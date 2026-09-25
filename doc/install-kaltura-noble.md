@@ -41,11 +41,20 @@ The admin password must be 8 to 14 characters long and include a digit, a lowerc
 
 ## Installing on your own server
 
-Prebuilt packages are published in the GitHub release [`noble-deb-18.20.0-1`](https://github.com/jniltinho/platform-install-packages/releases/tag/noble-deb-18.20.0-1). The release is a flat apt repository, so it can be used directly:
+Prebuilt packages are published in the GitHub release [`kaltura-server/v18.20.0-1`](https://github.com/jniltinho/platform-install-packages/releases/tag/kaltura-server/v18.20.0-1). Download and verify the Noble repository archive, then extract it locally (the GitHub download directory itself is not an apt repository):
 
 ```bash
-echo "deb [trusted=yes] https://github.com/jniltinho/platform-install-packages/releases/download/noble-deb-18.20.0-1 ./" > /etc/apt/sources.list.d/kaltura.list
+mkdir -p /tmp/kaltura-noble-download
+cd /tmp/kaltura-noble-download
+gh release download kaltura-server/v18.20.0-1 \
+  --repo jniltinho/platform-install-packages \
+  --pattern kaltura-server-noble-repo.tar.gz --pattern SHA256SUMS
+grep '  kaltura-server-noble-repo.tar.gz$' SHA256SUMS | sha256sum -c -
+sudo mkdir -p /opt/kaltura-repo/noble
+sudo tar -xzf kaltura-server-noble-repo.tar.gz -C /opt/kaltura-repo/noble
 ```
+
+Use `KALTURA_APT=file:/opt/kaltura-repo/noble` with the installer. It configures the flat apt repository. `[trusted=yes]` trusts these local packages; verify the downloaded checksum before installation.
 
 To build the packages yourself, use `vagrant up build` as above. The remaining steps are the same in both cases:
 
@@ -57,7 +66,7 @@ echo "deb [signed-by=/usr/share/keyrings/elastic.gpg] https://artifacts.elastic.
 apt-get update
 ```
 
-Then follow `deb/noble/install-aio.sh`, or run it directly with `KALTURA_APT=https://github.com/jniltinho/platform-install-packages/releases/download/noble-deb-18.20.0-1 HOST_IP=<your ip> bash install-aio.sh`. It is the reference procedure for the MariaDB settings, the debconf answers and the install order. Order matters: `kaltura-db` needs the front and Sphinx to be up before it runs.
+Then follow `deb/noble/install-aio.sh`, or run it directly with `KALTURA_APT=file:/opt/kaltura-repo/noble HOST_IP=<your ip> bash install-aio.sh`. It is the reference procedure for the MariaDB settings, the debconf answers and the install order. Order matters: `kaltura-db` needs the front and Sphinx to be up before it runs.
 
 ## Sources
 
