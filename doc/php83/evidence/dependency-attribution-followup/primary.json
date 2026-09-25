@@ -1,0 +1,1105 @@
+{
+  "schema": 1,
+  "scope": "Literal bundled metadata/header attribution, not runtime, legal compliance, whole SBOM or dependency upgrade advice. No application execution.",
+  "archive": {
+    "path": "/tmp/kaltura-php83-audit/Rigel-18.20.0.zip",
+    "sha256": "58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28"
+  },
+  "prior_ledger": {
+    "path": "doc/php83/evidence/inventory-ledger/ledger.json",
+    "sha256": "33977fe50b11cf851bee4ccd7a5d1e33bcfdb9653c07f413b108b8ed69edddea"
+  },
+  "rows": [
+    {
+      "directory": "vendor/IP2Location/",
+      "declared_version": null,
+      "declared_license": "Database README: GENERAL PUBLIC LICENSE, June 1991",
+      "scope": "Database notice only; generator Software Version 4.0.0 is NOT a library version",
+      "evidence": [
+        "vendor/IP2Location/ip_files/readme.txt"
+      ],
+      "remaining": [
+        "Library version/license unresolved; database timestamp and generator version do not prove library or data snapshot consistency."
+      ],
+      "whole_directory_attribution_complete": false,
+      "archive_file_count": 260,
+      "file_identity_manifest_sha256": "7123da2af44874ef426a0130d5aaac2f04a0d07831084ba4bf3f83768bd4cc06"
+    },
+    {
+      "directory": "vendor/MaxMind/",
+      "declared_version": "GeoIP2 v2.4.5",
+      "declared_license": null,
+      "scope": "GeoIP2 Client version declaration, NOT MaxMind Db reader version",
+      "evidence": [
+        "vendor/MaxMind/GeoIP2/WebService/Client.php"
+      ],
+      "remaining": [
+        "GeoIP2/Db reader exact revisions and license attribution unresolved."
+      ],
+      "whole_directory_attribution_complete": false,
+      "archive_file_count": 35,
+      "file_identity_manifest_sha256": "682bae1f8c9b8b14825b62a03d50f891b0c2240d46b73448ccae3a1e922169ac"
+    },
+    {
+      "directory": "vendor/PHPMailer/",
+      "declared_version": "5.2.1",
+      "declared_license": "LGPL declaration; bundled license text version 2.1",
+      "scope": "Top-level PHPMailer only, not nested Symfony copy",
+      "evidence": [
+        "vendor/PHPMailer/class.phpmailer.php",
+        "vendor/PHPMailer/LICENSE"
+      ],
+      "remaining": [
+        "Exact upstream revision and modified-file comparison unverified; no or-later grant inferred from generic license appendix."
+      ],
+      "whole_directory_attribution_complete": false,
+      "archive_file_count": 32,
+      "file_identity_manifest_sha256": "01b2634a89aefe1b90fa974bfb5a0f04bfdcc4a2b4880e2830c39ed75dfb2c38"
+    },
+    {
+      "directory": "vendor/ZendFramework/",
+      "declared_version": "1.9.6",
+      "declared_license": "New BSD declaration; bundled three-condition redistribution text",
+      "scope": "Zend Version declaration and matching bundled Zend notice",
+      "evidence": [
+        "vendor/ZendFramework/library/Zend/Version.php",
+        "vendor/ZendFramework/LICENSE.txt"
+      ],
+      "remaining": [
+        "Transitive exceptions and exact upstream revision unverified."
+      ],
+      "whole_directory_attribution_complete": false,
+      "archive_file_count": 1297,
+      "file_identity_manifest_sha256": "9e946ec31e268f557900c79d955220053a75c9b201827695c4f66621c3d82a5d"
+    },
+    {
+      "directory": "vendor/akamai/",
+      "declared_version": null,
+      "declared_license": null,
+      "scope": "Per-file revision notice only",
+      "evidence": [
+        "vendor/akamai/token/RijndaelAlgorithm.php"
+      ],
+      "remaining": [
+        "File revision 5428 is not an Akamai package version; mixed notices and license rights unresolved."
+      ],
+      "whole_directory_attribution_complete": false,
+      "archive_file_count": 24,
+      "file_identity_manifest_sha256": "d8d026658c33b167645f734b7e869e732e7afd655122838ef28b8ddb8a67abfb"
+    },
+    {
+      "directory": "vendor/avro/",
+      "declared_version": null,
+      "declared_license": "See separate Composer metadata records and exact bundled license texts",
+      "scope": "Mixed bundle, not one version/license",
+      "evidence": [
+        "vendor/avro/composer/installed.json",
+        "vendor/avro/flix-tech/confluent-schema-registry-api/LICENSE",
+        "vendor/avro/wikimedia/avro/LICENSE.txt",
+        "vendor/avro/composer/LICENSE"
+      ],
+      "remaining": [
+        "15 manifest declarations are not 15 installed byte identities; 13 expected name-prefixes absent. Exact upstream revision-to-byte verification and bundled subcomponent rights remain open."
+      ],
+      "whole_directory_attribution_complete": false,
+      "archive_file_count": 67,
+      "file_identity_manifest_sha256": "8137c28e1503e5d57be9ca431b4e51e1f8eec8c63e77a6272ce78e8337df9337"
+    },
+    {
+      "directory": "vendor/aws/",
+      "declared_version": "2.7.21",
+      "declared_license": "Apache License 2.0 bundled root text",
+      "scope": "AWS SDK declaration only, not all bundled dependencies",
+      "evidence": [
+        "vendor/aws/Aws/Common/Aws.php",
+        "vendor/aws/LICENSE.md",
+        "vendor/aws/Guzzle/Common/Version.php",
+        "vendor/aws/Doctrine/Common/Cache/Version.php",
+        "vendor/aws/Symfony/Component/EventDispatcher/LICENSE"
+      ],
+      "remaining": [
+        "Guzzle 3.9.2 and Doctrine cache 1.4.0-DEV are separate declarations; Monolog, Symfony, Doctrine, Guzzle transitive license/revision completion remains open."
+      ],
+      "whole_directory_attribution_complete": false,
+      "archive_file_count": 628,
+      "file_identity_manifest_sha256": "02bd7de38b2eafeba0ce1d7145329cd20c0bd85dc0b229c524d49ab2d5112587"
+    },
+    {
+      "directory": "vendor/facebook-sdk-php-v5-customized/",
+      "declared_version": "5.0.0",
+      "declared_license": "Facebook-specific permission limited to Facebook web services/APIs; retained notice",
+      "scope": "Facebook.php exact header, NOT a generic MIT attribution",
+      "evidence": [
+        "vendor/facebook-sdk-php-v5-customized/Facebook.php"
+      ],
+      "remaining": [
+        "Customized source-to-upstream delta/revision and per-file rights unverified; Graph API v7.0 is not SDK version."
+      ],
+      "whole_directory_attribution_complete": false,
+      "archive_file_count": 68,
+      "file_identity_manifest_sha256": "33e3f9e53e74b44a064917ce1dfd00595a5d5501eed6ff82f6726d2dbd9dc87f"
+    },
+    {
+      "directory": "vendor/fpdf/",
+      "declared_version": "1.7",
+      "declared_license": "Bundled permissive use/copy/modify/distribute/sublicense/sell permission text; no SPDX inferred",
+      "scope": "FPDF core and exact local license text",
+      "evidence": [
+        "vendor/fpdf/fpdf.php",
+        "vendor/fpdf/license.txt"
+      ],
+      "remaining": [
+        "Font/makefont component attribution and upstream revision unverified."
+      ],
+      "whole_directory_attribution_complete": false,
+      "archive_file_count": 112,
+      "file_identity_manifest_sha256": "4d2735c8eb8d05db4943ac0e7e92ad327b29b0dca59f62aebbe0e3d97a850a34"
+    },
+    {
+      "directory": "vendor/google-api-php-client/",
+      "declared_version": null,
+      "declared_license": "Apache License 2.0 explicit source header",
+      "scope": "Legacy Google Client, no version established",
+      "evidence": [
+        "vendor/google-api-php-client/src/Google_Client.php",
+        "vendor/google-api-php-client/LICENSE"
+      ],
+      "remaining": [
+        "No version inferred from naming; exact revision and generated service provenance unresolved."
+      ],
+      "whole_directory_attribution_complete": false,
+      "archive_file_count": 80,
+      "file_identity_manifest_sha256": "728c1173f9dc820bd07de1b5d4f090b9b19c70ad65555900e891e24aef7ad5fc"
+    },
+    {
+      "directory": "vendor/google-api-php-client-1.1.2/",
+      "declared_version": "1.1.5",
+      "declared_license": "Apache License 2.0 explicit source header",
+      "scope": "Google Client LIBVER conflicts with directory suffix 1.1.2",
+      "evidence": [
+        "vendor/google-api-php-client-1.1.2/src/Google/Client.php",
+        "vendor/google-api-php-client-1.1.2/LICENSE"
+      ],
+      "remaining": [
+        "Mixed/customized-tree possibility not adjudicated; exact upstream revision and service provenance unresolved."
+      ],
+      "whole_directory_attribution_complete": false,
+      "archive_file_count": 149,
+      "file_identity_manifest_sha256": "e231faed500129360832577e121bccf27a1775c45c9bad36f84c9cd6cee22702"
+    },
+    {
+      "directory": "vendor/htmlpurifier/",
+      "declared_version": "4.6.0",
+      "declared_license": "LGPL version 2.1 or later explicitly granted in source header",
+      "scope": "HTMLPurifier declaration and license",
+      "evidence": [
+        "vendor/htmlpurifier/library/HTMLPurifier.php",
+        "vendor/htmlpurifier/LICENSE"
+      ],
+      "remaining": [
+        "Exact upstream revision and transitive exceptions unverified."
+      ],
+      "whole_directory_attribution_complete": false,
+      "archive_file_count": 368,
+      "file_identity_manifest_sha256": "431c6c38f3b735d47f47382bf5d965b11be1972e5a707516ae00fc3e709b3117"
+    },
+    {
+      "directory": "vendor/mantis/",
+      "declared_version": null,
+      "declared_license": null,
+      "scope": "Single bundled mantisClient file, not assumed complete Mantis release",
+      "evidence": [
+        "vendor/mantis/mantisClient.class.php"
+      ],
+      "remaining": [
+        "No package version/license established."
+      ],
+      "whole_directory_attribution_complete": false,
+      "archive_file_count": 1,
+      "file_identity_manifest_sha256": "29f34060e3b98b0df12c6511e377d77062a217ab9d42adb43a87ade784d4f074"
+    },
+    {
+      "directory": "vendor/nusoap/",
+      "declared_version": "0.9.5",
+      "declared_license": "LGPL version 2.1 or later explicit header",
+      "scope": "NuSOAP base declaration and per-file CVS revision",
+      "evidence": [
+        "vendor/nusoap/class.nusoap_base.php"
+      ],
+      "remaining": [
+        "CVS revision 1.56 belongs to this file, not a full release commit; per-file upstream mapping remains open."
+      ],
+      "whole_directory_attribution_complete": false,
+      "archive_file_count": 13,
+      "file_identity_manifest_sha256": "1a23bc6f915c33571ece63eba91a30abcd27e7af3f4bf1052e53f5f4d520d69b"
+    },
+    {
+      "directory": "vendor/phpGangsta/",
+      "declared_version": null,
+      "declared_license": "BSD License label/link; clause variant not established",
+      "scope": "Edited GoogleAuthenticator source header",
+      "evidence": [
+        "vendor/phpGangsta/GoogleAuthenticator.php"
+      ],
+      "remaining": [
+        "Exact version/revision, complete license text and variant unresolved; edited header retained."
+      ],
+      "whole_directory_attribution_complete": false,
+      "archive_file_count": 1,
+      "file_identity_manifest_sha256": "790c3df73338ef4e3ac384dbf0cc93b74458c2e313205ae6dbb20fa48074a1b3"
+    },
+    {
+      "directory": "vendor/propel/",
+      "declared_version": "1.4.2",
+      "declared_license": "LGPL label without version in inspected header",
+      "scope": "Top-level Propel only",
+      "evidence": [
+        "vendor/propel/Propel.php"
+      ],
+      "remaining": [
+        "File SVN revision 1691 not package revision; exact LGPL version and nested runtime/generator relationships unresolved."
+      ],
+      "whole_directory_attribution_complete": false,
+      "archive_file_count": 136,
+      "file_identity_manifest_sha256": "f7115ea3b6e2cb047a86165dbefaf5f8f31142309450604366e146f18b05200a"
+    },
+    {
+      "directory": "vendor/symfony/",
+      "declared_version": "1.0.1",
+      "declared_license": null,
+      "scope": "Bundled VERSION; sfCore references a missing top-level LICENSE",
+      "evidence": [
+        "vendor/symfony/VERSION",
+        "vendor/symfony/util/sfCore.class.php",
+        "vendor/symfony/vendor/phpmailer/class.phpmailer.php",
+        "vendor/symfony/vendor/pake/pakeApp.class.php",
+        "vendor/symfony/vendor/propel-generator/LICENSE"
+      ],
+      "remaining": [
+        "Nested Propel license not automatically Symfony license; nested PHPMailer 1.73, pake 1.1.DEV distinct from top-level versions; other nested components unresolved."
+      ],
+      "whole_directory_attribution_complete": false,
+      "archive_file_count": 754,
+      "file_identity_manifest_sha256": "af78a40a7db9f88d6f22b17ffb6535f3cc2d04f629486bcf3909dfc74d786a90"
+    },
+    {
+      "directory": "vendor/symfony-data/",
+      "declared_version": null,
+      "declared_license": null,
+      "scope": "Header says part of Symfony, does not declare matching whole-tree release",
+      "evidence": [
+        "vendor/symfony-data/bin/symfony.php"
+      ],
+      "remaining": [
+        "Do not inherit version 1.0.1 or nested license merely from adjacent directory; source lineage and license unresolved."
+      ],
+      "whole_directory_attribution_complete": false,
+      "archive_file_count": 494,
+      "file_identity_manifest_sha256": "7408e5e26fc99d394a500648cd48f9aa8d7f5caef787192ffb3cf41ab07f8f46"
+    },
+    {
+      "directory": "vendor/tfpdf/",
+      "declared_version": "1.25",
+      "declared_license": "LGPL label without version in tFPDF header",
+      "scope": "tFPDF header/date 2018-03-19; fonts have separate notices",
+      "evidence": [
+        "vendor/tfpdf/tfpdf.php",
+        "vendor/tfpdf/font/unifont/LICENSE_OFL.txt",
+        "vendor/tfpdf/font/unifont/DejaVu_LICENSE.txt"
+      ],
+      "remaining": [
+        "Exact LGPL version and complete per-font attribution remain open."
+      ],
+      "whole_directory_attribution_complete": false,
+      "archive_file_count": 120,
+      "file_identity_manifest_sha256": "c7ac58199722bb5c107e623042be001477045e4a2843032f5eab664b10b62c0d"
+    },
+    {
+      "directory": "vendor/webex/",
+      "declared_version": null,
+      "declared_license": null,
+      "scope": "Read-only filename inventory and representative header only",
+      "evidence": [
+        "vendor/webex/xml/WebexXmlClient.class.php"
+      ],
+      "remaining": [
+        "No SDK version/license proven; service/API versions cannot substitute release identity."
+      ],
+      "whole_directory_attribution_complete": false,
+      "archive_file_count": 358,
+      "file_identity_manifest_sha256": "4aeec2709a4c9bb642afb29df3e5355f888de568cbb58e25cfb06128ab4b4041"
+    }
+  ],
+  "sources": {
+    "vendor/IP2Location/ip_files/readme.txt": {
+      "sha256": "aa8d6647eaddabf7ea2a80dc271f3767d390faa3c11c420ba598703de768b73e",
+      "bytes": 5169,
+      "line_count": 114,
+      "excerpts": [
+        {
+          "start": 1,
+          "end": 35,
+          "text": "This product includes IP to Country database from \nhttp://software77.net/cgi-bin/ip-country/geo-ip.pl\n__________________________________________________________________________\n\n\n INFORMATION AND NOTES ON IpToCountry.csv.gz\n ===========================================\n\n ~~~~~~~~~\n A REQUEST\n ~~~~~~~~~\n\n ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n It took a lot of work to put this database together and it takes even more to\n maintain it. For this, we do not charge you anything. We would **really**\n appreciate a link from your site back to us.\n\n It won't make you famous but it will earn you our gratitude :)\n ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n ------------------------------------------------------------------------------\n LICENSE\n =======\n This database is provided FREE under the terms of the GENERAL PUBLIC LICENSE,\n June 1991\n ------------------------------------------------------------------------------\n\n File Time Stamp   : Wed Oct 18 10:06:50 2006 UTC.\n Generator         : ip.pl on http://Software77.net (A Webnet77.com Company)\n Software Author   : BRM\n Software Version  : 4.0.0\n Contact           : http://Webnet77.com/contact.html\n Download          : http://software77.net/cgi-bin/ip-country/geo-ip.pl\n\n IMPORTANT NOTES"
+        }
+      ]
+    },
+    "vendor/MaxMind/GeoIP2/WebService/Client.php": {
+      "sha256": "3489016ed5cfb72f09fdd79d198605f9a5e45e31da3e66da6d4ae7f0f96ffbf9",
+      "bytes": 9808,
+      "line_count": 242,
+      "excerpts": [
+        {
+          "start": 43,
+          "end": 53,
+          "text": " * If the request fails, the client class throws an exception.\n */\nclass Client implements ProviderInterface\n{\n    private $locales;\n    private $client;\n    private static $basePath = '/geoip/v2.1';\n\n    const VERSION = 'v2.4.5';\n\n    /**"
+        }
+      ]
+    },
+    "vendor/PHPMailer/class.phpmailer.php": {
+      "sha256": "57a95a635b82c816cd80943b61600b6f74588be57c8e8f6fc144d40b2ece72d9",
+      "bytes": 81748,
+      "line_count": 2532,
+      "excerpts": [
+        {
+          "start": 1,
+          "end": 35,
+          "text": "<?php\n/*~ class.phpmailer.php\n.---------------------------------------------------------------------------.\n|  Software: PHPMailer - PHP email class                                    |\n|   Version: 5.2.1                                                          |\n|      Site: https://code.google.com/a/apache-extras.org/p/phpmailer/       |\n| ------------------------------------------------------------------------- |\n|     Admin: Jim Jagielski (project admininistrator)                        |\n|   Authors: Andy Prevost (codeworxtech) codeworxtech@users.sourceforge.net |\n|          : Marcus Bointon (coolbru) coolbru@users.sourceforge.net         |\n|          : Jim Jagielski (jimjag) jimjag@gmail.com                        |\n|   Founder: Brent R. Matzelle (original founder)                           |\n| Copyright (c) 2010-2012, Jim Jagielski. All Rights Reserved.              |\n| Copyright (c) 2004-2009, Andy Prevost. All Rights Reserved.               |\n| Copyright (c) 2001-2003, Brent R. Matzelle                                |\n| ------------------------------------------------------------------------- |\n|   License: Distributed under the Lesser General Public License (LGPL)     |\n|            http://www.gnu.org/copyleft/lesser.html                        |\n| This program is distributed in the hope that it will be useful - WITHOUT  |\n| ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or     |\n| FITNESS FOR A PARTICULAR PURPOSE.                                         |\n'---------------------------------------------------------------------------'\n*/\n\n/**\n * PHPMailer - PHP email transport class\n * NOTE: Requires PHP version 5 or later\n * @package PHPMailer\n * @author Andy Prevost\n * @author Marcus Bointon\n * @author Jim Jagielski\n * @copyright 2010 - 2012 Jim Jagielski\n * @copyright 2004 - 2009 Andy Prevost\n * @version $Id: class.phpmailer.php 450 2010-06-23 16:46:33Z coolbru $\n * @license http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License"
+        },
+        {
+          "start": 324,
+          "end": 328,
+          "text": "   * Sets the PHPMailer Version number\n   * @var string\n   */\n  public $Version         = '5.2.1';\n"
+        }
+      ]
+    },
+    "vendor/PHPMailer/LICENSE": {
+      "sha256": "6f679d0555a9a5aad08a4e88cdba552cf62bb46585084572f3cfd1b0c7e6ec4f",
+      "bytes": 26421,
+      "line_count": 504,
+      "excerpts": [
+        {
+          "start": 1,
+          "end": 11,
+          "text": "\t\t  GNU LESSER GENERAL PUBLIC LICENSE\n\t\t       Version 2.1, February 1999\n\n Copyright (C) 1991, 1999 Free Software Foundation, Inc.\n     59 Temple Place, Suite 330, Boston, MA  02111-1307  USA\n Everyone is permitted to copy and distribute verbatim copies\n of this license document, but changing it is not allowed.\n\n[This is the first released version of the Lesser GPL.  It also counts\n as the successor of the GNU Library Public License, version 2, hence\n the version number 2.1.]"
+        }
+      ]
+    },
+    "vendor/ZendFramework/library/Zend/Version.php": {
+      "sha256": "bc82489b4bab3755220d11fae2ed289d985afb1a73d772d8dafcc169975bfdca",
+      "bytes": 2561,
+      "line_count": 81,
+      "excerpts": [
+        {
+          "start": 1,
+          "end": 36,
+          "text": "<?php\n/**\n * Zend Framework\n *\n * LICENSE\n *\n * This source file is subject to the new BSD license that is bundled\n * with this package in the file LICENSE.txt.\n * It is also available through the world-wide-web at this URL:\n * http://framework.zend.com/license/new-bsd\n * If you did not receive a copy of the license and are unable to\n * obtain it through the world-wide-web, please send an email\n * to license@zend.com so we can send you a copy immediately.\n *\n * @category   Zend\n * @package    Zend_Version\n * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)\n * @license    http://framework.zend.com/license/new-bsd     New BSD License\n * @version    $Id: Version.php 23684 2011-01-31 16:41:13Z matthew $\n */\n\n/**\n * Class to store and retrieve the version of Zend Framework.\n *\n * @category   Zend\n * @package    Zend_Version\n * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)\n * @license    http://framework.zend.com/license/new-bsd     New BSD License\n */\nfinal class Zend_Version\n{\n    /**\n     * Zend Framework version identification - see compareVersion()\n     */\n    const VERSION = '1.9.6';\n"
+        }
+      ]
+    },
+    "vendor/ZendFramework/LICENSE.txt": {
+      "sha256": "ff22e7be52979f21b18823dd151dbea835f3b7f799f4a5d6d058bea185b229c7",
+      "bytes": 1547,
+      "line_count": 27,
+      "excerpts": [
+        {
+          "start": 1,
+          "end": 27,
+          "text": "Copyright (c) 2005-2009, Zend Technologies USA, Inc.\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without modification,\nare permitted provided that the following conditions are met:\n\n    * Redistributions of source code must retain the above copyright notice,\n      this list of conditions and the following disclaimer.\n\n    * Redistributions in binary form must reproduce the above copyright notice,\n      this list of conditions and the following disclaimer in the documentation\n      and/or other materials provided with the distribution.\n\n    * Neither the name of Zend Technologies USA, Inc. nor the names of its\n      contributors may be used to endorse or promote products derived from this\n      software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND\nANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED\nWARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR\nANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES\n(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;\nLOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON\nANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\nSOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
+        }
+      ]
+    },
+    "vendor/akamai/token/RijndaelAlgorithm.php": {
+      "sha256": "90a415f154331f654a964fbb50dd98f47f5475b8606334b848cd7f4c6c01137d",
+      "bytes": 9919,
+      "line_count": 258,
+      "excerpts": [
+        {
+          "start": 1,
+          "end": 17,
+          "text": "<?PHP\n/**\n * Rijndael --pronounced Reindaal-- is a variable block-size (128-, 192- and\n * 256-bit), variable key-size (128-, 192- and 256-bit) symmetric cipher.<p>\n *\n * Rijndael was written by <a href=\"mailto:rijmen@esat.kuleuven.ac.be\">Vincent\n * Rijmen</a> and <a href=\"mailto:Joan.Daemen@village.uunet.be\">Joan Daemen</a>.<p>\n *\n * Portions of this code are <b>Copyright</b> &copy; 1997, 1998\n * <a href=\"http://www.systemics.com/\">Systemics Ltd</a> on behalf of the\n * <a href=\"http://www.systemics.com/docs/cryptix/\">Cryptix Development Team</a>.\n * <br>All rights reserved.<p>\n *\n * $Id: RijndaelAlgorithm.php 5428 2006-06-06 21:08:18Z rbergstrom $\n * \n * @package External\n * @subpackage Akamai.token"
+        }
+      ]
+    },
+    "vendor/avro/composer/installed.json": {
+      "sha256": "196613ada5bc1aa805e6ce4d4127e4c7c88ecf291ffb5273161848bd589bf927",
+      "bytes": 37223,
+      "line_count": 1042,
+      "excerpts": [
+        {
+          "start": 1,
+          "end": 18,
+          "text": "{\n    \"packages\": [\n        {\n            \"name\": \"amphp/amp\",\n            \"version\": \"v1.2.2\",\n            \"version_normalized\": \"1.2.2.0\",\n            \"source\": {\n                \"type\": \"git\",\n                \"url\": \"https://github.com/amphp/amp.git\",\n                \"reference\": \"4f2161da5f68f274f116985635aea63b5c0f54d2\"\n            },\n            \"dist\": {\n                \"type\": \"zip\",\n                \"url\": \"https://api.github.com/repos/amphp/amp/zipball/4f2161da5f68f274f116985635aea63b5c0f54d2\",\n                \"reference\": \"4f2161da5f68f274f116985635aea63b5c0f54d2\",\n                \"shasum\": \"\"\n            },\n            \"require\": {"
+        }
+      ]
+    },
+    "vendor/avro/flix-tech/confluent-schema-registry-api/LICENSE": {
+      "sha256": "53485c9e6dc0bf6829f77361c3ab39c3e8bba4b7a8a6d8cf8bbaa6bdc4ca5e3d",
+      "bytes": 1057,
+      "line_count": 14,
+      "excerpts": [
+        {
+          "start": 1,
+          "end": 14,
+          "text": "Copyright 2017 FlixMobility GmbH\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated\ndocumentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the\nrights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit\npersons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the\nSoftware.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE\nWARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\nCOPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR\nOTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+        }
+      ]
+    },
+    "vendor/avro/wikimedia/avro/LICENSE.txt": {
+      "sha256": "d7dfc49ea9fba4c16ee810818f14f40052937e83c8dc6b377df2122916acd598",
+      "bytes": 16714,
+      "line_count": 308,
+      "excerpts": [
+        {
+          "start": 1,
+          "end": 5,
+          "text": "\n                                 Apache License\n                           Version 2.0, January 2004\n                        http://www.apache.org/licenses/\n"
+        },
+        {
+          "start": 205,
+          "end": 209,
+          "text": "License for the Jansson C JSON parser used in the C implementation:\n\nCopyright (c) 2009 Petri Lehtinen <petri@digip.org>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy"
+        },
+        {
+          "start": 228,
+          "end": 232,
+          "text": "License for the Json.NET used in the C# implementation:\n\nCopyright (c) 2007 James Newton-King\n\nPermission is hereby granted, free of charge, to any person obtaining"
+        },
+        {
+          "start": 252,
+          "end": 256,
+          "text": "License for msinttypes used in the C implementation:\nSource from:\nhttp://code.google.com/p/msinttypes/downloads/detail?name=msinttypes-r26.zip\n\nCopyright (c) 2006-2008 Alexander Chemeris"
+        },
+        {
+          "start": 283,
+          "end": 287,
+          "text": "License for Dirent API for Microsoft Visual Studio used in the C implementation:\nSource from:\nhttp://www.softagalleria.net/download/dirent/dirent-1.11.zip\n\nCopyright (C) 2006 Toni Ronkko"
+        }
+      ]
+    },
+    "vendor/avro/composer/LICENSE": {
+      "sha256": "c8cce4b6b9729f264ffdf9296d505d63432497feeed1f586d1902b942197e024",
+      "bytes": 1070,
+      "line_count": 21,
+      "excerpts": [
+        {
+          "start": 1,
+          "end": 18,
+          "text": "\nCopyright (c) Nils Adermann, Jordi Boggiano\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is furnished\nto do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,"
+        }
+      ]
+    },
+    "vendor/aws/Aws/Common/Aws.php": {
+      "sha256": "20a47448aeac922d95dd05f26e0b9cd098474fe87b9f8ca142010de4985c74db",
+      "bytes": 3671,
+      "line_count": 105,
+      "excerpts": [
+        {
+          "start": 1,
+          "end": 33,
+          "text": "<?php\n/**\n * Copyright 2010-2013 Amazon.com, Inc. or its affiliates. All Rights Reserved.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\").\n * You may not use this file except in compliance with the License.\n * A copy of the License is located at\n *\n * http://aws.amazon.com/apache2.0\n *\n * or in the \"license\" file accompanying this file. This file is distributed\n * on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either\n * express or implied. See the License for the specific language governing\n * permissions and limitations under the License.\n */\n\nnamespace Aws\\Common;\n\nuse Aws\\Common\\Facade\\Facade;\nuse Guzzle\\Service\\Builder\\ServiceBuilder;\nuse Guzzle\\Service\\Builder\\ServiceBuilderLoader;\n\n/**\n * Base class for interacting with web service clients\n */\nclass Aws extends ServiceBuilder\n{\n    /**\n     * @var string Current version of the SDK\n     */\n    const VERSION = '2.7.21';\n\n    /**"
+        }
+      ]
+    },
+    "vendor/aws/LICENSE.md": {
+      "sha256": "d86082393c045c6ee8fcef26a1680e31c72b2afb07f687ac337325747f341585",
+      "bytes": 9202,
+      "line_count": 141,
+      "excerpts": [
+        {
+          "start": 1,
+          "end": 4,
+          "text": "# Apache License\nVersion 2.0, January 2004\n\nTERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION"
+        }
+      ]
+    },
+    "vendor/aws/Guzzle/Common/Version.php": {
+      "sha256": "8ef032c3a220a61dd41da751c01e02159524c3f204a14f4cf1ade9c31288e12c",
+      "bytes": 641,
+      "line_count": 29,
+      "excerpts": [
+        {
+          "start": 1,
+          "end": 13,
+          "text": "<?php\n\nnamespace Guzzle\\Common;\n\n/**\n * Guzzle version information\n */\nclass Version\n{\n    const VERSION = '3.9.2';\n\n    /**\n     * @var bool Set this value to true to enable warnings for deprecated functionality use. This should be on in your"
+        }
+      ]
+    },
+    "vendor/aws/Doctrine/Common/Cache/Version.php": {
+      "sha256": "86a74797fdfcd3355f05f84f1f361274971615c076f093397e60d4a53c425199",
+      "bytes": 1074,
+      "line_count": 25,
+      "excerpts": [
+        {
+          "start": 1,
+          "end": 25,
+          "text": "<?php\n/*\n * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n * \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\n * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\n * A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\n * OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\n * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT\n * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,\n * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY\n * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n *\n * This software consists of voluntary contributions made by many individuals\n * and is licensed under the MIT license. For more information, see\n * <http://www.doctrine-project.org>.\n */\n\nnamespace Doctrine\\Common\\Cache;\n\nclass Version\n{\n    const VERSION = '1.4.0-DEV';\n}"
+        }
+      ]
+    },
+    "vendor/aws/Symfony/Component/EventDispatcher/LICENSE": {
+      "sha256": "41dbc7f22e823cc486c8565cabc6ade2ed4f95c84832c17266467d0c722ed5ee",
+      "bytes": 1065,
+      "line_count": 19,
+      "excerpts": [
+        {
+          "start": 1,
+          "end": 19,
+          "text": "Copyright (c) 2004-2015 Fabien Potencier\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is furnished\nto do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE."
+        }
+      ]
+    },
+    "vendor/facebook-sdk-php-v5-customized/Facebook.php": {
+      "sha256": "af69ebaf03a69fd1439e3ddfb5353df9da8a26249f744dfb4abc0666768314d8",
+      "bytes": 19129,
+      "line_count": 589,
+      "excerpts": [
+        {
+          "start": 1,
+          "end": 23,
+          "text": "<?php\n/**\n * Copyright 2014 Facebook, Inc.\n *\n * You are hereby granted a non-exclusive, worldwide, royalty-free license to\n * use, copy, modify, and distribute this software in source code or binary\n * form for use in connection with the web services and APIs provided by\n * Facebook.\n *\n * As with any software that integrates with the Facebook platform, your use\n * of this software is subject to the Facebook Developer Principles and\n * Policies [http://developers.facebook.com/policy/]. This copyright notice\n * shall be included in all copies or substantial portions of the software.\n *\n * THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL\n * THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\n * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER\n * DEALINGS IN THE SOFTWARE.\n *\n */"
+        },
+        {
+          "start": 54,
+          "end": 66,
+          "text": " */\nclass Facebook\n{\n    /**\n     * @const string Version number of the Facebook PHP SDK.\n     */\n    const VERSION = '5.0.0';\n\n    /**\n     * @const string Default Graph API version for requests.\n     */\n    const DEFAULT_GRAPH_VERSION = 'v7.0';\n"
+        }
+      ]
+    },
+    "vendor/fpdf/fpdf.php": {
+      "sha256": "635d1a5534ca1d56c9f7e44a8c7e8de322c7d325970cc32eede97f413f16f9e8",
+      "bytes": 47091,
+      "line_count": 1804,
+      "excerpts": [
+        {
+          "start": 1,
+          "end": 12,
+          "text": "<?php\n/*******************************************************************************\n* FPDF                                                                         *\n*                                                                              *\n* Version: 1.7                                                                 *\n* Date:    2011-06-18                                                          *\n* Author:  Olivier PLATHEY                                                     *\n*******************************************************************************/\n\ndefine('FPDF_VERSION','1.7');\n\nclass FPDF"
+        }
+      ]
+    },
+    "vendor/fpdf/license.txt": {
+      "sha256": "44b085ba3e622633e3dfc75e06fd8f03b173fff64055390218b88e6e6809953d",
+      "bytes": 331,
+      "line_count": 6,
+      "excerpts": [
+        {
+          "start": 1,
+          "end": 6,
+          "text": "Permission is hereby granted, free of charge, to any person obtaining a copy\nof this software to use, copy, modify, distribute, sublicense, and/or sell\ncopies of the software, and to permit persons to whom the software is furnished\nto do so.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED."
+        }
+      ]
+    },
+    "vendor/google-api-php-client/src/Google_Client.php": {
+      "sha256": "5e5b02a2f1e3e7203cf8a7b5fd62b479f6f95c2264d570e5bf5607782799d5e3",
+      "bytes": 14132,
+      "line_count": 471,
+      "excerpts": [
+        {
+          "start": 1,
+          "end": 16,
+          "text": "<?php\n/*\n * Copyright 2010 Google Inc.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\");\n * you may not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n *\n *     http://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing, software\n * distributed under the License is distributed on an \"AS IS\" BASIS,\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n * See the License for the specific language governing permissions and\n * limitations under the License.\n */"
+        }
+      ]
+    },
+    "vendor/google-api-php-client/LICENSE": {
+      "sha256": "c07795dc0d0e17cc4b23566ddc05a508f14e8ce98bb7404963250039a2c1a811",
+      "bytes": 10256,
+      "line_count": 203,
+      "excerpts": [
+        {
+          "start": 1,
+          "end": 6,
+          "text": "Apache License\nVersion 2.0, January 2004\nhttp://www.apache.org/licenses/\n\nTERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n"
+        }
+      ]
+    },
+    "vendor/google-api-php-client-1.1.2/src/Google/Client.php": {
+      "sha256": "078335cf75e294ae1653f7cf6fd8fcae28f13794d5efb6a6b36c561bb27179ab",
+      "bytes": 20369,
+      "line_count": 715,
+      "excerpts": [
+        {
+          "start": 1,
+          "end": 30,
+          "text": "<?php\n/*\n * Copyright 2010 Google Inc.\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\");\n * you may not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n *\n *     http://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing, software\n * distributed under the License is distributed on an \"AS IS\" BASIS,\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n * See the License for the specific language governing permissions and\n * limitations under the License.\n */\n\nif (!class_exists('Google_Client')) {\n  require_once dirname(__FILE__) . '/autoload.php';\n}\n\n/**\n * The Google API Client\n * https://github.com/google/google-api-php-client\n */\nclass Google_Client\n{\n  const LIBVER = \"1.1.5\";\n  const USER_AGENT_SUFFIX = \"google-api-php-client/\";\n  /**"
+        }
+      ]
+    },
+    "vendor/google-api-php-client-1.1.2/LICENSE": {
+      "sha256": "c07795dc0d0e17cc4b23566ddc05a508f14e8ce98bb7404963250039a2c1a811",
+      "bytes": 10256,
+      "line_count": 203,
+      "excerpts": [
+        {
+          "start": 1,
+          "end": 6,
+          "text": "Apache License\nVersion 2.0, January 2004\nhttp://www.apache.org/licenses/\n\nTERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n"
+        }
+      ]
+    },
+    "vendor/htmlpurifier/library/HTMLPurifier.php": {
+      "sha256": "0c9f953f14a133984a965729d5cbe619c6088c0b51be9665c26fb6261917d516",
+      "bytes": 10027,
+      "line_count": 292,
+      "excerpts": [
+        {
+          "start": 21,
+          "end": 38,
+          "text": "/*\n    HTML Purifier 4.6.0 - Standards Compliant HTML Filtering\n    Copyright (C) 2006-2008 Edward Z. Yang\n\n    This library is free software; you can redistribute it and/or\n    modify it under the terms of the GNU Lesser General Public\n    License as published by the Free Software Foundation; either\n    version 2.1 of the License, or (at your option) any later version.\n\n    This library is distributed in the hope that it will be useful,\n    but WITHOUT ANY WARRANTY; without even the implied warranty of\n    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU\n    Lesser General Public License for more details.\n\n    You should have received a copy of the GNU Lesser General Public\n    License along with this library; if not, write to the Free Software\n    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA\n */"
+        },
+        {
+          "start": 56,
+          "end": 67,
+          "text": "\n    /**\n     * Version of HTML Purifier.\n     * @type string\n     */\n    public $version = '4.6.0';\n\n    /**\n     * Constant with version of HTML Purifier.\n     */\n    const VERSION = '4.6.0';\n"
+        }
+      ]
+    },
+    "vendor/htmlpurifier/LICENSE": {
+      "sha256": "cc8ab76d79191e4dada4a25fee98ae289c63e612d923861cf36032805aa3349d",
+      "bytes": 26456,
+      "line_count": 513,
+      "excerpts": [
+        {
+          "start": 1,
+          "end": 11,
+          "text": "\t\t  GNU LESSER GENERAL PUBLIC LICENSE\n\t\t       Version 2.1, February 1999\n\n Copyright (C) 1991, 1999 Free Software Foundation, Inc.\n 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA\n Everyone is permitted to copy and distribute verbatim copies\n of this license document, but changing it is not allowed.\n\n[This is the first released version of the Lesser GPL.  It also counts\n as the successor of the GNU Library Public License, version 2, hence\n the version number 2.1.]"
+        }
+      ]
+    },
+    "vendor/mantis/mantisClient.class.php": {
+      "sha256": "f072740e0bdafa0d6c6d6bb4e3212fafcd95546187199234b84772e794a19861",
+      "bytes": 1862,
+      "line_count": 77,
+      "excerpts": [
+        {
+          "start": 1,
+          "end": 12,
+          "text": "<?php\n/**\n * @package infra\n * @subpackage mantis\n */\nclass MantisClient extends nusoap_client\n{\n\tvar $soapClient = null;\n\tvar $username = \"\";\n\tvar $password = \"\";\n\t\n\tfunction __construct($wsdlUrl, $username, $password)"
+        }
+      ]
+    },
+    "vendor/nusoap/class.nusoap_base.php": {
+      "sha256": "4ecc2476483be5c9ce83f3702bacf7922ce0f61461335cff675e03b27d4b908b",
+      "bytes": 29269,
+      "line_count": 998,
+      "excerpts": [
+        {
+          "start": 1,
+          "end": 23,
+          "text": "<?php\n\n/*\n$Id: class.nusoap_base.php,v 1.56 2010/04/26 20:15:08 snichol Exp $\n\nNuSOAP - Web Services Toolkit for PHP\n\nCopyright (c) 2002 NuSphere Corporation\n\nThis library is free software; you can redistribute it and/or\nmodify it under the terms of the GNU Lesser General Public\nLicense as published by the Free Software Foundation; either\nversion 2.1 of the License, or (at your option) any later version.\n\nThis library is distributed in the hope that it will be useful,\nbut WITHOUT ANY WARRANTY; without even the implied warranty of\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU\nLesser General Public License for more details.\n\nYou should have received a copy of the GNU Lesser General Public\nLicense along with this library; if not, write to the Free Software\nFoundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA\n"
+        },
+        {
+          "start": 94,
+          "end": 112,
+          "text": "\tvar $title = 'NuSOAP';\n\t/**\n\t * Version for HTTP headers.\n\t *\n\t * @var string\n\t * @access private\n\t */\n\tvar $version = '0.9.5';\n\t/**\n\t * CVS revision for HTTP headers.\n\t *\n\t * @var string\n\t * @access private\n\t */\n\tvar $revision = '$Revision: 1.56 $';\n    /**\n     * Current error string (manipulated by getError/setError)\n\t *\n\t * @var string"
+        }
+      ]
+    },
+    "vendor/phpGangsta/GoogleAuthenticator.php": {
+      "sha256": "e976a55f5c8c1a8cb438501075dbb9c3fb10b461c78fa860d33640544bbc33cf",
+      "bytes": 6765,
+      "line_count": 211,
+      "excerpts": [
+        {
+          "start": 1,
+          "end": 12,
+          "text": "<?php\n\n/**\n * PHP Class for handling Google Authenticator 2-factor authentication\n *\n * @author Michael Kliewe\n * Edited by Hila Karimov\n * \n * @copyright 2012 Michael Kliewe\n * @license http://www.opensource.org/licenses/bsd-license.php BSD License\n * @link http://www.phpgangsta.de/\n */"
+        }
+      ]
+    },
+    "vendor/propel/Propel.php": {
+      "sha256": "e1f93581bcf1a6467c0b2cb7740e6af8777265810cd08802b549f8f8934d9f2d",
+      "bytes": 28848,
+      "line_count": 884,
+      "excerpts": [
+        {
+          "start": 1,
+          "end": 21,
+          "text": "<?php\n/*\n *  $Id: Propel.php 1691 2010-04-19 22:01:20Z francois $\n *\n * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n * \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\n * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\n * A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\n * OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\n * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT\n * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,\n * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY\n * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n *\n * This software consists of voluntary contributions made by many individuals\n * and is licensed under the LGPL. For more information please see\n * <http://propel.phpdb.org>.\n */\n"
+        },
+        {
+          "start": 88,
+          "end": 96,
+          "text": "\tconst LOG_DEBUG = 7;\n\n\t/**\n\t * The Propel version.\n\t */\n\tconst VERSION = '1.4.2';\n\n\t/**\n\t * The class name for a PDO object."
+        }
+      ]
+    },
+    "vendor/symfony/VERSION": {
+      "sha256": "d51e6ec94058554a84558a5b402ee6ef5fdf5455e35c902feda61cda8752943a",
+      "bytes": 5,
+      "line_count": 1,
+      "excerpts": [
+        {
+          "start": 1,
+          "end": 1,
+          "text": "1.0.1"
+        }
+      ]
+    },
+    "vendor/symfony/util/sfCore.class.php": {
+      "sha256": "09f1cdbd38be0e97939bc56ac4ae7895ccf9c7622098afeb46f40adbef6def46",
+      "bytes": 7319,
+      "line_count": 270,
+      "excerpts": [
+        {
+          "start": 1,
+          "end": 17,
+          "text": "<?php\n\n/*\n * This file is part of the symfony package.\n * (c) 2004-2006 Fabien Potencier <fabien.potencier@symfony-project.com>\n *\n * For the full copyright and license information, please view the LICENSE\n * file that was distributed with this source code.\n */\n\n/**\n * core symfony class.\n *\n * @package    symfony\n * @author     Fabien Potencier <fabien.potencier@symfony-project.com>\n * @version    SVN: $Id: sfCore.class.php 3128 2007-01-03 08:01:46Z fabien $\n */"
+        }
+      ]
+    },
+    "vendor/symfony/vendor/phpmailer/class.phpmailer.php": {
+      "sha256": "1fb9052796ab4941a9490f6369f1fabc45ddd52bcc77a395bd8dc20531c47157",
+      "bytes": 46240,
+      "line_count": 1520,
+      "excerpts": [
+        {
+          "start": 1,
+          "end": 27,
+          "text": "<?php\n////////////////////////////////////////////////////\n// PHPMailer - PHP email class\n//\n// Class for sending email using either\n// sendmail, PHP mail(), or SMTP.  Methods are\n// based upon the standard AspEmail(tm) classes.\n//\n// Copyright (C) 2001 - 2003  Brent R. Matzelle\n//\n// License: LGPL, see LICENSE\n////////////////////////////////////////////////////\n\n/**\n * PHPMailer - PHP email transport class\n * @package PHPMailer\n * @author Brent R. Matzelle\n * @copyright 2001 - 2003 Brent R. Matzelle\n */\nclass PHPMailer\n{\n    /////////////////////////////////////////////////\n    // PUBLIC VARIABLES\n    /////////////////////////////////////////////////\n\n    /**\n     * Email priority (1 = High, 3 = Normal, 5 = low)."
+        },
+        {
+          "start": 123,
+          "end": 130,
+          "text": "\n    /**\n     *  Holds PHPMailer version.\n     *  @var string\n     */\n    public $Version           = \"1.73\";\n\n    /**"
+        }
+      ]
+    },
+    "vendor/symfony/vendor/pake/pakeApp.class.php": {
+      "sha256": "72f538165dd3226b46c35ddac7700c0f3a6046e74f4646b74ca5bd541d59b120",
+      "bytes": 11526,
+      "line_count": 426,
+      "excerpts": [
+        {
+          "start": 1,
+          "end": 27,
+          "text": "<?php\n\n/**\n * @package    pake\n * @author     Fabien Potencier <fabien.potencier@symfony-project.com>\n * @copyright  2004-2005 Fabien Potencier <fabien.potencier@symfony-project.com>\n * @license    see the LICENSE file included in the distribution\n * @version    SVN: $Id: pakeApp.class.php 2574 2006-10-31 06:44:28Z fabien $\n */\n\n/**\n *\n * main pake class.\n *\n * This class is a singleton.\n *\n * @package    pake\n * @author     Fabien Potencier <fabien.potencier@symfony-project.com>\n * @copyright  2004-2005 Fabien Potencier <fabien.potencier@symfony-project.com>\n * @license    see the LICENSE file included in the distribution\n * @version    SVN: $Id: pakeApp.class.php 2574 2006-10-31 06:44:28Z fabien $\n */\nclass pakeApp\n{\n  const VERSION = '1.1.DEV';\n\n  private static $MAX_LINE_SIZE = 65;"
+        }
+      ]
+    },
+    "vendor/symfony/vendor/propel-generator/LICENSE": {
+      "sha256": "becceda34f7f6668a97f8abcbbef79e92f3935f5036e23c7602a76f5f993ebfc",
+      "bytes": 26469,
+      "line_count": 506,
+      "excerpts": [
+        {
+          "start": 1,
+          "end": 8,
+          "text": "\tGNU LESSER GENERAL PUBLIC LICENSE\n\tVersion 2.1, February 1999\n\n\tCopyright (C) 1991, 1999 Free Software Foundation, Inc.\n\t59 Temple Place, Suite 330, Boston, MA  02111-1307  USA\n\tEveryone is permitted to copy and distribute verbatim copies\n\tof this license document, but changing it is not allowed.\n"
+        }
+      ]
+    },
+    "vendor/symfony-data/bin/symfony.php": {
+      "sha256": "f934f3d5d56a5b5430bf37a6741f2a782ff377f858d0327e4056c6d2dc45234a",
+      "bytes": 4267,
+      "line_count": 173,
+      "excerpts": [
+        {
+          "start": 1,
+          "end": 9,
+          "text": "<?php\n\n/*\n * This file is part of the symfony package.\n * (c) 2004-2006 Fabien Potencier <fabien.potencier@symfony-project.com>\n * \n * For the full copyright and license information, please view the LICENSE\n * file that was distributed with this source code.\n */"
+        }
+      ]
+    },
+    "vendor/tfpdf/tfpdf.php": {
+      "sha256": "e2d0a838ad04b35a6eb8ad774f87b89fb6a70361f5999110565f0b515401af09",
+      "bytes": 60320,
+      "line_count": 2302,
+      "excerpts": [
+        {
+          "start": 1,
+          "end": 12,
+          "text": "<?php\n/*******************************************************************************\n* tFPDF (based on FPDF 1.7)                                                    *\n*                                                                              *\n* Version:  1.25                                                               *\n* Date:     2018-03-19                                                         *\n* Author:   Ian Back <ianb@bpm1.com>                                           *\n* License:  LGPL                                                               *\n*******************************************************************************/\n\ndefine('tFPDF_VERSION','1.25');\n"
+        }
+      ]
+    },
+    "vendor/tfpdf/font/unifont/LICENSE_OFL.txt": {
+      "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2",
+      "bytes": 4301,
+      "line_count": 92,
+      "excerpts": [
+        {
+          "start": 1,
+          "end": 12,
+          "text": "This Font Software is licensed under the SIL Open Font License,\nVersion 1.1.\n\nThis license is copied below, and is also available with a FAQ at:\nhttp://scripts.sil.org/OFL\n\n-----------------------------------------------------------\nSIL OPEN FONT LICENSE Version 1.1 - 26 February 2007\n-----------------------------------------------------------\n\nPREAMBLE\nThe goals of the Open Font License (OFL) are to stimulate worldwide"
+        }
+      ]
+    },
+    "vendor/tfpdf/font/unifont/DejaVu_LICENSE.txt": {
+      "sha256": "d75938dec098f06f0ac3c00853065d94f020be1c3c62ef1dc2975ba15b4d9b0e",
+      "bytes": 4816,
+      "line_count": 99,
+      "excerpts": [
+        {
+          "start": 1,
+          "end": 18,
+          "text": "Fonts are (c) Bitstream (see below). DejaVu changes are in public domain.\nGlyphs imported from Arev fonts are (c) Tavmjong Bah (see below)\n\nBitstream Vera Fonts Copyright\n------------------------------\n\nCopyright (c) 2003 by Bitstream, Inc. All Rights Reserved. Bitstream Vera is\na trademark of Bitstream, Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof the fonts accompanying this license (\"Fonts\") and associated\ndocumentation files (the \"Font Software\"), to reproduce and distribute the\nFont Software, including without limitation the rights to use, copy, merge,\npublish, distribute, and/or sell copies of the Font Software, and to permit\npersons to whom the Font Software is furnished to do so, subject to the\nfollowing conditions:\n\nThe above copyright and trademark notices and this permission notice shall"
+        }
+      ]
+    },
+    "vendor/webex/xml/WebexXmlClient.class.php": {
+      "sha256": "6192b2fc0871e22b6c1689102b5f4809fbee7dd3bb6aa0ad4701593f2f12141e",
+      "bytes": 2877,
+      "line_count": 109,
+      "excerpts": [
+        {
+          "start": 1,
+          "end": 14,
+          "text": "<?php\nrequire_once(__DIR__ . '/WebexXmlSecurityContext.class.php');\nrequire_once(__DIR__ . '/WebexXmlResponse.class.php');\nrequire_once(__DIR__ . '/WebexXmlRequest.class.php');\nrequire_once(__DIR__ . '/WebexXmlException.class.php');\n\nclass WebexXmlClient\n{\n\t/**\n\t * URL to webex XML end point\n\t * @var string\n\t */\n\tprotected $url;\n\t"
+        }
+      ]
+    }
+  },
+  "composer_metadata": [
+    {
+      "name": "amphp/amp",
+      "version": "v1.2.2",
+      "license": [
+        "MIT"
+      ],
+      "source": {
+        "type": "git",
+        "url": "https://github.com/amphp/amp.git",
+        "reference": "4f2161da5f68f274f116985635aea63b5c0f54d2"
+      },
+      "install_path": "../amphp/amp",
+      "metadata_pointer": "/packages/0",
+      "files_at_expected_name_prefix": 0,
+      "source_revision_bytes_verified": false
+    },
+    {
+      "name": "beberlei/assert",
+      "version": "v2.9.9",
+      "license": [
+        "BSD-2-Clause"
+      ],
+      "source": {
+        "type": "git",
+        "url": "https://github.com/beberlei/assert.git",
+        "reference": "124317de301b7c91d5fce34c98bba2c6925bec95"
+      },
+      "install_path": "../beberlei/assert",
+      "metadata_pointer": "/packages/1",
+      "files_at_expected_name_prefix": 0,
+      "source_revision_bytes_verified": false
+    },
+    {
+      "name": "flix-tech/confluent-schema-registry-api",
+      "version": "4.0.0",
+      "license": [
+        "MIT"
+      ],
+      "source": {
+        "type": "git",
+        "url": "https://github.com/flix-tech/schema-registry-php-client.git",
+        "reference": "d014797d332107d311c3afac1a6dc6f30988d032"
+      },
+      "install_path": "../flix-tech/confluent-schema-registry-api",
+      "metadata_pointer": "/packages/2",
+      "files_at_expected_name_prefix": 43,
+      "source_revision_bytes_verified": false
+    },
+    {
+      "name": "guzzlehttp/guzzle",
+      "version": "6.5.5",
+      "license": [
+        "MIT"
+      ],
+      "source": {
+        "type": "git",
+        "url": "https://github.com/guzzle/guzzle.git",
+        "reference": "9d4290de1cfd701f38099ef7e183b64b4b7b0c5e"
+      },
+      "install_path": "../guzzlehttp/guzzle",
+      "metadata_pointer": "/packages/3",
+      "files_at_expected_name_prefix": 0,
+      "source_revision_bytes_verified": false
+    },
+    {
+      "name": "guzzlehttp/promises",
+      "version": "1.5.1",
+      "license": [
+        "MIT"
+      ],
+      "source": {
+        "type": "git",
+        "url": "https://github.com/guzzle/promises.git",
+        "reference": "fe752aedc9fd8fcca3fe7ad05d419d32998a06da"
+      },
+      "install_path": "../guzzlehttp/promises",
+      "metadata_pointer": "/packages/4",
+      "files_at_expected_name_prefix": 0,
+      "source_revision_bytes_verified": false
+    },
+    {
+      "name": "guzzlehttp/psr7",
+      "version": "1.8.5",
+      "license": [
+        "MIT"
+      ],
+      "source": {
+        "type": "git",
+        "url": "https://github.com/guzzle/psr7.git",
+        "reference": "337e3ad8e5716c15f9657bd214d16cc5e69df268"
+      },
+      "install_path": "../guzzlehttp/psr7",
+      "metadata_pointer": "/packages/5",
+      "files_at_expected_name_prefix": 0,
+      "source_revision_bytes_verified": false
+    },
+    {
+      "name": "nmred/kafka-php",
+      "version": "v0.2.0.8",
+      "license": [
+        "BSD-3-Clause"
+      ],
+      "source": {
+        "type": "git",
+        "url": "https://github.com/weiboad/kafka-php.git",
+        "reference": "d5b395aeb9d069dce49fc1dceff0a6f45750d981"
+      },
+      "install_path": "../nmred/kafka-php",
+      "metadata_pointer": "/packages/6",
+      "files_at_expected_name_prefix": 0,
+      "source_revision_bytes_verified": false
+    },
+    {
+      "name": "psr/http-message",
+      "version": "1.0.1",
+      "license": [
+        "MIT"
+      ],
+      "source": {
+        "type": "git",
+        "url": "https://github.com/php-fig/http-message.git",
+        "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363"
+      },
+      "install_path": "../psr/http-message",
+      "metadata_pointer": "/packages/7",
+      "files_at_expected_name_prefix": 0,
+      "source_revision_bytes_verified": false
+    },
+    {
+      "name": "psr/log",
+      "version": "1.0.2",
+      "license": [
+        "MIT"
+      ],
+      "source": {
+        "type": "git",
+        "url": "https://github.com/php-fig/log.git",
+        "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d"
+      },
+      "install_path": "../psr/log",
+      "metadata_pointer": "/packages/8",
+      "files_at_expected_name_prefix": 0,
+      "source_revision_bytes_verified": false
+    },
+    {
+      "name": "ralouphie/getallheaders",
+      "version": "3.0.3",
+      "license": [
+        "MIT"
+      ],
+      "source": {
+        "type": "git",
+        "url": "https://github.com/ralouphie/getallheaders.git",
+        "reference": "120b605dfeb996808c31b6477290a714d356e822"
+      },
+      "install_path": "../ralouphie/getallheaders",
+      "metadata_pointer": "/packages/9",
+      "files_at_expected_name_prefix": 0,
+      "source_revision_bytes_verified": false
+    },
+    {
+      "name": "rg/avro-php",
+      "version": "1.8.0",
+      "license": [
+        "Apache-2.0"
+      ],
+      "source": {
+        "type": "git",
+        "url": "https://github.com/researchgate/avro-php.git",
+        "reference": "05e51785d14188a471c604b82ba2149f7debc5e0"
+      },
+      "install_path": "../rg/avro-php",
+      "metadata_pointer": "/packages/10",
+      "files_at_expected_name_prefix": 0,
+      "source_revision_bytes_verified": false
+    },
+    {
+      "name": "symfony/polyfill-intl-idn",
+      "version": "v1.25.0",
+      "license": [
+        "MIT"
+      ],
+      "source": {
+        "type": "git",
+        "url": "https://github.com/symfony/polyfill-intl-idn.git",
+        "reference": "749045c69efb97c70d25d7463abba812e91f3a44"
+      },
+      "install_path": "../symfony/polyfill-intl-idn",
+      "metadata_pointer": "/packages/11",
+      "files_at_expected_name_prefix": 0,
+      "source_revision_bytes_verified": false
+    },
+    {
+      "name": "symfony/polyfill-intl-normalizer",
+      "version": "v1.25.0",
+      "license": [
+        "MIT"
+      ],
+      "source": {
+        "type": "git",
+        "url": "https://github.com/symfony/polyfill-intl-normalizer.git",
+        "reference": "8590a5f561694770bdcd3f9b5c69dde6945028e8"
+      },
+      "install_path": "../symfony/polyfill-intl-normalizer",
+      "metadata_pointer": "/packages/12",
+      "files_at_expected_name_prefix": 0,
+      "source_revision_bytes_verified": false
+    },
+    {
+      "name": "symfony/polyfill-php72",
+      "version": "v1.25.0",
+      "license": [
+        "MIT"
+      ],
+      "source": {
+        "type": "git",
+        "url": "https://github.com/symfony/polyfill-php72.git",
+        "reference": "9a142215a36a3888e30d0a9eeea9766764e96976"
+      },
+      "install_path": "../symfony/polyfill-php72",
+      "metadata_pointer": "/packages/13",
+      "files_at_expected_name_prefix": 0,
+      "source_revision_bytes_verified": false
+    },
+    {
+      "name": "wikimedia/avro",
+      "version": "v1.9.0",
+      "license": [
+        "Apache-2.0"
+      ],
+      "source": {
+        "type": "git",
+        "url": "https://github.com/wikimedia/avro-php.git",
+        "reference": "b2e0c9d750da03d95ba979215397f62a6121ddea"
+      },
+      "install_path": "../wikimedia/avro",
+      "metadata_pointer": "/packages/14",
+      "files_at_expected_name_prefix": 12,
+      "source_revision_bytes_verified": false
+    }
+  ],
+  "summary": {
+    "directories": 20,
+    "version_declarations": 12,
+    "license_evidence_rows": 14,
+    "whole_directory_attributions_complete": 0,
+    "composer_declared_packages": 15,
+    "composer_name_prefix_present": 2,
+    "vendor_files": 4999
+  },
+  "method": "ZIP reads only. Literal metadata inventory is not structural code discovery; no graph-based conclusion. No external attribution relied on. SHA256 identities do not authenticate upstream revisions."
+}

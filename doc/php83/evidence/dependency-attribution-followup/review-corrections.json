@@ -1,0 +1,33 @@
+{
+  "review": "claude-review.json",
+  "review_exit": 0,
+  "reviewed_inputs_unchanged_before_correction": true,
+  "primary_report_and_builder_unchanged": true,
+  "D1": {
+    "directory_manifest_files": 4997,
+    "vendor_root_files_not_in_those_manifests": [
+      {
+        "path": "vendor/.project",
+        "sha256": "e13546844bcc73c9025729831fc4905db3b0e72476c8b8e24e85a027aa2a23fb",
+        "bytes": 494
+      },
+      {
+        "path": "vendor/.buildpath",
+        "sha256": "f128258684c5120093788d2e65d44c6fc46a9642a2a2877f6bdf9e25241a8c0b",
+        "bytes": 169
+      }
+    ],
+    "total_vendor_files": 4999
+  },
+  "D2": {
+    "path": "vendor/google-api-php-client/src/io/Google_HttpRequest.php",
+    "sha256": "e17064f3bab019b08e55a57ceb17cb9a07547b430e6eac81669b9c79f8f144a6",
+    "bytes": 7776,
+    "line": 27,
+    "text": "  const USER_AGENT_SUFFIX = \"google-api-php-client/0.6.5\";",
+    "classification": "User-agent suffix literal 0.6.5, not verified whole-release version; version remains unresolved."
+  },
+  "D3": "Use separately scoped nested Propel license instead of unrelated.",
+  "task_mapping_correction": "5.4 is T0-04 full dependency/license/entrypoint/static inventory, not solely distribution review.",
+  "validation": "Author direct ZIP read after terminal independent review; no second independent correction review claimed."
+}

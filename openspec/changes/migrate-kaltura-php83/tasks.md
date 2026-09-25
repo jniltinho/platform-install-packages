@@ -300,3 +300,12 @@ fatal. Runtime/source identities agree before/after; Cursor independently runs
 checks/review is retained). API diagnostics remain 18 groups / 503 events.
 See `doc/php83/exp11-integration.md`; no full application/detailed-case or release
 gate is closed, and byte-replay corpora are not full behavioral coverage.
+
+T0-04/5.4 and original1.1 attribution follow-up records 12 scoped version
+declarations and 14 directory rows with some license evidence across the 20
+historically unresolved vendor directories. Claude independently rebuilds the
+report and verifies 39 source/excerpt identities and 20 manifests; additive
+corrections retain unmanifested vendor-root files and metadata-only packages.
+See `doc/php83/dependency-attribution-followup.md`. Zero entire-directory license
+closures are claimed; package overlays, transitive scopes and missing attribution
+remain open. The historical unknown ledger is not relabeled complete.

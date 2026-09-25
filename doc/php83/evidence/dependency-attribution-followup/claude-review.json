@@ -1,0 +1,113 @@
+{
+  "schema": 1,
+  "case": "dependency-attribution-followup independent local review/rebuild",
+  "executor": "Claude Code CLI (claude-opus-5-5), local only",
+  "reviewer": "Claude (independent of primary author)",
+  "environment": "local workstation, Python 3.12.3; no VM/network/git/PHP/package install",
+  "inputs_sha256": {
+    "/tmp/kaltura-php83-audit/Rigel-18.20.0.zip": "58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28",
+    "doc/php83/evidence/dependency-attribution-followup/build.py": "25eff8fad28a1cde1034aa3d202bb962205caa291484e56449049249fc0833ba",
+    "doc/php83/evidence/dependency-attribution-followup/primary.json": "232ad945d54ef3bfda5a8c7777be146bf2641b0551143b166e84a4c50b843ec2",
+    "doc/php83/dependency-attribution-followup.md": "8779b05943bb01a4fa266024ab4395a2af02516fb09bbf7386696c7cb3d01f60"
+  },
+  "inputs_match_review_inputs_json": true,
+  "inputs_unchanged_after_review": true,
+  "checks": [
+    {
+      "id": "rebuild",
+      "command": "python3 doc/php83/evidence/dependency-attribution-followup/build.py --output doc/php83/evidence/dependency-attribution-followup/claude-rebuild.json",
+      "exit": 0,
+      "stderr_bytes": 0,
+      "stdout": "{\"directories\": 20, \"version_declarations\": 12, \"license_evidence_rows\": 14, \"whole_directory_attributions_complete\": 0, \"composer_declared_packages\": 15, \"composer_name_prefix_present\": 2, \"vendor_files\": 4999}"
+    },
+    {
+      "id": "cmp",
+      "command": "cmp doc/php83/evidence/dependency-attribution-followup/primary.json doc/php83/evidence/dependency-attribution-followup/claude-rebuild.json",
+      "exit": 0,
+      "result": "byte-identical (sha256 232ad945...43ec2)"
+    },
+    {
+      "id": "independent_verifier",
+      "command": "python3 - (inline zipfile verifier, not build.py)",
+      "exit": 0,
+      "result": {
+        "vendor_members": 4999,
+        "duplicate_names": 0,
+        "cited_sources": 39,
+        "source_hash_bytes_linecount_excerpt_mismatches": 0,
+        "row_manifests_recomputed": 20,
+        "row_manifest_mismatches": 0,
+        "files_in_row_manifests": 4997,
+        "vendor_files_in_no_row_manifest": [
+          "vendor/.project",
+          "vendor/.buildpath"
+        ],
+        "version_rows": 12,
+        "license_rows": 14,
+        "rows_marked_complete": 0,
+        "composer_packages": 15,
+        "composer_name_prefixes_with_files": {
+          "flix-tech/confluent-schema-registry-api": 43,
+          "wikimedia/avro": 12
+        },
+        "avro_top_dirs": [
+          "composer",
+          "flix-tech",
+          "wikimedia"
+        ]
+      }
+    },
+    {
+      "id": "archive_post_hash",
+      "command": "sha256sum /tmp/kaltura-php83-audit/Rigel-18.20.0.zip",
+      "exit": 0,
+      "result": "unchanged"
+    }
+  ],
+  "label_checks": {
+    "google_1.1.2_LIBVER": "CONFIRMED: src/Google/Client.php line 28 const LIBVER = \"1.1.5\"; only LIBVER in both Google trees",
+    "facebook_non_MIT": "CONFIRMED: Facebook.php L1-23 grants license 'for use in connection with the web services and APIs provided by Facebook'; VERSION 5.0.0 (L60), DEFAULT_GRAPH_VERSION v7.0 (L65)",
+    "lgpl_ambiguity": "CONFIRMED: Propel.php L18 'licensed under the LGPL' and tfpdf.php L8 'License: LGPL' carry no version; htmlpurifier and nusoap headers say 2.1 or later; PHPMailer header unversioned + bundled LGPL 2.1 text",
+    "symfony_license_missing": "CONFIRMED: vendor/symfony/ top level has only VERSION and symfony.php; sfCore references a LICENSE not present; only nested license file is vendor/symfony/vendor/propel-generator/LICENSE (LGPL 2.1); vendor/symfony-data has no license file",
+    "composer_15_vs_2": "CONFIRMED: installed.json declares 15 packages; only flix-tech 4.0.0 (d014797d...) MIT and wikimedia/avro v1.9.0 (b2e0c9d7...) Apache-2.0 prefixes contain files",
+    "other_labels": "ZendFramework 1.9.6/New BSD three-condition, AWS 2.7.21/Apache-2.0, FPDF 1.7 permission text, htmlpurifier 4.6.0, nusoap 0.9.5, propel 1.4.2, tfpdf 1.25, PHPMailer 5.2.1, MaxMind v2.4.5, IP2Location GPL June 1991 database notice: excerpts match labels"
+  },
+  "discrepancies": [
+    {
+      "id": "D1",
+      "severity": "medium",
+      "location": "doc/php83/dependency-attribution-followup.md lines 14-15",
+      "claim": "'a canonical path/hash/size manifest hash. All 4,999 files under vendor/ contribute to those identity manifests.'",
+      "evidence": "primary.json has only 20 per-directory file_identity_manifest_sha256 values (no whole-vendor manifest); their file counts sum to 4997. vendor/.project and vendor/.buildpath are counted in summary.vendor_files=4999 but belong to no manifest.",
+      "correction": "State 4,997 files in 20 per-directory manifests; 2 vendor-root IDE files are counted but unmanifested (or add a whole-vendor manifest)."
+    },
+    {
+      "id": "D2",
+      "severity": "low",
+      "location": "doc lines 50, 80; primary row google-api-php-client",
+      "claim": "Legacy Google client version 'Unresolved' with no candidate cited.",
+      "evidence": "vendor/google-api-php-client/src/io/Google_HttpRequest.php (sha256 e17064f3bab019b08e55a57ceb17cb9a07547b430e6eac81669b9c79f8f144a6, 7776 bytes) line 27: const USER_AGENT_SUFFIX = \"google-api-php-client/0.6.5\";",
+      "correction": "Cite as an unadjudicated in-tree user-agent version literal (same mechanism as the 1.1.2 tree's LIBVER); do not silently leave it out. Whether it is the release version remains unproven."
+    },
+    {
+      "id": "D3",
+      "severity": "low",
+      "location": "doc lines 35-36",
+      "claim": "'unrelated nested Propel generator license'",
+      "evidence": "propel-generator is bundled inside vendor/symfony/vendor/; it is not unrelated, only not proven applicable to Symfony's own files.",
+      "correction": "Replace 'unrelated' with 'nested, separately scoped'."
+    }
+  ],
+  "minor_notes": [
+    "build.py silently clips requested excerpt ranges past EOF (ZendFramework LICENSE.txt 1-32 -> 1-27; aws EventDispatcher LICENSE 1-20 -> 1-19); recorded end values are correct, no claim affected.",
+    "MaxMind v2.4.5 is the GeoIP2 WebService\\Client::VERSION constant; the doc's 'GeoIP2 v2.4.5' is a reasonable but not package-manifest-level label.",
+    "Doc 'Reproduce' block writes to /tmp; this review wrote to a new in-repo claude-rebuild.json instead."
+  ],
+  "not_disputed": "All 20 rows remain whole_directory_attribution_complete=false as intended; no waiver granted.",
+  "limitations": [
+    "No upstream sources consulted; no license/legal conclusion.",
+    "Reviewer used the same builder for rebuild; independence comes from the separate inline verifier and manual excerpt reading.",
+    "Scan for missed version/license evidence was heuristic (filename and regex), not exhaustive.",
+    "Package-only overlays, non-vendor dependencies and executability not in scope."
+  ]
+}
