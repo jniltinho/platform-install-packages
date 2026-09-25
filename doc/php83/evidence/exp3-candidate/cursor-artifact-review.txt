@@ -1,0 +1,34 @@
+Vou executar o verificador exato, checar os SHA256 pedidos e revisar o delta sem builds/deploy.Verificador passou (exit 0). Lendo o JSON gerado para fechar o relatório do delta.## Verificação exp3 — PASS (exit 0)
+
+**Executor:** Cursor Agent (esta sessão) · **Escopo:** só ZIP/manifest/verificador · **Sem** build, VM, deploy ou execução PHP do ZIP.
+
+### Comando e exit
+```text
+python3 tools/php83/verify-experimental-zip.py \
+  /tmp/kaltura-php83-audit/Rigel-18.20.0.zip \
+  .../exp3/Rigel-18.20.0-php83-experimental.exp3.zip \
+  .../exp3-repeat/Rigel-18.20.0-php83-experimental.exp3.zip \
+  doc/php83/evidence/exp3-candidate/manifest.json \
+  doc/php83/evidence/exp3-candidate/cursor-verification.json
+```
+**Exit:** `0` · stdout: `1c64edb5ff34308cedfcea3c7879187c21417b6bd1a8e083d70d580bedc985e3`  
+Escrita permitida: só `cursor-verification.json`.
+
+### Hashes (independentes)
+| Artefato | SHA256 | Esperado |
+|---|---|---|
+| Original `Rigel-18.20.0.zip` | `58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28` | igual |
+| Exp2 retido | `99233ac6638f02072b3394159340edd1e2388b243bafadca3fe33b6bbafa97a0` | igual |
+| Exp3 / exp3-repeat | `1c64edb5ff34308cedfcea3c7879187c21417b6bd1a8e083d70d580bedc985e3` | idênticos |
+| Manifest (raiz fixa) | `2618cd21866659127be23f198a7f522c86a82beea6feb4919f0acb4287e9cd37` | — |
+| Verifier | `211a0c187a53e4444fd0b5bfd0be972544ff66f21e7ce2d78c1c6aa2206ee6bc` | — |
+| Builder | `055443730325459ff2f4e5ad093542e3aa544f6d82af8b21174027f5cdbf523e` | — |
+
+### Delta exato
+- **6 fontes alteradas:** `Services_JSON.class.php`, `dateUtils.class.php`, `KalturaPDO.php`, `KalturaDocCommentParser.php`, Zend `Decoder.php`, Zend `Encoder.php`
+- **8 metadados adicionados:** 6 patches + `manifest.json` + `README.txt` sob `.php83-experimental/`
+- **18027** entradas originais retidas (`missing_original_entries: []`); demais bytes originais idênticos; comentários de arquivo/entrada preservados; dois builds byte-idênticos
+
+### Limitações (sem overclaim)
+- Isto **não** prova execução PHP real do ZIP, compatibilidade 8.3 completa, nem aceite de release.
+- Evidência = identidade de ZIP/manifest/patches apenas; gates de runtime, pacote, CI, `.20` e produção permanecem abertos (como no manifesto).

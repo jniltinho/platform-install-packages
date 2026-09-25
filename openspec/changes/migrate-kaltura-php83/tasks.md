@@ -116,3 +116,9 @@ requests under an explicit minimal INI on PHP 7.4/8.3; disabled-cache controls
 and test-only fetch/store/delete alias persistence/version/delete/replacement
 rows passed with independent Claude/Cursor reruns. This is not full bootstrap,
 reflection, concurrency/restart or an approved adapter. See `doc/php83/apcu-web.md`.
+
+For T1-01/5.7 and original 1.6, a separately reviewed six-patch exp3 experiment
+selects the existing JSON repairs plus KalturaPDO query, date ternary and parser
+property repairs. The original exp2 selection/artifact is preserved. Actual ZIP
+construction and regression on its extracted bytes are tracked separately in
+`doc/php83/exp3-candidate.md`; no full-case completion is inferred from selection.

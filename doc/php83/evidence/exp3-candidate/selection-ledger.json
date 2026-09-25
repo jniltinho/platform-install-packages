@@ -1,0 +1,160 @@
+{
+  "scope": "Subsequent exp3 experimental selection; prior frozen batch2 ledger is preserved",
+  "promotion": false,
+  "active_manifest": "patches/php83/manifest.json (exp2 unchanged)",
+  "decisions": [
+    {
+      "patch": "patches/php83/0002-Services_JSON.class.patch",
+      "patch_sha256": "126eaa808a590c753f2a06d91de5e5b78da7a45ac02f50f172c84e825cf13df0",
+      "decision": "selected-for-exp3-experiment-only",
+      "reason": "Six-patch experimental API web artifact; prior bounded repair evidence plus independent selection review. Full runtime/package/release acceptance still open.",
+      "evidence": "doc/php83/exp3-candidate.md",
+      "original_metadata_status": "experimental; not full PHP 8.3 compatibility"
+    },
+    {
+      "patch": "patches/php83/0003-Encoder.patch",
+      "patch_sha256": "d39935bc38dbe62d54d02e065a801810acc5635e24cc28de7515556092b2f490",
+      "decision": "selected-for-exp3-experiment-only",
+      "reason": "Six-patch experimental API web artifact; prior bounded repair evidence plus independent selection review. Full runtime/package/release acceptance still open.",
+      "evidence": "doc/php83/exp3-candidate.md",
+      "original_metadata_status": "experimental; not full PHP 8.3 compatibility"
+    },
+    {
+      "patch": "patches/php83/0004-Decoder.patch",
+      "patch_sha256": "bbd82723f3232be8d0d50827e0d4c4ffb8b37ffe16afb11b1151b9e4c2beac93",
+      "decision": "selected-for-exp3-experiment-only",
+      "reason": "Six-patch experimental API web artifact; prior bounded repair evidence plus independent selection review. Full runtime/package/release acceptance still open.",
+      "evidence": "doc/php83/exp3-candidate.md",
+      "original_metadata_status": "experimental; not full PHP 8.3 compatibility"
+    },
+    {
+      "patch": "patches/php83/held/DebugPDO-query-v2.patch",
+      "patch_sha256": "ed9d74b49040b3c73438ecfb2abd05238aee65307d32ef8a41fb8982319f4f43",
+      "decision": "deferred",
+      "reason": "Standalone alternatives, never stacked. v1/v2 forwarding defects and v3 numeric/API/diagnostic acceptance unresolved; none promoted.",
+      "evidence": "doc/php83/debug-pdo-experiment.md",
+      "original_metadata_status": "held: forwarding variant; not in active manifest; standalone alternative to v1"
+    },
+    {
+      "patch": "patches/php83/held/DebugPDO-query-v3.patch",
+      "patch_sha256": "f966cf320b74717d134b4dd8710e5deafcbd77f890775cf643868e4cb4ab541e",
+      "decision": "deferred",
+      "reason": "Standalone alternatives, never stacked. v1/v2 forwarding defects and v3 numeric/API/diagnostic acceptance unresolved; none promoted.",
+      "evidence": "doc/php83/debug-pdo-experiment.md",
+      "original_metadata_status": "held: variadic forwarding alternative against original; not stacked on v1/v2"
+    },
+    {
+      "patch": "patches/php83/held/DebugPDO-query.patch",
+      "patch_sha256": "a9cbd8be059f3d3e1871cbd25b8f4b38a94e307224ddaa2db55e12d7baf36e72",
+      "decision": "deferred",
+      "reason": "Standalone alternatives, never stacked. v1/v2 forwarding defects and v3 numeric/API/diagnostic acceptance unresolved; none promoted.",
+      "evidence": "doc/php83/debug-pdo-experiment.md",
+      "original_metadata_status": "held: PHP8.3 strict parity fails; native SQLite control reproduces integer/string difference; named-argument forwarding needs testing"
+    },
+    {
+      "patch": "patches/php83/held/KalturaPDO-query.patch",
+      "patch_sha256": "51403c941fa0197b9f484c5acfa443a8a8435fc69098712df39a6e49471a43fe",
+      "decision": "selected-for-exp3-experiment-only",
+      "reason": "Six-patch experimental API web artifact; prior bounded repair evidence plus independent selection review. Full runtime/package/release acceptance still open.",
+      "evidence": "doc/php83/exp3-candidate.md",
+      "original_metadata_status": "held; API/database integration experiment"
+    },
+    {
+      "patch": "patches/php83/held/Registry-cast.patch",
+      "patch_sha256": "12809d136010cfcb4deb70b5ef9d63fea5da9571d057c957c6396ce5861b5415",
+      "decision": "deferred",
+      "reason": "ArrayObject property-write flag 2/3 differences remain unresolved; not in active manifest.",
+      "evidence": "doc/php83/registry-investigation.md",
+      "original_metadata_status": "unknown"
+    },
+    {
+      "patch": "patches/php83/held/Registry-properties.patch",
+      "patch_sha256": "d771eaae74852c6a7a32f24b3f9913a38ef430200da4517ebfdf383248611f0b",
+      "decision": "rejected",
+      "reason": "Changes original 7.4 behavior and fails 8.3 parity; retained only for reproduction.",
+      "evidence": "doc/php83/registry-investigation.md",
+      "original_metadata_status": "rejected: changes PHP7.4 baseline and does not repair PHP8.3 parity; evidence/registry-investigation/rejected-properties.json"
+    },
+    {
+      "patch": "patches/php83/held/core_compile.yml.patch",
+      "patch_sha256": "e2c0d3c8976cda0ca1f7abb84093e5fad54a28c97ea3f09836050c5469294355",
+      "decision": "deferred",
+      "reason": "Symfony isolated bootstrap/ordering evidence only; no full service/application acceptance.",
+      "evidence": "doc/php83/symfony-bootstrap.md",
+      "original_metadata_status": "held; parent-before-child compile ordering"
+    },
+    {
+      "patch": "patches/php83/held/dateUtils-ternary.patch",
+      "patch_sha256": "88050ed941434ae499c6a3b2a24dd24f4443acbdb7ea49d0617e2d4b9c1b1093",
+      "decision": "selected-for-exp3-experiment-only",
+      "reason": "Six-patch experimental API web artifact; prior bounded repair evidence plus independent selection review. Full runtime/package/release acceptance still open.",
+      "evidence": "doc/php83/exp3-candidate.md",
+      "original_metadata_status": "held; session integration experiment"
+    },
+    {
+      "patch": "patches/php83/held/doc-comment-property.patch",
+      "patch_sha256": "22887d8226fd003985f6773d2a2f82df26e66792ef4a92a0f42ab0ef0551c8f0",
+      "decision": "selected-for-exp3-experiment-only",
+      "reason": "Six-patch experimental API web artifact; prior bounded repair evidence plus independent selection review. Full runtime/package/release acceptance still open.",
+      "evidence": "doc/php83/exp3-candidate.md",
+      "original_metadata_status": "held; explicit existing public property declaration"
+    },
+    {
+      "patch": "patches/php83/held/sfRouting.class.php.patch",
+      "patch_sha256": "8f5188f7828c4a5785bdf8753b8aef9643d7e15227dcd7c57b7290dc291ce8db",
+      "decision": "deferred",
+      "reason": "Symfony isolated bootstrap/ordering evidence only; no full service/application acceptance.",
+      "evidence": "doc/php83/symfony-bootstrap.md",
+      "original_metadata_status": "held: focused regressions and bootstrap investigation, not in active ZIP"
+    },
+    {
+      "patch": "patches/php83/held/UrlHelper.php.patch",
+      "patch_sha256": "7451da440ef7d468ebd90216d24bb127eb27ff0d314d63fd33fe9b91670fb7e7",
+      "decision": "deferred",
+      "reason": "Symfony isolated bootstrap/ordering evidence only; no full service/application acceptance.",
+      "evidence": "doc/php83/symfony-bootstrap.md",
+      "original_metadata_status": "held: focused regressions and bootstrap investigation, not in active ZIP"
+    },
+    {
+      "patch": "patches/php83/held/sfCore.class.php.patch",
+      "patch_sha256": "7a5b4cb0453336d6ad71f5e107df6d8d68c93d4991d75480c69636ee39e85db7",
+      "decision": "deferred",
+      "reason": "Symfony isolated bootstrap/ordering evidence only; no full service/application acceptance.",
+      "evidence": "doc/php83/symfony-bootstrap.md",
+      "original_metadata_status": "held: focused regressions and bootstrap investigation, not in active ZIP"
+    },
+    {
+      "patch": "patches/php83/held/sfFinder.class.php.patch",
+      "patch_sha256": "3a328004aee479b921880c0eb549e5928975efc4048c199dd425e0388f1dfaca",
+      "decision": "deferred",
+      "reason": "Symfony isolated bootstrap/ordering evidence only; no full service/application acceptance.",
+      "evidence": "doc/php83/symfony-bootstrap.md",
+      "original_metadata_status": "held: focused regressions and bootstrap investigation, not in active ZIP"
+    },
+    {
+      "patch": "patches/php83/held/Spyc.class.php.patch",
+      "patch_sha256": "154aac7bae44f0425f9899f9145e533c85d38eb00148714fe163f3bfd5dac214",
+      "decision": "deferred",
+      "reason": "Symfony isolated bootstrap/ordering evidence only; no full service/application acceptance.",
+      "evidence": "doc/php83/symfony-bootstrap.md",
+      "original_metadata_status": "held: focused regressions and bootstrap investigation, not in active ZIP"
+    },
+    {
+      "patch": "patches/php83/held/sfToolkit.class.php.patch",
+      "patch_sha256": "479a0dd2fb0b74aa022d283d403bbecebee702c062e85565ab452273ded3698c",
+      "decision": "deferred",
+      "reason": "Symfony isolated bootstrap/ordering evidence only; no full service/application acceptance.",
+      "evidence": "doc/php83/symfony-bootstrap.md",
+      "original_metadata_status": "held: focused regressions and bootstrap investigation, not in active ZIP"
+    },
+    {
+      "patch": "patches/php83/held/sfConfigHandler.class.php.patch",
+      "patch_sha256": "287f439dc12f51a78c92067008de73450ecab9c07521c7518b490d1a6a9a93e8",
+      "decision": "deferred",
+      "reason": "Symfony isolated bootstrap/ordering evidence only; no full service/application acceptance.",
+      "evidence": "doc/php83/symfony-bootstrap.md",
+      "original_metadata_status": "held: focused regressions and bootstrap investigation, not in active ZIP"
+    }
+  ],
+  "experimental_manifest": "doc/php83/evidence/exp3-candidate/manifest.json"
+}

@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd /home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83
+stage=$(mktemp -d /tmp/php83-exp3-patches.XXXXXXXX)
+trap 'rm -rf -- "$stage"' EXIT
+python3 - "$stage" <<'PY'
+import hashlib,json,sys
+from pathlib import Path
+p=Path('doc/php83/evidence/exp3-candidate/manifest.json'); data=p.read_bytes(); m=json.loads(data)
+for e in m['patches']:
+ b=Path(e['source_patch']).read_bytes()
+ assert hashlib.sha256(b).hexdigest()==e['sha256']
+ assert Path(e['patch']).name==e['patch'] and e['patch'].endswith('.patch')
+ with (Path(sys.argv[1])/e['patch']).open('xb') as f:f.write(b)
+with (Path(sys.argv[1])/'manifest.json').open('xb') as f:f.write(data)
+PY
+original=/tmp/kaltura-php83-audit/Rigel-18.20.0.zip
+first=/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83-artifacts/exp3
+repeat=/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83-artifacts/exp3-repeat
+python3 tools/php83/build-experimental-zip.py "$original" "$first" --patch-dir "$stage"
+python3 tools/php83/build-experimental-zip.py "$original" "$repeat" --patch-dir "$stage"
+python3 tools/php83/verify-experimental-zip.py "$original" \
+ "$first/Rigel-18.20.0-php83-experimental.exp3.zip" \
+ "$repeat/Rigel-18.20.0-php83-experimental.exp3.zip" \
+ "$stage/manifest.json" doc/php83/evidence/exp3-candidate/verification.json
+cp "$first/build-report.json" doc/php83/evidence/exp3-candidate/build-report.json

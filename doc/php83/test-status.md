@@ -16,6 +16,17 @@ and [execution contract](../../openspec/changes/migrate-kaltura-php83/design.md)
 - No new VM/application test, release, package integration or `.20` mutation in
   this batch. No release ETA or application completion percentage is inferred.
 
+## Latest progress: integrated experimental source artifact
+
+The separate six-patch **exp3** ZIP was built twice with identical hashes and
+verified exact delta (six source changes, eight metadata additions). It preserves
+the original archive and exp2. Selection includes the demonstrated JSON/PDO/date/
+parser repairs; Symfony, Registry, DebugPDO alternatives and APCu remain explicit
+separate work. [Selection, artifact and remaining tests](exp3-candidate.md).
+
+The built ZIP is staged for regression. Prior ad-hoc-tree tests do not count as
+execution of this artifact; no original or detailed acceptance checkbox closed.
+
 ## Latest progress: configuration cache over Apache
 
 Four original-source HTTP rows passed (7.4/8.3 × original/test-only aliases),

@@ -1,0 +1,1 @@
+NOT_EXECUTED: document-only selection review timed out after 120 seconds (exit 124), without final JSON. No approval inferred. Cursor assigned independent selection and hash review next.

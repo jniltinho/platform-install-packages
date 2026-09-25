@@ -1,0 +1,72 @@
+{
+  "builder_sha256": "055443730325459ff2f4e5ad093542e3aa544f6d82af8b21174027f5cdbf523e",
+  "known_limitations": [
+    "Six-patch experimental API web candidate; not a complete PHP 8.3 port",
+    "Prior evidence comes from held-patch lab trees, not execution of this newly selected ZIP",
+    "Real cache-enabled persistence, invalidation and complete historical service-map compatibility remain unverified; failed APCu adapter excluded",
+    "Other runtime diagnostics, Registry semantics and PDO numeric/API compatibility remain unresolved",
+    "Symfony/bootstrap repair bundle and DebugPDO alternatives are not selected in this six-patch candidate",
+    "Full dependency/license audit, installed distro/service/media/worker/UI, performance, upgrade and rollback gates remain open",
+    "No production package/CI integration, publication, main merge or .20 deployment is authorized by this manifest"
+  ],
+  "manifest_sha256": "2618cd21866659127be23f198a7f522c86a82beea6feb4919f0acb4287e9cd37",
+  "patches": [
+    {
+      "after_sha256": "f8611508758756f0a2264cc1a7aa022d8a8af8d80a0abdeba49a9a30e23d1358",
+      "before_sha256": "6b83716ffb5a10a641293508a58443e3117f24613da4be0c7b038e1cc0851aa9",
+      "patch": "0002-Services_JSON.class.patch",
+      "path": "alpha/apps/kaltura/lib/Services_JSON.class.php",
+      "sha256": "126eaa808a590c753f2a06d91de5e5b78da7a45ac02f50f172c84e825cf13df0",
+      "source_patch": "patches/php83/0002-Services_JSON.class.patch"
+    },
+    {
+      "after_sha256": "e74ee2fae9c48c2d99859ee0821f17293d2586e73a2ff9844ec530b2d6a5bf64",
+      "before_sha256": "7af0946f20f81f7cbef204f9cdb907d9c52407fa7e4797bd613d12f778baf720",
+      "patch": "0003-Encoder.patch",
+      "path": "vendor/ZendFramework/library/Zend/Json/Encoder.php",
+      "sha256": "d39935bc38dbe62d54d02e065a801810acc5635e24cc28de7515556092b2f490",
+      "source_patch": "patches/php83/0003-Encoder.patch"
+    },
+    {
+      "after_sha256": "1d3ef5a95568db6dfe2db823766965a4b887f4689b2a182835b9390695360673",
+      "before_sha256": "7336a0a91cdb2da465642e3322d77cae04f788c6b3e937cd2e1cbd4aff0aa996",
+      "patch": "0004-Decoder.patch",
+      "path": "vendor/ZendFramework/library/Zend/Json/Decoder.php",
+      "sha256": "bbd82723f3232be8d0d50827e0d4c4ffb8b37ffe16afb11b1151b9e4c2beac93",
+      "source_patch": "patches/php83/0004-Decoder.patch"
+    },
+    {
+      "after_sha256": "aeb012822d0af7c5fe0e6ea4221f789fc8c886f0c53dbb729a51bc9463a30f0e",
+      "before_sha256": "97b756bed876d42da87f6a023b6ecf7af7c2b8454bb382da56ba9c54acae848d",
+      "patch": "KalturaPDO-query.patch",
+      "path": "alpha/apps/kaltura/lib/db/KalturaPDO.php",
+      "sha256": "51403c941fa0197b9f484c5acfa443a8a8435fc69098712df39a6e49471a43fe",
+      "source_patch": "patches/php83/held/KalturaPDO-query.patch"
+    },
+    {
+      "after_sha256": "490aef40d4e5a8c0312f481dc0dcf85577d753963e6dbe35648bc03bb13eadc1",
+      "before_sha256": "023ab7d9f3de70014225615c089c5ee26477a6b974da301232abd719e656a599",
+      "patch": "dateUtils-ternary.patch",
+      "path": "alpha/apps/kaltura/lib/dateUtils.class.php",
+      "sha256": "88050ed941434ae499c6a3b2a24dd24f4443acbdb7ea49d0617e2d4b9c1b1093",
+      "source_patch": "patches/php83/held/dateUtils-ternary.patch"
+    },
+    {
+      "after_sha256": "7b843ea1900763216df77bba2b6b091582c41e716a2989754cadc22e77f29f5e",
+      "before_sha256": "5941bf6b13c889997f2d7158594f65c4bdd89ae142379864eddc782f8d53970d",
+      "patch": "doc-comment-property.patch",
+      "path": "api_v3/lib/reflection/KalturaDocCommentParser.php",
+      "sha256": "22887d8226fd003985f6773d2a2f82df26e66792ef4a92a0f42ab0ef0551c8f0",
+      "source_patch": "patches/php83/held/doc-comment-property.patch"
+    }
+  ],
+  "python": "3.12.3",
+  "revision": "exp3",
+  "status": "experimental candidate selection; not full PHP 8.3 compatibility or release approval",
+  "upstream_root": "server-Rigel-18.20.0",
+  "upstream_sha256": "58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28",
+  "upstream_zip_comment_hex": "",
+  "zip_name": "Rigel-18.20.0-php83-experimental.exp3.zip",
+  "zip_sha256": "1c64edb5ff34308cedfcea3c7879187c21417b6bd1a8e083d70d580bedc985e3",
+  "zlib": "1.3"
+}

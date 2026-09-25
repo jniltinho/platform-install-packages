@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "recorded_at_utc": "2026-09-25T17:05:04.810011+00:00",
+  "input_commit": "b34657f699d1ac32c20c2f0611b8ca9dba3d5b69",
+  "case_ids": [
+    "T1-01",
+    "T0-02"
+  ],
+  "state": "PARTIAL",
+  "construction": "PASS",
+  "zip_sha256": "1c64edb5ff34308cedfcea3c7879187c21417b6bd1a8e083d70d580bedc985e3",
+  "selected_patches": 6,
+  "builder_exit": 0,
+  "independent_verifier": "Cursor Agent CLI, exit0; exact report matches primary",
+  "source_and_exp2_unchanged": "independently checked by Cursor",
+  "runtime_from_built_zip": "NOT_RUN",
+  "production_integration": false,
+  "release_approval": false,
+  "cli_selection_review": {
+    "Claude": "timeout120s exit124, no approval",
+    "Cursor": "APPROVE_FOR_EXPERIMENT; independently checked6patch hashes andmetadata"
+  },
+  "evidence": {
+    "build-command.sh.txt": "fa69692da4681f419443ef4c17f4f4f4c203823cdc6db42ca72eca147fef9f98",
+    "build-report.json": "29db14af8ac28bbb50b462672d3be4a8278a962df91b59f76837ff0a722fb887",
+    "build.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "build.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "build.stdout": "bae053b87afb7ce8842b1138a4893b4d467a8a9fd22a8e078f4a4f6a8431c762",
+    "claude-selection-review.exit": "ca2ebdf97d7469496b1f4b78958f9dc8447efdcb623953fee7b6996b762f6fff",
+    "claude-selection-review.txt": "2c7ad44f36bdb9f2944da2257045690e1800cc9beeb422d00b3c46ba133f8b57",
+    "cursor-artifact-prompt.txt": "4134c9662eae638678108d82008076c38cab282c204c32709c5371911c31fc3e",
+    "cursor-artifact-review.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "cursor-artifact-review.txt": "5f0725d513b5f1f321f7cfeca0b7afd423a5462d6adead20ee84bd9d42589bd6",
+    "cursor-selection-prompt.txt": "be48538d47e28389673ebccffdfd6d5118820a011df411b7337f3635c7e5e9ec",
+    "cursor-selection-review.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "cursor-selection-review.txt": "c76c64130adfeb93f555ae7b78805140582bfbccf5f9a404810a6eb2cf585aa6",
+    "cursor-verification.json": "c9788dd10d1171ea51bd2ee2fde3b28af56f3cf365d628475232bb571bc4c29c",
+    "extraction.json": "9156bcd14ed8e5941c3bc3cd0c274b6d6e1fa98110faca89e95660159eddc90e",
+    "manifest.json": "2618cd21866659127be23f198a7f522c86a82beea6feb4919f0acb4287e9cd37",
+    "selection-ledger.json": "7d61493a3c81936afef3cd6c73500935fa8793febfa5e444c8de330cc008ec8f",
+    "verification.json": "c9788dd10d1171ea51bd2ee2fde3b28af56f3cf365d628475232bb571bc4c29c"
+  }
+}

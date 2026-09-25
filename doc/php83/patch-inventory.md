@@ -87,3 +87,13 @@ disposition/coverage documents without blocking findings. See the
 [batch record](evidence/batch2-inventory/result.json). The first Cursor Ask-mode
 attempt refused report writing; the same authorized command then succeeded in
 Agent mode. That initial refusal is not reported as an execution pass.
+
+## Subsequent experimental selection: exp3
+
+The table and linked batch-2 ledger above are the immutable historical selection
+at that audit. A separate [six-patch exp3 manifest](exp3-candidate.md) now selects
+the existing JSON repairs plus KalturaPDO query, date ternary and parser property
+for a reproducible **lab experiment**, following Cursor CLI review. Their original
+held files/metadata and exp2 manifest remain unchanged. This is not production
+promotion or a claim that broad runtime acceptance must precede experimentation.
+Other alternatives remain explicitly excluded, with reasons in the exp3 record.

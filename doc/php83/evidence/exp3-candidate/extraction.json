@@ -1,0 +1,6 @@
+{
+  "zip_sha256": "1c64edb5ff34308cedfcea3c7879187c21417b6bd1a8e083d70d580bedc985e3",
+  "extracted_root": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83-artifacts/exp3-extracted/server-Rigel-18.20.0",
+  "changed_files_hashes_verified": 6,
+  "purpose": "staging for future artifact-based regression, no runtime test yet"
+}

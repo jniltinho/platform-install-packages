@@ -1,0 +1,21 @@
+Vou revisar os artefatos do candidato experimental e verificar os hashes do manifesto contra os arquivos reais.Vou conferir hashes dos patches, metadados held e o suporte em `api-web.md` / `doc-comment-property.md`.Hashes dos 6 patches e dos 3 held batem. Conferindo metadados exp2, identidades em api-web e exclusões held.## APPROVE_FOR_EXPERIMENT
+
+Justificado para montar/testar o ZIP experimental de lab (6 patches). **Não** é aprovação de produção, CI, release, merge em `main` ou `.20`. Claude: **NOT_EXECUTED** (timeout 120s) — sem atribuição de aprovação.
+
+### Hash verification (Python read-only)
+| # | `source_patch` | SHA vs arquivo | held/exp2 before/after/path |
+|---|---|---|---|
+| 1–3 | `0002`/`0003`/`0004` | MATCH | MATCH vs `patches/php83/manifest.json` (exp2) |
+| 4 | `held/KalturaPDO-query.patch` | MATCH | MATCH vs `.json` (`patch_sha256`→`sha256`) |
+| 5 | `held/dateUtils-ternary.patch` | MATCH | MATCH |
+| 6 | `held/doc-comment-property.patch` | MATCH | MATCH |
+
+`upstream_sha256` idêntico ao exp2. 6 targets distintos. `ALL_SOURCE_PATCH_HASHES_OK=True`.
+
+### Seleção
+- **Ordem:** base JSON exp2 → fatals PDO/date (api-web) → declaração parser (doc-comment).
+- **Minimalidade:** 5 = caminho API web funcional documentado; 6º = mesmo harness, stdout/harness estáveis, diagnósticos selecionados 4408→0.
+- **Held explícitos:** Symfony/`core_compile`, DebugPDO v1–v3, Registry cast/properties, APCu — excluídos e ainda em disco; limitações no manifesto.
+
+### Escopo
+Evidência prévia em árvores held, não execução deste ZIP. Build/verify do artefato e reteste no candidato extraído ainda pendentes após esta seleção.
