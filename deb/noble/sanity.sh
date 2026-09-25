@@ -41,7 +41,7 @@ SECRET=$(sql "select secret from partner where id=$PARTNER_ID")
 ok "test partner $PARTNER_ID"
 
 MP4=/tmp/sanity.mp4
-[ -s $MP4 ] || ffmpeg -loglevel error -y -f lavfi -i testsrc=duration=10:size=640x360:rate=25 \
+[ -s $MP4 ] || ffmpeg -nostdin -loglevel error -y -f lavfi -i testsrc=duration=10:size=640x360:rate=25 \
 	-f lavfi -i sine=duration=10 -c:v libx264 -pix_fmt yuv420p -c:a aac -shortest $MP4
 ENTRY=$(cd $BIN && php upload_test.php "$URL" "$PARTNER_ID" "$SECRET" $MP4 2>/dev/null | tail -1)
 if [[ ! "$ENTRY" =~ ^[0-9]_[a-z0-9]{8}$ ]]; then
