@@ -5,6 +5,11 @@ class-loading fatal in an isolated SQLite fixture, but strict cross-runtime
 output parity fails on numeric types; named-argument forwarding needs testing.
 See `../../../doc/php83/debug-pdo-experiment.md`. Do not add it to exp2.
 
+`DebugPDO-query-v2.patch` is an alternative against the same original source,
+not a patch to stack after `DebugPDO-query.patch`. It fixes the reproduced
+named-argument loss and removes the deprecated parent callable; default
+cross-runtime numeric-type parity still fails, so v2 is also held.
+
 The Registry cast experiment is retained solely for review and reproduction.
 The active `../manifest.json` does not list it. Do not add it through wildcard
 patch discovery.

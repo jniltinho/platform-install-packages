@@ -40,7 +40,9 @@ if ($case === 'registry') {
     } catch (Zend_Exception $error) {
         $out[] = array('missing-exception', get_class($error));
     }
-} elseif ($case === 'debug-pdo') {
+} elseif ($case === 'debug-pdo-edges') {
+    require __DIR__ . '/debug-pdo-edges.php';
+} elseif ($case === 'debug-pdo' || $case === 'debug-pdo-stringify') {
     require __DIR__ . '/debug-pdo.php';
 } elseif ($case === 'legacy-json' || $case === 'zend-json') {
     if ($case === 'legacy-json') {

@@ -73,3 +73,62 @@ useful diagnostically but must not replace the failing default comparison.
 All 27 offline Python tests pass; all eight JSON-only differential comparisons
 still pass (see `json-regression.json`). Neither result closes the migration's
 broader gates. `.20`, main, releases and the active patch manifest are unchanged.
+
+## Follow-up: forwarding variant v2 (2026-09-25)
+
+The completed Grok review is saved as `evidence/debug-pdo/grok-review.txt`.
+Both reviewers requested native-PDO controls and boundary tests; their initial
+review input predates the native control and the separately recorded module
+identities. Those findings were addressed with evidence, not assumed approval.
+
+The new `debug-pdo-edges.php` fixture confirmed that v1 silently discards named
+`fetchMode:` and unknown named arguments on 8.3. The valid FETCH_NUM call returns
+associative rows instead of numeric rows; the unknown-name call succeeds where
+native PDO throws. Both failures reproduce under exception and silent modes.
+
+`held/DebugPDO-query-v2.patch` is a **standalone alternative**, not an incremental
+patch to apply after v1. It explicitly declares `$fetchMode`, retains positional
+arity via `func_get_args()`, appends string-keyed variadic arguments so the parent
+can reject unknown names, and dispatches with `parent::query(...$args)`. This
+removes the deprecated parent callable from this method without suppressing
+other diagnostics. It targets the tested PHP7.4/8.3 pair, not historical PHP5.
+
+Evidence in `evidence/debug-pdo/v2/`:
+
+- `edges.json`: eight native-PDO return/error comparisons on 7.4 and twelve on
+  8.3 pass for v2; covers positional column index, null mode, zero arguments,
+  null SQL, and (8.3 only) valid/unknown named arguments in both error modes.
+  Query accounting is recorded, not asserted as equivalent to native PDO.
+  Module version and available drivers are emitted in the actual test process.
+- `behavior.json`: original/patched 7.4 default behavior matches. Patched 8.3
+  default strict parity **still fails** on numeric types. A separate explicitly
+  named `debug-pdo-stringify` diagnostic passes on both runtimes. It sets the
+  attribute only on fixture connections; it is not a production setting or a
+  replacement for the failing default gate.
+- `source-checks.json`: tested source hashes and successful syntax checks for
+  both runtimes. Patch/input/output hashes are in the v2 patch JSON.
+- `json-regression.json`: all eight existing JSON differential comparisons pass.
+
+The edge fixture is diagnostic rather than a cross-runtime acceptance case;
+invoke `run-one.sh candidate debug-pdo-edges standard` inside either lab. Its
+PHP8-only named-call syntax is in fixed eval strings, never user input. The
+collector supports `--case debug-pdo-stringify --mode standard` separately from
+`--case debug-pdo`. Existing 27 offline tests still pass.
+
+V2 remains **held**. Missing return-type diagnostics, enabled logging, broader
+fetch modes/subclasses and isolated MySQL/API behavior still need validation.
+No migration gate was relaxed, no active manifest changed and no ZIP rebuilt.
+
+After collecting v2 evidence, both lab candidate DebugPDO files were restored
+to original hash `6178d39fd2c11c2bd2dcc220c4234f72dfb11364c11d381e7f7bfaf55089e021`.
+The v2 patch was also applied from scratch locally with zero fuzz and its output
+hash matched the tested source hash.
+
+Claude's v2 review is retained as advisory text. Some suggestions concern
+coverage already present: E_ALL stderr is captured and FETCH_CLASS constructor
+arguments are exercised by `debug-pdo.php`, though not by the edge-only fixture.
+Claims about PHP versions outside 7.4/8.3 were not validated or used for approval.
+The graph-discovered `vendor/propel/adapter/MSSQL/MssqlDebugPDO.php` was coverage
+checked (generation 2026-09-25T12:19:00Z, metadata match, no recorded gap) and read:
+it inherits query without overriding it. This is a bounded source check, not
+an exhaustive subclass audit or MSSQL runtime test.

@@ -1,0 +1,42 @@
+The patch stays held, outside the active manifest, and the exp2 JSON-only ZIP stays as it is. This run does not approve a release. PHP 7.4 original and patched match on this harness. PHP 8.3 now loads and runs every exercised query. The parity gate stays **FAIL**, and that failure is not waived.
+
+## What the run shows
+
+On PHP 7.4.33 the signature change is behavior-preserving for this script: return code 0, empty stderr, and byte-identical stdout between original and candidate.
+
+On PHP 8.3.6 the original tree dies while loading the class:
+
+`Declaration of DebugPDO::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs): PDOStatement|false`
+
+The candidate removes that fatal. All seven `query()` calls run: default fetch, `FETCH_ASSOC`, `FETCH_COLUMN` with index 1, `FETCH_CLASS` with a constructor argument, rollback `fetchColumn()`, exception mode, and silent mode. Prepare/bind/execute still returns a `DebugPDOStatement`. Rollback leaves two rows. A failing query under `ERRMODE_EXCEPTION` does not advance `getQueryCount()`; the same SQL under `ERRMODE_SILENT` returns `false`, advances the count by one, and is stored as the last executed query. The last successful logged SQL is the statement text only, so the extra fetch-mode arguments are not being appended to the log string.
+
+`FETCH_COLUMN` returning `alpha`/`beta` and `FETCH_CLASS` setting `marker` to `ctor` show that those trailing arguments reach `PDO::query`. The `FETCH_ASSOC` arm does not show that on its own, because the connection default is already `PDO::FETCH_ASSOC`.
+
+The stdout gap is SQLite integer affinity coming back as JSON numbers on 8.3 and JSON strings on 7.4: `id` in default, assoc, and class rows, and `COUNT(*)` via `fetchColumn()`. Text columns stay strings on both. Counts, `true`/`false`, and the prepared `name` column already match. The original 8.3 tree never reaches a query, so this run does not yet separate wrapper from driver. Nothing here justifies treating the type gap as acceptable parity.
+
+## Signature and forwarding
+
+`PDO::query` on 8.3 is `query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs): PDOStatement|false`. The held change is `query($query = null, ...$fetchModeArgs)`, with the body still taking `func_get_args()`. That is a 7.4-parseable declaration: no union type, no `mixed`, no return type, no attribute. PHP 8.3 accepts the parameters and still reports the missing return type as a deprecation. The override remains officially incompatible; it is no longer a load fatal.
+
+| Risk | Why it matters |
+| --- | --- |
+| Return type still missing | Candidate stderr deprecates `DebugPDO::query` at line 330. The same file’s `exec` deprecation was already present on the fatal 8.3 run. stderr stays recorded under the stated policy. |
+| New parameters are unused | `$query` and `$fetchModeArgs` exist for the declaration. Forwarding still follows `func_get_args()`, which does not include an unpassed default. `query()` therefore still forwards an empty list. A later edit that calls `parent::query($query, ...$fetchModeArgs)` would forward `null` for a zero-argument call. |
+| No `fetchMode` parameter | Positional calls unpack into the parent correctly, and column/class results support that. A PHP 8 named call `fetchMode: ...` does not match this signature. `$query` and `$fetchModeArgs` are the only names. |
+| Untyped optional SQL | Keeps the 7.4 call boundary for this harness. Non-string SQL is untested; 8.3’s parent will reject it inside the old logging path. |
+| `parent` used as a callable | Line 337 deprecates once per `query()` call, seven times, including both failing queries. That matches a single parent dispatch per call, including calls that throw or return `false`. The patch makes this path reachable; the body is unchanged. |
+| Other deprecations | `PropelConfiguration` ArrayAccess, `PropelPDO` transaction/attribute/prepare methods, `DebugPDOStatement::bindValue`/`execute`, and `DebugPDO::exec` are pre-existing and outside this one-line patch. They already appear on the original 8.3 fatal run. |
+
+The stock environment module lists omit `pdo_sqlite` on both runtimes, while `sqlite::memory:` ran. The driver was loaded beside that probe. Its identity is not pinned in this JSON.
+
+## Next tests
+
+Keep the same bounds: extracted `pdo_sqlite`, no package or INI install, nobody sandbox, private network, `:memory:`, no production data. Record stderr. Do not waive it, and do not hide it with error-reporting changes.
+
+1. From the same process, record `PDO::getAvailableDrivers()` and `phpversion('pdo_sqlite')`.
+2. Run the same fixture and fetch forms through raw `new PDO('sqlite::memory:')` on PHP 8.3. Compare integer columns and `COUNT(*)` with the `DebugPDO` candidate.
+3. Repeat the `DebugPDO` candidate with `PDO::ATTR_STRINGIFY_FETCHES` set true. This measures whether stdout can match 7.4. It is a measurement, not a gate waiver.
+4. On both runtimes, call `query()`, `query(null)`, and `query($sql, null)` under both error modes. Assert error class, query count, and last SQL. This locks the `func_get_args()` contract against a later “clean” forward of the new parameters.
+5. On PHP 8.3 only, call `query(query: $sql, fetchMode: PDO::FETCH_ASSOC)` and record the engine error. That is a signature hole, separate from the 7.4 parity gate.
+
+No manifest promotion and no release approval follow from this run.

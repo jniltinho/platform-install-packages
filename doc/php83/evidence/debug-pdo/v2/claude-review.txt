@@ -1,0 +1,18 @@
+Não usei ferramentas. Riscos concretos que ainda restam no encaminhamento da v2:
+
+1. **Deprecation do tentative return type (8.1+).** `PDO::query` declara `PDOStatement|false` como tentative return type. Sem `#[\ReturnTypeWillChange]`, a declaração de `DebugPDO::query()` gera `E_DEPRECATED` ao compilar a classe, e isso acontece antes de qualquer caso rodar. O fixture só compara retorno/exceção, então esse aviso não aparece nele. Confirme com `error_reporting(E_ALL)` e um handler que registre os avisos. O atributo em linha própria é lido como comentário no 7.4, então é seguro para as duas versões.
+
+2. **Regressão de LSP para subclasses no 7.4.** Antes, `query()` não tinha parâmetros. Agora qualquer classe que estenda `DebugPDO` e declare `query()` com menos parâmetros dá erro fatal também no 7.4. Vale fazer um grep por `extends DebugPDO` e por overrides de `query(` na árvore Kaltura/Propel. Confirme também que `PropelPDO` não sobrescreve `query()`. Se sobrescrever, `parent::` aponta para ela e a assinatura dela também precisa ser compatível.
+
+3. **Spread com chaves string só funciona a partir do 8.1.** No 8.0, `parent::query(...$args)` com chave string lança `Error`. No 7.4 isso não acontece, porque não existem named args e `$fetchModeArgs` nunca tem chave string. Fica fora do escopo 7.4/8.3, mas deixe isso anotado no patch.
+
+4. **Aridade variádica ≥ 2 não testada.** O fixture cobre `FETCH_COLUMN, 0`, com um único argumento extra. Faltam:
+   - `FETCH_CLASS, 'Cls', [ctorArgs]`, que tem 3 argumentos extras.
+   - `FETCH_INTO, $obj`, com objeto e identidade preservada.
+   - Mistura de posicional e nome, como `query($sql, PDO::FETCH_COLUMN, colno: 0)`, se isso for relevante no 8.3.
+
+5. **Chamada nomeada com `fetchModeArgs:`.** Ela cai no variádico como chave string e é repassada como nome desconhecido. Deve ser equivalente ao nativo, mas não foi testada. É um caso barato de adicionar.
+
+6. **`$sql = $args[0]` sem argumentos no 7.4.** Se o `PDO::query()` nativo do 7.4 retornar `false` com warning em vez de lançar exceção, aparece um `Undefined offset` extra que o nativo não emite. O caso `no-args` bate no retorno, mas não compara os warnings emitidos.
+
+A falha de paridade de tipos numéricos continua ortogonal ao encaminhamento: é mudança do `pdo_sqlite` no 8.1, ligada a `ATTR_STRINGIFY_FETCHES`. A v2 não resolve isso e não deveria resolver.

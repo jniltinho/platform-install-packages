@@ -270,3 +270,10 @@ Named-argument forwarding and MySQL/application behavior remain unverified.
 The original DebugPDO files were restored in both disposable candidate trees
 after evidence collection. All eight JSON comparisons and 27 offline tests
 still pass; no broad migration task is complete.
+
+The subsequent DebugPDO v2 held variant fixes reproduced named-argument loss
+and removes the deprecated parent callable. Native-PDO return/error controls
+pass in eight 7.4 and twelve 8.3 boundary cases. Explicit stringify-fetches
+diagnostics match the baseline, but default numeric-type parity remains failed;
+no application setting or acceptance gate changed. See the experiment document
+and `evidence/debug-pdo/v2/`. Candidate trees were restored to exp2 after testing.

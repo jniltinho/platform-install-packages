@@ -9,12 +9,12 @@ import sys
 
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('output', type=Path)
-parser.add_argument('--case', action='append', choices=['registry', 'legacy-json', 'zend-json', 'debug-pdo'])
+parser.add_argument('--case', action='append', choices=['registry', 'legacy-json', 'zend-json', 'debug-pdo', 'debug-pdo-stringify'])
 parser.add_argument('--mode', action='append', choices=['standard', 'minimal'])
 args = parser.parse_args()
 cases = args.case or ['registry', 'legacy-json', 'zend-json']
 modes = args.mode or ['standard', 'minimal']
-if 'debug-pdo' in cases and 'minimal' in modes:
+if any(c.startswith('debug-pdo') for c in cases) and 'minimal' in modes:
     parser.error('debug-pdo requires --mode standard (isolated SQLite module)')
 records = []
 environments = []
@@ -50,7 +50,7 @@ for mode in modes:
 report = {'environments': environments,
           'diagnostic_policy': 'stdout and roundtrip parity required; stderr retained, not waived',
           'harness_hashes': {p.name: hashlib.sha256(p.read_bytes()).hexdigest()
-          for p in [folder / 'behavior.php', folder / 'debug-pdo.php', folder / 'run-one.sh', Path(__file__)]},
+          for p in [folder / 'behavior.php', folder / 'debug-pdo.php', folder / 'debug-pdo-edges.php', folder / 'run-one.sh', Path(__file__)]},
           'comparisons': comparisons, 'records': records}
 args.output.write_text(json.dumps(report, indent=2) + '\n')
 print(json.dumps(comparisons))

@@ -7,9 +7,15 @@ require_once 'propel/util/DebugPDOStatement.php';
 require_once 'propel/util/DebugPDO.php';
 Propel::setConfiguration(array('debugpdo' => array('logging' => array('enabled' => false))));
 $native = new PDO('sqlite::memory:');
+if ($case === 'debug-pdo-stringify') {
+    $native->setAttribute(PDO::ATTR_STRINGIFY_FETCHES, true);
+}
 $nativeRow = $native->query('SELECT 1 AS id')->fetch(PDO::FETCH_ASSOC);
 $out[] = array('native-pdo-control', $nativeRow);
 $db = new DebugPDO('sqlite::memory:');
+if ($case === 'debug-pdo-stringify') {
+    $db->setAttribute(PDO::ATTR_STRINGIFY_FETCHES, true);
+}
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 $debugRow = $db->query('SELECT 1 AS id')->fetch(PDO::FETCH_ASSOC);
