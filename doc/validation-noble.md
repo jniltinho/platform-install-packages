@@ -9,6 +9,14 @@ Evidence collected on the `aio` VM (`deb/noble`, http://192.168.56.20) after a c
 - The entry became READY in about 80 seconds. All the required flavors were transcoded: source 720p, 360p, 480p, 540p and 720p (see `kmc-05-entry-flavors.png`).
 - It plays in the KMC preview through HLS served by nginx VOD (`kmc-03b-entry-player-playing.png`).
 
+## External clients (criare)
+
+- **kaltura-console** (Laravel 13, PHP 8.3) was run in a `php:8.3-cli` container pointed at the AIO:
+  - `KALTURA_SERVICE_URL=http://192.168.56.20/api_v3`, `KALTURA_PARTNER_ID=102`, `KALTURA_PLAYBACK_HOST=http://192.168.56.20`.
+  - It works unchanged against 18.20: login, dashboard, media list, upload form, entry details with the progressive player via its proxy and the flavor table, and health (all checks green).
+  - Screenshots are in [prints/kaltura-console](prints/kaltura-console).
+- **kaltura-legacy-gateway** is **not needed**. It only preserved the old `kaltura.wifimax.com.br` host: an nginx alias from `/kaltura-api/` to `api_v3` plus a PHP proof of concept with hard-coded URLs. Clients talk to `http://<host>/api_v3/` directly.
+
 ## Known limitations seen in the UI
 
 - **Analytics** (`kmc-19-analytics.png`) shows *Internal server error*. The analytics screens need the KAVA/DWH backend (Druid/pentaho), which is out of scope for this AIO.
@@ -85,3 +93,14 @@ Evidence collected on the `aio` VM (`deb/noble`, http://192.168.56.20) after a c
 | Admin users | [![kmc-27-admin-users.png](prints/kmc-27-admin-users.png)](prints/kmc-27-admin-users.png) |
 | Admin roles | [![kmc-28-admin-roles.png](prints/kmc-28-admin-roles.png)](prints/kmc-28-admin-roles.png) |
 | Create upload menu | [![kmc-29-create-upload-menu.png](prints/kmc-29-create-upload-menu.png)](prints/kmc-29-create-upload-menu.png) |
+
+## kaltura-console (Laravel) against the AIO
+
+| Screen | Screenshot |
+|---|---|
+| Login | [![01-login.png](prints/kaltura-console/01-login.png)](prints/kaltura-console/01-login.png) |
+| Dashboard | [![02-dashboard.png](prints/kaltura-console/02-dashboard.png)](prints/kaltura-console/02-dashboard.png) |
+| Media list | [![03-media-list.png](prints/kaltura-console/03-media-list.png)](prints/kaltura-console/03-media-list.png) |
+| Media upload | [![04-media-upload.png](prints/kaltura-console/04-media-upload.png)](prints/kaltura-console/04-media-upload.png) |
+| Media show bbb | [![05-media-show-bbb.png](prints/kaltura-console/05-media-show-bbb.png)](prints/kaltura-console/05-media-show-bbb.png) |
+| System health | [![06-system-health.png](prints/kaltura-console/06-system-health.png)](prints/kaltura-console/06-system-health.png) |

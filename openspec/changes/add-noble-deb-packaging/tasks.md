@@ -36,4 +36,4 @@
 - [x] 6.1 Download a YouTube video with `yt-dlp` (MP4, 720p or lower) and upload it through the API to the test partner. Verify READY, the flavors and HLS.
 - [x] 6.2 Capture screenshots with `agent-browser` of every Admin Console page and the main KMC screens into `doc/prints/`. Verify that none of them shows an error.
 - [x] 6.3 Write `doc/kaltura-api-noble.md` with `curl` examples run on the VM. Verify by re-running the examples.
-- [ ] 6.4 Run `criare/kaltura-console` and `criare/kaltura-legacy-gateway` against the AIO and record the outcome in the documentation.
+- [x] 6.4 Run `criare/kaltura-console` against the AIO and record the outcome in the documentation; `kaltura-legacy-gateway` was assessed as unnecessary (see doc/validation-noble.md).
