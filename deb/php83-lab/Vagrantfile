@@ -1,0 +1,18 @@
+# Isolated feasibility lab: never provision or copy data from the .20 AIO.
+Vagrant.configure("2") do |config|
+  config.vm.box = "bento/ubuntu-24.04"
+  config.vm.box_version = "202510.26.0"
+  config.vm.box_check_update = false
+  # Do not expose the source worktree, host secrets or existing media to the guest.
+  config.vm.synced_folder ".", "/vagrant", disabled: true
+  config.vm.define "php83" do |lab|
+    lab.vm.hostname = "kaltura-php83-lab"
+    lab.vm.network "private_network", ip: "192.168.56.83"
+    lab.vm.provider("virtualbox") do |vm|
+      vm.name = "kaltura-php83-noble-lab"
+      vm.memory = 8192
+      vm.cpus = 4
+    end
+    lab.vm.provision "runtime", type: "shell", path: "bootstrap.sh"
+  end
+end
