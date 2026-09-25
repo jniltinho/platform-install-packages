@@ -16,6 +16,15 @@ the cycle. Assign explicit, non-overlapping cases and rotate reviewers; an
 author's review alone is not independent validation. Codex coordinates the
 results. Use the actual CLIs, not another agent merely named after them.
 
+If Grok stalls or encounters a tool, quota or execution problem, use OpenCode
+with Zen's Muse Spark 1.3 Free as the operator-authorized fallback. Resolve its
+exact model ID from `opencode models opencode` (currently
+`opencode/muse-spark-1.3-contributor-free`); do not silently substitute a paid
+model. Bound Grok attempts (normally 120 seconds for local batch checks), stop
+or confirm completion of its attempt before reassigning execution, and record
+Grok's outcome separately from the fallback's actual result. The fallback may
+fulfil Grok's assigned executor/reviewer role, but must not be reported as Grok.
+
 Run independent reviews and isolated tests in parallel. Never run competing
 writers, destructive fixtures or benchmark workloads against the same VM,
 database or worktree; use separate disposable clones or serialize with an

@@ -1,0 +1,18 @@
+**Relatório T0-01 (EXECUTADO)**
+
+- **Caso:** T0-01. Executor: Claude CLI (Opus 5.5). Revisor: nenhum. Isto é só execução, não revisão independente.
+- **Diretório de trabalho:** `/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83`, branch `proposal/migrate-kaltura-php83`. `AGENTS.md` já estava modificado no início da sessão e eu não alterei nada.
+- **Comando:**
+  ```
+  PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83 -p 'test_*.py'
+  ```
+  Juntei stdout e stderr e gravei tudo em `/tmp/t0-01.out`, fora do repositório, só para capturar a saída. Esse arquivo é o único que criei.
+- **Exit status:** `0`
+- **Testes:** 68 rodaram e todos passaram, em 0,034 s. O unittest não informou falhas, erros nem testes pulados.
+- **Saída completa (5 linhas):** 68 pontos, a linha separadora, `Ran 68 tests in 0.034s` e `OK`. Não houve nenhum aviso nem traceback.
+- **Escopo respeitado:** não fiz edições no repositório nem mudanças no git, e não usei VMs, MCP, rede, delegação ou outros testes.
+
+**Limitações:**
+- Isto mostra só que o harness local em `tools/php83` passa. Não comprova que a aplicação funciona em PHP 8.3 nem cumpre nenhuma aprovação de release ou cutover.
+- Não registrei o hash do commit nem a versão exata do `python3`.
+- Ninguém revisou este resultado de forma independente. Segundo o `AGENTS.md`, essa revisão deve ficar com outro agente (Grok ou Cursor), em rotação.

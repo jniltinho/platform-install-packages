@@ -56,7 +56,7 @@ scope. Expand applicable distro/SAPI/transport rows before execution. Use the
 owners/reviewer rotation and result contract in design.md. Closing a detailed
 case does not automatically close its original parent.
 
-- [ ] 5.1 T0-01 — Claude executes the existing local Python harness suite on a frozen commit; Grok reviews and independently reruns it. Record command, test count, exit, harness hashes and sanitized results, with mocks explicitly excluded from runtime acceptance; this is harness support, not baseline acceptance (parent 1.6).
+- [x] 5.1 T0-01 — Claude executes the existing local Python harness suite on a frozen commit; Grok reviews and independently reruns it. Record command, test count, exit, harness hashes and sanitized results, with mocks explicitly excluded from runtime acceptance; this is harness support, not baseline acceptance (parent 1.6).
 - [ ] 5.2 T0-02 — Cursor audits immutable baseline/source, held patch metadata, selected/rejected/deferred patch decisions and exp2 ZIP identities; Claude verifies hashes and the held-versus-exp2 gap. No selected patch may silently disappear from a proposed candidate (parents 1.1, 1.6).
 - [ ] 5.3 T0-03 — Grok reconciles all original 24 tasks with these cases and existing evidence; Cursor verifies every parent is mapped, partial evidence is bounded and untested entrypoints/findings remain visible (parents 1.1–1.7, 2.1–2.6, 3.1–3.6, 4.1–4.5).
 - [ ] 5.4 T0-04 — Inventory dependencies/licenses, active packaging overlays, generated clients, web/CLI/cron/install/plugin entrypoints and syntax/static findings; verify exact identities, analyzer pins and classification of every finding, with uncovered paths listed (parents 1.1, 1.3).
@@ -83,3 +83,13 @@ case does not automatically close its original parent.
 - [ ] 5.25 T6-03 — Validate migration/provider/rollback instructions and evidence links, known limitations and current PHP security-support information; verify documentation against lab commands and the complete coverage board (parent 4.3).
 - [ ] 5.26 T6-04 — Audit all required distro/runtime/performance/recovery rows, independent reviews and critical defects; verify uniquely versioned artifacts and explicit operator release approval, without implying `.20` cutover approval (parent 4.4).
 - [ ] 5.27 T6-05 — Only after T6-04, publish the accepted versioned ZIP, manifest, instructions and DEB/RPM bundles in one release; verify downloaded SHA256SUMS and accepted identities, preservation of existing releases, then synchronize/archive only when all original gates are satisfied (parent 4.5).
+
+## Detailed-case execution evidence
+
+T0-01 / 5.1 is complete for frozen commit `e93dc4cf`: Claude executed the
+68-test local harness, Grok independently reran and reviewed it, and Cursor
+reviewed the result. Codex also reran the suite and verified all 107 tracked
+harness/patch file hashes against that commit. This does not close parent 1.6.
+T0-02 / 5.2 has only partial three-patch/ZIP hash evidence and stays unchecked.
+See `doc/php83/test-status.md` and `doc/php83/evidence/batch1-local/`.
+The original 24 acceptance tasks remain unchecked.

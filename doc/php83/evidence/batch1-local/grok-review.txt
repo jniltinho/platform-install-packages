@@ -1,0 +1,9 @@
+**T0-01: met.** No blocker on the narrow criterion. Parent 1.6 stays open.
+
+Claude executed `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83 -p 'test_*.py'` on `proposal/migrate-kaltura-php83`: 68 tests, 0.034s, exit 0, `OK` (no failures, errors, or skips), and made no repo edits. Grok independently reran that command on the frozen harness: 68 tests, exit 0, `OK`. The supplied Codex capture matches commit `e93dc4cf`, and hashes were rechecked after the commands. The only residual is the pre-existing `AGENTS.md` modification; the fallback rule places review with another agent, and the Grok rerun is that review.
+
+The two runs establish that the local `tools/php83` harness passed. They contain no PHP 8.3 runtime, release, or cutover evidence, so parent 1.6 stays open.
+
+**T0-02:** Cursor is partial only (exit 0). Held SHA-256 checks matched for doc-comment-property, dateUtils-ternary, and KalturaPDO-query; `exp2_unchanged` is true (ZIP `99233ac6…97a0`). `held/` is outside the active `manifest.json` series (offsets 0002–0004); `series.json` is absent. Full inventory and selection remain unproven.
+
+All 24 original broad tasks remain open.

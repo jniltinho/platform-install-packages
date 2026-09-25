@@ -1,0 +1,9 @@
+Vou inspecionar o script e, se for exatamente o verificador read-only dos 3 patches, executar o audit.**T0-02 preliminar (3 patches + ZIP) — PASS**
+
+**Comando:** `PYTHONDONTWRITEBYTECODE=1 python3 /tmp/php83-independent-integrity.py`  
+**Exit:** `0`  
+**Output:** `{"held_hash_checks": ["doc-comment-property", "dateUtils-ternary", "KalturaPDO-query"], "exp2_unchanged": true}`
+
+O script em `/tmp` é só hashlib read-only: confere SHA-256 de cada `.patch` held vs meta, `before_sha256` em `kaltura-rigel-18.20.0-source/graph-view`, e o ZIP exp2 (`99233ac6…97a0`). Sem writes.
+
+**Escopo (README):** a série ativa está em `manifest.json` (JSON offset 0002–0004); `held/` não entra no build. `series.json` não existe. Isto não valida baseline completo nem conclui T0-02.

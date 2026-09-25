@@ -1,0 +1,9 @@
+**Veredito:** critério estreito **T0-01 atendido**. Parent **1.6** e aceitação da aplicação **não** estão cobertos.
+
+**Harness local (T0-01):** Claude e Grok (rerun independente) no mesmo comando frozen (`unittest discover` em `tools/php83`): **68 testes, exit 0, OK**. Identidade Codex alinhada a `e93dc4cf`; hashes rechecados pós-comando. Pendência `AGENTS` fallback **fora** do T0-01 estreito — **sem bloqueador** para esse critério.
+
+**Não é aceitação de app:** só prova o harness Python local; zero evidência de runtime PHP 8.3, release ou cutover.
+
+**T0-02:** audit Cursor 3-patch/ZIP = **PARTIAL** (integridade held/ZIP). **Não** fecha inventário/seleção completa de T0-02.
+
+**Escopo amplo:** as **24** tarefas originais seguem **abertas**.

@@ -1,0 +1,15 @@
+**Reexecução (read-only confirmado):** o script só faz leitura e `hashlib` e não grava nada.
+
+- **Comando:** `PYTHONDONTWRITEBYTECODE=1 python3 /tmp/php83-independent-integrity.py` (cwd = worktree)
+- **Exit:** `0`
+- **Output:** `{"held_hash_checks": ["doc-comment-property", "dateUtils-ternary", "KalturaPDO-query"], "exp2_unchanged": true}`
+
+**Revisão da auditoria do Cursor:** concordo dentro do escopo verificado. Confirmei que `series.json` não existe e que `manifest.json` lista a série ativa 0002–0004 (`revision: exp2`). O script compara `patch_sha256` e `before_sha256` com a árvore `graph-view`, e compara também o ZIP exp2 com `99233ac6…97a0`.
+
+**Ressalvas:**
+- O script só confere 3 dos cerca de 17 patches em `held/`. Não verifica DebugPDO v1–v3, Registry, os patches do symfony, `core_compile` etc.
+- Os patches ativos 0002–0004 do `manifest.json` (`sha256`, `before`/`after`) também não foram conferidos.
+- Não aplica patches nem confere `after_sha256`.
+- Chamar isso de "PASS" vale só para essas 3 verificações e o ZIP. Não é um baseline de integridade.
+
+O T0-02 continua incompleto. Esta é uma evidência parcial com Claude como executor/revisor. Não fiz nenhuma edição nem mudança no git.

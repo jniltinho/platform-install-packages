@@ -1,0 +1,9 @@
+I'll run only the requested unittest discovery in that directory and report the exit status and output.**T0-01 execution report** (local unittest only; not runtime acceptance).
+
+- **Command:** `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83 -p 'test_*.py'`
+- **Working directory:** `/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83`
+- **Exit status:** `0`
+- **Test count:** `68` (`Ran 68 tests in 0.034s`)
+- **Result:** `OK`
+
+**Output summary:** The runner returned one combined stream (no separate stderr channel). It was 68 progress dots, then the standard footer: `Ran 68 tests in 0.034s` and `OK`. No failures, errors, or skips were printed. No repo edits, git changes, VMs, MCP, network, or other tests were used.

@@ -1,0 +1,14 @@
+import hashlib,json
+from pathlib import Path
+root=Path('/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83')
+source=Path('/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/graph-view')
+checked=[]
+for name in ['doc-comment-property','dateUtils-ternary','KalturaPDO-query']:
+ meta=json.loads((root/'patches/php83/held'/f'{name}.json').read_text())
+ patch=root/'patches/php83/held'/f'{name}.patch'
+ assert hashlib.sha256(patch.read_bytes()).hexdigest()==meta['patch_sha256'],name+' patch drift'
+ assert hashlib.sha256((source/meta['path']).read_bytes()).hexdigest()==meta['before_sha256'],name+' source drift'
+ checked.append(name)
+zip_path=Path('/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83-artifacts/exp2/Rigel-18.20.0-php83-experimental.exp2.zip')
+assert hashlib.sha256(zip_path.read_bytes()).hexdigest()=='99233ac6638f02072b3394159340edd1e2388b243bafadca3fe33b6bbafa97a0'
+print(json.dumps({'held_hash_checks':checked,'exp2_unchanged':True}))
