@@ -60,6 +60,34 @@ class HTTPProbeTests(unittest.TestCase):
             with self.assertRaisesRegex(RuntimeError, 'content type'):
                 client.request({})
 
+    def test_https_uses_explicit_ca_and_fixed_loopback(self):
+        with patch.dict(client.os.environ, {'PHP83_HTTP_TLS': '1', 'PHP83_HTTP_CA': '/private/test-ca.crt'}), \
+             patch.object(client.ssl, 'create_default_context') as context, \
+             patch.object(client.http.client, 'HTTPSConnection') as connection:
+            connection.return_value.getresponse.return_value = self.response()
+            self.assertTrue(client.request({}))
+            context.assert_called_once_with(cafile='/private/test-ca.crt')
+            connection.assert_called_once_with('127.0.0.1', 18443, timeout=15, context=context.return_value)
+
+    def test_wrong_runtime_or_sapi_rejected(self):
+        for expectation in [{'PHP83_EXPECTED_RUNTIME': '83'}, {'PHP83_EXPECTED_SAPI': 'apache2handler'}]:
+            with patch.dict(client.os.environ, expectation), patch.object(client.http.client, 'HTTPConnection') as connection:
+                connection.return_value.getresponse.return_value = self.response()
+                with self.assertRaisesRegex(RuntimeError, 'runtime/SAPI'):
+                    client.request({})
+
+    def test_missing_tls_ca_fails_closed(self):
+        with patch.dict(client.os.environ, {'PHP83_HTTP_TLS': '1'}):
+            client.os.environ.pop('PHP83_HTTP_CA', None)
+            with self.assertRaises(KeyError):
+                client.request({})
+
+    def test_wrong_server_nonce_rejected(self):
+        with patch.dict(client.os.environ, {'PHP83_HTTP_NONCE': 'expected-run'}), patch.object(client.http.client, 'HTTPConnection') as connection:
+            connection.return_value.getresponse.return_value = self.response()
+            with self.assertRaisesRegex(RuntimeError, 'server nonce'):
+                client.request({})
+
     def test_log_formats_record_locations_not_secret_text(self):
         log = '[25-Sep] PHP Deprecated: sensitive text in /audit/app/a.php on line 2\n'
         log += '/audit/app/b.php line 4 - sensitive text\nSQL token\n'

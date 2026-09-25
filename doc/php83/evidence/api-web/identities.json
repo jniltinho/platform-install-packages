@@ -1,0 +1,10 @@
+{
+  "host": "kaltura-php74-baseline",
+  "scope": "Independent Apache process; PHP8.3 mod_php copied from isolated .83, matching origin SHA256 checked before copy",
+  "sha256": {
+    "/home/vagrant/php74-audit/packaged/opt/kaltura/app/api_v3/web/index.php": "9322c660865838acf3651fc360e01d8cea297bf0e4df850092998bec2b52bdc5",
+    "/home/vagrant/php-patch-tests/candidate/api_v3/web/index.php": "9322c660865838acf3651fc360e01d8cea297bf0e4df850092998bec2b52bdc5",
+    "/usr/lib/apache2/modules/libphp7.4.so": "e2eed71fa86014b0fe0e10270ebec1fa79c89cbabc20a795caa26fc8a091499b",
+    "/home/vagrant/php-mysql-probe/runtime83/libphp8.3.so": "836620e8b0733c288ab323f3c341855066a8a91e774e82c9fc059adea257d8d5"
+  }
+}

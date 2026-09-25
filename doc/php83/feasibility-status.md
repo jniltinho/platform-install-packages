@@ -397,3 +397,10 @@ candidates, including session.start/get, GET/POST, exact JSON string types and
 negative auth responses. This uses a synthetic cli-server adapter, not the
 production entrypoint, Apache/FPM or HTTPS. E_ALL diagnostics are logged rather
 than emitted in the JSON body; their remediation remains a migration gate.
+
+## Real entrypoint and Apache/HTTPS follow-up
+
+[The real web entrypoint](api-web.md) now passes the bounded session/JSON suite
+under cli-server and a separate Apache mod_php instance. HTTP and trusted HTTPS
+match original 7.4, and an untrusted CA is rejected. No new application patch;
+full installed AIO, FPM, diagnostic remediation and release gates remain open.

@@ -3,13 +3,18 @@
 import http.client
 import json
 import os
+import ssl
 import time
 import urllib.parse
 
 
 def request(params, method='POST'):
     body = urllib.parse.urlencode(dict(format=1, **params))
-    connection = http.client.HTTPConnection('127.0.0.1', 18383, timeout=15)
+    if os.environ.get('PHP83_HTTP_TLS') == '1':
+        context = ssl.create_default_context(cafile=os.environ['PHP83_HTTP_CA'])
+        connection = http.client.HTTPSConnection('127.0.0.1', 18443, timeout=15, context=context)
+    else:
+        connection = http.client.HTTPConnection('127.0.0.1', 18383, timeout=15)
     path = '/probe' + ('?' + body if method == 'GET' else '')
     connection.request(method, path, body if method == 'POST' else None,
                        {'Content-Type': 'application/x-www-form-urlencoded'})
@@ -18,12 +23,15 @@ def request(params, method='POST'):
     content_type = response.getheader('Content-Type', '')
     runtime = response.getheader('X-Probe-PHP', '')
     sapi = response.getheader('X-Probe-SAPI', '')
+    nonce = response.getheader('X-Probe-Nonce', '')
     connection.close()
     if response.status != 200:
         raise RuntimeError('Unexpected HTTP status: ' + str(response.status))
     expected_runtime = {'74': '7.4.', '83': '8.3.'}.get(os.environ.get('PHP83_EXPECTED_RUNTIME'))
-    if not expected_runtime or not runtime.startswith(expected_runtime) or sapi != 'cli-server':
+    if not expected_runtime or not runtime.startswith(expected_runtime) or sapi != os.environ.get('PHP83_EXPECTED_SAPI', 'cli-server'):
         raise RuntimeError('Unexpected HTTP runtime/SAPI')
+    if os.environ.get('PHP83_HTTP_NONCE') and nonce != os.environ['PHP83_HTTP_NONCE']:
+        raise RuntimeError('Unexpected HTTP server nonce')
     if 'json' not in content_type.lower():
         raise RuntimeError('Unexpected content type')
     return json.loads(data)

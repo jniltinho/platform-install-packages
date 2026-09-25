@@ -1,0 +1,56 @@
+Advisory review before final hardening; no tools or repository access.
+
+Revisão baseada só no texto colado. Não usei ferramentas e não criei arquivo de plano.
+
+## Riscos de falso positivo (prioridade alta)
+
+1. **Variáveis globais vazam para o `index.php`.** `$root`, `$connection`, `$mounts`, `$expected`, `$found` e `$requiredMount` ficam no escopo global antes do `require`. Se o bootstrap ou o `index.php` ler algum desses nomes sem inicializar, o comportamento muda. Isso contradiz a premissa de "nenhum bootstrap prévio". Coloque o setup dentro de uma closure/função, ou faça `unset(...)` antes do `require`. Feche também o PDO com `$connection = null`.
+
+2. **`define('STDERR', ...)` sob apache2handler.** O comentário vale para o cli-server e está desatualizado aqui. Código que detecta CLI por `defined('STDERR')` passaria a se comportar como CLI, algo que produção nunca faz. Remova quando `PHP_SAPI === 'apache2handler'`.
+
+3. **O banco é recriado a cada request.** Com `invalid_session` zerado entre requests, testes de estado entre chamadas não significam nada (por exemplo, `session.end` seguido de reuso do KS deveria ser negado). Como original e candidato sofrem o mesmo efeito, o "baseline bem-sucedido" esconde o problema. Faça o seed uma vez por subida do Apache, ou garanta que o cliente não dependa de estado entre requests.
+
+4. **Os headers de versão/SAPI não identificam a árvore testada.** O header prova a família do PHP, mas não diferencia original de candidato. Com portas fixas (18383/18443), um Apache antigo da mesma família ainda escutando passa no readiness e em todas as asserções. O `apache2 -DFOREGROUND` novo morreria com "address in use", e ninguém verifica isso. Correções:
+   - `kill -0 "$server"` após o readiness;
+   - um nonce por execução (`SetEnv PROBE_NONCE`) ecoado pelo router e verificado pelo cliente, junto com o hash/ID da árvore `/audit/app`.
+
+   Se o runner roda dentro do netns privado da sessão anterior, o conflito de portas desaparece, mas o nonce continua barato e vale a pena.
+
+5. **Os headers são enviados antes do `index.php`.** Um fatal dentro do app ainda devolve `X-Probe-*` válidos. Confirme que o cliente também exige status/JSON esperados. Opcionalmente, adicione um marcador via `register_shutdown_function` indicando que o dispatcher real executou (por exemplo, `get_included_files()` contendo o `index.php` e o dispatcher).
+
+6. **O log de diagnóstico nunca é truncado e não falha a execução.**
+   - `probe-diagnostics.log` acumula conteúdo entre combinações se o tmpfs for reaproveitado, e aí warnings são atribuídos à combinação errada.
+   - O Zend logger (mensagens informativas) e o `error_log` do PHP gravam no mesmo arquivo, o que mistura as contagens.
+   - Um `E_DEPRECATED` novo no candidato só é impresso no `cleanup` e não altera o exit code.
+
+   Trunque o arquivo no início, separe os arquivos (PHP em um, Zend em outro) e faça o collector comparar as contagens por combinação.
+
+7. **Assimetria de extensões.** O `libphp7.4` da distro e o `libphp8.3` customizado podem ter extensões built-in diferentes (mbstring, xml, filter, session, etc.). Código com fallback via `function_exists` diverge silenciosamente. Registre e compare `get_loaded_extensions()` (ignorando `json`), e verifique `php_ini_loaded_file() === "$dir/php.ini"` e `php_ini_scanned_files() === false`.
+
+## Segurança (média/baixa)
+
+8. **`error_log` é configurado antes da verificação do tmpfs.** Se `/audit/app/cache` não for tmpfs, a `RuntimeException` é gravada justamente na árvore real. Mova o `ini_set('error_log', ...)` para depois do loop de mounts.
+
+9. **A verificação de mounts é frágil:**
+   - `strpos(' /audit/app/cache ')` também casa o campo 4 (root de bind mount), não só o campo 5 (mount point);
+   - com mounts empilhados, um tmpfs antigo encoberto por um mount não-tmpfs ainda passa;
+   - "privado" não é verificado: a presença de `shared:N` nos campos opcionais indica propagação.
+
+   Faça o parse do campo 5, use a última entrada correspondente e rejeite `shared:`.
+
+10. **Logs brutos acabam no stderr.** O `cleanup` faz `cat` do `error.log` e do log do app. O logger `api_v3` pode registrar KS e os secrets sintéticos (`synthetic-admin-only`). Se o stderr do `run-api-apache.sh` for capturado para `doc/php83/evidence/api-web/` (hoje não rastreado), a regra "só locais/contagens" é quebrada. São sintéticos, mas scanners de segredo vão acusar. Confira esse diretório antes de commitar.
+
+11. **`DocumentRoot /audit/tests` com `Require all granted`.** Os demais arquivos (SQL, `.py`, outros `.php` como texto-fonte) ficam servidos. Só é alcançável por loopback, mas é desnecessário: use `Require all denied` e libere apenas `<Location /probe>`.
+
+12. **`User vagrant` e o UID efetivo.** Se o runner rodar como root, o pai do Apache fica root e os filhos viram `vagrant`. O check de UID 1000 no adapter cobre os filhos, mas confirme que o inner script roda sem privilégios, como diz o comentário do runner. Rodando sem privilégios, a diretiva é ignorada com warning e vale remover.
+
+## Pontos que estão corretos
+
+- `PHPIniDir` + `PHP_INI_SCAN_DIR` vazio isolam o ini.
+- O guard de `@@datadir` falha fechado quando a env está ausente.
+- `MaxRequestWorkers 1` serializa os resets.
+- O teste de CA não confiável só aceita `SSLCertVerificationError`.
+- O `trap` preserva o exit code.
+- O `/probe/x` via PATH_INFO cai no 404 do router.
+
+Os itens 1, 2, 4 e 6 são os que podem produzir "verde" enganoso. Corrija esses antes de usar o resultado como evidência.
