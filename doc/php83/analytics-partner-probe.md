@@ -67,3 +67,52 @@ was read, no source patch or ZIP was changed, and `.20`/main remain untouched.
 Next evidence: reproduce the relevant connection/query path against synthetic
 schema/data and establish consumer expectations, including null/zero values,
 before claiming or repairing an endpoint contract regression.
+
+## Real-driver integration follow-up
+
+`analytics-mysql.php` now connects the exact functions to actual PDO statements
+obtained through the bundled Propel connection factory and held DebugPDO v3.
+It uses the dedicated socket-only MariaDB from the type experiments. The
+Criteria and PartnerPeer layers are still **test adapters**: they return a real
+statement for a synthetic literal SELECT/UNION rather than generating the
+production query. No endpoint bootstrap, authentication, real partner table or
+application credentials are loaded. This narrows the driver-to-function gap,
+but is not full endpoint or real-schema acceptance.
+
+Nine combinations cover positive, zero and NULL parent/package values, each
+with unspecified attributes, explicit native prepares or explicit stringify.
+Every SQL result flows through the original `getPartnerUpdates` function. A
+separate fetch checks that the output pp/se types match the actual driver input.
+The inactive-partner result, count, timestamp and successful-path filter reset
+are asserted again.
+
+Results in `evidence/analytics-partner/mysql/behavior.json`:
+
+- Original/patched 7.4 match in all nine combinations.
+- Patched 8.3 differs from original 7.4 for **positive and zero** values with
+  unspecified connection attributes: quoted numbers become JSON numbers.
+- NULL values match; all explicit-native and explicit-stringify cases match.
+- Original 8.3 still fails at the unpatched DebugPDO declaration.
+- Existing function-only comparisons still pass, as expected for identical
+  supplied input shapes (`unit-regression.json`). All 38 offline tests pass.
+
+With the existing guarded, disposable server prepared, invoke:
+
+```bash
+bash /home/vagrant/php-patch-tests/run-mysql-types.sh 74 original "$d" analytics
+bash /home/vagrant/php-patch-tests/run-mysql-types.sh 74 candidate "$d" analytics
+bash /home/vagrant/php-patch-tests/run-mysql-types.sh 83 candidate "$d" analytics
+```
+
+Both PHP binaries run on the isolated baseline VM with previously recorded
+binary/module provenance. Hashes of the integration harness are in the report.
+The dedicated database service was stopped and candidate DebugPDO restored
+after collection. No new source patch or global PDO setting was selected.
+
+Claude's unit-methodology review is saved as advisory text. Its request for
+real-driver evidence motivated this bounded integration. Its opinions about
+whether a downstream consumer must fail before a repair is warranted, or where
+a repair must live, are not acceptance decisions: the proposal still requires
+preserved API contracts and review of configuration side effects. Effective
+deployed attributes, real query/schema execution, downstream readers and the
+full authenticated endpoint remain unverified.

@@ -1,6 +1,7 @@
 <?php
 // Unit isolation only: exact source functions, explicit query/criteria doubles.
-// Never include the endpoint bootstrap or perform a database/network operation.
+// Never include the endpoint bootstrap. Default unit mode performs no DB I/O;
+// the separate integration harness may provide an isolated PDO statement.
 $source = file_get_contents($root . '/api_v3/web/analyticsSyncServe.php');
 $sourceHash = 'b2fe37440f542a49020547bfc6babc76049ab713e65495247b0c6a6eb1f010dc';
 if (hash('sha256', $source) !== $sourceHash) {
@@ -37,10 +38,15 @@ class PartnerPeer
     const ID = 'ID', STATUS = 'STATUS', ADMIN_SECRET = 'ADMIN_SECRET', CUSTOM_DATA = 'CUSTOM_DATA',
         PARTNER_PARENT_ID = 'PARTNER_PARENT_ID', PARTNER_PACKAGE = 'PARTNER_PACKAGE', UPDATED_AT = 'UPDATED_AT';
     public static $rows;
+    public static $statementFactory;
     public static $filter = true;
     public static function setUseCriteriaFilter($enabled) { self::$filter = $enabled; }
-    public static function doSelectStmt($criteria) { return new AnalyticsStatementDouble(); }
+    public static function doSelectStmt($criteria) {
+        if (self::$statementFactory !== null) { return call_user_func(self::$statementFactory); }
+        return new AnalyticsStatementDouble();
+    }
 }
+if (isset($analyticsFunctionsOnly) && $analyticsFunctionsOnly) { return; }
 $results = array();
 foreach (array('text' => array('42', '7'), 'native' => array(42, 7), 'null' => array(null, null)) as $shape => $values) {
     $row = array('ID' => '101', 'STATUS' => Partner::PARTNER_STATUS_ACTIVE,

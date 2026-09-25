@@ -1,0 +1,23 @@
+# Revisão de metodologia
+
+A conclusão está bem delimitada. Os doubles fornecem os tipos, então a saída idêntica em 7.4 e 8.3 prova apenas que as três funções **repassam o tipo sem alterá-lo**. Isso não mostra que os tipos permanecem iguais em produção. A lacuna fica entre o driver e a função.
+
+## Menor evidência que falta
+
+1. **Caracterização do driver real no caminho real de conexão.** Use a mesma factory/config de conexão que o endpoint usa (Propel/DebugPDO, se for o caso), com um banco descartável e somente leitura. Em PHP 7.4 e 8.3, registre:
+   - `ATTR_EMULATE_PREPARES`, `ATTR_STRINGIFY_FETCHES` e a versão do mysqlnd efetivos;
+   - `gettype()` de `pp` e `se` para a mesma query, ou uma query com os mesmos tipos de coluna, incluindo NULL.
+
+   Se os tipos coincidirem entre as versões, não há o que reparar.
+
+2. **Trace dos consumidores de `pp`/`se`.** Liste só os leitores diretos e verifique se algum é sensível a tipo: `===`, `in_array(..., true)`, `match`, `json_encode` enviado a um cliente tipado, ou chaves de array. Se nenhum for, a divergência de tipo é inócua e também não há reparo.
+
+## Critério de decisão
+
+Só existe um defeito de compatibilidade se os tipos divergirem no passo 1 **e** houver um consumidor sensível no passo 2.
+
+Nesse caso, o reparo deve ficar no ponto de configuração da conexão (fixar os atributos de emulate/stringify), e não num cast global dos campos. Isso preserva as configurações que já são numéricas ou usam prepares nativos, que é exatamente a sua objeção ao patch.
+
+O handoff anterior menciona que "stringify=true passa em ambas". Trate isso como hipótese a confirmar no passo 1, não como evidência.
+
+**Pulado:** teste de regressão do endpoint. Ele só se justifica depois que os passos 1 e 2 confirmarem o defeito.

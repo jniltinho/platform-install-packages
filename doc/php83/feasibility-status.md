@@ -321,3 +321,11 @@ on both PHP versions. This is consumer-sensitivity evidence, not an endpoint
 regression or permission to normalize all responses. No new source patch was
 selected; downstream type expectations and real isolated query integration
 remain open. All 38 offline tests continue to pass.
+
+Analytics integration now feeds real MariaDB/PDO statements through the pinned
+partner-update function using synthetic SELECTs and explicit peer/criteria
+adapters. Nine combinations confirm JSON type changes for positive/zero values
+under unspecified attributes; NULL/native/stringify cases match. This closes
+the fixture's driver-to-function gap, not full query/schema/authentication or
+endpoint acceptance. No global attribute or source repair was selected; the
+probe service was stopped and original candidate source restored.

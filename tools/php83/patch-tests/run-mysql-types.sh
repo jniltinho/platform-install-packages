@@ -7,6 +7,7 @@ set -euo pipefail
 case "${4:-types}" in
  types) fixture=mysql-types.php ;;
  init) fixture=mysql-init.php ;;
+ analytics) fixture=analytics-mysql.php ;;
  *) exit 64 ;;
 esac
 case "$1" in
