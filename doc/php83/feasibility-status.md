@@ -306,3 +306,10 @@ numeric-type difference. Constructor/post-construction native options and
 stringify options are honored; selected hydrated integer fields match in all
 four cases. This is not effective live-configuration or full API validation.
 PDO7.4's unsupported stringify-attribute readback is explicitly recorded.
+
+The real Kaltura JSON serializer now confirms a raw-object numeric JSON type
+difference in the unspecified synthetic connection case; selected hydrated
+fields retain identical JSON. A direct analytics row-to-JSON path was identified
+for further synthetic endpoint testing, not executed. The characterization
+collector retains the known mismatch explicitly. All 38 offline tests pass;
+full API acceptance and promotion remain blocked.

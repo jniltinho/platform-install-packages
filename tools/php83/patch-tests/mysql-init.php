@@ -15,6 +15,9 @@ require_once 'propel/om/Persistent.php';
 require_once '/audit/app/alpha/lib/model/om/Baseentry.php';
 // Concrete test subclass; no override of construction or hydration behavior.
 class Php83EntryHydrationProbe extends Baseentry {}
+require_once '/audit/app/api_v3/lib/KalturaSerializer.php';
+require_once '/audit/app/api_v3/lib/KalturaJsonSerializer.php';
+$serializer = new KalturaJsonSerializer();
 $fixtures = array(
     'unspecified' => array(),
     'constructor-native' => array('options' => array('PDO::ATTR_EMULATE_PREPARES' => array('value' => false))),
@@ -62,9 +65,17 @@ foreach ($fixtures as $name => $extra) {
         'partner_id' => 42, 'name' => null) || $entry->isNew() || $entry->isModified()) {
         throw new RuntimeException('Generated entry hydration fixture failed');
     }
+    // Plain synthetic objects: exercises the real serializer, not an API action
+    // or KalturaObject mapping. The serializer removes null properties.
+    $rawJson = $serializer->serialize((object) $row);
+    $hydratedJson = $serializer->serialize((object) $hydrated);
+    if ($hydratedJson !== '{"id":"1_synthetic","views":42,"partner_id":42}'
+        || array_key_exists('nullable', json_decode($rawJson, true))) {
+        throw new RuntimeException('Synthetic serializer contract failed');
+    }
     $results[] = array('case' => $name, 'class' => get_class($db), 'emulate' => $emulate,
         'stringify' => $stringify, 'stringify_readback' => $stringifyReadback,
         'error_mode' => $db->getAttribute(PDO::ATTR_ERRMODE),
-        'row' => $row, 'hydrated' => $hydrated);
+        'row' => $row, 'hydrated' => $hydrated, 'raw_json' => $rawJson, 'hydrated_json' => $hydratedJson);
 }
 echo json_encode(array('php' => PHP_VERSION, 'results' => $results)), "\n";

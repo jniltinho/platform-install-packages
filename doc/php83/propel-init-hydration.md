@@ -87,3 +87,60 @@ the previous type probe. The temporary DB service was stopped and candidate
 DebugPDO restored after collection. `.20`, main, active patch manifest and exp2
 ZIP are unchanged. Remaining diagnostics and API/raw-query consumers still
 block promotion; no migration task is marked complete.
+
+## Follow-up: actual JSON serializer
+
+The fixture now invokes the bundled `KalturaSerializer` and
+`KalturaJsonSerializer` on **plain synthetic objects** constructed from the raw
+row and the selected hydrated fields. It does not construct a full Kaltura API
+object, invoke authentication or execute an endpoint. Both serializer files
+were source-read and coverage checked with the same graph generation and
+metadata-match/no-recorded-gap result.
+
+New report: `evidence/debug-pdo/mysql-serializer/behavior.json` (the earlier
+hydration report remains unchanged). With unspecified connection attributes:
+
+```json
+{"n":"42","f":"1.25","charset":"utf8mb4"}
+```
+
+is the original 7.4 raw-object JSON, while patched 8.3 produces:
+
+```json
+{"n":42,"f":1.25,"charset":"utf8mb4"}
+```
+
+The selected hydrated object produces identical JSON on both runtimes in all
+four configurations. The real serializer's removal of null properties is also
+asserted. Constructor/attribute native-prepares and explicit stringify cases
+retain raw JSON parity in this fixture, not necessarily across the whole API.
+
+Run the prepared, dedicated probe with:
+
+```bash
+python3 tools/php83/patch-tests/collect-mysql-init.py /tmp/mysql-init.json
+```
+
+The collector's success means the recorded characterization was reproduced,
+**not that raw JSON parity passed**: its report explicitly retains the known
+false comparison. Five offline tests verify that the mismatch remains visible
+and that hydration regressions, missing cases, candidate failures and unrelated
+original failures fail collection. All 38 offline tests pass.
+
+### Direct-consumer triage (source only)
+
+- `api_v3/web/analyticsSyncServe.php`, `getPartnerUpdates`, lines 132–151:
+  fetches associative rows, copies parent-ID/package columns into a structure
+  and calls `json_encode` without explicit casts for those columns. This is a
+  candidate JSON-contract risk inferred from source, **not an executed endpoint
+  regression**. The script was not loaded or run; it includes sensitive-data
+  processing paths and must only be tested later with isolated synthetic data.
+- `alpha/lib/model/PartnerLoadPeer.php`, `getPartnerLoads`, lines 110–132:
+  consumes associative rows then passes values through generated model setters.
+  That is a different path from direct JSON emission. Setter behavior and the
+  complete batch workflow were not tested in this step.
+
+Both files were coverage checked and relevant source ranges read. This is not
+an exhaustive raw-query inventory or evidence that deployed connections use
+the synthetic unspecified configuration. Broad API acceptance remains open.
+The probe DB was stopped and original candidate source restored after this run.
