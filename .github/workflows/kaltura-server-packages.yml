@@ -131,7 +131,9 @@ jobs:
       - name: Resolve kaltura-server
         run: |
           dnf -y install --downloadonly kaltura-server | tee plan.txt
-          if grep -E '^ php[^-]*-8\.|php-common.*8\.' plan.txt; then echo "PHP 8 would be installed"; exit 1; fi
+          # match the version column only: a release like 7.4.33-28 must not look like PHP 8
+          if awk '$1 ~ /^php/ && $3 ~ /^([0-9]+:)?8\./ {print; f=1} END {exit !f}' plan.txt; then echo "PHP 8 would be installed"; exit 1; fi
+          grep -qE '^ php-common +x86_64 +7\.4\.' plan.txt
 
   release:
     if: startsWith(github.ref, 'refs/tags/kaltura-server/v')
