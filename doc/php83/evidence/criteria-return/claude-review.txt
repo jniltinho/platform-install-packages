@@ -1,0 +1,24 @@
+Executei `python3 tools/php83/criteria-return/collect.py doc/php83/evidence/criteria-return/claude.json` e o **exit real é 1**. Salvei `claude.stdout` (vazio), `claude.stderr` (`RuntimeError: Same-runtime error contract changed`) e `claude.exit`. O `claude.json` não foi gerado, assim como o `codex.json`: o Codex também terminou com exit 1 e o mesmo erro, então não houve relatório completo para comparar.
+
+1. **Causa da falha:** reexecutei o fixture no php83 (8.3.6), só para diagnóstico e sem salvar a saída. Os dois controles de acesso inválido têm a mesma severidade (2), a mesma mensagem ("Undefined array key 0/2") e a mesma linha (1268/1272) em previous e candidate. A única diferença é o nome do arquivo que o `probe.php` grava via `basename($file)` (`previous.php` ≠ `candidate.php`). É um defeito do harness, não uma regressão do patch.
+2. **Correção do harness:** a comparação na linha 38 do `collect.py` precisa ignorar o nome do arquivo, ou o probe precisa normalizá-lo. Depois disso, a coleta precisa ser refeita pelo Codex e por mim. Não editei nada, como pedido.
+3. **O que confirmei na reexecução diagnóstica** (sem relatório salvo):
+   - As 16 linhas positivas são idênticas entre previous e candidate no 8.3.
+   - As assinaturas nativas do candidate são `Traversable`, `void`, `bool`, `mixed`, `mixed`, `void`.
+   - O previous no 8.3 gera exatamente seis avisos de carga (8192, "Return type of…"); o candidate não gera nenhum.
+   - A paridade das linhas com a execução no 7.4 só é checada pelo collector, que abortou antes do fim; portanto não ficou registrada.
+4. **Patch cumulativo:**
+   - O hunk `$realtable === null || ! strlen(...)` é igual ao do `Criteria-null-alias.patch`, e o `before_sha256` é o mesmo nos dois.
+   - O JSON declara `supersedes_in_candidate`, ou seja, este patch substitui o anterior no manifesto futuro.
+   - As duas mudanças ficam preservadas num único alvo, sem promover `Criteria.php` duas vezes.
+5. **Escopo de runtime:**
+   - O candidate roda só no 8.3 (o `run.sh` sai com código 64 no 7.4).
+   - O que roda no 7.4 e no 8.3 é a classe anterior, com o null-alias. Isso não significa que o exp7 inteiro suporte o 7.4.
+6. **Fixture:**
+   - `DBAdapter` e `Propel::getDB` são stubs.
+   - `myCriteria` e `KalturaCriteria` são as duas únicas subclasses diretas reais de `Criteria` no source, e nenhuma sobrescreve os métodos do iterador.
+   - Há casos de mutação, clone e serialização em que o valor é trocado ao vivo enquanto a lista de chaves continua sendo um snapshot.
+7. **Limitações:**
+   - Não houve SQL, cache, bootstrap nem aceitação da aplicação.
+   - A execução ficou isolada via `systemd-run` sem rede.
+   - Nenhum resultado desta rodada pode ser dado como aprovado enquanto o collector não corrigido não terminar com exit 0.

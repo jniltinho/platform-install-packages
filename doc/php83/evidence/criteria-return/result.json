@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "primary_sha256": "9dfa60531605cc2c9e435740ad0eb1a3f53ac5a54268849c87d83df08980834f",
+  "independent_sha256": "9dfa60531605cc2c9e435740ad0eb1a3f53ac5a54268849c87d83df08980834f",
+  "full_reports_byte_identical": true,
+  "variants": [
+    "previous74",
+    "previous83",
+    "candidate83"
+  ],
+  "positive_rows_per_variant": 16,
+  "invalid_controls_per_variant": 2,
+  "previous83_load_deprecations": 6,
+  "candidate83_load_diagnostics": 0,
+  "invalid83_diagnostics_unchanged": true,
+  "candidate74_guard_exit": 64,
+  "initial_attempt": {
+    "codex_collector_exit": 1,
+    "claude_collector_exit": 1,
+    "cause": "variant filenames in strict diagnostic equality",
+    "correction": "canonical read-only source mount; no comparison relaxation"
+  },
+  "claude_retry_collector_exit": 0,
+  "cursor_cli_exit": 0,
+  "grok_cli_exit": 124,
+  "grok_status": "timeout at120seconds; no completed validation result",
+  "opencode_cli_exit": 0,
+  "fallback_model": "opencode/muse-spark-1.3-contributor-free",
+  "local_tests": 126,
+  "patch_inventory": {
+    "active": 3,
+    "held": 25,
+    "result": "PASS"
+  },
+  "application_acceptance": false,
+  "artifact_integration": "pending"
+}

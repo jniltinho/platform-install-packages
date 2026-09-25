@@ -1,0 +1,9 @@
+{
+  "status": "held; cumulative Criteria null-alias repair plus native return contracts; PHP8.3-only",
+  "path": "vendor/propel/util/Criteria.php",
+  "before_sha256": "0626bb5b976ae7eedccaf5060675cd7c7ca56b22fc2c9d6c1a51ce485a303543",
+  "after_sha256": "e8333167c6b501c92a8ee681a3b8c63372e8bf20e81c140a242c37c75b49a89a",
+  "patch_sha256": "1c543d541c4422b36f58b67954d020e0e9c3a9582711c5dad43fe70e60942f0f",
+  "supersedes_in_candidate": "Criteria-null-alias.patch",
+  "prior_candidate_sha256": "9b36246d143a11ab1ffd8b31966cf86d4a7563e78cca216f344727ba3d232d19"
+}

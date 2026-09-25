@@ -1,0 +1,49 @@
+--- a/vendor/propel/util/Criteria.php
++++ b/vendor/propel/util/Criteria.php
+@@ -190,7 +190,7 @@
+ 	 * Implementing SPL IteratorAggregate interface.  This allows
+ 	 * you to foreach () over a Criteria object.
+ 	 */
+-	public function getIterator()
++	public function getIterator(): Traversable
+ 	{
+ 		return new CriterionIterator($this);
+ 	}
+@@ -1256,23 +1256,23 @@
+ 		$this->criteriaSize = count($this->criteriaKeys);
+ 	}
+ 
+-	public function rewind() {
++	public function rewind(): void {
+ 		$this->idx = 0;
+ 	}
+ 
+-	public function valid() {
++	public function valid(): bool {
+ 		return $this->idx < $this->criteriaSize;
+ 	}
+ 
+-	public function key() {
++	public function key(): mixed {
+ 		return $this->criteriaKeys[$this->idx];
+ 	}
+ 
+-	public function current() {
++	public function current(): mixed {
+ 		return $this->criteria->getCriterion($this->criteriaKeys[$this->idx]);
+ 	}
+ 
+-	public function next() {
++	public function next(): void {
+ 		$this->idx++;
+ 	}
+ 
+@@ -1372,7 +1372,7 @@
+ 
+ 		//init $this->realtable
+ 		$realtable = $criteria->getTableForAlias($this->table);
+-		if (! strlen ( $realtable ) ) {
++		if ($realtable === null || ! strlen ( $realtable ) ) {
+ 			$realtable = $this->table;
+ 		}
+ 		$this->realtable = $realtable;

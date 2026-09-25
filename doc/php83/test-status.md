@@ -241,3 +241,11 @@ API diagnostics: 27 groups/703 events. CLI: 60 rows including original7.4 baseli
 and exp6 counterfactual; all 12 exp7 rows pass. Local suite: 126 tests.
 See [exp7 evidence](exp7-config-integration.md). Acceptance remains 0/24 and
 3/27 detailed tasks; no release or production change is approved by this cycle.
+
+## Held Criteria iterator native returns
+
+Sixteen actual-class state/alias rows and two invalid-access controls pass with
+independent reruns after correcting a fixture filename mismatch. Cumulative patch
+preserves the null-alias repair and must replace its old manifest entry, not be
+stacked. See [Criteria evidence](criteria-return-contracts.md). No API diagnostic
+reduction or full-case completion is claimed before artifact integration.

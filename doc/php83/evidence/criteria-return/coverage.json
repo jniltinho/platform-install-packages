@@ -1,0 +1,156 @@
+{
+  "project": "kaltura-rigel-18.20.0-full",
+  "signal": "best_effort",
+  "indexed_at": "2026-09-25T12:19:00Z",
+  "metadata": {
+    "generation": "2026-09-25T12:19:00Z",
+    "index_mode": "full",
+    "recorded_at": "2026-09-25T12:19:04Z",
+    "recording_status": "complete",
+    "ignored_files_stored": 519,
+    "ignored_files_total": 519,
+    "hash_records_complete": true,
+    "coverage_version": 3,
+    "generation_matches": true
+  },
+  "paths": [
+    {
+      "requested_path": "vendor/propel/util/Criteria.php",
+      "path": "vendor/propel/util/Criteria.php",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "alpha/apps/kaltura/lib/model/objectfilters/IKalturaDbQuery.php",
+      "path": "alpha/apps/kaltura/lib/model/objectfilters/IKalturaDbQuery.php",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "alpha/apps/kaltura/lib/model/objectfilters/KalturaCriteria.php",
+      "path": "alpha/apps/kaltura/lib/model/objectfilters/KalturaCriteria.php",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "alpha/apps/kaltura/lib/myCriteria.class.php",
+      "path": "alpha/apps/kaltura/lib/myCriteria.class.php",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "plugins/content/caption/search/sphinx/SphinxCaptionAssetItemCriteria.php",
+      "path": "plugins/content/caption/search/sphinx/SphinxCaptionAssetItemCriteria.php",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "plugins/content_distribution/content_distribution_sphinx/lib/SphinxEntryDistributionCriteria.php",
+      "path": "plugins/content_distribution/content_distribution_sphinx/lib/SphinxEntryDistributionCriteria.php",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "plugins/cue_points/quiz/sphinx/lib/SphinxAnswerCuePointCriteria.php",
+      "path": "plugins/cue_points/quiz/sphinx/lib/SphinxAnswerCuePointCriteria.php",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "plugins/cue_points/sphinx/lib/SphinxCuePointCriteria.php",
+      "path": "plugins/cue_points/sphinx/lib/SphinxCuePointCriteria.php",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "plugins/metadata/sphinx/lib/SphinxMetadataCriteria.php",
+      "path": "plugins/metadata/sphinx/lib/SphinxMetadataCriteria.php",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "plugins/reach/sphinx/lib/SphinxEntryVendorTaskCriteria.php",
+      "path": "plugins/reach/sphinx/lib/SphinxEntryVendorTaskCriteria.php",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "plugins/schedule/sphinx/lib/SphinxScheduleEventCriteria.php",
+      "path": "plugins/schedule/sphinx/lib/SphinxScheduleEventCriteria.php",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "plugins/search/providers/sphinx_search/lib/SphinxCategoryCriteria.php",
+      "path": "plugins/search/providers/sphinx_search/lib/SphinxCategoryCriteria.php",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "plugins/search/providers/sphinx_search/lib/SphinxCategoryKuserCriteria.php",
+      "path": "plugins/search/providers/sphinx_search/lib/SphinxCategoryKuserCriteria.php",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "plugins/search/providers/sphinx_search/lib/SphinxCriteria.php",
+      "path": "plugins/search/providers/sphinx_search/lib/SphinxCriteria.php",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "plugins/search/providers/sphinx_search/lib/SphinxEntryCriteria.php",
+      "path": "plugins/search/providers/sphinx_search/lib/SphinxEntryCriteria.php",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "plugins/search/providers/sphinx_search/lib/SphinxKuserCriteria.php",
+      "path": "plugins/search/providers/sphinx_search/lib/SphinxKuserCriteria.php",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "plugins/tag_search/sphinx/SphinxTagCriteria.php",
+      "path": "plugins/tag_search/sphinx/SphinxTagCriteria.php",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    }
+  ],
+  "scopes": [],
+  "caveat": "Best-effort signal only. No recorded issue does not prove graph or source completeness; read flagged source and qualify claims when metadata is changed or unavailable."
+}

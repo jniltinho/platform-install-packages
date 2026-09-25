@@ -1,0 +1,11 @@
+Escopo fechado: só o guard SSH no baseline74, salvar a evidência do Cursor e comparar os JSON já existentes. Começo inspecionando a pasta de evidência e o runner.Guard saiu 64 como esperado. Agora comparo byte a byte os JSON e reviso o runner canônico e os controles retidos.**Guard:** `ssh … baseline74 "… run.sh candidate"` → exit **64**, stdout/stderr vazios; salvos em `doc/php83/evidence/criteria-return/cursor-guard.{stdout,stderr,exit}` (pré-mount/PHP, como esperado no 7.4).
+
+**Comparação:** `codex.json` e `claude.json` são byte-idênticos (`sha256` `9dfa6053…`); 3 records (74/previous, 83/previous, 83/candidate), `functional_checks_passed=true`, `application_acceptance=false`.
+
+**Erros preservados:** `invalid_controls` empty/exhausted intactos — 74 `Undefined offset` (sev 8), 83 `Undefined array key` (sev 2); comparação same-runtime previous↔candidate não foi enfraquecida.
+
+**Runner:** canônico remonta `$base/$1.php→/audit/Criteria.php` e invoca `/audit/Criteria.php`; tentativa falha retida em `attempts/variant-paths/` usava `/audit/probe/$1.php` sem esse bind e caiu em `Same-runtime error contract changed` (exit 1).
+
+**Nota:** `mixed` nos contratos (key/current) é o nome do tipo de retorno via Reflection no candidate 8.3, não erro de parse no 74.
+
+**Limite:** só este guard + revisão local de evidência/runner; sem claim de app inteira/SQL nem execução 8.3 neste turno.

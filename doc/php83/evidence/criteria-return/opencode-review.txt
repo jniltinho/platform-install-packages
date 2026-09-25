@@ -1,0 +1,11 @@
+Grok fallback active — running your PHP 8.3 checks in place.
+Tests green — now inspecting the patch and helpers.
+Grok executor timed out124, fallback executed by OpenCode with Zen Muse Spark 1.3 Free in `/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83` only, no VMs, writes or commits.
+Local `python3 -m unittest discover -s tools/php83 -p "test_*.py"` exit 0, 126 tests OK in ~0.07s.
+`Criteria-native-returns.patch` retains prior null-alias guard `$realtable === null || !strlen($realtable)`, and `Criteria-native-returns.json` carries same `before_sha256`, chains `prior_candidate_sha256` to null-alias `after_sha256`, and declares `supersedes_in_candidate`.
+Defect/gate: `held/` still contains both `Criteria-null-alias.*` and `Criteria-native-returns.*` for same target `vendor/propel/util/Criteria.php`, so future manifest must REPLACE not apply both or it duplicates target.
+PHP8.3-only gating is correct because `mixed` is a class name on 7.4 not a parse error: `run.sh` refuses `candidate` off 8.3 and `collect.py` runs candidate only on runtime 83 with `candidate_runtime 8.3 only`.
+Native contracts cover 6 methods with exact `Traversable/void/bool/mixed` map for candidate versus typeless previous, plus 16 positive rows for empty/ordered/independent/snapshot/replace/remove/clone/serialize/rewind/5 alias cases.
+Two invalid controls `empty/exhausted` preserve legacy `[null,null]` values with 2 diagnostics each and severity 8 on 74 versus 2 on 83, and 6x E_DEPRECATED 8192 load warnings required only for 83/previous.
+Scope correctly uses actual `Criteria/myCriteria/KalturaCriteria` with object identity while stubbing only `Propel::getDB/DBAdapter` with no SQL, `application_acceptance False`.
+VM probe cases are NOT_EXECUTED here by constraint, no full acceptance claimed.

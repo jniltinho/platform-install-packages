@@ -186,3 +186,9 @@ original7.4 functional comparisons plus exp6 counterfactuals. Exactly 144 events
 are removed; 27 groups/703 events remain. Four local fault-injection/matrix tests
 raise the suite to 126. See `doc/php83/exp7-config-integration.md`; no full-case
 checkbox closes and candidate7.4 support is explicitly not claimed.
+
+T1-01 partial: cumulative held Criteria-native-returns retains the prior alias
+fix and adds six native return declarations for 8.3. Sixteen state/alias rows and
+two invalid iterator controls match; the first fixture-filename equality failure
+is retained and corrected through a canonical read-only mount, not suppression.
+See `doc/php83/criteria-return-contracts.md`; combined ZIP/SQL/API remains pending.

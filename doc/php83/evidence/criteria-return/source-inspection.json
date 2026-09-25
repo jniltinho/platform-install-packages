@@ -1,0 +1,115 @@
+{
+  "scope": "15 graph-discovered descendants at depth<=10 plus exact interface/base; no claim about external/dynamic classes",
+  "files": [
+    {
+      "path": "vendor/propel/util/Criteria.php",
+      "sha256": "0626bb5b976ae7eedccaf5060675cd7c7ca56b22fc2c9d6c1a51ce485a303543",
+      "declarations": [
+        {
+          "line": 193,
+          "source": "\tpublic function getIterator()"
+        },
+        {
+          "line": 1259,
+          "source": "\tpublic function rewind() {"
+        },
+        {
+          "line": 1263,
+          "source": "\tpublic function valid() {"
+        },
+        {
+          "line": 1267,
+          "source": "\tpublic function key() {"
+        },
+        {
+          "line": 1271,
+          "source": "\tpublic function current() {"
+        },
+        {
+          "line": 1275,
+          "source": "\tpublic function next() {"
+        }
+      ]
+    },
+    {
+      "path": "alpha/apps/kaltura/lib/model/objectfilters/IKalturaDbQuery.php",
+      "sha256": "f9b9052659f667d3214d7823149345479f30828b716e6fecd45fe021a7817bee",
+      "declarations": []
+    },
+    {
+      "path": "alpha/apps/kaltura/lib/model/objectfilters/KalturaCriteria.php",
+      "sha256": "becac7307ea27ae3f2a8742f02718e54efd3dbcca4ea5a8633a674969b62cadf",
+      "declarations": []
+    },
+    {
+      "path": "alpha/apps/kaltura/lib/myCriteria.class.php",
+      "sha256": "ea82576584de2faa22f989d1ebed1d939fed44c3b4552ed8e9cc77b03c033479",
+      "declarations": []
+    },
+    {
+      "path": "plugins/content/caption/search/sphinx/SphinxCaptionAssetItemCriteria.php",
+      "sha256": "4c655e1131ce3796e11a73120acec9d80c3ed19e61bbb19610a2053374305129",
+      "declarations": []
+    },
+    {
+      "path": "plugins/content_distribution/content_distribution_sphinx/lib/SphinxEntryDistributionCriteria.php",
+      "sha256": "96dce4625c29a0d7fa564ce1ea1098e4ea5a1963c0d91ecf96570e8888986e5e",
+      "declarations": []
+    },
+    {
+      "path": "plugins/cue_points/quiz/sphinx/lib/SphinxAnswerCuePointCriteria.php",
+      "sha256": "c416c13072ca007da186498253c2562b6ca25b69a93d276687a64de13ee7e52a",
+      "declarations": []
+    },
+    {
+      "path": "plugins/cue_points/sphinx/lib/SphinxCuePointCriteria.php",
+      "sha256": "bb342881c90ccd31849a6b80adff3f7e15bccd1d6d341bf56cec844ba43885f1",
+      "declarations": []
+    },
+    {
+      "path": "plugins/metadata/sphinx/lib/SphinxMetadataCriteria.php",
+      "sha256": "872b194c68c9b389bf364dc724c9e1ac37434ba768cdea74ad83682dc5c2fc92",
+      "declarations": []
+    },
+    {
+      "path": "plugins/reach/sphinx/lib/SphinxEntryVendorTaskCriteria.php",
+      "sha256": "a033b4542b836492e7cd1db72d972baddf7abb08c5b40434314a10155bf433eb",
+      "declarations": []
+    },
+    {
+      "path": "plugins/schedule/sphinx/lib/SphinxScheduleEventCriteria.php",
+      "sha256": "f46cb493079b05ed75295616f395fc5eab4370f8cc03099b4a57d9a58a6a04e6",
+      "declarations": []
+    },
+    {
+      "path": "plugins/search/providers/sphinx_search/lib/SphinxCategoryCriteria.php",
+      "sha256": "1573d0a9f7fbe7d273fa6d81b622a76e7e840db0f7c21946af1d575789f71fc9",
+      "declarations": []
+    },
+    {
+      "path": "plugins/search/providers/sphinx_search/lib/SphinxCategoryKuserCriteria.php",
+      "sha256": "eb54efe3d41fc49bdaed68eb04f1c50a969fa4f20410a0c20a06ae77356ec384",
+      "declarations": []
+    },
+    {
+      "path": "plugins/search/providers/sphinx_search/lib/SphinxCriteria.php",
+      "sha256": "a860930badf886f6e9bfbd516a6c6a3ee61f649055d2bbdb2a2ff2ef4d198ab5",
+      "declarations": []
+    },
+    {
+      "path": "plugins/search/providers/sphinx_search/lib/SphinxEntryCriteria.php",
+      "sha256": "8d56bde33b1ae625c3f968306de60090f519d62ad35636c764b0c9f5ab7b4b05",
+      "declarations": []
+    },
+    {
+      "path": "plugins/search/providers/sphinx_search/lib/SphinxKuserCriteria.php",
+      "sha256": "bfb1824d2bd6b78583bdb5f6a603f46406689ae05803e8637e8d271074c350d7",
+      "declarations": []
+    },
+    {
+      "path": "plugins/tag_search/sphinx/SphinxTagCriteria.php",
+      "sha256": "675ca5e69928cc461dcc02d2f358570777b4454608f39774fe89e292e8787792",
+      "declarations": []
+    }
+  ]
+}

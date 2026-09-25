@@ -1,0 +1,7 @@
+Vou rodar os testes do harness e cruzar o patch held com o Criteria-null-alias e as classes Criteria no source Rigel.**Harness:** `python3 -m unittest discover -s tools/php83 -p "test_*.py"` → **126 OK** (0,068s); isso não cobre o patch held nem o estado do iterator.
+
+**Patch:** `Criteria-native-returns` aplica no original (`before` = source SHA `0626bb5b…`), bate `after` `e8333167…`, e é cumulativo: o mesmo guard `$realtable === null || ! strlen(...)` de `Criteria-null-alias` **mais** seis contratos nativos (`getIterator(): Traversable`, `rewind`/`next(): void`, `valid(): bool`, `key`/`current(): mixed`). Empilhar null+native falha no hunk do guard — o manifesto futuro deve **substituir** `Criteria-null-alias.patch`, não duplicar o alvo `vendor/propel/util/Criteria.php`. Só 8.3: `mixed` não parseia em 7.4.
+
+**Overrides:** `myCriteria` / `KalturaCriteria` / `SphinxCriteria` não sobrescrevem `getIterator` nem o `CriterionIterator`; herdam o `CriterionIterator` do Propel. `getTableForAlias` continua com retorno implícito `null` — o guard é necessário; `key`/`current` tipados `mixed` batem com chaves string e objetos `Criterion`, sem mudar ramos vazios/`"0"`.
+
+**Lacuna:** `tools/php83/criteria-return/` está vazio; faltam testes de estado (mapa vazio, multi-chave, `rewind`/`valid` pós-exaustão, instâncias das subclasses). Held / PHP8.3-only, sem aceitação de app/SQL/API.

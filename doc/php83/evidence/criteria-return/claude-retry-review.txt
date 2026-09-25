@@ -1,0 +1,16 @@
+A execução independente terminou com o processo CLI do `collect.py` em **exit 0**, sem stderr. O stdout foi a linha de sucesso habitual, e tudo ficou gravado em `claude.stdout`, `claude.stderr` e `claude.exit`. Os três fixtures dentro do `systemd-run` também retornaram 0: 74/previous, 83/previous e 83/candidate.
+
+- **Comparação com o `codex.json`:** o `claude.json` é idêntico byte a byte (verificado com `cmp`). Os hashes batem com os arquivos locais: collector `77faba21…`, `probe.php` `0d9fe571…`, `run.sh` `a2efb905…`, patch `1c543d54…`. O fixture `previous.php` tem hash `9b36246d…` e o `candidate.php` tem `e8333167…`.
+- **Correção do harness:** o `run.sh` atual monta `$base/$1.php` somente leitura no mesmo caminho canônico `/audit/Criteria.php`. A igualdade dos diagnósticos continua estrita, sem nenhuma normalização.
+- **Seis assinaturas:** só o candidate tem os tipos nativos (`Traversable`, `void`, `bool`, `mixed`, `mixed`, `void`). Nas duas execuções do previous as seis ficam `null`.
+- **Linhas válidas:** as 3 execuções têm 16 linhas cada, e as linhas são iguais entre todas.
+- **Dois controles inválidos:** `empty` e `exhausted` retornam `[null, null]` com 2 diagnósticos cada. A severidade é 8 (E_NOTICE) no 7.4 e 2 (E_WARNING) no 8.3, e esse resultado não mudou entre previous e candidate no 8.3.
+- **Avisos de carga:** o 83/previous mantém exatamente 6 avisos 8192 "Return type of …", que servem de controle. O candidate e o 7.4 ficam com zero.
+- **Proteção cumulativa contra null:** o patch mantém `$realtable === null || ! strlen(...)`. O probe também exercita os casos de alias `missing`, `null`, `empty`, `table` e `zero`, e o `previous.php` é o candidate anterior com o null-alias já aplicado. Assim, o novo patch substitui o `Criteria-null-alias.patch` sem perder essa correção.
+
+Limitações:
+- O escopo é só a `Criteria` real com duas subclasses diretas e um stub de lookup de DB. Não houve SQL, cache nem bootstrap, e o relatório registra `application_acceptance: false`.
+- O candidate foi executado só no 8.3, e o 7.4 rodou apenas o previous.
+- Esta foi uma reexecução no mesmo lab e com o mesmo harness do Codex. Ela confirma a reprodutibilidade, mas não é uma revisão independente de lógica feita por Grok ou pelo Cursor.
+
+Não editei nenhum arquivo além dos quatro artefatos `claude.*`. Não fiz commit nem rodei SQL, e nada tocou produção.

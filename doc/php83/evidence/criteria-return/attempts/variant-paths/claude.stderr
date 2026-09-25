@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/criteria-return/collect.py", line 41, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/criteria-return/collect.py", line 38, in main
+    require(records[1]['result']['invalid_controls']==records[2]['result']['invalid_controls'],'Same-runtime error contract changed')
+  File "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/criteria-return/collect.py", line 8, in require
+    if not ok:raise RuntimeError(message)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Same-runtime error contract changed
