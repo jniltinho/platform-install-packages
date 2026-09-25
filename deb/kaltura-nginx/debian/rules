@@ -42,10 +42,10 @@ endif
 #LIBRARY_PATH=/opt/kaltura/ffmpeg-$(FFMPEG_VERSION)/lib 
 #C_INCLUDE_PATH=/opt/kaltura/ffmpeg-$(FFMPEG_VERSION)/include
 #export LD_LIBRARY_PATH LIBRARY_PATH C_INCLUDE_PATH
-$(archive):
+$(archive) $(vod_module_archive):
 	~/sources/platform-install-packages/build/package_kaltura_nginx.sh
 
-$(tree): $(archive)
+$(tree): $(archive) $(vod_module_archive)
 	tar zxf $(archive) 
 	unzip -o $(vod_module_archive) -d $(tree)
 	echo unzip -o $(vod_module_archive) -d $(tree)
@@ -87,7 +87,7 @@ config.status: $(tree)
         --with-file-aio \
         --with-ipv6 \
         --with-debug \
-        --with-cc-opt=-Wno-error \
+        --with-cc-opt="-std=gnu17 -Wno-error -include $(CURDIR)/debian/ffmpeg-compat.h" \
 	--add-module=./nginx-vod-module-$(KALTURA_NGINX_VOD_VERSION) \
 	--add-module=./nginx-secure-token-module-$(KALTURA_NGINX_SECURE_TOKEN_VERSION) \
 	--add-module=./nginx-akamai-token-validate-module-$(KALTURA_NGINX_AKAMAI_TOKEN_VALIDATE_VERSION) \

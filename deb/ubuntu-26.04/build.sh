@@ -1,5 +1,5 @@
 #!/bin/bash
-# Builds the Kaltura All-In-One .deb packages for Ubuntu 24.04 into /vagrant/deb/noble/repo.
+# Builds the Kaltura All-In-One .deb packages for Ubuntu 26.04 into /vagrant/deb/ubuntu-26.04/repo.
 # Usage: build.sh [package ...]   (no arguments = full set)
 set -euo pipefail
 
@@ -11,14 +11,14 @@ kaltura-elasticsearch kaltura-server"
 
 # SRC/REPO default to the Vagrant layout; CI sets SRC to the checkout
 SRC=${SRC:-/vagrant}
-REPO=${REPO:-$SRC/deb/noble/repo}
+REPO=${REPO:-$SRC/deb/ubuntu-26.04/repo}
 WORK=~/sources/platform-install-packages
 SUDO=; [ "$(id -u)" -ne 0 ] && SUDO=sudo
 
 $SUDO env DEBIAN_FRONTEND=noninteractive apt-get update -qq
 $SUDO env DEBIAN_FRONTEND=noninteractive NEEDRESTART_MODE=a apt-get install -y -qq \
 	build-essential devscripts debhelper dpkg-dev fakeroot rsync wget curl unzip zip bzip2 dos2unix \
-	libssl-dev libpcre3-dev zlib1g-dev libxml2-dev libxslt1-dev libgd-dev libgeoip-dev \
+	libssl-dev libpcre2-dev zlib1g-dev libxml2-dev libxslt1-dev libgd-dev libgeoip-dev \
 	libavcodec-dev libavformat-dev libavutil-dev libswscale-dev libavfilter-dev libswresample-dev >/dev/null
 
 # the recipes expect the repo in ~/sources/platform-install-packages and sources in ~/rpmbuild/SOURCES

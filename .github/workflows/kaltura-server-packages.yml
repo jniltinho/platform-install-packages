@@ -1,0 +1,167 @@
+name: Kaltura server packages
+# Builds the Kaltura CE server packages (not the Go console, see
+# kaltura-console-release.yml) for every supported distro, checks that the
+# resulting repositories resolve on a clean system, and publishes them on
+# tags kaltura-server/v*.
+on:
+  push:
+    tags: ['kaltura-server/v*']
+  pull_request:
+    paths:
+      - 'deb/**'
+      - 'RPM/**'
+      - 'rpm/**'
+      - 'build/**'
+      - '.github/workflows/kaltura-server-packages.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: kaltura-server-packages-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  deb:
+    name: deb ${{ matrix.dist }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - dist: noble
+            image: ubuntu:24.04
+          - dist: ubuntu-26.04
+            image: ubuntu:26.04
+    runs-on: ubuntu-24.04
+    container: ${{ matrix.image }}
+    steps:
+      - run: apt-get update -qq && DEBIAN_FRONTEND=noninteractive apt-get install -y -qq git ca-certificates >/dev/null
+      - uses: actions/checkout@v6
+      - name: Build packages
+        run: SRC="$GITHUB_WORKSPACE" bash deb/${{ matrix.dist }}/build.sh
+      - name: Checksums
+        run: cd deb/${{ matrix.dist }}/repo && sha256sum *.deb > SHA256SUMS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: kaltura-server-${{ matrix.dist }}
+          path: deb/${{ matrix.dist }}/repo/
+          if-no-files-found: error
+
+  rpm:
+    name: rpm el9
+    runs-on: ubuntu-24.04
+    container: rockylinux/rockylinux:9
+    steps:
+      - run: dnf -y -q install git
+      - uses: actions/checkout@v6
+      - name: Build packages
+        run: SRC="$GITHUB_WORKSPACE" bash rpm/el9/build.sh
+      - name: Checksums
+        run: cd rpm/el9/repo && sha256sum *.rpm > SHA256SUMS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: kaltura-server-el9
+          path: rpm/el9/repo/
+          if-no-files-found: error
+
+  # Resolve kaltura-server on a clean system with only the documented
+  # third-party repositories; fails on unmet dependencies or on PHP 8.
+  verify-deb:
+    name: verify deb ${{ matrix.dist }}
+    needs: deb
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - dist: noble
+            image: ubuntu:24.04
+          - dist: ubuntu-26.04
+            image: ubuntu:26.04
+    runs-on: ubuntu-24.04
+    container: ${{ matrix.image }}
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: kaltura-server-${{ matrix.dist }}
+          path: /repo
+      - name: Configure repositories
+        run: |
+          export DEBIAN_FRONTEND=noninteractive
+          apt-get update -qq && apt-get install -y -qq software-properties-common curl gnupg ca-certificates lsb-release >/dev/null
+          add-apt-repository -y multiverse
+          if [ "$(lsb_release -sc)" = noble ]; then
+            add-apt-repository -y ppa:ondrej/php
+          else
+            curl -fsSL https://packages.sury.org/php/apt.gpg | gpg --dearmor -o /usr/share/keyrings/sury-php.gpg
+            echo "deb [signed-by=/usr/share/keyrings/sury-php.gpg] https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/sury-php.list
+          fi
+          curl -fsSL https://artifacts.elastic.co/GPG-KEY-elasticsearch | gpg --dearmor -o /usr/share/keyrings/elastic.gpg
+          echo "deb [signed-by=/usr/share/keyrings/elastic.gpg] https://artifacts.elastic.co/packages/7.x/apt stable main" > /etc/apt/sources.list.d/elastic-7.x.list
+          echo "deb [trusted=yes] file:/repo ./" > /etc/apt/sources.list.d/kaltura.list
+          apt-get update -qq
+      - name: Resolve kaltura-server
+        run: |
+          apt-get install --simulate -y kaltura-server > plan.txt
+          grep -c '^Inst' plan.txt
+          if grep -E '^Inst php8' plan.txt; then echo "PHP 8 would be installed"; exit 1; fi
+          grep -q '^Inst kaltura-server ' plan.txt
+
+  verify-rpm:
+    name: verify rpm el9
+    needs: rpm
+    runs-on: ubuntu-24.04
+    container: rockylinux/rockylinux:9
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: kaltura-server-el9
+          path: /repo
+      - name: Configure repositories
+        run: |
+          dnf -y -q install epel-release dnf-plugins-core
+          dnf config-manager --set-enabled crb
+          dnf -y -q install https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-9.noarch.rpm \
+            https://rpms.remirepo.net/enterprise/remi-release-9.rpm
+          dnf -y -q module reset php && dnf -y -q module enable php:remi-7.4
+          rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch
+          printf '[elastic-7.x]\nname=Elastic 7.x\nbaseurl=https://artifacts.elastic.co/packages/7.x/yum\ngpgcheck=1\nenabled=1\n' > /etc/yum.repos.d/elastic.repo
+          printf '[kaltura-local]\nname=Kaltura local\nbaseurl=file:///repo\ngpgcheck=0\nenabled=1\n' > /etc/yum.repos.d/kaltura-local.repo
+      - name: Resolve kaltura-server
+        run: |
+          dnf -y install --downloadonly kaltura-server | tee plan.txt
+          if grep -E '^ php[^-]*-8\.|php-common.*8\.' plan.txt; then echo "PHP 8 would be installed"; exit 1; fi
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/kaltura-server/v')
+    needs: [verify-deb, verify-rpm]
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+      - name: Bundle one repository per distro
+        run: |
+          mkdir dist
+          for d in artifacts/kaltura-server-*; do
+            name=$(basename "$d")
+            tar -C "$d" -czf "dist/$name-repo.tar.gz" .
+          done
+          cd dist && sha256sum *.tar.gz > SHA256SUMS
+      - name: Publish tagged release
+        uses: softprops/action-gh-release@v2
+        with:
+          prerelease: ${{ contains(github.ref_name, '-rc') }}
+          fail_on_unmatched_files: true
+          body: |
+            Kaltura CE server packages (Rigel-18.20.0) built by GitHub Actions.
+
+            | Asset | Distro | Use |
+            |---|---|---|
+            | `kaltura-server-noble-repo.tar.gz` | Ubuntu 24.04 | `deb [trusted=yes] file:/path/to/extracted ./` |
+            | `kaltura-server-ubuntu-26.04-repo.tar.gz` | Ubuntu 26.04 | `deb [trusted=yes] file:/path/to/extracted ./` |
+            | `kaltura-server-el9-repo.tar.gz` | Rocky/Alma/RHEL 9 | `baseurl=file:///path/to/extracted` (repodata included) |
+
+            Installation guides: `doc/install-kaltura-noble.md`, `doc/install-kaltura-ubuntu-26.04.md`, `doc/install-kaltura-rocky9.md`.
+          files: |
+            dist/*.tar.gz
+            dist/SHA256SUMS
