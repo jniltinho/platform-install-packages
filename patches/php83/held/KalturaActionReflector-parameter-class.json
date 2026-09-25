@@ -1,0 +1,7 @@
+{
+  "status": "held; reflection replacement, native and API metadata controls pending",
+  "path": "api_v3/lib/reflection/KalturaActionReflector.php",
+  "before_sha256": "0b00d1466c92138c71e8b3141a26affbd248476c0a138f3b470f0717c49ce607",
+  "after_sha256": "b6b9ea91b1e1902bdf718bdfd5d3573ffd826662d1f25c35d7eb2a7004f15d7d",
+  "patch_sha256": "fb62c56fcf79b6de555bddacc799d43e37016603afa6fe4491272fb3e3cb031e"
+}

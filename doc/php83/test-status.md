@@ -16,6 +16,14 @@ and [execution contract](../../openspec/changes/migrate-kaltura-php83/design.md)
 - No new VM/application test, release, package integration or `.20` mutation in
   this batch. No release ETA or application completion percentage is inferred.
 
+## Latest progress: held reflection compatibility repair
+
+Native controls caught two pitfalls: class-plus-scalar unions retain a class
+component, and SELF/PARENT matching is case-insensitive. The corrected resolver
+matches 15/22 native cases and 17/24 real API-metadata cases on PHP 7.4/8.3,
+preserving same-runtime serialized parameter hashes. [Evidence and limits](reflection-parameter-repair.md).
+Not yet selected into a new ZIP or real SQL/HTTP/TLS matrix; no 84-event API reduction claimed.
+
 ## Latest progress: exp5 null-only batch
 
 Five one-line null-only repairs were integrated in a reproducible twelve-patch

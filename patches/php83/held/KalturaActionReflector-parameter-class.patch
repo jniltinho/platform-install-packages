@@ -1,0 +1,63 @@
+--- a/api_v3/lib/reflection/KalturaActionReflector.php
++++ b/api_v3/lib/reflection/KalturaActionReflector.php
+@@ -103,6 +103,42 @@
+ 		return $this->_actionInfo;
+ 	}
+ 	
++	/** Resolve the class component with the legacy getClass() semantics. */
++	private static function getParameterClass(ReflectionParameter $parameter)
++	{
++		$type = $parameter->getType();
++		if ($type instanceof ReflectionNamedType)
++			$types = array($type);
++		else if ($type instanceof ReflectionUnionType)
++			$types = $type->getTypes();
++		else
++			return null;
++
++		$className = null;
++		foreach ($types as $member)
++		{
++			if (!($member instanceof ReflectionNamedType))
++				return null;
++			if ($member->isBuiltin())
++				continue;
++			if ($className !== null)
++				return null;
++			$className = $member->getName();
++		}
++		if ($className === null)
++			return null;
++		if (strcasecmp($className, 'self') === 0)
++			return $parameter->getDeclaringClass();
++		if (strcasecmp($className, 'parent') === 0)
++		{
++			$parent = $parameter->getDeclaringClass()->getParentClass();
++			if (!$parent)
++				throw new ReflectionException("Parameter uses 'parent' as type hint although class does not have a parent!");
++			return $parent;
++		}
++		return new ReflectionClass($className);
++	}
++
+ 	/**
+ 	 * Action returns array of the parameters the action method expects
+ 	 * @return array<KalturaParamInfo>
+@@ -126,7 +162,7 @@
+ 					
+ 				$parsedDocComment = new KalturaDocCommentParser( $docComment, array(
+ 					KalturaDocCommentParser::DOCCOMMENT_REPLACENET_PARAM_NAME => $name , ) );
+-				$paramClass = $reflectionParam->getClass(); // type hinting for objects
++				$paramClass = self::getParameterClass($reflectionParam); // type hinting for objects
+ 				if ($paramClass)
+ 				{
+ 					$type = $paramClass->getName();
+@@ -150,7 +186,7 @@
+ 					$paramInfo->setDefaultValue($reflectionParam->getDefaultValue());
+ 					$paramInfo->setOptional(true);
+ 				}
+-				else if ($reflectionParam->getClass() && $reflectionParam->allowsNull()) // for object parameter
++				else if ($paramClass && $reflectionParam->allowsNull()) // for object parameter
+ 				{
+ 					$paramInfo->setOptional(true);
+ 				}

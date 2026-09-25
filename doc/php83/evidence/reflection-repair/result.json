@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "input_commit": "8d7f3f2c",
+  "state": "PARTIAL",
+  "patch": "KalturaActionReflector-parameter-class.patch",
+  "base_exp5_preserved": true,
+  "native_cases": {
+    "74": 15,
+    "83": 22
+  },
+  "actual_metadata_cases": {
+    "74": 17,
+    "83": 24
+  },
+  "native_candidate_warning_counts": {
+    "74": 1,
+    "83": 0
+  },
+  "metadata_candidate_warning_counts": {
+    "74": 1,
+    "83": 0
+  },
+  "php74_warning": "Retained fixture-only parent-without-parent declaration warning, same in native/original controls",
+  "first_attempt": "Uppercase SELF mismatch caught on both runtimes; preserved and fixed using case-insensitive keyword matching",
+  "comparison": "Exact within-runtime rows including exception messages and serialized parameter hashes; no cross-runtime byte-parity assertion",
+  "independent_executors": {
+    "74": "Claude CLI",
+    "83": "Cursor CLI"
+  },
+  "independent_review": "OpenCode Muse Spark Free fallback; Codex exact report/hash cross-check",
+  "cli_exit": {
+    "claude": 0,
+    "cursor": 0,
+    "grok": 124,
+    "opencode": 0
+  },
+  "local_tests": 122,
+  "API_event_reduction": "NOT_MEASURED; exp5 still35groups931events",
+  "integrated_zip": "NOT_BUILT for this patch",
+  "full_case_checkboxes_closed": 0,
+  "application_acceptance": false,
+  "production_changes": false
+}

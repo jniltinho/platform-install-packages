@@ -161,3 +161,9 @@ reproducible twelve-patch ZIP. Real SQL/HTTP/trusted-TLS contract remains equal;
 exactly 142 events removed, 35 groups/931 remain. Forty-one actual-class cases
 and ten real PermissionPeer SQL dependency cases pass on exp4/exp5 × 7.4/8.3;
 no full acceptance inferred. See `doc/php83/exp5-null-batch.md`.
+
+T1-01/T1-03 partial: held ActionReflector parameter-class resolver matches native
+15/22 cases and real metadata17/24 cases across 7.4/8.3, retaining errors/options
+and same-runtime serialized hashes. Uppercase SELF failure was corrected with
+the control retained; class-plus-scalar unions handled as native. ZIP/API/shared
+cache integration remains pending. See `doc/php83/reflection-parameter-repair.md`.

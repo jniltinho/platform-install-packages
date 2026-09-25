@@ -45,3 +45,9 @@ KalturaLog and KalturaFrontController are explicit null-only input guards,
 selected separately into exp5. They preserve non-null paths in the focused
 controls and real API matrix; no permission policy, property visibility or
 serialization format change is selected. See `../../../doc/php83/exp5-null-batch.md`.
+
+`KalturaActionReflector-parameter-class.patch` replaces deprecated parameter
+class reflection while preserving tested native class/union/self/parent/error
+behavior and real API parameter metadata. Uppercase SELF failure was retained
+and fixed. It is not selected into exp5; SQL/HTTP/shared-cache integration remains
+open. See `../../../doc/php83/reflection-parameter-repair.md`.

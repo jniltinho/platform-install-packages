@@ -113,3 +113,7 @@ The subsequent exp5 null-only batch adds five explicitly reviewed experiments:
 audit at [`null-batch/patch-inventory.json`](evidence/null-batch/patch-inventory.json).
 The separate exp5 manifest selects twelve patches for isolated integration, not
 production acceptance. See [exp5 evidence](exp5-null-batch.md).
+
+The subsequent held reflection resolver adds one patch: 26 total, 3 active exp2 /
+23 held. See [`reflection-repair/patch-inventory.json`](evidence/reflection-repair/patch-inventory.json)
+and [reflection controls](reflection-parameter-repair.md). It is not in exp5.

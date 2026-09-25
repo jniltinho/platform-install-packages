@@ -1,0 +1,12 @@
+[
+  {
+    "runtime": "74",
+    "executor": "claude-74",
+    "exact_records_equal": true
+  },
+  {
+    "runtime": "83",
+    "executor": "cursor-83",
+    "exact_records_equal": true
+  }
+]
