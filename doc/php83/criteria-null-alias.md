@@ -72,3 +72,11 @@ evidence path; it looked under `evidence/` rather than `doc/php83/evidence/` and
 therefore did **not** review the runtime JSON. This gap is retained explicitly;
 Claude and Cursor did review the correctly located runtime evidence. No model
 self-identification in CLI prose is treated as verified runtime provenance.
+
+## Later integration
+
+The subsequent [exp4 experiment](exp4-candidate.md) explicitly selects this patch
+alongside exp3 and verifies actual ZIP SQL/HTTP/TLS and focused CLI behavior.
+Its contemporaneous API comparison confirms removal of exactly 694 events;
+remaining diagnostics and full application acceptance stay open. The earlier
+focused results above are historical, not rewritten as integrated evidence.

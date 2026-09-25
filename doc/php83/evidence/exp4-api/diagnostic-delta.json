@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "functional_output_equal": true,
+  "removed_diagnostic_groups": [
+    {
+      "severity": "ApplicationDiagnostic",
+      "path": "/audit/app/vendor/propel/util/Criteria.php",
+      "line": 1375,
+      "count": 694
+    }
+  ],
+  "other_diagnostic_groups_equal": true,
+  "before_events": 1767,
+  "after_events": 1073,
+  "before_groups": 41,
+  "after_groups": 40,
+  "performance_claim": false,
+  "application_acceptance": false
+}

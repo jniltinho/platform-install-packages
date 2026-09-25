@@ -1,0 +1,38 @@
+# Rerun do baseline74 exp4 (Claude, somente leitura): 24/24 linhas com exit 0, idêntico ao `codex-74.json` após normalização
+
+Executei o comando exatamente como você pediu. Não rodei nenhum outro SSH, não editei nenhum código e não mexi no lado 83.
+
+**Execução**
+- **Caso:** exp4-regression, runtime 7.4. Executor: Claude CLI. Comparei com o `codex-74.json`, que foi executado pelo Codex.
+- **Ambiente:** host `kaltura-php74-baseline`, PHP 7.4.33.
+- **Candidato:** `zip_sha256` = `a1ce4c46…ab9d08`. O próprio `batch.py` confere esse hash com um assert antes de rodar, e ele bate com `doc/php83/evidence/exp4-candidate/verification.json` e `cursor-verification.json`. Foram verificados 15184 arquivos extraídos.
+- **Resultado:** `claude-74.exit` = **0**, `claude-74.stderr` vazio, `claude-74.json` com 74496 bytes, `application_acceptance: false`.
+
+**As 24 linhas** (2 fontes × 2 ini × 6 casos): todas terminaram com **exit 0**. As fontes são `original` e `exp4`, os ini são `standard` e `minimal`, e os casos são `environment`, `legacy-json`, `zend-json`, `doc-comment`, `doc-comment-export` e `doc-comment-consumer`.
+
+**Comparação com `codex-74.json`**
+Ignorei `recorded_at_utc` e `duration_ns`. O resto é **idêntico**: metadados do topo, o mapa `harness` (48 hashes) e o stdout, stderr e exit de todas as 24 linhas. O `codex-74.exit` também é 0.
+
+**Contrato do candidato: `original` × `exp4` dentro do meu run, nos dois ini**
+- **`environment`, `doc-comment`, `doc-comment-consumer`:** stdout e stderr idênticos.
+- **`doc-comment-consumer` no ini `standard`:** aparecem 3× "Missing host or port in config" no stderr, igual nas duas fontes.
+- **`legacy-json`:** stdout idêntico. Os 40 avisos de "curly brace offset" desaparecem no exp4. Continuam os 2 avisos de "same-name constructor" nas duas fontes; o patch não cobre esses dois.
+- **`zend-json`:** stdout idêntico. Os 14 avisos de "curly brace" do original desaparecem e o stderr do exp4 fica vazio.
+- **`doc-comment-export`:** as 6 entradas serializadas (payload e sha256) são idênticas. Só muda o `source_sha256`, porque o arquivo do parser foi patcheado. Isso é esperado.
+
+**Revisão de `batch.py` e `run-one.sh` contra as variantes do exp3**
+O `diff` mostra só mudanças de revisão:
+- caminho `php-exp3-regression` → `php-exp4-regression`
+- `exp3.zip` → `exp4.zip`, com o hash esperado atualizado
+- o rótulo da fonte `exp3` → `exp4`
+- a pasta da harness
+
+Não há nenhuma mudança de lógica. Os hashes locais de `exp4-regression/batch.py` (`949b7340…`) e `run-one.sh` (`de6710a4…`) batem com os registrados no JSON remoto.
+
+**Limitações**
+- **Hashes de `tests/` não conferidos localmente:** comparei esses hashes da harness só entre os dois runs. Não os conferi contra arquivos locais.
+- **Diretório exp4 incompleto:** `tools/php83/exp4-regression/` não tem o `stage.sh` nem o `README.md` que existem no exp3. Por isso, este checkout não documenta como foi feito o staging do exp4 na VM.
+- **Revisão não independente:** a revisão foi feita por mim, o executor. AGENTS.md exige outro revisor, então esta checagem não vale como revisão independente.
+- **Escopo:** é só o runtime 7.4 e só testes CLI da harness. Não cobre o 83 (fica com o outro agente), não cobre fluxos web ou API e não aprova a aplicação.
+
+Os arquivos `claude-74.{json,stderr,exit}` estão em `doc/php83/evidence/exp4-runtime/` e não foram commitados.

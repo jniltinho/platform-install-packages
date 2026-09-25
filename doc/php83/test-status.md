@@ -16,6 +16,14 @@ and [execution contract](../../openspec/changes/migrate-kaltura-php83/design.md)
 - No new VM/application test, release, package integration or `.20` mutation in
   this batch. No release ETA or application completion percentage is inferred.
 
+## Latest progress: exp4 actual ZIP integration
+
+A separately built seven-patch ZIP now runs the synthetic SQL/HTTP/trusted-HTTPS
+matrix alongside exp3. All candidate outputs match original 7.4; the 694 Criteria
+null-alias events disappear while the other 40 groups / 1,073 events remain
+unchanged. Two builds are identical. [Artifact and integration evidence](exp4-candidate.md).
+This is not full application, distro, performance or release acceptance.
+
 ## Latest progress: Criteria null-alias repair (held)
 
 A new one-line explicit-null repair preserves eight alias contracts on real

@@ -1,0 +1,43 @@
+A execução passou (exit 0). A matriz completa foi rodada e o meu relatório bate com o do Codex depois de normalizado. O exp4 remove só os eventos de `Criteria.php:1375`.
+
+**Caso:** matriz exp4 da API, com executor Claude CLI (execução independente). O relatório primário é do Codex e a coordenação fica com o Codex.
+
+**Comando executado:**
+```
+python3 tools/php83/exp4-api/collect.py doc/php83/evidence/exp4-api/claude.json >…/claude.stdout 2>…/claude.stderr; echo $? >…/claude.exit
+```
+- **Resultado:** exit `0`, stderr vazio, `functional_checks_passed: true`, `application_acceptance: false`.
+- **Ambiente:** VM baseline74 (`/tmp/kaltura-php74-ssh.conf`). O 8.3 roda com o runtime83 copiado, e o banco foi um MariaDB sintético novo e privado (unit `php83-exp4-api-df25d65b2d1f4f9fbe538d2420d05be2`), parado no fim (`inactive`). Não houve outros comandos na VM, nenhum acesso ao `.20` e nenhuma escrita na aplicação instalada.
+- **Artefatos:**
+  - exp4 ZIP `a1ce4c46…9d08`, com 15184 arquivos extraídos e verificados.
+  - Referência exp3 `1c64edb5…85e3`, com 15183 arquivos.
+  - Os hashes do harness, dos helpers e do coletor são idênticos aos do relatório do Codex.
+
+**Revisão do coletor frente ao exp3:** a diferença se resume a:
+- `ROOT` e nome da unit trocados para exp4;
+- árvore `exp4` adicionada a `run-apache.sh` e à matriz;
+- verificação da fonte exp3 como `previous_artifact`;
+- guarda `__debug__` no `verify-source.py`.
+
+A lista de SQL e as fixtures são as mesmas do exp3, então não houve redução de escopo. O sandbox systemd não mudou (PrivateNetwork, ProtectSystem=strict, InaccessiblePaths em `/opt/kaltura` e no MySQL do sistema). Não encontrei problemas.
+
+**Matriz, comparada com o Codex** (campos normalizados: código de saída, whitelist, hash do stdout, controle de assinatura, contagem de observações e diagnósticos). Todos os 6 registros ficaram sem diferenças:
+
+| runtime | árvore | exit | stdout ok | diagnósticos (entradas/total) |
+|---|---|---|---|---|
+| 74 | original | 0 | ✓ | 1 / 6 |
+| 74 | exp3 | 0 | ✓ | 0 / 0 |
+| 74 | exp4 | 0 | ✓ | 0 / 0 |
+| 83 | original | 1 | falha esperada: fatal de assinatura em `KalturaPDO::query()` | 15 / 15 |
+| 83 | exp3 | 0 | ✓ | 41 / 1767 |
+| 83 | exp4 | 0 | ✓ | 40 / 1073 |
+
+**exp3 contra exp4 no 8.3:** a única diferença é a entrada `ApplicationDiagnostic vendor/propel/util/Criteria.php:1375` (694 eventos), que existe só no exp3. Isso bate com 1767 − 1073 = 694. Nenhuma entrada foi adicionada ou teve a contagem alterada. O exp4 não tem nenhum evento na linha 1375. Os outros avisos de `Criteria.php` (linhas 193 e 1259–1275, 22 cada) continuam.
+
+**Testes locais:** `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83 -p 'test_*.py'` rodou 122 testes, todos OK, com exit 0.
+
+**Limites:**
+- O escopo é o `web/index.php` do ZIP exp4 com SQL sintético e Apache HTTP/HTTPS confiável. **Não cobre AIO/FPM nem aceitação da aplicação completa.**
+- No 8.3 ainda há 1073 diagnósticos, entre Deprecated e ApplicationDiagnostic, que não foram tratados.
+- A minha execução ainda precisa de um revisor independente (Grok, com OpenCode como alternativa, ou Cursor), porque eu não posso validar a minha própria execução.
+- Não editei nem reverti nenhum código-fonte. Os arquivos novos são `doc/php83/evidence/exp4-api/claude.{json,stdout,stderr,exit}`, e nada foi commitado.

@@ -1,0 +1,18 @@
+Vou ler o AGENTS.md e o contexto do exp4, depois executar só a verificação pedida — sem tocar em fonte nem SSH/VMs.Executando a verificação e os testes unitários; em paralelo confiro o metadata do patch held Criteria.**Veredito:** ZIP exp4 íntegro e reproduzível; seleção = exp3 + Criteria held. Sem claim de app completa.
+
+### Comandos
+| Comando | Exit | Contagem |
+|---|---|---|
+| `python3 tools/php83/verify-experimental-zip.py … cursor-verification.json` | **0** | 7 `changed_files`; 18027 originais; 9 metadata; builds idênticos |
+| `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83 -p 'test_*.py'` | **0** | **122** OK |
+
+`zip_sha256` / repeat: `a1ce4c46792667b07a733e622a3ee71dd01c87a94f7841edfc72d58746ab9d08`
+Saída: `doc/php83/evidence/exp4-candidate/cursor-verification.json` (byte-igual a `verification.json`).
+
+### Seleção vs exp3 / Criteria held
+- Exp4 = 6 patches idênticos ao exp3 + `Criteria-null-alias.patch`.
+- Held `Criteria-null-alias.json`: `path` / `before_sha256` / `after_sha256` / `patch_sha256` batem com o manifest e com o arquivo held.
+- Demais entradas originais inalteradas; comentários de archive preservados; `two_builds_identical=true`.
+
+### Limitações
+Experimento isolado de 7 patches — não aceitação PHP 8.3, release, CI/pacotes ou cutover `.20`. Sem SSH/VM; sem execução SQL/HTTP/TLS desta artefato. Fonte não tocada.

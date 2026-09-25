@@ -1,0 +1,34 @@
+Vou seguir o escopo read-only: ler AGENTS.md, executar só o rerun SSH autorizado do batch exp4 e revisar as evidências pedidas.Rerun concluiu com exit 0. Agora comparo com `codex-83.json`, reviso o harness vs exp3 e confiro os controles/API.**Rerun Cursor PHP 8.3 concluído: exit 0, 24/24 rows, paridade com `codex-83.json` (ignorando timestamps/durações). Sem aprovação de app.**
+
+### Execução (só o SSH autorizado)
+```bash
+ssh -T -F /tmp/kaltura-php83-ssh.conf php83 \
+  'python3 /home/vagrant/php-exp4-regression/exp4-regression/batch.py' \
+  >doc/php83/evidence/exp4-runtime/cursor-83.json \
+  2>doc/php83/evidence/exp4-runtime/cursor-83.stderr
+echo $? >doc/php83/evidence/exp4-runtime/cursor-83.exit
+```
+| Artefato | Valor |
+|---|---|
+| `cursor-83.exit` | **0** |
+| `cursor-83.stderr` | vazio |
+| host | `kaltura-php83-lab` |
+| rows | **24** |
+| `verified_extracted_files` | 15184 |
+| `zip_sha256` | `a1ce4c46792667b07a733e622a3ee71dd01c87a94f7841edfc72d58746ab9d08` |
+| vs `codex-83.json` | **igual** sem `recorded_at_utc` / `duration_ns` |
+| `application_acceptance` | **false** |
+
+### Controles vs candidate
+- **original** `legacy-json`/`zend-json` (std+min): **4× exit 255** — fatals curly-brace (`Services_JSON.class.php:176`, `Zend/Json/Encoder.php:557`)
+- **exp4 (candidate)**: **12× exit 0** (`allcandidate0`)
+- demais original: 8× exit 0
+
+### Harness exp4 vs exp3
+Só path/revisão/hash: `php-exp3`→`php-exp4`, `exp3.zip`/`exp3`→`exp4.zip`/`exp4`, SHA `1c64…`→`a1ce…`. Sandbox inalterado: `PrivateNetwork`, sem socket, RO bind, `MemoryMax=512M`, `RuntimeMaxSec=60`, batch timeout 70s/caso.
+
+### API `claude.json` (review, não execução minha)
+Counterfactual confirmado a partir de `records` 83/exp3→exp4: remove `Criteria.php:1375` **count 694**; restam **1073** eventos (40 grupos); `application_acceptance: false`. Alinha com `diagnostic-delta.json`.
+
+### Limites / gates
+Escopo: ZIP pré-stageado, sandboxed no-network RO PHP; 6 cases × 2 ini × 2 sources. Claude owns **74**. **Não** é aceite whole-app / AIO/FPM.

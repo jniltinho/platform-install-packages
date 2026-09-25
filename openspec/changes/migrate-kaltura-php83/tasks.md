@@ -142,3 +142,10 @@ missing-alias null before strlen. Eight real-class contracts agree on PHP 7.4
 and 8.3; three focused null deprecations disappear, other diagnostics remain.
 DB adapter is a fixture; real SQL/API integration remains pending. See
 `doc/php83/criteria-null-alias.md`; no acceptance checkbox is closed.
+
+T1-01/T1-02 partial integration: separate seven-patch exp4 ZIP built twice with
+identical bytes and exact source delta. Actual extracted ZIP runs alongside exp3
+in the synthetic SQL/Apache/HTTP/trusted-TLS matrix; normalized contracts match
+original 7.4. The 694 Criteria1375 events disappear, while all other 40 groups /
+1,073 events remain unchanged. Full acceptance stays open. See
+`doc/php83/exp4-candidate.md`; original/exp2/exp3 preserved.

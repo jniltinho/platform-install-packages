@@ -1,0 +1,16 @@
+[
+  {
+    "runtime": "74",
+    "independent_executor": "claude-74",
+    "normalized_report_equal": true,
+    "local_fixture_hashes_equal": true,
+    "fixture_count": 48
+  },
+  {
+    "runtime": "83",
+    "independent_executor": "cursor-83",
+    "normalized_report_equal": true,
+    "local_fixture_hashes_equal": true,
+    "fixture_count": 48
+  }
+]

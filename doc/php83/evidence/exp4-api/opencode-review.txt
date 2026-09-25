@@ -1,0 +1,38 @@
+Read-only check queued — running tests and reviewing the exp4 evidence.
+
+Tests pass (122 OK) — now inspecting the collectors and evidence files.
+
+Initial evidence skim done — now running the normalized comparison and scope check.
+
+Read-only review complete. No SSH, no edits, no collector execution.
+
+Executed 6 local commands, all exit 0:
+1. `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83 -p "test_*.py"` → 122 tests OK (0.072s), matches `doc/php83/evidence/exp4-api/local-tests.txt` (122 OK).
+2. `ls tools/php83` + evidence dir listing.
+3-4. Normalized JSON comparisons via local `python3 -c`.
+5. `sha256sum` + `diff tools/php83/exp3-api/collect.py tools/php83/exp4-api/collect.py`.
+6. `cat doc/php83/evidence/exp4-api/{codex.exit,claude.exit,codex.stdout,claude.stdout}` → both exit 0, `functional_checks_passed:true`.
+
+Reviewed exact paths (not shortened):
+- `tools/php83/exp4-api/collect.py`
+- `doc/php83/evidence/exp4-api/codex.json`
+- `doc/php83/evidence/exp4-api/claude.json`
+- `doc/php83/evidence/exp4-api/diagnostic-delta.json`
+
+Primary vs independent (normalized, ignoring `duration_ns`, `stderr_sha256`, `db`/`cleanup` identities):
+- Equal: `harness`, `artifact` (exp4 `a1ce4c46…`, 15184 files), `previous_artifact` (exp3 `1c64edb5…`, 15183 files), `collector_sha256` `868528e1…` matches on-disk `tools/php83/exp4-api/collect.py`, all `returncode`/`stdout`/`stdout_sha256`/`diagnostics`/`runtime_observations`, `comparisons`, `functional_checks_passed:true`.
+- Only differences are expected run-unique: `duration_ns`, `stderr_sha256`, `db.datadir/unit` tokens (`6ffa9871…` vs `df25d65b…`), both `stopped:true`/`inactive`.
+
+Diagnostic delta confirmed in both reports:
+- 83/exp3: 41 groups, 1767 events, includes `ApplicationDiagnostic /audit/app/vendor/propel/util/Criteria.php:1375 count 694`.
+- 83/exp4: 40 groups, 1073 events, that key absent, zero added keys, all other 40 group counts identical. `1767-1073=694`.
+- Matches `doc/php83/evidence/exp4-api/diagnostic-delta.json`: `before_events 1767/before_groups 41`, `after 1073/40`, `removed_diagnostic_groups=[Criteria.php:1375×694]`, `other_diagnostic_groups_equal:true`, `functional_output_equal:true`.
+- Note: other `Criteria.php` lines (1259,1263,1267,1271,1275,193 ×22 each) remain in exp4; removal is exactly line 1375.
+
+Functional rows:
+- 5× `rc 0 + stdout_whitelisted + matches_baseline:true`: 74/original (baseline), 74/exp3, 74/exp4, 83/exp3, 83/exp4, all `stdout_sha 787d33cd…`.
+- Control 83/original: `rc 1`, `signature_failure:true` (`KalturaPDO::query()`), empty stdout (`e3b0c442…`), as expected fatal.
+- `application_acceptance:false`, scope: `actual exp4 ZIP web/index.php, synthetic SQL, Apache HTTP/trustedHTTPS; NOT AIO/FPM acceptance`. No whole-app acceptance claimed.
+
+Exp4 vs exp3 collector scope:
+- No narrowing. Same `HTTP_EXPECTED`, same `selected` harness (3× `api/` + 5× `tests/`), same `old.diagnostics`, same runtimes `74,83`. Change is widening: `ROOT exp3→exp4`, adds `previous_artifact` exp3-reference check, loop `['original','exp3']` → `['original','exp3','exp4']`, `comparisons` extended with `tree` field, scope string `exp3→exp4`. `passed` logic unchanged apart from covering exp4.

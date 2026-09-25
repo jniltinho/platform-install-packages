@@ -1,0 +1,151 @@
+{
+  "schema": 1,
+  "logical_rows": 48,
+  "zero_exits": 44,
+  "original83_expected_json_fatals": 4,
+  "candidate_rows_exit0": 24,
+  "comparisons": [
+    {
+      "runtime": "74",
+      "ini": "standard",
+      "case": "legacy-json",
+      "typed_json_equal": true,
+      "stderr_present": true
+    },
+    {
+      "runtime": "74",
+      "ini": "standard",
+      "case": "zend-json",
+      "typed_json_equal": true,
+      "stderr_present": false
+    },
+    {
+      "runtime": "74",
+      "ini": "standard",
+      "case": "doc-comment",
+      "typed_json_equal": true,
+      "stderr_present": false
+    },
+    {
+      "runtime": "74",
+      "ini": "standard",
+      "case": "doc-comment-export",
+      "typed_json_equal": true,
+      "stderr_present": false
+    },
+    {
+      "runtime": "74",
+      "ini": "standard",
+      "case": "doc-comment-consumer",
+      "typed_json_equal": true,
+      "stderr_present": true
+    },
+    {
+      "runtime": "74",
+      "ini": "minimal",
+      "case": "legacy-json",
+      "typed_json_equal": true,
+      "stderr_present": true
+    },
+    {
+      "runtime": "74",
+      "ini": "minimal",
+      "case": "zend-json",
+      "typed_json_equal": true,
+      "stderr_present": false
+    },
+    {
+      "runtime": "74",
+      "ini": "minimal",
+      "case": "doc-comment",
+      "typed_json_equal": true,
+      "stderr_present": false
+    },
+    {
+      "runtime": "74",
+      "ini": "minimal",
+      "case": "doc-comment-export",
+      "typed_json_equal": true,
+      "stderr_present": false
+    },
+    {
+      "runtime": "74",
+      "ini": "minimal",
+      "case": "doc-comment-consumer",
+      "typed_json_equal": true,
+      "stderr_present": false
+    },
+    {
+      "runtime": "83",
+      "ini": "standard",
+      "case": "legacy-json",
+      "typed_json_equal": true,
+      "stderr_present": true
+    },
+    {
+      "runtime": "83",
+      "ini": "standard",
+      "case": "zend-json",
+      "typed_json_equal": true,
+      "stderr_present": true
+    },
+    {
+      "runtime": "83",
+      "ini": "standard",
+      "case": "doc-comment",
+      "typed_json_equal": true,
+      "stderr_present": false
+    },
+    {
+      "runtime": "83",
+      "ini": "standard",
+      "case": "doc-comment-export",
+      "typed_json_equal": true,
+      "stderr_present": false
+    },
+    {
+      "runtime": "83",
+      "ini": "standard",
+      "case": "doc-comment-consumer",
+      "typed_json_equal": true,
+      "stderr_present": true
+    },
+    {
+      "runtime": "83",
+      "ini": "minimal",
+      "case": "legacy-json",
+      "typed_json_equal": true,
+      "stderr_present": true
+    },
+    {
+      "runtime": "83",
+      "ini": "minimal",
+      "case": "zend-json",
+      "typed_json_equal": true,
+      "stderr_present": true
+    },
+    {
+      "runtime": "83",
+      "ini": "minimal",
+      "case": "doc-comment",
+      "typed_json_equal": true,
+      "stderr_present": false
+    },
+    {
+      "runtime": "83",
+      "ini": "minimal",
+      "case": "doc-comment-export",
+      "typed_json_equal": true,
+      "stderr_present": false
+    },
+    {
+      "runtime": "83",
+      "ini": "minimal",
+      "case": "doc-comment-consumer",
+      "typed_json_equal": true,
+      "stderr_present": true
+    }
+  ],
+  "normalization": "Typed JSON compared using canonical serialization; doc-comment-export compares exact entries only, retaining producer PHP/source hash separately; environment not a functional parity case",
+  "application_acceptance": false
+}

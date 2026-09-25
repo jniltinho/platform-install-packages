@@ -1,0 +1,70 @@
+{
+  "upstream_sha256": "58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28",
+  "upstream_root": "server-Rigel-18.20.0",
+  "status": "experimental exp3 plus Criteria null-alias; not full acceptance or release approval",
+  "revision": "exp4",
+  "patches": [
+    {
+      "patch": "0002-Services_JSON.class.patch",
+      "sha256": "126eaa808a590c753f2a06d91de5e5b78da7a45ac02f50f172c84e825cf13df0",
+      "path": "alpha/apps/kaltura/lib/Services_JSON.class.php",
+      "before_sha256": "6b83716ffb5a10a641293508a58443e3117f24613da4be0c7b038e1cc0851aa9",
+      "after_sha256": "f8611508758756f0a2264cc1a7aa022d8a8af8d80a0abdeba49a9a30e23d1358",
+      "source_patch": "patches/php83/0002-Services_JSON.class.patch"
+    },
+    {
+      "patch": "0003-Encoder.patch",
+      "sha256": "d39935bc38dbe62d54d02e065a801810acc5635e24cc28de7515556092b2f490",
+      "path": "vendor/ZendFramework/library/Zend/Json/Encoder.php",
+      "before_sha256": "7af0946f20f81f7cbef204f9cdb907d9c52407fa7e4797bd613d12f778baf720",
+      "after_sha256": "e74ee2fae9c48c2d99859ee0821f17293d2586e73a2ff9844ec530b2d6a5bf64",
+      "source_patch": "patches/php83/0003-Encoder.patch"
+    },
+    {
+      "patch": "0004-Decoder.patch",
+      "sha256": "bbd82723f3232be8d0d50827e0d4c4ffb8b37ffe16afb11b1151b9e4c2beac93",
+      "path": "vendor/ZendFramework/library/Zend/Json/Decoder.php",
+      "before_sha256": "7336a0a91cdb2da465642e3322d77cae04f788c6b3e937cd2e1cbd4aff0aa996",
+      "after_sha256": "1d3ef5a95568db6dfe2db823766965a4b887f4689b2a182835b9390695360673",
+      "source_patch": "patches/php83/0004-Decoder.patch"
+    },
+    {
+      "patch": "KalturaPDO-query.patch",
+      "sha256": "51403c941fa0197b9f484c5acfa443a8a8435fc69098712df39a6e49471a43fe",
+      "path": "alpha/apps/kaltura/lib/db/KalturaPDO.php",
+      "before_sha256": "97b756bed876d42da87f6a023b6ecf7af7c2b8454bb382da56ba9c54acae848d",
+      "after_sha256": "aeb012822d0af7c5fe0e6ea4221f789fc8c886f0c53dbb729a51bc9463a30f0e",
+      "source_patch": "patches/php83/held/KalturaPDO-query.patch"
+    },
+    {
+      "patch": "dateUtils-ternary.patch",
+      "sha256": "88050ed941434ae499c6a3b2a24dd24f4443acbdb7ea49d0617e2d4b9c1b1093",
+      "path": "alpha/apps/kaltura/lib/dateUtils.class.php",
+      "before_sha256": "023ab7d9f3de70014225615c089c5ee26477a6b974da301232abd719e656a599",
+      "after_sha256": "490aef40d4e5a8c0312f481dc0dcf85577d753963e6dbe35648bc03bb13eadc1",
+      "source_patch": "patches/php83/held/dateUtils-ternary.patch"
+    },
+    {
+      "patch": "doc-comment-property.patch",
+      "sha256": "22887d8226fd003985f6773d2a2f82df26e66792ef4a92a0f42ab0ef0551c8f0",
+      "path": "api_v3/lib/reflection/KalturaDocCommentParser.php",
+      "before_sha256": "5941bf6b13c889997f2d7158594f65c4bdd89ae142379864eddc782f8d53970d",
+      "after_sha256": "7b843ea1900763216df77bba2b6b091582c41e716a2989754cadc22e77f29f5e",
+      "source_patch": "patches/php83/held/doc-comment-property.patch"
+    },
+    {
+      "patch": "Criteria-null-alias.patch",
+      "sha256": "2da8bfbfdfd4af592c4e3ca5f0e1725fd458a249a4d31103f9343f7da5fc4293",
+      "path": "vendor/propel/util/Criteria.php",
+      "before_sha256": "0626bb5b976ae7eedccaf5060675cd7c7ca56b22fc2c9d6c1a51ce485a303543",
+      "after_sha256": "9b36246d143a11ab1ffd8b31966cf86d4a7563e78cca216f344727ba3d232d19",
+      "source_patch": "patches/php83/held/Criteria-null-alias.patch"
+    }
+  ],
+  "known_limitations": [
+    "Seven-patch isolated experiment, not full PHP 8.3 compatibility",
+    "Requires actual ZIP SQL/HTTP/TLS regression and independent execution",
+    "Remaining deprecations, cache/framework/Registry/PDO differences are unresolved",
+    "No production packages, CI integration, release or .20 cutover authorized by this artifact"
+  ]
+}
