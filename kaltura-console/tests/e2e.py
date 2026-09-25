@@ -47,6 +47,11 @@ def wait_js(js, seconds=30):
     raise AssertionError('Timed out waiting for page state')
 
 
+def open_page(path):
+    ab('open', base + path)
+    wait_js('document.querySelector(".page-transition")?.children.length>0 && !document.querySelector(".page-enter-active,.page-leave-active")')
+
+
 def browser_api(path, method='GET', body=None):
     return evaluate('''(async()=>{
       const s=await (await fetch('/api/session')).json();
@@ -56,7 +61,8 @@ def browser_api(path, method='GET', body=None):
 
 try:
     ab('set', 'viewport', '1280', '900')
-    ab('open', base + '/login')
+    open_page('/login')
+    wait_js('document.querySelector("input[type=password]")!==null')
     ab('snapshot', '-i')
     screenshot('01-login.png')
     ab('find', 'label', 'E-mail', 'fill', email)
@@ -65,10 +71,10 @@ try:
     ab('wait', '--url', '**/dashboard')
     wait_js('document.querySelectorAll(".stat strong").length===4')
     screenshot('02-dashboard.png')
-    ab('open', base + '/media')
+    open_page('/media')
     wait_js('document.querySelector("table")!==null')
     screenshot('03-library.png')
-    ab('open', base + '/media/upload')
+    open_page('/media/upload')
     ab('snapshot', '-i')
     title = 'Console E2E ' + uuid.uuid4().hex[:10]
     ab('find', 'label', 'Nome', 'fill', title)
@@ -100,7 +106,7 @@ try:
     ab('wait', '--url', '**/media')
     assert browser_api(created_path)['status'] == 404
     created_path = None
-    ab('open', base + '/users')
+    open_page('/users')
     ab('snapshot', '-i')
     created_user = 'e2e-' + uuid.uuid4().hex[:8] + '@example.test'
     ab('find', 'label', 'Nome', 'fill', 'E2E viewer')
@@ -125,7 +131,7 @@ try:
     ab('dialog', 'accept')
     wait_js('!document.querySelector("tbody")?.innerText.includes(' + json.dumps(created_user) + ')')
     created_user = None
-    ab('open', base + '/system/health')
+    open_page('/system/health')
     wait_js('document.querySelectorAll("tbody tr").length>=7')
     checks = browser_api('/health')['data']
     assert all(c['ok'] for c in checks), checks
@@ -136,7 +142,7 @@ try:
     ab('select', '[aria-label=Language]', 'pt-BR')
     ab('set', 'viewport', '360', '800')
     for route in ['/dashboard','/media','/media/upload','/users','/system/health']:
-        ab('open', base + route)
+        open_page(route)
         wait_js('document.querySelector("h1")!==null')
         assert evaluate('document.documentElement.scrollWidth<=window.innerWidth'), route
         screenshot('mobile-' + route.replace('/', '-') + '.png')

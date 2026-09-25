@@ -127,6 +127,12 @@ main {
   background: white;
 }
 .content {
+  /* painel-golang's #contentIn: keep the card/footer still during route fades. */
+  height: 720px;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: #b9c9dc transparent;
   padding: 22px;
 }
 footer {
@@ -375,6 +381,8 @@ progress {
     padding: 12px;
   }
   .content {
+    height: min(720px, 70dvh);
+    min-height: 360px;
     padding: 14px;
   }
   .tabs {
@@ -399,5 +407,29 @@ progress {
   }
   .details {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Match painel-golang: animate only the view, never the navigation chrome. */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+.page-enter-from {
+  opacity: 0;
+  transform: translateY(6px);
+}
+.page-leave-to {
+  opacity: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-enter-active,
+  .page-leave-active {
+    transition: none;
+  }
+  .page-enter-from,
+  .page-leave-to {
+    opacity: 1;
+    transform: none;
   }
 }

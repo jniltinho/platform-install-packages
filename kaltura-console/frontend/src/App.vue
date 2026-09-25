@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, ref } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import {
   Film,
@@ -14,6 +14,10 @@ import { t, locale, changeLocale } from "./i18n";
 const session = useSession(),
   route = useRoute(),
   router = useRouter();
+const content = ref<HTMLElement | null>(null);
+function resetContentScroll() {
+  content.value?.scrollTo({ top: 0, left: 0, behavior: "instant" });
+}
 const media = computed(() => route.path.startsWith("/media"));
 async function logout() {
   try {
@@ -75,7 +79,15 @@ async function logout() {
     </div>
     <div class="layout">
       <main>
-        <div class="content"><RouterView :key="route.path" /></div>
+        <div ref="content" class="content">
+          <RouterView v-slot="{ Component, route: viewRoute }">
+            <Transition name="page" mode="out-in" @before-enter="resetContentScroll">
+              <div :key="viewRoute.path" class="page-transition">
+                <component :is="Component" />
+              </div>
+            </Transition>
+          </RouterView>
+        </div>
         <footer>
           Kaltura Console · {{ session.data?.version ?? "Go + Vue" }}
         </footer>

@@ -95,3 +95,17 @@ done
 After regeneration, use each HTML viewer’s Export → SVG action to refresh its matching standalone `.svg`. This uses Archify’s dual-theme export, including semantic CSS, local font fallbacks and `prefers-color-scheme` handling. Do not extract raw inline SVG without its required styles.
 
 The renderer is a development aid; generated diagrams are usable without it. When routes, config keys, source layout or packaging change, update the related guide and diagram JSON together. [OpenSpec artifacts](../../openspec/changes/add-kaltura-console-go/) document the proposal; [Kaltura API notes](../../doc/kaltura-api-noble.md) document the validated upstream contract. Do not copy secrets, local session state or `.env` files into examples.
+
+### Page transitions
+
+The routed content uses the same out-in transition as painel-golang: 150 ms
+opacity easing and a 6 px entrance translation. Header and navigation remain
+mounted. Like painel-golang, the card has a stable 720 px height and internal
+scrolling (viewport-bounded on mobile), avoiding footer jumps during fade or
+API loading. New pages start at the top of the card; the route path keys a wrapper so multi-root views animate correctly.
+Query-only updates do not remount the view. Reduced-motion users get no animation.
+
+Run `python3 tests/navigation.py` from `kaltura-console/` with the same
+`E2E_BASE_URL`, `E2E_EMAIL`, `E2E_PASSWORD_FILE` and optional `E2E_CHROME_ARGS`
+as the full E2E script. It checks actual transition classes/timing, stable
+navigation, rapid route changes, reduced-motion emulation and logout.
