@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Kaltura Console",
+    "subtitle": "One executable; one partner; separate console state"
+  },
+  "components": [
+    {
+      "id": "browser",
+      "type": "frontend",
+      "label": "Browser",
+      "sublabel": "Vue + Tailwind",
+      "pos": [
+        40,
+        260
+      ]
+    },
+    {
+      "id": "edge",
+      "type": "security",
+      "label": "HTTPS edge",
+      "sublabel": "optional proxy",
+      "pos": [
+        250,
+        260
+      ]
+    },
+    {
+      "id": "go",
+      "type": "backend",
+      "label": "Go / Echo v5",
+      "sublabel": "API + embedded UI",
+      "pos": [
+        470,
+        260
+      ],
+      "size": [
+        150,
+        60
+      ]
+    },
+    {
+      "id": "kaltura",
+      "type": "external",
+      "label": "Kaltura 18.20",
+      "sublabel": "API + media delivery",
+      "pos": [
+        760,
+        260
+      ],
+      "size": [
+        155,
+        60
+      ]
+    },
+    {
+      "id": "db",
+      "type": "database",
+      "label": "Console database",
+      "sublabel": "SQLite OR MariaDB",
+      "pos": [
+        470,
+        80
+      ],
+      "size": [
+        150,
+        60
+      ]
+    },
+    {
+      "id": "disk",
+      "type": "database",
+      "label": "Private staging",
+      "sublabel": "bounded disk uploads",
+      "pos": [
+        470,
+        440
+      ],
+      "size": [
+        150,
+        60
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "Console process and local state",
+      "wraps": [
+        "go",
+        "db",
+        "disk"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "browser",
+      "to": "edge",
+      "label": "HTTPS",
+      "variant": "emphasis"
+    },
+    {
+      "from": "edge",
+      "to": "go",
+      "variant": "emphasis"
+    },
+    {
+      "from": "go",
+      "to": "kaltura",
+      "label": "server-side KS",
+      "variant": "emphasis"
+    },
+    {
+      "from": "go",
+      "to": "db",
+      "fromSide": "top",
+      "toSide": "bottom"
+    },
+    {
+      "from": "go",
+      "to": "disk",
+      "fromSide": "bottom",
+      "toSide": "top"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "rose",
+      "title": "Security boundary",
+      "items": [
+        "Local cookie sessions + CSRF; admin/viewer roles",
+        "Proxy headers trusted only from configured CIDRs",
+        "Kaltura secrets never sent to the browser"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "Persistence boundary",
+      "items": [
+        "Console DB stores accounts, sessions and login attempts",
+        "Kaltura owns entries, conversion and media storage",
+        "No direct access to Kaltura SQL or transcoding workers"
+      ]
+    }
+  ]
+}

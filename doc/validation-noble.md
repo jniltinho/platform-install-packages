@@ -104,3 +104,32 @@ Evidence collected on the `aio` VM (`deb/noble`, http://192.168.56.20) after a c
 | Media upload | [![04-media-upload.png](prints/kaltura-console/04-media-upload.png)](prints/kaltura-console/04-media-upload.png) |
 | Media show bbb | [![05-media-show-bbb.png](prints/kaltura-console/05-media-show-bbb.png)](prints/kaltura-console/05-media-show-bbb.png) |
 | System health | [![06-system-health.png](prints/kaltura-console/06-system-health.png)](prints/kaltura-console/06-system-health.png) |
+
+## Go console validation (2026-09-25 UTC)
+
+The Go rewrite is installed alongside Kaltura on the existing noble `aio` VM
+at `http://192.168.56.20:8080`. It uses partner 102 and its own SQLite database;
+no Laravel or Kaltura server data was migrated or removed.
+
+Validated locally with console packages `0.1.0~rc1` and `0.1.0~rc2`:
+
+- `.deb` fresh install, hardened systemd service, `/healthz` and login HTTP 200.
+- Package upgrade retained the exact configuration checksum, local user and
+  existing authenticated browser session, changed the service PID, and served
+  the upgraded version.
+- `kaltura-console/tests/e2e.sh` exited 0 after login, both upload transfer phases,
+  Kaltura processing to READY, HTML5 playback, Range 206 (1024 bytes and matching
+  Content-Range), edit/delete, local-user creation/role/password/delete, health,
+  English navigation, logout/revocation, zero computed border radius and mobile
+  layouts at 360 px. Only generated test media/users were deleted.
+- MariaDB last-admin concurrency test passed five repetitions over independent
+  connection pools in a separate `kconsole_test_*` database. Migrations ran
+  repeatedly without changing the Kaltura schema.
+- Go tests passed with CGO disabled and with race detection; frontend production
+  build, TypeScript/ESLint/radius lint and 11 Vitest tests passed.
+
+Screenshots: [`prints/kaltura-console-go/`](prints/kaltura-console-go/).
+Code, operator documentation and diagrams: [`../kaltura-console/README.md`](../kaltura-console/README.md).
+The console GitHub workflow is separate from the server DEB/RPM workflows.
+No public release has been published by this validation. Ubuntu 26.04 server
+packaging and Rocky Linux 9 server packaging are separate workstreams.

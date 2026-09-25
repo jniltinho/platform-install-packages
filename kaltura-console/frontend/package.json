@@ -1,0 +1,33 @@
+{
+  "name": "kaltura-console-frontend",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "test": "vitest run",
+    "lint": "vue-tsc --noEmit && eslint src && node scripts/check-radius.mjs"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^5.2.8",
+    "lucide-vue-next": "^1.0.0",
+    "pinia": "^4.0.2",
+    "vue": "^3.5.40",
+    "vue-router": "^5.2.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.5",
+    "@tailwindcss/vite": "^4.3.3",
+    "@vitejs/plugin-vue": "^6.0.8",
+    "eslint": "^9.39.5",
+    "eslint-plugin-vue": "^10.11.1",
+    "prettier": "^3.9.9",
+    "tailwindcss": "^4.3.3",
+    "typescript": "~5.9.0",
+    "typescript-eslint": "^8.70.1",
+    "vite": "^8.2.0",
+    "vitest": "^4.1.10",
+    "vue-tsc": "^3.3.9"
+  }
+}

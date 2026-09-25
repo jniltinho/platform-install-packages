@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "Console delivery workflow",
+    "subtitle": "Repository automation contract; not proof of a completed GitHub run"
+  },
+  "lanes": [
+    {
+      "id": "source",
+      "label": "Source / trigger"
+    },
+    {
+      "id": "ci",
+      "label": "Quality gates"
+    },
+    {
+      "id": "build",
+      "label": "Build / package"
+    },
+    {
+      "id": "delivery",
+      "label": "Delivery"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "trigger",
+      "lane": "source",
+      "col": 0,
+      "type": "external",
+      "label": "Push / PR",
+      "sublabel": "tag / manual"
+    },
+    {
+      "id": "checkout",
+      "lane": "source",
+      "col": 2,
+      "type": "backend",
+      "label": "Checkout",
+      "sublabel": "Go + Node"
+    },
+    {
+      "id": "checks",
+      "lane": "ci",
+      "col": 2,
+      "type": "security",
+      "label": "Validate",
+      "sublabel": "lint + tests"
+    },
+    {
+      "id": "assets",
+      "lane": "build",
+      "col": 2,
+      "type": "frontend",
+      "label": "Build UI",
+      "sublabel": "embedded dist"
+    },
+    {
+      "id": "packages",
+      "lane": "build",
+      "col": 4,
+      "type": "backend",
+      "label": "Package",
+      "sublabel": "tar / deb / rpm"
+    },
+    {
+      "id": "artifact",
+      "lane": "delivery",
+      "col": 4,
+      "type": "cloud",
+      "label": "Artifacts",
+      "sublabel": "SHA256SUMS"
+    },
+    {
+      "id": "release",
+      "lane": "delivery",
+      "col": 5,
+      "type": "external",
+      "label": "Release",
+      "sublabel": "tags only"
+    }
+  ],
+  "edges": [
+    {
+      "from": "trigger",
+      "to": "checkout",
+      "variant": "emphasis"
+    },
+    {
+      "from": "checkout",
+      "to": "checks",
+      "variant": "emphasis"
+    },
+    {
+      "from": "checks",
+      "to": "assets",
+      "variant": "emphasis"
+    },
+    {
+      "from": "assets",
+      "to": "packages",
+      "variant": "emphasis"
+    },
+    {
+      "from": "packages",
+      "to": "artifact",
+      "variant": "emphasis"
+    },
+    {
+      "from": "artifact",
+      "to": "release",
+      "variant": "emphasis"
+    }
+  ],
+  "mainPath": [
+    "trigger",
+    "checkout",
+    "checks",
+    "assets",
+    "packages",
+    "artifact",
+    "release"
+  ],
+  "cards": [
+    {
+      "dot": "emerald",
+      "title": "Build output",
+      "items": [
+        "Linux executable includes Vue assets",
+        "nFPM creates native deb and rpm archives",
+        "Tag prefix: kaltura-console/v",
+        "Build: contents read; tagged release job: contents write"
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "Acceptance boundary",
+      "items": [
+        "Manual dispatch uploads artifacts, not a tagged Release",
+        "Install / upgrade tests are separate from archive generation",
+        "Ubuntu 26.04 and RPM targets need target-system evidence"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+/bin/
+/dist/
+/frontend/node_modules/
+/web/dist/*
+!/web/dist/.gitkeep
+/config.toml
+*.db
+*.db-shm
+*.db-wal
+/coverage.out
