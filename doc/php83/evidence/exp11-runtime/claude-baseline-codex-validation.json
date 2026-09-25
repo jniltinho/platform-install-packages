@@ -1,0 +1,25 @@
+{
+  "agent_exit": 0,
+  "six_step_exits": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "frozen_input_count": 24,
+  "frozen_input_mismatches": [],
+  "actual_tool_calls": 19,
+  "actual_tool_results": 19,
+  "cleanup": {
+    "unit": "php83-exp11-api-9280ef7224e8446e9c07524e3438db6a",
+    "is_active_output": "inactive",
+    "stopped": true
+  },
+  "baseline74_released": true,
+  "limitations": [
+    "Raw API stderr hash differences remain disclosed; raw stderr was not retained, so cause cannot be established here. Normalized diagnostic and observable contract comparisons are separate.",
+    "No application, FPM, AIO, package or release acceptance."
+  ]
+}

@@ -1,0 +1,237 @@
+{
+  "schema": 1,
+  "status": "PASS_BOUNDED_RUNTIME_COMPARISON",
+  "additions": {
+    "processes": 17,
+    "positive_processes": 16,
+    "expected_duplicate_include_fatals": 1,
+    "ternary_functional_rows": 147,
+    "all_bytes_equal_reviewed_candidate83": true,
+    "application_acceptance": false,
+    "independent_report_equal": true
+  },
+  "api": {
+    "logical_rows": 4,
+    "independent_rows": [
+      {
+        "runtime": "74",
+        "tree": "original",
+        "independent_equal": true,
+        "diagnostic_groups": 1,
+        "diagnostic_events": 6
+      },
+      {
+        "runtime": "83",
+        "tree": "original",
+        "independent_equal": true,
+        "diagnostic_groups": 15,
+        "diagnostic_events": 15
+      },
+      {
+        "runtime": "83",
+        "tree": "exp10",
+        "independent_equal": true,
+        "diagnostic_groups": 18,
+        "diagnostic_events": 503
+      },
+      {
+        "runtime": "83",
+        "tree": "exp11",
+        "independent_equal": true,
+        "diagnostic_groups": 18,
+        "diagnostic_events": 503
+      }
+    ],
+    "exp10_exp11_diagnostics_exactly_equal": true,
+    "diagnostic_groups": 18,
+    "diagnostic_events": 503,
+    "distinct_owned_database_tokens": true
+  },
+  "cli": {
+    "logical_rows": 48,
+    "positive_rows": 44,
+    "expected_original83_json_failures": 4,
+    "typed_baseline_comparisons": [
+      {
+        "source": "exp10",
+        "ini": "standard",
+        "case": "legacy-json",
+        "typed_equal": true
+      },
+      {
+        "source": "exp10",
+        "ini": "standard",
+        "case": "zend-json",
+        "typed_equal": true
+      },
+      {
+        "source": "exp10",
+        "ini": "standard",
+        "case": "doc-comment",
+        "typed_equal": true
+      },
+      {
+        "source": "exp10",
+        "ini": "standard",
+        "case": "doc-comment-export",
+        "typed_equal": true
+      },
+      {
+        "source": "exp10",
+        "ini": "standard",
+        "case": "doc-comment-consumer",
+        "typed_equal": true
+      },
+      {
+        "source": "exp10",
+        "ini": "minimal",
+        "case": "legacy-json",
+        "typed_equal": true
+      },
+      {
+        "source": "exp10",
+        "ini": "minimal",
+        "case": "zend-json",
+        "typed_equal": true
+      },
+      {
+        "source": "exp10",
+        "ini": "minimal",
+        "case": "doc-comment",
+        "typed_equal": true
+      },
+      {
+        "source": "exp10",
+        "ini": "minimal",
+        "case": "doc-comment-export",
+        "typed_equal": true
+      },
+      {
+        "source": "exp10",
+        "ini": "minimal",
+        "case": "doc-comment-consumer",
+        "typed_equal": true
+      },
+      {
+        "source": "exp11",
+        "ini": "standard",
+        "case": "legacy-json",
+        "typed_equal": true
+      },
+      {
+        "source": "exp11",
+        "ini": "standard",
+        "case": "zend-json",
+        "typed_equal": true
+      },
+      {
+        "source": "exp11",
+        "ini": "standard",
+        "case": "doc-comment",
+        "typed_equal": true
+      },
+      {
+        "source": "exp11",
+        "ini": "standard",
+        "case": "doc-comment-export",
+        "typed_equal": true
+      },
+      {
+        "source": "exp11",
+        "ini": "standard",
+        "case": "doc-comment-consumer",
+        "typed_equal": true
+      },
+      {
+        "source": "exp11",
+        "ini": "minimal",
+        "case": "legacy-json",
+        "typed_equal": true
+      },
+      {
+        "source": "exp11",
+        "ini": "minimal",
+        "case": "zend-json",
+        "typed_equal": true
+      },
+      {
+        "source": "exp11",
+        "ini": "minimal",
+        "case": "doc-comment",
+        "typed_equal": true
+      },
+      {
+        "source": "exp11",
+        "ini": "minimal",
+        "case": "doc-comment-export",
+        "typed_equal": true
+      },
+      {
+        "source": "exp11",
+        "ini": "minimal",
+        "case": "doc-comment-consumer",
+        "typed_equal": true
+      }
+    ],
+    "independent_rows_equal_except_duration": true
+  },
+  "classes": {
+    "classes": 3,
+    "logical_cases": 68,
+    "independent_equal": true,
+    "exact_prior_candidate83_equal": true,
+    "all63_source_runtime_coverage": false
+  },
+  "runtime_identity": {
+    "snapshots": 4,
+    "all_before_after_independent_bytes_equal": true,
+    "host": "kaltura-php74-baseline",
+    "hashed_objects": 55,
+    "runtime_modes": 3,
+    "scope": "baseline74 native74 and copied83 Apache/CLI/modules/libraries/INI; not a fresh php83lab module snapshot"
+  },
+  "native83_runtime_identity": {
+    "snapshots": 4,
+    "all_before_after_independent_bytes_equal": true,
+    "host": "kaltura-php83-lab",
+    "hashed_objects": 39,
+    "runtime_modes": 2,
+    "copied_and_native83_interpreter_hash_equal": true,
+    "scope": "Fresh native php83lab CLI/modules/linked libraries and standard/minimal INI; no application acceptance inferred"
+  },
+  "normalization_policy": {
+    "api": "Exclude only duration_ns and opaque stderr_sha256 from independent row equality; compare exact stdout, signature control, sanitized diagnostics and runtime observations. DB UUIDs differ but each path/unit/cleanup identity is checked and both tokens must be distinct.",
+    "api_stderr_limit": "Raw KS-bearing logs were not retained; differing opaque stderr hashes are not asserted to differ solely by known timestamps/UUIDs. Equality claim is explicitly limited to collected sanitized fields.",
+    "cli": "Exclude per-row duration_ns and report recorded_at_utc only. stdout/stderr remain byte-exact between executors. Typed baseline comparison excludes environment; doc-comment-export compares entries only.",
+    "additions": "No independent normalization; all17 ordered rows, source, fixture and reference identities checked.",
+    "classes": "No independent normalization; full reports and prior83 result objects must match exactly.",
+    "runtime": "No normalization; each host has four fresh snapshots which must match exactly within that host; native83 and copied83 interpreter hashes must match."
+  },
+  "input_sha256": {
+    "additions-primary.json": "ffbce561c9348cf5bc8e00d50254c8c0554f77357c5df00ac2718a448676a323",
+    "claude-additions.json": "ffbce561c9348cf5bc8e00d50254c8c0554f77357c5df00ac2718a448676a323",
+    "api-primary.json": "2b1919b41b64edab0e85d03656ec680d541ec65808140557e321255743df935b",
+    "claude-api.json": "50412f86e09e40b88b7c1a062d3803e7737cbab4ac235dcefc7eb5ecdc6dbf74",
+    "cli74-primary.json": "2c620ab88c44985d65c550330318892f76da8605e1b89f75041e66b1047f3f70",
+    "claude-cli74.json": "9b89de865b913ccaed09b5d4d1c051db134cda1d7dba1cbdb01d3759f565d199",
+    "cli83-primary.json": "2eedeadb34f76345006bee9ad8a9f1b73c0f5cd6499e5e65e9bbbdbb05d02e73",
+    "claude-native83-cli.json": "f556b3c52d2e9f85ddd75d71d97394f55f2a62e64c5fa04d99db3e6ce5573358",
+    "curly-primary.json": "c694c7d43dc69f6f791b273f2f3d430351e1c1ba1dd698a82932d877f0b9b774",
+    "claude-curly.json": "c694c7d43dc69f6f791b273f2f3d430351e1c1ba1dd698a82932d877f0b9b774",
+    "runtime-before.json": "a7c9a22fb6d120993fe188ceb31b68cafb49079aef5100d047d9ad31d21820dd",
+    "runtime-after.json": "a7c9a22fb6d120993fe188ceb31b68cafb49079aef5100d047d9ad31d21820dd",
+    "claude-runtime-before.json": "a7c9a22fb6d120993fe188ceb31b68cafb49079aef5100d047d9ad31d21820dd",
+    "claude-runtime-after.json": "a7c9a22fb6d120993fe188ceb31b68cafb49079aef5100d047d9ad31d21820dd",
+    "runtime83-before.json": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491",
+    "runtime83-after.json": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491",
+    "claude-native83-runtime-before.json": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491",
+    "claude-native83-runtime-after.json": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491"
+  },
+  "reference_sha256": {
+    "exp10-runtime/api-primary.json": "fb99528a1bf0fe1520249d2a0d6082f1af2c8564db4f46c7dac3c7526457f19f",
+    "curly-offsets/behavior-primary.json": "0b506f100680f0a5e02fa1af71ed34ffe7cbd16a85c50375010dae63c5b64991",
+    "exp11-candidate/selected-manifest.json": "99f87bf705b0a9c419229fc5c1484919e6de4ebc24dabcccb359b5bb762af2ff"
+  },
+  "comparator_sha256": "7f6ea1736412ab5cd01257bacffb80d3e84e2c4da060b0c1ddf7c063ed21e8b7",
+  "application_acceptance": false
+}

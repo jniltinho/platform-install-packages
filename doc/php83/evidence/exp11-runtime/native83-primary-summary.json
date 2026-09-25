@@ -1,0 +1,10 @@
+{
+  "rows": 36,
+  "successful_processes": 32,
+  "expected_original_json_compile_failures": 4,
+  "runtime_identity_equal": true,
+  "runtime_objects": 39,
+  "application_acceptance": false,
+  "independent_repeat": "pending",
+  "cross_version_semantic_comparison": "pending baseline74 execution"
+}

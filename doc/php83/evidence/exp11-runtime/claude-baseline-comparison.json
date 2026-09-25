@@ -1,0 +1,210 @@
+{
+  "schema": 1,
+  "executor": "Claude CLI (claude-opus-5-5), independent repeat on baseline74 alias",
+  "scope": "bounded exp11 runtime repeat; NOT application/release acceptance; exp11 is PHP8.3-only, no original74 exp11 support claim",
+  "step_exits": {
+    "runtime-before": {
+      "exit": "0",
+      "stderr_bytes": 0
+    },
+    "api": {
+      "exit": "0",
+      "stderr_bytes": 0
+    },
+    "cli74": {
+      "exit": "0",
+      "stderr_bytes": 0
+    },
+    "curly": {
+      "exit": "0",
+      "stderr_bytes": 0
+    },
+    "additions": {
+      "exit": "0",
+      "stderr_bytes": 0
+    },
+    "runtime-after": {
+      "exit": "0",
+      "stderr_bytes": 0
+    }
+  },
+  "frozen_inputs_after": {
+    "entries": 24,
+    "mismatches": []
+  },
+  "legitimate_exclusions": [
+    "API records[*].duration_ns",
+    "API db.unit/db.datadir/cleanup.unit (synthetic UUID)",
+    "CLI rows[*].duration_ns",
+    "CLI recorded_at_utc"
+  ],
+  "comparisons": [
+    {
+      "fresh": "claude-runtime-before.json",
+      "reference": "runtime-before.json",
+      "fresh_sha256": "a7c9a22fb6d120993fe188ceb31b68cafb49079aef5100d047d9ad31d21820dd",
+      "reference_sha256": "a7c9a22fb6d120993fe188ceb31b68cafb49079aef5100d047d9ad31d21820dd",
+      "byte_identical": true,
+      "excluded_paths": [],
+      "non_excluded_differences": []
+    },
+    {
+      "fresh": "claude-runtime-after.json",
+      "reference": "runtime-after.json",
+      "fresh_sha256": "a7c9a22fb6d120993fe188ceb31b68cafb49079aef5100d047d9ad31d21820dd",
+      "reference_sha256": "a7c9a22fb6d120993fe188ceb31b68cafb49079aef5100d047d9ad31d21820dd",
+      "byte_identical": true,
+      "excluded_paths": [],
+      "non_excluded_differences": []
+    },
+    {
+      "fresh": "claude-runtime-after.json",
+      "reference": "claude-runtime-before.json",
+      "fresh_sha256": "a7c9a22fb6d120993fe188ceb31b68cafb49079aef5100d047d9ad31d21820dd",
+      "reference_sha256": "a7c9a22fb6d120993fe188ceb31b68cafb49079aef5100d047d9ad31d21820dd",
+      "byte_identical": true,
+      "excluded_paths": [],
+      "non_excluded_differences": []
+    },
+    {
+      "fresh": "claude-api.json",
+      "reference": "api-primary.json",
+      "fresh_sha256": "50412f86e09e40b88b7c1a062d3803e7737cbab4ac235dcefc7eb5ecdc6dbf74",
+      "reference_sha256": "2b1919b41b64edab0e85d03656ec680d541ec65808140557e321255743df935b",
+      "byte_identical": false,
+      "excluded_paths": [
+        "/cleanup/unit",
+        "/db/datadir",
+        "/db/unit",
+        "/records/0/duration_ns",
+        "/records/1/duration_ns",
+        "/records/2/duration_ns",
+        "/records/3/duration_ns"
+      ],
+      "non_excluded_differences": [
+        "/records/0/stderr_sha256",
+        "/records/1/stderr_sha256",
+        "/records/2/stderr_sha256",
+        "/records/3/stderr_sha256"
+      ]
+    },
+    {
+      "fresh": "claude-cli74.json",
+      "reference": "cli74-primary.json",
+      "fresh_sha256": "9b89de865b913ccaed09b5d4d1c051db134cda1d7dba1cbdb01d3759f565d199",
+      "reference_sha256": "2c620ab88c44985d65c550330318892f76da8605e1b89f75041e66b1047f3f70",
+      "byte_identical": false,
+      "excluded_paths": [
+        "/recorded_at_utc",
+        "/rows/0/duration_ns",
+        "/rows/1/duration_ns",
+        "/rows/2/duration_ns",
+        "/rows/3/duration_ns",
+        "/rows/4/duration_ns",
+        "/rows/5/duration_ns",
+        "/rows/6/duration_ns",
+        "/rows/7/duration_ns",
+        "/rows/8/duration_ns",
+        "/rows/9/duration_ns",
+        "/rows/10/duration_ns",
+        "/rows/11/duration_ns"
+      ],
+      "non_excluded_differences": []
+    },
+    {
+      "fresh": "claude-curly.json",
+      "reference": "curly-primary.json",
+      "fresh_sha256": "c694c7d43dc69f6f791b273f2f3d430351e1c1ba1dd698a82932d877f0b9b774",
+      "reference_sha256": "c694c7d43dc69f6f791b273f2f3d430351e1c1ba1dd698a82932d877f0b9b774",
+      "byte_identical": true,
+      "excluded_paths": [],
+      "non_excluded_differences": []
+    },
+    {
+      "fresh": "claude-additions.json",
+      "reference": "additions-primary.json",
+      "fresh_sha256": "ffbce561c9348cf5bc8e00d50254c8c0554f77357c5df00ac2718a448676a323",
+      "reference_sha256": "ffbce561c9348cf5bc8e00d50254c8c0554f77357c5df00ac2718a448676a323",
+      "byte_identical": true,
+      "excluded_paths": [],
+      "non_excluded_differences": []
+    }
+  ],
+  "api_stderr_sha256_deltas_disclosed_not_excluded": [
+    {
+      "runtime": "74",
+      "tree": "original",
+      "fresh": "0f053079e959a98bec30435290d07ccb9c5f34da8679a435f5a9c8b027f02113",
+      "primary": "4b5a8d6f59374f06d402d9bb25973c20e4dd50611df205ee66689b78dcc9f04f"
+    },
+    {
+      "runtime": "83",
+      "tree": "original",
+      "fresh": "f2389c78837e9727996a0f7a550c2f023ef1fd751c7ef519298b3e6be872ba58",
+      "primary": "0ab31108f7a3f44f8839bb5dd965ce442f62b7c4641566adf03dc452051cfb5b"
+    },
+    {
+      "runtime": "83",
+      "tree": "exp10",
+      "fresh": "504fa97ab492f59f7f70b129e6bd5311d9815227312749b08a484cbdd245c815",
+      "primary": "7635450189df2146ddb13e592aed3c783495ea4691c0461feb1b1fd9084195c7"
+    },
+    {
+      "runtime": "83",
+      "tree": "exp11",
+      "fresh": "eda50680367d8c988129dab14db199ff5400b96d10890c89fef6f5edd87fcc9f",
+      "primary": "21d0c2327cc279b62d3975f94230b4274c813add42abe205d34424d854385f02"
+    }
+  ],
+  "counts": {
+    "runtime_files_before": 55,
+    "runtime_files_after": 55,
+    "api_rows": [
+      [
+        "74",
+        "original",
+        0,
+        false,
+        1
+      ],
+      [
+        "83",
+        "original",
+        1,
+        true,
+        15
+      ],
+      [
+        "83",
+        "exp10",
+        0,
+        false,
+        18
+      ],
+      [
+        "83",
+        "exp11",
+        0,
+        false,
+        18
+      ]
+    ],
+    "api_functional_checks_passed": true,
+    "cli74_rows": 12,
+    "cli74_nonzero": [],
+    "curly_cases": 68,
+    "additions": {
+      "processes": 17,
+      "positive_processes": 16,
+      "expected_duplicate_include_fatals": 1,
+      "ternary_functional_rows": 147,
+      "all_bytes_equal_reviewed_candidate83": true,
+      "application_acceptance": false
+    }
+  },
+  "api_cleanup": {
+    "unit": "php83-exp11-api-9280ef7224e8446e9c07524e3438db6a",
+    "is_active_output": "inactive",
+    "stopped": true
+  }
+}

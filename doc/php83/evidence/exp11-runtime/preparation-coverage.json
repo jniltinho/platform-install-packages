@@ -1,0 +1,124 @@
+{
+  "project": "home-nilton-Projetos-nilton-NOVOS-platform-install-packages",
+  "signal": "best_effort",
+  "indexed_at": "2026-09-25T19:28:02Z",
+  "metadata": {
+    "generation": "2026-09-25T19:28:02Z",
+    "index_mode": "full",
+    "recorded_at": "2026-09-25T19:28:24Z",
+    "recording_status": "complete",
+    "ignored_files_stored": 100,
+    "ignored_files_total": 100,
+    "hash_records_complete": true,
+    "coverage_version": 3,
+    "generation_matches": true
+  },
+  "paths": [
+    {
+      "requested_path": "tools/php83/exp10-api/artifact.py",
+      "path": "tools/php83/exp10-api/artifact.py",
+      "status": "no_recorded_issue",
+      "freshness": "missing",
+      "recommended_action": "read_source_and_reindex",
+      "coverage": []
+    },
+    {
+      "requested_path": "tools/php83/exp10-api/collect.py",
+      "path": "tools/php83/exp10-api/collect.py",
+      "status": "no_recorded_issue",
+      "freshness": "missing",
+      "recommended_action": "read_source_and_reindex",
+      "coverage": []
+    },
+    {
+      "requested_path": "tools/php83/exp10-api/stage.sh",
+      "path": "tools/php83/exp10-api/stage.sh",
+      "status": "no_recorded_issue",
+      "freshness": "missing",
+      "recommended_action": "read_source_and_reindex",
+      "coverage": []
+    },
+    {
+      "requested_path": "tools/php83/exp10-api/run-apache.sh",
+      "path": "tools/php83/exp10-api/run-apache.sh",
+      "status": "no_recorded_issue",
+      "freshness": "missing",
+      "recommended_action": "read_source_and_reindex",
+      "coverage": []
+    },
+    {
+      "requested_path": "tools/php83/exp10-api/start-db.sh",
+      "path": "tools/php83/exp10-api/start-db.sh",
+      "status": "no_recorded_issue",
+      "freshness": "missing",
+      "recommended_action": "read_source_and_reindex",
+      "coverage": []
+    },
+    {
+      "requested_path": "tools/php83/exp10-api/verify-source.py",
+      "path": "tools/php83/exp10-api/verify-source.py",
+      "status": "no_recorded_issue",
+      "freshness": "missing",
+      "recommended_action": "read_source_and_reindex",
+      "coverage": []
+    },
+    {
+      "requested_path": "tools/php83/exp10-api/collect-curly.py",
+      "path": "tools/php83/exp10-api/collect-curly.py",
+      "status": "no_recorded_issue",
+      "freshness": "missing",
+      "recommended_action": "read_source_and_reindex",
+      "coverage": []
+    },
+    {
+      "requested_path": "tools/php83/exp10-api/run-curly.sh",
+      "path": "tools/php83/exp10-api/run-curly.sh",
+      "status": "no_recorded_issue",
+      "freshness": "missing",
+      "recommended_action": "read_source_and_reindex",
+      "coverage": []
+    },
+    {
+      "requested_path": "tools/php83/exp10-api/runtime-identity.py",
+      "path": "tools/php83/exp10-api/runtime-identity.py",
+      "status": "no_recorded_issue",
+      "freshness": "missing",
+      "recommended_action": "read_source_and_reindex",
+      "coverage": []
+    },
+    {
+      "requested_path": "tools/php83/exp10-api/test_collector.py",
+      "path": "tools/php83/exp10-api/test_collector.py",
+      "status": "no_recorded_issue",
+      "freshness": "missing",
+      "recommended_action": "read_source_and_reindex",
+      "coverage": []
+    },
+    {
+      "requested_path": "tools/php83/exp10-api/test_pin.py",
+      "path": "tools/php83/exp10-api/test_pin.py",
+      "status": "no_recorded_issue",
+      "freshness": "missing",
+      "recommended_action": "read_source_and_reindex",
+      "coverage": []
+    },
+    {
+      "requested_path": "tools/php83/exp10-regression/batch.py",
+      "path": "tools/php83/exp10-regression/batch.py",
+      "status": "no_recorded_issue",
+      "freshness": "missing",
+      "recommended_action": "read_source_and_reindex",
+      "coverage": []
+    },
+    {
+      "requested_path": "tools/php83/exp10-regression/run-one.sh",
+      "path": "tools/php83/exp10-regression/run-one.sh",
+      "status": "no_recorded_issue",
+      "freshness": "missing",
+      "recommended_action": "read_source_and_reindex",
+      "coverage": []
+    }
+  ],
+  "scopes": [],
+  "caveat": "Best-effort signal only. No recorded issue does not prove graph or source completeness; read flagged source and qualify claims when metadata is changed or unavailable."
+}

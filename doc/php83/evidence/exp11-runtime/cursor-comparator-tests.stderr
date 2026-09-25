@@ -1,0 +1,23 @@
+test_additions_bad_summary (test_compare.Guards.test_additions_bad_summary) ... ok
+test_additions_fixture_positive (test_compare.Guards.test_additions_fixture_positive) ... ok
+test_additions_missing (test_compare.Guards.test_additions_missing) ... ok
+test_additions_wrong_control (test_compare.Guards.test_additions_wrong_control) ... ok
+test_api_active_cleanup (test_compare.Guards.test_api_active_cleanup) ... ok
+test_api_bool_exit (test_compare.Guards.test_api_bool_exit) ... ok
+test_api_control_removed (test_compare.Guards.test_api_control_removed) ... ok
+test_api_diagnostic_loss (test_compare.Guards.test_api_diagnostic_loss) ... ok
+test_api_fixture_positive (test_compare.Guards.test_api_fixture_positive) ... ok
+test_api_missing_row (test_compare.Guards.test_api_missing_row) ... ok
+test_api_response_drift (test_compare.Guards.test_api_response_drift) ... ok
+test_api_same_db (test_compare.Guards.test_api_same_db) ... ok
+test_classes_fixture_positive (test_compare.Guards.test_classes_fixture_positive) ... ok
+test_cli_bool_exit (test_compare.Guards.test_cli_bool_exit) ... ok
+test_cli_duplicate (test_compare.Guards.test_cli_duplicate) ... ok
+test_cli_fixture_positive (test_compare.Guards.test_cli_fixture_positive) ... ok
+test_cli_stderr_drift (test_compare.Guards.test_cli_stderr_drift) ... ok
+test_runtime_drift (test_compare.Guards.test_runtime_drift) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.069s
+
+OK

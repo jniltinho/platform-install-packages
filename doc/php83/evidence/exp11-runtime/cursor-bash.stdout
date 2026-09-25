@@ -1,0 +1,6 @@
+bash -n tools/php83/exp11-api/run-additions.sh
+bash -n tools/php83/exp11-api/run-apache.sh
+bash -n tools/php83/exp11-api/run-curly.sh
+bash -n tools/php83/exp11-api/stage.sh
+bash -n tools/php83/exp11-api/start-db.sh
+bash -n tools/php83/exp11-regression/run-one.sh

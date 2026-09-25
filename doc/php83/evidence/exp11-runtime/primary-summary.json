@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "artifact": {
+    "zip_sha256": "f2474f5b951bfd2d121291025c8dd4554697fb5bb4024e132987643dab6144a7",
+    "verified_extracted_files": 15240
+  },
+  "api_functional_checks_passed": true,
+  "api_diagnostics_groups": 18,
+  "api_diagnostics_events": 503,
+  "exp10_exp11_diagnostics_identical": true,
+  "baseline74_cli_rows": 12,
+  "native83_cli_rows": 36,
+  "class_cases": 68,
+  "addition_processes": 17,
+  "runtime55_before_after_equal": true,
+  "independent_baseline_repeat": "actual Claude CLI exit 0; six commands exit 0;24 frozen inputs verified; sanitized19tool-call ledger and bounded serialization evidence audited",
+  "application_acceptance": false,
+  "independent_native83_repeat": "actual Claude CLI exit 0; 36 rows and runtime identities verified",
+  "comparison_report": "comparison-runtime.json",
+  "cursor_comparison": "actual18tests+comparison exit0; report identical; CLI timeout124 after writing review"
+}

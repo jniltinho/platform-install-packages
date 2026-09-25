@@ -1,0 +1,19 @@
+Final semantic pass — reading the exp11 collectors and corpus in-repo now.
+Found the exp11 toolset — opening collectors, contracts, and evidence files.
+Core harnesses checked — now verifying containment, pins, and prior evidence.
+Probes and containment look sound — now checking fixture inventory and staging guards.
+Inventory reconciles — writing the final semantic review now.
+Final semantic review written to `doc/php83/evidence/exp11-runtime/opencode-final-review.md`. Same findings:
+
+No blocking defect in inspected scope.
+
+- Source/artifact binding PASS: additions bind to in-repo `doc/php83/evidence/exp11-runtime/addition-corpus.json`; per-report SHA, `is_relative_to(REPO)`, corpus identities (441/FAIL-3/PASS-30), 14-file fixture inventory reconciles, verify-before/after + re-verify.
+- Missing-pin fail-closed PASS: `artifact.py` strict 64-hex; `artifact-sha256.txt` absent by design; `stage.sh` checks pin before SSH; no placeholder/exp10 fallback; refuse-existing-output guards.
+- Containment PASS: `run-additions.sh` hostname/uid/argc + allowlist + systemd-run (PrivateNetwork, syscall filter, ProtectSystem/Home, PrivateTmp, NoNewPrivileges, 512M/60s, read-only binds, `env -i`, hardened `php -n`). Same pattern in apache/curly/run-one; `stage.sh` mkdir-without-p preserves prior stages.
+- DB cleanup + KS privacy PASS: per-run UUID unit, finally-stops-known-unit, token regex, socket/realpath checks; fault tests cover malformed/untrusted/timeout; API stdout whitelisted + hashes-only, additions verbatim OK (synthetic/public corpora, probes hash messages/files).
+- 17-addition matrix PASS: 1+6+10 ordered; strict int + exact exit/stdout/stderr byte equality; 16 positive + 1 expected `cli-repeat` fatal; tests cover duplicate/missing/extra/bool/float/stdout/stderr/fatal.
+- Original83/74 controls PASS: 4-row matrix exact, `(74,exp11)` excluded; pass requires baseline golden stdout, whitelisted stdout, 83/original signature-fatal, both candidates match baseline, cleanup stopped.
+
+Non-blocking notes: pin failure before INCOMPLETE write (still fail-closed); `147` summary constant implied by byte equality; `base-object-ternary/fixtures` rglob yields 0 (total still 14).
+
+Limitations: repo-only, no execution here, harness-only preserved 25-test/6-syntax evidence, bounded corpora only, `application_acceptance:False`, denied tempfile not retried.

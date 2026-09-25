@@ -1,0 +1,90 @@
+{
+  "scope": "mechanical preparation only; no artifact pin, staging or runtime execution",
+  "transform": "exp10->exp11, exp9->exp10, Exp10->Exp11; 59->63 scope text in class report",
+  "files": [
+    {
+      "before": "tools/php83/exp10-api/README.md",
+      "after": "tools/php83/exp11-api/README.md",
+      "before_sha256": "6e3368a303f2b433957903bba0dc1d4abdbff3a3d38abece7914d7a463e7e030",
+      "after_sha256": "79e89c0cd6be49c2133c4cd61d928a6e1a18523626ff509f6a17c7b555a21666"
+    },
+    {
+      "before": "tools/php83/exp10-api/artifact.py",
+      "after": "tools/php83/exp11-api/artifact.py",
+      "before_sha256": "ac11b9a5581173837f6cd0d772157a69182ab7cc61804371554df7f727cef99e",
+      "after_sha256": "6b2ddcb00471326797d85a8cd0308463517969a2bf9d8865b47041e030dac811"
+    },
+    {
+      "before": "tools/php83/exp10-api/collect-curly.py",
+      "after": "tools/php83/exp11-api/collect-curly.py",
+      "before_sha256": "bce58746d070601c7535522bce217988910ac12903b134e98f2bf1ea6004494e",
+      "after_sha256": "05cfb6db2fbe63e163db9fe400cc3a557384b50185665a806e329ebef281d9d0"
+    },
+    {
+      "before": "tools/php83/exp10-api/collect.py",
+      "after": "tools/php83/exp11-api/collect.py",
+      "before_sha256": "ad24ce1f41a999f6a6209017b9825c2527094f6895b812cc332d18a59657ed02",
+      "after_sha256": "b364fd127b57658d5263836fe307d5d0316348dabab118904258511dcd1282e7"
+    },
+    {
+      "before": "tools/php83/exp10-api/run-apache.sh",
+      "after": "tools/php83/exp11-api/run-apache.sh",
+      "before_sha256": "ca411b3048600db231459b87ea00a8f10f0983a4f3af134629e48265d40214c0",
+      "after_sha256": "d6c3ee093db1cbf478f454a0136c58de81b2c849476e09a2e0c3d05c865958d8"
+    },
+    {
+      "before": "tools/php83/exp10-api/run-curly.sh",
+      "after": "tools/php83/exp11-api/run-curly.sh",
+      "before_sha256": "4f5bad453269e0babf7b2e1dc01054140aa15df8aa1ff2425578a64111e2aa45",
+      "after_sha256": "802956e8212e29d1898fe78850d1fc91bac5d5851c2632c782d77a7d40c16877"
+    },
+    {
+      "before": "tools/php83/exp10-api/runtime-identity.py",
+      "after": "tools/php83/exp11-api/runtime-identity.py",
+      "before_sha256": "f2985a7d3f054c3a743535009e0ad2937545d05e1c0d9e7c936a24acf13da463",
+      "after_sha256": "f2985a7d3f054c3a743535009e0ad2937545d05e1c0d9e7c936a24acf13da463"
+    },
+    {
+      "before": "tools/php83/exp10-api/stage.sh",
+      "after": "tools/php83/exp11-api/stage.sh",
+      "before_sha256": "065606b1dc6f9f85e7b97c70c6c023de604114052dbab1934c563b0c60e13dde",
+      "after_sha256": "cfd559db55af1e00e7c46894e30b7cf99cd00adef9c0299fda96fdcf95c37fd5"
+    },
+    {
+      "before": "tools/php83/exp10-api/start-db.sh",
+      "after": "tools/php83/exp11-api/start-db.sh",
+      "before_sha256": "80ec639d37b2963742a30ed0f65d197e186631f6b0fe2df53660d27468346d0e",
+      "after_sha256": "885afc43395155b6f176ce9e3d4bedc536f3445284d4f3d0a33639a4041b9c72"
+    },
+    {
+      "before": "tools/php83/exp10-api/test_collector.py",
+      "after": "tools/php83/exp11-api/test_collector.py",
+      "before_sha256": "0340f51bdb10b06a3929503ab8d2cbe98996501971a9918f9441e08400d3b580",
+      "after_sha256": "a5f0fb6bf7865383298b7b293b75abeba1e47badcc86d4e61146f3730ad70775"
+    },
+    {
+      "before": "tools/php83/exp10-api/test_pin.py",
+      "after": "tools/php83/exp11-api/test_pin.py",
+      "before_sha256": "4e31224ee608511a6b1a5fbed850d48a4973aaec82ef2584ab4d1435ce06c2c9",
+      "after_sha256": "7810bbc757a03d91b2d6bc79d4bc6aa1aa4bc702da910b1214f9bbb18fb05f1a"
+    },
+    {
+      "before": "tools/php83/exp10-api/verify-source.py",
+      "after": "tools/php83/exp11-api/verify-source.py",
+      "before_sha256": "11f1cd56c9de8a90f6e0b5c7018db1b0112784ba33d839ca7a7b14cd915a7ace",
+      "after_sha256": "80e222395515ead477df3be358f02367ba39e21ce79457153f93a356b0ae6a2e"
+    },
+    {
+      "before": "tools/php83/exp10-regression/batch.py",
+      "after": "tools/php83/exp11-regression/batch.py",
+      "before_sha256": "fec025e939870f01d23061b6ef435fd7c0a1322678b114aa62d3851f07ad1685",
+      "after_sha256": "71ea2f8fa04903d37aa53d638d2dd0433f6e148c2094df94d5ea8ea02b919eba"
+    },
+    {
+      "before": "tools/php83/exp10-regression/run-one.sh",
+      "after": "tools/php83/exp11-regression/run-one.sh",
+      "before_sha256": "3d3b235452c84cbe585a68903e9d4e205cfbdb8a42dcec37145793a5283d8eb5",
+      "after_sha256": "5c761bb0b58ec45ea86d8db8e26e4635bd29ddaa31e8270a15dd18ea736c7b2a"
+    }
+  ]
+}

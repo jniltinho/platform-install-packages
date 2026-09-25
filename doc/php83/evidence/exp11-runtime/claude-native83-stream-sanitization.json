@@ -1,0 +1,12 @@
+{
+  "policy": "Keep actual current tool calls/results, task metadata, public final; remove historical hooks/reasoning. Raw hash/count provenance only; no raw reasoning archive.",
+  "original_sha256": "e2d056307e6219911386e7d9dac8828e2d54ef58b02c94542b12e56c2549d254",
+  "sanitized_sha256": "206fabd94f933ae869cbb6cb1ed138a948cff0dfce882c79abe444558c51ea9b",
+  "original_events": 50,
+  "retained_events": 21,
+  "removed_hook_events": 6,
+  "removed_reasoning_blocks": 7,
+  "actual_tool_calls": 9,
+  "actual_tool_results": 9,
+  "raw_body_retained": false
+}

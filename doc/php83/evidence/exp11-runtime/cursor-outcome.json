@@ -1,0 +1,42 @@
+{
+  "executor": "actual Cursor Agent CLI",
+  "command": "timeout -k 5 180 agent -p --trust --auto-review --output-format json <cursor-prep-prompt>",
+  "terminal_exit": 124,
+  "status": "PARTIAL_LOCAL_EXECUTION_PASS_REVIEW_TIMEOUT",
+  "unit_tests": {
+    "count": 25,
+    "exit": 0,
+    "stdout": "cursor-tests.stdout",
+    "stderr": "cursor-tests.stderr"
+  },
+  "bash_syntax": {
+    "exit": 0,
+    "per_file_invocations": [
+      "bash -n tools/php83/exp11-api/run-additions.sh",
+      "bash -n tools/php83/exp11-api/run-apache.sh",
+      "bash -n tools/php83/exp11-api/run-curly.sh",
+      "bash -n tools/php83/exp11-api/stage.sh",
+      "bash -n tools/php83/exp11-api/start-db.sh",
+      "bash -n tools/php83/exp11-regression/run-one.sh"
+    ],
+    "stderr_empty": true
+  },
+  "public_result_emitted": false,
+  "final_review_emitted": false,
+  "semantic_review_status": "INCOMPLETE_NO_FINAL_FINDINGS",
+  "application_acceptance": false,
+  "pin_written": false,
+  "vm_execution": false,
+  "hashes": {
+    "doc/php83/evidence/exp11-runtime/cursor-bash.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "doc/php83/evidence/exp11-runtime/cursor-bash.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "doc/php83/evidence/exp11-runtime/cursor-bash.stdout": "9031a671e208deefee081aa04596b146f2175111234fd88841d7ed6eb07fac0d",
+    "doc/php83/evidence/exp11-runtime/cursor-prep-prompt.txt": "e5291afcb3961354fac8de8848e2d4c9f7c46df7a8186acca35fdbfc484a0e97",
+    "doc/php83/evidence/exp11-runtime/cursor-prep.exit": "ca2ebdf97d7469496b1f4b78958f9dc8447efdcb623953fee7b6996b762f6fff",
+    "doc/php83/evidence/exp11-runtime/cursor-prep.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "doc/php83/evidence/exp11-runtime/cursor-public.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "doc/php83/evidence/exp11-runtime/cursor-tests.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "doc/php83/evidence/exp11-runtime/cursor-tests.stderr": "bc011855d258acbb0fb12c91cc0ffeb141f9f67b77c6fa5b17d5c142268496ca",
+    "doc/php83/evidence/exp11-runtime/cursor-tests.stdout": "7ad7d9f37bb85a85a48f634c9b64c865a502d279bfde2e78c94501b85c75cecc"
+  }
+}

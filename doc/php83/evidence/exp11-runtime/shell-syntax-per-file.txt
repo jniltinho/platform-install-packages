@@ -1,0 +1,6 @@
+PASS tools/php83/exp11-api/run-additions.sh
+PASS tools/php83/exp11-api/run-apache.sh
+PASS tools/php83/exp11-api/run-curly.sh
+PASS tools/php83/exp11-api/stage.sh
+PASS tools/php83/exp11-api/start-db.sh
+PASS tools/php83/exp11-regression/run-one.sh

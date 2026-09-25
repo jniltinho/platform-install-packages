@@ -1,0 +1,14 @@
+{
+  "cli_exit": 124,
+  "cli_result": "timeout at 180 seconds",
+  "local_tests_exit": 0,
+  "local_tests": 18,
+  "comparator_exit": 0,
+  "independent_comparison_sha256": "5180d04fdb2b3b0bc2be37f460fee76d493f89628cc249abdc2d3040b58dd08f",
+  "matches_primary_comparison": true,
+  "review_file_written": true,
+  "review_sha256": "5bbb04485cd03f3626536fb920096d04a3892bcc8d72b8b42b6d1a0af549f7e9",
+  "frozen_comparator_inputs_unchanged": true,
+  "not_claimed": "CLI exit 0 or Cursor VM application execution",
+  "application_acceptance": false
+}

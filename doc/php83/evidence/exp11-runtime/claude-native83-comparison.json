@@ -1,0 +1,68 @@
+{
+  "case": "claude-native83 independent fresh native PHP 8.3 CLI runtime repeat (exp11 regression batch)",
+  "executor": "Claude CLI (claude-opus-5-5)",
+  "reviewer_of_primary": "Claude (independent reconciliation)",
+  "environment": {
+    "host": "kaltura-php83-lab",
+    "php_version_line": "PHP 8.3.6 (cli) (built: Sep  2 2026 12:56:02) (NTS)"
+  },
+  "command_exits": {
+    "runtime-before": "0",
+    "cli": "0",
+    "runtime-after": "0"
+  },
+  "counts": {
+    "rows": 36,
+    "exit0": 32,
+    "exit255_expected": 4
+  },
+  "identities": {
+    "fresh_cli_sha256": "f556b3c52d2e9f85ddd75d71d97394f55f2a62e64c5fa04d99db3e6ce5573358",
+    "primary_cli_sha256": "2eedeadb34f76345006bee9ad8a9f1b73c0f5cd6499e5e65e9bbbdbb05d02e73",
+    "zip_sha256": "f2474f5b951bfd2d121291025c8dd4554697fb5bb4024e132987643dab6144a7",
+    "previous_artifact": {
+      "zip_sha256": "de177e6cbaedf3a3207661c2325f466cce37febb73190f3a49d31f24b740c053",
+      "verified_extracted_files": 15236
+    },
+    "verified_extracted_files": 15240,
+    "harness_batch_sha256": "71ea2f8fa04903d37aa53d638d2dd0433f6e148c2094df94d5ea8ea02b919eba",
+    "harness_run_one_sha256": "5c761bb0b58ec45ea86d8db8e26e4635bd29ddaa31e8270a15dd18ea736c7b2a",
+    "runtime_identity_sha256": "4d94383ac8c279f3cad66f8cddb14ac09a5c8e5e01d21cad9cfdcc87d74b5975",
+    "php_binary_sha256": "1c564e6bafa56d03359c3774be6f4c77d0edecabd2075e18556940a56747c8d7",
+    "recorded_at_utc": {
+      "primary": "2026-09-25T22:01:46.922955+00:00",
+      "fresh": "2026-09-25T22:03:41.539751+00:00"
+    }
+  },
+  "checks": {
+    "primary_ordered_36_unique_triples": true,
+    "primary_all_exit_int": true,
+    "primary_row_keys": true,
+    "primary_exactly_4_expected_255": true,
+    "primary_other_32_exit0": true,
+    "fresh_ordered_36_unique_triples": true,
+    "fresh_all_exit_int": true,
+    "fresh_row_keys": true,
+    "fresh_exactly_4_expected_255": true,
+    "fresh_other_32_exit0": true,
+    "rows_match_primary_except_duration_ns": true,
+    "batch_metadata_strict_equal_except_recorded_at_utc": true,
+    "recorded_at_utc_new": true,
+    "remote_harness_matches_local_frozen": true,
+    "runtime_identity_all4_equal": true,
+    "runtime_39_files": true,
+    "runtime_modules_ini_both_modes_equal": true,
+    "snapshot_collector_sha_pinned": true,
+    "frozen_local_inputs_unchanged": true
+  },
+  "row_mismatches": [],
+  "metadata_mismatches": [],
+  "frozen_drift": [],
+  "verdict": "PASS",
+  "limitations": [
+    "Scope is the 36 native PHP 8.3 CLI regression cases only; no PHP 7.4 baseline semantics, no HTTP/API/DB/application acceptance (application_acceptance=false).",
+    "Same lab VM, same staged artifacts and harness as primary; independence is fresh execution plus separate reconciliation, not a separate environment.",
+    "recorded_at_utc is VM clock; VM clock appears ahead of local clock (local batch window 21:48:44Z-21:48:51Z).",
+    "No release/parity claim."
+  ]
+}

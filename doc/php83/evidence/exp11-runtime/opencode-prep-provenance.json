@@ -1,0 +1,10 @@
+{
+  "raw_sha256": "cce253c3b35269c0221bfeda00f54cb0c228f2b8105bbd23fe0b8394bb04509e",
+  "public_records": 243,
+  "event_counts": {
+    "step_start": 81,
+    "tool_use": 81,
+    "step_finish": 81
+  },
+  "model": "minimax-coding-plan/MiniMax-M3"
+}

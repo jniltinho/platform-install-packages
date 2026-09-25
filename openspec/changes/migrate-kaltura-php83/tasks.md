@@ -280,3 +280,23 @@ Intentional SPL composition differences are explicit. Typed validator guards,
 23base+15composition tests and actual CLI outcomes (including quota/timeout) are
 recorded in `doc/php83/autoload83.md`. No task-body/fullapplication acceptance,
 package integration or release gate closes. exp11 selection/build is separate.
+
+T1-01/5.7 and 1.6 additional bounded exp11 evidence: two identical experimental
+ZIP builds select the four reviewed ternary/autoload source repairs while
+preserving all 59 previous source results. Actual Codex and Claude whole-artifact
+compiler runs inspect 11,784 files per version, reducing rejections from 11 to 7;
+Cursor independently reconciles both reports and executes 38 harness tests.
+The seven remaining rejections and 66 accepted files with diagnostics remain
+open. See `doc/php83/exp11-candidate.md` and `doc/php83/exp11-syntax.md`.
+Actual-artifact runtime integration is still in progress; no parent or detailed
+case is closed by compiler success, and no release/package gate is satisfied.
+
+T1-01/5.7 and T1-02/5.8 bounded exp11 runtime follow-up: Codex and actual Claude
+execute the selected ZIP's synthetic SQL/Apache HTTP+trusted-HTTPS matrix, 48 CLI
+rows (44 successful and four original-source compiler controls), 68 class cases
+and 17 new ternary/autoload processes including the expected duplicate-include
+fatal. Runtime/source identities agree before/after; Cursor independently runs
+18 guard tests and reconciles all reports (outer CLI timeout after completed
+checks/review is retained). API diagnostics remain 18 groups / 503 events.
+See `doc/php83/exp11-integration.md`; no full application/detailed-case or release
+gate is closed, and byte-replay corpora are not full behavioral coverage.

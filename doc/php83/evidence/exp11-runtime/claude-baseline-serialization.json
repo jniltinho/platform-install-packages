@@ -1,0 +1,85 @@
+{
+  "scope": "Host shell evidence bounds, not per-case timing or benchmark.",
+  "interpretation": "Refuse-existing guards and stdout redirection precede each foreground timeout invocation; .exit is written after it returns. Observed process bounds do not overlap. Tool-call grouping alone does not establish serialization; curly and additions appeared in one assistant message. No process-level monotonic start/end tracing was recorded.",
+  "curly_additions_gap_seconds": "3.688008347",
+  "steps": [
+    {
+      "step": "runtime-before",
+      "stat_command": [
+        "stat",
+        "-c",
+        "%n birth=%w mtime=%y",
+        "doc/php83/evidence/exp11-runtime/claude-baseline-runtime-before.stdout",
+        "doc/php83/evidence/exp11-runtime/claude-baseline-runtime-before.exit"
+      ],
+      "stat_output": "doc/php83/evidence/exp11-runtime/claude-baseline-runtime-before.stdout birth=2026-09-25 18:54:18.565769247 -0300 mtime=2026-09-25 18:54:19.500771359 -0300\ndoc/php83/evidence/exp11-runtime/claude-baseline-runtime-before.exit birth=2026-09-25 18:54:19.504771368 -0300 mtime=2026-09-25 18:54:19.504771368 -0300\n",
+      "exit": 0,
+      "stderr_bytes": 0
+    },
+    {
+      "step": "api",
+      "stat_command": [
+        "stat",
+        "-c",
+        "%n birth=%w mtime=%y",
+        "doc/php83/evidence/exp11-runtime/claude-baseline-api.stdout",
+        "doc/php83/evidence/exp11-runtime/claude-baseline-api.exit"
+      ],
+      "stat_output": "doc/php83/evidence/exp11-runtime/claude-baseline-api.stdout birth=2026-09-25 18:54:25.996786035 -0300 mtime=2026-09-25 18:54:39.313816137 -0300\ndoc/php83/evidence/exp11-runtime/claude-baseline-api.exit birth=2026-09-25 18:54:39.317816146 -0300 mtime=2026-09-25 18:54:39.317816146 -0300\n",
+      "exit": 0,
+      "stderr_bytes": 0
+    },
+    {
+      "step": "cli74",
+      "stat_command": [
+        "stat",
+        "-c",
+        "%n birth=%w mtime=%y",
+        "doc/php83/evidence/exp11-runtime/claude-baseline-cli74.stdout",
+        "doc/php83/evidence/exp11-runtime/claude-baseline-cli74.exit"
+      ],
+      "stat_output": "doc/php83/evidence/exp11-runtime/claude-baseline-cli74.stdout birth=2026-09-25 18:54:45.722830630 -0300 mtime=2026-09-25 18:54:45.722830630 -0300\ndoc/php83/evidence/exp11-runtime/claude-baseline-cli74.exit birth=2026-09-25 18:54:51.631843997 -0300 mtime=2026-09-25 18:54:51.631843997 -0300\n",
+      "exit": 0,
+      "stderr_bytes": 0
+    },
+    {
+      "step": "curly",
+      "stat_command": [
+        "stat",
+        "-c",
+        "%n birth=%w mtime=%y",
+        "doc/php83/evidence/exp11-runtime/claude-baseline-curly.stdout",
+        "doc/php83/evidence/exp11-runtime/claude-baseline-curly.exit"
+      ],
+      "stat_output": "doc/php83/evidence/exp11-runtime/claude-baseline-curly.stdout birth=2026-09-25 18:54:58.402859317 -0300 mtime=2026-09-25 18:55:02.026867519 -0300\ndoc/php83/evidence/exp11-runtime/claude-baseline-curly.exit birth=2026-09-25 18:55:02.030867529 -0300 mtime=2026-09-25 18:55:02.030867529 -0300\n",
+      "exit": 0,
+      "stderr_bytes": 0
+    },
+    {
+      "step": "additions",
+      "stat_command": [
+        "stat",
+        "-c",
+        "%n birth=%w mtime=%y",
+        "doc/php83/evidence/exp11-runtime/claude-baseline-additions.stdout",
+        "doc/php83/evidence/exp11-runtime/claude-baseline-additions.exit"
+      ],
+      "stat_output": "doc/php83/evidence/exp11-runtime/claude-baseline-additions.stdout birth=2026-09-25 18:55:05.718875876 -0300 mtime=2026-09-25 18:55:11.967890024 -0300\ndoc/php83/evidence/exp11-runtime/claude-baseline-additions.exit birth=2026-09-25 18:55:11.972890036 -0300 mtime=2026-09-25 18:55:11.972890036 -0300\n",
+      "exit": 0,
+      "stderr_bytes": 0
+    },
+    {
+      "step": "runtime-after",
+      "stat_command": [
+        "stat",
+        "-c",
+        "%n birth=%w mtime=%y",
+        "doc/php83/evidence/exp11-runtime/claude-baseline-runtime-after.stdout",
+        "doc/php83/evidence/exp11-runtime/claude-baseline-runtime-after.exit"
+      ],
+      "stat_output": "doc/php83/evidence/exp11-runtime/claude-baseline-runtime-after.stdout birth=2026-09-25 18:55:30.358931685 -0300 mtime=2026-09-25 18:55:31.257933723 -0300\ndoc/php83/evidence/exp11-runtime/claude-baseline-runtime-after.exit birth=2026-09-25 18:55:31.263933736 -0300 mtime=2026-09-25 18:55:31.263933736 -0300\n",
+      "exit": 0,
+      "stderr_bytes": 0
+    }
+  ]
+}

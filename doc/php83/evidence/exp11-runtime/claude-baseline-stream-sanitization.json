@@ -1,0 +1,115 @@
+{
+  "original_sha256": "fa83ec0fe924c73f5e024dbf72b43a02d17a0776596b7b9ea2b2dd87a700bed6",
+  "sanitized_sha256": "c06c44d3ff42f6e79b580c58d1f068941984027d701c01b75f8a87bc735dfc19",
+  "original_events": 104,
+  "retained_events": 47,
+  "counts": {
+    "system": 39,
+    "assistant": 39,
+    "content:thinking": 14,
+    "content:tool_use": 19,
+    "rate_limit_event": 6,
+    "user": 19,
+    "content:tool_result": 19,
+    "content:text": 6,
+    "result": 1
+  },
+  "policy": "Retain current tool calls/results and public terminal result; remove historical hook context, thinking and intermediate narration. Original body not retained; original hash only.",
+  "tool_calls": [
+    {
+      "original_event_index": 8,
+      "id": "toolu_013X5r5p8Wms14V2FnbaXGgp",
+      "command": "ls doc/php83/evidence/exp11-runtime/ && ls tools/php83/exp11-api/ && ls -la /tmp/kaltura-php74-ssh.conf && git status --short | head -30"
+    },
+    {
+      "original_event_index": 14,
+      "id": "toolu_01Nz8D4QB68eywzdobUEPyoJ",
+      "command": "cd /home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp11-runtime && ls claude-baseline-* claude-runtime-* claude-api* claude-cli74* claude-curly* claude-additions* 2>&1; head -c 3000 claude-baseline-input-identities.json; echo; python3 -c \"import json;d=json.load(open('claude-baseline-input-identities.json'));print(type(d), list(d)[:20] if isinstance(d,dict) else len(d))\""
+    },
+    {
+      "original_event_index": 18,
+      "id": "toolu_01KSkcb4B7y2AJz1MegF61wh",
+      "command": "cd /home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83 && python3 -c \"\nimport json,hashlib\nd=json.load(open('doc/php83/evidence/exp11-runtime/claude-baseline-input-identities.json'))\nbad=[k for k,v in d.items() if hashlib.sha256(open(k,'rb').read()).hexdigest()!=v]\nprint('entries',len(d),'mismatch',bad)\"; cat /tmp/kaltura-php74-ssh.conf | sed 's/IdentityFile.*/IdentityFile <redacted>/'; wc -l tools/php83/exp11-api/{collect.py,collect-curly.py,collect-additions.py,runtime-identity.py}"
+    },
+    {
+      "original_event_index": 20,
+      "id": "toolu_01C5MiqYMDTDBc9YTGSYTSw6",
+      "command": "cd /home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/exp11-api && cat collect.py runtime-identity.py collect-curly.py collect-additions.py"
+    },
+    {
+      "original_event_index": 28,
+      "id": "toolu_01WCUXxfo8FwvoCKnQ5Fe5uT",
+      "command": "cd /home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp11-runtime && cat api-primary.exit cli74-primary.exit curly-primary.exit additions-primary.exit runtime-before.exit runtime-after.exit; python3 -c \"\nimport json\nd=json.load(open('api-primary.json'));print([(r['runtime'],r['tree'],r['returncode'],r['duration_ns']//10**9) for r in d['records']], d['cleanup'])\"; ls ../../../../tools/php83/exp11-regression/; cat api-primary.stdout"
+    },
+    {
+      "original_event_index": 32,
+      "id": "toolu_01DnirdS77WcvBVEgyoK2qgD",
+      "command": "cd /home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83 && E=$PWD/doc/php83/evidence/exp11-runtime && for f in $E/claude-baseline-runtime-before.{stdout,stderr,exit} $E/claude-runtime-before.json; do [ -e \"$f\" ] && { echo \"EXISTS $f\"; exit 9; }; done; PYTHONDONTWRITEBYTECODE=1 timeout -s INT -k 30 300 python3 tools/php83/exp11-api/runtime-identity.py $E/claude-runtime-before.json >$E/claude-baseline-runtime-before.stdout 2>$E/claude-baseline-runtime-before.stderr; echo $? >$E/claude-baseline-runtime-before.exit; cat $E/claude-baseline-runtime-before.{exit,stdout}; wc -c $E/claude-baseline-runtime-before.stderr"
+    },
+    {
+      "original_event_index": 35,
+      "id": "toolu_015JJ3kjt4LetsF7TCAqg9YP",
+      "command": "E=$PWD/doc/php83/evidence/exp11-runtime && for f in $E/claude-baseline-api.{stdout,stderr,exit} $E/claude-api.json; do [ -e \"$f\" ] && { echo \"EXISTS $f\"; exit 9; }; done; PYTHONDONTWRITEBYTECODE=1 timeout -s INT -k 30 300 python3 tools/php83/exp11-api/collect.py $E/claude-api.json >$E/claude-baseline-api.stdout 2>$E/claude-baseline-api.stderr; echo $? >$E/claude-baseline-api.exit; cat $E/claude-baseline-api.{exit,stdout}; wc -c $E/claude-baseline-api.stderr"
+    },
+    {
+      "original_event_index": 39,
+      "id": "toolu_01TYKUtnuoZ27p3gEtk9qE32",
+      "command": "E=$PWD/doc/php83/evidence/exp11-runtime && for f in $E/claude-baseline-cli74.{stdout,stderr,exit} $E/claude-cli74.json; do [ -e \"$f\" ] && { echo \"EXISTS $f\"; exit 9; }; done; : >$E/claude-baseline-cli74.stdout; timeout -s INT -k 30 300 ssh -T -F /tmp/kaltura-php74-ssh.conf baseline74 'python3 /home/vagrant/php-exp11-regression/exp11-regression/batch.py' >$E/claude-cli74.json 2>$E/claude-baseline-cli74.stderr; echo $? >$E/claude-baseline-cli74.exit; cat $E/claude-baseline-cli74.exit; wc -c $E/claude-cli74.json $E/claude-baseline-cli74.stderr"
+    },
+    {
+      "original_event_index": 44,
+      "id": "toolu_01VXxKbUowEArD6NmvRwRjMx",
+      "command": "E=$PWD/doc/php83/evidence/exp11-runtime && for f in $E/claude-baseline-curly.{stdout,stderr,exit} $E/claude-curly.json; do [ -e \"$f\" ] && { echo \"EXISTS $f\"; exit 9; }; done; PYTHONDONTWRITEBYTECODE=1 timeout -s INT -k 30 300 python3 tools/php83/exp11-api/collect-curly.py $E/claude-curly.json >$E/claude-baseline-curly.stdout 2>$E/claude-baseline-curly.stderr; echo $? >$E/claude-baseline-curly.exit; cat $E/claude-baseline-curly.{exit,stdout}; wc -c $E/claude-baseline-curly.stderr"
+    },
+    {
+      "original_event_index": 45,
+      "id": "toolu_012SvB8EHGaVDzDmgHMhgcTx",
+      "command": "E=$PWD/doc/php83/evidence/exp11-runtime && for f in $E/claude-baseline-additions.{stdout,stderr,exit} $E/claude-additions.json; do [ -e \"$f\" ] && { echo \"EXISTS $f\"; exit 9; }; done; PYTHONDONTWRITEBYTECODE=1 timeout -s INT -k 30 300 python3 tools/php83/exp11-api/collect-additions.py $E/claude-additions.json >$E/claude-baseline-additions.stdout 2>$E/claude-baseline-additions.stderr; echo $? >$E/claude-baseline-additions.exit; cat $E/claude-baseline-additions.{exit,stdout}; wc -c $E/claude-baseline-additions.stderr"
+    },
+    {
+      "original_event_index": 56,
+      "id": "toolu_014hPowTcdYHBkPtk1BmAiJm",
+      "command": "cd /home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp11-runtime && stat -c '%n birth=%w modify=%y' claude-baseline-curly.stdout claude-curly.json claude-baseline-curly.exit claude-baseline-additions.stdout claude-additions.json claude-baseline-additions.exit"
+    },
+    {
+      "original_event_index": 60,
+      "id": "toolu_01DxM5Z2Ab5DtoNwjjVBD7jd",
+      "command": "cd /home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83 && E=$PWD/doc/php83/evidence/exp11-runtime && for f in $E/claude-baseline-runtime-after.{stdout,stderr,exit} $E/claude-runtime-after.json; do [ -e \"$f\" ] && { echo \"EXISTS $f\"; exit 9; }; done; PYTHONDONTWRITEBYTECODE=1 timeout -s INT -k 30 300 python3 tools/php83/exp11-api/runtime-identity.py $E/claude-runtime-after.json >$E/claude-baseline-runtime-after.stdout 2>$E/claude-baseline-runtime-after.stderr; echo $? >$E/claude-baseline-runtime-after.exit; cat $E/claude-baseline-runtime-after.{exit,stdout}; wc -c $E/claude-baseline-runtime-after.stderr"
+    },
+    {
+      "original_event_index": 65,
+      "id": "toolu_013WGU6dgtL9VemTNh4CRHMA",
+      "command": "cd /home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp11-runtime && cat compare-runtime.py | head -40; python3 -c \"\nimport json\nd=json.load(open('claude-cli74.json'));print(type(d).__name__, list(d) if isinstance(d,dict) else len(d))\nr=d['records'] if isinstance(d,dict) and 'records' in d else d\nprint(len(r), list(r[0]) if isinstance(r,list) else '')\n\""
+    },
+    {
+      "original_event_index": 70,
+      "id": "toolu_01DunmsdzbHEMQsEya3wj7Gz",
+      "command": "[ -e claude-baseline-comparison.json ] && exit 9; python3 - <<'EOF'\nimport json\ndef diff(a,b,p=''):\n    if type(a)!=type(b): return [(p,'type')]\n    if isinstance(a,dict):\n        out=[]\n        for k in sorted(set(a)|set(b)):\n            if k not in a or k not in b: out.append((p+'/'+k,'missing'))\n            else: out+=diff(a[k],b[k],p+'/'+k)\n        return out\n    if isinstance(a,list):\n        if len(a)!=len(b): return [(p,'len %d!=%d'%(len(a),len(b)))]\n        out=[]\n        for i,(x,y) in enumerate(zip(a,b)): out+=diff(x,y,p+'/%d'%i)\n        return out\n    return [] if a==b else [(p,'value')]\npairs=[('claude-runtime-before.json','runtime-before.json'),('claude-runtime-after.json','runtime-after.json'),('claude-runtime-after.json','claude-runtime-before.json'),\n('claude-api.json','api-primary.json'),('claude-cli74.json','cli74-primary.json'),('claude-curly.json','curly-primary.json'),('claude-additions.json','additions-primary.json')]\nfor f,g in pairs:\n    d=diff(json.load(open(f)),json.load(open(g)))\n    print(f,'vs',g,len(d)); [print('  ',x) for x in d[:40]]\nEOF"
+    },
+    {
+      "original_event_index": 76,
+      "id": "toolu_01Tq6aWF1Vnh8h5k9G5GE7Sp",
+      "command": "sha256sum claude-runtime-before.json claude-runtime-after.json runtime-before.json claude-curly.json curly-primary.json claude-additions.json additions-primary.json | cut -c1-16,65-; python3 - <<'EOF'\nimport json\na=json.load(open('claude-api.json'));p=json.load(open('api-primary.json'))\nfor r,q in zip(a['records'],p['records']):\n    d=r['diagnostics']\n    print(r['runtime'],r['tree'],'rc',r['returncode'],'sig',r['signature_failure'],'wl',r['stdout_whitelisted'],'diag',type(d).__name__,len(d),'obs',len(r['runtime_observations']),'stderr',r['stderr_sha256'][:12],'prim',q['stderr_sha256'][:12])\nprint('passed',a['functional_checks_passed'],'cleanup',a['cleanup']['is_active_output'],a['cleanup']['stopped'])\nc=json.load(open('claude-cli74.json'));print('cli rows',len(c['rows']),list(c['rows'][0]))\nfor r in c['rows']: print({k:v for k,v in r.items() if k not in('stdout','stderr','duration_ns') and not isinstance(v,(dict,list))})\ncu=json.load(open('claude-curly.json'));print('curly',[(r['case'],r['exit'],r['matches_prior_actual_candidate83'],len(r['result']) if r['result'] else None) for r in cu['records']])\nad=json.load(open('claude-additions.json'));print('add',ad['status'],len(ad['records']),ad['summary'])\nEOF"
+    },
+    {
+      "original_event_index": 81,
+      "id": "toolu_01J3X437xaFtsxAwh4E1DgSC",
+      "command": "python3 -c \"\nimport json\ncu=json.load(open('claude-curly.json'))\nfor r in cu['records']:\n  print(r['case'],{k:(len(v) if isinstance(v,(list,dict)) else v) for k,v in r['result'].items()})\n\"; grep -n '68' primary-summary.json | head"
+    },
+    {
+      "original_event_index": 87,
+      "id": "toolu_01MBZptsDS7kC1pCqZf9owvP",
+      "command": "cd /home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83 && E=doc/php83/evidence/exp11-runtime && for f in $E/claude-baseline-comparison.json $E/claude-baseline-public-review.md; do [ -e $f ] && { echo EXISTS $f; exit 9; }; done; python3 - <<'EOF'\nimport json,hashlib\nE='doc/php83/evidence/exp11-runtime/'\nh=lambda p:hashlib.sha256(open(p,'rb').read()).hexdigest()\nids=json.load(open(E+'claude-baseline-input-identities.json'))\nmism=[k for k,v in ids.items() if h(k)!=v]\ndef diff(a,b,p=''):\n    if type(a)!=type(b): return [p]\n    if isinstance(a,dict):\n        o=[]\n        for k in sorted(set(a)|set(b)):\n            o+= [p+'/'+k] if (k not in a or k not in b) else diff(a[k],b[k],p+'/'+k)\n        return o\n    if isinstance(a,list):\n        if len(a)!=len(b): return [p]\n        return [x for i,(u,v) in enumerate(zip(a,b)) for x in diff(u,v,p+'/%d'%i)]\n    return [] if a==b else [p]\nimport re\nEXCL={'claude-api.json':re.compile(r'^(/records/\\d+/duration_ns|/db/unit|/db/datadir|/cleanup/unit)$'),\n      'claude-cli74.json':re.compile(r'^(/rows/\\d+/duration_ns|/recorded_at_utc)$')}\npairs=[('claude-runtime-before.json','runtime-before.json'),('claude-runtime-after.json','runtime-after.json'),('claude-runtime-after.json','claude-runtime-before.json'),\n('claude-api.json','api-primary.json'),('claude-cli74.json','cli74-primary.json'),('claude-curly.json','curly-primary.json'),('claude-additions.json','additions-primary.json')]\ncomp=[]\nfor f,g in pairs:\n    d=diff(json.load(open(E+f)),json.load(open(E+g)))\n    ex=EXCL.get(f); legit=[x for x in d if ex and ex.match(x)]; other=[x for x in d if x not in legit]\n    comp.append({'fresh':f,'reference':g,'fresh_sha256':h(E+f),'reference_sha256':h(E+g),'byte_identical':h(E+f)==h(E+g),'excluded_paths':legit,'non_excluded_differences':other})\na=json.load(open(E+'claude-api.json'));p=json.load(open(E+'api-primary.json'))\nstderr_deltas=[{'runtime':r['runtime'],'tree':r['tree'],'fresh':r['stderr_sha256'],'primary':q['stderr_sha256']} for r,q in zip(a['records'],p['records']) if r['stderr_sha256']!=q['stderr_sha256']]\nsteps={}\nfor s in ['runtime-before','api','cli74','curly','additions','runtime-after']:\n    steps[s]={'exit':open(E+f'claude-baseline-{s}.exit').read().strip(),'stderr_bytes':len(open(E+f'claude-baseline-{s}.stderr','rb').read())}\nreport={'schema':1,'executor':'Claude CLI (claude-opus-5-5), independent repeat on baseline74','scope':'bounded exp11 runtime repeat; NOT application/release acceptance; exp11 is PHP8.3-only, no original74 exp11 support claim',\n 'step_exits':steps,'frozen_inputs_after':{'entries':len(ids),'mismatches':mism},\n 'legitimate_exclusions':['API records[*].duration_ns','API db.unit/db.datadir/cleanup.unit (synthetic UUID)','CLI rows[*].duration_ns','CLI recorded_at_utc'],\n 'comparisons':comp,\n 'api_stderr_sha256_deltas_disclosed_not_excluded':stderr_deltas,\n 'counts':{'runtime_files_before':len(json.load(open(E+'claude-runtime-before.json'))['identity']['files']),\n   'runtime_files_after':len(json.load(open(E+'claude-runtime-after.json'))['identity']['files']),\n   'api_rows':len(a['records']),'api_exp11_diagnostic_groups':len(a['records'][3]['diagnostics']),\n   'api_rows_summary':[[r['runtime'],r['tree'],r['returncode'],r['signature_failure']] for r in a['records']],\n   'cli74_rows':len(json.load(open(E+'claude-cli74.json'))['rows']),'cli74_nonzero':[r['case'] for r in json.load(open(E+'claude-cli74.json'))['rows'] if r['exit']!=0],\n   'curly_cases':sum(r['result']['rows'] for r in json.load(open(E+'claude-curly.json'))['records']),\n   'additions':json.load(open(E+'claude-additions.json'))['summary']},\n 'api_cleanup':a['cleanup']}\nopen(E+'claude-baseline-comparison.json','w').write(json.dumps(report,indent=2)+'\\n')\nprint(json.dumps({'mism':mism,'steps':steps,'counts':report['counts'],'other':[(c['fresh'],c['non_excluded_differences']) for c in comp if c['non_excluded_differences']],'stderr_deltas':len(stderr_deltas)},indent=1))\nEOF\ngit status --short"
+    },
+    {
+      "original_event_index": 93,
+      "id": "toolu_01SMoBP1zMTwnFEjou9F4KxT",
+      "command": "E=doc/php83/evidence/exp11-runtime && [ -e $E/claude-baseline-comparison.json ] && { echo EXISTS; exit 9; }; python3 - <<'EOF'\nimport json,hashlib,re\nE='doc/php83/evidence/exp11-runtime/'\nh=lambda p:hashlib.sha256(open(p,'rb').read()).hexdigest()\nL=lambda f:json.load(open(E+f))\nids=json.load(open(E+'claude-baseline-input-identities.json'))\nmism=[k for k,v in ids.items() if h(k)!=v]\ndef diff(a,b,p=''):\n    if type(a)!=type(b): return [p]\n    if isinstance(a,dict):\n        o=[]\n        for k in sorted(set(a)|set(b)):\n            o+= [p+'/'+k] if (k not in a or k not in b) else diff(a[k],b[k],p+'/'+k)\n        return o\n    if isinstance(a,list):\n        if len(a)!=len(b): return [p]\n        return [x for i,(u,v) in enumerate(zip(a,b)) for x in diff(u,v,p+'/%d'%i)]\n    return [] if a==b else [p]\nEXCL={'claude-api.json':re.compile(r'^(/records/\\d+/duration_ns|/db/unit|/db/datadir|/cleanup/unit)$'),\n      'claude-cli74.json':re.compile(r'^(/rows/\\d+/duration_ns|/recorded_at_utc)$')}\npairs=[('claude-runtime-before.json','runtime-before.json'),('claude-runtime-after.json','runtime-after.json'),('claude-runtime-after.json','claude-runtime-before.json'),\n('claude-api.json','api-primary.json'),('claude-cli74.json','cli74-primary.json'),('claude-curly.json','curly-primary.json'),('claude-additions.json','additions-primary.json')]\ncomp=[]\nfor f,g in pairs:\n    d=diff(L(f),L(g)); ex=EXCL.get(f)\n    legit=[x for x in d if ex and ex.match(x)]\n    comp.append({'fresh':f,'reference':g,'fresh_sha256':h(E+f),'reference_sha256':h(E+g),'byte_identical':h(E+f)==h(E+g),'excluded_paths':legit,'non_excluded_differences':[x for x in d if x not in legit]})\na=L('claude-api.json');p=L('api-primary.json');cli=L('claude-cli74.json')\ndeltas=[{'runtime':r['runtime'],'tree':r['tree'],'fresh':r['stderr_sha256'],'primary':q['stderr_sha256']} for r,q in zip(a['records'],p['records']) if r['stderr_sha256']!=q['stderr_sha256']]\nsteps={s:{'exit':open(E+f'claude-baseline-{s}.exit').read().strip(),'stderr_bytes':len(open(E+f'claude-baseline-{s}.stderr','rb').read())} for s in ['runtime-before','api','cli74','curly','additions','runtime-after']}\ncounts={'runtime_files_before':len(L('claude-runtime-before.json')['identity']['files']),'runtime_files_after':len(L('claude-runtime-after.json')['identity']['files']),\n 'api_rows':[[r['runtime'],r['tree'],r['returncode'],r['signature_failure'],len(r['diagnostics'])] for r in a['records']],\n 'api_functional_checks_passed':a['functional_checks_passed'],\n 'cli74_rows':len(cli['rows']),'cli74_nonzero':[r['case'] for r in cli['rows'] if r['exit']!=0],\n 'curly_cases':sum(len(r['result']['rows']) for r in L('claude-curly.json')['records']),\n 'additions':L('claude-additions.json')['summary']}\nreport={'schema':1,'executor':'Claude CLI (claude-opus-5-5), independent repeat on baseline74 alias','scope':'bounded exp11 runtime repeat; NOT application/release acceptance; exp11 is PHP8.3-only, no original74 exp11 support claim',\n 'step_exits':steps,'frozen_inputs_after':{'entries':len(ids),'mismatches':mism},\n 'legitimate_exclusions':['API records[*].duration_ns','API db.unit/db.datadir/cleanup.unit (synthetic UUID)','CLI rows[*].duration_ns','CLI recorded_at_utc'],\n 'comparisons':comp,'api_stderr_sha256_deltas_disclosed_not_excluded':deltas,'counts':counts,'api_cleanup':a['cleanup']}\nopen(E+'claude-baseline-comparison.json','w').write(json.dumps(report,indent=2)+'\\n')\nprint(json.dumps({'mism':mism,'steps':steps,'counts':counts,'other':[(c['fresh'],c['non_excluded_differences']) for c in comp if c['non_excluded_differences']],'byte_identical':[c['fresh'] for c in comp if c['byte_identical']],'stderr_deltas':len(deltas)}))\nEOF"
+    },
+    {
+      "original_event_index": 98,
+      "id": "toolu_01G31pR2MJvNJco6r6bfby5B",
+      "command": "cd /home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp11-runtime && [ -e claude-baseline-public-review.md ] && exit 9; cat > claude-baseline-public-review.md <<'EOF'\n# Claude baseline74 exp11 runtime repeat \u2014 public review\n\nExecutor/reviewer: actual Claude CLI (claude-opus-5-5), exclusive `baseline74` alias via `/tmp/kaltura-php74-ssh.conf`.\nEach step wrapped as `timeout -s INT -k 30 300 ...` (SIGINT so the API collector `finally` cleanup would run); Python steps with `PYTHONDONTWRITEBYTECODE=1`. Executed serially (file timestamps confirm).\n\n| Step | Command | Exit | stderr bytes |\n|---|---|---|---|\n| runtime-before | `runtime-identity.py claude-runtime-before.json` | 0 | 0 |\n| api | `collect.py claude-api.json` | 0 | 0 |\n| cli74 | `ssh ... baseline74 'python3 .../exp11-regression/batch.py' > claude-cli74.json` | 0 | 0 |\n| curly | `collect-curly.py claude-curly.json` | 0 | 0 |\n| additions | `collect-additions.py claude-additions.json` | 0 | 0 |\n| runtime-after | `runtime-identity.py claude-runtime-after.json` | 0 | 0 |\n\n`claude-baseline-cli74.stdout` is an empty placeholder: step 3 stdout is `claude-cli74.json`.\n\n## Results\n- Runtime: 55 files, 3 runtime modes; before == after == primary runtime-before/after (byte-identical, sha256 a7c9a22f\u2026).\n- API: 4 rows \u2014 74/original rc0; 83/original rc1 with KalturaPDO::query() signature failure (15 diagnostic groups); 83/exp10 rc0 (18); 83/exp11 rc0 (18). functional_checks_passed=true. Own synthetic DB unit `php83-exp11-api-9280ef72\u2026` stopped (`inactive`).\n- CLI74: 12 original rows (standard+minimal INI x 6 cases), all exit 0.\n- Curly: 3 class files, 68 cases, all match prior candidate83; report byte-identical to curly-primary.json.\n- Additions: 17 processes PASS (16 positive + 1 expected duplicate-include fatal, 147 ternary rows); byte-identical to additions-primary.json.\n- Frozen inputs (24 entries in claude-baseline-input-identities.json): unchanged after run.\n\n## Differences vs primary\n- Excluded as legitimate: API per-record duration_ns, db.unit/db.datadir/cleanup.unit (UUID); CLI per-row duration_ns, recorded_at_utc.\n- NOT excluded, disclosed: API `stderr_sha256` differs for all 4 records (see claude-baseline-comparison.json). Raw stderr is not persisted by the collector, so the cause was not determined here. Diagnostics, runtime observations, stdout, return codes, signature control, artifact/harness identities all identical.\n\n## Limits\nNo application/release acceptance. exp11 is PHP 8.3-only: no original74 exp11 support claim. Not AIO/FPM. Single repeat on one lab VM.\nEOF\ncd ../../../.. && python3 -c \"\nimport json,hashlib\nd=json.load(open('doc/php83/evidence/exp11-runtime/claude-baseline-input-identities.json'))\nprint([k for k,v in d.items() if hashlib.sha256(open(k,'rb').read()).hexdigest()!=v])\"; ls tools/php83/exp11-api/__pycache__ -la --time-style=+%T | tail -n +2"
+    }
+  ]
+}
