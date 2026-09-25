@@ -1,0 +1,90 @@
+{
+  "checks": [
+    {
+      "runtime": "74",
+      "path": "vendor/symfony/controller/sfRouting.class.php",
+      "stdout": "52a0fb006d480654a2f233514729b9bd61001efd930b3745d6a25472abf5bbdb  /home/vagrant/php74-audit/packaged/opt/kaltura/app/vendor/symfony/controller/sfRouting.class.php\n26190ee57d75efe0ccdc6d55621639fc5ccb33b5657f2b741599cf2cbcfcf226  /home/vagrant/php-patch-tests/candidate/vendor/symfony/controller/sfRouting.class.php\nNo syntax errors detected in /home/vagrant/php-patch-tests/candidate/vendor/symfony/controller/sfRouting.class.php\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "74",
+      "path": "vendor/symfony/helper/UrlHelper.php",
+      "stdout": "ed19a9a3a785e96a05dd263d0c1718d28b8bedacb3a9238d971ebb4070cfacc4  /home/vagrant/php74-audit/packaged/opt/kaltura/app/vendor/symfony/helper/UrlHelper.php\n68bf9a9ea831f1caaf83d17e393a50e6a403046bce4e483be13a197a6d846ebe  /home/vagrant/php-patch-tests/candidate/vendor/symfony/helper/UrlHelper.php\nNo syntax errors detected in /home/vagrant/php-patch-tests/candidate/vendor/symfony/helper/UrlHelper.php\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "74",
+      "path": "vendor/symfony/util/sfCore.class.php",
+      "stdout": "09f1cdbd38be0e97939bc56ac4ae7895ccf9c7622098afeb46f40adbef6def46  /home/vagrant/php74-audit/packaged/opt/kaltura/app/vendor/symfony/util/sfCore.class.php\n19a644c1c1ad033c4e5ddf438fe5165ace3b9886427af2861c5763ad39bbd60d  /home/vagrant/php-patch-tests/candidate/vendor/symfony/util/sfCore.class.php\nNo syntax errors detected in /home/vagrant/php-patch-tests/candidate/vendor/symfony/util/sfCore.class.php\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "74",
+      "path": "vendor/symfony/util/sfFinder.class.php",
+      "stdout": "a318b76683cb32035412bb5e576a31ac21b82c99f5b991e0963b6aa5e74b2e3c  /home/vagrant/php74-audit/packaged/opt/kaltura/app/vendor/symfony/util/sfFinder.class.php\n8ba0951504ec25d3a4c4fdb384e76a62d4fbec0f334026b6cdc1aab9a21af933  /home/vagrant/php-patch-tests/candidate/vendor/symfony/util/sfFinder.class.php\nNo syntax errors detected in /home/vagrant/php-patch-tests/candidate/vendor/symfony/util/sfFinder.class.php\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "74",
+      "path": "vendor/symfony/util/Spyc.class.php",
+      "stdout": "6cdd311eeaedd77d69cab14f8730597f935527aa0b9776e91be6b4da1af91a2c  /home/vagrant/php74-audit/packaged/opt/kaltura/app/vendor/symfony/util/Spyc.class.php\nad74d6134506af6e15f7be3a4f60ecc3f4f2e5633902663d194dab95df0110c1  /home/vagrant/php-patch-tests/candidate/vendor/symfony/util/Spyc.class.php\nNo syntax errors detected in /home/vagrant/php-patch-tests/candidate/vendor/symfony/util/Spyc.class.php\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "74",
+      "path": "vendor/symfony/util/sfToolkit.class.php",
+      "stdout": "a825563946fe10a0d7b7eb8fbc04187006004749b110793095b9a1572ca6e8df  /home/vagrant/php74-audit/packaged/opt/kaltura/app/vendor/symfony/util/sfToolkit.class.php\n8f3870786e4da83a33f5e275f0ffbae291abbd80aefe0d75b68e507c26491046  /home/vagrant/php-patch-tests/candidate/vendor/symfony/util/sfToolkit.class.php\nNo syntax errors detected in /home/vagrant/php-patch-tests/candidate/vendor/symfony/util/sfToolkit.class.php\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "74",
+      "path": "vendor/symfony/config/sfConfigHandler.class.php",
+      "stdout": "e5478148d0be988e3a25eaacd83f9d682ef35e73b4bcd945e6575d431f6de2ec  /home/vagrant/php74-audit/packaged/opt/kaltura/app/vendor/symfony/config/sfConfigHandler.class.php\n8643eda9dda17ee9d96351947e6426b9ea669e5e75475a0ed41913821417d0a5  /home/vagrant/php-patch-tests/candidate/vendor/symfony/config/sfConfigHandler.class.php\nNo syntax errors detected in /home/vagrant/php-patch-tests/candidate/vendor/symfony/config/sfConfigHandler.class.php\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "83",
+      "path": "vendor/symfony/controller/sfRouting.class.php",
+      "stdout": "52a0fb006d480654a2f233514729b9bd61001efd930b3745d6a25472abf5bbdb  /home/vagrant/php83-audit/packaged/opt/kaltura/app/vendor/symfony/controller/sfRouting.class.php\n26190ee57d75efe0ccdc6d55621639fc5ccb33b5657f2b741599cf2cbcfcf226  /home/vagrant/php-patch-tests/candidate/vendor/symfony/controller/sfRouting.class.php\nNo syntax errors detected in /home/vagrant/php-patch-tests/candidate/vendor/symfony/controller/sfRouting.class.php\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "83",
+      "path": "vendor/symfony/helper/UrlHelper.php",
+      "stdout": "ed19a9a3a785e96a05dd263d0c1718d28b8bedacb3a9238d971ebb4070cfacc4  /home/vagrant/php83-audit/packaged/opt/kaltura/app/vendor/symfony/helper/UrlHelper.php\n68bf9a9ea831f1caaf83d17e393a50e6a403046bce4e483be13a197a6d846ebe  /home/vagrant/php-patch-tests/candidate/vendor/symfony/helper/UrlHelper.php\nNo syntax errors detected in /home/vagrant/php-patch-tests/candidate/vendor/symfony/helper/UrlHelper.php\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "83",
+      "path": "vendor/symfony/util/sfCore.class.php",
+      "stdout": "09f1cdbd38be0e97939bc56ac4ae7895ccf9c7622098afeb46f40adbef6def46  /home/vagrant/php83-audit/packaged/opt/kaltura/app/vendor/symfony/util/sfCore.class.php\n19a644c1c1ad033c4e5ddf438fe5165ace3b9886427af2861c5763ad39bbd60d  /home/vagrant/php-patch-tests/candidate/vendor/symfony/util/sfCore.class.php\nNo syntax errors detected in /home/vagrant/php-patch-tests/candidate/vendor/symfony/util/sfCore.class.php\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "83",
+      "path": "vendor/symfony/util/sfFinder.class.php",
+      "stdout": "a318b76683cb32035412bb5e576a31ac21b82c99f5b991e0963b6aa5e74b2e3c  /home/vagrant/php83-audit/packaged/opt/kaltura/app/vendor/symfony/util/sfFinder.class.php\n8ba0951504ec25d3a4c4fdb384e76a62d4fbec0f334026b6cdc1aab9a21af933  /home/vagrant/php-patch-tests/candidate/vendor/symfony/util/sfFinder.class.php\nNo syntax errors detected in /home/vagrant/php-patch-tests/candidate/vendor/symfony/util/sfFinder.class.php\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "83",
+      "path": "vendor/symfony/util/Spyc.class.php",
+      "stdout": "6cdd311eeaedd77d69cab14f8730597f935527aa0b9776e91be6b4da1af91a2c  /home/vagrant/php83-audit/packaged/opt/kaltura/app/vendor/symfony/util/Spyc.class.php\nad74d6134506af6e15f7be3a4f60ecc3f4f2e5633902663d194dab95df0110c1  /home/vagrant/php-patch-tests/candidate/vendor/symfony/util/Spyc.class.php\nNo syntax errors detected in /home/vagrant/php-patch-tests/candidate/vendor/symfony/util/Spyc.class.php\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "83",
+      "path": "vendor/symfony/util/sfToolkit.class.php",
+      "stdout": "a825563946fe10a0d7b7eb8fbc04187006004749b110793095b9a1572ca6e8df  /home/vagrant/php83-audit/packaged/opt/kaltura/app/vendor/symfony/util/sfToolkit.class.php\n8f3870786e4da83a33f5e275f0ffbae291abbd80aefe0d75b68e507c26491046  /home/vagrant/php-patch-tests/candidate/vendor/symfony/util/sfToolkit.class.php\nNo syntax errors detected in /home/vagrant/php-patch-tests/candidate/vendor/symfony/util/sfToolkit.class.php\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "83",
+      "path": "vendor/symfony/config/sfConfigHandler.class.php",
+      "stdout": "e5478148d0be988e3a25eaacd83f9d682ef35e73b4bcd945e6575d431f6de2ec  /home/vagrant/php83-audit/packaged/opt/kaltura/app/vendor/symfony/config/sfConfigHandler.class.php\n8643eda9dda17ee9d96351947e6426b9ea669e5e75475a0ed41913821417d0a5  /home/vagrant/php-patch-tests/candidate/vendor/symfony/config/sfConfigHandler.class.php\nNo syntax errors detected in /home/vagrant/php-patch-tests/candidate/vendor/symfony/config/sfConfigHandler.class.php\n",
+      "stderr": ""
+    }
+  ],
+  "patch_application": "zero fuzz, zero offset, output hashes verified",
+  "restoration": "all seven experimental files restored to original hashes on both labs"
+}

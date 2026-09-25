@@ -343,3 +343,10 @@ merge/clear behavior. Together with bootstrap-container tests, eight differentia
 comparisons pass across both runtimes and INI modes. The literal-property
 Registry mismatch remains held; these tests do not waive it or replace full
 HTTP/Admin Console acceptance. Originals were restored after collection.
+
+[Symfony bootstrap investigation](symfony-bootstrap.md) adds seven held minimal
+repairs and advances real public bootstrap into generated core-cache loading.
+Six focused differential comparisons and eight JSON comparisons pass; 38 offline
+tests pass. PHP 7.4 bootstrap completes, while PHP 8.3 still fails on duplicate
+sfOutputEscaperObjectDecorator declaration. A private ephemeral cache avoids
+modifying source/live cache. No patch was promoted; lab originals restored.

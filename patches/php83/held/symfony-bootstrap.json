@@ -1,0 +1,54 @@
+{
+  "status": "held: focused regressions and bootstrap investigation, not in active ZIP",
+  "files": [
+    {
+      "path": "vendor/symfony/controller/sfRouting.class.php",
+      "before_sha256": "52a0fb006d480654a2f233514729b9bd61001efd930b3745d6a25472abf5bbdb",
+      "after_sha256": "26190ee57d75efe0ccdc6d55621639fc5ccb33b5657f2b741599cf2cbcfcf226",
+      "patch": "patches/php83/held/sfRouting.class.php.patch",
+      "patch_sha256": "8f5188f7828c4a5785bdf8753b8aef9643d7e15227dcd7c57b7290dc291ce8db"
+    },
+    {
+      "path": "vendor/symfony/helper/UrlHelper.php",
+      "before_sha256": "ed19a9a3a785e96a05dd263d0c1718d28b8bedacb3a9238d971ebb4070cfacc4",
+      "after_sha256": "68bf9a9ea831f1caaf83d17e393a50e6a403046bce4e483be13a197a6d846ebe",
+      "patch": "patches/php83/held/UrlHelper.php.patch",
+      "patch_sha256": "7451da440ef7d468ebd90216d24bb127eb27ff0d314d63fd33fe9b91670fb7e7"
+    },
+    {
+      "path": "vendor/symfony/util/sfCore.class.php",
+      "before_sha256": "09f1cdbd38be0e97939bc56ac4ae7895ccf9c7622098afeb46f40adbef6def46",
+      "after_sha256": "19a644c1c1ad033c4e5ddf438fe5165ace3b9886427af2861c5763ad39bbd60d",
+      "patch": "patches/php83/held/sfCore.class.php.patch",
+      "patch_sha256": "7a5b4cb0453336d6ad71f5e107df6d8d68c93d4991d75480c69636ee39e85db7"
+    },
+    {
+      "path": "vendor/symfony/util/sfFinder.class.php",
+      "before_sha256": "a318b76683cb32035412bb5e576a31ac21b82c99f5b991e0963b6aa5e74b2e3c",
+      "after_sha256": "8ba0951504ec25d3a4c4fdb384e76a62d4fbec0f334026b6cdc1aab9a21af933",
+      "patch": "patches/php83/held/sfFinder.class.php.patch",
+      "patch_sha256": "3a328004aee479b921880c0eb549e5928975efc4048c199dd425e0388f1dfaca"
+    },
+    {
+      "path": "vendor/symfony/util/Spyc.class.php",
+      "before_sha256": "6cdd311eeaedd77d69cab14f8730597f935527aa0b9776e91be6b4da1af91a2c",
+      "after_sha256": "ad74d6134506af6e15f7be3a4f60ecc3f4f2e5633902663d194dab95df0110c1",
+      "patch": "patches/php83/held/Spyc.class.php.patch",
+      "patch_sha256": "154aac7bae44f0425f9899f9145e533c85d38eb00148714fe163f3bfd5dac214"
+    },
+    {
+      "path": "vendor/symfony/util/sfToolkit.class.php",
+      "before_sha256": "a825563946fe10a0d7b7eb8fbc04187006004749b110793095b9a1572ca6e8df",
+      "after_sha256": "8f3870786e4da83a33f5e275f0ffbae291abbd80aefe0d75b68e507c26491046",
+      "patch": "patches/php83/held/sfToolkit.class.php.patch",
+      "patch_sha256": "479a0dd2fb0b74aa022d283d403bbecebee702c062e85565ab452273ded3698c"
+    },
+    {
+      "path": "vendor/symfony/config/sfConfigHandler.class.php",
+      "before_sha256": "e5478148d0be988e3a25eaacd83f9d682ef35e73b4bcd945e6575d431f6de2ec",
+      "after_sha256": "8643eda9dda17ee9d96351947e6426b9ea669e5e75475a0ed41913821417d0a5",
+      "patch": "patches/php83/held/sfConfigHandler.class.php.patch",
+      "patch_sha256": "287f439dc12f51a78c92067008de73450ecab9c07521c7518b490d1a6a9a93e8"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+# Revisão dos patches held
+
+Não usei ferramentas nem fiz modificações, como você pediu. A revisão se baseia só nos diffs acima.
+
+## Correção semântica mínima
+
+| Patch | Veredito | Observação |
+|---|---|---|
+| `sfRouting` `{}`→`[]` | ✅ equivalente | Com `$route === ''` o índice seria `-1`. A 7.4 emite Notice e a 8.x emite Warning, ambos retornando `""`. Na prática não ocorre, porque a rota tem pelo menos `/`. |
+| `UrlHelper` | ✅ equivalente | O `$i` fica sempre dentro de `strlen($text)`. |
+| `sfFinder` (`to_regex`, `isPathAbsolute`) | ✅ equivalente | Com `$path === ''` ou `$str === ''`, o `[0]` passou de Notice para Warning na 8.0. Só importa se algum error handler tratar `E_WARNING` de forma diferente de `E_NOTICE`. Vale um teste com string vazia se `isPathAbsolute('')` for alcançável. |
+| `Spyc` `$ifchk[0]` | ✅ equivalente | A linha vazia é tratada no ramo anterior. |
+| `Spyc` `each()`→`$vals[$index]` | ✅ equivalente exata | `array_merge` de duas listas (`array_keys`/`array_values`) gera chaves `0..n-1` e os dois arrays têm o mesmo tamanho. O `each()` partia do ponteiro inicial de um array recém-criado, então `$index` percorre a mesma sequência. |
+| `sfToolkit::replaceConstants` | ✅ equivalente | O `"%{$v[1]}%"` já era interpolado em runtime dentro do corpo do `create_function`, e a closure faz o mesmo. `{$x}` não é afetado pela depreciação de `${}` da 8.2. Bônus: acaba o vazamento de lambda a cada chamada. |
+| `sfConfigHandler` `array_walk_recursive` | ✅ equivalente | O by-ref é preservado. O argumento `$key` extra é ignorado pela closure, igual ao original, e as chaves continuam sem substituição, também igual. |
+| `sfCore` fail-closed | ✅ aceitável | Na 8.x, declarar `function __autoload` dá erro fatal de compilação mesmo dentro de um ramo condicional, então a remoção é obrigatória. O `else` é inalcançável na 7.4 e na 8.3, porque a SPL não pode ser desabilitada desde a 5.3. A única diferença teórica: antes, "SPL ausente + `__autoload` já existente" era um no-op silencioso, e agora lança exceção. Isso é irrelevante e está documentado como deliberado. |
+
+Não encontrei regressão semântica. Uma ressalva de cobertura: estes patches só corrigem os pontos que o bootstrap já atingiu. Rode um `grep` por `create_function`, `each(`, `{$`-offset e `__autoload` em todo o `vendor/symfony` antes de considerar o conjunto completo.
+
+## Diagnóstico do `sfOutputEscaperObjectDecorator` duplicado
+
+Uma classe duplicada gera fatal tanto na 7.4 quanto na 8.3. Então a pergunta certa é o que mudou na **entrada** ou na **ordem de carga**, e não na sintaxe. Sequência recomendada:
+
+1. **Cache limpo nas duas versões.** Apague o cache do symfony e gere o `config_core_compile.yml.php` na 7.4 e na 8.3 a partir da mesma árvore com os patches. Depois compare os dois arquivos com `diff`. O arquivo compilado pode estar stale de uma tentativa anterior que falhou no meio do caminho, já que você iterou os patches.
+2. **Contar as declarações:** `grep -c 'class sfOutputEscaperObjectDecorator'` no arquivo gerado.
+   - **2 ou mais:** a lista de arquivos está duplicada. Verifique se `core_compile.yml` e o `compile.yml` da app listam o mesmo arquivo, porque o `sfCompileConfigHandler` concatena as listas via `array_merge` e isso faz append. Verifique também se algum arquivo-fonte, como `sfOutputEscaper.class.php` ou um override Kaltura, redeclara a classe. Aqui o suspeito direto é o seu patch do `Spyc::_arrayMerge` junto com os merges de YAML, caso a lista resultante na 8.3 tenha mais entradas que na 7.4. Faça um dump de `$files` no handler nas duas versões.
+   - **Exatamente 1:** a classe foi carregada **antes** do include do compilado, por um `require_once` do arquivo original ou pelo `sfCore::splAutoload` disparado cedo. Neste caso, compare o `get_declared_classes()` imediatamente antes do include do compilado na 7.4 e na 8.3. Se a 8.3 já tiver a classe, faça um `debug_backtrace` no autoloader para esse nome e descubra quem a pediu.
+3. Se o diff do passo 1 for vazio e o fatal só ocorrer na 8.3, o caminho é o de "exatamente 1": ordem de autoload ou de include diferente na 8.3, e não conteúdo diferente.
+
+Não sugiro guardar a classe com `class_exists` antes de achar a causa. Isso mascara uma ordem de carga divergente.

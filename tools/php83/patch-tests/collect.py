@@ -9,13 +9,13 @@ import sys
 
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('output', type=Path)
-parser.add_argument('--case', action='append', choices=['registry', 'registry-bootstrap', 'registry-action-stack', 'legacy-json', 'zend-json', 'analytics-partner', 'debug-pdo', 'debug-pdo-logging', 'debug-pdo-stringify'])
+parser.add_argument('--case', action='append', choices=['symfony-bootstrap', 'symfony-yaml', 'symfony', 'registry', 'registry-bootstrap', 'registry-action-stack', 'legacy-json', 'zend-json', 'analytics-partner', 'debug-pdo', 'debug-pdo-logging', 'debug-pdo-stringify'])
 parser.add_argument('--mode', action='append', choices=['standard', 'minimal'])
 args = parser.parse_args()
 cases = args.case or ['registry', 'legacy-json', 'zend-json']
 modes = args.mode or ['standard', 'minimal']
-if any(c.startswith('debug-pdo') or c == 'analytics-partner' for c in cases) and 'minimal' in modes:
-    parser.error('PDO/analytics fixtures require --mode standard')
+if any(c.startswith('debug-pdo') or c in ('analytics-partner', 'symfony-yaml', 'symfony-bootstrap') for c in cases) and 'minimal' in modes:
+    parser.error('PDO/analytics/YAML fixtures require --mode standard')
 records = []
 environments = []
 folder = Path(__file__).resolve().parent
@@ -50,7 +50,7 @@ for mode in modes:
 report = {'environments': environments,
           'diagnostic_policy': 'stdout and roundtrip parity required; stderr retained, not waived',
           'harness_hashes': {p.name: hashlib.sha256(p.read_bytes()).hexdigest()
-          for p in [folder / 'behavior.php', folder / 'registry-bootstrap.php', folder / 'registry-action-stack.php', folder / 'analytics-partner.php', folder / 'debug-pdo.php', folder / 'debug-pdo-edges.php', folder / 'debug-pdo-logging.php', folder / 'run-one.sh', Path(__file__)]},
+          for p in [folder / 'behavior.php', folder / 'symfony.php', folder / 'registry-bootstrap.php', folder / 'registry-action-stack.php', folder / 'analytics-partner.php', folder / 'debug-pdo.php', folder / 'debug-pdo-edges.php', folder / 'debug-pdo-logging.php', folder / 'run-one.sh', Path(__file__)]},
           'comparisons': comparisons, 'records': records}
 args.output.write_text(json.dumps(report, indent=2) + '\n')
 print(json.dumps(comparisons))

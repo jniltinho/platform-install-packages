@@ -1,0 +1,56 @@
+# Revisão: correções mínimas de compilação no Symfony KMC (Rigel 18.20.0, PHP 7.4 → 8.3)
+
+Resposta sem ferramentas, como você pediu. Por isso não criei o arquivo de plano do modo de planejamento.
+
+## 1. Chaves em offsets → colchetes (`sfRouting.class.php:302`, `UrlHelper.php:418`)
+
+**Recomendação: trocar `{}` por `[]` literalmente, sem outra mudança.**
+
+- No 7.4, `$s{…}` e `$s[…]` geram exatamente o mesmo opcode. A paridade no 7.4 é total.
+- **Não** troque por `substr($route, -1)` para "evitar warning". Isso muda a semântica de diagnóstico, e a diferença deve aparecer no teste, não ser escondida.
+- **Risco no `sfRouting:302`:** se `$route` puder ser `''`, `$route[-1]` já emitia Notice no 7.4. No 8.x vira Warning "Uninitialized string offset -1".
+  - Verifique se existe guarda antes da linha (ex.: `$route == '' ||` com curto-circuito).
+  - Se não existir, registre isso como diferença conhecida em vez de corrigir agora.
+- **Inventário completo, não só as duas linhas conhecidas:** rode `php7.4 -d error_reporting=E_ALL -l` em toda a árvore Symfony incluída. O 7.4 emite o `E_DEPRECATED` de chaves em offset já na compilação. É um detector confiável.
+  - Não use regex: gera falsos positivos com `${var}`, `"{$x}"` e `$obj->{$p}`.
+
+## 2. `__autoload` em `sfCore.class.php`
+
+**Recomendação: remover os dois ramos `else` e deixar `spl_autoload_register(...)` incondicional. Não adicione exceção fail-closed.**
+
+Justificativa:
+- SPL não pode ser desabilitado desde o 5.3, então o ramo é código morto nos dois runtimes.
+- Um `throw` inalcançável é código sem teste possível.
+- No 8.x, declarar `__autoload`, mesmo dentro de um condicional, é erro fatal de compilação. Não há meio-termo.
+- No 7.4, quando a pilha SPL existe, `__autoload` nunca é chamado. A remoção preserva o comportamento.
+- Efeito colateral esperado: some o `E_DEPRECATED` de declaração no log do 7.4. Documente isso no diff de baseline.
+
+Verificações obrigatórias antes do patch:
+- **Procure a string literal `__autoload` em toda a árvore**, incluindo `.ini`, `.yml` e configs. Os pontos de atenção:
+  - `ini_set('unserialize_callback_func', '__autoload')`: no 8.x a função não existe e o comportamento de `unserialize` muda. Trocar por `spl_autoload_call` seria mudança comportamental, então segure e registre.
+  - Chamadas diretas a `__autoload($c)` ou testes com `function_exists('__autoload')`.
+- **O callback registrado precisa ser `static`.** No 8.x, chamar método não estático estaticamente é `Error`, não mais deprecation. Isso também é hazard de bootstrap.
+- **Mantenha argumentos e posição da chamada** (`prepend`/`throw`). A ordem em relação ao autoloader do Kaltura (`KAutoloader`) importa.
+
+## 3. Requisitos de regressão
+
+1. `php7.4 -l` e `php8.3 -l` limpos nos três arquivos.
+2. **Paridade de opcodes no 7.4** para `sfRouting` e `UrlHelper`, antes e depois (`opcache.opt_debug_level=0x10000`). Deve ser idêntica. Para `sfCore`, a diferença deve ser apenas a remoção do ramo.
+3. **`sfRouting`:** `connect`/`parse`/`generate` com rota com barra final, sem barra, `/` e `''`. Saída e log comparados entre 7.4 e 8.3.
+4. **`UrlHelper`** (a função da linha 418): ASCII, string vazia e UTF‑8 multibyte (a iteração é por byte e deve continuar igual). Se houver `rand`/`mt_rand`, fixe a semente com `mt_srand`.
+5. **Autoload:**
+   - snapshot de `spl_autoload_functions()` idêntico antes e depois;
+   - carregamento de uma classe Symfony ainda não carregada;
+   - `class_exists('Inexistente')` retorna `false` sem erro fatal;
+   - `unserialize` de uma classe desconhecida.
+6. Log `E_ALL` capturado nos dois runtimes, com diff revisado linha a linha.
+
+## 4. Hazards de bootstrap
+
+- **Caches de configuração do Symfony** (`cache/**/config_*.php` e cache de autoload) gerados no 7.4 podem conter a sintaxe antiga ou estar obsoletos. Use diretórios de cache separados por runtime e limpe antes de cada execução.
+- **Opcache e file_cache:** reinicie o FPM e limpe o `file_cache` ao alternar de runtime.
+- **Cópias duplicadas do Symfony:** o Kaltura empacota o Symfony em mais de um lugar. Confirme com `get_included_files()` que a cópia patchada é a que está sendo carregada.
+- **Handler de erro do sf:** se ele converte Notice/Warning em exceção, o Warning de offset `-1` no 8.3 pode interromper o bootstrap. Verifique `set_error_handler` no `sfCore`.
+- **Correções retidas (Registry cast e DebugPDO variadic):** depois da compilação passar, a inicialização vai chegar nelas. Marque os testes afetados como *expected-fail* explícito, nunca como skip silencioso, para não mascarar a próxima falha real.
+
+Omiti deliberadamente qualquer supressão global de warnings e qualquer upgrade do Symfony, conforme você pediu.

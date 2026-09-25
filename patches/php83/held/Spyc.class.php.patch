@@ -1,0 +1,24 @@
+--- a/vendor/symfony/util/Spyc.class.php
++++ b/vendor/symfony/util/Spyc.class.php
+@@ -157,7 +157,7 @@
+         $last =& $this->_allNodes[$this->_lastNode];
+         $last->data[key($last->data)] .= "\n";
+       }
+-      else if ($ifchk{0} != '#' && substr($ifchk, 0, 3) != '---')
++      else if ($ifchk[0] != '#' && substr($ifchk, 0, 3) != '---')
+       {
+         // Create a new node and get its indent
+         $node         = new YAMLNode();
+@@ -996,9 +996,9 @@
+     $keys  = array_merge(array_keys($arr1), array_keys($arr2));
+     $vals  = array_merge(array_values($arr1), array_values($arr2));
+     $ret   = array();
+-    foreach ($keys as $key)
+-    {
+-      list($unused, $val) = each($vals);
++    foreach ($keys as $index => $key)
++    {
++      $val = $vals[$index];
+       if (isset($ret[$key]) && is_int($key))
+       {
+         $ret[] = $val;

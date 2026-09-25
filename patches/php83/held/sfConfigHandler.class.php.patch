@@ -1,0 +1,11 @@
+--- a/vendor/symfony/config/sfConfigHandler.class.php
++++ b/vendor/symfony/config/sfConfigHandler.class.php
+@@ -65,7 +65,7 @@
+   {
+     if (is_array($value))
+     {
+-      array_walk_recursive($value, create_function('&$value', '$value = sfToolkit::replaceConstants($value);'));
++      array_walk_recursive($value, function (&$value) { $value = sfToolkit::replaceConstants($value); });
+     }
+     else
+     {
