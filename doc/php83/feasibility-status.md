@@ -313,3 +313,11 @@ fields retain identical JSON. A direct analytics row-to-JSON path was identified
 for further synthetic endpoint testing, not executed. The characterization
 collector retains the known mismatch explicitly. All 38 offline tests pass;
 full API acceptance and promotion remain blocked.
+
+The [analytics partner unit probe](analytics-partner-probe.md) now executes
+hash-pinned function-only source with explicit query doubles and synthetic
+string/integer/null rows. It confirms pp/se preserve incoming types identically
+on both PHP versions. This is consumer-sensitivity evidence, not an endpoint
+regression or permission to normalize all responses. No new source patch was
+selected; downstream type expectations and real isolated query integration
+remain open. All 38 offline tests continue to pass.
