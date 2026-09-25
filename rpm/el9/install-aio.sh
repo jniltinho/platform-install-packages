@@ -10,6 +10,9 @@ ADMIN_PASSWD=${ADMIN_PASSWD:-Adm1n#Video}
 # yum baseurl of the Kaltura RPMs: the local build, or an extracted release tarball
 KALTURA_REPO=${KALTURA_REPO:-file:///vagrant/rpm/el9/repo}
 ANS=/root/kaltura.ans
+# answers template: next to the script in a checkout; Vagrant uploads the script to /tmp, so fall back to /vagrant
+TEMPLATE=$(dirname "$(readlink -f "$0")")/../../doc/kaltura.template.ans
+[ -f "$TEMPLATE" ] || TEMPLATE=/vagrant/doc/kaltura.template.ans
 # written only after kaltura-config-all.sh succeeds, so an interrupted configuration is retried
 DONE=/opt/kaltura/app/configurations/.aio-configured
 # Kaltura does not support SELinux enforcing (see doc/install-kaltura-redhat-based.md).
@@ -76,7 +79,7 @@ if [ ! -f "$DONE" ]; then
 		-e "s#^ADMIN_CONSOLE_ADMIN_MAIL=.*#ADMIN_CONSOLE_ADMIN_MAIL=\"$ADMIN_EMAIL\"#" \
 		-e "s|^ADMIN_CONSOLE_PASSWORD=.*|ADMIN_CONSOLE_PASSWORD=\"$ADMIN_PASSWD\"|" \
 		-e 's#^KALTURA_FULL_VIRTUAL_HOST_NAME=.*#KALTURA_FULL_VIRTUAL_HOST_NAME="$KALTURA_VIRTUAL_HOST_NAME"#' \
-		/vagrant/doc/kaltura.template.ans > $ANS
+		"$TEMPLATE" > $ANS
 	echo 'CONTACT_URL="http://corp.kaltura.com/company/contact-us"' >> $ANS
 	echo 'CONTACT_PHONE_NUMBER="+1 800 871 5224"' >> $ANS
 	chmod 600 $ANS
