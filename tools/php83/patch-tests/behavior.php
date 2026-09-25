@@ -40,6 +40,10 @@ if ($case === 'registry') {
     } catch (Zend_Exception $error) {
         $out[] = array('missing-exception', get_class($error));
     }
+} elseif ($case === 'registry-bootstrap') {
+    require __DIR__ . '/registry-bootstrap.php';
+} elseif ($case === 'registry-storage') {
+    require __DIR__ . '/registry-storage.php';
 } elseif ($case === 'analytics-partner') {
     require __DIR__ . '/analytics-partner.php';
 } elseif ($case === 'debug-pdo-logging') {

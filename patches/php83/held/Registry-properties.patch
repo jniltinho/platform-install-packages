@@ -1,0 +1,30 @@
+--- a/vendor/ZendFramework/library/Zend/Registry.php
++++ b/vendor/ZendFramework/library/Zend/Registry.php
+@@ -195,6 +195,18 @@
+         parent::__construct($array, $flags);
+     }
+ 
++    /** Preserve property writes independently of ArrayObject offset storage. */
++    public function __set($name, $value)
++    {
++        $flags = $this->getFlags();
++        $this->setFlags($flags & ~self::ARRAY_AS_PROPS);
++        try {
++            $this->$name = $value;
++        } finally {
++            $this->setFlags($flags);
++        }
++    }
++
+     /**
+      * @param string $index
+      * @returns mixed
+@@ -203,7 +215,7 @@
+      */
+     public function offsetExists($index)
+     {
+-        return array_key_exists($index, $this);
++        return array_key_exists($index, (array) $this);
+     }
+ 
+ }

@@ -329,3 +329,10 @@ under unspecified attributes; NULL/native/stringify cases match. This closes
 the fixture's driver-to-function gap, not full query/schema/authentication or
 endpoint acceptance. No global attribute or source repair was selected; the
 probe service was stopped and original candidate source restored.
+
+[Claude-assisted Registry investigation](registry-investigation.md) isolated
+literal versus variable-name ArrayObject write behavior. A __set workaround was
+rejected by real tests. The cast-only candidate passes inherited Zend bootstrap
+container read/write operations in both runtimes and INI modes, but the broader
+literal-property parity failure remains. Neither Registry candidate entered the
+active ZIP; all 38 offline tests pass and lab originals were restored.

@@ -1,0 +1,43 @@
+# Proposta: corrigir só `offsetExists` e não tentar reproduzir o comportamento 7.4
+
+**Resposta curta:** não. Um `__set` limitado não reproduz o comportamento do 7.4 no 8.3. Pela minha leitura do engine, ele nem chega a ser chamado para chaves novas. A sua bateria real deve confirmar isso.
+
+## Por que a ideia do `__set` com flags temporárias falha
+
+1. **No 8.3 o `__set` fica inalcançável.** Com `ARRAY_AS_PROPS`, `spl_array_write_property` testa `zend_std_has_property(..., ZEND_PROPERTY_EXISTS)`. Esse teste não chama `__isset`. Se a propriedade não existe, o engine vai direto para `spl_array_write_dimension` e nunca entra em `zend_std_write_property`, que é onde o `__set` seria chamado. O `__set` nunca dispara para nomes novos, então não há onde limpar as flags.
+2. **No 7.4 ele muda o baseline.** Hoje o nome novo cai em `zend_std_write_property` e vira propriedade real direto. Com `__set` declarado, esse caminho passa a chamá-lo. Isso cria um comportamento novo justamente onde você quer preservar o atual.
+3. **`setFlags` temporário no singleton compartilhado** tem outros riscos: reentrância (um `__get`/`offsetGet` aninhado veria flags erradas) e estado global mutável. Além disso, no 8.2+ a propriedade dinâmica gera deprecation se o `ArrayObject` não a permitir. Esse último ponto precisa de teste.
+4. **`offsetSet` também não serve como gancho.** No 8.3 a escrita por propriedade chega ao `offsetSet` sobrescrito. Só que `Zend_Registry::set()` e `$r['k'] =` chegam ao mesmo método, com a mesma assinatura. Não dá para distinguir a origem sem `debug_backtrace`, o que é frágil e está rejeitado.
+
+Conclusão: sem mudar as flags globalmente, o userland não consegue interceptar a escrita de propriedade nova no 8.3.
+
+## Patch mínimo proposto
+
+```php
+public function offsetExists($index)
+{
+    return array_key_exists($index, $this->getArrayCopy());
+}
+```
+
+- É equivalente ao 7.4, porque o `get_properties` do SPL devolve o storage.
+- Remove o fatal do 8.x.
+- Não mexe em flags nem acrescenta magic methods.
+
+**Delta aceito e documentado:** `$registry->novaChave = x` vira propriedade real no 7.4 e offset no 8.3. O efeito prático é que, depois dessa escrita, `Zend_Registry::get('novaChave')` lança exceção no 7.4 e retorna o valor no 8.3. O mesmo vale para `isRegistered`.
+
+## Próxima evidência mínima, antes de aceitar o delta
+
+1. Buscar nos callers escritas por propriedade em instâncias do registry: `getInstance()->x =`, `$registry->x =` e subclasses/`setInstance`. Estes são os únicos pontos afetados.
+   - **Zero ocorrências:** o delta é teórico. Fica o patch mais um teste que fixa o comportamento.
+   - **Há ocorrências:** trocar esses callers por `Zend_Registry::set()`, que tem comportamento idêntico nas duas versões. É explícito e restrito a esses pontos.
+
+## Testes reais, em 7.4, 7.4 `-n` e 8.3
+
+- `offsetExists`/`isRegistered`/`get` para chave existente, ausente, chave `null`, chave int e chave numérica em string.
+- Escrita por propriedade em chave **existente**: vai para o offset nas duas versões, sem mudança.
+- Escrita por propriedade em chave **nova**: fixar o resultado por versão, `get_object_vars` versus `getArrayCopy`. Serve de teste de caracterização, não de paridade.
+- Prova negativa da ideia do `__set`: um `__set` instrumentado não pode ser chamado no 8.3. Se for chamado, minha leitura do engine está errada e a opção deve ser reavaliada.
+- `E_DEPRECATED` ativo no 8.3, para verificar que não surge deprecation nova.
+
+Não fiz nenhuma alteração. É só a proposta; release apenas depois dos testes reais.

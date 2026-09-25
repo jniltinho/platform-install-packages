@@ -1,0 +1,98 @@
+Não usei ferramentas nem editei arquivos, como você pediu. Por isso também não gerei o arquivo de plano nem chamei `ExitPlanMode`. A resposta vai direto aqui.
+
+## Patch proposto
+
+```php
+    /**
+     * @param string $index
+     * @returns mixed
+     *
+     * Workaround for http://bugs.php.net/bug.php?id=40442 (ZF-960).
+     * PHP 8 removed array_key_exists() on objects; the array cast reads the same
+     * get_properties_for() table (storage, or std props under STD_PROP_LIST).
+     * ponytail: O(n) copy per call; the 7.4 read did not copy. Fine for small registries.
+     */
+    #[\ReturnTypeWillChange]
+    public function offsetExists($index)
+    {
+        return array_key_exists($index, (array) $this);
+    }
+```
+
+- **`#[\ReturnTypeWillChange]`**: sem ele, o PHP 8.1+ emite um E_DEPRECATED por causa do tipo de retorno provisório `bool` de `ArrayObject::offsetExists`. No 7.4 a linha vira comentário. Ela precisa ficar sozinha na linha.
+- **Chaves e `null`**: continua sendo o `array_key_exists` nativo de cada versão sobre um array. A coerção de `null`→`''`, `'0'`→`0` e `'01'` fica igual à do original naquela versão.
+
+## Por que não as alternativas
+
+| Leitor | Problema concreto |
+|---|---|
+| `getArrayCopy()` | Ignora STD_PROP_LIST. Quebra todas as linhas `[1,*]`/`[3,*]` (daria `true` em vez de `false`) e `property,1`. |
+| `get_object_vars($this)` | Nas flags 0/2 devolve a storage, igual ao cast. Com STD_PROP_LIST, desmangla e filtra por escopo, então diverge em subclasses com props protected/private declaradas. |
+| `parent::offsetExists()` | Ignora STD_PROP_LIST e usa a coerção de offset do SPL (`null`/bool/float), não a do `array_key_exists`. |
+
+## Sobre as linhas `property` nas flags 2/3
+
+O baseline 7.4 mostra `property,2=false` e `property,3=true`. Para as flags 2/3 isso só é consistente se, no 7.4, a escrita `$registry->dynamicProbe = …` caiu nas **std props** e não na storage. Isso acontece mesmo com ARRAY_AS_PROPS.
+
+Minha hipótese: é uma diferença no caminho de **escrita** do engine, não na leitura. O 8.3 grava na storage, e isso explicaria o `(array)` "divergir". Se for isso:
+
+- Nenhum leitor dentro de `offsetExists` resolve o problema, porque o dado está em outro lugar antes mesmo da chamada.
+- Preservar exatamente exigiria emular no 8.3 o roteamento de escrita do 7.4, ou seja, comportamento específico por versão fora de `offsetExists`.
+  - `__set` não intercepta, porque o handler SPL desvia para a dimensão antes.
+  - Um override de `offsetSet` não distingue `$r->x=` de `$r['x']=`.
+- Não proponho hack. Isso vira um blocker com evidência. Vale fazer `grep -rn "Zend_Registry::getInstance()->" ` no Kaltura para saber se alguém depende disso: é o flag padrão (2).
+
+O teste 1 abaixo confirma ou derruba essa hipótese. Se derrubar, o problema está em outro ponto e revisitamos.
+
+## Testes extras (novo case no fixture)
+
+```php
+} elseif ($case === 'registry-edges') {
+    require_once 'Zend/Registry.php';
+    class Registry_Declared extends Zend_Registry { protected $hidden = 1; public $shown = 2; }
+    $legacy = version_compare(PHP_VERSION, '8.0.0', '<');
+    // 1. Onde a escrita dinâmica cai (sem chamar offsetExists)
+    foreach (array(0, 1, 2, 3) as $flags) {
+        foreach (array('cold', 'legacy-read') as $mode) {
+            $r = new Zend_Registry(array('seed' => 1), $flags);
+            if ($mode === 'legacy-read' && $legacy) {
+                $tmp = @array_key_exists('seed', $r); // reproduz as leituras prévias do baseline 7.4
+            }
+            $r->probe = 'x';
+            $storage = array_key_exists('probe', $r->getArrayCopy());
+            $r->setFlags($flags | ArrayObject::STD_PROP_LIST);
+            $props = array_key_exists('probe', (array) $r);
+            $out[] = array('landing', $flags, $mode, $storage, $props);
+        }
+    }
+    // 2. Coerção de chave + 3. storage objeto/props declaradas + 4. não-mutação
+    $holder = new stdClass;
+    $holder->a = null;
+    foreach (array(0, 1, 2, 3) as $flags) {
+        $r = new Zend_Registry(array('' => 'e', 0 => 'z', 1 => 'o', '01' => 'p'), $flags);
+        if (!($flags & ArrayObject::ARRAY_AS_PROPS)) {
+            $r->{'7'} = 'numeric-prop';
+        }
+        $before = serialize($r);
+        foreach (array(null, false, true, 0.0, 1.9, '1', ' 1', '1 ', '-0', '7', 7) as $key) {
+            $out[] = array('key', $flags, var_export($key, true), $r->offsetExists($key));
+        }
+        $out[] = array('stable', $flags, serialize($r) === $before);
+        $o = new Zend_Registry($holder, $flags);
+        $out[] = array('object-storage', $flags, $o->offsetExists('a'), $o->offsetExists('b'));
+        $d = new Registry_Declared(array(), $flags);
+        $out[] = array('declared', $flags, $d->offsetExists('hidden'), $d->offsetExists('shown'),
+            $d->offsetExists("\0*\0hidden"));
+    }
+```
+
+**Como rodar e comparar:**
+
+1. Rode `registry` e `registry-edges` com 7.4 original, 7.4 patched e 8.3 patched.
+2. Compare o **stdout**. Compare também o **stderr**: no 8.3 o `registry` precisa sair com stderr vazio, e as diferenças de warning/deprecation nas chaves bool/float precisam ficar visíveis.
+
+**Critérios de decisão:**
+
+- **`landing`**: se o 7.4 der `storage=false, props=true` nas flags 2/3 (pelo menos em `legacy-read`) e o 8.3 der o inverso, a hipótese está confirmada. As duas linhas `property` ficam como divergência do engine, não do patch.
+- **`key`**: diferença 7.4 original × 8.3 patched ⇒ mudança do `array_key_exists` nativo. Só nesse caso eu adicionaria um guard de chave por versão, restrito às linhas que divergirem.
+- **`declared`/`key 7` na flag 1**: o cast converte nomes numéricos de propriedades em chaves int e mantém o mangling. Se diferir do 7.4 original, isso vira o segundo candidato a tratamento específico.

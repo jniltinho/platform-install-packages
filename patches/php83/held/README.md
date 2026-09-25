@@ -1,5 +1,9 @@
 # Held experiments — not part of any active archive
 
+`Registry-properties.patch` is a rejected __set experiment, retained with
+failure evidence in `doc/php83/evidence/registry-investigation/`. It changes
+the 7.4 baseline and does not fix 8.3 parity. Never add it to the active manifest.
+
 The DebugPDO query-signature experiment is also held. It removes the PHP8.3
 class-loading fatal in an isolated SQLite fixture, but strict cross-runtime
 output parity fails on numeric types; named-argument forwarding needs testing.

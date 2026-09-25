@@ -1,0 +1,8 @@
+{
+  "path": "vendor/ZendFramework/library/Zend/Registry.php",
+  "patch": "Registry-properties.patch",
+  "sha256": "d771eaae74852c6a7a32f24b3f9913a38ef430200da4517ebfdf383248611f0b",
+  "before_sha256": "304ba8242c81790f11dadcf7a39e63b7047f8ea33fc3de03b748cab70397b48d",
+  "after_sha256": "378c8a171475d369f343bbbbb8db6c30d83b4cf6d0f86b9d36a4e1c4d5d690a5",
+  "status": "rejected: changes PHP7.4 baseline and does not repair PHP8.3 parity; evidence/registry-investigation/rejected-properties.json"
+}
