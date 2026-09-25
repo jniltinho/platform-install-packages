@@ -1,0 +1,2 @@
+Pre-flight review starting — gathering local evidence only.
+Found the marker harness — now validating the local test suite.

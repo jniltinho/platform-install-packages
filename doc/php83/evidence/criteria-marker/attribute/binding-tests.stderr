@@ -1,0 +1,21 @@
+test_74_fixture_not_empty (test_compare.CompareTests.test_74_fixture_not_empty) ... ok
+test_duplicate_mode (test_compare.CompareTests.test_duplicate_mode) ... ok
+test_import_changed (test_compare.CompareTests.test_import_changed) ... ok
+test_layout_changed (test_compare.CompareTests.test_layout_changed) ... ok
+test_legacy_hash_drift (test_compare.CompareTests.test_legacy_hash_drift) ... ok
+test_missing_hint_control (test_compare.CompareTests.test_missing_hint_control) ... ok
+test_new_warning (test_compare.CompareTests.test_new_warning) ... ok
+test_payload_unbound (test_compare.CompareTests.test_payload_unbound) ... ok
+test_positive (test_compare.CompareTests.test_positive) ... ok
+test_raw_body_binding (test_compare.CompareTests.test_raw_body_binding) ... ok
+test_source_drift (test_compare.CompareTests.test_source_drift) ... ok
+test_unrelated_control_missing (test_compare.CompareTests.test_unrelated_control_missing) ... ok
+test_duplicate_anchor (test_prepare.PrepareTests.test_duplicate_anchor) ... ok
+test_exact_single_attribute (test_prepare.PrepareTests.test_exact_single_attribute) ... ok
+test_existing_attribute (test_prepare.PrepareTests.test_existing_attribute) ... ok
+test_line_drift (test_prepare.PrepareTests.test_line_drift) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.003s
+
+OK

@@ -1,0 +1,30 @@
+test_behavior_change (test_compare.ComparatorTests.test_behavior_change) ... ok
+test_bool_exit (test_compare.ComparatorTests.test_bool_exit) ... ok
+test_case_missing (test_compare.ComparatorTests.test_case_missing) ... ok
+test_drift (test_compare.ComparatorTests.test_drift) ... ok
+test_duplicate_mode (test_compare.ComparatorTests.test_duplicate_mode) ... ok
+test_missing_control (test_compare.ComparatorTests.test_missing_control) ... ok
+test_missing_native_stderr (test_compare.ComparatorTests.test_missing_native_stderr) ... ok
+test_positive (test_compare.ComparatorTests.test_positive) ... ok
+test_representation_delta_not_parity (test_compare.ComparatorTests.test_representation_delta_not_parity) ... ok
+test_serialization_corruption (test_compare.ComparatorTests.test_serialization_corruption) ... ok
+test_stdout_body_binding (test_compare.ComparatorTests.test_stdout_body_binding) ... ok
+test_unrelated_exact_source_line_mapping (test_compare.ComparatorTests.test_unrelated_exact_source_line_mapping) ... ok
+test_unrelated_warning_regression (test_compare.ComparatorTests.test_unrelated_warning_regression) ... ok
+test_duplicate_anchor (test_prepare.PreparationTests.test_duplicate_anchor) ... ok
+test_existing_property (test_prepare.PreparationTests.test_existing_property) ... ok
+test_missing_anchor (test_prepare.PreparationTests.test_missing_anchor) ... ok
+test_single_declaration (test_prepare.PreparationTests.test_single_declaration) ... ok
+test_declaration_shift (test_prepare.SourceLineTests.test_declaration_shift) ... ok
+test_exact_lines (test_prepare.SourceLineTests.test_exact_lines) ... ok
+test_filter_shift (test_prepare.SourceLineTests.test_filter_shift) ... ok
+test_fixture_drift (test_verify.IdentityTests.test_fixture_drift) ... ok
+test_invalid_pin (test_verify.IdentityTests.test_invalid_pin) ... ok
+test_manifest_drift (test_verify.IdentityTests.test_manifest_drift) ... ok
+test_symlink (test_verify.IdentityTests.test_symlink) ... ok
+test_verified (test_verify.IdentityTests.test_verified) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 0.003s
+
+OK

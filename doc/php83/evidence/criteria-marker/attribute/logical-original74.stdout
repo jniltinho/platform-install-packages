@@ -1,0 +1,1635 @@
+{
+    "schema": 1,
+    "php": "7.4.33",
+    "variant": "original",
+    "rows": {
+        "\/clone\/2": {
+            "input_sha256": "d27098c3c5bc6962e59c94103b4efdf5f33f8ba52f60afd66abfffcc4380fac4",
+            "logical": {
+                "type": "object",
+                "class": "Criteria",
+                "id": 0,
+                "properties": [
+                    [
+                        "AENyaXRlcmlhAGFsaWFzZXM=",
+                        {
+                            "type": "array",
+                            "items": [
+                                [
+                                    [
+                                        "string",
+                                        "YQ=="
+                                    ],
+                                    {
+                                        "type": "string",
+                                        "base64": "YQ=="
+                                    }
+                                ]
+                            ]
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGFzQ29sdW1ucw==",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGJsb2JGbGFn",
+                        {
+                            "type": "NULL",
+                            "value": null
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGRiTmFtZQ==",
+                        {
+                            "type": "string",
+                            "base64": "Zml4dHVyZQ=="
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGZvcmNlSW5kZXg=",
+                        {
+                            "type": "NULL",
+                            "value": null
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGdyb3VwQnlDb2x1bW5z",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGhhdmluZw==",
+                        {
+                            "type": "NULL",
+                            "value": null
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGlnbm9yZUNhc2U=",
+                        {
+                            "type": "boolean",
+                            "value": false
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGpvaW5z",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGxpbWl0",
+                        {
+                            "type": "integer",
+                            "value": 0
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAG1hcA==",
+                        {
+                            "type": "array",
+                            "items": [
+                                [
+                                    [
+                                        "string",
+                                        "YS5pZA=="
+                                    ],
+                                    {
+                                        "type": "object",
+                                        "class": "Criterion",
+                                        "id": 1,
+                                        "properties": [
+                                            [
+                                                "AENyaXRlcmlvbgBjbGF1c2Vz",
+                                                {
+                                                    "type": "array",
+                                                    "items": []
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgBjb2x1bW4=",
+                                                {
+                                                    "type": "string",
+                                                    "base64": "aWQ="
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgBjb21wYXJpc29u",
+                                                {
+                                                    "type": "string",
+                                                    "base64": "PQ=="
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgBjb25qdW5jdGlvbnM=",
+                                                {
+                                                    "type": "array",
+                                                    "items": []
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgBkYg==",
+                                                {
+                                                    "type": "object",
+                                                    "class": "DBAdapter",
+                                                    "id": 2,
+                                                    "properties": []
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgBpZ25vcmVTdHJpbmdDYXNl",
+                                                {
+                                                    "type": "boolean",
+                                                    "value": false
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgBwYXJlbnQ=",
+                                                {
+                                                    "type": "NULL",
+                                                    "value": null
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgByZWFsdGFibGU=",
+                                                {
+                                                    "type": "string",
+                                                    "base64": "YQ=="
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgB0YWJsZQ==",
+                                                {
+                                                    "type": "string",
+                                                    "base64": "YQ=="
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgB2YWx1ZQ==",
+                                                {
+                                                    "type": "integer",
+                                                    "value": 1
+                                                }
+                                            ]
+                                        ]
+                                    }
+                                ]
+                            ]
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAG9mZnNldA==",
+                        {
+                            "type": "integer",
+                            "value": 0
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAG9yZGVyQnlDb2x1bW5z",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAG9yaWdpbmFsRGJOYW1l",
+                        {
+                            "type": "string",
+                            "base64": "Zml4dHVyZQ=="
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAHByaW1hcnlUYWJsZU5hbWU=",
+                        {
+                            "type": "NULL",
+                            "value": null
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAHNlbGVjdENvbHVtbnM=",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAHNlbGVjdE1vZGlmaWVycw==",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAHNpbmdsZVJlY29yZA==",
+                        {
+                            "type": "boolean",
+                            "value": false
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAHVzZVRyYW5zYWN0aW9u",
+                        {
+                            "type": "boolean",
+                            "value": false
+                        }
+                    ],
+                    [
+                        "Y3JldGVyaWFfZmlsdGVyX2F0dGFjaGVk",
+                        {
+                            "type": "boolean",
+                            "value": true
+                        }
+                    ]
+                ]
+            },
+            "reserialized_sha256": "d27098c3c5bc6962e59c94103b4efdf5f33f8ba52f60afd66abfffcc4380fac4"
+        },
+        "\/fresh\/representation": {
+            "input_sha256": "7096d8712794815ef4ae737badc5ec88a140a5961b39c1e6f6e0891a3a4a98df",
+            "logical": {
+                "type": "object",
+                "class": "Criteria",
+                "id": 0,
+                "properties": [
+                    [
+                        "AENyaXRlcmlhAGFsaWFzZXM=",
+                        {
+                            "type": "array",
+                            "items": [
+                                [
+                                    [
+                                        "string",
+                                        "YQ=="
+                                    ],
+                                    {
+                                        "type": "string",
+                                        "base64": "YQ=="
+                                    }
+                                ]
+                            ]
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGFzQ29sdW1ucw==",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGJsb2JGbGFn",
+                        {
+                            "type": "NULL",
+                            "value": null
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGRiTmFtZQ==",
+                        {
+                            "type": "string",
+                            "base64": "Zml4dHVyZQ=="
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGZvcmNlSW5kZXg=",
+                        {
+                            "type": "NULL",
+                            "value": null
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGdyb3VwQnlDb2x1bW5z",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGhhdmluZw==",
+                        {
+                            "type": "NULL",
+                            "value": null
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGlnbm9yZUNhc2U=",
+                        {
+                            "type": "boolean",
+                            "value": false
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGpvaW5z",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGxpbWl0",
+                        {
+                            "type": "integer",
+                            "value": 0
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAG1hcA==",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAG9mZnNldA==",
+                        {
+                            "type": "integer",
+                            "value": 0
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAG9yZGVyQnlDb2x1bW5z",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAG9yaWdpbmFsRGJOYW1l",
+                        {
+                            "type": "string",
+                            "base64": "Zml4dHVyZQ=="
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAHByaW1hcnlUYWJsZU5hbWU=",
+                        {
+                            "type": "NULL",
+                            "value": null
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAHNlbGVjdENvbHVtbnM=",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAHNlbGVjdE1vZGlmaWVycw==",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAHNpbmdsZVJlY29yZA==",
+                        {
+                            "type": "boolean",
+                            "value": false
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAHVzZVRyYW5zYWN0aW9u",
+                        {
+                            "type": "boolean",
+                            "value": false
+                        }
+                    ]
+                ]
+            },
+            "reserialized_sha256": "7096d8712794815ef4ae737badc5ec88a140a5961b39c1e6f6e0891a3a4a98df"
+        },
+        "\/kalturacriteria_marker\/representation": {
+            "input_sha256": "8297d50200cd387e10e6465b56c5649b07822abaae419795f92f173b4edec621",
+            "logical": {
+                "type": "object",
+                "class": "KalturaCriteria",
+                "id": 0,
+                "properties": [
+                    [
+                        "ACoAZG9Db3VudA==",
+                        {
+                            "type": "boolean",
+                            "value": true
+                        }
+                    ],
+                    [
+                        "ACoAZmV0Y2hlZElkcw==",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "ACoAZmlsdGVycw==",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "ACoAZ3JvdXBCeUNvbHVtbg==",
+                        {
+                            "type": "NULL",
+                            "value": null
+                        }
+                    ],
+                    [
+                        "ACoAcmVjb3Jkc0NvdW50",
+                        {
+                            "type": "integer",
+                            "value": 0
+                        }
+                    ],
+                    [
+                        "ACoAc2VsZWN0Q29sdW1u",
+                        {
+                            "type": "NULL",
+                            "value": null
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGFsaWFzZXM=",
+                        {
+                            "type": "array",
+                            "items": [
+                                [
+                                    [
+                                        "string",
+                                        "YQ=="
+                                    ],
+                                    {
+                                        "type": "string",
+                                        "base64": "YQ=="
+                                    }
+                                ]
+                            ]
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGFzQ29sdW1ucw==",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGJsb2JGbGFn",
+                        {
+                            "type": "NULL",
+                            "value": null
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGRiTmFtZQ==",
+                        {
+                            "type": "string",
+                            "base64": "Zml4dHVyZQ=="
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGZvcmNlSW5kZXg=",
+                        {
+                            "type": "NULL",
+                            "value": null
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGdyb3VwQnlDb2x1bW5z",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGhhdmluZw==",
+                        {
+                            "type": "NULL",
+                            "value": null
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGlnbm9yZUNhc2U=",
+                        {
+                            "type": "boolean",
+                            "value": false
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGpvaW5z",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGxpbWl0",
+                        {
+                            "type": "integer",
+                            "value": 0
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAG1hcA==",
+                        {
+                            "type": "array",
+                            "items": [
+                                [
+                                    [
+                                        "string",
+                                        "YS5pZA=="
+                                    ],
+                                    {
+                                        "type": "object",
+                                        "class": "Criterion",
+                                        "id": 1,
+                                        "properties": [
+                                            [
+                                                "AENyaXRlcmlvbgBjbGF1c2Vz",
+                                                {
+                                                    "type": "array",
+                                                    "items": []
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgBjb2x1bW4=",
+                                                {
+                                                    "type": "string",
+                                                    "base64": "aWQ="
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgBjb21wYXJpc29u",
+                                                {
+                                                    "type": "string",
+                                                    "base64": "PQ=="
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgBjb25qdW5jdGlvbnM=",
+                                                {
+                                                    "type": "array",
+                                                    "items": []
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgBkYg==",
+                                                {
+                                                    "type": "object",
+                                                    "class": "DBAdapter",
+                                                    "id": 2,
+                                                    "properties": []
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgBpZ25vcmVTdHJpbmdDYXNl",
+                                                {
+                                                    "type": "boolean",
+                                                    "value": false
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgBwYXJlbnQ=",
+                                                {
+                                                    "type": "NULL",
+                                                    "value": null
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgByZWFsdGFibGU=",
+                                                {
+                                                    "type": "string",
+                                                    "base64": "YQ=="
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgB0YWJsZQ==",
+                                                {
+                                                    "type": "string",
+                                                    "base64": "YQ=="
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgB2YWx1ZQ==",
+                                                {
+                                                    "type": "integer",
+                                                    "value": 1
+                                                }
+                                            ]
+                                        ]
+                                    }
+                                ]
+                            ]
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAG9mZnNldA==",
+                        {
+                            "type": "integer",
+                            "value": 0
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAG9yZGVyQnlDb2x1bW5z",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAG9yaWdpbmFsRGJOYW1l",
+                        {
+                            "type": "string",
+                            "base64": "Zml4dHVyZQ=="
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAHByaW1hcnlUYWJsZU5hbWU=",
+                        {
+                            "type": "NULL",
+                            "value": null
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAHNlbGVjdENvbHVtbnM=",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAHNlbGVjdE1vZGlmaWVycw==",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAHNpbmdsZVJlY29yZA==",
+                        {
+                            "type": "boolean",
+                            "value": false
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAHVzZVRyYW5zYWN0aW9u",
+                        {
+                            "type": "boolean",
+                            "value": false
+                        }
+                    ],
+                    [
+                        "Y3JldGVyaWFfZmlsdGVyX2F0dGFjaGVk",
+                        {
+                            "type": "boolean",
+                            "value": true
+                        }
+                    ]
+                ]
+            },
+            "reserialized_sha256": "8297d50200cd387e10e6465b56c5649b07822abaae419795f92f173b4edec621"
+        },
+        "\/mycriteria_hint\/representation": {
+            "input_sha256": "a2fa1e3124e4b68633cbdfda082ee623058975eb36d48adba6f04036bde3a7bb",
+            "logical": {
+                "type": "object",
+                "class": "myCriteria",
+                "id": 0,
+                "properties": [
+                    [
+                        "AENyaXRlcmlhAGFsaWFzZXM=",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGFzQ29sdW1ucw==",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGJsb2JGbGFn",
+                        {
+                            "type": "NULL",
+                            "value": null
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGRiTmFtZQ==",
+                        {
+                            "type": "string",
+                            "base64": "Zml4dHVyZQ=="
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGZvcmNlSW5kZXg=",
+                        {
+                            "type": "NULL",
+                            "value": null
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGdyb3VwQnlDb2x1bW5z",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGhhdmluZw==",
+                        {
+                            "type": "NULL",
+                            "value": null
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGlnbm9yZUNhc2U=",
+                        {
+                            "type": "boolean",
+                            "value": false
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGpvaW5z",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGxpbWl0",
+                        {
+                            "type": "integer",
+                            "value": 0
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAG1hcA==",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAG9mZnNldA==",
+                        {
+                            "type": "integer",
+                            "value": 0
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAG9yZGVyQnlDb2x1bW5z",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAG9yaWdpbmFsRGJOYW1l",
+                        {
+                            "type": "string",
+                            "base64": "Zml4dHVyZQ=="
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAHByaW1hcnlUYWJsZU5hbWU=",
+                        {
+                            "type": "NULL",
+                            "value": null
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAHNlbGVjdENvbHVtbnM=",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAHNlbGVjdE1vZGlmaWVycw==",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAHNpbmdsZVJlY29yZA==",
+                        {
+                            "type": "boolean",
+                            "value": false
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAHVzZVRyYW5zYWN0aW9u",
+                        {
+                            "type": "boolean",
+                            "value": false
+                        }
+                    ],
+                    [
+                        "AG15Q3JpdGVyaWEAaWdub3JlX3NlbGVjdF9jb2x1bW5fbGlzdA==",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AG15Q3JpdGVyaWEAaW5kZXhfaGludHNfbWFw",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "aGludA==",
+                        {
+                            "type": "array",
+                            "items": [
+                                [
+                                    [
+                                        "string",
+                                        "YQ=="
+                                    ],
+                                    {
+                                        "type": "string",
+                                        "base64": "aWR4X2ZpeHR1cmU="
+                                    }
+                                ]
+                            ]
+                        }
+                    ]
+                ]
+            },
+            "reserialized_sha256": "a2fa1e3124e4b68633cbdfda082ee623058975eb36d48adba6f04036bde3a7bb"
+        },
+        "\/mycriteria_marker\/representation": {
+            "input_sha256": "d07a96bf1a9ee91df3a34fdb0e6730b3659a51b60d3a003ddbd4462028fd69c1",
+            "logical": {
+                "type": "object",
+                "class": "myCriteria",
+                "id": 0,
+                "properties": [
+                    [
+                        "AENyaXRlcmlhAGFsaWFzZXM=",
+                        {
+                            "type": "array",
+                            "items": [
+                                [
+                                    [
+                                        "string",
+                                        "YQ=="
+                                    ],
+                                    {
+                                        "type": "string",
+                                        "base64": "YQ=="
+                                    }
+                                ]
+                            ]
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGFzQ29sdW1ucw==",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGJsb2JGbGFn",
+                        {
+                            "type": "NULL",
+                            "value": null
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGRiTmFtZQ==",
+                        {
+                            "type": "string",
+                            "base64": "Zml4dHVyZQ=="
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGZvcmNlSW5kZXg=",
+                        {
+                            "type": "NULL",
+                            "value": null
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGdyb3VwQnlDb2x1bW5z",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGhhdmluZw==",
+                        {
+                            "type": "NULL",
+                            "value": null
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGlnbm9yZUNhc2U=",
+                        {
+                            "type": "boolean",
+                            "value": false
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGpvaW5z",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGxpbWl0",
+                        {
+                            "type": "integer",
+                            "value": 0
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAG1hcA==",
+                        {
+                            "type": "array",
+                            "items": [
+                                [
+                                    [
+                                        "string",
+                                        "YS5pZA=="
+                                    ],
+                                    {
+                                        "type": "object",
+                                        "class": "Criterion",
+                                        "id": 1,
+                                        "properties": [
+                                            [
+                                                "AENyaXRlcmlvbgBjbGF1c2Vz",
+                                                {
+                                                    "type": "array",
+                                                    "items": []
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgBjb2x1bW4=",
+                                                {
+                                                    "type": "string",
+                                                    "base64": "aWQ="
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgBjb21wYXJpc29u",
+                                                {
+                                                    "type": "string",
+                                                    "base64": "PQ=="
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgBjb25qdW5jdGlvbnM=",
+                                                {
+                                                    "type": "array",
+                                                    "items": []
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgBkYg==",
+                                                {
+                                                    "type": "object",
+                                                    "class": "DBAdapter",
+                                                    "id": 2,
+                                                    "properties": []
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgBpZ25vcmVTdHJpbmdDYXNl",
+                                                {
+                                                    "type": "boolean",
+                                                    "value": false
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgBwYXJlbnQ=",
+                                                {
+                                                    "type": "NULL",
+                                                    "value": null
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgByZWFsdGFibGU=",
+                                                {
+                                                    "type": "string",
+                                                    "base64": "YQ=="
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgB0YWJsZQ==",
+                                                {
+                                                    "type": "string",
+                                                    "base64": "YQ=="
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgB2YWx1ZQ==",
+                                                {
+                                                    "type": "integer",
+                                                    "value": 1
+                                                }
+                                            ]
+                                        ]
+                                    }
+                                ]
+                            ]
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAG9mZnNldA==",
+                        {
+                            "type": "integer",
+                            "value": 0
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAG9yZGVyQnlDb2x1bW5z",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAG9yaWdpbmFsRGJOYW1l",
+                        {
+                            "type": "string",
+                            "base64": "Zml4dHVyZQ=="
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAHByaW1hcnlUYWJsZU5hbWU=",
+                        {
+                            "type": "NULL",
+                            "value": null
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAHNlbGVjdENvbHVtbnM=",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAHNlbGVjdE1vZGlmaWVycw==",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAHNpbmdsZVJlY29yZA==",
+                        {
+                            "type": "boolean",
+                            "value": false
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAHVzZVRyYW5zYWN0aW9u",
+                        {
+                            "type": "boolean",
+                            "value": false
+                        }
+                    ],
+                    [
+                        "AG15Q3JpdGVyaWEAaWdub3JlX3NlbGVjdF9jb2x1bW5fbGlzdA==",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AG15Q3JpdGVyaWEAaW5kZXhfaGludHNfbWFw",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "Y3JldGVyaWFfZmlsdGVyX2F0dGFjaGVk",
+                        {
+                            "type": "boolean",
+                            "value": true
+                        }
+                    ]
+                ]
+            },
+            "reserialized_sha256": "d07a96bf1a9ee91df3a34fdb0e6730b3659a51b60d3a003ddbd4462028fd69c1"
+        },
+        "\/once_twice\/2": {
+            "input_sha256": "d27098c3c5bc6962e59c94103b4efdf5f33f8ba52f60afd66abfffcc4380fac4",
+            "logical": {
+                "type": "object",
+                "class": "Criteria",
+                "id": 0,
+                "properties": [
+                    [
+                        "AENyaXRlcmlhAGFsaWFzZXM=",
+                        {
+                            "type": "array",
+                            "items": [
+                                [
+                                    [
+                                        "string",
+                                        "YQ=="
+                                    ],
+                                    {
+                                        "type": "string",
+                                        "base64": "YQ=="
+                                    }
+                                ]
+                            ]
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGFzQ29sdW1ucw==",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGJsb2JGbGFn",
+                        {
+                            "type": "NULL",
+                            "value": null
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGRiTmFtZQ==",
+                        {
+                            "type": "string",
+                            "base64": "Zml4dHVyZQ=="
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGZvcmNlSW5kZXg=",
+                        {
+                            "type": "NULL",
+                            "value": null
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGdyb3VwQnlDb2x1bW5z",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGhhdmluZw==",
+                        {
+                            "type": "NULL",
+                            "value": null
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGlnbm9yZUNhc2U=",
+                        {
+                            "type": "boolean",
+                            "value": false
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGpvaW5z",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGxpbWl0",
+                        {
+                            "type": "integer",
+                            "value": 0
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAG1hcA==",
+                        {
+                            "type": "array",
+                            "items": [
+                                [
+                                    [
+                                        "string",
+                                        "YS5pZA=="
+                                    ],
+                                    {
+                                        "type": "object",
+                                        "class": "Criterion",
+                                        "id": 1,
+                                        "properties": [
+                                            [
+                                                "AENyaXRlcmlvbgBjbGF1c2Vz",
+                                                {
+                                                    "type": "array",
+                                                    "items": []
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgBjb2x1bW4=",
+                                                {
+                                                    "type": "string",
+                                                    "base64": "aWQ="
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgBjb21wYXJpc29u",
+                                                {
+                                                    "type": "string",
+                                                    "base64": "PQ=="
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgBjb25qdW5jdGlvbnM=",
+                                                {
+                                                    "type": "array",
+                                                    "items": []
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgBkYg==",
+                                                {
+                                                    "type": "object",
+                                                    "class": "DBAdapter",
+                                                    "id": 2,
+                                                    "properties": []
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgBpZ25vcmVTdHJpbmdDYXNl",
+                                                {
+                                                    "type": "boolean",
+                                                    "value": false
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgBwYXJlbnQ=",
+                                                {
+                                                    "type": "NULL",
+                                                    "value": null
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgByZWFsdGFibGU=",
+                                                {
+                                                    "type": "string",
+                                                    "base64": "YQ=="
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgB0YWJsZQ==",
+                                                {
+                                                    "type": "string",
+                                                    "base64": "YQ=="
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgB2YWx1ZQ==",
+                                                {
+                                                    "type": "integer",
+                                                    "value": 1
+                                                }
+                                            ]
+                                        ]
+                                    }
+                                ]
+                            ]
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAG9mZnNldA==",
+                        {
+                            "type": "integer",
+                            "value": 0
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAG9yZGVyQnlDb2x1bW5z",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAG9yaWdpbmFsRGJOYW1l",
+                        {
+                            "type": "string",
+                            "base64": "Zml4dHVyZQ=="
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAHByaW1hcnlUYWJsZU5hbWU=",
+                        {
+                            "type": "NULL",
+                            "value": null
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAHNlbGVjdENvbHVtbnM=",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAHNlbGVjdE1vZGlmaWVycw==",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAHNpbmdsZVJlY29yZA==",
+                        {
+                            "type": "boolean",
+                            "value": false
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAHVzZVRyYW5zYWN0aW9u",
+                        {
+                            "type": "boolean",
+                            "value": false
+                        }
+                    ],
+                    [
+                        "Y3JldGVyaWFfZmlsdGVyX2F0dGFjaGVk",
+                        {
+                            "type": "boolean",
+                            "value": true
+                        }
+                    ]
+                ]
+            },
+            "reserialized_sha256": "d27098c3c5bc6962e59c94103b4efdf5f33f8ba52f60afd66abfffcc4380fac4"
+        },
+        "\/serialize_attached\/1": {
+            "input_sha256": "d27098c3c5bc6962e59c94103b4efdf5f33f8ba52f60afd66abfffcc4380fac4",
+            "logical": {
+                "type": "object",
+                "class": "Criteria",
+                "id": 0,
+                "properties": [
+                    [
+                        "AENyaXRlcmlhAGFsaWFzZXM=",
+                        {
+                            "type": "array",
+                            "items": [
+                                [
+                                    [
+                                        "string",
+                                        "YQ=="
+                                    ],
+                                    {
+                                        "type": "string",
+                                        "base64": "YQ=="
+                                    }
+                                ]
+                            ]
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGFzQ29sdW1ucw==",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGJsb2JGbGFn",
+                        {
+                            "type": "NULL",
+                            "value": null
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGRiTmFtZQ==",
+                        {
+                            "type": "string",
+                            "base64": "Zml4dHVyZQ=="
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGZvcmNlSW5kZXg=",
+                        {
+                            "type": "NULL",
+                            "value": null
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGdyb3VwQnlDb2x1bW5z",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGhhdmluZw==",
+                        {
+                            "type": "NULL",
+                            "value": null
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGlnbm9yZUNhc2U=",
+                        {
+                            "type": "boolean",
+                            "value": false
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGpvaW5z",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAGxpbWl0",
+                        {
+                            "type": "integer",
+                            "value": 0
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAG1hcA==",
+                        {
+                            "type": "array",
+                            "items": [
+                                [
+                                    [
+                                        "string",
+                                        "YS5pZA=="
+                                    ],
+                                    {
+                                        "type": "object",
+                                        "class": "Criterion",
+                                        "id": 1,
+                                        "properties": [
+                                            [
+                                                "AENyaXRlcmlvbgBjbGF1c2Vz",
+                                                {
+                                                    "type": "array",
+                                                    "items": []
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgBjb2x1bW4=",
+                                                {
+                                                    "type": "string",
+                                                    "base64": "aWQ="
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgBjb21wYXJpc29u",
+                                                {
+                                                    "type": "string",
+                                                    "base64": "PQ=="
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgBjb25qdW5jdGlvbnM=",
+                                                {
+                                                    "type": "array",
+                                                    "items": []
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgBkYg==",
+                                                {
+                                                    "type": "object",
+                                                    "class": "DBAdapter",
+                                                    "id": 2,
+                                                    "properties": []
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgBpZ25vcmVTdHJpbmdDYXNl",
+                                                {
+                                                    "type": "boolean",
+                                                    "value": false
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgBwYXJlbnQ=",
+                                                {
+                                                    "type": "NULL",
+                                                    "value": null
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgByZWFsdGFibGU=",
+                                                {
+                                                    "type": "string",
+                                                    "base64": "YQ=="
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgB0YWJsZQ==",
+                                                {
+                                                    "type": "string",
+                                                    "base64": "YQ=="
+                                                }
+                                            ],
+                                            [
+                                                "AENyaXRlcmlvbgB2YWx1ZQ==",
+                                                {
+                                                    "type": "integer",
+                                                    "value": 1
+                                                }
+                                            ]
+                                        ]
+                                    }
+                                ]
+                            ]
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAG9mZnNldA==",
+                        {
+                            "type": "integer",
+                            "value": 0
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAG9yZGVyQnlDb2x1bW5z",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAG9yaWdpbmFsRGJOYW1l",
+                        {
+                            "type": "string",
+                            "base64": "Zml4dHVyZQ=="
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAHByaW1hcnlUYWJsZU5hbWU=",
+                        {
+                            "type": "NULL",
+                            "value": null
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAHNlbGVjdENvbHVtbnM=",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAHNlbGVjdE1vZGlmaWVycw==",
+                        {
+                            "type": "array",
+                            "items": []
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAHNpbmdsZVJlY29yZA==",
+                        {
+                            "type": "boolean",
+                            "value": false
+                        }
+                    ],
+                    [
+                        "AENyaXRlcmlhAHVzZVRyYW5zYWN0aW9u",
+                        {
+                            "type": "boolean",
+                            "value": false
+                        }
+                    ],
+                    [
+                        "Y3JldGVyaWFfZmlsdGVyX2F0dGFjaGVk",
+                        {
+                            "type": "boolean",
+                            "value": true
+                        }
+                    ]
+                ]
+            },
+            "reserialized_sha256": "d27098c3c5bc6962e59c94103b4efdf5f33f8ba52f60afd66abfffcc4380fac4"
+        }
+    },
+    "events": []
+}

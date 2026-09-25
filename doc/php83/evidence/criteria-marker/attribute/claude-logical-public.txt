@@ -1,0 +1,28 @@
+A revisão não encontrou bloqueadores e os dois guards passaram, então executei o comando autorizado nos dois labs. Terminou com exit 0.
+
+**Execuções** (evidências em `doc/php83/evidence/criteria-marker/attribute/`):
+
+| Caso | Exit | Resultado | Arquivos |
+|---|---|---|---|
+| Testes unitários (discovery) | 0 | 23 testes OK | `claude-logical-tests.log/.exit` |
+| `bash -n logical-run.sh` | 0 | sintaxe OK | `claude-logical-bash.log/.exit` |
+| `logical-collect.py` | 0 | ver abaixo | `claude-logical-command.log/.exit`; o helper gravou `logical-primary.json` e `logical-*` |
+
+**Resultado da coleta:**
+- Status gravado: `BOUNDED_TYPED_VALUES_MATCH_STRICT_LAYOUT_FAIL_RETAINED`.
+- Os três processos nativos (original74, original83 e attribute83) terminaram com exit 0.
+- O estado lógico tipado ficou idêntico nos três modos para os 7 payloads.
+- Bytes da reserialização iguais aos da entrada: original74 7/7, original83 4/7, attribute83 4/7. Portanto o strict FAIL anterior continua valendo. Igualdade tipada não é paridade de bytes.
+
+**Pontos da revisão que não bloqueiam:**
+- `logical-identities.json` é gravado sem checar se já existe; só `logical-primary.json` tem esse guard.
+- O `logical-compare.py` grava o rótulo de strict-FAIL como constante e não verifica se há de fato alguma divergência de bytes. Nesta execução a divergência existe (os 4/7 acima).
+
+**Limites:**
+- Nenhum attribute foi selecionado e não há aceitação do cache completo nem da aplicação.
+- Identidade e ciclos de referências em arrays não foram testados.
+- A ordem das propriedades de objeto foi ignorada de propósito.
+- O corpus se limita a 7 payloads.
+- Nada foi feito em SQL, produção ou caches, e nenhum fonte foi reescrito.
+
+O relatório completo está em `claude-logical-review.md`. A liberação dos labs fica com o coordenador.

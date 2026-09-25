@@ -1,0 +1,686 @@
+{
+  "scope": "17 previously graph-discovered files, same byte hashes; lexical candidates, not exhaustive dynamic member analysis",
+  "files": [
+    {
+      "path": "vendor/propel/util/Criteria.php",
+      "sha256": "0626bb5b976ae7eedccaf5060675cd7c7ca56b22fc2c9d6c1a51ce485a303543",
+      "declared_properties": [
+        "ignoreCase",
+        "singleRecord",
+        "selectModifiers",
+        "selectColumns",
+        "forceIndex",
+        "orderByColumns",
+        "groupByColumns",
+        "having",
+        "asColumns",
+        "joins",
+        "dbName",
+        "primaryTableName",
+        "originalDbName",
+        "limit",
+        "offset",
+        "blobFlag",
+        "aliases",
+        "useTransaction",
+        "map",
+        "idx",
+        "criteria",
+        "criteriaKeys",
+        "criteriaSize",
+        "value",
+        "comparison",
+        "table",
+        "realtable",
+        "column",
+        "ignoreStringCase",
+        "db",
+        "clauses",
+        "conjunctions",
+        "parent"
+      ],
+      "assignment_lines": [
+        {
+          "line": 186,
+          "text": "$this->originalDbName = $dbName;"
+        },
+        {
+          "line": 215,
+          "text": "$this->map = array();"
+        },
+        {
+          "line": 216,
+          "text": "$this->ignoreCase = false;"
+        },
+        {
+          "line": 217,
+          "text": "$this->singleRecord = false;"
+        },
+        {
+          "line": 218,
+          "text": "$this->selectModifiers = array();"
+        },
+        {
+          "line": 219,
+          "text": "$this->selectColumns = array();"
+        },
+        {
+          "line": 220,
+          "text": "$this->forceIndex = null;"
+        },
+        {
+          "line": 221,
+          "text": "$this->orderByColumns = array();"
+        },
+        {
+          "line": 222,
+          "text": "$this->groupByColumns = array();"
+        },
+        {
+          "line": 223,
+          "text": "$this->having = null;"
+        },
+        {
+          "line": 224,
+          "text": "$this->asColumns = array();"
+        },
+        {
+          "line": 225,
+          "text": "$this->joins = array();"
+        },
+        {
+          "line": 226,
+          "text": "$this->dbName = $this->originalDbName;"
+        },
+        {
+          "line": 227,
+          "text": "$this->offset = 0;"
+        },
+        {
+          "line": 228,
+          "text": "$this->limit = -1;"
+        },
+        {
+          "line": 229,
+          "text": "$this->blobFlag = null;"
+        },
+        {
+          "line": 230,
+          "text": "$this->aliases = array();"
+        },
+        {
+          "line": 231,
+          "text": "$this->useTransaction = false;"
+        },
+        {
+          "line": 251,
+          "text": "$this->asColumns[$name] = $clause;"
+        },
+        {
+          "line": 289,
+          "text": "$this->aliases[$alias] = $table;"
+        },
+        {
+          "line": 349,
+          "text": "$this->useTransaction = (boolean) $v;"
+        },
+        {
+          "line": 457,
+          "text": "$this->dbName = ($dbName === null ? Propel::getDefaultDB() : $dbName);"
+        },
+        {
+          "line": 485,
+          "text": "$this->primaryTableName = $tableName;"
+        },
+        {
+          "line": 565,
+          "text": "$this->map[$key] = $value;"
+        },
+        {
+          "line": 577,
+          "text": "$this->joins = $t->joins;"
+        },
+        {
+          "line": 612,
+          "text": "$this->map[$p1->getTable() . '.' . $p1->getColumn()] = $p1;"
+        },
+        {
+          "line": 614,
+          "text": "$this->map[$p1] = new Criterion($this, $p1, $value, $comparison);"
+        },
+        {
+          "line": 694,
+          "text": "$this->joins[] = $join;"
+        },
+        {
+          "line": 715,
+          "text": "$this->selectModifiers[] = self::ALL;"
+        },
+        {
+          "line": 725,
+          "text": "$this->selectModifiers[] = self::DISTINCT;"
+        },
+        {
+          "line": 737,
+          "text": "$this->ignoreCase = (boolean) $b;"
+        },
+        {
+          "line": 765,
+          "text": "$this->singleRecord = (boolean) $b;"
+        },
+        {
+          "line": 788,
+          "text": "$this->limit = $limit;"
+        },
+        {
+          "line": 811,
+          "text": "$this->offset = (int) $offset;"
+        },
+        {
+          "line": 833,
+          "text": "$this->selectColumns[] = $name;"
+        },
+        {
+          "line": 879,
+          "text": "$this->forceIndex = $forceIndex;"
+        },
+        {
+          "line": 888,
+          "text": "$this->selectColumns = $this->asColumns = array();"
+        },
+        {
+          "line": 910,
+          "text": "$this->groupByColumns[] = $groupBy;"
+        },
+        {
+          "line": 922,
+          "text": "$this->orderByColumns[] = $name . ' ' . self::ASC;"
+        },
+        {
+          "line": 934,
+          "text": "$this->orderByColumns[] = $name . ' ' . self::DESC;"
+        },
+        {
+          "line": 955,
+          "text": "$this->orderByColumns = array();"
+        },
+        {
+          "line": 966,
+          "text": "$this->groupByColumns = array();"
+        },
+        {
+          "line": 1112,
+          "text": "$this->having = $having;"
+        },
+        {
+          "line": 1152,
+          "text": "$this->map[$p1] = $nc;"
+        },
+        {
+          "line": 1208,
+          "text": "$this->map[$p1] = $nc;"
+        },
+        {
+          "line": 1254,
+          "text": "$this->criteria = $criteria;"
+        },
+        {
+          "line": 1255,
+          "text": "$this->criteriaKeys = $criteria->keys();"
+        },
+        {
+          "line": 1256,
+          "text": "$this->criteriaSize = count($this->criteriaKeys);"
+        },
+        {
+          "line": 1260,
+          "text": "$this->idx = 0;"
+        },
+        {
+          "line": 1343,
+          "text": "$this->value = $value;"
+        },
+        {
+          "line": 1347,
+          "text": "$this->table = null;"
+        },
+        {
+          "line": 1348,
+          "text": "$this->column = $column;"
+        },
+        {
+          "line": 1350,
+          "text": "$this->table = substr($column, 0, $dotPos);"
+        },
+        {
+          "line": 1351,
+          "text": "$this->column = substr($column, $dotPos+1, strlen($column));"
+        },
+        {
+          "line": 1353,
+          "text": "$this->comparison = ($comparison === null ? Criteria::EQUAL : $comparison);"
+        },
+        {
+          "line": 1378,
+          "text": "$this->realtable = $realtable;"
+        },
+        {
+          "line": 1400,
+          "text": "$this->table = $name;"
+        },
+        {
+          "line": 1452,
+          "text": "$this->db = $v;"
+        },
+        {
+          "line": 1466,
+          "text": "$this->ignoreStringCase = (boolean) $b;"
+        },
+        {
+          "line": 1504,
+          "text": "$this->clauses[] = $criterion;"
+        },
+        {
+          "line": 1505,
+          "text": "$this->conjunctions[] = self::UND;"
+        },
+        {
+          "line": 1515,
+          "text": "$this->clauses[] = $criterion;"
+        },
+        {
+          "line": 1516,
+          "text": "$this->conjunctions[] = self::ODER;"
+        },
+        {
+          "line": 1587,
+          "text": "$this->comparison = Criteria::ILIKE;"
+        },
+        {
+          "line": 1589,
+          "text": "$this->comparison = Criteria::NOT_ILIKE;"
+        }
+      ],
+      "serialization_magic_lines": [
+        {
+          "line": 1703,
+          "text": "$h = crc32(serialize($this->value)) ^ crc32($this->comparison);"
+        },
+        {
+          "line": 1721,
+          "text": "$h ^= crc32(serialize(array($sb,$params)));"
+        }
+      ]
+    },
+    {
+      "path": "alpha/apps/kaltura/lib/model/objectfilters/IKalturaDbQuery.php",
+      "sha256": "f9b9052659f667d3214d7823149345479f30828b716e6fecd45fe021a7817bee",
+      "declared_properties": [],
+      "assignment_lines": [],
+      "serialization_magic_lines": []
+    },
+    {
+      "path": "alpha/apps/kaltura/lib/model/objectfilters/KalturaCriteria.php",
+      "sha256": "becac7307ea27ae3f2a8742f02718e54efd3dbcca4ea5a8633a674969b62cadf",
+      "declared_properties": [
+        "maxRecords",
+        "recordsCount",
+        "fetchedIds",
+        "filters",
+        "doCount",
+        "selectColumn",
+        "groupByColumn"
+      ],
+      "assignment_lines": [
+        {
+          "line": 79,
+          "text": "$this->fetchedIds = $fetchedIds;"
+        },
+        {
+          "line": 87,
+          "text": "$this->recordsCount = $recordsCount;"
+        },
+        {
+          "line": 92,
+          "text": "$this->doCount = false;"
+        },
+        {
+          "line": 107,
+          "text": "$this->filters[] = $filter;"
+        },
+        {
+          "line": 124,
+          "text": "$this->hasAdvancedSearchFilter = true;"
+        },
+        {
+          "line": 273,
+          "text": "$this->groupByColumn = $name;"
+        },
+        {
+          "line": 278,
+          "text": "$this->selectColumn = $name;"
+        }
+      ],
+      "serialization_magic_lines": []
+    },
+    {
+      "path": "alpha/apps/kaltura/lib/myCriteria.class.php",
+      "sha256": "ea82576584de2faa22f989d1ebed1d939fed44c3b4552ed8e9cc77b03c033479",
+      "declared_properties": [
+        "ignore_select_column_list",
+        "index_hints_map"
+      ],
+      "assignment_lines": [
+        {
+          "line": 57,
+          "text": "$this->ignore_select_column_list[] = $name;"
+        },
+        {
+          "line": 72,
+          "text": "$this->ignore_select_column_list = array();"
+        },
+        {
+          "line": 81,
+          "text": "$this->hint[$table_name] = $index_to_use;"
+        }
+      ],
+      "serialization_magic_lines": []
+    },
+    {
+      "path": "plugins/content/caption/search/sphinx/SphinxCaptionAssetItemCriteria.php",
+      "sha256": "4c655e1131ce3796e11a73120acec9d80c3ed19e61bbb19610a2053374305129",
+      "declared_properties": [],
+      "assignment_lines": [],
+      "serialization_magic_lines": []
+    },
+    {
+      "path": "plugins/content_distribution/content_distribution_sphinx/lib/SphinxEntryDistributionCriteria.php",
+      "sha256": "96dce4625c29a0d7fa564ce1ea1098e4ea5a1963c0d91ecf96570e8888986e5e",
+      "declared_properties": [],
+      "assignment_lines": [],
+      "serialization_magic_lines": []
+    },
+    {
+      "path": "plugins/cue_points/quiz/sphinx/lib/SphinxAnswerCuePointCriteria.php",
+      "sha256": "c416c13072ca007da186498253c2562b6ca25b69a93d276687a64de13ee7e52a",
+      "declared_properties": [
+        "filter"
+      ],
+      "assignment_lines": [],
+      "serialization_magic_lines": []
+    },
+    {
+      "path": "plugins/cue_points/sphinx/lib/SphinxCuePointCriteria.php",
+      "sha256": "bb342881c90ccd31849a6b80adff3f7e15bccd1d6d341bf56cec844ba43885f1",
+      "declared_properties": [
+        "filter"
+      ],
+      "assignment_lines": [
+        {
+          "line": 69,
+          "text": "$this->sphinxSkipped = false;"
+        },
+        {
+          "line": 77,
+          "text": "$this->sphinxSkipped = false;"
+        }
+      ],
+      "serialization_magic_lines": []
+    },
+    {
+      "path": "plugins/metadata/sphinx/lib/SphinxMetadataCriteria.php",
+      "sha256": "872b194c68c9b389bf364dc724c9e1ac37434ba768cdea74ad83682dc5c2fc92",
+      "declared_properties": [],
+      "assignment_lines": [],
+      "serialization_magic_lines": []
+    },
+    {
+      "path": "plugins/reach/sphinx/lib/SphinxEntryVendorTaskCriteria.php",
+      "sha256": "a033b4542b836492e7cd1db72d972baddf7abb08c5b40434314a10155bf433eb",
+      "declared_properties": [
+        "filter"
+      ],
+      "assignment_lines": [
+        {
+          "line": 32,
+          "text": "$this->sphinxSkipped = false;"
+        }
+      ],
+      "serialization_magic_lines": []
+    },
+    {
+      "path": "plugins/schedule/sphinx/lib/SphinxScheduleEventCriteria.php",
+      "sha256": "f46cb493079b05ed75295616f395fc5eab4370f8cc03099b4a57d9a58a6a04e6",
+      "declared_properties": [
+        "filter"
+      ],
+      "assignment_lines": [
+        {
+          "line": 31,
+          "text": "$this->sphinxSkipped = false;"
+        }
+      ],
+      "serialization_magic_lines": []
+    },
+    {
+      "path": "plugins/search/providers/sphinx_search/lib/SphinxCategoryCriteria.php",
+      "sha256": "1573d0a9f7fbe7d273fa6d81b622a76e7e840db0f7c21946af1d575789f71fc9",
+      "declared_properties": [],
+      "assignment_lines": [
+        {
+          "line": 76,
+          "text": "$this->matchClause[] = '(@(' . categoryFilter::MEMBERS . ') ' . $manager . '_' . $kuserId . ')';"
+        },
+        {
+          "line": 88,
+          "text": "$this->matchClause[] = '(@(' . categoryFilter::MEMBERS . ') ' ."
+        }
+      ],
+      "serialization_magic_lines": []
+    },
+    {
+      "path": "plugins/search/providers/sphinx_search/lib/SphinxCategoryKuserCriteria.php",
+      "sha256": "eb54efe3d41fc49bdaed68eb04f1c50a969fa4f20410a0c20a06ae77356ec384",
+      "declared_properties": [],
+      "assignment_lines": [],
+      "serialization_magic_lines": []
+    },
+    {
+      "path": "plugins/search/providers/sphinx_search/lib/SphinxCriteria.php",
+      "sha256": "a860930badf886f6e9bfbd516a6c6a3ee61f649055d2bbdb2a2ff2ef4d198ab5",
+      "declared_properties": [
+        "NEGATIVE_COMPARISON_VALUES",
+        "ranker",
+        "keyToRemove",
+        "whereClause",
+        "matchClause",
+        "conditionClause",
+        "conditionClauseEqualsZero",
+        "orderByClause",
+        "numericalOrderConditions",
+        "applySortRequired",
+        "nonSphinxOrderColumns",
+        "sphinxRecordCount",
+        "criteriasLeft",
+        "ids",
+        "hasAdvancedSearchFilter",
+        "sphinxSkipped",
+        "forcedOrderIds",
+        "forceSkipSphinx",
+        "sphinxOptimizationsFilterKeys",
+        "disablePartnerOptimization"
+      ],
+      "assignment_lines": [
+        {
+          "line": 112,
+          "text": "$this->disablePartnerOptimization = $value;"
+        },
+        {
+          "line": 149,
+          "text": "$this->ids[$comparison] = $ids;"
+        },
+        {
+          "line": 179,
+          "text": "$this->selectColumn = $objectClass::getSphinxIdField();"
+        },
+        {
+          "line": 260,
+          "text": "$this->sphinxRecordCount = false;"
+        },
+        {
+          "line": 269,
+          "text": "$this->sphinxRecordCount =  (int)$metaItem['Value'];"
+        },
+        {
+          "line": 301,
+          "text": "$this->recordsCount = 0;"
+        },
+        {
+          "line": 307,
+          "text": "$this->recordsCount = $this->sphinxRecordCount;"
+        },
+        {
+          "line": 312,
+          "text": "$this->recordsCount = count($this->getFetchedIds());"
+        },
+        {
+          "line": 324,
+          "text": "$this->recordsCount = $objectClass::doCountOnPeer($c);"
+        },
+        {
+          "line": 479,
+          "text": "$this->matchClause[] = \"( @sphinx_match_optimizations \" . implode(\" | \", $formatedStr) . \")\";"
+        },
+        {
+          "line": 519,
+          "text": "$this->criteriasLeft = 0;"
+        },
+        {
+          "line": 533,
+          "text": "$this->sphinxSkipped = true;"
+        },
+        {
+          "line": 564,
+          "text": "$this->keyToRemove[] = $field;"
+        },
+        {
+          "line": 580,
+          "text": "$this->matchClause = array_unique($this->matchClause);"
+        },
+        {
+          "line": 613,
+          "text": "$this->whereClause = array_unique($this->whereClause);"
+        },
+        {
+          "line": 630,
+          "text": "$this->nonSphinxOrderColumns = array();"
+        },
+        {
+          "line": 659,
+          "text": "$this->nonSphinxOrderColumns[] = array($column, strtoupper($direction));"
+        },
+        {
+          "line": 672,
+          "text": "$this->applySortRequired = true;"
+        },
+        {
+          "line": 681,
+          "text": "$this->applySortRequired = true;"
+        },
+        {
+          "line": 685,
+          "text": "$this->applySortRequired = false;"
+        },
+        {
+          "line": 688,
+          "text": "$this->ranker = self::RANKER_NONE;"
+        },
+        {
+          "line": 691,
+          "text": "$this->ranker = self::RANKER_BM25;"
+        },
+        {
+          "line": 1012,
+          "text": "$this->hasAdvancedSearchFilter = true;"
+        },
+        {
+          "line": 1175,
+          "text": "$this->recordsCount = $objectClass::doCountOnPeer($c);"
+        },
+        {
+          "line": 1177,
+          "text": "$this->sphinxSkipped = false;"
+        },
+        {
+          "line": 1197,
+          "text": "$this->whereClause[] = $statement;"
+        },
+        {
+          "line": 1209,
+          "text": "$this->matchClause[] = $match;"
+        },
+        {
+          "line": 1222,
+          "text": "$this->conditionClause[] = $condition;"
+        },
+        {
+          "line": 1231,
+          "text": "$this->conditionClauseEqualsZero[] = $condition;"
+        },
+        {
+          "line": 1239,
+          "text": "$this->numericalOrderConditions[] = \"integer($column) $newColumn\";"
+        },
+        {
+          "line": 1250,
+          "text": "$this->orderByClause[] = \"$column $orderByType\";"
+        },
+        {
+          "line": 1272,
+          "text": "$this->selectColumn = $sphinxColumnName;"
+        },
+        {
+          "line": 1279,
+          "text": "$this->groupByColumn = $sphinxColumnName;"
+        },
+        {
+          "line": 1346,
+          "text": "$this->matchClause[] = $matches;"
+        },
+        {
+          "line": 1366,
+          "text": "$this->sphinxOptimizationsFilterKeys[] = $key;"
+        }
+      ],
+      "serialization_magic_lines": [
+        {
+          "line": 517,
+          "text": "KalturaLog::debug('kaltura_entry_criteria ' . serialize($this));"
+        }
+      ]
+    },
+    {
+      "path": "plugins/search/providers/sphinx_search/lib/SphinxEntryCriteria.php",
+      "sha256": "8d56bde33b1ae625c3f968306de60090f519d62ad35636c764b0c9f5ab7b4b05",
+      "declared_properties": [
+        "filter"
+      ],
+      "assignment_lines": [],
+      "serialization_magic_lines": []
+    },
+    {
+      "path": "plugins/search/providers/sphinx_search/lib/SphinxKuserCriteria.php",
+      "sha256": "bfb1824d2bd6b78583bdb5f6a603f46406689ae05803e8637e8d271074c350d7",
+      "declared_properties": [],
+      "assignment_lines": [],
+      "serialization_magic_lines": []
+    },
+    {
+      "path": "plugins/tag_search/sphinx/SphinxTagCriteria.php",
+      "sha256": "675ca5e69928cc461dcc02d2f358570777b4454608f39774fe89e292e8787792",
+      "declared_properties": [],
+      "assignment_lines": [],
+      "serialization_magic_lines": []
+    }
+  ]
+}

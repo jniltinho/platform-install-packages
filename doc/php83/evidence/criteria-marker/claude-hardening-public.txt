@@ -1,0 +1,30 @@
+A revisão foi concluída. Os 22 testes locais passaram e o `bash -n` do `run.sh` também. Ainda ficam dois bloqueios de gravidade média: a linha 38/40 e a linha 51 estão fixas no código e não foram conferidas com o fonte. Nenhum PHP foi executado e não há aceitação da aplicação. O relatório está em `doc/php83/evidence/criteria-marker/claude-hardening-review.md`.
+
+**Execuções** (saídas reais guardadas em `claude-hardening-*`)
+- **`unittest discover`:** 22 testes (4 de prepare, 13 de compare e 5 de verify), código de saída 0. A saída está em `claude-hardening-tests.{stdout,stderr,exit}`. Para os testes não usarem o `/tmp`, apontei o `TMPDIR` para uma pasta minha dentro do repositório; ela ficou vazia e foi removida.
+- **`bash -n run.sh`:** código de saída 0, sem nenhuma saída. Está em `claude-hardening-bash.{stdout,stderr,exit}`.
+- Os hashes atuais de `probe.php`, `run.sh` e `verify.py` são iguais aos de `hardening-identities.json`.
+
+**O que foi resolvido desde a revisão anterior**
+- **json no PHP 7.4:** o `run.sh:5` agora carrega a extensão json explicitamente. Isso ainda não foi observado em execução real.
+- **Diagnósticos não relacionados:** o `compare.py:47-70` agora os compara por runtime e rejeita qualquer diferença. As diferenças brutas ficam guardadas, e o ajuste de linha só vale para eventos de `declaration.php` a partir da linha 40.
+- **Pin de identidade:** o hash esperado vem do processo pai, e há verificação antes e depois da execução (`verify.py:7-17`, `run.sh:11-13`, com `trap` que sai com código 70).
+- **Ligação stdout/body:** `compare.py:36`. A comparação é pelo JSON decodificado, não byte a byte.
+- **stderr nativo:** continua sendo preservado. Os 15 casos e a ordem batem, e as diferenças de serialização são reportadas à parte da paridade.
+
+**Bloqueios e limites que restam**
+1. **Média:** `compare.py:54-65` supõe que a âncora está na linha 38 do original e ajusta a partir da linha 40. Isso não foi conferido contra o fonte fixado, e `prepare.py:14` não registra a linha da âncora.
+2. **Média:** `compare.py:43` fixa a linha 51 de `criteriaFilter.php`, também sem conferência local. O `any()` aceita eventos extras do marcador no original83 sem rejeitá-los.
+3. **Baixa:** o stderr é apenas guardado como hash (`compare.py:77`), sem comparar o texto entre as variantes.
+4. **Baixa:** ainda há uma janela TOCTOU (a pasta pode mudar entre a checagem e a execução), e o `verify.py` roda de dentro da própria área de staging. As duas coisas dependem do congelamento feito pelo processo pai. Um manifesto malformado gera `KeyError` em vez de `ValueError`, mas mesmo assim a execução para.
+5. **Baixa:** faltam testes para:
+   - marcador inesperado nas variantes declaration ou 7.4;
+   - prefixo de versão do PHP errado;
+   - roundtrip de serialização quebrado;
+   - caminho de representação ausente;
+   - a fronteira das linhas 39/40;
+   - inventário do `verify` com arquivo a mais ou a menos;
+   - symlink na pasta base ou no manifesto;
+   - `prepare()` com ZIP.
+
+**O que não foi executado:** o runtime PHP, o sandbox `systemd-run`, o carregamento real do json no 7.4, a observação real do marcador na linha 51 e o unserialize entre versões. Os 22 testes são checagens locais com dados sintéticos e não servem como evidência de execução.

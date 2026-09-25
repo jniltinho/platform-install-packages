@@ -1,0 +1,29 @@
+Terminei a revisão, que ficou só no repositório, sem rodar nada nas VMs. **Não encontrei nenhum defeito que bloqueie** no probe, no collector ou no compare. Nada foi executado nos labs, então o parse/comportamento do attribute74 e os imports byte-exact do 8.3 continuam **sem prova**.
+
+Os comandos locais passaram:
+
+| Comando | Exit | Resultado |
+|---|---|---|
+| `python3 -m unittest discover -s tools/php83/criteria-marker/attribute -p 'test_*.py' -v` | 0 | 14 testes OK |
+| `bash -n tools/php83/criteria-marker/attribute/run.sh` | 0 | sintaxe válida |
+
+As saídas estão em `claude-tests.{stdout,stderr,exit}` e `claude-bash.{stdout,stderr,exit}`. O relatório completo, com caminhos e linhas, está em `doc/php83/evidence/criteria-marker/attribute/claude-review.md`.
+
+**O que conferi e se sustenta:**
+- **Classes originais completas:** os cinco fontes estão fixados por hash dentro do ZIP; só DBAdapter e Propel são stubs.
+- **Transformação do attribute:** há uma âncora única e ela precisa estar exatamente na linha 38. O compare desconta 1 das linhas ≥39 do attribute, o que bate com a linha inserida.
+- **Matriz de 19 casos:** a ordem no probe é a mesma de `compare.CASES`.
+- **attribute74:** tem que rodar de fato, com exit 0, PHP 7.4.x, linhas idênticas às do original74 e nenhum aviso de propriedade dinâmica.
+- **myCriteria e KalturaCriteria:** o original83 tem que emitir os avisos reais de `myCriteria::$hint` e do marcador herdado pela KalturaCriteria. O attribute83 não pode emitir nenhum aviso da hierarquia, o que testa a herança do attribute.
+- **Controle da classe não relacionada:** nos dois modos 8.3 é exigido exatamente um E_DEPRECATED, e ele tem que aparecer também no stderr nativo.
+- **Payloads legados:** os sete vêm só das linhas gravadas do original74 e o compare confere de novo essa origem. A re-serialização no 8.3 tem que ser byte-idêntica aos bytes do 7.4, e os imports do original83 e do attribute83 têm que ser iguais.
+- **Stage:** é criado do zero (`mkdir` falha se já existir), pertence ao root e fica somente leitura. O pin do manifest vem do host pai, com verificação antes e depois em `run.sh`, e os hashes de fonte e runtime também são comparados antes e depois.
+
+**Achados que não bloqueiam:**
+1. O `compare.validate` não confere se o hash de `legacy.json` no manifest do 8.3 corresponde aos `payloads`, nem se o do 7.4 é `{}`. Hoje isso depende só de o collector estar certo; basta um assert para resolver.
+2. A identidade do runtime só é comparada antes e depois, sem ser fixada contra um valor esperado.
+3. Não há checagem de arquivos extras no stage. O risco é baixo, porque o `mkdir` garante stage novo.
+4. Não dá para confirmar, só pelo repositório, que KalturaCriteria e myCriteria carregam apenas com esses stubs, porque os fontes fixados estão no ZIP em `/tmp`, que não li. Se faltar alguma dependência, o resultado será exit ≠ 0, não um falso sucesso.
+5. `attribute74_executed` e `hierarchy_exemption_broader_than_marker` são constantes fixas no código. A segunda é uma afirmação de design, não uma evidência.
+
+Os arquivos `claude-prep-prompt.txt`, `claude-raw.json` e `claude.stderr` já existiam no diretório de evidência e eu não mexi neles.

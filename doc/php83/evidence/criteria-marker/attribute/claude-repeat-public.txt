@@ -1,0 +1,23 @@
+Rodei `python3 tools/php83/criteria-marker/attribute/repeat.py` uma única vez, com exit **0**. Os quatro processos repetem exatamente a execução primária, e a falha estrita de representação entre runtimes continua como falha. Isso não é PASS, e nenhum atributo foi selecionado.
+
+**Caso:** repetição independente em quatro processos do experimento de atributo, sobre os estágios congelados existentes (`/home/vagrant/php-criteria-marker-attribute-v1`).
+**Executor:** Claude CLI. A revisão independente ainda não foi feita.
+**Ambiente:** labs `baseline74` e `php83`, acessados só pela configuração SSH já existente em `/tmp/kaltura-php{74,83}-ssh.conf`, sem ações negadas.
+
+**Evidência** em `doc/php83/evidence/criteria-marker/attribute/`:
+- `claude-repeat-command.{stdout,stderr,exit}`: exit 0; a saída padrão é a mensagem que o helper imprime ao concluir.
+- `claude.json`, o relatório gerado pelo helper e preservado como veio: status `EXACT_PRIMARY_REPEAT_STRICT_LAYOUT_FAILURE_RETAINED`, `comparison_error: "Exact state/representation differs"`, `patch_selected: false`, `application_acceptance: false`.
+- `claude-{original,attribute}{74,83}.{stdout,stderr,exit}`: as quatro execuções terminaram com exit 0.
+
+**O que o helper verificou (senão teria abortado):**
+- O sha256 dos fontes e do `identities.json` bate com o esperado antes e depois, nos dois labs.
+- A identidade de runtime (versão, módulos, hashes de binários e libs) é igual à da execução primária, antes e depois.
+- A saída bruta dos quatro processos é idêntica byte a byte à da primária.
+- A falha estrita é a mesma da primária.
+
+**Leitura dos resultados:**
+- **Dentro de cada runtime**, `original` e `attribute` produzem linhas idênticas (`same_runtime_exact_rows` 74 e 83 = true). O atributo não mudou nada observável no mesmo runtime.
+- **Entre 7.4 e 8.3**, o `serialize()` de `myCriteria`/`KalturaCriteria` tem o mesmo comprimento (1175 e 1239 bytes) e hash diferente. Os prefixos mostram por quê: o 7.4 serializa primeiro as propriedades da classe filha (`ignore_select_column_list`, `recordsCount`…), e o 8.3 começa pelas propriedades privadas herdadas de `Criteria` (`ignoreCase`, `singleRecord`…). É uma diferença de ordem das propriedades herdadas que já existia na baseline, e não foi introduzida pelo atributo. Os snapshots `/clone`, `/fresh`, `/once_twice` e `/serialize_attached` são idênticos byte a byte.
+- **Hash diferente, por si só, não significa perda de dados.** Os payloads legados do 7.4 importados no 8.3 resultam na mesma importação por atributo (`same_attribute_import: true` nos 7 casos). Mesmo assim, o validador estrito exige bytes idênticos e continua falhando. Esse gate permanece aberto.
+
+**Limitações:** esta execução não é aceitação da aplicação. Não houve staging, edição de fonte, SQL, `.20` nem seleção de patch, e não chamei o `main()` do `collect.py`. A revisão independente por outro CLI continua pendente, e os labs só voltam para o coordenador quando ele os liberar.

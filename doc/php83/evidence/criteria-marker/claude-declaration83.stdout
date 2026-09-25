@@ -1,0 +1,363 @@
+{
+    "schema": 1,
+    "php": "8.3.6",
+    "variant": "declaration",
+    "rows": {
+        "fresh": {
+            "state": {
+                "keys": [],
+                "nodes": [],
+                "order": [],
+                "isset": false,
+                "marker": null
+            },
+            "representation": {
+                "property_exists": true,
+                "public_vars": {
+                    "creteria_filter_attached": null
+                },
+                "serialized_base64": "Tzo4OiJDcml0ZXJpYSI6MjA6e3M6MjQ6ImNyZXRlcmlhX2ZpbHRlcl9hdHRhY2hlZCI7TjtzOjIwOiIAQ3JpdGVyaWEAaWdub3JlQ2FzZSI7YjowO3M6MjI6IgBDcml0ZXJpYQBzaW5nbGVSZWNvcmQiO2I6MDtzOjI1OiIAQ3JpdGVyaWEAc2VsZWN0TW9kaWZpZXJzIjthOjA6e31zOjIzOiIAQ3JpdGVyaWEAc2VsZWN0Q29sdW1ucyI7YTowOnt9czoyMDoiAENyaXRlcmlhAGZvcmNlSW5kZXgiO047czoyNDoiAENyaXRlcmlhAG9yZGVyQnlDb2x1bW5zIjthOjA6e31zOjI0OiIAQ3JpdGVyaWEAZ3JvdXBCeUNvbHVtbnMiO2E6MDp7fXM6MTY6IgBDcml0ZXJpYQBoYXZpbmciO047czoxOToiAENyaXRlcmlhAGFzQ29sdW1ucyI7YTowOnt9czoxNToiAENyaXRlcmlhAGpvaW5zIjthOjA6e31zOjE2OiIAQ3JpdGVyaWEAZGJOYW1lIjtzOjc6ImZpeHR1cmUiO3M6MjY6IgBDcml0ZXJpYQBwcmltYXJ5VGFibGVOYW1lIjtOO3M6MjQ6IgBDcml0ZXJpYQBvcmlnaW5hbERiTmFtZSI7czo3OiJmaXh0dXJlIjtzOjE1OiIAQ3JpdGVyaWEAbGltaXQiO2k6MDtzOjE2OiIAQ3JpdGVyaWEAb2Zmc2V0IjtpOjA7czoxODoiAENyaXRlcmlhAGJsb2JGbGFnIjtOO3M6MTc6IgBDcml0ZXJpYQBhbGlhc2VzIjthOjE6e3M6MToiYSI7czoxOiJhIjt9czoyNDoiAENyaXRlcmlhAHVzZVRyYW5zYWN0aW9uIjtiOjA7czoxMzoiAENyaXRlcmlhAG1hcCI7YTowOnt9fQ==",
+                "serialized_bytes": 703,
+                "serialized_sha256": "9a79879ed512896c9b374d1d7ad89e6049b778197eb3afad0ded5a0176aab80c",
+                "roundtrip_bytes_identical": true
+            }
+        },
+        "disabled": {
+            "keys": [],
+            "nodes": [],
+            "order": [],
+            "isset": false,
+            "marker": null
+        },
+        "once_twice": [
+            {
+                "keys": [
+                    "a.id"
+                ],
+                "nodes": {
+                    "a.id": [
+                        "a",
+                        "id",
+                        1,
+                        "=",
+                        [],
+                        []
+                    ]
+                },
+                "order": [],
+                "isset": true,
+                "marker": true
+            },
+            {
+                "keys": [
+                    "a.id"
+                ],
+                "nodes": {
+                    "a.id": [
+                        "a",
+                        "id",
+                        1,
+                        "=",
+                        [],
+                        []
+                    ]
+                },
+                "order": [],
+                "isset": true,
+                "marker": true
+            },
+            {
+                "property_exists": true,
+                "public_vars": {
+                    "creteria_filter_attached": true
+                },
+                "serialized_base64": "Tzo4OiJDcml0ZXJpYSI6MjA6e3M6MjQ6ImNyZXRlcmlhX2ZpbHRlcl9hdHRhY2hlZCI7YjoxO3M6MjA6IgBDcml0ZXJpYQBpZ25vcmVDYXNlIjtiOjA7czoyMjoiAENyaXRlcmlhAHNpbmdsZVJlY29yZCI7YjowO3M6MjU6IgBDcml0ZXJpYQBzZWxlY3RNb2RpZmllcnMiO2E6MDp7fXM6MjM6IgBDcml0ZXJpYQBzZWxlY3RDb2x1bW5zIjthOjA6e31zOjIwOiIAQ3JpdGVyaWEAZm9yY2VJbmRleCI7TjtzOjI0OiIAQ3JpdGVyaWEAb3JkZXJCeUNvbHVtbnMiO2E6MDp7fXM6MjQ6IgBDcml0ZXJpYQBncm91cEJ5Q29sdW1ucyI7YTowOnt9czoxNjoiAENyaXRlcmlhAGhhdmluZyI7TjtzOjE5OiIAQ3JpdGVyaWEAYXNDb2x1bW5zIjthOjA6e31zOjE1OiIAQ3JpdGVyaWEAam9pbnMiO2E6MDp7fXM6MTY6IgBDcml0ZXJpYQBkYk5hbWUiO3M6NzoiZml4dHVyZSI7czoyNjoiAENyaXRlcmlhAHByaW1hcnlUYWJsZU5hbWUiO047czoyNDoiAENyaXRlcmlhAG9yaWdpbmFsRGJOYW1lIjtzOjc6ImZpeHR1cmUiO3M6MTU6IgBDcml0ZXJpYQBsaW1pdCI7aTowO3M6MTY6IgBDcml0ZXJpYQBvZmZzZXQiO2k6MDtzOjE4OiIAQ3JpdGVyaWEAYmxvYkZsYWciO047czoxNzoiAENyaXRlcmlhAGFsaWFzZXMiO2E6MTp7czoxOiJhIjtzOjE6ImEiO31zOjI0OiIAQ3JpdGVyaWEAdXNlVHJhbnNhY3Rpb24iO2I6MDtzOjEzOiIAQ3JpdGVyaWEAbWFwIjthOjE6e3M6NDoiYS5pZCI7Tzo5OiJDcml0ZXJpb24iOjEwOntzOjE2OiIAQ3JpdGVyaW9uAHZhbHVlIjtpOjE7czoyMToiAENyaXRlcmlvbgBjb21wYXJpc29uIjtzOjE6Ij0iO3M6MTY6IgBDcml0ZXJpb24AdGFibGUiO3M6MToiYSI7czoyMDoiAENyaXRlcmlvbgByZWFsdGFibGUiO3M6MToiYSI7czoxNzoiAENyaXRlcmlvbgBjb2x1bW4iO3M6MjoiaWQiO3M6Mjc6IgBDcml0ZXJpb24AaWdub3JlU3RyaW5nQ2FzZSI7YjowO3M6MTM6IgBDcml0ZXJpb24AZGIiO086OToiREJBZGFwdGVyIjowOnt9czoxODoiAENyaXRlcmlvbgBjbGF1c2VzIjthOjA6e31zOjIzOiIAQ3JpdGVyaW9uAGNvbmp1bmN0aW9ucyI7YTowOnt9czoxNzoiAENyaXRlcmlvbgBwYXJlbnQiO047fX19",
+                "serialized_bytes": 1080,
+                "serialized_sha256": "2d0812f268dfe70451b6efeaf03db73b277445db3b96e741d39dabcbecc96b7f",
+                "roundtrip_bytes_identical": true
+            }
+        ],
+        "two_filters": {
+            "keys": [
+                "a.id"
+            ],
+            "nodes": {
+                "a.id": [
+                    "a",
+                    "id",
+                    1,
+                    "=",
+                    [],
+                    []
+                ]
+            },
+            "order": [],
+            "isset": true,
+            "marker": true
+        },
+        "preset_true": {
+            "keys": [],
+            "nodes": [],
+            "order": [],
+            "isset": true,
+            "marker": true
+        },
+        "preset_false": {
+            "keys": [],
+            "nodes": [],
+            "order": [],
+            "isset": true,
+            "marker": false
+        },
+        "preset_null": {
+            "keys": [
+                "a.id"
+            ],
+            "nodes": {
+                "a.id": [
+                    "a",
+                    "id",
+                    1,
+                    "=",
+                    [],
+                    []
+                ]
+            },
+            "order": [],
+            "isset": true,
+            "marker": true
+        },
+        "unset_reapply": {
+            "keys": [
+                "a.id"
+            ],
+            "nodes": {
+                "a.id": [
+                    "a",
+                    "id",
+                    1,
+                    "=",
+                    [
+                        " AND "
+                    ],
+                    [
+                        [
+                            "a",
+                            "id",
+                            2,
+                            "=",
+                            [],
+                            []
+                        ]
+                    ]
+                ]
+            },
+            "order": [],
+            "isset": true,
+            "marker": true
+        },
+        "clone": [
+            {
+                "keys": [
+                    "a.id"
+                ],
+                "nodes": {
+                    "a.id": [
+                        "a",
+                        "id",
+                        1,
+                        "=",
+                        [],
+                        []
+                    ]
+                },
+                "order": [],
+                "isset": true,
+                "marker": true
+            },
+            {
+                "keys": [
+                    "a.id"
+                ],
+                "nodes": {
+                    "a.id": [
+                        "a",
+                        "id",
+                        1,
+                        "=",
+                        [],
+                        []
+                    ]
+                },
+                "order": [],
+                "isset": true,
+                "marker": true
+            },
+            {
+                "property_exists": true,
+                "public_vars": {
+                    "creteria_filter_attached": true
+                },
+                "serialized_base64": "Tzo4OiJDcml0ZXJpYSI6MjA6e3M6MjQ6ImNyZXRlcmlhX2ZpbHRlcl9hdHRhY2hlZCI7YjoxO3M6MjA6IgBDcml0ZXJpYQBpZ25vcmVDYXNlIjtiOjA7czoyMjoiAENyaXRlcmlhAHNpbmdsZVJlY29yZCI7YjowO3M6MjU6IgBDcml0ZXJpYQBzZWxlY3RNb2RpZmllcnMiO2E6MDp7fXM6MjM6IgBDcml0ZXJpYQBzZWxlY3RDb2x1bW5zIjthOjA6e31zOjIwOiIAQ3JpdGVyaWEAZm9yY2VJbmRleCI7TjtzOjI0OiIAQ3JpdGVyaWEAb3JkZXJCeUNvbHVtbnMiO2E6MDp7fXM6MjQ6IgBDcml0ZXJpYQBncm91cEJ5Q29sdW1ucyI7YTowOnt9czoxNjoiAENyaXRlcmlhAGhhdmluZyI7TjtzOjE5OiIAQ3JpdGVyaWEAYXNDb2x1bW5zIjthOjA6e31zOjE1OiIAQ3JpdGVyaWEAam9pbnMiO2E6MDp7fXM6MTY6IgBDcml0ZXJpYQBkYk5hbWUiO3M6NzoiZml4dHVyZSI7czoyNjoiAENyaXRlcmlhAHByaW1hcnlUYWJsZU5hbWUiO047czoyNDoiAENyaXRlcmlhAG9yaWdpbmFsRGJOYW1lIjtzOjc6ImZpeHR1cmUiO3M6MTU6IgBDcml0ZXJpYQBsaW1pdCI7aTowO3M6MTY6IgBDcml0ZXJpYQBvZmZzZXQiO2k6MDtzOjE4OiIAQ3JpdGVyaWEAYmxvYkZsYWciO047czoxNzoiAENyaXRlcmlhAGFsaWFzZXMiO2E6MTp7czoxOiJhIjtzOjE6ImEiO31zOjI0OiIAQ3JpdGVyaWEAdXNlVHJhbnNhY3Rpb24iO2I6MDtzOjEzOiIAQ3JpdGVyaWEAbWFwIjthOjE6e3M6NDoiYS5pZCI7Tzo5OiJDcml0ZXJpb24iOjEwOntzOjE2OiIAQ3JpdGVyaW9uAHZhbHVlIjtpOjE7czoyMToiAENyaXRlcmlvbgBjb21wYXJpc29uIjtzOjE6Ij0iO3M6MTY6IgBDcml0ZXJpb24AdGFibGUiO3M6MToiYSI7czoyMDoiAENyaXRlcmlvbgByZWFsdGFibGUiO3M6MToiYSI7czoxNzoiAENyaXRlcmlvbgBjb2x1bW4iO3M6MjoiaWQiO3M6Mjc6IgBDcml0ZXJpb24AaWdub3JlU3RyaW5nQ2FzZSI7YjowO3M6MTM6IgBDcml0ZXJpb24AZGIiO086OToiREJBZGFwdGVyIjowOnt9czoxODoiAENyaXRlcmlvbgBjbGF1c2VzIjthOjA6e31zOjIzOiIAQ3JpdGVyaW9uAGNvbmp1bmN0aW9ucyI7YTowOnt9czoxNzoiAENyaXRlcmlvbgBwYXJlbnQiO047fX19",
+                "serialized_bytes": 1080,
+                "serialized_sha256": "2d0812f268dfe70451b6efeaf03db73b277445db3b96e741d39dabcbecc96b7f",
+                "roundtrip_bytes_identical": true
+            }
+        ],
+        "clear": {
+            "keys": [],
+            "nodes": [],
+            "order": [],
+            "isset": true,
+            "marker": true
+        },
+        "empty_filter": {
+            "keys": [],
+            "nodes": [],
+            "order": [],
+            "isset": true,
+            "marker": true
+        },
+        "nested_order": {
+            "keys": [
+                "a.id"
+            ],
+            "nodes": {
+                "a.id": [
+                    "a",
+                    "id",
+                    1,
+                    "=",
+                    [
+                        " OR "
+                    ],
+                    [
+                        [
+                            "a",
+                            "id",
+                            2,
+                            "=",
+                            [],
+                            []
+                        ]
+                    ]
+                ]
+            },
+            "order": [
+                "a.id ASC",
+                "a.name DESC"
+            ],
+            "isset": true,
+            "marker": true
+        },
+        "duplicate_constraint": {
+            "keys": [
+                "a.id"
+            ],
+            "nodes": {
+                "a.id": [
+                    "a",
+                    "id",
+                    1,
+                    "=",
+                    [],
+                    []
+                ]
+            },
+            "order": [],
+            "isset": true,
+            "marker": true
+        },
+        "exception_marker": [
+            [
+                "Error",
+                "Call to a member function keys() on null"
+            ],
+            {
+                "keys": [],
+                "nodes": [],
+                "order": [],
+                "isset": true,
+                "marker": true
+            }
+        ],
+        "serialize_attached": [
+            {
+                "keys": [
+                    "a.id"
+                ],
+                "nodes": {
+                    "a.id": [
+                        "a",
+                        "id",
+                        1,
+                        "=",
+                        [],
+                        []
+                    ]
+                },
+                "order": [],
+                "isset": true,
+                "marker": true
+            },
+            {
+                "property_exists": true,
+                "public_vars": {
+                    "creteria_filter_attached": true
+                },
+                "serialized_base64": "Tzo4OiJDcml0ZXJpYSI6MjA6e3M6MjQ6ImNyZXRlcmlhX2ZpbHRlcl9hdHRhY2hlZCI7YjoxO3M6MjA6IgBDcml0ZXJpYQBpZ25vcmVDYXNlIjtiOjA7czoyMjoiAENyaXRlcmlhAHNpbmdsZVJlY29yZCI7YjowO3M6MjU6IgBDcml0ZXJpYQBzZWxlY3RNb2RpZmllcnMiO2E6MDp7fXM6MjM6IgBDcml0ZXJpYQBzZWxlY3RDb2x1bW5zIjthOjA6e31zOjIwOiIAQ3JpdGVyaWEAZm9yY2VJbmRleCI7TjtzOjI0OiIAQ3JpdGVyaWEAb3JkZXJCeUNvbHVtbnMiO2E6MDp7fXM6MjQ6IgBDcml0ZXJpYQBncm91cEJ5Q29sdW1ucyI7YTowOnt9czoxNjoiAENyaXRlcmlhAGhhdmluZyI7TjtzOjE5OiIAQ3JpdGVyaWEAYXNDb2x1bW5zIjthOjA6e31zOjE1OiIAQ3JpdGVyaWEAam9pbnMiO2E6MDp7fXM6MTY6IgBDcml0ZXJpYQBkYk5hbWUiO3M6NzoiZml4dHVyZSI7czoyNjoiAENyaXRlcmlhAHByaW1hcnlUYWJsZU5hbWUiO047czoyNDoiAENyaXRlcmlhAG9yaWdpbmFsRGJOYW1lIjtzOjc6ImZpeHR1cmUiO3M6MTU6IgBDcml0ZXJpYQBsaW1pdCI7aTowO3M6MTY6IgBDcml0ZXJpYQBvZmZzZXQiO2k6MDtzOjE4OiIAQ3JpdGVyaWEAYmxvYkZsYWciO047czoxNzoiAENyaXRlcmlhAGFsaWFzZXMiO2E6MTp7czoxOiJhIjtzOjE6ImEiO31zOjI0OiIAQ3JpdGVyaWEAdXNlVHJhbnNhY3Rpb24iO2I6MDtzOjEzOiIAQ3JpdGVyaWEAbWFwIjthOjE6e3M6NDoiYS5pZCI7Tzo5OiJDcml0ZXJpb24iOjEwOntzOjE2OiIAQ3JpdGVyaW9uAHZhbHVlIjtpOjE7czoyMToiAENyaXRlcmlvbgBjb21wYXJpc29uIjtzOjE6Ij0iO3M6MTY6IgBDcml0ZXJpb24AdGFibGUiO3M6MToiYSI7czoyMDoiAENyaXRlcmlvbgByZWFsdGFibGUiO3M6MToiYSI7czoxNzoiAENyaXRlcmlvbgBjb2x1bW4iO3M6MjoiaWQiO3M6Mjc6IgBDcml0ZXJpb24AaWdub3JlU3RyaW5nQ2FzZSI7YjowO3M6MTM6IgBDcml0ZXJpb24AZGIiO086OToiREJBZGFwdGVyIjowOnt9czoxODoiAENyaXRlcmlvbgBjbGF1c2VzIjthOjA6e31zOjIzOiIAQ3JpdGVyaW9uAGNvbmp1bmN0aW9ucyI7YTowOnt9czoxNzoiAENyaXRlcmlvbgBwYXJlbnQiO047fX19",
+                "serialized_bytes": 1080,
+                "serialized_sha256": "2d0812f268dfe70451b6efeaf03db73b277445db3b96e741d39dabcbecc96b7f",
+                "roundtrip_bytes_identical": true
+            }
+        ]
+    },
+    "events": [
+        {
+            "phase": "load",
+            "severity": 8192,
+            "message": "Return type of Criteria::getIterator() should either be compatible with IteratorAggregate::getIterator(): Traversable, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+            "file": "declaration.php",
+            "line": 194
+        },
+        {
+            "phase": "load",
+            "severity": 8192,
+            "message": "Return type of CriterionIterator::current() should either be compatible with Iterator::current(): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+            "file": "declaration.php",
+            "line": 1272
+        },
+        {
+            "phase": "load",
+            "severity": 8192,
+            "message": "Return type of CriterionIterator::next() should either be compatible with Iterator::next(): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+            "file": "declaration.php",
+            "line": 1276
+        },
+        {
+            "phase": "load",
+            "severity": 8192,
+            "message": "Return type of CriterionIterator::key() should either be compatible with Iterator::key(): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+            "file": "declaration.php",
+            "line": 1268
+        },
+        {
+            "phase": "load",
+            "severity": 8192,
+            "message": "Return type of CriterionIterator::valid() should either be compatible with Iterator::valid(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+            "file": "declaration.php",
+            "line": 1264
+        },
+        {
+            "phase": "load",
+            "severity": 8192,
+            "message": "Return type of CriterionIterator::rewind() should either be compatible with Iterator::rewind(): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+            "file": "declaration.php",
+            "line": 1260
+        }
+    ],
+    "source_sha256": {
+        "criteria": "d5084a55c7b10ca702edeb8cf926805749dfe4a567880d9285b0a2a86f883422",
+        "filter": "fc4cefcbff304a0b176af4e22f608c087e8d781b092acdec888459b7fec2bc13"
+    }
+}

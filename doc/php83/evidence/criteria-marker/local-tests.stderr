@@ -1,0 +1,19 @@
+test_behavior_change (test_compare.ComparatorTests.test_behavior_change) ... ok
+test_bool_exit (test_compare.ComparatorTests.test_bool_exit) ... ok
+test_case_missing (test_compare.ComparatorTests.test_case_missing) ... ok
+test_drift (test_compare.ComparatorTests.test_drift) ... ok
+test_duplicate_mode (test_compare.ComparatorTests.test_duplicate_mode) ... ok
+test_missing_control (test_compare.ComparatorTests.test_missing_control) ... ok
+test_missing_native_stderr (test_compare.ComparatorTests.test_missing_native_stderr) ... ok
+test_positive (test_compare.ComparatorTests.test_positive) ... ok
+test_representation_delta_not_parity (test_compare.ComparatorTests.test_representation_delta_not_parity) ... ok
+test_serialization_corruption (test_compare.ComparatorTests.test_serialization_corruption) ... ok
+test_duplicate_anchor (test_prepare.PreparationTests.test_duplicate_anchor) ... ok
+test_existing_property (test_prepare.PreparationTests.test_existing_property) ... ok
+test_missing_anchor (test_prepare.PreparationTests.test_missing_anchor) ... ok
+test_single_declaration (test_prepare.PreparationTests.test_single_declaration) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.001s
+
+OK

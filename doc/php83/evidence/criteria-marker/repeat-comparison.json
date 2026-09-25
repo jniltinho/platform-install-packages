@@ -1,0 +1,12 @@
+{
+  "status": "EXACT_BOUNDED_INDEPENDENT_EXECUTOR_REPEAT",
+  "primary_sha256": "0bf7426ee12a75d447ad753c6cb296a9738398a4e24db8c5796636d8c478e70d",
+  "claude_sha256": "e0ebaa38e4ecc1662e385b9d2c43f6e728d6ddcf0053fcb88f5543a440dd32f6",
+  "exact_records": true,
+  "exact_labs_runtime_source": true,
+  "actual_claude_cli_exit": 0,
+  "actual_helper_exit": 0,
+  "patch_selected": false,
+  "attribute_runtime_executed": false,
+  "labs_released": true
+}

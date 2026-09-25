@@ -1,0 +1,21 @@
+{
+  "status": "PREPARED_AWAITING_COORDINATOR_RUNTIME_APPROVAL",
+  "codex_local_tests": 25,
+  "claude_prior_hardening_tests": 22,
+  "claude_hardening_terminal": 0,
+  "line_guards_added_after_review": true,
+  "prior_review": "claude-hardening-review.md",
+  "source_and_native_php_execution": false,
+  "patch_selected": false,
+  "files": {
+    "tools/php83/criteria-marker/compare.py": "f377b1662903417d86f08503613ef1e6dea61891975b941b0eeb390511c057f9",
+    "tools/php83/criteria-marker/prepare.py": "2ab14d558054727ae87e17533d7f9f9fa77b87c7c8d1d838d1c65de91f551692",
+    "tools/php83/criteria-marker/probe.php": "c1870d3fafd036afc80303447e0ce1411c22d19e492570a7a104863945c6f5c8",
+    "tools/php83/criteria-marker/run.sh": "13378241972368faf8fcbebba0708c031ef7e11421a793abbaad4c836784ae0a",
+    "tools/php83/criteria-marker/source-pins.json": "28b78a20b362f003011d4f3b8ae31c51617ab9385dc12732e52c9fc6362252c6",
+    "tools/php83/criteria-marker/test_compare.py": "fddbf111179c9caa9cc3645d8d9d635007680880378e3aa16c33c6ac628071de",
+    "tools/php83/criteria-marker/test_prepare.py": "6d80f4947cda5c247b21d530f03a325c68ee6f33b74d3cf974a80b03c0f02849",
+    "tools/php83/criteria-marker/test_verify.py": "5125d35f7bbfc38937f17a229d931add7a59322200d6da8add0d78d1fb7d78b4",
+    "tools/php83/criteria-marker/verify.py": "9b8e747960be7677c5e801deb635167b83dc9cbaa96d73b2c828b130e86f5b22"
+  }
+}

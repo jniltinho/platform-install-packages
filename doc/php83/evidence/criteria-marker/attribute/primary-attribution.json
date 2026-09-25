@@ -1,0 +1,126 @@
+{
+  "status": "STRICT_CROSS_RUNTIME_LAYOUT_FAIL_WITH_ATTRIBUTION",
+  "four_process_exits": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "same_runtime_exact_rows": {
+    "74": true,
+    "83": true
+  },
+  "original74_vs_original83_layout_deltas": [
+    {
+      "snapshot": "/mycriteria_hint/representation",
+      "length74": 792,
+      "length83": 792,
+      "sha25674": "a2fa1e3124e4b68633cbdfda082ee623058975eb36d48adba6f04036bde3a7bb",
+      "sha25683": "9d6c5df173ea44dca11042aa794e4bc30cf124fbbfea4d4fb273bd97804d295c",
+      "prefix74_base64": "TzoxMDoibXlDcml0ZXJpYSI6MjI6e3M6Mzc6IgBteUNyaXRlcmlhAGlnbm9yZV9zZWxlY3RfY29sdW1uX2xpc3QiO2E6MDp7fXM6Mjc6IgBteUNyaXRlcmlhAGluZGV4X2hpbnRzX21hcCI7YTowOnt9czoyMDoiAENyaXRlcmlhAGlnbm9yZUNhc2UiO2I6MDtzOjIyOiIAQ3JpdGVyaQ==",
+      "prefix83_base64": "TzoxMDoibXlDcml0ZXJpYSI6MjI6e3M6MjA6IgBDcml0ZXJpYQBpZ25vcmVDYXNlIjtiOjA7czoyMjoiAENyaXRlcmlhAHNpbmdsZVJlY29yZCI7YjowO3M6MjU6IgBDcml0ZXJpYQBzZWxlY3RNb2RpZmllcnMiO2E6MDp7fXM6MjM6IgBDcml0ZXJpYQBzZWxlY3RDb2x1bW5zIjthOg=="
+    },
+    {
+      "snapshot": "/mycriteria_marker/representation",
+      "length74": 1175,
+      "length83": 1175,
+      "sha25674": "d07a96bf1a9ee91df3a34fdb0e6730b3659a51b60d3a003ddbd4462028fd69c1",
+      "sha25683": "f78cd4a7a5dafcc2421035f32be571304cb78d7cc46fb4bd287a78607e9fe3f4",
+      "prefix74_base64": "TzoxMDoibXlDcml0ZXJpYSI6MjI6e3M6Mzc6IgBteUNyaXRlcmlhAGlnbm9yZV9zZWxlY3RfY29sdW1uX2xpc3QiO2E6MDp7fXM6Mjc6IgBteUNyaXRlcmlhAGluZGV4X2hpbnRzX21hcCI7YTowOnt9czoyMDoiAENyaXRlcmlhAGlnbm9yZUNhc2UiO2I6MDtzOjIyOiIAQ3JpdGVyaQ==",
+      "prefix83_base64": "TzoxMDoibXlDcml0ZXJpYSI6MjI6e3M6MjA6IgBDcml0ZXJpYQBpZ25vcmVDYXNlIjtiOjA7czoyMjoiAENyaXRlcmlhAHNpbmdsZVJlY29yZCI7YjowO3M6MjU6IgBDcml0ZXJpYQBzZWxlY3RNb2RpZmllcnMiO2E6MDp7fXM6MjM6IgBDcml0ZXJpYQBzZWxlY3RDb2x1bW5zIjthOg=="
+    },
+    {
+      "snapshot": "/kalturacriteria_marker/representation",
+      "length74": 1239,
+      "length83": 1239,
+      "sha25674": "8297d50200cd387e10e6465b56c5649b07822abaae419795f92f173b4edec621",
+      "sha25683": "41b14c9819610077e367ef7601f9677881956e2a8a676a84893602bb43bf2f96",
+      "prefix74_base64": "TzoxNToiS2FsdHVyYUNyaXRlcmlhIjoyNjp7czoxNToiACoAcmVjb3Jkc0NvdW50IjtpOjA7czoxMzoiACoAZmV0Y2hlZElkcyI7YTowOnt9czoxMDoiACoAZmlsdGVycyI7YTowOnt9czoxMDoiACoAZG9Db3VudCI7YjoxO3M6MTU6IgAqAHNlbGVjdENvbHVtbiI7TjtzOjE2OiIAKg==",
+      "prefix83_base64": "TzoxNToiS2FsdHVyYUNyaXRlcmlhIjoyNjp7czoyMDoiAENyaXRlcmlhAGlnbm9yZUNhc2UiO2I6MDtzOjIyOiIAQ3JpdGVyaWEAc2luZ2xlUmVjb3JkIjtiOjA7czoyNToiAENyaXRlcmlhAHNlbGVjdE1vZGlmaWVycyI7YTowOnt9czoyMzoiAENyaXRlcmlhAHNlbGVjdENvbHVtbg=="
+    }
+  ],
+  "legacy_imports": [
+    {
+      "snapshot": "/clone/2",
+      "input74_sha256": "d27098c3c5bc6962e59c94103b4efdf5f33f8ba52f60afd66abfffcc4380fac4",
+      "output83_sha256": "d27098c3c5bc6962e59c94103b4efdf5f33f8ba52f60afd66abfffcc4380fac4",
+      "exact_legacy_bytes": true,
+      "same_attribute_import": true
+    },
+    {
+      "snapshot": "/fresh/representation",
+      "input74_sha256": "7096d8712794815ef4ae737badc5ec88a140a5961b39c1e6f6e0891a3a4a98df",
+      "output83_sha256": "7096d8712794815ef4ae737badc5ec88a140a5961b39c1e6f6e0891a3a4a98df",
+      "exact_legacy_bytes": true,
+      "same_attribute_import": true
+    },
+    {
+      "snapshot": "/kalturacriteria_marker/representation",
+      "input74_sha256": "8297d50200cd387e10e6465b56c5649b07822abaae419795f92f173b4edec621",
+      "output83_sha256": "41b14c9819610077e367ef7601f9677881956e2a8a676a84893602bb43bf2f96",
+      "exact_legacy_bytes": false,
+      "same_attribute_import": true
+    },
+    {
+      "snapshot": "/mycriteria_hint/representation",
+      "input74_sha256": "a2fa1e3124e4b68633cbdfda082ee623058975eb36d48adba6f04036bde3a7bb",
+      "output83_sha256": "9d6c5df173ea44dca11042aa794e4bc30cf124fbbfea4d4fb273bd97804d295c",
+      "exact_legacy_bytes": false,
+      "same_attribute_import": true
+    },
+    {
+      "snapshot": "/mycriteria_marker/representation",
+      "input74_sha256": "d07a96bf1a9ee91df3a34fdb0e6730b3659a51b60d3a003ddbd4462028fd69c1",
+      "output83_sha256": "f78cd4a7a5dafcc2421035f32be571304cb78d7cc46fb4bd287a78607e9fe3f4",
+      "exact_legacy_bytes": false,
+      "same_attribute_import": true
+    },
+    {
+      "snapshot": "/once_twice/2",
+      "input74_sha256": "d27098c3c5bc6962e59c94103b4efdf5f33f8ba52f60afd66abfffcc4380fac4",
+      "output83_sha256": "d27098c3c5bc6962e59c94103b4efdf5f33f8ba52f60afd66abfffcc4380fac4",
+      "exact_legacy_bytes": true,
+      "same_attribute_import": true
+    },
+    {
+      "snapshot": "/serialize_attached/1",
+      "input74_sha256": "d27098c3c5bc6962e59c94103b4efdf5f33f8ba52f60afd66abfffcc4380fac4",
+      "output83_sha256": "d27098c3c5bc6962e59c94103b4efdf5f33f8ba52f60afd66abfffcc4380fac4",
+      "exact_legacy_bytes": true,
+      "same_attribute_import": true
+    }
+  ],
+  "diagnostic_counts": {
+    "original74": {},
+    "attribute74": {},
+    "original83": {
+      "Return type of Criteria::getIterator() should either be compatible with IteratorAggregate::getIterator(): Traversable, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice": 1,
+      "Return type of CriterionIterator::current() should either be compatible with Iterator::current(): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice": 1,
+      "Return type of CriterionIterator::next() should either be compatible with Iterator::next(): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice": 1,
+      "Return type of CriterionIterator::key() should either be compatible with Iterator::key(): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice": 1,
+      "Return type of CriterionIterator::valid() should either be compatible with Iterator::valid(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice": 1,
+      "Return type of CriterionIterator::rewind() should either be compatible with Iterator::rewind(): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice": 1,
+      "Creation of dynamic property Criteria::$creteria_filter_attached is deprecated": 25,
+      "Creation of dynamic property myCriteria::$hint is deprecated": 4,
+      "Creation of dynamic property myCriteria::$creteria_filter_attached is deprecated": 5,
+      "Creation of dynamic property KalturaCriteria::$creteria_filter_attached is deprecated": 4,
+      "Creation of dynamic property UnrelatedMarkerControl::$fixtureMarker is deprecated": 1,
+      "strlen(): Passing null to parameter #1 ($string) of type string is deprecated": 1
+    },
+    "attribute83": {
+      "Return type of Criteria::getIterator() should either be compatible with IteratorAggregate::getIterator(): Traversable, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice": 1,
+      "Return type of CriterionIterator::current() should either be compatible with Iterator::current(): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice": 1,
+      "Return type of CriterionIterator::next() should either be compatible with Iterator::next(): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice": 1,
+      "Return type of CriterionIterator::key() should either be compatible with Iterator::key(): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice": 1,
+      "Return type of CriterionIterator::valid() should either be compatible with Iterator::valid(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice": 1,
+      "Return type of CriterionIterator::rewind() should either be compatible with Iterator::rewind(): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice": 1,
+      "Creation of dynamic property UnrelatedMarkerControl::$fixtureMarker is deprecated": 1,
+      "strlen(): Passing null to parameter #1 ($string) of type string is deprecated": 1
+    }
+  },
+  "source_runtime_prepost_equal": true,
+  "attribute_selected": false,
+  "strict_original_validator_unchanged": true,
+  "application_acceptance": false,
+  "labs_released": true
+}

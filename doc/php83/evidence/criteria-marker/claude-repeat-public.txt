@@ -1,0 +1,32 @@
+Rodei a repetição de quatro processos do Criteria marker nos estágios congelados que já existiam, e o resultado bateu exatamente com o primary: `EXACT_PRIMARY_REPEAT_BOUNDED_ONLY`.
+
+**Execução**
+- **Caso:** repetição do Criteria marker, em baseline74 e native83. Executor: Claude CLI (Opus 5.5). Ainda não houve revisor independente.
+- **Comando:** `python3 tools/php83/criteria-marker/repeat.py`, com limite de 150 s. Terminou com exit 0.
+- **Onde ficou a saída:** stdout, stderr e exit estão em `doc/php83/evidence/criteria-marker/claude-repeat-command.{stdout,stderr,exit}`. O stderr ficou vazio.
+- **Artefatos gravados pelo helper:** `claude.json` (sha256 `e0ebaa38…32f6`) e `claude-{original,declaration}{74,83}.{stdout,stderr,exit}`.
+- **Identidades:** `identities.json` com pin `f03b69e1…ce3d`; `repeat.py` com sha256 `598e69cc…6346`.
+- **O que não fiz:** não chamei o `main` do `collect.py`, não fiz staging nem build, não rodei SQL e não editei nenhum código-fonte.
+
+**Resultados observados nos 4 processos**
+
+| modo | exit | eventos do marker |
+|---|---|---|
+| original74 | 0 | 0 |
+| declaration74 | 0 | 0 |
+| original83 | 0 | 18 (deprecation nativa de `Criteria::$creteria_filter_attached` no controle) |
+| declaration83 | 0 | 0 |
+
+- **Igualdade com o primary:** as quatro linhas são iguais às do primary em stdout e stderr brutos, nos registros decodificados, nos comandos e nos exits.
+- **Estado antes/depois nos dois labs:** os hashes dos fontes e a identidade do runtime (binário PHP, bibliotecas `ldd` e `json.so` no 7.4) foram iguais antes e depois da execução.
+- **Comparação:** deu `OBSERVED_FUNCTIONAL_PARITY_REPRESENTATION_DELTAS_SEPARATE`. Os 15 casos se comportaram igual nos quatro processos.
+- **Diferenças de representação:** continuam 8 linhas com delta de serialização (`exact_representation_parity: false`), as mesmas do primary.
+
+**Achados**
+- O `declaration83` produziu 1514 bytes de stderr, contra 3899 do `original83`. É um aviso de tipo de retorno de `getIterator` e `current`, sem relação com o marker. Ele aparece igual nas duas variantes do 8.3 depois de ajustar a linha que a declaração acrescenta no fonte, e a comparação do helper aceitou. Continua sendo um problema próprio da migração para PHP 8.3.
+- As 8 diferenças de representação continuam em aberto. A declaração nula **não** foi escolhida (`patch_selected: false`) e a aplicação não foi aceita (`application_acceptance: false`).
+
+**Limites**
+- Esta repetição reforça o resultado que o mesmo harness já tinha dado. Não é revisão independente nem aceitação da aplicação.
+- Falta uma revisão por outro executor, por exemplo Cursor ou OpenCode.
+- Não liberei os labs. Isso fica com o coordenador.

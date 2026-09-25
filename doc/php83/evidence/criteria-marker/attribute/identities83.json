@@ -1,0 +1,24 @@
+{
+  "status": "UNSELECTED_ATTRIBUTE_HIERARCHY_EXPERIMENT",
+  "upstream_sha256": "58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28",
+  "original_sources": {
+    "original.php": "0626bb5b976ae7eedccaf5060675cd7c7ca56b22fc2c9d6c1a51ce485a303543",
+    "criteriaFilter.php": "fc4cefcbff304a0b176af4e22f608c087e8d781b092acdec888459b7fec2bc13",
+    "myCriteria.php": "ea82576584de2faa22f989d1ebed1d939fed44c3b4552ed8e9cc77b03c033479",
+    "IKalturaDbQuery.php": "f9b9052659f667d3214d7823149345479f30828b716e6fecd45fe021a7817bee",
+    "KalturaCriteria.php": "becac7307ea27ae3f2a8742f02718e54efd3dbcca4ea5a8633a674969b62cadf"
+  },
+  "files": {
+    "original.php": "0626bb5b976ae7eedccaf5060675cd7c7ca56b22fc2c9d6c1a51ce485a303543",
+    "criteriaFilter.php": "fc4cefcbff304a0b176af4e22f608c087e8d781b092acdec888459b7fec2bc13",
+    "myCriteria.php": "ea82576584de2faa22f989d1ebed1d939fed44c3b4552ed8e9cc77b03c033479",
+    "IKalturaDbQuery.php": "f9b9052659f667d3214d7823149345479f30828b716e6fecd45fe021a7817bee",
+    "KalturaCriteria.php": "becac7307ea27ae3f2a8742f02718e54efd3dbcca4ea5a8633a674969b62cadf",
+    "attribute.php": "8e0e6e5a2d721900218f11f65f7394c20136f40d71e9e80dadc90f268f7ea32f",
+    "probe.php": "12800e23042e037b8c1da2448702e0dbba9953d6a3c38d1de9c2174065807fb5",
+    "run.sh": "207a1d25d92fef5666a50d8da2f989f64fa176073b8ebf5441c19f15b8a60d44",
+    "verify.py": "7dbc6a9aad12ffc4d2e71006db70c806430f63d9082ef0c3236cecf6e1e82e4a",
+    "legacy.json": "dec254a9789e74cb3e283de22e1f74cae959717226cdb580646f9fea940930b2"
+  },
+  "patch_selected": false
+}

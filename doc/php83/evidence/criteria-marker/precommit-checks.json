@@ -1,0 +1,14 @@
+{
+  "status": "PASS_BOUNDED_PRECOMMIT_CHECKS",
+  "root_suite_tests": 25,
+  "attribute_suite_tests": 23,
+  "three_shell_syntax_checks": true,
+  "frozen_tool_and_raw_evidence_pins_match": true,
+  "checkpoint_only_doc_hash_refreshed": true,
+  "original_zip_source_pins_match": true,
+  "prepared_exp11_manifest_unchanged": true,
+  "secret_scan_files": 203,
+  "secret_pattern_hits": [],
+  "scope": "Only owned Criteria tools/evidence/docs and runtime-next-fix-plan; pattern scan not exhaustive assurance",
+  "vm_actions": false
+}

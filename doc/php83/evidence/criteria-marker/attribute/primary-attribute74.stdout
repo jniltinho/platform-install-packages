@@ -1,0 +1,407 @@
+{
+    "schema": 2,
+    "php": "7.4.33",
+    "variant": "attribute",
+    "rows": {
+        "fresh": {
+            "state": {
+                "keys": [],
+                "nodes": [],
+                "order": [],
+                "isset": false,
+                "marker": null
+            },
+            "representation": {
+                "property_exists": false,
+                "public_vars": [],
+                "serialized_base64": "Tzo4OiJDcml0ZXJpYSI6MTk6e3M6MjA6IgBDcml0ZXJpYQBpZ25vcmVDYXNlIjtiOjA7czoyMjoiAENyaXRlcmlhAHNpbmdsZVJlY29yZCI7YjowO3M6MjU6IgBDcml0ZXJpYQBzZWxlY3RNb2RpZmllcnMiO2E6MDp7fXM6MjM6IgBDcml0ZXJpYQBzZWxlY3RDb2x1bW5zIjthOjA6e31zOjIwOiIAQ3JpdGVyaWEAZm9yY2VJbmRleCI7TjtzOjI0OiIAQ3JpdGVyaWEAb3JkZXJCeUNvbHVtbnMiO2E6MDp7fXM6MjQ6IgBDcml0ZXJpYQBncm91cEJ5Q29sdW1ucyI7YTowOnt9czoxNjoiAENyaXRlcmlhAGhhdmluZyI7TjtzOjE5OiIAQ3JpdGVyaWEAYXNDb2x1bW5zIjthOjA6e31zOjE1OiIAQ3JpdGVyaWEAam9pbnMiO2E6MDp7fXM6MTY6IgBDcml0ZXJpYQBkYk5hbWUiO3M6NzoiZml4dHVyZSI7czoyNjoiAENyaXRlcmlhAHByaW1hcnlUYWJsZU5hbWUiO047czoyNDoiAENyaXRlcmlhAG9yaWdpbmFsRGJOYW1lIjtzOjc6ImZpeHR1cmUiO3M6MTU6IgBDcml0ZXJpYQBsaW1pdCI7aTowO3M6MTY6IgBDcml0ZXJpYQBvZmZzZXQiO2k6MDtzOjE4OiIAQ3JpdGVyaWEAYmxvYkZsYWciO047czoxNzoiAENyaXRlcmlhAGFsaWFzZXMiO2E6MTp7czoxOiJhIjtzOjE6ImEiO31zOjI0OiIAQ3JpdGVyaWEAdXNlVHJhbnNhY3Rpb24iO2I6MDtzOjEzOiIAQ3JpdGVyaWEAbWFwIjthOjA6e319",
+                "serialized_bytes": 669,
+                "serialized_sha256": "7096d8712794815ef4ae737badc5ec88a140a5961b39c1e6f6e0891a3a4a98df",
+                "roundtrip_bytes_identical": true
+            }
+        },
+        "disabled": {
+            "keys": [],
+            "nodes": [],
+            "order": [],
+            "isset": false,
+            "marker": null
+        },
+        "once_twice": [
+            {
+                "keys": [
+                    "a.id"
+                ],
+                "nodes": {
+                    "a.id": [
+                        "a",
+                        "id",
+                        1,
+                        "=",
+                        [],
+                        []
+                    ]
+                },
+                "order": [],
+                "isset": true,
+                "marker": true
+            },
+            {
+                "keys": [
+                    "a.id"
+                ],
+                "nodes": {
+                    "a.id": [
+                        "a",
+                        "id",
+                        1,
+                        "=",
+                        [],
+                        []
+                    ]
+                },
+                "order": [],
+                "isset": true,
+                "marker": true
+            },
+            {
+                "property_exists": true,
+                "public_vars": {
+                    "creteria_filter_attached": true
+                },
+                "serialized_base64": "Tzo4OiJDcml0ZXJpYSI6MjA6e3M6MjA6IgBDcml0ZXJpYQBpZ25vcmVDYXNlIjtiOjA7czoyMjoiAENyaXRlcmlhAHNpbmdsZVJlY29yZCI7YjowO3M6MjU6IgBDcml0ZXJpYQBzZWxlY3RNb2RpZmllcnMiO2E6MDp7fXM6MjM6IgBDcml0ZXJpYQBzZWxlY3RDb2x1bW5zIjthOjA6e31zOjIwOiIAQ3JpdGVyaWEAZm9yY2VJbmRleCI7TjtzOjI0OiIAQ3JpdGVyaWEAb3JkZXJCeUNvbHVtbnMiO2E6MDp7fXM6MjQ6IgBDcml0ZXJpYQBncm91cEJ5Q29sdW1ucyI7YTowOnt9czoxNjoiAENyaXRlcmlhAGhhdmluZyI7TjtzOjE5OiIAQ3JpdGVyaWEAYXNDb2x1bW5zIjthOjA6e31zOjE1OiIAQ3JpdGVyaWEAam9pbnMiO2E6MDp7fXM6MTY6IgBDcml0ZXJpYQBkYk5hbWUiO3M6NzoiZml4dHVyZSI7czoyNjoiAENyaXRlcmlhAHByaW1hcnlUYWJsZU5hbWUiO047czoyNDoiAENyaXRlcmlhAG9yaWdpbmFsRGJOYW1lIjtzOjc6ImZpeHR1cmUiO3M6MTU6IgBDcml0ZXJpYQBsaW1pdCI7aTowO3M6MTY6IgBDcml0ZXJpYQBvZmZzZXQiO2k6MDtzOjE4OiIAQ3JpdGVyaWEAYmxvYkZsYWciO047czoxNzoiAENyaXRlcmlhAGFsaWFzZXMiO2E6MTp7czoxOiJhIjtzOjE6ImEiO31zOjI0OiIAQ3JpdGVyaWEAdXNlVHJhbnNhY3Rpb24iO2I6MDtzOjEzOiIAQ3JpdGVyaWEAbWFwIjthOjE6e3M6NDoiYS5pZCI7Tzo5OiJDcml0ZXJpb24iOjEwOntzOjE2OiIAQ3JpdGVyaW9uAHZhbHVlIjtpOjE7czoyMToiAENyaXRlcmlvbgBjb21wYXJpc29uIjtzOjE6Ij0iO3M6MTY6IgBDcml0ZXJpb24AdGFibGUiO3M6MToiYSI7czoyMDoiAENyaXRlcmlvbgByZWFsdGFibGUiO3M6MToiYSI7czoxNzoiAENyaXRlcmlvbgBjb2x1bW4iO3M6MjoiaWQiO3M6Mjc6IgBDcml0ZXJpb24AaWdub3JlU3RyaW5nQ2FzZSI7YjowO3M6MTM6IgBDcml0ZXJpb24AZGIiO086OToiREJBZGFwdGVyIjowOnt9czoxODoiAENyaXRlcmlvbgBjbGF1c2VzIjthOjA6e31zOjIzOiIAQ3JpdGVyaW9uAGNvbmp1bmN0aW9ucyI7YTowOnt9czoxNzoiAENyaXRlcmlvbgBwYXJlbnQiO047fX1zOjI0OiJjcmV0ZXJpYV9maWx0ZXJfYXR0YWNoZWQiO2I6MTt9",
+                "serialized_bytes": 1080,
+                "serialized_sha256": "d27098c3c5bc6962e59c94103b4efdf5f33f8ba52f60afd66abfffcc4380fac4",
+                "roundtrip_bytes_identical": true
+            }
+        ],
+        "two_filters": {
+            "keys": [
+                "a.id"
+            ],
+            "nodes": {
+                "a.id": [
+                    "a",
+                    "id",
+                    1,
+                    "=",
+                    [],
+                    []
+                ]
+            },
+            "order": [],
+            "isset": true,
+            "marker": true
+        },
+        "preset_true": {
+            "keys": [],
+            "nodes": [],
+            "order": [],
+            "isset": true,
+            "marker": true
+        },
+        "preset_false": {
+            "keys": [],
+            "nodes": [],
+            "order": [],
+            "isset": true,
+            "marker": false
+        },
+        "preset_null": {
+            "keys": [
+                "a.id"
+            ],
+            "nodes": {
+                "a.id": [
+                    "a",
+                    "id",
+                    1,
+                    "=",
+                    [],
+                    []
+                ]
+            },
+            "order": [],
+            "isset": true,
+            "marker": true
+        },
+        "unset_reapply": {
+            "keys": [
+                "a.id"
+            ],
+            "nodes": {
+                "a.id": [
+                    "a",
+                    "id",
+                    1,
+                    "=",
+                    [
+                        " AND "
+                    ],
+                    [
+                        [
+                            "a",
+                            "id",
+                            2,
+                            "=",
+                            [],
+                            []
+                        ]
+                    ]
+                ]
+            },
+            "order": [],
+            "isset": true,
+            "marker": true
+        },
+        "clone": [
+            {
+                "keys": [
+                    "a.id"
+                ],
+                "nodes": {
+                    "a.id": [
+                        "a",
+                        "id",
+                        1,
+                        "=",
+                        [],
+                        []
+                    ]
+                },
+                "order": [],
+                "isset": true,
+                "marker": true
+            },
+            {
+                "keys": [
+                    "a.id"
+                ],
+                "nodes": {
+                    "a.id": [
+                        "a",
+                        "id",
+                        1,
+                        "=",
+                        [],
+                        []
+                    ]
+                },
+                "order": [],
+                "isset": true,
+                "marker": true
+            },
+            {
+                "property_exists": true,
+                "public_vars": {
+                    "creteria_filter_attached": true
+                },
+                "serialized_base64": "Tzo4OiJDcml0ZXJpYSI6MjA6e3M6MjA6IgBDcml0ZXJpYQBpZ25vcmVDYXNlIjtiOjA7czoyMjoiAENyaXRlcmlhAHNpbmdsZVJlY29yZCI7YjowO3M6MjU6IgBDcml0ZXJpYQBzZWxlY3RNb2RpZmllcnMiO2E6MDp7fXM6MjM6IgBDcml0ZXJpYQBzZWxlY3RDb2x1bW5zIjthOjA6e31zOjIwOiIAQ3JpdGVyaWEAZm9yY2VJbmRleCI7TjtzOjI0OiIAQ3JpdGVyaWEAb3JkZXJCeUNvbHVtbnMiO2E6MDp7fXM6MjQ6IgBDcml0ZXJpYQBncm91cEJ5Q29sdW1ucyI7YTowOnt9czoxNjoiAENyaXRlcmlhAGhhdmluZyI7TjtzOjE5OiIAQ3JpdGVyaWEAYXNDb2x1bW5zIjthOjA6e31zOjE1OiIAQ3JpdGVyaWEAam9pbnMiO2E6MDp7fXM6MTY6IgBDcml0ZXJpYQBkYk5hbWUiO3M6NzoiZml4dHVyZSI7czoyNjoiAENyaXRlcmlhAHByaW1hcnlUYWJsZU5hbWUiO047czoyNDoiAENyaXRlcmlhAG9yaWdpbmFsRGJOYW1lIjtzOjc6ImZpeHR1cmUiO3M6MTU6IgBDcml0ZXJpYQBsaW1pdCI7aTowO3M6MTY6IgBDcml0ZXJpYQBvZmZzZXQiO2k6MDtzOjE4OiIAQ3JpdGVyaWEAYmxvYkZsYWciO047czoxNzoiAENyaXRlcmlhAGFsaWFzZXMiO2E6MTp7czoxOiJhIjtzOjE6ImEiO31zOjI0OiIAQ3JpdGVyaWEAdXNlVHJhbnNhY3Rpb24iO2I6MDtzOjEzOiIAQ3JpdGVyaWEAbWFwIjthOjE6e3M6NDoiYS5pZCI7Tzo5OiJDcml0ZXJpb24iOjEwOntzOjE2OiIAQ3JpdGVyaW9uAHZhbHVlIjtpOjE7czoyMToiAENyaXRlcmlvbgBjb21wYXJpc29uIjtzOjE6Ij0iO3M6MTY6IgBDcml0ZXJpb24AdGFibGUiO3M6MToiYSI7czoyMDoiAENyaXRlcmlvbgByZWFsdGFibGUiO3M6MToiYSI7czoxNzoiAENyaXRlcmlvbgBjb2x1bW4iO3M6MjoiaWQiO3M6Mjc6IgBDcml0ZXJpb24AaWdub3JlU3RyaW5nQ2FzZSI7YjowO3M6MTM6IgBDcml0ZXJpb24AZGIiO086OToiREJBZGFwdGVyIjowOnt9czoxODoiAENyaXRlcmlvbgBjbGF1c2VzIjthOjA6e31zOjIzOiIAQ3JpdGVyaW9uAGNvbmp1bmN0aW9ucyI7YTowOnt9czoxNzoiAENyaXRlcmlvbgBwYXJlbnQiO047fX1zOjI0OiJjcmV0ZXJpYV9maWx0ZXJfYXR0YWNoZWQiO2I6MTt9",
+                "serialized_bytes": 1080,
+                "serialized_sha256": "d27098c3c5bc6962e59c94103b4efdf5f33f8ba52f60afd66abfffcc4380fac4",
+                "roundtrip_bytes_identical": true
+            }
+        ],
+        "clear": {
+            "keys": [],
+            "nodes": [],
+            "order": [],
+            "isset": true,
+            "marker": true
+        },
+        "empty_filter": {
+            "keys": [],
+            "nodes": [],
+            "order": [],
+            "isset": true,
+            "marker": true
+        },
+        "nested_order": {
+            "keys": [
+                "a.id"
+            ],
+            "nodes": {
+                "a.id": [
+                    "a",
+                    "id",
+                    1,
+                    "=",
+                    [
+                        " OR "
+                    ],
+                    [
+                        [
+                            "a",
+                            "id",
+                            2,
+                            "=",
+                            [],
+                            []
+                        ]
+                    ]
+                ]
+            },
+            "order": [
+                "a.id ASC",
+                "a.name DESC"
+            ],
+            "isset": true,
+            "marker": true
+        },
+        "duplicate_constraint": {
+            "keys": [
+                "a.id"
+            ],
+            "nodes": {
+                "a.id": [
+                    "a",
+                    "id",
+                    1,
+                    "=",
+                    [],
+                    []
+                ]
+            },
+            "order": [],
+            "isset": true,
+            "marker": true
+        },
+        "exception_marker": [
+            [
+                "Error",
+                "Call to a member function keys() on null"
+            ],
+            {
+                "keys": [],
+                "nodes": [],
+                "order": [],
+                "isset": true,
+                "marker": true
+            }
+        ],
+        "serialize_attached": [
+            {
+                "keys": [
+                    "a.id"
+                ],
+                "nodes": {
+                    "a.id": [
+                        "a",
+                        "id",
+                        1,
+                        "=",
+                        [],
+                        []
+                    ]
+                },
+                "order": [],
+                "isset": true,
+                "marker": true
+            },
+            {
+                "property_exists": true,
+                "public_vars": {
+                    "creteria_filter_attached": true
+                },
+                "serialized_base64": "Tzo4OiJDcml0ZXJpYSI6MjA6e3M6MjA6IgBDcml0ZXJpYQBpZ25vcmVDYXNlIjtiOjA7czoyMjoiAENyaXRlcmlhAHNpbmdsZVJlY29yZCI7YjowO3M6MjU6IgBDcml0ZXJpYQBzZWxlY3RNb2RpZmllcnMiO2E6MDp7fXM6MjM6IgBDcml0ZXJpYQBzZWxlY3RDb2x1bW5zIjthOjA6e31zOjIwOiIAQ3JpdGVyaWEAZm9yY2VJbmRleCI7TjtzOjI0OiIAQ3JpdGVyaWEAb3JkZXJCeUNvbHVtbnMiO2E6MDp7fXM6MjQ6IgBDcml0ZXJpYQBncm91cEJ5Q29sdW1ucyI7YTowOnt9czoxNjoiAENyaXRlcmlhAGhhdmluZyI7TjtzOjE5OiIAQ3JpdGVyaWEAYXNDb2x1bW5zIjthOjA6e31zOjE1OiIAQ3JpdGVyaWEAam9pbnMiO2E6MDp7fXM6MTY6IgBDcml0ZXJpYQBkYk5hbWUiO3M6NzoiZml4dHVyZSI7czoyNjoiAENyaXRlcmlhAHByaW1hcnlUYWJsZU5hbWUiO047czoyNDoiAENyaXRlcmlhAG9yaWdpbmFsRGJOYW1lIjtzOjc6ImZpeHR1cmUiO3M6MTU6IgBDcml0ZXJpYQBsaW1pdCI7aTowO3M6MTY6IgBDcml0ZXJpYQBvZmZzZXQiO2k6MDtzOjE4OiIAQ3JpdGVyaWEAYmxvYkZsYWciO047czoxNzoiAENyaXRlcmlhAGFsaWFzZXMiO2E6MTp7czoxOiJhIjtzOjE6ImEiO31zOjI0OiIAQ3JpdGVyaWEAdXNlVHJhbnNhY3Rpb24iO2I6MDtzOjEzOiIAQ3JpdGVyaWEAbWFwIjthOjE6e3M6NDoiYS5pZCI7Tzo5OiJDcml0ZXJpb24iOjEwOntzOjE2OiIAQ3JpdGVyaW9uAHZhbHVlIjtpOjE7czoyMToiAENyaXRlcmlvbgBjb21wYXJpc29uIjtzOjE6Ij0iO3M6MTY6IgBDcml0ZXJpb24AdGFibGUiO3M6MToiYSI7czoyMDoiAENyaXRlcmlvbgByZWFsdGFibGUiO3M6MToiYSI7czoxNzoiAENyaXRlcmlvbgBjb2x1bW4iO3M6MjoiaWQiO3M6Mjc6IgBDcml0ZXJpb24AaWdub3JlU3RyaW5nQ2FzZSI7YjowO3M6MTM6IgBDcml0ZXJpb24AZGIiO086OToiREJBZGFwdGVyIjowOnt9czoxODoiAENyaXRlcmlvbgBjbGF1c2VzIjthOjA6e31zOjIzOiIAQ3JpdGVyaW9uAGNvbmp1bmN0aW9ucyI7YTowOnt9czoxNzoiAENyaXRlcmlvbgBwYXJlbnQiO047fX1zOjI0OiJjcmV0ZXJpYV9maWx0ZXJfYXR0YWNoZWQiO2I6MTt9",
+                "serialized_bytes": 1080,
+                "serialized_sha256": "d27098c3c5bc6962e59c94103b4efdf5f33f8ba52f60afd66abfffcc4380fac4",
+                "roundtrip_bytes_identical": true
+            }
+        ],
+        "mycriteria_hint": {
+            "hint": {
+                "a": "idx_fixture"
+            },
+            "state": {
+                "keys": [],
+                "nodes": [],
+                "order": [],
+                "isset": false,
+                "marker": null
+            },
+            "representation": {
+                "property_exists": false,
+                "public_vars": {
+                    "hint": {
+                        "a": "idx_fixture"
+                    }
+                },
+                "serialized_base64": "TzoxMDoibXlDcml0ZXJpYSI6MjI6e3M6Mzc6IgBteUNyaXRlcmlhAGlnbm9yZV9zZWxlY3RfY29sdW1uX2xpc3QiO2E6MDp7fXM6Mjc6IgBteUNyaXRlcmlhAGluZGV4X2hpbnRzX21hcCI7YTowOnt9czoyMDoiAENyaXRlcmlhAGlnbm9yZUNhc2UiO2I6MDtzOjIyOiIAQ3JpdGVyaWEAc2luZ2xlUmVjb3JkIjtiOjA7czoyNToiAENyaXRlcmlhAHNlbGVjdE1vZGlmaWVycyI7YTowOnt9czoyMzoiAENyaXRlcmlhAHNlbGVjdENvbHVtbnMiO2E6MDp7fXM6MjA6IgBDcml0ZXJpYQBmb3JjZUluZGV4IjtOO3M6MjQ6IgBDcml0ZXJpYQBvcmRlckJ5Q29sdW1ucyI7YTowOnt9czoyNDoiAENyaXRlcmlhAGdyb3VwQnlDb2x1bW5zIjthOjA6e31zOjE2OiIAQ3JpdGVyaWEAaGF2aW5nIjtOO3M6MTk6IgBDcml0ZXJpYQBhc0NvbHVtbnMiO2E6MDp7fXM6MTU6IgBDcml0ZXJpYQBqb2lucyI7YTowOnt9czoxNjoiAENyaXRlcmlhAGRiTmFtZSI7czo3OiJmaXh0dXJlIjtzOjI2OiIAQ3JpdGVyaWEAcHJpbWFyeVRhYmxlTmFtZSI7TjtzOjI0OiIAQ3JpdGVyaWEAb3JpZ2luYWxEYk5hbWUiO3M6NzoiZml4dHVyZSI7czoxNToiAENyaXRlcmlhAGxpbWl0IjtpOjA7czoxNjoiAENyaXRlcmlhAG9mZnNldCI7aTowO3M6MTg6IgBDcml0ZXJpYQBibG9iRmxhZyI7TjtzOjE3OiIAQ3JpdGVyaWEAYWxpYXNlcyI7YTowOnt9czoyNDoiAENyaXRlcmlhAHVzZVRyYW5zYWN0aW9uIjtiOjA7czoxMzoiAENyaXRlcmlhAG1hcCI7YTowOnt9czo0OiJoaW50IjthOjE6e3M6MToiYSI7czoxMToiaWR4X2ZpeHR1cmUiO319",
+                "serialized_bytes": 792,
+                "serialized_sha256": "a2fa1e3124e4b68633cbdfda082ee623058975eb36d48adba6f04036bde3a7bb",
+                "roundtrip_bytes_identical": true
+            }
+        },
+        "mycriteria_marker": {
+            "state": {
+                "keys": [
+                    "a.id"
+                ],
+                "nodes": {
+                    "a.id": [
+                        "a",
+                        "id",
+                        1,
+                        "=",
+                        [],
+                        []
+                    ]
+                },
+                "order": [],
+                "isset": true,
+                "marker": true
+            },
+            "representation": {
+                "property_exists": true,
+                "public_vars": {
+                    "creteria_filter_attached": true
+                },
+                "serialized_base64": "TzoxMDoibXlDcml0ZXJpYSI6MjI6e3M6Mzc6IgBteUNyaXRlcmlhAGlnbm9yZV9zZWxlY3RfY29sdW1uX2xpc3QiO2E6MDp7fXM6Mjc6IgBteUNyaXRlcmlhAGluZGV4X2hpbnRzX21hcCI7YTowOnt9czoyMDoiAENyaXRlcmlhAGlnbm9yZUNhc2UiO2I6MDtzOjIyOiIAQ3JpdGVyaWEAc2luZ2xlUmVjb3JkIjtiOjA7czoyNToiAENyaXRlcmlhAHNlbGVjdE1vZGlmaWVycyI7YTowOnt9czoyMzoiAENyaXRlcmlhAHNlbGVjdENvbHVtbnMiO2E6MDp7fXM6MjA6IgBDcml0ZXJpYQBmb3JjZUluZGV4IjtOO3M6MjQ6IgBDcml0ZXJpYQBvcmRlckJ5Q29sdW1ucyI7YTowOnt9czoyNDoiAENyaXRlcmlhAGdyb3VwQnlDb2x1bW5zIjthOjA6e31zOjE2OiIAQ3JpdGVyaWEAaGF2aW5nIjtOO3M6MTk6IgBDcml0ZXJpYQBhc0NvbHVtbnMiO2E6MDp7fXM6MTU6IgBDcml0ZXJpYQBqb2lucyI7YTowOnt9czoxNjoiAENyaXRlcmlhAGRiTmFtZSI7czo3OiJmaXh0dXJlIjtzOjI2OiIAQ3JpdGVyaWEAcHJpbWFyeVRhYmxlTmFtZSI7TjtzOjI0OiIAQ3JpdGVyaWEAb3JpZ2luYWxEYk5hbWUiO3M6NzoiZml4dHVyZSI7czoxNToiAENyaXRlcmlhAGxpbWl0IjtpOjA7czoxNjoiAENyaXRlcmlhAG9mZnNldCI7aTowO3M6MTg6IgBDcml0ZXJpYQBibG9iRmxhZyI7TjtzOjE3OiIAQ3JpdGVyaWEAYWxpYXNlcyI7YToxOntzOjE6ImEiO3M6MToiYSI7fXM6MjQ6IgBDcml0ZXJpYQB1c2VUcmFuc2FjdGlvbiI7YjowO3M6MTM6IgBDcml0ZXJpYQBtYXAiO2E6MTp7czo0OiJhLmlkIjtPOjk6IkNyaXRlcmlvbiI6MTA6e3M6MTY6IgBDcml0ZXJpb24AdmFsdWUiO2k6MTtzOjIxOiIAQ3JpdGVyaW9uAGNvbXBhcmlzb24iO3M6MToiPSI7czoxNjoiAENyaXRlcmlvbgB0YWJsZSI7czoxOiJhIjtzOjIwOiIAQ3JpdGVyaW9uAHJlYWx0YWJsZSI7czoxOiJhIjtzOjE3OiIAQ3JpdGVyaW9uAGNvbHVtbiI7czoyOiJpZCI7czoyNzoiAENyaXRlcmlvbgBpZ25vcmVTdHJpbmdDYXNlIjtiOjA7czoxMzoiAENyaXRlcmlvbgBkYiI7Tzo5OiJEQkFkYXB0ZXIiOjA6e31zOjE4OiIAQ3JpdGVyaW9uAGNsYXVzZXMiO2E6MDp7fXM6MjM6IgBDcml0ZXJpb24AY29uanVuY3Rpb25zIjthOjA6e31zOjE3OiIAQ3JpdGVyaW9uAHBhcmVudCI7Tjt9fXM6MjQ6ImNyZXRlcmlhX2ZpbHRlcl9hdHRhY2hlZCI7YjoxO30=",
+                "serialized_bytes": 1175,
+                "serialized_sha256": "d07a96bf1a9ee91df3a34fdb0e6730b3659a51b60d3a003ddbd4462028fd69c1",
+                "roundtrip_bytes_identical": true
+            }
+        },
+        "kalturacriteria_marker": {
+            "state": {
+                "keys": [
+                    "a.id"
+                ],
+                "nodes": {
+                    "a.id": [
+                        "a",
+                        "id",
+                        1,
+                        "=",
+                        [],
+                        []
+                    ]
+                },
+                "order": [],
+                "isset": true,
+                "marker": true
+            },
+            "representation": {
+                "property_exists": true,
+                "public_vars": {
+                    "creteria_filter_attached": true
+                },
+                "serialized_base64": "TzoxNToiS2FsdHVyYUNyaXRlcmlhIjoyNjp7czoxNToiACoAcmVjb3Jkc0NvdW50IjtpOjA7czoxMzoiACoAZmV0Y2hlZElkcyI7YTowOnt9czoxMDoiACoAZmlsdGVycyI7YTowOnt9czoxMDoiACoAZG9Db3VudCI7YjoxO3M6MTU6IgAqAHNlbGVjdENvbHVtbiI7TjtzOjE2OiIAKgBncm91cEJ5Q29sdW1uIjtOO3M6MjA6IgBDcml0ZXJpYQBpZ25vcmVDYXNlIjtiOjA7czoyMjoiAENyaXRlcmlhAHNpbmdsZVJlY29yZCI7YjowO3M6MjU6IgBDcml0ZXJpYQBzZWxlY3RNb2RpZmllcnMiO2E6MDp7fXM6MjM6IgBDcml0ZXJpYQBzZWxlY3RDb2x1bW5zIjthOjA6e31zOjIwOiIAQ3JpdGVyaWEAZm9yY2VJbmRleCI7TjtzOjI0OiIAQ3JpdGVyaWEAb3JkZXJCeUNvbHVtbnMiO2E6MDp7fXM6MjQ6IgBDcml0ZXJpYQBncm91cEJ5Q29sdW1ucyI7YTowOnt9czoxNjoiAENyaXRlcmlhAGhhdmluZyI7TjtzOjE5OiIAQ3JpdGVyaWEAYXNDb2x1bW5zIjthOjA6e31zOjE1OiIAQ3JpdGVyaWEAam9pbnMiO2E6MDp7fXM6MTY6IgBDcml0ZXJpYQBkYk5hbWUiO3M6NzoiZml4dHVyZSI7czoyNjoiAENyaXRlcmlhAHByaW1hcnlUYWJsZU5hbWUiO047czoyNDoiAENyaXRlcmlhAG9yaWdpbmFsRGJOYW1lIjtzOjc6ImZpeHR1cmUiO3M6MTU6IgBDcml0ZXJpYQBsaW1pdCI7aTowO3M6MTY6IgBDcml0ZXJpYQBvZmZzZXQiO2k6MDtzOjE4OiIAQ3JpdGVyaWEAYmxvYkZsYWciO047czoxNzoiAENyaXRlcmlhAGFsaWFzZXMiO2E6MTp7czoxOiJhIjtzOjE6ImEiO31zOjI0OiIAQ3JpdGVyaWEAdXNlVHJhbnNhY3Rpb24iO2I6MDtzOjEzOiIAQ3JpdGVyaWEAbWFwIjthOjE6e3M6NDoiYS5pZCI7Tzo5OiJDcml0ZXJpb24iOjEwOntzOjE2OiIAQ3JpdGVyaW9uAHZhbHVlIjtpOjE7czoyMToiAENyaXRlcmlvbgBjb21wYXJpc29uIjtzOjE6Ij0iO3M6MTY6IgBDcml0ZXJpb24AdGFibGUiO3M6MToiYSI7czoyMDoiAENyaXRlcmlvbgByZWFsdGFibGUiO3M6MToiYSI7czoxNzoiAENyaXRlcmlvbgBjb2x1bW4iO3M6MjoiaWQiO3M6Mjc6IgBDcml0ZXJpb24AaWdub3JlU3RyaW5nQ2FzZSI7YjowO3M6MTM6IgBDcml0ZXJpb24AZGIiO086OToiREJBZGFwdGVyIjowOnt9czoxODoiAENyaXRlcmlvbgBjbGF1c2VzIjthOjA6e31zOjIzOiIAQ3JpdGVyaW9uAGNvbmp1bmN0aW9ucyI7YTowOnt9czoxNzoiAENyaXRlcmlvbgBwYXJlbnQiO047fX1zOjI0OiJjcmV0ZXJpYV9maWx0ZXJfYXR0YWNoZWQiO2I6MTt9",
+                "serialized_bytes": 1239,
+                "serialized_sha256": "8297d50200cd387e10e6465b56c5649b07822abaae419795f92f173b4edec621",
+                "roundtrip_bytes_identical": true
+            }
+        },
+        "unrelated_control": [
+            "UnrelatedMarkerControl",
+            true
+        ]
+    },
+    "imports": [],
+    "events": [],
+    "source_sha256": {
+        "criteria": "8e0e6e5a2d721900218f11f65f7394c20136f40d71e9e80dadc90f268f7ea32f",
+        "filter": "fc4cefcbff304a0b176af4e22f608c087e8d781b092acdec888459b7fec2bc13"
+    }
+}

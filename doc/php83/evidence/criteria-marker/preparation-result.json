@@ -1,0 +1,39 @@
+{
+  "status": "PREPARED_REVIEWED_HARDENING_REQUIRED_BEFORE_RUNTIME",
+  "local_guard_tests": 14,
+  "local_test_exit": 0,
+  "source_only_preflight": "preflight.json",
+  "actual_opencode_terminal_exit": 0,
+  "actual_opencode_tests_executed": false,
+  "actual_opencode_final_review": false,
+  "tool_errors": [
+    "Ripgrep JSON record exceeded 65536 bytes",
+    "The user rejected permission to use this specific tool call."
+  ],
+  "permission_denial_not_bypassed": true,
+  "php_lint_or_runtime_executed": false,
+  "patch_selected": false,
+  "source_hashes": {
+    "tools/php83/criteria-marker/compare.py": "92197a8a5de0eeffa1453ef8c0b7a630538837c52f043f98874ac8e17f62f629",
+    "tools/php83/criteria-marker/prepare.py": "7e984b3f7486b8eb817c554642f869659497ceb79c1298d3fdd2f5a190d8f5ed",
+    "tools/php83/criteria-marker/probe.php": "c1870d3fafd036afc80303447e0ce1411c22d19e492570a7a104863945c6f5c8",
+    "tools/php83/criteria-marker/run.sh": "d408f884959331d2a984474b2d93d7e8b3775e3abda15583d31f8fc92a0cf4d1",
+    "tools/php83/criteria-marker/source-pins.json": "28b78a20b362f003011d4f3b8ae31c51617ab9385dc12732e52c9fc6362252c6",
+    "tools/php83/criteria-marker/test_compare.py": "6721ca3c518c1b3373ecfcdb80e9ce676039176202cc13c1b6aab4a645bca7dd",
+    "tools/php83/criteria-marker/test_prepare.py": "10bc0505e02210bfe28e0b92ad6fad0f6d963f4a9a7df5a8b70c1dd9ce771d36"
+  },
+  "actual_claude": {
+    "terminal_exit": 0,
+    "tests": 14,
+    "test_exit": 0,
+    "bash_syntax_exit": 0,
+    "review": "claude-review.md",
+    "runtime": false
+  },
+  "runtime_blockers": [
+    "Confirm/load json for php74 -n",
+    "Record or reject unrelated diagnostic delta",
+    "Bind identities manifest and enforce before/after hashes",
+    "Bind parsed report to exact raw stdout"
+  ]
+}

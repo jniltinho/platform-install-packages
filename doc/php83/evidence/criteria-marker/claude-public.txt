@@ -1,0 +1,29 @@
+Terminei a revisão. Os testes locais passam, mas encontrei um defeito provável que pode impedir as duas execuções em PHP 7.4 (`original74` e `declaration74`). Não executei PHP nem `prepare()`. A revisão está em `doc/php83/evidence/criteria-marker/claude-review.md`.
+
+**O que rodei**
+- `python3 -m unittest discover …`: exit 0, 14 testes OK. Saídas em `claude-tests.{stdout,stderr,exit}`.
+- `bash -n run.sh`: exit 0. Saídas em `claude-bash.{stdout,stderr,exit}`.
+- Os 14 testes são só guardas locais sintéticos: 4 testam `propose` e 10 testam `validate` com dados fabricados. Nada neles executa PHP, `prepare()`/ZIP/pins, `probe.php`, o sandbox do `run.sh` ou a importação de serialização entre versões.
+
+**Sem defeito**
+- Inventário de 15 casos: `probe.php:27-39` bate com `compare.py:7`, na mesma ordem.
+- As 4 representações conferem.
+- Os avisos nativos chegam ao stderr: o handler retorna `false` e o PHP roda com `display_errors=stderr`.
+- O comparador exige os 4 modos em ordem e exit inteiro igual a 0.
+- Diferenças de representação não viram paridade nem seleção de patch.
+- `propose` rejeita âncora ausente ou duplicada e propriedade já existente.
+
+**Achados**
+1. **HIGH (provável, não verificado em runtime)** — `run.sh:21` roda `php -n`. No PHP 7.4 do Debian/Ubuntu, `json` costuma vir como módulo carregado por ini, então `json_encode` em `probe.php:42` pode não existir nos modos 74. Falharia fechado, mas bloquearia as execuções em 7.4.
+2. **MEDIUM** — `compare.py:39-47`: eventos e stderr que não são do marcador são guardados, mas nunca comparados. Avisos novos na variante com a declaração não impedem a "paridade funcional".
+3. **MEDIUM** — `compare.py:41`: a linha 51 de `criteriaFilter.php` está fixa no código e não foi verificada contra o pin. Além disso, o `any()` aceita eventos extras do marcador sem listá-los.
+4. **MEDIUM** — `run.sh:10-14` + `prepare.py:29`: o próprio `identities.json` não tem hash fixado, e há uma janela TOCTOU entre a checagem e o `exec`. O `is_symlink` só confere o último componente do caminho.
+5. **LOW**
+   - Não há como provar que o `body` veio do stdout bruto.
+   - `public_vars` é uma representação rasa dos objetos aninhados.
+   - A mensagem de erro em `probe.php:38` pode divergir entre 7.4 e 8.3 e aparecer como diferença de comportamento.
+   - Faltam testes para `compare.py:15`, `:36`, `:43`, `:48` e para `prepare()`.
+   - `PINS={}` é código morto.
+   - Membro ausente no ZIP gera `KeyError`, não `ValueError` (ainda falha fechado).
+
+**Ainda não testado:** runtime PHP 7.4/8.3, lint nativo de PHP, importação de serialização entre versões e colisão com descendentes. A documentação já os marca como pendentes. Esta revisão não é evidência de execução nem aceitação da aplicação. Sugiro resolver o achado 1 antes de agendar a VM. Não alterei o código-fonte.

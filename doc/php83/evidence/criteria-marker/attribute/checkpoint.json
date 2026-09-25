@@ -1,0 +1,54 @@
+{
+  "status": "CHECKPOINT_NO_PATCH_SELECTED_STRICT_LAYOUT_FAIL_PRESERVED",
+  "attribute_four_process_primary_exit": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "actual_claude_repeat_cli_exit": 0,
+  "exact_repeat": true,
+  "strict_failure": "Exact state/representation differs",
+  "logical_executor": "actual Claude",
+  "logical_process_exits": [
+    0,
+    0,
+    0
+  ],
+  "logical_payloads": 7,
+  "typed_state_identical": true,
+  "raw_layout_counts": {
+    "original74": "7/7",
+    "original83": "4/7",
+    "attribute83": "4/7"
+  },
+  "attribute_selected": false,
+  "cache_application_acceptance": false,
+  "labs_released": true,
+  "files": {
+    "tools/php83/criteria-marker/attribute/collect.py": "721233a9080f9c73984f70fc85fb43050cad67b888a96dd618bddede7c676cb7",
+    "tools/php83/criteria-marker/attribute/compare.py": "a2d8c7b3090a4723d914250209b69f20f3cce4019a5d4b54f505a0d78aead4ce",
+    "tools/php83/criteria-marker/attribute/logical-collect.py": "ddf5480a2bd59237b51bf04ecc562d9bde87d6eaf2756fbde7ba4dd52ac3d71a",
+    "tools/php83/criteria-marker/attribute/logical-compare.py": "09b18c2ddd793432363783c53a807ff77d058b9e77c89d6e393e0926c62dd8b7",
+    "tools/php83/criteria-marker/attribute/logical-run.sh": "6b2e4b95ab19879fd2fd8c6f08a50e0b5cdaf1d243ad73456760f2119b7cd2ed",
+    "tools/php83/criteria-marker/attribute/logical-verify.py": "154343ab050e203ffe0f2e1acde84260ac6207766851633db68f7b21aaec2068",
+    "tools/php83/criteria-marker/attribute/logical.php": "1f93807ab8ebca514fbd752225ced0e5e1aec9ca37a502664fe0723df798c3e2",
+    "tools/php83/criteria-marker/attribute/prepare.py": "96b143e4338fccba549d56ccb28bd27556eae69cdd528ee9ef20f49c282fab3a",
+    "tools/php83/criteria-marker/attribute/probe.php": "12800e23042e037b8c1da2448702e0dbba9953d6a3c38d1de9c2174065807fb5",
+    "tools/php83/criteria-marker/attribute/repeat.py": "5e9e81ec42fa778d468f6273f44473a8f21ec65478010f36402d38e02a73dadb",
+    "tools/php83/criteria-marker/attribute/run.sh": "207a1d25d92fef5666a50d8da2f989f64fa176073b8ebf5441c19f15b8a60d44",
+    "tools/php83/criteria-marker/attribute/source-pins.json": "cc6fd6793ca3c1bb223f9992e1a3677bc1afa5ff1badd7d52b9bb9dfdfe82f73",
+    "tools/php83/criteria-marker/attribute/test_compare.py": "cea6be41bff7e8a7d6195cb444a825d2c9c076efc68e9843a7e2644b9659ca1c",
+    "tools/php83/criteria-marker/attribute/test_logical.py": "cee03c0ce16fe4107804d6be3baf06c0dbafa10dbb449500ac58de46b8191909",
+    "tools/php83/criteria-marker/attribute/test_prepare.py": "57120d107484c0d67b872a6d942c6870e65873235a1742281ecb1ce3712a6479",
+    "tools/php83/criteria-marker/attribute/verify.py": "7dbc6a9aad12ffc4d2e71006db70c806430f63d9082ef0c3236cecf6e1e82e4a"
+  },
+  "evidence": {
+    "doc/php83/evidence/criteria-marker/attribute/primary.json": "68bc891625f61d3f49968917c1ea9cb28ab9de9c2e2b5c4a3b21fc80a6062b6a",
+    "doc/php83/evidence/criteria-marker/attribute/claude.json": "ba406e9042ce09edf454bbcb72294949e58b9fca68a47f6ea54026202f70d798",
+    "doc/php83/evidence/criteria-marker/attribute/logical-primary.json": "3be5ce3c5a5216523d8da1b6e74564c4a9b449025b29594f86088b0d71eaa3dd",
+    "doc/php83/evidence/criteria-marker/attribute/primary-attribution.json": "d4ac419bd547d46ab1950326c04a93b2e342f9632a1427db5fe782d1c5f32c7e",
+    "doc/php83/evidence/criteria-marker/attribute/cache-digest-observations.json": "cf93727cbfd19a026b053c1653f3ac298ff86273a5675a7d965e53ff754c30e6",
+    "doc/php83/criteria-marker.md": "4416e132cd183399730f05dc601363e692d8344affc3b82fdcbb462d7dc4aa26"
+  }
+}

@@ -1,0 +1,318 @@
+{
+    "schema": 1,
+    "php": "7.4.33",
+    "variant": "original",
+    "rows": {
+        "fresh": {
+            "state": {
+                "keys": [],
+                "nodes": [],
+                "order": [],
+                "isset": false,
+                "marker": null
+            },
+            "representation": {
+                "property_exists": false,
+                "public_vars": [],
+                "serialized_base64": "Tzo4OiJDcml0ZXJpYSI6MTk6e3M6MjA6IgBDcml0ZXJpYQBpZ25vcmVDYXNlIjtiOjA7czoyMjoiAENyaXRlcmlhAHNpbmdsZVJlY29yZCI7YjowO3M6MjU6IgBDcml0ZXJpYQBzZWxlY3RNb2RpZmllcnMiO2E6MDp7fXM6MjM6IgBDcml0ZXJpYQBzZWxlY3RDb2x1bW5zIjthOjA6e31zOjIwOiIAQ3JpdGVyaWEAZm9yY2VJbmRleCI7TjtzOjI0OiIAQ3JpdGVyaWEAb3JkZXJCeUNvbHVtbnMiO2E6MDp7fXM6MjQ6IgBDcml0ZXJpYQBncm91cEJ5Q29sdW1ucyI7YTowOnt9czoxNjoiAENyaXRlcmlhAGhhdmluZyI7TjtzOjE5OiIAQ3JpdGVyaWEAYXNDb2x1bW5zIjthOjA6e31zOjE1OiIAQ3JpdGVyaWEAam9pbnMiO2E6MDp7fXM6MTY6IgBDcml0ZXJpYQBkYk5hbWUiO3M6NzoiZml4dHVyZSI7czoyNjoiAENyaXRlcmlhAHByaW1hcnlUYWJsZU5hbWUiO047czoyNDoiAENyaXRlcmlhAG9yaWdpbmFsRGJOYW1lIjtzOjc6ImZpeHR1cmUiO3M6MTU6IgBDcml0ZXJpYQBsaW1pdCI7aTowO3M6MTY6IgBDcml0ZXJpYQBvZmZzZXQiO2k6MDtzOjE4OiIAQ3JpdGVyaWEAYmxvYkZsYWciO047czoxNzoiAENyaXRlcmlhAGFsaWFzZXMiO2E6MTp7czoxOiJhIjtzOjE6ImEiO31zOjI0OiIAQ3JpdGVyaWEAdXNlVHJhbnNhY3Rpb24iO2I6MDtzOjEzOiIAQ3JpdGVyaWEAbWFwIjthOjA6e319",
+                "serialized_bytes": 669,
+                "serialized_sha256": "7096d8712794815ef4ae737badc5ec88a140a5961b39c1e6f6e0891a3a4a98df",
+                "roundtrip_bytes_identical": true
+            }
+        },
+        "disabled": {
+            "keys": [],
+            "nodes": [],
+            "order": [],
+            "isset": false,
+            "marker": null
+        },
+        "once_twice": [
+            {
+                "keys": [
+                    "a.id"
+                ],
+                "nodes": {
+                    "a.id": [
+                        "a",
+                        "id",
+                        1,
+                        "=",
+                        [],
+                        []
+                    ]
+                },
+                "order": [],
+                "isset": true,
+                "marker": true
+            },
+            {
+                "keys": [
+                    "a.id"
+                ],
+                "nodes": {
+                    "a.id": [
+                        "a",
+                        "id",
+                        1,
+                        "=",
+                        [],
+                        []
+                    ]
+                },
+                "order": [],
+                "isset": true,
+                "marker": true
+            },
+            {
+                "property_exists": true,
+                "public_vars": {
+                    "creteria_filter_attached": true
+                },
+                "serialized_base64": "Tzo4OiJDcml0ZXJpYSI6MjA6e3M6MjA6IgBDcml0ZXJpYQBpZ25vcmVDYXNlIjtiOjA7czoyMjoiAENyaXRlcmlhAHNpbmdsZVJlY29yZCI7YjowO3M6MjU6IgBDcml0ZXJpYQBzZWxlY3RNb2RpZmllcnMiO2E6MDp7fXM6MjM6IgBDcml0ZXJpYQBzZWxlY3RDb2x1bW5zIjthOjA6e31zOjIwOiIAQ3JpdGVyaWEAZm9yY2VJbmRleCI7TjtzOjI0OiIAQ3JpdGVyaWEAb3JkZXJCeUNvbHVtbnMiO2E6MDp7fXM6MjQ6IgBDcml0ZXJpYQBncm91cEJ5Q29sdW1ucyI7YTowOnt9czoxNjoiAENyaXRlcmlhAGhhdmluZyI7TjtzOjE5OiIAQ3JpdGVyaWEAYXNDb2x1bW5zIjthOjA6e31zOjE1OiIAQ3JpdGVyaWEAam9pbnMiO2E6MDp7fXM6MTY6IgBDcml0ZXJpYQBkYk5hbWUiO3M6NzoiZml4dHVyZSI7czoyNjoiAENyaXRlcmlhAHByaW1hcnlUYWJsZU5hbWUiO047czoyNDoiAENyaXRlcmlhAG9yaWdpbmFsRGJOYW1lIjtzOjc6ImZpeHR1cmUiO3M6MTU6IgBDcml0ZXJpYQBsaW1pdCI7aTowO3M6MTY6IgBDcml0ZXJpYQBvZmZzZXQiO2k6MDtzOjE4OiIAQ3JpdGVyaWEAYmxvYkZsYWciO047czoxNzoiAENyaXRlcmlhAGFsaWFzZXMiO2E6MTp7czoxOiJhIjtzOjE6ImEiO31zOjI0OiIAQ3JpdGVyaWEAdXNlVHJhbnNhY3Rpb24iO2I6MDtzOjEzOiIAQ3JpdGVyaWEAbWFwIjthOjE6e3M6NDoiYS5pZCI7Tzo5OiJDcml0ZXJpb24iOjEwOntzOjE2OiIAQ3JpdGVyaW9uAHZhbHVlIjtpOjE7czoyMToiAENyaXRlcmlvbgBjb21wYXJpc29uIjtzOjE6Ij0iO3M6MTY6IgBDcml0ZXJpb24AdGFibGUiO3M6MToiYSI7czoyMDoiAENyaXRlcmlvbgByZWFsdGFibGUiO3M6MToiYSI7czoxNzoiAENyaXRlcmlvbgBjb2x1bW4iO3M6MjoiaWQiO3M6Mjc6IgBDcml0ZXJpb24AaWdub3JlU3RyaW5nQ2FzZSI7YjowO3M6MTM6IgBDcml0ZXJpb24AZGIiO086OToiREJBZGFwdGVyIjowOnt9czoxODoiAENyaXRlcmlvbgBjbGF1c2VzIjthOjA6e31zOjIzOiIAQ3JpdGVyaW9uAGNvbmp1bmN0aW9ucyI7YTowOnt9czoxNzoiAENyaXRlcmlvbgBwYXJlbnQiO047fX1zOjI0OiJjcmV0ZXJpYV9maWx0ZXJfYXR0YWNoZWQiO2I6MTt9",
+                "serialized_bytes": 1080,
+                "serialized_sha256": "d27098c3c5bc6962e59c94103b4efdf5f33f8ba52f60afd66abfffcc4380fac4",
+                "roundtrip_bytes_identical": true
+            }
+        ],
+        "two_filters": {
+            "keys": [
+                "a.id"
+            ],
+            "nodes": {
+                "a.id": [
+                    "a",
+                    "id",
+                    1,
+                    "=",
+                    [],
+                    []
+                ]
+            },
+            "order": [],
+            "isset": true,
+            "marker": true
+        },
+        "preset_true": {
+            "keys": [],
+            "nodes": [],
+            "order": [],
+            "isset": true,
+            "marker": true
+        },
+        "preset_false": {
+            "keys": [],
+            "nodes": [],
+            "order": [],
+            "isset": true,
+            "marker": false
+        },
+        "preset_null": {
+            "keys": [
+                "a.id"
+            ],
+            "nodes": {
+                "a.id": [
+                    "a",
+                    "id",
+                    1,
+                    "=",
+                    [],
+                    []
+                ]
+            },
+            "order": [],
+            "isset": true,
+            "marker": true
+        },
+        "unset_reapply": {
+            "keys": [
+                "a.id"
+            ],
+            "nodes": {
+                "a.id": [
+                    "a",
+                    "id",
+                    1,
+                    "=",
+                    [
+                        " AND "
+                    ],
+                    [
+                        [
+                            "a",
+                            "id",
+                            2,
+                            "=",
+                            [],
+                            []
+                        ]
+                    ]
+                ]
+            },
+            "order": [],
+            "isset": true,
+            "marker": true
+        },
+        "clone": [
+            {
+                "keys": [
+                    "a.id"
+                ],
+                "nodes": {
+                    "a.id": [
+                        "a",
+                        "id",
+                        1,
+                        "=",
+                        [],
+                        []
+                    ]
+                },
+                "order": [],
+                "isset": true,
+                "marker": true
+            },
+            {
+                "keys": [
+                    "a.id"
+                ],
+                "nodes": {
+                    "a.id": [
+                        "a",
+                        "id",
+                        1,
+                        "=",
+                        [],
+                        []
+                    ]
+                },
+                "order": [],
+                "isset": true,
+                "marker": true
+            },
+            {
+                "property_exists": true,
+                "public_vars": {
+                    "creteria_filter_attached": true
+                },
+                "serialized_base64": "Tzo4OiJDcml0ZXJpYSI6MjA6e3M6MjA6IgBDcml0ZXJpYQBpZ25vcmVDYXNlIjtiOjA7czoyMjoiAENyaXRlcmlhAHNpbmdsZVJlY29yZCI7YjowO3M6MjU6IgBDcml0ZXJpYQBzZWxlY3RNb2RpZmllcnMiO2E6MDp7fXM6MjM6IgBDcml0ZXJpYQBzZWxlY3RDb2x1bW5zIjthOjA6e31zOjIwOiIAQ3JpdGVyaWEAZm9yY2VJbmRleCI7TjtzOjI0OiIAQ3JpdGVyaWEAb3JkZXJCeUNvbHVtbnMiO2E6MDp7fXM6MjQ6IgBDcml0ZXJpYQBncm91cEJ5Q29sdW1ucyI7YTowOnt9czoxNjoiAENyaXRlcmlhAGhhdmluZyI7TjtzOjE5OiIAQ3JpdGVyaWEAYXNDb2x1bW5zIjthOjA6e31zOjE1OiIAQ3JpdGVyaWEAam9pbnMiO2E6MDp7fXM6MTY6IgBDcml0ZXJpYQBkYk5hbWUiO3M6NzoiZml4dHVyZSI7czoyNjoiAENyaXRlcmlhAHByaW1hcnlUYWJsZU5hbWUiO047czoyNDoiAENyaXRlcmlhAG9yaWdpbmFsRGJOYW1lIjtzOjc6ImZpeHR1cmUiO3M6MTU6IgBDcml0ZXJpYQBsaW1pdCI7aTowO3M6MTY6IgBDcml0ZXJpYQBvZmZzZXQiO2k6MDtzOjE4OiIAQ3JpdGVyaWEAYmxvYkZsYWciO047czoxNzoiAENyaXRlcmlhAGFsaWFzZXMiO2E6MTp7czoxOiJhIjtzOjE6ImEiO31zOjI0OiIAQ3JpdGVyaWEAdXNlVHJhbnNhY3Rpb24iO2I6MDtzOjEzOiIAQ3JpdGVyaWEAbWFwIjthOjE6e3M6NDoiYS5pZCI7Tzo5OiJDcml0ZXJpb24iOjEwOntzOjE2OiIAQ3JpdGVyaW9uAHZhbHVlIjtpOjE7czoyMToiAENyaXRlcmlvbgBjb21wYXJpc29uIjtzOjE6Ij0iO3M6MTY6IgBDcml0ZXJpb24AdGFibGUiO3M6MToiYSI7czoyMDoiAENyaXRlcmlvbgByZWFsdGFibGUiO3M6MToiYSI7czoxNzoiAENyaXRlcmlvbgBjb2x1bW4iO3M6MjoiaWQiO3M6Mjc6IgBDcml0ZXJpb24AaWdub3JlU3RyaW5nQ2FzZSI7YjowO3M6MTM6IgBDcml0ZXJpb24AZGIiO086OToiREJBZGFwdGVyIjowOnt9czoxODoiAENyaXRlcmlvbgBjbGF1c2VzIjthOjA6e31zOjIzOiIAQ3JpdGVyaW9uAGNvbmp1bmN0aW9ucyI7YTowOnt9czoxNzoiAENyaXRlcmlvbgBwYXJlbnQiO047fX1zOjI0OiJjcmV0ZXJpYV9maWx0ZXJfYXR0YWNoZWQiO2I6MTt9",
+                "serialized_bytes": 1080,
+                "serialized_sha256": "d27098c3c5bc6962e59c94103b4efdf5f33f8ba52f60afd66abfffcc4380fac4",
+                "roundtrip_bytes_identical": true
+            }
+        ],
+        "clear": {
+            "keys": [],
+            "nodes": [],
+            "order": [],
+            "isset": true,
+            "marker": true
+        },
+        "empty_filter": {
+            "keys": [],
+            "nodes": [],
+            "order": [],
+            "isset": true,
+            "marker": true
+        },
+        "nested_order": {
+            "keys": [
+                "a.id"
+            ],
+            "nodes": {
+                "a.id": [
+                    "a",
+                    "id",
+                    1,
+                    "=",
+                    [
+                        " OR "
+                    ],
+                    [
+                        [
+                            "a",
+                            "id",
+                            2,
+                            "=",
+                            [],
+                            []
+                        ]
+                    ]
+                ]
+            },
+            "order": [
+                "a.id ASC",
+                "a.name DESC"
+            ],
+            "isset": true,
+            "marker": true
+        },
+        "duplicate_constraint": {
+            "keys": [
+                "a.id"
+            ],
+            "nodes": {
+                "a.id": [
+                    "a",
+                    "id",
+                    1,
+                    "=",
+                    [],
+                    []
+                ]
+            },
+            "order": [],
+            "isset": true,
+            "marker": true
+        },
+        "exception_marker": [
+            [
+                "Error",
+                "Call to a member function keys() on null"
+            ],
+            {
+                "keys": [],
+                "nodes": [],
+                "order": [],
+                "isset": true,
+                "marker": true
+            }
+        ],
+        "serialize_attached": [
+            {
+                "keys": [
+                    "a.id"
+                ],
+                "nodes": {
+                    "a.id": [
+                        "a",
+                        "id",
+                        1,
+                        "=",
+                        [],
+                        []
+                    ]
+                },
+                "order": [],
+                "isset": true,
+                "marker": true
+            },
+            {
+                "property_exists": true,
+                "public_vars": {
+                    "creteria_filter_attached": true
+                },
+                "serialized_base64": "Tzo4OiJDcml0ZXJpYSI6MjA6e3M6MjA6IgBDcml0ZXJpYQBpZ25vcmVDYXNlIjtiOjA7czoyMjoiAENyaXRlcmlhAHNpbmdsZVJlY29yZCI7YjowO3M6MjU6IgBDcml0ZXJpYQBzZWxlY3RNb2RpZmllcnMiO2E6MDp7fXM6MjM6IgBDcml0ZXJpYQBzZWxlY3RDb2x1bW5zIjthOjA6e31zOjIwOiIAQ3JpdGVyaWEAZm9yY2VJbmRleCI7TjtzOjI0OiIAQ3JpdGVyaWEAb3JkZXJCeUNvbHVtbnMiO2E6MDp7fXM6MjQ6IgBDcml0ZXJpYQBncm91cEJ5Q29sdW1ucyI7YTowOnt9czoxNjoiAENyaXRlcmlhAGhhdmluZyI7TjtzOjE5OiIAQ3JpdGVyaWEAYXNDb2x1bW5zIjthOjA6e31zOjE1OiIAQ3JpdGVyaWEAam9pbnMiO2E6MDp7fXM6MTY6IgBDcml0ZXJpYQBkYk5hbWUiO3M6NzoiZml4dHVyZSI7czoyNjoiAENyaXRlcmlhAHByaW1hcnlUYWJsZU5hbWUiO047czoyNDoiAENyaXRlcmlhAG9yaWdpbmFsRGJOYW1lIjtzOjc6ImZpeHR1cmUiO3M6MTU6IgBDcml0ZXJpYQBsaW1pdCI7aTowO3M6MTY6IgBDcml0ZXJpYQBvZmZzZXQiO2k6MDtzOjE4OiIAQ3JpdGVyaWEAYmxvYkZsYWciO047czoxNzoiAENyaXRlcmlhAGFsaWFzZXMiO2E6MTp7czoxOiJhIjtzOjE6ImEiO31zOjI0OiIAQ3JpdGVyaWEAdXNlVHJhbnNhY3Rpb24iO2I6MDtzOjEzOiIAQ3JpdGVyaWEAbWFwIjthOjE6e3M6NDoiYS5pZCI7Tzo5OiJDcml0ZXJpb24iOjEwOntzOjE2OiIAQ3JpdGVyaW9uAHZhbHVlIjtpOjE7czoyMToiAENyaXRlcmlvbgBjb21wYXJpc29uIjtzOjE6Ij0iO3M6MTY6IgBDcml0ZXJpb24AdGFibGUiO3M6MToiYSI7czoyMDoiAENyaXRlcmlvbgByZWFsdGFibGUiO3M6MToiYSI7czoxNzoiAENyaXRlcmlvbgBjb2x1bW4iO3M6MjoiaWQiO3M6Mjc6IgBDcml0ZXJpb24AaWdub3JlU3RyaW5nQ2FzZSI7YjowO3M6MTM6IgBDcml0ZXJpb24AZGIiO086OToiREJBZGFwdGVyIjowOnt9czoxODoiAENyaXRlcmlvbgBjbGF1c2VzIjthOjA6e31zOjIzOiIAQ3JpdGVyaW9uAGNvbmp1bmN0aW9ucyI7YTowOnt9czoxNzoiAENyaXRlcmlvbgBwYXJlbnQiO047fX1zOjI0OiJjcmV0ZXJpYV9maWx0ZXJfYXR0YWNoZWQiO2I6MTt9",
+                "serialized_bytes": 1080,
+                "serialized_sha256": "d27098c3c5bc6962e59c94103b4efdf5f33f8ba52f60afd66abfffcc4380fac4",
+                "roundtrip_bytes_identical": true
+            }
+        ]
+    },
+    "events": [],
+    "source_sha256": {
+        "criteria": "0626bb5b976ae7eedccaf5060675cd7c7ca56b22fc2c9d6c1a51ce485a303543",
+        "filter": "fc4cefcbff304a0b176af4e22f608c087e8d781b092acdec888459b7fec2bc13"
+    }
+}

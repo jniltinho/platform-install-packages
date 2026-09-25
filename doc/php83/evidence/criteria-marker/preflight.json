@@ -1,0 +1,17 @@
+{
+  "status": "UNSELECTED_REPRESENTATION_EXPERIMENT",
+  "upstream_sha256": "58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28",
+  "source_hashes": {
+    "vendor/propel/util/Criteria.php": "0626bb5b976ae7eedccaf5060675cd7c7ca56b22fc2c9d6c1a51ce485a303543",
+    "alpha/apps/kaltura/lib/criteriaFilter.class.php": "fc4cefcbff304a0b176af4e22f608c087e8d781b092acdec888459b7fec2bc13"
+  },
+  "files": {
+    "original.php": "0626bb5b976ae7eedccaf5060675cd7c7ca56b22fc2c9d6c1a51ce485a303543",
+    "declaration.php": "d5084a55c7b10ca702edeb8cf926805749dfe4a567880d9285b0a2a86f883422",
+    "criteriaFilter.php": "fc4cefcbff304a0b176af4e22f608c087e8d781b092acdec888459b7fec2bc13",
+    "probe.php": "c1870d3fafd036afc80303447e0ce1411c22d19e492570a7a104863945c6f5c8",
+    "run.sh": "d408f884959331d2a984474b2d93d7e8b3775e3abda15583d31f8fc92a0cf4d1"
+  },
+  "php_executed": false,
+  "patch_selected": false
+}

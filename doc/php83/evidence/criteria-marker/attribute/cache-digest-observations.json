@@ -1,0 +1,57 @@
+{
+  "scope": "Offline calculation of kQueryCache.php:310 digest input with verified CACHE_VERSION=2; no cache backend execution",
+  "records": [
+    {
+      "mode": "original74",
+      "digests": {
+        "/fresh/representation": "bc665aeb4e1dcc59dac724534b55614d",
+        "/once_twice/2": "bef52b664b88c98b28989eca14948a46",
+        "/clone/2": "bef52b664b88c98b28989eca14948a46",
+        "/serialize_attached/1": "bef52b664b88c98b28989eca14948a46",
+        "/mycriteria_hint/representation": "a28ad71a893d5ff63380df2957f1a894",
+        "/mycriteria_marker/representation": "f6faa0472578f92781ee2ff5f531c3df",
+        "/kalturacriteria_marker/representation": "7f9f48a4c05c64b574c7159beeaf231e"
+      }
+    },
+    {
+      "mode": "attribute74",
+      "digests": {
+        "/fresh/representation": "bc665aeb4e1dcc59dac724534b55614d",
+        "/once_twice/2": "bef52b664b88c98b28989eca14948a46",
+        "/clone/2": "bef52b664b88c98b28989eca14948a46",
+        "/serialize_attached/1": "bef52b664b88c98b28989eca14948a46",
+        "/mycriteria_hint/representation": "a28ad71a893d5ff63380df2957f1a894",
+        "/mycriteria_marker/representation": "f6faa0472578f92781ee2ff5f531c3df",
+        "/kalturacriteria_marker/representation": "7f9f48a4c05c64b574c7159beeaf231e"
+      }
+    },
+    {
+      "mode": "original83",
+      "digests": {
+        "/fresh/representation": "bc665aeb4e1dcc59dac724534b55614d",
+        "/once_twice/2": "bef52b664b88c98b28989eca14948a46",
+        "/clone/2": "bef52b664b88c98b28989eca14948a46",
+        "/serialize_attached/1": "bef52b664b88c98b28989eca14948a46",
+        "/mycriteria_hint/representation": "42387f14237e4465d181a44e81b3ade6",
+        "/mycriteria_marker/representation": "72393d17a108fc3e6bc60639f772a521",
+        "/kalturacriteria_marker/representation": "128b699c4f4a355d415ab710801c562f"
+      }
+    },
+    {
+      "mode": "attribute83",
+      "digests": {
+        "/fresh/representation": "bc665aeb4e1dcc59dac724534b55614d",
+        "/once_twice/2": "bef52b664b88c98b28989eca14948a46",
+        "/clone/2": "bef52b664b88c98b28989eca14948a46",
+        "/serialize_attached/1": "bef52b664b88c98b28989eca14948a46",
+        "/mycriteria_hint/representation": "42387f14237e4465d181a44e81b3ade6",
+        "/mycriteria_marker/representation": "72393d17a108fc3e6bc60639f772a521",
+        "/kalturacriteria_marker/representation": "128b699c4f4a355d415ab710801c562f"
+      }
+    }
+  ],
+  "same_runtime_attribute_delta": false,
+  "cross_runtime_digest_delta_count": 3,
+  "cache_corruption_or_data_loss_claimed": false,
+  "cache_acceptance": false
+}
