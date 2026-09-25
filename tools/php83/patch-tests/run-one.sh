@@ -10,7 +10,7 @@ case "${1:-}" in
  candidate) tree=/home/vagrant/php-patch-tests/candidate ;;
  *) exit 64 ;;
 esac
-case "${2:-}" in registry|legacy-json|zend-json|environment) ;; *) exit 64 ;; esac
+case "${2:-}" in registry|legacy-json|zend-json|debug-pdo|environment) ;; *) exit 64 ;; esac
 ini=()
 case "${3:-standard}" in
  standard) ;;
@@ -18,6 +18,11 @@ case "${3:-standard}" in
  *) exit 64 ;;
 esac
 scripts=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
+if [[ "$2" == debug-pdo ]]; then
+ [[ "${3:-standard}" == standard ]] || exit 64
+ abi=20230831; [[ "$number" == 74 ]] && abi=20190902
+ ini+=(-d "extension=/audit/tests/sqlite/extracted/usr/lib/php/$abi/pdo_sqlite.so")
+fi
 exec sudo systemd-run --quiet --wait --pipe --collect \
  -p User=nobody -p Group=nogroup -p PrivateNetwork=yes \
  -p 'SystemCallFilter=~socket socketpair' -p SystemCallErrorNumber=EPERM \

@@ -40,6 +40,8 @@ if ($case === 'registry') {
     } catch (Zend_Exception $error) {
         $out[] = array('missing-exception', get_class($error));
     }
+} elseif ($case === 'debug-pdo') {
+    require __DIR__ . '/debug-pdo.php';
 } elseif ($case === 'legacy-json' || $case === 'zend-json') {
     if ($case === 'legacy-json') {
         require_once $root . '/alpha/apps/kaltura/lib/Services_JSON.class.php';

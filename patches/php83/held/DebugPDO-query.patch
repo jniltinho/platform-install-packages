@@ -1,0 +1,11 @@
+--- a/vendor/propel/util/DebugPDO.php
++++ b/vendor/propel/util/DebugPDO.php
+@@ -327,7 +327,7 @@
+ 	 * @see        http://php.net/manual/en/pdo.query.php for a description of the possible parameters.
+ 	 * @return     PDOStatement
+ 	 */
+-	public function query()
++	public function query($query = null, ...$fetchModeArgs)
+ 	{
+ 		$debug	= $this->getDebugSnapshot();
+ 		$args	= func_get_args();

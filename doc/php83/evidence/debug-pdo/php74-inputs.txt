@@ -1,0 +1,6 @@
+afbdd60eb52b3892110b8fac4170737fe663c30d21aeca9ef9533109447d11be  php7.4-sqlite3_1%3a7.4.33-30+ubuntu24.04.1+deb.sury.org+1_amd64.deb
+Package: php7.4-sqlite3
+Version: 1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1
+Architecture: amd64
+8802007574d94a9d79eb60b361697bdd6914eafa6a10778aeb5a3df80c2a7b51  extracted/usr/lib/php/20190902/pdo_sqlite.so
+08cdcfd1113e24adcfdde1c03b9e39004dadb6dc7efcb2f9a05e338ed3af272e  ../candidate/vendor/propel/util/DebugPDO.php

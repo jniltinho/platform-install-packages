@@ -1,0 +1,40 @@
+# Revisão: `DebugPDO::query()` (patch em held, PHP 8.3)
+
+Não usei ferramentas nem editei arquivos, como você pediu. Por isso não criei o arquivo de plano nem chamei ExitPlanMode. A análise se baseia só no patch, no harness e no JSON que você colou. Não há aprovação de release.
+
+## Veredito
+
+O patch resolve o fatal de assinatura com o menor diff possível. A paridade no 7.4 (byte a byte) e a execução completa no 8.3 sustentam isso. O gate FAIL está correto e não depende do patch: a diferença de tipos (`"1"` → `1`) vem do driver, não do encaminhamento de argumentos.
+
+## Riscos de assinatura e encaminhamento
+
+1. **`parent::` em callable, linha 337.** Os 7 avisos batem exatamente com as 7 chamadas a `query()` no harness, então o corpo usa algo como `call_user_func_array(array($this, 'parent::query'), $args)`. Hoje isso gera Deprecated no 8.2+, e a forma deve ser removida no PHP 9. O patch fica certo só "por enquanto". A troca mínima é `parent::query(...$args)`, que funciona igual no 7.4. Deve ir num patch held separado e passar pelo mesmo gate.
+
+2. **Argumentos nomeados são descartados em silêncio.** Uma chamada como `query(query: $sql, fetchMode: PDO::FETCH_COLUMN)` coloca `fetchMode` como chave string dentro de `$fetchModeArgs`. Como `func_get_args()` não inclui argumentos nomeados extras, o fetch mode some sem erro. Declarar `$fetchMode = null` explicitamente, com os nomes do PHP 8, fecha esse buraco. Risco baixo em código legado, mas é perda silenciosa.
+
+3. **`$query = null` como default.** No 7.4, `query()` sem argumentos gerava warning e retornava `false`. No 8.3, o encaminhamento de zero argumentos lança `ArgumentCountError`. É uma divergência de borda sem cobertura.
+
+4. **`fetchMode` explícito `null`.** `query($sql, null)` é válido no 8.x (`?int`), mas no 7.4 o comportamento difere. Hoje não está coberto.
+
+5. **Subclasses e chamadores fora do escopo testado.** Qualquer classe da aplicação que estenda `DebugPDO` ou `PropelPDO` e sobrescreva `query()` com a assinatura antiga continuará fatal no 8.3. Vale um grep por `function query(` nas classes derivadas antes de concluir que "o fatal está resolvido".
+
+6. **Deprecation de return type.** Continua registrada e não foi dispensada. Se for tratada depois, `#[\ReturnTypeWillChange]` numa linha própria é inofensivo no 7.4, porque `#` inicia um comentário.
+
+## Paridade de tipos: o risco maior está fora do SQLite
+
+A partir do PHP 8.1, o pdo_sqlite retorna int/float nativos. O mesmo vale para pdo_mysql com prepares emulados. Portanto o FAIL no SQLite provavelmente antecipa uma mudança real no MySQL de produção: comparações `===` com strings e JSON serializado mudam. Isso é uma decisão de migração separada, não um problema deste patch.
+
+## Próximos testes, do menor ao maior
+
+1. **Variante diagnóstica com `PDO::ATTR_STRINGIFY_FETCHES => true` nos dois runtimes.** Mantém o gate estrito como está. Se a variante der paridade, prova que o patch encaminha corretamente e isola a diferença no driver.
+2. **Casos de borda no mesmo harness:**
+   - `query($sql, null)`
+   - `query()` sem argumentos, capturando `Throwable`
+   - `FETCH_INTO` com objeto
+   - `FETCH_CLASS | FETCH_PROPS_LATE` e `FETCH_CLASS` sem argumentos de construtor
+   - no 8.3 apenas, uma chamada com argumento nomeado `fetchMode:`
+3. **Logging habilitado** (hoje `enabled => false`). Capture a mensagem de log para verificar que `getDebugSnapshot` e o log recebem `$args[0]` corretamente. Esse caminho ainda não foi exercitado.
+4. **Sonda de `ReflectionMethod`** em `DebugPDO::query` nos dois runtimes, registrando parâmetros, defaults e variadic. É barata e detecta regressões de assinatura.
+5. **Grep estático, só leitura:** subclasses que sobrescrevem `query()`, chamadas com 3 ou mais argumentos, e outros `'parent::…'` em callables em `DebugPDO.php` e `PropelPDO.php`.
+
+A mudança de `call_user_func_array` para `parent::query(...$args)` só deve ser tentada depois de 1 e 2. Deve ir num patch held próprio e manter o ZIP exp2 intocado.

@@ -9,15 +9,19 @@ import sys
 
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('output', type=Path)
-parser.add_argument('--case', action='append', choices=['registry', 'legacy-json', 'zend-json'])
+parser.add_argument('--case', action='append', choices=['registry', 'legacy-json', 'zend-json', 'debug-pdo'])
+parser.add_argument('--mode', action='append', choices=['standard', 'minimal'])
 args = parser.parse_args()
 cases = args.case or ['registry', 'legacy-json', 'zend-json']
+modes = args.mode or ['standard', 'minimal']
+if 'debug-pdo' in cases and 'minimal' in modes:
+    parser.error('debug-pdo requires --mode standard (isolated SQLite module)')
 records = []
 environments = []
 folder = Path(__file__).resolve().parent
 for number, host in [('74', 'baseline74'), ('83', 'php83')]:
     config = f'/tmp/kaltura-php{number}-ssh.conf'
-    for mode in ['standard', 'minimal']:
+    for mode in modes:
         env = subprocess.run(['ssh', '-F', config, host,
             f'bash /home/vagrant/php-patch-tests/run-one.sh original environment {mode}'],
             capture_output=True, text=True, timeout=90, check=True)
@@ -31,7 +35,7 @@ for number, host in [('74', 'baseline74'), ('83', 'php83')]:
                                 'mode': mode, 'returncode': run.returncode,
                                 'stdout': run.stdout, 'stderr': run.stderr})
 comparisons = []
-for mode in ['standard', 'minimal']:
+for mode in modes:
     for case in cases:
         baseline = next(r for r in records if r['runtime'] == 'php74'
                         and r['tree'] == 'original' and r['case'] == case and r['mode'] == mode)
@@ -46,7 +50,7 @@ for mode in ['standard', 'minimal']:
 report = {'environments': environments,
           'diagnostic_policy': 'stdout and roundtrip parity required; stderr retained, not waived',
           'harness_hashes': {p.name: hashlib.sha256(p.read_bytes()).hexdigest()
-          for p in [folder / 'behavior.php', folder / 'run-one.sh', Path(__file__)]},
+          for p in [folder / 'behavior.php', folder / 'debug-pdo.php', folder / 'run-one.sh', Path(__file__)]},
           'comparisons': comparisons, 'records': records}
 args.output.write_text(json.dumps(report, indent=2) + '\n')
 print(json.dumps(comparisons))

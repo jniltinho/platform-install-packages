@@ -1,5 +1,10 @@
 # Held experiments — not part of any active archive
 
+The DebugPDO query-signature experiment is also held. It removes the PHP8.3
+class-loading fatal in an isolated SQLite fixture, but strict cross-runtime
+output parity fails on numeric types; named-argument forwarding needs testing.
+See `../../../doc/php83/debug-pdo-experiment.md`. Do not add it to exp2.
+
 The Registry cast experiment is retained solely for review and reproduction.
 The active `../manifest.json` does not list it. Do not add it through wildcard
 patch discovery.

@@ -259,3 +259,14 @@ its unchanged source, DebugPDO and Symfony still block a complete PHP 8.3 switch
 No dependency upgrade was selected, no production package/CI reference changed,
 and no GitHub migration release or `.20` deploy occurred. Tasks 1.3/1.5/1.6 and
 later gates remain open despite this first bounded artifact.
+
+### DebugPDO follow-up (2026-09-25)
+
+The [held DebugPDO experiment](debug-pdo-experiment.md) removes the query
+signature fatal in a synthetic SQLite test, without changing the active ZIP.
+Original/patched 7.4 match, but patched 8.3 fails strict parity on numeric fetch
+types; native PDO controls reproduce that difference. No waiver was applied.
+Named-argument forwarding and MySQL/application behavior remain unverified.
+The original DebugPDO files were restored in both disposable candidate trees
+after evidence collection. All eight JSON comparisons and 27 offline tests
+still pass; no broad migration task is complete.

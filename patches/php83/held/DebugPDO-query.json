@@ -1,0 +1,8 @@
+{
+  "path": "vendor/propel/util/DebugPDO.php",
+  "patch": "DebugPDO-query.patch",
+  "sha256": "a9cbd8be059f3d3e1871cbd25b8f4b38a94e307224ddaa2db55e12d7baf36e72",
+  "before_sha256": "6178d39fd2c11c2bd2dcc220c4234f72dfb11364c11d381e7f7bfaf55089e021",
+  "after_sha256": "08cdcfd1113e24adcfdde1c03b9e39004dadb6dc7efcb2f9a05e338ed3af272e",
+  "status": "held: PHP8.3 strict parity fails; native SQLite control reproduces integer/string difference; named-argument forwarding needs testing"
+}

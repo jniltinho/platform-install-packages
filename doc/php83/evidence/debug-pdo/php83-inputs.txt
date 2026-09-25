@@ -1,0 +1,6 @@
+dd3ac0f3f0edd5069e998d388a84fea543e968073b888438a810e822c51372da  php8.3-sqlite3_8.3.6-0ubuntu0.24.04.11_amd64.deb
+Package: php8.3-sqlite3
+Version: 8.3.6-0ubuntu0.24.04.11
+Architecture: amd64
+def426d3ead068517d5e716fe5b9226d80611c60196c523a69a107cdb30598be  extracted/usr/lib/php/20230831/pdo_sqlite.so
+08cdcfd1113e24adcfdde1c03b9e39004dadb6dc7efcb2f9a05e338ed3af272e  ../candidate/vendor/propel/util/DebugPDO.php
