@@ -51,7 +51,7 @@ Requires(pre): pwdutils
 %endif
 
 
-%define nginx_vod_module_ver 1.30
+%define nginx_vod_module_ver 1.33
 %define nginx_secure_token_ver 1.5
 %define nginx_token_validate_ver 1.1
 %define nginx_kafka_log_ver 1.0

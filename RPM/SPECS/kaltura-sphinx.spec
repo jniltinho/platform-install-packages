@@ -24,7 +24,7 @@ Vendor:         Sphinx Technologies Inc.
 Packager:       Kaltura Inc.
 
 %if 0%{?rhel} >= 9
-Source0:       	http://sphinxsearch.com/files/sphinx-%{version}-release.tar.gz
+Source0:       	https://sphinxsearch.com/files/sphinx-%{version}-release.tar.gz
 %else
 Source0:       	%{name}-%{version}.tar.gz 
 %endif

@@ -479,6 +479,9 @@ if [ "$1" = "configure" ]; then
                         sed -i "s#$PH#${NEW_SECRETS[$PH]}#g" $F
                 done
         done
+        # the generated top-level init_data/init_content .ini/.xml hold partner secrets: root-only
+        # (media/ and ui_conf/ stay readable: the API reads them during insertContent)
+        find $BASE_DIR/app/deployment/base/scripts/init_data $BASE_DIR/app/deployment/base/scripts/init_content -maxdepth 1 -type f \( -name "*.ini" -o -name "*.xml" \) ! -name "*template*" -exec chmod 600 {} +
         if [ -f "$KALTURA_PREFIX/app/configurations/system.ini" ];then
                 mkdir -p /etc/kaltura.d
                 ln -sf $KALTURA_PREFIX/app/configurations/system.ini /etc/kaltura.d/system.ini

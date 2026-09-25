@@ -10,11 +10,21 @@ ADMIN_PASSWD=${ADMIN_PASSWD:-Adm1n#Video}
 # yum baseurl of the Kaltura RPMs: the local build, or an extracted release tarball
 KALTURA_REPO=${KALTURA_REPO:-file:///vagrant/rpm/el9/repo}
 ANS=/root/kaltura.ans
+# written only after kaltura-config-all.sh succeeds, so an interrupted configuration is retried
+DONE=/opt/kaltura/app/configurations/.aio-configured
+# Kaltura does not support SELinux enforcing (see doc/install-kaltura-redhat-based.md).
+# RELAX_HOST_SECURITY=1 (set by the Vagrantfile) makes SELinux permissive and stops firewalld;
+# on real servers do it yourself and open the ports in doc/kaltura-required-ports.md.
+RELAX_HOST_SECURITY=${RELAX_HOST_SECURITY:-0}
 
-# --- test VM hardening relaxations (see doc/install-kaltura-rocky9.md) ---
-setenforce 0 2>/dev/null || true
-sed -i 's/^SELINUX=enforcing/SELINUX=permissive/' /etc/selinux/config
-systemctl disable --now firewalld 2>/dev/null || true
+if [ "$RELAX_HOST_SECURITY" = 1 ]; then
+	setenforce 0 2>/dev/null || true
+	sed -i 's/^SELINUX=enforcing/SELINUX=permissive/' /etc/selinux/config
+	systemctl disable --now firewalld 2>/dev/null || true
+elif [ "$(getenforce 2>/dev/null)" = Enforcing ]; then
+	echo "ERROR: SELinux is enforcing; Kaltura needs permissive (or run with RELAX_HOST_SECURITY=1)" >&2
+	exit 1
+fi
 
 # --- repositories ---
 if [ ! -f /etc/yum.repos.d/kaltura-local.repo ]; then
@@ -56,7 +66,7 @@ dnf -y -q install kaltura-server memcached postfix
 systemctl enable --now memcached postfix
 
 # --- configuration (first run only) ---
-if [ ! -f /opt/kaltura/app/configurations/local.ini ]; then
+if [ ! -f "$DONE" ]; then
 	sed -e "s#@HOSTNAME@#$HOST_IP#g" -e "s#@MYSQL_HOST@#127.0.0.1#g" -e "s#@MYSQL_PORT@#3306#g" \
 		-e "s#@KALT_DB_PASS@#$(tr -dc A-Za-z0-9 </dev/urandom | head -c16)#g" \
 		-e "s#@MYSQL_SUPER_USER@#root#g" -e "s|@MYSQL_SUPER_USER_PASSWD@|$MYSQL_ROOT_PASSWD|g" \
@@ -79,6 +89,7 @@ if [ ! -f /opt/kaltura/app/configurations/local.ini ]; then
 	started=
 	for i in 1 2 3; do systemctl restart kaltura-elastic-populate && { started=1; break; }; sleep 10; done
 	[ -n "$started" ] || echo "WARNING: kaltura-elastic-populate did not start; run: systemctl restart kaltura-elastic-populate"
+	touch "$DONE"
 fi
 
 systemctl is-active --quiet httpd && echo "Kaltura AIO: http://$HOST_IP (admin: $ADMIN_EMAIL)"

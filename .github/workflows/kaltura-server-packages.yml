@@ -16,6 +16,10 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+# containers default to sh without pipefail: a failing 'dnf | tee' would pass
+defaults:
+  run:
+    shell: bash -euo pipefail {0}
 concurrency:
   group: kaltura-server-packages-${{ github.ref }}
   cancel-in-progress: true

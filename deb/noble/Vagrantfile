@@ -16,4 +16,13 @@ Vagrant.configure("2") do |config|
     a.vm.provision "install", type: "shell", path: "install-aio.sh"
     a.vm.provision "sanity", type: "shell", path: "sanity.sh", run: "always"
   end
+
+  # Same All-In-One with SSL=1 (Apache 443, nginx 8443, self-signed certificate)
+  config.vm.define "aiossl", autostart: false do |a|
+    a.vm.hostname = "kaltura-ssl"
+    a.vm.network "private_network", ip: "192.168.56.21"
+    a.vm.provider("virtualbox") { |v| v.memory = 8192; v.cpus = 4 }
+    a.vm.provision "install", type: "shell", path: "install-aio.sh", env: { "SSL" => "1", "HOST_IP" => "192.168.56.21" }
+    a.vm.provision "sanity", type: "shell", path: "sanity.sh", run: "always", env: { "HOST_IP" => "192.168.56.21", "URL" => "https://192.168.56.21" }
+  end
 end

@@ -55,7 +55,8 @@ build_one() {
 		rpmbuild -bb $WORK/rpm/el9/SPECS/$1.spec ;;
 	kaltura-sphinx)
 		# the googlecode SVN is gone; EL9 builds the 2.2.11 release tarball
-		wget -q -N -P ~/rpmbuild/SOURCES http://sphinxsearch.com/files/sphinx-2.2.11-release.tar.gz
+		wget -q -N -P ~/rpmbuild/SOURCES https://sphinxsearch.com/files/sphinx-2.2.11-release.tar.gz
+		echo "6662039f093314f896950519fa781bc87610f926f64b3d349229002f06ac41a9  $HOME/rpmbuild/SOURCES/sphinx-2.2.11-release.tar.gz" | sha256sum -c -
 		rpmbuild -bb ~/rpmbuild/SPECS/kaltura-sphinx.spec ;;
 	kaltura-html5-analytics)
 		cd $SOURCE_PACKAGING_DIR

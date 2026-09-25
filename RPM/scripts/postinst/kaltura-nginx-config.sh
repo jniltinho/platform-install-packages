@@ -101,6 +101,8 @@ else
 fi
 # the upstream host must be a bare host[:port], not a URL
 WWW_HOST=`echo $WWW_HOST | sed -e 's@^https\?://@@' -e 's@/.*@@'`
+# with SSL the API is proxied over https: a bare host would mean port 80 (plain HTTP on Apache)
+case "$PROTOCOL:$WWW_HOST" in https:*:*) ;; https:*) WWW_HOST=$WWW_HOST:443 ;; esac
 if [ -f /etc/nginx/nginx.conf ];then
 	mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.old
 fi

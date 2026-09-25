@@ -501,6 +501,9 @@ for F in `find $BASE_DIR/app/deployment/base/scripts/init_data $BASE_DIR/app/dep
                 sed -i "s#$PH#${NEW_SECRETS[$PH]}#g" $F
         done
 done
+# the generated top-level init_data/init_content .ini/.xml hold partner secrets: root-only
+# (media/ and ui_conf/ stay readable: the API reads them during insertContent)
+find $BASE_DIR/app/deployment/base/scripts/init_data $BASE_DIR/app/deployment/base/scripts/init_content -maxdepth 1 -type f \( -name "*.ini" -o -name "*.xml" \) ! -name "*template*" -exec chmod 600 {} +
 
 if [ ! -r "$BASE_DIR/app/base-config-generator.lock" ];then
         echo -en "

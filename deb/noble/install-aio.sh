@@ -5,7 +5,16 @@ set -euo pipefail
 export DEBIAN_FRONTEND=noninteractive NEEDRESTART_MODE=a
 
 HOST_IP=${HOST_IP:-192.168.56.20}
-SERVICE_URL=http://$HOST_IP
+# SSL=1: Apache on 443 and the nginx VOD packager on 8443 (see doc/kaltura-ssl-and-console.md).
+# Without SSL_CERT/SSL_KEY a self-signed certificate for HOST_IP is generated and trusted
+# locally (test VMs only; use a real certificate in production).
+SSL=${SSL:-0}
+SSL_CERT=${SSL_CERT:-/etc/ssl/certs/kaltura.crt}
+SSL_KEY=${SSL_KEY:-/etc/ssl/private/kaltura.key}
+SSL_CHAIN=${SSL_CHAIN:-}
+# with SSL the delivery profiles must point at the nginx SSL port (doc/nginx-ssl-config.md)
+if [ "$SSL" = 1 ]; then PROTO=https; VHOST_PORT=443; VOD_PORT=8443; else PROTO=http; VHOST_PORT=80; VOD_PORT=88; fi
+SERVICE_URL=$PROTO://$HOST_IP
 MYSQL_ROOT_PASSWD=${MYSQL_ROOT_PASSWD:-kaltura-root}
 ADMIN_EMAIL=${ADMIN_EMAIL:-admin@kaltura.local}
 ADMIN_PASSWD=${ADMIN_PASSWD:-Adm1n#Video}
@@ -48,6 +57,15 @@ FLUSH PRIVILEGES;
 EOF
 fi
 
+# --- self-signed certificate for SSL=1 test installs ---
+if [ "$SSL" = 1 ] && [ ! -r "$SSL_CERT" ]; then
+	openssl req -x509 -newkey rsa:2048 -nodes -days 3650 -subj "/CN=$HOST_IP" \
+		-addext "subjectAltName=IP:$HOST_IP" -keyout "$SSL_KEY" -out "$SSL_CERT" 2>/dev/null
+	chmod 640 "$SSL_KEY"
+	cp "$SSL_CERT" /usr/local/share/ca-certificates/kaltura-selfsigned.crt && update-ca-certificates >/dev/null
+fi
+IS_SSL=false; [ "$SSL" = 1 ] && IS_SSL=true
+
 # --- debconf answers (postfix + Kaltura) ---
 debconf-set-selections <<EOF
 postfix postfix/main_mailer_type select Local only
@@ -73,9 +91,9 @@ kaltura-base kaltura-base/sphinx_hostname string 127.0.0.1
 kaltura-base kaltura-base/second_sphinx_hostname string 127.0.0.1
 kaltura-base kaltura-base/service_url string $SERVICE_URL
 kaltura-base kaltura-base/time_zone string UTC
-kaltura-base kaltura-base/vhost_port string 80
+kaltura-base kaltura-base/vhost_port string $VHOST_PORT
 kaltura-base kaltura-base/vod_packager_hostname string $HOST_IP
-kaltura-base kaltura-base/vod_packager_port string 88
+kaltura-base kaltura-base/vod_packager_port string $VOD_PORT
 kaltura-db kaltura-db/db_already_installed boolean false
 kaltura-db kaltura-db/db_hostname string 127.0.0.1
 kaltura-db kaltura-db/db_port string 3306
@@ -83,9 +101,12 @@ kaltura-db kaltura-db/fix_mysql_settings boolean true
 kaltura-db kaltura-db/mysql_super_user string root
 kaltura-db kaltura-db/mysql_super_passwd password $MYSQL_ROOT_PASSWD
 kaltura-db kaltura-db/remove_db boolean false
-kaltura-front kaltura-front/is_apache_ssl boolean false
+kaltura-front kaltura-front/is_apache_ssl boolean $IS_SSL
+kaltura-front kaltura-front/apache_ssl_cert string $SSL_CERT
+kaltura-front kaltura-front/apache_ssl_key string $SSL_KEY
+kaltura-front kaltura-front/apache_ssl_chain string $SSL_CHAIN
 kaltura-front kaltura-front/service_url string $SERVICE_URL
-kaltura-front kaltura-front/vhost_port string 80
+kaltura-front kaltura-front/vhost_port string $VHOST_PORT
 kaltura-front kaltura-front/disable_default_vhost boolean true
 kaltura-nginx kaltura-nginx/is_kaltura_server boolean true
 kaltura-nginx kaltura-nginx/kaltura_service_url string $SERVICE_URL
@@ -93,7 +114,9 @@ kaltura-nginx kaltura-nginx/nginx_hostname string $HOST_IP
 kaltura-nginx kaltura-nginx/nginx_port string 88
 kaltura-nginx kaltura-nginx/nginx_ssl_port string 8443
 kaltura-nginx kaltura-nginx/rtmp_port string 1935
-kaltura-nginx kaltura-nginx/is_ssl boolean false
+kaltura-nginx kaltura-nginx/is_ssl boolean $IS_SSL
+kaltura-nginx kaltura-nginx/ssl_cert string $SSL_CERT
+kaltura-nginx kaltura-nginx/ssl_key string $SSL_KEY
 EOF
 
 # --- Kaltura: same order as the legacy all-in-1 installer (kaltura-db needs front and sphinx up) ---

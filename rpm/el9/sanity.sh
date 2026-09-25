@@ -16,7 +16,7 @@ check() { local d=$1; shift; if "$@" >/dev/null 2>&1; then ok "$d"; else fail "$
 http_code() { curl -s -o /dev/null -L -w '%{http_code}' "$1"; }
 sql() { mysql -N -uroot -p"$MYSQL_ROOT_PASSWD" kaltura -e "$1"; }
 
-for s in mariadb httpd memcached elasticsearch kaltura-nginx kaltura-sphinx kaltura-batch; do
+for s in mariadb httpd memcached elasticsearch kaltura-nginx kaltura-sphinx kaltura-batch kaltura-populate kaltura-elastic-populate; do
 	check "service $s active" systemctl is-active $s
 done
 check "searchd running" pgrep -x searchd
@@ -58,7 +58,7 @@ for _ in $(seq 60); do
 done
 [ "$STATUS" = 2 ] && ok "entry READY (transcoding ok)" || fail "entry READY (status $STATUS)"
 
-M3U8=$(curl -sfL "$URL/p/$PARTNER_ID/sp/${PARTNER_ID}00/playManifest/entryId/$ENTRY/format/applehttp/protocol/http/a.m3u8")
+M3U8=$(curl -sfL "$URL/p/$PARTNER_ID/sp/${PARTNER_ID}00/playManifest/entryId/$ENTRY/format/applehttp/protocol/${URL%%:*}/a.m3u8")
 VARIANT=$(echo "$M3U8" | grep -m1 -v '^#')
 if echo "$M3U8" | grep -q '^#EXTM3U' && [ -n "$VARIANT" ]; then
 	ok "HLS manifest"
