@@ -40,6 +40,8 @@ if ($case === 'registry') {
     } catch (Zend_Exception $error) {
         $out[] = array('missing-exception', get_class($error));
     }
+} elseif ($case === 'debug-pdo-logging') {
+    require __DIR__ . '/debug-pdo-logging.php';
 } elseif ($case === 'debug-pdo-edges') {
     require __DIR__ . '/debug-pdo-edges.php';
 } elseif ($case === 'debug-pdo' || $case === 'debug-pdo-stringify') {

@@ -277,3 +277,10 @@ pass in eight 7.4 and twelve 8.3 boundary cases. Explicit stringify-fetches
 diagnostics match the baseline, but default numeric-type parity remains failed;
 no application setting or acceptance gate changed. See the experiment document
 and `evidence/debug-pdo/v2/`. Candidate trees were restored to exp2 after testing.
+
+Extended v2 evidence adds deterministic in-memory logging with successful,
+exception and silent-error accounting: both runtimes match original 7.4.
+Native-PDO controls now cover 12 cases on 7.4 and 20 on 8.3, including object
+identity and constructor order. All 33 offline tests and eight JSON comparisons
+pass. The default numeric-type blocker remains; MySQL/application behavior is
+not inferred from SQLite. See `evidence/debug-pdo/v2-extended/`.

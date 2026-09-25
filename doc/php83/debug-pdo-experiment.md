@@ -132,3 +132,42 @@ The graph-discovered `vendor/propel/adapter/MSSQL/MssqlDebugPDO.php` was coverag
 checked (generation 2026-09-25T12:19:00Z, metadata match, no recorded gap) and read:
 it inherits query without overriding it. This is a bounded source check, not
 an exhaustive subclass audit or MSSQL runtime test.
+
+## Extended v2 controls: logging and fetch semantics
+
+Evidence: `evidence/debug-pdo/v2-extended/`. The source patch is unchanged.
+The added logging fixture enables synthetic Propel logging to an in-memory
+logger, with deterministic method/query-count prefixes and slow-only filtering
+disabled. It asserts exact messages, count and last-SQL state after success,
+exception-mode failure and silent-mode failure. Both patched runtimes match
+unpatched 7.4 byte-for-byte (`logging.json`). This does not cover real log
+destinations or timing/memory/slow-query prefixes.
+
+The extended edge fixture adds FETCH_INTO identity, FETCH_PROPS_LATE constructor
+order, mixed positional/named arguments and the variadic parameter name. All
+12 native-return/error controls on patched 7.4 and all 20 on patched 8.3 pass.
+The new collector also asserts expected successful values for positive cases:
+two identical exceptions must not accidentally count as a successful fetch.
+Original/patched 7.4 edge output matches byte-for-byte. Diagnostics remain in
+stderr and are not waived; native warning parity is not asserted.
+
+```bash
+# Requires the held v2 patch applied to disposable candidate copies only.
+python3 tools/php83/patch-tests/collect-pdo-edges.py /tmp/edges.json
+python3 tools/php83/patch-tests/collect.py /tmp/logging.json \
+  --case debug-pdo-logging --mode standard
+python3 -m unittest discover -s tools/php83 -p 'test_*.py'
+```
+
+Six offline collector tests cover success, execution failure, wrong original
+failure, equal-error false positives, missing cases and native mismatch. All 33
+offline tests and all eight JSON regression comparisons pass. Source/module
+identities remain those recorded for v2; the new reports pin the changed harness.
+After collecting evidence, both lab candidate DebugPDO files were restored to
+the original hash listed above. Active manifest, exp2 ZIP, main and `.20` remain
+unchanged. No migration task is marked complete.
+
+The v2 Grok CLI review still had no response at collection time; it is not counted
+as approval. Next: isolated MySQL numeric/JSON behavior and remaining runtime
+diagnostics, without applying stringify-fetches globally or waiving default
+parity. These SQLite controls alone do not prove application compatibility.
