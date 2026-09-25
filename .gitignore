@@ -3,3 +3,7 @@ deb/noble/repo/
 .vagrant/
 deb/ubuntu-26.04/repo/
 rpm/el9/repo/
+
+# Local Python interpreter caches are not source or execution evidence.
+__pycache__/
+*.py[cod]
