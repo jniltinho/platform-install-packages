@@ -40,6 +40,8 @@ if ($case === 'registry') {
     } catch (Zend_Exception $error) {
         $out[] = array('missing-exception', get_class($error));
     }
+} elseif ($case === 'registry-action-stack') {
+    require __DIR__ . '/registry-action-stack.php';
 } elseif ($case === 'registry-bootstrap') {
     require __DIR__ . '/registry-bootstrap.php';
 } elseif ($case === 'registry-storage') {

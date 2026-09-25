@@ -336,3 +336,10 @@ rejected by real tests. The cast-only candidate passes inherited Zend bootstrap
 container read/write operations in both runtimes and INI modes, but the broader
 literal-property parity failure remains. Neither Registry candidate entered the
 active ZIP; all 38 offline tests pass and lab originals were restored.
+
+Real Zend ActionStack consumer tests now pass for singleton/custom registries,
+LIFO/empty-action handling, request inheritance, forwarding and parameter
+merge/clear behavior. Together with bootstrap-container tests, eight differential
+comparisons pass across both runtimes and INI modes. The literal-property
+Registry mismatch remains held; these tests do not waive it or replace full
+HTTP/Admin Console acceptance. Originals were restored after collection.

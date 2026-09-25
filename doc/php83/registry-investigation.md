@@ -90,3 +90,41 @@ after collection. Main, `.20` and the JSON-only exp2 ZIP remain untouched.
 Next: assess application-visible literal-property/alias/subclass use and runtime
 diagnostics before selecting a bounded repair or requesting acceptance of a
 specific native-engine behavior change. No broad migration task is complete.
+
+## Follow-up: real ActionStack consumer
+
+`registry-action-stack.php` loads the actual ActionStack plugin, its abstract
+base and real Zend simple/abstract request classes. No request doubles are used,
+but all requests are synthetic and no front controller or HTTP endpoint runs.
+Graph discovery and coverage checks of those four files returned the same
+generation with metadata-match/no-recorded-gap; relevant source was read.
+
+The cast-only Registry candidate now passes these asserted consumer cases:
+
+- singleton registration, empty stack and empty pop;
+- LIFO order and skipping a request with no action;
+- inheriting controller/module from the current request when omitted;
+- postDispatch forwarding with parameter merge versus clear;
+- resetting the dispatched flag and emptying the consumed stack;
+- custom-key/separate-registry isolation;
+- preserving pending actions when the request is not yet dispatched.
+
+Together with the bootstrap-container fixture, all eight candidate/runtime/INI
+comparisons pass (two cases × two runtimes × two modes). Original PHP8.3 still
+hits the Registry object-argument fatal when the ActionStack fixture checks
+singleton registration. Deprecations remain captured, not waived.
+
+Evidence: `evidence/registry-investigation/action-stack/behavior.json` and
+`json-regression.json`. Reproduction with a cast-only lab candidate:
+
+```bash
+python3 tools/php83/patch-tests/collect.py /tmp/registry-consumers.json \
+  --case registry-action-stack --case registry-bootstrap
+```
+
+All eight existing JSON differential comparisons and all 38 offline tests also
+pass. Both Registry candidates were restored to original source afterward.
+This expands positive consumer coverage but does not prove all aliases,
+subclasses or literal-property consumers safe. The earlier full Registry parity
+failure remains; no behavioral waiver, active-manifest change or ZIP rebuild
+was made. Full Admin Console/HTTP dispatch and warning triage remain pending.
