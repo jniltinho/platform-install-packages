@@ -6,6 +6,16 @@ export DEBIAN_FRONTEND=noninteractive
 [[ $ID == ubuntu && $VERSION_ID == 24.04 ]]
 [[ $(hostname) == kaltura-php83-lab ]]
 [[ ! -d /opt/kaltura && ! -d /var/lib/mysql ]]
+# Keep the candidate on native Ubuntu packages, even if another repo is added.
+cat > /etc/apt/preferences.d/kaltura-php83-native <<'PIN'
+Package: php8.3* libapache2-mod-php8.3
+Pin: release o=Ubuntu
+Pin-Priority: 1001
+
+Package: php8.3* libapache2-mod-php8.3
+Pin: version *
+Pin-Priority: -1
+PIN
 apt-get update -q
 apt-get install -y ca-certificates curl unzip python3 apache2 \
     php8.3-cli libapache2-mod-php8.3 php8.3-xml php8.3-curl php8.3-mysql \
@@ -48,6 +58,6 @@ php8.3 -v > /var/lib/kaltura-php83-lab/php-version.txt
 php8.3 -m > /var/lib/kaltura-php83-lab/cli-modules.txt
 php8.3 --ini > /var/lib/kaltura-php83-lab/cli-ini.txt
 dpkg-query -W 'php8.3*' 'libapache2-mod-php8.3' > /var/lib/kaltura-php83-lab/packages.txt
-apt-cache policy php8.3-cli libapache2-mod-php8.3 php8.3-apcu php8.3-memcache php8.3-ssh2 \
+apt-cache policy $(dpkg-query -W -f='${binary:Package}\n' 'php8.3*' 'libapache2-mod-php8.3') \
     > /var/lib/kaltura-php83-lab/provider-policy.txt
 printf 'PHP 8.3 CLI/Apache lab ready; Kaltura compatibility is NOT established.\n'

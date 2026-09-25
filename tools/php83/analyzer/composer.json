@@ -1,0 +1,11 @@
+{
+  "name": "local/kaltura-php83-audit",
+  "description": "Isolated audit tools; never installed into Kaltura",
+  "type": "project",
+  "license": "AGPL-3.0-or-later",
+  "require": {
+    "phpcompatibility/php-compatibility": "10.0.0-alpha2",
+    "squizlabs/php_codesniffer": "4.0.4"
+  },
+  "config": {"allow-plugins": false, "sort-packages": true}
+}

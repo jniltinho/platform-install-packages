@@ -1,0 +1,21 @@
+/tmp/php74-baseline-sanity.sh: OK
+[ OK ] service mariadb active
+[ OK ] service apache2 active
+[ OK ] service memcached active
+[ OK ] service elasticsearch active
+[ OK ] service kaltura-nginx active
+[ OK ] service kaltura-sphinx active
+[ OK ] service kaltura-batch active
+[ OK ] service kaltura-populate active
+[ OK ] service kaltura-elastic-populate active
+[ OK ] searchd running
+[ OK ] API system.ping
+[ OK ] admin_console HTTP 200
+[ OK ] kmcng HTTP 200
+[ OK ] session.start partner -2
+[ OK ] test partner 102
+[ OK ] upload -> entry 0_23nejxbv
+[ OK ] entry READY (transcoding ok)
+[ OK ] HLS manifest
+[ OK ] HLS segment (54520 bytes)
+Failures: 0

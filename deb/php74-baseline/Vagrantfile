@@ -1,0 +1,17 @@
+# Synthetic reference installation for the PHP 8.3 feasibility gate.
+Vagrant.configure("2") do |config|
+  config.vm.box = "bento/ubuntu-24.04"
+  config.vm.box_version = "202510.26.0"
+  config.vm.box_check_update = false
+  config.vm.synced_folder ".", "/vagrant", disabled: true
+  config.vm.define "baseline74" do |lab|
+    lab.vm.hostname = "kaltura-php74-baseline"
+    lab.vm.network "private_network", ip: "192.168.56.74"
+    lab.vm.provider("virtualbox") do |vm|
+      vm.name = "kaltura-php74-noble-baseline"
+      vm.memory = 8192
+      vm.cpus = 4
+    end
+    lab.vm.provision "baseline", type: "shell", path: "bootstrap.sh"
+  end
+end

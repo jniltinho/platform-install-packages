@@ -1,41 +1,270 @@
-php8.3-cli:
-  Installed: 8.3.6-0ubuntu0.24.04.11
-  Candidate: 8.3.6-0ubuntu0.24.04.11
-  Version table:
- *** 8.3.6-0ubuntu0.24.04.11 500
-        500 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages
-        500 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages
-        100 /var/lib/dpkg/status
-     8.3.6-0maysync1 500
-        500 http://us.archive.ubuntu.com/ubuntu noble/main amd64 Packages
 libapache2-mod-php8.3:
   Installed: 8.3.6-0ubuntu0.24.04.11
   Candidate: 8.3.6-0ubuntu0.24.04.11
   Version table:
- *** 8.3.6-0ubuntu0.24.04.11 500
+ *** 8.3.6-0ubuntu0.24.04.11 1001
         500 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages
         500 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages
         100 /var/lib/dpkg/status
-     8.3.6-0maysync1 500
+     8.3.6-0maysync1 1001
         500 http://us.archive.ubuntu.com/ubuntu noble/main amd64 Packages
 php8.3-apcu:
   Installed: 5.1.22+4.0.11-2ubuntu1
   Candidate: 5.1.22+4.0.11-2ubuntu1
   Version table:
- *** 5.1.22+4.0.11-2ubuntu1 500
+ *** 5.1.22+4.0.11-2ubuntu1 1001
         500 http://us.archive.ubuntu.com/ubuntu noble/universe amd64 Packages
         100 /var/lib/dpkg/status
+php8.3-calendar:
+  Installed: (none)
+  Candidate: (none)
+  Version table:
+php8.3-cli:
+  Installed: 8.3.6-0ubuntu0.24.04.11
+  Candidate: 8.3.6-0ubuntu0.24.04.11
+  Version table:
+ *** 8.3.6-0ubuntu0.24.04.11 1001
+        500 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages
+        500 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages
+        100 /var/lib/dpkg/status
+     8.3.6-0maysync1 1001
+        500 http://us.archive.ubuntu.com/ubuntu noble/main amd64 Packages
+php8.3-common:
+  Installed: 8.3.6-0ubuntu0.24.04.11
+  Candidate: 8.3.6-0ubuntu0.24.04.11
+  Version table:
+ *** 8.3.6-0ubuntu0.24.04.11 1001
+        500 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages
+        500 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages
+        100 /var/lib/dpkg/status
+     8.3.6-0maysync1 1001
+        500 http://us.archive.ubuntu.com/ubuntu noble/main amd64 Packages
+php8.3-ctype:
+  Installed: (none)
+  Candidate: (none)
+  Version table:
+php8.3-curl:
+  Installed: 8.3.6-0ubuntu0.24.04.11
+  Candidate: 8.3.6-0ubuntu0.24.04.11
+  Version table:
+ *** 8.3.6-0ubuntu0.24.04.11 1001
+        500 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages
+        500 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages
+        100 /var/lib/dpkg/status
+     8.3.6-0maysync1 1001
+        500 http://us.archive.ubuntu.com/ubuntu noble/main amd64 Packages
+php8.3-dom:
+  Installed: (none)
+  Candidate: (none)
+  Version table:
+php8.3-exif:
+  Installed: (none)
+  Candidate: (none)
+  Version table:
+php8.3-ffi:
+  Installed: (none)
+  Candidate: (none)
+  Version table:
+php8.3-fileinfo:
+  Installed: (none)
+  Candidate: (none)
+  Version table:
+php8.3-ftp:
+  Installed: (none)
+  Candidate: (none)
+  Version table:
+php8.3-gd:
+  Installed: 8.3.6-0ubuntu0.24.04.11
+  Candidate: 8.3.6-0ubuntu0.24.04.11
+  Version table:
+ *** 8.3.6-0ubuntu0.24.04.11 1001
+        500 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages
+        500 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages
+        100 /var/lib/dpkg/status
+     8.3.6-0maysync1 1001
+        500 http://us.archive.ubuntu.com/ubuntu noble/main amd64 Packages
+php8.3-gettext:
+  Installed: (none)
+  Candidate: (none)
+  Version table:
+php8.3-gmp:
+  Installed: 8.3.6-0ubuntu0.24.04.11
+  Candidate: 8.3.6-0ubuntu0.24.04.11
+  Version table:
+ *** 8.3.6-0ubuntu0.24.04.11 1001
+        500 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages
+        500 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages
+        100 /var/lib/dpkg/status
+     8.3.6-0maysync1 1001
+        500 http://us.archive.ubuntu.com/ubuntu noble/main amd64 Packages
+php8.3-iconv:
+  Installed: (none)
+  Candidate: (none)
+  Version table:
+php8.3-intl:
+  Installed: 8.3.6-0ubuntu0.24.04.11
+  Candidate: 8.3.6-0ubuntu0.24.04.11
+  Version table:
+ *** 8.3.6-0ubuntu0.24.04.11 1001
+        500 http://us.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages
+        500 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages
+        100 /var/lib/dpkg/status
+     8.3.6-0maysync1 1001
+        500 http://us.archive.ubuntu.com/ubuntu noble/universe amd64 Packages
+php8.3-json:
+  Installed: (none)
+  Candidate: (none)
+  Version table:
+php8.3-ldap:
+  Installed: 8.3.6-0ubuntu0.24.04.11
+  Candidate: 8.3.6-0ubuntu0.24.04.11
+  Version table:
+ *** 8.3.6-0ubuntu0.24.04.11 1001
+        500 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages
+        500 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages
+        100 /var/lib/dpkg/status
+     8.3.6-0maysync1 1001
+        500 http://us.archive.ubuntu.com/ubuntu noble/main amd64 Packages
+php8.3-mbstring:
+  Installed: 8.3.6-0ubuntu0.24.04.11
+  Candidate: 8.3.6-0ubuntu0.24.04.11
+  Version table:
+ *** 8.3.6-0ubuntu0.24.04.11 1001
+        500 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages
+        500 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages
+        100 /var/lib/dpkg/status
+     8.3.6-0maysync1 1001
+        500 http://us.archive.ubuntu.com/ubuntu noble/main amd64 Packages
 php8.3-memcache:
   Installed: 8.0+4.0.5.2+3.0.9~20170802.e702b5f9+-8ubuntu1
   Candidate: 8.0+4.0.5.2+3.0.9~20170802.e702b5f9+-8ubuntu1
   Version table:
- *** 8.0+4.0.5.2+3.0.9~20170802.e702b5f9+-8ubuntu1 500
+ *** 8.0+4.0.5.2+3.0.9~20170802.e702b5f9+-8ubuntu1 1001
         500 http://us.archive.ubuntu.com/ubuntu noble/universe amd64 Packages
         100 /var/lib/dpkg/status
+php8.3-mysql:
+  Installed: 8.3.6-0ubuntu0.24.04.11
+  Candidate: 8.3.6-0ubuntu0.24.04.11
+  Version table:
+ *** 8.3.6-0ubuntu0.24.04.11 1001
+        500 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages
+        500 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages
+        100 /var/lib/dpkg/status
+     8.3.6-0maysync1 1001
+        500 http://us.archive.ubuntu.com/ubuntu noble/main amd64 Packages
+php8.3-mysqli:
+  Installed: (none)
+  Candidate: (none)
+  Version table:
+php8.3-mysqlnd:
+  Installed: (none)
+  Candidate: (none)
+  Version table:
+php8.3-opcache:
+  Installed: 8.3.6-0ubuntu0.24.04.11
+  Candidate: 8.3.6-0ubuntu0.24.04.11
+  Version table:
+ *** 8.3.6-0ubuntu0.24.04.11 1001
+        500 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages
+        500 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages
+        100 /var/lib/dpkg/status
+     8.3.6-0maysync1 1001
+        500 http://us.archive.ubuntu.com/ubuntu noble/main amd64 Packages
+php8.3-pdo:
+  Installed: (none)
+  Candidate: (none)
+  Version table:
+php8.3-pdo-mysql:
+  Installed: (none)
+  Candidate: (none)
+  Version table:
+php8.3-phar:
+  Installed: (none)
+  Candidate: (none)
+  Version table:
+php8.3-posix:
+  Installed: (none)
+  Candidate: (none)
+  Version table:
+php8.3-readline:
+  Installed: 8.3.6-0ubuntu0.24.04.11
+  Candidate: 8.3.6-0ubuntu0.24.04.11
+  Version table:
+ *** 8.3.6-0ubuntu0.24.04.11 1001
+        500 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages
+        500 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages
+        100 /var/lib/dpkg/status
+     8.3.6-0maysync1 1001
+        500 http://us.archive.ubuntu.com/ubuntu noble/main amd64 Packages
+php8.3-shmop:
+  Installed: (none)
+  Candidate: (none)
+  Version table:
+php8.3-simplexml:
+  Installed: (none)
+  Candidate: (none)
+  Version table:
+php8.3-sockets:
+  Installed: (none)
+  Candidate: (none)
+  Version table:
 php8.3-ssh2:
   Installed: 1.3.1+0.13-7ubuntu3
   Candidate: 1.3.1+0.13-7ubuntu3
   Version table:
- *** 1.3.1+0.13-7ubuntu3 500
+ *** 1.3.1+0.13-7ubuntu3 1001
         500 http://us.archive.ubuntu.com/ubuntu noble/universe amd64 Packages
         100 /var/lib/dpkg/status
+php8.3-sysvmsg:
+  Installed: (none)
+  Candidate: (none)
+  Version table:
+php8.3-sysvsem:
+  Installed: (none)
+  Candidate: (none)
+  Version table:
+php8.3-sysvshm:
+  Installed: (none)
+  Candidate: (none)
+  Version table:
+php8.3-tokenizer:
+  Installed: (none)
+  Candidate: (none)
+  Version table:
+php8.3-xml:
+  Installed: 8.3.6-0ubuntu0.24.04.11
+  Candidate: 8.3.6-0ubuntu0.24.04.11
+  Version table:
+ *** 8.3.6-0ubuntu0.24.04.11 1001
+        500 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages
+        500 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages
+        100 /var/lib/dpkg/status
+     8.3.6-0maysync1 1001
+        500 http://us.archive.ubuntu.com/ubuntu noble/main amd64 Packages
+php8.3-xmlreader:
+  Installed: (none)
+  Candidate: (none)
+  Version table:
+php8.3-xmlwriter:
+  Installed: (none)
+  Candidate: (none)
+  Version table:
+php8.3-xsl:
+  Installed: (none)
+  Candidate: 8.3.6-0ubuntu0.24.04.11
+  Version table:
+     8.3.6-0ubuntu0.24.04.11 1001
+        500 http://us.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages
+        500 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages
+     8.3.6-0maysync1 1001
+        500 http://us.archive.ubuntu.com/ubuntu noble/universe amd64 Packages
+php8.3-zip:
+  Installed: 8.3.6-0ubuntu0.24.04.11
+  Candidate: 8.3.6-0ubuntu0.24.04.11
+  Version table:
+ *** 8.3.6-0ubuntu0.24.04.11 1001
+        500 http://us.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages
+        500 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages
+        100 /var/lib/dpkg/status
+     8.3.6-0maysync1 1001
+        500 http://us.archive.ubuntu.com/ubuntu noble/universe amd64 Packages

@@ -1,9 +1,9 @@
 ## 1. Baseline and feasibility gate
 
 - [ ] 1.1 Extract the checksum-verified pinned Kaltura archive and enumerate bundled dependencies, generated clients, packaging overlays and PHP entrypoints; verify a reproducible inventory records revisions, licenses and active versus historical build paths.
-- [ ] 1.2 Reproduce the PHP 7.4 baseline in an isolated lab, never `.20`; verify API/UI/upload/worker/playback checks and save sanitized runtime, extension and timing reports.
-- [ ] 1.3 Run PHP 8.3 syntax checks and a pinned compatibility analyzer against the exact packaged application, clients and installer PHP; verify every reported finding is classified with a source location and evidence, including manual checks the analyzer cannot cover.
-- [ ] 1.4 Produce the three-distro provider/extension/SAPI matrix; verify signed suite-compatible PHP 8.3 package resolution and loaded modules in clean test environments, without mixing unsupported distro packages or extension ABIs.
+- [ ] 1.2 Reproduce the PHP 7.4 baseline from checksum-verified published packages in a fresh isolated lab, never `.20`; freeze the design's VM/fixture/API/repetition protocol first, enforce target/DNS/redirect guards, and use synthetic data only; verify API/UI/upload/worker/playback checks and save sanitized runtime, extension and timing reports.
+- [ ] 1.3 Run PHP 8.3 syntax checks and a PHP-8.3-capable pinned PHPCompatibility/PHPCS analyzer with testVersion=7.4-8.3 against the exact packaged application, clients and installer PHP; verify every reported finding is classified with a source location and evidence, including manual checks the analyzer cannot cover.
+- [ ] 1.4 Produce the three-distro provider/extension/SAPI matrix (native Noble pinned origins; EL9 AppStream versus Remi evaluation); verify signed suite-compatible PHP 8.3 package resolution and loaded modules in clean test environments, without mixing unsupported distro packages or extension ABIs.
 - [ ] 1.5 Write a go/no-go feasibility report with bounded repairs, upstream references and blockers; verify operator approval before runtime/package implementation, stopping for a revised proposal if a framework/Kaltura upgrade is needed.
 
 ## 2. Compatibility patches and packaging
@@ -26,7 +26,17 @@
 
 ## 4. Upgrade, recovery and release gate
 
-- [ ] 4.1 Rehearse 7.4-to-8.3 upgrade with representative existing data in an isolated clone; verify accounts, partner secrets, media, configuration and job state are preserved without schema/engine changes.
+- [ ] 4.1 Rehearse 7.4-to-8.3 upgrade with representative synthetic existing data in an isolated lab clone; verify accounts, partner secrets, media, configuration and job state are preserved without schema/engine changes.
 - [ ] 4.2 Rehearse failed-cutover recovery from a coherent restricted snapshot; verify matched application/runtime/config/DB/media restoration and baseline login/playback, documenting the maintenance/write-freeze boundary.
 - [ ] 4.3 Write migration, provider-update, rollback and limitations documentation with the evidence matrix; verify commands/links and re-check PHP 8.3 security-support dates before proposing a release candidate.
-- [ ] 4.4 Obtain release approval only after all distro, runtime and recovery gates pass; verify uniquely versioned DEB/RPM artifacts and checksums, leaving old releases unchanged. Any actual `.20` cutover requires separate explicit target/window/backup approval.
+- [ ] 4.4 Obtain release approval only after all distro, runtime and recovery gates pass; verify uniquely versioned DEB/RPM artifacts and checksums, leaving old releases unchanged; synchronize main specs/archive only after this gate, and create no migration tag earlier. Any actual `.20` cutover requires separate explicit target/window/backup approval.
+
+## Partial phase-1 evidence (2026-09-25)
+
+See `doc/php83/feasibility-status.md` and `doc/php83/evidence/`. Planning corrections
+are approved and strict validation passes. Noble candidate runtime/modules and
+package origins are verified; raw-source and published-payload syntax/static
+scans are recorded, including identical-file PHP 7.4/8.3 comparison. The isolated
+`.74` baseline is provisioned and passed the HTTP upload-to-READY/HLS smoke suite. No checkbox above is complete yet: full
+inventory/license/entrypoint review, runtime reachability, synthetic workload,
+provider matrix and go/no-go decision remain open.

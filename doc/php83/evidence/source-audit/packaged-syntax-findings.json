@@ -1,0 +1,1053 @@
+{
+  "php": "PHP 8.3.6 (cli) (built: Sep  2 2026 12:56:02) (NTS)",
+  "scope": "Syntax/compile checks only; not runtime acceptance",
+  "file_count": 13454,
+  "failed_count": 79,
+  "diagnostic_count": 149,
+  "repo_archive_sha256": "91629580441f6a896ebf9e51f0256532221715bee57a3e5a64c66ff0c4e3127b",
+  "diagnostic_files": [
+    {
+      "path": "opt/kaltura/app/alpha/apps/kaltura/lib/KDLWrap.php",
+      "sha256": "2a1c3d8bcd15ae9bd42ac03a08c5a369e8be8ae64b814743def7364b565a0f05",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $cdlMediaInfo declared before required parameter $cdlFlavorList is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/KDLWrap.php on line 34\nDeprecated: Optional parameter $cdlMediaInfo declared before required parameter $cdlFlavorList is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/KDLWrap.php on line 34",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/alpha/apps/kaltura/lib/Services_JSON.class.php",
+      "sha256": "6b83716ffb5a10a641293508a58443e3117f24613da4be0c7b038e1cc0851aa9",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/alpha/apps/kaltura/lib/Services_JSON.class.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/alpha/apps/kaltura/lib/Services_JSON.class.php on line 176\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/alpha/apps/kaltura/lib/Services_JSON.class.php on line 176",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/alpha/apps/kaltura/lib/baseObjectUtils.class.php",
+      "sha256": "1834b0ce9ab903af000e95c6a1c065a8dfaa64a91cd454a57de3b44824ee9e03",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/alpha/apps/kaltura/lib/baseObjectUtils.class.php\nPHP Fatal error:  Unparenthesized `a ? b : c ? d : e` is not supported. Use either `(a ? b : c) ? d : e` or `a ? b : (c ? d : e)` in opt/kaltura/app/alpha/apps/kaltura/lib/baseObjectUtils.class.php on line 474\nFatal error: Unparenthesized `a ? b : c ? d : e` is not supported. Use either `(a ? b : c) ? d : e` or `a ? b : (c ? d : e)` in opt/kaltura/app/alpha/apps/kaltura/lib/baseObjectUtils.class.php on line 474",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/alpha/apps/kaltura/lib/batch2/kFlowHelper.php",
+      "sha256": "31d290799a8575dea8fe03a033eebab0bc9716c353f027b60fa3bbb04f93423a",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $fileExt declared before required parameter $flavorParamsId is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/batch2/kFlowHelper.php on line 75\nDeprecated: Optional parameter $fileExt declared before required parameter $flavorParamsId is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/batch2/kFlowHelper.php on line 75\nPHP Deprecated:  Optional parameter $asset declared before required parameter $liveSegmentCount is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/batch2/kFlowHelper.php on line 492\nDeprecated: Optional parameter $asset declared before required parameter $liveSegmentCount is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/batch2/kFlowHelper.php on line 492",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/alpha/apps/kaltura/lib/batch2/kJobsManager.php",
+      "sha256": "c54e0181ba6c796a81bae00501fb7b62db990bb36fa7793269bcab30772ef2e9",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $entryId declared before required parameter $fileSync is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/batch2/kJobsManager.php on line 1629\nDeprecated: Optional parameter $entryId declared before required parameter $fileSync is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/batch2/kJobsManager.php on line 1629\nPHP Deprecated:  Optional parameter $entryId declared before required parameter $dc is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/batch2/kJobsManager.php on line 1652\nDeprecated: Optional parameter $entryId declared before required parameter $dc is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/batch2/kJobsManager.php on line 1652",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/alpha/apps/kaltura/lib/clipconcat/kClipManager.php",
+      "sha256": "935cb37f449f86f046dab086e61ba0b285b095ac77952c35460cfee563081fe9",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $priority declared before required parameter $assetId is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/clipconcat/kClipManager.php on line 424\nDeprecated: Optional parameter $priority declared before required parameter $assetId is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/clipconcat/kClipManager.php on line 424",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/alpha/apps/kaltura/lib/dateUtils.class.php",
+      "sha256": "023ab7d9f3de70014225615c089c5ee26477a6b974da301232abd719e656a599",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/alpha/apps/kaltura/lib/dateUtils.class.php\nPHP Fatal error:  Unparenthesized `a ? b : c ? d : e` is not supported. Use either `(a ? b : c) ? d : e` or `a ? b : (c ? d : e)` in opt/kaltura/app/alpha/apps/kaltura/lib/dateUtils.class.php on line 100\nFatal error: Unparenthesized `a ? b : c ? d : e` is not supported. Use either `(a ? b : c) ? d : e` or `a ? b : (c ? d : e)` in opt/kaltura/app/alpha/apps/kaltura/lib/dateUtils.class.php on line 100",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/alpha/apps/kaltura/lib/db/KalturaStatement.php",
+      "sha256": "a80d6029db03e1880adf240b157489d6f25b47163c394d0b0969300416378d70",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Return type of KalturaStatement::bindValue($parameter, $value, $data_type = null) should either be compatible with PDOStatement::bindValue(string|int $param, mixed $value, int $type = PDO::PARAM_STR): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/alpha/apps/kaltura/lib/db/KalturaStatement.php on line 20\nDeprecated: Return type of KalturaStatement::bindValue($parameter, $value, $data_type = null) should either be compatible with PDOStatement::bindValue(string|int $param, mixed $value, int $type = PDO::PARAM_STR): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/alpha/apps/kaltura/lib/db/KalturaStatement.php on line 20\nPHP Deprecated:  Return type of KalturaStatement::execute($input_parameters = null) should either be compatible with PDOStatement::execute(?array $params = null): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/alpha/apps/kaltura/lib/db/KalturaStatement.php on line 31\nDeprecated: Return type of KalturaStatement::execute($input_parameters = null) should either be compatible with PDOStatement::execute(?array $params = null): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/alpha/apps/kaltura/lib/db/KalturaStatement.php on line 31",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/alpha/apps/kaltura/lib/kDeliveryUtils.php",
+      "sha256": "81f7fe798ecb5e4cfc9535959a4bc936fca66cb8fa886171204b3ad31da4c198",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $pattern declared before required parameter $params is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/kDeliveryUtils.php on line 71\nDeprecated: Optional parameter $pattern declared before required parameter $params is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/kDeliveryUtils.php on line 71",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/alpha/apps/kaltura/lib/myCaptchaImage.class.php",
+      "sha256": "8e402b0ccd11d8a62e65e0623463fac5812b1e068d48c2dfa4050618c6f5aa21",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/alpha/apps/kaltura/lib/myCaptchaImage.class.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/alpha/apps/kaltura/lib/myCaptchaImage.class.php on line 74\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/alpha/apps/kaltura/lib/myCaptchaImage.class.php on line 74",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/alpha/apps/kaltura/lib/myEntryUtils.class.php",
+      "sha256": "70ebf2b99fbd5b898f88700b5c696eb1d64258f52bbfeb77bb68f8ef57306089",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $copyFlavors declared before required parameter $originalEntryId is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/myEntryUtils.class.php on line 1488\nDeprecated: Optional parameter $copyFlavors declared before required parameter $originalEntryId is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/myEntryUtils.class.php on line 1488\nPHP Deprecated:  Optional parameter $copyCaptions declared before required parameter $originalEntryId is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/myEntryUtils.class.php on line 1488\nDeprecated: Optional parameter $copyCaptions declared before required parameter $originalEntryId is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/myEntryUtils.class.php on line 1488",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/alpha/apps/kaltura/lib/reports/kKavaReportsMgr.class.php",
+      "sha256": "8f737aca10b635fbbcdb9815442e1e9cfc63cc792491dd9f8d71f98a0ac62b4a",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $object_ids declared before required parameter $response_options is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/reports/kKavaReportsMgr.class.php on line 4968\nDeprecated: Optional parameter $object_ids declared before required parameter $response_options is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/reports/kKavaReportsMgr.class.php on line 4968\nPHP Deprecated:  Optional parameter $flags declared before required parameter $response_options is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/reports/kKavaReportsMgr.class.php on line 4968\nDeprecated: Optional parameter $flags declared before required parameter $response_options is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/reports/kKavaReportsMgr.class.php on line 4968\nPHP Deprecated:  Optional parameter $object_ids declared before required parameter $response_options is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/reports/kKavaReportsMgr.class.php on line 5395\nDeprecated: Optional parameter $object_ids declared before required parameter $response_options is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/reports/kKavaReportsMgr.class.php on line 5395\nPHP Deprecated:  Optional parameter $flags declared before required parameter $response_options is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/reports/kKavaReportsMgr.class.php on line 5395\nDeprecated: Optional parameter $flags declared before required parameter $response_options is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/reports/kKavaReportsMgr.class.php on line 5395\nPHP Deprecated:  Optional parameter $object_ids declared before required parameter $response_options is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/reports/kKavaReportsMgr.class.php on line 5562\nDeprecated: Optional parameter $object_ids declared before required parameter $response_options is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/reports/kKavaReportsMgr.class.php on line 5562\nPHP Deprecated:  Optional parameter $flags declared before required parameter $response_options is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/reports/kKavaReportsMgr.class.php on line 5562\nDeprecated: Optional parameter $flags declared before required parameter $response_options is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/reports/kKavaReportsMgr.class.php on line 5562\nPHP Deprecated:  Optional parameter $dimension declared before required parameter $response_options is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/reports/kKavaReportsMgr.class.php on line 6703\nDeprecated: Optional parameter $dimension declared before required parameter $response_options is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/reports/kKavaReportsMgr.class.php on line 6703\nPHP Deprecated:  Optional parameter $object_ids declared before required parameter $response_options is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/reports/kKavaReportsMgr.class.php on line 6703\nDeprecated: Optional parameter $object_ids declared before required parameter $response_options is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/reports/kKavaReportsMgr.class.php on line 6703\nPHP Deprecated:  Optional parameter $page_size declared before required parameter $response_options is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/reports/kKavaReportsMgr.class.php on line 6703\nDeprecated: Optional parameter $page_size declared before required parameter $response_options is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/reports/kKavaReportsMgr.class.php on line 6703\nPHP Deprecated:  Optional parameter $page_index declared before required parameter $response_options is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/reports/kKavaReportsMgr.class.php on line 6703\nDeprecated: Optional parameter $page_index declared before required parameter $response_options is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/reports/kKavaReportsMgr.class.php on line 6703\nPHP Deprecated:  Optional parameter $dimension declared before required parameter $order_by is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/reports/kKavaReportsMgr.class.php on line 6784\nDeprecated: Optional parameter $dimension declared before required parameter $order_by is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/reports/kKavaReportsMgr.class.php on line 6784\nPHP Deprecated:  Optional parameter $object_ids declared before required parameter $order_by is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/reports/kKavaReportsMgr.class.php on line 6784\nDeprecated: Optional parameter $object_ids declared before required parameter $order_by is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/reports/kKavaReportsMgr.class.php on line 6784\nPHP Deprecated:  Optional parameter $page_size declared before required parameter $order_by is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/reports/kKavaReportsMgr.class.php on line 6784\nDeprecated: Optional parameter $page_size declared before required parameter $order_by is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/reports/kKavaReportsMgr.class.php on line 6784\nPHP Deprecated:  Optional parameter $page_index declared before required parameter $order_by is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/reports/kKavaReportsMgr.class.php on line 6784\nDeprecated: Optional parameter $page_index declared before required parameter $order_by is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/reports/kKavaReportsMgr.class.php on line 6784",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/alpha/apps/kaltura/lib/reports/myReportsMgr.class.php",
+      "sha256": "d73e625105c06bb975f5c9b76befc20b6192ec84915d16c16d73422ecaee707c",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $dimension declared before required parameter $order_by is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/reports/myReportsMgr.class.php on line 451\nDeprecated: Optional parameter $dimension declared before required parameter $order_by is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/reports/myReportsMgr.class.php on line 451\nPHP Deprecated:  Optional parameter $object_ids declared before required parameter $order_by is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/reports/myReportsMgr.class.php on line 451\nDeprecated: Optional parameter $object_ids declared before required parameter $order_by is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/reports/myReportsMgr.class.php on line 451\nPHP Deprecated:  Optional parameter $page_size declared before required parameter $order_by is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/reports/myReportsMgr.class.php on line 451\nDeprecated: Optional parameter $page_size declared before required parameter $order_by is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/reports/myReportsMgr.class.php on line 451\nPHP Deprecated:  Optional parameter $page_index declared before required parameter $order_by is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/reports/myReportsMgr.class.php on line 451\nDeprecated: Optional parameter $page_index declared before required parameter $order_by is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/lib/reports/myReportsMgr.class.php on line 451",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/alpha/apps/kaltura/lib/s3/S3.php",
+      "sha256": "aaf68bbaa4067ab58168be51fa450f06decb432cc98eafc5a37c6defce8dd8fe",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/alpha/apps/kaltura/lib/s3/S3.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/alpha/apps/kaltura/lib/s3/S3.php on line 1368\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/alpha/apps/kaltura/lib/s3/S3.php on line 1368",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/alpha/apps/kaltura/lib/storage/urlTokenizers/kAkamaiSecureHDUrlTokenizer.php",
+      "sha256": "ade9029930b0cdca877262ccac5ad7ae37bcaa577a5822c74763c4039540416c",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/alpha/apps/kaltura/lib/storage/urlTokenizers/kAkamaiSecureHDUrlTokenizer.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/alpha/apps/kaltura/lib/storage/urlTokenizers/kAkamaiSecureHDUrlTokenizer.php on line 198\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/alpha/apps/kaltura/lib/storage/urlTokenizers/kAkamaiSecureHDUrlTokenizer.php on line 198",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/alpha/apps/kaltura/modules/extwidget/actions/serveFlavorAction.class.php",
+      "sha256": "9e4d7470625adb3288b7692cbd093c8a0162f8bf781f72495c03524c79bb7610",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $playlistStartTime declared before required parameter $discontinuity is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/modules/extwidget/actions/serveFlavorAction.class.php on line 121\nDeprecated: Optional parameter $playlistStartTime declared before required parameter $discontinuity is implicitly treated as a required parameter in opt/kaltura/app/alpha/apps/kaltura/modules/extwidget/actions/serveFlavorAction.class.php on line 121",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/alpha/lib/model/DeliveryProfilePeer.php",
+      "sha256": "dbfd0df052c0f3a5246ac3300f1dab8862793163d395c6a0677976ce4817f84f",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $streamerType declared before required parameter $deliveryAttributes is implicitly treated as a required parameter in opt/kaltura/app/alpha/lib/model/DeliveryProfilePeer.php on line 185\nDeprecated: Optional parameter $streamerType declared before required parameter $deliveryAttributes is implicitly treated as a required parameter in opt/kaltura/app/alpha/lib/model/DeliveryProfilePeer.php on line 185",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/alpha/lib/model/LiveStreamEntry.php",
+      "sha256": "a7220be78151025be4cb09fa29ac8e9fedda9ccc1f4faeba455d8fe619c54215",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $copyPartnerId declared before required parameter $template is implicitly treated as a required parameter in opt/kaltura/app/alpha/lib/model/LiveStreamEntry.php on line 188\nDeprecated: Optional parameter $copyPartnerId declared before required parameter $template is implicitly treated as a required parameter in opt/kaltura/app/alpha/lib/model/LiveStreamEntry.php on line 188",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/alpha/lib/model/entry.php",
+      "sha256": "b677a171f5cc51f6a692eab774938b1a582e21e177ec40ff36aaf4277886dfb5",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $version declared before required parameter $format is implicitly treated as a required parameter in opt/kaltura/app/alpha/lib/model/entry.php on line 1016\nDeprecated: Optional parameter $version declared before required parameter $format is implicitly treated as a required parameter in opt/kaltura/app/alpha/lib/model/entry.php on line 1016\nPHP Deprecated:  Optional parameter $copyPartnerId declared before required parameter $template is implicitly treated as a required parameter in opt/kaltura/app/alpha/lib/model/entry.php on line 3372\nDeprecated: Optional parameter $copyPartnerId declared before required parameter $template is implicitly treated as a required parameter in opt/kaltura/app/alpha/lib/model/entry.php on line 3372",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/alpha/lib/model/uiConf.php",
+      "sha256": "d483417a209140ad9ce90edc4432969d8070a97582243c1cfdf3f4aa99acdffb",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $suffix declared before required parameter $v is implicitly treated as a required parameter in opt/kaltura/app/alpha/lib/model/uiConf.php on line 360\nDeprecated: Optional parameter $suffix declared before required parameter $v is implicitly treated as a required parameter in opt/kaltura/app/alpha/lib/model/uiConf.php on line 360",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/api_v3/lib/KalturaEntryService.php",
+      "sha256": "9495b584f73df1f4a11812efa964f57f42562159a405693b71e1731d53fe4dd5",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $entryType declared before required parameter $rank is implicitly treated as a required parameter in opt/kaltura/app/api_v3/lib/KalturaEntryService.php on line 1836\nDeprecated: Optional parameter $entryType declared before required parameter $rank is implicitly treated as a required parameter in opt/kaltura/app/api_v3/lib/KalturaEntryService.php on line 1836",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/api_v3/lib/exceptions/KalturaAPIException.php",
+      "sha256": "7f8352e8fb01c6913f85ae35b4b7acb36466c5d9a0f6b9d5f6581ea84655abcb",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Return type of KalturaAPIException::__wakeup() should either be compatible with Exception::__wakeup(): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/api_v3/lib/exceptions/KalturaAPIException.php on line 40\nDeprecated: Return type of KalturaAPIException::__wakeup() should either be compatible with Exception::__wakeup(): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/api_v3/lib/exceptions/KalturaAPIException.php on line 40",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/api_v3/lib/reflection/UnitTestsGenerator.php",
+      "sha256": "9757fb30b8551902f9d3357cd58cf95f37a52e48bcc52a87340d8136c30e124e",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $txt declared before required parameter $isBase is implicitly treated as a required parameter in opt/kaltura/app/api_v3/lib/reflection/UnitTestsGenerator.php on line 639\nDeprecated: Optional parameter $txt declared before required parameter $isBase is implicitly treated as a required parameter in opt/kaltura/app/api_v3/lib/reflection/UnitTestsGenerator.php on line 639",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/api_v3/lib/types/serverNode/base/KalturaServerNode.php",
+      "sha256": "ec94a857e686f8dfeb2f7e5827146a004d6967bc5e8005d6acf1c5c3bf6945e0",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $propertiesToSkip declared before required parameter $type is implicitly treated as a required parameter in opt/kaltura/app/api_v3/lib/types/serverNode/base/KalturaServerNode.php on line 157\nDeprecated: Optional parameter $propertiesToSkip declared before required parameter $type is implicitly treated as a required parameter in opt/kaltura/app/api_v3/lib/types/serverNode/base/KalturaServerNode.php on line 157\nPHP Deprecated:  Optional parameter $serverNodeId declared before required parameter $type is implicitly treated as a required parameter in opt/kaltura/app/api_v3/lib/types/serverNode/base/KalturaServerNode.php on line 174\nDeprecated: Optional parameter $serverNodeId declared before required parameter $type is implicitly treated as a required parameter in opt/kaltura/app/api_v3/lib/types/serverNode/base/KalturaServerNode.php on line 174\nPHP Deprecated:  Optional parameter $serverNodeId declared before required parameter $type is implicitly treated as a required parameter in opt/kaltura/app/api_v3/lib/types/serverNode/base/KalturaServerNode.php on line 183\nDeprecated: Optional parameter $serverNodeId declared before required parameter $type is implicitly treated as a required parameter in opt/kaltura/app/api_v3/lib/types/serverNode/base/KalturaServerNode.php on line 183\nPHP Deprecated:  Optional parameter $serverNodeId declared before required parameter $type is implicitly treated as a required parameter in opt/kaltura/app/api_v3/lib/types/serverNode/base/KalturaServerNode.php on line 197\nDeprecated: Optional parameter $serverNodeId declared before required parameter $type is implicitly treated as a required parameter in opt/kaltura/app/api_v3/lib/types/serverNode/base/KalturaServerNode.php on line 197",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/batch/batches/Convert/KAsyncConvert.class.php",
+      "sha256": "dcf53d8d80fc45a12bd6ef9d20ec4fda5abfb230515346e7114c797175061ac4",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $operator declared before required parameter $filePath is implicitly treated as a required parameter in opt/kaltura/app/batch/batches/Convert/KAsyncConvert.class.php on line 503\nDeprecated: Optional parameter $operator declared before required parameter $filePath is implicitly treated as a required parameter in opt/kaltura/app/batch/batches/Convert/KAsyncConvert.class.php on line 503",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/batch/batches/LiveReportExport/Engines/LiveReportQueryHelper.php",
+      "sha256": "268f8529a0f954893567cf7a46befc03870e08ed0ed8f0ea1cc3218406020982",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $keyField declared before required parameter $valueField is implicitly treated as a required parameter in opt/kaltura/app/batch/batches/LiveReportExport/Engines/LiveReportQueryHelper.php on line 13\nDeprecated: Optional parameter $keyField declared before required parameter $valueField is implicitly treated as a required parameter in opt/kaltura/app/batch/batches/LiveReportExport/Engines/LiveReportQueryHelper.php on line 13",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/batch/scheduler/KGenericScheduler.class.php",
+      "sha256": "c2067bb5fd4e6a937e7436885fe8ffcdeab373d8946fe9c515fbd4a1fee654c0",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Using ${var} in strings is deprecated, use {$var} instead in opt/kaltura/app/batch/scheduler/KGenericScheduler.class.php on line 500\nDeprecated: Using ${var} in strings is deprecated, use {$var} instead in opt/kaltura/app/batch/scheduler/KGenericScheduler.class.php on line 500",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/infra/cdl/kdl/KDLAudioMultiStreaming.php",
+      "sha256": "9ed6f40222184f9dbb97bd573aacdfcc25eba9f6411adb91f4406c8a3f7905ec",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $verifyFields declared before required parameter $filteredStreams is implicitly treated as a required parameter in opt/kaltura/app/infra/cdl/kdl/KDLAudioMultiStreaming.php on line 164\nDeprecated: Optional parameter $verifyFields declared before required parameter $filteredStreams is implicitly treated as a required parameter in opt/kaltura/app/infra/cdl/kdl/KDLAudioMultiStreaming.php on line 164",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/infra/chunkedEncode/KChunkedEncode.php",
+      "sha256": "684e274e32c131667feeeb7b67e2789e50e80a50bb4848951634bfc85001af09",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $acodec declared before required parameter $msgStr is implicitly treated as a required parameter in opt/kaltura/app/infra/chunkedEncode/KChunkedEncode.php on line 287\nDeprecated: Optional parameter $acodec declared before required parameter $msgStr is implicitly treated as a required parameter in opt/kaltura/app/infra/chunkedEncode/KChunkedEncode.php on line 287",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/infra/general/KDOMDocument.php",
+      "sha256": "2565ebb69c8ce09877f2be4298b92c110e3dc38cadcbcac98dd7f0bdaa32711b",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Return type of KDOMDocument::load($filename, $options = 0, $key = null, $iv = null) should either be compatible with DOMDocument::load(string $filename, int $options = 0): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/infra/general/KDOMDocument.php on line 14\nDeprecated: Return type of KDOMDocument::load($filename, $options = 0, $key = null, $iv = null) should either be compatible with DOMDocument::load(string $filename, int $options = 0): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/infra/general/KDOMDocument.php on line 14\nPHP Deprecated:  Return type of KDOMDocument::schemaValidate($filename, $key = null, $iv = null) should either be compatible with DOMDocument::schemaValidate(string $filename, int $flags = 0): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/infra/general/KDOMDocument.php on line 22\nDeprecated: Return type of KDOMDocument::schemaValidate($filename, $key = null, $iv = null) should either be compatible with DOMDocument::schemaValidate(string $filename, int $flags = 0): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/infra/general/KDOMDocument.php on line 22",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/infra/general/PdfGenerator.php",
+      "sha256": "e10a5ad092f788b80a42ef8cc1e8b8ee0de9e6c8e3d462d903cf5a95e504abd3",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $level declared before required parameter $style is implicitly treated as a required parameter in opt/kaltura/app/infra/general/PdfGenerator.php on line 165\nDeprecated: Optional parameter $level declared before required parameter $style is implicitly treated as a required parameter in opt/kaltura/app/infra/general/PdfGenerator.php on line 165",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/infra/general/S3.php",
+      "sha256": "2bb3f488e8305b6399cf7ed041e382333216204fbc02187bef02c1e6e4ce3acb",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/infra/general/S3.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/infra/general/S3.php on line 1917\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/infra/general/S3.php on line 1917",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/plugins/beacon/lib/model/kBeaconSearchQueryManger.php",
+      "sha256": "42606d7abd06dbad2cbc03586169c55e217d244818c940aa88916de753214e49",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $indexType declared before required parameter $searchObject is implicitly treated as a required parameter in opt/kaltura/app/plugins/beacon/lib/model/kBeaconSearchQueryManger.php on line 47\nDeprecated: Optional parameter $indexType declared before required parameter $searchObject is implicitly treated as a required parameter in opt/kaltura/app/plugins/beacon/lib/model/kBeaconSearchQueryManger.php on line 47",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/plugins/content/external_media/lib/model/ExternalMediaEntry.php",
+      "sha256": "3983c8e57a8c3469974bfd89164f61afbfb7aba5915fb58eba4e337a813d45e5",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $copyPartnerId declared before required parameter $template is implicitly treated as a required parameter in opt/kaltura/app/plugins/content/external_media/lib/model/ExternalMediaEntry.php on line 65\nDeprecated: Optional parameter $copyPartnerId declared before required parameter $template is implicitly treated as a required parameter in opt/kaltura/app/plugins/content/external_media/lib/model/ExternalMediaEntry.php on line 65",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/plugins/content_distribution/providers/freewheel/lib/FreewheelDistributionEngine.php",
+      "sha256": "73970823d3bcbd00fdf4ff736702a6a5798cef6f03a644b7b98806dac9566487",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Using ${var} in strings is deprecated, use {$var} instead in opt/kaltura/app/plugins/content_distribution/providers/freewheel/lib/FreewheelDistributionEngine.php on line 148\nDeprecated: Using ${var} in strings is deprecated, use {$var} instead in opt/kaltura/app/plugins/content_distribution/providers/freewheel/lib/FreewheelDistributionEngine.php on line 148\nPHP Deprecated:  Using ${var} in strings is deprecated, use {$var} instead in opt/kaltura/app/plugins/content_distribution/providers/freewheel/lib/FreewheelDistributionEngine.php on line 154\nDeprecated: Using ${var} in strings is deprecated, use {$var} instead in opt/kaltura/app/plugins/content_distribution/providers/freewheel/lib/FreewheelDistributionEngine.php on line 154\nPHP Deprecated:  Using ${var} in strings is deprecated, use {$var} instead in opt/kaltura/app/plugins/content_distribution/providers/freewheel/lib/FreewheelDistributionEngine.php on line 154\nDeprecated: Using ${var} in strings is deprecated, use {$var} instead in opt/kaltura/app/plugins/content_distribution/providers/freewheel/lib/FreewheelDistributionEngine.php on line 154",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/plugins/content_distribution/providers/freewheel_generic/lib/FreewheelGenericDistributionEngine.php",
+      "sha256": "f0b5aca1e5f4133e5bf96a2eb49338d2a29a2cc059cd6921ecad66a7035091a7",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Using ${var} in strings is deprecated, use {$var} instead in opt/kaltura/app/plugins/content_distribution/providers/freewheel_generic/lib/FreewheelGenericDistributionEngine.php on line 148\nDeprecated: Using ${var} in strings is deprecated, use {$var} instead in opt/kaltura/app/plugins/content_distribution/providers/freewheel_generic/lib/FreewheelGenericDistributionEngine.php on line 148\nPHP Deprecated:  Using ${var} in strings is deprecated, use {$var} instead in opt/kaltura/app/plugins/content_distribution/providers/freewheel_generic/lib/FreewheelGenericDistributionEngine.php on line 154\nDeprecated: Using ${var} in strings is deprecated, use {$var} instead in opt/kaltura/app/plugins/content_distribution/providers/freewheel_generic/lib/FreewheelGenericDistributionEngine.php on line 154\nPHP Deprecated:  Using ${var} in strings is deprecated, use {$var} instead in opt/kaltura/app/plugins/content_distribution/providers/freewheel_generic/lib/FreewheelGenericDistributionEngine.php on line 154\nDeprecated: Using ${var} in strings is deprecated, use {$var} instead in opt/kaltura/app/plugins/content_distribution/providers/freewheel_generic/lib/FreewheelGenericDistributionEngine.php on line 154",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/plugins/content_distribution/providers/youtube/lib/feed/YouTubeDistributionCsvFeedHelper.php",
+      "sha256": "d276a59ffbe4e15a563fff77a820041e31cb0f229ac9961e3815198012303450",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $videoId declared before required parameter $entryId is implicitly treated as a required parameter in opt/kaltura/app/plugins/content_distribution/providers/youtube/lib/feed/YouTubeDistributionCsvFeedHelper.php on line 69\nDeprecated: Optional parameter $videoId declared before required parameter $entryId is implicitly treated as a required parameter in opt/kaltura/app/plugins/content_distribution/providers/youtube/lib/feed/YouTubeDistributionCsvFeedHelper.php on line 69\nPHP Deprecated:  Optional parameter $videoId declared before required parameter $entryId is implicitly treated as a required parameter in opt/kaltura/app/plugins/content_distribution/providers/youtube/lib/feed/YouTubeDistributionCsvFeedHelper.php on line 88\nDeprecated: Optional parameter $videoId declared before required parameter $entryId is implicitly treated as a required parameter in opt/kaltura/app/plugins/content_distribution/providers/youtube/lib/feed/YouTubeDistributionCsvFeedHelper.php on line 88\nPHP Deprecated:  Optional parameter $videoFilePath declared before required parameter $entryId is implicitly treated as a required parameter in opt/kaltura/app/plugins/content_distribution/providers/youtube/lib/feed/YouTubeDistributionCsvFeedHelper.php on line 88\nDeprecated: Optional parameter $videoFilePath declared before required parameter $entryId is implicitly treated as a required parameter in opt/kaltura/app/plugins/content_distribution/providers/youtube/lib/feed/YouTubeDistributionCsvFeedHelper.php on line 88",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/plugins/drm/providers/widevine/batch/KWidevineBatchHelper.php",
+      "sha256": "c2e0b9fc9d81eb3b115c01551f5fcb2e1a7d66e21131b74487c05ae1d0c396fe",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $assetName declared before required parameter $errorMessage is implicitly treated as a required parameter in opt/kaltura/app/plugins/drm/providers/widevine/batch/KWidevineBatchHelper.php on line 88\nDeprecated: Optional parameter $assetName declared before required parameter $errorMessage is implicitly treated as a required parameter in opt/kaltura/app/plugins/drm/providers/widevine/batch/KWidevineBatchHelper.php on line 88\nPHP Deprecated:  Optional parameter $assetId declared before required parameter $errorMessage is implicitly treated as a required parameter in opt/kaltura/app/plugins/drm/providers/widevine/batch/KWidevineBatchHelper.php on line 88\nDeprecated: Optional parameter $assetId declared before required parameter $errorMessage is implicitly treated as a required parameter in opt/kaltura/app/plugins/drm/providers/widevine/batch/KWidevineBatchHelper.php on line 88\nPHP Deprecated:  Optional parameter $portal declared before required parameter $errorMessage is implicitly treated as a required parameter in opt/kaltura/app/plugins/drm/providers/widevine/batch/KWidevineBatchHelper.php on line 88\nDeprecated: Optional parameter $portal declared before required parameter $errorMessage is implicitly treated as a required parameter in opt/kaltura/app/plugins/drm/providers/widevine/batch/KWidevineBatchHelper.php on line 88\nPHP Deprecated:  Optional parameter $policy declared before required parameter $errorMessage is implicitly treated as a required parameter in opt/kaltura/app/plugins/drm/providers/widevine/batch/KWidevineBatchHelper.php on line 88\nDeprecated: Optional parameter $policy declared before required parameter $errorMessage is implicitly treated as a required parameter in opt/kaltura/app/plugins/drm/providers/widevine/batch/KWidevineBatchHelper.php on line 88\nPHP Deprecated:  Optional parameter $licenseStartDate declared before required parameter $errorMessage is implicitly treated as a required parameter in opt/kaltura/app/plugins/drm/providers/widevine/batch/KWidevineBatchHelper.php on line 88\nDeprecated: Optional parameter $licenseStartDate declared before required parameter $errorMessage is implicitly treated as a required parameter in opt/kaltura/app/plugins/drm/providers/widevine/batch/KWidevineBatchHelper.php on line 88\nPHP Deprecated:  Optional parameter $licenseEndDate declared before required parameter $errorMessage is implicitly treated as a required parameter in opt/kaltura/app/plugins/drm/providers/widevine/batch/KWidevineBatchHelper.php on line 88\nDeprecated: Optional parameter $licenseEndDate declared before required parameter $errorMessage is implicitly treated as a required parameter in opt/kaltura/app/plugins/drm/providers/widevine/batch/KWidevineBatchHelper.php on line 88",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/plugins/drop_folder/batch/Engine/KDropFolderFileTransferEngine.php",
+      "sha256": "1af2d3e510e2451a205aa25191c43f5a46fa17ddd3e3bdf8a65903877c1ae549",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $matchedEntry declared before required parameter $dropFolder is implicitly treated as a required parameter in opt/kaltura/app/plugins/drop_folder/batch/Engine/KDropFolderFileTransferEngine.php on line 536\nDeprecated: Optional parameter $matchedEntry declared before required parameter $dropFolder is implicitly treated as a required parameter in opt/kaltura/app/plugins/drop_folder/batch/Engine/KDropFolderFileTransferEngine.php on line 536",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/plugins/event_notification/lib/model/EventNotificationTemplatePeer.php",
+      "sha256": "724bb6914f53336ef233cfe57eeb56c88e7791fe1c0cea6c7ace5690ff380bed",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $partnerId declared before required parameter $pks is implicitly treated as a required parameter in opt/kaltura/app/plugins/event_notification/lib/model/EventNotificationTemplatePeer.php on line 149\nDeprecated: Optional parameter $partnerId declared before required parameter $pks is implicitly treated as a required parameter in opt/kaltura/app/plugins/event_notification/lib/model/EventNotificationTemplatePeer.php on line 149",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Connection/AbstractConnection.php",
+      "sha256": "2c97f01676187bcc6e14106ddbbeffc247277bb38d4804836583d925296ed6cd",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $vhost declared before required parameter $io is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Connection/AbstractConnection.php on line 148\nDeprecated: Optional parameter $vhost declared before required parameter $io is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Connection/AbstractConnection.php on line 148\nPHP Deprecated:  Optional parameter $insist declared before required parameter $io is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Connection/AbstractConnection.php on line 148\nDeprecated: Optional parameter $insist declared before required parameter $io is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Connection/AbstractConnection.php on line 148\nPHP Deprecated:  Optional parameter $login_method declared before required parameter $io is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Connection/AbstractConnection.php on line 148\nDeprecated: Optional parameter $login_method declared before required parameter $io is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Connection/AbstractConnection.php on line 148\nPHP Deprecated:  Optional parameter $login_response declared before required parameter $io is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Connection/AbstractConnection.php on line 148\nDeprecated: Optional parameter $login_response declared before required parameter $io is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Connection/AbstractConnection.php on line 148\nPHP Deprecated:  Optional parameter $locale declared before required parameter $io is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Connection/AbstractConnection.php on line 148\nDeprecated: Optional parameter $locale declared before required parameter $io is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Connection/AbstractConnection.php on line 148",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php",
+      "sha256": "c6c73b9e124756a29dd1047094018a5eab70934aa2d4f444cdcaf81e850b1cac",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $version_major declared before required parameter $server_properties is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 16\nDeprecated: Optional parameter $version_major declared before required parameter $server_properties is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 16\nPHP Deprecated:  Optional parameter $version_minor declared before required parameter $server_properties is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 16\nDeprecated: Optional parameter $version_minor declared before required parameter $server_properties is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 16\nPHP Deprecated:  Optional parameter $reply_text declared before required parameter $method_id is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 142\nDeprecated: Optional parameter $reply_text declared before required parameter $method_id is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 142\nPHP Deprecated:  Optional parameter $reply_text declared before required parameter $method_id is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 232\nDeprecated: Optional parameter $reply_text declared before required parameter $method_id is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 232\nPHP Deprecated:  Optional parameter $ticket declared before required parameter $exchange is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 285\nDeprecated: Optional parameter $ticket declared before required parameter $exchange is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 285\nPHP Deprecated:  Optional parameter $ticket declared before required parameter $exchange is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 313\nDeprecated: Optional parameter $ticket declared before required parameter $exchange is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 313\nPHP Deprecated:  Optional parameter $ticket declared before required parameter $exchange is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 369\nDeprecated: Optional parameter $ticket declared before required parameter $exchange is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 369\nPHP Deprecated:  Optional parameter $queue declared before required parameter $exchange is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 369\nDeprecated: Optional parameter $queue declared before required parameter $exchange is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 369\nPHP Deprecated:  Optional parameter $ticket declared before required parameter $exchange is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 452\nDeprecated: Optional parameter $ticket declared before required parameter $exchange is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 452\nPHP Deprecated:  Optional parameter $queue declared before required parameter $exchange is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 452\nDeprecated: Optional parameter $queue declared before required parameter $exchange is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 452\nPHP Deprecated:  Optional parameter $reply_text declared before required parameter $routing_key is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 575\nDeprecated: Optional parameter $reply_text declared before required parameter $routing_key is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 575\nPHP Deprecated:  Optional parameter $redelivered declared before required parameter $routing_key is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 590\nDeprecated: Optional parameter $redelivered declared before required parameter $routing_key is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 590\nPHP Deprecated:  Optional parameter $ticket declared before required parameter $identifier is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 829\nDeprecated: Optional parameter $ticket declared before required parameter $identifier is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 829\nPHP Deprecated:  Optional parameter $exchange declared before required parameter $identifier is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 829\nDeprecated: Optional parameter $exchange declared before required parameter $identifier is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 829\nPHP Deprecated:  Optional parameter $routing_key declared before required parameter $identifier is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 829\nDeprecated: Optional parameter $routing_key declared before required parameter $identifier is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 829\nPHP Deprecated:  Optional parameter $mandatory declared before required parameter $identifier is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 829\nDeprecated: Optional parameter $mandatory declared before required parameter $identifier is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 829\nPHP Deprecated:  Optional parameter $immediate declared before required parameter $identifier is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 829\nDeprecated: Optional parameter $immediate declared before required parameter $identifier is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 829\nPHP Deprecated:  Optional parameter $reply_code declared before required parameter $routing_key is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 845\nDeprecated: Optional parameter $reply_code declared before required parameter $routing_key is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 845\nPHP Deprecated:  Optional parameter $reply_text declared before required parameter $routing_key is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 845\nDeprecated: Optional parameter $reply_text declared before required parameter $routing_key is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 845\nPHP Deprecated:  Optional parameter $redelivered declared before required parameter $identifier is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 860\nDeprecated: Optional parameter $redelivered declared before required parameter $identifier is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 860\nPHP Deprecated:  Optional parameter $reply_code declared before required parameter $routing_key is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 999\nDeprecated: Optional parameter $reply_code declared before required parameter $routing_key is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 999\nPHP Deprecated:  Optional parameter $reply_text declared before required parameter $routing_key is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 999\nDeprecated: Optional parameter $reply_text declared before required parameter $routing_key is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol080.php on line 999",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol091.php",
+      "sha256": "6e58087c6e121e0e365e604157291e6227c16704a33d23a0e356675140649fa2",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $version_major declared before required parameter $server_properties is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol091.php on line 16\nDeprecated: Optional parameter $version_major declared before required parameter $server_properties is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol091.php on line 16\nPHP Deprecated:  Optional parameter $version_minor declared before required parameter $server_properties is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol091.php on line 16\nDeprecated: Optional parameter $version_minor declared before required parameter $server_properties is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol091.php on line 16\nPHP Deprecated:  Optional parameter $reply_text declared before required parameter $method_id is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol091.php on line 129\nDeprecated: Optional parameter $reply_text declared before required parameter $method_id is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol091.php on line 129\nPHP Deprecated:  Optional parameter $reply_text declared before required parameter $method_id is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol091.php on line 230\nDeprecated: Optional parameter $reply_text declared before required parameter $method_id is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol091.php on line 230\nPHP Deprecated:  Optional parameter $ticket declared before required parameter $exchange is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol091.php on line 283\nDeprecated: Optional parameter $ticket declared before required parameter $exchange is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol091.php on line 283\nPHP Deprecated:  Optional parameter $ticket declared before required parameter $exchange is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol091.php on line 311\nDeprecated: Optional parameter $ticket declared before required parameter $exchange is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol091.php on line 311\nPHP Deprecated:  Optional parameter $ticket declared before required parameter $source is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol091.php on line 337\nDeprecated: Optional parameter $ticket declared before required parameter $source is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol091.php on line 337\nPHP Deprecated:  Optional parameter $ticket declared before required parameter $source is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol091.php on line 366\nDeprecated: Optional parameter $ticket declared before required parameter $source is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol091.php on line 366\nPHP Deprecated:  Optional parameter $ticket declared before required parameter $exchange is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol091.php on line 425\nDeprecated: Optional parameter $ticket declared before required parameter $exchange is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol091.php on line 425\nPHP Deprecated:  Optional parameter $queue declared before required parameter $exchange is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol091.php on line 425\nDeprecated: Optional parameter $queue declared before required parameter $exchange is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol091.php on line 425\nPHP Deprecated:  Optional parameter $ticket declared before required parameter $exchange is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol091.php on line 508\nDeprecated: Optional parameter $ticket declared before required parameter $exchange is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol091.php on line 508\nPHP Deprecated:  Optional parameter $queue declared before required parameter $exchange is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol091.php on line 508\nDeprecated: Optional parameter $queue declared before required parameter $exchange is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol091.php on line 508\nPHP Deprecated:  Optional parameter $reply_text declared before required parameter $routing_key is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol091.php on line 632\nDeprecated: Optional parameter $reply_text declared before required parameter $routing_key is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol091.php on line 632\nPHP Deprecated:  Optional parameter $redelivered declared before required parameter $routing_key is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol091.php on line 647\nDeprecated: Optional parameter $redelivered declared before required parameter $routing_key is implicitly treated as a required parameter in opt/kaltura/app/plugins/queue/providers/rabbit_mq/lib/PhpAmqpLib/Helper/Protocol/Protocol091.php on line 647",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/plugins/reach/lib/model/EntryVendorTaskPeer.php",
+      "sha256": "120b8e2758fd5ce00f629cb2e104913585df9d45a16085c1577c3fee80782711",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $partnerId declared before required parameter $statuses is implicitly treated as a required parameter in opt/kaltura/app/plugins/reach/lib/model/EntryVendorTaskPeer.php on line 97\nDeprecated: Optional parameter $partnerId declared before required parameter $statuses is implicitly treated as a required parameter in opt/kaltura/app/plugins/reach/lib/model/EntryVendorTaskPeer.php on line 97",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/plugins/scheduled_task/lib/processors/KMediaRepurposingProcessor.php",
+      "sha256": "b2e9b54656fab14b87079b957364cd184d6740dc562f04c9536bb4e146eee6b1",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $xml declared before required parameter $process is implicitly treated as a required parameter in opt/kaltura/app/plugins/scheduled_task/lib/processors/KMediaRepurposingProcessor.php on line 204\nDeprecated: Optional parameter $xml declared before required parameter $process is implicitly treated as a required parameter in opt/kaltura/app/plugins/scheduled_task/lib/processors/KMediaRepurposingProcessor.php on line 204",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/plugins/search/providers/elastic_search/client/elasticClient.php",
+      "sha256": "1f6755478d996ff565c53e3fe63552ab7eb8f8bff35740f70e5358a9965f5bf2",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $body declared before required parameter $monitorIndexName is implicitly treated as a required parameter in opt/kaltura/app/plugins/search/providers/elastic_search/client/elasticClient.php on line 194\nDeprecated: Optional parameter $body declared before required parameter $monitorIndexName is implicitly treated as a required parameter in opt/kaltura/app/plugins/search/providers/elastic_search/client/elasticClient.php on line 194\nPHP Deprecated:  Optional parameter $logQuery declared before required parameter $monitorIndexName is implicitly treated as a required parameter in opt/kaltura/app/plugins/search/providers/elastic_search/client/elasticClient.php on line 194\nDeprecated: Optional parameter $logQuery declared before required parameter $monitorIndexName is implicitly treated as a required parameter in opt/kaltura/app/plugins/search/providers/elastic_search/client/elasticClient.php on line 194",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/plugins/sso/services/SsoService.php",
+      "sha256": "cf1c7d93b1a8ac9edae1101904708987153c1c9be6cdc42c5abfca07222e914d",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $userId declared before required parameter $applicationType is implicitly treated as a required parameter in opt/kaltura/app/plugins/sso/services/SsoService.php on line 121\nDeprecated: Optional parameter $userId declared before required parameter $applicationType is implicitly treated as a required parameter in opt/kaltura/app/plugins/sso/services/SsoService.php on line 121",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/IP2Location/IP2Location.inc.php",
+      "sha256": "142e90a7337ab3561c8df0ed2bfa9dd2e33af7e80d5e2af1bc89712c2f139ced",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/IP2Location/IP2Location.inc.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/IP2Location/IP2Location.inc.php on line 83\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/IP2Location/IP2Location.inc.php on line 83",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/PHPMailer/class.pop3.php",
+      "sha256": "f755591c78179e759d6d63fa9b536fdec77f37473a816c5d276de085523bad53",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $port declared before required parameter $password is implicitly treated as a required parameter in opt/kaltura/app/vendor/PHPMailer/class.pop3.php on line 148\nDeprecated: Optional parameter $port declared before required parameter $password is implicitly treated as a required parameter in opt/kaltura/app/vendor/PHPMailer/class.pop3.php on line 148\nPHP Deprecated:  Optional parameter $tval declared before required parameter $password is implicitly treated as a required parameter in opt/kaltura/app/vendor/PHPMailer/class.pop3.php on line 148\nDeprecated: Optional parameter $tval declared before required parameter $password is implicitly treated as a required parameter in opt/kaltura/app/vendor/PHPMailer/class.pop3.php on line 148",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/PHPMailer/extras/htmlfilter.php",
+      "sha256": "ea02afbfef091267eb86dc47afb302900dd312d987767051a6e5697592dc78a8",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/PHPMailer/extras/htmlfilter.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/PHPMailer/extras/htmlfilter.php on line 357\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/PHPMailer/extras/htmlfilter.php on line 357",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/ZendFramework/library/Zend/Gdata/App/Base.php",
+      "sha256": "92dc6fef962f668abde338be8e0cc778df919d2e43a8eb904a72c86a346ace02",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Using ${var} in strings is deprecated, use {$var} instead in opt/kaltura/app/vendor/ZendFramework/library/Zend/Gdata/App/Base.php on line 480\nDeprecated: Using ${var} in strings is deprecated, use {$var} instead in opt/kaltura/app/vendor/ZendFramework/library/Zend/Gdata/App/Base.php on line 480",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/ZendFramework/library/Zend/Gdata/App/BaseMediaSource.php",
+      "sha256": "76d037851afa38bc78015bb0187fa7dfd9d276d4a3bd967c3a8377686921a64a",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Using ${var} in strings is deprecated, use {$var} instead in opt/kaltura/app/vendor/ZendFramework/library/Zend/Gdata/App/BaseMediaSource.php on line 116\nDeprecated: Using ${var} in strings is deprecated, use {$var} instead in opt/kaltura/app/vendor/ZendFramework/library/Zend/Gdata/App/BaseMediaSource.php on line 116",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/ZendFramework/library/Zend/Gdata/App/LoggingHttpClientAdapterSocket.php",
+      "sha256": "63b50deb7af8babe3529a1cd4a51bdccb0f22bd369b515fe180fc13b8a52afbe",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Using ${var} in strings is deprecated, use {$var} instead in opt/kaltura/app/vendor/ZendFramework/library/Zend/Gdata/App/LoggingHttpClientAdapterSocket.php on line 76\nDeprecated: Using ${var} in strings is deprecated, use {$var} instead in opt/kaltura/app/vendor/ZendFramework/library/Zend/Gdata/App/LoggingHttpClientAdapterSocket.php on line 76\nPHP Deprecated:  Using ${var} in strings is deprecated, use {$var} instead in opt/kaltura/app/vendor/ZendFramework/library/Zend/Gdata/App/LoggingHttpClientAdapterSocket.php on line 76\nDeprecated: Using ${var} in strings is deprecated, use {$var} instead in opt/kaltura/app/vendor/ZendFramework/library/Zend/Gdata/App/LoggingHttpClientAdapterSocket.php on line 76\nPHP Deprecated:  Using ${var} in strings is deprecated, use {$var} instead in opt/kaltura/app/vendor/ZendFramework/library/Zend/Gdata/App/LoggingHttpClientAdapterSocket.php on line 105\nDeprecated: Using ${var} in strings is deprecated, use {$var} instead in opt/kaltura/app/vendor/ZendFramework/library/Zend/Gdata/App/LoggingHttpClientAdapterSocket.php on line 105",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/ZendFramework/library/Zend/Gdata/App.php",
+      "sha256": "1cf11b0c578c8f79d0edfe689415b521a366a1715088e6e41cc6f93ad44ba8ca",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Using ${var} in strings is deprecated, use {$var} instead in opt/kaltura/app/vendor/ZendFramework/library/Zend/Gdata/App.php on line 1053\nDeprecated: Using ${var} in strings is deprecated, use {$var} instead in opt/kaltura/app/vendor/ZendFramework/library/Zend/Gdata/App.php on line 1053\nPHP Deprecated:  Using ${var} in strings is deprecated, use {$var} instead in opt/kaltura/app/vendor/ZendFramework/library/Zend/Gdata/App.php on line 1057\nDeprecated: Using ${var} in strings is deprecated, use {$var} instead in opt/kaltura/app/vendor/ZendFramework/library/Zend/Gdata/App.php on line 1057",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/ZendFramework/library/Zend/Gdata/Gapps.php",
+      "sha256": "1fe737779add3c590dcb383dfb572ce0963fcabd5a5752f7d4f8539394b764c7",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Using ${var} in strings is deprecated, use {$var} instead in opt/kaltura/app/vendor/ZendFramework/library/Zend/Gdata/Gapps.php on line 648\nDeprecated: Using ${var} in strings is deprecated, use {$var} instead in opt/kaltura/app/vendor/ZendFramework/library/Zend/Gdata/Gapps.php on line 648",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/ZendFramework/library/Zend/Gdata/YouTube.php",
+      "sha256": "8b561429fff4b41bf24dd9ea073e6b5adde78bc0717c3d00f4bb599ecca74379",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $videoEntry declared before required parameter $recipientUserName is implicitly treated as a required parameter in opt/kaltura/app/vendor/ZendFramework/library/Zend/Gdata/YouTube.php on line 800\nDeprecated: Optional parameter $videoEntry declared before required parameter $recipientUserName is implicitly treated as a required parameter in opt/kaltura/app/vendor/ZendFramework/library/Zend/Gdata/YouTube.php on line 800\nPHP Deprecated:  Optional parameter $videoId declared before required parameter $recipientUserName is implicitly treated as a required parameter in opt/kaltura/app/vendor/ZendFramework/library/Zend/Gdata/YouTube.php on line 800\nDeprecated: Optional parameter $videoId declared before required parameter $recipientUserName is implicitly treated as a required parameter in opt/kaltura/app/vendor/ZendFramework/library/Zend/Gdata/YouTube.php on line 800",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/ZendFramework/library/Zend/Json/Decoder.php",
+      "sha256": "7336a0a91cdb2da465642e3322d77cae04f788c6b3e937cd2e1cbd4aff0aa996",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/ZendFramework/library/Zend/Json/Decoder.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/ZendFramework/library/Zend/Json/Decoder.php on line 324\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/ZendFramework/library/Zend/Json/Decoder.php on line 324",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/ZendFramework/library/Zend/Json/Encoder.php",
+      "sha256": "7af0946f20f81f7cbef204f9cdb907d9c52407fa7e4797bd613d12f778baf720",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/ZendFramework/library/Zend/Json/Encoder.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/ZendFramework/library/Zend/Json/Encoder.php on line 557\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/ZendFramework/library/Zend/Json/Encoder.php on line 557",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/ZendFramework/library/Zend/Registry.php",
+      "sha256": "304ba8242c81790f11dadcf7a39e63b7047f8ea33fc3de03b748cab70397b48d",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Return type of Zend_Registry::offsetExists($index) should either be compatible with ArrayObject::offsetExists(mixed $key): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/ZendFramework/library/Zend/Registry.php on line 204\nDeprecated: Return type of Zend_Registry::offsetExists($index) should either be compatible with ArrayObject::offsetExists(mixed $key): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/ZendFramework/library/Zend/Registry.php on line 204",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/ZendFramework/library/Zend/View/Helper/Navigation/Sitemap.php",
+      "sha256": "5220cde25a81eda81b9744080c615ffc5e36017b33a53dc7a909871078af7957",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/ZendFramework/library/Zend/View/Helper/Navigation/Sitemap.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/ZendFramework/library/Zend/View/Helper/Navigation/Sitemap.php on line 289\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/ZendFramework/library/Zend/View/Helper/Navigation/Sitemap.php on line 289",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/aws/Aws/S3/Sync/ChangedFilesIterator.php",
+      "sha256": "ebdd816181af49ec4da940fc6e77c6b1cbd8e5e25a54cb33eb3b42f9c6959902",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Return type of Aws\\S3\\Sync\\ChangedFilesIterator::accept() should either be compatible with FilterIterator::accept(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/aws/Aws/S3/Sync/ChangedFilesIterator.php on line 58\nDeprecated: Return type of Aws\\S3\\Sync\\ChangedFilesIterator::accept() should either be compatible with FilterIterator::accept(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/aws/Aws/S3/Sync/ChangedFilesIterator.php on line 58",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/aws/Doctrine/Common/Cache/RiakCache.php",
+      "sha256": "0ec9e10a5c35033e6ebd154630565a63431831c53fac0a33b98f32d0652f79db",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/aws/Doctrine/Common/Cache/RiakCache.php\nPHP Fatal error:  Cannot use Riak\\Object as Object because 'Object' is a special class name in opt/kaltura/app/vendor/aws/Doctrine/Common/Cache/RiakCache.php on line 26\nFatal error: Cannot use Riak\\Object as Object because 'Object' is a special class name in opt/kaltura/app/vendor/aws/Doctrine/Common/Cache/RiakCache.php on line 26",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/aws/Guzzle/Iterator/AppendIterator.php",
+      "sha256": "ad782a2b59295f1307cf0e3f90c9835b04ef2f30d4393e01fb6156076a7091c0",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Return type of Guzzle\\Iterator\\AppendIterator::append(Iterator $iterator) should either be compatible with AppendIterator::append(Iterator $iterator): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/aws/Guzzle/Iterator/AppendIterator.php on line 15\nDeprecated: Return type of Guzzle\\Iterator\\AppendIterator::append(Iterator $iterator) should either be compatible with AppendIterator::append(Iterator $iterator): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/aws/Guzzle/Iterator/AppendIterator.php on line 15",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/aws/Guzzle/Iterator/ChunkedIterator.php",
+      "sha256": "008f8a1b6e6eb87b5fd836f2b4f8096d71be4d05ee4dd7330b454a659778463c",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Return type of Guzzle\\Iterator\\ChunkedIterator::rewind() should either be compatible with IteratorIterator::rewind(): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/aws/Guzzle/Iterator/ChunkedIterator.php on line 32\nDeprecated: Return type of Guzzle\\Iterator\\ChunkedIterator::rewind() should either be compatible with IteratorIterator::rewind(): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/aws/Guzzle/Iterator/ChunkedIterator.php on line 32\nPHP Deprecated:  Return type of Guzzle\\Iterator\\ChunkedIterator::valid() should either be compatible with IteratorIterator::valid(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/aws/Guzzle/Iterator/ChunkedIterator.php on line 52\nDeprecated: Return type of Guzzle\\Iterator\\ChunkedIterator::valid() should either be compatible with IteratorIterator::valid(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/aws/Guzzle/Iterator/ChunkedIterator.php on line 52\nPHP Deprecated:  Return type of Guzzle\\Iterator\\ChunkedIterator::current() should either be compatible with IteratorIterator::current(): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/aws/Guzzle/Iterator/ChunkedIterator.php on line 47\nDeprecated: Return type of Guzzle\\Iterator\\ChunkedIterator::current() should either be compatible with IteratorIterator::current(): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/aws/Guzzle/Iterator/ChunkedIterator.php on line 47\nPHP Deprecated:  Return type of Guzzle\\Iterator\\ChunkedIterator::next() should either be compatible with IteratorIterator::next(): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/aws/Guzzle/Iterator/ChunkedIterator.php on line 38\nDeprecated: Return type of Guzzle\\Iterator\\ChunkedIterator::next() should either be compatible with IteratorIterator::next(): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/aws/Guzzle/Iterator/ChunkedIterator.php on line 38",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/aws/Guzzle/Iterator/FilterIterator.php",
+      "sha256": "3073cfb22adda196c2661bc79f2512a3911c49fcce1cdd75657a450cdb58ebb7",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Return type of Guzzle\\Iterator\\FilterIterator::accept() should either be compatible with FilterIterator::accept(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/aws/Guzzle/Iterator/FilterIterator.php on line 32\nDeprecated: Return type of Guzzle\\Iterator\\FilterIterator::accept() should either be compatible with FilterIterator::accept(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/aws/Guzzle/Iterator/FilterIterator.php on line 32",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/aws/Guzzle/Iterator/MapIterator.php",
+      "sha256": "991153cad2eddbfab4e37456067a86ed446acac69207eb5a016d5be713330af0",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Return type of Guzzle\\Iterator\\MapIterator::current() should either be compatible with IteratorIterator::current(): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/aws/Guzzle/Iterator/MapIterator.php on line 30\nDeprecated: Return type of Guzzle\\Iterator\\MapIterator::current() should either be compatible with IteratorIterator::current(): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/aws/Guzzle/Iterator/MapIterator.php on line 30",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/google-api-php-client/src/service/Google_Utils.php",
+      "sha256": "525c9b2e69ae8d3b3039c486cc3417a52cb55107c329ce2f34cd1671b4f28fcd",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/google-api-php-client/src/service/Google_Utils.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/google-api-php-client/src/service/Google_Utils.php on line 58\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/google-api-php-client/src/service/Google_Utils.php on line 58",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/google-api-php-client-1.1.2/src/Google/Utils.php",
+      "sha256": "deaa15a8550814910dd96bd4679459df366cf98c8ea71c60d27fc6f75e6eb433",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/google-api-php-client-1.1.2/src/Google/Utils.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/google-api-php-client-1.1.2/src/Google/Utils.php on line 65\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/google-api-php-client-1.1.2/src/Google/Utils.php on line 65",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/htmlpurifier/library/HTMLPurifier/ChildDef/Custom.php",
+      "sha256": "e33babccfe0f50fe87c55bd010fe5ed27d9baa18dc62527f027a2bef9d0e0149",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/htmlpurifier/library/HTMLPurifier/ChildDef/Custom.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/htmlpurifier/library/HTMLPurifier/ChildDef/Custom.php on line 48\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/htmlpurifier/library/HTMLPurifier/ChildDef/Custom.php on line 48",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/htmlpurifier/library/HTMLPurifier/Encoder.php",
+      "sha256": "b1b735e555c6dc070cf7a39ed2fd111b983a1fe1312561b92a63825cae9d34fc",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/htmlpurifier/library/HTMLPurifier/Encoder.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/htmlpurifier/library/HTMLPurifier/Encoder.php on line 157\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/htmlpurifier/library/HTMLPurifier/Encoder.php on line 157",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/htmlpurifier/library/HTMLPurifier/PropertyListIterator.php",
+      "sha256": "859cd3c65ab7f16c315d5e3cede4253857aa6eb4d4d0bb665a28068f14d8ec77",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Return type of HTMLPurifier_PropertyListIterator::accept() should either be compatible with FilterIterator::accept(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/htmlpurifier/library/HTMLPurifier/PropertyListIterator.php on line 32\nDeprecated: Return type of HTMLPurifier_PropertyListIterator::accept() should either be compatible with FilterIterator::accept(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/htmlpurifier/library/HTMLPurifier/PropertyListIterator.php on line 32",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/htmlpurifier/library/HTMLPurifier/StringHash.php",
+      "sha256": "09cb3db5ca26cc1b159bff587555c7969fd89fe2932841da798331da3ed6571c",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Return type of HTMLPurifier_StringHash::offsetGet($index) should either be compatible with ArrayObject::offsetGet(mixed $key): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/htmlpurifier/library/HTMLPurifier/StringHash.php on line 23\nDeprecated: Return type of HTMLPurifier_StringHash::offsetGet($index) should either be compatible with ArrayObject::offsetGet(mixed $key): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/htmlpurifier/library/HTMLPurifier/StringHash.php on line 23",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/htmlpurifier/library/HTMLPurifier/TagTransform/Font.php",
+      "sha256": "c0c2e803fdb13990a69d085b8723e0d1dd3abc1a2433aa536f409e9ab074bd9b",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/htmlpurifier/library/HTMLPurifier/TagTransform/Font.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/htmlpurifier/library/HTMLPurifier/TagTransform/Font.php on line 78\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/htmlpurifier/library/HTMLPurifier/TagTransform/Font.php on line 78",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/htmlpurifier/library/HTMLPurifier.autoload.php",
+      "sha256": "b845e45b8428bb01d9870cd55a5ad005c4e005329cd5cf418a4642f9b96803fa",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/htmlpurifier/library/HTMLPurifier.autoload.php\nPHP Fatal error:  __autoload() is no longer supported, use spl_autoload_register() instead in opt/kaltura/app/vendor/htmlpurifier/library/HTMLPurifier.autoload.php on line 17\nFatal error: __autoload() is no longer supported, use spl_autoload_register() instead in opt/kaltura/app/vendor/htmlpurifier/library/HTMLPurifier.autoload.php on line 17",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/nusoap/class.soap_transport_http.php",
+      "sha256": "3aceac089f9dc052f66d14ef0dbf03a00c6fb769f2575670d41f07fe8bb9a4b1",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $timeout declared before required parameter $cookies is implicitly treated as a required parameter in opt/kaltura/app/vendor/nusoap/class.soap_transport_http.php on line 456\nDeprecated: Optional parameter $timeout declared before required parameter $cookies is implicitly treated as a required parameter in opt/kaltura/app/vendor/nusoap/class.soap_transport_http.php on line 456\nPHP Deprecated:  Optional parameter $response_timeout declared before required parameter $cookies is implicitly treated as a required parameter in opt/kaltura/app/vendor/nusoap/class.soap_transport_http.php on line 456\nDeprecated: Optional parameter $response_timeout declared before required parameter $cookies is implicitly treated as a required parameter in opt/kaltura/app/vendor/nusoap/class.soap_transport_http.php on line 456",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/propel/engine/GeneratorConfig.php",
+      "sha256": "1b6b36c3af5f7b2cdf417a4eed35bf843aa44b3c1e86f5e11db0a3faa47599ee",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/propel/engine/GeneratorConfig.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/propel/engine/GeneratorConfig.php on line 122\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/propel/engine/GeneratorConfig.php on line 122",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/propel/engine/database/transform/XmlToAppData.php",
+      "sha256": "75311115454e3d967137cb77db84216d6c48cf70478f3662530b7383261516b2",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/propel/engine/database/transform/XmlToAppData.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/propel/engine/database/transform/XmlToAppData.php on line 184\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/propel/engine/database/transform/XmlToAppData.php on line 184",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/propel/util/DebugPDOStatement.php",
+      "sha256": "d25d3149afefa3a3b4e0f451869d2103adace575cc4445078c77dad6e1e68239",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Return type of DebugPDOStatement::bindValue($pos, $value, $type = PDO::PARAM_STR) should either be compatible with PDOStatement::bindValue(string|int $param, mixed $value, int $type = PDO::PARAM_STR): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/propel/util/DebugPDOStatement.php on line 119\nDeprecated: Return type of DebugPDOStatement::bindValue($pos, $value, $type = PDO::PARAM_STR) should either be compatible with PDOStatement::bindValue(string|int $param, mixed $value, int $type = PDO::PARAM_STR): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/propel/util/DebugPDOStatement.php on line 119\nPHP Deprecated:  Return type of DebugPDOStatement::execute($input_parameters = null) should either be compatible with PDOStatement::execute(?array $params = null): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/propel/util/DebugPDOStatement.php on line 97\nDeprecated: Return type of DebugPDOStatement::execute($input_parameters = null) should either be compatible with PDOStatement::execute(?array $params = null): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/propel/util/DebugPDOStatement.php on line 97",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/propel/util/PropelConfigurationIterator.php",
+      "sha256": "c78f286f369f54cebd2a36b4f659447d8dde4855a7e66b972355b5bd0cae6229",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Return type of PropelConfigurationIterator::current() should either be compatible with RecursiveIteratorIterator::current(): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/propel/util/PropelConfigurationIterator.php on line 86\nDeprecated: Return type of PropelConfigurationIterator::current() should either be compatible with RecursiveIteratorIterator::current(): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/propel/util/PropelConfigurationIterator.php on line 86\nPHP Deprecated:  Return type of PropelConfigurationIterator::endChildren() should either be compatible with RecursiveIteratorIterator::endChildren(): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/propel/util/PropelConfigurationIterator.php on line 105\nDeprecated: Return type of PropelConfigurationIterator::endChildren() should either be compatible with RecursiveIteratorIterator::endChildren(): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/propel/util/PropelConfigurationIterator.php on line 105",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/propel/util/PropelDateTime.php",
+      "sha256": "0b49c09a0ebe9c2ea58d519b124adcd3bbe21ec818b76757bfd998f215ec1d51",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Return type of PropelDateTime::__wakeup() should either be compatible with DateTime::__wakeup(): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/propel/util/PropelDateTime.php on line 82\nDeprecated: Return type of PropelDateTime::__wakeup() should either be compatible with DateTime::__wakeup(): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/propel/util/PropelDateTime.php on line 82",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/propel/util/PropelPDO.php",
+      "sha256": "9e4f602f50bc24432107f34a2f3b4a995518fe28c46be9dc8f642dbb9ca74d22",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Return type of PropelPDO::beginTransaction() should either be compatible with PDO::beginTransaction(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/propel/util/PropelPDO.php on line 123\nDeprecated: Return type of PropelPDO::beginTransaction() should either be compatible with PDO::beginTransaction(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/propel/util/PropelPDO.php on line 123\nPHP Deprecated:  Return type of PropelPDO::commit() should either be compatible with PDO::commit(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/propel/util/PropelPDO.php on line 139\nDeprecated: Return type of PropelPDO::commit() should either be compatible with PDO::commit(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/propel/util/PropelPDO.php on line 139\nPHP Deprecated:  Return type of PropelPDO::getAttribute($attribute) should either be compatible with PDO::getAttribute(int $attribute): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/propel/util/PropelPDO.php on line 225\nDeprecated: Return type of PropelPDO::getAttribute($attribute) should either be compatible with PDO::getAttribute(int $attribute): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/propel/util/PropelPDO.php on line 225\nPHP Deprecated:  Return type of PropelPDO::prepare($sql, $driver_options = []) should either be compatible with PDO::prepare(string $query, array $options = []): PDOStatement|false, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/propel/util/PropelPDO.php on line 244\nDeprecated: Return type of PropelPDO::prepare($sql, $driver_options = []) should either be compatible with PDO::prepare(string $query, array $options = []): PDOStatement|false, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/propel/util/PropelPDO.php on line 244\nPHP Deprecated:  Return type of PropelPDO::rollBack() should either be compatible with PDO::rollBack(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/propel/util/PropelPDO.php on line 161\nDeprecated: Return type of PropelPDO::rollBack() should either be compatible with PDO::rollBack(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/propel/util/PropelPDO.php on line 161\nPHP Deprecated:  Return type of PropelPDO::setAttribute($attribute, $value) should either be compatible with PDO::setAttribute(int $attribute, mixed $value): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/propel/util/PropelPDO.php on line 206\nDeprecated: Return type of PropelPDO::setAttribute($attribute, $value) should either be compatible with PDO::setAttribute(int $attribute, mixed $value): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in opt/kaltura/app/vendor/propel/util/PropelPDO.php on line 206",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/propel/validator/MatchValidator.php",
+      "sha256": "b916a75bd40c96c3b19402e9e94a95f9da48fd3d91446e5b412ac78504a07746",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/propel/validator/MatchValidator.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/propel/validator/MatchValidator.php on line 62\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/propel/validator/MatchValidator.php on line 62",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/propel/validator/NotMatchValidator.php",
+      "sha256": "6ece40c0d22b4f29e64789be2d6f7a77c1b6a2cf9a54942a4210266b4cb4ad24",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/propel/validator/NotMatchValidator.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/propel/validator/NotMatchValidator.php on line 60\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/propel/validator/NotMatchValidator.php on line 60",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/addon/propel/sfPropelDatabaseSchema.class.php",
+      "sha256": "06a1c2a83866e76062407f889f11e4a883071436dba5f3defcef7c58b2863c1c",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Using ${var} in strings is deprecated, use {$var} instead in opt/kaltura/app/vendor/symfony/addon/propel/sfPropelDatabaseSchema.class.php on line 365\nDeprecated: Using ${var} in strings is deprecated, use {$var} instead in opt/kaltura/app/vendor/symfony/addon/propel/sfPropelDatabaseSchema.class.php on line 365\nPHP Deprecated:  Using ${var} in strings is deprecated, use {$var} instead in opt/kaltura/app/vendor/symfony/addon/propel/sfPropelDatabaseSchema.class.php on line 365\nDeprecated: Using ${var} in strings is deprecated, use {$var} instead in opt/kaltura/app/vendor/symfony/addon/propel/sfPropelDatabaseSchema.class.php on line 365\nPHP Deprecated:  Using ${var} in strings is deprecated, use {$var} instead in opt/kaltura/app/vendor/symfony/addon/propel/sfPropelDatabaseSchema.class.php on line 371\nDeprecated: Using ${var} in strings is deprecated, use {$var} instead in opt/kaltura/app/vendor/symfony/addon/propel/sfPropelDatabaseSchema.class.php on line 371\nPHP Deprecated:  Using ${var} in strings is deprecated, use {$var} instead in opt/kaltura/app/vendor/symfony/addon/propel/sfPropelDatabaseSchema.class.php on line 371\nDeprecated: Using ${var} in strings is deprecated, use {$var} instead in opt/kaltura/app/vendor/symfony/addon/propel/sfPropelDatabaseSchema.class.php on line 371",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/cache/sfCache.class.php",
+      "sha256": "a81dd178d458761cb7f6be2beda98e2093176be14d4cfc6593d28a618e232cdb",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $namespace declared before required parameter $data is implicitly treated as a required parameter in opt/kaltura/app/vendor/symfony/cache/sfCache.class.php on line 67\nDeprecated: Optional parameter $namespace declared before required parameter $data is implicitly treated as a required parameter in opt/kaltura/app/vendor/symfony/cache/sfCache.class.php on line 67",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/cache/sfFileCache.class.php",
+      "sha256": "f81b8f04b2571dd42d1e84488f14be3629ba21c3a21783a9942be4b2de442b67",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $namespace declared before required parameter $data is implicitly treated as a required parameter in opt/kaltura/app/vendor/symfony/cache/sfFileCache.class.php on line 289\nDeprecated: Optional parameter $namespace declared before required parameter $data is implicitly treated as a required parameter in opt/kaltura/app/vendor/symfony/cache/sfFileCache.class.php on line 289",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/cache/sfSQLiteCache.class.php",
+      "sha256": "03ada7ce537b3c049191b919af3ef6b3ba3effb02bc7ef6e1470153a9f110a48",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $namespace declared before required parameter $data is implicitly treated as a required parameter in opt/kaltura/app/vendor/symfony/cache/sfSQLiteCache.class.php on line 232\nDeprecated: Optional parameter $namespace declared before required parameter $data is implicitly treated as a required parameter in opt/kaltura/app/vendor/symfony/cache/sfSQLiteCache.class.php on line 232",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/controller/sfRouting.class.php",
+      "sha256": "52a0fb006d480654a2f233514729b9bd61001efd930b3745d6a25472abf5bbdb",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/symfony/controller/sfRouting.class.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/controller/sfRouting.class.php on line 302\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/controller/sfRouting.class.php on line 302",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/helper/DateHelper.php",
+      "sha256": "8294a8818627334d5400916153674b5b29d7443e15d19038a9e54a324314d582",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $format declared before required parameter $end_text is implicitly treated as a required parameter in opt/kaltura/app/vendor/symfony/helper/DateHelper.php on line 20\nDeprecated: Optional parameter $format declared before required parameter $end_text is implicitly treated as a required parameter in opt/kaltura/app/vendor/symfony/helper/DateHelper.php on line 20",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/helper/I18NHelper.php",
+      "sha256": "e6215cab809edabefc8f55848177196960f20540fac23cfb514dbac754ea09df",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $args declared before required parameter $number is implicitly treated as a required parameter in opt/kaltura/app/vendor/symfony/helper/I18NHelper.php on line 48\nDeprecated: Optional parameter $args declared before required parameter $number is implicitly treated as a required parameter in opt/kaltura/app/vendor/symfony/helper/I18NHelper.php on line 48",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/helper/ObjectHelper.php",
+      "sha256": "a96052a4ca77aeff28896f470cc95ae880f3761a87f0cb5a0f4e4369a7a44100",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Optional parameter $options declared before required parameter $value_method is implicitly treated as a required parameter in opt/kaltura/app/vendor/symfony/helper/ObjectHelper.php on line 69\nDeprecated: Optional parameter $options declared before required parameter $value_method is implicitly treated as a required parameter in opt/kaltura/app/vendor/symfony/helper/ObjectHelper.php on line 69",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/helper/UrlHelper.php",
+      "sha256": "ed19a9a3a785e96a05dd263d0c1718d28b8bedacb3a9238d971ebb4070cfacc4",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/symfony/helper/UrlHelper.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/helper/UrlHelper.php on line 418\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/helper/UrlHelper.php on line 418",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/i18n/sfDateFormat.class.php",
+      "sha256": "30c09e9cb2099a41a42beaad255c27abe8da0369231c6622cb13724c1ab52d91",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/symfony/i18n/sfDateFormat.class.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/i18n/sfDateFormat.class.php on line 225\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/i18n/sfDateFormat.class.php on line 225",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/i18n/sfNumberFormat.class.php",
+      "sha256": "859516d015730cb68978a39c70acc062b4dbbd103f3492582355be7b0b8f4997",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/symfony/i18n/sfNumberFormat.class.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/i18n/sfNumberFormat.class.php on line 195\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/i18n/sfNumberFormat.class.php on line 195",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/i18n/sfNumberFormatInfo.class.php",
+      "sha256": "8734733838790b2d980f2f2a4fa64435c1f24766434329f8aba347540c8df075",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/symfony/i18n/sfNumberFormatInfo.class.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/i18n/sfNumberFormatInfo.class.php on line 312\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/i18n/sfNumberFormatInfo.class.php on line 312",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/util/Spyc.class.php",
+      "sha256": "6cdd311eeaedd77d69cab14f8730597f935527aa0b9776e91be6b4da1af91a2c",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/symfony/util/Spyc.class.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/util/Spyc.class.php on line 160\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/util/Spyc.class.php on line 160",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/util/sfCore.class.php",
+      "sha256": "09f1cdbd38be0e97939bc56ac4ae7895ccf9c7622098afeb46f40adbef6def46",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/symfony/util/sfCore.class.php\nPHP Fatal error:  __autoload() is no longer supported, use spl_autoload_register() instead in opt/kaltura/app/vendor/symfony/util/sfCore.class.php on line 188\nFatal error: __autoload() is no longer supported, use spl_autoload_register() instead in opt/kaltura/app/vendor/symfony/util/sfCore.class.php on line 188",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/util/sfFinder.class.php",
+      "sha256": "a318b76683cb32035412bb5e576a31ac21b82c99f5b991e0963b6aa5e74b2e3c",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/symfony/util/sfFinder.class.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/util/sfFinder.class.php on line 117\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/util/sfFinder.class.php on line 117",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/vendor/creole/drivers/pgsql/PgSQLResultSet.php",
+      "sha256": "6b9e5e44a2974919e7af21879f24cd7c3f006c83ad8a72dfa4f150c161dc6aff",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/symfony/vendor/creole/drivers/pgsql/PgSQLResultSet.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/vendor/creole/drivers/pgsql/PgSQLResultSet.php on line 140\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/vendor/creole/drivers/pgsql/PgSQLResultSet.php on line 140",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/vendor/creole/util/sql/SQLStatementExtractor.php",
+      "sha256": "b2376ee910ad81054acb486c19175b9734f742a9e01f305669a4df5a4e71fc8e",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/symfony/vendor/creole/util/sql/SQLStatementExtractor.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/vendor/creole/util/sql/SQLStatementExtractor.php on line 146\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/vendor/creole/util/sql/SQLStatementExtractor.php on line 146",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/vendor/pake/pakeFinder.class.php",
+      "sha256": "9adef4dc3d354b31230852b849cff083812c483fb12c8ec23ff7e4f2ae724fd1",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/symfony/vendor/pake/pakeFinder.class.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/vendor/pake/pakeFinder.class.php on line 526\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/vendor/pake/pakeFinder.class.php on line 526",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/vendor/pake/pakeGetopt.class.php",
+      "sha256": "0eccb66f094c62bbb3292cbeda1f3f9667bc873e988a882f0bf645586460a734",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/symfony/vendor/pake/pakeGetopt.class.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/vendor/pake/pakeGetopt.class.php on line 53\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/vendor/pake/pakeGetopt.class.php on line 53",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/vendor/pake/pakeYaml.class.php",
+      "sha256": "4c04f1e193a3feb729b907faaadedf9980aee596740a37b7506b40e644373634",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/symfony/vendor/pake/pakeYaml.class.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/vendor/pake/pakeYaml.class.php on line 196\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/vendor/pake/pakeYaml.class.php on line 196",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/vendor/phing/Phing.php",
+      "sha256": "0a8a42e467fed195d87f08eddd37f47c8502a14eba17b615308215e8230bb950",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/symfony/vendor/phing/Phing.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/vendor/phing/Phing.php on line 919\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/vendor/phing/Phing.php on line 919",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/vendor/phing/lib/Capsule.php",
+      "sha256": "4413e03eea4deab268c4df43654a95f2832e9d65d514c58e4c27b54713f8e479",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/symfony/vendor/phing/lib/Capsule.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/vendor/phing/lib/Capsule.php on line 186\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/vendor/phing/lib/Capsule.php on line 186",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/vendor/phing/listener/AnsiColorLogger.php",
+      "sha256": "bbdea9a09d4300f9db9a8ec4cde4539c12837ab4e116ca284ac606ac21702453",
+      "returncode": 0,
+      "diagnostics": "PHP Warning:  Private methods cannot be final as they are never overridden by other classes in opt/kaltura/app/vendor/symfony/vendor/phing/listener/AnsiColorLogger.php on line 158\nWarning: Private methods cannot be final as they are never overridden by other classes in opt/kaltura/app/vendor/symfony/vendor/phing/listener/AnsiColorLogger.php on line 158",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/vendor/phing/system/io/BufferedReader.php",
+      "sha256": "519f605ad05b7f9a531436c70c2106d8373c478353a9bea2828edb1d61a8a6aa",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/symfony/vendor/phing/system/io/BufferedReader.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/vendor/phing/system/io/BufferedReader.php on line 145\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/vendor/phing/system/io/BufferedReader.php on line 145",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/vendor/phing/system/io/UnixFileSystem.php",
+      "sha256": "6b2be485a6d663ea518eff34069ed72609082679b2abf38b93830b9f53fdf3ec",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/symfony/vendor/phing/system/io/UnixFileSystem.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/vendor/phing/system/io/UnixFileSystem.php on line 78\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/vendor/phing/system/io/UnixFileSystem.php on line 78",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/vendor/phing/system/io/Win32FileSystem.php",
+      "sha256": "0053d619bcf928de2028fb7be0aa383fa507d99acecbf429f857ee2f2f69312b",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/symfony/vendor/phing/system/io/Win32FileSystem.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/vendor/phing/system/io/Win32FileSystem.php on line 51\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/vendor/phing/system/io/Win32FileSystem.php on line 51",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/vendor/phing/system/util/Properties.php",
+      "sha256": "ff11c5458a0bd3e42431bd503ecbabbb05c3962731739c122c346458fbd27cb7",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/symfony/vendor/phing/system/util/Properties.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/vendor/phing/system/util/Properties.php on line 84\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/vendor/phing/system/util/Properties.php on line 84",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/vendor/phing/tasks/system/CvsPassTask.php",
+      "sha256": "7e639057ee4c4e36627769a8eb4c02cfd43316e412fcc14d2cadf5a058dbcf65",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/symfony/vendor/phing/tasks/system/CvsPassTask.php\nPHP Warning:  Private methods cannot be final as they are never overridden by other classes in opt/kaltura/app/vendor/symfony/vendor/phing/tasks/system/CvsPassTask.php on line 141\nWarning: Private methods cannot be final as they are never overridden by other classes in opt/kaltura/app/vendor/symfony/vendor/phing/tasks/system/CvsPassTask.php on line 141\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/vendor/phing/tasks/system/CvsPassTask.php on line 144\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/vendor/phing/tasks/system/CvsPassTask.php on line 144",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/vendor/phing/tasks/system/PropertyTask.php",
+      "sha256": "d7438f1c032d68c43530e0f56c3180cc8ab2776c0ed7c3dce47701876e42213c",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/symfony/vendor/phing/tasks/system/PropertyTask.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/vendor/phing/tasks/system/PropertyTask.php on line 415\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/vendor/phing/tasks/system/PropertyTask.php on line 415",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/vendor/phing/types/Path.php",
+      "sha256": "fc4ab9e9d26c05eae839c88e19bbfe14a46369beb3271e1425c4f37b3260231d",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/symfony/vendor/phing/types/Path.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/vendor/phing/types/Path.php on line 358\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/vendor/phing/types/Path.php on line 358",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/vendor/phing/util/FileUtils.php",
+      "sha256": "e142a918fc0e5a794a8340128f69118a98b665c01f4a3c9b52ce70d9427c290a",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/symfony/vendor/phing/util/FileUtils.php\nPHP Deprecated:  Optional parameter $overwrite declared before required parameter $project is implicitly treated as a required parameter in opt/kaltura/app/vendor/symfony/vendor/phing/util/FileUtils.php on line 74\nDeprecated: Optional parameter $overwrite declared before required parameter $project is implicitly treated as a required parameter in opt/kaltura/app/vendor/symfony/vendor/phing/util/FileUtils.php on line 74\nPHP Deprecated:  Optional parameter $preserveLastModified declared before required parameter $project is implicitly treated as a required parameter in opt/kaltura/app/vendor/symfony/vendor/phing/util/FileUtils.php on line 74\nDeprecated: Optional parameter $preserveLastModified declared before required parameter $project is implicitly treated as a required parameter in opt/kaltura/app/vendor/symfony/vendor/phing/util/FileUtils.php on line 74\nPHP Deprecated:  Optional parameter $filterChains declared before required parameter $project is implicitly treated as a required parameter in opt/kaltura/app/vendor/symfony/vendor/phing/util/FileUtils.php on line 74\nDeprecated: Optional parameter $filterChains declared before required parameter $project is implicitly treated as a required parameter in opt/kaltura/app/vendor/symfony/vendor/phing/util/FileUtils.php on line 74\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/vendor/phing/util/FileUtils.php on line 134\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/vendor/phing/util/FileUtils.php on line 134",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/vendor/phing/util/PathTokenizer.php",
+      "sha256": "c7f35dd598a48d72d16ae4105b15f8eeb101af568625faed43c3f89eb37370a7",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/symfony/vendor/phing/util/PathTokenizer.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/vendor/phing/util/PathTokenizer.php on line 182\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/vendor/phing/util/PathTokenizer.php on line 182",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/vendor/phing/util/StringHelper.php",
+      "sha256": "8b9c26dc7060af8fb30b6101d01e6b0574bfbb6efdc7b34dabdf27dbe6ee574a",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/symfony/vendor/phing/util/StringHelper.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/vendor/phing/util/StringHelper.php on line 63\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/vendor/phing/util/StringHelper.php on line 63",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/vendor/propel-generator/classes/propel/engine/builder/DataModelBuilder.php",
+      "sha256": "3d7fb936cdd229bc4e9171017589a83a63ef8ac2f1d1cbafd152afcd97b36e0f",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/symfony/vendor/propel-generator/classes/propel/engine/builder/DataModelBuilder.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/vendor/propel-generator/classes/propel/engine/builder/DataModelBuilder.php on line 94\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/vendor/propel-generator/classes/propel/engine/builder/DataModelBuilder.php on line 94",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/vendor/propel-generator/classes/propel/engine/database/transform/XmlToAppData.php",
+      "sha256": "6499d96463d59b2f291ef2dc2817467d0a57623f39234ff119dfc0d6d47fa49c",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/symfony/vendor/propel-generator/classes/propel/engine/database/transform/XmlToAppData.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/vendor/propel-generator/classes/propel/engine/database/transform/XmlToAppData.php on line 183\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/vendor/propel-generator/classes/propel/engine/database/transform/XmlToAppData.php on line 183",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/vendor/propel-generator/classes/propel/phing/AbstractPropelDataModelTask.php",
+      "sha256": "e604840d3ba4170112bd5326021236c7e22aa0199ca110b7ff1466bdd222b189",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/symfony/vendor/propel-generator/classes/propel/phing/AbstractPropelDataModelTask.php\nPHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/vendor/propel-generator/classes/propel/phing/AbstractPropelDataModelTask.php on line 372\nFatal error: Array and string offset access syntax with curly braces is no longer supported in opt/kaltura/app/vendor/symfony/vendor/propel-generator/classes/propel/phing/AbstractPropelDataModelTask.php on line 372",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony-data/bin/symfony.php",
+      "sha256": "f934f3d5d56a5b5430bf37a6741f2a782ff377f858d0327e4056c6d2dc45234a",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/symfony-data/bin/symfony.php\nPHP Fatal error:  __autoload() is no longer supported, use spl_autoload_register() instead in opt/kaltura/app/vendor/symfony-data/bin/symfony.php on line 107\nFatal error: __autoload() is no longer supported, use spl_autoload_register() instead in opt/kaltura/app/vendor/symfony-data/bin/symfony.php on line 107",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony-data/generator/sfPropelAdmin/default/skeleton/actions/actions.class.php",
+      "sha256": "81b2e299d72ece711fab3a82dba6c5399c5747091a4b6a9de60b1cc5b31e798a",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/symfony-data/generator/sfPropelAdmin/default/skeleton/actions/actions.class.php\nPHP Parse error:  syntax error, unexpected token \"{\", expecting identifier in opt/kaltura/app/vendor/symfony-data/generator/sfPropelAdmin/default/skeleton/actions/actions.class.php on line 12\nParse error: syntax error, unexpected token \"{\", expecting identifier in opt/kaltura/app/vendor/symfony-data/generator/sfPropelAdmin/default/skeleton/actions/actions.class.php on line 12",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony-data/generator/sfPropelCrud/default/skeleton/actions/actions.class.php",
+      "sha256": "81b2e299d72ece711fab3a82dba6c5399c5747091a4b6a9de60b1cc5b31e798a",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/symfony-data/generator/sfPropelCrud/default/skeleton/actions/actions.class.php\nPHP Parse error:  syntax error, unexpected token \"{\", expecting identifier in opt/kaltura/app/vendor/symfony-data/generator/sfPropelCrud/default/skeleton/actions/actions.class.php on line 12\nParse error: syntax error, unexpected token \"{\", expecting identifier in opt/kaltura/app/vendor/symfony-data/generator/sfPropelCrud/default/skeleton/actions/actions.class.php on line 12",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony-data/skeleton/batch/default.php",
+      "sha256": "a82525ec83207e9193da1bb002310eb03fcba6dd30ab20b0ac9973bb97299479",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/symfony-data/skeleton/batch/default.php\nPHP Parse error:  syntax error, unexpected token \";\", expecting \")\" in opt/kaltura/app/vendor/symfony-data/skeleton/batch/default.php on line 18\nParse error: syntax error, unexpected token \";\", expecting \")\" in opt/kaltura/app/vendor/symfony-data/skeleton/batch/default.php on line 18",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony-data/skeleton/batch/rotate_log.php",
+      "sha256": "d8d4b03a7f63d8df562772783c78466b16bf1e87467d54ebd08dea03047f7cb6",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/symfony-data/skeleton/batch/rotate_log.php\nPHP Parse error:  syntax error, unexpected token \";\", expecting \")\" in opt/kaltura/app/vendor/symfony-data/skeleton/batch/rotate_log.php on line 18\nParse error: syntax error, unexpected token \";\", expecting \")\" in opt/kaltura/app/vendor/symfony-data/skeleton/batch/rotate_log.php on line 18",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony-data/skeleton/controller/controller.php",
+      "sha256": "dc64d95afab4440fd7274516c03467a473a0b595c42132d9a34f7ebf1a635fed",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/symfony-data/skeleton/controller/controller.php\nPHP Parse error:  syntax error, unexpected token \";\", expecting \")\" in opt/kaltura/app/vendor/symfony-data/skeleton/controller/controller.php on line 8\nParse error: syntax error, unexpected token \";\", expecting \")\" in opt/kaltura/app/vendor/symfony-data/skeleton/controller/controller.php on line 8",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony-data/skeleton/module/module/actions/actions.class.php",
+      "sha256": "2275a76643e292bbd645d2f6b94a4e32055eaf6e851f6dffae2169a128d4b95c",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/app/vendor/symfony-data/skeleton/module/module/actions/actions.class.php\nPHP Parse error:  syntax error, unexpected token \"{\", expecting identifier in opt/kaltura/app/vendor/symfony-data/skeleton/module/module/actions/actions.class.php on line 12\nParse error: syntax error, unexpected token \"{\", expecting identifier in opt/kaltura/app/vendor/symfony-data/skeleton/module/module/actions/actions.class.php on line 12",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/apps/html5/html5lib/v2.14/includes/MwEmbedAutoLoader.php",
+      "sha256": "f4708a2eb5a9efe6a619e5c5c4741eafaae8b247acd50c4fce9fbd426a08fdfb",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/apps/html5/html5lib/v2.14/includes/MwEmbedAutoLoader.php\nPHP Fatal error:  __autoload() is no longer supported, use spl_autoload_register() instead in opt/kaltura/apps/html5/html5lib/v2.14/includes/MwEmbedAutoLoader.php on line 91\nFatal error: __autoload() is no longer supported, use spl_autoload_register() instead in opt/kaltura/apps/html5/html5lib/v2.14/includes/MwEmbedAutoLoader.php on line 91",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/apps/html5/html5lib/v2.37/includes/MwEmbedAutoLoader.php",
+      "sha256": "e510e68c5ac83f9b3e6350c86b0b42fd842126f963db34f04b7307013b26d511",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/apps/html5/html5lib/v2.37/includes/MwEmbedAutoLoader.php\nPHP Fatal error:  __autoload() is no longer supported, use spl_autoload_register() instead in opt/kaltura/apps/html5/html5lib/v2.37/includes/MwEmbedAutoLoader.php on line 94\nFatal error: __autoload() is no longer supported, use spl_autoload_register() instead in opt/kaltura/apps/html5/html5lib/v2.37/includes/MwEmbedAutoLoader.php on line 94",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/apps/html5/html5lib/v2.37/modules/KalturaSupport/EntryResult.php",
+      "sha256": "e4d28e0d75a6bfba9f82bbf6108faa92333c82b0fdbc15818849ed3882069dce",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/apps/html5/html5lib/v2.37/modules/KalturaSupport/EntryResult.php\nPHP Fatal error:  Unparenthesized `a ? b : c ? d : e` is not supported. Use either `(a ? b : c) ? d : e` or `a ? b : (c ? d : e)` in opt/kaltura/apps/html5/html5lib/v2.37/modules/KalturaSupport/EntryResult.php on line 362\nFatal error: Unparenthesized `a ? b : c ? d : e` is not supported. Use either `(a ? b : c) ? d : e` or `a ? b : (c ? d : e)` in opt/kaltura/apps/html5/html5lib/v2.37/modules/KalturaSupport/EntryResult.php on line 362",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/apps/html5/html5lib/v2.37.1/includes/MwEmbedAutoLoader.php",
+      "sha256": "e510e68c5ac83f9b3e6350c86b0b42fd842126f963db34f04b7307013b26d511",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/apps/html5/html5lib/v2.37.1/includes/MwEmbedAutoLoader.php\nPHP Fatal error:  __autoload() is no longer supported, use spl_autoload_register() instead in opt/kaltura/apps/html5/html5lib/v2.37.1/includes/MwEmbedAutoLoader.php on line 94\nFatal error: __autoload() is no longer supported, use spl_autoload_register() instead in opt/kaltura/apps/html5/html5lib/v2.37.1/includes/MwEmbedAutoLoader.php on line 94",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/apps/html5/html5lib/v2.37.1/modules/KalturaSupport/EntryResult.php",
+      "sha256": "e4d28e0d75a6bfba9f82bbf6108faa92333c82b0fdbc15818849ed3882069dce",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/apps/html5/html5lib/v2.37.1/modules/KalturaSupport/EntryResult.php\nPHP Fatal error:  Unparenthesized `a ? b : c ? d : e` is not supported. Use either `(a ? b : c) ? d : e` or `a ? b : (c ? d : e)` in opt/kaltura/apps/html5/html5lib/v2.37.1/modules/KalturaSupport/EntryResult.php on line 362\nFatal error: Unparenthesized `a ? b : c ? d : e` is not supported. Use either `(a ? b : c) ? d : e` or `a ? b : (c ? d : e)` in opt/kaltura/apps/html5/html5lib/v2.37.1/modules/KalturaSupport/EntryResult.php on line 362",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/apps/html5/html5lib/v2.38.3/includes/MwEmbedAutoLoader.php",
+      "sha256": "e510e68c5ac83f9b3e6350c86b0b42fd842126f963db34f04b7307013b26d511",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/apps/html5/html5lib/v2.38.3/includes/MwEmbedAutoLoader.php\nPHP Fatal error:  __autoload() is no longer supported, use spl_autoload_register() instead in opt/kaltura/apps/html5/html5lib/v2.38.3/includes/MwEmbedAutoLoader.php on line 94\nFatal error: __autoload() is no longer supported, use spl_autoload_register() instead in opt/kaltura/apps/html5/html5lib/v2.38.3/includes/MwEmbedAutoLoader.php on line 94",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/apps/html5/html5lib/v2.38.3/modules/KalturaSupport/EntryResult.php",
+      "sha256": "97e9c9042022a78f5b88246c9dc511749ba76902f32a6f027e57b37add6fb22c",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/apps/html5/html5lib/v2.38.3/modules/KalturaSupport/EntryResult.php\nPHP Fatal error:  Unparenthesized `a ? b : c ? d : e` is not supported. Use either `(a ? b : c) ? d : e` or `a ? b : (c ? d : e)` in opt/kaltura/apps/html5/html5lib/v2.38.3/modules/KalturaSupport/EntryResult.php on line 364\nFatal error: Unparenthesized `a ? b : c ? d : e` is not supported. Use either `(a ? b : c) ? d : e` or `a ? b : (c ? d : e)` in opt/kaltura/apps/html5/html5lib/v2.38.3/modules/KalturaSupport/EntryResult.php on line 364",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/apps/html5/html5lib/v2.42/includes/MwEmbedAutoLoader.php",
+      "sha256": "e510e68c5ac83f9b3e6350c86b0b42fd842126f963db34f04b7307013b26d511",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/apps/html5/html5lib/v2.42/includes/MwEmbedAutoLoader.php\nPHP Fatal error:  __autoload() is no longer supported, use spl_autoload_register() instead in opt/kaltura/apps/html5/html5lib/v2.42/includes/MwEmbedAutoLoader.php on line 94\nFatal error: __autoload() is no longer supported, use spl_autoload_register() instead in opt/kaltura/apps/html5/html5lib/v2.42/includes/MwEmbedAutoLoader.php on line 94",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/apps/html5/html5lib/v2.42/modules/KalturaSupport/EntryResult.php",
+      "sha256": "9b71b6d4712b301bd1e260608927886d64e61e8764a1842d3a1cc9beacded244",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/apps/html5/html5lib/v2.42/modules/KalturaSupport/EntryResult.php\nPHP Fatal error:  Unparenthesized `a ? b : c ? d : e` is not supported. Use either `(a ? b : c) ? d : e` or `a ? b : (c ? d : e)` in opt/kaltura/apps/html5/html5lib/v2.42/modules/KalturaSupport/EntryResult.php on line 375\nFatal error: Unparenthesized `a ? b : c ? d : e` is not supported. Use either `(a ? b : c) ? d : e` or `a ? b : (c ? d : e)` in opt/kaltura/apps/html5/html5lib/v2.42/modules/KalturaSupport/EntryResult.php on line 375",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/apps/html5/html5lib/v2.44/includes/MwEmbedAutoLoader.php",
+      "sha256": "e510e68c5ac83f9b3e6350c86b0b42fd842126f963db34f04b7307013b26d511",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/apps/html5/html5lib/v2.44/includes/MwEmbedAutoLoader.php\nPHP Fatal error:  __autoload() is no longer supported, use spl_autoload_register() instead in opt/kaltura/apps/html5/html5lib/v2.44/includes/MwEmbedAutoLoader.php on line 94\nFatal error: __autoload() is no longer supported, use spl_autoload_register() instead in opt/kaltura/apps/html5/html5lib/v2.44/includes/MwEmbedAutoLoader.php on line 94",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/apps/html5/html5lib/v2.44/modules/KalturaSupport/EntryResult.php",
+      "sha256": "4fd39e84ddb6da2ffb0a4ab78ce3e517a1003da20ce342cd9f02d41ac85bfafe",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/apps/html5/html5lib/v2.44/modules/KalturaSupport/EntryResult.php\nPHP Fatal error:  Unparenthesized `a ? b : c ? d : e` is not supported. Use either `(a ? b : c) ? d : e` or `a ? b : (c ? d : e)` in opt/kaltura/apps/html5/html5lib/v2.44/modules/KalturaSupport/EntryResult.php on line 370\nFatal error: Unparenthesized `a ? b : c ? d : e` is not supported. Use either `(a ? b : c) ? d : e` or `a ? b : (c ? d : e)` in opt/kaltura/apps/html5/html5lib/v2.44/modules/KalturaSupport/EntryResult.php on line 370",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/apps/html5/html5lib/v2.45/includes/MwEmbedAutoLoader.php",
+      "sha256": "e510e68c5ac83f9b3e6350c86b0b42fd842126f963db34f04b7307013b26d511",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/apps/html5/html5lib/v2.45/includes/MwEmbedAutoLoader.php\nPHP Fatal error:  __autoload() is no longer supported, use spl_autoload_register() instead in opt/kaltura/apps/html5/html5lib/v2.45/includes/MwEmbedAutoLoader.php on line 94\nFatal error: __autoload() is no longer supported, use spl_autoload_register() instead in opt/kaltura/apps/html5/html5lib/v2.45/includes/MwEmbedAutoLoader.php on line 94",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/apps/html5/html5lib/v2.45/modules/KalturaSupport/EntryResult.php",
+      "sha256": "4fd39e84ddb6da2ffb0a4ab78ce3e517a1003da20ce342cd9f02d41ac85bfafe",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/apps/html5/html5lib/v2.45/modules/KalturaSupport/EntryResult.php\nPHP Fatal error:  Unparenthesized `a ? b : c ? d : e` is not supported. Use either `(a ? b : c) ? d : e` or `a ? b : (c ? d : e)` in opt/kaltura/apps/html5/html5lib/v2.45/modules/KalturaSupport/EntryResult.php on line 370\nFatal error: Unparenthesized `a ? b : c ? d : e` is not supported. Use either `(a ? b : c) ? d : e` or `a ? b : (c ? d : e)` in opt/kaltura/apps/html5/html5lib/v2.45/modules/KalturaSupport/EntryResult.php on line 370",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/apps/html5/html5lib/v2.45.1/includes/MwEmbedAutoLoader.php",
+      "sha256": "e510e68c5ac83f9b3e6350c86b0b42fd842126f963db34f04b7307013b26d511",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/apps/html5/html5lib/v2.45.1/includes/MwEmbedAutoLoader.php\nPHP Fatal error:  __autoload() is no longer supported, use spl_autoload_register() instead in opt/kaltura/apps/html5/html5lib/v2.45.1/includes/MwEmbedAutoLoader.php on line 94\nFatal error: __autoload() is no longer supported, use spl_autoload_register() instead in opt/kaltura/apps/html5/html5lib/v2.45.1/includes/MwEmbedAutoLoader.php on line 94",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/apps/html5/html5lib/v2.45.1/modules/KalturaSupport/EntryResult.php",
+      "sha256": "4fd39e84ddb6da2ffb0a4ab78ce3e517a1003da20ce342cd9f02d41ac85bfafe",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/apps/html5/html5lib/v2.45.1/modules/KalturaSupport/EntryResult.php\nPHP Fatal error:  Unparenthesized `a ? b : c ? d : e` is not supported. Use either `(a ? b : c) ? d : e` or `a ? b : (c ? d : e)` in opt/kaltura/apps/html5/html5lib/v2.45.1/modules/KalturaSupport/EntryResult.php on line 370\nFatal error: Unparenthesized `a ? b : c ? d : e` is not supported. Use either `(a ? b : c) ? d : e` or `a ? b : (c ? d : e)` in opt/kaltura/apps/html5/html5lib/v2.45.1/modules/KalturaSupport/EntryResult.php on line 370",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/apps/html5/html5lib/v2.46/includes/MwEmbedAutoLoader.php",
+      "sha256": "e510e68c5ac83f9b3e6350c86b0b42fd842126f963db34f04b7307013b26d511",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/apps/html5/html5lib/v2.46/includes/MwEmbedAutoLoader.php\nPHP Fatal error:  __autoload() is no longer supported, use spl_autoload_register() instead in opt/kaltura/apps/html5/html5lib/v2.46/includes/MwEmbedAutoLoader.php on line 94\nFatal error: __autoload() is no longer supported, use spl_autoload_register() instead in opt/kaltura/apps/html5/html5lib/v2.46/includes/MwEmbedAutoLoader.php on line 94",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/apps/html5/html5lib/v2.46/modules/KalturaSupport/EntryResult.php",
+      "sha256": "4fd39e84ddb6da2ffb0a4ab78ce3e517a1003da20ce342cd9f02d41ac85bfafe",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/apps/html5/html5lib/v2.46/modules/KalturaSupport/EntryResult.php\nPHP Fatal error:  Unparenthesized `a ? b : c ? d : e` is not supported. Use either `(a ? b : c) ? d : e` or `a ? b : (c ? d : e)` in opt/kaltura/apps/html5/html5lib/v2.46/modules/KalturaSupport/EntryResult.php on line 370\nFatal error: Unparenthesized `a ? b : c ? d : e` is not supported. Use either `(a ? b : c) ? d : e` or `a ? b : (c ? d : e)` in opt/kaltura/apps/html5/html5lib/v2.46/modules/KalturaSupport/EntryResult.php on line 370",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/apps/html5/html5lib/v2.47/includes/MwEmbedAutoLoader.php",
+      "sha256": "e510e68c5ac83f9b3e6350c86b0b42fd842126f963db34f04b7307013b26d511",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/apps/html5/html5lib/v2.47/includes/MwEmbedAutoLoader.php\nPHP Fatal error:  __autoload() is no longer supported, use spl_autoload_register() instead in opt/kaltura/apps/html5/html5lib/v2.47/includes/MwEmbedAutoLoader.php on line 94\nFatal error: __autoload() is no longer supported, use spl_autoload_register() instead in opt/kaltura/apps/html5/html5lib/v2.47/includes/MwEmbedAutoLoader.php on line 94",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/apps/html5/html5lib/v2.47/modules/KalturaSupport/EntryResult.php",
+      "sha256": "4fd39e84ddb6da2ffb0a4ab78ce3e517a1003da20ce342cd9f02d41ac85bfafe",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/apps/html5/html5lib/v2.47/modules/KalturaSupport/EntryResult.php\nPHP Fatal error:  Unparenthesized `a ? b : c ? d : e` is not supported. Use either `(a ? b : c) ? d : e` or `a ? b : (c ? d : e)` in opt/kaltura/apps/html5/html5lib/v2.47/modules/KalturaSupport/EntryResult.php on line 370\nFatal error: Unparenthesized `a ? b : c ? d : e` is not supported. Use either `(a ? b : c) ? d : e` or `a ? b : (c ? d : e)` in opt/kaltura/apps/html5/html5lib/v2.47/modules/KalturaSupport/EntryResult.php on line 370",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/apps/html5/html5lib/v2.98/includes/MwEmbedAutoLoader.php",
+      "sha256": "e510e68c5ac83f9b3e6350c86b0b42fd842126f963db34f04b7307013b26d511",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/apps/html5/html5lib/v2.98/includes/MwEmbedAutoLoader.php\nPHP Fatal error:  __autoload() is no longer supported, use spl_autoload_register() instead in opt/kaltura/apps/html5/html5lib/v2.98/includes/MwEmbedAutoLoader.php on line 94\nFatal error: __autoload() is no longer supported, use spl_autoload_register() instead in opt/kaltura/apps/html5/html5lib/v2.98/includes/MwEmbedAutoLoader.php on line 94",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/apps/html5/html5lib/v2.98/modules/KalturaSupport/EntryResult.php",
+      "sha256": "63b5eed7bac4dabc304e373c5288f437500975dd7a2db1a7797e70d36d5e1885",
+      "returncode": 255,
+      "diagnostics": "Errors parsing opt/kaltura/apps/html5/html5lib/v2.98/modules/KalturaSupport/EntryResult.php\nPHP Fatal error:  Unparenthesized `a ? b : c ? d : e` is not supported. Use either `(a ? b : c) ? d : e` or `a ? b : (c ? d : e)` in opt/kaltura/apps/html5/html5lib/v2.98/modules/KalturaSupport/EntryResult.php on line 460\nFatal error: Unparenthesized `a ? b : c ? d : e` is not supported. Use either `(a ? b : c) ? d : e` or `a ? b : (c ? d : e)` in opt/kaltura/apps/html5/html5lib/v2.98/modules/KalturaSupport/EntryResult.php on line 460",
+      "classification": "confirmed compiler rejection; PHP7.4 comparison and runtime reachability pending"
+    },
+    {
+      "path": "opt/kaltura/clients-generator/lib/JsClientGenerator.php",
+      "sha256": "c3d681856edfde2662c78bd0112b7b1e6d1d5cb020db886a55153b6754f4e0b6",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Using ${var} in strings is deprecated, use {$var} instead in opt/kaltura/clients-generator/lib/JsClientGenerator.php on line 316\nDeprecated: Using ${var} in strings is deprecated, use {$var} instead in opt/kaltura/clients-generator/lib/JsClientGenerator.php on line 316",
+      "classification": "compiler diagnostic; impact unverified"
+    },
+    {
+      "path": "opt/kaltura/clients-generator/lib/NodeClientGenerator.php",
+      "sha256": "2d09548d4927e3180abb945bea19bab1adb85b2032a39f7c4ecde9164ae5d172",
+      "returncode": 0,
+      "diagnostics": "PHP Deprecated:  Using ${var} in strings is deprecated, use {$var} instead in opt/kaltura/clients-generator/lib/NodeClientGenerator.php on line 356\nDeprecated: Using ${var} in strings is deprecated, use {$var} instead in opt/kaltura/clients-generator/lib/NodeClientGenerator.php on line 356",
+      "classification": "compiler diagnostic; impact unverified"
+    }
+  ]
+}

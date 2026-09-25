@@ -1,0 +1,643 @@
+{
+  "identical_hashed_file_count": 13454,
+  "php74": "PHP 7.4.33 (cli) (built: Jul  3 2026 06:09:47) ( NTS )",
+  "php83": "PHP 8.3.6 (cli) (built: Sep  2 2026 12:56:02) (NTS)",
+  "counts": {
+    "new PHP8.3 compiler rejection": 72,
+    "baseline compiler rejection retained": 7
+  },
+  "files": [
+    {
+      "path": "opt/kaltura/app/alpha/apps/kaltura/lib/Services_JSON.class.php",
+      "sha256": "6b83716ffb5a10a641293508a58443e3117f24613da4be0c7b038e1cc0851aa9",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/alpha/apps/kaltura/lib/baseObjectUtils.class.php",
+      "sha256": "1834b0ce9ab903af000e95c6a1c065a8dfaa64a91cd454a57de3b44824ee9e03",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/alpha/apps/kaltura/lib/dateUtils.class.php",
+      "sha256": "023ab7d9f3de70014225615c089c5ee26477a6b974da301232abd719e656a599",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/alpha/apps/kaltura/lib/myCaptchaImage.class.php",
+      "sha256": "8e402b0ccd11d8a62e65e0623463fac5812b1e068d48c2dfa4050618c6f5aa21",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/alpha/apps/kaltura/lib/s3/S3.php",
+      "sha256": "aaf68bbaa4067ab58168be51fa450f06decb432cc98eafc5a37c6defce8dd8fe",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/alpha/apps/kaltura/lib/storage/urlTokenizers/kAkamaiSecureHDUrlTokenizer.php",
+      "sha256": "ade9029930b0cdca877262ccac5ad7ae37bcaa577a5822c74763c4039540416c",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/infra/general/S3.php",
+      "sha256": "2bb3f488e8305b6399cf7ed041e382333216204fbc02187bef02c1e6e4ce3acb",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/IP2Location/IP2Location.inc.php",
+      "sha256": "142e90a7337ab3561c8df0ed2bfa9dd2e33af7e80d5e2af1bc89712c2f139ced",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/PHPMailer/extras/htmlfilter.php",
+      "sha256": "ea02afbfef091267eb86dc47afb302900dd312d987767051a6e5697592dc78a8",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/ZendFramework/library/Zend/Json/Decoder.php",
+      "sha256": "7336a0a91cdb2da465642e3322d77cae04f788c6b3e937cd2e1cbd4aff0aa996",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/ZendFramework/library/Zend/Json/Encoder.php",
+      "sha256": "7af0946f20f81f7cbef204f9cdb907d9c52407fa7e4797bd613d12f778baf720",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/ZendFramework/library/Zend/View/Helper/Navigation/Sitemap.php",
+      "sha256": "5220cde25a81eda81b9744080c615ffc5e36017b33a53dc7a909871078af7957",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/aws/Doctrine/Common/Cache/RiakCache.php",
+      "sha256": "0ec9e10a5c35033e6ebd154630565a63431831c53fac0a33b98f32d0652f79db",
+      "php74_returncode": 255,
+      "php83_returncode": 255,
+      "classification": "baseline compiler rejection retained",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/google-api-php-client/src/service/Google_Utils.php",
+      "sha256": "525c9b2e69ae8d3b3039c486cc3417a52cb55107c329ce2f34cd1671b4f28fcd",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/google-api-php-client-1.1.2/src/Google/Utils.php",
+      "sha256": "deaa15a8550814910dd96bd4679459df366cf98c8ea71c60d27fc6f75e6eb433",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/htmlpurifier/library/HTMLPurifier/ChildDef/Custom.php",
+      "sha256": "e33babccfe0f50fe87c55bd010fe5ed27d9baa18dc62527f027a2bef9d0e0149",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/htmlpurifier/library/HTMLPurifier/Encoder.php",
+      "sha256": "b1b735e555c6dc070cf7a39ed2fd111b983a1fe1312561b92a63825cae9d34fc",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/htmlpurifier/library/HTMLPurifier/TagTransform/Font.php",
+      "sha256": "c0c2e803fdb13990a69d085b8723e0d1dd3abc1a2433aa536f409e9ab074bd9b",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/htmlpurifier/library/HTMLPurifier.autoload.php",
+      "sha256": "b845e45b8428bb01d9870cd55a5ad005c4e005329cd5cf418a4642f9b96803fa",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/propel/engine/GeneratorConfig.php",
+      "sha256": "1b6b36c3af5f7b2cdf417a4eed35bf843aa44b3c1e86f5e11db0a3faa47599ee",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/propel/engine/database/transform/XmlToAppData.php",
+      "sha256": "75311115454e3d967137cb77db84216d6c48cf70478f3662530b7383261516b2",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/propel/validator/MatchValidator.php",
+      "sha256": "b916a75bd40c96c3b19402e9e94a95f9da48fd3d91446e5b412ac78504a07746",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/propel/validator/NotMatchValidator.php",
+      "sha256": "6ece40c0d22b4f29e64789be2d6f7a77c1b6a2cf9a54942a4210266b4cb4ad24",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/controller/sfRouting.class.php",
+      "sha256": "52a0fb006d480654a2f233514729b9bd61001efd930b3745d6a25472abf5bbdb",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/helper/UrlHelper.php",
+      "sha256": "ed19a9a3a785e96a05dd263d0c1718d28b8bedacb3a9238d971ebb4070cfacc4",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/i18n/sfDateFormat.class.php",
+      "sha256": "30c09e9cb2099a41a42beaad255c27abe8da0369231c6622cb13724c1ab52d91",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/i18n/sfNumberFormat.class.php",
+      "sha256": "859516d015730cb68978a39c70acc062b4dbbd103f3492582355be7b0b8f4997",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/i18n/sfNumberFormatInfo.class.php",
+      "sha256": "8734733838790b2d980f2f2a4fa64435c1f24766434329f8aba347540c8df075",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/util/Spyc.class.php",
+      "sha256": "6cdd311eeaedd77d69cab14f8730597f935527aa0b9776e91be6b4da1af91a2c",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/util/sfCore.class.php",
+      "sha256": "09f1cdbd38be0e97939bc56ac4ae7895ccf9c7622098afeb46f40adbef6def46",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/util/sfFinder.class.php",
+      "sha256": "a318b76683cb32035412bb5e576a31ac21b82c99f5b991e0963b6aa5e74b2e3c",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/vendor/creole/drivers/pgsql/PgSQLResultSet.php",
+      "sha256": "6b9e5e44a2974919e7af21879f24cd7c3f006c83ad8a72dfa4f150c161dc6aff",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/vendor/creole/util/sql/SQLStatementExtractor.php",
+      "sha256": "b2376ee910ad81054acb486c19175b9734f742a9e01f305669a4df5a4e71fc8e",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/vendor/pake/pakeFinder.class.php",
+      "sha256": "9adef4dc3d354b31230852b849cff083812c483fb12c8ec23ff7e4f2ae724fd1",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/vendor/pake/pakeGetopt.class.php",
+      "sha256": "0eccb66f094c62bbb3292cbeda1f3f9667bc873e988a882f0bf645586460a734",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/vendor/pake/pakeYaml.class.php",
+      "sha256": "4c04f1e193a3feb729b907faaadedf9980aee596740a37b7506b40e644373634",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/vendor/phing/Phing.php",
+      "sha256": "0a8a42e467fed195d87f08eddd37f47c8502a14eba17b615308215e8230bb950",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/vendor/phing/lib/Capsule.php",
+      "sha256": "4413e03eea4deab268c4df43654a95f2832e9d65d514c58e4c27b54713f8e479",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/vendor/phing/system/io/BufferedReader.php",
+      "sha256": "519f605ad05b7f9a531436c70c2106d8373c478353a9bea2828edb1d61a8a6aa",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/vendor/phing/system/io/UnixFileSystem.php",
+      "sha256": "6b2be485a6d663ea518eff34069ed72609082679b2abf38b93830b9f53fdf3ec",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/vendor/phing/system/io/Win32FileSystem.php",
+      "sha256": "0053d619bcf928de2028fb7be0aa383fa507d99acecbf429f857ee2f2f69312b",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/vendor/phing/system/util/Properties.php",
+      "sha256": "ff11c5458a0bd3e42431bd503ecbabbb05c3962731739c122c346458fbd27cb7",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/vendor/phing/tasks/system/CvsPassTask.php",
+      "sha256": "7e639057ee4c4e36627769a8eb4c02cfd43316e412fcc14d2cadf5a058dbcf65",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/vendor/phing/tasks/system/PropertyTask.php",
+      "sha256": "d7438f1c032d68c43530e0f56c3180cc8ab2776c0ed7c3dce47701876e42213c",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/vendor/phing/types/Path.php",
+      "sha256": "fc4ab9e9d26c05eae839c88e19bbfe14a46369beb3271e1425c4f37b3260231d",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/vendor/phing/util/FileUtils.php",
+      "sha256": "e142a918fc0e5a794a8340128f69118a98b665c01f4a3c9b52ce70d9427c290a",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/vendor/phing/util/PathTokenizer.php",
+      "sha256": "c7f35dd598a48d72d16ae4105b15f8eeb101af568625faed43c3f89eb37370a7",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/vendor/phing/util/StringHelper.php",
+      "sha256": "8b9c26dc7060af8fb30b6101d01e6b0574bfbb6efdc7b34dabdf27dbe6ee574a",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/vendor/propel-generator/classes/propel/engine/builder/DataModelBuilder.php",
+      "sha256": "3d7fb936cdd229bc4e9171017589a83a63ef8ac2f1d1cbafd152afcd97b36e0f",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/vendor/propel-generator/classes/propel/engine/database/transform/XmlToAppData.php",
+      "sha256": "6499d96463d59b2f291ef2dc2817467d0a57623f39234ff119dfc0d6d47fa49c",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony/vendor/propel-generator/classes/propel/phing/AbstractPropelDataModelTask.php",
+      "sha256": "e604840d3ba4170112bd5326021236c7e22aa0199ca110b7ff1466bdd222b189",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony-data/bin/symfony.php",
+      "sha256": "f934f3d5d56a5b5430bf37a6741f2a782ff377f858d0327e4056c6d2dc45234a",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony-data/generator/sfPropelAdmin/default/skeleton/actions/actions.class.php",
+      "sha256": "81b2e299d72ece711fab3a82dba6c5399c5747091a4b6a9de60b1cc5b31e798a",
+      "php74_returncode": 255,
+      "php83_returncode": 255,
+      "classification": "baseline compiler rejection retained",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony-data/generator/sfPropelCrud/default/skeleton/actions/actions.class.php",
+      "sha256": "81b2e299d72ece711fab3a82dba6c5399c5747091a4b6a9de60b1cc5b31e798a",
+      "php74_returncode": 255,
+      "php83_returncode": 255,
+      "classification": "baseline compiler rejection retained",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony-data/skeleton/batch/default.php",
+      "sha256": "a82525ec83207e9193da1bb002310eb03fcba6dd30ab20b0ac9973bb97299479",
+      "php74_returncode": 255,
+      "php83_returncode": 255,
+      "classification": "baseline compiler rejection retained",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony-data/skeleton/batch/rotate_log.php",
+      "sha256": "d8d4b03a7f63d8df562772783c78466b16bf1e87467d54ebd08dea03047f7cb6",
+      "php74_returncode": 255,
+      "php83_returncode": 255,
+      "classification": "baseline compiler rejection retained",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony-data/skeleton/controller/controller.php",
+      "sha256": "dc64d95afab4440fd7274516c03467a473a0b595c42132d9a34f7ebf1a635fed",
+      "php74_returncode": 255,
+      "php83_returncode": 255,
+      "classification": "baseline compiler rejection retained",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/app/vendor/symfony-data/skeleton/module/module/actions/actions.class.php",
+      "sha256": "2275a76643e292bbd645d2f6b94a4e32055eaf6e851f6dffae2169a128d4b95c",
+      "php74_returncode": 255,
+      "php83_returncode": 255,
+      "classification": "baseline compiler rejection retained",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/apps/html5/html5lib/v2.14/includes/MwEmbedAutoLoader.php",
+      "sha256": "f4708a2eb5a9efe6a619e5c5c4741eafaae8b247acd50c4fce9fbd426a08fdfb",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/apps/html5/html5lib/v2.37/includes/MwEmbedAutoLoader.php",
+      "sha256": "e510e68c5ac83f9b3e6350c86b0b42fd842126f963db34f04b7307013b26d511",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/apps/html5/html5lib/v2.37/modules/KalturaSupport/EntryResult.php",
+      "sha256": "e4d28e0d75a6bfba9f82bbf6108faa92333c82b0fdbc15818849ed3882069dce",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/apps/html5/html5lib/v2.37.1/includes/MwEmbedAutoLoader.php",
+      "sha256": "e510e68c5ac83f9b3e6350c86b0b42fd842126f963db34f04b7307013b26d511",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/apps/html5/html5lib/v2.37.1/modules/KalturaSupport/EntryResult.php",
+      "sha256": "e4d28e0d75a6bfba9f82bbf6108faa92333c82b0fdbc15818849ed3882069dce",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/apps/html5/html5lib/v2.38.3/includes/MwEmbedAutoLoader.php",
+      "sha256": "e510e68c5ac83f9b3e6350c86b0b42fd842126f963db34f04b7307013b26d511",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/apps/html5/html5lib/v2.38.3/modules/KalturaSupport/EntryResult.php",
+      "sha256": "97e9c9042022a78f5b88246c9dc511749ba76902f32a6f027e57b37add6fb22c",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/apps/html5/html5lib/v2.42/includes/MwEmbedAutoLoader.php",
+      "sha256": "e510e68c5ac83f9b3e6350c86b0b42fd842126f963db34f04b7307013b26d511",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/apps/html5/html5lib/v2.42/modules/KalturaSupport/EntryResult.php",
+      "sha256": "9b71b6d4712b301bd1e260608927886d64e61e8764a1842d3a1cc9beacded244",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/apps/html5/html5lib/v2.44/includes/MwEmbedAutoLoader.php",
+      "sha256": "e510e68c5ac83f9b3e6350c86b0b42fd842126f963db34f04b7307013b26d511",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/apps/html5/html5lib/v2.44/modules/KalturaSupport/EntryResult.php",
+      "sha256": "4fd39e84ddb6da2ffb0a4ab78ce3e517a1003da20ce342cd9f02d41ac85bfafe",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/apps/html5/html5lib/v2.45/includes/MwEmbedAutoLoader.php",
+      "sha256": "e510e68c5ac83f9b3e6350c86b0b42fd842126f963db34f04b7307013b26d511",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/apps/html5/html5lib/v2.45/modules/KalturaSupport/EntryResult.php",
+      "sha256": "4fd39e84ddb6da2ffb0a4ab78ce3e517a1003da20ce342cd9f02d41ac85bfafe",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/apps/html5/html5lib/v2.45.1/includes/MwEmbedAutoLoader.php",
+      "sha256": "e510e68c5ac83f9b3e6350c86b0b42fd842126f963db34f04b7307013b26d511",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/apps/html5/html5lib/v2.45.1/modules/KalturaSupport/EntryResult.php",
+      "sha256": "4fd39e84ddb6da2ffb0a4ab78ce3e517a1003da20ce342cd9f02d41ac85bfafe",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/apps/html5/html5lib/v2.46/includes/MwEmbedAutoLoader.php",
+      "sha256": "e510e68c5ac83f9b3e6350c86b0b42fd842126f963db34f04b7307013b26d511",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/apps/html5/html5lib/v2.46/modules/KalturaSupport/EntryResult.php",
+      "sha256": "4fd39e84ddb6da2ffb0a4ab78ce3e517a1003da20ce342cd9f02d41ac85bfafe",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/apps/html5/html5lib/v2.47/includes/MwEmbedAutoLoader.php",
+      "sha256": "e510e68c5ac83f9b3e6350c86b0b42fd842126f963db34f04b7307013b26d511",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/apps/html5/html5lib/v2.47/modules/KalturaSupport/EntryResult.php",
+      "sha256": "4fd39e84ddb6da2ffb0a4ab78ce3e517a1003da20ce342cd9f02d41ac85bfafe",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/apps/html5/html5lib/v2.98/includes/MwEmbedAutoLoader.php",
+      "sha256": "e510e68c5ac83f9b3e6350c86b0b42fd842126f963db34f04b7307013b26d511",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    },
+    {
+      "path": "opt/kaltura/apps/html5/html5lib/v2.98/modules/KalturaSupport/EntryResult.php",
+      "sha256": "63b5eed7bac4dabc304e373c5288f437500975dd7a2db1a7797e70d36d5e1885",
+      "php74_returncode": 0,
+      "php83_returncode": 255,
+      "classification": "new PHP8.3 compiler rejection",
+      "runtime_reachability": "unverified"
+    }
+  ]
+}
