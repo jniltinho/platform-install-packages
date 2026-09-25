@@ -4,7 +4,10 @@
 - [ ] 1.2 Reproduce the PHP 7.4 baseline from checksum-verified published packages in a fresh isolated lab, never `.20`; freeze the design's VM/fixture/API/repetition protocol first, enforce target/DNS/redirect guards, and use synthetic data only; verify API/UI/upload/worker/playback checks and save sanitized runtime, extension and timing reports.
 - [ ] 1.3 Run PHP 8.3 syntax checks and a PHP-8.3-capable pinned PHPCompatibility/PHPCS analyzer with testVersion=7.4-8.3 against the exact packaged application, clients and installer PHP; verify every reported finding is classified with a source location and evidence, including manual checks the analyzer cannot cover.
 - [ ] 1.4 Produce the three-distro provider/extension/SAPI matrix (native Noble pinned origins; EL9 AppStream versus Remi evaluation); verify signed suite-compatible PHP 8.3 package resolution and loaded modules in clean test environments, without mixing unsupported distro packages or extension ABIs.
-- [ ] 1.5 Write a go/no-go feasibility report with bounded repairs, upstream references and blockers; verify operator approval before runtime/package implementation, stopping for a revised proposal if a framework/Kaltura upgrade is needed.
+- [ ] 1.5 Write a go/no-go feasibility report with bounded repairs, upstream references and blockers; verify operator approval before production runtime/package integration (lab-only source experiments in 1.6 are already authorized), stopping for a revised proposal if a framework/Kaltura upgrade is needed.
+
+- [ ] 1.6 Develop minimal experimental source patches for confirmed failures in disposable lab trees; verify focused before/after behavior on PHP 7.4 and PHP 8.3, then generate the separately named experimental ZIP twice and compare hashes; record original archive, ordered patch, changed-file and ZIP identities, retaining the original 7.4 artifacts and excluding secrets/runtime data.
+- [ ] 1.7 Evaluate dependency upgrade candidates independently from compatibility fixes; record pinned old/new versions, support/license evidence, expected benefit, regression/revert tests and the explicit per-component selection or deferral decision; verify no upgrade is silently bundled or performance gain asserted without comparable measurements.
 
 ## 2. Compatibility patches and packaging
 
@@ -22,7 +25,7 @@
 - [ ] 3.3 Repeat the same acceptance on isolated Rocky 9 with FPM; verify request-body handling, worker processing and modules rather than relying on dependency simulation alone.
 - [ ] 3.4 Run API authentication/permission/JSON-contract, eSearch and Admin Console/KMC browser regression tests across the matrix; verify unauthorized calls still fail, UI flows succeed and logs contain no untriaged runtime failures.
 - [ ] 3.5 Run short deterministic and Full HD/60 fps upload fixtures across HTTP and trusted HTTPS API/delivery; verify READY, thumbnails/flavors, HLS manifest/segment, progressive resolution/frame rate/Range and existing Go console E2E behavior.
-- [ ] 3.6 Compare repeated baseline/candidate workload timings and error logs; verify the design's performance gate and triage all exercised-path warnings without blanket suppression.
+- [ ] 3.6 Compare repeated unchanged-baseline/candidate workload timings and error logs, separating compatibility-only patches from any selected component upgrade; verify the design's performance gate and triage all exercised-path warnings without blanket suppression.
 
 ## 4. Upgrade, recovery and release gate
 
@@ -37,6 +40,6 @@ See `doc/php83/feasibility-status.md` and `doc/php83/evidence/`. Planning correc
 are approved and strict validation passes. Noble candidate runtime/modules and
 package origins are verified; raw-source and published-payload syntax/static
 scans are recorded, including identical-file PHP 7.4/8.3 comparison. The isolated
-`.74` baseline is provisioned and passed the HTTP upload-to-READY/HLS smoke suite. No checkbox above is complete yet: full
+`.74` baseline is provisioned and passed the HTTP upload-to-READY/HLS smoke suite. The operator subsequently confirmed lab-only minimal patches and a separate experimental PHP 8.3 ZIP (tasks 1.6–1.7); production/release gates remain unchanged. No checkbox above is complete yet: full
 inventory/license/entrypoint review, runtime reachability, synthetic workload,
 provider matrix and go/no-go decision remain open.

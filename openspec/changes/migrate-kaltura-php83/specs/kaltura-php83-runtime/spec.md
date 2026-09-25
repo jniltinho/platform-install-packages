@@ -62,3 +62,25 @@ The migrated Ubuntu 24.04 AIO SHALL install unattended in the isolated Noble lab
 - **WHEN** a fresh migration AIO is provisioned, provisioned again and rebooted
 - **THEN** API/UI/upload-to-READY/HLS and progressive playback checks pass
 - **AND** accounts, secrets and existing synthetic media remain unchanged
+
+
+### Requirement: Isolated experimental source artifact
+The migration SHALL preserve the original source archive and published PHP 7.4 artifacts. Operator-approved feasibility experiments MAY apply minimal reviewed patches to isolated copies and produce a separately named PHP 8.3 experimental ZIP. The ZIP SHALL carry reproducible source/patch/output identities and SHALL NOT be represented as production-ready before full acceptance.
+
+#### Scenario: Reproducible experimental ZIP
+- **WHEN** the same pinned source and ordered patches are assembled twice
+- **THEN** the experimental ZIP hashes match and the manifest identifies the upstream hash, patch hashes and changed-file hashes
+- **AND** the original archive remains unchanged and the experimental artifact contains no runtime secrets, databases or user media
+
+#### Scenario: Regression and recovery before deployment
+- **WHEN** an experimental artifact is proposed for deployment to `.20`
+- **THEN** the full functional regression, performance review and isolated recovery rehearsal gates must have passed
+- **AND** separate operator approval for the target, maintenance window and verified backups is required; experimental patch authorization alone is insufficient
+
+### Requirement: Evidence-based component improvements
+Dependency updates SHALL be evaluated separately from compatibility repairs, with pinned versions, license/support review, regression evidence, a revert path and an explicit per-component selection decision. Performance improvement SHALL be claimed only from comparable baseline/candidate measurements. Unrelated features or wholesale framework/application replacement SHALL require a revised approved scope.
+
+#### Scenario: Optional upgrade candidate
+- **WHEN** a newer component version is proposed for the PHP 8.3 artifact
+- **THEN** its benefit, compatibility impact, version identities and focused regression/revert tests are reviewed before selection
+- **AND** preserving working application behavior takes precedence over an unmeasured performance expectation
