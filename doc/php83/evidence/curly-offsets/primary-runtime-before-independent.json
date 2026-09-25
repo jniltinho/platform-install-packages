@@ -1,0 +1,155 @@
+{
+  "configuration": {
+    "extension_dir": "/usr/lib/php/20230831",
+    "extensions": [
+      "Core",
+      "date",
+      "libxml",
+      "openssl",
+      "pcre",
+      "zlib",
+      "filter",
+      "hash",
+      "json",
+      "pcntl",
+      "random",
+      "Reflection",
+      "SPL",
+      "session",
+      "standard",
+      "sodium",
+      "tokenizer",
+      "mbstring",
+      "xmlwriter",
+      "dom",
+      "SimpleXML"
+    ],
+    "ini": false,
+    "module_versions": [
+      "8.3.6",
+      "8.3.6",
+      "8.3.6",
+      "8.3.6",
+      "8.3.6",
+      "8.3.6",
+      "8.3.6",
+      "8.3.6",
+      "8.3.6",
+      "8.3.6",
+      "8.3.6",
+      "8.3.6",
+      "8.3.6",
+      "8.3.6",
+      "8.3.6",
+      "8.3.6",
+      "8.3.6",
+      "8.3.6",
+      "8.3.6",
+      "20031129",
+      "8.3.6"
+    ],
+    "sapi": "cli",
+    "scanned_ini": false,
+    "version": "8.3.6"
+  },
+  "linked_libraries": {
+    "/lib/x86_64-linux-gnu/libargon2.so.1": {
+      "resolved_path": "/usr/lib/x86_64-linux-gnu/libargon2.so.1",
+      "sha256": "3c593c01d1c3497b1276537a1002c90ce3beb729a3520087608838cf8bbd847d"
+    },
+    "/lib/x86_64-linux-gnu/libc.so.6": {
+      "resolved_path": "/usr/lib/x86_64-linux-gnu/libc.so.6",
+      "sha256": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0"
+    },
+    "/lib/x86_64-linux-gnu/libcrypto.so.3": {
+      "resolved_path": "/usr/lib/x86_64-linux-gnu/libcrypto.so.3",
+      "sha256": "c19c2cf8d7cf91c4f273b1d3bbc56a9d19c91a739bfe57ad630756ee8ede7b77"
+    },
+    "/lib/x86_64-linux-gnu/libgcc_s.so.1": {
+      "resolved_path": "/usr/lib/x86_64-linux-gnu/libgcc_s.so.1",
+      "sha256": "02f3f192bf5f79b811f1e34a650fea443d407408703448906585232383957f60"
+    },
+    "/lib/x86_64-linux-gnu/libicudata.so.74": {
+      "resolved_path": "/usr/lib/x86_64-linux-gnu/libicudata.so.74.2",
+      "sha256": "ddbb3718b8bd9cbd780e5ab08b4503c30a6c4fa0706ebe5d074ed6b596c1714e"
+    },
+    "/lib/x86_64-linux-gnu/libicuuc.so.74": {
+      "resolved_path": "/usr/lib/x86_64-linux-gnu/libicuuc.so.74.2",
+      "sha256": "7560aadde38e5f4237a47a1ddd5891f9b36768a77a60faae30beee003ac01901"
+    },
+    "/lib/x86_64-linux-gnu/liblzma.so.5": {
+      "resolved_path": "/usr/lib/x86_64-linux-gnu/liblzma.so.5.4.5",
+      "sha256": "a9793942a8a5f6f4d0f523ef9e0a5be4f0033f2c6c28520cd2b4e706d53c6e17"
+    },
+    "/lib/x86_64-linux-gnu/libm.so.6": {
+      "resolved_path": "/usr/lib/x86_64-linux-gnu/libm.so.6",
+      "sha256": "f06f2ce1f1833df5f41cf13b6447ff07bea993ad9b27297d3428c2f70ab3f0e7"
+    },
+    "/lib/x86_64-linux-gnu/libonig.so.5": {
+      "resolved_path": "/usr/lib/x86_64-linux-gnu/libonig.so.5.4.0",
+      "sha256": "373f89146c922f948c69197f80a9b321a2689666de1b70ca3cee09e6f765fa42"
+    },
+    "/lib/x86_64-linux-gnu/libpcre2-8.so.0": {
+      "resolved_path": "/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.11.2",
+      "sha256": "e00576d71d81d3ba0cfa4903c835a44a8723aac96f72f79ff75200b4cff9071b"
+    },
+    "/lib/x86_64-linux-gnu/libsodium.so.23": {
+      "resolved_path": "/usr/lib/x86_64-linux-gnu/libsodium.so.23.3.0",
+      "sha256": "7de3e60f9f7df83a7299aa1b8b7a88013ace3233f70c9f63698dd331781d557e"
+    },
+    "/lib/x86_64-linux-gnu/libssl.so.3": {
+      "resolved_path": "/usr/lib/x86_64-linux-gnu/libssl.so.3",
+      "sha256": "63597a81ef19496ad0423cbaaf04d5b0244c7a9e261e331a5a7f3ac0fcdb9590"
+    },
+    "/lib/x86_64-linux-gnu/libstdc++.so.6": {
+      "resolved_path": "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33",
+      "sha256": "a68762c86d371e6041f03f03a33a78fa235809ae7d81c90185940c93c3535aed"
+    },
+    "/lib/x86_64-linux-gnu/libxml2.so.2": {
+      "resolved_path": "/usr/lib/x86_64-linux-gnu/libxml2.so.2.9.14",
+      "sha256": "3061d35b168d1eb472bba5d2c52931e408364770ec9b00ae1100aacd0c35c7da"
+    },
+    "/lib/x86_64-linux-gnu/libz.so.1": {
+      "resolved_path": "/usr/lib/x86_64-linux-gnu/libz.so.1.3",
+      "sha256": "9b64150b28505a33d6bc3ecf709c279f6de97a1c184dbda65d06ee4537f6d286"
+    },
+    "/lib64/ld-linux-x86-64.so.2": {
+      "resolved_path": "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2",
+      "sha256": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+    }
+  },
+  "objects": {
+    "/usr/bin/php8.3": {
+      "ldd": "\tlinux-vdso.so.1 (0x00007fffc07eb000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x000070a6bc093000)\n\tlibxml2.so.2 => /lib/x86_64-linux-gnu/libxml2.so.2 (0x000070a6bb81e000)\n\tlibssl.so.3 => /lib/x86_64-linux-gnu/libssl.so.3 (0x000070a6bbfe9000)\n\tlibcrypto.so.3 => /lib/x86_64-linux-gnu/libcrypto.so.3 (0x000070a6bb200000)\n\tlibpcre2-8.so.0 => /lib/x86_64-linux-gnu/libpcre2-8.so.0 (0x000070a6bb784000)\n\tlibz.so.1 => /lib/x86_64-linux-gnu/libz.so.1 (0x000070a6bbfcb000)\n\tlibsodium.so.23 => /lib/x86_64-linux-gnu/libsodium.so.23 (0x000070a6bb72d000)\n\tlibargon2.so.1 => /lib/x86_64-linux-gnu/libargon2.so.1 (0x000070a6bbfc2000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x000070a6bae00000)\n\t/lib64/ld-linux-x86-64.so.2 (0x000070a6bc184000)\n\tlibicuuc.so.74 => /lib/x86_64-linux-gnu/libicuuc.so.74 (0x000070a6baa00000)\n\tliblzma.so.5 => /lib/x86_64-linux-gnu/liblzma.so.5 (0x000070a6bb1ce000)\n\tlibicudata.so.74 => /lib/x86_64-linux-gnu/libicudata.so.74 (0x000070a6b8c00000)\n\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x000070a6b8800000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x000070a6bb1a0000)\n",
+      "resolved_path": "/usr/bin/php8.3",
+      "sha256": "1c564e6bafa56d03359c3774be6f4c77d0edecabd2075e18556940a56747c8d7"
+    },
+    "/usr/lib/php/20230831/dom.so": {
+      "ldd": "\tlinux-vdso.so.1 (0x00007ffdf0b9d000)\n\tlibxml2.so.2 => /lib/x86_64-linux-gnu/libxml2.so.2 (0x00007776f1260000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007776f1000000)\n\tlibicuuc.so.74 => /lib/x86_64-linux-gnu/libicuuc.so.74 (0x00007776f0c00000)\n\tlibz.so.1 => /lib/x86_64-linux-gnu/libz.so.1 (0x00007776f1244000)\n\tliblzma.so.5 => /lib/x86_64-linux-gnu/liblzma.so.5 (0x00007776f1212000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007776f0f15000)\n\t/lib64/ld-linux-x86-64.so.2 (0x00007776f147e000)\n\tlibicudata.so.74 => /lib/x86_64-linux-gnu/libicudata.so.74 (0x00007776eee00000)\n\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x00007776eea00000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00007776f0ee7000)\n",
+      "resolved_path": "/usr/lib/php/20230831/dom.so",
+      "sha256": "d10bacb7c950aa4a603743b3b1a039592c9dc2d1efa8227ceb446f1df4dd2e21"
+    },
+    "/usr/lib/php/20230831/mbstring.so": {
+      "ldd": "\tlinux-vdso.so.1 (0x00007ffc491b7000)\n\tlibonig.so.5 => /lib/x86_64-linux-gnu/libonig.so.5 (0x00007f0a23fe7000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f0a23c00000)\n\t/lib64/ld-linux-x86-64.so.2 (0x00007f0a241ad000)\n",
+      "resolved_path": "/usr/lib/php/20230831/mbstring.so",
+      "sha256": "a6086c078f33dfe34a25b2f9ceb33bae5e08e0d789f61af88c4298d2dbeb7a63"
+    },
+    "/usr/lib/php/20230831/simplexml.so": {
+      "ldd": "\tlinux-vdso.so.1 (0x00007ffc60323000)\n\tlibxml2.so.2 => /lib/x86_64-linux-gnu/libxml2.so.2 (0x00007b861f4a8000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007b861f200000)\n\tlibicuuc.so.74 => /lib/x86_64-linux-gnu/libicuuc.so.74 (0x00007b861ee00000)\n\tlibz.so.1 => /lib/x86_64-linux-gnu/libz.so.1 (0x00007b861f48c000)\n\tliblzma.so.5 => /lib/x86_64-linux-gnu/liblzma.so.5 (0x00007b861f45a000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007b861f117000)\n\t/lib64/ld-linux-x86-64.so.2 (0x00007b861f6a2000)\n\tlibicudata.so.74 => /lib/x86_64-linux-gnu/libicudata.so.74 (0x00007b861d000000)\n\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x00007b861cc00000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00007b861f42a000)\n",
+      "resolved_path": "/usr/lib/php/20230831/simplexml.so",
+      "sha256": "43d85cdc12be748b13db316f88cae630dab52e96e7cafc54e632fc209c530ea4"
+    },
+    "/usr/lib/php/20230831/tokenizer.so": {
+      "ldd": "\tlinux-vdso.so.1 (0x00007fff6d3fc000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x000072b4a6000000)\n\t/lib64/ld-linux-x86-64.so.2 (0x000072b4a62b1000)\n",
+      "resolved_path": "/usr/lib/php/20230831/tokenizer.so",
+      "sha256": "df382431be0c4ceb5cd99df184f40b7522b0718d6f9db1260097dd2c28fb95ee"
+    },
+    "/usr/lib/php/20230831/xmlwriter.so": {
+      "ldd": "\tlinux-vdso.so.1 (0x00007fff09285000)\n\tlibxml2.so.2 => /lib/x86_64-linux-gnu/libxml2.so.2 (0x0000760f7f7c6000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x0000760f7f400000)\n\tlibicuuc.so.74 => /lib/x86_64-linux-gnu/libicuuc.so.74 (0x0000760f7f000000)\n\tlibz.so.1 => /lib/x86_64-linux-gnu/libz.so.1 (0x0000760f7f7aa000)\n\tliblzma.so.5 => /lib/x86_64-linux-gnu/liblzma.so.5 (0x0000760f7f778000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x0000760f7f68d000)\n\t/lib64/ld-linux-x86-64.so.2 (0x0000760f7f9be000)\n\tlibicudata.so.74 => /lib/x86_64-linux-gnu/libicudata.so.74 (0x0000760f7d200000)\n\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x0000760f7ce00000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x0000760f7f65f000)\n",
+      "resolved_path": "/usr/lib/php/20230831/xmlwriter.so",
+      "sha256": "4adf013ef5ba887aeb4e01f285e009f73c5293c45bbc891046119fe10f232239"
+    }
+  },
+  "schema": 1,
+  "scope": "Read-only snapshot; no assertion that this predates an earlier completed run"
+}

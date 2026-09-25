@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "ssh",
+    "-T",
+    "-F",
+    "/tmp/kaltura-php74-ssh.conf",
+    "baseline74",
+    "test \"$(hostname)\" = kaltura-php74-baseline && test \"$(id -u)\" = 1000 && printf '88391be85bb3a18b81cc991947035ce42ea138e7d0b4b451e699d1c9f0ce32a0  /home/vagrant/php-curly-compiler74-r2/identity.json\n' | sha256sum --check --status && sudo systemd-run --quiet --wait --pipe --collect -p User=vagrant -p Group=vagrant -p PrivateNetwork=yes -p 'SystemCallFilter=~socket socketpair' -p SystemCallErrorNumber=EPERM -p ProtectSystem=strict -p ProtectHome=yes -p PrivateTmp=yes -p PrivateDevices=yes -p NoNewPrivileges=yes -p MemoryMax=512M -p RuntimeMaxSec=600 -p 'InaccessiblePaths=-/opt/kaltura /root -/run/mysqld -/var/lib/mysql' -p BindReadOnlyPaths=/home/vagrant/php-curly-compiler74-r2:/audit/curly74 /usr/bin/env -i PATH=/usr/bin:/bin LC_ALL=C TZ=UTC /usr/bin/python3 -B /audit/curly74/compile74.py scan"
+  ]
+}

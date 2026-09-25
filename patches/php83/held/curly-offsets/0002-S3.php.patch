@@ -1,0 +1,11 @@
+--- a/alpha/apps/kaltura/lib/s3/S3.php
++++ b/alpha/apps/kaltura/lib/s3/S3.php
+@@ -1365,7 +1365,7 @@
+ 			elseif ($header == 'Content-Type')
+ 				$this->response->headers['type'] = $value;
+ 			elseif ($header == 'ETag')
+-				$this->response->headers['hash'] = $value{0} == '"' ? substr($value, 1, -1) : $value;
++				$this->response->headers['hash'] = $value[0] == '"' ? substr($value, 1, -1) : $value;
+ 			elseif (preg_match('/^x-amz-meta-.*$/', $header))
+ 				$this->response->headers[$header] = is_numeric($value) ? (int)$value : $value;
+ 		}

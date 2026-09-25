@@ -246,3 +246,10 @@ output and runtime reachability remain untested; no row is waived. Independent
 identical rebuilds and final 19-test status guards are recorded in
 `doc/php83/compiler-triage.md`. The broader 4,711 static rows and component/license/
 entrypoint review keep 5.4 open; no source repair or package integration occurs.
+
+T0-04/T1-01 partial curly-offset repair:43 source files,153 paired delimiters,
+306 byte changes, independently repeated token/byte/compile proofs. Actual
+three-file before74/candidate74/candidate83 behavior yields204 checked rows,
+independently identical; retained Google overreads and changed diagnostic severity
+are explicit. See `doc/php83/curly-offsets.md`. All patches remain held, not
+selected in exp9; broader source/runtime acceptance and original gates stay open.

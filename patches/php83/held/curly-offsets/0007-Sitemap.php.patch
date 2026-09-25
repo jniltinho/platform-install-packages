@@ -1,0 +1,15 @@
+--- a/vendor/ZendFramework/library/Zend/View/Helper/Navigation/Sitemap.php
++++ b/vendor/ZendFramework/library/Zend/View/Helper/Navigation/Sitemap.php
+@@ -283,10 +283,10 @@
+     {
+         $href = $page->getHref();
+ 
+-        if (!isset($href{0})) {
++        if (!isset($href[0])) {
+             // no href
+             return '';
+-        } elseif ($href{0} == '/') {
++        } elseif ($href[0] == '/') {
+             // href is relative to root; use serverUrl helper
+             $url = $this->getServerUrl() . $href;
+         } elseif (preg_match('/^[a-z]+:/im', (string) $href)) {

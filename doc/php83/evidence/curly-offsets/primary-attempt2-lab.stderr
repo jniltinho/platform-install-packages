@@ -1,0 +1,59 @@
+Traceback (most recent call last):
+  File "/audit/stage/tools/build-lab.py", line 24, in <module>
+    if fixed.returncode!=1:raise RuntimeError('PHPCBF did not report corrected errors: '+fixed.stdout+fixed.stderr)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: PHPCBF did not report corrected errors: 
+PHPCBF RESULT SUMMARY
+--------------------------------------------------------------------------------
+FILE                                                            FIXED  REMAINING
+--------------------------------------------------------------------------------
+...a/lib/storage/urlTokenizers/kAkamaiSecureHDUrlTokenizer.php  2      0
+...1/candidate/alpha/apps/kaltura/lib/myCaptchaImage.class.php  1      0
+...3-curly-bl5cbyw1/candidate/alpha/apps/kaltura/lib/s3/S3.php  1      0
+...yw1/candidate/vendor/symfony/controller/sfRouting.class.php  1      0
+.../candidate/vendor/symfony/i18n/sfNumberFormatInfo.class.php  4      0
+...byw1/candidate/vendor/symfony/i18n/sfNumberFormat.class.php  1      0
+...5cbyw1/candidate/vendor/symfony/i18n/sfDateFormat.class.php  11     0
+...y-bl5cbyw1/candidate/vendor/symfony/util/sfFinder.class.php  8      0
+...curly-bl5cbyw1/candidate/vendor/symfony/util/Spyc.class.php  1      0
+...ly-bl5cbyw1/candidate/vendor/symfony/vendor/phing/Phing.php  1      0
+...te/vendor/symfony/vendor/phing/tasks/system/CvsPassTask.php  1      0
+...e/vendor/symfony/vendor/phing/tasks/system/PropertyTask.php  1      0
+...date/vendor/symfony/vendor/phing/system/util/Properties.php  2      0
+...te/vendor/symfony/vendor/phing/system/io/UnixFileSystem.php  8      0
+...te/vendor/symfony/vendor/phing/system/io/BufferedReader.php  1      0
+...e/vendor/symfony/vendor/phing/system/io/Win32FileSystem.php  24     0
+...cbyw1/candidate/vendor/symfony/vendor/phing/lib/Capsule.php  5      0
+...w1/candidate/vendor/symfony/vendor/phing/util/FileUtils.php  9      0
+...candidate/vendor/symfony/vendor/phing/util/StringHelper.php  2      0
+...andidate/vendor/symfony/vendor/phing/util/PathTokenizer.php  1      0
+...5cbyw1/candidate/vendor/symfony/vendor/phing/types/Path.php  3      0
+...enerator/classes/propel/engine/builder/DataModelBuilder.php  2      0
+...r/classes/propel/engine/database/transform/XmlToAppData.php  1      0
+...erator/classes/propel/phing/AbstractPropelDataModelTask.php  2      0
+...ndor/symfony/vendor/creole/drivers/pgsql/PgSQLResultSet.php  1      0
+...or/symfony/vendor/creole/util/sql/SQLStatementExtractor.php  1      0
+...1/candidate/vendor/symfony/vendor/pake/pakeFinder.class.php  6      0
+...yw1/candidate/vendor/symfony/vendor/pake/pakeYaml.class.php  1      0
+...1/candidate/vendor/symfony/vendor/pake/pakeGetopt.class.php  12     0
+...urly-bl5cbyw1/candidate/vendor/symfony/helper/UrlHelper.php  1      0
+...ate/vendor/google-api-php-client-1.1.2/src/Google/Utils.php  1      0
+...ndFramework/library/Zend/View/Helper/Navigation/Sitemap.php  2      0
+...y-bl5cbyw1/candidate/vendor/PHPMailer/extras/htmlfilter.php  22     0
+...bl5cbyw1/candidate/vendor/propel/engine/GeneratorConfig.php  2      0
+...te/vendor/propel/engine/database/transform/XmlToAppData.php  1      0
+...yw1/candidate/vendor/propel/validator/NotMatchValidator.php  2      0
+...5cbyw1/candidate/vendor/propel/validator/MatchValidator.php  2      0
+...endor/htmlpurifier/library/HTMLPurifier/ChildDef/Custom.php  1      0
+...didate/vendor/htmlpurifier/library/HTMLPurifier/Encoder.php  1      0
+...dor/htmlpurifier/library/HTMLPurifier/TagTransform/Font.php  2      0
+...e/vendor/google-api-php-client/src/service/Google_Utils.php  1      0
+...y-bl5cbyw1/candidate/vendor/IP2Location/IP2Location.inc.php  2      0
+/tmp/php83-curly-bl5cbyw1/candidate/infra/general/S3.php        1      0
+--------------------------------------------------------------------------------
+A TOTAL OF 155 ERRORS WERE FIXED IN 43 FILES
+--------------------------------------------------------------------------------
+
+
+Time: 1.13 secs; Memory: 38MB
+

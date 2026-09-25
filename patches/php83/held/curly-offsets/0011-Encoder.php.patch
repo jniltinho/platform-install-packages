@@ -1,0 +1,11 @@
+--- a/vendor/htmlpurifier/library/HTMLPurifier/Encoder.php
++++ b/vendor/htmlpurifier/library/HTMLPurifier/Encoder.php
+@@ -154,7 +154,7 @@
+ 
+         $len = strlen($str);
+         for ($i = 0; $i < $len; $i++) {
+-            $in = ord($str{$i});
++            $in = ord($str[$i]);
+             $char .= $str[$i]; // append byte to char
+             if (0 == $mState) {
+                 // When mState is zero we expect either a US-ASCII character

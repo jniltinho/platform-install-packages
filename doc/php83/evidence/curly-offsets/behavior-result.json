@@ -1,0 +1,124 @@
+{
+  "schema": 1,
+  "report": "doc/php83/evidence/curly-offsets/behavior-primary.json",
+  "report_sha256": "0b506f100680f0a5e02fa1af71ed34ffe7cbd16a85c50375010dae63c5b64991",
+  "report_exit": 0,
+  "command": "python3 tools/php83/curly-offsets/collect.py doc/php83/evidence/curly-offsets/behavior-primary.json",
+  "actual_process_count": 9,
+  "actual_case_row_count": 204,
+  "scope_actual_source_files": 3,
+  "lexical_batch_source_files": 43,
+  "matrix": [
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "google-old",
+      "exit": 0,
+      "rows": 20,
+      "load_diagnostics": 1,
+      "runtime_diagnostics": 6
+    },
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "google-new",
+      "exit": 0,
+      "rows": 20,
+      "load_diagnostics": 1,
+      "runtime_diagnostics": 6
+    },
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "purifier",
+      "exit": 0,
+      "rows": 28,
+      "load_diagnostics": 1,
+      "runtime_diagnostics": 1
+    },
+    {
+      "runtime": "74",
+      "variant": "candidate",
+      "case": "google-old",
+      "exit": 0,
+      "rows": 20,
+      "load_diagnostics": 0,
+      "runtime_diagnostics": 6
+    },
+    {
+      "runtime": "74",
+      "variant": "candidate",
+      "case": "google-new",
+      "exit": 0,
+      "rows": 20,
+      "load_diagnostics": 0,
+      "runtime_diagnostics": 6
+    },
+    {
+      "runtime": "74",
+      "variant": "candidate",
+      "case": "purifier",
+      "exit": 0,
+      "rows": 28,
+      "load_diagnostics": 0,
+      "runtime_diagnostics": 1
+    },
+    {
+      "runtime": "83",
+      "variant": "candidate",
+      "case": "google-old",
+      "exit": 0,
+      "rows": 20,
+      "load_diagnostics": 0,
+      "runtime_diagnostics": 6
+    },
+    {
+      "runtime": "83",
+      "variant": "candidate",
+      "case": "google-new",
+      "exit": 0,
+      "rows": 20,
+      "load_diagnostics": 0,
+      "runtime_diagnostics": 6
+    },
+    {
+      "runtime": "83",
+      "variant": "candidate",
+      "case": "purifier",
+      "exit": 0,
+      "rows": 28,
+      "load_diagnostics": 0,
+      "runtime_diagnostics": 1
+    }
+  ],
+  "comparisons": [
+    {
+      "case": "google-old",
+      "php74_case_values_and_diagnostics_identical": true,
+      "php83_case_values_identical": true,
+      "php83_diagnostic_severity_change_explicit": true
+    },
+    {
+      "case": "google-new",
+      "php74_case_values_and_diagnostics_identical": true,
+      "php83_case_values_identical": true,
+      "php83_diagnostic_severity_change_explicit": true
+    },
+    {
+      "case": "purifier",
+      "php74_case_values_and_diagnostics_identical": true,
+      "php83_case_values_identical": true,
+      "php83_diagnostic_severity_change_explicit": true
+    }
+  ],
+  "functional_checks_passed": true,
+  "full_diagnostic_parity": false,
+  "application_acceptance": false,
+  "limits": [
+    "Runtime tested three complete class files, not all43 patched classes.",
+    "Only synthetic dependency-light methods; no GoogleHTTP/client-service requests, HTMLPurifier full pipeline, iconv converter, S3 or application bootstrap.",
+    "Google getStrLen existing multibyte overread returns and diagnostics remain; this patch does not repair that algorithm.",
+    "PHP7.4notice/PHP8.3warning changes are expected only in explicitnative/application offset cases; not blanket diagnostic normalization.",
+    "This held batch has not been packaged into exp9 or anyrelease; no acceptance gate closed."
+  ]
+}

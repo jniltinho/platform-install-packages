@@ -1,0 +1,28 @@
+{
+  "manifest": "patches/php83/held/curly-offsets/manifest.json",
+  "manifest_sha256": "278a22c91d80f2fdab78da1bc65c0b4038506c8643ea836ee71ad524ce1ae2a7",
+  "scope": "3 complete actual class files, not all43 class runtime coverage",
+  "sources": {
+    "google-old": {
+      "path": "vendor/google-api-php-client/src/service/Google_Utils.php",
+      "original_sha256": "525c9b2e69ae8d3b3039c486cc3417a52cb55107c329ce2f34cd1671b4f28fcd",
+      "candidate_sha256": "27a4c379d02366d618bf84490d0ba2d0bbd1944fe9ea0547f1dd862c7382adb0",
+      "patch": "patches/php83/held/curly-offsets/0009-Google_Utils.php.patch",
+      "patch_sha256": "ea3a6ea51fc05f3b7eaaaf16dae6d5c8d5448a9de4258dd0a3af0b740b9eb7ff"
+    },
+    "google-new": {
+      "path": "vendor/google-api-php-client-1.1.2/src/Google/Utils.php",
+      "original_sha256": "deaa15a8550814910dd96bd4679459df366cf98c8ea71c60d27fc6f75e6eb433",
+      "candidate_sha256": "702aef5136606a005e331bb74181a480e7b3226f41f51127acd70e926f765dec",
+      "patch": "patches/php83/held/curly-offsets/0008-Utils.php.patch",
+      "patch_sha256": "2c7c00a28a43485a8032ef35fa043682db0ee0925df7e692e27fec14bd0f9d70"
+    },
+    "purifier": {
+      "path": "vendor/htmlpurifier/library/HTMLPurifier/Encoder.php",
+      "original_sha256": "b1b735e555c6dc070cf7a39ed2fd111b983a1fe1312561b92a63825cae9d34fc",
+      "candidate_sha256": "657cb46cabdce5c915043ac6e8546467186f44a98c2f5f60b0e5079259ea5d7b",
+      "patch": "patches/php83/held/curly-offsets/0011-Encoder.php.patch",
+      "patch_sha256": "c7e7c69a28e6f854fbc9ab8459ab5d59580aa96348aa74dfea30c781188fb8f5"
+    }
+  }
+}

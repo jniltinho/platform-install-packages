@@ -1,0 +1,237 @@
+{
+  "schema": 1,
+  "observed_at": "2026-09-25 20:14:50 UTC",
+  "index_status": {
+    "project": "kaltura-rigel-18.20.0-full",
+    "status": "ready",
+    "root_path": "/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/graph-view"
+  },
+  "coverage": {
+    "project": "kaltura-rigel-18.20.0-full",
+    "signal": "best_effort",
+    "indexed_at": "2026-09-25T12:19:00Z",
+    "metadata": {
+      "generation": "2026-09-25T12:19:00Z",
+      "index_mode": "full",
+      "recorded_at": "2026-09-25T12:19:04Z",
+      "recording_status": "complete",
+      "ignored_files_stored": 519,
+      "ignored_files_total": 519,
+      "hash_records_complete": true,
+      "coverage_version": 3,
+      "generation_matches": true
+    },
+    "paths": [
+      {
+        "requested_path": "vendor/google-api-php-client/src/service/Google_Utils.php",
+        "path": "vendor/google-api-php-client/src/service/Google_Utils.php",
+        "status": "partial",
+        "freshness": "metadata_match",
+        "recommended_action": "read_ranges_and_verify_scope",
+        "coverage": [
+          {
+            "path": "vendor/google-api-php-client/src/service/Google_Utils.php",
+            "kind": "parse_partial",
+            "detail": "58-60,62-62,65-65,71-71,77-77,83-83,89-89,97-97,99-99,117-117",
+            "match": "exact",
+            "ranges": [
+              {
+                "start": 58,
+                "end": 60
+              },
+              {
+                "start": 62,
+                "end": 62
+              },
+              {
+                "start": 65,
+                "end": 65
+              },
+              {
+                "start": 71,
+                "end": 71
+              },
+              {
+                "start": 77,
+                "end": 77
+              },
+              {
+                "start": 83,
+                "end": 83
+              },
+              {
+                "start": 89,
+                "end": 89
+              },
+              {
+                "start": 97,
+                "end": 97
+              },
+              {
+                "start": 99,
+                "end": 99
+              },
+              {
+                "start": 117,
+                "end": 117
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "requested_path": "vendor/google-api-php-client-1.1.2/src/Google/Utils.php",
+        "path": "vendor/google-api-php-client-1.1.2/src/Google/Utils.php",
+        "status": "partial",
+        "freshness": "metadata_match",
+        "recommended_action": "read_ranges_and_verify_scope",
+        "coverage": [
+          {
+            "path": "vendor/google-api-php-client-1.1.2/src/Google/Utils.php",
+            "kind": "parse_partial",
+            "detail": "65-67,69-69,71-71,76-76,81-81,86-86,91-91,99-99,101-101,133-133",
+            "match": "exact",
+            "ranges": [
+              {
+                "start": 65,
+                "end": 67
+              },
+              {
+                "start": 69,
+                "end": 69
+              },
+              {
+                "start": 71,
+                "end": 71
+              },
+              {
+                "start": 76,
+                "end": 76
+              },
+              {
+                "start": 81,
+                "end": 81
+              },
+              {
+                "start": 86,
+                "end": 86
+              },
+              {
+                "start": 91,
+                "end": 91
+              },
+              {
+                "start": 99,
+                "end": 99
+              },
+              {
+                "start": 101,
+                "end": 101
+              },
+              {
+                "start": 133,
+                "end": 133
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "requested_path": "vendor/htmlpurifier/library/HTMLPurifier/Encoder.php",
+        "path": "vendor/htmlpurifier/library/HTMLPurifier/Encoder.php",
+        "status": "partial",
+        "freshness": "metadata_match",
+        "recommended_action": "read_ranges_and_verify_scope",
+        "coverage": [
+          {
+            "path": "vendor/htmlpurifier/library/HTMLPurifier/Encoder.php",
+            "kind": "parse_partial",
+            "detail": "157-157,158-158",
+            "match": "exact",
+            "ranges": [
+              {
+                "start": 157,
+                "end": 157
+              },
+              {
+                "start": 158,
+                "end": 158
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "scopes": [],
+    "caveat": "Best-effort signal only. No recorded issue does not prove graph or source completeness; read flagged source and qualify claims when metadata is changed or unavailable."
+  },
+  "source_read_fallback": "Read full Google_Utils files and HTMLPurifier_Encoder cleanUTF8 affected157-158 plus called unichr309-353/convertToASCIIDumbLossless474-512 directly; all selected files partial in graph.",
+  "scope": "Three actual class files, separate processes; no evidence all43 runtime behaviors",
+  "graph_snippets": [
+    {
+      "query": {
+        "project": "kaltura-rigel-18.20.0-full",
+        "qualified_name": "kaltura-rigel-18.20.0-full.vendor.google-api-php-client.src.service.Google_Utils.Google_Utils"
+      },
+      "result": {
+        "name": "Google_Utils",
+        "qualified_name": "kaltura-rigel-18.20.0-full.vendor.google-api-php-client.src.service.Google_Utils.Google_Utils",
+        "label": "Class",
+        "file_path": "/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/graph-view/vendor/google-api-php-client/src/service/Google_Utils.php",
+        "start_line": 24,
+        "end_line": 97,
+        "source": "class Google_Utils {\n  public static function urlSafeB64Encode($data) {\n    $b64 = base64_encode($data);\n    $b64 = str_replace(array('+', '/', '\\r', '\\n', '='),\n                       array('-', '_'),\n                       $b64);\n    return $b64;\n  }\n\n  public static function urlSafeB64Decode($b64) {\n    $b64 = str_replace(array('-', '_'),\n                       array('+', '/'),\n                       $b64);\n    return base64_decode($b64);\n  }\n\n  /**\n   * Misc function used to count the number of bytes in a post body, in the world of multi-byte chars\n   * and the unpredictability of strlen/mb_strlen/sizeof, this is the only way to do that in a sane\n   * manner at the moment.\n   *\n   * This algorithm was originally developed for the\n   * Solar Framework by Paul M. Jones\n   *\n   * @link   http://solarphp.com/\n   * @link   http://svn.solarphp.com/core/trunk/Solar/Json.php\n   * @link   http://framework.zend.com/svn/framework/standard/trunk/library/Zend/Json/Decoder.php\n   * @param  string $str\n   * @return int The number of bytes in a string.\n   */\n  static public function getStrLen($str) {\n    $strlenVar = strlen($str);\n    $d = $ret = 0;\n    for ($count = 0; $count < $strlenVar; ++ $count) {\n      $ordinalValue = ord($str{$ret});\n      switch (true) {\n        case (($ordinalValue >= 0x20) && ($ordinalValue <= 0x7F)):\n          // characters U-00000000 - U-0000007F (same as ASCII)\n          $ret ++;\n          break;\n\n        case (($ordinalValue & 0xE0) == 0xC0):\n          // characters U-00000080 - U-000007FF, mask 110XXXXX\n          // see http://www.cl.cam.ac.uk/~mgk25/unicode.html#utf-8\n          $ret += 2;\n          break;\n\n        case (($ordinalValue & 0xF0) == 0xE0):\n          // characters U-00000800 - U-0000FFFF, mask 1110XXXX\n          // see http://www.cl.cam.ac.uk/~mgk25/unicode.html#utf-8\n          $ret += 3;\n          break;\n\n        case (($ordinalValue & 0xF8) == 0xF0):\n          // characters U-00010000 - U-001FFFFF, mask 11110XXX\n          // see http://www.cl.cam.ac.uk/~mgk25/unicode.html#utf-8\n          $ret += 4;\n          break;\n\n        case (($ordinalValue & 0xFC) == 0xF8):\n          // characters U-00200000 - U-03FFFFFF, mask 111110XX\n          // see http://www.cl.cam.ac.uk/~mgk25/unicode.html#utf-8\n          $ret += 5;\n          break;\n\n        case (($ordinalValue & 0xFE) == 0xFC):\n          // characters U-04000000 - U-7FFFFFFF, mask 1111110X\n          // see http://www.cl.cam.ac.uk/~mgk25/unicode.html#utf-8\n          $ret += 6;\n          break;\n        default:\n          $ret ++;\n      }\n    }\n",
+        "callers": 0,
+        "callees": 0,
+        "coverage_note": "This file was only PARTIALLY indexed \u2014 line range(s) 58-60,62-62,65-65,71-71,77-77,83-83,89-89,97-97,99-99,117-117 could not be parsed, so constructs there may be missing from the graph (callers/callees and search results can under-report this file). The source above is ground truth. (best-effort signal)"
+      }
+    },
+    {
+      "query": {
+        "project": "kaltura-rigel-18.20.0-full",
+        "qualified_name": "kaltura-rigel-18.20.0-full.vendor.google-api-php-client-1.1.2.src.Google.Utils.Google_Utils"
+      },
+      "result": {
+        "name": "Google_Utils",
+        "qualified_name": "kaltura-rigel-18.20.0-full.vendor.google-api-php-client-1.1.2.src.Google.Utils.Google_Utils",
+        "label": "Class",
+        "file_path": "/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/graph-view/vendor/google-api-php-client-1.1.2/src/Google/Utils.php",
+        "start_line": 22,
+        "end_line": 99,
+        "source": "class Google_Utils\n{\n  public static function urlSafeB64Encode($data)\n  {\n    $b64 = base64_encode($data);\n    $b64 = str_replace(\n        array('+', '/', '\\r', '\\n', '='),\n        array('-', '_'),\n        $b64\n    );\n    return $b64;\n  }\n\n  public static function urlSafeB64Decode($b64)\n  {\n    $b64 = str_replace(\n        array('-', '_'),\n        array('+', '/'),\n        $b64\n    );\n    return base64_decode($b64);\n  }\n\n  /**\n   * Misc function used to count the number of bytes in a post body, in the\n   * world of multi-byte chars and the unpredictability of\n   * strlen/mb_strlen/sizeof, this is the only way to do that in a sane\n   * manner at the moment.\n   *\n   * This algorithm was originally developed for the\n   * Solar Framework by Paul M. Jones\n   *\n   * @link   http://solarphp.com/\n   * @link   http://svn.solarphp.com/core/trunk/Solar/Json.php\n   * @link   http://framework.zend.com/svn/framework/standard/trunk/library/Zend/Json/Decoder.php\n   * @param  string $str\n   * @return int The number of bytes in a string.\n   */\n  public static function getStrLen($str)\n  {\n    $strlenVar = strlen($str);\n    $d = $ret = 0;\n    for ($count = 0; $count < $strlenVar; ++ $count) {\n      $ordinalValue = ord($str{$ret});\n      switch (true) {\n        case (($ordinalValue >= 0x20) && ($ordinalValue <= 0x7F)):\n          // characters U-00000000 - U-0000007F (same as ASCII)\n          $ret ++;\n          break;\n        case (($ordinalValue & 0xE0) == 0xC0):\n          // characters U-00000080 - U-000007FF, mask 110XXXXX\n          // see http://www.cl.cam.ac.uk/~mgk25/unicode.html#utf-8\n          $ret += 2;\n          break;\n        case (($ordinalValue & 0xF0) == 0xE0):\n          // characters U-00000800 - U-0000FFFF, mask 1110XXXX\n          // see http://www.cl.cam.ac.uk/~mgk25/unicode.html#utf-8\n          $ret += 3;\n          break;\n        case (($ordinalValue & 0xF8) == 0xF0):\n          // characters U-00010000 - U-001FFFFF, mask 11110XXX\n          // see http://www.cl.cam.ac.uk/~mgk25/unicode.html#utf-8\n          $ret += 4;\n          break;\n        case (($ordinalValue & 0xFC) == 0xF8):\n          // characters U-00200000 - U-03FFFFFF, mask 111110XX\n          // see http://www.cl.cam.ac.uk/~mgk25/unicode.html#utf-8\n          $ret += 5;\n          break;\n        case (($ordinalValue & 0xFE) == 0xFC):\n          // characters U-04000000 - U-7FFFFFFF, mask 1111110X\n          // see http://www.cl.cam.ac.uk/~mgk25/unicode.html#utf-8\n          $ret += 6;\n          break;\n        default:\n          $ret ++;\n      }\n    }\n",
+        "callers": 0,
+        "callees": 0,
+        "coverage_note": "This file was only PARTIALLY indexed \u2014 line range(s) 65-67,69-69,71-71,76-76,81-81,86-86,91-91,99-99,101-101,133-133 could not be parsed, so constructs there may be missing from the graph (callers/callees and search results can under-report this file). The source above is ground truth. (best-effort signal)"
+      }
+    },
+    {
+      "query": {
+        "project": "kaltura-rigel-18.20.0-full",
+        "qualified_name": "kaltura-rigel-18.20.0-full.vendor.htmlpurifier.library.HTMLPurifier.Encoder.HTMLPurifier_Encoder"
+      },
+      "result": {
+        "name": "HTMLPurifier_Encoder",
+        "qualified_name": "kaltura-rigel-18.20.0-full.vendor.htmlpurifier.library.HTMLPurifier.Encoder.HTMLPurifier_Encoder",
+        "label": "Class",
+        "file_path": "/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/graph-view/vendor/htmlpurifier/library/HTMLPurifier/Encoder.php",
+        "start_line": 7,
+        "end_line": 506,
+        "source_clipped": true,
+        "clipped_at_lines": 500,
+        "source": "class HTMLPurifier_Encoder\n{\n\n    /**\n     * Constructor throws fatal error if you attempt to instantiate class\n     */\n    private function __construct()\n    {\n        trigger_error('Cannot instantiate encoder, call methods statically', E_USER_ERROR);\n    }\n\n    /**\n     * Error-handler that mutes errors, alternative to shut-up operator.\n     */\n    public static function muteErrorHandler()\n    {\n    }\n\n    /**\n     * iconv wrapper which mutes errors, but doesn't work around bugs.\n     * @param string $in Input encoding\n     * @param string $out Output encoding\n     * @param string $text The text to convert\n     * @return string\n     */\n    public static function unsafeIconv($in, $out, $text)\n    {\n        set_error_handler(array('HTMLPurifier_Encoder', 'muteErrorHandler'));\n        $r = iconv($in, $out, $text);\n        restore_error_handler();\n        return $r;\n    }\n\n    /**\n     * iconv wrapper which mutes errors and works around bugs.\n     * @param string $in Input encoding\n     * @param string $out Output encoding\n     * @param string $text The text to convert\n     * @param int $max_chunk_size\n     * @return string\n     */\n    public static function iconv($in, $out, $text, $max_chunk_size = 8000)\n    {\n        $code = self::testIconvTruncateBug();\n        if ($code == self::ICONV_OK) {\n            return self::unsafeIconv($in, $out, $text);\n        } elseif ($code == self::ICONV_TRUNCATES) {\n            // we can only work around this if the input character set\n            // is utf-8\n            if ($in == 'utf-8') {\n                if ($max_chunk_size < 4) {\n                    trigger_error('max_chunk_size is too small', E_USER_WARNING);\n                    return false;\n                }\n                // split into 8000 byte chunks, but be careful to handle\n                // multibyte boundaries properly\n                if (($c = strlen($text)) <= $max_chunk_size) {\n                    return self::unsafeIconv($in, $out, $text);\n                }\n                $r = '';\n                $i = 0;\n                while (true) {\n                    if ($i + $max_chunk_size >= $c) {\n                        $r .= self::unsafeIconv($in, $out, substr($text, $i));\n                        break;\n                    }\n                    // wibble the boundary\n                    if (0x80 != (0xC0 & ord($text[$i + $max_chunk_size]))) {\n                        $chunk_size = $max_chunk_size;\n                    } elseif (0x80 != (0xC0 & ord($text[$i + $max_chunk_size - 1]))) {\n                        $chunk_size = $max_chunk_size - 1;\n                    } elseif (0x80 != (0xC0 & ord($text[$i + $max_chunk_size - 2]))) {\n                        $chunk_size = $max_chunk_size - 2;\n                    } elseif (0x80 != (0xC0 & ord($text[$i + $max_chunk_size - 3]))) {\n                        $chunk_size = $max_chunk_size - 3;\n                    } else {\n                        return false; // rather confusing UTF-8...\n                    }\n                    $chunk = substr($text, $i, $chunk_size); // substr doesn't mind overlong lengths\n                    $r .= self::unsafeIconv($in, $out, $chunk);\n                    $i += $chunk_size;\n                }\n                return $r;\n            } else {\n                return false;\n            }\n        } else {\n            return false;\n        }\n    }\n\n    /**\n     * Cleans a UTF-8 string for well-formedness and SGML validity\n     *\n     * It will parse according to UTF-8 and return a valid UTF8 string, with\n     * non-SGML codepoints excluded.\n     *\n     * @param string $str The string to clean\n     * @param bool $force_php\n     * @return string\n     *\n     * @note Just for reference, the non-SGML code points are 0 to 31 and\n     *       127 to 159, inclusive.  However, we allow code points 9, 10\n     *       and 13, which are the tab, line feed and carriage return\n     *       respectively. 128 and above the code points map to multibyte\n     *       UTF-8 representations.\n     *\n     * @note Fallback code adapted from utf8ToUnicode by Henri Sivonen and\n     *       hsivonen@iki.fi at <http://iki.fi/hsivonen/php-utf8/> under the\n     *       LGPL license.  Notes on what changed are inside, but in general,\n     *       the original code transformed UTF-8 text into an array of integer\n     *       Unicode codepoints. Understandably, transforming that back to\n     *       a string would be somewhat expensive, so the function was modded to\n     *       directly operate on the string.  However, this discourages code\n     *       reuse, and the logic enumerated here would be useful for any\n     *       function that needs to be able to understand UTF-8 characters.\n     *       As of right now, only smart lossless character encoding converters\n     *       would need that, and I'm probably not going to implement them.\n     *       Once again, PHP 6 should solve all our problems.\n     */\n    public static function cleanUTF8($str, $force_php = false)\n    {\n        // UTF-8 validity is checked since PHP 4.3.5\n        // This is an optimization: if the string is already valid UTF-8, no\n        // need to do PHP stuff. 99% of the time, this will be the case.\n        // The regexp matches the XML char production, as well as well as excluding\n        // non-SGML codepoints U+007F to U+009F\n        if (preg_match(\n            '/^[\\x{9}\\x{A}\\x{D}\\x{20}-\\x{7E}\\x{A0}-\\x{D7FF}\\x{E000}-\\x{FFFD}\\x{10000}-\\x{10FFFF}]*$/Du',\n            $str\n        )) {\n            return $str;\n        }\n\n        $mState = 0; // cached expected number of octets after the current octet\n                     // until the beginning of the next UTF8 character sequence\n        $mUcs4  = 0; // cached Unicode character\n        $mBytes = 1; // cached expected number of octets in the current sequence\n\n        // original code involved an $out that was an array of Unicode\n        // codepoints.  Instead of having to convert back into UTF-8, we've\n        // decided to directly append valid UTF-8 characters onto a string\n        // $out once they're done.  $char accumulates raw bytes, while $mUcs4\n        // turns into the Unicode code point, so there's some redundancy.\n\n        $out = '';\n        $char = '';\n\n        $len = strlen($str);\n        for ($i = 0; $i < $len; $i++) {\n            $in = ord($str{$i});\n            $char .= $str[$i]; // append byte to char\n            if (0 == $mState) {\n                // When mState is zero we expect either a US-ASCII character\n                // or a multi-octet sequence.\n                if (0 == (0x80 & ($in))) {\n                    // US-ASCII, pass straight through.\n                    if (($in <= 31 || $in == 127) &&\n                        !($in == 9 || $in == 13 || $in == 10) // save \\r\\t\\n\n                    ) {\n                        // control characters, remove\n                    } else {\n                        $out .= $char;\n                    }\n                    // reset\n                    $char = '';\n                    $mBytes = 1;\n                } elseif (0xC0 == (0xE0 & ($in))) {\n                    // First octet of 2 octet sequence\n                    $mUcs4 = ($in);\n                    $mUcs4 = ($mUcs4 & 0x1F) << 6;\n                    $mState = 1;\n                    $mBytes = 2;\n                } elseif (0xE0 == (0xF0 & ($in))) {\n                    // First octet of 3 octet sequence\n                    $mUcs4 = ($in);\n                    $mUcs4 = ($mUcs4 & 0x0F) << 12;\n                    $mState = 2;\n                    $mBytes = 3;\n                } elseif (0xF0 == (0xF8 & ($in))) {\n                    // First octet of 4 octet sequence\n                    $mUcs4 = ($in);\n                    $mUcs4 = ($mUcs4 & 0x07) << 18;\n                    $mState = 3;\n                    $mBytes = 4;\n                } elseif (0xF8 == (0xFC & ($in))) {\n                    // First octet of 5 octet sequence.\n                    //\n                    // This is illegal because the encoded codepoint must be\n                    // either:\n                    // (a) not the shortest form or\n                    // (b) outside the Unicode range of 0-0x10FFFF.\n                    // Rather than trying to resynchronize, we will carry on\n                    // until the end of the sequence and let the later error\n                    // handling code catch it.\n                    $mUcs4 = ($in);\n                    $mUcs4 = ($mUcs4 & 0x03) << 24;\n                    $mState = 4;\n                    $mBytes = 5;\n                } elseif (0xFC == (0xFE & ($in))) {\n                    // First octet of 6 octet sequence, see comments for 5\n                    // octet sequence.\n                    $mUcs4 = ($in);\n                    $mUcs4 = ($mUcs4 & 1) << 30;\n                    $mState = 5;\n                    $mBytes = 6;\n                } else {\n                    // Current octet is neither in the US-ASCII range nor a\n                    // legal first octet of a multi-octet sequence.\n                    $mState = 0;\n                    $mUcs4  = 0;\n                    $mBytes = 1;\n                    $char = '';\n                }\n            } else {\n                // When mState is non-zero, we expect a continuation of the\n                // multi-octet sequence\n                if (0x80 == (0xC0 & ($in))) {\n                    // Legal continuation.\n                    $shift = ($mState - 1) * 6;\n                    $tmp = $in;\n                    $tmp = ($tmp & 0x0000003F) << $shift;\n                    $mUcs4 |= $tmp;\n\n                    if (0 == --$mState) {\n                        // End of the multi-octet sequence. mUcs4 now contains\n                        // the final Unicode codepoint to be output\n\n                        // Check for illegal sequences and codepoints.\n\n                        // From Unicode 3.1, non-shortest form is illegal\n                        if (((2 == $mBytes) && ($mUcs4 < 0x0080)) ||\n                            ((3 == $mBytes) && ($mUcs4 < 0x0800)) ||\n                            ((4 == $mBytes) && ($mUcs4 < 0x10000)) ||\n                            (4 < $mBytes) ||\n                            // From Unicode 3.2, surrogate characters = illegal\n                            (($mUcs4 & 0xFFFFF800) == 0xD800) ||\n                            // Codepoints outside the Unicode range are illegal\n                            ($mUcs4 > 0x10FFFF)\n                        ) {\n\n                        } elseif (0xFEFF != $mUcs4 && // omit BOM\n                            // check for valid Char unicode codepoints\n                            (\n                                0x9 == $mUcs4 ||\n                                0xA == $mUcs4 ||\n                                0xD == $mUcs4 ||\n                                (0x20 <= $mUcs4 && 0x7E >= $mUcs4) ||\n                                // 7F-9F is not strictly prohibited by XML,\n                                // but it is non-SGML, and thus we don't allow it\n                                (0xA0 <= $mUcs4 && 0xD7FF >= $mUcs4) ||\n                                (0x10000 <= $mUcs4 && 0x10FFFF >= $mUcs4)\n                            )\n                        ) {\n                            $out .= $char;\n                        }\n                        // initialize UTF8 cache (reset)\n                        $mState = 0;\n                        $mUcs4  = 0;\n                        $mBytes = 1;\n                        $char = '';\n                    }\n                } else {\n                    // ((0xC0 & (*in) != 0x80) && (mState != 0))\n                    // Incomplete multi-octet sequence.\n                    // used to result in complete fail, but we'll reset\n                    $mState = 0;\n                    $mUcs4  = 0;\n                    $mBytes = 1;\n                    $char ='';\n                }\n            }\n        }\n        return $out;\n    }\n\n    /**\n     * Translates a Unicode codepoint into its corresponding UTF-8 character.\n     * @note Based on Feyd's function at\n     *       <http://forums.devnetwork.net/viewtopic.php?p=191404#191404>,\n     *       which is in public domain.\n     * @note While we're going to do code point parsing anyway, a good\n     *       optimization would be to refuse to translate code points that\n     *       are non-SGML characters.  However, this could lead to duplication.\n     * @note This is very similar to the unichr function in\n     *       maintenance/generate-entity-file.php (although this is superior,\n     *       due to its sanity checks).\n     */\n\n    // +----------+----------+----------+----------+\n    // | 33222222 | 22221111 | 111111   |          |\n    // | 10987654 | 32109876 | 54321098 | 76543210 | bit\n    // +----------+----------+----------+----------+\n    // |          |          |          | 0xxxxxxx | 1 byte 0x00000000..0x0000007F\n    // |          |          | 110yyyyy | 10xxxxxx | 2 byte 0x00000080..0x000007FF\n    // |          | 1110zzzz | 10yyyyyy | 10xxxxxx | 3 byte 0x00000800..0x0000FFFF\n    // | 11110www | 10wwzzzz | 10yyyyyy | 10xxxxxx | 4 byte 0x00010000..0x0010FFFF\n    // +----------+----------+----------+----------+\n    // | 00000000 | 00011111 | 11111111 | 11111111 | Theoretical upper limit of legal scalars: 2097151 (0x001FFFFF)\n    // | 00000000 | 00010000 | 11111111 | 11111111 | Defined upper limit of legal scalar codes\n    // +----------+----------+----------+----------+\n\n    public static function unichr($code)\n    {\n        if ($code > 1114111 or $code < 0 or\n          ($code >= 55296 and $code <= 57343) ) {\n            // bits are set outside the \"valid\" range as defined\n            // by UNICODE 4.1.0\n            return '';\n        }\n\n        $x = $y = $z = $w = 0;\n        if ($code < 128) {\n            // regular ASCII character\n            $x = $code;\n        } else {\n            // set up bits for UTF-8\n            $x = ($code & 63) | 128;\n            if ($code < 2048) {\n                $y = (($code & 2047) >> 6) | 192;\n            } else {\n                $y = (($code & 4032) >> 6) | 128;\n                if ($code < 65536) {\n                    $z = (($code >> 12) & 15) | 224;\n                } else {\n                    $z = (($code >> 12) & 63) | 128;\n                    $w = (($code >> 18) & 7)  | 240;\n                }\n            }\n        }\n        // set up the actual character\n        $ret = '';\n        if ($w) {\n            $ret .= chr($w);\n        }\n        if ($z) {\n            $ret .= chr($z);\n        }\n        if ($y) {\n            $ret .= chr($y);\n        }\n        $ret .= chr($x);\n\n        return $ret;\n    }\n\n    /**\n     * @return bool\n     */\n    public static function iconvAvailable()\n    {\n        static $iconv = null;\n        if ($iconv === null) {\n            $iconv = function_exists('iconv') && self::testIconvTruncateBug() != self::ICONV_UNUSABLE;\n        }\n        return $iconv;\n    }\n\n    /**\n     * Convert a string to UTF-8 based on configuration.\n     * @param string $str The string to convert\n     * @param HTMLPurifier_Config $config\n     * @param HTMLPurifier_Context $context\n     * @return string\n     */\n    public static function convertToUTF8($str, $config, $context)\n    {\n        $encoding = $config->get('Core.Encoding');\n        if ($encoding === 'utf-8') {\n            return $str;\n        }\n        static $iconv = null;\n        if ($iconv === null) {\n            $iconv = self::iconvAvailable();\n        }\n        if ($iconv && !$config->get('Test.ForceNoIconv')) {\n            // unaffected by bugs, since UTF-8 support all characters\n            $str = self::unsafeIconv($encoding, 'utf-8//IGNORE', $str);\n            if ($str === false) {\n                // $encoding is not a valid encoding\n                trigger_error('Invalid encoding ' . $encoding, E_USER_ERROR);\n                return '';\n            }\n            // If the string is bjorked by Shift_JIS or a similar encoding\n            // that doesn't support all of ASCII, convert the naughty\n            // characters to their true byte-wise ASCII/UTF-8 equivalents.\n            $str = strtr($str, self::testEncodingSupportsASCII($encoding));\n            return $str;\n        } elseif ($encoding === 'iso-8859-1') {\n            $str = utf8_encode($str);\n            return $str;\n        }\n        $bug = HTMLPurifier_Encoder::testIconvTruncateBug();\n        if ($bug == self::ICONV_OK) {\n            trigger_error('Encoding not supported, please install iconv', E_USER_ERROR);\n        } else {\n            trigger_error(\n                'You have a buggy version of iconv, see https://bugs.php.net/bug.php?id=48147 ' .\n                'and http://sourceware.org/bugzilla/show_bug.cgi?id=13541',\n                E_USER_ERROR\n            );\n        }\n    }\n\n    /**\n     * Converts a string from UTF-8 based on configuration.\n     * @param string $str The string to convert\n     * @param HTMLPurifier_Config $config\n     * @param HTMLPurifier_Context $context\n     * @return string\n     * @note Currently, this is a lossy conversion, with unexpressable\n     *       characters being omitted.\n     */\n    public static function convertFromUTF8($str, $config, $context)\n    {\n        $encoding = $config->get('Core.Encoding');\n        if ($escape = $config->get('Core.EscapeNonASCIICharacters')) {\n            $str = self::convertToASCIIDumbLossless($str);\n        }\n        if ($encoding === 'utf-8') {\n            return $str;\n        }\n        static $iconv = null;\n        if ($iconv === null) {\n            $iconv = self::iconvAvailable();\n        }\n        if ($iconv && !$config->get('Test.ForceNoIconv')) {\n            // Undo our previous fix in convertToUTF8, otherwise iconv will barf\n            $ascii_fix = self::testEncodingSupportsASCII($encoding);\n            if (!$escape && !empty($ascii_fix)) {\n                $clear_fix = array();\n                foreach ($ascii_fix as $utf8 => $native) {\n                    $clear_fix[$utf8] = '';\n                }\n                $str = strtr($str, $clear_fix);\n            }\n            $str = strtr($str, array_flip($ascii_fix));\n            // Normal stuff\n            $str = self::iconv('utf-8', $encoding . '//IGNORE', $str);\n            return $str;\n        } elseif ($encoding === 'iso-8859-1') {\n            $str = utf8_decode($str);\n            return $str;\n        }\n        trigger_error('Encoding not supported', E_USER_ERROR);\n        // You might be tempted to assume that the ASCII representation\n        // might be OK, however, this is *not* universally true over all\n        // encodings.  So we take the conservative route here, rather\n        // than forcibly turn on %Core.EscapeNonASCIICharacters\n    }\n\n    /**\n     * Lossless (character-wise) conversion of HTML to ASCII\n     * @param string $str UTF-8 string to be converted to ASCII\n     * @return string ASCII encoded string with non-ASCII character entity-ized\n     * @warning Adapted from MediaWiki, claiming fair use: this is a common\n     *       algorithm. If you disagree with this license fudgery,\n     *       implement it yourself.\n     * @note Uses decimal numeric entities since they are best supported.\n     * @note This is a DUMB function: it has no concept of keeping\n     *       character entities that the projected character encoding\n     *       can allow. We could possibly implement a smart version\n     *       but that would require it to also know which Unicode\n     *       codepoints the charset supported (not an easy task).\n     * @note Sort of with cleanUTF8() but it assumes that $str is\n     *       well-formed UTF-8\n     */\n    public static function convertToASCIIDumbLossless($str)\n    {\n        $bytesleft = 0;\n        $result = '';\n        $working = 0;\n        $len = strlen($str);\n        for ($i = 0; $i < $len; $i++) {\n            $bytevalue = ord($str[$i]);\n            if ($bytevalue <= 0x7F) { //0xxx xxxx\n                $result .= chr($bytevalue);\n                $bytesleft = 0;\n            } elseif ($bytevalue <= 0xBF) { //10xx xxxx\n                $working = $working << 6;\n                $working += ($bytevalue & 0x3F);\n                $bytesleft--;\n                if ($bytesleft <= 0) {\n                    $result .= \"&#\" . $working . \";\";\n                }\n            } elseif ($bytevalue <= 0xDF) { //110x xxxx\n                $working = $bytevalue & 0x1F;\n                $bytesleft = 1;\n            } elseif ($bytevalue <= 0xEF) { //1110 xxxx\n                $working = $bytevalue & 0x0F;\n                $bytesleft = 2;\n            } else { //1111 0xxx\n                $working = $bytevalue & 0x07;\n                $bytesleft = 3;\n            }\n        }\n        return $result;\n    }\n\n    /** No bugs detected in iconv. */\n",
+        "callers": 0,
+        "callees": 0,
+        "coverage_note": "This file was only PARTIALLY indexed \u2014 line range(s) 157-157,158-158 could not be parsed, so constructs there may be missing from the graph (callers/callees and search results can under-report this file). The source above is ground truth. (best-effort signal)"
+      }
+    }
+  ],
+  "case_plan": {
+    "google_each": 20,
+    "purifier": 28,
+    "matrix": "original74, candidate74, candidate83",
+    "expected_total_case_rows": 204,
+    "google_multibyte": "Retain existing out-of-range loop results3/7/5 with1/3/1 diagnostics; PHP7.4 NOTICE vs8.3 WARNING explicitly characterized, not suppressed or full diagnostic parity.",
+    "native_control": "Each class process also executes native square string overread expectedempty with7.4NOTICE/8.3WARNING to independently reproduce diagnostic severity change."
+  },
+  "acceptance": false
+}

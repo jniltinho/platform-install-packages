@@ -337,3 +337,15 @@ after Grok times out. Final 19-test status guards reject timeout/signal/noninteg
 values instead of misclassifying them as compiler failures. See
 [compiler triage](compiler-triage.md). No application patch is promoted and no
 aggregate acceptance checkbox closes.
+
+## Held curly-offset batch
+
+[Curly-offset evidence](curly-offsets.md) now records 43 isolated source repairs:
+153 paired delimiters, 306 changed bytes and no other token/byte changes. Actual
+Claude repeats the 43 PHP8.3 compiler controls and native negative controls;
+204 standalone behavior rows cover three source files on original74/candidate74/
+candidate83 with exact independent results. Cursor executes/reviews the behavior
+validator; OpenCode executes23 tests and an independent byte audit after Grok's
+bounded timeout. Broader runtime effects and integration remain open; patches
+stay held, exp9 remains unchanged. Original tasks0/24 and detailed3/27 are not
+advanced by this partial T0-04/T1-01 evidence.

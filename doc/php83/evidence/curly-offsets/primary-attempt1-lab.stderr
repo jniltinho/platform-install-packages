@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/audit/stage/tools/build-lab.py", line 22, in <module>
+    if fixed.returncode!=1:raise RuntimeError('PHPCBF did not report corrected errors: '+fixed.stdout+fixed.stderr)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: PHPCBF did not report corrected errors: 
+Fatal error: Uncaught PHP_CodeSniffer\Exceptions\RuntimeException: file_put_contents(/tmp/php83-curly-bdwyh2kz/candidate/alpha/apps/kaltura/lib/storage/urlTokenizers/kAkamaiSecureHDUrlTokenizer.php): Failed to open stream: Permission denied in /audit/analyzer/vendor/squizlabs/php_codesniffer/src/Reports/Cbf.php on line 98 in /audit/analyzer/vendor/squizlabs/php_codesniffer/src/Runner.php:543
+Stack trace:
+#0 [internal function]: PHP_CodeSniffer\Runner->handleErrors(2, 'file_put_conten...', '/audit/analyzer...', 98)
+#1 /audit/analyzer/vendor/squizlabs/php_codesniffer/src/Reports/Cbf.php(98): file_put_contents('/tmp/php83-curl...', '<?php\n/**\n * Ak...')
+#2 /audit/analyzer/vendor/squizlabs/php_codesniffer/src/Reporter.php(368): PHP_CodeSniffer\Reports\Cbf->generateFileReport(Array, Object(PHP_CodeSniffer\Files\LocalFile), false, 80)
+#3 /audit/analyzer/vendor/squizlabs/php_codesniffer/src/Runner.php(627): PHP_CodeSniffer\Reporter->cacheFileReport(Object(PHP_CodeSniffer\Files\LocalFile))
+#4 /audit/analyzer/vendor/squizlabs/php_codesniffer/src/Runner.php(390): PHP_CodeSniffer\Runner->processFile(Object(PHP_CodeSniffer\Files\LocalFile))
+#5 /audit/analyzer/vendor/squizlabs/php_codesniffer/src/Runner.php(208): PHP_CodeSniffer\Runner->run()
+#6 /audit/analyzer/vendor/squizlabs/php_codesniffer/bin/phpcbf(30): PHP_CodeSniffer\Runner->runPHPCBF()
+#7 /audit/analyzer/vendor/bin/phpcbf(119): include('/audit/analyzer...')
+#8 {main}
+  thrown in /audit/analyzer/vendor/squizlabs/php_codesniffer/src/Runner.php on line 543
+

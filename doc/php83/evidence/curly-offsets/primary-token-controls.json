@@ -1,0 +1,94 @@
+{
+  "cases": [
+    {
+      "case": "valid",
+      "expected_accept": true,
+      "exit": 0,
+      "passed": true,
+      "stdout": "{\"before_sha256\":\"2e516ba2f3f87100a24cc0ce5e8757425070b7c596153f5c918bab5339080547\",\"after_sha256\":\"671f7185bbcf86711e68dc708ba34696a6e7d32defe87c1d86181207c1adf5f3\",\"token_count\":31,\"unchanged_protected_tokens\":19,\"changed_bytes\":2,\"offset_pairs\":[{\"open\":{\"token_index\":24,\"offset\":69,\"line\":5,\"column\":20,\"before\":\"{\",\"after\":\"[\"},\"close\":{\"token_index\":26,\"offset\":71,\"line\":5,\"column\":22,\"before\":\"}\",\"after\":\"]\"}}],\"all_other_bytes_tokens_identical\":true}\n",
+      "stderr": ""
+    },
+    {
+      "case": "duplicate_findings",
+      "expected_accept": true,
+      "exit": 0,
+      "passed": true,
+      "stdout": "{\"before_sha256\":\"2e516ba2f3f87100a24cc0ce5e8757425070b7c596153f5c918bab5339080547\",\"after_sha256\":\"671f7185bbcf86711e68dc708ba34696a6e7d32defe87c1d86181207c1adf5f3\",\"token_count\":31,\"unchanged_protected_tokens\":19,\"changed_bytes\":2,\"offset_pairs\":[{\"open\":{\"token_index\":24,\"offset\":69,\"line\":5,\"column\":20,\"before\":\"{\",\"after\":\"[\"},\"close\":{\"token_index\":26,\"offset\":71,\"line\":5,\"column\":22,\"before\":\"}\",\"after\":\"]\"}}],\"all_other_bytes_tokens_identical\":true}\n",
+      "stderr": ""
+    },
+    {
+      "case": "comment_change",
+      "expected_accept": false,
+      "exit": 255,
+      "passed": true,
+      "stdout": "\nFatal error: Uncaught RuntimeException: Non-bracket token change in /audit/tools/verify-tokens.php:7\nStack trace:\n#0 /audit/tools/verify-tokens.php(42): failCheck('Non-bracket tok...')\n#1 {main}\n  thrown in /audit/tools/verify-tokens.php on line 7\n",
+      "stderr": ""
+    },
+    {
+      "case": "string_change",
+      "expected_accept": false,
+      "exit": 255,
+      "passed": true,
+      "stdout": "\nFatal error: Uncaught RuntimeException: Non-bracket token change in /audit/tools/verify-tokens.php:7\nStack trace:\n#0 /audit/tools/verify-tokens.php(42): failCheck('Non-bracket tok...')\n#1 {main}\n  thrown in /audit/tools/verify-tokens.php on line 7\n",
+      "stderr": ""
+    },
+    {
+      "case": "control_block_change",
+      "expected_accept": false,
+      "exit": 255,
+      "passed": true,
+      "stdout": "\nFatal error: Uncaught RuntimeException: Changed open not reported by targeted sniff in /audit/tools/verify-tokens.php:7\nStack trace:\n#0 /audit/tools/verify-tokens.php(50): failCheck('Changed open no...')\n#1 {main}\n  thrown in /audit/tools/verify-tokens.php on line 7\n",
+      "stderr": ""
+    },
+    {
+      "case": "no_changes",
+      "expected_accept": false,
+      "exit": 255,
+      "passed": true,
+      "stdout": "\nFatal error: Uncaught RuntimeException: Unpaired/uncovered/no changes in /audit/tools/verify-tokens.php:7\nStack trace:\n#0 /audit/tools/verify-tokens.php(56): failCheck('Unpaired/uncove...')\n#1 {main}\n  thrown in /audit/tools/verify-tokens.php on line 7\n",
+      "stderr": ""
+    },
+    {
+      "case": "closing_only",
+      "expected_accept": false,
+      "exit": 255,
+      "passed": true,
+      "stdout": "\nFatal error: Uncaught RuntimeException: Unpaired/uncovered/no changes in /audit/tools/verify-tokens.php:7\nStack trace:\n#0 /audit/tools/verify-tokens.php(56): failCheck('Unpaired/uncove...')\n#1 {main}\n  thrown in /audit/tools/verify-tokens.php on line 7\n",
+      "stderr": ""
+    },
+    {
+      "case": "other_code_change",
+      "expected_accept": false,
+      "exit": 255,
+      "passed": true,
+      "stdout": "\nFatal error: Uncaught RuntimeException: Non-bracket token change in /audit/tools/verify-tokens.php:7\nStack trace:\n#0 /audit/tools/verify-tokens.php(42): failCheck('Non-bracket tok...')\n#1 {main}\n  thrown in /audit/tools/verify-tokens.php on line 7\n",
+      "stderr": ""
+    },
+    {
+      "case": "wrong_sniff",
+      "expected_accept": false,
+      "exit": 255,
+      "passed": true,
+      "stdout": "\nFatal error: Uncaught RuntimeException: Unexpected PHPCS finding in /audit/tools/verify-tokens.php:7\nStack trace:\n#0 /audit/tools/verify-tokens.php(25): failCheck('Unexpected PHPC...')\n#1 {main}\n  thrown in /audit/tools/verify-tokens.php on line 7\n",
+      "stderr": ""
+    },
+    {
+      "case": "wrong_position",
+      "expected_accept": false,
+      "exit": 255,
+      "passed": true,
+      "stdout": "\nFatal error: Uncaught RuntimeException: Changed open not reported by targeted sniff in /audit/tools/verify-tokens.php:7\nStack trace:\n#0 /audit/tools/verify-tokens.php(50): failCheck('Changed open no...')\n#1 {main}\n  thrown in /audit/tools/verify-tokens.php on line 7\n",
+      "stderr": ""
+    },
+    {
+      "case": "interpolation_change",
+      "expected_accept": false,
+      "exit": 255,
+      "passed": true,
+      "stdout": "\nFatal error: Uncaught RuntimeException: Non-bracket token change in /audit/tools/verify-tokens.php:7\nStack trace:\n#0 /audit/tools/verify-tokens.php(42): failCheck('Non-bracket tok...')\n#1 {main}\n  thrown in /audit/tools/verify-tokens.php on line 7\n",
+      "stderr": ""
+    }
+  ],
+  "passed": true,
+  "synthetic_only": true
+}

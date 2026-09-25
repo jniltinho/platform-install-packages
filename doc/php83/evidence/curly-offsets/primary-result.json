@@ -1,0 +1,36 @@
+{
+  "executor": "Codex delegated curly-offset batch",
+  "independent_execution": "Coordinator-owned subsequent CLI runs; not asserted here",
+  "files": 43,
+  "offset_pairs": 153,
+  "changed_bytes": 306,
+  "phpcs_messages": 155,
+  "analyzer_files": 767,
+  "analyzer_identity_unchanged": true,
+  "original83_compile_exits": [
+    255
+  ],
+  "candidate83_compile_exits": [
+    0
+  ],
+  "native_controls": {
+    "cases": 11,
+    "pass": true
+  },
+  "local_tests": {
+    "byte_policy": 15,
+    "behavior_harness": 8,
+    "total": 23,
+    "exit": 0
+  },
+  "strict_replay_exit": 0,
+  "runtime_identity_limitation": "Module/library snapshot collected after initial run, before independently coordinated rerun; not retrospective proof.",
+  "identities": {
+    "patches/php83/held/curly-offsets/manifest.json": "278a22c91d80f2fdab78da1bc65c0b4038506c8643ea836ee71ad524ce1ae2a7",
+    "doc/php83/evidence/curly-offsets/primary-lab.json": "6d6ba34fb9ebd5250573a271b04609b2d0e09206cac206c45db09e4ebae5c964",
+    "doc/php83/evidence/curly-offsets/primary-frozen-tools-r2.sha256": "087a7229282ffabbdad2ee01405679428fda88841be6f3972a0ee6d9a7221a4c",
+    "doc/php83/evidence/curly-offsets/primary-runtime-before-independent.json": "62d79f998cfe5e209a52cace8797e05e02750b9a3d501d7e2eb2212de9cd45e8"
+  },
+  "held_only": true,
+  "application_acceptance": false
+}

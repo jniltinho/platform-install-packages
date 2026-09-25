@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "parsed_reports_identical": true,
+  "byte_reports_identical": true,
+  "files": 43,
+  "compile_processes": 86,
+  "native_token_processes": 43,
+  "application_acceptance": false,
+  "inputs": {
+    "compiler74-primary-r2.json": "7a6879502989648cd51d3fcc05a946d388a202b013d62618dda6cf97c42944eb",
+    "compiler74-cursor.json": "7a6879502989648cd51d3fcc05a946d388a202b013d62618dda6cf97c42944eb",
+    "compiler74-command-r2.json": "a9ad5bcdfae26c15906192452353290c81184dba5f348ec5bbdc164987d9d325"
+  },
+  "harness_sha256": "519570cebe0a07b7c6e750f9feaa485a7362aa1e994503d6206da0e0772eab8a"
+}

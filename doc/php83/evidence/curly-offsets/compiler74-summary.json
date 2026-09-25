@@ -1,0 +1,47 @@
+{
+  "schema": 1,
+  "primary_report": "doc/php83/evidence/curly-offsets/compiler74-primary-r2.json",
+  "report_sha256": "7a6879502989648cd51d3fcc05a946d388a202b013d62618dda6cf97c42944eb",
+  "exit": 0,
+  "repeat_command_file": "doc/php83/evidence/curly-offsets/compiler74-command-r2.json",
+  "stage_identity_sha256": "88391be85bb3a18b81cc991947035ce42ea138e7d0b4b451e699d1c9f0ce32a0",
+  "summary": {
+    "original": {
+      "files": 43,
+      "accepted": 43,
+      "rejected": 0,
+      "incomplete": 0
+    },
+    "candidate": {
+      "files": 43,
+      "accepted": 43,
+      "rejected": 0,
+      "incomplete": 0
+    }
+  },
+  "token_proofs_passed": 43,
+  "offset_pairs": 153,
+  "changed_bytes": 306,
+  "source_compile_processes": 86,
+  "native_tokenizer_processes": 43,
+  "diagnostic_files": {
+    "original": 43,
+    "candidate": 1
+  },
+  "candidate_remaining_diagnostics": [
+    {
+      "path": "vendor/symfony/vendor/pake/pakeYaml.class.php",
+      "exit": 0,
+      "stderr": "Deprecated: Methods with the same name as their class will not be constructors in a future version of PHP; pakeYAMLNode has a deprecated constructor in /audit/curly74/candidate/vendor/symfony/vendor/pake/pakeYaml.class.php on line 54\n"
+    }
+  ],
+  "collection_complete": true,
+  "compiler_and_token_checks_passed": true,
+  "application_acceptance": false,
+  "limitations": [
+    "php -l does not execute source bodies or establish runtime acceptance.",
+    "Token proof is paired within PHP7.4; token numeric IDs/counts need not match across PHP versions.",
+    "Candidate retains old-style pakeYAMLNode constructor deprecation; no diagnostic waiver or suppression.",
+    "Compiler collector is a trusted staged-input test harness, not a general hostile archive sandbox."
+  ]
+}

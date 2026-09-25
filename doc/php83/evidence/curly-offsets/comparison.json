@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "compile_files": 43,
+  "offset_pairs": 153,
+  "native_control_cases": 11,
+  "behavior_processes": 9,
+  "behavior_rows": 204,
+  "lab_differing_fields": [
+    "fix_stdout",
+    "fix_stderr"
+  ],
+  "comparison_exclusions": [
+    "PHPCBF fix_stdout line-leading truncated temporary-path prefixes only",
+    "PHPCBF fix_stderr elapsed time, fixed validated shape",
+    "ldd hexadecimal ASLR addresses only"
+  ],
+  "inputs": {
+    "primary-lab.json": "6d6ba34fb9ebd5250573a271b04609b2d0e09206cac206c45db09e4ebae5c964",
+    "claude-lab.json": "ef16c57624c60002a00e6de021ffa2e535a409584af2c32f27d14d2a1d16927a",
+    "primary-token-controls.json": "87eb090d551f86047b0302d377646618434221d3c4d260f42fc5829c1a9600cd",
+    "claude-token-controls.json": "87eb090d551f86047b0302d377646618434221d3c4d260f42fc5829c1a9600cd",
+    "claude-runtime-before.json": "cbf1a1228197f1cefbdb62a862b18e98022aa2fedb4bb927ccea08488644bd07",
+    "claude-runtime-after.json": "14ae1c305386d8689658bfcfbc72c013625b11d3a06e30dd8d0d6f5bce122699",
+    "behavior-primary.json": "0b506f100680f0a5e02fa1af71ed34ffe7cbd16a85c50375010dae63c5b64991",
+    "behavior-claude.json": "0b506f100680f0a5e02fa1af71ed34ffe7cbd16a85c50375010dae63c5b64991",
+    "primary-frozen-tools-r2.sha256": "087a7229282ffabbdad2ee01405679428fda88841be6f3972a0ee6d9a7221a4c"
+  },
+  "comparison_tool_sha256": "e2151be076d6be9703513834bb7bf6eb932e0b82c4568b890d4483309076ae60",
+  "application_acceptance": false
+}

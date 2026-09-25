@@ -1,0 +1,11 @@
+--- a/vendor/symfony/vendor/phing/system/util/Properties.php
++++ b/vendor/symfony/vendor/phing/system/util/Properties.php
+@@ -81,7 +81,7 @@
+             if($line == "")
+                 continue;
+                     
+-            if ($line{0} == '#' or $line{0} == ';') {
++            if ($line[0] == '#' or $line[0] == ';') {
+                 // it's a comment, so continue to next line
+                 continue;
+             } else {

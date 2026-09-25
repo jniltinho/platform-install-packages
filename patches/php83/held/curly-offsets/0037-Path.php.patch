@@ -1,0 +1,13 @@
+--- a/vendor/symfony/vendor/phing/types/Path.php
++++ b/vendor/symfony/vendor/phing/types/Path.php
+@@ -355,8 +355,8 @@
+      * replacements.  
+      */
+     protected static function translateFileSep(&$buffer, $pos) {
+-        if ($buffer{$pos} == '/' || $buffer{$pos} == '\\') {
+-            $buffer{$pos} = DIRECTORY_SEPARATOR;
++        if ($buffer[$pos] == '/' || $buffer[$pos] == '\\') {
++            $buffer[$pos] = DIRECTORY_SEPARATOR;
+             return true;
+         }
+         return false;

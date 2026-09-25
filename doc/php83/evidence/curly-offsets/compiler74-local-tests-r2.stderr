@@ -1,0 +1,11 @@
+test_absolute (__main__.Controls.test_absolute) ... ok
+test_extra_file (__main__.Controls.test_extra_file) ... ok
+test_symlink (__main__.Controls.test_symlink) ... ok
+test_traversal (__main__.Controls.test_traversal) ... ok
+test_valid (__main__.Controls.test_valid) ... ok
+test_wrong_hash (__main__.Controls.test_wrong_hash) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.001s
+
+OK

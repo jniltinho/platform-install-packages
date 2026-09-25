@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "base_commit": "ea69091c",
+  "status": "bounded_held_batch_passed",
+  "patch_files": 43,
+  "offset_pairs": 153,
+  "changed_bytes": 306,
+  "php83_original_rejections": 43,
+  "php83_candidate_accepted": 43,
+  "php74_compiler_processes": 86,
+  "php74_token_processes": 43,
+  "behavior_source_files": 3,
+  "behavior_processes": 9,
+  "behavior_rows": 204,
+  "local_purity_behavior_tests": 23,
+  "local_compiler74_guard_tests": 6,
+  "existing_root_harness_tests": 146,
+  "actual_executors": {
+    "Claude": "fresh43PHPCBF/native11/behavior204/23local plus review",
+    "Cursor": "86PHP74compiler/43native/6local guards; first8behaviorvalidator+shell; review",
+    "Grok": "timeout124,not PASS",
+    "OpenCode": "opencode/muse-spark-1.3-contributor-free;23localtests+independent43filebyteaudit and review"
+  },
+  "harness_sha256": {
+    "tools/php83/curly-offsets/compile74.py": "519570cebe0a07b7c6e750f9feaa485a7362aa1e994503d6206da0e0772eab8a",
+    "tools/php83/curly-offsets/compare.py": "e2151be076d6be9703513834bb7bf6eb932e0b82c4568b890d4483309076ae60",
+    "tools/php83/curly-offsets/collect.py": "23348881516b35800ca359e2b2fd6a667c375a0dcb8eb0904eb3fb4256fa5b7c",
+    "tools/php83/curly-offsets/probe.php": "7cd251fd9120fa86b4a1e4b2f2bdc9705da78db76ea158dda2b5c42068448a8a",
+    "tools/php83/curly-offsets/run.sh": "90cb022a082e49133797937157ee18f29ad87dfcd5f5f21cdef8bb5d26945278",
+    "tools/php83/curly-offsets/build-lab.py": "0ee4932d1075b8522846438d6a604c5ba4f7d223c9f1b5335fb6bfcc457752ab",
+    "tools/php83/curly-offsets/build-patches.py": "921747436e22c6a6b143247b03f26c998be5a06ecccaad3b759deeaa5fdf3191",
+    "tools/php83/curly-offsets/verify-bytes.py": "601ec75bc28d6a2cf17555b8c877323eba817cf413ef5a009bb83e26ce23b626",
+    "tools/php83/curly-offsets/verify-tokens.php": "3cb9ed34801e56f0d7e74391ab6847bc907b7248c5ecc94e69b5fb688d3845da"
+  },
+  "held_manifest_sha256": "278a22c91d80f2fdab78da1bc65c0b4038506c8643ea836ee71ad524ce1ae2a7",
+  "application_acceptance": false,
+  "experimental_zip_integrated": false,
+  "original_acceptance_completed": 0,
+  "original_acceptance_total": 24,
+  "detailed_completed": 3,
+  "detailed_total": 27,
+  "remaining": [
+    "40sourcefileswithoutrepresentativebehaviorcoverage",
+    "fullmethod/caller/bootstrapbehavior",
+    "Googlemultibyteoverreadretaineddefect",
+    "pakeoldstyleconstructordeprecationretained",
+    "noncurlycompiler/runtimefindings",
+    "integrationandallaggregateacceptancegates"
+  ]
+}

@@ -1,0 +1,9 @@
+0ee4932d1075b8522846438d6a604c5ba4f7d223c9f1b5335fb6bfcc457752ab  tools/php83/curly-offsets/build-lab.py
+921747436e22c6a6b143247b03f26c998be5a06ecccaad3b759deeaa5fdf3191  tools/php83/curly-offsets/build-patches.py
+1fcbd61cb363a247a49dea8938ac50d2fcda1d63bd21650c3988910c885fe451  tools/php83/curly-offsets/build-run.sh
+e61f690cc7b85ccfc9ccefce5d3ae6e9b4d41eb49d1495c1a097342fe5c7f1d8  tools/php83/curly-offsets/build-stage.py
+86f7e6dcb3dce174bf9cbb292703d685061364ce945ccdd3bd9319030c64656c  tools/php83/curly-offsets/test_byte_proof.py
+601ec75bc28d6a2cf17555b8c877323eba817cf413ef5a009bb83e26ce23b626  tools/php83/curly-offsets/verify-bytes.py
+755fde02780d9a423292660e35e552d401452451ad0db8ccaeb35007efafaff4  tools/php83/curly-offsets/verify-controls.py
+d8a3f230d1fff12cfc69b30b9941ba54bf5653e65a293b7b55ebc7cd7e699222  tools/php83/curly-offsets/verify-runtime.py
+3cb9ed34801e56f0d7e74391ab6847bc907b7248c5ecc94e69b5fb688d3845da  tools/php83/curly-offsets/verify-tokens.php
