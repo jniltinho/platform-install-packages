@@ -1,0 +1,250 @@
+{
+  "php": "PHP 8.3.6 (cli) (built: Sep  2 2026 12:56:02) (NTS)",
+  "modules": [
+    "[PHP Modules]",
+    "apcu",
+    "calendar",
+    "Core",
+    "ctype",
+    "curl",
+    "date",
+    "dom",
+    "exif",
+    "FFI",
+    "fileinfo",
+    "filter",
+    "ftp",
+    "gd",
+    "gettext",
+    "gmp",
+    "hash",
+    "iconv",
+    "intl",
+    "json",
+    "ldap",
+    "libxml",
+    "mbstring",
+    "memcache",
+    "mysqli",
+    "mysqlnd",
+    "openssl",
+    "pcntl",
+    "pcre",
+    "PDO",
+    "pdo_mysql",
+    "Phar",
+    "posix",
+    "random",
+    "readline",
+    "Reflection",
+    "session",
+    "shmop",
+    "SimpleXML",
+    "sockets",
+    "sodium",
+    "SPL",
+    "ssh2",
+    "standard",
+    "sysvmsg",
+    "sysvsem",
+    "sysvshm",
+    "tokenizer",
+    "xml",
+    "xmlreader",
+    "xmlwriter",
+    "xsl",
+    "Zend OPcache",
+    "zip",
+    "zlib",
+    "",
+    "[Zend Modules]",
+    "Zend OPcache",
+    ""
+  ],
+  "ini_files": [
+    "Configuration File (php.ini) Path: /etc/php/8.3/cli",
+    "Loaded Configuration File:         /etc/php/8.3/cli/php.ini",
+    "Scan for additional .ini files in: /etc/php/8.3/cli/conf.d",
+    "Additional .ini files parsed:      /etc/php/8.3/cli/conf.d/10-mysqlnd.ini,",
+    "/etc/php/8.3/cli/conf.d/10-opcache.ini,",
+    "/etc/php/8.3/cli/conf.d/10-pdo.ini,",
+    "/etc/php/8.3/cli/conf.d/15-xml.ini,",
+    "/etc/php/8.3/cli/conf.d/20-apcu.ini,",
+    "/etc/php/8.3/cli/conf.d/20-calendar.ini,",
+    "/etc/php/8.3/cli/conf.d/20-ctype.ini,",
+    "/etc/php/8.3/cli/conf.d/20-curl.ini,",
+    "/etc/php/8.3/cli/conf.d/20-dom.ini,",
+    "/etc/php/8.3/cli/conf.d/20-exif.ini,",
+    "/etc/php/8.3/cli/conf.d/20-ffi.ini,",
+    "/etc/php/8.3/cli/conf.d/20-fileinfo.ini,",
+    "/etc/php/8.3/cli/conf.d/20-ftp.ini,",
+    "/etc/php/8.3/cli/conf.d/20-gd.ini,",
+    "/etc/php/8.3/cli/conf.d/20-gettext.ini,",
+    "/etc/php/8.3/cli/conf.d/20-gmp.ini,",
+    "/etc/php/8.3/cli/conf.d/20-iconv.ini,",
+    "/etc/php/8.3/cli/conf.d/20-intl.ini,",
+    "/etc/php/8.3/cli/conf.d/20-ldap.ini,",
+    "/etc/php/8.3/cli/conf.d/20-mbstring.ini,",
+    "/etc/php/8.3/cli/conf.d/20-memcache.ini,",
+    "/etc/php/8.3/cli/conf.d/20-mysqli.ini,",
+    "/etc/php/8.3/cli/conf.d/20-pdo_mysql.ini,",
+    "/etc/php/8.3/cli/conf.d/20-phar.ini,",
+    "/etc/php/8.3/cli/conf.d/20-posix.ini,",
+    "/etc/php/8.3/cli/conf.d/20-readline.ini,",
+    "/etc/php/8.3/cli/conf.d/20-shmop.ini,",
+    "/etc/php/8.3/cli/conf.d/20-simplexml.ini,",
+    "/etc/php/8.3/cli/conf.d/20-sockets.ini,",
+    "/etc/php/8.3/cli/conf.d/20-ssh2.ini,",
+    "/etc/php/8.3/cli/conf.d/20-sysvmsg.ini,",
+    "/etc/php/8.3/cli/conf.d/20-sysvsem.ini,",
+    "/etc/php/8.3/cli/conf.d/20-sysvshm.ini,",
+    "/etc/php/8.3/cli/conf.d/20-tokenizer.ini,",
+    "/etc/php/8.3/cli/conf.d/20-xmlreader.ini,",
+    "/etc/php/8.3/cli/conf.d/20-xmlwriter.ini,",
+    "/etc/php/8.3/cli/conf.d/20-xsl.ini,",
+    "/etc/php/8.3/cli/conf.d/20-zip.ini",
+    ""
+  ],
+  "php_flags": [
+    "-d",
+    "allow_url_fopen=0",
+    "-d",
+    "allow_url_include=0",
+    "-d",
+    "opcache.enable_cli=0",
+    "-d",
+    "date.timezone=UTC",
+    "-d",
+    "log_errors=0"
+  ],
+  "wrapper_sha256": "452466d5d0dc908948f0fb4d77ebb2c120afa0ffb6014d51b3f113bbe16a537a",
+  "probe_sha256": "df9e307f7e244961be0edeea2b8af4710a8b25297a198e0c0b278a247351132c",
+  "runner_sha256": "06de9a0258189cc56329f20177f6b095b477661ea6c545139d2b309a6cb8fdcb",
+  "scope": "Fixed unpatched library probes; no full application reachability claim",
+  "summary": {
+    "total": 15,
+    "passed_output": 10,
+    "failed_or_incomplete": 5
+  },
+  "results": [
+    {
+      "probe": "zend_application",
+      "returncode": 0,
+      "stdout": "testing\n\nAUDIT_INCLUDED={\"vendor\\/ZendFramework\\/library\\/Zend\\/Application.php\":\"e2712c77de3b94c4af1e87142a25a346655ecab34456f80b9c244079f196bec9\",\"vendor\\/ZendFramework\\/library\\/Zend\\/Loader.php\":\"8b6ee15ac1e9360ed26725e55096a020b1d03c4fbf3b07e7d847d5415ed0ee26\",\"vendor\\/ZendFramework\\/library\\/Zend\\/Loader\\/Autoloader.php\":\"051b1c5afd5bce11362aa38bf43d1e42daf817b6d18eebf37f48a3b27fe298cd\"}\n",
+      "stderr": "",
+      "expected_output_matches": true
+    },
+    {
+      "probe": "zend_registry",
+      "returncode": 255,
+      "stdout": "\nAUDIT_INCLUDED={\"vendor\\/ZendFramework\\/library\\/Zend\\/Registry.php\":\"304ba8242c81790f11dadcf7a39e63b7047f8ea33fc3de03b748cab70397b48d\"}\n",
+      "stderr": "Deprecated: Return type of Zend_Registry::offsetExists($index) should either be compatible with ArrayObject::offsetExists(mixed $key): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in <public-app>/vendor/ZendFramework/library/Zend/Registry.php on line 204\nFatal error: Uncaught TypeError: array_key_exists(): Argument #2 ($array) must be of type array, Zend_Registry given in <public-app>/vendor/ZendFramework/library/Zend/Registry.php:206\nStack trace:\n#0 <public-app>/vendor/ZendFramework/library/Zend/Registry.php(145): Zend_Registry->offsetExists()\n#1 /audit/tools/runtime-probes.php(32): Zend_Registry::get()\n#2 {main}\n  thrown in <public-app>/vendor/ZendFramework/library/Zend/Registry.php on line 206\n",
+      "expected_output_matches": false
+    },
+    {
+      "probe": "zend_config",
+      "returncode": 0,
+      "stdout": "ok\n\nAUDIT_INCLUDED={\"vendor\\/ZendFramework\\/library\\/Zend\\/Config.php\":\"065597c625046207683d14682bffcdbfd0aed862ad456a3dbefcf9b538e97a2f\"}\n",
+      "stderr": "Deprecated: Return type of Zend_Config::count() should either be compatible with Countable::count(): int, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in <public-app>/vendor/ZendFramework/library/Zend/Config.php on line 248\nDeprecated: Return type of Zend_Config::current() should either be compatible with Iterator::current(): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in <public-app>/vendor/ZendFramework/library/Zend/Config.php on line 258\nDeprecated: Return type of Zend_Config::next() should either be compatible with Iterator::next(): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in <public-app>/vendor/ZendFramework/library/Zend/Config.php on line 278\nDeprecated: Return type of Zend_Config::key() should either be compatible with Iterator::key(): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in <public-app>/vendor/ZendFramework/library/Zend/Config.php on line 269\nDeprecated: Return type of Zend_Config::valid() should either be compatible with Iterator::valid(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in <public-app>/vendor/ZendFramework/library/Zend/Config.php on line 304\nDeprecated: Return type of Zend_Config::rewind() should either be compatible with Iterator::rewind(): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in <public-app>/vendor/ZendFramework/library/Zend/Config.php on line 292\n",
+      "expected_output_matches": true
+    },
+    {
+      "probe": "propel_load",
+      "returncode": 0,
+      "stdout": "1.4.2\nPDO subclass loaded\n\nAUDIT_INCLUDED={\"vendor\\/propel\\/Propel.php\":\"e1f93581bcf1a6467c0b2cb7740e6af8777265810cd08802b549f8f8934d9f2d\",\"vendor\\/propel\\/util\\/PropelPDO.php\":\"9e4f602f50bc24432107f34a2f3b4a995518fe28c46be9dc8f642dbb9ca74d22\"}\n",
+      "stderr": "Deprecated: Return type of PropelPDO::beginTransaction() should either be compatible with PDO::beginTransaction(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in <public-app>/vendor/propel/util/PropelPDO.php on line 123\nDeprecated: Return type of PropelPDO::commit() should either be compatible with PDO::commit(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in <public-app>/vendor/propel/util/PropelPDO.php on line 139\nDeprecated: Return type of PropelPDO::getAttribute($attribute) should either be compatible with PDO::getAttribute(int $attribute): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in <public-app>/vendor/propel/util/PropelPDO.php on line 225\nDeprecated: Return type of PropelPDO::prepare($sql, $driver_options = []) should either be compatible with PDO::prepare(string $query, array $options = []): PDOStatement|false, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in <public-app>/vendor/propel/util/PropelPDO.php on line 244\nDeprecated: Return type of PropelPDO::rollBack() should either be compatible with PDO::rollBack(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in <public-app>/vendor/propel/util/PropelPDO.php on line 161\nDeprecated: Return type of PropelPDO::setAttribute($attribute, $value) should either be compatible with PDO::setAttribute(int $attribute, mixed $value): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in <public-app>/vendor/propel/util/PropelPDO.php on line 206\n",
+      "expected_output_matches": true
+    },
+    {
+      "probe": "legacy_json",
+      "returncode": 255,
+      "stdout": "\nAUDIT_INCLUDED={\"alpha\\/apps\\/kaltura\\/lib\\/Services_JSON.class.php\":\"6b83716ffb5a10a641293508a58443e3117f24613da4be0c7b038e1cc0851aa9\"}\n",
+      "stderr": "Fatal error: Array and string offset access syntax with curly braces is no longer supported in <public-app>/alpha/apps/kaltura/lib/Services_JSON.class.php on line 176\n",
+      "expected_output_matches": false
+    },
+    {
+      "probe": "zend_json_default",
+      "returncode": 0,
+      "stdout": "{\"synthetic\":true}\n{\"synthetic\":true}\n\nAUDIT_INCLUDED={\"vendor\\/ZendFramework\\/library\\/Zend\\/Json.php\":\"e9139ee5ad331bd639fa8d2b04781775414c92ffc123a3c2cb6bc26c4f06bd45\",\"vendor\\/ZendFramework\\/library\\/Zend\\/Json\\/Expr.php\":\"c6d50cb3656164393162d6ed54f56d0861e36937ae113cbf5f9481eb964288d9\"}\n",
+      "stderr": "",
+      "expected_output_matches": true
+    },
+    {
+      "probe": "zend_json_fallback_encode",
+      "returncode": 255,
+      "stdout": "\nAUDIT_INCLUDED={\"vendor\\/ZendFramework\\/library\\/Zend\\/Json.php\":\"e9139ee5ad331bd639fa8d2b04781775414c92ffc123a3c2cb6bc26c4f06bd45\",\"vendor\\/ZendFramework\\/library\\/Zend\\/Json\\/Encoder.php\":\"7af0946f20f81f7cbef204f9cdb907d9c52407fa7e4797bd613d12f778baf720\",\"vendor\\/ZendFramework\\/library\\/Zend\\/Json\\/Expr.php\":\"c6d50cb3656164393162d6ed54f56d0861e36937ae113cbf5f9481eb964288d9\"}\n",
+      "stderr": "Fatal error: Array and string offset access syntax with curly braces is no longer supported in <public-app>/vendor/ZendFramework/library/Zend/Json/Encoder.php on line 557\n",
+      "expected_output_matches": false
+    },
+    {
+      "probe": "zend_json_fallback_decode",
+      "returncode": 255,
+      "stdout": "\nAUDIT_INCLUDED={\"vendor\\/ZendFramework\\/library\\/Zend\\/Json.php\":\"e9139ee5ad331bd639fa8d2b04781775414c92ffc123a3c2cb6bc26c4f06bd45\",\"vendor\\/ZendFramework\\/library\\/Zend\\/Json\\/Decoder.php\":\"7336a0a91cdb2da465642e3322d77cae04f788c6b3e937cd2e1cbd4aff0aa996\",\"vendor\\/ZendFramework\\/library\\/Zend\\/Json\\/Expr.php\":\"c6d50cb3656164393162d6ed54f56d0861e36937ae113cbf5f9481eb964288d9\"}\n",
+      "stderr": "Fatal error: Array and string offset access syntax with curly braces is no longer supported in <public-app>/vendor/ZendFramework/library/Zend/Json/Decoder.php on line 324\n",
+      "expected_output_matches": false
+    },
+    {
+      "probe": "propel_DebugPDO",
+      "returncode": 255,
+      "stdout": "\nAUDIT_INCLUDED={\"vendor\\/propel\\/Propel.php\":\"e1f93581bcf1a6467c0b2cb7740e6af8777265810cd08802b549f8f8934d9f2d\",\"vendor\\/propel\\/util\\/DebugPDO.php\":\"6178d39fd2c11c2bd2dcc220c4234f72dfb11364c11d381e7f7bfaf55089e021\",\"vendor\\/propel\\/util\\/PropelPDO.php\":\"9e4f602f50bc24432107f34a2f3b4a995518fe28c46be9dc8f642dbb9ca74d22\"}\n",
+      "stderr": "Deprecated: Return type of PropelPDO::beginTransaction() should either be compatible with PDO::beginTransaction(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in <public-app>/vendor/propel/util/PropelPDO.php on line 123\nDeprecated: Return type of PropelPDO::commit() should either be compatible with PDO::commit(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in <public-app>/vendor/propel/util/PropelPDO.php on line 139\nDeprecated: Return type of PropelPDO::getAttribute($attribute) should either be compatible with PDO::getAttribute(int $attribute): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in <public-app>/vendor/propel/util/PropelPDO.php on line 225\nDeprecated: Return type of PropelPDO::prepare($sql, $driver_options = []) should either be compatible with PDO::prepare(string $query, array $options = []): PDOStatement|false, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in <public-app>/vendor/propel/util/PropelPDO.php on line 244\nDeprecated: Return type of PropelPDO::rollBack() should either be compatible with PDO::rollBack(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in <public-app>/vendor/propel/util/PropelPDO.php on line 161\nDeprecated: Return type of PropelPDO::setAttribute($attribute, $value) should either be compatible with PDO::setAttribute(int $attribute, mixed $value): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in <public-app>/vendor/propel/util/PropelPDO.php on line 206\nDeprecated: Return type of DebugPDO::exec($sql) should either be compatible with PDO::exec(string $statement): int|false, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in <public-app>/vendor/propel/util/DebugPDO.php on line 309\nFatal error: Declaration of DebugPDO::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs): PDOStatement|false in <public-app>/vendor/propel/util/DebugPDO.php on line 330\n",
+      "expected_output_matches": false
+    },
+    {
+      "probe": "propel_DebugPDOStatement",
+      "returncode": 0,
+      "stdout": "DebugPDOStatement loaded\n\nAUDIT_INCLUDED={\"vendor\\/propel\\/Propel.php\":\"e1f93581bcf1a6467c0b2cb7740e6af8777265810cd08802b549f8f8934d9f2d\",\"vendor\\/propel\\/util\\/DebugPDOStatement.php\":\"d25d3149afefa3a3b4e0f451869d2103adace575cc4445078c77dad6e1e68239\"}\n",
+      "stderr": "Deprecated: Return type of DebugPDOStatement::bindValue($pos, $value, $type = PDO::PARAM_STR) should either be compatible with PDOStatement::bindValue(string|int $param, mixed $value, int $type = PDO::PARAM_STR): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in <public-app>/vendor/propel/util/DebugPDOStatement.php on line 119\nDeprecated: Return type of DebugPDOStatement::execute($input_parameters = null) should either be compatible with PDOStatement::execute(?array $params = null): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in <public-app>/vendor/propel/util/DebugPDOStatement.php on line 97\n",
+      "expected_output_matches": true
+    },
+    {
+      "probe": "propel_PropelConfigurationIterator",
+      "returncode": 0,
+      "stdout": "PropelConfigurationIterator loaded\n\nAUDIT_INCLUDED={\"vendor\\/propel\\/Propel.php\":\"e1f93581bcf1a6467c0b2cb7740e6af8777265810cd08802b549f8f8934d9f2d\",\"vendor\\/propel\\/util\\/PropelConfigurationIterator.php\":\"c78f286f369f54cebd2a36b4f659447d8dde4855a7e66b972355b5bd0cae6229\"}\n",
+      "stderr": "Deprecated: Return type of PropelConfigurationIterator::current() should either be compatible with RecursiveIteratorIterator::current(): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in <public-app>/vendor/propel/util/PropelConfigurationIterator.php on line 86\nDeprecated: Return type of PropelConfigurationIterator::endChildren() should either be compatible with RecursiveIteratorIterator::endChildren(): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in <public-app>/vendor/propel/util/PropelConfigurationIterator.php on line 105\n",
+      "expected_output_matches": true
+    },
+    {
+      "probe": "propel_Criteria",
+      "returncode": 0,
+      "stdout": "Criteria loaded\n\nAUDIT_INCLUDED={\"vendor\\/propel\\/Propel.php\":\"e1f93581bcf1a6467c0b2cb7740e6af8777265810cd08802b549f8f8934d9f2d\",\"vendor\\/propel\\/util\\/Criteria.php\":\"0626bb5b976ae7eedccaf5060675cd7c7ca56b22fc2c9d6c1a51ce485a303543\"}\n",
+      "stderr": "Deprecated: Return type of Criteria::getIterator() should either be compatible with IteratorAggregate::getIterator(): Traversable, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in <public-app>/vendor/propel/util/Criteria.php on line 193\nDeprecated: Return type of CriterionIterator::current() should either be compatible with Iterator::current(): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in <public-app>/vendor/propel/util/Criteria.php on line 1271\nDeprecated: Return type of CriterionIterator::next() should either be compatible with Iterator::next(): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in <public-app>/vendor/propel/util/Criteria.php on line 1275\nDeprecated: Return type of CriterionIterator::key() should either be compatible with Iterator::key(): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in <public-app>/vendor/propel/util/Criteria.php on line 1267\nDeprecated: Return type of CriterionIterator::valid() should either be compatible with Iterator::valid(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in <public-app>/vendor/propel/util/Criteria.php on line 1263\nDeprecated: Return type of CriterionIterator::rewind() should either be compatible with Iterator::rewind(): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in <public-app>/vendor/propel/util/Criteria.php on line 1259\n",
+      "expected_output_matches": true
+    },
+    {
+      "probe": "propel_BasePeer",
+      "returncode": 0,
+      "stdout": "BasePeer loaded\n\nAUDIT_INCLUDED={\"vendor\\/propel\\/Propel.php\":\"e1f93581bcf1a6467c0b2cb7740e6af8777265810cd08802b549f8f8934d9f2d\",\"vendor\\/propel\\/util\\/BasePeer.php\":\"fcf184d451bd49d19801115ed6564106bb074972668875dadfa9f5f0bbdece93\"}\n",
+      "stderr": "",
+      "expected_output_matches": true
+    },
+    {
+      "probe": "propel_BaseObject",
+      "returncode": 0,
+      "stdout": "BaseObject loaded\n\nAUDIT_INCLUDED={\"vendor\\/propel\\/Propel.php\":\"e1f93581bcf1a6467c0b2cb7740e6af8777265810cd08802b549f8f8934d9f2d\",\"vendor\\/propel\\/om\\/BaseObject.php\":\"4e07ae2f83189a14f9eca9b4916f25e3bcdaa1822ceb36797962b29b8a6dc686\"}\n",
+      "stderr": "",
+      "expected_output_matches": true
+    },
+    {
+      "probe": "propel_PropelPager",
+      "returncode": 0,
+      "stdout": "PropelPager loaded\n\nAUDIT_INCLUDED={\"vendor\\/propel\\/Propel.php\":\"e1f93581bcf1a6467c0b2cb7740e6af8777265810cd08802b549f8f8934d9f2d\",\"vendor\\/propel\\/util\\/PropelPager.php\":\"9cbab28301a5e05f1109a0285e319c1646089435c0905383d238ad8ba79b98a0\"}\n",
+      "stderr": "Deprecated: Return type of PropelPager::count() should either be compatible with Countable::count(): int, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in <public-app>/vendor/propel/util/PropelPager.php on line 551\nDeprecated: Return type of PropelPager::current() should either be compatible with Iterator::current(): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in <public-app>/vendor/propel/util/PropelPager.php on line 560\nDeprecated: Return type of PropelPager::next() should either be compatible with Iterator::next(): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in <public-app>/vendor/propel/util/PropelPager.php on line 581\nDeprecated: Return type of PropelPager::key() should either be compatible with Iterator::key(): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in <public-app>/vendor/propel/util/PropelPager.php on line 572\nDeprecated: Return type of PropelPager::valid() should either be compatible with Iterator::valid(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in <public-app>/vendor/propel/util/PropelPager.php on line 599\nDeprecated: Return type of PropelPager::rewind() should either be compatible with Iterator::rewind(): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in <public-app>/vendor/propel/util/PropelPager.php on line 590\n",
+      "expected_output_matches": true
+    }
+  ],
+  "sandbox_checks": {
+    "uid": 65534,
+    "payload_read_only": true,
+    "protected_directories": {
+      "/root": "denied",
+      "/home": "denied",
+      "/opt/kaltura": "absent"
+    },
+    "socket_families_denied": [
+      "AF_INET",
+      "AF_INET6",
+      "AF_UNIX"
+    ]
+  }
+}

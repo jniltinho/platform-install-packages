@@ -208,3 +208,18 @@ AppStream exposes PHP 8.3, but the partial listing did not include memcache/ssh2
 its exit-zero result is not a full dependency-resolution success. Full mandatory
 extension coverage, provider selection and unattended application acceptance
 remain pending. Existing packaging and workflows remain unchanged.
+
+## Expanded sandboxed library probes
+
+The [runtime triage ledger](runtime-triage.md) records 15 same-harness probes in
+both Noble labs. PHP 7.4 completed all 15; PHP 8.3 failed five. In addition to
+previous Registry/Services_JSON findings, forced Zend JSON fallback encoding and
+decoding fail, and Propel `DebugPDO::query()` has an incompatible declaration.
+Default Zend JSON encode/decode succeeds, demonstrating why fallback compiler
+failures cannot be generalized to every JSON call.
+
+Both runs verified non-root execution, a read-only payload, hidden protected
+paths and denied internet socket creation before executing PHP. No DB connection
+or configured application tree was used. Expanded reports preserve diagnostics,
+module lists, included public-file hashes and harness identities. No application
+patch, package change, `.20` action or task completion is implied.

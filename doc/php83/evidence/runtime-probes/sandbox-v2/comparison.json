@@ -1,0 +1,92 @@
+[
+  {
+    "probe": "zend_application",
+    "php74_exit": 0,
+    "php83_exit": 0,
+    "classification": "successful fixed probe; inspect diagnostics"
+  },
+  {
+    "probe": "zend_registry",
+    "php74_exit": 0,
+    "php83_exit": 255,
+    "classification": "new failing library probe"
+  },
+  {
+    "probe": "zend_config",
+    "php74_exit": 0,
+    "php83_exit": 0,
+    "classification": "successful fixed probe; inspect diagnostics"
+  },
+  {
+    "probe": "propel_load",
+    "php74_exit": 0,
+    "php83_exit": 0,
+    "classification": "successful fixed probe; inspect diagnostics"
+  },
+  {
+    "probe": "legacy_json",
+    "php74_exit": 0,
+    "php83_exit": 255,
+    "classification": "new failing library probe"
+  },
+  {
+    "probe": "zend_json_default",
+    "php74_exit": 0,
+    "php83_exit": 0,
+    "classification": "successful fixed probe; inspect diagnostics"
+  },
+  {
+    "probe": "zend_json_fallback_encode",
+    "php74_exit": 0,
+    "php83_exit": 255,
+    "classification": "new failing library probe"
+  },
+  {
+    "probe": "zend_json_fallback_decode",
+    "php74_exit": 0,
+    "php83_exit": 255,
+    "classification": "new failing library probe"
+  },
+  {
+    "probe": "propel_DebugPDO",
+    "php74_exit": 0,
+    "php83_exit": 255,
+    "classification": "new failing library probe"
+  },
+  {
+    "probe": "propel_DebugPDOStatement",
+    "php74_exit": 0,
+    "php83_exit": 0,
+    "classification": "successful fixed probe; inspect diagnostics"
+  },
+  {
+    "probe": "propel_PropelConfigurationIterator",
+    "php74_exit": 0,
+    "php83_exit": 0,
+    "classification": "successful fixed probe; inspect diagnostics"
+  },
+  {
+    "probe": "propel_Criteria",
+    "php74_exit": 0,
+    "php83_exit": 0,
+    "classification": "successful fixed probe; inspect diagnostics"
+  },
+  {
+    "probe": "propel_BasePeer",
+    "php74_exit": 0,
+    "php83_exit": 0,
+    "classification": "successful fixed probe; inspect diagnostics"
+  },
+  {
+    "probe": "propel_BaseObject",
+    "php74_exit": 0,
+    "php83_exit": 0,
+    "classification": "successful fixed probe; inspect diagnostics"
+  },
+  {
+    "probe": "propel_PropelPager",
+    "php74_exit": 0,
+    "php83_exit": 0,
+    "classification": "successful fixed probe; inspect diagnostics"
+  }
+]

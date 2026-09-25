@@ -80,3 +80,51 @@ Use a non-web-accessible `/var/lib/kaltura-audit-traces` directory writable by
 Apache. Enable only for controlled requests and remove the Apache directive
 and reload afterward. The collected inclusion set is not method-call coverage;
 absence does not prove a file is unreachable. Do not deploy this to `.20`.
+
+### Expanded sandboxed probes (v2)
+
+The wrapper `run-sandboxed-probes.sh` now runs 15 fixed probes using systemd in
+the two named disposable VMs only. Copy it, `run-runtime-probes.py` and
+`runtime-probes.php` into the same dedicated guest folder, then run:
+
+```sh
+bash /home/vagrant/php-probes-v2/run-sandboxed-probes.sh > result.json
+```
+
+The payload and tools are bind-mounted read-only at `/audit/app` and
+`/audit/tools`. The transient service uses nobody/nogroup, private networking
+and temporary storage, no new privileges, denied socket/socketpair creation, hidden home/root
+and configured application paths, a 512 MiB memory limit and 600-second overall
+limit. Before invoking PHP, the runner verifies its non-root UID, read-only
+payload, inaccessible protected directories, and denial of AF_INET socket
+creation for AF_INET, AF_INET6 and AF_UNIX. No live network request is used to test this restriction.
+
+These constraints are useful isolation, not a general untrusted-code sandbox.
+Only fixed reviewed probes are allowed, not arbitrary application code. The
+preflight is a partial check, not an independent attestation of every systemd
+property; the wrapper hash records the intended configuration.
+The hostname allowlist prevents accidental use on another host but is not
+cryptographic host authentication; SSH identity/host-key validation is separate.
+
+Each PHP process explicitly disables CLI OPcache/URL fopen/include and uses UTC;
+normal lab extension configuration remains loaded and is recorded. Shutdown
+output includes the path/hash of successfully included public payload files.
+A fatal failure can omit the failing file from that list; do not interpret it as
+complete attempted-file coverage. Original five-probe reports are preserved;
+expanded evidence resides in `runtime-probes/sandbox-v2`.
+
+Recreate the exit comparison (this is classification, not an acceptance gate):
+
+```sh
+python3 tools/php83/compare-runtime-probes.py \
+  doc/php83/evidence/runtime-probes/sandbox-v2/php74.json \
+  doc/php83/evidence/runtime-probes/sandbox-v2/php83.json
+```
+
+Different runner/probe/wrapper identities, flags or probe sets are rejected.
+Successful probes must also match their expected fixed output. Runner exit zero
+means collection completed, not acceptance; inspect `summary` and every record.
+Module/INI file lists are recorded without dumping potentially sensitive INI
+values. Duplicate PHP log output is disabled, not error reporting. The public
+payload include path excludes ambient system PHP libraries. Timeouts are
+incomplete evidence, never automatically classified as PHP regressions.
