@@ -9,6 +9,8 @@ import (
 	"time"
 
 	"github.com/labstack/echo/v5"
+
+	"kaltura-console/internal/kaltura"
 )
 
 const (
@@ -55,7 +57,15 @@ func (s *Server) stream(c *echo.Context) error {
 	if err != nil {
 		return err
 	}
-	return s.proxy(c, s.kc.PlaybackURL(id), true)
+	flavors, err := s.kc.ListFlavors(c.Request().Context(), id)
+	if err != nil {
+		return s.kalturaErr(c, err)
+	}
+	flavor, ok := kaltura.BestPlaybackFlavor(id, flavors)
+	if !ok {
+		return echo.NewHTTPError(http.StatusBadGateway, "nenhuma versão MP4 compatível está pronta")
+	}
+	return s.proxy(c, s.kc.PlaybackURL(id, flavor.ID), true)
 }
 
 func (s *Server) thumbnail(c *echo.Context) error {

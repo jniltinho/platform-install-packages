@@ -26,6 +26,12 @@ func proxyFixture(t *testing.T, delivery http.HandlerFunc) (*httptest.Server, ha
 			t.Error(err)
 			return
 		}
+		if r.Form.Get("service") == "flavorAsset" {
+			require.NoError(t, json.NewEncoder(w).Encode(map[string]any{"objects": []map[string]any{{
+				"id": "0_ijklmnop", "entryId": "0_abcdefgh", "status": 2, "fileExt": "mp4", "videoCodecId": "avc1", "width": 1920, "height": 1080,
+			}}}))
+			return
+		}
 		var reply any = map[string]any{"id": "0_abcdefgh", "partnerId": 102}
 		if r.Form.Get("service") == "session" {
 			reply = "test-ks"
@@ -153,5 +159,34 @@ func TestProxyClientDisconnectCancelsUpstream(t *testing.T) {
 	case <-stopped:
 	case <-time.After(5 * time.Second):
 		t.Fatal("upstream was not canceled when browser disconnected")
+	}
+}
+
+func TestProxyFlavorSelectionFailure(t *testing.T) {
+	for _, tt := range []struct{ name, reply string }{
+		{"no compatible flavor", `{"objects":[]}`},
+		{"listing failure", `{"objectType":"KalturaAPIException","code":"SERVICE_FORBIDDEN","message":"private detail"}`},
+		{"other entry flavor", `{"objects":[{"id":"0_ijklmnop","entryId":"0_wrongone","status":2,"fileExt":"mp4","videoCodecId":"avc1","width":1920,"height":1080}]}`},
+	} {
+		t.Run(tt.name, func(t *testing.T) {
+			up := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+				require.Equal(t, http.MethodPost, r.Method, "must never contact delivery")
+				require.NoError(t, r.ParseForm())
+				reply := `{"id":"0_abcdefgh","partnerId":102}`
+				switch r.Form.Get("service") {
+				case "session":
+					reply = `"test-ks"`
+				case "flavorAsset":
+					reply = tt.reply
+				}
+				_, err := io.WriteString(w, reply)
+				require.NoError(t, err)
+			}))
+			defer up.Close()
+			h := setup(t, up.URL, "viewer")
+			w := h.request("GET", "/media/0_abcdefgh/stream", "", true, false)
+			require.Equal(t, 502, w.Code)
+			require.NotContains(t, w.Body.String(), "private detail")
+		})
 	}
 }

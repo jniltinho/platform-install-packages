@@ -222,3 +222,16 @@ The upstream multipart request has an exact Content-Length computed from small
 framing plus the staged file size. File bytes still stream without a file-sized
 memory buffer. This is required for PHP-FPM deployments that silently ignore
 chunked multipart uploads.
+
+### Playback quality and bandwidth
+
+Progressive playback explicitly selects the highest-resolution ready MP4/H.264
+asset for the entry. At equal resolution it prefers a compatible original to
+avoid another compression generation and retain the source frame rate; otherwise
+it selects the higher bitrate. Unsupported or unready assets are excluded. An
+entry with no compatible ready asset returns a controlled playback error.
+
+The player is not adaptive: Full HD/60 fps needs sufficient client bandwidth.
+Uploading 720p cannot produce genuine Full HD detail. Supply a real 1080p source
+and verify the delivered stream, not only the entry dimensions. Existing videos
+are not replaced or re-encoded by this selection change.

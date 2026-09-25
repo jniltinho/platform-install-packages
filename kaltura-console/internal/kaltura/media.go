@@ -177,16 +177,50 @@ func (c *Client) deliveryBase(entryID string) string {
 }
 
 // PlaybackURL is the progressive MP4 playManifest URL of an entry.
-func (c *Client) PlaybackURL(entryID string) string {
+func (c *Client) PlaybackURL(entryID, flavorID string) string {
 	protocol := "http"
 	if strings.HasPrefix(strings.ToLower(c.cfg.PlaybackHost), "https://") {
 		protocol = "https"
 	}
 	return c.deliveryBase(entryID) + "/playManifest/entryId/" + entryID +
-		"/format/url/protocol/" + protocol + "/a.mp4"
+		"/format/url/protocol/" + protocol + "/flavorIds/" + flavorID + "/a.mp4"
 }
 
 // ThumbnailURL is the thumbnail URL of an entry.
 func (c *Client) ThumbnailURL(entryID string) string {
 	return c.deliveryBase(entryID) + "/thumbnail/entry_id/" + entryID + "/width/640"
+}
+
+// BestPlaybackFlavor selects a ready, entry-owned MP4/H.264 asset. Originals
+// win at equal resolution to avoid another compression generation/frame-rate loss.
+func BestPlaybackFlavor(entryID string, flavors []Flavor) (Flavor, bool) {
+	var best Flavor
+	found := false
+	for _, f := range flavors {
+		codec := strings.ToLower(f.VideoCodecID)
+		if f.EntryID != entryID || !ValidEntryID(f.ID) || f.Status != 2 ||
+			!strings.EqualFold(f.FileExt, "mp4") || (codec != "avc1" && codec != "h264") ||
+			f.Width <= 0 || f.Height <= 0 {
+			continue
+		}
+		if !found || betterPlaybackFlavor(f, best) {
+			best, found = f, true
+		}
+	}
+	return best, found
+}
+
+func betterPlaybackFlavor(a, b Flavor) bool {
+	// Floating-point area avoids integer overflow from malformed upstream dimensions.
+	areaA, areaB := float64(a.Width)*float64(a.Height), float64(b.Width)*float64(b.Height)
+	if areaA != areaB {
+		return areaA > areaB
+	}
+	if a.IsOriginal != b.IsOriginal {
+		return a.IsOriginal
+	}
+	if a.Bitrate != b.Bitrate {
+		return a.Bitrate > b.Bitrate
+	}
+	return a.ID < b.ID
 }

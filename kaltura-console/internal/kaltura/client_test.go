@@ -221,7 +221,7 @@ func TestUploadAttachFailureCleansUp(t *testing.T) {
 
 func TestHelpers(t *testing.T) {
 	c := NewClient(Config{ServiceURL: "http://k/api_v3", PartnerID: 102, PlaybackHost: "http://k/"})
-	assert.Equal(t, "http://k/p/102/sp/10200/playManifest/entryId/0_abcdefgh/format/url/protocol/http/a.mp4", c.PlaybackURL("0_abcdefgh"))
+	assert.Equal(t, "http://k/p/102/sp/10200/playManifest/entryId/0_abcdefgh/format/url/protocol/http/flavorIds/0_ijklmnop/a.mp4", c.PlaybackURL("0_abcdefgh", "0_ijklmnop"))
 	assert.True(t, ValidEntryID("0_8irzw99z"))
 	assert.False(t, ValidEntryID("../etc/passwd"))
 	assert.Equal(t, GroupProcessing, EntryStatusGroup(4))
@@ -234,7 +234,7 @@ func TestPlaybackURLProtocol(t *testing.T) {
 	for _, protocol := range []string{"http", "https"} {
 		t.Run(protocol, func(t *testing.T) {
 			c := NewClient(Config{ServiceURL: protocol + "://k/api_v3", PartnerID: 102, PlaybackHost: protocol + "://k/"})
-			assert.Equal(t, protocol+"://k/p/102/sp/10200/playManifest/entryId/0_abcdefgh/format/url/protocol/"+protocol+"/a.mp4", c.PlaybackURL("0_abcdefgh"))
+			assert.Equal(t, protocol+"://k/p/102/sp/10200/playManifest/entryId/0_abcdefgh/format/url/protocol/"+protocol+"/flavorIds/0_ijklmnop/a.mp4", c.PlaybackURL("0_abcdefgh", "0_ijklmnop"))
 		})
 	}
 }
