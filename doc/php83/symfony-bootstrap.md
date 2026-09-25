@@ -104,3 +104,29 @@ without weakening escaping or disabling compilation merely to force success.
 Once bootstrap returns, proceed to configured synthetic HTTP/API and worker
 acceptance. Registry and raw PDO/JSON contract divergences remain independent
 release blockers; successful Symfony fixtures do not resolve them.
+
+## Follow-up: duplicate-class blocker resolved
+
+`core_compile.yml` listed `sfOutputEscaperIteratorDecorator` before its parent
+`sfOutputEscaperObjectDecorator`. The held `core_compile.yml.patch` swaps only
+these two entries. With the seven prerequisites retained, bootstrap now completes
+on both PHP 7.4 and 8.3. Reverting only this ordering on 8.3 reproduces the exact
+duplicate-class fatal with a fresh cache, isolating this repair from the other
+seven changes. This supports a parent/child loading-order cause; no `class_exists`
+guard or escaping/compilation disablement was introduced.
+
+The fixture now exercises real array, object and iterator decorators after
+compiled bootstrap, including HTML metacharacters, raw getters, NULL and false.
+Outputs match original 7.4, and all 38 offline tests pass. Evidence is in
+`evidence/symfony-compile-order/`; the prior failed reports remain historical.
+All eight experiment-owned files were restored to original hashes afterward.
+The patch remains held outside the active ZIP. Existing deprecations remain
+unwaived; successful bootstrap does not establish configured HTTP/API/worker or
+full Kaltura compatibility. The next step is configured synthetic application
+acceptance, not further work on this now-resolved duplicate-class blocker.
+
+Claude's follow-up review agrees with the bounded ordering repair. Warm-cache
+reuse, broader iterator mutation/nesting and other application-specific compile
+overrides remain additional coverage, not completed checks. Its explanation of
+the autoload sequence is advisory; the recorded counterfactual directly verifies
+the ordering dependency without claiming a captured engine-internal trace.

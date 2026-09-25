@@ -1,0 +1,27 @@
+# Revisão: troca de ordem em `core_compile.yml` (Rigel 18.20, PHP 7.4 → 8.3)
+
+**Veredito:** o patch corrige a causa raiz e é semanticamente neutro. Ele muda só a ordem de declaração; os corpos das classes continuam idênticos.
+
+**Mecanismo:** no compilado, `IteratorDecorator extends ObjectDecorator` aparece antes de o pai estar definido. O autoloader então carrega `sfOutputEscaperObjectDecorator.class.php` do disco. Mais adiante, o compilado declara `ObjectDecorator` de novo, o que causa o fatal. Com o pai antes do filho, o problema desaparece sem guard nem supressão. É o fix certo e no lugar certo.
+
+## Preocupações semânticas
+
+1. **Overrides de `core_compile.yml`**: verifique se algum `apps/*/config/core_compile.yml` ou `config/` de projeto redefine ou estende a lista. O handler faz merge, então um override com a ordem antiga reintroduz o bug só naquele app.
+2. **Outros pares pai/filho na mesma lista**, como `sfController`/`sfWebController`/`sfFrontWebController` e `sfRequest`/`sfWebRequest`. Hoje passam, mas estão sujeitos ao mesmo risco. Vale uma checagem estática única: para cada classe do compilado cujo pai também está no compilado, o pai tem de vir antes.
+3. **Deprecations no 8.1+**: `IteratorDecorator` implementa `Iterator`, `ArrayAccess` e `Countable` sem tipos de retorno. No 8.3 isso emite `E_DEPRECATED` na declaração. Não é fatal nem é escopo deste patch, mas os testes devem registrar essas deprecations explicitamente em vez de ignorá-las em silêncio.
+
+## Testes que faltam (em ordem de valor)
+
+1. **Cache quente**: rodar um segundo bootstrap reaproveitando o compilado já gerado. O tmpfs novo a cada execução só cobre o caminho de compilação a frio. O caminho do `require` direto do compilado é outro.
+2. **Asserção estrutural no compilado gerado**: o offset da declaração de `ObjectDecorator` deve ser menor que o de `IteratorDecorator`.
+3. **Asserção de não-fallback**: `sfOutputEscaperObjectDecorator.class.php` não pode aparecer em `get_included_files()` após o bootstrap. Isso prova que a classe veio do compilado e não do autoload.
+4. **Protocolo completo do `IteratorDecorator`**:
+   - `foreach` com `current`/`key`/`next`/`valid`/`rewind`, incluindo rewind após iteração parcial;
+   - `count()`;
+   - `offsetGet` com escaping;
+   - `offsetSet`/`offsetUnset` lançando exceção de read-only.
+5. **Aninhamento**: objeto dentro de array dentro de iterator deve sair decorado recursivamente. Um valor `sfOutputEscaperSafe` deve passar sem escaping.
+6. **Estratégias de escaping**: `ESC_RAW` versus a estratégia padrão, e `getRawValue()` devolvendo a mesma instância original (`===`).
+7. **Modo de compilação**: confirmar que o bootstrap testado realmente usa o compilado. Em Symfony 1.0 ele depende de `SF_DEBUG` desligado. Com debug ligado, o teste passa sem exercitar o bug.
+
+**Escopo:** a evidência atual prova que o bootstrap CLI isolado funciona, e só isso. Não prova o fluxo HTTP/DB, o que está consistente com o que você declarou.

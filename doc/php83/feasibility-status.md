@@ -350,3 +350,10 @@ Six focused differential comparisons and eight JSON comparisons pass; 38 offline
 tests pass. PHP 7.4 bootstrap completes, while PHP 8.3 still fails on duplicate
 sfOutputEscaperObjectDecorator declaration. A private ephemeral cache avoids
 modifying source/live cache. No patch was promoted; lab originals restored.
+
+The Symfony duplicate-class blocker is now resolved experimentally by ordering
+ObjectDecorator before its IteratorDecorator child in core_compile.yml (two-line
+reordering only). Both bootstrap comparisons and post-bootstrap escaping tests
+pass. Reverting only that order reproduces the fatal on 8.3. All eight held
+source files were restored afterward; HTTP/API/worker acceptance and diagnostics
+triage remain pending, and no patch entered the active ZIP.

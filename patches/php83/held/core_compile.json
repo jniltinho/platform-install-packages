@@ -1,0 +1,7 @@
+{
+  "path": "vendor/symfony-data/config/core_compile.yml",
+  "before_sha256": "34b5082912ba11d744c69e2797a3343ee862a2198bf7a81cb4f7a23210216459",
+  "after_sha256": "ac8dc64452aa5c4aa49675dcc656617f56f8dd937b7759dfc5e6085e1555919f",
+  "patch_sha256": "e2c0d3c8976cda0ca1f7abb84093e5fad54a28c97ea3f09836050c5469294355",
+  "status": "held; parent-before-child compile ordering"
+}

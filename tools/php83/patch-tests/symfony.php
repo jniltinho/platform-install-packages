@@ -36,6 +36,29 @@ if ($case === 'symfony-bootstrap') {
     define('SF_DEBUG', false);
     sfCore::bootstrap($root . '/vendor/symfony', $root . '/vendor/symfony-data');
     $out[] = array('bootstrap-returned', true);
+    // Exercise real escaping classes after the compiled bootstrap, not just load.
+    $payload = '<script>"&';
+    $expected = '&lt;script&gt;&quot;&amp;';
+    function synthetic_escape_html($value) {
+        return htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
+    }
+    class SyntheticEscapedObject {
+        public function value() { return '<script>"&'; }
+        public function get($key) { return $this->value(); }
+    }
+    $array = sfOutputEscaper::escape('synthetic_escape_html', array('value' => $payload));
+    $object = sfOutputEscaper::escape('synthetic_escape_html', new SyntheticEscapedObject());
+    $iterator = sfOutputEscaper::escape('synthetic_escape_html', new ArrayIterator(array($payload)));
+    $values = array();
+    foreach ($iterator as $value) { $values[] = $value; }
+    if ($array['value'] !== $expected || $object->value() !== $expected ||
+        $object->get('value') !== $expected || $values !== array($expected) ||
+        $array->getRaw('value') !== $payload || $object->getRaw('value') !== $payload ||
+        sfOutputEscaper::escape('synthetic_escape_html', null) !== null ||
+        sfOutputEscaper::escape('synthetic_escape_html', false) !== false) {
+        throw new RuntimeException('Post-bootstrap escaping regression');
+    }
+    $out[] = array('escaping', $array['value'], $object->value(), $values);
     return;
 }
 require_once $root . '/vendor/symfony/config/sfConfig.class.php';
