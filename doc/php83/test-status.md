@@ -258,3 +258,11 @@ retained; diagnostics reduce by 132 events to 21 groups/571. Forty-eight CLI row
 retain original74 reference and exp7 comparison; all 12 exp8 rows exit 0. Local
 suite 136 tests includes ten new collector cases. See
 [exp8 evidence](exp8-criteria-integration.md); acceptance remains 0/24 and 3/27.
+
+## PDO return-loss diagnosis on real synthetic SQL
+
+Codex/Claude independently reproduce nineteen rows per runtime: attributes and
+statement execution discard native success/failure booleans, while transaction,
+cache and dry-run effects remain intact. No repair or warning reduction claimed.
+See [PDO return audit](pdo-return-audit.md). Exp8 residual remains 21 groups/571;
+full acceptance stays 0/24 and 3/27 detailed tasks.

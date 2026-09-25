@@ -1,0 +1,136 @@
+{
+  "scope": "original PDO-class source and four graph-discovered descendants, best effort",
+  "files": [
+    {
+      "path": "vendor/propel/util/PropelPDO.php",
+      "sha256": "9e4f602f50bc24432107f34a2f3b4a995518fe28c46be9dc8f642dbb9ca74d22",
+      "selected_declarations": [
+        {
+          "line": 123,
+          "source": "\tpublic function beginTransaction()"
+        },
+        {
+          "line": 139,
+          "source": "\tpublic function commit()"
+        },
+        {
+          "line": 161,
+          "source": "\tpublic function rollBack()"
+        },
+        {
+          "line": 206,
+          "source": "\tpublic function setAttribute($attribute, $value)"
+        },
+        {
+          "line": 225,
+          "source": "\tpublic function getAttribute($attribute)"
+        },
+        {
+          "line": 244,
+          "source": "\tpublic function prepare($sql, $driver_options = array())"
+        }
+      ]
+    },
+    {
+      "path": "vendor/propel/util/DebugPDO.php",
+      "sha256": "6178d39fd2c11c2bd2dcc220c4234f72dfb11364c11d381e7f7bfaf55089e021",
+      "selected_declarations": [
+        {
+          "line": 292,
+          "source": "\tpublic function prepare($sql, $driver_options = array())"
+        },
+        {
+          "line": 330,
+          "source": "\tpublic function query()"
+        }
+      ]
+    },
+    {
+      "path": "vendor/propel/util/DebugPDOStatement.php",
+      "sha256": "d25d3149afefa3a3b4e0f451869d2103adace575cc4445078c77dad6e1e68239",
+      "selected_declarations": [
+        {
+          "line": 97,
+          "source": "\tpublic function execute($input_parameters = null)"
+        },
+        {
+          "line": 119,
+          "source": "\tpublic function bindValue($pos, $value, $type = PDO::PARAM_STR)"
+        }
+      ]
+    },
+    {
+      "path": "vendor/propel/adapter/MSSQL/MssqlPropelPDO.php",
+      "sha256": "22454680c12ef66b48787ce6c9f34b85ab078db2f9f967cb379af2c15ff37733",
+      "selected_declarations": [
+        {
+          "line": 16,
+          "source": "\tpublic function beginTransaction()"
+        },
+        {
+          "line": 34,
+          "source": "  public function commit()"
+        },
+        {
+          "line": 57,
+          "source": "\tpublic function rollBack()"
+        }
+      ]
+    },
+    {
+      "path": "vendor/propel/adapter/MSSQL/MssqlDebugPDO.php",
+      "sha256": "a3e3ab953fd1321eb4eddd4b812bdbec11fcc5e97067602704c73e2a279d80e5",
+      "selected_declarations": [
+        {
+          "line": 16,
+          "source": "\tpublic function beginTransaction()"
+        },
+        {
+          "line": 34,
+          "source": "  public function commit()"
+        },
+        {
+          "line": 57,
+          "source": "\tpublic function rollBack()"
+        }
+      ]
+    },
+    {
+      "path": "vendor/propel/PropelException.php",
+      "sha256": "33dfad191e47b08479881af6bf95f266070d15b6c2c9753a7e7dd8921d959dc4",
+      "selected_declarations": []
+    },
+    {
+      "path": "alpha/apps/kaltura/lib/db/KalturaPDO.php",
+      "sha256": "97b756bed876d42da87f6a023b6ecf7af7c2b8454bb382da56ba9c54acae848d",
+      "selected_declarations": [
+        {
+          "line": 116,
+          "source": "\tpublic function prepare($sql, $driver_options = array())"
+        },
+        {
+          "line": 188,
+          "source": "\tpublic function query()"
+        },
+        {
+          "line": 228,
+          "source": "\tpublic function beginTransaction()"
+        }
+      ]
+    },
+    {
+      "path": "alpha/apps/kaltura/lib/db/KalturaStatement.php",
+      "sha256": "a80d6029db03e1880adf240b157489d6f25b47163c394d0b0969300416378d70",
+      "selected_declarations": [
+        {
+          "line": 20,
+          "source": "\tpublic function bindValue ($parameter, $value, $data_type = null)"
+        },
+        {
+          "line": 31,
+          "source": "\tpublic function execute ($input_parameters = null) "
+        }
+      ]
+    }
+  ]
+}

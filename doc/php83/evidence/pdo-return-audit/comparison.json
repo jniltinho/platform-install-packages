@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "independent_runtime_results_equal": true,
+  "same_observed_values_across74_83": true,
+  "rows_per_runtime": 19,
+  "native_attribute_true_false_preserved": true,
+  "propel_attribute_returns_null": true,
+  "kaltura_execute_returns_null_on_success_and_silent_failure": true,
+  "pdo_exception_class_and_sqlstate_retained": true,
+  "dry_run_skips_write_and_allows_select": true,
+  "nested_commit_rollback_assertions_passed": true,
+  "all_owned_units_stopped": true,
+  "application_acceptance": false,
+  "repair_selected": false,
+  "source_or_artifact_changed": false
+}

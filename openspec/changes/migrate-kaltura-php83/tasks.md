@@ -199,3 +199,10 @@ application delta is only six declarations; alias guard retained. Four API and
 48 CLI rows preserve the original74 reference. Exactly 132 events disappear;
 21 groups/571 remain. Local suite now 136 with ten new collector tests.
 See `doc/php83/exp8-criteria-integration.md`; no full acceptance checkbox closes.
+
+T1-01/T1-02 additional actual SQL evidence: nineteen rows per runtime confirm
+PropelPDO::setAttribute and KalturaStatement::execute discard native booleans on
+both 7.4/8.3; nested transaction/cache/dry-run data effects are separately asserted.
+This is a reproduced defect, not a corrected candidate or accepted exception.
+See `doc/php83/pdo-return-audit.md`; native-bool propagation and caller integration
+remain required before return declarations or release.

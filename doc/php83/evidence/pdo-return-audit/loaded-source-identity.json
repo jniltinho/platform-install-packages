@@ -1,0 +1,20 @@
+{
+  "exp8_source_files": [
+    {
+      "path": "vendor/propel/PropelException.php",
+      "sha256": "33dfad191e47b08479881af6bf95f266070d15b6c2c9753a7e7dd8921d959dc4",
+      "identical_to_original_source": true
+    },
+    {
+      "path": "vendor/propel/util/PropelPDO.php",
+      "sha256": "9e4f602f50bc24432107f34a2f3b4a995518fe28c46be9dc8f642dbb9ca74d22",
+      "identical_to_original_source": true
+    },
+    {
+      "path": "alpha/apps/kaltura/lib/db/KalturaStatement.php",
+      "sha256": "a80d6029db03e1880adf240b157489d6f25b47163c394d0b0969300416378d70",
+      "identical_to_original_source": true
+    }
+  ],
+  "whole_exp8_on74_supported": false
+}

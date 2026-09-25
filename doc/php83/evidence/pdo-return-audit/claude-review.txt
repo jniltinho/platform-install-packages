@@ -1,0 +1,26 @@
+Coleta e comparação concluídas; segue o relato.
+
+1. **Execução:** `collect.py` terminou com **exit 0** (`claude.exit`) e `stderr` vazio. O `stdout` confirmou `audit_executed:true` e a unit `php83-exp8-api-d0702c0b…` parou (`inactive`). Na reverificação posterior, nenhuma unit `php83-exp8-api-*` continuava ativa.
+2. **Identidades:** estes campos batem exatamente com `codex.json`: artefato ZIP `67acaa1a…` com 15191 arquivos verificados antes e depois, hashes do harness, hashes dos dois collectors, `scope` e `application_acceptance:false`.
+3. **Linhas:** 74 (PHP 7.4.33) e 83 (PHP 8.3.6) produziram as mesmas 19 linhas cada. O `stdout_sha256` é idêntico ao do Codex nas duas, então a comparação com o Codex é byte a byte.
+4. **O que isso significa:** isso mede o comportamento atual, não um candidato corrigido. A igualdade entre 7.4 e 8.3 só mostra que o defeito já existia. Não prova compatibilidade dos contratos.
+5. **Retornos bool perdidos (confirmado de forma independente):**
+   - `PropelPDO::setAttribute` retorna `NULL` tanto no caso aceito quanto no atributo não suportado 987654. O PDO nativo retorna `true`/`false`, e o cache-attribute também devolve `NULL`.
+   - `KalturaStatement::execute` retorna `NULL` no sucesso, na falha silenciosa `42S02` e nos dois modos de dry-run. Com `ERRMODE_SILENT`, sucesso e falha ficam indistinguíveis pelo retorno. Só `errorCode()` ou a exceção em `ERRMODE_EXCEPTION` mostram a falha.
+6. **O que se comporta como o nativo:** o cache de prepare (mesma instância quando ligado, instâncias distintas quando desligado) e os commits aninhados, que chegam a `[0,false,1]`. No rollback aninhado, o `commit` depois de um rollback interno lança `PropelException` e o `forceRollBack` leva a `[0,false,1]`. Commit e rollBack sem transação ativa retornam `true`, o que difere do PDO nativo e ficou registrado. O dry-run não gravou a linha 9 (`count 0`) e deixou passar o SELECT (`19`).
+7. **Diagnósticos no 8.3:** só no 8.3 aparecem 8 `E_DEPRECATED` (8192). No `PropelPDO.php` são as linhas 123/139/161/206/225/244 (`beginTransaction`/`commit`/`rollBack`/`setAttribute`/`getAttribute`/`prepare`). No `KalturaStatement.php` são as linhas 20/31 (`bindValue`/`execute`). Pelas linhas, são os tipos de retorno provisórios (tentative) ainda não declarados; no 7.4 não há nenhum diagnóstico.
+8. **Proteções verificadas:**
+   - O `probe.php` recusa escrever no schema se `@@datadir` não for o datadir criado para esta execução.
+   - O `run.sh` exige o hostname `kaltura-php74-baseline`, um datadir que casa com o padrão esperado e sem symlinks, e um sandbox `systemd-run` com `PrivateNetwork`, somente `AF_UNIX` e `/opt/kaltura`, `/var/lib/mysql` e `/run/mysqld` inacessíveis.
+   - O `start-db.sh` só aceita um token hex de 32 caracteres e o uid 1000.
+9. **Lacunas de limpeza e identidade:**
+   - A limpeza só para a unit. Continuam em `/tmp` 19 datadirs `kaltura-pdo-mysql.*` no baseline74, incluindo o meu (`d0702c0b…`) e o do Codex (`dd7a69fa…`), sem remoção nem registro no relatório.
+   - O probe registra o nome de classe solicitado (`$class`), não `get_class()` do objeto real. O hash do fonte do `PropelPDO.php`/`KalturaStatement.php` só vem indiretamente, pelo hash do ZIP.
+10. **Stubs:** `KalturaLog`, `kQueryCache`, `kApiCache` e `KalturaMonitorClient` são stubs. Não houve bootstrap real do `KalturaPDO`, nem conexão via configuração, nem caminhos de log, cache ou monitor.
+11. **Controles pendentes antes de corrigir os contratos bool:**
+    - Registrar `get_class` e o sha256 dos dois fontes.
+    - Remover ou registrar os datadirs que ficaram.
+    - Decidir o contrato esperado para `setAttribute` e `execute` (bool real, propagando o retorno de `parent::`).
+    - Testar o `KalturaPDO` real.
+    - Obter revisão independente por Grok (ou pelo fallback OpenCode) e pelo Cursor `agent`, que não fiz aqui.
+12. Não editei fontes, não fiz commit nem release; só criei `claude.json`, `.stdout`, `.stderr` e `.exit` em `doc/php83/evidence/pdo-return-audit/`.
