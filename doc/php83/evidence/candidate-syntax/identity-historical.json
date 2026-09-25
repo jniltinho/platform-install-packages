@@ -1,0 +1,117 @@
+{
+  "schema": 1,
+  "scope": "read-only historical report/path/hash accounting; no VM or PHP execution",
+  "command": "python3 tools/php83/candidate-syntax/historical-identity.py",
+  "script_sha256": "d1c2b38a30ff944238e3bbef1f0bbf7f8033d472bd9e5c546be56a3bb2ec79a4",
+  "inputs": {
+    "/tmp/kaltura-php83-audit/source-lint.json": {
+      "sha256": "52c72116db774ad3209389dedc0aa03be3c5f4b2b0ac1dfce21cb6be7f012e68",
+      "bytes": 2753899
+    },
+    "/tmp/kaltura-php83-audit/source-phpcompatibility.json": {
+      "sha256": "812c3e6346d279fc6da46bcc3e42b84f990945e52e630741115fa56b69dce9d6",
+      "bytes": 2448459
+    },
+    "/tmp/kaltura-php83-audit/packaged-lint.json": {
+      "sha256": "b5b5e33c9e23d6c6cce74beb4ad015ec30831ed31c587e8f611028b2a0ca2c78",
+      "bytes": 3380191
+    },
+    "/tmp/kaltura-php83-audit/packaged-phpcompatibility.json": {
+      "sha256": "f4346c702758136ebafecf646a7296e7be76285b9eb7c3270a75b16b2ac87cd6",
+      "bytes": 3156470
+    },
+    "/tmp/kaltura-php83-audit/php74-packaged-lint.json": {
+      "sha256": "e786960cb545af1b2d0b4d3dd452e8fa450803cea76272a48d7b68b7ba90d0cc",
+      "bytes": 3352184
+    },
+    "/tmp/kaltura-php83-audit/Rigel-18.20.0.zip": {
+      "sha256": "58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28",
+      "bytes": 92295735
+    }
+  },
+  "checks": {
+    "raw_lint_paths_equal_selected_zip_paths": true,
+    "all_raw_lint_file_hashes_match_original_zip": true,
+    "raw_static_paths_equal_selected_zip_paths": true,
+    "packaged_static_paths_equal_packaged_lint_paths": true
+  },
+  "counts": {
+    "source-lint.json": {
+      "files_scanned": 11784,
+      "compiler_rejected": 58,
+      "other_nonzero": 0,
+      "diagnostic_files": 126,
+      "accepted_with_diagnostics": 68
+    },
+    "source-phpcompatibility.json": {
+      "files_scanned": 11784,
+      "files_with_nonempty_messages": 562,
+      "totals": {
+        "errors": 1256,
+        "warnings": 645,
+        "fixable": 209
+      }
+    },
+    "packaged-lint.json": {
+      "files_scanned": 13454,
+      "compiler_rejected": 79,
+      "other_nonzero": 0,
+      "diagnostic_files": 149,
+      "accepted_with_diagnostics": 70
+    },
+    "packaged-phpcompatibility.json": {
+      "files_scanned": 13454,
+      "files_with_nonempty_messages": 919,
+      "totals": {
+        "errors": 2025,
+        "warnings": 785,
+        "fixable": 209
+      }
+    },
+    "php74-packaged-lint.json": {
+      "files_scanned": 13454,
+      "compiler_rejected": 7,
+      "other_nonzero": 0,
+      "diagnostic_files": 86,
+      "accepted_with_diagnostics": 79
+    }
+  },
+  "analyzer": {
+    "lock_sha256": "1349200f714f39615153d319d88046b1f34b91a782954b76a7fe538c9b8b5e33",
+    "lock_content_hash": "72bb01c588ed27ddd2a3a73fc34e85fa",
+    "packages": [
+      {
+        "name": "dealerdirect/phpcodesniffer-composer-installer",
+        "version": "v1.2.1",
+        "reference": "963f0c67bffde0eac41b56be71ac0e8ba132f0bd",
+        "dist_shasum": ""
+      },
+      {
+        "name": "phpcompatibility/php-compatibility",
+        "version": "10.0.0-alpha2",
+        "reference": "e0f0e5a3dc819a4a0f8d679a0f2453d941976e18",
+        "dist_shasum": ""
+      },
+      {
+        "name": "phpcsstandards/phpcsutils",
+        "version": "1.2.3",
+        "reference": "5f35d9408c54d7b529501f3c688b6eae562aea1f",
+        "dist_shasum": ""
+      },
+      {
+        "name": "squizlabs/php_codesniffer",
+        "version": "4.0.4",
+        "reference": "bbdc3d0532623e21838b7041a4364383a8126f96",
+        "dist_shasum": ""
+      }
+    ]
+  },
+  "correction": "Historical static-summary.json files_with_findings=11784 is scanned files; actual raw files with messages=562 and packaged=919.",
+  "limits": [
+    "4,711 static rows overlap raw/package scope and are not distinct confirmed defects.",
+    "Syntax accepted files with diagnostics are not compiler rejections.",
+    "These report-set checks do not authenticate packaged payload bytes.",
+    "Other extensions, generated runtime code, dynamic includes, entrypoint reachability and analyzer manual blind spots remain open.",
+    "Installed analyzer file hashes/configuration and historical shell/exit provenance were not captured by these imported reports."
+  ]
+}

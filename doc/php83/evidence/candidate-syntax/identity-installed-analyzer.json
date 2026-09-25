@@ -1,0 +1,31 @@
+{
+  "root": "/home/vagrant/php83-tools",
+  "scope": "Read-only analyzer availability; no analyzer execution/install",
+  "files": {
+    "composer.json": {
+      "exists": true,
+      "sha256": "de30dd3eb4dd00700c2ac79a83e433d66a599d80942e24bfc34866df0cb21712",
+      "bytes": 349
+    },
+    "composer.lock": {
+      "exists": true,
+      "sha256": "1349200f714f39615153d319d88046b1f34b91a782954b76a7fe538c9b8b5e33",
+      "bytes": 14954
+    },
+    "vendor/composer/installed.json": {
+      "exists": true,
+      "sha256": "232acd1afb737bb24508f52b99383cf0a0e13c7ea6afb70ec880bca256eb920a",
+      "bytes": 15028
+    },
+    "vendor/bin/phpcs": {
+      "exists": true,
+      "sha256": "3ffee2e12ad47f3f153982a04850faacda9a581af28282a834ea5c48ae74467e",
+      "bytes": 3363
+    },
+    "vendor/squizlabs/php_codesniffer/CodeSniffer.conf": {
+      "exists": true,
+      "sha256": "2ce985dab5557b18aabb07df56f972f2231943f22ed71ac57c17c436a05dcea5",
+      "bytes": 143
+    }
+  }
+}

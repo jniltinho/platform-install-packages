@@ -1,0 +1,29 @@
+{
+  "executor": "Codex delegated package identity task",
+  "independent_cli_execution_review": "Coordinator-owned; not asserted by this primary record",
+  "local_tests": {
+    "count": 18,
+    "exit": 0
+  },
+  "repeat_byte_identical": true,
+  "identities": {
+    "tools/php83/package-identities/build.py": "a425673559290d0dcb343500fcfdd1bdde7b43c91c6f342da9725b708cebf110",
+    "tools/php83/package-identities/test_package_identities.py": "eb50f30aefd387a4022e2ffa7c749511838bdd6085ad4685828e9bcccd275c3b",
+    "doc/php83/evidence/package-identities/primary.json": "9e76e1f9664527102528ea2eb46aae38a0d06d441cf270dc48724086af1515c9",
+    "doc/php83/evidence/package-identities/primary-repeat.json": "9e76e1f9664527102528ea2eb46aae38a0d06d441cf270dc48724086af1515c9"
+  },
+  "summary": {
+    "packages": 17,
+    "php_payload_occurrences": 13454,
+    "unique_php_paths": 13454,
+    "duplicate_php_paths": 0,
+    "php_nonregular_entries": 0,
+    "upstream_php_files": 11784,
+    "missing_ledger_hashes_resolved": 792,
+    "known_ledger_hashes_preserved": 149,
+    "remaining_ledger_packaged_hashes_missing": 0,
+    "semantic_findings_resolved": 0
+  },
+  "t0_04_complete": false,
+  "no_vm_network_or_package_installation": true
+}

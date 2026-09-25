@@ -1,0 +1,17 @@
+{
+  "independent_reports": [
+    "primary.json",
+    "primary-repeat.json",
+    "claude.json"
+  ],
+  "all_bytes_identical": true,
+  "sha256": "9e76e1f9664527102528ea2eb46aae38a0d06d441cf270dc48724086af1515c9",
+  "inputs_still_match": true,
+  "packages": 17,
+  "php_family_files": 13454,
+  "resolved_missing": 792,
+  "preserved_known": 149,
+  "semantic_findings_resolved": 0,
+  "t0_04_complete": false,
+  "verifier_sha256": "55724e930dfee7f5a6ff5deab8d1f3a66f52400642005cd9f92b7bc5ae26d8b9"
+}

@@ -1,0 +1,1 @@
+{"duplicate_php_paths": 0, "known_ledger_hashes_preserved": 149, "missing_ledger_hashes_resolved": 792, "packages": 17, "php_nonregular_entries": 0, "php_payload_occurrences": 13454, "remaining_ledger_packaged_hashes_missing": 0, "semantic_findings_resolved": 0, "unique_php_paths": 13454, "upstream_php_files": 11784}

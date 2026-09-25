@@ -228,3 +228,12 @@ defects or resolving findings from patch overlap. Cursor independently rebuilds
 identical bytes and runs eight tests. The 792 missing packaged identities and
 20 version/license attributions are explicit. See `doc/php83/inventory-ledger.md`;
 full classification/entrypoint/license review remains pending, so 5.4 stays open.
+
+T0-04 identity subcase: all 792 missing packaged hashes resolved and 149 known
+hashes preserved through 17 verified DEB payloads, independently byte-rebuilt by
+Claude; no semantic classification inferred. See `doc/php83/package-identities.md`.
+Fresh paired whole-ZIP PHP 8.3 syntax scans (11,784 files each) are independently
+repeated: original58 versus exp9 54 rejected files, zero incomplete rows, no new
+rejections. Collection success is not compiler/application acceptance. Historical
+files-scanned versus files-with-messages label is corrected in derived evidence,
+not overwritten. See `doc/php83/candidate-syntax.md`; aggregate5.4 remains open.

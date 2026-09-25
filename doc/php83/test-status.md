@@ -302,3 +302,23 @@ pass. It explicitly exposes 792 missing packaged-file hashes and 20 unresolved
 dependency version/license attributions; it resolves zero semantic findings.
 See [inventory ledger](inventory-ledger.md). T0-04 remains open; next is read-only
 identity extraction from the already checksum-verified published DEB payloads.
+
+## Published payload identities and whole-exp9 syntax
+
+All 792 previously missing packaged hashes are now recovered from exact payload
+bytes across 17 checksum-verified DEBs; 149 known hashes remain equal. Claude's
+independent build and the primary/repeat reports are byte-identical, covering
+13,454 PHP-family files. Cursor reviews the joins and tests; orchestration
+negative controls expand the nested package suite to 25. See
+[package identities](package-identities.md). This closes the missing-hash
+subcase, not T0-04's semantic/license/entrypoint obligations.
+
+A fresh original/exp9 compiler matrix on one isolated PHP 8.3 runtime scans
+11,784 files per artifact, with full ZIP/source/runtime identities. Claude
+independently repeats all 23,568 logical rows. Rejections decrease 58→54;
+64 accepted-with-diagnostics files remain per artifact and no new rejection
+appears. The initial syscall-action harness failure is retained; corrected
+collection completes but `candidate_all_files_compile` remains false. See
+[paired syntax](candidate-syntax.md). Static finding attribution, remaining
+compiler failures and full runtime coverage remain open; acceptance stays
+0/24 original and 3/27 detailed cases.

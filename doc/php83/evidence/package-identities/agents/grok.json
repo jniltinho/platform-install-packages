@@ -1,0 +1,27 @@
+{
+  "text": "I'll run the inventory-ledger tests and read only the existing builder and its contract doc, leaving the in-progress package-identities tool untouched.The suite finished cleanly. I\u2019ll read the truncated builder tail and the start of the ledger contract so the identity rules are complete.`python3 -m unittest discover -s tools/php83/inventory-ledger -p 'test_*.py'` ran 8 tests, OK, exit 0. The duplicate-name `UserWarning` is the expected fixture noise before `Duplicate archive path` is rejected.\n\nAttach an exact SHA-256 only to an `unresolved:packaged:` record, and only from the checksum-verified DEB member bytes. The Noble tarball digest `91629580441f6a896ebf9e51f0256532221715bee57a3e5a64c66ff0c4e3127b` identifies the archive alone. Keep every key as `sha256:scope:path` or `unresolved:scope:path`, and leave a packaged hash unresolved when the payload does not contain that path. An upstream candidate exists only for the `opt/kaltura/app/` prefix, and `upstream_identity_matches` is true only when those payload bytes equal that original ZIP member. Record each alias or hardlink as its own path, with a shared hash as a relationship, and fail closed on a repeated archive member name. When one path has two hashes, raise `Conflicting packaged identities`. When two packages own one path, keep every owner or leave ownership unresolved. The overlay's two changed upstream PHP files and 1,670 extra packaged files, plus vendor or license prefixes, stay discovery evidence. Filling a hash leaves `semantic_finding_status`, `active_entrypoint_status`, static classification, and `semantic_findings_resolved_by_this_join` (still 0) unchanged, and runtime exp9 hashes stay in their own records.",
+  "stopReason": "end_turn",
+  "sessionId": "01a0da16-eb70-7240-aa4b-8fc3503146e7",
+  "requestId": "82a60c6f-cd72-43a7-879b-e3cc9065d7fa",
+  "num_turns": 5,
+  "usage": {
+    "input_tokens": 53842,
+    "cache_read_input_tokens": 50688,
+    "cache_creation_input_tokens": 0,
+    "output_tokens": 4188,
+    "reasoning_tokens": 3440,
+    "total_tokens": 108718
+  },
+  "modelUsage": {
+    "grok-4.7-build": {
+      "inputTokens": 53842,
+      "outputTokens": 4188,
+      "cacheReadInputTokens": 50688,
+      "cacheCreationInputTokens": 0,
+      "modelCalls": 5,
+      "costUSD": 0.05377304
+    }
+  },
+  "raw_response_sha256": "f843fa7506955c5b99192ee27af0908a184fe34a9de8fdf8b1cffdd112029f57",
+  "sanitization": "Only final text/outcome/usage metadata retained; reasoning field removed without treating it as evidence."
+}

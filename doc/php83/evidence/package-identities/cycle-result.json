@@ -1,0 +1,44 @@
+{
+  "scope": "Published payload identity and paired original/exp9 compiler evidence, not acceptance",
+  "local_tests": {
+    "root_harness": 146,
+    "ledger_existing": 8,
+    "package_identities_final": 25,
+    "candidate_syntax": 11
+  },
+  "independent_execution": {
+    "claude": "Exact real DEB inventory rebuild; actual lab23568syntaxrepeat;18package+11syntaxlocaltests",
+    "cursor": "8ledger+18package initial;25package+11syntaxfinal, source/evidence review",
+    "grok": "8ledger tests and contract review completed;finalbuilderfollowup timeout120s exit124",
+    "opencode": "Authorized free fallback:25package+11syntaxlocaltests exit0 and actualbuilder/scanner review"
+  },
+  "model": "opencode/muse-spark-1.3-contributor-free",
+  "missing_packaged_hashes_resolved": 792,
+  "known_packaged_hashes_preserved": 149,
+  "paired_compiler": {
+    "original_rejected": 58,
+    "candidate_rejected": 54,
+    "new_rejections": 0,
+    "incomplete": 0,
+    "files_per_artifact": 11784
+  },
+  "retained_failures": [
+    "Initial syntaxunit SIGSYS before anycompilerreport; same denialset corrected toEPERM",
+    "Grok finalreview timeout124"
+  ],
+  "original_tasks_complete": 0,
+  "original_tasks_total": 24,
+  "detailed_tasks_complete": 3,
+  "detailed_tasks_total": 27,
+  "application_acceptance": false,
+  "t0_04_complete": false,
+  "final_local_tool_sha256": {
+    "tools/php83/package-identities/build.py": "a425673559290d0dcb343500fcfdd1bdde7b43c91c6f342da9725b708cebf110",
+    "tools/php83/package-identities/test_package_identities.py": "bb293e0b7e71fcd965a3de9550d60c41b4fd57163311be795b23531356d1ed53",
+    "tools/php83/candidate-syntax/historical-identity.py": "d1c2b38a30ff944238e3bbef1f0bbf7f8033d472bd9e5c546be56a3bb2ec79a4",
+    "tools/php83/candidate-syntax/run.sh": "a4c56183e69aaadb6bb32412c69cfb3ca9c1dfb36bc21b7bc90b06b2007cb905",
+    "tools/php83/candidate-syntax/scan.py": "d7068544abf8e0255238b17990c8bfea2be2a0e5d0b2ca4537fc2687000a3bdb",
+    "tools/php83/candidate-syntax/stage.py": "5ff03920be87cfa10b4bec9fec2c9fffaa194c7537101b37643a2d0cc86f11ca",
+    "tools/php83/candidate-syntax/test_scan.py": "7f5a8db831a342f490b6d3ca384322238207d1a2c2ec5a3bd80e72c76f45faea"
+  }
+}

@@ -1,0 +1,3 @@
+Started run-u2501.service - /usr/bin/env -i PATH=/usr/bin:/bin LC_ALL=C TZ=UTC /usr/bin/python3 -B /audit/tools/scan.py.
+run-u2501.service: Main process exited, code=dumped, status=31/SYS
+run-u2501.service: Failed with result 'core-dump'.

@@ -1,0 +1,33 @@
+{
+  "phase": "Synthetic build orchestration fault-path coverage after Claude review",
+  "executor": "Codex delegated package identity task",
+  "builder_changed": false,
+  "prior_evidence_preserved": [
+    "primary-tests.stdout",
+    "primary-tests.stderr",
+    "primary-tests.exit",
+    "primary-result.json"
+  ],
+  "prior_test_source": "primary-initial-tests.py",
+  "prior_tests": 18,
+  "added_tests": 7,
+  "total_tests": 25,
+  "exit": 0,
+  "cases_added": [
+    "successful synthetic archive-to-ledger join",
+    "outer bundle hash mismatch",
+    "inner checksum mismatch",
+    "original ZIP hash mismatch",
+    "nonregular DEB member",
+    "checksum/DEB set mismatch",
+    "dpkg-deb failure"
+  ],
+  "execution_scope": "Real build() Python orchestration over synthetic tar/ZIP/reports; dpkg executable/version mocked, archive pins temporarily set to synthetic fixture identities. No subprocess package decoding/install, network or VM execution. Frozen production builder unchanged.",
+  "independent_review": "Pending coordinator-owned actual CLI follow-up for this expanded test source",
+  "identities": {
+    "tools/php83/package-identities/build.py": "a425673559290d0dcb343500fcfdd1bdde7b43c91c6f342da9725b708cebf110",
+    "tools/php83/package-identities/test_package_identities.py": "bb293e0b7e71fcd965a3de9550d60c41b4fd57163311be795b23531356d1ed53",
+    "doc/php83/evidence/package-identities/primary-initial-tests.py": "eb50f30aefd387a4022e2ffa7c749511838bdd6085ad4685828e9bcccd275c3b"
+  },
+  "t0_04_complete": false
+}
