@@ -73,12 +73,19 @@ func newRoot() *cobra.Command {
 		}
 	}
 	root.AddCommand(&cobra.Command{Use: "migrate", Args: cobra.NoArgs, RunE: withDB(func(*cobra.Command, *gorm.DB, *auth.Service) error { return nil })})
-	root.AddCommand(&cobra.Command{Use: "serve", Args: cobra.NoArgs, RunE: func(c *cobra.Command, args []string) error {
+	serveCmd := &cobra.Command{Use: "serve", Args: cobra.NoArgs, RunE: func(c *cobra.Command, args []string) error {
+		applyServerFlags(c, &cfg.Server)
 		if err := cfg.Validate(); err != nil {
 			return err
 		}
 		return withDB(func(c *cobra.Command, db *gorm.DB, svc *auth.Service) error { return serve(c, cfg, db, svc) })(c, args)
-	}})
+	}}
+	serveCmd.Flags().Bool("https", false, "serve standalone HTTPS")
+	serveCmd.Flags().String("tls-cert", "", "TLS certificate file")
+	serveCmd.Flags().String("tls-key", "", "TLS private key file")
+	serveCmd.Flags().String("tls-dir", "", "self-signed certificate storage directory")
+	serveCmd.Flags().String("base-path", "", "URL prefix, e.g. /console (proxy must preserve it)")
+	root.AddCommand(serveCmd)
 	users := &cobra.Command{Use: "user", Short: "Manage local users"}
 	for _, operation := range []string{"add", "passwd", "delete", "list"} {
 		var email, name, role string
@@ -157,4 +164,15 @@ func password(c *cobra.Command, stdin bool) (string, error) {
 		return "", printErr
 	}
 	return string(b), err
+}
+
+func applyServerFlags(c *cobra.Command, cfg *config.ServerConfig) {
+	if c.Flags().Changed("https") {
+		cfg.HTTPS, _ = c.Flags().GetBool("https")
+	}
+	for name, target := range map[string]*string{"tls-cert": &cfg.TLSCert, "tls-key": &cfg.TLSKey, "tls-dir": &cfg.TLSDir, "base-path": &cfg.BasePath} {
+		if c.Flags().Changed(name) {
+			*target, _ = c.Flags().GetString(name)
+		}
+	}
 }

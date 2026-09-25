@@ -1,9 +1,11 @@
 [server]
 host = "0.0.0.0"
 port = 8080
+base_path = "" # e.g. /console; proxy preserves this prefix
 https = false
 tls_cert = ""
 tls_key = ""
+tls_dir = "/var/lib/kaltura-console/tls" # self-signed fallback when cert/key are both empty
 trusted_proxies = []
 session_ttl = "2h"
 session_max = "12h"

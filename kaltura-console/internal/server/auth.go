@@ -51,7 +51,7 @@ func (s *Server) sessionMiddleware(next echo.HandlerFunc) echo.HandlerFunc {
 	return func(c *echo.Context) error {
 		r := c.Request()
 		// Never let shared or browser caches retain authenticated content or CSRF tokens.
-		if strings.HasPrefix(r.URL.Path, "/api/") || strings.HasPrefix(r.URL.Path, "/media/") {
+		if strings.HasPrefix(r.URL.Path, s.cfg.Server.BasePath+"/api/") || strings.HasPrefix(r.URL.Path, s.cfg.Server.BasePath+"/media/") {
 			c.Response().Header().Set("Cache-Control", "private, no-store")
 		}
 		if isMutating(r.Method) && !s.sameOrigin(r) {
@@ -110,7 +110,11 @@ func (s *Server) requireAdmin(next echo.HandlerFunc) echo.HandlerFunc {
 }
 
 func (s *Server) cookie(value string, maxAge int, r *http.Request) *http.Cookie {
-	return &http.Cookie{Name: sessionCookie, Value: value, Path: "/", MaxAge: maxAge,
+	path := s.cfg.Server.BasePath
+	if path == "" {
+		path = "/"
+	}
+	return &http.Cookie{Name: sessionCookie, Value: value, Path: path, MaxAge: maxAge,
 		HttpOnly: true, Secure: s.isHTTPS(r), SameSite: http.SameSiteLaxMode}
 }
 

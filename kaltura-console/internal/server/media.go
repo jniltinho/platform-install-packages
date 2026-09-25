@@ -34,20 +34,20 @@ type entryView struct {
 	Playback    string `json:"playback_url"`
 }
 
-func viewEntry(e *kaltura.Entry) entryView {
+func (s *Server) viewEntry(e *kaltura.Entry) entryView {
 	return entryView{
 		ID: e.ID, Name: e.Name, Description: e.Description, Status: e.Status,
 		StatusLabel: kaltura.EntryStatusLabel(e.Status), StatusGroup: kaltura.EntryStatusGroup(e.Status),
 		Duration: e.Duration, CreatedAt: e.CreatedAt, UpdatedAt: e.UpdatedAt, Plays: e.Plays,
 		Width: e.Width, Height: e.Height,
-		Thumbnail: "/media/" + e.ID + "/thumbnail", Playback: "/media/" + e.ID + "/stream",
+		Thumbnail: s.cfg.Server.BasePath + "/media/" + e.ID + "/thumbnail", Playback: s.cfg.Server.BasePath + "/media/" + e.ID + "/stream",
 	}
 }
 
-func viewEntries(in []kaltura.Entry) []entryView {
+func (s *Server) viewEntries(in []kaltura.Entry) []entryView {
 	out := make([]entryView, len(in))
 	for i := range in {
-		out[i] = viewEntry(&in[i])
+		out[i] = s.viewEntry(&in[i])
 	}
 	return out
 }
@@ -98,7 +98,7 @@ func (s *Server) dashboard(c *echo.Context) error {
 	}
 	return c.JSON(http.StatusOK, map[string]any{
 		"counts": map[string]int{"total": total, "ready": ready, "processing": processing, "error": failed},
-		"recent": viewEntries(recent.Objects),
+		"recent": s.viewEntries(recent.Objects),
 	})
 }
 
@@ -120,7 +120,7 @@ func (s *Server) listMedia(c *echo.Context) error {
 		pages = 1
 	}
 	return c.JSON(http.StatusOK, map[string]any{
-		"items": viewEntries(l.Objects), "total": l.TotalCount, "page": page, "page_size": pageSize, "pages": pages,
+		"items": s.viewEntries(l.Objects), "total": l.TotalCount, "page": page, "page_size": pageSize, "pages": pages,
 	})
 }
 
@@ -134,7 +134,7 @@ func (s *Server) getMedia(c *echo.Context) error {
 		return s.kalturaErr(c, err)
 	}
 	s.ownCache.Store(id, s.now())
-	return c.JSON(http.StatusOK, viewEntry(e))
+	return c.JSON(http.StatusOK, s.viewEntry(e))
 }
 
 func (s *Server) mediaStatus(c *echo.Context) error {
@@ -146,7 +146,7 @@ func (s *Server) mediaStatus(c *echo.Context) error {
 	if err != nil {
 		return s.kalturaErr(c, err)
 	}
-	v := viewEntry(e)
+	v := s.viewEntry(e)
 	return c.JSON(http.StatusOK, map[string]any{
 		"id": v.ID, "status": v.Status, "status_label": v.StatusLabel, "status_group": v.StatusGroup,
 		"ready": v.StatusGroup == kaltura.GroupReady, "duration": v.Duration, "width": v.Width, "height": v.Height,
@@ -212,7 +212,7 @@ func (s *Server) updateMedia(c *echo.Context) error {
 	if err != nil {
 		return s.kalturaErr(c, err)
 	}
-	return c.JSON(http.StatusOK, viewEntry(e))
+	return c.JSON(http.StatusOK, s.viewEntry(e))
 }
 
 func (s *Server) deleteMedia(c *echo.Context) error {

@@ -43,3 +43,19 @@ A single static Go binary, packaged as `.deb`/`.rpm` next to the Kaltura package
 - New directory `kaltura-console/` (Go module `kaltura-console`), its CI workflow `.github/workflows/kaltura-console-release.yml`, and new skills under `.claude/skills/` and `.agents/skills/`.
 - There is no change to the Kaltura server packages. Optionally, `deb/noble/install-aio.sh` can install the console on the `aio` VM for validation.
 - `criare/kaltura-console` and `criare/kaltura-legacy-gateway` are superseded once this ships. They are not modified.
+
+## HTTPS and subpath deployment refinement
+
+The console also supports `server.base_path` (empty/root or a canonical path
+such as `/console`). The proxy MUST preserve this prefix and the external Host,
+and overwrite X-Forwarded-Proto; only configured trusted proxy CIDRs are honored.
+All SPA, asset, API and media URLs and session cookie paths use the prefix. The
+same embedded build works at root or a configured prefix without rebuilding.
+
+Standalone `server.https=true` accepts an explicit certificate/key pair. With
+neither configured, it creates and reuses a self-signed certificate valid for
+ten years under `server.tls_dir` (default `/var/lib/kaltura-console/tls`, writable
+under systemd); private keys are 0600. Existing or incomplete certificate files
+are never silently replaced. Self-signed TLS is for lab/bootstrap use, not a
+publicly trusted certificate. Serve flags override file/env for HTTPS, cert/key,
+TLS directory and base path. TLS requires version 1.2 or newer.

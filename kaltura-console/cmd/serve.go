@@ -17,6 +17,7 @@ import (
 	"kaltura-console/internal/config"
 	"kaltura-console/internal/kaltura"
 	"kaltura-console/internal/server"
+	"kaltura-console/internal/tlsconfig"
 	"kaltura-console/web"
 )
 
@@ -50,12 +51,21 @@ func serve(c *cobra.Command, cfg *config.Config, db *gorm.DB, svc *auth.Service)
 	}
 	h := &http.Server{Addr: cfg.Server.Addr(), Handler: e, ReadHeaderTimeout: 10 * time.Second,
 		IdleTimeout: 120 * time.Second, WriteTimeout: 60 * time.Second, MaxHeaderBytes: 1 << 20}
+	if cfg.Server.HTTPS {
+		h.TLSConfig, err = tlsconfig.Prepare(cfg.Server.TLSCert, cfg.Server.TLSKey, cfg.Server.TLSDir, cfg.Server.Host)
+		if err != nil {
+			return err
+		}
+		if cfg.Server.TLSCert == "" {
+			slog.Warn("using self-signed TLS; configure a trusted certificate for production", "directory", cfg.Server.TLSDir)
+		}
+	}
 	ctx, stop := signal.NotifyContext(c.Context(), os.Interrupt, syscall.SIGTERM)
 	defer stop()
 	done := make(chan error, 1)
 	go func() {
 		if cfg.Server.HTTPS {
-			done <- h.ListenAndServeTLS(cfg.Server.TLSCert, cfg.Server.TLSKey)
+			done <- h.ListenAndServeTLS("", "")
 			return
 		}
 		done <- h.ListenAndServe()

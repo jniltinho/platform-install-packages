@@ -1,3 +1,4 @@
+import { apiPath } from "./base";
 import { ref } from "vue";
 export const notice = ref("");
 let noticeTimer: ReturnType<typeof setTimeout> | undefined;
@@ -20,7 +21,7 @@ export async function api<T>(
   body?: unknown,
   csrf = "",
 ): Promise<T> {
-  const response = await fetch("/api" + path, {
+  const response = await fetch(apiPath(path), {
     method,
     credentials: "same-origin",
     headers: { "Content-Type": "application/json", "X-CSRF-Token": csrf },

@@ -170,3 +170,19 @@
 ## Migration Plan
 
 Deploy the new package side by side on a different port, then point users to it. Laravel users are not migrated; recreate them with `kaltura-console user add`. To roll back, stop the service and keep using the Laravel app.
+
+## HTTPS and subpath deployment refinement
+
+The console also supports `server.base_path` (empty/root or a canonical path
+such as `/console`). The proxy MUST preserve this prefix and the external Host,
+and overwrite X-Forwarded-Proto; only configured trusted proxy CIDRs are honored.
+All SPA, asset, API and media URLs and session cookie paths use the prefix. The
+same embedded build works at root or a configured prefix without rebuilding.
+
+Standalone `server.https=true` accepts an explicit certificate/key pair. With
+neither configured, it creates and reuses a self-signed certificate valid for
+ten years under `server.tls_dir` (default `/var/lib/kaltura-console/tls`, writable
+under systemd); private keys are 0600. Existing or incomplete certificate files
+are never silently replaced. Self-signed TLS is for lab/bootstrap use, not a
+publicly trusted certificate. Serve flags override file/env for HTTPS, cert/key,
+TLS directory and base path. TLS requires version 1.2 or newer.

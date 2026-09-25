@@ -17,7 +17,7 @@ Browser → optional HTTPS reverse proxy → Go HTTP server → Kaltura api_v3
                                               └────────→ private upload staging directory
 ```
 
-Vue, Tailwind and local Inter fonts are compiled by Vite into `web/dist`; `web/web.go` embeds that tree. Node and a separate frontend server are unnecessary in production. `cmd/serve.go` constructs the Kaltura client, auth service and Echo v5 handlers. HTTP and UI use the same origin. API errors are JSON; unknown API paths are not rewritten to the SPA.
+Vue, Tailwind and local Inter fonts are compiled by Vite into `web/dist`; `web/web.go` embeds that tree. Node and a separate frontend server are unnecessary in production. `cmd/serve.go` constructs the Kaltura client, auth service and Echo v5 handlers. HTTP and UI use the same origin. A canonical `server.base_path` mounts all routes beneath a prefix such as `/console`; the default empty prefix preserves root deployment. Vite emits relative assets, the server injects a matching HTML base, and the router/API helpers consume that base, so the same build supports either deployment. API errors are JSON; unknown API paths are not rewritten to the SPA.
 
 ## Source navigation
 
@@ -27,6 +27,7 @@ Paths below are relative to `kaltura-console/`.
 |---|---|
 | `main.go`, `cmd/root.go` | CLI entry point; config, migrations and local-account commands |
 | `cmd/serve.go` | Dependency wiring, listener, structured logging, shutdown, periodic expiry cleanup |
+| `internal/tlsconfig/tls.go` | Explicit TLS pair loading or persistent self-signed generation/reuse; startup validity checks |
 | `internal/config/config.go` | Viper defaults, TOML/environment loading and validation |
 | `internal/config/example.toml`, `config.toml.example` | Identical embedded/public example configuration |
 | `internal/models/models.go` | Users, sessions and failed-login records |
@@ -41,7 +42,7 @@ Paths below are relative to `kaltura-console/`.
 | `internal/kaltura/client.go` | Form-based API transport, KS cache and single session-error retry |
 | `internal/kaltura/upload.go` | Create entry/token, stream upload, attach content, failure cleanup |
 | `internal/kaltura/media.go`, `status.go` | Typed API objects, delivery URLs and status mappings |
-| `frontend/src/main.ts`, `session.ts`, `api.ts` | UI routes, Pinia session state, fetch/errors and safe return URLs |
+| `frontend/src/main.ts`, `session.ts`, `api.ts`, `base.ts` | UI routes, Pinia session state, fetch/errors and safe return URLs |
 | `frontend/src/views/` | Login, dashboard, library, upload, detail, users and diagnostics screens |
 | `frontend/src/style.css` | Theme/layout; square-corner design enforced by frontend lint |
 | `web/web.go`, `web/dist/` | Embedded production assets; generated assets rebuilt before Go compilation |
@@ -54,9 +55,15 @@ Passwords use bcrypt (cost 12); users have `admin` or `viewer` roles. Both can r
 
 Sessions use random opaque identifiers stored in the console database and an HttpOnly, SameSite=Lax cookie. Normal sessions default to 2 hours idle / 12 hours absolute; remembered sessions have a 30-day absolute lifetime without the idle check. Each session has a CSRF token; authenticated mutations require `X-CSRF-Token`. Mutations with a supplied cross-origin `Origin` are rejected, including login. Role/password changes and account deletion revoke sessions. Transactions serialize account edits before checking the last-admin invariant.
 
-TLS determines the cookie's Secure flag. Forwarded client IP/protocol are trusted only for configured proxy CIDRs; the default list is empty. Never expose an HTTP installation as if it provided transport confidentiality. JSON/API and proxied-media responses use `private, no-store`.
+TLS determines the cookie's Secure flag; its Path is the application prefix or `/`. A prefix change does not revoke or migrate existing sessions/cookies. Forwarded client IP/protocol are trusted only for configured proxy CIDRs; the default list is empty. Never expose an HTTP installation as if it provided transport confidentiality. JSON/API and proxied-media responses use `private, no-store`.
 
 Kaltura's admin secret and KS stay server-side. KS caching is protected by a mutex and requests retry once on recognized expired/invalid KS errors. This is not a general retry of arbitrary upstream failures. Request logging records paths, not query strings or request bodies; operators should still treat logs as sensitive because account identifiers can appear. Kaltura API exceptions are logged by error code rather than the upstream message, which might echo sensitive values.
+
+## Listener TLS
+
+`cmd/serve.go` uses `internal/tlsconfig` for standalone HTTPS. Operator certificate/key paths take precedence over fallback generation. If both paths are empty, a ten-year self-signed ECDSA pair is generated once beneath `server.tls_dir`, then reused. Unsafe/partial fallback material and invalid/expired certificates stop startup; identity is not silently renewed. Certificate rotation is an operator action followed by restart. The fallback private key is 0600. The listener configuration does not disable outbound Kaltura certificate verification.
+
+The diagrams show logical components and root-relative request names; a configured prefix applies to all illustrated HTTP paths. Native HTTPS runs in the Go process instead of the optional HTTPS edge shown. See [operations](operations.md#standalone-https) for production CA guidance and the prefix-preserving Apache example.
 
 ## Upload and playback
 

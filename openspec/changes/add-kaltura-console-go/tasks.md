@@ -22,7 +22,7 @@
 
 ## 4. Packaging, release and validation
 
-- [ ] 4.1 nfpm `.deb`/`.rpm`: preinst creates the user; hardened unit with ReadWritePaths; config `root:kaltura-console 0640` noreplace; postinst migrate and hint; upgrade restart; purge. Version from `git describe --match 'kaltura-console/v*'`. Verify by installing on the noble `aio` VM (`systemctl is-active`), upgrading with data kept, and installing the `.rpm` on Rocky 9 `el9aio` when available.
+- [x] 4.1 nfpm `.deb`/`.rpm`: preinst creates the user; hardened unit with ReadWritePaths; config `root:kaltura-console 0640` noreplace; postinst migrate and hint; upgrade restart; purge. Version from `git describe --match 'kaltura-console/v*'`. Verify by installing on the noble `aio` VM (`systemctl is-active`), upgrading with data kept, and installing the `.rpm` on Rocky 9 `el9aio` when available.
 - [x] 4.2 E2E on the noble `aio` VM:
   - install the `.deb` and configure partner 102;
   - use `agent-browser` to log in, upload an MP4, wait for READY, play (check the 206 Range), edit and delete;
@@ -42,3 +42,16 @@
 - The workflow build job passed under act v0.2.89 with the Ubuntu 24.04 image: frontend build/lint/Vitest, Go lint/static tests/race tests, binary/DEB/RPM/archive/checksums and local artifact upload. GitHub-hosted publication was not performed.
 - Documentation relative links and Archify diagram schema/render/layout/SVG checks passed.
 - Codex reviewed the proposal and implementation in this CLI session, applying fixes for transactional last-admin protection, logout/login-attempt DB failures, API cache policy, proxy truncation/cancellation, configuration validation and upstream error-log redaction. No separate automated codex review process is claimed.
+
+## 5. HTTPS and reverse-proxy refinement
+
+- [ ] 5.1 Implement/validate canonical server.base_path across routes, assets, cookies and frontend; test deep links, login, upload and media URLs at root and /console.
+- [x] 5.2 Implement standalone TLS flags/env and persistent self-signed certificate fallback; test permissions, reuse, explicit pair, invalid material and real HTTPS.
+- [ ] 5.3 Document Apache prefix-preserving proxy/TLS settings; validate HTTPS proxy E2E with a trusted local proxy and standalone TLS smoke test.
+
+### HTTPS refinement evidence (2026-09-25 UTC)
+
+- rc6 RPM installed on Rocky 9 el9aio; service active as kaltura-console. Noble/26.04 DEB upgrades kept operator configs using dpkg --force-confold.
+- Standalone HTTPS on el9aio:8443/console/healthz returned200 with curl --cacert; key0600, identical certificate SHA256 before/after restart.
+- Go tests (CGO0 and race), lint and13Vitest tests passed. Tests cover prefix route isolation, SPA base/deep-link redirects, cookie path, trusted/untrusted forwarding, CSRF, prefixed media URLs and certificate generation/reuse/permissions/invalid material.
+- rc6 Noble browser E2E passed; Rocky/26.04/prefixed HTTPS E2E are still in progress.

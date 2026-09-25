@@ -4,6 +4,12 @@
 
 This is the embedded SPA's same-origin API, not the Kaltura public API. Route authority: [`internal/server/server.go`](../internal/server/server.go). JSON field definitions: [`auth.go`](../internal/server/auth.go), [`media.go`](../internal/server/media.go). Error bodies use `{"message":"..."}` (currently pt-BR). Do not match localized error strings in integrations.
 
+## Base URL
+
+All paths below are relative to the configured application prefix. With default `server.base_path = ""`, use the paths as written. With `server.base_path = "/console"`, prepend `/console`: login is `/console/api/login`, playback is `/console/media/:id/stream`, and liveness is `/console/healthz`. There are no duplicate root API routes in prefixed mode. Response media URLs include the prefix. Serve flags or `KCONSOLE_SERVER_BASE_PATH` can override the TOML setting.
+
+Use HTTPS directly (`server.https`) or through a trusted TLS-terminating proxy. Cookie Path follows the prefix, or `/` at root; Secure follows direct TLS/trusted forwarded HTTPS. Refer to [TLS/prefix operations](operations.md#standalone-https) for deployment and cookie migration.
+
 ## Session contract
 
 `POST /api/login` accepts `{"email":"operator@example.invalid","password":"<supplied securely>","remember":false}`. Success sets `kconsole_session` and returns `{user:{id,name,email,role},csrf,partner_id,version}`. `GET /api/session` returns the same shape. Retain cookies and send the returned `csrf` as `X-CSRF-Token` on authenticated POST/PATCH/DELETE requests, including logout. A fresh unauthenticated login has no CSRF token requirement; a login made with an existing valid session does. Origin checks also apply. No bearer-token or public registration endpoint exists.

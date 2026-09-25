@@ -81,3 +81,18 @@ A tag `kaltura-console/vX.Y.Z` SHALL trigger CI that builds the frontend, runs t
 #### Scenario: Tag pushed
 - **WHEN** `kaltura-console/v0.1.0` is pushed
 - **THEN** the release `kaltura-console/v0.1.0` has release notes and the three assets
+
+### Requirement: Standalone HTTPS
+The console SHALL support HTTPS with an explicit certificate/key pair or, when
+neither is provided, a persisted self-signed certificate in `server.tls_dir`.
+It SHALL support equivalent serve flags and environment configuration.
+Private keys SHALL be mode 0600 and existing material SHALL NOT be overwritten.
+
+#### Scenario: First standalone TLS start
+- **WHEN** HTTPS is enabled without explicit certificate paths
+- **THEN** a ten-year self-signed certificate is created and HTTPS serves the console
+- **AND** subsequent starts reuse the same certificate and private key
+
+#### Scenario: Invalid certificate configuration
+- **WHEN** only one explicit certificate path is configured or stored material is incomplete
+- **THEN** startup fails without replacing existing certificate material
