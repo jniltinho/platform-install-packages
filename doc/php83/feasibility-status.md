@@ -412,3 +412,11 @@ selected construction/cache-restoration diagnostic occurrences from the Apache
 HTTP/HTTPS workload with unchanged responses, fixture hashes and focused
 original-7.4 serialization comparisons. Other diagnostics and all release gates
 remain open; no production artifact was promoted.
+
+## Parser cache/consumer follow-up
+
+[Complete original parser-object transfer and the real annotation consumer](doc-comment-consumer.md)
+now match original 7.4 on the candidate runtimes. Real playlist metadata and
+nested time conversion/opt-out are checked without invoking service actions.
+Claude ran nine client unit tests; Grok's verifier execution was blocked and
+is not counted. The primary agent verified identities; 68 local tests pass.

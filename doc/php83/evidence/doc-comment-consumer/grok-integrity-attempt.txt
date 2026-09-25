@@ -1,0 +1,5 @@
+The script is a read-only hash check. I'll confirm `/tmp/php83-independent-integrity.py` matches the source you pasted, then run that exact command.The file matches the source you provided: local reads, SHA256 checks, assertions, and a JSON print. Running it now.**NOT EXECUTED.**
+
+`python3 /tmp/php83-independent-integrity.py` was blocked before it started. Auto mode treated the `/tmp` Python file as an unverified payload, so there is no script stdout and no script exit code.
+
+The file on disk was read first and matches the source you pasted (995 bytes: local reads, SHA256 checks, assertions, one JSON print). That read did not run the script, and the run was not retried.

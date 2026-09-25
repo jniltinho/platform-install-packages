@@ -1,5 +1,6 @@
 <?php
 require_once $root . '/api_v3/lib/reflection/KalturaDocCommentParser.php';
+$cacheExports = array();
 foreach (array(
     array('/** Empty */', array()),
     array('/** @disableRelativeTime $createdAt */', array('createdAt')),
@@ -13,6 +14,7 @@ foreach (array(
         throw new RuntimeException('Doc comment parse contract changed');
     }
     $serialized = serialize($parsed);
+    $cacheExports[] = array('comment' => $fixture[0], 'payload_base64' => base64_encode($serialized), 'sha256' => hash('sha256', $serialized));
     $restored = unserialize($serialized);
     if (get_object_vars($restored) !== get_object_vars($parsed)) {
         throw new RuntimeException('Doc comment cache roundtrip changed');
@@ -26,3 +28,7 @@ if (!$restored instanceof KalturaDocCommentParser || $restored->disableRelativeT
     throw new RuntimeException('Legacy property cache cannot be read');
 }
 $out[] = array('legacy-public-property-cache', true);
+
+if ($case === 'doc-comment-export') {
+    $out = array('producer_php' => PHP_VERSION, 'source_sha256' => hash_file('sha256', $root . '/api_v3/lib/reflection/KalturaDocCommentParser.php'), 'entries' => $cacheExports);
+}

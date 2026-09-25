@@ -26,6 +26,9 @@ foreach (array('/audit/app/configurations', '/audit/app/cache') as $requiredMoun
 }
 file_put_contents($root . '/configurations/local.ini', "date_default_timezone = UTC\nquery_cache_enabled = false\nenable_cache = false\nmax_num_instances_in_pool = 100\n");
 file_put_contents($root . '/configurations/logger.ini', "[api_v3]\nwriters.stream.name = Zend_Log_Writer_Stream\nwriters.stream.stream = php://stderr\nwriters.stream.formatters.simple.name = Zend_Log_Formatter_Simple\nwriters.stream.formatters.simple.format = %message%\n");
+if ($case === 'doc-comment-consumer') {
+    file_put_contents($root . '/configurations/local.ini', "max_relative_time = 86400\n", FILE_APPEND);
+}
 if ($case === 'api-http') {
     file_put_contents($root . '/configurations/local.ini', "[api_strict_error_map]\n", FILE_APPEND);
 }

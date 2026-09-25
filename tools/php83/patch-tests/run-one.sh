@@ -10,7 +10,7 @@ case "${1:-}" in
  candidate) tree=/home/vagrant/php-patch-tests/candidate ;;
  *) exit 64 ;;
 esac
-case "${2:-}" in doc-comment|api-dispatch|api-bootstrap|symfony-yaml|symfony|symfony-bootstrap|registry|registry-action-stack|registry-bootstrap|registry-storage|legacy-json|zend-json|analytics-partner|debug-pdo|debug-pdo-logging|debug-pdo-stringify|debug-pdo-edges|environment) ;; *) exit 64 ;; esac
+case "${2:-}" in doc-comment-cache|doc-comment-export|doc-comment-consumer|doc-comment|api-dispatch|api-bootstrap|symfony-yaml|symfony|symfony-bootstrap|registry|registry-action-stack|registry-bootstrap|registry-storage|legacy-json|zend-json|analytics-partner|debug-pdo|debug-pdo-logging|debug-pdo-stringify|debug-pdo-edges|environment) ;; *) exit 64 ;; esac
 ini=()
 case "${3:-standard}" in
  standard) ;;
@@ -24,11 +24,11 @@ if [[ "$2" == debug-pdo* ]]; then
  ini+=(-d "extension=/audit/tests/sqlite/extracted/usr/lib/php/$abi/pdo_sqlite.so")
 fi
 cache=()
-if [[ "$2" == symfony-bootstrap || "$2" == api-bootstrap || "$2" == api-dispatch ]]; then
+if [[ "$2" == symfony-bootstrap || "$2" == doc-comment-consumer || "$2" == api-bootstrap || "$2" == api-dispatch ]]; then
  # Private ephemeral cache overlay, never the host payload or application cache.
  cache=(-p 'TemporaryFileSystem=/audit/app/cache:rw,nosuid,nodev,mode=1777')
 fi
-if [[ "$2" == api-bootstrap || "$2" == api-dispatch ]]; then
+if [[ "$2" == doc-comment-consumer || "$2" == api-bootstrap || "$2" == api-dispatch ]]; then
  cache+=(-p 'TemporaryFileSystem=/audit/app/configurations:rw,nosuid,nodev,mode=1777')
 fi
 exec sudo systemd-run --quiet --wait --pipe --collect \

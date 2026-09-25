@@ -13,7 +13,11 @@ if ($case === 'environment') {
         'iconv_loaded' => extension_loaded('iconv'))), "\n";
     exit(0);
 }
-if ($case === 'doc-comment') {
+if ($case === 'doc-comment-cache') {
+    require __DIR__ . '/doc-comment-cache.php';
+} elseif ($case === 'doc-comment-consumer') {
+    require __DIR__ . '/doc-comment-consumer.php';
+} elseif ($case === 'doc-comment' || $case === 'doc-comment-export') {
     require __DIR__ . '/doc-comment.php';
 } elseif ($case === 'registry') {
     require_once 'Zend/Registry.php';

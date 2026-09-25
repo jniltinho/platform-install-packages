@@ -1,0 +1,18 @@
+**Resultado:** rodei exatamente o comando pedido, sem negação da ferramenta.
+
+```
+python3 -m unittest discover -s tools/php83 -p 'test_api_http.py'
+.........
+Ran 9 tests in 0.009s
+OK
+```
+
+- **Contagem:** 9 testes, 9 passaram. Nenhuma falha, erro ou skip.
+- **Exit code:** 0. Não foi impresso explicitamente. Deduzo do `OK` do unittest e de a ferramenta não ter sinalizado erro.
+
+**O que isto NÃO prova:**
+- **Nada sobre o Kaltura real sob PHP 8.3.** Os testes cobrem só o cliente Python HTTP/HTTPS e levaram 9 ms, então não houve I/O real de rede, VM, Apache ou DB. Não verificam o comportamento do `api_v3`, do dispatcher, de sessões ou do contrato JSON de um servidor real.
+- **Nada sobre o patch do `KalturaDocCommentParser` (`$disableRelativeTimeParams`).** Os testes não provam que o comportamento ficou igual nem que os avisos de dynamic property sumiram.
+- **Nada sobre TLS real.** Não houve cadeia de certificados, SNI, verificação de hostname nem timeouts de rede.
+- **Não sei exatamente o que os 9 testes cobrem.** Só me foi permitido rodar o comando, então não li `test_api_http.py`. Não posso garantir a cobertura de caminhos de erro, redirects ou parsing de respostas malformadas.
+- **Nada sobre a suíte completa de `tools/php83`.** O padrão `-p` restringiu a execução a este único arquivo.
