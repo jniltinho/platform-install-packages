@@ -221,3 +221,10 @@ Actual KalturaPDO/bootstrap without dependency stubs independently passes 23 row
 per prior/candidate artifact; nine intentional null-to-bool slots are checked.
 First fixture named-input failure is retained and corrected. See
 `doc/php83/exp9-pdo-integration.md`; no aggregate acceptance checkbox closes.
+
+T0-04 partial prerequisite: deterministic identity/accounting ledger joins all
+4,711 raw/package static rows and 275 syntax records without claiming distinct
+defects or resolving findings from patch overlap. Cursor independently rebuilds
+identical bytes and runs eight tests. The 792 missing packaged identities and
+20 version/license attributions are explicit. See `doc/php83/inventory-ledger.md`;
+full classification/entrypoint/license review remains pending, so 5.4 stays open.

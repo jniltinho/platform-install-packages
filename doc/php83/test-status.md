@@ -292,3 +292,13 @@ full-service 7.4 baseline, not only individual diagnostic repairs. Do not reuse
 `/tmp/php74-baseline-sanity.sh` unmodified: its default target is protected `.20`
 and `curl -L` does not enforce per-hop lab destinations. Historical network-guard
 removal means prior temporary protection cannot be assumed active.
+
+## Inventory accounting prerequisite
+
+A reproducible, independently Cursor-rebuilt ledger now links 4,711 overlapping
+static-report rows, 275 syntax records, 79 compiler comparisons and exp9 runtime
+locations to available source identities. Eight additional nested local tests
+pass. It explicitly exposes 792 missing packaged-file hashes and 20 unresolved
+dependency version/license attributions; it resolves zero semantic findings.
+See [inventory ledger](inventory-ledger.md). T0-04 remains open; next is read-only
+identity extraction from the already checksum-verified published DEB payloads.

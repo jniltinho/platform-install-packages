@@ -1,0 +1,18 @@
+{
+  "executor": "Codex delegated inventory task",
+  "independent_review": "Cursor CLI: 8 tests, rebuild and cmp exit0; bounded review complete",
+  "local_tests": {
+    "count": 8,
+    "exit": 0
+  },
+  "repeat_byte_identity": true,
+  "identities": {
+    "tools/php83/inventory-ledger/build.py": "692ec35d7e0dfc48818b695f1fc16817f932157d4d06283f41b9aa9b5b0d8fbb",
+    "tools/php83/inventory-ledger/test_ledger.py": "8d2640f1328d296bac0bac740e85207be33d8c63a2f4738a27aa6f35aeb924f2",
+    "doc/php83/evidence/inventory-ledger/ledger.json": "33977fe50b11cf851bee4ccd7a5d1e33bcfdb9653c07f413b108b8ed69edddea"
+  },
+  "t0_04_complete": false,
+  "no_vm_network_or_application_execution": true,
+  "independent_ledger_sha256": "33977fe50b11cf851bee4ccd7a5d1e33bcfdb9653c07f413b108b8ed69edddea",
+  "independent_report": "cursor.json"
+}
