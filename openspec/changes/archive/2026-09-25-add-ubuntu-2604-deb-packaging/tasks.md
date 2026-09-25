@@ -10,5 +10,5 @@
 
 - [x] 2.1 `build.sh` scripts run as root in containers (`SRC`/`REPO`). Verify with a local `docker run ubuntu:26.04` build.
 - [x] 2.2 `.github/workflows/kaltura-server-packages.yml`: builds, clean-system checks, release on `kaltura-server/v*`.
-- [ ] 2.3 Run the workflow on GitHub (`workflow_dispatch`) after the integration merge. Verify that all jobs are green.
+- [x] 2.3 Run the workflow on GitHub (`workflow_dispatch`) after the integration merge. Verify that all jobs are green.
 - [x] 2.4 Write `doc/install-kaltura-ubuntu-26.04.md` and add the README link.
