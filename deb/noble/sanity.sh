@@ -21,7 +21,7 @@ for s in mariadb apache2 memcached elasticsearch kaltura-nginx kaltura-sphinx ka
 done
 check "searchd running" pgrep -x searchd
 
-check "API system.ping" bash -c "curl -sf '$URL/api_v3/index.php?service=system&action=ping' | grep -q true"
+check "API system.ping" bash -c "curl -sf '$URL/api_v3/index.php?service=system&action=ping' | grep -Eq '<result>(1|true)</result>'"
 [ "$(http_code $URL/admin_console/)" = 200 ] && ok "admin_console HTTP 200" || fail "admin_console HTTP 200"
 [ "$(http_code $URL/index.php/kmcng/)" = 200 ] && ok "kmcng HTTP 200" || fail "kmcng HTTP 200"
 

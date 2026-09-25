@@ -46,6 +46,11 @@
 13. **Upstream 18.20.0 fixes applied at package time:**
     - A comma is missing in `app_token` in `01.kaltura_ce_tables.sql`.
     - New partners in `init_data/01.Partner.ini` (for example AUTH_BROKER, USER_PROFILE and KMS) bring new secret placeholders. `kaltura-base` generates a secret for any `@*_SECRET@` left.
+15. **Elasticsearch 7 client mode.** Kaltura 18.20 defaults to the ES 5 client (`elasticVersion` = 5), where `hits.total` is an integer. On ES 7 it is an object, and `partner.register` crashes (`Unsupported operand types` in `myPartnerUtils`). The `kaltura-elasticsearch` postinst:
+    - sets `elasticVersion = 7` in `elastic.ini` and in the populate config;
+    - fills the leftover `@BEACONS_ELASTIC_*@` and `@CURL_TIMEOUT_IN_SEC@` placeholders;
+    - uses 0 replicas (single node).
+16. **`qt-faststart`.** The ffmpeg conversion engine runs `/opt/kaltura/bin/qt-faststart` after transcoding. Ubuntu ships it in the `ffmpeg` package, so `kaltura-ffmpeg` links it too.
 14. **Package distribution.** The built `.deb` files are published as release assets, not committed.
 
 ## Risks / Trade-offs

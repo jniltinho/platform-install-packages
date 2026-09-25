@@ -6,14 +6,14 @@ Vagrant.configure("2") do |config|
   config.vm.define "build" do |b|
     b.vm.hostname = "kaltura-build"
     b.vm.provider("virtualbox") { |v| v.memory = 8192; v.cpus = 8 }
-    b.vm.provision "shell", path: "build.sh", privileged: false
+    b.vm.provision "build", type: "shell", path: "build.sh", privileged: false
   end
 
   config.vm.define "aio", autostart: false do |a|
     a.vm.hostname = "kaltura.local"
     a.vm.network "private_network", ip: "192.168.56.20"
     a.vm.provider("virtualbox") { |v| v.memory = 8192; v.cpus = 4 }
-    a.vm.provision "shell", path: "install-aio.sh"
-    a.vm.provision "shell", path: "sanity.sh", run: "always"
+    a.vm.provision "install", type: "shell", path: "install-aio.sh"
+    a.vm.provision "sanity", type: "shell", path: "sanity.sh", run: "always"
   end
 end

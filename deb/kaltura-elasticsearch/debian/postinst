@@ -101,7 +101,7 @@ if [ "$1" = "configure" ]; then
 
 	set +e
 	for ITEM in beacon_entry_index_$TIME_STAMP beacon_entry_server_node_index_$TIME_STAMP beacon_scheduled_resource_index_$TIME_STAMP beacon_server_node_index_$TIME_STAMP kaltura_entry kaltura_kuser kaltura_category;do 
-		curl -f -XPUT http://$ES_HOST:$ES_PORT/$ITEM/_settings -H 'Content-Type: application/json' -d'{"index" : {"number_of_replicas" : "1"}}';
+		curl -f -XPUT http://$ES_HOST:$ES_PORT/$ITEM/_settings -H 'Content-Type: application/json' -d'{"index" : {"number_of_replicas" : "0"}}';
 	done
 	sed -i "s#@MONTH_DAY@#$TIME_STAMP#g" /etc/elasticsearch/aliases/aliases.json
 	curl -f -XPOST "http://$ES_HOST:$ES_PORT/_aliases?pretty" -H 'Content-Type: application/json' -d @/etc/elasticsearch/aliases/aliases.json
@@ -111,8 +111,11 @@ if [ "$1" = "configure" ]; then
 	echo "elasticCluster = kaltura
 	elasticServer = $ES_HOST 
 	elasticPort = $ES_PORT
+	elasticVersion = 7
 	" >$APP_DIR/configurations/elastic/populate/`hostname`.ini
-	sed -i -e "s#@ELASTIC_PORT@#$ES_PORT#g" -e "s#@ELASTIC_HOST@#$ES_HOST#g" $APP_DIR/configurations/elastic.ini
+	sed -i -e "s#@ELASTIC_PORT@#$ES_PORT#g" -e "s#@ELASTIC_HOST@#$ES_HOST#g" -e "s#@BEACONS_ELASTIC_HOST@#$ES_HOST#g" -e "s#@BEACONS_ELASTIC_PORT@#$ES_PORT#g" -e "s#@CURL_TIMEOUT_IN_SEC@#10#g" $APP_DIR/configurations/elastic.ini
+	# ES 7 returns hits.total as an object; Kaltura defaults to the ES 5 client behavior
+	grep -q '^elasticVersion' $APP_DIR/configurations/elastic.ini || sed -i '0,/^elasticPort = .*/s//&\nelasticVersion = 7/' $APP_DIR/configurations/elastic.ini
 	find $APP_DIR/cache/ -type f -exec rm {} \;
 	find $APP_DIR/cache/ -type d -exec chmod 775 {} \;  
 	find $APP_DIR/cache/ -type f -exec chmod 664 {} \;  
