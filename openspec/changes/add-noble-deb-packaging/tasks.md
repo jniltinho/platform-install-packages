@@ -1,37 +1,39 @@
-## 1. Fontes
+## 1. Sources
 
-- [x] 1.1 Conferir o commit da tag `Rigel-18.20.0-rel` em dois forks e publicar `Rigel-18.20.0.zip` (raiz `server-Rigel-18.20.0/`) e o `.sha256` na release `sources-rigel-18.20.0`; verificar com `curl -I` que o asset responde 200
-- [ ] 1.2 Apontar `KALTURA_CORE_URI` para o espelho e verificar o SHA-256 em `build/package_kaltura_core.sh`; verificar que um SHA-256 errado faz o script falhar
+- [x] 1.1 Check the commit of tag `Rigel-18.20.0-rel` in two forks. Publish `Rigel-18.20.0.zip` (root `server-Rigel-18.20.0/`) and its `.sha256` in release `sources-rigel-18.20.0`. Verify with `curl -I` that the asset returns 200.
+- [x] 1.2 Point `KALTURA_CORE_URI` at the mirror and verify the SHA-256 in `build/package_kaltura_core.sh`. Verify that a wrong SHA-256 makes the script fail.
 
-## 2. Ambiente de build
+## 2. Build environment
 
-- [ ] 2.1 Criar `deb/noble/Vagrantfile` (VMs `build` e `aio`, box fixada) e `deb/noble/build.sh` (dependências de build, cópia do repo para `~/sources/platform-install-packages`, build do conjunto em ordem, `dpkg-scanpackages`); verificar com `vagrant up build`
-- [ ] 2.2 Ignorar no git os artefatos de build (`deb/noble/repo/`); verificar que `git status` fica limpo depois do build
+- [x] 2.1 Create `deb/noble/Vagrantfile` (VMs `build` and `aio`, pinned box) and `deb/noble/build.sh`. The script installs the build deps, copies the repo to `~/sources/platform-install-packages`, builds the set in order and runs `dpkg-scanpackages`. Verify with `vagrant up build`.
+- [x] 2.2 Ignore the build artifacts (`deb/noble/repo/`, `.vagrant/`) in git. Verify that `git status` is clean after a build.
 
-## 3. Pacotes
+## 3. Packages
 
-- [ ] 3.1 Pacotes-ponte `kaltura-ffmpeg`, `kaltura-ffmpeg-aux` e `kaltura-sphinx` sobre ffmpeg/sphinxsearch da distro; verificar que os `.deb` são gerados e instalam (a validação funcional fica no 4.2)
-- [ ] 3.2 `kaltura-postinst` 1.0.34 e `kaltura-base` 18.20.0 (dependências `php7.4-*`, `rules`/`postinst` ajustados, templates Flash removidos do `init_content`); verificar que o build gera o `.deb` e que `dpkg -c` mostra `/opt/kaltura/app`
-- [ ] 3.3 `kaltura-front`, `kaltura-batch` e `kaltura-db` 18.20.0 (apache2 + libapache2-mod-php7.4, mariadb, sem DWH); verificar que os `.deb` são gerados
-- [ ] 3.4 Pacotes web: `kaltura-kmcng` v5.17.0, `kaltura-html5lib` v2.98, `kaltura-html5lib3` 3.8.1, `kaltura-html5-studio` v2.2.3, `kaltura-html5-studio3` v3.18.0, `kaltura-html5-analytics`; verificar que os `.deb` são gerados
-- [ ] 3.5 `kaltura-nginx` 1.23.0 com vod 1.30, secure-token, akamai-token, rtmp e vts, linkado ao ffmpeg da distro e com `dh_shlibdeps`; verificar com `nginx -V` e `nginx -t` na VM `aio`
-- [ ] 3.6 `kaltura-elasticsearch` sobre elasticsearch 7.17 (plugin ICU, índices criados); verificar com `curl :9200/_cat/indices` na VM `aio`
-- [ ] 3.7 Meta `kaltura-server` 18.20.0, que depende exatamente do conjunto All-In-One da spec; verificar que `apt-get install --simulate kaltura-server` resolve na VM `aio`
+- [x] 3.1 Bridge packages `kaltura-ffmpeg`, `kaltura-ffmpeg-aux` and `kaltura-sphinx` over the distro ffmpeg and sphinxsearch. Verify that the `.deb` files build and install (functional validation is in 4.2).
+- [x] 3.2 `kaltura-postinst` 1.0.34 and `kaltura-base` 18.20.0: `php7.4-*` dependencies, upstream SQL fix and generic partner secrets. Verify that `dpkg -c` lists `/opt/kaltura/app`.
+- [x] 3.3 `kaltura-front`, `kaltura-batch` and `kaltura-db` 18.20.0: apache2 + libapache2-mod-php7.4, MariaDB, no DWH. Verify that the `.deb` files are built.
+- [x] 3.4 Web packages: `kaltura-kmcng` v5.17.0, `kaltura-html5lib` v2.98, `kaltura-html5lib3` 3.8.1, `kaltura-html5-studio` v2.2.3, `kaltura-html5-studio3` v3.18.0 and `kaltura-html5-analytics` v0.3. Verify that they build and do not pull PHP 8.
+- [ ] 3.5 `kaltura-nginx` 1.23.0 with vod 1.30, secure-token, akamai-token, rtmp and vts, linked against the distro ffmpeg, with `dh_shlibdeps`. Verify with `nginx -t` and that the service is active on the `aio` VM.
+- [ ] 3.6 `kaltura-elasticsearch` on Elasticsearch 7.17 (ICU plugin, indices created). Verify with `curl :9200/_cat/indices` on the `aio` VM.
+- [x] 3.7 Meta package `kaltura-server` 18.20.0, depending on exactly the All-In-One set. Verify that `apt-get install --simulate kaltura-server` resolves on the `aio` VM.
 
-## 4. Instalação e testes
+## 4. Install and tests
 
-- [ ] 4.1 `deb/noble/install-aio.sh`: PPA ondrej, repositório da Elastic, repositório local, mariadb, preseed, instalação sem interação e configuração inicial idempotente; verificar com `vagrant up aio` (código 0) e depois `vagrant provision aio` (código 0, mesmo admin secret)
-- [ ] 4.2 `deb/noble/sanity.sh`: ping, `session.start`, admin_console, kmcng, serviços ativos, upload de MP4, entry READY em ≤10 min, manifesto HLS com segmento válido; verificar que passa na VM `aio` e que falha ao parar o apache2
-- [ ] 4.3 `vagrant reload aio --no-provision` e depois sanity via `vagrant ssh`; verificar que passa
+- [ ] 4.1 `deb/noble/install-aio.sh`: ondrej PPA, Elastic repo, local repo, MariaDB, preseed and unattended install. Verify that `vagrant up aio` and then `vagrant provision aio` both exit 0 and keep the same admin secret.
+- [ ] 4.2 `deb/noble/sanity.sh` checks services, ping, `session.start`, admin_console, kmcng, MP4 upload, entry READY within 10 minutes, and an HLS manifest with a valid segment. Verify that it passes on the `aio` VM and fails when apache2 is stopped.
+- [ ] 4.3 Run `vagrant reload aio --no-provision`, then the sanity script over `vagrant ssh`. Verify that it passes.
 
-## 5. Revisão e documentação
+## 5. Review and documentation
 
-- [ ] 5.1 Revisar a proposta e a implementação com `codex` CLI e aplicar as correções pertinentes
-- [ ] 5.2 Escrever `doc/install-kaltura-noble.md` (build, instalação e limitações); verificar com `openspec validate add-noble-deb-packaging --strict`
+- [ ] 5.1 Review the proposal and the implementation with the `codex` CLI and apply the relevant fixes.
+- [ ] 5.2 Write `doc/install-kaltura-noble.md` (build, install, limitations). Verify with `openspec validate add-noble-deb-packaging --strict`.
+- [ ] 5.3 Update `README.md` and the related docs (package list, supported distros, links) for the noble packages.
+- [ ] 5.4 Publish the built `.deb` files and `Packages.gz` as release assets. Verify that `apt-get update` works with `deb [trusted=yes] https://github.com/jniltinho/platform-install-packages/releases/download/<tag> ./`.
 
-## 6. Validação de ponta a ponta
+## 6. End-to-end validation
 
-- [ ] 6.1 Baixar um vídeo do YouTube com `yt-dlp` (MP4 ≤720p), enviar pela API ao partner de teste e verificar READY, flavors e HLS
-- [ ] 6.2 Capturar com `agent-browser` prints de todas as páginas do Admin Console e das telas principais do KMC em `doc/prints/`; verificar que nenhuma mostra erro
-- [ ] 6.3 Escrever `doc/kaltura-api-noble.md` com exemplos `curl` executados na VM; verificar reexecutando os exemplos
-- [ ] 6.4 Executar `criare/kaltura-console` e `criare/kaltura-legacy-gateway` contra o AIO e registrar o resultado na documentação
+- [ ] 6.1 Download a YouTube video with `yt-dlp` (MP4, 720p or lower) and upload it through the API to the test partner. Verify READY, the flavors and HLS.
+- [ ] 6.2 Capture screenshots with `agent-browser` of every Admin Console page and the main KMC screens into `doc/prints/`. Verify that none of them shows an error.
+- [ ] 6.3 Write `doc/kaltura-api-noble.md` with `curl` examples run on the VM. Verify by re-running the examples.
+- [ ] 6.4 Run `criare/kaltura-console` and `criare/kaltura-legacy-gateway` against the AIO and record the outcome in the documentation.
