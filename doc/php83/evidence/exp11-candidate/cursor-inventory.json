@@ -1,0 +1,161 @@
+{
+  "schema": 1,
+  "executor": "Cursor Agent CLI (independent inventory)",
+  "case": "exp11-candidate-selection-inventory",
+  "status": "PREPARED_NOT_SELECTED",
+  "outcome": "PASS",
+  "inventory_exit": 0,
+  "selection_approved": false,
+  "zip_built": false,
+  "runtime_executed": false,
+  "application_acceptance": false,
+  "stage_py_main_invoked": false,
+  "original_zip_preflight_invoked": false,
+  "counts": {
+    "prior_entries": 59,
+    "exp11_entries": 63,
+    "prior_entries_preserved_exactly": 59,
+    "additional_disjoint_entries": 4,
+    "unique_paths": 63,
+    "unique_patch_leaves": 63,
+    "source_patch_hashes_checked": 63,
+    "source_patch_hashes_matched": 63,
+    "metadata_pins_checked": 5,
+    "metadata_pins_matched": 5,
+    "frozen_input_identities": 72,
+    "frozen_input_mismatches": 0
+  },
+  "hashes": {
+    "exp11_manifest_sha256": "dd9243b654a98385a30dd87a3bbf6e20a3034c9106311d135b57bc9f35696eb2",
+    "exp11_manifest_expected_from_frozen": "dd9243b654a98385a30dd87a3bbf6e20a3034c9106311d135b57bc9f35696eb2",
+    "exp11_manifest_matches_frozen": true,
+    "prior_manifest_sha256": "db4c2b6dfff31f9fd64e05f29e0ccd79b2049e85e7c27ee29b2783605db387aa",
+    "prior_manifest_pinned": "db4c2b6dfff31f9fd64e05f29e0ccd79b2049e85e7c27ee29b2783605db387aa",
+    "prior_manifest_pin_match": true,
+    "upstream_sha256_declared": "58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28",
+    "upstream_sha256_expected": "58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28",
+    "metadata_pins": [
+      {
+        "role": "prior",
+        "path": "doc/php83/evidence/exp10-candidate/manifest.json",
+        "pinned_sha256": "db4c2b6dfff31f9fd64e05f29e0ccd79b2049e85e7c27ee29b2783605db387aa",
+        "actual_sha256": "db4c2b6dfff31f9fd64e05f29e0ccd79b2049e85e7c27ee29b2783605db387aa",
+        "match": true
+      },
+      {
+        "role": "ternary",
+        "path": "patches/php83/held/base-object-ternary/manifest.json",
+        "pinned_sha256": "df50a1afaf236d33153f8e2f6e1b865457875c6657c87ec1aa0b345fee709700",
+        "actual_sha256": "df50a1afaf236d33153f8e2f6e1b865457875c6657c87ec1aa0b345fee709700",
+        "match": true
+      },
+      {
+        "role": "purifier",
+        "path": "patches/php83/held/autoload83/HTMLPurifier-autoload.json",
+        "pinned_sha256": "d914414f8fa00ff793f714797c3788241b1231dcbf99296640adbbe110874b2d",
+        "actual_sha256": "d914414f8fa00ff793f714797c3788241b1231dcbf99296640adbbe110874b2d",
+        "match": true
+      },
+      {
+        "role": "cli",
+        "path": "patches/php83/held/autoload83/symfony-cli-autoload.json",
+        "pinned_sha256": "b3052352913617f362807c75a6cb30cc0b72c5731d291282440c6cad0f5b8ecb",
+        "actual_sha256": "b3052352913617f362807c75a6cb30cc0b72c5731d291282440c6cad0f5b8ecb",
+        "match": true
+      },
+      {
+        "role": "core",
+        "path": "patches/php83/held/symfony-bootstrap.json",
+        "pinned_sha256": "d467a1b95baf5367ca807180ebabce222e9cb2f7f9f4f429271ed0e08431ecca",
+        "actual_sha256": "d467a1b95baf5367ca807180ebabce222e9cb2f7f9f4f429271ed0e08431ecca",
+        "match": true
+      }
+    ]
+  },
+  "checks": {
+    "frozen_input_identities_ok": true,
+    "exp11_identity_status_ok": true,
+    "prior_59_field_for_field_order_preserved": true,
+    "appended_4_targets_exact": true,
+    "appended_4_paths": [
+      "alpha/apps/kaltura/lib/baseObjectUtils.class.php",
+      "vendor/htmlpurifier/library/HTMLPurifier.autoload.php",
+      "vendor/symfony-data/bin/symfony.php",
+      "vendor/symfony/util/sfCore.class.php"
+    ],
+    "unique_63_paths_and_leaves": true,
+    "all_source_patch_byte_hashes_match": true,
+    "all_5_metadata_hash_pins_match": true,
+    "selection_provenance_matches_inputs": true,
+    "additional_rows_match_metadata_join": true
+  },
+  "appended_targets": [
+    {
+      "order": 60,
+      "path": "alpha/apps/kaltura/lib/baseObjectUtils.class.php",
+      "source_patch": "patches/php83/held/base-object-ternary/base-object-ternary.patch",
+      "sha256": "22508c21d41ac68949b76504dd201bf8a3e589ebc7188c44350f26effcf505ac"
+    },
+    {
+      "order": 61,
+      "path": "vendor/htmlpurifier/library/HTMLPurifier.autoload.php",
+      "source_patch": "patches/php83/held/autoload83/HTMLPurifier-autoload.patch",
+      "sha256": "f1038cce8807ccb7f139fa9608a2b27c25bfd2a4eccc71a6f71b036bc8e32d20"
+    },
+    {
+      "order": 62,
+      "path": "vendor/symfony-data/bin/symfony.php",
+      "source_patch": "patches/php83/held/autoload83/symfony-cli-autoload.patch",
+      "sha256": "2ff7fdf8f13d0fb14f23bce79a0f5c6ade5c569a1ce6e3bc3a677ac45a0d4e05"
+    },
+    {
+      "order": 63,
+      "path": "vendor/symfony/util/sfCore.class.php",
+      "source_patch": "patches/php83/held/sfCore.class.php.patch",
+      "sha256": "7a5b4cb0453336d6ad71f5e107df6d8d68c93d4991d75480c69636ee39e85db7"
+    }
+  ],
+  "unittest": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/exp11-candidate -p 'test_*.py' -v",
+    "exit": 0,
+    "ran_tests_reported": 23,
+    "ok_reported": true,
+    "stdout_bytes": 0,
+    "stderr_sha256": "ee38c280c7b27d22a381b42c3eef5d47ab84bbcef4b8979f712839daabe37fd0",
+    "note": "23 synthetic harness tests are not application acceptance proof"
+  },
+  "notes": [
+    {
+      "sfcore_only_one_selected": true,
+      "core_metadata_other_paths_not_selected": [
+        "vendor/symfony/controller/sfRouting.class.php",
+        "vendor/symfony/helper/UrlHelper.php",
+        "vendor/symfony/util/sfFinder.class.php",
+        "vendor/symfony/util/Spyc.class.php",
+        "vendor/symfony/util/sfToolkit.class.php",
+        "vendor/symfony/config/sfConfigHandler.class.php"
+      ],
+      "other_core_paths_absent_from_exp11": false
+    },
+    {
+      "ternary_helpers_not_extra_patches": true,
+      "ternary_helper_paths": [
+        "alpha/apps/kaltura/lib/myBaseObject.class.php",
+        "alpha/apps/kaltura/lib/kAssetUtils.class.php",
+        "infra/general/kString.class.php",
+        "vendor/propel/om/BaseObject.php",
+        "vendor/propel/util/BasePeer.php",
+        "alpha/lib/enums/entryStatus.php",
+        "infra/general/BaseEnum.php"
+      ]
+    }
+  ],
+  "errors": [],
+  "not_executed": [
+    "stage.py main / --check-only original ZIP preflight (Claude-owned independent task)",
+    "VM/SSH/SQL/services/network",
+    "ZIP build",
+    "git",
+    "selection/PHP/runtime/release approval"
+  ]
+}

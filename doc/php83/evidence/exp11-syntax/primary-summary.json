@@ -1,0 +1,150 @@
+{
+  "status": "PASS_BOUNDED_COMPILER_REGRESSION; seven rejections remain",
+  "artifact_pins": {
+    "exp10": "de177e6cbaedf3a3207661c2325f466cce37febb73190f3a49d31f24b740c053",
+    "exp11": "f2474f5b951bfd2d121291025c8dd4554697fb5bb4024e132987643dab6144a7"
+  },
+  "variants": {
+    "exp10": {
+      "files_scanned": 11784,
+      "compiler_rejected": 11,
+      "compiler_accepted": 11773,
+      "incomplete": 0,
+      "diagnostic_files": 77,
+      "accepted_with_diagnostics": 66
+    },
+    "exp11": {
+      "files_scanned": 11784,
+      "compiler_rejected": 7,
+      "compiler_accepted": 11777,
+      "incomplete": 0,
+      "diagnostic_files": 73,
+      "accepted_with_diagnostics": 66
+    }
+  },
+  "selected_extension_counts": {
+    "exp10": {
+      ".php": 11619,
+      ".phtml": 165
+    },
+    "exp11": {
+      ".php": 11619,
+      ".phtml": 165
+    }
+  },
+  "verified_full_file_counts": {
+    "exp10": 15236,
+    "exp11": 15240
+  },
+  "exact_changed_source_paths": [
+    "alpha/apps/kaltura/lib/baseObjectUtils.class.php",
+    "vendor/htmlpurifier/library/HTMLPurifier.autoload.php",
+    "vendor/symfony-data/bin/symfony.php",
+    "vendor/symfony/util/sfCore.class.php"
+  ],
+  "remaining_rejections": [
+    "vendor/aws/Doctrine/Common/Cache/RiakCache.php",
+    "vendor/symfony-data/generator/sfPropelAdmin/default/skeleton/actions/actions.class.php",
+    "vendor/symfony-data/generator/sfPropelCrud/default/skeleton/actions/actions.class.php",
+    "vendor/symfony-data/skeleton/batch/default.php",
+    "vendor/symfony-data/skeleton/batch/rotate_log.php",
+    "vendor/symfony-data/skeleton/controller/controller.php",
+    "vendor/symfony-data/skeleton/module/module/actions/actions.class.php"
+  ],
+  "independent_equal_except_duration": true,
+  "runtime_identity_equal": true,
+  "candidate_all_files_compile": false,
+  "application_acceptance": false,
+  "commands": {
+    "primary": "ssh -T -F /tmp/kaltura-php83-ssh.conf php83 bash /home/vagrant/php-candidate-syntax-exp11/tools/run.sh",
+    "independent_cli": "Claude CLI second invocation; stdin prompt; fresh ssh whole scan recorded in stream tool calls"
+  },
+  "independent_cli_exit": 0,
+  "primary_exit": 0,
+  "independent_scan_exit": 0,
+  "independent_command_ledger_sha256": "8ee1823916c10193452dce76da26786580675583936618f1d8e37ea284738dbf",
+  "initial_cli_attempt": {
+    "exit": 1,
+    "status": "NOT_EXECUTED; prompt argument swallowed by variadic allowedTools; corrected using stdin without overwrite"
+  },
+  "actual_independent_tool_calls": [
+    {
+      "tool_use_id": "toolu_01Q2qLNgj8qUgUcFDfSfs4rk",
+      "name": "Bash",
+      "input": {
+        "command": "D=doc/php83/evidence/exp11-syntax; ls $D; for f in claude-scan.json claude-scan.exit claude-scan.stderr claude-tests.stdout claude-compare.json claude-review.md; do test -e $D/$f && echo \"EXISTS $f\"; done; sha256sum $D/primary.json $D/frozen-tools.json $D/input-contract.json tools/php83/exp11-syntax/* 2>/dev/null | tee /tmp/claude-exp11-pre.sha; ls -l /tmp/kaltura-php83-ssh.conf",
+        "description": "Check output absence and hash frozen inputs"
+      }
+    },
+    {
+      "tool_use_id": "toolu_01N8KCqUJeAQ4pqYZGEZe1Es",
+      "name": "Bash",
+      "input": {
+        "command": "D=doc/php83/evidence/exp11-syntax; set -o noclobber; date -u +%FT%TZ; timeout 270 ssh -T -F /tmp/kaltura-php83-ssh.conf php83 'bash /home/vagrant/php-candidate-syntax-exp11/tools/run.sh' > $D/claude-scan.json 2> $D/claude-scan.stderr; echo $? > $D/claude-scan.exit; date -u +%FT%TZ; cat $D/claude-scan.exit; ls -l $D/claude-scan.*; tail -c 600 $D/claude-scan.stderr",
+        "description": "Run fresh remote compiler scan on php83 lab",
+        "timeout": 290000
+      }
+    },
+    {
+      "tool_use_id": "toolu_01UMYo7G87fWA5LcoKsXhqTf",
+      "name": "Bash",
+      "input": {
+        "command": "D=doc/php83/evidence/exp11-syntax; set -o noclobber\nPYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/exp11-syntax -p 'test_*.py' -v > $D/claude-tests.stdout 2> $D/claude-tests.stderr; echo $? > $D/claude-tests.exit\npython3 tools/php83/exp11-syntax/compare.py $D/primary.json $D/claude-scan.json $D/claude-compare.json > $D/claude-compare.stdout 2> $D/claude-compare.stderr; echo $? > $D/claude-compare.exit\ncat $D/claude-tests.exit $D/claude-compare.exit; tail -4 $D/claude-tests.stderr; cat $D/claude-compare.stdout $D/claude-compare.stderr | head -40; wc -c $D/claude-compare.json",
+        "description": "Run unit tests and primary/repeat comparison"
+      }
+    },
+    {
+      "tool_use_id": "toolu_01E9V6WqWmPE43FbH5zvk27J",
+      "name": "Bash",
+      "input": {
+        "command": "D=doc/php83/evidence/exp11-syntax; cat $D/claude-compare.json; echo; python3 - <<'E'\nimport json\nd=json.load(open('doc/php83/evidence/exp11-syntax/claude-scan.json'))\ndef show(o,depth=0,pre=''):\n    if isinstance(o,dict):\n        for k,v in o.items():\n            if isinstance(v,(list,)) : print(pre+k,'list',len(v))\n            elif isinstance(v,dict) and depth<1: print(pre+k,'{'); show(v,depth+1,pre+'  ')\n            elif isinstance(v,dict): print(pre+k,'dict',len(v))\n            else: print(pre+k,repr(v)[:160])\nshow(d)\nE",
+        "description": "Inspect compare result and scan structure"
+      }
+    },
+    {
+      "tool_use_id": "toolu_01ErQsGMX3hXupmZeXkVsukv",
+      "name": "Bash",
+      "input": {
+        "command": "python3 - <<'E'\nimport json\nd=json.load(open('doc/php83/evidence/exp11-syntax/claude-scan.json'))\nprint('flags',d['flags']); print('env',d['runtime']['environment'])\nfor k,v in d['variants'].items():\n    print(k,{kk:(vv if not isinstance(vv,(list,dict)) else (type(vv).__name__,len(vv))) for kk,vv in v.items()})\n    for kk,vv in v.items():\n        if isinstance(vv,dict) and kk!='records': print('  ',kk,{a:(b if not isinstance(b,(list,dict)) else len(b)) for a,b in vv.items()})\nprint('pins',d['input_contract']['pins'])\nfor t in d['delta']: print('delta',{k:(v if not isinstance(v,(list,dict)) else v) for k,v in t.items()} if len(json.dumps(t))<700 else list(t))\nE\ngrep -nE 'unshare|network|readonly|ro,|bwrap|--net|pin|sha256|post|pre_' tools/php83/exp11-syntax/run.sh | head -30",
+        "description": "Summarize variant pins, delta and sandbox guards"
+      }
+    },
+    {
+      "tool_use_id": "toolu_01Kzdbp3sopHDAZ4f1MRxx1T",
+      "name": "Bash",
+      "input": {
+        "command": "cat tools/php83/exp11-syntax/run.sh | head -40; grep -nE 'unshare|net|read.?only|chattr|mount|pin|runtime_post|after|verify|raise' tools/php83/exp11-syntax/scan.py | head -40; python3 - <<'E'\nimport json\nd=json.load(open('doc/php83/evidence/exp11-syntax/claude-scan.json'))\nT={t['path'] for t in d['delta']}\nfor r in d['variants']['exp11']['records']:\n    if r.get('path') in T: print({k:v for k,v in r.items() if k not in('duration_ns',)})\n    break\nprint([k for k in d['variants']['exp11']['records'][0]])\nE\nsha256sum -c /tmp/claude-exp11-pre.sha | grep -v ': OK$'; echo sha-check-done; git status --short tools patches | head",
+        "description": "Inspect sandbox guards and verify frozen inputs"
+      }
+    },
+    {
+      "tool_use_id": "toolu_0153i3NpD9vhP3MZwR5mTT8W",
+      "name": "Bash",
+      "input": {
+        "command": "sed -n 183,215p tools/php83/exp11-syntax/scan.py; python3 - <<'E'\nimport json\nd=json.load(open('doc/php83/evidence/exp11-syntax/claude-scan.json'))\nT={t['path'] for t in d['delta']}\nfor r in d['variants']['exp11']['records']:\n    if r['path'] in T: print(r['path'],r['exit'],r['diagnostics'])\nrej=[r['path'] for r in d['variants']['exp11']['records'] if r['exit']!=0]; print(len(rej))\nE",
+        "description": "Check runtime pre/post guard and target diagnostics"
+      }
+    },
+    {
+      "tool_use_id": "toolu_013zrBfNKEHePCJ89E7vqoFJ",
+      "name": "Bash",
+      "input": {
+        "command": "D=doc/php83/evidence/exp11-syntax; set -o noclobber; python3 - <<'E'\nimport json\nd=json.load(open('doc/php83/evidence/exp11-syntax/claude-scan.json'))\na={e['path'] for e in d['variants']['exp10']['excluded_files']}\nprint([ (e['path'],e['suffix']) for e in d['variants']['exp11']['excluded_files'] if e['path'] not in a])\nE\ncat > $D/claude-review.md <<'E'\n# exp11 paired compiler repeat \u2014 Claude (actual CLI) independent execution + review\n\n- Case: exp11 paired whole-artifact PHP 8.3 `-n -l` compiler audit, fresh repeat (not a replay).\n- Executor/reviewer: Claude (Opus 5.5) CLI, sole php83lab user for this repeat. No baseline74, no .20.\n- Environment: SSH alias `php83` (`/tmp/kaltura-php83-ssh.conf`), host guard `kaltura-php83-lab`, uid 1000;\n  systemd-run sandbox (PrivateNetwork, socket syscalls denied, ProtectSystem=strict, ProtectHome,\n  read-only binds of tools/ZIPs/trees, /opt/kaltura + MySQL paths inaccessible). Only `php8.3 -n -l`.\n\n## Commands and exits\n| Step | Command | Exit |\n|---|---|---|\n| 1 | `ssh -T -F /tmp/kaltura-php83-ssh.conf php83 'bash /home/vagrant/php-candidate-syntax-exp11/tools/run.sh'` (21:38:11Z\u201321:38:41Z) | 0, stderr empty |\n| 2 | `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/exp11-syntax -p 'test_*.py' -v` | 0, Ran 38, OK |\n| 3 | `python3 tools/php83/exp11-syntax/compare.py primary.json claude-scan.json claude-compare.json` | 0 |\n\n## Identities\n- claude-scan.json sha256 `69163332de53dba8fddb30d698d043b73349f92974f01178ec240e2cba5c4edd`; primary.json `e6c11b07\u2026bff7`.\n- Pins inside scan: exp10 `de177e6c\u2026c053`, exp11 `f2474f5b\u202644a7` (match task-stated pins).\n- Harness in-report: run.sh `c5d257ca\u2026`, scan.py `b6dd5359\u2026`, stage.py `761f70f4\u2026`, input-contract.json `5a8e3999\u2026`,\n  compare.py `c2910c60\u2026` \u2014 equal to local files. Runtime `/usr/bin/php8.3` 8.3.6 NTS, sha256 `1c564e6b\u2026d7`, no ini loaded.\n- Frozen local inputs (primary.json, frozen-tools.json, tools/php83/exp11-syntax/*) re-hashed after run: unchanged.\n\n## Results (targeted fields)\n- compare stdout: \"23568 independent logical rows equal; 4 repairs compile; 7 rejections remain\";\n  `reports_equal_except_record_duration_ns: true`, all 9 checks true, `bounded_regression_pass: true`.\n- exp10: 11784 scanned, 11 rejected, 11773 accepted, 0 incomplete, 77 diagnostic files, 66 accepted-with-diagnostics.\n- exp11: 11784 scanned, 7 rejected, 11777 accepted, 0 incomplete, 73 diagnostic files, 66 accepted-with-diagnostics.\n- delta = exactly 4 (all source_changed, 255\u21920, empty exp11 diagnostics): baseObjectUtils.class.php,\n  HTMLPurifier.autoload.php, symfony-data/bin/symfony.php, symfony/util/sfCore.class.php.\n- No unchanged-source outcome/diagnostic differences; no newly accepted-with-diagnostics.\n- 7 remaining rejects retained, NOT waived: 6 symfony-data raw templates/skeletons + vendor/aws/Doctrine/Common/Cache/RiakCache.php.\n- Scanner guards reviewed in source: contract pin check, read-only mount assertion, archive inventory pre/post\n  (drift fails), runtime identity + harness hash pre/post, identical pathset. Guards are self-enforced by scan.py;\n  exit 0 implies they passed.\n\n## Limitations\n- Compiler/syntax only (`-n`, no extensions beyond built-ins): no includes, autoload, runtime, SQL, or application acceptance.\n  `candidate_all_files_compile: false`, `application_acceptance: false`.\n- exp11 ZIP has 4 more non-selected files than exp10 (15240 vs 15236 verified, excluded 3452\u21923456); not compiled by design.\n- Same lab/VM/runtime as primary: repeat proves determinism of this environment, not cross-environment parity.\n- No parity, release, or cutover endorsement.\nE\nls $D/claude-*",
+        "description": "Identify extra excluded files and save review"
+      }
+    },
+    {
+      "tool_use_id": "toolu_01VirfSigcwKtBXk6zjDrsWU",
+      "name": "Bash",
+      "input": {
+        "command": "sed -i 's|^- exp11 ZIP has 4 more non-selected files.*|- exp11 ZIP has 4 more non-selected files than exp10 (15240 vs 15236; excluded 3452\u21923456): the four `.php83-experimental/*.patch` provenance files; not compiled by design.|' doc/php83/evidence/exp11-syntax/claude-review.md && grep -n experimental doc/php83/evidence/exp11-syntax/claude-review.md",
+        "description": "Record identity of extra excluded files in review"
+      }
+    }
+  ],
+  "original_unsanitized_stream_sha256": "8787342eca129cfaf76950a67eae7eb6e3b33733499a83689a5aa746ba451f57",
+  "command_ledger_sanitization": "claude-stream-sanitization.json; current tool calls/results retained, hook history/reasoning removed",
+  "actual_cursor_final_cli_exit": 0,
+  "actual_cursor_final_frozen_inputs_unchanged": true,
+  "bounded_cycle_status": "COMPLETE_BOUNDED_SOURCE_VALIDATION; seven compiler rejects and application/release gates remain open"
+}

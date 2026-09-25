@@ -1,0 +1,63 @@
+{
+  "schema": 1,
+  "reports_equal_except_record_duration_ns": true,
+  "independent_logical_rows": 23568,
+  "collection_complete": true,
+  "comparison": {
+    "checks": {
+      "both_scan_all_11784_files": true,
+      "4_selected_targets": true,
+      "all_targets_previously_rejected": true,
+      "all_targets_now_accepted": true,
+      "unchanged_sources_same_outcome_and_diagnostics": true,
+      "remaining_rejected_paths_unchanged": true,
+      "no_incomplete_subprocesses": true,
+      "observed_exp10_rejections_11": true,
+      "observed_exp11_rejections_7": true
+    },
+    "bounded_regression_pass": true,
+    "unchanged_outcome_differences": [],
+    "target_rejections_after": [],
+    "remaining_rejected_paths": [
+      "vendor/aws/Doctrine/Common/Cache/RiakCache.php",
+      "vendor/symfony-data/generator/sfPropelAdmin/default/skeleton/actions/actions.class.php",
+      "vendor/symfony-data/generator/sfPropelCrud/default/skeleton/actions/actions.class.php",
+      "vendor/symfony-data/skeleton/batch/default.php",
+      "vendor/symfony-data/skeleton/batch/rotate_log.php",
+      "vendor/symfony-data/skeleton/controller/controller.php",
+      "vendor/symfony-data/skeleton/module/module/actions/actions.class.php"
+    ],
+    "scope": "4-target compiler repair only; remaining rejections are not waived"
+  },
+  "variants": {
+    "exp10": {
+      "files_scanned": 11784,
+      "compiler_rejected": 11,
+      "compiler_accepted": 11773,
+      "incomplete": 0,
+      "diagnostic_files": 77,
+      "accepted_with_diagnostics": 66
+    },
+    "exp11": {
+      "files_scanned": 11784,
+      "compiler_rejected": 7,
+      "compiler_accepted": 11777,
+      "incomplete": 0,
+      "diagnostic_files": 73,
+      "accepted_with_diagnostics": 66
+    }
+  },
+  "newly_accepted_with_diagnostics": [],
+  "candidate_all_files_compile": false,
+  "application_acceptance": false,
+  "scope": "independent repetition of bounded compiler repair; no whole-candidate acceptance",
+  "inputs_sha256": {
+    "doc/php83/evidence/exp11-syntax/primary.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "doc/php83/evidence/exp11-syntax/primary.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "doc/php83/evidence/exp11-syntax/primary.json": "e6c11b07f700e7c8ae81db4837213020a7a1f93bd2b161a7633fe619e8c4bff7",
+    "doc/php83/evidence/exp11-syntax/claude-scan.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "doc/php83/evidence/exp11-syntax/claude-scan.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "doc/php83/evidence/exp11-syntax/claude-scan.json": "69163332de53dba8fddb30d698d043b73349f92974f01178ec240e2cba5c4edd"
+  },
+  "comparator_sha256": "c2910c6012111741ded71a9e771d71a3493f03c42b318003d6666af2c105052b"
+}

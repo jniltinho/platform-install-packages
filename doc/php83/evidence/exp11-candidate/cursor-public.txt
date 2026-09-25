@@ -1,0 +1,19 @@
+Vou executar o inventário Cursor de forma independente: primeiro leio os inputs congelados e o escopo do candidato, depois rodo os testes e o inventário Python só em `cursor-*`.Rodando os testes e o inventário Python independente em paralelo.Inventário passou. Revisando gaps semânticos nos testes e no `stage.py`, e conferindo os metadados do sfCore/ternary.Confirmado: Spyc no bootstrap diverge do prior; só sfCore entra nos +4. Escrevendo o relatório de review.## Executado (Cursor)
+
+| Caso | Comando / escopo | Exit | Contagens |
+|---|---|---|---|
+| Unittest | `unittest discover -s tools/php83/exp11-candidate` | **0** | **23** OK (stderr; stdout vazio) |
+| Inventário repo-only | Python independente (sem `stage.py` main / ZIP) | **0** | prior **59** exatos; **63** entradas; **63** paths; **63** leaves; +**4** alvos; patches **63/63**; metadata **5/5**; frozen **72/72** |
+
+Status permanece **PREPARED_NOT_SELECTED**. Artefatos: `cursor-tests.*`, `cursor-inventory.json` / `.exit`, `cursor-review.json` / `.txt`.
+
+**NOT_EXECUTED:** preflight ZIP/`stage.py` (Claude), VM/rede, build ZIP, git, aprovação PHP/runtime/release.
+
+## Review (separado)
+
+- Escopo/status/composição pendente: coerentes no doc, manifest e tool; sem aprovação implícita.
+- Ordem/colisão/proveniência: OK nos bytes do repo; só `sfCore` do bootstrap; Spyc bootstrap (`154aac7b…`) ≠ prior curly (`486a17ce…`) e não entra; helpers ternary não viram patches.
+- Gaps (não bloqueiam inventário): falta teste de identidade prior errada (`stage.py:65-66`); fixture ternary com 1 arquivo não exercita helpers multi (`test_stage.py:47-48` vs `stage.py:150-155`); sem testes explícitos de não-seleção Spyc/sfToolkit/sfConfigHandler.
+- **23 testes ≠ aceite** dos 4 patches novos nem do candidato inteiro.
+
+**Veredito:** inventário PASS apenas; sem aprovação de seleção/PHP/runtime/release.

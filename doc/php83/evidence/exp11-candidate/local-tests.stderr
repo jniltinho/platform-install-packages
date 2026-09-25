@@ -1,0 +1,28 @@
+test_addition_order_drift (test_stage.SelectionTests.test_addition_order_drift) ... ok
+test_archive_drift (test_stage.SelectionTests.test_archive_drift) ... ok
+test_duplicate_sfcore_record (test_stage.SelectionTests.test_duplicate_sfcore_record) ... ok
+test_exact_59_plus_4_and_private_replay (test_stage.SelectionTests.test_exact_59_plus_4_and_private_replay) ... ok
+test_leaf_collision (test_stage.SelectionTests.test_leaf_collision) ... ok
+test_malformed_hash (test_stage.SelectionTests.test_malformed_hash) ... ok
+test_metadata_drift (test_stage.SelectionTests.test_metadata_drift) ... ok
+test_missing_sfcore_record (test_stage.SelectionTests.test_missing_sfcore_record) ... ok
+test_offset_rejected (test_stage.SelectionTests.test_offset_rejected) ... ok
+test_omission (test_stage.SelectionTests.test_omission) ... ok
+test_original_target_hash_drift (test_stage.SelectionTests.test_original_target_hash_drift) ... ok
+test_patch_drift (test_stage.SelectionTests.test_patch_drift) ... ok
+test_patch_headers_not_metadata_only (test_stage.SelectionTests.test_patch_headers_not_metadata_only) ... ok
+test_path_traversal (test_stage.SelectionTests.test_path_traversal) ... ok
+test_prior_field_changed (test_stage.SelectionTests.test_prior_field_changed) ... ok
+test_prior_order_drift (test_stage.SelectionTests.test_prior_order_drift) ... ok
+test_provenance_declaration_drift (test_stage.SelectionTests.test_provenance_declaration_drift) ... ok
+test_status_cannot_claim_selected (test_stage.SelectionTests.test_status_cannot_claim_selected) ... ok
+test_symlink_patch (test_stage.SelectionTests.test_symlink_patch) ... ok
+test_target_collision (test_stage.SelectionTests.test_target_collision) ... ok
+test_unselected_ternary_helper_changed (test_stage.SelectionTests.test_unselected_ternary_helper_changed) ... ok
+test_wrong_after_hash (test_stage.SelectionTests.test_wrong_after_hash) ... ok
+test_wrong_autoload_target (test_stage.SelectionTests.test_wrong_autoload_target) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.117s
+
+OK

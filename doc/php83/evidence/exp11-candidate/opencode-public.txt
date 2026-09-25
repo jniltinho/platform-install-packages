@@ -1,0 +1,39 @@
+Fallback executor for Grok — running repo-scoped checks and evidence capture.
+
+Synthetic suite passed — now verifying the manifest inventory.
+
+Identity: actual OpenCode Zen Muse Spark 1.3 Contributor-Free fallback, not Grok. Grok remains `terminal timeout 120 exit 124, NOT_EXECUTED` per `grok-outcome.json` (no tests executed by Grok). Cwd `/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83`. `PREPARED_NOT_SELECTED` remains. No selection approval.
+
+## Actually executed (repo-only)
+
+Command as tasked (no `stage.py main/preflight`, no `/tmp` original ZIP read):
+
+`PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/exp11-candidate -p 'test_*.py' -v`
+
+Outputs written (only allowed prefix):
+
+- `doc/php83/evidence/exp11-candidate/opencode-tests.stdout`: 0 bytes (expected; verbose goes to stderr)
+- `doc/php83/evidence/exp11-candidate/opencode-tests.stderr`: 2078 bytes, `Ran 23 tests in 0.118s OK`
+- `doc/php83/evidence/exp11-candidate/opencode-tests.exit`: `0`
+
+Real counts: 23/23 pass, exit 0. 23 expected is matched by actual output, not assumed. Tests internally own synthetic fixtures in temp dirs; no external original artifacts accessed. No source/patch/tool/manifest edits.
+
+## Hash inventory review (independent, repo reads only)
+
+Reviewed `tools/php83/exp11-candidate/stage.py`, `test_stage.py`, `doc/php83/exp11-candidate.md`, `evidence/exp11-candidate/manifest.json`. Scope `review-input-identities.json` (72 entries): 0 drifts; `stage.py` `d384328e…`, `test_stage.py` `cdb78fb0…`, `exp11-candidate.md` `681e1fc7…`, exp11 manifest `dd9243b6…` all match pins. `preflight-final.json` `manifest_sha256` equals live exp11 manifest hash.
+
+- 5 metadata pins all `OK`: prior `db4c2b6d…`, ternary `df50a1af…`, purifier `d914414f…`, cli `b3052352…`, core `d467a1b9…`.
+- All 63 `source_patch` byte hashes match manifest `sha256`: 0 mismatches.
+- Exact 59 prior entries unchanged: `manifest.patches[:59] == prior.patches`, order and fields identical, prior len 59.
+- 4 disjoint additions, 63 total: unique paths 63, unique leaves 63. Targets 60–63 exactly as doc: `baseObjectUtils`, `HTMLPurifier.autoload.php`, `symfony.php`, `sfCore.class.php`. Addition `source_patch` set disjoint from all prior `source_patch`.
+- sfCore reuse confirmed: entry 63 reuses exactly once `patches/php83/held/sfCore.class.php.patch` `7a5b4cb0…`, matching `symfony-bootstrap.json` single `sfCore` row (7-file doc, only that row selected as new). Other `symfony-bootstrap` paths overlapping selection (`sfRouting`, `UrlHelper`, `sfFinder`, `Spyc`) are prior-59 entries via curly-offset patches, not silent new promotions.
+- Ternary: 1 changed (`baseObjectUtils`) + 7 unchanged helpers with `before==after`; patch `22508c21…` matches.
+- Autoload JSON targets match `TARGETS[1..2]`.
+
+## Safe paths / strict replay / negative tests
+
+`stage.py`: `safe_relative` rejects absolute/`..`/`.`/empty/`\`/control; `repo_bytes` rejects symlink/escape; SHA256 regex enforced; leaf must be single `.patch` name; `apply_exact` requires exact `--- a/<path>`/`+++ b/<path>` headers, runs `patch --batch --forward --fuzz=0 --no-backup-if-mismatch -p1`, rejects `offset/fuzz/reversed/skipping` text, checks `after_sha256` per-hunk plus exact output file set plus second cumulative drift check; `validate` refuses `SELECTED` status, checks provenance, pinned drift, ordered 59+4 equality, archive identity, duplicate ZIP names, nonregular targets.
+
+`test_stage.py` 23 negatives map to these: prior/addition reorder, omission, extra field, target/leaf collision, patch/original/after/metadata/provenance/archive drift, status claim, traversal, symlink, header mismatch, offset rejection, missing/duplicate sfCore, unselected helper change, wrong autoload target, malformed hash, plus exact 59+4 replay. No wildcard promotion path observed.
+
+Advisory: preparation hygiene passes repo-only; composition/PHP/runtime/ZIP/build acceptance still open per doc limits (130+17 cases not 147 goldens, SPL-append delta, empty-project CLI failures separate). Explicitly not PHP/runtime/artifact/release acceptance, no approval.

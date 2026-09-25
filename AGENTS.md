@@ -27,6 +27,11 @@ silently substitute another paid model. Bound every external CLI attempt, confir
 it is terminal before reassigning its work, and record each actual executor's
 result separately. Tool/quota/authentication failures never count as passes.
 
+For noninteractive Claude runs, supply the prompt via stdin after all options;
+do not put a positional prompt after variadic `--allowedTools`, which can consume
+it as another tool argument. For shell syntax checks, invoke `bash -n` separately
+for each script; extra filenames are arguments, not additional parsed scripts.
+
 Run independent reviews and isolated tests in parallel. Never run competing
 writers, destructive fixtures or benchmark workloads against the same VM,
 database or worktree; use separate disposable clones or serialize with an

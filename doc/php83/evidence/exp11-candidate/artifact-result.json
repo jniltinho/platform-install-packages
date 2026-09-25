@@ -1,0 +1,40 @@
+{
+  "status": "PASS_LAB_ARTIFACT_BUILD_AND_DELTA_ONLY",
+  "executor": "Codex candidate_plan",
+  "python": "3.12.3",
+  "patch_version": "GNU patch 2.7.6",
+  "zip_sha256": "f2474f5b951bfd2d121291025c8dd4554697fb5bb4024e132987643dab6144a7",
+  "two_builds_identical": true,
+  "source_changes_vs_original": 63,
+  "metadata_added_vs_original": 65,
+  "source_changes_vs_exp10": 4,
+  "prior59_preserved": true,
+  "local_tests": 37,
+  "source_application_execution": false,
+  "production_package_release_approval": false,
+  "independent_cli_review": {
+    "executor": "actual OpenCode",
+    "model": "opencode/muse-spark-1.3-contributor-free",
+    "terminal_exit": 0,
+    "actual_local_tests": 37,
+    "test_exit": 0,
+    "permission_or_tool_errors": [],
+    "tool_source_identities_unchanged": true,
+    "actual_zip_replay": false,
+    "scope": "Repo-only selected/delta tooling and evidence review; no artifact reads or VM"
+  },
+  "hashes": {
+    "tools/php83/exp11-candidate/delta.py": "5fbd1fbe32551779c915efcd4677a39d83c32afecfddd376f65f04831fcfd419",
+    "tools/php83/exp11-candidate/selected.py": "28cf09002160ec0c98500d68f10b987a15aeb6c15fa5d3938653eef7caf00e9c",
+    "tools/php83/exp11-candidate/stage.py": "d384328e48975c2131643c009e9ced55c251d1f9b387a0884cd158fd06b0bf15",
+    "tools/php83/exp11-candidate/test_delta.py": "82f653b012d0b92813c5fc55e95e1e492ddb1b9e314e3a31e05863bd3091cb58",
+    "tools/php83/exp11-candidate/test_selected.py": "f81cbbd7a1e6d28814526ec642bcb8ef8b775bd9163751e8f518db192268998d",
+    "tools/php83/exp11-candidate/test_stage.py": "cdb78fb094395b63b42b311671e699d17702ccecb711ed8ff31cd9917d98cf12",
+    "doc/php83/evidence/exp11-candidate/manifest.json": "dd9243b654a98385a30dd87a3bbf6e20a3034c9106311d135b57bc9f35696eb2",
+    "doc/php83/evidence/exp11-candidate/selected-manifest.json": "99f87bf705b0a9c419229fc5c1484919e6de4ebc24dabcccb359b5bb762af2ff",
+    "doc/php83/evidence/exp11-candidate/verification.json": "cfb9b5e21a16bf53713e824596099efdc2576eb0781fb00621a1eee8d374bbfc",
+    "doc/php83/evidence/exp11-candidate/delta.json": "3bdd46e99c583e5516bc9af3c9cdf4a663ce0bee897c004513a27856d2b4aba7",
+    "tools/php83/build-experimental-zip.py": "055443730325459ff2f4e5ad093542e3aa544f6d82af8b21174027f5cdbf523e",
+    "tools/php83/verify-experimental-zip.py": "211a0c187a53e4444fd0b5bfd0be972544ff66f21e7ce2d78c1c6aa2206ee6bc"
+  }
+}

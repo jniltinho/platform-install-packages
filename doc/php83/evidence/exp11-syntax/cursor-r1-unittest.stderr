@@ -1,0 +1,43 @@
+test_diagnostics_not_ignored (test_compare.ComparisonTests.test_diagnostics_not_ignored) ... ok
+test_frozen_files_exclude_new_host_comparator (test_compare.ComparisonTests.test_frozen_files_exclude_new_host_comparator) ... ok
+test_ignores_only_per_record_duration (test_compare.ComparisonTests.test_ignores_only_per_record_duration) ... ok
+test_invalid_duration_rejected (test_compare.ComparisonTests.test_invalid_duration_rejected) ... ok
+test_missing_duration_rejected (test_compare.ComparisonTests.test_missing_duration_rejected) ... ok
+test_runtime_not_ignored (test_compare.ComparisonTests.test_runtime_not_ignored) ... ok
+test_top_level_duration_not_ignored (test_compare.ComparisonTests.test_top_level_duration_not_ignored) ... ok
+test_duplicate_record (test_scan.ContractAndComparisonTests.test_duplicate_record) ... ok
+test_duplicate_target (test_scan.ContractAndComparisonTests.test_duplicate_target) ... ok
+test_expected_bounded_result_still_has_7_rejections (test_scan.ContractAndComparisonTests.test_expected_bounded_result_still_has_7_rejections) ... ok
+test_extra_row_field_rejected (test_scan.ContractAndComparisonTests.test_extra_row_field_rejected) ... ok
+test_missing_path (test_scan.ContractAndComparisonTests.test_missing_path) ... ok
+test_noninteger_status_rejected (test_scan.ContractAndComparisonTests.test_noninteger_status_rejected) ... ok
+test_partial_both_scans_not_complete (test_scan.ContractAndComparisonTests.test_partial_both_scans_not_complete) ... ok
+test_pending_pin_fail_closed (test_scan.ContractAndComparisonTests.test_pending_pin_fail_closed) ... ok
+test_target_count (test_scan.ContractAndComparisonTests.test_target_count) ... ok
+test_target_hash_drift (test_scan.ContractAndComparisonTests.test_target_hash_drift) ... ok
+test_target_invalid_hash (test_scan.ContractAndComparisonTests.test_target_invalid_hash) ... ok
+test_target_rejection_is_failure (test_scan.ContractAndComparisonTests.test_target_rejection_is_failure) ... ok
+test_target_timeout_is_incomplete_failure (test_scan.ContractAndComparisonTests.test_target_timeout_is_incomplete_failure) ... ok
+test_unchanged_acceptance_change_is_not_silent_success (test_scan.ContractAndComparisonTests.test_unchanged_acceptance_change_is_not_silent_success) ... ok
+test_unchanged_diagnostic_drift_fails (test_scan.ContractAndComparisonTests.test_unchanged_diagnostic_drift_fails) ... ok
+test_unexpected_source_change (test_scan.ContractAndComparisonTests.test_unexpected_source_change) ... ok
+test_unsafe_target (test_scan.ContractAndComparisonTests.test_unsafe_target) ... ok
+test_valid_contract (test_scan.ContractAndComparisonTests.test_valid_contract) ... ok
+test_wrong_baseline_pin (test_scan.ContractAndComparisonTests.test_wrong_baseline_pin) ... ok
+test_wrong_command_rejected (test_scan.ContractAndComparisonTests.test_wrong_command_rejected) ... ok
+test_diagnostics_are_not_rejections (test_scan.ScanTests.test_diagnostics_are_not_rejections) ... ok
+test_duplicate_entry (test_scan.ScanTests.test_duplicate_entry) ... ok
+test_explicit_syntax_only_flags (test_scan.ScanTests.test_explicit_syntax_only_flags) ... ok
+test_extension_selection (test_scan.ScanTests.test_extension_selection) ... ok
+test_extra_source (test_scan.ScanTests.test_extra_source) ... ok
+test_source_drift (test_scan.ScanTests.test_source_drift) ... ok
+test_symlink (test_scan.ScanTests.test_symlink) ... ok
+test_traversal (test_scan.ScanTests.test_traversal) ... ok
+test_valid (test_scan.ScanTests.test_valid) ... ok
+test_wrong_hash (test_scan.ScanTests.test_wrong_hash) ... ok
+test_wrong_root (test_scan.ScanTests.test_wrong_root) ... ok
+
+----------------------------------------------------------------------
+Ran 38 tests in 2.279s
+
+OK

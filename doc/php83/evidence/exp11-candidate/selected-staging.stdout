@@ -1,0 +1,1 @@
+{"application_acceptance": false, "exact_private_replays": 63, "reviewed_prepared_manifest_sha256": "dd9243b654a98385a30dd87a3bbf6e20a3034c9106311d135b57bc9f35696eb2", "selected_manifest_sha256": "99f87bf705b0a9c419229fc5c1484919e6de4ebc24dabcccb359b5bb762af2ff", "status": "EXPERIMENTAL_SELECTED_LAB_ONLY_NOT_FOR_PRODUCTION", "targets": 63, "zip_built": false}

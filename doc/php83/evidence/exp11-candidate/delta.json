@@ -1,0 +1,26 @@
+{
+  "status": "PASS_LAB_ARTIFACT_DELTA_ONLY",
+  "exp10_sha256": "de177e6cbaedf3a3207661c2325f466cce37febb73190f3a49d31f24b740c053",
+  "exp11_sha256": "f2474f5b951bfd2d121291025c8dd4554697fb5bb4024e132987643dab6144a7",
+  "prior_targets_preserved": 59,
+  "changed_application_paths": [
+    "alpha/apps/kaltura/lib/baseObjectUtils.class.php",
+    "vendor/htmlpurifier/library/HTMLPurifier.autoload.php",
+    "vendor/symfony-data/bin/symfony.php",
+    "vendor/symfony/util/sfCore.class.php"
+  ],
+  "changed_metadata": [
+    "server-Rigel-18.20.0/.php83-experimental/manifest.json"
+  ],
+  "added_metadata": [
+    "server-Rigel-18.20.0/.php83-experimental/HTMLPurifier-autoload.patch",
+    "server-Rigel-18.20.0/.php83-experimental/base-object-ternary.patch",
+    "server-Rigel-18.20.0/.php83-experimental/sfCore.class.php.patch",
+    "server-Rigel-18.20.0/.php83-experimental/symfony-cli-autoload.patch"
+  ],
+  "exp10_entries": 18088,
+  "exp11_entries": 18092,
+  "all_other_entry_bytes_identical": true,
+  "application_acceptance": false,
+  "verifier_sha256": "5fbd1fbe32551779c915efcd4677a39d83c32afecfddd376f65f04831fcfd419"
+}

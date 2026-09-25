@@ -1,0 +1,70 @@
+{
+  "case": "exp11-syntax",
+  "role": "Cursor final local reconciliation (not lab scan executor)",
+  "executor": "Cursor Agent (this session)",
+  "scope": "local unittest + compare of Codex primary vs Claude fresh repeat; no VM/SSH/PHP app/SQL/git/source edits",
+  "commands": [
+    {
+      "cmd": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/exp11-syntax -p 'test_*.py' -v",
+      "exit": 0,
+      "tests_ran": 38,
+      "result": "OK",
+      "evidence": [
+        "cursor-final-unittest.exit",
+        "cursor-final-unittest.stdout",
+        "cursor-final-unittest.stderr"
+      ]
+    },
+    {
+      "cmd": "python3 tools/php83/exp11-syntax/compare.py doc/php83/evidence/exp11-syntax/primary.json doc/php83/evidence/exp11-syntax/claude-scan.json doc/php83/evidence/exp11-syntax/cursor-final-compare.json",
+      "exit": 0,
+      "stdout": "23568 independent logical rows equal; 4 repairs compile; 7 rejections remain",
+      "evidence": [
+        "cursor-final-compare.exit",
+        "cursor-final-compare.stdout",
+        "cursor-final-compare.stderr",
+        "cursor-final-compare.json"
+      ]
+    }
+  ],
+  "comparison_true": true,
+  "reports_equal_except_record_duration_ns": true,
+  "bounded_regression_pass": true,
+  "frozen_input_identities_unchanged": true,
+  "pins": {
+    "exp10": "de177e6cbaedf3a3207661c2325f466cce37febb73190f3a49d31f24b740c053",
+    "exp11": "f2474f5b951bfd2d121291025c8dd4554697fb5bb4024e132987643dab6144a7"
+  },
+  "reconciled_summaries": {
+    "independent_logical_rows": 23568,
+    "per_variant_scanned": 11784,
+    "exp10": {"reject": 11, "diag": 77, "accepted_with_diagnostics": 66, "incomplete": 0, "verified_source_files": 15236},
+    "exp11": {"reject": 7, "diag": 73, "accepted_with_diagnostics": 66, "incomplete": 0, "verified_source_files": 15240},
+    "exact_targets_255_to_0": 4,
+    "unchanged_outcomes_and_diagnostics_identical": true,
+    "remaining_not_waived": "6 raw symfony-data templates/skeletons + RiakCache.php",
+    "runtime_harness_source_identities_equal_primary_vs_claude": true,
+    "comparator_ignores_only_duration_ns": true
+  },
+  "independent_execution_ledger": {
+    "codex_primary": "recorded in primary.json / primary-summary.json",
+    "claude_fresh_repeat": "genuine tool calls in claude-cli-r2-stream.jsonl (exit 0)",
+    "claude_first_cli_launch_error": "claude-cli.exit=1 retained separately; NOT_EXECUTED / not a pass",
+    "note": "matching JSON alone does not prove independent execution; actual CLI toolcalls are the independent evidence"
+  },
+  "prior_cursor_prep": "38 tests passed (reconfirmed here)",
+  "status": "PASS_LOCAL_RECONCILIATION; bounded compiler regression holds; 7 rejections remain",
+  "candidate_all_files_compile": false,
+  "application_acceptance": false,
+  "gaps": [
+    "This Cursor final pass did not re-run the lab scanner/SSH compile (ordered out of scope).",
+    "Independent whole-compiler execution evidence remains Codex primary + Claude CLI r2 stream, not this local compare.",
+    "7 remaining rejects are retained, not waived.",
+    "No application, full-candidate compile, release, or cutover acceptance."
+  ],
+  "limitations": [
+    "Syntax-only (-n); no includes/autoload/runtime/SQL/app acceptance.",
+    "Same lab/runtime between primary and Claude repeat: determinism evidence, not cross-environment parity.",
+    "Empty cursor-final-cli.json/.stderr stubs pre-existed from launcher; unused by this reconciliation."
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "tools/php83/exp11-syntax/README.md": "4eb7005510eabb60b20118476224b3b548082f18e1e3dc5f902ec3efdcee188c",
+  "tools/php83/exp11-syntax/compare.py": "c2910c6012111741ded71a9e771d71a3493f03c42b318003d6666af2c105052b",
+  "tools/php83/exp11-syntax/input-contract.json": "1bb300458b0b737d508382afd5693dffba37c3ebd0f947a0cb256434ef6ed6c9",
+  "tools/php83/exp11-syntax/run.sh": "c5d257ca989b44b1d69087a9b4441263a41717f056495bfa7af66ea57c750547",
+  "tools/php83/exp11-syntax/scan.py": "b6dd5359a1711d0b9efaf2bf17819cf4e8d66f8a2f5b83ae917b58ac2c4bc85f",
+  "tools/php83/exp11-syntax/stage.py": "761f70f4f76f07966f7e6a0c05bf6e16fceff80281f2429229ee16762105aabc",
+  "tools/php83/exp11-syntax/test_compare.py": "0d982a143ae03ad14a7f3fd75962bd560eb0314f2eb940c32698f700491fc6ed",
+  "tools/php83/exp11-syntax/test_scan.py": "6ddd10c389d454471691c0e9a5a9dec59933a2bdee6a724633b392b035ec4fc1"
+}

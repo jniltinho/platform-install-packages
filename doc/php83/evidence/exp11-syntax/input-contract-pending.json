@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "status": "PENDING verified final two-build exp11 artifact pin; staging and scanning fail closed",
+  "pins": {
+    "exp10": "de177e6cbaedf3a3207661c2325f466cce37febb73190f3a49d31f24b740c053",
+    "exp11": null
+  },
+  "targets": [
+    {
+      "path": "alpha/apps/kaltura/lib/baseObjectUtils.class.php",
+      "exp10_sha256": "1834b0ce9ab903af000e95c6a1c065a8dfaa64a91cd454a57de3b44824ee9e03",
+      "exp11_sha256": "cd74355a19c1366f26a8dd31be503e439fd5d39fa2152de947e7f264e7dff218"
+    },
+    {
+      "path": "vendor/htmlpurifier/library/HTMLPurifier.autoload.php",
+      "exp10_sha256": "b845e45b8428bb01d9870cd55a5ad005c4e005329cd5cf418a4642f9b96803fa",
+      "exp11_sha256": "3ae42813026c862d3a778d44fa027a3845f7c3e637bf352b7c46d4b41bc04414"
+    },
+    {
+      "path": "vendor/symfony-data/bin/symfony.php",
+      "exp10_sha256": "f934f3d5d56a5b5430bf37a6741f2a782ff377f858d0327e4056c6d2dc45234a",
+      "exp11_sha256": "9c3c561f44e20dee9b51ecfa580884bc895dcc2c71381692a4e2f20f6e0b44b8"
+    },
+    {
+      "path": "vendor/symfony/util/sfCore.class.php",
+      "exp10_sha256": "09f1cdbd38be0e97939bc56ac4ae7895ccf9c7622098afeb46f40adbef6def46",
+      "exp11_sha256": "19a644c1c1ad033c4e5ddf438fe5165ace3b9886427af2861c5763ad39bbd60d"
+    }
+  ]
+}

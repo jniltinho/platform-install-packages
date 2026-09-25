@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "status": "PREPARED_NOT_SELECTED",
+  "executor": "Codex delegated candidate_plan agent",
+  "independent_cli_review": "NOT_EXECUTED in this preparation task; required in next review cycle",
+  "local_tests": {
+    "count": 23,
+    "exit": 0
+  },
+  "preflight": {
+    "exit": 0,
+    "prior_entries_preserved": 59,
+    "additional_disjoint_targets": 4,
+    "strict_private_copy_replays": 63
+  },
+  "files_sha256": {
+    "doc/php83/evidence/exp11-candidate/coverage.json": "a15a4b6a7e5f26790ab475be7b15425936875f506043162f54608331dad28e18",
+    "doc/php83/evidence/exp11-candidate/local-tests.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "doc/php83/evidence/exp11-candidate/local-tests.stderr": "87788df316b065bf297ffa3ca0fda4ba78d92dcecfe98f7ddc94029e3b5d4906",
+    "doc/php83/evidence/exp11-candidate/local-tests.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "doc/php83/evidence/exp11-candidate/manifest.json": "dd9243b654a98385a30dd87a3bbf6e20a3034c9106311d135b57bc9f35696eb2",
+    "doc/php83/evidence/exp11-candidate/preflight-final.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "doc/php83/evidence/exp11-candidate/preflight-final.json": "7a05c7dd604a7f461928c95adc99008dabc95b0ced6319bcd799157e8e953048",
+    "doc/php83/evidence/exp11-candidate/preflight-final.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "doc/php83/evidence/exp11-candidate/preflight-final.stdout": "43530a40c91008f21bc84b6cb35f73c2d68a984a9330dd4db1522ad90ba1a8aa",
+    "doc/php83/evidence/exp11-candidate/preflight.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "doc/php83/evidence/exp11-candidate/preflight.json": "247001e93864aea7c2cffea0c54103101faa25bf588094a972a4f0a455492cad",
+    "doc/php83/evidence/exp11-candidate/preflight.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "doc/php83/evidence/exp11-candidate/preflight.stdout": "8500dbf6aa74b24304815ef5ecc90de354ce73c37f3fb90050d8ec4f6997f285",
+    "doc/php83/exp11-candidate.md": "681e1fc714c786fd9bb14c0249abf5ee68ce41b4743baa4fbf0b97441523c334",
+    "tools/php83/exp11-candidate/stage.py": "d384328e48975c2131643c009e9ced55c251d1f9b387a0884cd158fd06b0bf15",
+    "tools/php83/exp11-candidate/test_stage.py": "cdb78fb094395b63b42b311671e699d17702ccecb711ed8ff31cd9917d98cf12"
+  },
+  "selection_approved": false,
+  "zip_built": false,
+  "runtime_executed": false,
+  "application_acceptance": false
+}

@@ -1,0 +1,17 @@
+{
+  "verified_local_archive_hashes": {
+    "../platform-install-packages-php83-artifacts/exp11/Rigel-18.20.0-php83-experimental.exp11.zip": "f2474f5b951bfd2d121291025c8dd4554697fb5bb4024e132987643dab6144a7",
+    "../platform-install-packages-php83-artifacts/exp11-repeat/Rigel-18.20.0-php83-experimental.exp11.zip": "f2474f5b951bfd2d121291025c8dd4554697fb5bb4024e132987643dab6144a7"
+  },
+  "verified_local_two_build_bytes_equal": true,
+  "verification_report_sha256": "cfb9b5e21a16bf53713e824596099efdc2576eb0781fb00621a1eee8d374bbfc",
+  "delta_report_sha256": "3bdd46e99c583e5516bc9af3c9cdf4a663ce0bee897c004513a27856d2b4aba7",
+  "changed_application_paths": [
+    "alpha/apps/kaltura/lib/baseObjectUtils.class.php",
+    "vendor/htmlpurifier/library/HTMLPurifier.autoload.php",
+    "vendor/symfony-data/bin/symfony.php",
+    "vendor/symfony/util/sfCore.class.php"
+  ],
+  "prior_targets_preserved": 59,
+  "initial_local_check_correction": "First local repeat discovery looked for two ZIPs in exp11 directory and stopped AssertionError; actual repeat is separate exp11-repeat directory. Local exact byte comparison then succeeded; no input modified. Stage independently checked primary archive exact pin."
+}

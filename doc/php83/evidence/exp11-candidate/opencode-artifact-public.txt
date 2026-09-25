@@ -1,0 +1,27 @@
+Read-only artifact review starting — inspecting candidate tooling and evidence in-repo.
+Found the candidate manifests and prior evidence — now validating guardrails and running the unit suite.
+All 37 tests passed — now confirming the 63-entry manifest transition and delta scope.
+Independent lab artifact tooling review — repository evidence only.
+
+Scope reviewed:
+- `tools/php83/exp11-candidate/selected.py`, `delta.py`, `test_selected.py`, `test_delta.py`
+- `doc/php83/evidence/exp11-candidate/manifest.json` (prepared), `selected-manifest.json`, `verification.json`, `delta.json`
+- Did not read original ZIP or sibling artifacts. No independent actual ZIP replay. No VM, network, git, builds, or tool edits.
+
+Test execution:
+- Command: `python3 -m unittest discover -s tools/php83/exp11-candidate -p 'test_*.py' -v`
+- Evidence: `doc/php83/evidence/exp11-candidate/opencode-artifact-tests.stdout` (0 bytes), `.stderr` (3192 bytes), `.exit` (`0`)
+- Result: 37 tests, exit 0, OK
+  - `test_delta`: 8 tests
+  - `test_selected`: 6 tests
+  - `test_stage`: 23 tests (matched by `test_*.py` pattern)
+
+Findings:
+- `selected.py`: pins prepared `dd9243b6…96eb2`, requires `PREPARED_NOT_SELECTED`. `make_selected` deep-copies, only changes `status` to `EXPERIMENTAL_SELECTED_LAB_ONLY_NOT_FOR_PRODUCTION`, adds `selection_authorization` (lab_build True, production/package/ release False, runtime_acceptance False), rewrites `known_limitations[0]` and `[3]`. `validate_selected` requires exact equality plus patch-list identity; rejects reorder, drift, production escalation, extra keys, prepared-as-selected.
+- Manifests: prepared and selected both 63 patches, patch lists byte-identical. Only authorized metadata transition differs. Prepared SHA256 matches `PREPARED_PIN`. New4 paths: `baseObjectUtils.class.php`, `HTMLPurifier.autoload.php`, `symfony.php`, `sfCore.class.php`.
+- `delta.py`: enforces `current patches[:59]==prior` + len 63, new order == `stage.TARGETS`, no duplicate ZIP members, exact added/changed sets, prior 59 bytes + `after_sha256` identical, new before/after/patch hashes, embedded manifest contains current. Returns `PASS_LAB_ARTIFACT_DELTA_ONLY`, `application_acceptance False`.
+- `delta.json`: `prior_targets_preserved 59`, 4 changed application paths matching new4, 1 changed metadata manifest, 4 added metadata patches, `18088 -> 18092` entries, `all_other_entry_bytes_identical True`.
+- `verification.json`: 63 changed files, 65 added metadata, `two_builds_identical True`, `all_other_original_entry_bytes_identical True`, comments preserved. Repository claim only; not independently replayed here.
+- Limitations preserved: lab source-artifact only; ternary legacy output; SPL append delta; no package/CI, merge, publication, `.20` deployment; runtime and full application acceptance remain unproven.
+
+No production approval. No full application acceptance.

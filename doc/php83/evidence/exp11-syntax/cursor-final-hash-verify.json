@@ -1,0 +1,10 @@
+{
+  "all_match": true,
+  "checked": 11,
+  "mismatches": [],
+  "source": "doc/php83/evidence/exp11-syntax/cursor-final-input-identities.json",
+  "exp11_pin_expected": "f2474f5b951bfd2d121291025c8dd4554697fb5bb4024e132987643dab6144a7",
+  "exp11_pin_in_primary_and_claude_scan": "f2474f5b951bfd2d121291025c8dd4554697fb5bb4024e132987643dab6144a7",
+  "primary_json_sha256": "e6c11b07f700e7c8ae81db4837213020a7a1f93bd2b161a7633fe619e8c4bff7",
+  "claude_scan_json_sha256": "69163332de53dba8fddb30d698d043b73349f92974f01178ec240e2cba5c4edd"
+}

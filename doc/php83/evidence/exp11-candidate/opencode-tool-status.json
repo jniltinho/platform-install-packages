@@ -1,0 +1,74 @@
+{
+  "tool_statuses": [
+    {
+      "tool": "read",
+      "status": "completed"
+    },
+    {
+      "tool": "read",
+      "status": "completed"
+    },
+    {
+      "tool": "read",
+      "status": "completed"
+    },
+    {
+      "tool": "read",
+      "status": "completed"
+    },
+    {
+      "tool": "read",
+      "status": "completed"
+    },
+    {
+      "tool": "read",
+      "status": "completed"
+    },
+    {
+      "tool": "read",
+      "status": "completed"
+    },
+    {
+      "tool": "read",
+      "status": "completed"
+    },
+    {
+      "tool": "read",
+      "status": "completed"
+    },
+    {
+      "tool": "read",
+      "status": "completed"
+    },
+    {
+      "tool": "todowrite",
+      "status": "completed"
+    },
+    {
+      "tool": "bash",
+      "status": "completed"
+    },
+    {
+      "tool": "todowrite",
+      "status": "completed"
+    },
+    {
+      "tool": "bash",
+      "status": "completed"
+    },
+    {
+      "tool": "bash",
+      "status": "completed"
+    },
+    {
+      "tool": "bash",
+      "status": "completed"
+    },
+    {
+      "tool": "todowrite",
+      "status": "completed"
+    }
+  ],
+  "tool_errors": [],
+  "thought_fields_retained": false
+}

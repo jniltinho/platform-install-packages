@@ -1,0 +1,38 @@
+Os dois comandos rodaram e saíram com 0. O `claude-preflight.json` que gerei é idêntico byte a byte ao `preflight-final.json` e não encontrei nenhum defeito que bloqueie. O status continua **PREPARED_NOT_SELECTED**.
+
+**Execução.** Executor e revisor: Claude CLI (claude-opus-5-5), no worktree local, com Python 3.12.3 e GNU patch 2.7.6. Não usei VM, SSH, SQL, rede nem git.
+
+| Caso | Comando | Exit | Resultado observado |
+|---|---|---|---|
+| preflight | `stage.py --check-only --report claude-preflight.json` | 0 | 63 aplicações de patch em cópias privadas, todas com exit 0. O diagnóstico de cada uma é só "patching file …", sem offset, fuzz, reversed ou skipping. O stderr ficou vazio e o stdout é idêntico ao `preflight-final.stdout`. |
+| unittest | `unittest discover tools/php83/exp11-candidate` | 0 | `Ran 23 tests … OK`, todos sobre dados sintéticos |
+
+- **Comparação com `preflight-final.json`:** os dois arquivos têm o mesmo sha256 (`7a05c7dd…3048`). Portanto coincidem os 63 registros, os hashes finais dos arquivos, `manifest_sha256` (`dd9243b6…`) e o hash do `stage.py` (`d384328e…`, gravado no campo `preflight_sha256`).
+- **Entradas congeladas:** recalculei os 72 hashes de `review-input-identities.json` e nenhum diverge.
+- **ZIP original:** o sha256 é o mesmo antes e depois da execução.
+- **Execução em paralelo:** rodei os dois comandos ao mesmo tempo. Os testes usam só fixtures temporárias próprias, sem tocar no ZIP nem nos caminhos de evidência.
+
+**O que confirmei na revisão**
+- As 59 primeiras entradas do manifesto são exatamente as do exp10, com os mesmos campos e a mesma ordem. As 4 novas são ternary, HTMLPurifier, CLI e sfCore, e os 63 caminhos e nomes de patch são únicos.
+- O sfCore não está entre as 59 anteriores e entra uma única vez, vindo de `symfony-bootstrap.json`. Nenhuma outra entrada desse arquivo foi incluída às escondidas.
+- Os cinco arquivos de metadados têm hash fixo no código e batem com o que está declarado no manifesto.
+- O manifesto do ternary altera um único arquivo. Os outros 7 arquivos auxiliares não mudam e seus bytes conferem com o ZIP.
+- Os 4 patches novos têm exatamente 2 linhas de cabeçalho cada, sem metadados de git.
+- Os hashes de antes e depois dos arquivos são conferidos. O patch roda com `--fuzz=0` e `--forward`, e o conjunto de arquivos resultante é checado no final.
+
+**Observações e limites de cobertura**
+1. **Cabeçalhos:** a checagem trata como cabeçalho qualquer linha iniciada por `--- ` ou `+++ `. Um trecho de patch que remova uma linha começando com `-- ` seria recusado sem motivo; isso só bloqueia, não deixa passar nada indevido.
+   - Linhas no formato `diff --git` e mudanças de permissão não são recusadas. Uma mudança de permissão passaria sem ser notada; nenhum dos 63 patches tem isso hoje.
+2. **Arquivos extras:** a checagem final procura só arquivos regulares. Diretórios vazios ou links simbólicos quebrados criados por um patch não seriam percebidos. O risco é baixo.
+3. **Manifesto:** o `stage.py` não fixa o hash do próprio `manifest.json`, só o registra no relatório. Campos fora da seleção, como `known_limitations` ou chaves extras, não são validados. A proteção hoje vem do pin em `review-input-identities.json`.
+4. **Casos sem teste:** fuzz e patch invertido (só offset é testado), arquivos extras após a aplicação, alteração acumulada, bytes alterados nos auxiliares do ternary, membros do ZIP duplicados ou que não sejam arquivos comuns, e as recusas do `main()` (`--report`/`--output` já existentes e uso dos dois juntos).
+5. **Relatório:** não registra as versões do `patch` e do Python nem o hash do `test_stage.py`. O nome do campo `preflight_sha256` confunde, porque ele guarda o hash do `stage.py`.
+6. **Composição:** está provado que os patches mexem em arquivos separados, mas não que funcionam juntos. O patch do sfCore agora lança `RuntimeException` se o suporte a SPL autoload faltar. Nesta seleção ele convive com as versões curly-offset de sfRouting, UrlHelper, sfFinder e Spyc, sem sfToolkit e sfConfigHandler, e com os novos patches de autoload. Essa qualificação de composição continua **pendente**.
+
+**Escopo**
+- **Observado:** exatidão textual dos 63 patches, identidades por hash e as 23 verificações sintéticas.
+- **Não executado:** PHP, montagem do ZIP, execução em runtime e qualquer teste de aplicação.
+
+O preflight passar não demonstra compatibilidade da aplicação com PHP 8.3 nem aprova a seleção ou o release.
+
+Os únicos arquivos escritos foram os `claude-preflight.*` e `claude-tests.*` pedidos, mais o `claude-review.md` com este resumo, todos em `doc/php83/evidence/exp11-candidate/`. Nada foi sobrescrito.

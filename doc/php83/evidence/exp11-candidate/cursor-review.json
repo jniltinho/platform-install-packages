@@ -1,0 +1,171 @@
+{
+  "schema": 1,
+  "executor": "Cursor Agent CLI",
+  "reviewer_role": "independent selection inventory review",
+  "case": "exp11-candidate",
+  "status": "PREPARED_NOT_SELECTED",
+  "selection_approved": false,
+  "zip_built": false,
+  "runtime_executed": false,
+  "application_acceptance": false,
+  "package_ci_main_production_affected": false,
+  "executed": {
+    "unittest": {
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/exp11-candidate -p 'test_*.py' -v",
+      "exit": 0,
+      "ran_tests": 23,
+      "ok": true,
+      "artifacts": [
+        "doc/php83/evidence/exp11-candidate/cursor-tests.stdout",
+        "doc/php83/evidence/exp11-candidate/cursor-tests.stderr",
+        "doc/php83/evidence/exp11-candidate/cursor-tests.exit"
+      ],
+      "note": "23 synthetic harness tests are not proof of application acceptance or whole-candidate PHP behavior"
+    },
+    "inventory": {
+      "scope": "repo-only; no stage.py main; no original ZIP preflight",
+      "exit": 0,
+      "outcome": "PASS",
+      "artifact": "doc/php83/evidence/exp11-candidate/cursor-inventory.json",
+      "exit_artifact": "doc/php83/evidence/exp11-candidate/cursor-inventory.exit"
+    }
+  },
+  "not_executed": [
+    {
+      "item": "tools/php83/exp11-candidate/stage.py main / --check-only against original ZIP",
+      "reason": "Claude-owned independent task; Cursor inventory deliberately repo-only"
+    },
+    {
+      "item": "before_sha256 / after_sha256 verification against original archive bytes and private-copy patch replay",
+      "reason": "Requires original ZIP preflight; NOT_EXECUTED in this Cursor pass"
+    },
+    {
+      "item": "VM/SSH/SQL/services/network, ZIP build, git, selection/PHP/runtime/release approval",
+      "reason": "Out of authorized Cursor scope"
+    }
+  ],
+  "inventory_summary": {
+    "prior_59_field_for_field_order_preserved": true,
+    "exp11_entries": 63,
+    "unique_paths": 63,
+    "unique_patch_leaves": 63,
+    "appended_4_paths_exact": [
+      "alpha/apps/kaltura/lib/baseObjectUtils.class.php",
+      "vendor/htmlpurifier/library/HTMLPurifier.autoload.php",
+      "vendor/symfony-data/bin/symfony.php",
+      "vendor/symfony/util/sfCore.class.php"
+    ],
+    "source_patch_byte_hashes_matched": "63/63",
+    "metadata_hash_pins_matched": "5/5",
+    "frozen_input_identities_matched": "72/72",
+    "exp11_manifest_sha256": "dd9243b654a98385a30dd87a3bbf6e20a3034c9106311d135b57bc9f35696eb2",
+    "prior_manifest_sha256": "db4c2b6dfff31f9fd64e05f29e0ccd79b2049e85e7c27ee29b2783605db387aa"
+  },
+  "findings": [
+    {
+      "severity": "info",
+      "id": "status-truthful",
+      "paths": [
+        "doc/php83/exp11-candidate.md:3",
+        "doc/php83/evidence/exp11-candidate/manifest.json:4",
+        "tools/php83/exp11-candidate/stage.py:124-126",
+        "tools/php83/exp11-candidate/stage.py:157-163"
+      ],
+      "summary": "Docs/tool/manifest consistently keep PREPARED_NOT_SELECTED with selection_approved/zip_built/runtime_executed/application_acceptance false; status SELECTED is rejected."
+    },
+    {
+      "severity": "info",
+      "id": "composition-pending-truthful",
+      "paths": [
+        "doc/php83/exp11-candidate.md:5-6",
+        "doc/php83/exp11-candidate.md:97-102",
+        "doc/php83/evidence/exp11-candidate/manifest.json:540-548"
+      ],
+      "summary": "Known limitations correctly state autoload composition/extended queue evidence remains pending independent review; preparation must not be read as composition pass or selection approval."
+    },
+    {
+      "severity": "info",
+      "id": "order-collision-provenance-ok-repo",
+      "paths": [
+        "tools/php83/exp11-candidate/stage.py:63-89",
+        "tools/php83/exp11-candidate/stage.py:127-134"
+      ],
+      "summary": "Repo inventory confirms exact prior-59 equality, unique 63 paths/leaves, provenance pins, and metadata join for the four appends. No source/leaf collisions observed."
+    },
+    {
+      "severity": "info",
+      "id": "sfcore-only-from-bootstrap",
+      "paths": [
+        "patches/php83/held/symfony-bootstrap.json:1-53",
+        "tools/php83/exp11-candidate/stage.py:77-79",
+        "doc/php83/exp11-candidate.md:19-24"
+      ],
+      "summary": "Bootstrap metadata lists seven files; only sfCore is joined. Routing/UrlHelper/sfFinder share prior path+hash via curly leaves; Spyc bootstrap hash 154aac7b… differs from prior curly 486a17ce… and is correctly not selected; sfToolkit/sfConfigHandler remain unselected."
+    },
+    {
+      "severity": "info",
+      "id": "ternary-helpers-not-patches",
+      "paths": [
+        "patches/php83/held/base-object-ternary/manifest.json:5-45",
+        "tools/php83/exp11-candidate/stage.py:68-71",
+        "tools/php83/exp11-candidate/stage.py:150-155"
+      ],
+      "summary": "Seven unchanged ternary helpers remain provenance checks, not extra selection entries; only baseObjectUtils is appended."
+    },
+    {
+      "severity": "gap",
+      "id": "missing-prior-identity-test",
+      "paths": [
+        "tools/php83/exp11-candidate/stage.py:65-66",
+        "tools/php83/exp11-candidate/test_stage.py:85-186"
+      ],
+      "summary": "No unittest covers wrong prior revision/upstream_sha256/upstream_root/target_php despite require() in expected_selection."
+    },
+    {
+      "severity": "gap",
+      "id": "missing-multi-helper-fixture",
+      "paths": [
+        "tools/php83/exp11-candidate/test_stage.py:47-48",
+        "tools/php83/exp11-candidate/stage.py:150-155"
+      ],
+      "summary": "Synthetic ternary fixture contains only the changed file; validate()'s multi-helper original-byte and unchanged-after checks are not exercised by the 23 tests."
+    },
+    {
+      "severity": "gap",
+      "id": "missing-explicit-nonselection-tests",
+      "paths": [
+        "tools/php83/exp11-candidate/test_stage.py",
+        "patches/php83/held/symfony-bootstrap.json:33-38"
+      ],
+      "summary": "No explicit test that selecting bootstrap Spyc/sfToolkit/sfConfigHandler (or duplicate alternate leaves) is rejected beyond generic collision/ordered-equality; relies on expected_selection construction."
+    },
+    {
+      "severity": "gap",
+      "id": "no-addition-field-drift-test",
+      "paths": [
+        "tools/php83/exp11-candidate/test_stage.py:107-109"
+      ],
+      "summary": "test_prior_field_changed covers invented prior fields; no dedicated addition-row field-drift case (caught only via full ordered 59+4 equality against expected_selection)."
+    },
+    {
+      "severity": "limit",
+      "id": "harness-not-semantic-acceptance",
+      "paths": [
+        "doc/php83/exp11-candidate.md:55-60",
+        "tools/php83/exp11-candidate/test_stage.py:1"
+      ],
+      "summary": "Passing 23 synthetic tests and repo inventory does not accept the four new patches' PHP/runtime/composition behavior, nor whole-candidate readiness."
+    },
+    {
+      "severity": "limit",
+      "id": "zip-replay-owned-elsewhere",
+      "paths": [
+        "tools/php83/exp11-candidate/stage.py:121-164",
+        "doc/php83/evidence/exp11-candidate/preflight-final.json"
+      ],
+      "summary": "Strict private-copy replay and original before/after pins remain outside this Cursor inventory; preparation preflight claims exit 0 but are not re-executed here."
+    }
+  ],
+  "defects_blocking_inventory": [],
+  "verdict": "Inventory PASS under PREPARED_NOT_SELECTED. No selection, ZIP, PHP, runtime, package/CI/main/production or release approval."
+}

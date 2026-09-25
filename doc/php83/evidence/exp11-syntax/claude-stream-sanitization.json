@@ -1,0 +1,40 @@
+{
+  "policy": "Retain only current actual tool calls/results, task completion metadata and public final result. Remove all historical hook context, reasoning content and unrelated initialization metadata. Original SHA256/count provenance only; no raw reasoning archive. Authorized coordinator instruction.",
+  "streams": [
+    {
+      "path": "doc/php83/evidence/exp11-syntax/claude-cli-r2-stream.jsonl",
+      "original_sha256": "8787342eca129cfaf76950a67eae7eb6e3b33733499a83689a5aa746ba451f57",
+      "sanitized_sha256": "8ee1823916c10193452dce76da26786580675583936618f1d8e37ea284738dbf",
+      "original_bytes": 147265,
+      "sanitized_bytes": 33915,
+      "original_event_count": 50,
+      "retained_event_count": 21,
+      "removed_hook_events": 6,
+      "removed_reasoning_blocks": 7,
+      "original_event_type_counts": {
+        "system": 17,
+        "assistant": 18,
+        "rate_limit_event": 4,
+        "user": 9,
+        "tool_progress": 1,
+        "result": 1
+      },
+      "raw_body_retained": false
+    },
+    {
+      "path": "doc/php83/evidence/exp11-syntax/claude-cli-stream.jsonl",
+      "original_sha256": "14b7afa698808236007c138a5c67d817b48962f2d6a5b83bd1367dd615851550",
+      "sanitized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "original_bytes": 22337,
+      "sanitized_bytes": 0,
+      "original_event_count": 6,
+      "retained_event_count": 0,
+      "removed_hook_events": 6,
+      "removed_reasoning_blocks": 0,
+      "original_event_type_counts": {
+        "system": 6
+      },
+      "raw_body_retained": false
+    }
+  ]
+}

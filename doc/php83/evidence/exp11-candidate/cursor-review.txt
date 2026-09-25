@@ -1,0 +1,48 @@
+Cursor independent exp11 selection inventory review
+===================================================
+Status: PREPARED_NOT_SELECTED
+selection_approved=false; zip_built=false; runtime_executed=false; application_acceptance=false
+Upstream package/CI/main/production unaffected.
+
+Executed
+--------
+- unittest discover tools/php83/exp11-candidate: exit 0, Ran 23 tests, OK
+  artifacts: cursor-tests.{stdout,stderr,exit}
+- repo-only inventory (no stage.py main, no original ZIP): exit 0, PASS
+  artifacts: cursor-inventory.json, cursor-inventory.exit
+
+Inventory counts
+----------------
+- prior 59 field-for-field/order-preserved: yes
+- exp11 entries / unique paths / unique leaves: 63 / 63 / 63
+- appended 4 exactly: baseObjectUtils, HTMLPurifier.autoload, symfony-data/bin/symfony.php, sfCore
+- source_patch byte hashes: 63/63 match
+- metadata pins: 5/5 match
+- frozen review-input-identities: 72/72 match
+- exp11 manifest sha256: dd9243b654a98385a30dd87a3bbf6e20a3034c9106311d135b57bc9f35696eb2
+
+NOT_EXECUTED
+------------
+- stage.py --check-only / original ZIP preflight (Claude-owned)
+- before/after archive identity and private-copy patch replay
+- VM/SSH/SQL/services/network, ZIP build, git, approvals
+
+Review findings (separate from execution)
+-----------------------------------------
+OK:
+- Docs/tool refuse selected status; composition/approval remain pending in prose and known_limitations.
+- Order/collision/provenance checks hold on repo bytes; only sfCore taken from bootstrap metadata.
+- Spyc bootstrap alternate (154aac7b…) differs from prior curly (486a17ce…) and is not selected.
+- Ternary helpers stay provenance-only (7 unchanged), not extra patches.
+
+Gaps (not inventory blockers):
+- test_stage.py: no case for wrong prior identity (stage.py:65-66).
+- test_stage.py:47-48 fixture has only one ternary file; stage.py:150-155 multi-helper ZIP checks unexercised.
+- No explicit non-selection tests for bootstrap Spyc/sfToolkit/sfConfigHandler.
+- Addition-row field drift covered only via full 59+4 equality, not a dedicated test.
+
+Limits:
+- 23 harness passes ≠ application/PHP/composition acceptance for the four new patches.
+- Preparation preflight-final.json not re-run by Cursor.
+
+Verdict: inventory PASS only. No PHP/runtime/release approval.

@@ -1,0 +1,42 @@
+test_embedded_metadata_drift (test_delta.DeltaTests.test_embedded_metadata_drift) ... ok
+test_exact_delta (test_delta.DeltaTests.test_exact_delta) ... ok
+test_extra_change (test_delta.DeltaTests.test_extra_change) ... ok
+test_extra_member (test_delta.DeltaTests.test_extra_member) ... ok
+test_missing_member (test_delta.DeltaTests.test_missing_member) ... ok
+test_new_patch_wrong_hash (test_delta.DeltaTests.test_new_patch_wrong_hash) ... ok
+test_new_target_wrong_hash (test_delta.DeltaTests.test_new_target_wrong_hash) ... ok
+test_prior_target_drift (test_delta.DeltaTests.test_prior_target_drift) ... ok
+test_exact_transition (test_selected.SelectedTests.test_exact_transition) ... ok
+test_patch_reorder (test_selected.SelectedTests.test_patch_reorder) ... ok
+test_prepared_drift (test_selected.SelectedTests.test_prepared_drift) ... ok
+test_prepared_is_not_selected (test_selected.SelectedTests.test_prepared_is_not_selected) ... ok
+test_production_escalation (test_selected.SelectedTests.test_production_escalation) ... ok
+test_unexpected_metadata (test_selected.SelectedTests.test_unexpected_metadata) ... ok
+test_addition_order_drift (test_stage.SelectionTests.test_addition_order_drift) ... ok
+test_archive_drift (test_stage.SelectionTests.test_archive_drift) ... ok
+test_duplicate_sfcore_record (test_stage.SelectionTests.test_duplicate_sfcore_record) ... ok
+test_exact_59_plus_4_and_private_replay (test_stage.SelectionTests.test_exact_59_plus_4_and_private_replay) ... ok
+test_leaf_collision (test_stage.SelectionTests.test_leaf_collision) ... ok
+test_malformed_hash (test_stage.SelectionTests.test_malformed_hash) ... ok
+test_metadata_drift (test_stage.SelectionTests.test_metadata_drift) ... ok
+test_missing_sfcore_record (test_stage.SelectionTests.test_missing_sfcore_record) ... ok
+test_offset_rejected (test_stage.SelectionTests.test_offset_rejected) ... ok
+test_omission (test_stage.SelectionTests.test_omission) ... ok
+test_original_target_hash_drift (test_stage.SelectionTests.test_original_target_hash_drift) ... ok
+test_patch_drift (test_stage.SelectionTests.test_patch_drift) ... ok
+test_patch_headers_not_metadata_only (test_stage.SelectionTests.test_patch_headers_not_metadata_only) ... ok
+test_path_traversal (test_stage.SelectionTests.test_path_traversal) ... ok
+test_prior_field_changed (test_stage.SelectionTests.test_prior_field_changed) ... ok
+test_prior_order_drift (test_stage.SelectionTests.test_prior_order_drift) ... ok
+test_provenance_declaration_drift (test_stage.SelectionTests.test_provenance_declaration_drift) ... ok
+test_status_cannot_claim_selected (test_stage.SelectionTests.test_status_cannot_claim_selected) ... ok
+test_symlink_patch (test_stage.SelectionTests.test_symlink_patch) ... ok
+test_target_collision (test_stage.SelectionTests.test_target_collision) ... ok
+test_unselected_ternary_helper_changed (test_stage.SelectionTests.test_unselected_ternary_helper_changed) ... ok
+test_wrong_after_hash (test_stage.SelectionTests.test_wrong_after_hash) ... ok
+test_wrong_autoload_target (test_stage.SelectionTests.test_wrong_autoload_target) ... ok
+
+----------------------------------------------------------------------
+Ran 37 tests in 0.147s
+
+OK
