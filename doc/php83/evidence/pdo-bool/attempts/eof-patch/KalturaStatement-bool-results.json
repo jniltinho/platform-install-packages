@@ -1,0 +1,7 @@
+{
+  "status": "held; restore boolean result contract, focused SQL validation pending",
+  "path": "alpha/apps/kaltura/lib/db/KalturaStatement.php",
+  "before_sha256": "a80d6029db03e1880adf240b157489d6f25b47163c394d0b0969300416378d70",
+  "after_sha256": "e1c21b05e6c43ae98d9483b1ab1825068bed72234b32ea6c40e9886ed6a2c7d3",
+  "patch_sha256": "4759e745b891c579b604a6b915698f5b023be61d9b9fddcd04ddfcd8a8a57e67"
+}

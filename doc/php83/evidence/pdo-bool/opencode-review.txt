@@ -1,0 +1,13 @@
+Grok timed out — running fallback checks on the bool patches with no writes.
+I've mapped the harness; now pulling evidence and running the local tests.
+Local tests pass and evidence parses — final verification before reporting.
+Grok executor timed out (124) recorded as NOT_EXECUTED, this fallback executed assigned local checks only.
+Local `python3 -m unittest discover -s tools/php83 -p "test_*.py"` ran 136 tests OK exit 0, no writes/commits or VM calls made.
+Reviewed `tools/php83/pdo-bool/{probe,run,collect}.py/sh/php` plus held patches `PropelPDO-bool-setAttribute` and `KalturaStatement-bool-results` with before/after SHA matching evidence.
+Both `codex.json` and `claude.json` (exits 0, stderr empty) report 4/4 VM rows exit 0 with 29 cases each on 74/83 previous/candidate, functional_checks_passed true, cleanup stopped true, application_acceptance false.
+Intentional null→native bool repair confirmed: previous PropelPDO setAttribute/cache-attribute and KalturaStatement bind/execute/dry-run returned NULL, candidate returns bool true matching native PDO.
+Native false/error propagation preserved: unsupported-attribute false, silent/warning failure false with errorCode 42S02, exception mode throws PDOException 42S02, input-array and bound SELECT values 17/23 intact, warning mode covered.
+Dry-run no-write holds (write count 0, select 19, candidate bool true), cache enable/disable identity and nested commit/rollback traces byte-identical, source_sha256/contracts null→bool and get_class checks confirm source/class identity with only Log/Cache/Monitor stubs and no full bootstrap.
+Genuine gaps: PHP 8.3 previous load_diagnostics 8 vs candidate 5 deprecations remain (probe still exit 0), plus persistent E_WARNING diagnostics at probe.php:62 and KalturaStatement:72/73 across all runs.
+Fallback did not re-execute VM harness locally so VM evidence is reviewed not re-proven, and codex/claude JSON differ by SHA only in db token/harness stdout hashes requiring token-scoped comparison.
+This is focused SQL contract evidence only, not full application acceptance or release gate.

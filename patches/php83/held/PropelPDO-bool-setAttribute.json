@@ -1,0 +1,7 @@
+{
+  "status": "held; restore boolean result contract, focused SQL validation pending",
+  "path": "vendor/propel/util/PropelPDO.php",
+  "before_sha256": "9e4f602f50bc24432107f34a2f3b4a995518fe28c46be9dc8f642dbb9ca74d22",
+  "after_sha256": "9017430cfa12adc2de1a187f2d034ecba04ab32677cdbdc419ba2a1e1fc5f0d3",
+  "patch_sha256": "794b4d9d7b65d0b868a009228d56483ec2b086054c970c2f495b651d82aa8145"
+}

@@ -1,0 +1,7 @@
+Vou rodar os unit tests e cruzar os patches held com as observações do `pdo-return-audit`.Vou cruzar as restrições do audit com overrides herdados e as evidências.**Testes:** `python3 -m unittest discover -s tools/php83 -p "test_*.py"` → **136 OK, exit 0** (suite local; não exercita o fixture SQL do audit).
+
+**Cruzamento com o audit** (`codex`/`claude` 19 rows, null onde o nativo dá bool): os held patches corrigem de propósito o contrato público `null→bool`. `PropelPDO-bool-setAttribute` faz `return true` no setter custom `PROPEL_ATTR_CACHE_PREPARES` e `return parent::setAttribute(...)` no default — propaga `true`/`false` nativo (ex.: atributo 987654), sem `true` incondicional. `KalturaStatement-bool-results` simula dry-run write com `$result = true`, atribui o bool de `parent::execute` no caminho real (incl. SELECT em dry-run), mantém o `catch` que relança `PropelException`, e deixa log/monitor no `else` antes do `return $result`; `bindValue` só declara `: bool` sobre o retorno que já existia.
+
+**Overrides:** inspeção do grafo não acha `setAttribute` em `KalturaPDO`/`DebugPDO`/`Mssql*`; `KalturaStatement` sem descendentes no trace — a anotação no pai é coerente com o inventário, sem prova fora da árvore.
+
+**Lacunas (sem aceitação):** JSONs held ainda `focused SQL validation pending`; binding default/null, input-array, `ERRMODE_WARNING`, emulation-off, bootstrap/`KalturaPDO` e reexecução real pós-patch não cobertos; `application_acceptance: false` / `repair_selected: false` no comparison.

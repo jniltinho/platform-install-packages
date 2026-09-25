@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "independent_result_rows_equal": true,
+  "cases_per_variant": 29,
+  "variants": 4,
+  "only_explicit_return_positions_differ": true,
+  "candidate_values_equal_across_runtime": true,
+  "previous_values_equal_across_runtime": true,
+  "three_native_bool_contracts_reflected": true,
+  "load_deprecations83_before": 8,
+  "load_deprecations83_after": 5,
+  "application_acceptance": false,
+  "artifact_integration": "pending",
+  "comparison_sha256": "431968b3c4861668c1f6dc7edc2c8a08ca167bd44f1a9cb2ef93ef5b32496a3d"
+}

@@ -1,0 +1,400 @@
+{
+  "schema": 1,
+  "promotion": false,
+  "stacking": false,
+  "entries": [
+    {
+      "patch": "patches/php83/0002-Services_JSON.class.patch",
+      "path": "alpha/apps/kaltura/lib/Services_JSON.class.php",
+      "scope": "active",
+      "metadata": "patches/php83/manifest.json",
+      "status": "experimental; not full PHP 8.3 compatibility",
+      "patch_sha256": "126eaa808a590c753f2a06d91de5e5b78da7a45ac02f50f172c84e825cf13df0",
+      "before_sha256": "6b83716ffb5a10a641293508a58443e3117f24613da4be0c7b038e1cc0851aa9",
+      "after_sha256": "f8611508758756f0a2264cc1a7aa022d8a8af8d80a0abdeba49a9a30e23d1358",
+      "result": "PASS",
+      "patch_output": "patching file alpha/apps/kaltura/lib/Services_JSON.class.php"
+    },
+    {
+      "patch": "patches/php83/0003-Encoder.patch",
+      "path": "vendor/ZendFramework/library/Zend/Json/Encoder.php",
+      "scope": "active",
+      "metadata": "patches/php83/manifest.json",
+      "status": "experimental; not full PHP 8.3 compatibility",
+      "patch_sha256": "d39935bc38dbe62d54d02e065a801810acc5635e24cc28de7515556092b2f490",
+      "before_sha256": "7af0946f20f81f7cbef204f9cdb907d9c52407fa7e4797bd613d12f778baf720",
+      "after_sha256": "e74ee2fae9c48c2d99859ee0821f17293d2586e73a2ff9844ec530b2d6a5bf64",
+      "result": "PASS",
+      "patch_output": "patching file vendor/ZendFramework/library/Zend/Json/Encoder.php"
+    },
+    {
+      "patch": "patches/php83/0004-Decoder.patch",
+      "path": "vendor/ZendFramework/library/Zend/Json/Decoder.php",
+      "scope": "active",
+      "metadata": "patches/php83/manifest.json",
+      "status": "experimental; not full PHP 8.3 compatibility",
+      "patch_sha256": "bbd82723f3232be8d0d50827e0d4c4ffb8b37ffe16afb11b1151b9e4c2beac93",
+      "before_sha256": "7336a0a91cdb2da465642e3322d77cae04f788c6b3e937cd2e1cbd4aff0aa996",
+      "after_sha256": "1d3ef5a95568db6dfe2db823766965a4b887f4689b2a182835b9390695360673",
+      "result": "PASS",
+      "patch_output": "patching file vendor/ZendFramework/library/Zend/Json/Decoder.php"
+    },
+    {
+      "patch": "patches/php83/held/Criteria-native-returns.patch",
+      "path": "vendor/propel/util/Criteria.php",
+      "scope": "held",
+      "metadata": "patches/php83/held/Criteria-native-returns.json",
+      "status": "held; cumulative Criteria null-alias repair plus native return contracts; PHP8.3-only",
+      "patch_sha256": "1c543d541c4422b36f58b67954d020e0e9c3a9582711c5dad43fe70e60942f0f",
+      "before_sha256": "0626bb5b976ae7eedccaf5060675cd7c7ca56b22fc2c9d6c1a51ce485a303543",
+      "after_sha256": "e8333167c6b501c92a8ee681a3b8c63372e8bf20e81c140a242c37c75b49a89a",
+      "result": "PASS",
+      "patch_output": "patching file vendor/propel/util/Criteria.php"
+    },
+    {
+      "patch": "patches/php83/held/Criteria-null-alias.patch",
+      "path": "vendor/propel/util/Criteria.php",
+      "scope": "held",
+      "metadata": "patches/php83/held/Criteria-null-alias.json",
+      "status": "held; focused null-alias experiment, integration pending",
+      "patch_sha256": "2da8bfbfdfd4af592c4e3ca5f0e1725fd458a249a4d31103f9343f7da5fc4293",
+      "before_sha256": "0626bb5b976ae7eedccaf5060675cd7c7ca56b22fc2c9d6c1a51ce485a303543",
+      "after_sha256": "9b36246d143a11ab1ffd8b31966cf86d4a7563e78cca216f344727ba3d232d19",
+      "result": "PASS",
+      "patch_output": "patching file vendor/propel/util/Criteria.php"
+    },
+    {
+      "patch": "patches/php83/held/DebugPDO-query-v2.patch",
+      "path": "vendor/propel/util/DebugPDO.php",
+      "scope": "held",
+      "metadata": "patches/php83/held/DebugPDO-query-v2.json",
+      "status": "held: forwarding variant; not in active manifest; standalone alternative to v1",
+      "patch_sha256": "ed9d74b49040b3c73438ecfb2abd05238aee65307d32ef8a41fb8982319f4f43",
+      "before_sha256": "6178d39fd2c11c2bd2dcc220c4234f72dfb11364c11d381e7f7bfaf55089e021",
+      "after_sha256": "483793dfe2d2fd8f7cb2b4c620f9f32c6b24ea99f24cdd2508c348340be5d3e1",
+      "result": "PASS",
+      "patch_output": "patching file vendor/propel/util/DebugPDO.php"
+    },
+    {
+      "patch": "patches/php83/held/DebugPDO-query-v3.patch",
+      "path": "vendor/propel/util/DebugPDO.php",
+      "scope": "held",
+      "metadata": "patches/php83/held/DebugPDO-query-v3.json",
+      "status": "held: variadic forwarding alternative against original; not stacked on v1/v2",
+      "patch_sha256": "f966cf320b74717d134b4dd8710e5deafcbd77f890775cf643868e4cb4ab541e",
+      "before_sha256": "6178d39fd2c11c2bd2dcc220c4234f72dfb11364c11d381e7f7bfaf55089e021",
+      "after_sha256": "85ffdb6aefb5b538813de368177148e24071da8513f6aaadc8adccdc822cb6cc",
+      "result": "PASS",
+      "patch_output": "patching file vendor/propel/util/DebugPDO.php"
+    },
+    {
+      "patch": "patches/php83/held/DebugPDO-query.patch",
+      "path": "vendor/propel/util/DebugPDO.php",
+      "scope": "held",
+      "metadata": "patches/php83/held/DebugPDO-query.json",
+      "status": "held: PHP8.3 strict parity fails; native SQLite control reproduces integer/string difference; named-argument forwarding needs testing",
+      "patch_sha256": "a9cbd8be059f3d3e1871cbd25b8f4b38a94e307224ddaa2db55e12d7baf36e72",
+      "before_sha256": "6178d39fd2c11c2bd2dcc220c4234f72dfb11364c11d381e7f7bfaf55089e021",
+      "after_sha256": "08cdcfd1113e24adcfdde1c03b9e39004dadb6dc7efcb2f9a05e338ed3af272e",
+      "result": "PASS",
+      "patch_output": "patching file vendor/propel/util/DebugPDO.php"
+    },
+    {
+      "patch": "patches/php83/held/KalturaActionReflector-parameter-class.patch",
+      "path": "api_v3/lib/reflection/KalturaActionReflector.php",
+      "scope": "held",
+      "metadata": "patches/php83/held/KalturaActionReflector-parameter-class.json",
+      "status": "held; reflection replacement, native and API metadata controls pending",
+      "patch_sha256": "fb62c56fcf79b6de555bddacc799d43e37016603afa6fe4491272fb3e3cb031e",
+      "before_sha256": "0b00d1466c92138c71e8b3141a26affbd248476c0a138f3b470f0717c49ce607",
+      "after_sha256": "b6b9ea91b1e1902bdf718bdfd5d3573ffd826662d1f25c35d7eb2a7004f15d7d",
+      "result": "PASS",
+      "patch_output": "patching file api_v3/lib/reflection/KalturaActionReflector.php"
+    },
+    {
+      "patch": "patches/php83/held/KalturaFrontController-null-user.patch",
+      "path": "api_v3/lib/KalturaFrontController.php",
+      "scope": "held",
+      "metadata": "patches/php83/held/KalturaFrontController-null-user.json",
+      "status": "held; explicit null-only experiment; behavior and integrated acceptance pending",
+      "patch_sha256": "e5a93a5868f21fd56a71a826be884ecd13a0eabf1e2c97e85c42527622297603",
+      "before_sha256": "5f2eeffe526d4a0ee245b6f10f4e9600e0f7c8bcb4a52eef41e3a66bbd9ab7a1",
+      "after_sha256": "189607dca3b5ef33270d8e4dfe081daf6a76f39d5fd49066ee0b83f24c62d71a",
+      "result": "PASS",
+      "patch_output": "patching file api_v3/lib/KalturaFrontController.php"
+    },
+    {
+      "patch": "patches/php83/held/KalturaLog-null-analytics.patch",
+      "path": "infra/log/KalturaLog.php",
+      "scope": "held",
+      "metadata": "patches/php83/held/KalturaLog-null-analytics.json",
+      "status": "held; explicit null-only experiment; behavior and integrated acceptance pending",
+      "patch_sha256": "a52e6e27158728d00ee6c84397d6064cf222de87a248c4733d7c07c52c598d93",
+      "before_sha256": "9b7a7c3dd37616ffd2ac9720ece862641c43bb687a2db4e8fc9cbcb259ff5449",
+      "after_sha256": "dd2a01851114e821a88f266dd060e55a80d7cd795001369c9c14e7d2a794381f",
+      "result": "PASS",
+      "patch_output": "patching file infra/log/KalturaLog.php"
+    },
+    {
+      "patch": "patches/php83/held/KalturaPDO-query.patch",
+      "path": "alpha/apps/kaltura/lib/db/KalturaPDO.php",
+      "scope": "held",
+      "metadata": "patches/php83/held/KalturaPDO-query.json",
+      "status": "held; API/database integration experiment",
+      "patch_sha256": "51403c941fa0197b9f484c5acfa443a8a8435fc69098712df39a6e49471a43fe",
+      "before_sha256": "97b756bed876d42da87f6a023b6ecf7af7c2b8454bb382da56ba9c54acae848d",
+      "after_sha256": "aeb012822d0af7c5fe0e6ea4221f789fc8c886f0c53dbb729a51bc9463a30f0e",
+      "result": "PASS",
+      "patch_output": "patching file alpha/apps/kaltura/lib/db/KalturaPDO.php"
+    },
+    {
+      "patch": "patches/php83/held/KalturaStatement-bool-results.patch",
+      "path": "alpha/apps/kaltura/lib/db/KalturaStatement.php",
+      "scope": "held",
+      "metadata": "patches/php83/held/KalturaStatement-bool-results.json",
+      "status": "held; restore boolean result contract, focused SQL validation pending",
+      "patch_sha256": "89dee143f9917bc35f4d87ae6b8643fa21fe84eeb90e08e921f06202b531412b",
+      "before_sha256": "a80d6029db03e1880adf240b157489d6f25b47163c394d0b0969300416378d70",
+      "after_sha256": "e1c21b05e6c43ae98d9483b1ab1825068bed72234b32ea6c40e9886ed6a2c7d3",
+      "result": "PASS",
+      "patch_output": "patching file alpha/apps/kaltura/lib/db/KalturaStatement.php"
+    },
+    {
+      "patch": "patches/php83/held/Partner-null-permission-name.patch",
+      "path": "alpha/lib/model/Partner.php",
+      "scope": "held",
+      "metadata": "patches/php83/held/Partner-null-permission-name.json",
+      "status": "held; explicit null-only experiment; behavior and integrated acceptance pending",
+      "patch_sha256": "f4df85e938f6d8bea307583d28a2f626990540cb0c6b343c592e1f98dc15bbad",
+      "before_sha256": "27dfd30c3f0190e29a86489c10f154b8098f8d2b2b4a8928799056ee4c3d6f07",
+      "after_sha256": "9fd78239a94da6268a92f72b335acffffde05a49152798cd611a0153b876e714",
+      "result": "PASS",
+      "patch_output": "patching file alpha/lib/model/Partner.php"
+    },
+    {
+      "patch": "patches/php83/held/PermissionPeer-null-dependency.patch",
+      "path": "alpha/lib/model/PermissionPeer.php",
+      "scope": "held",
+      "metadata": "patches/php83/held/PermissionPeer-null-dependency.json",
+      "status": "held; explicit null-only experiment; behavior and integrated acceptance pending",
+      "patch_sha256": "72c002d341dacb863e9b19e618df040bdd8e565211d8bf25d2e95b12b1f44353",
+      "before_sha256": "95f41a27363ab23d76a2f52259f9a325139da1174fdefd17500479b2c1a2ad16",
+      "after_sha256": "cc7569a58686cbe4c56fa1e6f72663b3bf71147d741427eb4176d8d891255f59",
+      "result": "PASS",
+      "patch_output": "patching file alpha/lib/model/PermissionPeer.php"
+    },
+    {
+      "patch": "patches/php83/held/PropelPDO-bool-setAttribute.patch",
+      "path": "vendor/propel/util/PropelPDO.php",
+      "scope": "held",
+      "metadata": "patches/php83/held/PropelPDO-bool-setAttribute.json",
+      "status": "held; restore boolean result contract, focused SQL validation pending",
+      "patch_sha256": "794b4d9d7b65d0b868a009228d56483ec2b086054c970c2f495b651d82aa8145",
+      "before_sha256": "9e4f602f50bc24432107f34a2f3b4a995518fe28c46be9dc8f642dbb9ca74d22",
+      "after_sha256": "9017430cfa12adc2de1a187f2d034ecba04ab32677cdbdc419ba2a1e1fc5f0d3",
+      "result": "PASS",
+      "patch_output": "patching file vendor/propel/util/PropelPDO.php"
+    },
+    {
+      "patch": "patches/php83/held/Registry-cast.patch",
+      "path": "vendor/ZendFramework/library/Zend/Registry.php",
+      "scope": "held",
+      "metadata": "patches/php83/held/Registry-cast.json",
+      "status": "unknown",
+      "patch_sha256": "12809d136010cfcb4deb70b5ef9d63fea5da9571d057c957c6396ce5861b5415",
+      "before_sha256": "304ba8242c81790f11dadcf7a39e63b7047f8ea33fc3de03b748cab70397b48d",
+      "after_sha256": "1334c98e9bce7142376e24a629f634cb8412bd502ddee6f6a3950e9e67ef77b1",
+      "result": "PASS",
+      "patch_output": "patching file vendor/ZendFramework/library/Zend/Registry.php"
+    },
+    {
+      "patch": "patches/php83/held/Registry-properties.patch",
+      "path": "vendor/ZendFramework/library/Zend/Registry.php",
+      "scope": "held",
+      "metadata": "patches/php83/held/Registry-properties.json",
+      "status": "rejected: changes PHP7.4 baseline and does not repair PHP8.3 parity; evidence/registry-investigation/rejected-properties.json",
+      "patch_sha256": "d771eaae74852c6a7a32f24b3f9913a38ef430200da4517ebfdf383248611f0b",
+      "before_sha256": "304ba8242c81790f11dadcf7a39e63b7047f8ea33fc3de03b748cab70397b48d",
+      "after_sha256": "378c8a171475d369f343bbbbb8db6c30d83b4cf6d0f86b9d36a4e1c4d5d690a5",
+      "result": "PASS",
+      "patch_output": "patching file vendor/ZendFramework/library/Zend/Registry.php"
+    },
+    {
+      "patch": "patches/php83/held/Zend-Config-return-types.patch",
+      "path": "vendor/ZendFramework/library/Zend/Config.php",
+      "scope": "held",
+      "metadata": "patches/php83/held/Zend-Config-return-types.json",
+      "status": "held; explicit PHP 8.3 return contracts, focused validation pending",
+      "patch_sha256": "602bb21bd0a34b33c01dd1146654b4b023245936a41e4d9168068641f219f276",
+      "before_sha256": "065597c625046207683d14682bffcdbfd0aed862ad456a3dbefcf9b538e97a2f",
+      "after_sha256": "ccdbe8edbc8498fd52a3ac9456fe1085edbd09e77d4f332f7c279b94825e805b",
+      "result": "PASS",
+      "patch_output": "patching file vendor/ZendFramework/library/Zend/Config.php"
+    },
+    {
+      "patch": "patches/php83/held/core_compile.yml.patch",
+      "path": "vendor/symfony-data/config/core_compile.yml",
+      "scope": "held",
+      "metadata": "patches/php83/held/core_compile.json",
+      "status": "held; parent-before-child compile ordering",
+      "patch_sha256": "e2c0d3c8976cda0ca1f7abb84093e5fad54a28c97ea3f09836050c5469294355",
+      "before_sha256": "34b5082912ba11d744c69e2797a3343ee862a2198bf7a81cb4f7a23210216459",
+      "after_sha256": "ac8dc64452aa5c4aa49675dcc656617f56f8dd937b7759dfc5e6085e1555919f",
+      "result": "PASS",
+      "patch_output": "patching file vendor/symfony-data/config/core_compile.yml"
+    },
+    {
+      "patch": "patches/php83/held/dateUtils-ternary.patch",
+      "path": "alpha/apps/kaltura/lib/dateUtils.class.php",
+      "scope": "held",
+      "metadata": "patches/php83/held/dateUtils-ternary.json",
+      "status": "held; session integration experiment",
+      "patch_sha256": "88050ed941434ae499c6a3b2a24dd24f4443acbdb7ea49d0617e2d4b9c1b1093",
+      "before_sha256": "023ab7d9f3de70014225615c089c5ee26477a6b974da301232abd719e656a599",
+      "after_sha256": "490aef40d4e5a8c0312f481dc0dcf85577d753963e6dbe35648bc03bb13eadc1",
+      "result": "PASS",
+      "patch_output": "patching file alpha/apps/kaltura/lib/dateUtils.class.php"
+    },
+    {
+      "patch": "patches/php83/held/doc-comment-property.patch",
+      "path": "api_v3/lib/reflection/KalturaDocCommentParser.php",
+      "scope": "held",
+      "metadata": "patches/php83/held/doc-comment-property.json",
+      "status": "held; explicit existing public property declaration",
+      "patch_sha256": "22887d8226fd003985f6773d2a2f82df26e66792ef4a92a0f42ab0ef0551c8f0",
+      "before_sha256": "5941bf6b13c889997f2d7158594f65c4bdd89ae142379864eddc782f8d53970d",
+      "after_sha256": "7b843ea1900763216df77bba2b6b091582c41e716a2989754cadc22e77f29f5e",
+      "result": "PASS",
+      "patch_output": "patching file api_v3/lib/reflection/KalturaDocCommentParser.php"
+    },
+    {
+      "patch": "patches/php83/held/myCustomData-null-argument.patch",
+      "path": "alpha/apps/kaltura/lib/myCustomData.class.php",
+      "scope": "held",
+      "metadata": "patches/php83/held/myCustomData-null-argument.json",
+      "status": "held; explicit null-only experiment; behavior and integrated acceptance pending",
+      "patch_sha256": "7ced5100e5423719bbd6ece41405e3ee70af5b028dd74ea4d23dd5eab2e2e6d0",
+      "before_sha256": "d318d8a9629f90e68bccc6dde92adbff9d369a61d65c911e80eac0527b83d5a2",
+      "after_sha256": "03712d6f301ad2567b3a842fcef84f89c07018f661a85eb43d203d8289c143d5",
+      "result": "PASS",
+      "patch_output": "patching file alpha/apps/kaltura/lib/myCustomData.class.php"
+    },
+    {
+      "patch": "patches/php83/held/sfRouting.class.php.patch",
+      "path": "vendor/symfony/controller/sfRouting.class.php",
+      "scope": "held",
+      "metadata": "patches/php83/held/symfony-bootstrap.json",
+      "status": "held: focused regressions and bootstrap investigation, not in active ZIP",
+      "patch_sha256": "8f5188f7828c4a5785bdf8753b8aef9643d7e15227dcd7c57b7290dc291ce8db",
+      "before_sha256": "52a0fb006d480654a2f233514729b9bd61001efd930b3745d6a25472abf5bbdb",
+      "after_sha256": "26190ee57d75efe0ccdc6d55621639fc5ccb33b5657f2b741599cf2cbcfcf226",
+      "result": "PASS",
+      "patch_output": "patching file vendor/symfony/controller/sfRouting.class.php"
+    },
+    {
+      "patch": "patches/php83/held/UrlHelper.php.patch",
+      "path": "vendor/symfony/helper/UrlHelper.php",
+      "scope": "held",
+      "metadata": "patches/php83/held/symfony-bootstrap.json",
+      "status": "held: focused regressions and bootstrap investigation, not in active ZIP",
+      "patch_sha256": "7451da440ef7d468ebd90216d24bb127eb27ff0d314d63fd33fe9b91670fb7e7",
+      "before_sha256": "ed19a9a3a785e96a05dd263d0c1718d28b8bedacb3a9238d971ebb4070cfacc4",
+      "after_sha256": "68bf9a9ea831f1caaf83d17e393a50e6a403046bce4e483be13a197a6d846ebe",
+      "result": "PASS",
+      "patch_output": "patching file vendor/symfony/helper/UrlHelper.php"
+    },
+    {
+      "patch": "patches/php83/held/sfCore.class.php.patch",
+      "path": "vendor/symfony/util/sfCore.class.php",
+      "scope": "held",
+      "metadata": "patches/php83/held/symfony-bootstrap.json",
+      "status": "held: focused regressions and bootstrap investigation, not in active ZIP",
+      "patch_sha256": "7a5b4cb0453336d6ad71f5e107df6d8d68c93d4991d75480c69636ee39e85db7",
+      "before_sha256": "09f1cdbd38be0e97939bc56ac4ae7895ccf9c7622098afeb46f40adbef6def46",
+      "after_sha256": "19a644c1c1ad033c4e5ddf438fe5165ace3b9886427af2861c5763ad39bbd60d",
+      "result": "PASS",
+      "patch_output": "patching file vendor/symfony/util/sfCore.class.php"
+    },
+    {
+      "patch": "patches/php83/held/sfFinder.class.php.patch",
+      "path": "vendor/symfony/util/sfFinder.class.php",
+      "scope": "held",
+      "metadata": "patches/php83/held/symfony-bootstrap.json",
+      "status": "held: focused regressions and bootstrap investigation, not in active ZIP",
+      "patch_sha256": "3a328004aee479b921880c0eb549e5928975efc4048c199dd425e0388f1dfaca",
+      "before_sha256": "a318b76683cb32035412bb5e576a31ac21b82c99f5b991e0963b6aa5e74b2e3c",
+      "after_sha256": "8ba0951504ec25d3a4c4fdb384e76a62d4fbec0f334026b6cdc1aab9a21af933",
+      "result": "PASS",
+      "patch_output": "patching file vendor/symfony/util/sfFinder.class.php"
+    },
+    {
+      "patch": "patches/php83/held/Spyc.class.php.patch",
+      "path": "vendor/symfony/util/Spyc.class.php",
+      "scope": "held",
+      "metadata": "patches/php83/held/symfony-bootstrap.json",
+      "status": "held: focused regressions and bootstrap investigation, not in active ZIP",
+      "patch_sha256": "154aac7bae44f0425f9899f9145e533c85d38eb00148714fe163f3bfd5dac214",
+      "before_sha256": "6cdd311eeaedd77d69cab14f8730597f935527aa0b9776e91be6b4da1af91a2c",
+      "after_sha256": "ad74d6134506af6e15f7be3a4f60ecc3f4f2e5633902663d194dab95df0110c1",
+      "result": "PASS",
+      "patch_output": "patching file vendor/symfony/util/Spyc.class.php"
+    },
+    {
+      "patch": "patches/php83/held/sfToolkit.class.php.patch",
+      "path": "vendor/symfony/util/sfToolkit.class.php",
+      "scope": "held",
+      "metadata": "patches/php83/held/symfony-bootstrap.json",
+      "status": "held: focused regressions and bootstrap investigation, not in active ZIP",
+      "patch_sha256": "479a0dd2fb0b74aa022d283d403bbecebee702c062e85565ab452273ded3698c",
+      "before_sha256": "a825563946fe10a0d7b7eb8fbc04187006004749b110793095b9a1572ca6e8df",
+      "after_sha256": "8f3870786e4da83a33f5e275f0ffbae291abbd80aefe0d75b68e507c26491046",
+      "result": "PASS",
+      "patch_output": "patching file vendor/symfony/util/sfToolkit.class.php"
+    },
+    {
+      "patch": "patches/php83/held/sfConfigHandler.class.php.patch",
+      "path": "vendor/symfony/config/sfConfigHandler.class.php",
+      "scope": "held",
+      "metadata": "patches/php83/held/symfony-bootstrap.json",
+      "status": "held: focused regressions and bootstrap investigation, not in active ZIP",
+      "patch_sha256": "287f439dc12f51a78c92067008de73450ecab9c07521c7518b490d1a6a9a93e8",
+      "before_sha256": "e5478148d0be988e3a25eaacd83f9d682ef35e73b4bcd945e6575d431f6de2ec",
+      "after_sha256": "8643eda9dda17ee9d96351947e6426b9ea669e5e75475a0ed41913821417d0a5",
+      "result": "PASS",
+      "patch_output": "patching file vendor/symfony/config/sfConfigHandler.class.php"
+    }
+  ],
+  "alternative_groups": [
+    {
+      "path": "vendor/ZendFramework/library/Zend/Registry.php",
+      "patches": [
+        "patches/php83/held/Registry-cast.patch",
+        "patches/php83/held/Registry-properties.patch"
+      ],
+      "stacked": false
+    },
+    {
+      "path": "vendor/propel/util/Criteria.php",
+      "patches": [
+        "patches/php83/held/Criteria-native-returns.patch",
+        "patches/php83/held/Criteria-null-alias.patch"
+      ],
+      "stacked": false
+    },
+    {
+      "path": "vendor/propel/util/DebugPDO.php",
+      "patches": [
+        "patches/php83/held/DebugPDO-query-v2.patch",
+        "patches/php83/held/DebugPDO-query-v3.patch",
+        "patches/php83/held/DebugPDO-query.patch"
+      ],
+      "stacked": false
+    }
+  ],
+  "errors": [],
+  "result": "PASS",
+  "counts": {
+    "active": 3,
+    "held": 27
+  }
+}

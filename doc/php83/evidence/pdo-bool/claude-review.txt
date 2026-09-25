@@ -1,0 +1,21 @@
+Os quatro runs saíram com exit 0, mas isso não prova compatibilidade da aplicação inteira: o probe usa stubs de log/cache/monitor e não passa pelo bootstrap nem pelo `KalturaPDO` reais.
+
+1. **Execução:** rodei `python3 tools/php83/pdo-bool/collect.py doc/php83/evidence/pdo-bool/claude.json` sozinho e em série, no meu fixture SQL sintético do baseline74 (unit `php83-exp8-api-27ee8297…`). O collector saiu com `claude.exit=0` e `claude.stderr` vazio, reportando `functional_checks_passed=true`; a unit terminou `inactive`.
+
+2. **Comparação com `codex.json`:** as 29 linhas × previous/candidate × 7.4.33/8.3.6 batem, com `stdout_sha256` idêntico nas quatro combinações. Artifact, hashes do harness, do collector e do collector importado também são iguais, e `application_acceptance=false`.
+
+3. **Contratos que mudaram:** entre previous e candidate, só `PropelPDO` e `KalturaStatement` mudaram, e só na forma prevista: `null` passou a `bool`. Isso vale para setAttribute com sucesso (`true`), atributo não suportado (`false`), cache-attribute (`true`), `execute` com sucesso e com array de entrada (`true`), falha nos modos silent/warning (`false`) e dry-run write/select (`true`). Os resultados de 7.4 e 8.3 são idênticos entre si.
+
+4. **O que ficou igual:** o `PDO`/`PDOStatement` nativo não mudou. No modo exception, a falha continua lançando `PDOException` com `42S02`, e `errorCode()` é `42S02` em todos os modos. O dry-run continua sem gravar (count=0) e ainda deixa SELECT passar (19). O cache de prepare (`===` / `!==`) e os traces de transação aninhada (commit, rollback com `PropelException`, forceRollBack) se mantêm.
+
+5. **Identidades verificadas:** o probe checa `get_class` da conexão e do statement de verdade. Os `source_sha256` carregados batem com `before_sha256`/`after_sha256` dos JSONs held, e os arquivos no VM (`a80d…`, `9e4f…`, `e1c2…`, `9017…`) reproduzem exatamente os dois patches pelo `diff`. Os 3 contratos refletidos são `null`/`bool` como esperado. O modo warning gera um único `E_WARNING` por classe (a linha só mudou de 72 para 73), e os arrays de entrada `[23]` retornam 23.
+
+6. **Diagnósticos de carga:** no 8.3 caem de 8 para 5, mas continuam os `E_DEPRECATED` de tentative return type em `PropelPDO::beginTransaction`, `commit`, `rollBack`, `getAttribute` e `prepare`, que ficam fora deste patch. No 7.4 candidate aparecem 3 deprecations em `probe.php:95`, que vêm do próprio harness (`ReflectionType::__toString`), não do produto.
+
+7. **Revisão dos patches:** as mudanças são mínimas e os caminhos novos não deixam `$result` sem definir. O `catch(PropelException)` segue relançando e não foi testado, porque o PDO lança `PDOException`.
+
+8. **Lacunas de cobertura:** não foram testados `bindValue` com `$value=null` ou com `$data_type=null`. No 8.3, esse `null` passado a um parâmetro `int` interno provavelmente gera deprecation e vira `PARAM_NULL`; isso não foi verificado. Também faltam atributo não suportado em `ERRMODE_EXCEPTION`, SQL com comentário antes do SELECT no dry-run e statements reais do Propel.
+
+9. **Integração com os chamadores:** o grep por regex na árvore Rigel achou só `PartnerActivity.php:104`, que guarda o resultado de `execute()` e nunca o usa. Ele não pegou nenhum chamador em runtime que decida algo com base no resultado. Não fica provado que não existam: chamadas encadeadas, em várias linhas ou dinâmicas escapam do regex.
+
+Nada foi editado no código-fonte e não houve commit nem release. Criei apenas os arquivos de evidência `claude.*`.

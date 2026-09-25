@@ -266,3 +266,11 @@ statement execution discard native success/failure booleans, while transaction,
 cache and dry-run effects remain intact. No repair or warning reduction claimed.
 See [PDO return audit](pdo-return-audit.md). Exp8 residual remains 21 groups/571;
 full acceptance stays 0/24 and 3/27 detailed tasks.
+
+## Held PDO boolean repair
+
+Twenty-nine real SQL cases across previous/candidate74/83 confirm native boolean
+success/failure restoration without changing observed transaction/cache/dry-run
+data effects. Three load warnings removed in this focused fixture only; artifact
+API count remains unchanged until integration. See
+[boolean repair](pdo-boolean-repair.md). Full acceptance tasks remain open.

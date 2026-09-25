@@ -1,0 +1,7 @@
+Executando o inventário e inspecionando as evidências — sem editar fonte, VMs ou commits.Inventário: **PASS**, exit **0**, `active=3`/`held=27`, `errors=[]` → `/tmp/php83-pdo-bool/cursor-inventory.json`.
+
+Tentativa EOF de `KalturaStatement` permanece em `doc/php83/evidence/pdo-bool/attempts/eof-patch/`; `before_sha256`/`after_sha256` idênticos ao held; só `patch_sha256` muda (serialização GNU diff + newline final).
+
+Em `codex.json` (e `claude.json`/`comparison.json` lidos no início): **29 casos × 4 variantes** (74/83 × previous/candidate), exit 0; candidate restaura os 3 contratos nativos `bool` (`PropelPDO::setAttribute`, `KalturaStatement::bindValue`/`execute`); só posições de retorno explícito diferem (ex.: `NULL`→`boolean true`); valores previous/candidate iguais entre runtimes; load deprecations 8→5.
+
+`functional_checks_passed=true`, `application_acceptance=false`, integração pending — sem aceite de app completo; sem VMs/edits/commits nesta rodada.

@@ -1,0 +1,20 @@
+--- a/vendor/propel/util/PropelPDO.php
++++ b/vendor/propel/util/PropelPDO.php
+@@ -203,14 +203,14 @@
+ 	 * @param      int $attribute The attribute to set (e.g. PropelPDO::PROPEL_ATTR_CACHE_PREPARES).
+ 	 * @param      mixed $value The attribute value.
+ 	 */
+-	public function setAttribute($attribute, $value)
++	public function setAttribute($attribute, $value): bool
+ 	{
+ 		switch($attribute) {
+ 			case self::PROPEL_ATTR_CACHE_PREPARES:
+ 				$this->cachePreparedStatements = $value;
+-				break;
++				return true;
+ 			default:
+-				parent::setAttribute($attribute, $value);
++				return parent::setAttribute($attribute, $value);
+ 		}
+ 	}
+ 

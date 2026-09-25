@@ -206,3 +206,10 @@ both 7.4/8.3; nested transaction/cache/dry-run data effects are separately asser
 This is a reproduced defect, not a corrected candidate or accepted exception.
 See `doc/php83/pdo-return-audit.md`; native-bool propagation and caller integration
 remain required before return declarations or release.
+
+T1-01/T1-02 partial repair: held PropelPDO setter and KalturaStatement result
+patches intentionally restore native boolean success/failure, preserving nested
+transactions/cache/dry-run effects in 29 SQL cases × 4 variants. EOF patch serialization
+and fixture-only reflection deprecations were corrected with attempts retained.
+See `doc/php83/pdo-boolean-repair.md`; real callers/bootstrap/artifact integration
+remain pending and public null→bool behavior is explicitly documented.

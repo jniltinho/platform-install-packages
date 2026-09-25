@@ -1,0 +1,14 @@
+Executei `python3 tools/php83/pdo-bool/collect.py doc/php83/evidence/pdo-bool/claude.json` uma única vez, sozinho, no fixture SQL owned do baseline74. A saída ficou em `claude.stdout`/`.stderr`/`.exit`: exit 0, stderr vazio, `functional_checks_passed: true` e unit `php83-exp8-api-12ec1363…` parado (`inactive`).
+
+1. Comparei a execução com o `codex.json` final e tudo bate: `artifact`, `harness`, `collector_sha256` e `imported_collector_sha256` são iguais, e as 4 variantes (74/83 × previous/candidate) saíram com exit 0, 29 casos cada, e `result` e `stderr_diagnostics` idênticos.
+2. Warnings em runtime: cada variante gerou exatamente os 2 warnings intencionais (`probe.php:62` e `KalturaStatement.php:72`, que passa a 73 no candidate por causa da linha adicionada pelo patch). Não apareceu nenhum warning não intencional, e os load diagnostics foram 0/0/8/5.
+3. As declarações de retorno aparecem como previsto: `None` nas três no previous e `bool` em `PropelPDO::setAttribute`, `KalturaStatement::bindValue` e `KalturaStatement::execute` no candidate.
+4. Mudanças de contrato: nos dois runtimes, só os slots de retorno trocaram de `NULL` para bool, em 13 linhas: set/unsupported/cache-attribute, statement-success/failure/array e dry-run-write/select. O false nativo e o SQLSTATE `42S02` continuam lá.
+5. Efeitos no banco não mudaram: a função `effects()` do `compare.py` (usada em memória, sem gravar `comparison.json`) deu igualdade entre previous e candidate nos dois runtimes. Isso inclui contagens 17/23/19, dry-run-write com 0 escritas, cache e nested commit/rollback. Os valores também são iguais entre 7.4 e 8.3.
+6. Não editei fonte e não fiz commit; os únicos arquivos novos são os 4 `claude.*`.
+
+Lacunas:
+- O `comparison.json` não foi gerado, porque rodar o `compare.py` fica para o coordenador.
+- A validação cobre só o fixture com stubs de efeitos colaterais. Ficaram de fora KalturaPDO, bootstrap e a integração com callers reais.
+- Pelas regras do projeto, o Grok e o Cursor Agent também precisam participar deste ciclo, como executores e revisores.
+- Isso não é aceitação da aplicação inteira.

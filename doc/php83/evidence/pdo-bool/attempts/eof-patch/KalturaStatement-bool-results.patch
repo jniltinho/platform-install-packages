@@ -1,0 +1,43 @@
+--- a/alpha/apps/kaltura/lib/db/KalturaStatement.php
++++ b/alpha/apps/kaltura/lib/db/KalturaStatement.php
+@@ -17,7 +17,7 @@
+ 		self::$dryRun = $dryRun;
+ 	}
+ 	
+-	public function bindValue ($parameter, $value, $data_type = null)
++	public function bindValue ($parameter, $value, $data_type = null): bool
+ 	{
+ 		$index = count($this->values) + 1;
+ 		if(is_null($value))
+@@ -28,7 +28,7 @@
+ 		return parent::bindValue ($parameter, $value, $data_type);
+ 	}
+ 
+-	public function execute ($input_parameters = null) 
++	public function execute ($input_parameters = null): bool 
+ 	{
+ 		if (!kQueryCache::isCurrentQueryHandled())
+ 			kApiCache::disableConditionalCache();
+@@ -64,12 +64,13 @@
+ 		if(self::$dryRun && !preg_match('/^(\/\*.+\*\/ )?SELECT/i', $sql))
+ 		{
+ 			KalturaLog::debug("Sql dry run - " . (microtime(true) - $sqlStart) . " seconds");
++			$result = true;
+ 		}
+ 		else
+ 		{
+ 			try
+ 			{
+-				parent::execute($input_parameters);
++				$result = parent::execute($input_parameters);
+ 			}
+ 			catch(PropelException $pex)
+ 			{
+@@ -80,6 +81,7 @@
+ 			KalturaLog::debug("Sql took - " . $sqlTook . " seconds");
+ 			KalturaMonitorClient::monitorDatabaseAccess($sql, $sqlTook);
+ 		}
++		return $result;
+ 	}
+ 	
+ }

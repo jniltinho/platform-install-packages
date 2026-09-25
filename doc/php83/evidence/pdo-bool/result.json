@@ -1,0 +1,41 @@
+{
+  "schema": 1,
+  "held_patches": [
+    "PropelPDO-bool-setAttribute",
+    "KalturaStatement-bool-results"
+  ],
+  "primary_and_independent_variants": 4,
+  "cases_per_variant": 29,
+  "native_bool_declarations": 3,
+  "intentional_public_return_changes": "null to native bool; explicit true for custom assignment/skipped dryrun",
+  "application_bytes_unchanged_by_harness_and_patch_encoding_fixes": true,
+  "strict_inventory_primary_and_cursor_entries_identical": true,
+  "patch_inventory_counts": {
+    "active": 3,
+    "held": 27
+  },
+  "claude": {
+    "cli_exit": 0,
+    "final_collector_exit": 0,
+    "role": "real SQL executor and independent behavior/harness reviewer"
+  },
+  "cursor": {
+    "cli_exit": 0,
+    "local_tests": 136,
+    "final_inventory_exit": 0,
+    "role": "local executor, patch/override reviewer and independent exact patch audit"
+  },
+  "grok": {
+    "cli_exit": 124,
+    "timeout_seconds": 120,
+    "status": "timeout; no completed validation result"
+  },
+  "opencode": {
+    "cli_exit": 0,
+    "local_tests": 136,
+    "model": "opencode/muse-spark-1.3-contributor-free",
+    "role": "fallback local executor and first SQL/candidate review; before fixture-only getName correction"
+  },
+  "application_acceptance": false,
+  "artifact_and_real_bootstrap_integration": "pending"
+}
