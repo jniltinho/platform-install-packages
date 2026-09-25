@@ -84,7 +84,7 @@ MYVER=`echo "select version();" | mysql -h$MYSQL_OP_HOST -u$MYSQL_SUPER_USER -p$
 MYMAJVER=`echo $MYVER| awk -F "." '{print $1}'`
 MYMINORVER=`echo $MYVER| awk -F "." '{print $2}'`
 
-if [ "$MYMAJVER" -ne 5 ];then
+if [ "$MYMAJVER" -ne 5 ] && ! echo "$MYVER" | grep -q MariaDB;then
 	echo -e "${BRIGHT_RED}Your version of MySQL is incompatible. 
 The Kaltura Server supports all MySQL versions between 5.1 and 5.6, including.
 Please install and configure MySQL according to the instructions on the Kaltura install manual before proceeding with the Kaltura installation.${NORMAL}"
@@ -222,7 +222,10 @@ if [ "$IS_SSL" = 'Y' -o "$IS_SSL" = 1 -o "$IS_SSL" = 'y' -o "$IS_SSL" = 'true' ]
 fi
 
 echo -e "${BRIGHT_BLUE}Generating UI confs..${NORMAL}"
-php $APP_DIR/deployment/uiconf/deploy_v2.php --ini=$WEB_DIR/flash/kmc/$KMC_VERSION/config.ini >> $LOG_DIR/deploy_v2.log  2>&1
+# the legacy (Flash) KMC is optional: EL9 ships without it
+if [ -r "$WEB_DIR/flash/kmc/$KMC_VERSION/config.ini" ];then
+	php $APP_DIR/deployment/uiconf/deploy_v2.php --ini=$WEB_DIR/flash/kmc/$KMC_VERSION/config.ini >> $LOG_DIR/deploy_v2.log  2>&1
+fi
 php $BASE_DIR/app/deployment/uiconf/deploy_v2.php --ini=$BASE_DIR/apps/kmcng/$KMCNG_VERSION/deploy/config.ini >> /dev/null
 
 #for i in $APP_DIR/deployment/updates/scripts/patches/*.sh;do

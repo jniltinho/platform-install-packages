@@ -5,8 +5,16 @@
 %define confdir	/opt/kaltura/app/configurations/sphinx
 
 Name:           kaltura-sphinx
+%if 0%{?rhel} >= 9
+%global srcdir sphinx-%{version}-release
+# EL9: the 2.2.1 googlecode source is gone; build the 2.2.11 release tarball (same version as Ubuntu noble)
+Version:        2.2.11
+Release:        1%{?dist}
+%else
 Version:        2.2.1
 Release:        23
+%global srcdir %{name}-%{version}
+%endif
 Summary:        Sphinx full-text search server - for Kaltura
 
 Group:          Applications/Text
@@ -15,14 +23,24 @@ URL:            http://sphinxsearch.com
 Vendor:         Sphinx Technologies Inc.
 Packager:       Kaltura Inc.
 
+%if 0%{?rhel} >= 9
+Source0:       	https://sphinxsearch.com/files/sphinx-%{version}-release.tar.gz
+%else
 Source0:       	%{name}-%{version}.tar.gz 
+%endif
 Source1: 	%{name}
 Source2: 	kaltura-populate
 Patch0:		config-main.patch
 Patch1:		config.patch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-build
 
+%if 0%{?rhel} >= 9
+BuildRequires:  mariadb-connector-c-devel
+BuildRequires:  unixODBC-devel
+Requires:       initscripts, chkconfig
+%else
 BuildRequires:  mysql-devel
+%endif
 BuildRequires:	expat-devel
 
 Requires(post): chkconfig
@@ -48,9 +66,13 @@ Requires: kaltura-sphinx
 Not stripped version of Sphinx built with the debugging log support.
 
 %prep
+%if 0%{?rhel} >= 9
+%setup -n %{srcdir}
+%else
 %setup -n %{name}-%{version}
 %patch0 -p1
 %patch1 -p1
+%endif
 #%setup -D -T -a 2 -n %{name}-%{version}
 #%setup -D -T -a 3 -n %{name}-%{version}
 
@@ -86,7 +108,7 @@ mkdir -p $RPM_BUILD_ROOT/opt/kaltura/log/sphinx/data
 # Create /var/run/sphinx
 mkdir -p $RPM_BUILD_ROOT%{prefix}/var/run
 
-%{__mv} %{_builddir}/%{name}-%{version}/src/searchd $RPM_BUILD_ROOT/%{prefix}/bin/searchd.debug
+%{__mv} %{_builddir}/%{srcdir}/src/searchd $RPM_BUILD_ROOT/%{prefix}/bin/searchd.debug
 
 mkdir $RPM_BUILD_ROOT%{_sysconfdir}/profile.d
 cat > $RPM_BUILD_ROOT%{_sysconfdir}/profile.d/kaltura_sphinx.sh << EOF
@@ -158,7 +180,9 @@ fi
 %{_initrddir}/kaltura-*
 %{prefix}/bin/indexer      
 %{prefix}/bin/indextool    
-%{prefix}/bin/search       
+%if 0%{?rhel} < 9
+%{prefix}/bin/search
+%endif
 %{prefix}/bin/searchd      
 %{prefix}/bin/spelldump    
 %{prefix}/bin/wordbreaker

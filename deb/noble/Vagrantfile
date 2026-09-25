@@ -1,0 +1,28 @@
+# Ubuntu 24.04 (noble): VM "build" builds the .deb packages, VM "aio" installs and tests the All-In-One.
+Vagrant.configure("2") do |config|
+  config.vm.box = "bento/ubuntu-24.04"
+  config.vm.synced_folder "../..", "/vagrant"
+
+  config.vm.define "build" do |b|
+    b.vm.hostname = "kaltura-build"
+    b.vm.provider("virtualbox") { |v| v.memory = 8192; v.cpus = 8 }
+    b.vm.provision "build", type: "shell", path: "build.sh", privileged: false
+  end
+
+  config.vm.define "aio", autostart: false do |a|
+    a.vm.hostname = "kaltura.local"
+    a.vm.network "private_network", ip: "192.168.56.20"
+    a.vm.provider("virtualbox") { |v| v.memory = 8192; v.cpus = 4 }
+    a.vm.provision "install", type: "shell", path: "install-aio.sh"
+    a.vm.provision "sanity", type: "shell", path: "sanity.sh", run: "always"
+  end
+
+  # Same All-In-One with SSL=1 (Apache 443, nginx 8443, self-signed certificate)
+  config.vm.define "aiossl", autostart: false do |a|
+    a.vm.hostname = "kaltura-ssl"
+    a.vm.network "private_network", ip: "192.168.56.21"
+    a.vm.provider("virtualbox") { |v| v.memory = 8192; v.cpus = 4 }
+    a.vm.provision "install", type: "shell", path: "install-aio.sh", env: { "SSL" => "1", "HOST_IP" => "192.168.56.21" }
+    a.vm.provision "sanity", type: "shell", path: "sanity.sh", run: "always", env: { "HOST_IP" => "192.168.56.21", "URL" => "https://192.168.56.21" }
+  end
+end

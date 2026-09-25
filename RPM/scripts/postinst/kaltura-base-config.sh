@@ -332,7 +332,7 @@ fi
 MYMAJVER=`echo $MYVER| awk -F "." '{print $1}'`
 MYMINORVER=`echo $MYVER| awk -F "." '{print $2}'`
 
-if [ "$MYMAJVER" -ne 5 ];then
+if [ "$MYMAJVER" -ne 5 ] && ! echo "$MYVER" | grep -q MariaDB;then
 	echo -e "${BRIGHT_RED}Your version of MySQL is not compatible with Kaltura at the moment. 
 Kaltura supports MySQL 5.1.n - 5.6.n. MySQL 5.7.n is not supported.
 Please install and configure MySQL according to the instructions on the Kaltura install manual before proceeding with the Kaltura installation.${NORMAL}"
@@ -492,6 +492,18 @@ for TMPL in $CONFS;do
         fi
         sed -e "s#@ENVIRONMENT_PROTOCOL@#$PROTOCOL#g" -e "s#@WEB_DIR@#$BASE_DIR/web#g" -e "s#@TEMPLATE_PARTNER_ADMIN_SECRET@#$ADMIN_SECRET#g" -e "s#@ADMIN_CONSOLE_PARTNER_ADMIN_SECRET@#$ADMIN_SECRET#g" -e "s#@MONITOR_PARTNER_ADMIN_SECRET@#$MONITOR_PARTNER_ADMIN_SECRET#g"  -e "s#@MONITORING_PROXY_ADMIN_SECRET@#$PARTNER_MONITORING_PROXY_ADMIN_SECRET#g" -e "s#@MONITORING_PROXY_SECRET@#$PARTNER_MONITORING_PROXY_SECRET#g" -e "s#@KMC_SSO_SERVER_ADMIN_SECRET@#$PARTNER_KMC_SSO_ADMIN_SECRET#g" -e "s#@KMC_SSO_SERVER_SECRET@#$PARTNER_KMC_SSO_SECRET#g"  -e "s#@SERVICE_URL@#$SERVICE_URL#g" -e "s#@ADMIN_CONSOLE_ADMIN_MAIL@#$ADMIN_CONSOLE_ADMIN_MAIL#g" -e "s#@MONITOR_PARTNER_SECRET@#$MONITOR_PARTNER_SECRET#g" -e "s#@PARTNER_ZERO_ADMIN_SECRET@#$PARTNER_ZERO_ADMIN_SECRET#g" -e "s#@BATCH_PARTNER_ADMIN_SECRET@#$BATCH_PARTNER_ADMIN_SECRET#g" -e "s#@MEDIA_PARTNER_ADMIN_SECRET@#$MEDIA_PARTNER_ADMIN_SECRET#g" -e "s#@TEMPLATE_PARTNER_ADMIN_SECRET@#$TEMPLATE_PARTNER_ADMIN_SECRET#g" -e "s#@KALTURA_VERSION@#$DISPLAY_NAME#g" -e "s#@HOSTED_PAGES_PARTNER_ADMIN_SECRET@#$HOSTED_PAGES_PARTNER_ADMIN_SECRET#g" -e "s#@STORAGE_BASE_DIR@#$BASE_DIR/web#g" -e "s#@DELIVERY_HTTP_BASE_URL@#https://dontknow.com#g" -e "s#@DELIVERY_RTMP_BASE_URL@#rtmp://reallydontknow.com#g" -e "s#@DELIVERY_ISS_BASE_URL@#https://honesttogodihavenoidea.com#g"  -e "s/@ADMIN_CONSOLE_PASSWORD@/$ADMIN_CONSOLE_PASSWORD/g"  -e "s/@PLAY_PARTNER_ADMIN_SECRET@/$PLAY_PARTNER_ADMIN_SECRET/g" -e "s#@WWW_HOST@#$KALTURA_FULL_VIRTUAL_HOST_NAME#g" -e "s#@TEMPLATE_PARTNER_ADMIN_PASSWORD@#$TEMPLATE_PARTNER_ADMIN_PASSWORD#g" -e "s#@HOSTED_PAGES_PARTNER_SECRET@#$HOSTED_PAGES_PARTNER_SECRET#g" -e "s#@MEDIA_PARTNER_SECRET@#$MEDIA_PARTNER_SECRET#g"  -e "s#@SELF_SERVE_PARTNER_ADMIN_SECRET@#$SELF_SERVE_PARTNER_ADMIN_SECRET#g" -e "s#@SELF_SERVE_PARTNER_SECRET@#$SELF_SERVE_PARTNER_SECRET#g" -e "s#@KME_PARTNER_ADMIN_SECRET@#$KME_PARTNER_ADMIN_SECRET#g" -e "s#@KME_PARTNER_SECRET@#$KME_PARTNER_SECRET#g" -e "s#@CONNECTORS_FRAMEWORK_PARTNER_ADMIN_SECRET@#$CONNECTORS_FRAMEWORK_PARTNER_ADMIN_SECRET#g" -e "s#@CONNECTORS_FRAMEWORK_PARTNER_SECRET@#$CONNECTORS_FRAMEWORK_PARTNER_SECRET#g" -e "s#@BI_PARTNER_ADMIN_SECRET@#$BI_PARTNER_ADMIN_SECRET#g" -e "s#@BI_PARTNER_SECRET@#$BI_PARTNER_SECRET#g" -e "s#@GAME_SERVICES_PARTNER_ADMIN_SECRET@#$GAME_SERVICES_PARTNER_ADMIN_SECRET#g" -e "s#@GAME_SERVICES_PARTNER_SECRET@#$GAME_SERVICES_PARTNER_SECRET#g"  -e "s#@CNC_PARTNER_ADMIN_SECRET@#$CNC_PARTNER_ADMIN_SECRET#g" -e "s#@CNC_PARTNER_SECRET@#$CNC_PARTNER_SECRET#g"  -e "s#@REACH_INTERNAL_PARTNER_ADMIN_SECRET@#$REACH_INTERNAL_PARTNER_ADMIN_SECRET#g"  -e "s#@REACH_INTERNAL_PARTNER_SECRET@#$REACH_INTERNAL_PARTNER_SECRET#g"  -e "s#@PLAY_PARTNER_SECRET@#$PLAY_PARTNER_SECRET#g" -e "s#@TEMPLATE_PARTNER_SECRET@#$TEMPLATE_PARTNER_SECRET#g" -e "s#@PARTNER_ZERO_SECRET@#$PARTNER_ZERO_SECRET#g" -e "s#@BATCH_PARTNER_SECRET@#$BATCH_PARTNER_SECRET#g" -e "s#@ADMIN_CONSOLE_PARTNER_SECRET@#$ADMIN_CONSOLE_PARTNER_SECRET#g" -e "s#@VOD_PACKAGER_HOST@#$VOD_PACKAGER_HOST#g" -e "s#@VOD_PACKAGER_PORT@#$VOD_PACKAGER_PORT#g" -e "s#@LIVE_PACKAGER_HOST@#$VOD_PACKAGER_HOST#g" -e "s#@LIVE_PACKAGER_PORT@#$VOD_PACKAGER_PORT#g" -e "s#@IP_RANGE@#$IP_RANGE#g"  -e "s#@PRIMARY_MEDIA_SERVER_HOST@#$PRIMARY_MEDIA_SERVER_HOST#g" -e "s#@SECONDARY_MEDIA_SERVER_HOST@#$SECONDARY_MEDIA_SERVER_HOST#g" -e "s#@LIVE_ANALYTICS_HOST@#$LIVE_ANALYTICS_HOST#g" -e "s#@LIVE_ANALYTICS_WS@#$LIVE_ANALYTICS_WS#g"  -e "s#@MEMACHED_HOSTNAME@#127.0.0.1#g"  -e "s#@MEMACHED_HOSTNAME_FOR_WRITE@#127.0.0.1#g"  -e "s#@MEMACHED_PORT@#11211#g"   -i $DEST_FILE 
 done
+
+# every 18.x release adds new partners: generate one secret per @*_SECRET@ placeholder left, reused across files
+declare -A NEW_SECRETS
+for F in `find $BASE_DIR/app/deployment/base/scripts/init_data $BASE_DIR/app/deployment/base/scripts/init_content -type f ! -name "*template*"`;do
+        for PH in `grep -o '@[A-Z0-9_]*_SECRET@' $F | sort -u`;do
+                [ -n "${NEW_SECRETS[$PH]}" ] || NEW_SECRETS[$PH]=`gen_partner_secret`
+                sed -i "s#$PH#${NEW_SECRETS[$PH]}#g" $F
+        done
+done
+# the generated top-level init_data/init_content .ini/.xml hold partner secrets: root-only
+# (media/ and ui_conf/ stay readable: the API reads them during insertContent)
+find $BASE_DIR/app/deployment/base/scripts/init_data $BASE_DIR/app/deployment/base/scripts/init_content -maxdepth 1 -type f \( -name "*.ini" -o -name "*.xml" \) ! -name "*template*" -exec chmod 600 {} +
 
 if [ ! -r "$BASE_DIR/app/base-config-generator.lock" ];then
         echo -en "

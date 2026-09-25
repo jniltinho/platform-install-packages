@@ -12,7 +12,12 @@ Source0: %{name}-%{version}.tar.bz2
 BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 BuildArch: noarch
 
+%if 0%{?rhel} >= 9
+# EL9: live analytics front-end is not part of the All-In-One set
+Requires: kaltura-base, httpd, kaltura-html5-studio, php-cli, kaltura-html5-analytics
+%else
 Requires: kaltura-base, httpd, kaltura-html5-studio,php-cli, kaltura-live-analytics-front, kaltura-html5-analytics 
+%endif
 
 %description
 Kaltura is the world's first Open Source Online Video Platform, transforming the way people work, 

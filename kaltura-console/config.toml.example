@@ -1,0 +1,38 @@
+[server]
+host = "0.0.0.0"
+port = 8080
+base_path = "" # e.g. /console; proxy preserves this prefix
+https = false
+tls_cert = ""
+tls_key = ""
+tls_dir = "/var/lib/kaltura-console/tls" # self-signed fallback when cert/key are both empty
+trusted_proxies = []
+session_ttl = "2h"
+session_max = "12h"
+
+[database]
+driver = "sqlite"
+dsn = "/var/lib/kaltura-console/console.db"
+
+[kaltura]
+service_url = "http://127.0.0.1/api_v3"
+upload_service_url = ""
+playback_host = "http://127.0.0.1"
+extra_media_hosts = []
+partner_id = 0
+admin_secret = ""
+user_id = "kaltura-console"
+session_expiry = "24h"
+http_timeout = "15s"
+connect_timeout = "5s"
+upload_timeout = "30m"
+
+[upload]
+tmp_dir = "/var/lib/kaltura-console/tmp"
+max_mb = 2048
+max_concurrent = 2
+min_free_mb = 1024
+allowed_ext = [".mp4"]
+
+[log]
+level = "info"

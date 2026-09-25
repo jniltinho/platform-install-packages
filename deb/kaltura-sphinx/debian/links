@@ -1,0 +1,2 @@
+usr/bin/searchd opt/kaltura/sphinx/bin/searchd
+usr/bin/indexer opt/kaltura/sphinx/bin/indexer

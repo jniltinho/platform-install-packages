@@ -1,0 +1,20 @@
+# Rocky Linux 9: VM "el9build" builds the RPMs, VM "el9aio" installs and tests the All-In-One.
+# Names and IP differ from the noble VMs (build, aio, 192.168.56.20) so both can coexist.
+Vagrant.configure("2") do |config|
+  config.vm.box = "bento/rockylinux-9"
+  config.vm.synced_folder "../..", "/vagrant"
+
+  config.vm.define "el9build" do |b|
+    b.vm.hostname = "kaltura-el9build"
+    b.vm.provider("virtualbox") { |v| v.memory = 8192; v.cpus = 8 }
+    b.vm.provision "build", type: "shell", path: "build.sh", privileged: false
+  end
+
+  config.vm.define "el9aio", autostart: false do |a|
+    a.vm.hostname = "kaltura-el9.local"
+    a.vm.network "private_network", ip: "192.168.56.30"
+    a.vm.provider("virtualbox") { |v| v.memory = 8192; v.cpus = 4 }
+    a.vm.provision "install", type: "shell", path: "install-aio.sh", env: { "RELAX_HOST_SECURITY" => "1" }
+    a.vm.provision "sanity", type: "shell", path: "sanity.sh", run: "always"
+  end
+end

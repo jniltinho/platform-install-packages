@@ -5,24 +5,28 @@ Maintainer: Jess Portnoy <jess.portnoy@kaltura.com>
 
 Package: kaltura-base
 Architecture: all
-Depends: 
- ${shlibs:Depends},
- rsync,
- mysql-client|mariadb-client|mysql-client-5.6,
+Depends: rsync,
+ mariadb-client | default-mysql-client,
  cron,
- systemd-timesyncd|ntp,
- mail-transport-agent,
+ systemd-timesyncd | chrony,
+ default-mta | mail-transport-agent,
  monit,
- mailutils|heirloom-mailx,
+ mailutils | bsd-mailx,
  kaltura-postinst,
  bash,
- curl, 
- php-xml,
- php5-mysql|php-mysql|kaltura-php7-mysql, 
- php5-cli|php-cli|kaltura-php7-cli,
- php5-curl|php-curl|kaltura-php7-curl,
- php5-memcache|php-memcache|kaltura-php7-memcache,
- php-mbstring
+ curl,
+ unzip,
+ php7.4-cli,
+ php7.4-xml,
+ php7.4-curl,
+ php7.4-mysql,
+ php7.4-mbstring,
+ php7.4-gd,
+ php7.4-gmp,
+ php7.4-ldap,
+ php7.4-memcache,
+ php7.4-zip,
+ php7.4-intl
 Description: Kaltura Open Source Video Platform 
  Kaltura is the world's first Open Source Online Video Platform, transforming the way people work, learn, 
  and entertain using online video. The Kaltura platform empowers media applications with advanced video 

@@ -21,7 +21,12 @@ Source3: aliases.json
 
 Buildroot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch
+%if 0%{?rhel} >= 9
+# EL9: Elasticsearch 7.17 from artifacts.elastic.co, which bundles its own JDK
+Requires(pre): kaltura-base, kaltura-postinst, elasticsearch >= 7.17, elasticsearch < 8
+%else
 Requires(pre): kaltura-base, kaltura-postinst,  java-1.8.0-openjdk-headless
+%endif
 %define use_systemd (0%{?fedora} && 0%{?fedora} >= 18) || (0%{?rhel} && 0%{?rhel} >= 7)
 %if %{use_systemd}
 Group: System Environment/Daemons

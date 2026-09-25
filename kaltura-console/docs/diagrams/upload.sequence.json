@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "diagram_type": "sequence",
+  "meta": {
+    "title": "Authenticated MP4 upload",
+    "subtitle": "Disk-backed intake; bounded-memory upstream streaming",
+    "viewBox": [
+      760,
+      900
+    ]
+  },
+  "participants": [
+    {
+      "id": "browser",
+      "type": "frontend",
+      "label": "Browser",
+      "sublabel": "admin"
+    },
+    {
+      "id": "console",
+      "type": "backend",
+      "label": "Console",
+      "sublabel": "Echo handler"
+    },
+    {
+      "id": "db",
+      "type": "security",
+      "label": "Auth DB",
+      "sublabel": "session + user"
+    },
+    {
+      "id": "disk",
+      "type": "database",
+      "label": "Staging",
+      "sublabel": "private file"
+    },
+    {
+      "id": "api",
+      "type": "external",
+      "label": "Kaltura",
+      "sublabel": "api_v3"
+    }
+  ],
+  "messages": [
+    {
+      "from": "browser",
+      "to": "console",
+      "y": 175,
+      "label": "POST multipart",
+      "variant": "emphasis"
+    },
+    {
+      "from": "console",
+      "to": "db",
+      "y": 217,
+      "label": "resolve session",
+      "variant": "security"
+    },
+    {
+      "from": "db",
+      "to": "console",
+      "y": 259,
+      "label": "user + CSRF",
+      "variant": "return"
+    },
+    {
+      "from": "console",
+      "to": "disk",
+      "y": 301,
+      "label": "stage + validate",
+      "variant": "default"
+    },
+    {
+      "from": "console",
+      "to": "api",
+      "y": 343,
+      "label": "media.add",
+      "variant": "emphasis"
+    },
+    {
+      "from": "console",
+      "to": "api",
+      "y": 385,
+      "label": "uploadToken.add",
+      "variant": "emphasis"
+    },
+    {
+      "from": "disk",
+      "to": "console",
+      "y": 427,
+      "label": "reopen file",
+      "variant": "return"
+    },
+    {
+      "from": "console",
+      "to": "api",
+      "y": 469,
+      "label": "uploadToken.upload",
+      "variant": "emphasis"
+    },
+    {
+      "from": "console",
+      "to": "api",
+      "y": 511,
+      "label": "media.addContent",
+      "variant": "emphasis"
+    },
+    {
+      "from": "api",
+      "to": "console",
+      "y": 553,
+      "label": "entry attached",
+      "variant": "return"
+    },
+    {
+      "from": "console",
+      "to": "disk",
+      "y": 595,
+      "label": "remove temp file",
+      "variant": "default"
+    },
+    {
+      "from": "console",
+      "to": "browser",
+      "y": 637,
+      "label": "201 entry",
+      "variant": "return"
+    },
+    {
+      "from": "browser",
+      "to": "console",
+      "y": 679,
+      "label": "poll status",
+      "variant": "default"
+    },
+    {
+      "from": "console",
+      "to": "api",
+      "y": 721,
+      "label": "media.get",
+      "variant": "default"
+    },
+    {
+      "from": "console",
+      "to": "browser",
+      "y": 763,
+      "label": "ready / processing",
+      "variant": "return"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "rose",
+      "title": "Rejection / failure",
+      "items": [
+        "Admin + CSRF + Origin checks precede intake",
+        "Limits: bytes, slots, free disk, extension and BMFF header",
+        "After entry creation, failure triggers best-effort entry deletion"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "Retry / completion",
+      "items": [
+        "Invalid KS: refresh once, reopen the file and retry",
+        "201 means attached, not conversion READY",
+        "Local file cleanup runs on both success and failure"
+      ]
+    }
+  ]
+}

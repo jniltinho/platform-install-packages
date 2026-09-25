@@ -58,6 +58,9 @@ start()
                 return 1
         fi
         if ! $STATUS_COMM ;then
+                # not running: a leftover pid file (e.g. from a crash before the DB existed)
+                # would make populateElasticFromLog.php refuse to start
+                rm -f $PIDFILE
                 cd $ES_PLUGIN_BASEDIR
                 su $OS_KALTURA_USER -c "$PHP_BIN $ES_PLUGIN_SCRIPT 2>> $LOG_DIR/kaltura_elastic_populate.log 1>/dev/null &"
                 sleep 2

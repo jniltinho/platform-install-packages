@@ -1,3 +1,9 @@
+kaltura-kmcng (5.17.0-1) noble; urgency=medium
+
+  * Ubuntu 24.04 (noble), Kaltura CE Rigel-18.20.0 All-In-One.
+
+ -- Nilton OS <jniltinho@gmail.com>  Thu, 24 Sep 2026 12:00:00 +0000
+
 kaltura-kmcng (5.19-3+really5.17-1) orion; urgency=medium
 
   * Downgrade KMCng ver on account of analytics

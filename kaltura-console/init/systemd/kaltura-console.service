@@ -1,0 +1,30 @@
+[Unit]
+Description=Kaltura Console
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=kaltura-console
+Group=kaltura-console
+WorkingDirectory=/var/lib/kaltura-console
+ExecStart=/usr/bin/kaltura-console --config /etc/kaltura-console/config.toml serve
+Restart=on-failure
+RestartSec=5s
+TimeoutStopSec=35s
+UMask=0027
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=yes
+ReadWritePaths=/var/lib/kaltura-console
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+RestrictSUIDSGID=yes
+LockPersonality=yes
+CapabilityBoundingSet=
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+
+[Install]
+WantedBy=multi-user.target

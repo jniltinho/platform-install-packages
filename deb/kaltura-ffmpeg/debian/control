@@ -1,106 +1,13 @@
 Source: kaltura-ffmpeg
-Section: libs
+Section: video
 Priority: optional
-Maintainer: Jess Portnoy <jess.portnoy@kaltura.com>
-Standards-Version: 3.9.4
-Homepage: http://ffmpeg.org/
-Build-Depends-Indep:
- doxygen
-Build-Depends:
- debhelper (>= 8.1.3~),
- frei0r-plugins-dev,
- libasound2-dev [linux-any],
- libbz2-dev,
- libass-dev,
- libcdio-cdda-dev,
- libcdio-dev,
- libcdio-paranoia-dev,
- libdc1394-22-dev [linux-any],
- libfreetype6-dev,
- libgnutls26-dev|libgnutls28-dev|libgnutls-dev,
- libgsm1-dev,
- libimlib2-dev,
- libjack-dev,
- libmp3lame-dev,
- libopencore-amrnb-dev,
- libopencore-amrwb-dev,
- libopenjpeg-dev|libopenjp2-7-dev,
- libopus-dev,
- libpulse-dev,
- libraw1394-dev [linux-any],
- librtmp-dev (>= 2.2e-4),
- libsdl1.2-dev,
- libspeex-dev,
- libtheora-dev (>> 0.0.0.alpha4),
- libtiff4-dev | libtiff-dev,
- libva-dev [!hurd-any],
- libvdpau-dev,
- libvo-aacenc-dev,
- libvo-amrwbenc-dev,
- libvorbis-dev,
- libvpx-dev (>= 1.4.0),
- libx11-dev,
- libx264-dev,
- libxext-dev,
- libxfixes-dev,
- libxvidcore-dev,
- libxvmc-dev,
- texi2html,
- libx265-dev,
- yasm [any-amd64 any-i386],
- zlib1g-dev,
- libxcb-shm0-dev,
- libzvbi-dev
+Maintainer: Nilton OS <jniltinho@gmail.com>
+Build-Depends: debhelper (>= 10)
+Standards-Version: 4.6.2
 
 Package: kaltura-ffmpeg
-Section: video
-Architecture: any
-Pre-Depends:
- dpkg (>= 1.15.7.2~)
-Depends:
- ${misc:Depends},
- ${shlibs:Depends},
- libopencore-amrwb0,
- libx264-142|libx264-148|libx264-155,
- libopencore-amrnb0,
- libass5|libass9,
- libgsm1,
- libvdpau1,
- libmp3lame0,
- libopenjpeg2|libopenjpeg5|libopenjp2-7,
- libspeex1,
- libtheora0,
- libva1|libva2,
- libva-drm1|libva-drm2, 
- libva-x11-1|libva-x11-2,
- libvpx1|libvpx3|libvpx5|libvpx6,
- libxvidcore4,
- libvorbis0a, 
- libvorbisenc2, 
- x265|libx265-87|libx265-79|libx265-179,
- libpng12-0|libpng16-16,
- libvorbisfile3,
- libgnutls26|libgnutls28|libgnutls30,
- libopenjp2-7,
- libbz2-1.0,
- libdrm2,
- libexpat1,
- libffi6|libffi7,
- libfontconfig1,
- libfreetype6,
- libfribidi0,
- libglib2.0-0,
- libgmp10,
- libgsm1,
- libxcb1,
- libzvbi0
-Description: 
- FFmpeg is a very fast video and audio converter. It can also grab from a
- live audio/video source.
- The command line interface is designed to be intuitive, in the sense that
- ffmpeg tries to figure out all the parameters, when possible. You have
- usually to give only the target bitrate you want. FFmpeg can also convert
- from any sample rate to any other, and resize video on the fly with a high
- quality polyphase filter.
- .
-
+Architecture: all
+Depends: ${misc:Depends}, ffmpeg
+Description: Kaltura - FFmpeg (distro ffmpeg)
+ Bridge package for Ubuntu 24.04: exposes the distro binary at the
+ /opt/kaltura paths Kaltura CE expects.

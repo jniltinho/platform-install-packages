@@ -125,6 +125,8 @@ fi
 #"
 #$BASE_DIR/bin/kaltura-red5-config.sh "$ANSFILE" 
 #
+# the DWH (pentaho) is optional: EL9 ships without it
+if rpm -q kaltura-dwh >/dev/null 2>&1;then
 echo "Running DWH config...
 
 "
@@ -132,6 +134,7 @@ $BASE_DIR/bin/kaltura-dwh-config.sh "$ANSFILE"
 if [ $? -ne 0 ];then
        echo -e "${BRIGHT_RED}ERROR: $BASE_DIR/bin/kaltura-dwh-config.sh failed:( You can re-run it when the issue is fixed.${NORMAL}"
 	exit 115
+fi
 fi
 
 find $APP_DIR/cache/ -type f -exec rm {} \;

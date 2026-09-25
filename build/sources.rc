@@ -143,14 +143,15 @@ MONIT_VERSION=5.32.0
 MONIT_URI="http://mmonit.com/monit/dist/monit-$MONIT_VERSION.tar.gz"
 
 # Kaltura Core build vars:
-KALTURA_CORE_URI="https://github.com/kaltura/server/archive/$KALTURA_SERVER_VERSION.zip"
+KALTURA_CORE_URI="https://github.com/jniltinho/platform-install-packages/releases/download/sources-rigel-18.20.0/$KALTURA_SERVER_VERSION.zip"
+KALTURA_CORE_SHA256=58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28
 KALTURA_TEMPLATES_URI="svn+ssh://$SVN_USER@kelev.kaltura.com/usr/local/kalsource/on-premise/trunk/packaging/templates"
 
 # Kaltura clients generator
 KALTURA_CLIENTS_GENERATOR_URI="https://github.com/kaltura/clients-generator/archive/$KALTURA_SERVER_VERSION.zip"
 
 # Kaltura nginx-vod-module:
-KALTURA_NGINX_VOD_VERSION=1.30
+KALTURA_NGINX_VOD_VERSION=1.33
 KALTURA_NGINX_VOD_URI="https://github.com/kaltura/nginx-vod-module/archive/$KALTURA_NGINX_VOD_VERSION.zip"
 
 KALTURA_NGINX_AKAMAI_TOKEN_VALIDATE_VERSION=1.1

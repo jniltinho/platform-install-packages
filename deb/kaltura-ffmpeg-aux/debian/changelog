@@ -1,3 +1,9 @@
+kaltura-ffmpeg-aux (6.1-1) noble; urgency=medium
+
+  * Ubuntu 24.04 (noble), Kaltura CE Rigel-18.20.0 All-In-One.
+
+ -- Nilton OS <jniltinho@gmail.com>  Thu, 24 Sep 2026 12:00:00 +0000
+
 kaltura-ffmpeg-aux (3.4.6-1) propus; urgency=medium
 
   * New upstream ver. 2.1.3 cannot be built with modern GCCs 
