@@ -1,0 +1,9 @@
+{
+  "source": "deployment/base/sql/01.kaltura_ce_tables.sql",
+  "source_sha256": "4e790bfe524452ba6e92e5c5e6b79f7908a80f201c0f98c6848734ffb43e8350",
+  "lines": [
+    1261,
+    1271
+  ],
+  "fixture_sha256": "9a8a29a4cac6ffa07c40b94a8d475d3ddefd3553534dc16d82eec4ba0590fe1e"
+}

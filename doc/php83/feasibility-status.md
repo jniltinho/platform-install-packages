@@ -373,3 +373,11 @@ held patch; original 8.3 failure remains recorded. Eleven native-PDO forwarding
 controls pass within their runtimes. This is six-table CLI integration, not full
 HTTP/authenticated acceptance. Original source restored and probe server stopped;
 active ZIP and release gates unchanged.
+
+## Bounded session validation follow-up
+
+[The synthetic session experiment](api-session.md) now compares direct real
+SessionService/KS validation on PHP 7.4 and 8.3, including negative authentication
+checks. A held dateUtils ternary repair preserves original 7.4 formatting and
+unblocks this path. HTTP/authenticated dispatcher and diagnostic triage remain
+open; no full task, artifact promotion or release gate is complete.

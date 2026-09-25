@@ -1,0 +1,6 @@
+{
+  "scope": "KalturaPDO held patch retained; only dateUtils restored to original",
+  "returncode": 255,
+  "date_ternary_failure_reproduced": true,
+  "stderr_sha256": "de6ddea6ede817a01aa884b609f7164c0bb3c9b1a35aff08a7bf000409251ae7"
+}

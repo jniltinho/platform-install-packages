@@ -1,0 +1,48 @@
+Advisory review of the held ternary patch and session fixture; no repository/tool access.
+
+# Revisão: patch `dateUtils` e fixture de sessão
+
+## Patch `dateUtils.class.php`: correto
+
+- Em PHP 7.4, `a ? b : c ? d : e` é avaliado como `(a ? b : c) ? d : e`. O patch reproduz exatamente esse agrupamento, então a semântica é preservada.
+- O comportamento legado resultante equivale a `$hours > 0 ? "0$hours:" : ""`:
+  - `"$hours:"` nunca é `"0"` nem vazio, logo é sempre truthy.
+  - 11h vira `"011:"`, 10h vira `"010:"`, 0h ou horas negativas viram `""`.
+- Manter a forma literal está certo para auditoria. Sugiro um comentário curto documentando o quirk (`011:`), para ninguém "corrigir" isso depois.
+- O original em 7.4 emite `E_DEPRECATED` em tempo de compilação. Se o runner trata stderr como falha na execução de referência 7.4, isso precisa ser tolerado explicitamente.
+
+## Fixture: durações
+
+- **Principal:** o script só imprime os valores e não os compara com nada. A prova de equivalência exige comparar o **original em 7.4** com o **patch em 8.3**. Rodar o patch nas duas versões não prova equivalência com o original. Confirme que o `run-api-session.sh` faz esse diff com golden output congelado.
+- A cobertura de fronteiras é boa: horas 0, 1, 10, 11, 24 e negativo; minutos 10 e segundos 10 (o quirk `010`); decimal `.9`. Opcional: acrescentar `3599999` (59:59.9).
+
+## Fixture: checks de KS (riscos de falso positivo)
+
+1. **"Admin" não é admin.** O loop usa `1 => 'synthetic-admin-only'`, mas `SessionType::ADMIN` é **2**, não 1.
+   - O tipo 1 provavelmente passa pelo ramo admin do `startKSession` porque 1 é truthy.
+   - Assim o teste valida um tipo não padrão, e não uma sessão ADMIN real.
+   - Use as constantes `SessionType::USER` e `SessionType::ADMIN`.
+2. **Falta o check de escalonamento de privilégio**, o check de KS mais importante:
+   - `startAction('synthetic-user-only', …, ADMIN, …)` deve lançar `START_SESSION_ERROR`.
+   - Hoje o único negativo de secret é o de secret inexistente com tipo USER.
+3. **Falta o check de tipo errado:** `isValid(83001, 'synthetic-user', <outro tipo>) === ks::INVALID_TYPE`.
+   - Verifique também se `isValid` testa `$type` com `!== false`/`!== null`, e não por truthiness.
+   - Se for por truthiness, o tipo USER=0 pula a checagem e o teste de tipo passaria em falso para USER.
+4. **Ordem entre INSERT e schema.** O `INSERT INTO partner` roda *antes* de `exec(api-session-schema.sql)`.
+   - Se o schema fizer `DROP`/`CREATE` de `partner`, a linha some.
+   - `exec()` com multi-statement pode engolir erros depois do primeiro statement.
+   - O loop falharia alto nesse caso, então não é falso positivo, mas confira o retorno de `exec()` ou inverta a ordem.
+5. **`cache.ini` escrito depois do bootstrap.**
+   - Se o `kConf` já estiver em cache, `partnerSecrets = disabledProbe` pode não ter efeito, e o secret viria de cache em vez do DB sintético.
+   - Além disso, a escrita altera `/audit/app` de forma persistente. Escreva antes do `require` e restaure o arquivo ao final.
+6. **Adulteração só no meio do token.**
+   - Na V2, o meio cai no blob cifrado, o que é suficiente. Na V1, cai nos campos e não na assinatura.
+   - Opcional: adulterar também uma posição no início do payload.
+   - O `catch (Exception)` não captura `TypeError`/`ValueError` do 8.3. Isso falha alto, o que é aceitável.
+7. **Expiração negativa (`-60`).** Se `startAction` normalizar expiry ≤ 0 para o default, o teste falha em vez de passar em falso, o que é seguro. Vale registrar qual comportamento foi observado no 7.4.
+
+## Escopo
+
+O script chama `SessionService` diretamente, sem HTTP, dispatcher ou ACL, e todos os patches continuam retidos. Isso está consistente com o que você declarou. O resultado não cobre a validação de KS no fluxo autenticado real do dispatcher.
+
+**Bloqueantes antes de considerar a fixture como evidência:** itens 1 e 2, e o diff de durações contra o original em 7.4.
