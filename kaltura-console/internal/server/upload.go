@@ -166,7 +166,7 @@ func (s *Server) upload(c *echo.Context) error {
 		}
 		return s.kalturaErr(c, err)
 	}
-	return c.JSON(http.StatusCreated, viewEntry(entry))
+	return c.JSON(http.StatusCreated, s.viewEntry(entry))
 }
 
 func validBMFF(path string, size int64) bool {

@@ -164,3 +164,18 @@ The UI SHALL:
 - **THEN** the tabs wrap
 - **AND** the help column moves below the content
 - **AND** tables scroll horizontally without breaking the layout
+
+### Requirement: Configurable reverse-proxy prefix
+The console SHALL support `server.base_path` with prefix-preserving reverse
+proxies and SHALL serve SPA, assets, APIs and media under that path. Cookies
+SHALL be scoped to that path and Secure on TLS or trusted-proxy HTTPS requests.
+Untrusted forwarded headers SHALL NOT enable HTTPS semantics.
+
+#### Scenario: HTTPS Apache subpath
+- **WHEN** Apache proxies `https://host/console/` to the console with the prefix intact
+- **THEN** login, direct deep links, upload, polling and media playback work
+- **AND** browser resources remain under `/console/` without mixed content
+
+#### Scenario: Root deployment compatibility
+- **WHEN** the base path is empty
+- **THEN** existing root routes and login redirects continue working

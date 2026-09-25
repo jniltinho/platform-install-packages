@@ -15,11 +15,12 @@ make test                  # pure-Go tests, race tests, frontend tests
 
 Production builds disable CGO; SQLite is pure Go. The **race detector** is a separate developer/CI build and requires a C toolchain/CGO support. Do not interpret its requirement as a runtime libc dependency of the release executable. golangci-lint and nFPM are external development tools, not runtime requirements.
 
-For an isolated development config, use `config init`, set a development partner and writable DB/staging paths, then create a local admin. Do not reuse production secrets. Prefer `make build` + the embedded UI when checking complete same-origin behavior. `npm run dev` starts Vite with proxy entries from `frontend/vite.config.ts`; check Host/Origin and proxy routing when testing authentication or `/media/...` paths. No production CORS workaround is needed.
+For an isolated development config, use `config init`, set a development partner and writable DB/staging paths, then create a local admin. Do not reuse production secrets. Prefer `make build` + the embedded UI when checking complete same-origin behavior. `npm run dev` starts Vite with proxy entries from `frontend/vite.config.ts`; check Host/Origin and proxy routing when testing authentication or `/media/...` paths. No production CORS workaround is needed. Test `base_path` against the built embedded UI: runtime base injection is performed by the Go server, not by the default Vite development server. Relative Vite assets plus `frontend/src/base.ts` avoid separate per-prefix builds.
 
 ## Validation layers
 
-- `internal/config`: configuration/defaults/env validation.
+- `internal/config`: configuration/defaults/env validation, canonical base paths.
+- `internal/tlsconfig`: self-signed generation/reuse, pair validation, permissions and TLS listener behavior.
 - `internal/database`: migration idempotency and pure-Go SQLite behavior.
 - `internal/auth`: local accounts, sessions, password/role revocation and last-admin invariants.
 - `internal/kaltura`: fake upstream API, session retry, multipart streaming, errors and ownership checks.
@@ -35,12 +36,14 @@ Tests using a fake upstream do not prove real Kaltura conversion or target-OS pa
 Prerequisites: a disposable configured console/partner, an admin account, `agent-browser`, Python 3 and a valid short MP4. The test creates uniquely named media and a user, performs mutations, and attempts cleanup. Run only where that is authorized.
 
 ```sh
-export E2E_BASE_URL='https://test-console.example.invalid'
+export E2E_BASE_URL='https://test-console.example.invalid/console'
 export E2E_EMAIL='test-admin@example.invalid'
 export E2E_PASSWORD_FILE='/protected/path/test-password'
 export E2E_VIDEO='/path/to/short-valid.mp4'
 ./tests/e2e.sh
 ```
+
+Include the configured prefix in `E2E_BASE_URL` (omit `/console` for root deployments). Lab self-signed trust is an explicit test-client setup step, not a production verification bypass.
 
 Keep the password file out of Git and restrict permissions. Screenshots default to `doc/prints/kaltura-console-go` at repository root; override with `E2E_SCREENSHOTS`. Screenshots may contain account/media metadata: review before publication. Headless-browser flags are optional via `E2E_CHROME_ARGS`; do not disable browser sandboxing in ordinary desktop use.
 
@@ -75,6 +78,10 @@ Implementation-session checks reported on 2026-09-25:
 - Complete scripted browser E2E exited successfully, including account management, mobile layout, localization and zero-border-radius checks.
 
 See the [integration validation report](validation.md) for the subsequent rc3 Ubuntu 26.04 installation, Noble retest, GitHub run and outstanding Rocky/upgrade/removal gates. These are bounded observations, not a blanket distribution compatibility claim. No credentials are included here.
+
+### TLS and prefix acceptance scope
+
+The earlier rc3/root-deployment evidence is not evidence for the subsequent native-TLS/base-path changes. Re-run acceptance at root and `/console`, checking refresh/deep links, assets, login/logout, cookie Path/Secure, CSRF, upload, playback Range and prefixed health probes. Check self-signed reuse across restarts, explicit CA pair loading and rejected partial/expired material. A real Apache HTTPS deployment must preserve the prefix and overwrite forwarding protocol. Target-host HTTPS results remain pending until recorded separately; implementation and local test code are not a claim of a completed deployment run.
 
 ## Diagrams and documentation maintenance
 

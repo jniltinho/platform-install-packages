@@ -31,7 +31,7 @@ sudo systemctl start kaltura-console
 ```
 
 Set `kaltura.service_url` to `http://KALTURA/api_v3`, `playback_host` to the
-HTTP delivery origin, `partner_id` to a regular publisher (not -2), and
+HTTP(S) delivery origin, `partner_id` to a regular publisher (not -2), and
 `admin_secret` to that publisher's admin secret. The package starts no service
 until configured. Port 8080 is the default. Configure TLS or put the console
 behind a TLS reverse proxy before exposing credentials outside a trusted lab.
@@ -45,7 +45,7 @@ regular removal and RPM removal keep it. Back up config and the database first.
 
 See [config.toml.example](config.toml.example) for all options. Lookup order is
 `--config`, `./config.toml`, `/etc/kaltura-console/config.toml`. Environment
-variables override values, e.g. `KCONSOLE_KALTURA_ADMIN_SECRET` and
+variables override file values, and explicitly supplied `serve` flags override both, e.g. `KCONSOLE_KALTURA_ADMIN_SECRET` and
 `KCONSOLE_SERVER_PORT`. `config init --output config.toml` writes a new file
 with mode 0600 and never overwrites an existing file.
 
@@ -58,8 +58,37 @@ commit; back up before schema upgrades even though the migration runner uses
 transactions.
 
 Only list actual reverse proxy CIDRs in `server.trusted_proxies`; forwarded
-client IP and HTTPS are ignored from other peers. `server.https`, `tls_cert`
-and `tls_key` enable native TLS. The service cannot bind privileged ports.
+client IP and HTTPS are ignored from other peers. The service cannot bind
+privileged ports.
+
+### HTTPS and /console deployment
+
+Set `server.base_path = "/console"` to mount UI, assets, API, media and health
+under that prefix. Keep it canonical without a trailing slash; empty means root.
+Open `https://HOST/console/` and preserve `/console/` in reverse-proxy forwarding.
+The same embedded frontend build works at either prefix. Session cookie Path
+follows the prefix; direct TLS or a trusted HTTPS proxy sets Secure.
+
+For standalone TLS, set `server.https = true` and supply both `tls_cert` and
+`tls_key` for a production CA-issued pair. If both paths are empty, the console
+creates/reuses a ten-year self-signed pair in `server.tls_dir` (default
+`/var/lib/kaltura-console/tls`), with a 0600 private key. Self-signed certificates
+are not automatically trusted by browsers. Invalid, expired or incomplete
+material fails startup; certificates are not silently renewed. Rotate explicitly
+and restart. Outbound Kaltura TLS verification is unchanged.
+
+```sh
+# Isolated lab: persistent self-signed HTTPS using configured host/port.
+kaltura-console --config /etc/kaltura-console/config.toml serve --https --base-path /console
+```
+
+`serve --https --tls-cert ... --tls-key ... --tls-dir ... --base-path ...`
+flags override matching environment/file settings when supplied. HTTP at root
+remains the default. For Apache TLS termination, use backend HTTP on loopback,
+trust only the proxy CIDR, and preserve Host/protocol and the prefix.
+See [operations](docs/operations.md#standalone-https) for exact configuration,
+Apache rules, certificate handling and migration steps. When moving from root,
+log out/clear old root and prefix cookies before logging in again.
 
 The proxy follows redirects only to configured service/playback origins and
 `extra_media_hosts` (exact `host[:port]` entries). Add the actual Kaltura CDN

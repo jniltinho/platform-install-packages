@@ -5,8 +5,11 @@ from pathlib import Path
 import subprocess
 import time
 import uuid
+from urllib.parse import urlsplit
 
 base = os.environ['E2E_BASE_URL'].rstrip('/')
+prefix = urlsplit(base).path.rstrip('/')
+api_prefix = prefix + '/api'
 email = os.environ['E2E_EMAIL']
 password = Path(os.environ['E2E_PASSWORD_FILE']).read_text().strip()
 video = str(Path(os.environ['E2E_VIDEO']).resolve())
@@ -54,10 +57,10 @@ def open_page(path):
 
 def browser_api(path, method='GET', body=None):
     return evaluate('''(async()=>{
-      const s=await (await fetch('/api/session')).json();
-      const r=await fetch('/api'+%s,{method:%s,headers:{'Content-Type':'application/json','X-CSRF-Token':s.csrf},body:%s});
+      const s=await (await fetch(%s)).json();
+      const r=await fetch(%s+%s,{method:%s,headers:{'Content-Type':'application/json','X-CSRF-Token':s.csrf},body:%s});
       const data=r.status===204?null:await r.json();return {status:r.status,data};
-    })()''' % (json.dumps(path), json.dumps(method), 'undefined' if body is None else json.dumps(json.dumps(body))))
+    })()''' % (json.dumps(api_prefix + '/session'), json.dumps(api_prefix), json.dumps(path), json.dumps(method), 'undefined' if body is None else json.dumps(json.dumps(body))))
 
 try:
     ab('set', 'viewport', '1280', '900')
@@ -85,7 +88,7 @@ try:
     evaluate('window.__phases=[];window.__phaseObserver=new MutationObserver(()=>{const s=document.querySelector("[aria-live]");if(s&&!window.__phases.includes(s.innerText))window.__phases.push(s.innerText)});window.__phaseObserver.observe(document.body,{childList:true,subtree:true,characterData:true});true')
     ab('find', 'role', 'button', 'click', '--name', 'Enviar')
     ab('wait', '--url', '**/media/0_*')
-    created_path = evaluate('location.pathname')
+    created_path = evaluate('location.pathname')[len(prefix):]
     wait_js('document.querySelector("h1")?.textContent===' + json.dumps(title))
     phases = evaluate('window.__phases')
     assert any('Enviando ao console' in p for p in phases), phases
@@ -148,7 +151,7 @@ try:
         screenshot('mobile-' + route.replace('/', '-') + '.png')
     ab('find', 'role', 'button', 'click', '--name', 'Sair')
     ab('wait', '--url', '**/login')
-    assert evaluate('(async()=>{const r=await fetch("/api/session");return r.status})()') == 401
+    assert evaluate('(async()=>{const r=await fetch('+json.dumps(api_prefix + '/session')+');return r.status})()') == 401
     print('PASS: login, upload phases, READY polling, playback/206, edit/delete, users, health, i18n, radius, mobile, logout')
 finally:
     if created_path:

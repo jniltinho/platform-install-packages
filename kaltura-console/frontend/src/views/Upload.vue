@@ -2,6 +2,7 @@
 import { ref, onBeforeUnmount } from "vue";
 import { useRouter } from "vue-router";
 import { useSession } from "../session";
+import { apiPath } from "../base";
 import { toast } from "../api";
 import { t } from "../i18n";
 const name = ref(""),
@@ -31,7 +32,7 @@ function submit() {
   body.append("description", description.value);
   body.append("file", file.value);
   xhr = new XMLHttpRequest();
-  xhr.open("POST", "/api/media");
+  xhr.open("POST", apiPath("/media"));
   xhr.setRequestHeader("X-CSRF-Token", session.data?.csrf ?? "");
   xhr.upload.onprogress = (e) => {
     if (e.lengthComputable)

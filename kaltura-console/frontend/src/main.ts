@@ -1,3 +1,4 @@
+import { basePath } from "./base";
 import { createApp } from "vue";
 import { createPinia } from "pinia";
 import { createRouter, createWebHistory } from "vue-router";
@@ -17,7 +18,7 @@ import "./style.css";
 const app = createApp(App);
 app.use(createPinia());
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(basePath() || "/"),
   routes: [
     { path: "/", redirect: "/dashboard" },
     {

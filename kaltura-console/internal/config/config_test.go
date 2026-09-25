@@ -68,9 +68,10 @@ admin_secret = "topsecret"`, "kaltura.service_url must be an absolute http(s) UR
 		{"bad driver", validTOML + `
 [database]
 driver = "postgres"`, "database.driver must be sqlite or mysql"},
-		{"https without cert", validTOML + `
+		{"https incomplete pair", validTOML + `
 [server]
-https = true`, "server.https requires"},
+https = true
+tls_cert = "cert.pem"`, "server.https requires"},
 	}
 	for _, tc := range tests {
 		t.Run(tc.name, func(t *testing.T) {

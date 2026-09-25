@@ -37,6 +37,9 @@ type Server struct {
 // New builds the Echo instance with every route registered. dist is the
 // embedded SPA build (web/dist); it may be nil in tests.
 func New(cfg *config.Config, db *gorm.DB, authSvc *auth.Service, kc *kaltura.Client, dist fs.FS) (*echo.Echo, *Server, error) {
+	if err := config.ValidateBasePath(cfg.Server.BasePath); err != nil {
+		return nil, nil, err
+	}
 	s := &Server{cfg: cfg, db: db, auth: authSvc, kc: kc, now: time.Now, log: slog.Default(),
 		uploads: make(chan struct{}, cfg.Upload.MaxConcurrent)}
 	for _, cidr := range cfg.Server.TrustedProxies {
@@ -82,9 +85,13 @@ func New(cfg *config.Config, db *gorm.DB, authSvc *auth.Service, kc *kaltura.Cli
 	}))
 	e.Use(s.sessionMiddleware)
 
-	e.GET("/healthz", func(c *echo.Context) error { return c.String(http.StatusOK, "ok") })
+	routes := e.Group(cfg.Server.BasePath)
+	if cfg.Server.BasePath != "" {
+		e.GET(cfg.Server.BasePath, func(c *echo.Context) error { return c.Redirect(http.StatusPermanentRedirect, cfg.Server.BasePath+"/") })
+	}
+	routes.GET("/healthz", func(c *echo.Context) error { return c.String(http.StatusOK, "ok") })
 
-	api := e.Group("/api", middleware.BodyLimit(1<<20))
+	api := routes.Group("/api", middleware.BodyLimit(1<<20))
 	api.POST("/login", s.login)
 	api.GET("/session", s.session, s.requireAuth)
 	api.POST("/logout", s.logout, s.requireAuth)
@@ -102,15 +109,15 @@ func New(cfg *config.Config, db *gorm.DB, authSvc *auth.Service, kc *kaltura.Cli
 	api.GET("/health", s.health, s.requireAuth)
 	api.GET("/version", s.version, s.requireAuth)
 	// The upload route has its own (large) body limit.
-	e.POST("/api/media", s.upload, s.requireAuth, s.requireAdmin)
+	routes.POST("/api/media", s.upload, s.requireAuth, s.requireAdmin)
 
 	for _, m := range []string{http.MethodGet, http.MethodHead} {
-		e.Add(m, "/media/:id/stream", s.stream, s.requireAuth)
-		e.Add(m, "/media/:id/thumbnail", s.thumbnail, s.requireAuth)
+		routes.Add(m, "/media/:id/stream", s.stream, s.requireAuth)
+		routes.Add(m, "/media/:id/thumbnail", s.thumbnail, s.requireAuth)
 	}
 
 	if dist != nil {
-		registerSPA(e, dist)
+		registerSPA(routes, dist, cfg.Server.BasePath)
 	}
 	return e, s, nil
 }

@@ -12,6 +12,7 @@ import (
 	"math"
 	"net"
 	"net/url"
+	"regexp"
 	"strconv"
 	"strings"
 	"time"
@@ -32,11 +33,13 @@ type Config struct {
 
 // ServerConfig holds HTTP listener and session settings.
 type ServerConfig struct {
-	Host    string `mapstructure:"host"`
-	Port    int    `mapstructure:"port"`
-	HTTPS   bool   `mapstructure:"https"`
-	TLSCert string `mapstructure:"tls_cert"`
-	TLSKey  string `mapstructure:"tls_key"`
+	Host     string `mapstructure:"host"`
+	Port     int    `mapstructure:"port"`
+	HTTPS    bool   `mapstructure:"https"`
+	TLSCert  string `mapstructure:"tls_cert"`
+	TLSKey   string `mapstructure:"tls_key"`
+	TLSDir   string `mapstructure:"tls_dir"`
+	BasePath string `mapstructure:"base_path"`
 	// TrustedProxies lists CIDRs allowed to set X-Forwarded-For/-Proto.
 	TrustedProxies []string `mapstructure:"trusted_proxies"`
 	// SessionTTL is the idle timeout of a session.
@@ -117,6 +120,8 @@ func setDefaults(v *viper.Viper) {
 	v.SetDefault("server.host", "0.0.0.0")
 	v.SetDefault("server.port", 8080)
 	v.SetDefault("server.https", false)
+	v.SetDefault("server.base_path", "")
+	v.SetDefault("server.tls_dir", "/var/lib/kaltura-console/tls")
 	v.SetDefault("server.trusted_proxies", []string{})
 	v.SetDefault("server.session_ttl", "2h")
 	v.SetDefault("server.session_max", "12h")
@@ -179,6 +184,9 @@ func Load(path string) (*Config, error) {
 // includes secret values in its error messages.
 func (c *Config) Validate() error {
 	var errs []error
+	if err := ValidateBasePath(c.Server.BasePath); err != nil {
+		errs = append(errs, err)
+	}
 	if c.Kaltura.PartnerID <= 0 {
 		errs = append(errs, errors.New("kaltura.partner_id is required"))
 	}
@@ -203,7 +211,7 @@ func (c *Config) Validate() error {
 	default:
 		errs = append(errs, fmt.Errorf("database.driver must be sqlite or mysql, got %q", c.Database.Driver))
 	}
-	if c.Server.HTTPS && (c.Server.TLSCert == "" || c.Server.TLSKey == "") {
+	if (c.Server.TLSCert == "") != (c.Server.TLSKey == "") {
 		errs = append(errs, errors.New("server.https requires server.tls_cert and server.tls_key"))
 	}
 	if c.Upload.MaxMB <= 0 || c.Upload.MaxConcurrent <= 0 {
@@ -234,4 +242,15 @@ func (c *Config) Validate() error {
 		errs = append(errs, errors.New("upload.max_concurrent must not exceed 1024"))
 	}
 	return errors.Join(errs...)
+}
+
+// ValidateBasePath permits canonical, unescaped URL path segments only.
+func ValidateBasePath(p string) error {
+	if p == "" {
+		return nil
+	}
+	if !regexp.MustCompile(`^(/[A-Za-z0-9_-]+)+$`).MatchString(p) {
+		return errors.New("server.base_path must be empty or a canonical path such as /console (no trailing slash)")
+	}
+	return nil
 }
