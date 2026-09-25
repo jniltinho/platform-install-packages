@@ -8,6 +8,6 @@ Standards-Version: 4.6.2
 Package: kaltura-ffmpeg
 Architecture: all
 Depends: ${misc:Depends}, ffmpeg
-Description: Kaltura - FFmpeg (ffmpeg da distro)
- Pacote-ponte para Ubuntu 24.04: expõe o binário da distro nos caminhos
- de /opt/kaltura esperados pelo Kaltura CE.
+Description: Kaltura - FFmpeg (distro ffmpeg)
+ Bridge package for Ubuntu 24.04: exposes the distro binary at the
+ /opt/kaltura paths Kaltura CE expects.

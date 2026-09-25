@@ -46,7 +46,7 @@ for SOURCE in HTML5LIB3 PLAYKIT_IMA PLAYKIT_YOUBORA PLAYKIT_GOOGLE_ANALYTICS PLA
 	fi
 	# that's OTT and we don't want it
 done 
-# plugin privado: só entra quando há token
+# private plugin: only included when a token is set
 if [ -n "$GITHUB_TOKEN" ];then
 for i in path-kaltura-player.js path-kaltura-player.js.map;do
 	$BASE_CHECKOUT_DIR/build/gh_download_asset.sh $GITHUB_TOKEN kaltura/kaltura-interactive-player $i v$PLAYKIT_INTERACTIVE_VERSION $SOURCE_PACKAGING_DIR/html5lib3_tmp/$HTML5LIB3_VERSION
@@ -58,7 +58,7 @@ tar zxf playkit-ui_$PLAYKIT_UI_VERSION.tar.gz
 cp -r playkit-js-ui-$PLAYKIT_UI_VERSION/translations $SOURCE_PACKAGING_DIR/html5lib3_tmp/$HTML5LIB3_VERSION
 
 # Fetch Brand3d from Bitbucket:
-# plugin de terceiro no Bitbucket: só entra com credenciais
+# third-party plugin on Bitbucket: only included with credentials
 if [ -n "$BITBUCKET_TOKEN" ];then
 BRAND3D_ARCHIVE=$SOURCE_PACKAGING_DIR/playkit_brand3d_${PLAYKIT_BRAND3D_VERSION}.tar.bz2
 curl -L $PLAYKIT_BRAND3D_URI --output $BRAND3D_ARCHIVE

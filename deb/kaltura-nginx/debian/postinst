@@ -63,7 +63,7 @@ if [ "$1" = "configure" ]; then
 		db_input critical 'kaltura-nginx/kaltura_service_url' || true
 		db_go || true
 		db_get 'kaltura-nginx/kaltura_service_url'
-		WWW_HOST=$RET
+		WWW_HOST=`echo $RET | sed -e 's@^https\?://@@' -e 's@/.*@@'`
 		sed -e "s#@STATIC_FILES_PATH@#$NGINX_BASE_DIR/static#g" -e "s#@PROTOCOL@#$PROTOCOL#g" -e "s#@WWW_HOST@#$WWW_HOST#g"  -e "s#@RTMP_PORT@#$RTMP_PORT#g"  -i $NGINX_BASE_DIR/conf/kaltura-nginx.conf $NGINX_BASE_DIR/conf/kaltura.conf
 		ln -sf $NGINX_BASE_DIR/conf/kaltura-nginx.conf $NGINX_BASE_DIR/conf/nginx.conf
 		ln -sf $NGINX_BASE_DIR/conf/kaltura.conf $NGINX_BASE_DIR/conf/server.conf

@@ -32,7 +32,7 @@ if [ "$1" = "configure" ]; then
 	#ln -s /usr/lib/jvm/java-8-openjdk-amd64/bin/java /etc/alternatives/java
 
 	chown -R elasticsearch $LOG_DIR/elasticsearch $BASE_DIR/var/lib/elasticsearch
-	# ponytail: heap fixo de 1 GB para AIO; ajuste em /etc/elasticsearch/jvm.options.d/kaltura.options
+	# ponytail: fixed 1 GB heap for AIO; tune in /etc/elasticsearch/jvm.options.d/kaltura.options
 	[ -f /etc/elasticsearch/jvm.options.d/kaltura.options ] || printf -- '-Xms1g\n-Xmx1g\n' > /etc/elasticsearch/jvm.options.d/kaltura.options
 	if [ ! -d /usr/share/elasticsearch/plugins/analysis-icu ];then
 		/usr/share/elasticsearch/bin/elasticsearch-plugin install --batch analysis-icu

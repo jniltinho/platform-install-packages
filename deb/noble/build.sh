@@ -1,6 +1,6 @@
 #!/bin/bash
-# Gera os .deb do Kaltura All-In-One para Ubuntu 24.04 e publica em /vagrant/deb/noble/repo.
-# Uso: build.sh [pacote ...]   (sem argumentos = conjunto completo)
+# Builds the Kaltura All-In-One .deb packages for Ubuntu 24.04 into /vagrant/deb/noble/repo.
+# Usage: build.sh [package ...]   (no arguments = full set)
 set -euo pipefail
 
 PACKAGES="kaltura-postinst kaltura-ffmpeg kaltura-ffmpeg-aux kaltura-sphinx kaltura-base
@@ -19,7 +19,7 @@ sudo DEBIAN_FRONTEND=noninteractive NEEDRESTART_MODE=a apt-get install -y -qq \
 	libssl-dev libpcre3-dev zlib1g-dev libxml2-dev libxslt1-dev libgd-dev libgeoip-dev \
 	libavcodec-dev libavformat-dev libavutil-dev libswscale-dev libavfilter-dev libswresample-dev >/dev/null
 
-# as receitas esperam o repo em ~/sources/platform-install-packages e as fontes em ~/rpmbuild/SOURCES
+# the recipes expect the repo in ~/sources/platform-install-packages and sources in ~/rpmbuild/SOURCES
 mkdir -p ~/sources ~/rpmbuild
 [ -e ~/rpmbuild/SOURCES ] || ln -s ~/sources ~/rpmbuild/SOURCES
 rsync -a --delete --exclude .git --exclude deb/noble/repo --exclude .vagrant "$SRC/" "$WORK/"
@@ -31,7 +31,7 @@ for pkg in $PACKAGES; do
 	cd $WORK/deb/$pkg
 	if ! dpkg-buildpackage -b -uc -us -d > ../$pkg.build.log 2>&1; then
 		tail -40 ../$pkg.build.log
-		echo "FALHOU: $pkg (log completo em $WORK/deb/$pkg.build.log)"
+		echo "FAILED: $pkg (full log: $WORK/deb/$pkg.build.log)"
 		exit 1
 	fi
 	cp ../${pkg}_*.deb "$REPO/"
@@ -39,5 +39,5 @@ done
 
 cd "$REPO"
 dpkg-scanpackages --multiversion . /dev/null 2>/dev/null | gzip -9c > Packages.gz
-echo "Repositório: $REPO"
+echo "Repository: $REPO"
 ls -1 *.deb

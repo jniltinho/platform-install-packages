@@ -1,38 +1,60 @@
 ## Why
 
-O empacotamento `.deb` do repositório parou na versão 16.16.0 (Ubuntu focal/xenial), enquanto os RPMs já estão em Rigel-18.20.0. Hoje não existe forma de instalar o Kaltura CE 18.20.0 no Ubuntu 24.04 LTS (noble). Além disso, várias fontes das quais o build depende sumiram: o repositório `kaltura/server` saiu do GitHub, `installrepo.kaltura.org` não responde, o pentaho no SourceForge retorna 404 e os apps Flash vêm de um SVN interno inacessível. O build atual, portanto, nem reproduz.
+The `.deb` packaging in this repository stopped at 16.16.0 (Ubuntu focal/xenial), while the RPMs are already on Rigel-18.20.0. Kaltura CE 18.20.0 therefore cannot be installed on Ubuntu 24.04 LTS (noble). Several sources the build depends on are also gone:
+
+- The `kaltura/server` repository was removed from GitHub.
+- `installrepo.kaltura.org` no longer responds.
+- pentaho on SourceForge returns 404.
+- The Flash apps come from an unreachable internal SVN.
+
+As a result, the current build cannot be reproduced.
 
 ## What Changes
 
-- Atualizar as receitas em `deb/` para Rigel-18.20.0, com alvo Ubuntu 24.04 (noble), amd64, instalação **Single-server All-In-One**.
-- PHP 7.4 via PPA `ondrej/php` (o Kaltura 18.20 não é suportado em PHP 8.3), MariaDB 10.11 da distro, Elasticsearch 7.17 do repositório apt da Elastic.
-- `kaltura-ffmpeg`, `kaltura-ffmpeg-aux` e `kaltura-sphinx` passam a ser pacotes finos sobre `ffmpeg` 6.1 e `sphinxsearch` 2.2.11 da distro, com os mesmos caminhos em `/opt/kaltura`.
-- `kaltura-nginx` volta a ser compilado a partir do código-fonte (nginx 1.23.0 + vod/secure-token/akamai-token/rtmp/vts), linkando o ffmpeg da distro.
-- As fontes que sumiram são espelhadas como assets de Release do próprio repositório (`jniltinho/platform-install-packages`), e `build/sources.rc` passa a apontar para esse espelho.
-- Novo ambiente reprodutível em `deb/noble/`:
-  - `Vagrantfile` com uma VM `build`, que gera os `.deb` e um repositório apt local, e uma VM `aio`, que instala do repositório local, configura sem interação e roda sanity.
-  - Scripts `build.sh`, `install-aio.sh` e `sanity.sh`.
-- **BREAKING**: no noble, `kaltura-server` deixa de depender dos pacotes Flash (`kaltura-widgets`, kdp/kcw/kupload/kvpm/kclip/flexwrapper/kmc legado), de `kaltura-dwh`/`kaltura-pentaho` e de `kaltura-playkit-bundler`, porque não há fonte pública para eles.
-- Validação de ponta a ponta:
-  - Upload de um vídeo real do YouTube (baixado com `yt-dlp`) pela API e pela interface.
-  - Prints de toda a interface de administração (Admin Console e KMC) com `agent-browser`, salvos em `doc/prints/`.
-  - Verificação de que os projetos `criare/kaltura-console` e `criare/kaltura-legacy-gateway` conseguem interagir com a API desta instalação.
-- Documentação:
+- Update the recipes in `deb/` to Rigel-18.20.0 for Ubuntu 24.04 (noble), amd64, as a **Single-server All-In-One** install.
+- Runtime stack:
+  - PHP 7.4 from the `ondrej/php` PPA. Kaltura 18.20 does not support PHP 8.x.
+  - MariaDB 10.11 from the distro.
+  - Elasticsearch 7.17 from the Elastic apt repository.
+- `kaltura-ffmpeg`, `kaltura-ffmpeg-aux` and `kaltura-sphinx` become thin bridge packages over the distro `ffmpeg` 6.1 and `sphinxsearch` 2.2.11. They keep the same `/opt/kaltura` paths.
+- `kaltura-nginx` is built from source again: nginx 1.23.0 plus the vod, secure-token, akamai-token, rtmp and vts modules, linked against the distro ffmpeg.
+- Sources that disappeared are mirrored as GitHub Release assets of this repository (`jniltinho/platform-install-packages`). `build/sources.rc` points to the mirror.
+- New reproducible environment in `deb/noble/`:
+  - `Vagrantfile` with a `build` VM, which builds the `.deb` files and a local apt repository, and an `aio` VM, which installs from it, configures unattended and runs the sanity checks.
+  - Scripts `build.sh`, `install-aio.sh` and `sanity.sh`.
+- **BREAKING**: on noble, `kaltura-server` no longer depends on the following, because none of them has a public source anymore:
+  - The Flash packages: `kaltura-widgets`, kdp, kcw, kupload, kvpm, kclip, flexwrapper and legacy kmc.
+  - `kaltura-dwh` and `kaltura-pentaho`.
+  - `kaltura-playkit-bundler`.
+- End-to-end validation:
+  - Upload a real YouTube video (fetched with `yt-dlp`) through the API and the UI.
+  - Screenshots of the whole administration interface (Admin Console and KMC), taken with `agent-browser` and saved in `doc/prints/`.
+  - Check that the `criare/kaltura-console` and `criare/kaltura-legacy-gateway` clients can talk to this install's API.
+- Documentation, all in English:
   - `doc/install-kaltura-noble.md`.
-  - `doc/kaltura-api-noble.md`, com a API usada: sessão, upload, entries e playManifest, com exemplos `curl` validados na VM.
+  - `doc/kaltura-api-noble.md`: session, upload, entries and playManifest, with `curl` examples validated on the VM.
+  - Update `README.md` and the related docs for the new packages.
+- Built packages are published as GitHub Release assets rather than committed to git. A flat apt repository can point at the release URL.
 
 ## Capabilities
 
 ### New Capabilities
-- `noble-aio-validation`: evidências de validação do AIO: vídeo real enviado, prints da interface administrativa, documentação da API e interoperabilidade com os clientes `criare`.
-- `noble-deb-build`: build reprodutível dos `.deb` do Kaltura 18.20.0 para Ubuntu 24.04, com fontes resolvíveis e repositório apt local.
-- `noble-aio-install`: instalação e configuração sem interação de um servidor All-In-One em Ubuntu 24.04 a partir desses `.deb`, validada por sanity automatizado.
+- `noble-deb-build`: reproducible build of the Kaltura 18.20.0 `.deb` packages for Ubuntu 24.04, with resolvable sources and a local apt repository.
+- `noble-aio-install`: unattended install and configuration of a Single-server All-In-One on Ubuntu 24.04 from those packages, verified by automated sanity checks.
+- `noble-aio-validation`: validation evidence for the AIO:
+  - a real video uploaded and processed;
+  - screenshots of the administration interface;
+  - API documentation;
+  - interoperability with the `criare` clients.
 
 ### Modified Capabilities
-<!-- nenhuma: não existem specs anteriores em openspec/specs -->
+<!-- none: there are no previous specs in openspec/specs -->
 
 ## Impact
 
-- Código: `deb/*/debian/{control,rules,postinst,changelog}`, `build/sources.rc`, `build/package_*.sh` (URLs), novo `deb/noble/`, novo `doc/install-kaltura-noble.md`.
-- Dependências externas: PPA `ondrej/php`, repositório apt da Elastic 7.x e Releases do GitHub do repositório (espelho de fontes).
-- RPM: só muda `KALTURA_CORE_URI`, que troca uma URL que dava 404 pelo espelho, com o mesmo conteúdo. As specs RPM não mudam.
+- Code: `deb/*/debian/{control,rules,postinst,changelog}`, `build/sources.rc`, `build/package_*.sh`, the new `deb/noble/`, `doc/` and `README.md`.
+- External dependencies:
+  - The `ondrej/php` PPA.
+  - The Elastic 7.x apt repository.
+  - This repository's GitHub Releases, used as the source mirror and for package downloads.
+- RPM: only `KALTURA_CORE_URI` changes. It replaces a URL that returned 404 with the mirror, which serves the same content. The RPM specs do not change.

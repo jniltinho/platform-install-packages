@@ -1,6 +1,6 @@
 #!/bin/bash
-# Instala e configura o Kaltura CE 18.20.0 All-In-One no Ubuntu 24.04 a partir do repositório local.
-# Idempotente: reexecutar só garante pacotes e serviços; banco e segredos não são recriados.
+# Installs and configures a Kaltura CE 18.20.0 All-In-One on Ubuntu 24.04 from the local repo.
+# Idempotent: re-running only ensures packages and services; the DB and secrets are never recreated.
 set -euo pipefail
 export DEBIAN_FRONTEND=noninteractive NEEDRESTART_MODE=a
 
@@ -12,7 +12,7 @@ ADMIN_PASSWD=${ADMIN_PASSWD:-Adm1n#Video}
 REPO_DIR=${REPO_DIR:-/vagrant/deb/noble/repo}
 APT="apt-get install -y -q -o Dpkg::Options::=--force-confold"
 
-# --- repositórios ---
+# --- repositories ---
 if [ ! -f /etc/apt/sources.list.d/kaltura-local.list ]; then
 	apt-get update -q
 	apt-get install -y -q software-properties-common curl gnupg
@@ -24,7 +24,7 @@ if [ ! -f /etc/apt/sources.list.d/kaltura-local.list ]; then
 fi
 apt-get update -q
 
-# --- MariaDB com os ajustes exigidos pelo Kaltura ---
+# --- MariaDB with the settings Kaltura requires ---
 mkdir -p /etc/mysql/mariadb.conf.d
 cat > /etc/mysql/mariadb.conf.d/99-kaltura.cnf <<EOF
 [mysqld]
@@ -46,7 +46,7 @@ FLUSH PRIVILEGES;
 EOF
 fi
 
-# --- respostas do debconf (postfix + Kaltura) ---
+# --- debconf answers (postfix + Kaltura) ---
 debconf-set-selections <<EOF
 postfix postfix/main_mailer_type select Local only
 postfix postfix/mailname string $HOST_IP
@@ -94,7 +94,7 @@ kaltura-nginx kaltura-nginx/rtmp_port string 1935
 kaltura-nginx kaltura-nginx/is_ssl boolean false
 EOF
 
-# --- Kaltura: mesma ordem do instalador all-in-1 legado (o db precisa de front e sphinx ativos) ---
+# --- Kaltura: same order as the legacy all-in-1 installer (kaltura-db needs front and sphinx up) ---
 for step in "kaltura-postinst kaltura-base" \
 	"kaltura-kmcng kaltura-html5lib kaltura-html5lib3 kaltura-html5-studio kaltura-html5-studio3 kaltura-html5-analytics" \
 	kaltura-front kaltura-sphinx kaltura-db kaltura-batch kaltura-nginx kaltura-elasticsearch kaltura-server; do

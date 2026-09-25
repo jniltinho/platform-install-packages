@@ -1,68 +1,71 @@
 ## Purpose
 
-Garantir que um servidor Kaltura CE 18.20.0 Single-server All-In-One seja instalado e configurado sem interação em Ubuntu 24.04 (noble), e que fique funcional e verificável por sanity automatizado.
+Ensure that a Kaltura CE 18.20.0 Single-server All-In-One can be installed and configured unattended on Ubuntu 24.04 (noble), and that the result is functional and checked by an automated sanity script.
 
 ## ADDED Requirements
 
-### Requirement: Instalação All-In-One sem interação
-A instalação SHALL ser concluída sem prompts quando as respostas de configuração são fornecidas previamente (debconf preseed / arquivo de respostas).
+### Requirement: Unattended All-In-One install
+The install SHALL complete without any prompt when the configuration answers are provided upfront (debconf preseed).
 
-#### Scenario: Provisionamento da VM de teste
-- **WHEN** o operador executa `vagrant up aio` em `deb/noble/` depois de um build bem-sucedido
-- **THEN** `kaltura-server` e dependências são instalados a partir do repositório local
-- **AND** o banco de dados, o Sphinx, o Elasticsearch, o nginx e o Apache ficam configurados e em execução
-- **AND** o provisionamento termina com código 0
+#### Scenario: Test VM provisioning
+- **WHEN** the operator runs `vagrant up aio` in `deb/noble/` after a successful build
+- **THEN** `kaltura-server` and its dependencies are installed from the local repository
+- **AND** the database, Sphinx, Elasticsearch, nginx and Apache are configured and running
+- **AND** provisioning exits with code 0
 
-### Requirement: API funcional
-Depois da instalação, a API do Kaltura SHALL responder.
+### Requirement: Working API
+After the install, the Kaltura API SHALL respond.
 
-#### Scenario: Ping da API
-- **WHEN** se faz `GET http://<host>/api_v3/index.php?service=system&action=ping`
-- **THEN** a resposta HTTP é 200 e o corpo contém `true`
+#### Scenario: API ping
+- **WHEN** `GET http://<host>/api_v3/index.php?service=system&action=ping` is requested
+- **THEN** the response is HTTP 200 and the body contains `true`
 
-#### Scenario: Sessão administrativa
-- **WHEN** se abre uma sessão (`session.start`) com o partner -2 e o admin secret gerado na instalação
-- **THEN** a API retorna uma KS válida
+#### Scenario: Admin session
+- **WHEN** a session is started (`session.start`) for partner -2 with the admin secret generated during the install
+- **THEN** the API returns a valid KS
 
-### Requirement: Interfaces web acessíveis
-O Admin Console e o KMC (kmc-ng) SHALL ser servidos pelo host.
+### Requirement: Web interfaces reachable
+The host SHALL serve the Admin Console and the KMC (kmc-ng).
 
 #### Scenario: Admin Console
-- **WHEN** se faz `GET http://<host>/admin_console/`
-- **THEN** a resposta é HTTP 200 (ou um redirecionamento para a página de login que termina em 200)
+- **WHEN** `GET http://<host>/admin_console/` is requested, following redirects
+- **THEN** the final response is HTTP 200
 
 #### Scenario: KMC
-- **WHEN** se faz `GET http://<host>/index.php/kmcng/`
-- **THEN** a resposta é HTTP 200
+- **WHEN** `GET http://<host>/index.php/kmcng/` is requested
+- **THEN** the response is HTTP 200
 
-### Requirement: Transcodificação e entrega VOD
-O All-In-One SHALL converter um vídeo enviado e entregá-lo pelo nginx VOD.
+### Requirement: Transcoding and VOD delivery
+The All-In-One SHALL transcode an uploaded video and deliver it through nginx VOD.
 
-#### Scenario: Upload e conversão
-- **WHEN** o sanity envia um MP4 curto de teste para o partner padrão pela API
-- **THEN** a entry atinge o status READY (2) em no máximo 10 minutos
+#### Scenario: Upload and transcoding
+- **WHEN** the sanity script uploads a short MP4 to a test partner through the API
+- **THEN** the entry reaches status READY (2) within 10 minutes
 
-#### Scenario: Manifesto HLS
-- **WHEN** se faz `GET` no manifesto HLS da entry convertida (`/p/<pid>/sp/<pid>00/playManifest/entryId/<id>/format/applehttp/protocol/http/a.m3u8`), seguindo os redirecionamentos
-- **THEN** a resposta é um m3u8 válido e o primeiro segmento `.ts` responde HTTP 200 com conteúdo não vazio
+#### Scenario: HLS manifest
+- **WHEN** the HLS manifest of the converted entry is requested, following redirects, at `/p/<pid>/sp/<pid>00/playManifest/entryId/<id>/format/applehttp/protocol/http/a.m3u8`
+- **THEN** the response is a valid m3u8
+- **AND** its first `.ts` segment returns HTTP 200 with a non-empty body
 
-### Requirement: Reprovisionamento idempotente
-Executar de novo a instalação na mesma VM SHALL NOT recriar o banco nem trocar segredos já gerados.
+### Requirement: Idempotent re-provisioning
+Re-running the install on the same VM SHALL NOT recreate the database or change secrets already generated.
 
-#### Scenario: Segundo provisionamento
-- **WHEN** o operador executa `vagrant provision aio` numa VM já instalada
-- **THEN** o provisionamento termina com código 0 e o sanity passa com o mesmo admin secret
+#### Scenario: Second provisioning
+- **WHEN** the operator runs `vagrant provision aio` on an installed VM
+- **THEN** provisioning exits with code 0
+- **AND** the sanity checks pass with the same admin secret
 
-### Requirement: Serviços persistentes
-Os serviços do All-In-One SHALL subir sozinhos depois de um reboot.
+### Requirement: Persistent services
+The All-In-One services SHALL start on their own after a reboot.
 
 #### Scenario: Reboot
-- **WHEN** a VM `aio` é reiniciada sem provisionamento (`vagrant reload aio --no-provision`)
-- **THEN** o sanity, executado por SSH, volta a passar sem intervenção manual
+- **WHEN** the `aio` VM is rebooted without provisioning (`vagrant reload aio --no-provision`)
+- **THEN** the sanity script, run over SSH, passes again with no manual intervention
 
-### Requirement: Sanity automatizado
-O ambiente SHALL oferecer um script de sanity que verifica os requisitos acima e termina com código diferente de 0 se algum falhar.
+### Requirement: Automated sanity checks
+The environment SHALL provide a sanity script that checks the requirements above. It SHALL exit non-zero if any check fails.
 
-#### Scenario: Falha detectada
-- **WHEN** algum serviço essencial está parado (por exemplo, apache2)
-- **THEN** o script de sanity reporta a verificação que falhou e termina com código diferente de 0
+#### Scenario: Failure detected
+- **WHEN** an essential service is stopped, for example apache2
+- **THEN** the sanity script reports the failed check
+- **AND** it exits non-zero

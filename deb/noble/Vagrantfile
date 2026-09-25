@@ -1,4 +1,4 @@
-# Ubuntu 24.04 (noble): VM "build" gera os .deb, VM "aio" instala e testa o All-In-One.
+# Ubuntu 24.04 (noble): VM "build" builds the .deb packages, VM "aio" installs and tests the All-In-One.
 Vagrant.configure("2") do |config|
   config.vm.box = "bento/ubuntu-24.04"
   config.vm.synced_folder "../..", "/vagrant"

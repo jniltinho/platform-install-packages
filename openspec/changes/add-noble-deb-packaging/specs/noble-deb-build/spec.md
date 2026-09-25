@@ -1,48 +1,60 @@
 ## Purpose
 
-Garantir que os pacotes `.deb` do Kaltura CE Rigel-18.20.0 para Ubuntu 24.04 (noble) possam ser gerados de forma reprodutível, a partir de fontes publicamente resolvíveis, em uma VM limpa.
+Ensure the Kaltura CE Rigel-18.20.0 `.deb` packages for Ubuntu 24.04 (noble) can be built repeatably on a clean VM, from publicly resolvable sources.
 
 ## ADDED Requirements
 
-### Requirement: Build repetível em VM limpa
-O build SHALL gerar todos os `.deb` do conjunto All-In-One a partir de uma VM Ubuntu 24.04 limpa (box `bento/ubuntu-24.04` fixada no Vagrantfile), com um único comando e sem intervenção manual. "Repetível" significa repetibilidade funcional: dois builds limpos produzem o mesmo conjunto de pacotes e versões. Não é reprodutibilidade bit a bit.
+### Requirement: Repeatable build on a clean VM
+The build SHALL produce every `.deb` of the All-In-One set on a clean Ubuntu 24.04 VM, using the `bento/ubuntu-24.04` box pinned in the Vagrantfile. It SHALL run from a single command with no manual steps.
 
-O conjunto All-In-One é: `kaltura-postinst`, `kaltura-base`, `kaltura-front`, `kaltura-batch`, `kaltura-db`, `kaltura-server`, `kaltura-ffmpeg`, `kaltura-ffmpeg-aux`, `kaltura-sphinx`, `kaltura-nginx`, `kaltura-elasticsearch`, `kaltura-kmcng`, `kaltura-html5lib`, `kaltura-html5lib3`, `kaltura-html5-studio`, `kaltura-html5-studio3`, `kaltura-html5-analytics`.
+"Repeatable" means functional repeatability: two clean builds produce the same set of packages and versions. It does not mean bit-for-bit reproducibility.
 
-#### Scenario: Build completo
-- **WHEN** o operador executa `vagrant up build` em `deb/noble/`
-- **THEN** o provisionamento termina com código 0
-- **AND** existe um `.deb` para cada pacote do conjunto All-In-One em `deb/noble/repo/`
+The All-In-One set is:
+- core: `kaltura-postinst`, `kaltura-base`, `kaltura-front`, `kaltura-batch`, `kaltura-db`, `kaltura-server`;
+- media and search: `kaltura-ffmpeg`, `kaltura-ffmpeg-aux`, `kaltura-sphinx`, `kaltura-nginx`, `kaltura-elasticsearch`;
+- web apps: `kaltura-kmcng`, `kaltura-html5lib`, `kaltura-html5lib3`, `kaltura-html5-studio`, `kaltura-html5-studio3`, `kaltura-html5-analytics`.
 
-#### Scenario: Falha de pacote interrompe o build
-- **WHEN** a construção de qualquer pacote do conjunto falha
-- **THEN** o build termina com código diferente de 0 e informa qual pacote falhou
+#### Scenario: Full build
+- **WHEN** the operator runs `vagrant up build` in `deb/noble/`
+- **THEN** provisioning exits with code 0
+- **AND** `deb/noble/repo/` contains a `.deb` for every package of the All-In-One set
 
-### Requirement: Versões alinhadas ao RPM 18.20.0
-Os pacotes do core (`kaltura-base`, `kaltura-front`, `kaltura-batch`, `kaltura-db`, `kaltura-server`) SHALL ter a versão `18.20.0` e embutir o código do servidor Kaltura do commit `29cf45469c1e210498087942f5b76b5c706e4cda` (tag `Rigel-18.20.0-rel`, cujo `VERSION.txt` é `Rigel-18.20.0`).
+#### Scenario: A package failure stops the build
+- **WHEN** building any package of the set fails
+- **THEN** the build exits non-zero and reports which package failed
 
-#### Scenario: Versão do core
-- **WHEN** se inspeciona `dpkg-deb -f kaltura-base_*.deb Version`
-- **THEN** o valor começa com `18.20.0`
+### Requirement: Versions aligned with RPM 18.20.0
+The core packages (`kaltura-base`, `kaltura-front`, `kaltura-batch`, `kaltura-db`, `kaltura-server`) SHALL be versioned `18.20.0`. They SHALL ship the Kaltura server code from commit `29cf45469c1e210498087942f5b76b5c706e4cda`, which is tag `Rigel-18.20.0-rel` (its `VERSION.txt` reads `Rigel-18.20.0`).
 
-### Requirement: Fontes resolvíveis
-Toda fonte usada pelo build SHALL ser baixável de uma URL pública. Quando a origem original de uma fonte deixa de existir, a URL dessa fonte SHALL ser substituída de forma permanente por um espelho controlado pelo projeto (assets de Release do GitHub do próprio repositório), publicado junto com o SHA-256. Não há fallback em tempo de build: cada fonte tem uma única URL.
+#### Scenario: Core version
+- **WHEN** `dpkg-deb -f kaltura-base_*.deb Version` is inspected
+- **THEN** the value starts with `18.20.0`
 
-#### Scenario: Fonte espelhada
-- **WHEN** o build baixa o código do servidor
-- **THEN** a URL usada é a do espelho do projeto
-- **AND** o SHA-256 do arquivo baixado confere com o publicado no espelho, senão o build falha
+### Requirement: Resolvable sources
+Every source the build uses SHALL be downloadable from a public URL. When the original location of a source no longer exists, its URL SHALL be permanently replaced by a mirror the project controls, published together with its SHA-256. The mirror is a GitHub Release asset of this repository. There is no build-time fallback: each source has exactly one URL.
 
-### Requirement: Repositório apt local
-O build SHALL publicar os `.deb` gerados como repositório apt consumível via `deb [trusted=yes] file:<dir> ./`.
+#### Scenario: Mirrored source
+- **WHEN** the build downloads the server code
+- **THEN** it uses the project mirror URL
+- **AND** the SHA-256 of the downloaded file matches the published one, otherwise the build fails
 
-#### Scenario: Índice do repositório
-- **WHEN** o build termina
-- **THEN** `deb/noble/repo/Packages.gz` existe e lista todos os pacotes gerados
+### Requirement: Local apt repository
+The build SHALL publish the resulting `.deb` files as an apt repository usable via `deb [trusted=yes] file:<dir> ./`.
 
-### Requirement: Qualidade dos pacotes
-Cada `.deb` gerado SHALL instalar em Ubuntu 24.04 sem dependências insatisfeitas, usando apenas os repositórios da distro (main/universe/multiverse), o PPA `ondrej/php`, o repositório apt da Elastic 7.x (versão 7.17) e o repositório local.
+#### Scenario: Repository index
+- **WHEN** the build finishes
+- **THEN** `deb/noble/repo/Packages.gz` exists and lists every built package
 
-#### Scenario: Resolução de dependências
-- **WHEN** se executa `apt-get install --simulate kaltura-server` com esses repositórios configurados
-- **THEN** o apt resolve todas as dependências sem erro
+### Requirement: Package quality
+Every built `.deb` SHALL install on Ubuntu 24.04 without unmet dependencies, using only these repositories:
+- the distro repositories (main, universe and multiverse);
+- the `ondrej/php` PPA;
+- the Elastic 7.x apt repository (version 7.17);
+- the local repository.
+
+Installing the set SHALL NOT pull any PHP version other than 7.4.
+
+#### Scenario: Dependency resolution
+- **WHEN** `apt-get install --simulate kaltura-server` runs with those repositories configured
+- **THEN** apt resolves every dependency without errors
+- **AND** no `php8.*` package is selected
