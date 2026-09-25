@@ -1,0 +1,23 @@
+import hashlib,json,tarfile
+from pathlib import Path
+archive=Path('/tmp/kaltura-php83-audit/release/kaltura-server-noble-repo.tar.gz')
+expected='91629580441f6a896ebf9e51f0256532221715bee57a3e5a64c66ff0c4e3127b'
+actual=hashlib.sha256(archive.read_bytes()).hexdigest();assert actual==expected,'baseline archive drift'
+with tarfile.open(archive,'r:gz') as t:
+ names=t.getnames();assert len(names)==len(set(names)),'duplicate tar member'
+ assert t.getmember('./SHA256SUMS').isfile(),'non-regular checksum manifest'
+ sums=t.extractfile('./SHA256SUMS').read().decode()
+ expected_members={name.lstrip('*'):h for h,name in (line.split(maxsplit=1) for line in sums.splitlines() if line.strip())}
+ packages={m.name.removeprefix('./'):m for m in t.getmembers() if m.name.endswith('.deb')}
+ assert packages,'no baseline packages'
+ assert {n.removeprefix('./') for n in expected_members}==set(packages),'checksum/package set mismatch'
+ results=[]
+ for name,member in packages.items():
+  assert member.isfile(),'non-regular package'
+  want=expected_members.get(name,expected_members.get('./'+name));assert want,'unlisted package '+name
+  h=hashlib.sha256()
+  with t.extractfile(member) as f:
+   for b in iter(lambda:f.read(1024*1024),b''):h.update(b)
+  assert h.hexdigest()==want,'package drift '+name
+  results.append({'file':name,'sha256':h.hexdigest()})
+ print(json.dumps({'result':'PASS','archive_sha256':actual,'verified_packages':results,'package_count':len(results),'provenance':'local previously pinned release checksum, not fresh signature/network verification','extraction_or_package_hooks':False},indent=2))

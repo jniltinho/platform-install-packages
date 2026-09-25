@@ -1,0 +1,32 @@
+Executei o T0-02 localmente, só com leitura. Os dois artefatos conferem com a referência registrada.
+
+**Relatório T0-02 (EXECUTADO, só a identidade do baseline e da origem)**
+
+- **Executor:** Claude CLI (Opus 5.5). **Revisor:** nenhum, então isto ainda não é revisão independente.
+- **Cwd:** `/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83`, branch `proposal/migrate-kaltura-php83`.
+
+**Comandos e exit status**
+1. `sha256sum /tmp/kaltura-php83-audit/Rigel-18.20.0.zip /tmp/kaltura-php83-audit/release/kaltura-server-noble-repo.tar.gz` terminou com exit 0.
+2. `cat /tmp/kaltura-php83-audit/release/SHA256SUMS` terminou com exit 0.
+3. `grep -n -i -E 'sha256|upstream|zip|version' patches/php83/manifest.json` terminou com exit 0.
+4. `tar -tzf …noble-repo.tar.gz > /tmp/t0-02-members.txt` terminou com exit 0. Só listou os membros, sem extrair nada.
+5. `tar -xzOf …noble-repo.tar.gz ./SHA256SUMS | grep …` terminou com exit 0. O arquivo foi lido direto no stdout, nada foi gravado em disco e nenhum hook de pacote rodou.
+
+**Hashes obtidos e comparação**
+
+| Artefato | sha256 calculado | Referência | Resultado |
+|---|---|---|---|
+| `Rigel-18.20.0.zip` | `58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28` | `upstream_sha256` do `manifest.json` (linha 2), com `upstream_root` = `server-Rigel-18.20.0` | **Igual** |
+| `kaltura-server-noble-repo.tar.gz` (177769175 bytes) | `91629580441f6a896ebf9e51f0256532221715bee57a3e5a64c66ff0c4e3127b` | linha correspondente em `release/SHA256SUMS` | **Igual** |
+
+**Identidade embutida no tarball noble:** são 20 membros, dos quais 17 são `.deb`, mais `SHA256SUMS` e `Packages.gz`. Os pacotes principais são `kaltura-base`, `kaltura-server`, `kaltura-front`, `kaltura-batch` e `kaltura-db`, todos na versão `18.20.0-1_all`. Pelo `SHA256SUMS` interno:
+- `kaltura-base_18.20.0-1_all.deb`: `985aefac…4cfe`
+- `kaltura-server_18.20.0-1_all.deb`: `e4ac1cdb…e214`
+
+Não recalculei os hashes dos `.deb`, porque para isso teria que extraí-los.
+
+**Limitações**
+- O `SHA256SUMS` local é uma cópia histórica, com mtime de 25/09 08:31. Não verifiquei de novo na origem da release, porque não usei rede. Ele também lista os tarballs el9 e ubuntu-26.04, que não estão presentes e não foram conferidos.
+- O manifest cobre três patches. Este caso não confere os hashes antes e depois de cada patch, nem prova que o inventário e a seleção de patches estão completos.
+- Isto confirma só a identidade dos artefatos. Não é aceite da aplicação nem da release.
+- Criei um arquivo fora do repositório, `/tmp/t0-02-members.txt`, com a lista de membros do tar. Não mexi no git, não usei VMs nem MCP e não alterei nenhum arquivo do repositório.

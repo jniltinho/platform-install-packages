@@ -1,0 +1,40 @@
+# Revisão documental T0-02/T0-03
+
+**Resultado: sem blockers de conteúdo.** Há três condições de registro que precisam ser cumpridas antes de marcar os checkboxes.
+
+## Mapeamento dos 24 parents
+
+- Todos os 24 estão presentes: 1.1–1.7, 2.1–2.6, 3.1–3.6 e 4.1–4.5.
+- Conferi todos os casos T0-01 a T6-05 contra os parents declarados em `tasks.md`. A correspondência é exata nos dois sentidos, sem parent faltando ou sobrando.
+- A exclusão de T0-03 das linhas é explícita e correta.
+- O ledger tem 19 registros (3 selecionados, 15 deferred e 1 rejected), igual à soma da tabela de disposição (3+1+1+3+3+8). Os hashes estão fixados e `promotion: false`.
+- A 80 testes corresponde à soma de 68 + 12, o que é consistente.
+
+## Overclaims (menores, não bloqueantes)
+
+1. "The tool audits **all** metadata formats": trocar por "all metadata formats present in this repository".
+2. "Seven Symfony repairs": `UrlHelper` e `Spyc` estão agrupados sob o rótulo Symfony bootstrap. Sugiro "seven bootstrap-path repairs".
+3. Não encontrei overclaims de aceitação. Proveniência do baseline, escopo do exp2 ("not a new build"), ressalva sobre sandbox, contagens estáticas e limites de 1.1/1.6 estão todos delimitados.
+
+## Fechamento de 5.2 e 5.3
+
+**5.2 (T0-02): pode fechar de forma estreita.**
+- Execução: Cursor (19 patches e arquivo verificados).
+- Verificação: Claude, por reexecução independente de patch, raw tree e baseline.
+- Não exige promoção.
+
+**5.3 (T0-03): pode fechar de forma estreita** se:
+- o Grok for registrado como FAILED/NOT_EXECUTED (max-turn, exit 1), separado do resultado do fallback OpenCode Muse Spark;
+- o registro mostrar que o **Cursor verificou a tabela corrigida**, e não só o rascunho. O caso atribui explicitamente essa verificação ao Cursor. Pelo texto recebido, não sei se o retry em Agent mode foi desse verificador ou do de T0-02.
+
+**Condições comuns:**
+1. Congelar a identidade da fonte. Os artefatos ainda estão untracked, então o registro precisa de commit ou hashes de ferramenta, testes, evidência e matriz (exigência do AGENTS.md).
+2. Atualizar o parágrafo "Detailed-case execution evidence" em `tasks.md`, que ainda diz "T0-02 / 5.2 has only partial three-patch/ZIP hash evidence".
+3. Manter os 24 parents desmarcados.
+
+## Limitações remanescentes
+
+- Esta revisão é só documental: não verifiquei a existência dos arquivos citados, os hashes nem as saídas.
+- Fechar 5.2 e 5.3 não fecha 1.1 nem 1.6, nem nenhum outro parent.
+- Continuam abertos: auditoria de dependências/licenças/entrypoints, classificação estática, paridade do Registry, candidato integrado, providers em três distros, workloads, desempenho, upgrade/recovery e os release gates.
+- Uma revisão não é evidência de execução, e isto não é aceitação da aplicação.

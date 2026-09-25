@@ -1,0 +1,25 @@
+import hashlib, json, stat, zipfile
+from pathlib import Path, PurePosixPath
+archive=Path('/tmp/kaltura-php83-audit/Rigel-18.20.0.zip')
+root=Path('/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/server-Rigel-18.20.0').resolve()
+expected='58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28'
+actual=hashlib.sha256(archive.read_bytes()).hexdigest()
+assert actual==expected,'upstream archive mismatch'
+files={}; names=set()
+with zipfile.ZipFile(archive) as z:
+ for info in z.infolist():
+  assert info.filename not in names,'duplicate ZIP entry'
+  names.add(info.filename)
+  p=PurePosixPath(info.filename)
+  assert not p.is_absolute() and '..' not in p.parts,'unsafe member'
+  assert p.parts[0]=='server-Rigel-18.20.0','unexpected root'
+  if info.is_dir():continue
+  assert not stat.S_ISLNK(info.external_attr>>16),'symlink in archive'
+  relative=Path(*p.parts[1:]); path=root/relative
+  assert path.is_file() and not path.is_symlink() and path.resolve().is_relative_to(root),'missing/unsafe source'
+  before=hashlib.sha256(z.read(info)).hexdigest()
+  assert hashlib.sha256(path.read_bytes()).hexdigest()==before,str(relative)+' source drift'
+  files[str(relative)]=before
+actual_files={str(p.relative_to(root)) for p in root.rglob('*') if p.is_file() or p.is_symlink()}
+assert actual_files==set(files),'extra or missing tree files'
+print(json.dumps({'archive_sha256':actual,'archive_entries':len(names),'verified_files':len(files),'missing_or_extra_files':0,'raw_tree_matches_original_archive':True,'graph_view_not_used':True,'files_sha256':files},indent=2))

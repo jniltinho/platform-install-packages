@@ -1,0 +1,18 @@
+**Sem blockers** para fechar os casos estreitos **5.2 (T0-02)** e **5.3 (T0-03)**. Os 24 pais permanecem abertos; isto não é aceitação da aplicação.
+
+### Mapeamento dos 24 pais
+A matriz cobre **1.1–1.7, 2.1–2.6, 3.1–3.6, 4.1–4.5**, cada um com ≥1 caso detalhado (T0-03 excluído da coluna de execução, como cabe). Nenhum pai órfão.
+
+### T0-02 / 5.2
+Inventário coerente com o ledger: **19 patches** (3 exp2 / 16 held), **Registry-properties rejected**, **Registry-cast deferred** (`original_metadata_status: unknown` sem reescrever metadata), sem promoção. Escopo limitado a identidade/disposição; **não fecha 1.1 nem 1.6**. Execuções relatadas (Cursor + Claude, harness 80/12 novos) batem com o tom do doc. Caveats corretos: baseline Noble local pinned (não assinatura publisher), só esse bundle, não sandbox hostil.
+
+### T0-03 / 5.3
+Reconciliação evidência↔pais, com “o que falta” explícito e correção do rascunho OpenCode (ausência de cobertura plena ≠ ausência de testes). Fallback Muse Spark atribuído após Grok `exit 1` — ok. **Fechar 5.3 ≠ fechar os 24**.
+
+### Overclaims
+Nenhum material nos docs novos. Evitam promoção, aceitação integrada e “todos os held devem entrar”. Limitação residual de documentação: o rodapé de `tasks.md` ainda diz 5.2 “parcial/unchecked” — desatualizado face à evidência narrada; sincronizar ao marcar checkboxes, sem alterar gates.
+
+### Casos e limitações restantes
+- **Fecháveis agora:** 5.2, 5.3 (casos estreitos).
+- **Pais/gates intactos:** T0-04+, providers, go/no-go, packaging/CI, aceitação distro, media/perf, upgrade/recovery, release/publication; `.20` separado.
+- **Não fechar:** nenhum checkbox 1.x–4.x; release gates inalterados.

@@ -1,0 +1,77 @@
+{
+  "result": "PASS",
+  "archive_sha256": "91629580441f6a896ebf9e51f0256532221715bee57a3e5a64c66ff0c4e3127b",
+  "verified_packages": [
+    {
+      "file": "kaltura-postinst_1.0.34-1_all.deb",
+      "sha256": "bbb6e455f4736db8102be51c6cd433486dcbeab0bc159ae8641750c08fd8945b"
+    },
+    {
+      "file": "kaltura-ffmpeg_6.1-1_all.deb",
+      "sha256": "396d2a393400391a3f39747f2f3e802c2e2c7f3d7ef3cf84c58f22d55cfe0dcf"
+    },
+    {
+      "file": "kaltura-base_18.20.0-1_all.deb",
+      "sha256": "985aefac3b349b5b5ab5e28a72ba7727343692f4e697f94342b50ea3e74c4cfe"
+    },
+    {
+      "file": "kaltura-front_18.20.0-1_all.deb",
+      "sha256": "605864d8885980ccc1c38ae4db963304013995666c99e8f04e4388fc9d1a9990"
+    },
+    {
+      "file": "kaltura-html5-studio3_3.18.0-1_all.deb",
+      "sha256": "75cc09f87c50ec4bcb10d2320411919a7920239868cabd3b1ca345ed087aff43"
+    },
+    {
+      "file": "kaltura-ffmpeg-aux_6.1-1_all.deb",
+      "sha256": "0ca4c03e5325f3a2d6c443059915317760b2006d473c3b9faa70886ae89c3e7a"
+    },
+    {
+      "file": "kaltura-server_18.20.0-1_all.deb",
+      "sha256": "e4ac1cdb4c506085965ce92c37aabc235cc7bca79241acc0ccc772e22d6fe214"
+    },
+    {
+      "file": "kaltura-batch_18.20.0-1_all.deb",
+      "sha256": "1cd9b6fdae828dff7932f080c12f5ac34fe159c8d57edf24393ff0faa7b1bd64"
+    },
+    {
+      "file": "kaltura-nginx_1.23.0-1_amd64.deb",
+      "sha256": "79fe482b249abdc949b21acc24f04ab664963845e64ceb3bc373431d2f3303c7"
+    },
+    {
+      "file": "kaltura-html5-analytics_0.3-1_all.deb",
+      "sha256": "271f9713d237143c9089ca186c49cf7fd72cd86498c2e60dcb496cf722e705b0"
+    },
+    {
+      "file": "kaltura-html5-studio_2.2.3-1_all.deb",
+      "sha256": "3edadd17e6b18763850715dd11b0b21b77e76b2bf5f851cbfc6fe1eb17160110"
+    },
+    {
+      "file": "kaltura-html5lib_2.98-1_all.deb",
+      "sha256": "742f6a9de6e414e747de40f1e726ce1043c08f7937e3f82ff765ff0ebddfe3d1"
+    },
+    {
+      "file": "kaltura-elasticsearch_7.17-1_all.deb",
+      "sha256": "2099350d0d5e9db653005d424865437432bfb66f6f7b153dfcdfa251bc3af0df"
+    },
+    {
+      "file": "kaltura-html5lib3_3.8.1-1_all.deb",
+      "sha256": "cc06bb2e835b5a4e941812b5370aee8a0ba35dc8ea7ef8dcee66c6ba622c42ec"
+    },
+    {
+      "file": "kaltura-sphinx_2.2.11-1_all.deb",
+      "sha256": "b55fbe57c6156f213572aa8140dc36f9631e4b2eb1ab62987e043c9a4b0d10a7"
+    },
+    {
+      "file": "kaltura-kmcng_5.17.0-1_all.deb",
+      "sha256": "705938b84b0a08ed3a940953854316f38ca3e3e911e3c8487a95b066e2914ddb"
+    },
+    {
+      "file": "kaltura-db_18.20.0-1_all.deb",
+      "sha256": "c0624d507b2c5ecd9965c877e85ab511060ecd3e0939564fd031908e1bd1a3e2"
+    }
+  ],
+  "package_count": 17,
+  "provenance": "local previously pinned release checksum, not fresh signature/network verification",
+  "extraction_or_package_hooks": false
+}

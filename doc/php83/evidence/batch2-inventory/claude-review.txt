@@ -1,0 +1,50 @@
+## T0-02: revisão independente e execução (Claude CLI)
+
+**Escopo lido:** `audit-patch-inventory.py`, `test_patch_inventory.py`, `patches.json` (evidência), `verify-source-tree.py` e `verify-baseline.py`. Não fiz edições, operações git de escrita, acesso a VM, rede, MCP ou delegação. `git status` ficou igual ao início: os mesmos 3 caminhos untracked.
+
+### Execuções
+
+| Caso | Comando | Exit | Resultado |
+|---|---|---|---|
+| Unit tests | `unittest discover -s tools/php83 -p 'test_*.py'` | 0 | **80 testes, OK** |
+| Patch audit | `audit-patch-inventory.py … --output /tmp/php83-loop-batch2/claude-patches.json` | 0 | PASS: `active: 3`, `held: 16`, `errors: []`, `promotion=false`, `stacking=false` |
+| Source tree | `verify-source-tree.py > claude-source-tree.json` | 0 | ZIP `58d534d0…ab28`, 18027 entradas, 15175 arquivos verificados, 0 faltando ou sobrando |
+| Baseline | `verify-baseline.py > claude-baseline.json` | 0 | PASS, tarball `91629580441f…`, 17 `.deb` conferidos contra `SHA256SUMS` |
+
+### Comparação com a evidência commitável
+
+- Os campos `patch`, `result`, `patch_sha256`, `before_sha256` e `after_sha256` das 19 entradas batem com `doc/php83/evidence/batch2-inventory/patches.json`. Os `alternative_groups` também batem.
+- Os pacotes verificados batem com `baseline-packages.json`.
+- O `before_sha256` de todos os 19 patches bate com o hash do arquivo correspondente na árvore verificada contra o ZIP.
+- Há 2 grupos de alternativas: `DebugPDO.php` (v1, v2 e v3) e `Registry.php` (cast e properties). Todos estão com `stacked=false`, e cada patch foi aplicado sozinho sobre o original.
+- Os 3 patches ativos são só de JSON (Services_JSON, Zend Encoder e Zend Decoder), com status "experimental; not full PHP 8.3 compatibility".
+
+### Revisão de segurança e escopo
+
+**Não encontrei bloqueios.**
+- O auditor usa a árvore-fonte só para leitura e aplica cada patch numa cópia de um único arquivo em um tempdir.
+- Os cabeçalhos do patch precisam ser exatamente `a/<path>` e `b/<path>`. O `patch` roda com `--fuzz=0 --forward` e timeout de 30s, e a aplicação é rejeitada se aparecer offset, fuzz, reversed ou "previously applied", ou se surgir algum arquivo extra.
+- `confined()` bloqueia `..`, caminhos absolutos, `\` e fuga por symlink.
+- `--output` não pode apontar para a fonte nem para `patches/php83`.
+- O auditor não promove patches, não empilha alternativas e não mistura held com active.
+- Os dois scripts de verificação só leem os arquivos. O conteúdo fica em memória via `zipfile.read` e `tarfile.extractfile`; não há `extract`, não roda hooks de pacote e só escrevem pelo redirecionamento do shell.
+
+### Limitações e observações (nenhuma bloqueia)
+
+1. **O discover rodou 80 testes, mas `test_patch_inventory.py` tem só cerca de 12.** Os outros vêm de arquivos `test_*.py` em `tools/php83` que eu não estava autorizado a ler. Não revisei esses testes; só os executei.
+2. **`Registry-cast.patch` está com status `unknown`.** Falta status na metadata. Não afeta a integridade, mas é uma lacuna de documentação.
+3. **Em `verify-baseline.py`:**
+   - não verifica se `./SHA256SUMS` é um arquivo regular;
+   - não exige que toda linha do `SHA256SUMS` corresponda a um `.deb` presente, então só confere no sentido pacote → soma;
+   - a proveniência é um checksum local fixado, sem verificação nova de assinatura nem pela rede. O próprio script declara isso.
+4. **O guard de `--output` não protege outros caminhos do repositório,** como `doc/php83/evidence/`. Isso é aceitável porque só o operador escolhe o destino.
+5. **O filtro por texto de saída do `patch`** (`offset|fuzz|…`) depende do formato em inglês com `LC_ALL=C`. Isso está correto aqui, mas é frágil se o GNU patch mudar as mensagens.
+6. **A árvore-fonte e o ZIP são locais** (`/tmp/kaltura-php83-audit/`). Não baixei o ZIP de novo nem conferi a proveniência upstream nesta execução.
+
+### O que isso não prova
+
+- **Semântica:** o PASS mostra só que as identidades de hash são íntegras e que cada patch aplica de forma exata e isolada. Não mostra que os patches são corretos em PHP 8.3, que há paridade com a baseline 7.4, nem que a aplicação é aceita.
+- **Promoção:** os 16 held continuam held. A auditoria não pede promoção, e um PASS aqui não justifica promover nenhum.
+- **Release e cutover:** o gate de release, o cutover e a validação em runtime ou VM não foram exercitados.
+
+**Executor:** Claude CLI. **Revisor independente pendente:** Grok (ou o fallback OpenCode) ou Cursor, conforme a rotação.

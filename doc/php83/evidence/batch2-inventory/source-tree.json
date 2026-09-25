@@ -1,0 +1,11 @@
+{
+  "archive_sha256": "58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28",
+  "archive_entries": 18027,
+  "verified_files": 15175,
+  "missing_or_extra_files": 0,
+  "raw_tree_matches_original_archive": true,
+  "graph_view_not_used": true,
+  "full_report_sha256": "28f05c413775ef4fc7d4c2c08fb7be89c65212b38209e7b243d59cb6042465ff",
+  "command": "PYTHONDONTWRITEBYTECODE=1 python3 /tmp/php83-loop-batch2/verify-source-tree.py",
+  "exit_code": 0
+}

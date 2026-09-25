@@ -1,0 +1,31 @@
+Vou executar exatamente o verificador T0-02 e reportar saída, exit e resumo.O comando saiu 0; lendo o relatório JSON gerado.**T0-02 archive verification — PASS**
+
+**Command**
+```bash
+PYTHONDONTWRITEBYTECODE=1 python3 tools/php83/verify-experimental-zip.py \
+  /tmp/kaltura-php83-audit/Rigel-18.20.0.zip \
+  .../exp2/Rigel-18.20.0-php83-experimental.exp2.zip \
+  /tmp/php83-exp2-reviewed-b/Rigel-18.20.0-php83-experimental.exp2.zip \
+  patches/php83/manifest.json \
+  /tmp/php83-loop-batch2/cursor-archive.json
+```
+
+**Exit:** `0`
+
+**ZIP identity (sha256):** `99233ac6638f02072b3394159340edd1e2388b243bafadca3fe33b6bbafa97a0`  
+(candidate = repeat; `two_builds_identical: true`)
+
+**Summary** (`/tmp/php83-loop-batch2/cursor-archive.json`)
+| Metric | Value |
+|---|---|
+| Original entries | 18027 |
+| Unchanged | 18024 (`all_other_original_entry_bytes_identical: true`) |
+| Changed | 3 |
+| Missing | 0 |
+| Added metadata | 5 |
+
+**Changed:** `Services_JSON.class.php`, Zend `Decoder.php`, Zend `Encoder.php`  
+**Metadata:** `.php83-experimental/` — 3 patches + `README.txt` + `manifest.json`  
+Comments preserved; policy: sorted entries, fixed timestamps, normalized modes.
+
+Validates **exp2 JSON-only** archive only — not full candidate/release.

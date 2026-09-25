@@ -1,0 +1,3 @@
+Estou em Ask mode: não posso executar o verifier porque ele escreve o relatório em `/tmp/php83-loop-batch2/cursor-archive.json`.
+
+Para rodar exatamente esse comando e devolver exit + summary (unchanged/changed/missing, metadata, ZIP identity), mude para **Agent mode** e repita o pedido T0-02.

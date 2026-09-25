@@ -7,7 +7,7 @@ and [execution contract](../../openspec/changes/migrate-kaltura-php83/design.md)
 ## Counts and boundaries
 
 - Original acceptance obligations: **0 of 24 complete**.
-- Detailed cases: **1 of 27 complete**, **1 partial**, **25 not yet executed under
+- Detailed cases: **3 of 27 complete**, **24 not yet executed under
   the new case contract**. Older evidence is retained; NOT_RUN here does not mean
   no historical investigation exists.
 - T0-01: **68 distinct local Python tests passed**, independently executed by
@@ -16,7 +16,22 @@ and [execution contract](../../openspec/changes/migrate-kaltura-php83/design.md)
 - No new VM/application test, release, package integration or `.20` mutation in
   this batch. No release ETA or application completion percentage is inferred.
 
-## First batch
+## Latest batch: inventory and coverage
+
+- **T0-02 / 5.2 PASS:** all 19 current patches (3 active / 16 held), 15,175 raw
+  source files, 17 Noble baseline DEBs and the exp2 archive verified. Explicit
+  selected/deferred/rejected ledger; no patch promotion. Cursor executed and
+  Claude independently reran the audits.
+- **T0-03 / 5.3 PASS:** all 24 parent tasks reconciled to case IDs, bounded
+  evidence and remaining gaps. OpenCode Muse Spark executed the audit after
+  Grok hit its turn limit; Cursor verified the corrected matrix.
+- New offline auditor has 12 unit tests; **80 local tests** pass in Codex and
+  Claude runs. This is not a new PHP/application runtime acceptance result.
+
+[Inventory](patch-inventory.md), [coverage matrix](coverage-matrix.md),
+[batch results and identities](evidence/batch2-inventory/result.json).
+
+## First batch (historical, before the completed audit above)
 
 | Case | State | Executor / independent review | Evidence / remaining work |
 |---|---|---|---|
@@ -67,7 +82,10 @@ AGENTS.md records the operator-approved fallback from slow/failed Grok attempts
 to OpenCode with Zen Muse Spark 1.3 Free. Local model discovery returned
 `opencode/muse-spark-1.3-contributor-free`. Grok completed execution and review
 within their 120-second deadlines, so **the fallback was not invoked**.
-Availability in a model list is not proof of authentication or execution success.
+In the second batch, Grok exited 1 at its turn limit. OpenCode with that model
+then executed the local coverage audit successfully (exit 0); its result is
+attributed to OpenCode and independently reviewed by Cursor. Model discovery
+alone was not counted as execution success.
 If needed, record the stopped/failed Grok attempt separately and report the actual
 OpenCode executor and model, never attribute its result to Grok.
 
@@ -78,10 +96,11 @@ static/reachable-path triage, a reviewed integrated candidate, the two additiona
 provider/distros, full browser/media/job regression, benchmark acceptance and
 upgrade/recovery rehearsal. Small passing probes do not close these gaps.
 
-1. Finish **T0-02**: complete immutable source/baseline/active/held identity and
-   explicit selected/rejected/deferred inventory without promoting patches.
-2. Execute **T0-03**: reconcile all 24 original tasks against actual evidence and
-   uncovered scope, independently reviewed by Cursor.
-3. Execute **T0-04**: prioritize remaining dependency/license/entrypoint and static
-   finding classifications; retain unknown reachability instead of declaring it
-   unused. Lab mutations remain subject to ownership and existing approval gates.
+1. Execute **T0-04**: complete dependency/license/active-entrypoint and static
+   finding classification, retaining unknown reachability rather than assuming
+   unused code.
+2. Execute **T4-01** provider-resolution portion in disposable environments:
+   establish the remaining Ubuntu 26.04 / Rocky 9 provider and extension facts
+   before production integration.
+3. Execute **T0-05**: finish comparable baseline fixture/run evidence and the
+   frozen workload. VM ownership and existing isolation/approval gates apply.

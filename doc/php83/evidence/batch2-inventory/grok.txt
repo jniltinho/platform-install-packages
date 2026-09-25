@@ -1,0 +1,1 @@
+I'll audit evidence coverage from the task list and the PHP 8.3 docs only, read-only, and map each of the 24 tasks to document paths or a remaining gap.The task list names 24 original items plus later detailed cases. I'll read the status docs and skim the other PHP 8.3 notes so each row cites only what those documents actually record.

@@ -1,0 +1,15 @@
+Vou ler a ferramenta congelada e em seguida executar o inventário exatamente com o comando indicado.Comando passou; vou extrair do relatório status `unknown` e grupos alternativos.## T0-02 — inventário de patches (integridade/aplicação)
+
+**Comando:** `PYTHONDONTWRITEBYTECODE=1 python3 tools/php83/audit-patch-inventory.py --source-root …/server-Rigel-18.20.0 --output /tmp/php83-loop-batch2/cursor-patches.json`  
+**Exit:** `0` · **result:** `PASS` · **errors:** `[]`
+
+**Contagens:** active **3**, held **16** (19 entradas). Aplicação isolada: **19/19 PASS** (SHA do patch, `before`/`after` e `patch --fuzz=0`).
+
+**Status original `unknown`:** 1  
+- `patches/php83/held/Registry-cast.patch` → `vendor/ZendFramework/library/Zend/Registry.php` (held, apply PASS)
+
+**Grupos alternativos** (`stacked: false`): 2  
+1. `Zend/Registry.php` — `Registry-cast.patch`, `Registry-properties.patch`  
+2. `propel/util/DebugPDO.php` — `DebugPDO-query-v2.patch`, `DebugPDO-query-v3.patch`, `DebugPDO-query.patch`
+
+**Limitações:** só identidade + aplicação isolada em cópia temp; `promotion=false`, `stacking=false` — não combina held, não avalia semântica PHP 8.3 nem promoção. Escrita só no JSON de saída. Fontes/repo/patches intocados. Cobertura semântica fica para a tabela à parte.

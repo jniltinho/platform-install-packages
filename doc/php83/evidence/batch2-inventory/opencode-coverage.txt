@@ -1,0 +1,37 @@
+Read-only coverage audit — mapping all 24 tasks to on-disk evidence.
+
+# T0-03 Evidence Coverage Audit — 24 Original Tasks
+
+Scope: local read-only. Sources: `openspec/changes/migrate-kaltura-php83/tasks.md`, `doc/php83/test-status.md`, `doc/php83/*.md` + `doc/php83/evidence/*` listings. Existing docs are PARTIAL historical evidence only. 0/24 original tasks complete. No runtime acceptance inferred, no tasks closed.
+
+Method: `ls`, `cat`, `head` only. No edits, no VM/network/MCP/git mutation, no delegation.
+
+| Orig | Detailed cases | Existing evidence DOCUMENTS or NONE | Remaining gap — scope-specific |
+|---|---|---|---|
+| 1.1 inventory | T0-02, T0-03, T0-04 | `doc/php83/feasibility-status.md`, `doc/php83/source-graph.md`, `evidence/source-audit/archive-inventory.json`, `evidence/source-audit/source-to-package-map.json`, `evidence/batch2-inventory/source-tree.json` | Licenses, active vs historical overlays, generated clients, web/CLI/cron/install/plugin entrypoints, revision attribution incomplete |
+| 1.2 7.4 baseline | T0-03, T0-05, T5-01 | `doc/php83/feasibility-status.md`, `doc/php83/test-status.md`, `evidence/noble-baseline/smoke-http.txt`, `evidence/noble-baseline/php-runtime.txt` | Frozen Decision-7 protocol, fixture hashes, repetition counts, timings, full API/UI/upload/worker/playback with runtime/extension reports missing; only `.74` HTTP smoke exists |
+| 1.3 syntax/static | T0-03, T0-04, T1-04 | `doc/php83/feasibility-status.md`, `evidence/source-audit/syntax-findings.json`, `static-findings.csv`, `php74-vs-php83-compile.json`, `packaged-static-*` | Every finding (1256+645 raw, 2025+785 packaged; 58/79 compiler rejects) unclassified; manual analyzer-blind coverage and entrypoint reachability open |
+| 1.4 provider matrix | T0-03, T4-01 | `doc/php83/feasibility-status.md`, `evidence/noble-runtime/*`, `evidence/providers/ubuntu2604-sury.txt`, `el9-remi.txt`, `el9-native.txt`, `ubuntu2604-native.txt` | Clean-env signed suite-compatible resolution + loaded CLI/web modules for all 3 distros incomplete; mandatory-extension/ABI coverage, no-mix proof, 26.04-native/EL9-AppStream blockers unresolved |
+| 1.5 go/no-go | T0-03, T0-06 | NONE | No feasibility report, bounded repairs, upstream refs, blockers, operator approval; explicitly open per `feasibility-status.md`, `test-status.md` |
+| 1.6 experimental patches/ZIP | T0-01*, T0-02, T0-03, T1-01 | `doc/php83/experimental-zip.md`, `doc/php83/debug-pdo-experiment.md`, `doc/php83/test-status.md`, `evidence/experimental-zip/exp2/*`, `evidence/batch1-local/*` | Only 3-file exp2 `99233ac6…` with 8 JSON compars; full per-repair 7.4/8.3 before/after, strict-apply, double-build hash, complete patch/file/ZIP identities missing. *T0-01 is harness-only |
+| 1.7 dependency upgrades | T0-03, T0-06 | NONE | No pinned old/new versions, support/license evidence, benefit/regression/revert tests, per-component select/defer record; `feasibility-status.md`: none selected |
+| 2.1 core/API fixes | T0-03, T1-01, T1-02, T1-03 | `doc/php83/registry-investigation.md`, `doc/php83/symfony-bootstrap.md`, `doc/php83/doc-comment-property.md`, `doc/php83/doc-comment-consumer.md`, `doc/php83/api-mysql.md` | No reviewed patch series; held Registry/DebugPDO/Symfony/doc-comment candidates unpromoted, per-behavior focused 8.3 tests + fuzz-free apply unverified |
+| 2.2 worker/CLI/libs/clients | T0-03, T1-01, T1-02, T1-04, T3-02 | Same held docs as 2.1 + `doc/php83/runtime-triage.md`, `doc/php83/mysql-type-experiment.md`, `doc/php83/propel-init-hydration.md` | No attribution/hashes for every dep change; worker/CLI/cron/install/plugin + bundled/generated-client execution, failure handling, inactive-path exclusions unverified; no unpinned-upgrade guard proof |
+| 2.3 shared patch step | T0-03, T4-02, T4-06 | NONE | No common DEB/RPM patch step; identical patched-source identities across ZIP + 3 payloads and deliberate drift-fails-build unverified |
+| 2.4 Ubuntu deps/config | T0-03, T4-03, T4-04 | NONE | No 8.3 dependency/config change; clean resolution, CLI/Apache module match, config-preserving upgrade on 24.04+26.04 untested |
+| 2.5 EL9 deps/FPM | T0-03, T4-05 | NONE | No 8.3 stream/deps/pool/service change; version-family selection, mandatory extensions, FPM/CLI coherence, no old-runtime workers unverified |
+| 2.6 CI guards | T0-03, T4-06 | NONE | No positive exact-family/extension assertions; fixtures rejecting 7.4/8.2/8.4/missing modules/misleading RPM strings and accepting 8.3 untested |
+| 3.1 Noble 24.04 acceptance | T0-03, T4-03 | `evidence/noble-baseline/*` for `.74` only; candidate: NONE | Candidate fresh install, repeated provisioning, reboot, data/secret preservation, zero sanity failures with web/CLI 8.3 evidence missing |
+| 3.2 26.04 acceptance | T0-03, T4-04 | Provider probe only (see 1.4); acceptance: NONE | Full install/provision/reboot + provider/module evidence on 26.04 with no wrong-minor/cross-suite fallback missing |
+| 3.3 Rocky 9 acceptance | T0-03, T2-03, T4-05 | Provider probe only; acceptance: NONE | FPM request-body, worker processing, module verification on Rocky 9 missing; simulation-only not accepted |
+| 3.4 API/auth/UI/eSearch | T0-03, T1-02, T1-03, T2-01, T2-02, T2-03 | `doc/php83/api-bootstrap.md`, `api-mysql.md`, `api-session.md`, `api-auth-dispatch.md`, `api-http.md`, `api-web.md`, `analytics-partner-probe.md` | Synthetic CLI/loopback/cli-server/Apache-mod_php only; full authz/KS-skew/privilege/crypto fixtures, eSearch, Admin/KMC browser, log-triage across matrix missing |
+| 3.5 upload/delivery | T0-03, T2-02, T3-01, T3-02 | `.74` smoke only (`evidence/noble-baseline/smoke-http.txt`); candidate: NONE | Frozen 10s-360p25 + 60s-1080p60 via HTTP/trusted-HTTPS, READY/flavors/thumbs/HLS-manifest/segments/206/Range, Go-console E2E, empty/corrupt + retry/cleanup missing |
+| 3.6 perf/comparison | T0-03, T5-01 | NONE | No Decision-7 repeated workload (2 warmup+5 measured, median/p95/transcode/queue/dispersion), no 20% gate, no exercised-path warning triage; compat vs upgrade not separated |
+| 4.1 upgrade rehearsal | T0-03, T1-03, T6-01 | NONE | No 7.4→8.3 rehearsal on synthetic clone; accounts/secrets/media/config/jobs preservation without schema/engine change unverified |
+| 4.2 recovery rehearsal | T0-03, T6-02 | NONE | No failed-cutover restore of matched app/runtime/config/DB/media, no baseline login/playback, no maintenance/write-freeze boundary doc |
+| 4.3 docs/limits | T0-03, T6-03 | NONE as evidence matrix | No migration/provider/rollback/limitations doc with verified commands/links; PHP 8.3 security-support re-check (2027-12-31 per design) not recorded in release doc |
+| 4.4 release approval | T0-03, T6-04 | NONE | No distro/runtime/recovery-gate audit, no versioned DEB/RPM + checksums, no operator approval; specs/archive sync and `.20` cutover explicitly gated |
+| 4.5 publish ZIP+bundles | T0-03, T6-05 | `doc/php83/experimental-zip.md` = lab-only exp2, NOT releasable | No accepted versioned ZIP+manifest+instructions in same release as DEB/RPM bundles, no SHA256SUMS download verification, no preservation proof; exp2 must never be relabeled |
+
+Unknowns retained: full reachable-path triage; integrated reviewed candidate; complete license/overlay/client/entrypoint map; frozen baseline protocol + timings; 2 additional distros' app acceptance; browser/media/job regression; benchmark gate; upgrade/recovery rehearsal; go/no-go and release approvals.
+
