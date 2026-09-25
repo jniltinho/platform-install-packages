@@ -1,0 +1,8 @@
+malformed-empty-exception-dict ACCEPTED
+exception-extra-key REJECTED ValueError exception fields
+deny-wrapper-event REJECTED ValueError wrapper reached under blocking policy
+legacy-diag-marker REJECTED ValueError external marker disclosed under blocking policy
+empty-deprecation-message REJECTED ValueError policy deprecation
+deny-marker-in-loader-systemid ACCEPTED
+bool-severity REJECTED ValueError diagnostic integer
+obfuscated-marker-in-value-legacy ACCEPTED

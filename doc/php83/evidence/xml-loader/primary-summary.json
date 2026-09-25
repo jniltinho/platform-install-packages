@@ -1,0 +1,2562 @@
+{
+  "status": "PASS_BOUNDED_NATIVE_POLICY_NOT_APPLICATION",
+  "matrices": {
+    "74": [
+      {
+        "policy": "enabled",
+        "parser": "dom",
+        "exit": 0,
+        "php": "7.4.33",
+        "libxml_loaded": "20914",
+        "rows": 42,
+        "marker_cases": [
+          {
+            "document": "file",
+            "flag": "noent",
+            "options": 2
+          },
+          {
+            "document": "file",
+            "flag": "dtdvalid",
+            "options": 16
+          },
+          {
+            "document": "file",
+            "flag": "noent_dtdload",
+            "options": 6
+          },
+          {
+            "document": "file",
+            "flag": "noent_dtdload_nonet",
+            "options": 2054
+          },
+          {
+            "document": "wrapper",
+            "flag": "noent",
+            "options": 2
+          },
+          {
+            "document": "wrapper",
+            "flag": "dtdvalid",
+            "options": 16
+          },
+          {
+            "document": "wrapper",
+            "flag": "noent_dtdload",
+            "options": 6
+          },
+          {
+            "document": "wrapper",
+            "flag": "noent_dtdload_nonet",
+            "options": 2054
+          },
+          {
+            "document": "dtd",
+            "flag": "dtdload",
+            "options": 4
+          },
+          {
+            "document": "dtd",
+            "flag": "dtdvalid",
+            "options": 16
+          },
+          {
+            "document": "dtd",
+            "flag": "noent_dtdload",
+            "options": 6
+          },
+          {
+            "document": "dtd",
+            "flag": "noent_dtdload_nonet",
+            "options": 2054
+          }
+        ],
+        "diagnostic_events": 20,
+        "policy_diagnostics": []
+      },
+      {
+        "policy": "enabled",
+        "parser": "simplexml",
+        "exit": 0,
+        "php": "7.4.33",
+        "libxml_loaded": "20914",
+        "rows": 42,
+        "marker_cases": [
+          {
+            "document": "file",
+            "flag": "noent",
+            "options": 2
+          },
+          {
+            "document": "file",
+            "flag": "dtdvalid",
+            "options": 16
+          },
+          {
+            "document": "file",
+            "flag": "noent_dtdload",
+            "options": 6
+          },
+          {
+            "document": "file",
+            "flag": "noent_dtdload_nonet",
+            "options": 2054
+          },
+          {
+            "document": "wrapper",
+            "flag": "noent",
+            "options": 2
+          },
+          {
+            "document": "wrapper",
+            "flag": "dtdvalid",
+            "options": 16
+          },
+          {
+            "document": "wrapper",
+            "flag": "noent_dtdload",
+            "options": 6
+          },
+          {
+            "document": "wrapper",
+            "flag": "noent_dtdload_nonet",
+            "options": 2054
+          },
+          {
+            "document": "dtd",
+            "flag": "dtdload",
+            "options": 4
+          },
+          {
+            "document": "dtd",
+            "flag": "dtdvalid",
+            "options": 16
+          },
+          {
+            "document": "dtd",
+            "flag": "noent_dtdload",
+            "options": 6
+          },
+          {
+            "document": "dtd",
+            "flag": "noent_dtdload_nonet",
+            "options": 2054
+          }
+        ],
+        "diagnostic_events": 66,
+        "policy_diagnostics": []
+      },
+      {
+        "policy": "enabled",
+        "parser": "xmlreader",
+        "exit": 0,
+        "php": "7.4.33",
+        "libxml_loaded": "20914",
+        "rows": 42,
+        "marker_cases": [
+          {
+            "document": "file",
+            "flag": "noent",
+            "options": 2
+          },
+          {
+            "document": "file",
+            "flag": "noent_dtdload",
+            "options": 6
+          },
+          {
+            "document": "file",
+            "flag": "noent_dtdload_nonet",
+            "options": 2054
+          },
+          {
+            "document": "wrapper",
+            "flag": "noent",
+            "options": 2
+          },
+          {
+            "document": "wrapper",
+            "flag": "noent_dtdload",
+            "options": 6
+          },
+          {
+            "document": "wrapper",
+            "flag": "noent_dtdload_nonet",
+            "options": 2054
+          },
+          {
+            "document": "dtd",
+            "flag": "noent_dtdload",
+            "options": 6
+          },
+          {
+            "document": "dtd",
+            "flag": "noent_dtdload_nonet",
+            "options": 2054
+          }
+        ],
+        "diagnostic_events": 54,
+        "policy_diagnostics": []
+      },
+      {
+        "policy": "legacy",
+        "parser": "dom",
+        "exit": 0,
+        "php": "7.4.33",
+        "libxml_loaded": "20914",
+        "rows": 42,
+        "marker_cases": [],
+        "diagnostic_events": 36,
+        "policy_diagnostics": []
+      },
+      {
+        "policy": "legacy",
+        "parser": "simplexml",
+        "exit": 0,
+        "php": "7.4.33",
+        "libxml_loaded": "20914",
+        "rows": 42,
+        "marker_cases": [],
+        "diagnostic_events": 101,
+        "policy_diagnostics": []
+      },
+      {
+        "policy": "legacy",
+        "parser": "xmlreader",
+        "exit": 0,
+        "php": "7.4.33",
+        "libxml_loaded": "20914",
+        "rows": 42,
+        "marker_cases": [],
+        "diagnostic_events": 89,
+        "policy_diagnostics": []
+      },
+      {
+        "policy": "default",
+        "parser": "dom",
+        "exit": 0,
+        "php": "7.4.33",
+        "libxml_loaded": "20914",
+        "rows": 42,
+        "marker_cases": [
+          {
+            "document": "file",
+            "flag": "noent",
+            "options": 2
+          },
+          {
+            "document": "file",
+            "flag": "dtdvalid",
+            "options": 16
+          },
+          {
+            "document": "file",
+            "flag": "noent_dtdload",
+            "options": 6
+          },
+          {
+            "document": "file",
+            "flag": "noent_dtdload_nonet",
+            "options": 2054
+          },
+          {
+            "document": "wrapper",
+            "flag": "noent",
+            "options": 2
+          },
+          {
+            "document": "wrapper",
+            "flag": "dtdvalid",
+            "options": 16
+          },
+          {
+            "document": "wrapper",
+            "flag": "noent_dtdload",
+            "options": 6
+          },
+          {
+            "document": "wrapper",
+            "flag": "noent_dtdload_nonet",
+            "options": 2054
+          },
+          {
+            "document": "dtd",
+            "flag": "dtdload",
+            "options": 4
+          },
+          {
+            "document": "dtd",
+            "flag": "dtdvalid",
+            "options": 16
+          },
+          {
+            "document": "dtd",
+            "flag": "noent_dtdload",
+            "options": 6
+          },
+          {
+            "document": "dtd",
+            "flag": "noent_dtdload_nonet",
+            "options": 2054
+          }
+        ],
+        "diagnostic_events": 20,
+        "policy_diagnostics": []
+      },
+      {
+        "policy": "default",
+        "parser": "simplexml",
+        "exit": 0,
+        "php": "7.4.33",
+        "libxml_loaded": "20914",
+        "rows": 42,
+        "marker_cases": [
+          {
+            "document": "file",
+            "flag": "noent",
+            "options": 2
+          },
+          {
+            "document": "file",
+            "flag": "dtdvalid",
+            "options": 16
+          },
+          {
+            "document": "file",
+            "flag": "noent_dtdload",
+            "options": 6
+          },
+          {
+            "document": "file",
+            "flag": "noent_dtdload_nonet",
+            "options": 2054
+          },
+          {
+            "document": "wrapper",
+            "flag": "noent",
+            "options": 2
+          },
+          {
+            "document": "wrapper",
+            "flag": "dtdvalid",
+            "options": 16
+          },
+          {
+            "document": "wrapper",
+            "flag": "noent_dtdload",
+            "options": 6
+          },
+          {
+            "document": "wrapper",
+            "flag": "noent_dtdload_nonet",
+            "options": 2054
+          },
+          {
+            "document": "dtd",
+            "flag": "dtdload",
+            "options": 4
+          },
+          {
+            "document": "dtd",
+            "flag": "dtdvalid",
+            "options": 16
+          },
+          {
+            "document": "dtd",
+            "flag": "noent_dtdload",
+            "options": 6
+          },
+          {
+            "document": "dtd",
+            "flag": "noent_dtdload_nonet",
+            "options": 2054
+          }
+        ],
+        "diagnostic_events": 66,
+        "policy_diagnostics": []
+      },
+      {
+        "policy": "default",
+        "parser": "xmlreader",
+        "exit": 0,
+        "php": "7.4.33",
+        "libxml_loaded": "20914",
+        "rows": 42,
+        "marker_cases": [
+          {
+            "document": "file",
+            "flag": "noent",
+            "options": 2
+          },
+          {
+            "document": "file",
+            "flag": "noent_dtdload",
+            "options": 6
+          },
+          {
+            "document": "file",
+            "flag": "noent_dtdload_nonet",
+            "options": 2054
+          },
+          {
+            "document": "wrapper",
+            "flag": "noent",
+            "options": 2
+          },
+          {
+            "document": "wrapper",
+            "flag": "noent_dtdload",
+            "options": 6
+          },
+          {
+            "document": "wrapper",
+            "flag": "noent_dtdload_nonet",
+            "options": 2054
+          },
+          {
+            "document": "dtd",
+            "flag": "noent_dtdload",
+            "options": 6
+          },
+          {
+            "document": "dtd",
+            "flag": "noent_dtdload_nonet",
+            "options": 2054
+          }
+        ],
+        "diagnostic_events": 54,
+        "policy_diagnostics": []
+      },
+      {
+        "policy": "deny",
+        "parser": "dom",
+        "exit": 0,
+        "php": "7.4.33",
+        "libxml_loaded": "20914",
+        "rows": 42,
+        "marker_cases": [],
+        "diagnostic_events": 36,
+        "policy_diagnostics": []
+      },
+      {
+        "policy": "deny",
+        "parser": "simplexml",
+        "exit": 0,
+        "php": "7.4.33",
+        "libxml_loaded": "20914",
+        "rows": 42,
+        "marker_cases": [],
+        "diagnostic_events": 93,
+        "policy_diagnostics": []
+      },
+      {
+        "policy": "deny",
+        "parser": "xmlreader",
+        "exit": 0,
+        "php": "7.4.33",
+        "libxml_loaded": "20914",
+        "rows": 42,
+        "marker_cases": [],
+        "diagnostic_events": 81,
+        "policy_diagnostics": []
+      }
+    ],
+    "83": [
+      {
+        "policy": "enabled",
+        "parser": "dom",
+        "exit": 0,
+        "php": "8.3.6",
+        "libxml_loaded": "20914",
+        "rows": 42,
+        "marker_cases": [
+          {
+            "document": "file",
+            "flag": "noent",
+            "options": 2
+          },
+          {
+            "document": "file",
+            "flag": "dtdvalid",
+            "options": 16
+          },
+          {
+            "document": "file",
+            "flag": "noent_dtdload",
+            "options": 6
+          },
+          {
+            "document": "file",
+            "flag": "noent_dtdload_nonet",
+            "options": 2054
+          },
+          {
+            "document": "wrapper",
+            "flag": "noent",
+            "options": 2
+          },
+          {
+            "document": "wrapper",
+            "flag": "dtdvalid",
+            "options": 16
+          },
+          {
+            "document": "wrapper",
+            "flag": "noent_dtdload",
+            "options": 6
+          },
+          {
+            "document": "wrapper",
+            "flag": "noent_dtdload_nonet",
+            "options": 2054
+          },
+          {
+            "document": "dtd",
+            "flag": "dtdload",
+            "options": 4
+          },
+          {
+            "document": "dtd",
+            "flag": "dtdvalid",
+            "options": 16
+          },
+          {
+            "document": "dtd",
+            "flag": "noent_dtdload",
+            "options": 6
+          },
+          {
+            "document": "dtd",
+            "flag": "noent_dtdload_nonet",
+            "options": 2054
+          }
+        ],
+        "diagnostic_events": 20,
+        "policy_diagnostics": [
+          {
+            "severity": 8192,
+            "message": "Function libxml_disable_entity_loader() is deprecated",
+            "file": "probe.php",
+            "line": 43
+          }
+        ]
+      },
+      {
+        "policy": "enabled",
+        "parser": "simplexml",
+        "exit": 0,
+        "php": "8.3.6",
+        "libxml_loaded": "20914",
+        "rows": 42,
+        "marker_cases": [
+          {
+            "document": "file",
+            "flag": "noent",
+            "options": 2
+          },
+          {
+            "document": "file",
+            "flag": "dtdvalid",
+            "options": 16
+          },
+          {
+            "document": "file",
+            "flag": "noent_dtdload",
+            "options": 6
+          },
+          {
+            "document": "file",
+            "flag": "noent_dtdload_nonet",
+            "options": 2054
+          },
+          {
+            "document": "wrapper",
+            "flag": "noent",
+            "options": 2
+          },
+          {
+            "document": "wrapper",
+            "flag": "dtdvalid",
+            "options": 16
+          },
+          {
+            "document": "wrapper",
+            "flag": "noent_dtdload",
+            "options": 6
+          },
+          {
+            "document": "wrapper",
+            "flag": "noent_dtdload_nonet",
+            "options": 2054
+          },
+          {
+            "document": "dtd",
+            "flag": "dtdload",
+            "options": 4
+          },
+          {
+            "document": "dtd",
+            "flag": "dtdvalid",
+            "options": 16
+          },
+          {
+            "document": "dtd",
+            "flag": "noent_dtdload",
+            "options": 6
+          },
+          {
+            "document": "dtd",
+            "flag": "noent_dtdload_nonet",
+            "options": 2054
+          }
+        ],
+        "diagnostic_events": 66,
+        "policy_diagnostics": [
+          {
+            "severity": 8192,
+            "message": "Function libxml_disable_entity_loader() is deprecated",
+            "file": "probe.php",
+            "line": 43
+          }
+        ]
+      },
+      {
+        "policy": "enabled",
+        "parser": "xmlreader",
+        "exit": 0,
+        "php": "8.3.6",
+        "libxml_loaded": "20914",
+        "rows": 42,
+        "marker_cases": [
+          {
+            "document": "file",
+            "flag": "noent",
+            "options": 2
+          },
+          {
+            "document": "file",
+            "flag": "noent_dtdload",
+            "options": 6
+          },
+          {
+            "document": "file",
+            "flag": "noent_dtdload_nonet",
+            "options": 2054
+          },
+          {
+            "document": "wrapper",
+            "flag": "noent",
+            "options": 2
+          },
+          {
+            "document": "wrapper",
+            "flag": "noent_dtdload",
+            "options": 6
+          },
+          {
+            "document": "wrapper",
+            "flag": "noent_dtdload_nonet",
+            "options": 2054
+          },
+          {
+            "document": "dtd",
+            "flag": "noent_dtdload",
+            "options": 6
+          },
+          {
+            "document": "dtd",
+            "flag": "noent_dtdload_nonet",
+            "options": 2054
+          }
+        ],
+        "diagnostic_events": 54,
+        "policy_diagnostics": [
+          {
+            "severity": 8192,
+            "message": "Function libxml_disable_entity_loader() is deprecated",
+            "file": "probe.php",
+            "line": 43
+          }
+        ]
+      },
+      {
+        "policy": "legacy",
+        "parser": "dom",
+        "exit": 0,
+        "php": "8.3.6",
+        "libxml_loaded": "20914",
+        "rows": 42,
+        "marker_cases": [],
+        "diagnostic_events": 36,
+        "policy_diagnostics": [
+          {
+            "severity": 8192,
+            "message": "Function libxml_disable_entity_loader() is deprecated",
+            "file": "probe.php",
+            "line": 44
+          }
+        ]
+      },
+      {
+        "policy": "legacy",
+        "parser": "simplexml",
+        "exit": 0,
+        "php": "8.3.6",
+        "libxml_loaded": "20914",
+        "rows": 42,
+        "marker_cases": [],
+        "diagnostic_events": 101,
+        "policy_diagnostics": [
+          {
+            "severity": 8192,
+            "message": "Function libxml_disable_entity_loader() is deprecated",
+            "file": "probe.php",
+            "line": 44
+          }
+        ]
+      },
+      {
+        "policy": "legacy",
+        "parser": "xmlreader",
+        "exit": 0,
+        "php": "8.3.6",
+        "libxml_loaded": "20914",
+        "rows": 42,
+        "marker_cases": [],
+        "diagnostic_events": 89,
+        "policy_diagnostics": [
+          {
+            "severity": 8192,
+            "message": "Function libxml_disable_entity_loader() is deprecated",
+            "file": "probe.php",
+            "line": 44
+          }
+        ]
+      },
+      {
+        "policy": "default",
+        "parser": "dom",
+        "exit": 0,
+        "php": "8.3.6",
+        "libxml_loaded": "20914",
+        "rows": 42,
+        "marker_cases": [
+          {
+            "document": "file",
+            "flag": "noent",
+            "options": 2
+          },
+          {
+            "document": "file",
+            "flag": "dtdvalid",
+            "options": 16
+          },
+          {
+            "document": "file",
+            "flag": "noent_dtdload",
+            "options": 6
+          },
+          {
+            "document": "file",
+            "flag": "noent_dtdload_nonet",
+            "options": 2054
+          },
+          {
+            "document": "wrapper",
+            "flag": "noent",
+            "options": 2
+          },
+          {
+            "document": "wrapper",
+            "flag": "dtdvalid",
+            "options": 16
+          },
+          {
+            "document": "wrapper",
+            "flag": "noent_dtdload",
+            "options": 6
+          },
+          {
+            "document": "wrapper",
+            "flag": "noent_dtdload_nonet",
+            "options": 2054
+          },
+          {
+            "document": "dtd",
+            "flag": "dtdload",
+            "options": 4
+          },
+          {
+            "document": "dtd",
+            "flag": "dtdvalid",
+            "options": 16
+          },
+          {
+            "document": "dtd",
+            "flag": "noent_dtdload",
+            "options": 6
+          },
+          {
+            "document": "dtd",
+            "flag": "noent_dtdload_nonet",
+            "options": 2054
+          }
+        ],
+        "diagnostic_events": 20,
+        "policy_diagnostics": []
+      },
+      {
+        "policy": "default",
+        "parser": "simplexml",
+        "exit": 0,
+        "php": "8.3.6",
+        "libxml_loaded": "20914",
+        "rows": 42,
+        "marker_cases": [
+          {
+            "document": "file",
+            "flag": "noent",
+            "options": 2
+          },
+          {
+            "document": "file",
+            "flag": "dtdvalid",
+            "options": 16
+          },
+          {
+            "document": "file",
+            "flag": "noent_dtdload",
+            "options": 6
+          },
+          {
+            "document": "file",
+            "flag": "noent_dtdload_nonet",
+            "options": 2054
+          },
+          {
+            "document": "wrapper",
+            "flag": "noent",
+            "options": 2
+          },
+          {
+            "document": "wrapper",
+            "flag": "dtdvalid",
+            "options": 16
+          },
+          {
+            "document": "wrapper",
+            "flag": "noent_dtdload",
+            "options": 6
+          },
+          {
+            "document": "wrapper",
+            "flag": "noent_dtdload_nonet",
+            "options": 2054
+          },
+          {
+            "document": "dtd",
+            "flag": "dtdload",
+            "options": 4
+          },
+          {
+            "document": "dtd",
+            "flag": "dtdvalid",
+            "options": 16
+          },
+          {
+            "document": "dtd",
+            "flag": "noent_dtdload",
+            "options": 6
+          },
+          {
+            "document": "dtd",
+            "flag": "noent_dtdload_nonet",
+            "options": 2054
+          }
+        ],
+        "diagnostic_events": 66,
+        "policy_diagnostics": []
+      },
+      {
+        "policy": "default",
+        "parser": "xmlreader",
+        "exit": 0,
+        "php": "8.3.6",
+        "libxml_loaded": "20914",
+        "rows": 42,
+        "marker_cases": [
+          {
+            "document": "file",
+            "flag": "noent",
+            "options": 2
+          },
+          {
+            "document": "file",
+            "flag": "noent_dtdload",
+            "options": 6
+          },
+          {
+            "document": "file",
+            "flag": "noent_dtdload_nonet",
+            "options": 2054
+          },
+          {
+            "document": "wrapper",
+            "flag": "noent",
+            "options": 2
+          },
+          {
+            "document": "wrapper",
+            "flag": "noent_dtdload",
+            "options": 6
+          },
+          {
+            "document": "wrapper",
+            "flag": "noent_dtdload_nonet",
+            "options": 2054
+          },
+          {
+            "document": "dtd",
+            "flag": "noent_dtdload",
+            "options": 6
+          },
+          {
+            "document": "dtd",
+            "flag": "noent_dtdload_nonet",
+            "options": 2054
+          }
+        ],
+        "diagnostic_events": 54,
+        "policy_diagnostics": []
+      },
+      {
+        "policy": "deny",
+        "parser": "dom",
+        "exit": 0,
+        "php": "8.3.6",
+        "libxml_loaded": "20914",
+        "rows": 42,
+        "marker_cases": [],
+        "diagnostic_events": 36,
+        "policy_diagnostics": []
+      },
+      {
+        "policy": "deny",
+        "parser": "simplexml",
+        "exit": 0,
+        "php": "8.3.6",
+        "libxml_loaded": "20914",
+        "rows": 42,
+        "marker_cases": [],
+        "diagnostic_events": 93,
+        "policy_diagnostics": []
+      },
+      {
+        "policy": "deny",
+        "parser": "xmlreader",
+        "exit": 0,
+        "php": "8.3.6",
+        "libxml_loaded": "20914",
+        "rows": 42,
+        "marker_cases": [],
+        "diagnostic_events": 81,
+        "policy_diagnostics": []
+      }
+    ]
+  },
+  "processes": 24,
+  "parser_observations": 1008,
+  "runtime_before_after_equal": {
+    "74": true,
+    "83": true
+  },
+  "cross_runtime_row_differences": [
+    {
+      "policy": "deny",
+      "parser": "dom",
+      "document": "file",
+      "flag": "noent",
+      "differences": {
+        "diagnostics": {
+          "74": [
+            {
+              "severity": 2,
+              "message": "DOMDocument::loadXML(): Failed to load external entity \"NULL\"",
+              "file": "probe.php",
+              "line": 72
+            }
+          ],
+          "83": [
+            {
+              "severity": 2,
+              "message": "DOMDocument::loadXML(): Failed to load external entity because the resolver function returned null",
+              "file": "probe.php",
+              "line": 72
+            }
+          ]
+        }
+      }
+    },
+    {
+      "policy": "deny",
+      "parser": "dom",
+      "document": "file",
+      "flag": "dtdvalid",
+      "differences": {
+        "diagnostics": {
+          "74": [
+            {
+              "severity": 2,
+              "message": "DOMDocument::loadXML(): Failed to load external entity \"NULL\"",
+              "file": "probe.php",
+              "line": 72
+            },
+            {
+              "severity": 2,
+              "message": "DOMDocument::loadXML(): No declaration for element r in Entity, line: 1",
+              "file": "probe.php",
+              "line": 72
+            }
+          ],
+          "83": [
+            {
+              "severity": 2,
+              "message": "DOMDocument::loadXML(): Failed to load external entity because the resolver function returned null",
+              "file": "probe.php",
+              "line": 72
+            },
+            {
+              "severity": 2,
+              "message": "DOMDocument::loadXML(): No declaration for element r in Entity, line: 1",
+              "file": "probe.php",
+              "line": 72
+            }
+          ]
+        }
+      }
+    },
+    {
+      "policy": "deny",
+      "parser": "dom",
+      "document": "file",
+      "flag": "noent_dtdload",
+      "differences": {
+        "diagnostics": {
+          "74": [
+            {
+              "severity": 2,
+              "message": "DOMDocument::loadXML(): Failed to load external entity \"NULL\"",
+              "file": "probe.php",
+              "line": 72
+            }
+          ],
+          "83": [
+            {
+              "severity": 2,
+              "message": "DOMDocument::loadXML(): Failed to load external entity because the resolver function returned null",
+              "file": "probe.php",
+              "line": 72
+            }
+          ]
+        }
+      }
+    },
+    {
+      "policy": "deny",
+      "parser": "dom",
+      "document": "file",
+      "flag": "noent_dtdload_nonet",
+      "differences": {
+        "diagnostics": {
+          "74": [
+            {
+              "severity": 2,
+              "message": "DOMDocument::loadXML(): Failed to load external entity \"NULL\"",
+              "file": "probe.php",
+              "line": 72
+            }
+          ],
+          "83": [
+            {
+              "severity": 2,
+              "message": "DOMDocument::loadXML(): Failed to load external entity because the resolver function returned null",
+              "file": "probe.php",
+              "line": 72
+            }
+          ]
+        }
+      }
+    },
+    {
+      "policy": "deny",
+      "parser": "dom",
+      "document": "wrapper",
+      "flag": "noent",
+      "differences": {
+        "diagnostics": {
+          "74": [
+            {
+              "severity": 2,
+              "message": "DOMDocument::loadXML(): Failed to load external entity \"NULL\"",
+              "file": "probe.php",
+              "line": 72
+            }
+          ],
+          "83": [
+            {
+              "severity": 2,
+              "message": "DOMDocument::loadXML(): Failed to load external entity because the resolver function returned null",
+              "file": "probe.php",
+              "line": 72
+            }
+          ]
+        }
+      }
+    },
+    {
+      "policy": "deny",
+      "parser": "dom",
+      "document": "wrapper",
+      "flag": "dtdvalid",
+      "differences": {
+        "diagnostics": {
+          "74": [
+            {
+              "severity": 2,
+              "message": "DOMDocument::loadXML(): Failed to load external entity \"NULL\"",
+              "file": "probe.php",
+              "line": 72
+            },
+            {
+              "severity": 2,
+              "message": "DOMDocument::loadXML(): No declaration for element r in Entity, line: 1",
+              "file": "probe.php",
+              "line": 72
+            }
+          ],
+          "83": [
+            {
+              "severity": 2,
+              "message": "DOMDocument::loadXML(): Failed to load external entity because the resolver function returned null",
+              "file": "probe.php",
+              "line": 72
+            },
+            {
+              "severity": 2,
+              "message": "DOMDocument::loadXML(): No declaration for element r in Entity, line: 1",
+              "file": "probe.php",
+              "line": 72
+            }
+          ]
+        }
+      }
+    },
+    {
+      "policy": "deny",
+      "parser": "dom",
+      "document": "wrapper",
+      "flag": "noent_dtdload",
+      "differences": {
+        "diagnostics": {
+          "74": [
+            {
+              "severity": 2,
+              "message": "DOMDocument::loadXML(): Failed to load external entity \"NULL\"",
+              "file": "probe.php",
+              "line": 72
+            }
+          ],
+          "83": [
+            {
+              "severity": 2,
+              "message": "DOMDocument::loadXML(): Failed to load external entity because the resolver function returned null",
+              "file": "probe.php",
+              "line": 72
+            }
+          ]
+        }
+      }
+    },
+    {
+      "policy": "deny",
+      "parser": "dom",
+      "document": "wrapper",
+      "flag": "noent_dtdload_nonet",
+      "differences": {
+        "diagnostics": {
+          "74": [
+            {
+              "severity": 2,
+              "message": "DOMDocument::loadXML(): Failed to load external entity \"NULL\"",
+              "file": "probe.php",
+              "line": 72
+            }
+          ],
+          "83": [
+            {
+              "severity": 2,
+              "message": "DOMDocument::loadXML(): Failed to load external entity because the resolver function returned null",
+              "file": "probe.php",
+              "line": 72
+            }
+          ]
+        }
+      }
+    },
+    {
+      "policy": "deny",
+      "parser": "dom",
+      "document": "dtd",
+      "flag": "dtdload",
+      "differences": {
+        "diagnostics": {
+          "74": [
+            {
+              "severity": 2,
+              "message": "DOMDocument::loadXML(): Failed to load external entity \"NULL\" in Entity, line: 1",
+              "file": "probe.php",
+              "line": 72
+            },
+            {
+              "severity": 2,
+              "message": "DOMDocument::loadXML(): Entity 'x' not defined in Entity, line: 1",
+              "file": "probe.php",
+              "line": 72
+            }
+          ],
+          "83": [
+            {
+              "severity": 2,
+              "message": "DOMDocument::loadXML(): Failed to load external entity because the resolver function returned null in Entity, line: 1",
+              "file": "probe.php",
+              "line": 72
+            },
+            {
+              "severity": 2,
+              "message": "DOMDocument::loadXML(): Entity 'x' not defined in Entity, line: 1",
+              "file": "probe.php",
+              "line": 72
+            }
+          ]
+        }
+      }
+    },
+    {
+      "policy": "deny",
+      "parser": "dom",
+      "document": "dtd",
+      "flag": "dtdvalid",
+      "differences": {
+        "diagnostics": {
+          "74": [
+            {
+              "severity": 2,
+              "message": "DOMDocument::loadXML(): Failed to load external entity \"NULL\" in Entity, line: 1",
+              "file": "probe.php",
+              "line": 72
+            },
+            {
+              "severity": 2,
+              "message": "DOMDocument::loadXML(): Validation failed: no DTD found !Entity 'x' not defined in Entity, line: 1",
+              "file": "probe.php",
+              "line": 72
+            }
+          ],
+          "83": [
+            {
+              "severity": 2,
+              "message": "DOMDocument::loadXML(): Failed to load external entity because the resolver function returned null in Entity, line: 1",
+              "file": "probe.php",
+              "line": 72
+            },
+            {
+              "severity": 2,
+              "message": "DOMDocument::loadXML(): Validation failed: no DTD found !Entity 'x' not defined in Entity, line: 1",
+              "file": "probe.php",
+              "line": 72
+            }
+          ]
+        }
+      }
+    },
+    {
+      "policy": "deny",
+      "parser": "dom",
+      "document": "dtd",
+      "flag": "noent_dtdload",
+      "differences": {
+        "diagnostics": {
+          "74": [
+            {
+              "severity": 2,
+              "message": "DOMDocument::loadXML(): Failed to load external entity \"NULL\" in Entity, line: 1",
+              "file": "probe.php",
+              "line": 72
+            },
+            {
+              "severity": 2,
+              "message": "DOMDocument::loadXML(): Entity 'x' not defined in Entity, line: 1",
+              "file": "probe.php",
+              "line": 72
+            }
+          ],
+          "83": [
+            {
+              "severity": 2,
+              "message": "DOMDocument::loadXML(): Failed to load external entity because the resolver function returned null in Entity, line: 1",
+              "file": "probe.php",
+              "line": 72
+            },
+            {
+              "severity": 2,
+              "message": "DOMDocument::loadXML(): Entity 'x' not defined in Entity, line: 1",
+              "file": "probe.php",
+              "line": 72
+            }
+          ]
+        }
+      }
+    },
+    {
+      "policy": "deny",
+      "parser": "dom",
+      "document": "dtd",
+      "flag": "noent_dtdload_nonet",
+      "differences": {
+        "diagnostics": {
+          "74": [
+            {
+              "severity": 2,
+              "message": "DOMDocument::loadXML(): Failed to load external entity \"NULL\" in Entity, line: 1",
+              "file": "probe.php",
+              "line": 72
+            },
+            {
+              "severity": 2,
+              "message": "DOMDocument::loadXML(): Entity 'x' not defined in Entity, line: 1",
+              "file": "probe.php",
+              "line": 72
+            }
+          ],
+          "83": [
+            {
+              "severity": 2,
+              "message": "DOMDocument::loadXML(): Failed to load external entity because the resolver function returned null in Entity, line: 1",
+              "file": "probe.php",
+              "line": 72
+            },
+            {
+              "severity": 2,
+              "message": "DOMDocument::loadXML(): Entity 'x' not defined in Entity, line: 1",
+              "file": "probe.php",
+              "line": 72
+            }
+          ]
+        }
+      }
+    },
+    {
+      "policy": "deny",
+      "parser": "simplexml",
+      "document": "file",
+      "flag": "noent",
+      "differences": {
+        "diagnostics": {
+          "74": [
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): Failed to load external entity \"NULL\"",
+              "file": "probe.php",
+              "line": 75
+            }
+          ],
+          "83": [
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): Failed to load external entity because the resolver function returned null",
+              "file": "probe.php",
+              "line": 75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "policy": "deny",
+      "parser": "simplexml",
+      "document": "file",
+      "flag": "dtdvalid",
+      "differences": {
+        "diagnostics": {
+          "74": [
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): Failed to load external entity \"NULL\"",
+              "file": "probe.php",
+              "line": 75
+            },
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): element r: validity error : No declaration for element r",
+              "file": "probe.php",
+              "line": 75
+            },
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): <!DOCTYPE r [<!ENTITY x SYSTEM \"file:///audit/probe/marker.txt\">]><r>&x;</r>",
+              "file": "probe.php",
+              "line": 75
+            },
+            {
+              "severity": 2,
+              "message": "simplexml_load_string():                                                                             ^",
+              "file": "probe.php",
+              "line": 75
+            }
+          ],
+          "83": [
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): Failed to load external entity because the resolver function returned null",
+              "file": "probe.php",
+              "line": 75
+            },
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): element r: validity error : No declaration for element r",
+              "file": "probe.php",
+              "line": 75
+            },
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): <!DOCTYPE r [<!ENTITY x SYSTEM \"file:///audit/probe/marker.txt\">]><r>&x;</r>",
+              "file": "probe.php",
+              "line": 75
+            },
+            {
+              "severity": 2,
+              "message": "simplexml_load_string():                                                                             ^",
+              "file": "probe.php",
+              "line": 75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "policy": "deny",
+      "parser": "simplexml",
+      "document": "file",
+      "flag": "noent_dtdload",
+      "differences": {
+        "diagnostics": {
+          "74": [
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): Failed to load external entity \"NULL\"",
+              "file": "probe.php",
+              "line": 75
+            }
+          ],
+          "83": [
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): Failed to load external entity because the resolver function returned null",
+              "file": "probe.php",
+              "line": 75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "policy": "deny",
+      "parser": "simplexml",
+      "document": "file",
+      "flag": "noent_dtdload_nonet",
+      "differences": {
+        "diagnostics": {
+          "74": [
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): Failed to load external entity \"NULL\"",
+              "file": "probe.php",
+              "line": 75
+            }
+          ],
+          "83": [
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): Failed to load external entity because the resolver function returned null",
+              "file": "probe.php",
+              "line": 75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "policy": "deny",
+      "parser": "simplexml",
+      "document": "wrapper",
+      "flag": "noent",
+      "differences": {
+        "diagnostics": {
+          "74": [
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): Failed to load external entity \"NULL\"",
+              "file": "probe.php",
+              "line": 75
+            }
+          ],
+          "83": [
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): Failed to load external entity because the resolver function returned null",
+              "file": "probe.php",
+              "line": 75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "policy": "deny",
+      "parser": "simplexml",
+      "document": "wrapper",
+      "flag": "dtdvalid",
+      "differences": {
+        "diagnostics": {
+          "74": [
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): Failed to load external entity \"NULL\"",
+              "file": "probe.php",
+              "line": 75
+            },
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): element r: validity error : No declaration for element r",
+              "file": "probe.php",
+              "line": 75
+            },
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): <!DOCTYPE r [<!ENTITY x SYSTEM \"xfixture://marker\">]><r>&x;</r>",
+              "file": "probe.php",
+              "line": 75
+            },
+            {
+              "severity": 2,
+              "message": "simplexml_load_string():                                                                ^",
+              "file": "probe.php",
+              "line": 75
+            }
+          ],
+          "83": [
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): Failed to load external entity because the resolver function returned null",
+              "file": "probe.php",
+              "line": 75
+            },
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): element r: validity error : No declaration for element r",
+              "file": "probe.php",
+              "line": 75
+            },
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): <!DOCTYPE r [<!ENTITY x SYSTEM \"xfixture://marker\">]><r>&x;</r>",
+              "file": "probe.php",
+              "line": 75
+            },
+            {
+              "severity": 2,
+              "message": "simplexml_load_string():                                                                ^",
+              "file": "probe.php",
+              "line": 75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "policy": "deny",
+      "parser": "simplexml",
+      "document": "wrapper",
+      "flag": "noent_dtdload",
+      "differences": {
+        "diagnostics": {
+          "74": [
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): Failed to load external entity \"NULL\"",
+              "file": "probe.php",
+              "line": 75
+            }
+          ],
+          "83": [
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): Failed to load external entity because the resolver function returned null",
+              "file": "probe.php",
+              "line": 75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "policy": "deny",
+      "parser": "simplexml",
+      "document": "wrapper",
+      "flag": "noent_dtdload_nonet",
+      "differences": {
+        "diagnostics": {
+          "74": [
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): Failed to load external entity \"NULL\"",
+              "file": "probe.php",
+              "line": 75
+            }
+          ],
+          "83": [
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): Failed to load external entity because the resolver function returned null",
+              "file": "probe.php",
+              "line": 75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "policy": "deny",
+      "parser": "simplexml",
+      "document": "dtd",
+      "flag": "dtdload",
+      "differences": {
+        "diagnostics": {
+          "74": [
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): Failed to load external entity \"NULL\" in Entity, line: 1",
+              "file": "probe.php",
+              "line": 75
+            },
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): Entity: line 1: parser error : Entity 'x' not defined",
+              "file": "probe.php",
+              "line": 75
+            },
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): <!DOCTYPE r SYSTEM \"file:///audit/probe/marker.dtd\"><r>&x;</r>",
+              "file": "probe.php",
+              "line": 75
+            },
+            {
+              "severity": 2,
+              "message": "simplexml_load_string():                                                           ^",
+              "file": "probe.php",
+              "line": 75
+            }
+          ],
+          "83": [
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): Failed to load external entity because the resolver function returned null in Entity, line: 1",
+              "file": "probe.php",
+              "line": 75
+            },
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): Entity: line 1: parser error : Entity 'x' not defined",
+              "file": "probe.php",
+              "line": 75
+            },
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): <!DOCTYPE r SYSTEM \"file:///audit/probe/marker.dtd\"><r>&x;</r>",
+              "file": "probe.php",
+              "line": 75
+            },
+            {
+              "severity": 2,
+              "message": "simplexml_load_string():                                                           ^",
+              "file": "probe.php",
+              "line": 75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "policy": "deny",
+      "parser": "simplexml",
+      "document": "dtd",
+      "flag": "dtdvalid",
+      "differences": {
+        "diagnostics": {
+          "74": [
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): Failed to load external entity \"NULL\" in Entity, line: 1",
+              "file": "probe.php",
+              "line": 75
+            },
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): validity error : Validation failed: no DTD found !",
+              "file": "probe.php",
+              "line": 75
+            },
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): <!DOCTYPE r SYSTEM \"file:///audit/probe/marker.dtd\"><r>&x;</r>",
+              "file": "probe.php",
+              "line": 75
+            },
+            {
+              "severity": 2,
+              "message": "simplexml_load_string():                                                       ^",
+              "file": "probe.php",
+              "line": 75
+            },
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): Entity: line 1: parser error : Entity 'x' not defined",
+              "file": "probe.php",
+              "line": 75
+            },
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): <!DOCTYPE r SYSTEM \"file:///audit/probe/marker.dtd\"><r>&x;</r>",
+              "file": "probe.php",
+              "line": 75
+            },
+            {
+              "severity": 2,
+              "message": "simplexml_load_string():                                                           ^",
+              "file": "probe.php",
+              "line": 75
+            }
+          ],
+          "83": [
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): Failed to load external entity because the resolver function returned null in Entity, line: 1",
+              "file": "probe.php",
+              "line": 75
+            },
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): validity error : Validation failed: no DTD found !",
+              "file": "probe.php",
+              "line": 75
+            },
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): <!DOCTYPE r SYSTEM \"file:///audit/probe/marker.dtd\"><r>&x;</r>",
+              "file": "probe.php",
+              "line": 75
+            },
+            {
+              "severity": 2,
+              "message": "simplexml_load_string():                                                       ^",
+              "file": "probe.php",
+              "line": 75
+            },
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): Entity: line 1: parser error : Entity 'x' not defined",
+              "file": "probe.php",
+              "line": 75
+            },
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): <!DOCTYPE r SYSTEM \"file:///audit/probe/marker.dtd\"><r>&x;</r>",
+              "file": "probe.php",
+              "line": 75
+            },
+            {
+              "severity": 2,
+              "message": "simplexml_load_string():                                                           ^",
+              "file": "probe.php",
+              "line": 75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "policy": "deny",
+      "parser": "simplexml",
+      "document": "dtd",
+      "flag": "noent_dtdload",
+      "differences": {
+        "diagnostics": {
+          "74": [
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): Failed to load external entity \"NULL\" in Entity, line: 1",
+              "file": "probe.php",
+              "line": 75
+            },
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): Entity: line 1: parser error : Entity 'x' not defined",
+              "file": "probe.php",
+              "line": 75
+            },
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): <!DOCTYPE r SYSTEM \"file:///audit/probe/marker.dtd\"><r>&x;</r>",
+              "file": "probe.php",
+              "line": 75
+            },
+            {
+              "severity": 2,
+              "message": "simplexml_load_string():                                                           ^",
+              "file": "probe.php",
+              "line": 75
+            }
+          ],
+          "83": [
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): Failed to load external entity because the resolver function returned null in Entity, line: 1",
+              "file": "probe.php",
+              "line": 75
+            },
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): Entity: line 1: parser error : Entity 'x' not defined",
+              "file": "probe.php",
+              "line": 75
+            },
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): <!DOCTYPE r SYSTEM \"file:///audit/probe/marker.dtd\"><r>&x;</r>",
+              "file": "probe.php",
+              "line": 75
+            },
+            {
+              "severity": 2,
+              "message": "simplexml_load_string():                                                           ^",
+              "file": "probe.php",
+              "line": 75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "policy": "deny",
+      "parser": "simplexml",
+      "document": "dtd",
+      "flag": "noent_dtdload_nonet",
+      "differences": {
+        "diagnostics": {
+          "74": [
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): Failed to load external entity \"NULL\" in Entity, line: 1",
+              "file": "probe.php",
+              "line": 75
+            },
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): Entity: line 1: parser error : Entity 'x' not defined",
+              "file": "probe.php",
+              "line": 75
+            },
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): <!DOCTYPE r SYSTEM \"file:///audit/probe/marker.dtd\"><r>&x;</r>",
+              "file": "probe.php",
+              "line": 75
+            },
+            {
+              "severity": 2,
+              "message": "simplexml_load_string():                                                           ^",
+              "file": "probe.php",
+              "line": 75
+            }
+          ],
+          "83": [
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): Failed to load external entity because the resolver function returned null in Entity, line: 1",
+              "file": "probe.php",
+              "line": 75
+            },
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): Entity: line 1: parser error : Entity 'x' not defined",
+              "file": "probe.php",
+              "line": 75
+            },
+            {
+              "severity": 2,
+              "message": "simplexml_load_string(): <!DOCTYPE r SYSTEM \"file:///audit/probe/marker.dtd\"><r>&x;</r>",
+              "file": "probe.php",
+              "line": 75
+            },
+            {
+              "severity": 2,
+              "message": "simplexml_load_string():                                                           ^",
+              "file": "probe.php",
+              "line": 75
+            }
+          ]
+        }
+      }
+    },
+    {
+      "policy": "deny",
+      "parser": "xmlreader",
+      "document": "file",
+      "flag": "noent",
+      "differences": {
+        "diagnostics": {
+          "74": [
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): Failed to load external entity \"NULL\"",
+              "file": "probe.php",
+              "line": 80
+            }
+          ],
+          "83": [
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): Failed to load external entity because the resolver function returned null",
+              "file": "probe.php",
+              "line": 80
+            }
+          ]
+        }
+      }
+    },
+    {
+      "policy": "deny",
+      "parser": "xmlreader",
+      "document": "file",
+      "flag": "dtdvalid",
+      "differences": {
+        "diagnostics": {
+          "74": [
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): Failed to load external entity \"NULL\"",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): /:1: element r: validity error : No declaration for element r",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): <!DOCTYPE r [<!ENTITY x SYSTEM \"file:///audit/probe/marker.txt\">]><r>&x;</r>",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read():                                                                             ^",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): /:1: element r: validity error : No declaration for element r",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): <!DOCTYPE r [<!ENTITY x SYSTEM \"file:///audit/probe/marker.txt\">]><r>&x;</r>",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read():                                                                             ^",
+              "file": "probe.php",
+              "line": 80
+            }
+          ],
+          "83": [
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): Failed to load external entity because the resolver function returned null",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): /:1: element r: validity error : No declaration for element r",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): <!DOCTYPE r [<!ENTITY x SYSTEM \"file:///audit/probe/marker.txt\">]><r>&x;</r>",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read():                                                                             ^",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): /:1: element r: validity error : No declaration for element r",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): <!DOCTYPE r [<!ENTITY x SYSTEM \"file:///audit/probe/marker.txt\">]><r>&x;</r>",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read():                                                                             ^",
+              "file": "probe.php",
+              "line": 80
+            }
+          ]
+        }
+      }
+    },
+    {
+      "policy": "deny",
+      "parser": "xmlreader",
+      "document": "file",
+      "flag": "noent_dtdload",
+      "differences": {
+        "diagnostics": {
+          "74": [
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): Failed to load external entity \"NULL\"",
+              "file": "probe.php",
+              "line": 80
+            }
+          ],
+          "83": [
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): Failed to load external entity because the resolver function returned null",
+              "file": "probe.php",
+              "line": 80
+            }
+          ]
+        }
+      }
+    },
+    {
+      "policy": "deny",
+      "parser": "xmlreader",
+      "document": "file",
+      "flag": "noent_dtdload_nonet",
+      "differences": {
+        "diagnostics": {
+          "74": [
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): Failed to load external entity \"NULL\"",
+              "file": "probe.php",
+              "line": 80
+            }
+          ],
+          "83": [
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): Failed to load external entity because the resolver function returned null",
+              "file": "probe.php",
+              "line": 80
+            }
+          ]
+        }
+      }
+    },
+    {
+      "policy": "deny",
+      "parser": "xmlreader",
+      "document": "wrapper",
+      "flag": "noent",
+      "differences": {
+        "diagnostics": {
+          "74": [
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): Failed to load external entity \"NULL\"",
+              "file": "probe.php",
+              "line": 80
+            }
+          ],
+          "83": [
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): Failed to load external entity because the resolver function returned null",
+              "file": "probe.php",
+              "line": 80
+            }
+          ]
+        }
+      }
+    },
+    {
+      "policy": "deny",
+      "parser": "xmlreader",
+      "document": "wrapper",
+      "flag": "dtdvalid",
+      "differences": {
+        "diagnostics": {
+          "74": [
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): Failed to load external entity \"NULL\"",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): /:1: element r: validity error : No declaration for element r",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): <!DOCTYPE r [<!ENTITY x SYSTEM \"xfixture://marker\">]><r>&x;</r>",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read():                                                                ^",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): /:1: element r: validity error : No declaration for element r",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): <!DOCTYPE r [<!ENTITY x SYSTEM \"xfixture://marker\">]><r>&x;</r>",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read():                                                                ^",
+              "file": "probe.php",
+              "line": 80
+            }
+          ],
+          "83": [
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): Failed to load external entity because the resolver function returned null",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): /:1: element r: validity error : No declaration for element r",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): <!DOCTYPE r [<!ENTITY x SYSTEM \"xfixture://marker\">]><r>&x;</r>",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read():                                                                ^",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): /:1: element r: validity error : No declaration for element r",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): <!DOCTYPE r [<!ENTITY x SYSTEM \"xfixture://marker\">]><r>&x;</r>",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read():                                                                ^",
+              "file": "probe.php",
+              "line": 80
+            }
+          ]
+        }
+      }
+    },
+    {
+      "policy": "deny",
+      "parser": "xmlreader",
+      "document": "wrapper",
+      "flag": "noent_dtdload",
+      "differences": {
+        "diagnostics": {
+          "74": [
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): Failed to load external entity \"NULL\"",
+              "file": "probe.php",
+              "line": 80
+            }
+          ],
+          "83": [
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): Failed to load external entity because the resolver function returned null",
+              "file": "probe.php",
+              "line": 80
+            }
+          ]
+        }
+      }
+    },
+    {
+      "policy": "deny",
+      "parser": "xmlreader",
+      "document": "wrapper",
+      "flag": "noent_dtdload_nonet",
+      "differences": {
+        "diagnostics": {
+          "74": [
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): Failed to load external entity \"NULL\"",
+              "file": "probe.php",
+              "line": 80
+            }
+          ],
+          "83": [
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): Failed to load external entity because the resolver function returned null",
+              "file": "probe.php",
+              "line": 80
+            }
+          ]
+        }
+      }
+    },
+    {
+      "policy": "deny",
+      "parser": "xmlreader",
+      "document": "dtd",
+      "flag": "dtdload",
+      "differences": {
+        "diagnostics": {
+          "74": [
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): Failed to load external entity \"NULL\" in /, line: 1",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): /:1: parser error : Entity 'x' not defined",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): <!DOCTYPE r SYSTEM \"file:///audit/probe/marker.dtd\"><r>&x;</r>",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read():                                                           ^",
+              "file": "probe.php",
+              "line": 80
+            }
+          ],
+          "83": [
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): Failed to load external entity because the resolver function returned null in /, line: 1",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): /:1: parser error : Entity 'x' not defined",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): <!DOCTYPE r SYSTEM \"file:///audit/probe/marker.dtd\"><r>&x;</r>",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read():                                                           ^",
+              "file": "probe.php",
+              "line": 80
+            }
+          ]
+        }
+      }
+    },
+    {
+      "policy": "deny",
+      "parser": "xmlreader",
+      "document": "dtd",
+      "flag": "dtdvalid",
+      "differences": {
+        "diagnostics": {
+          "74": [
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): Failed to load external entity \"NULL\" in /, line: 1",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): /:1: validity error : Validation failed: no DTD found !",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): <!DOCTYPE r SYSTEM \"file:///audit/probe/marker.dtd\"><r>&x;</r>",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read():                                                       ^",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): /:1: parser error : Entity 'x' not defined",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): <!DOCTYPE r SYSTEM \"file:///audit/probe/marker.dtd\"><r>&x;</r>",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read():                                                           ^",
+              "file": "probe.php",
+              "line": 80
+            }
+          ],
+          "83": [
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): Failed to load external entity because the resolver function returned null in /, line: 1",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): /:1: validity error : Validation failed: no DTD found !",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): <!DOCTYPE r SYSTEM \"file:///audit/probe/marker.dtd\"><r>&x;</r>",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read():                                                       ^",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): /:1: parser error : Entity 'x' not defined",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): <!DOCTYPE r SYSTEM \"file:///audit/probe/marker.dtd\"><r>&x;</r>",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read():                                                           ^",
+              "file": "probe.php",
+              "line": 80
+            }
+          ]
+        }
+      }
+    },
+    {
+      "policy": "deny",
+      "parser": "xmlreader",
+      "document": "dtd",
+      "flag": "noent_dtdload",
+      "differences": {
+        "diagnostics": {
+          "74": [
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): Failed to load external entity \"NULL\" in /, line: 1",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): /:1: parser error : Entity 'x' not defined",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): <!DOCTYPE r SYSTEM \"file:///audit/probe/marker.dtd\"><r>&x;</r>",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read():                                                           ^",
+              "file": "probe.php",
+              "line": 80
+            }
+          ],
+          "83": [
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): Failed to load external entity because the resolver function returned null in /, line: 1",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): /:1: parser error : Entity 'x' not defined",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): <!DOCTYPE r SYSTEM \"file:///audit/probe/marker.dtd\"><r>&x;</r>",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read():                                                           ^",
+              "file": "probe.php",
+              "line": 80
+            }
+          ]
+        }
+      }
+    },
+    {
+      "policy": "deny",
+      "parser": "xmlreader",
+      "document": "dtd",
+      "flag": "noent_dtdload_nonet",
+      "differences": {
+        "diagnostics": {
+          "74": [
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): Failed to load external entity \"NULL\" in /, line: 1",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): /:1: parser error : Entity 'x' not defined",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): <!DOCTYPE r SYSTEM \"file:///audit/probe/marker.dtd\"><r>&x;</r>",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read():                                                           ^",
+              "file": "probe.php",
+              "line": 80
+            }
+          ],
+          "83": [
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): Failed to load external entity because the resolver function returned null in /, line: 1",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): /:1: parser error : Entity 'x' not defined",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read(): <!DOCTYPE r SYSTEM \"file:///audit/probe/marker.dtd\"><r>&x;</r>",
+              "file": "probe.php",
+              "line": 80
+            },
+            {
+              "severity": 2,
+              "message": "XMLReader::read():                                                           ^",
+              "file": "probe.php",
+              "line": 80
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "application_patch_selected": false,
+  "application_coverage": false,
+  "independent_repeat": "pending"
+}

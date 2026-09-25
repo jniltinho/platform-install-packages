@@ -1,0 +1,19 @@
+test_blocked_disclosure (test_prepare.Tests.test_blocked_disclosure) ... ok
+test_boolean_options (test_prepare.Tests.test_boolean_options) ... ok
+test_duplicate (test_prepare.Tests.test_duplicate) ... ok
+test_existing (test_prepare.Tests.test_existing) ... ok
+test_integer_boolean (test_prepare.Tests.test_integer_boolean) ... ok
+test_matrix_positive (test_prepare.Tests.test_matrix_positive) ... ok
+test_missing_callback (test_prepare.Tests.test_missing_callback) ... ok
+test_missing_canary (test_prepare.Tests.test_missing_canary) ... ok
+test_missing_row (test_prepare.Tests.test_missing_row) ... ok
+test_prepare (test_prepare.Tests.test_prepare) ... ok
+test_source_drift (test_prepare.Tests.test_source_drift) ... ok
+test_static_security (test_prepare.Tests.test_static_security) ... ok
+test_warning_suppression (test_prepare.Tests.test_warning_suppression) ... ok
+test_wrong_php (test_prepare.Tests.test_wrong_php) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.001s
+
+OK

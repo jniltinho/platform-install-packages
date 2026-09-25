@@ -1,0 +1,6 @@
+2111cac3d93a78e677bd39e8b890f73df3f443a3792705dc7e791e115a6ce5b3  tools/php83/xml-loader/collect.py
+7eaadc7867a4938b481338c33a4b8fdf8d855ac7d88603b283028b3ff733bfc4  tools/php83/xml-loader/prepare.py
+99a9b5f4edd8ca5308b9fac009cad71a1b8bab6011df4f3a99ff168b67fffacc  tools/php83/xml-loader/probe.php
+783b6f6ea87b5e7c4c629b576ede483d308693ac45a2b04a829daf0f0961ac04  tools/php83/xml-loader/run.sh
+ea62695228ed21704188614c178c84bc46b36fa51014b7484f740e450760de69  tools/php83/xml-loader/test_prepare.py
+e3de07db204f33b1be4d6d54e0f4ee5e42617a58c5bff0d71933d14b32153370  doc/php83/xml-loader.md

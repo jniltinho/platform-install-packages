@@ -1,0 +1,7 @@
+tools/php83/xml-loader/collect.py: OK
+tools/php83/xml-loader/prepare.py: OK
+tools/php83/xml-loader/probe.php: OK
+tools/php83/xml-loader/run.sh: OK
+tools/php83/xml-loader/test_prepare.py: OK
+doc/php83/xml-loader.md: OK
+0

@@ -1,0 +1,131 @@
+{
+  "case": "xml-loader native policy independent repeat (frozen matrix)",
+  "executor": "Claude CLI (claude-opus-5-5)",
+  "reviewer_of": "primary74.json/primary83.json (author run)",
+  "environment": "baseline74 (PHP 7.4.33, libxml 2.9.14) and php83 labs via approved SSH; serial",
+  "steps": [
+    {
+      "step": "runtime74-before",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 tools/php83/exp11-api/runtime-identity.py doc/php83/evidence/xml-loader/claude-native-runtime74-before.json",
+      "exit": 0,
+      "stdout_bytes": 113,
+      "stderr_bytes": 0,
+      "output": "doc/php83/evidence/xml-loader/claude-native-runtime74-before.json",
+      "output_sha256": "a7c9a22fb6d120993fe188ceb31b68cafb49079aef5100d047d9ad31d21820dd"
+    },
+    {
+      "step": "74",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 tools/php83/xml-loader/collect.py 74 /tmp/php-xml-loader-prep-r1 doc/php83/evidence/xml-loader/claude-native74.json",
+      "exit": 0,
+      "stdout_bytes": 74,
+      "stderr_bytes": 0,
+      "output": "doc/php83/evidence/xml-loader/claude-native74.json",
+      "output_sha256": "78b9d8ab0456cb37cea85c08522e72fd68913728f655675a820c620ae024ceef"
+    },
+    {
+      "step": "runtime74-after",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 tools/php83/exp11-api/runtime-identity.py doc/php83/evidence/xml-loader/claude-native-runtime74-after.json",
+      "exit": 0,
+      "stdout_bytes": 112,
+      "stderr_bytes": 0,
+      "output": "doc/php83/evidence/xml-loader/claude-native-runtime74-after.json",
+      "output_sha256": "a7c9a22fb6d120993fe188ceb31b68cafb49079aef5100d047d9ad31d21820dd"
+    },
+    {
+      "step": "runtime83-before",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 doc/php83/evidence/exp10-runtime/snapshot-php83.py doc/php83/evidence/xml-loader/claude-native-runtime83-before.json",
+      "exit": 0,
+      "stdout_bytes": 26,
+      "stderr_bytes": 0,
+      "output": "doc/php83/evidence/xml-loader/claude-native-runtime83-before.json",
+      "output_sha256": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491"
+    },
+    {
+      "step": "83",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 tools/php83/xml-loader/collect.py 83 /tmp/php-xml-loader-prep-r1 doc/php83/evidence/xml-loader/claude-native83.json",
+      "exit": 0,
+      "stdout_bytes": 74,
+      "stderr_bytes": 0,
+      "output": "doc/php83/evidence/xml-loader/claude-native83.json",
+      "output_sha256": "8dc9e2b87909ebf6d373d6c73740d06527485d7f250a5363979b5514dbbb7e1c"
+    },
+    {
+      "step": "runtime83-after",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 doc/php83/evidence/exp10-runtime/snapshot-php83.py doc/php83/evidence/xml-loader/claude-native-runtime83-after.json",
+      "exit": 0,
+      "stdout_bytes": 26,
+      "stderr_bytes": 0,
+      "output": "doc/php83/evidence/xml-loader/claude-native-runtime83-after.json",
+      "output_sha256": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491"
+    }
+  ],
+  "report_byte_equal_primary": {
+    "74": true,
+    "83": true
+  },
+  "runtime_identity_equal": {
+    "74-before": true,
+    "74-after": true,
+    "83-before": true,
+    "83-after": true
+  },
+  "runtime_identity_before_eq_after": {
+    "74": true,
+    "83": true
+  },
+  "frozen_local_tools_match_harness_frozen": true,
+  "local_hashes_before_eq_after": true,
+  "wrapper_verification": "run.sh verifies manifest/fixture hashes at start and in EXIT trap (exit 70 on drift); all 24 processes exit 0",
+  "counters": {
+    "74": {
+      "processes": 12,
+      "rows": 504,
+      "marker_by_policy": {
+        "enabled": 32,
+        "legacy": 0,
+        "default": 32,
+        "deny": 0
+      },
+      "nonet_rows_marker_seen": {
+        "enabled": 9,
+        "legacy": 0,
+        "default": 9,
+        "deny": 0
+      },
+      "stderr_nonempty_processes": 12,
+      "status": "PASS_BOUNDED_NATIVE_POLICY"
+    },
+    "83": {
+      "processes": 12,
+      "rows": 504,
+      "marker_by_policy": {
+        "enabled": 32,
+        "legacy": 0,
+        "default": 32,
+        "deny": 0
+      },
+      "nonet_rows_marker_seen": {
+        "enabled": 9,
+        "legacy": 0,
+        "default": 9,
+        "deny": 0
+      },
+      "stderr_nonempty_processes": 12,
+      "status": "PASS_BOUNDED_NATIVE_POLICY"
+    }
+  },
+  "deprecations": {
+    "74": 0,
+    "83": "6 processes (enabled+legacy x 3 parsers) report E_DEPRECATED libxml_disable_entity_loader(); retained in policy_diagnostics and stderr"
+  },
+  "exceptions": 0,
+  "failures": [],
+  "prep_findings": "initial F1-F5 fixes verified locally in claude-r2-review.json (READY_FOR_BOUNDED_NATIVE_EXPERIMENT, 26 tests OK)",
+  "verdict": "PASS_BOUNDED_NATIVE_POLICY_REPEAT",
+  "not_claimed": [
+    "kConf coverage",
+    "kSoapClient coverage",
+    "application coverage/acceptance",
+    "experiments beyond frozen matrix"
+  ]
+}

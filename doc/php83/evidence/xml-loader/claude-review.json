@@ -1,0 +1,120 @@
+{
+  "reviewer": "Claude CLI (claude-opus-5-5)",
+  "role": "independent local preparation review",
+  "executed_at_utc_date": "2026-09-25",
+  "status": "LOCAL_PREP_REVIEW_COMPLETE_WITH_FINDINGS",
+  "native_php_status": "NOT_EXECUTED",
+  "frozen_inputs_sha256_before": {
+    "AGENTS.md": "033ad28bae1048d07f64742808a2cef31f621c247c1e6dd857196fef9955c75e",
+    "doc/php83/xml-loader.md": "519cbc3dff58b0183d57de23d803138946ba96732876222d4d21336147f045f3",
+    "tools/php83/xml-loader/probe.php": "99a9b5f4edd8ca5308b9fac009cad71a1b8bab6011df4f3a99ff168b67fffacc",
+    "tools/php83/xml-loader/run.sh": "783b6f6ea87b5e7c4c629b576ede483d308693ac45a2b04a829daf0f0961ac04",
+    "tools/php83/xml-loader/prepare.py": "7eaadc7867a4938b481338c33a4b8fdf8d855ac7d88603b283028b3ff733bfc4",
+    "tools/php83/xml-loader/collect.py": "6d56991ba6fe42585c2b759785cf157da317a2cfc3d43ef668ea84b9a8a0d4b1",
+    "tools/php83/xml-loader/test_prepare.py": "c682afa147ebec623c123483a8ad21e95d0498436135cc780793c4042ba78435"
+  },
+  "frozen_inputs_sha256_after": {
+    "AGENTS.md": "033ad28bae1048d07f64742808a2cef31f621c247c1e6dd857196fef9955c75e",
+    "doc/php83/xml-loader.md": "519cbc3dff58b0183d57de23d803138946ba96732876222d4d21336147f045f3",
+    "tools/php83/xml-loader/probe.php": "99a9b5f4edd8ca5308b9fac009cad71a1b8bab6011df4f3a99ff168b67fffacc",
+    "tools/php83/xml-loader/run.sh": "783b6f6ea87b5e7c4c629b576ede483d308693ac45a2b04a829daf0f0961ac04",
+    "tools/php83/xml-loader/prepare.py": "7eaadc7867a4938b481338c33a4b8fdf8d855ac7d88603b283028b3ff733bfc4",
+    "tools/php83/xml-loader/collect.py": "6d56991ba6fe42585c2b759785cf157da317a2cfc3d43ef668ea84b9a8a0d4b1",
+    "tools/php83/xml-loader/test_prepare.py": "c682afa147ebec623c123483a8ad21e95d0498436135cc780793c4042ba78435"
+  },
+  "frozen_inputs_unchanged": true,
+  "commands": [
+    {
+      "case": "unit-tests",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/xml-loader -p 'test_*.py' -v",
+      "exit": 0,
+      "result": "14 tests OK (synthetic Python validator/prep only)",
+      "evidence": "claude-review-tests.{stdout,stderr,exit}"
+    },
+    {
+      "case": "bash-syntax",
+      "command": "bash -n tools/php83/xml-loader/run.sh",
+      "exit": 0,
+      "evidence": "claude-review-bashn.{stdout,stderr,exit}"
+    },
+    {
+      "case": "local-prepare",
+      "command": "python3 tools/php83/xml-loader/prepare.py /tmp/xml-loader-claude-prep",
+      "exit": 0,
+      "manifest_sha256": "257e1dacd078a80a78415c5214721e2124190c516c9bab3d30e8aa19071a04ec",
+      "stage_file_hashes_match_manifest": true,
+      "probe_run_sh_match_frozen_sources": true,
+      "evidence": "claude-review-prepare.{stdout,stderr,exit}",
+      "staged_to_vm": false
+    },
+    {
+      "case": "validator-gap-probe",
+      "command": "python3 stdin script calling collect.validate on mutated test fixtures (no PHP/SSH)",
+      "exit": 0,
+      "evidence": "claude-review-validator-probe.txt"
+    }
+  ],
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "medium",
+      "kind": "implementation-bug",
+      "file": "tools/php83/xml-loader/collect.py",
+      "lines": "179-187,224",
+      "summary": "Non-dict runtime or non-dict record raises AttributeError/TypeError, not ValueError; main() catches only ValueError/TimeoutExpired, so one malformed body aborts the whole 12-process run before the output JSON is written (lost evidence of prior processes). subprocess OSError likewise uncaught.",
+      "observed": "runtime_not_dict UNCAUGHT AttributeError; row_not_dict UNCAUGHT AttributeError"
+    },
+    {
+      "id": "F2",
+      "severity": "medium",
+      "kind": "false-positive-validator-scope",
+      "file": "tools/php83/xml-loader/collect.py",
+      "lines": "194",
+      "summary": "Blocking-policy check uses only marker_seen from value. wrapper_events (open/stat of xfixture://marker) and marker text in diagnostics are not rejected under legacy/deny, so an attempted/partial external access passes.",
+      "observed": "wrapper_opened_under_legacy ACCEPTED; marker_in_diag_under_deny ACCEPTED"
+    },
+    {
+      "id": "F3",
+      "severity": "low",
+      "kind": "strict-typing-gap",
+      "file": "tools/php83/xml-loader/collect.py",
+      "lines": "195,204",
+      "summary": "exception is untyped (any truthy value satisfies malformed diagnostic requirement); policy_diagnostics type unchecked (string length counted); diagnostics entries unchecked.",
+      "observed": "exception_untyped_string ACCEPTED; policy_diag_string ACCEPTED (count 3)"
+    },
+    {
+      "id": "F4",
+      "severity": "low",
+      "kind": "warning-retention-scope",
+      "file": "tools/php83/xml-loader/collect.py",
+      "lines": "175-204",
+      "summary": "policy_return and the expected PHP 8.3 E_DEPRECATED for enabled/legacy libxml_disable_entity_loader are not asserted; stderr retention is captured but not checked. Warning retention is only inferred from error_reporting/internal_errors plus a static test string.",
+      "observed": "policy_return_unchecked ACCEPTED"
+    },
+    {
+      "id": "F5",
+      "severity": "info",
+      "kind": "test-coverage",
+      "file": "tools/php83/xml-loader/test_prepare.py",
+      "summary": "Missing-canary test mutates only 'file' document; no tests for F1-F4; test_prepare does not compare staged bytes to source hashes (verified manually here: match)."
+    }
+  ],
+  "verified_ok": [
+    "4 policies x 3 parsers enumerated, each as a separate ssh/systemd-run process (collect.py:215-216)",
+    "6 docs x 7 flags = 42 rows/process, exact order and option ints enforced; 12x42=504 rows/runtime",
+    "Missing/duplicate rows and bool/int substitutions rejected (tests + code)",
+    "Positive enabled canary required for file+noent, wrapper+noent, dtd+noent_dtdload per parser",
+    "Deny requires loader_calls on the same three controls",
+    "Fixtures are synthetic static bytes; marker paths fixed to readonly /audit/probe; wrapper in-memory; no remote URL in probe",
+    "run.sh: PrivateNetwork, socket/socketpair EPERM, ProtectSystem/Home, InaccessiblePaths for /opt/kaltura, DB; open_basedir; allow_url_fopen=0",
+    "Error handler returns false; no @/NOERROR/NOWARNING in probe"
+  ],
+  "limitations": [
+    "No PHP, VM, SSH or network executed; no native/runtime PASS claimed",
+    "Unit tests use synthetic dicts; they do not prove probe.php behaviour on PHP 7.4/8.3",
+    "systemd BindReadOnlyPaths under ProtectHome=yes, bash empty-array with set -u, and lab python>=3.9 (Path.is_relative_to) not verified on labs",
+    "file:// reads cannot be observed except via marker value",
+    "No application coverage (kConf/kSoapClient); no security-call removal recommended"
+  ],
+  "recommendation": "Fix F1-F3 (catch Exception per process / strict isinstance checks; reject wrapper_events and marker in diagnostics under legacy/deny) before VM run; F4 optional assertion. Do not remove security calls without real application tests."
+}

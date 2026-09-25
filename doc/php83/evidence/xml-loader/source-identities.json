@@ -1,0 +1,32 @@
+{
+  "source_zip_sha256": "58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28",
+  "files": {
+    "alpha/config/kConf.php": {
+      "sha256": "d02983c560f6813c3546f2294a324d7a955f669e5b867d56d9a878c397cfa015",
+      "bytes": 2319,
+      "lines": 94
+    },
+    "infra/general/kSoapClient.php": {
+      "sha256": "6fe1abef06f3f365fc1862de0e25ffeaef9da156e731fd7cc17b386623561b7e",
+      "bytes": 945,
+      "lines": 38
+    },
+    "infra/content/kXml.class.php": {
+      "sha256": "4dcaf98963b0b4dda2747286fc352c35ec1e1267c2a7c1d268bb2fe810d6a9bd",
+      "bytes": 11415,
+      "lines": 467
+    },
+    "infra/general/KDOMDocument.php": {
+      "sha256": "2565ebb69c8ce09877f2be4298b92c110e3dc38cadcbcac98dd7f0bdaa32711b",
+      "bytes": 840,
+      "lines": 31
+    },
+    "api_v3/lib/KalturaRequestDeserializer.php": {
+      "sha256": "0273e331f1dc7c8dcb783e6193f969a7ff0953b3554cd32f6953b2149154a038",
+      "bytes": 14818,
+      "lines": 480
+    }
+  },
+  "source_execution": false,
+  "graph_provenance": "Parent supplied ready generation 2026-09-25T12:19:00Z and targeted five-path clean metadata coverage; not independently re-queried by this fixture author. No full-callgraph claim."
+}

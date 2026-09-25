@@ -1,0 +1,31 @@
+test_blocked_diagnostic_disclosure (test_prepare.Tests.test_blocked_diagnostic_disclosure) ... ok
+test_blocked_disclosure (test_prepare.Tests.test_blocked_disclosure) ... ok
+test_blocked_wrapper (test_prepare.Tests.test_blocked_wrapper) ... ok
+test_boolean_options (test_prepare.Tests.test_boolean_options) ... ok
+test_diagnostic_type (test_prepare.Tests.test_diagnostic_type) ... ok
+test_duplicate (test_prepare.Tests.test_duplicate) ... ok
+test_each_canary_missing (test_prepare.Tests.test_each_canary_missing) ... ok
+test_exception_type (test_prepare.Tests.test_exception_type) ... ok
+test_existing (test_prepare.Tests.test_existing) ... ok
+test_integer_boolean (test_prepare.Tests.test_integer_boolean) ... ok
+test_matrix_positive (test_prepare.Tests.test_matrix_positive) ... ok
+test_missing_callback (test_prepare.Tests.test_missing_callback) ... ok
+test_missing_canary (test_prepare.Tests.test_missing_canary) ... ok
+test_missing_deprecation (test_prepare.Tests.test_missing_deprecation) ... ok
+test_missing_row (test_prepare.Tests.test_missing_row) ... ok
+test_oserror_evidence_retained (test_prepare.Tests.test_oserror_evidence_retained) ... ok
+test_policy_diagnostics_type (test_prepare.Tests.test_policy_diagnostics_type) ... ok
+test_policy_return_type (test_prepare.Tests.test_policy_return_type) ... ok
+test_prepare (test_prepare.Tests.test_prepare) ... ok
+test_row_object (test_prepare.Tests.test_row_object) ... ok
+test_runtime_object (test_prepare.Tests.test_runtime_object) ... ok
+test_source_drift (test_prepare.Tests.test_source_drift) ... ok
+test_static_security (test_prepare.Tests.test_static_security) ... ok
+test_timeout_evidence_retained (test_prepare.Tests.test_timeout_evidence_retained) ... ok
+test_warning_suppression (test_prepare.Tests.test_warning_suppression) ... ok
+test_wrong_php (test_prepare.Tests.test_wrong_php) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 0.004s
+
+OK

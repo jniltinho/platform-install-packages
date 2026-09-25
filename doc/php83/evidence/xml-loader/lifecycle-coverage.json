@@ -1,0 +1,123 @@
+{
+  "project": "kaltura-rigel-18.20.0-full",
+  "tier": "Verify bounded class plus direct-source fallback",
+  "status": {
+    "project": "kaltura-rigel-18.20.0-full",
+    "status": "ready",
+    "root_path": "/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/graph-view",
+    "nodes": 231336,
+    "edges": 800641
+  },
+  "coverage": {
+    "project": "kaltura-rigel-18.20.0-full",
+    "signal": "best_effort",
+    "indexed_at": "2026-09-25T12:19:00Z",
+    "metadata": {
+      "generation": "2026-09-25T12:19:00Z",
+      "index_mode": "full",
+      "recorded_at": "2026-09-25T12:19:04Z",
+      "recording_status": "complete",
+      "ignored_files_stored": 519,
+      "ignored_files_total": 519,
+      "hash_records_complete": true,
+      "coverage_version": 3,
+      "generation_matches": true
+    },
+    "paths": [
+      {
+        "requested_path": "alpha/config/kConf.php",
+        "path": "alpha/config/kConf.php",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": "infra/general/kSoapClient.php",
+        "path": "infra/general/kSoapClient.php",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      }
+    ],
+    "scopes": [],
+    "caveat": "Best-effort signal only. No recorded issue does not prove graph or source completeness; read flagged source and qualify claims when metadata is changed or unavailable."
+  },
+  "queries": [
+    {
+      "name": "list_projects",
+      "args": {
+        "limit": 100
+      },
+      "note": "Target project present; unrelated projects intentionally omitted."
+    },
+    {
+      "name": "index_status",
+      "args": {
+        "project": "kaltura-rigel-18.20.0-full"
+      },
+      "note": "Compact target status retained; unrelated coverage lists omitted."
+    },
+    {
+      "name": "search_graph",
+      "args": {
+        "project": "kaltura-rigel-18.20.0-full",
+        "file_pattern": ".*kSoapClient.php",
+        "limit": 30
+      },
+      "result": [
+        {
+          "type": "text",
+          "text": "total: 0\nresults: 0  (rows: name label lines in out; qn = group prefix + \".\" + name)\nhas_more: false\n"
+        }
+      ]
+    },
+    {
+      "name": "search_graph",
+      "args": {
+        "name_pattern": "kSoapClient",
+        "limit": 20
+      },
+      "result": [
+        {
+          "type": "text",
+          "text": "total: 3\nresults: 3  (rows: name label lines in out; qn = group prefix + \".\" + name)\nkaltura-rigel-18.20.0-full.infra.general (infra/general/kSoapClient.php):\n  kSoapClient Module 1-39 0 0\nkaltura-rigel-18.20.0-full.infra.general.kSoapClient (infra/general/kSoapClient.php):\n  kSoapClient Class 2-38 2 0\nkaltura-rigel-18.20.0-full.infra.general.kSoapClient.php (infra/general/kSoapClient.php):\n  __file__ File  0 0\nhas_more: false\n"
+        }
+      ]
+    },
+    {
+      "name": "get_code_snippet",
+      "qualified_name": "kaltura-rigel-18.20.0-full.infra.general.kSoapClient.kSoapClient",
+      "result": {
+        "name": "kSoapClient",
+        "qualified_name": "kaltura-rigel-18.20.0-full.infra.general.kSoapClient.kSoapClient",
+        "label": "Class",
+        "file_path": "/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/graph-view/infra/general/kSoapClient.php",
+        "start_line": 2,
+        "end_line": 38,
+        "source": "class kSoapClient extends SoapClient \r\n{\r\n\r\n\tpublic function __construct($wsdl,$options=array())\r\n\t{\t\r\n\t\t$this->beforeCall();\r\n\t\tparent::__construct($wsdl, $options);\r\n\t\t$this->afterCall();\r\n\t}\r\n\tpublic function __call ($function_name , $arguments)\r\n\t{\r\n\t\t$this->beforeCall();\r\n\t\t$ret = parent::__call($function_name, $arguments);\r\n\t\t$this->afterCall();\r\n\t\treturn $ret;\r\n\t}\r\n\tpublic function __soapCall ($function_name, $arguments, $options = NULL, $input_headers = NULL, &$output_headers = NULL)\r\n\t{\r\n\t\t$this->beforeCall();\r\n\t\t$ret = parent::__soapCall($function_name, $arguments);\r\n\t\t$this->afterCall();\r\n\t\treturn $ret;\r\n\t}\r\n\tprivate function beforeCall()\r\n\t{\r\n\t\tstream_wrapper_restore('http');\r\n\t\tstream_wrapper_restore('https');\r\n\t\tlibxml_disable_entity_loader(false);\r\n\t}\r\n\tprivate function afterCall()\r\n\t{\r\n\t\tlibxml_disable_entity_loader(true);\r\n\t\tstream_wrapper_unregister('https');\r\n\t\tstream_wrapper_unregister('http');\r\n\t}\r\n\r\n}\r\n",
+        "callers": 0,
+        "callees": 0
+      }
+    },
+    {
+      "name": "trace_path",
+      "args": {
+        "direction": "both",
+        "depth": 1,
+        "limit": 20
+      },
+      "result": [
+        {
+          "type": "text",
+          "text": "function: kaltura-rigel-18.20.0-full.infra.general.kSoapClient.kSoapClient\ndirection: both\ncallees_total: 0\ncallees: 0  (rows: name hop; qn = group prefix + \".\" + name)\ncallers_total: 0\ncallers: 0  (rows: name hop; qn = group prefix + \".\" + name)\n"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Initial file_pattern regex-like query yielded zero; corrected exact name lookup found class. No absence inference.",
+    "Class trace has zero edges but source visibly has method calls; use exact direct ZIP body, not graph absence, for lifecycle. No full callgraph or full usage claim."
+  ]
+}

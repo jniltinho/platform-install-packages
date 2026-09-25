@@ -1,0 +1,10 @@
+2111cac3d93a78e677bd39e8b890f73df3f443a3792705dc7e791e115a6ce5b3  tools/php83/xml-loader/collect.py
+7eaadc7867a4938b481338c33a4b8fdf8d855ac7d88603b283028b3ff733bfc4  tools/php83/xml-loader/prepare.py
+99a9b5f4edd8ca5308b9fac009cad71a1b8bab6011df4f3a99ff168b67fffacc  tools/php83/xml-loader/probe.php
+783b6f6ea87b5e7c4c629b576ede483d308693ac45a2b04a829daf0f0961ac04  tools/php83/xml-loader/run.sh
+ea62695228ed21704188614c178c84bc46b36fa51014b7484f740e450760de69  tools/php83/xml-loader/test_prepare.py
+257e1dacd078a80a78415c5214721e2124190c516c9bab3d30e8aa19071a04ec  /tmp/php-xml-loader-prep-r1/identities.json
+71a04b9a228b7da9d2cbf5cb136305bc30810bebd6928c7a81781a568554e196  /tmp/php-xml-loader-prep-r1/marker.dtd
+7750a5a7a15affdcfcdeb3aa3ee6ade598131a0417df0742cc044865f57ca3b2  /tmp/php-xml-loader-prep-r1/marker.txt
+99a9b5f4edd8ca5308b9fac009cad71a1b8bab6011df4f3a99ff168b67fffacc  /tmp/php-xml-loader-prep-r1/probe.php
+783b6f6ea87b5e7c4c629b576ede483d308693ac45a2b04a829daf0f0961ac04  /tmp/php-xml-loader-prep-r1/run.sh

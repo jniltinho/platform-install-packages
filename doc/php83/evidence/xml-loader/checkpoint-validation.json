@@ -1,0 +1,17 @@
+{
+  "tests_exit": 0,
+  "local_tests": 26,
+  "shell_exit": 0,
+  "frozen_hashes_match": true,
+  "scan_file_count": 135,
+  "scan_patterns": [
+    "private_key",
+    "aws_access_key",
+    "github_token",
+    "raw_thinking_block",
+    "raw_hook_response"
+  ],
+  "findings": [],
+  "security_scan_limit": "Bounded pattern scan plus manual synthetic fixture review, not comprehensive secret/security audit. Retained code mentions APIs but not credentials.",
+  "labs_released": true
+}

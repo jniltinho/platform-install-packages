@@ -1,0 +1,2 @@
+{"status": "FAIL", "processes": 12, "failures": ["enabled/dom", "enabled/simplexml", "enabled/xmlreader", "legacy/dom", "legacy/simplexml", "legacy/xmlreader", "default/dom", "default/simplexml", "default/xmlreader", "deny/dom", "deny/simplexml", "deny/xmlreader"]}
+{"status": "FAIL", "processes": 12, "failures": ["enabled/dom", "enabled/simplexml", "enabled/xmlreader", "legacy/dom", "legacy/simplexml", "legacy/xmlreader", "default/dom", "default/simplexml", "default/xmlreader", "deny/dom", "deny/simplexml", "deny/xmlreader"]}

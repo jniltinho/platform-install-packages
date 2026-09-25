@@ -1,0 +1,61 @@
+{
+ "case": "xml-loader nativepolicy harness correction review r2",
+ "executor": "Claude CLI (claude-opus-5-5)",
+ "reviewer_of": "author revisions of collect.py/test_prepare.py",
+ "scope": "LOCAL only; no VM/SSH/network/PHP execution",
+ "verdict": "READY_FOR_BOUNDED_NATIVE_EXPERIMENT",
+ "blocking_findings": [],
+ "not_claimed": [
+  "runtime PASS",
+  "application acceptance",
+  "exhaustive malicious-JSON validation"
+ ],
+ "commands": [
+  {
+   "cmd": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/xml-loader -p 'test_*.py' -v",
+   "exit": 0,
+   "result": "26 tests OK",
+   "log": "claude-r2-tests.log"
+  },
+  {
+   "cmd": "bash -n tools/php83/xml-loader/run.sh",
+   "exit": 0,
+   "log": "claude-r2-bash.log"
+  },
+  {
+   "cmd": "PYTHONDONTWRITEBYTECODE=1 python3 claude-r2-mutations.py (in-memory validator mutations)",
+   "exit": 0,
+   "log": "claude-r2-mutations.log"
+  }
+ ],
+ "prior_findings": {
+  "F1": "FIXED: runtime/row type checks raise ValueError; main catches ValueError/TypeError/KeyError/AttributeError/OSError/TimeoutExpired, record retained, output always written (tests test_runtime_object,test_row_object,test_oserror_evidence_retained,test_timeout_evidence_retained)",
+  "F2": "FIXED: legacy/deny reject any wrapper_events and marker in value/diagnostics/exception (test_blocked_wrapper,test_blocked_diagnostic_disclosure; own mutations rejected)",
+  "F3": "FIXED: exception must be dict{class,message} of str; policy_diagnostics/diagnostics typed lists with strict fields and int>0 (bool rejected)",
+  "F4": "FIXED: policy_return asserted per policy; exactly one E_DEPRECATED(8192) libxml_disable_entity_loader on 83 enabled/legacy, zero otherwise; each diagnostic message must appear in native stderr",
+  "F5": "FIXED: test_each_canary_missing mutates each of 3 canaries; tests added for F1-F4"
+ },
+ "nonblocking_observations": [
+  "N1 low: malformed row accepted with exception {'class':'','message':''} and no diagnostics (empty strings allowed)",
+  "N2 low: stderr retention uses substring test; an empty diagnostic message trivially matches",
+  "N3 info: loader_calls system/public IDs not scanned for marker (they are URIs, not content; acceptable)",
+  "N4 info: obfuscated marker in value not detected - out of scope (not exhaustive malicious-JSON validation)",
+  "N5 limitation: deny expects registration return True and 83 legacy blocking semantics are native questions; a native FAIL here is an experimental outcome, not a harness defect"
+ ],
+ "frozen_hashes_before": {
+  "tools/php83/xml-loader/collect.py": "2111cac3d93a78e677bd39e8b890f73df3f443a3792705dc7e791e115a6ce5b3",
+  "tools/php83/xml-loader/prepare.py": "7eaadc7867a4938b481338c33a4b8fdf8d855ac7d88603b283028b3ff733bfc4",
+  "tools/php83/xml-loader/probe.php": "99a9b5f4edd8ca5308b9fac009cad71a1b8bab6011df4f3a99ff168b67fffacc",
+  "tools/php83/xml-loader/run.sh": "783b6f6ea87b5e7c4c629b576ede483d308693ac45a2b04a829daf0f0961ac04",
+  "tools/php83/xml-loader/test_prepare.py": "ea62695228ed21704188614c178c84bc46b36fa51014b7484f740e450760de69",
+  "doc/php83/xml-loader.md": "e3de07db204f33b1be4d6d54e0f4ee5e42617a58c5bff0d71933d14b32153370"
+ },
+ "frozen_hashes_after_check": "all OK (claude-r2-hashes-after.txt)",
+ "pycache_created": false,
+ "evidence_sha256": {
+  "claude-r2-tests.log": "5738803003081c7173a062dd070211889391231cbfa42c9377dafd07a94123ca",
+  "claude-r2-bash.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "claude-r2-mutations.log": "bdb2228b265a39a4d0f0a1ec0ffa164840c666fd7130836d5940f36dd9aa9695",
+  "claude-r2-mutations.py": "be117008a4f7f002e9c2e8d667457adaf583d1ad0111f361090de9290306c5a7"
+ }
+}

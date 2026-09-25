@@ -1,0 +1,7 @@
+runtime_not_dict UNCAUGHT AttributeError 'str' object has no attribute 'get'
+row_not_dict UNCAUGHT AttributeError 'list' object has no attribute 'get'
+exception_untyped_string ACCEPTED {'rows': 42, 'markers_observed': 3, 'diagnostics': 0, 'policy_diagnostics': 0}
+wrapper_opened_under_legacy ACCEPTED {'rows': 42, 'markers_observed': 0, 'diagnostics': 7, 'policy_diagnostics': 0}
+policy_diag_string ACCEPTED {'rows': 42, 'markers_observed': 3, 'diagnostics': 7, 'policy_diagnostics': 3}
+policy_return_unchecked ACCEPTED {'rows': 42, 'markers_observed': 3, 'diagnostics': 7, 'policy_diagnostics': 0}
+marker_in_diag_under_deny ACCEPTED {'rows': 42, 'markers_observed': 0, 'diagnostics': 8, 'policy_diagnostics': 0}

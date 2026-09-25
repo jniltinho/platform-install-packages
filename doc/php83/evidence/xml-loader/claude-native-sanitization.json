@@ -1,0 +1,18 @@
+{
+  "raw_sha256": "71cdb9e5cc546a6917b89048733cb0cb4654b16688993413a73ee0b244a159a7",
+  "sanitized_sha256": "0d0c17f648e3000b351677e6723c8ae7ff9203520d7fcb6a952353ec942dfb02",
+  "original_events": 55,
+  "retained_events": 21,
+  "counts": {
+    "system": 19,
+    "assistant": 21,
+    "content:thinking": 8,
+    "content:tool_use": 10,
+    "rate_limit_event": 4,
+    "user": 10,
+    "content:tool_result": 10,
+    "content:text": 3,
+    "result": 1
+  },
+  "policy": "Actual current tool calls/results and public final only; drop reasoning/hook history/intermediate narration, retain raw hash only."
+}

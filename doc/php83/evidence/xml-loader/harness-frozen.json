@@ -1,0 +1,18 @@
+{
+  "files": {
+    "tools/php83/xml-loader/probe.php": "99a9b5f4edd8ca5308b9fac009cad71a1b8bab6011df4f3a99ff168b67fffacc",
+    "tools/php83/xml-loader/run.sh": "783b6f6ea87b5e7c4c629b576ede483d308693ac45a2b04a829daf0f0961ac04",
+    "tools/php83/xml-loader/prepare.py": "7eaadc7867a4938b481338c33a4b8fdf8d855ac7d88603b283028b3ff733bfc4",
+    "tools/php83/xml-loader/collect.py": "2111cac3d93a78e677bd39e8b890f73df3f443a3792705dc7e791e115a6ce5b3",
+    "tools/php83/xml-loader/test_prepare.py": "ea62695228ed21704188614c178c84bc46b36fa51014b7484f740e450760de69"
+  },
+  "preparation": {
+    "manifest_sha256": "257e1dacd078a80a78415c5214721e2124190c516c9bab3d30e8aa19071a04ec",
+    "files": 4,
+    "application_coverage": false
+  },
+  "local_tests": 26,
+  "claude_first_exit": 0,
+  "claude_correction_exit": 0,
+  "vm_executed": false
+}
