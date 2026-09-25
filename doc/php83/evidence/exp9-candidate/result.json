@@ -1,0 +1,49 @@
+{
+  "scope": "exp9 experimental ZIP/API/CLI and real-bootstrap bool integration, not application acceptance",
+  "executors": {
+    "codex": "API4+CLI48+bootstrap46 logical rows",
+    "claude": "independent API4+CLI48+bootstrap46 repeat, CLI exits0",
+    "cursor": "archive verification executed and patches reviewed",
+    "grok": "NOT_COMPLETED: timeout120seconds exit124",
+    "opencode": "free fallback: root146 tests executed; initial report-write denied and review incomplete; read-only followup11bootstrap tests and review completed"
+  },
+  "artifact_sha256": "cb61e4cd11009bbf9e6e362dfafa5ef2f4af22da817c75fedbd7741a08e44cbc",
+  "api_diagnostics": {
+    "before_groups": 21,
+    "before_events": 571,
+    "after_groups": 18,
+    "after_events": 503,
+    "removed_groups": 3,
+    "removed_events": 68
+  },
+  "local_tests": {
+    "root": 146,
+    "pdo_bootstrap": 11,
+    "not_full_application_tests": true
+  },
+  "retained_failures": [
+    "pdo-bootstrap initial positional-array fixture: bothvariants255; corrected namedmapping and independently repeated",
+    "OpenCode initial writepermissiondenial: no outputfile; subsequent read-only review",
+    "Grok timeout124"
+  ],
+  "original_acceptance_complete": 0,
+  "original_acceptance_total": 24,
+  "detailed_complete": 3,
+  "detailed_total": 27,
+  "application_acceptance": false,
+  "harness_sha256": {
+    "tools/php83/exp9-api/README.md": "e75c861276184f79adeda89c07594f9b40320bc84e47a6914914558b7aba2287",
+    "tools/php83/exp9-api/collect.py": "aa7f589e1863c1336912cef88a850dc916341516f212a7cce518a5e06a3d6b39",
+    "tools/php83/exp9-api/run-apache.sh": "0141c23f5b5a3c76e77684ea622bd931f42f9b8317373bb0904fc4d68795c734",
+    "tools/php83/exp9-api/stage.sh": "e0d1c9f9cd4f6be1e5a712c7dd2de8b02bc3779b5030bdf0596ba087e34a0fbd",
+    "tools/php83/exp9-api/start-db.sh": "77b3c864a497a3b97cba8966b5ceb54d91523bc2513abb5a421855f55370b6a3",
+    "tools/php83/exp9-api/verify-source.py": "9ed571159a12fbc74644e6638cb8d723a4915fe9c959a7c06a213973f9d37f44",
+    "tools/php83/exp9-regression/batch.py": "04d3b5200c44d69f5f012671aa08de990a7b6722a83c83efd426981ae9adad49",
+    "tools/php83/exp9-regression/run-one.sh": "86fe66e79f0dbdad6409a0ec6a8eedab7c5fe825bab99b95dc832df1818db7dd",
+    "tools/php83/pdo-bootstrap/README.md": "eae5dac91d04638aa26167dca7b411aa30104b00d0ebfc2958eaa75dbf220bd0",
+    "tools/php83/pdo-bootstrap/collect.py": "06019aa6145b4e1e84029473a6fcbd7df6ec1f4b6c52dd44a94fb91381750781",
+    "tools/php83/pdo-bootstrap/probe.php": "3b4048b2e928b60a3b94947a8bf37e97dfd9066d77974685e70104a94901b149",
+    "tools/php83/pdo-bootstrap/run.sh": "f8e3ef64695b39e6f34e299343a47a3cded12d71ad4ba172d6883309725adb81",
+    "tools/php83/pdo-bootstrap/test_collect.py": "e70453b5882f8488731c983f353ddee5b07ec66f4a9f98400def57d7150276ff"
+  }
+}

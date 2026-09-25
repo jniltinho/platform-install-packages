@@ -274,3 +274,21 @@ success/failure restoration without changing observed transaction/cache/dry-run
 data effects. Three load warnings removed in this focused fixture only; artifact
 API count remains unchanged until integration. See
 [boolean repair](pdo-boolean-repair.md). Full acceptance tasks remain open.
+
+## exp9 PDO boolean artifact and real-bootstrap integration
+
+The separate reproducible sixteen-patch ZIP passes four API rows and 48 CLI rows,
+independently repeated by Claude. The API removes exactly 68 events, leaving
+18 groups / 503. A new real KalturaPDO/bootstrap probe (no dependency stubs) passes
+23 typed rows per exp8/exp9 independently; nine public null-to-bool corrections
+are explicit. First named-binding fixture failure is retained and corrected.
+Root harness 146 plus separate bootstrap 11 local tests pass; Grok timeout and
+OpenCode's initial denied report-write remain visible, with a completed read-only
+fallback review. See [exp9 evidence](exp9-pdo-integration.md). Original acceptance
+remains 0/24 and detailed 3/27, not a percentage or release date.
+
+Next aggregate progress must include inventory/classification and the frozen
+full-service 7.4 baseline, not only individual diagnostic repairs. Do not reuse
+`/tmp/php74-baseline-sanity.sh` unmodified: its default target is protected `.20`
+and `curl -L` does not enforce per-hop lab destinations. Historical network-guard
+removal means prior temporary protection cannot be assumed active.

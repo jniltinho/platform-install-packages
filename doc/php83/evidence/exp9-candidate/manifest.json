@@ -1,0 +1,143 @@
+{
+  "upstream_sha256": "58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28",
+  "upstream_root": "server-Rigel-18.20.0",
+  "status": "experimental exp8 plus explicit PDO boolean-result repairs; PHP8.3 target, no full acceptance",
+  "revision": "exp9",
+  "patches": [
+    {
+      "patch": "0002-Services_JSON.class.patch",
+      "sha256": "126eaa808a590c753f2a06d91de5e5b78da7a45ac02f50f172c84e825cf13df0",
+      "path": "alpha/apps/kaltura/lib/Services_JSON.class.php",
+      "before_sha256": "6b83716ffb5a10a641293508a58443e3117f24613da4be0c7b038e1cc0851aa9",
+      "after_sha256": "f8611508758756f0a2264cc1a7aa022d8a8af8d80a0abdeba49a9a30e23d1358",
+      "source_patch": "patches/php83/0002-Services_JSON.class.patch"
+    },
+    {
+      "patch": "0003-Encoder.patch",
+      "sha256": "d39935bc38dbe62d54d02e065a801810acc5635e24cc28de7515556092b2f490",
+      "path": "vendor/ZendFramework/library/Zend/Json/Encoder.php",
+      "before_sha256": "7af0946f20f81f7cbef204f9cdb907d9c52407fa7e4797bd613d12f778baf720",
+      "after_sha256": "e74ee2fae9c48c2d99859ee0821f17293d2586e73a2ff9844ec530b2d6a5bf64",
+      "source_patch": "patches/php83/0003-Encoder.patch"
+    },
+    {
+      "patch": "0004-Decoder.patch",
+      "sha256": "bbd82723f3232be8d0d50827e0d4c4ffb8b37ffe16afb11b1151b9e4c2beac93",
+      "path": "vendor/ZendFramework/library/Zend/Json/Decoder.php",
+      "before_sha256": "7336a0a91cdb2da465642e3322d77cae04f788c6b3e937cd2e1cbd4aff0aa996",
+      "after_sha256": "1d3ef5a95568db6dfe2db823766965a4b887f4689b2a182835b9390695360673",
+      "source_patch": "patches/php83/0004-Decoder.patch"
+    },
+    {
+      "patch": "KalturaPDO-query.patch",
+      "sha256": "51403c941fa0197b9f484c5acfa443a8a8435fc69098712df39a6e49471a43fe",
+      "path": "alpha/apps/kaltura/lib/db/KalturaPDO.php",
+      "before_sha256": "97b756bed876d42da87f6a023b6ecf7af7c2b8454bb382da56ba9c54acae848d",
+      "after_sha256": "aeb012822d0af7c5fe0e6ea4221f789fc8c886f0c53dbb729a51bc9463a30f0e",
+      "source_patch": "patches/php83/held/KalturaPDO-query.patch"
+    },
+    {
+      "patch": "dateUtils-ternary.patch",
+      "sha256": "88050ed941434ae499c6a3b2a24dd24f4443acbdb7ea49d0617e2d4b9c1b1093",
+      "path": "alpha/apps/kaltura/lib/dateUtils.class.php",
+      "before_sha256": "023ab7d9f3de70014225615c089c5ee26477a6b974da301232abd719e656a599",
+      "after_sha256": "490aef40d4e5a8c0312f481dc0dcf85577d753963e6dbe35648bc03bb13eadc1",
+      "source_patch": "patches/php83/held/dateUtils-ternary.patch"
+    },
+    {
+      "patch": "doc-comment-property.patch",
+      "sha256": "22887d8226fd003985f6773d2a2f82df26e66792ef4a92a0f42ab0ef0551c8f0",
+      "path": "api_v3/lib/reflection/KalturaDocCommentParser.php",
+      "before_sha256": "5941bf6b13c889997f2d7158594f65c4bdd89ae142379864eddc782f8d53970d",
+      "after_sha256": "7b843ea1900763216df77bba2b6b091582c41e716a2989754cadc22e77f29f5e",
+      "source_patch": "patches/php83/held/doc-comment-property.patch"
+    },
+    {
+      "patch": "Criteria-native-returns.patch",
+      "sha256": "1c543d541c4422b36f58b67954d020e0e9c3a9582711c5dad43fe70e60942f0f",
+      "path": "vendor/propel/util/Criteria.php",
+      "before_sha256": "0626bb5b976ae7eedccaf5060675cd7c7ca56b22fc2c9d6c1a51ce485a303543",
+      "after_sha256": "e8333167c6b501c92a8ee681a3b8c63372e8bf20e81c140a242c37c75b49a89a",
+      "source_patch": "patches/php83/held/Criteria-native-returns.patch"
+    },
+    {
+      "patch": "myCustomData-null-argument.patch",
+      "sha256": "7ced5100e5423719bbd6ece41405e3ee70af5b028dd74ea4d23dd5eab2e2e6d0",
+      "path": "alpha/apps/kaltura/lib/myCustomData.class.php",
+      "before_sha256": "d318d8a9629f90e68bccc6dde92adbff9d369a61d65c911e80eac0527b83d5a2",
+      "after_sha256": "03712d6f301ad2567b3a842fcef84f89c07018f661a85eb43d203d8289c143d5",
+      "source_patch": "patches/php83/held/myCustomData-null-argument.patch"
+    },
+    {
+      "patch": "Partner-null-permission-name.patch",
+      "sha256": "f4df85e938f6d8bea307583d28a2f626990540cb0c6b343c592e1f98dc15bbad",
+      "path": "alpha/lib/model/Partner.php",
+      "before_sha256": "27dfd30c3f0190e29a86489c10f154b8098f8d2b2b4a8928799056ee4c3d6f07",
+      "after_sha256": "9fd78239a94da6268a92f72b335acffffde05a49152798cd611a0153b876e714",
+      "source_patch": "patches/php83/held/Partner-null-permission-name.patch"
+    },
+    {
+      "patch": "PermissionPeer-null-dependency.patch",
+      "sha256": "72c002d341dacb863e9b19e618df040bdd8e565211d8bf25d2e95b12b1f44353",
+      "path": "alpha/lib/model/PermissionPeer.php",
+      "before_sha256": "95f41a27363ab23d76a2f52259f9a325139da1174fdefd17500479b2c1a2ad16",
+      "after_sha256": "cc7569a58686cbe4c56fa1e6f72663b3bf71147d741427eb4176d8d891255f59",
+      "source_patch": "patches/php83/held/PermissionPeer-null-dependency.patch"
+    },
+    {
+      "patch": "KalturaLog-null-analytics.patch",
+      "sha256": "a52e6e27158728d00ee6c84397d6064cf222de87a248c4733d7c07c52c598d93",
+      "path": "infra/log/KalturaLog.php",
+      "before_sha256": "9b7a7c3dd37616ffd2ac9720ece862641c43bb687a2db4e8fc9cbcb259ff5449",
+      "after_sha256": "dd2a01851114e821a88f266dd060e55a80d7cd795001369c9c14e7d2a794381f",
+      "source_patch": "patches/php83/held/KalturaLog-null-analytics.patch"
+    },
+    {
+      "patch": "KalturaFrontController-null-user.patch",
+      "sha256": "e5a93a5868f21fd56a71a826be884ecd13a0eabf1e2c97e85c42527622297603",
+      "path": "api_v3/lib/KalturaFrontController.php",
+      "before_sha256": "5f2eeffe526d4a0ee245b6f10f4e9600e0f7c8bcb4a52eef41e3a66bbd9ab7a1",
+      "after_sha256": "189607dca3b5ef33270d8e4dfe081daf6a76f39d5fd49066ee0b83f24c62d71a",
+      "source_patch": "patches/php83/held/KalturaFrontController-null-user.patch"
+    },
+    {
+      "patch": "KalturaActionReflector-parameter-class.patch",
+      "sha256": "fb62c56fcf79b6de555bddacc799d43e37016603afa6fe4491272fb3e3cb031e",
+      "path": "api_v3/lib/reflection/KalturaActionReflector.php",
+      "before_sha256": "0b00d1466c92138c71e8b3141a26affbd248476c0a138f3b470f0717c49ce607",
+      "after_sha256": "b6b9ea91b1e1902bdf718bdfd5d3573ffd826662d1f25c35d7eb2a7004f15d7d",
+      "source_patch": "patches/php83/held/KalturaActionReflector-parameter-class.patch"
+    },
+    {
+      "patch": "Zend-Config-return-types.patch",
+      "sha256": "602bb21bd0a34b33c01dd1146654b4b023245936a41e4d9168068641f219f276",
+      "path": "vendor/ZendFramework/library/Zend/Config.php",
+      "before_sha256": "065597c625046207683d14682bffcdbfd0aed862ad456a3dbefcf9b538e97a2f",
+      "after_sha256": "ccdbe8edbc8498fd52a3ac9456fe1085edbd09e77d4f332f7c279b94825e805b",
+      "source_patch": "patches/php83/held/Zend-Config-return-types.patch"
+    },
+    {
+      "patch": "PropelPDO-bool-setAttribute.patch",
+      "sha256": "794b4d9d7b65d0b868a009228d56483ec2b086054c970c2f495b651d82aa8145",
+      "path": "vendor/propel/util/PropelPDO.php",
+      "before_sha256": "9e4f602f50bc24432107f34a2f3b4a995518fe28c46be9dc8f642dbb9ca74d22",
+      "after_sha256": "9017430cfa12adc2de1a187f2d034ecba04ab32677cdbdc419ba2a1e1fc5f0d3",
+      "source_patch": "patches/php83/held/PropelPDO-bool-setAttribute.patch"
+    },
+    {
+      "patch": "KalturaStatement-bool-results.patch",
+      "sha256": "89dee143f9917bc35f4d87ae6b8643fa21fe84eeb90e08e921f06202b531412b",
+      "path": "alpha/apps/kaltura/lib/db/KalturaStatement.php",
+      "before_sha256": "a80d6029db03e1880adf240b157489d6f25b47163c394d0b0969300416378d70",
+      "after_sha256": "e1c21b05e6c43ae98d9483b1ab1825068bed72234b32ea6c40e9886ed6a2c7d3",
+      "source_patch": "patches/php83/held/KalturaStatement-bool-results.patch"
+    }
+  ],
+  "known_limitations": [
+    "Sixteen-patch PHP8.3-only experiment; intentional PDO null-to-bool correction; no candidate7.4 support claim",
+    "Original PHP7.4 remains behavioral baseline; prior artifacts unchanged",
+    "Other diagnostics/cache/framework/media/distro/performance/recovery gates remain open",
+    "No production package, CI, release or .20 authorization implied"
+  ],
+  "target_php": "8.3"
+}

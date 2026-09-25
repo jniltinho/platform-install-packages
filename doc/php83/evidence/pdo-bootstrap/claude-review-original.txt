@@ -1,0 +1,38 @@
+# Claude CLI — execução e revisão independente (pdo-bootstrap)
+
+Executor/revisor: Claude CLI (Opus 5.5). Coordenador: Codex. Ambiente: baseline74
+(`kaltura-php74-baseline`), posse exclusiva concedida pelo coordenador; nenhum outro VM.
+
+## Execução
+- `python3 tools/php83/pdo-bootstrap/collect.py doc/php83/evidence/pdo-bootstrap/claude.json`
+  → exit 0 (`claude.exit`), stderr vazio, `functional_checks_passed: true`;
+  unit `php83-exp9-api-c8ae967a157943cdb290713830a1b491` inactive/stopped.
+- `python3 -m unittest discover -s tools/php83/pdo-bootstrap -p 'test_*.py'` → `Ran 11 tests`, OK, exit 0
+  (não persistido em arquivo; controles locais sem SQL/SSH).
+- Identidades: collector `06019aa6…a489`, probe.php `3b4048b2…b149`, run.sh `f8e3ef64…db81`;
+  exp8 ZIP `67acaa1a…7adc` (15191 arquivos), exp9 ZIP `cb61e4cd…4cbc` (15193); PHP 8.3.6.
+
+## Revisão de codex-r2.json vs claude.json
+- `artifacts`, `harness`, `collector_sha256`, `imported_helper_sha256`: idênticos.
+- exp8 e exp9: exit 0, 23 linhas cada, `rows`/`sources`/diagnostics/stdout_sha256 idênticos
+  (exp8 16 grupos, exp9 13). stderr_sha256 difere entre execuções com diagnostics iguais
+  — provavelmente conteúdo variável (tempo/ids); não verificado, pois stderr bruto não é retido.
+- Diferenças exp8→exp9 somente em 9 retornos null→bool: set-supported, set-unsupported,
+  cache-set-on/off, execute-bound, execute-array, execute-false, dryrun-insert, dryrun-select.
+  Dados, identidade de cache, dry-run, exceções nativas/encapsuladas iguais.
+- Hashes de dependência reais: 7 classes carregadas da árvore do artefato, validadas contra
+  o ZIP; diferem entre variantes apenas PropelPDO e KalturaStatement (arquivos corrigidos).
+- Tentativa inicial: `codex.json` exit 255 em ambas; harness difere só em probe.php
+  (`ef44646c…` = `attempts/positional-array/probe.php`). Diff do fixture: apenas
+  `execute(array(23))` → `execute(array('p1' => 23))`; artefatos/aplicação inalterados.
+
+## Lacunas
+- Limpeza: unit parado e nenhum mariadbd/mysqld ativo (verificação read-only), mas 29
+  datadirs `/tmp/kaltura-pdo-mysql.*` permanecem (retenção por design, acumulando).
+- Se validação/SSH falhar dentro do `try`, não há relatório final; ausência ≠ aprovação.
+- Identidade não registrada: binário/módulos PHP 8.3 copiados, servidor MariaDB, chave de host SSH
+  (herdados do lab anterior). Só 7 classes têm hash de carga; o restante depende da verificação
+  completa da árvore extraída antes/depois.
+- Correção de inferência anterior: saídas de API inalteradas provam apenas igualdade de saída,
+  não que nenhum chamador consome o retorno.
+- Escopo: SQL sintético; não é aceite de aplicação, pacote, CI, release ou produção.

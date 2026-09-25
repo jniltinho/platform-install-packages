@@ -1,0 +1,164 @@
+{
+  "logical_rows": 48,
+  "zero_exits": 44,
+  "expected_original83_fatals": 4,
+  "candidate_rows_exit0": 12,
+  "previous_artifact_rows_exit0": 12,
+  "comparisons": [
+    {
+      "runtime": "83",
+      "source": "exp8",
+      "ini": "standard",
+      "case": "legacy-json",
+      "typed_output_equal": true
+    },
+    {
+      "runtime": "83",
+      "source": "exp8",
+      "ini": "standard",
+      "case": "zend-json",
+      "typed_output_equal": true
+    },
+    {
+      "runtime": "83",
+      "source": "exp8",
+      "ini": "standard",
+      "case": "doc-comment",
+      "typed_output_equal": true
+    },
+    {
+      "runtime": "83",
+      "source": "exp8",
+      "ini": "standard",
+      "case": "doc-comment-export",
+      "typed_output_equal": true
+    },
+    {
+      "runtime": "83",
+      "source": "exp8",
+      "ini": "standard",
+      "case": "doc-comment-consumer",
+      "typed_output_equal": true
+    },
+    {
+      "runtime": "83",
+      "source": "exp8",
+      "ini": "minimal",
+      "case": "legacy-json",
+      "typed_output_equal": true
+    },
+    {
+      "runtime": "83",
+      "source": "exp8",
+      "ini": "minimal",
+      "case": "zend-json",
+      "typed_output_equal": true
+    },
+    {
+      "runtime": "83",
+      "source": "exp8",
+      "ini": "minimal",
+      "case": "doc-comment",
+      "typed_output_equal": true
+    },
+    {
+      "runtime": "83",
+      "source": "exp8",
+      "ini": "minimal",
+      "case": "doc-comment-export",
+      "typed_output_equal": true
+    },
+    {
+      "runtime": "83",
+      "source": "exp8",
+      "ini": "minimal",
+      "case": "doc-comment-consumer",
+      "typed_output_equal": true
+    },
+    {
+      "runtime": "83",
+      "source": "exp9",
+      "ini": "standard",
+      "case": "legacy-json",
+      "typed_output_equal": true
+    },
+    {
+      "runtime": "83",
+      "source": "exp9",
+      "ini": "standard",
+      "case": "zend-json",
+      "typed_output_equal": true
+    },
+    {
+      "runtime": "83",
+      "source": "exp9",
+      "ini": "standard",
+      "case": "doc-comment",
+      "typed_output_equal": true
+    },
+    {
+      "runtime": "83",
+      "source": "exp9",
+      "ini": "standard",
+      "case": "doc-comment-export",
+      "typed_output_equal": true
+    },
+    {
+      "runtime": "83",
+      "source": "exp9",
+      "ini": "standard",
+      "case": "doc-comment-consumer",
+      "typed_output_equal": true
+    },
+    {
+      "runtime": "83",
+      "source": "exp9",
+      "ini": "minimal",
+      "case": "legacy-json",
+      "typed_output_equal": true
+    },
+    {
+      "runtime": "83",
+      "source": "exp9",
+      "ini": "minimal",
+      "case": "zend-json",
+      "typed_output_equal": true
+    },
+    {
+      "runtime": "83",
+      "source": "exp9",
+      "ini": "minimal",
+      "case": "doc-comment",
+      "typed_output_equal": true
+    },
+    {
+      "runtime": "83",
+      "source": "exp9",
+      "ini": "minimal",
+      "case": "doc-comment-export",
+      "typed_output_equal": true
+    },
+    {
+      "runtime": "83",
+      "source": "exp9",
+      "ini": "minimal",
+      "case": "doc-comment-consumer",
+      "typed_output_equal": true
+    }
+  ],
+  "independent": [
+    {
+      "runtime": "74",
+      "rows": 12,
+      "all_rows_equal_except_duration": true,
+      "fixture_hashes_verified": true
+    },
+    {
+      "runtime": "83",
+      "rows": 36,
+      "all_rows_equal_except_duration": true,
+      "fixture_hashes_verified": true
+    }
+  ],
+  "application_acceptance": false
+}

@@ -1,0 +1,140 @@
+{
+  "schema": 1,
+  "observed_at": "2026-09-25 19:36:54 UTC",
+  "scope": "Bounded KalturaPDO constructor/inheritance inspection; original source graph, not candidate graph or exhaustive caller proof",
+  "status": {
+    "project": "kaltura-rigel-18.20.0-full",
+    "status": "ready",
+    "root_path": "/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/graph-view",
+    "nodes": 231336,
+    "edges": 800641
+  },
+  "queries": [
+    {
+      "tool": "index_status",
+      "arguments": {
+        "project": "kaltura-rigel-18.20.0-full"
+      },
+      "result_selection": "project/status/root_path/nodes/edges; intentionally exclude large unrelated coverage listings"
+    },
+    {
+      "tool": "search_graph",
+      "arguments": {
+        "project": "kaltura-rigel-18.20.0-full",
+        "name_pattern": "KalturaPDO",
+        "limit": 10
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "total: 3\nresults: 3  (rows: name label lines in out; qn = group prefix + \".\" + name)\nkaltura-rigel-18.20.0-full.alpha.apps.kaltura.lib.db (alpha/apps/kaltura/lib/db/KalturaPDO.php):\n  KalturaPDO Module 1-236 0 2\nkaltura-rigel-18.20.0-full.alpha.apps.kaltura.lib.db.KalturaPDO (alpha/apps/kaltura/lib/db/KalturaPDO.php):\n  KalturaPDO Class 7-235 44 1\nkaltura-rigel-18.20.0-full.alpha.apps.kaltura.lib.db.KalturaPDO.php (alpha/apps/kaltura/lib/db/KalturaPDO.php):\n  __file__ File  0 0\nhas_more: false\n"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "tool": "trace_path",
+      "arguments": {
+        "project": "kaltura-rigel-18.20.0-full",
+        "function_name": "kaltura-rigel-18.20.0-full.alpha.apps.kaltura.lib.db.KalturaPDO.KalturaPDO",
+        "direction": "outbound",
+        "depth": 1,
+        "edge_types": [
+          "INHERITS"
+        ],
+        "limit": 10
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "function: kaltura-rigel-18.20.0-full.alpha.apps.kaltura.lib.db.KalturaPDO.KalturaPDO\ndirection: outbound\ncallees_total: 1\ncallees: 1  (rows: name hop; qn = group prefix + \".\" + name)\nkaltura-rigel-18.20.0-full.vendor.propel.util.PropelPDO:\n  PropelPDO 1\n"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "tool": "get_code_snippet",
+      "arguments": {
+        "project": "kaltura-rigel-18.20.0-full",
+        "qualified_name": "kaltura-rigel-18.20.0-full.alpha.apps.kaltura.lib.db.KalturaPDO.KalturaPDO"
+      },
+      "result": {
+        "name": "KalturaPDO",
+        "qualified_name": "kaltura-rigel-18.20.0-full.alpha.apps.kaltura.lib.db.KalturaPDO.KalturaPDO",
+        "file_path": "/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/graph-view/alpha/apps/kaltura/lib/db/KalturaPDO.php",
+        "start_line": 7,
+        "end_line": 235,
+        "source": "class KalturaPDO extends PropelPDO\n{\n\t/**\n\t * Use to set logged info for Kaltura logger\n\t */\n\tconst KALTURA_ATTR_NAME = -1001;\n\t\t\n\t/**\n\t * Use to disable transaction\n\t */\n\tconst KALTURA_ATTR_NO_TRANSACTION = 'noTransaction';\n\t\n\t/**\n\t * Sets the number of retries of doSave()\n\t */\n\tconst SAVE_MAX_RETRIES = 4; \n\t\n\tprotected static $comment = null;\n\tprotected $kalturaOptions = array();\n\tprotected $connectionName = null;\n\tprotected $hostName = null;\n\tprotected $enableComments = true;\n\tprotected $configKey = null;\n\n\t/* (non-PHPdoc)\n\t * @see PDO::__construct()\n\t */\n\tpublic function __construct($dsn, $username = null, $password = null, $driver_options = array(), $config_key = null)\n\t{\n\t\tif(isset($driver_options[KalturaPDO::KALTURA_ATTR_NAME]))\n\t\t{\n\t\t\t$this->connectionName = $driver_options[KalturaPDO::KALTURA_ATTR_NAME];\n\t\t\t$this->kalturaOptions = DbManager::getKalturaConfig($this->connectionName);\n\t\t}\n\t\t\n\t\tlist($mysql, $connection) = explode(':', $dsn);\n\t\t$arguments = explode(';', $connection);\n\t\tforeach($arguments as $argument)\n\t\t{\n\t\t\tlist($argumentName, $argumentValue) = explode('=', $argument);\n\t\t\tif(strtolower($argumentName) == 'host')\n\t\t\t{\n\t\t\t\t$this->hostName = $argumentValue;\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t\t$this->configKey = $config_key;\n\t\t\t\t\t\n\t\t$connStart = microtime(true);\n\n\t\ttry\n\t\t{\n\t\t\tparent::__construct($dsn, $username, $password, $driver_options);\n\t\t}\n\t\tcatch (PDOException $e)\n\t\t{\n\t\t\t$connTook = microtime(true) - $connStart;\n\t\t\tKalturaMonitorClient::monitorConnTook($dsn, $connTook, 'PDO_' . $e->getCode());\n\t\t\tthrow $e;\n\t\t}\n\n\t\t$connTook = microtime(true) - $connStart;\n\t\t\n\t\tKalturaLog::debug(\"conn took - $connTook seconds to $dsn\");\n\t\t\n\t\tKalturaMonitorClient::monitorConnTook($dsn, $connTook);\t\t\n\n\t\t$this->setAttribute(PDO::ATTR_STATEMENT_CLASS, array('KalturaStatement'));\n\t}\n\n\tpublic function setCommentsEnabled($enabled) \n\t{\n\t\t$this->enableComments = $enabled;\n\t}\n\n\tpublic function getConnectionName() \n\t{\n\t\treturn $this->connectionName;\n\t}\n\n\tpublic function getHostName() \n\t{\n\t\treturn $this->hostName;\n\t}\n\n\tpublic function getComment() \n\t{\n\t\tif(!self::$comment)\n\t\t{\n\t\t\t$uniqueId = new UniqueId();\n\t\t\tself::$comment = (isset($_SERVER[\"HOSTNAME\"]) ? $_SERVER[\"HOSTNAME\"] : gethostname());\n\t\t\tself::$comment .= \"[$uniqueId]\";\n\t\t}\n\t\t\n\t\treturn self::$comment . \"[$this->connectionName]\";\n\t}\n\t\n\tprotected function getCommentWrapped() \n\t{\n\t\tif(!$this->enableComments)\n\t\t\treturn '';\n\t\t\t\n\t\t$commentBody = $this->getComment();\n\t\treturn \"/* $commentBody */ \";\n\t}\n\t\n\t/* (non-PHPdoc)\n\t * @see PropelPDO::prepare()\n\t */\n\tpublic function prepare($sql, $driver_options = array())\n\t{\n\t\t$comment = $this->getCommentWrapped();\n\t\t$sql = $comment . $sql;\n\t\t\n\t\treturn parent::prepare($sql, $driver_options);\n\t}\n\t\n\t/* (non-PHPdoc)\n\t * @see PDO::exec()\n\t */\n\tpublic function exec($sql)\n\t{\n\t\t$comment = $this->getCommentWrapped();\n\t\t$sql = $comment . $sql;\n\t\t\n\t\tKalturaLog::debug($sql);\n\t\t\n\t\t$sqlStart = microtime(true);\n\t\ttry\n\t\t{\n\t\t\t$result = parent::exec($sql);\n\t\t}\n\t\tcatch(PropelException $pex)\n\t\t{\n\t\t\tKalturaLog::alert($pex->getMessage());\n\t\t\tthrow new PropelException(\"Database error\");\n\t\t}\n\t\t$sqlTook = microtime(true) - $sqlStart;\n\t\tKalturaLog::debug(\"Sql took - \" . $sqlTook . \" seconds\");\n\t\tKalturaMonitorClient::monitorDatabaseAccess($sql, $sqlTook, $this->hostName);\n\t\t\n\t\treturn $result;\n\t}\n\n\tpublic function queryAndFetchAll($sql, $fetchStyle, &$sqlConditions, $columnIndex = 0, $filter = null)\n\t{\n\t\t$finalSql = str_replace(kApiCache::KALTURA_COMMENT_MARKER, $this->getComment(), $sql);\n\t\t\n\t\tKalturaLog::debug($finalSql);\n\t\t\n\t\t$sqlStart = microtime(true);\n\t\t$stmt = parent::query($finalSql);\n\t\t\n\t\t$sqlTook = microtime(true) - $sqlStart;\n\t\tKalturaLog::debug(\"Sql took - \" . $sqlTook . \" seconds\");\n\t\tKalturaMonitorClient::monitorDatabaseAccess($sql, $sqlTook, $this->hostName);\n\t\t\n\t\tif (!$stmt)\n\t\t\treturn false;\n\t\t\n\t\tif ($fetchStyle == PDO::FETCH_COLUMN)\n\t\t\t$result = $stmt->fetchAll($fetchStyle, $columnIndex);\n\t\telse\n\t\t\t$result = $stmt->fetchAll($fetchStyle);\n\t\t\n\t\tif(is_null($result))\n\t\t\treturn false;\n\t\t\t\n\t\tif(!$result)\n\t\t\t$result = array();\n\t\t\t\n\t\t$filteredResult = kApiCache::filterQueryResult($result, $filter);\n\t\n\t\t$sqlConditions[] = array($this->configKey, $sql, $fetchStyle, $columnIndex, $filter, $filteredResult);\t\t\n\t\t\n\t\treturn $filteredResult;\n\t}\n\t\n\t/* (non-PHPdoc)\n\t * @see PDO::query()\n\t */\n\tpublic function query()\n\t{\n\t\tkApiCache::disableConditionalCache();\n\t\n\t\t$args = func_get_args();\n\t\t\n\t\t$sql = $args[0];\n\t\tKalturaLog::debug($sql);\n\t\t\n\t\t$comment = $this->getCommentWrapped();\n\t\t$sql = $comment . $sql;\n\t\t\n\t\t$sqlStart = microtime(true);\n\t\ttry\n\t\t{\n\t\t\tif (version_compare(PHP_VERSION, '5.3', '<'))\n\t\t\t\t$result = call_user_func_array(array($this, 'parent::query'), $args);\n\t\t\telse\n\t\t\t\t$result = call_user_func_array('parent::query', $args);\n\t\t}\n\t\tcatch(PropelException $pex)\n\t\t{\n\t\t\tKalturaLog::alert($pex->getMessage());\n\t\t\tthrow new PropelException(\"Database error\");\n\t\t}\n\t\t$sqlTook = microtime(true) - $sqlStart;\n\t\tKalturaLog::debug(\"Sql took - \" . $sqlTook . \" seconds\");\n\t\tKalturaMonitorClient::monitorDatabaseAccess($sql, $sqlTook, $this->hostName);\n\t\t\n\t\treturn $result;\n\t}\n\t\n\tpublic function getKalturaOption($option)\n\t{\n\t\tif(isset($this->kalturaOptions[$option]))\n\t\t\treturn $this->kalturaOptions[$option];\n\t\t\t\n\t\treturn null;\n\t}\n\t\n\tpublic function beginTransaction()\n\t{\n\t\tif($this->getKalturaOption(KalturaPDO::KALTURA_ATTR_NO_TRANSACTION))\n\t\t\treturn true;\n\t\t\n\t\treturn parent::beginTransaction();\n\t}\n}\n"
+      }
+    },
+    {
+      "tool": "check_index_coverage",
+      "arguments": {
+        "project": "kaltura-rigel-18.20.0-full",
+        "paths": [
+          "alpha/apps/kaltura/lib/db/KalturaPDO.php",
+          "alpha/apps/kaltura/lib/db/KalturaStatement.php",
+          "vendor/propel/util/PropelPDO.php"
+        ]
+      },
+      "result": {
+        "project": "kaltura-rigel-18.20.0-full",
+        "signal": "best_effort",
+        "indexed_at": "2026-09-25T12:19:00Z",
+        "metadata": {
+          "generation": "2026-09-25T12:19:00Z",
+          "index_mode": "full",
+          "recorded_at": "2026-09-25T12:19:04Z",
+          "recording_status": "complete",
+          "ignored_files_stored": 519,
+          "ignored_files_total": 519,
+          "hash_records_complete": true,
+          "coverage_version": 3,
+          "generation_matches": true
+        },
+        "paths": [
+          {
+            "requested_path": "alpha/apps/kaltura/lib/db/KalturaPDO.php",
+            "path": "alpha/apps/kaltura/lib/db/KalturaPDO.php",
+            "status": "no_recorded_issue",
+            "freshness": "metadata_match",
+            "recommended_action": "use_graph_with_best_effort_caveat",
+            "coverage": []
+          },
+          {
+            "requested_path": "alpha/apps/kaltura/lib/db/KalturaStatement.php",
+            "path": "alpha/apps/kaltura/lib/db/KalturaStatement.php",
+            "status": "no_recorded_issue",
+            "freshness": "metadata_match",
+            "recommended_action": "use_graph_with_best_effort_caveat",
+            "coverage": []
+          },
+          {
+            "requested_path": "vendor/propel/util/PropelPDO.php",
+            "path": "vendor/propel/util/PropelPDO.php",
+            "status": "no_recorded_issue",
+            "freshness": "metadata_match",
+            "recommended_action": "use_graph_with_best_effort_caveat",
+            "coverage": []
+          }
+        ],
+        "scopes": [],
+        "caveat": "Best-effort signal only. No recorded issue does not prove graph or source completeness; read flagged source and qualify claims when metadata is changed or unavailable."
+      }
+    }
+  ],
+  "conclusions": [
+    "KalturaPDO extends PropelPDO.",
+    "KalturaPDO constructor calls setAttribute(PDO::ATTR_STATEMENT_CLASS, array('KalturaStatement')).",
+    "KalturaPDO::prepare prepends getCommentWrapped() before delegating to parent."
+  ],
+  "limits": [
+    "Graph covers immutable original source; executed artifact class hashes are separately verified by the runtime collector.",
+    "No recorded coverage gaps is not completeness proof.",
+    "Direct source reads of KalturaStatement.php and PropelPDO.php informed fixture behavior, not an exhaustive caller audit."
+  ]
+}

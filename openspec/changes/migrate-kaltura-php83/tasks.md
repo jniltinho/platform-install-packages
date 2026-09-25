@@ -213,3 +213,11 @@ transactions/cache/dry-run effects in 29 SQL cases × 4 variants. EOF patch seri
 and fixture-only reflection deprecations were corrected with attempts retained.
 See `doc/php83/pdo-boolean-repair.md`; real callers/bootstrap/artifact integration
 remain pending and public null→bool behavior is explicitly documented.
+
+T1-01/T1-02 partial integration: exp9 retains prior 14 patches and adds the two
+boolean-result repairs, with reproducible 16-target ZIP. Four API / 48 CLI rows match
+baseline contracts; exactly 68 diagnostic events disappear,18 groups / 503 remain.
+Actual KalturaPDO/bootstrap without dependency stubs independently passes 23 rows
+per prior/candidate artifact; nine intentional null-to-bool slots are checked.
+First fixture named-input failure is retained and corrected. See
+`doc/php83/exp9-pdo-integration.md`; no aggregate acceptance checkbox closes.

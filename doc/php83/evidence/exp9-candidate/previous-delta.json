@@ -1,0 +1,14 @@
+{
+  "previous": "exp8",
+  "candidate": "exp9",
+  "changed_application_files": [
+    "server-Rigel-18.20.0/alpha/apps/kaltura/lib/db/KalturaStatement.php",
+    "server-Rigel-18.20.0/vendor/propel/util/PropelPDO.php"
+  ],
+  "all_other_application_bytes_identical": true,
+  "prior_fourteen_entries_preserved": true,
+  "manifest_unique_targets": 16,
+  "public_null_to_bool_change_intentional": true,
+  "verifier_sha256": "1cda458f8e8b00cfb64a1c634fb2fc352ce7bbcfffe7bfd5f705ac75012ff48c",
+  "application_acceptance": false
+}
