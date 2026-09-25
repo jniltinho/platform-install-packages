@@ -1,0 +1,20 @@
+test_acceptance_flag (test_generation.GenerationContractTests.test_acceptance_flag) ... ok
+test_actual_records (test_generation.GenerationContractTests.test_actual_records) ... ok
+test_altered_output (test_generation.GenerationContractTests.test_altered_output) ... ok
+test_command_drift (test_generation.GenerationContractTests.test_command_drift) ... ok
+test_duplicate_case (test_generation.GenerationContractTests.test_duplicate_case) ... ok
+test_extra_native_stderr (test_generation.GenerationContractTests.test_extra_native_stderr) ... ok
+test_extra_output (test_generation.GenerationContractTests.test_extra_output) ... ok
+test_false_exit (test_generation.GenerationContractTests.test_false_exit) ... ok
+test_false_lint_exit (test_generation.GenerationContractTests.test_false_lint_exit) ... ok
+test_missing_diagnostic (test_generation.GenerationContractTests.test_missing_diagnostic) ... ok
+test_missing_lint (test_generation.GenerationContractTests.test_missing_lint) ... ok
+test_missing_row (test_generation.GenerationContractTests.test_missing_row) ... ok
+test_pending_state (test_generation.GenerationContractTests.test_pending_state) ... ok
+test_program_hash (test_generation.GenerationContractTests.test_program_hash) ... ok
+test_unknown_status (test_generation.GenerationContractTests.test_unknown_status) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.034s
+
+OK

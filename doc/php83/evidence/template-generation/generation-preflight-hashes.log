@@ -1,0 +1,8 @@
+tools/php83/template-generation/build.py: OK
+tools/php83/template-generation/collect.py: OK
+tools/php83/template-generation/probe.php: OK
+tools/php83/template-generation/run.sh: OK
+tools/php83/template-generation/test_build.py: OK
+tools/php83/template-generation/test_collect.py: OK
+tools/php83/template-generation/test_method.py: OK
+tools/php83/template-generation/validate_method.py: OK

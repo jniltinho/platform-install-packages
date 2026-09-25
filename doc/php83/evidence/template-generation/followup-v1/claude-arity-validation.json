@@ -1,0 +1,12 @@
+{
+  "input_sha256": "cd899dac3304d39665448e10cc40c5874099f81650870ebb72ef5658d8957d5d",
+  "validator_sha256": "b7a10397a0dc5662a9d306f000cb9f22bca21f2c9ac5693b31381e6461e0697b",
+  "summary": {
+    "rows": 4,
+    "empty74_warning_null_undefined": true,
+    "empty83_argument_count_error_undefined": true,
+    "true_controls": 2,
+    "generated_application_execution": false,
+    "application_acceptance": false
+  }
+}

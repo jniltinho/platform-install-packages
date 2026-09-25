@@ -1,0 +1,498 @@
+{
+  "status": "OBSERVED_PENDING_INDEPENDENT_GENERATION_CONTRACT",
+  "report_sha256": "43074293abfe7a9bda134a6305a72adf66e4139b6888d13e220d93a674696a86",
+  "rows": 90,
+  "exit_counts": {
+    "0": 72,
+    "10": 18
+  },
+  "lint_counts": {
+    "0": 168,
+    "255": 30
+  },
+  "comparisons": [
+    {
+      "case": "module",
+      "exact_generated_inventory_bytes_sha256_equal_to_original74": {
+        "exp10_74": true,
+        "candidate74": true,
+        "candidate83": true
+      }
+    },
+    {
+      "case": "admin",
+      "exact_generated_inventory_bytes_sha256_equal_to_original74": {
+        "exp10_74": true,
+        "candidate74": true,
+        "candidate83": true
+      }
+    },
+    {
+      "case": "crud",
+      "exact_generated_inventory_bytes_sha256_equal_to_original74": {
+        "exp10_74": true,
+        "candidate74": true,
+        "candidate83": true
+      }
+    },
+    {
+      "case": "default-default",
+      "exact_generated_inventory_bytes_sha256_equal_to_original74": {
+        "exp10_74": true,
+        "candidate74": true,
+        "candidate83": true
+      }
+    },
+    {
+      "case": "default-true",
+      "exact_generated_inventory_bytes_sha256_equal_to_original74": {
+        "exp10_74": true,
+        "candidate74": true,
+        "candidate83": true
+      }
+    },
+    {
+      "case": "default-false",
+      "exact_generated_inventory_bytes_sha256_equal_to_original74": {
+        "exp10_74": true,
+        "candidate74": true,
+        "candidate83": true
+      }
+    },
+    {
+      "case": "default-zero",
+      "exact_generated_inventory_bytes_sha256_equal_to_original74": {
+        "exp10_74": true,
+        "candidate74": true,
+        "candidate83": true
+      }
+    },
+    {
+      "case": "default-wordfalse",
+      "exact_generated_inventory_bytes_sha256_equal_to_original74": {
+        "exp10_74": true,
+        "candidate74": true,
+        "candidate83": true
+      }
+    },
+    {
+      "case": "rotate-default",
+      "exact_generated_inventory_bytes_sha256_equal_to_original74": {
+        "exp10_74": true,
+        "candidate74": true,
+        "candidate83": true
+      }
+    },
+    {
+      "case": "rotate-true",
+      "exact_generated_inventory_bytes_sha256_equal_to_original74": {
+        "exp10_74": true,
+        "candidate74": true,
+        "candidate83": true
+      }
+    },
+    {
+      "case": "rotate-false",
+      "exact_generated_inventory_bytes_sha256_equal_to_original74": {
+        "exp10_74": true,
+        "candidate74": true,
+        "candidate83": true
+      }
+    },
+    {
+      "case": "rotate-zero",
+      "exact_generated_inventory_bytes_sha256_equal_to_original74": {
+        "exp10_74": true,
+        "candidate74": true,
+        "candidate83": true
+      }
+    },
+    {
+      "case": "rotate-wordfalse",
+      "exact_generated_inventory_bytes_sha256_equal_to_original74": {
+        "exp10_74": true,
+        "candidate74": true,
+        "candidate83": true
+      }
+    },
+    {
+      "case": "controller-default",
+      "exact_generated_inventory_bytes_sha256_equal_to_original74": {
+        "exp10_74": true,
+        "candidate74": true,
+        "candidate83": true
+      }
+    },
+    {
+      "case": "controller-true",
+      "exact_generated_inventory_bytes_sha256_equal_to_original74": {
+        "exp10_74": true,
+        "candidate74": true,
+        "candidate83": true
+      }
+    },
+    {
+      "case": "controller-false",
+      "exact_generated_inventory_bytes_sha256_equal_to_original74": {
+        "exp10_74": true,
+        "candidate74": true,
+        "candidate83": true
+      }
+    },
+    {
+      "case": "controller-zero",
+      "exact_generated_inventory_bytes_sha256_equal_to_original74": {
+        "exp10_74": true,
+        "candidate74": true,
+        "candidate83": true
+      }
+    },
+    {
+      "case": "controller-wordfalse",
+      "exact_generated_inventory_bytes_sha256_equal_to_original74": {
+        "exp10_74": true,
+        "candidate74": true,
+        "candidate83": true
+      }
+    }
+  ],
+  "debug_false_evidence": [
+    {
+      "case": "default-false",
+      "path": "batch/audit_job.php",
+      "debug_definition": [
+        "define('SF_DEBUG',       );"
+      ],
+      "lints": [
+        {
+          "path": "batch/audit_job.php",
+          "runtime": "74",
+          "exit": 0,
+          "stdout": "No syntax errors detected in Standard input code\n",
+          "stderr": ""
+        },
+        {
+          "path": "batch/audit_job.php",
+          "runtime": "83",
+          "exit": 0,
+          "stdout": "No syntax errors detected in Standard input code\n",
+          "stderr": ""
+        }
+      ],
+      "correction": "Actual74/83 lints pass despite empty second argument; runtime arity/constant behavior not executed, no waiver."
+    },
+    {
+      "case": "default-zero",
+      "path": "batch/audit_job.php",
+      "debug_definition": [
+        "define('SF_DEBUG',       );"
+      ],
+      "lints": [
+        {
+          "path": "batch/audit_job.php",
+          "runtime": "74",
+          "exit": 0,
+          "stdout": "No syntax errors detected in Standard input code\n",
+          "stderr": ""
+        },
+        {
+          "path": "batch/audit_job.php",
+          "runtime": "83",
+          "exit": 0,
+          "stdout": "No syntax errors detected in Standard input code\n",
+          "stderr": ""
+        }
+      ],
+      "correction": "Actual74/83 lints pass despite empty second argument; runtime arity/constant behavior not executed, no waiver."
+    },
+    {
+      "case": "rotate-false",
+      "path": "batch/rotate_log_auditapp_prod.php",
+      "debug_definition": [
+        "define('SF_DEBUG',       );"
+      ],
+      "lints": [
+        {
+          "path": "batch/rotate_log_auditapp_prod.php",
+          "runtime": "74",
+          "exit": 0,
+          "stdout": "No syntax errors detected in Standard input code\n",
+          "stderr": ""
+        },
+        {
+          "path": "batch/rotate_log_auditapp_prod.php",
+          "runtime": "83",
+          "exit": 0,
+          "stdout": "No syntax errors detected in Standard input code\n",
+          "stderr": ""
+        }
+      ],
+      "correction": "Actual74/83 lints pass despite empty second argument; runtime arity/constant behavior not executed, no waiver."
+    },
+    {
+      "case": "rotate-zero",
+      "path": "batch/rotate_log_auditapp_prod.php",
+      "debug_definition": [
+        "define('SF_DEBUG',       );"
+      ],
+      "lints": [
+        {
+          "path": "batch/rotate_log_auditapp_prod.php",
+          "runtime": "74",
+          "exit": 0,
+          "stdout": "No syntax errors detected in Standard input code\n",
+          "stderr": ""
+        },
+        {
+          "path": "batch/rotate_log_auditapp_prod.php",
+          "runtime": "83",
+          "exit": 0,
+          "stdout": "No syntax errors detected in Standard input code\n",
+          "stderr": ""
+        }
+      ],
+      "correction": "Actual74/83 lints pass despite empty second argument; runtime arity/constant behavior not executed, no waiver."
+    },
+    {
+      "case": "controller-false",
+      "path": "web/audit_front.php",
+      "debug_definition": [
+        "define('SF_DEBUG',       );"
+      ],
+      "lints": [
+        {
+          "path": "web/audit_front.php",
+          "runtime": "74",
+          "exit": 0,
+          "stdout": "No syntax errors detected in Standard input code\n",
+          "stderr": ""
+        },
+        {
+          "path": "web/audit_front.php",
+          "runtime": "83",
+          "exit": 0,
+          "stdout": "No syntax errors detected in Standard input code\n",
+          "stderr": ""
+        }
+      ],
+      "correction": "Actual74/83 lints pass despite empty second argument; runtime arity/constant behavior not executed, no waiver."
+    },
+    {
+      "case": "controller-zero",
+      "path": "web/audit_front.php",
+      "debug_definition": [
+        "define('SF_DEBUG',       );"
+      ],
+      "lints": [
+        {
+          "path": "web/audit_front.php",
+          "runtime": "74",
+          "exit": 0,
+          "stdout": "No syntax errors detected in Standard input code\n",
+          "stderr": ""
+        },
+        {
+          "path": "web/audit_front.php",
+          "runtime": "83",
+          "exit": 0,
+          "stdout": "No syntax errors detected in Standard input code\n",
+          "stderr": ""
+        }
+      ],
+      "correction": "Actual74/83 lints pass despite empty second argument; runtime arity/constant behavior not executed, no waiver."
+    }
+  ],
+  "diagnostic_groups": {
+    "74_original": [
+      {
+        "diagnostic": [
+          "load",
+          8192,
+          "Array and string offset access syntax with curly braces is deprecated",
+          "/audit/source/vendor/symfony/vendor/pake/pakeGetopt.class.php",
+          53
+        ],
+        "count": 36
+      },
+      {
+        "diagnostic": [
+          "load",
+          8192,
+          "Array and string offset access syntax with curly braces is deprecated",
+          "/audit/source/vendor/symfony/vendor/pake/pakeGetopt.class.php",
+          60
+        ],
+        "count": 18
+      },
+      {
+        "diagnostic": [
+          "load",
+          8192,
+          "Array and string offset access syntax with curly braces is deprecated",
+          "/audit/source/vendor/symfony/vendor/pake/pakeGetopt.class.php",
+          84
+        ],
+        "count": 18
+      },
+      {
+        "diagnostic": [
+          "load",
+          8192,
+          "Array and string offset access syntax with curly braces is deprecated",
+          "/audit/source/vendor/symfony/vendor/pake/pakeGetopt.class.php",
+          104
+        ],
+        "count": 36
+      },
+      {
+        "diagnostic": [
+          "load",
+          8192,
+          "Array and string offset access syntax with curly braces is deprecated",
+          "/audit/source/vendor/symfony/vendor/pake/pakeGetopt.class.php",
+          109
+        ],
+        "count": 18
+      },
+      {
+        "diagnostic": [
+          "load",
+          8192,
+          "Array and string offset access syntax with curly braces is deprecated",
+          "/audit/source/vendor/symfony/vendor/pake/pakeGetopt.class.php",
+          152
+        ],
+        "count": 18
+      },
+      {
+        "diagnostic": [
+          "load",
+          8192,
+          "Array and string offset access syntax with curly braces is deprecated",
+          "/audit/source/vendor/symfony/vendor/pake/pakeGetopt.class.php",
+          172
+        ],
+        "count": 18
+      },
+      {
+        "diagnostic": [
+          "load",
+          8192,
+          "Array and string offset access syntax with curly braces is deprecated",
+          "/audit/source/vendor/symfony/vendor/pake/pakeGetopt.class.php",
+          192
+        ],
+        "count": 18
+      },
+      {
+        "diagnostic": [
+          "load",
+          8192,
+          "Array and string offset access syntax with curly braces is deprecated",
+          "/audit/source/vendor/symfony/vendor/pake/pakeFinder.class.php",
+          526
+        ],
+        "count": 36
+      },
+      {
+        "diagnostic": [
+          "load",
+          8192,
+          "Array and string offset access syntax with curly braces is deprecated",
+          "/audit/source/vendor/symfony/vendor/pake/pakeFinder.class.php",
+          527
+        ],
+        "count": 18
+      },
+      {
+        "diagnostic": [
+          "load",
+          8192,
+          "Array and string offset access syntax with curly braces is deprecated",
+          "/audit/source/vendor/symfony/vendor/pake/pakeFinder.class.php",
+          528
+        ],
+        "count": 18
+      },
+      {
+        "diagnostic": [
+          "load",
+          8192,
+          "Array and string offset access syntax with curly braces is deprecated",
+          "/audit/source/vendor/symfony/vendor/pake/pakeFinder.class.php",
+          529
+        ],
+        "count": 36
+      },
+      {
+        "diagnostic": [
+          "generator-load",
+          8192,
+          "Methods with the same name as their class will not be constructors in a future version of PHP; pakeYAMLNode has a deprecated constructor",
+          "/audit/source/vendor/symfony/vendor/pake/pakeYaml.class.php",
+          54
+        ],
+        "count": 18
+      },
+      {
+        "diagnostic": [
+          "generator-load",
+          8192,
+          "Array and string offset access syntax with curly braces is deprecated",
+          "/audit/source/vendor/symfony/vendor/pake/pakeYaml.class.php",
+          196
+        ],
+        "count": 18
+      },
+      {
+        "diagnostic": [
+          "generation",
+          8192,
+          "Function create_function() is deprecated",
+          "/audit/source/vendor/symfony/vendor/pake/pakeApp.class.php",
+          357
+        ],
+        "count": 23
+      }
+    ],
+    "74_exp10": [
+      {
+        "diagnostic": [
+          "generator-load",
+          8192,
+          "Methods with the same name as their class will not be constructors in a future version of PHP; pakeYAMLNode has a deprecated constructor",
+          "/audit/source/vendor/symfony/vendor/pake/pakeYaml.class.php",
+          54
+        ],
+        "count": 18
+      },
+      {
+        "diagnostic": [
+          "generation",
+          8192,
+          "Function create_function() is deprecated",
+          "/audit/source/vendor/symfony/vendor/pake/pakeApp.class.php",
+          357
+        ],
+        "count": 23
+      }
+    ],
+    "83_exp10": [],
+    "74_candidate": [
+      {
+        "diagnostic": [
+          "generator-load",
+          8192,
+          "Methods with the same name as their class will not be constructors in a future version of PHP; pakeYAMLNode has a deprecated constructor",
+          "/audit/source/vendor/symfony/vendor/pake/pakeYaml.class.php",
+          54
+        ],
+        "count": 18
+      }
+    ],
+    "83_candidate": []
+  },
+  "generated_execution": false,
+  "generation_acceptance": false,
+  "application_acceptance": false
+}

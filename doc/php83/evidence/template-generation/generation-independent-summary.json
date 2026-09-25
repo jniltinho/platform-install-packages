@@ -1,0 +1,25 @@
+{
+  "executor": "Actual Claude CLI",
+  "cli_exit": 0,
+  "local_tests_executed": 44,
+  "local_suites": [
+    10,
+    19,
+    15
+  ],
+  "observation_collector_exit": 2,
+  "bounded_validator_exit": 0,
+  "rows": 90,
+  "reports_byte_identical": true,
+  "report_sha256": "43074293abfe7a9bda134a6305a72adf66e4139b6888d13e220d93a674696a86",
+  "before_after_runtime_stage_identical": true,
+  "bounded_generation_observation_contract": "PASS",
+  "generated_application_execution": false,
+  "negative_case_execution": false,
+  "debug_false_runtime_arity": "NOT_EXECUTED",
+  "application_acceptance": false,
+  "limitations": [
+    "Raw action logs and native diagnostic wording are recorded contract values, not independent functional oracle.",
+    "Same lab/runtime/input repeat does not imply environment diversity or full application correctness."
+  ]
+}

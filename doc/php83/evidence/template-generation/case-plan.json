@@ -1,0 +1,60 @@
+{
+  "status": "PREPARED_NOT_EXECUTED",
+  "modes": {
+    "method": [
+      "string",
+      "absolute",
+      "list",
+      "keys",
+      "empty-list",
+      "empty-name",
+      "zero-name",
+      "leading",
+      "outside",
+      "nonrelative",
+      "empty-target",
+      "finder",
+      "invalid"
+    ],
+    "generate": [
+      "module",
+      "admin",
+      "crud",
+      "default-default",
+      "default-true",
+      "default-false",
+      "default-zero",
+      "default-wordfalse",
+      "rotate-default",
+      "rotate-true",
+      "rotate-false",
+      "rotate-zero",
+      "rotate-wordfalse",
+      "controller-default",
+      "controller-true",
+      "controller-false",
+      "controller-zero",
+      "controller-wordfalse"
+    ],
+    "negative": [
+      "missing-module",
+      "missing-admin-model",
+      "unknown-batch",
+      "existing-module",
+      "missing-skeleton",
+      "readonly-output"
+    ]
+  },
+  "variants": [
+    "original74",
+    "exp10_74",
+    "exp10_83",
+    "candidate74",
+    "candidate83"
+  ],
+  "total_logical_cases": 37,
+  "planned_invocations": 185,
+  "control_notes": "Original83 full original source fails earlier on curly helper syntax; exp10_83 isolates removed create_function. Cases nonrelative/empty-target/invalid may not reach removed call; do not force fatal expectation on every case.",
+  "generator_compilation": "Decode retained output bytes only to private safe filenames; lint both74/83; never execute controller/batch outputs. DEBUGfalse/zero baseline generated failures must be retained.",
+  "runtime_executed": false
+}

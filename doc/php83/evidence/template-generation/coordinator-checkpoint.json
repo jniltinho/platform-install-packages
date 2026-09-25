@@ -1,0 +1,37 @@
+{
+  "executor": "Codex coordinator",
+  "date": "2026-09-25",
+  "local_test_suites": {
+    "collector": 19,
+    "builder": 10,
+    "generation_contract": 15,
+    "followup": 34
+  },
+  "local_suite_exits": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "shell_syntax_separate_invocations": 2,
+  "native_runtime_rerun": false,
+  "stored_primary_contract_revalidation": {
+    "generation_rows": 90,
+    "negative_rows": 30,
+    "arity_rows": 4,
+    "exit": 0
+  },
+  "historical_method_phase": "Previous frozen execution and validation retained; current collector hash changed so historical method suite not relabelled as current execution.",
+  "debug_repair": "Separate generator-debug-v1 preparation not included in this checkpoint",
+  "patch_selection": false,
+  "application_acceptance": false,
+  "files": {
+    "tools/php83/template-generation/collect.py": "40d12664be747a63b3b16fca2f2685303b140b69d1416bc3aaf704d17312556e",
+    "tools/php83/template-generation/build.py": "3899e80d9a80a0dacf618d09819f619a6f39a624e71c834249f0efff0d4835dd",
+    "tools/php83/template-generation/validate_generation.py": "cb3af6daedb3cd3f3b89b907020ff7fd93bcf90ed19ba0fc77c5778acca587d2",
+    "tools/php83/template-generation/followup-v1/validate_followup.py": "b7a10397a0dc5662a9d306f000cb9f22bca21f2c9ac5693b31381e6461e0697b",
+    "doc/php83/evidence/template-generation/generation-primary-r4.json": "43074293abfe7a9bda134a6305a72adf66e4139b6888d13e220d93a674696a86",
+    "doc/php83/evidence/template-generation/followup-v1/negative-primary.json": "8cfdbd33707a3e2e735e506ac65bdfedd1007d40d1e2c3912efd58fa380f6886",
+    "doc/php83/evidence/template-generation/followup-v1/arity-primary.json": "cd899dac3304d39665448e10cc40c5874099f81650870ebb72ef5658d8957d5d"
+  }
+}

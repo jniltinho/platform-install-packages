@@ -1,0 +1,5 @@
+3899e80d9a80a0dacf618d09819f619a6f39a624e71c834249f0efff0d4835dd  tools/php83/template-generation/build.py
+b261fcecc7d66e0cef4498fe5a037e488199d752de7cf02434704aa060424f5b  tools/php83/template-generation/probe.php
+7a187df61e72dc3451882cd0d5e54a427aa88ff57739c0d894a88a1687b7132c  tools/php83/template-generation/test_build.py
+a91d8100d824c7c43c4c2a9f285f6904a73dc65c235ea9a0762e170ecc40b51f  patches/php83/held/pake-relative-path/manifest.json
+93a43c503389b43f81493d1c5a14858b7f1fffc38a6c231fe7c3743885e2785e  patches/php83/held/pake-relative-path/pake-relative-path.patch

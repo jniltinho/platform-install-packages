@@ -1,0 +1,32 @@
+test_ambiguous (test_build.BuildTests.test_ambiguous) ... ok
+test_archive_parent (test_build.BuildTests.test_archive_parent) ... ok
+test_archive_positive (test_build.BuildTests.test_archive_positive) ... ok
+test_archive_symlink (test_build.BuildTests.test_archive_symlink) ... ok
+test_archive_wrong_pin (test_build.BuildTests.test_archive_wrong_pin) ... ok
+test_closure_has_no_capture (test_build.BuildTests.test_closure_has_no_capture) ... ok
+test_exact_transform (test_build.BuildTests.test_exact_transform) ... ok
+test_missing (test_build.BuildTests.test_missing) ... ok
+test_missing_input (test_build.BuildTests.test_missing_input) ... ok
+test_wrong_pin (test_build.BuildTests.test_wrong_pin) ... ok
+test_atomic_progress (test_collect.CollectorTests.test_atomic_progress) ... ok
+test_bool_exit (test_collect.CollectorTests.test_bool_exit) ... ok
+test_checksums_duplicates (test_collect.CollectorTests.test_checksums_duplicates) ... ok
+test_checksums_malformed (test_collect.CollectorTests.test_checksums_malformed) ... ok
+test_checksums_positive (test_collect.CollectorTests.test_checksums_positive) ... ok
+test_decode (test_collect.CollectorTests.test_decode) ... ok
+test_duplicate (test_collect.CollectorTests.test_duplicate) ... ok
+test_exact_matrix (test_collect.CollectorTests.test_exact_matrix) ... ok
+test_failed_replace_cleans_unique_temp (test_collect.CollectorTests.test_failed_replace_cleans_unique_temp) ... ok
+test_failed_serialization_cleans_unique_temp (test_collect.CollectorTests.test_failed_serialization_cleans_unique_temp) ... ok
+test_invalid_base64 (test_collect.CollectorTests.test_invalid_base64) ... ok
+test_missing (test_collect.CollectorTests.test_missing) ... ok
+test_native_fatal_rejected (test_collect.CollectorTests.test_native_fatal_rejected) ... ok
+test_output_hash (test_collect.CollectorTests.test_output_hash) ... ok
+test_path_escape (test_collect.CollectorTests.test_path_escape) ... ok
+test_stale_temp_does_not_block (test_collect.CollectorTests.test_stale_temp_does_not_block) ... ok
+test_timeout (test_collect.CollectorTests.test_timeout) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 0.002s
+
+OK

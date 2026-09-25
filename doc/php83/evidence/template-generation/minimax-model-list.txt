@@ -1,0 +1,7 @@
+minimax-coding-plan/MiniMax-M2
+minimax-coding-plan/MiniMax-M2.1
+minimax-coding-plan/MiniMax-M2.5
+minimax-coding-plan/MiniMax-M2.5-highspeed
+minimax-coding-plan/MiniMax-M2.7
+minimax-coding-plan/MiniMax-M2.7-highspeed
+minimax-coding-plan/MiniMax-M3

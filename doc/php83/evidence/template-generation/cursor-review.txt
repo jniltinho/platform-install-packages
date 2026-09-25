@@ -1,0 +1,85 @@
+Revisão somente leitura do pacote frozen r2 de template-generation: leio os artefatos nomeados e executo só os checks locais seguros pedidos.Executando os checks locais seguros e lendo o manifest/patch held.Verificando hashes locais e rodando checagens adversariais em memória/tempdir.Confirmando o defeito de `IndexError` em linhas vazias do `sha256sum` e o status `FAILED_OBSERVATION_VALIDATION`.## Veredito
+
+Preparação frozen r2 de **template-generation** passa nos checks locais pedidos (21/21 + `bash -n`). Hashes held/pins batem. Há **2 defeitos reais** na persistência/identidade do collector; runtime/goldens **não executados** — achados de runtime permanecem **pending**. Collector permanece não-aceitação (`return 2`).
+
+---
+
+## Comandos / exit / contagem
+
+| Comando | Exit | Resultado |
+|---|---|---|
+| `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/template-generation -p 'test_*.py' -v` | **0** | **21** tests OK (10 build + 11 collect) |
+| `bash -n tools/php83/template-generation/run.sh` | **0** | sintaxe OK |
+
+Não rodei `build.py`/`collect.py` `main`, SSH, VM, archives externos nem goldens.
+
+---
+
+## Hashes / identidades locais
+
+| Check | Resultado |
+|---|---|
+| `pake-relative-path.patch` vs `manifest.patch_sha256` | OK `93a43c503389b43f81493d1c5a14858b7f1fffc38a6c231fe7c3743885e2785e` |
+| `before_sha256` / `build.PIN` | OK `72f53816…` |
+| `after_sha256` = candidate `pakeApp.class.php` | OK `d5bdc461…` |
+| held `status=HELD`, `runtime_executed=false` | OK |
+| `SNAPSHOT_PIN` ↔ `runtime-identity.py` | OK `f2985a7d…` |
+| `REFERENCE_PIN` ↔ `runtime-before.json` | OK `df1a5a59…` |
+| `remote_program_sha256` (AST `REMOTE` only) | OK `5920d1d1…` |
+| archives build ↔ manifest | OK |
+
+Diffs de cohort esperados: só candidate muda `pakeApp`; `pakeFinder`/`pakeGetopt`/`pakeYaml` diferem original↔exp10 (coorte exp10), não o patch held.
+
+---
+
+## Matriz / status / aceitação
+
+- Casos únicos: method **13** + generate **18** + negative **6** = **37**; ×5 variantes = **185** — alinhado a `case-plan.json` e `VARIANTS`.
+- Probe cobre todos os cases do plano (switches / `kind-setting`).
+- Status estritos: `INITIALIZING` → `RUNNING` → `OBSERVED_PENDING_REVIEWED_CONTRACT` \| `FAILED_OBSERVATION_VALIDATION` \| `INTERRUPTED_OR_FAILED`.
+- Flags `*_acceptance` nascem `False` e **nunca** viram `True`; `main` sempre `return 2`.
+- Exits de processo: só `0`/`10` (`type is int`); lint observação: `0`/`255`. Timeout/`False`/`None` rejeitados nos unit/adversariais.
+
+---
+
+## Isolamento / lint / validação (revisão de código)
+
+- `run.sh`: gate hostname/uid; `PrivateNetwork`, seccomp `~socket`, `ProtectSystem/Home`, `PrivateTmp/Devices`, `NoNewPrivileges`, mounts RO, `InaccessiblePaths`, `allow_url_*=0`, limites memória/tempo; lint só `stdin` → `php -l`.
+- Collector: paths gerados rejeitam absoluto/`..`/vazio; SHA256 de bytes ↔ claim; loaded pins ↔ manifest; snapshot via AST literal (sem `main` do helper).
+- Sinais: `SIGTERM`/`SIGINT` → `InterruptedError`.
+
+---
+
+## Defeitos (com reprodução)
+
+### 1. `.progress.tmp` residual quebra `persist` e pode impedir gravar `INTERRUPTED_OR_FAILED`
+
+`persist` abre o tmp com modo `'x'`. Se o tmp sobrar (crash entre create e `replace`), o próximo `persist` — inclusive o do `finally` — levanta `FileExistsError`; o status de interrupção em memória **não** chega ao disco.
+
+```text
+# repro local (tempdir): após persist OK, criar report.json.progress.tmp stale
+# → persist(...) → FileExistsError; on_disk status permanece 'RUNNING'
+```
+
+### 2. Saída malformada de `sha256sum` → `IndexError` (não `ValueError` tipado)
+
+Em `identities`, `line.split()[1]` em linha vazia/malformada falha com `IndexError`. Fecha em falha via `except Exception`, mas a mensagem/tipo não é o `ValueError` de drift esperado.
+
+```text
+# remote mock stdout='\n\n', exit=0 → identities(...) → IndexError: list index out of range
+```
+
+---
+
+## Não-defeitos / by design (observação)
+
+- Lint `255` **não** entra em `failures` (só status desconhecido fora `{0,255}`); goldens/revisão humana ainda obrigatórios.
+- Path com `./` (`a/./b.php`) passa em `decode_outputs`; collector só usa path como metadado + stdin de lint, sem write em FS — risco baixo neste desenho.
+
+---
+
+## Limitações desta review
+
+- Sem execução guest/`systemd-run`, sem stage remota, sem lint PHP real, sem goldens, sem leitura dos ZIPs de archive.
+- Achados de **runtime/compatibilidade** = **pending** (`case-plan.status=PREPARED_NOT_EXECUTED`, `runtime_executed=false`).
+- Unittests locais ≠ aceitação de aplicação; collector intencionalmente exit **2** / nonacceptance.

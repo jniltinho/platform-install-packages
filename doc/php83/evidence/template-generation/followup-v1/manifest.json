@@ -1,0 +1,61 @@
+{
+  "status": "PREPARED_NOT_EXECUTED",
+  "source_report_sha256": "43074293abfe7a9bda134a6305a72adf66e4139b6888d13e220d93a674696a86",
+  "sources": [
+    {
+      "case": "default-true",
+      "path": "batch/audit_job.php",
+      "source_sha256": "944df3f3d218c1f456dcca194a9242fb115133aa23c1a37b3c1cf44693966e9c",
+      "statement": "define('SF_DEBUG',       1);",
+      "statement_sha256": "b5fabd5d91719595861d13888bdf3abc1a18f725d7f229fc2b64a9d0517b3c11"
+    },
+    {
+      "case": "default-false",
+      "path": "batch/audit_job.php",
+      "source_sha256": "1a5fef645f4e10a9b923829f240f143b0013869be77fbd552d222d798c3ac1e6",
+      "statement": "define('SF_DEBUG',       );",
+      "statement_sha256": "9fc196f740146464283a28ba8a9361ca8f6e680474141ffb7190e5e198722da4"
+    },
+    {
+      "case": "default-zero",
+      "path": "batch/audit_job.php",
+      "source_sha256": "1a5fef645f4e10a9b923829f240f143b0013869be77fbd552d222d798c3ac1e6",
+      "statement": "define('SF_DEBUG',       );",
+      "statement_sha256": "9fc196f740146464283a28ba8a9361ca8f6e680474141ffb7190e5e198722da4"
+    },
+    {
+      "case": "rotate-false",
+      "path": "batch/rotate_log_auditapp_prod.php",
+      "source_sha256": "0eca545c784339967f706c71bc5c05548c030c575ebb8b31d70de1f7bae0f9a8",
+      "statement": "define('SF_DEBUG',       );",
+      "statement_sha256": "9fc196f740146464283a28ba8a9361ca8f6e680474141ffb7190e5e198722da4"
+    },
+    {
+      "case": "rotate-zero",
+      "path": "batch/rotate_log_auditapp_prod.php",
+      "source_sha256": "0eca545c784339967f706c71bc5c05548c030c575ebb8b31d70de1f7bae0f9a8",
+      "statement": "define('SF_DEBUG',       );",
+      "statement_sha256": "9fc196f740146464283a28ba8a9361ca8f6e680474141ffb7190e5e198722da4"
+    },
+    {
+      "case": "controller-false",
+      "path": "web/audit_front.php",
+      "source_sha256": "330b8c1731c4ef50475abeb06410aab33a7b257eb825557b7b20a9fac75523b7",
+      "statement": "define('SF_DEBUG',       );",
+      "statement_sha256": "9fc196f740146464283a28ba8a9361ca8f6e680474141ffb7190e5e198722da4"
+    },
+    {
+      "case": "controller-zero",
+      "path": "web/audit_front.php",
+      "source_sha256": "330b8c1731c4ef50475abeb06410aab33a7b257eb825557b7b20a9fac75523b7",
+      "statement": "define('SF_DEBUG',       );",
+      "statement_sha256": "9fc196f740146464283a28ba8a9361ca8f6e680474141ffb7190e5e198722da4"
+    }
+  ],
+  "fixture_sha256": {
+    "true.php": "d6082efd6c940200f1f593e34b22bccaf18d3deda9e7a90a3fff1f0b19b992bb",
+    "empty.php": "09674ee3912088de23a4102f44bc288b6ad9ffe1bbbdd0cccbd737a93b6909f8"
+  },
+  "scope": "One literal native define call per process only; generated application never loaded",
+  "runtime_acceptance": false
+}

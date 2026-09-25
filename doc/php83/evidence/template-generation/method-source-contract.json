@@ -1,0 +1,192 @@
+{
+  "source_evidence": [
+    {
+      "path": "vendor/symfony/vendor/pake/pakeApp.class.php",
+      "sha256": "72f538165dd3226b46c35ddac7700c0f3a6046e74f4646b74ca5bd541d59b120",
+      "source_lines": [
+        {
+          "line": 332,
+          "text": "  public static function get_files_from_argument($arg, $target_dir = '', $relative = false)"
+        },
+        {
+          "line": 333,
+          "text": "  {"
+        },
+        {
+          "line": 334,
+          "text": "    $files = array();"
+        },
+        {
+          "line": 335,
+          "text": "    if (is_array($arg))"
+        },
+        {
+          "line": 336,
+          "text": "    {"
+        },
+        {
+          "line": 337,
+          "text": "      $files = $arg;"
+        },
+        {
+          "line": 338,
+          "text": "    }"
+        },
+        {
+          "line": 339,
+          "text": "    else if (is_string($arg))"
+        },
+        {
+          "line": 340,
+          "text": "    {"
+        },
+        {
+          "line": 341,
+          "text": "      $files[] = $arg;"
+        },
+        {
+          "line": 342,
+          "text": "    }"
+        },
+        {
+          "line": 343,
+          "text": "    else if ($arg instanceof pakeFinder)"
+        },
+        {
+          "line": 344,
+          "text": "    {"
+        },
+        {
+          "line": 345,
+          "text": "      $files = $arg->in($target_dir);"
+        },
+        {
+          "line": 346,
+          "text": "    }"
+        },
+        {
+          "line": 347,
+          "text": "    else"
+        },
+        {
+          "line": 348,
+          "text": "    {"
+        },
+        {
+          "line": 349,
+          "text": "      throw new pakeException('Wrong argument type (must be a list, a string or a pakeFinder object).');"
+        },
+        {
+          "line": 350,
+          "text": "    }"
+        },
+        {
+          "line": 351,
+          "text": ""
+        },
+        {
+          "line": 352,
+          "text": "    if ($relative && $target_dir)"
+        },
+        {
+          "line": 353,
+          "text": "    {"
+        },
+        {
+          "line": 354,
+          "text": "      $files = preg_replace('/^'.preg_quote(realpath($target_dir), '/').'/', '', $files);"
+        },
+        {
+          "line": 355,
+          "text": ""
+        },
+        {
+          "line": 356,
+          "text": "      // remove leading /"
+        },
+        {
+          "line": 357,
+          "text": "      $files = array_map(create_function('$f', 'return 0 === strpos($f, DIRECTORY_SEPARATOR) ? substr($f, 1) : $f;'), $files);"
+        },
+        {
+          "line": 358,
+          "text": "    }"
+        },
+        {
+          "line": 359,
+          "text": ""
+        },
+        {
+          "line": 360,
+          "text": "    return $files;"
+        },
+        {
+          "line": 361,
+          "text": "  }"
+        }
+      ]
+    },
+    {
+      "path": "vendor/symfony/vendor/pake/pakeGetopt.class.php",
+      "sha256": "0eccb66f094c62bbb3292cbeda1f3f9667bc873e988a882f0bf645586460a734",
+      "source_lines": [
+        {
+          "line": 53,
+          "text": "    if ($long_opt{0} == '-' && $long_opt{1} == '-')"
+        },
+        {
+          "line": 60,
+          "text": "      if ($short_opt{0} == '-')"
+        },
+        {
+          "line": 84,
+          "text": "      if (isset($args[0]) && $args[0]{0} != '-')"
+        },
+        {
+          "line": 104,
+          "text": "      if ($arg{0} != '-' || (strlen($arg) > 1 && $arg{1} == '-' && !$this->long_options))"
+        },
+        {
+          "line": 109,
+          "text": "      elseif (strlen($arg) > 1 && $arg{1} == '-')"
+        },
+        {
+          "line": 152,
+          "text": "      $opt = $arg{$i};"
+        },
+        {
+          "line": 172,
+          "text": "          if (count($this->args) && $this->args[0]{0} != '-')"
+        },
+        {
+          "line": 192,
+          "text": "          if (count($this->args) && $this->args[0]{0} != '-')"
+        }
+      ]
+    },
+    {
+      "path": "vendor/symfony/vendor/pake/pakeFinder.class.php",
+      "sha256": "9adef4dc3d354b31230852b849cff083812c483fb12c8ec23ff7e4f2ae724fd1",
+      "source_lines": [
+        {
+          "line": 526,
+          "text": "    if ($path{0} == '/' || $path{0} == '\\\\' ||"
+        },
+        {
+          "line": 527,
+          "text": "        (strlen($path) > 3 && ctype_alpha($path{0}) &&"
+        },
+        {
+          "line": 528,
+          "text": "         $path{1} == ':' &&"
+        },
+        {
+          "line": 529,
+          "text": "         ($path{2} == '\\\\' || $path{2} == '/')"
+        }
+      ]
+    }
+  ],
+  "rationale": "get_files_from_argument strips target prefix then one leading directory separator; array_map preserves string/numeric keys. Native74 establishes Finder traversal ordering for controlled fixture (nested dir created before plain file). String0 stays string; unexpected output/diagnostics/types rejected. No source-generated golden copied blindly.",
+  "runtime_pending_independent_repeat": true
+}

@@ -1,0 +1,92 @@
+{
+  "status": "PRIMARY_OBSERVATIONS_PENDING_INDEPENDENT_NATIVE_CONTRACT",
+  "negative_rows": 30,
+  "negative_exits": {
+    "10": 26,
+    "0": 4
+  },
+  "negative_identity_equal": true,
+  "arity_rows": [
+    {
+      "runtime": "74",
+      "case": "empty",
+      "exit": 0,
+      "body": {
+        "runtime": "7.4.33",
+        "returned": null,
+        "returned_type": "NULL",
+        "defined": false,
+        "constant": null,
+        "diagnostics": [
+          {
+            "severity": 2,
+            "message": "define() expects at least 2 parameters, 1 given",
+            "line": 9
+          }
+        ],
+        "exception": null
+      },
+      "stderr": "Warning: define() expects at least 2 parameters, 1 given in /audit/case.php on line 9\n"
+    },
+    {
+      "runtime": "74",
+      "case": "true",
+      "exit": 0,
+      "body": {
+        "runtime": "7.4.33",
+        "returned": true,
+        "returned_type": "boolean",
+        "defined": true,
+        "constant": 1,
+        "diagnostics": [],
+        "exception": null
+      },
+      "stderr": ""
+    },
+    {
+      "runtime": "83",
+      "case": "empty",
+      "exit": 10,
+      "body": {
+        "runtime": "8.3.6",
+        "returned": null,
+        "returned_type": "NULL",
+        "defined": false,
+        "constant": null,
+        "diagnostics": [],
+        "exception": {
+          "class": "ArgumentCountError",
+          "message": "define() expects at least 2 arguments, 1 given"
+        }
+      },
+      "stderr": ""
+    },
+    {
+      "runtime": "83",
+      "case": "true",
+      "exit": 0,
+      "body": {
+        "runtime": "8.3.6",
+        "returned": true,
+        "returned_type": "boolean",
+        "defined": true,
+        "constant": 1,
+        "diagnostics": [],
+        "exception": null
+      },
+      "stderr": ""
+    }
+  ],
+  "arity_identity_equal": true,
+  "input_sha256": {
+    "negative-primary.json": "8cfdbd33707a3e2e735e506ac65bdfedd1007d40d1e2c3912efd58fa380f6886",
+    "arity-primary.json": "cd899dac3304d39665448e10cc40c5874099f81650870ebb72ef5658d8957d5d"
+  },
+  "application_acceptance": false,
+  "generated_application_execution": false,
+  "findings": [
+    "Readonly-output returns exit0 with warnings and no output in original74/exp1074/candidate74/candidate83.",
+    "Missing skeleton can create an empty output file before throwing in four positive-runtime variants.",
+    "Empty DEBUG definition is syntax-valid but PHP74 warns and leaves constant undefined; PHP83 throws ArgumentCountError and leaves it undefined."
+  ]
+}

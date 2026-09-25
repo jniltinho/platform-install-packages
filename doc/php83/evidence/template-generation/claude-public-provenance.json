@@ -1,0 +1,60 @@
+{
+  "claude-generation-public.json": {
+    "previous_public_sha256": "c9e99611a8b6fe7af304791022600c6b4a45c3e0c06dece22daf2dae526c5c3f",
+    "removed_top_level_keys": [
+      "api_error_status",
+      "duration_api_ms",
+      "fast_mode_disabled_reason",
+      "fast_mode_state",
+      "first_content_frame_ms",
+      "modelUsage",
+      "num_turns",
+      "permission_denials",
+      "queued_turn_count",
+      "result_index",
+      "stop_reason",
+      "subagent_stats",
+      "terminal_reason",
+      "time_to_request_ms",
+      "total_cost_usd",
+      "ttft_ms",
+      "ttft_stream_ms",
+      "usage",
+      "uuid"
+    ],
+    "public_sha256": "0c90fdc5480fddc247d2d63d968282a295a4b2e19e54c5a2a671c7ab2849b1db"
+  },
+  "claude-method-public.json": {
+    "previous_public_sha256": "da4ec931446ec38a6f10015c80a3e1c8f098055c0048057c899dd74709f97322",
+    "removed_top_level_keys": [
+      "api_error_status",
+      "duration_api_ms",
+      "fast_mode_disabled_reason",
+      "fast_mode_state",
+      "first_content_frame_ms",
+      "modelUsage",
+      "num_turns",
+      "permission_denials",
+      "queued_turn_count",
+      "result_index",
+      "stop_reason",
+      "subagent_stats",
+      "terminal_reason",
+      "time_to_request_ms",
+      "total_cost_usd",
+      "ttft_ms",
+      "ttft_stream_ms",
+      "usage",
+      "uuid"
+    ],
+    "public_sha256": "9e3d85600f58f41775f50b78a7ae263c68052e3f7665e0b045675ccc504fbb9d"
+  },
+  "/tmp/template-generation-claude-generation-private.json": {
+    "raw_sha256": "68ae94bffd02b5787ba64f05f6fa8ef8cb9c93faa97af8e0aed22dbd010bfcef",
+    "raw_body_not_copied_to_repo": true
+  },
+  "/tmp/template-generation-claude-r2-private.json": {
+    "raw_sha256": "b4e27351ea4f6365a6200626f366afec7faab0257b2036d749baa1bcb51398e1",
+    "raw_body_not_copied_to_repo": true
+  }
+}

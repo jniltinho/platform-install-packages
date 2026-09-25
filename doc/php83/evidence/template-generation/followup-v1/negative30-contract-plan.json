@@ -1,0 +1,407 @@
+{
+  "status": "PREPARED_NOT_EXECUTED",
+  "exact_rows": [
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "missing-module",
+      "expected_source_derived_outcome": {
+        "exit": 10,
+        "exception_class": "Exception",
+        "exception_message": "You must provide your module name.",
+        "outputs": {}
+      },
+      "native_diagnostic_contract": "PENDING_ACTUAL_OBSERVATION_AND_REVIEW",
+      "acceptance": false
+    },
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "missing-admin-model",
+      "expected_source_derived_outcome": {
+        "exit": 10,
+        "exception_class": "Exception",
+        "exception_message": "You must provide your model class name.",
+        "outputs": {}
+      },
+      "native_diagnostic_contract": "PENDING_ACTUAL_OBSERVATION_AND_REVIEW",
+      "acceptance": false
+    },
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "unknown-batch",
+      "expected_source_derived_outcome": {
+        "exit": 10,
+        "exception_class": "Exception",
+        "exception_message": "The specified batch \"unknown\" does not exist.",
+        "outputs": {}
+      },
+      "native_diagnostic_contract": "PENDING_ACTUAL_OBSERVATION_AND_REVIEW",
+      "acceptance": false
+    },
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "existing-module",
+      "expected_source_derived_outcome": {
+        "exit": 10,
+        "exception_class": "Exception",
+        "exception_message": "The directory \"/tmp/template-audit/apps/auditapp/modules/AuditModule\" already exists.",
+        "outputs": {}
+      },
+      "native_diagnostic_contract": "PENDING_ACTUAL_OBSERVATION_AND_REVIEW",
+      "acceptance": false
+    },
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "missing-skeleton",
+      "expected_source_derived_outcome": {
+        "exit": 10,
+        "exception_class": "Exception",
+        "exception_message": "The skeleton you specified could not be found.",
+        "outputs": {
+          "batch/audit_job.php": "empty bytes; requires native observation"
+        }
+      },
+      "native_diagnostic_contract": "PENDING_ACTUAL_OBSERVATION_AND_REVIEW",
+      "acceptance": false
+    },
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "readonly-output",
+      "expected_source_derived_outcome": {
+        "exit": 0,
+        "exception": null,
+        "outputs": {},
+        "warning_requirement": "copy/write permission failures must remain visible; exit0 is not successful generation"
+      },
+      "native_diagnostic_contract": "PENDING_ACTUAL_OBSERVATION_AND_REVIEW",
+      "acceptance": false
+    },
+    {
+      "runtime": "74",
+      "variant": "exp10",
+      "case": "missing-module",
+      "expected_source_derived_outcome": {
+        "exit": 10,
+        "exception_class": "Exception",
+        "exception_message": "You must provide your module name.",
+        "outputs": {}
+      },
+      "native_diagnostic_contract": "PENDING_ACTUAL_OBSERVATION_AND_REVIEW",
+      "acceptance": false
+    },
+    {
+      "runtime": "74",
+      "variant": "exp10",
+      "case": "missing-admin-model",
+      "expected_source_derived_outcome": {
+        "exit": 10,
+        "exception_class": "Exception",
+        "exception_message": "You must provide your model class name.",
+        "outputs": {}
+      },
+      "native_diagnostic_contract": "PENDING_ACTUAL_OBSERVATION_AND_REVIEW",
+      "acceptance": false
+    },
+    {
+      "runtime": "74",
+      "variant": "exp10",
+      "case": "unknown-batch",
+      "expected_source_derived_outcome": {
+        "exit": 10,
+        "exception_class": "Exception",
+        "exception_message": "The specified batch \"unknown\" does not exist.",
+        "outputs": {}
+      },
+      "native_diagnostic_contract": "PENDING_ACTUAL_OBSERVATION_AND_REVIEW",
+      "acceptance": false
+    },
+    {
+      "runtime": "74",
+      "variant": "exp10",
+      "case": "existing-module",
+      "expected_source_derived_outcome": {
+        "exit": 10,
+        "exception_class": "Exception",
+        "exception_message": "The directory \"/tmp/template-audit/apps/auditapp/modules/AuditModule\" already exists.",
+        "outputs": {}
+      },
+      "native_diagnostic_contract": "PENDING_ACTUAL_OBSERVATION_AND_REVIEW",
+      "acceptance": false
+    },
+    {
+      "runtime": "74",
+      "variant": "exp10",
+      "case": "missing-skeleton",
+      "expected_source_derived_outcome": {
+        "exit": 10,
+        "exception_class": "Exception",
+        "exception_message": "The skeleton you specified could not be found.",
+        "outputs": {
+          "batch/audit_job.php": "empty bytes; requires native observation"
+        }
+      },
+      "native_diagnostic_contract": "PENDING_ACTUAL_OBSERVATION_AND_REVIEW",
+      "acceptance": false
+    },
+    {
+      "runtime": "74",
+      "variant": "exp10",
+      "case": "readonly-output",
+      "expected_source_derived_outcome": {
+        "exit": 0,
+        "exception": null,
+        "outputs": {},
+        "warning_requirement": "copy/write permission failures must remain visible; exit0 is not successful generation"
+      },
+      "native_diagnostic_contract": "PENDING_ACTUAL_OBSERVATION_AND_REVIEW",
+      "acceptance": false
+    },
+    {
+      "runtime": "83",
+      "variant": "exp10",
+      "case": "missing-module",
+      "expected_source_derived_outcome": {
+        "exit": 10,
+        "exception_class": "Exception",
+        "exception_message": "You must provide your module name.",
+        "outputs": {}
+      },
+      "native_diagnostic_contract": "PENDING_ACTUAL_OBSERVATION_AND_REVIEW",
+      "acceptance": false
+    },
+    {
+      "runtime": "83",
+      "variant": "exp10",
+      "case": "missing-admin-model",
+      "expected_source_derived_outcome": {
+        "exit": 10,
+        "exception_class": "Exception",
+        "exception_message": "You must provide your model class name.",
+        "outputs": {}
+      },
+      "native_diagnostic_contract": "PENDING_ACTUAL_OBSERVATION_AND_REVIEW",
+      "acceptance": false
+    },
+    {
+      "runtime": "83",
+      "variant": "exp10",
+      "case": "unknown-batch",
+      "expected_source_derived_outcome": {
+        "exit": 10,
+        "exception_class": "Exception",
+        "exception_message": "The specified batch \"unknown\" does not exist.",
+        "outputs": {}
+      },
+      "native_diagnostic_contract": "PENDING_ACTUAL_OBSERVATION_AND_REVIEW",
+      "acceptance": false
+    },
+    {
+      "runtime": "83",
+      "variant": "exp10",
+      "case": "existing-module",
+      "expected_source_derived_outcome": {
+        "exit": 10,
+        "exception_class": "Exception",
+        "exception_message": "The directory \"/tmp/template-audit/apps/auditapp/modules/AuditModule\" already exists.",
+        "outputs": {}
+      },
+      "native_diagnostic_contract": "PENDING_ACTUAL_OBSERVATION_AND_REVIEW",
+      "acceptance": false
+    },
+    {
+      "runtime": "83",
+      "variant": "exp10",
+      "case": "missing-skeleton",
+      "expected_source_derived_outcome": {
+        "exit": 10,
+        "exception_class": "Error",
+        "exception_message": "Call to undefined function create_function()",
+        "outputs": {}
+      },
+      "native_diagnostic_contract": "PENDING_ACTUAL_OBSERVATION_AND_REVIEW",
+      "acceptance": false
+    },
+    {
+      "runtime": "83",
+      "variant": "exp10",
+      "case": "readonly-output",
+      "expected_source_derived_outcome": {
+        "exit": 10,
+        "exception_class": "Error",
+        "exception_message": "Call to undefined function create_function()",
+        "outputs": {}
+      },
+      "native_diagnostic_contract": "PENDING_ACTUAL_OBSERVATION_AND_REVIEW",
+      "acceptance": false
+    },
+    {
+      "runtime": "74",
+      "variant": "candidate",
+      "case": "missing-module",
+      "expected_source_derived_outcome": {
+        "exit": 10,
+        "exception_class": "Exception",
+        "exception_message": "You must provide your module name.",
+        "outputs": {}
+      },
+      "native_diagnostic_contract": "PENDING_ACTUAL_OBSERVATION_AND_REVIEW",
+      "acceptance": false
+    },
+    {
+      "runtime": "74",
+      "variant": "candidate",
+      "case": "missing-admin-model",
+      "expected_source_derived_outcome": {
+        "exit": 10,
+        "exception_class": "Exception",
+        "exception_message": "You must provide your model class name.",
+        "outputs": {}
+      },
+      "native_diagnostic_contract": "PENDING_ACTUAL_OBSERVATION_AND_REVIEW",
+      "acceptance": false
+    },
+    {
+      "runtime": "74",
+      "variant": "candidate",
+      "case": "unknown-batch",
+      "expected_source_derived_outcome": {
+        "exit": 10,
+        "exception_class": "Exception",
+        "exception_message": "The specified batch \"unknown\" does not exist.",
+        "outputs": {}
+      },
+      "native_diagnostic_contract": "PENDING_ACTUAL_OBSERVATION_AND_REVIEW",
+      "acceptance": false
+    },
+    {
+      "runtime": "74",
+      "variant": "candidate",
+      "case": "existing-module",
+      "expected_source_derived_outcome": {
+        "exit": 10,
+        "exception_class": "Exception",
+        "exception_message": "The directory \"/tmp/template-audit/apps/auditapp/modules/AuditModule\" already exists.",
+        "outputs": {}
+      },
+      "native_diagnostic_contract": "PENDING_ACTUAL_OBSERVATION_AND_REVIEW",
+      "acceptance": false
+    },
+    {
+      "runtime": "74",
+      "variant": "candidate",
+      "case": "missing-skeleton",
+      "expected_source_derived_outcome": {
+        "exit": 10,
+        "exception_class": "Exception",
+        "exception_message": "The skeleton you specified could not be found.",
+        "outputs": {
+          "batch/audit_job.php": "empty bytes; requires native observation"
+        }
+      },
+      "native_diagnostic_contract": "PENDING_ACTUAL_OBSERVATION_AND_REVIEW",
+      "acceptance": false
+    },
+    {
+      "runtime": "74",
+      "variant": "candidate",
+      "case": "readonly-output",
+      "expected_source_derived_outcome": {
+        "exit": 0,
+        "exception": null,
+        "outputs": {},
+        "warning_requirement": "copy/write permission failures must remain visible; exit0 is not successful generation"
+      },
+      "native_diagnostic_contract": "PENDING_ACTUAL_OBSERVATION_AND_REVIEW",
+      "acceptance": false
+    },
+    {
+      "runtime": "83",
+      "variant": "candidate",
+      "case": "missing-module",
+      "expected_source_derived_outcome": {
+        "exit": 10,
+        "exception_class": "Exception",
+        "exception_message": "You must provide your module name.",
+        "outputs": {}
+      },
+      "native_diagnostic_contract": "PENDING_ACTUAL_OBSERVATION_AND_REVIEW",
+      "acceptance": false
+    },
+    {
+      "runtime": "83",
+      "variant": "candidate",
+      "case": "missing-admin-model",
+      "expected_source_derived_outcome": {
+        "exit": 10,
+        "exception_class": "Exception",
+        "exception_message": "You must provide your model class name.",
+        "outputs": {}
+      },
+      "native_diagnostic_contract": "PENDING_ACTUAL_OBSERVATION_AND_REVIEW",
+      "acceptance": false
+    },
+    {
+      "runtime": "83",
+      "variant": "candidate",
+      "case": "unknown-batch",
+      "expected_source_derived_outcome": {
+        "exit": 10,
+        "exception_class": "Exception",
+        "exception_message": "The specified batch \"unknown\" does not exist.",
+        "outputs": {}
+      },
+      "native_diagnostic_contract": "PENDING_ACTUAL_OBSERVATION_AND_REVIEW",
+      "acceptance": false
+    },
+    {
+      "runtime": "83",
+      "variant": "candidate",
+      "case": "existing-module",
+      "expected_source_derived_outcome": {
+        "exit": 10,
+        "exception_class": "Exception",
+        "exception_message": "The directory \"/tmp/template-audit/apps/auditapp/modules/AuditModule\" already exists.",
+        "outputs": {}
+      },
+      "native_diagnostic_contract": "PENDING_ACTUAL_OBSERVATION_AND_REVIEW",
+      "acceptance": false
+    },
+    {
+      "runtime": "83",
+      "variant": "candidate",
+      "case": "missing-skeleton",
+      "expected_source_derived_outcome": {
+        "exit": 10,
+        "exception_class": "Exception",
+        "exception_message": "The skeleton you specified could not be found.",
+        "outputs": {
+          "batch/audit_job.php": "empty bytes; requires native observation"
+        }
+      },
+      "native_diagnostic_contract": "PENDING_ACTUAL_OBSERVATION_AND_REVIEW",
+      "acceptance": false
+    },
+    {
+      "runtime": "83",
+      "variant": "candidate",
+      "case": "readonly-output",
+      "expected_source_derived_outcome": {
+        "exit": 0,
+        "exception": null,
+        "outputs": {},
+        "warning_requirement": "copy/write permission failures must remain visible; exit0 is not successful generation"
+      },
+      "native_diagnostic_contract": "PENDING_ACTUAL_OBSERVATION_AND_REVIEW",
+      "acceptance": false
+    }
+  ],
+  "count": 30,
+  "runtime_observation_command": "python3 tools/php83/template-generation/collect.py --phase negative NEW-REPORT.json",
+  "fail_closed_policy": "Require exact unique30 rows, fixed identities, actual raw/structured diagnostics and generated bytes/lints. Predictions are not results. Different outcomes remain findings.",
+  "application_acceptance": false
+}

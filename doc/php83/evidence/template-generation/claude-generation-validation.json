@@ -1,0 +1,18 @@
+{
+  "input_sha256": "43074293abfe7a9bda134a6305a72adf66e4139b6888d13e220d93a674696a86",
+  "validator_sha256": "cb3af6daedb3cd3f3b89b907020ff7fd93bcf90ed19ba0fc77c5778acca587d2",
+  "contract_sha256": "2f352ebdaa25d8269b3daf05d134dd4943f2f48c8cce522e5398a9948c8096f3",
+  "summary": {
+    "scope": "90 real generation observations only",
+    "rows": 90,
+    "positive_tasks": 72,
+    "expected_removed_function_errors": 18,
+    "lint_success": 168,
+    "lint_expected_unsubstituted_failure": 30,
+    "debug_empty_argument_outputs": 24,
+    "debug_false_runtime_arity": "NOT_EXECUTED",
+    "generated_application_execution": false,
+    "negative_case_execution": false,
+    "application_acceptance": false
+  }
+}

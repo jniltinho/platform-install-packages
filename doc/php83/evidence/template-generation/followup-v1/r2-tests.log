@@ -1,0 +1,25 @@
+test_boolean_exit (test_collect_arity.ArityGuardTests.test_boolean_exit) ... ok
+test_exit_exception (test_collect_arity.ArityGuardTests.test_exit_exception) ... ok
+test_main_records_all_four_after_fatal (test_collect_arity.ArityGuardTests.test_main_records_all_four_after_fatal) ... ok
+test_manifest_drift_before_remote (test_collect_arity.ArityGuardTests.test_manifest_drift_before_remote) ... ok
+test_native_fatal (test_collect_arity.ArityGuardTests.test_native_fatal) ... ok
+test_positive (test_collect_arity.ArityGuardTests.test_positive) ... ok
+test_schema (test_collect_arity.ArityGuardTests.test_schema) ... ok
+test_timeout (test_collect_arity.ArityGuardTests.test_timeout) ... ok
+test_empty (test_prepare.ExtractTests.test_empty) ... ok
+test_injection (test_prepare.ExtractTests.test_injection) ... ok
+test_missing (test_prepare.ExtractTests.test_missing) ... ok
+test_multiple (test_prepare.ExtractTests.test_multiple) ... ok
+test_no_application_boot (test_prepare.ExtractTests.test_no_application_boot) ... ok
+test_prepare_complete (test_prepare.ExtractTests.test_prepare_complete) ... ok
+test_prepare_duplicate (test_prepare.ExtractTests.test_prepare_duplicate) ... ok
+test_prepare_existing_directory (test_prepare.ExtractTests.test_prepare_existing_directory) ... ok
+test_prepare_name_literal_mismatch (test_prepare.ExtractTests.test_prepare_name_literal_mismatch) ... ok
+test_prepare_pin (test_prepare.ExtractTests.test_prepare_pin) ... ok
+test_true (test_prepare.ExtractTests.test_true) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.004s
+
+OK
+{"status": "FAILED_OBSERVATION_VALIDATION", "rows": 4}

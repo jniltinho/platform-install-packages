@@ -1,0 +1,14 @@
+{
+  "input_sha256": "8cfdbd33707a3e2e735e506ac65bdfedd1007d40d1e2c3912efd58fa380f6886",
+  "validator_sha256": "b7a10397a0dc5662a9d306f000cb9f22bca21f2c9ac5693b31381e6461e0697b",
+  "summary": {
+    "rows": 30,
+    "exceptions": 26,
+    "legacy_zero_exit_without_output": 4,
+    "empty_files_before_missing_skeleton_exception": 4,
+    "retained_removed_function_controls": 2,
+    "lint_success_empty_files": 8,
+    "generation_success": false,
+    "application_acceptance": false
+  }
+}

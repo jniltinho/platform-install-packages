@@ -1,0 +1,17 @@
+{
+  "executor": "actual Cursor Agent CLI",
+  "command": "timeout 180s agent --print --output-format json <cursor-prompt.txt>",
+  "exit": 0,
+  "reported_actual_tests": 21,
+  "reported_tests_exit": 0,
+  "reported_bash_syntax_exit": 0,
+  "reviewer_duration_ms": 157357,
+  "all_11_frozen_input_hashes_unchanged": true,
+  "review_findings": [
+    "Residual exclusive .progress.tmp can block persistence, including finally; use unique atomic temp and cleanup tests.",
+    "Malformed sha256sum output causes IndexError; failclosed but not deliberate validation error."
+  ],
+  "runtime_execution": false,
+  "followup_status": "FIXES_PENDING_AUTHORIZATION",
+  "scope_note": "CLI final report supplies executed-check outcomes; CLI json mode did not expose per-tool event transcript."
+}

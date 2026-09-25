@@ -1,0 +1,16 @@
+{
+  "input": "doc/php83/evidence/template-generation/method-primary.json",
+  "input_sha256": "9fb502d6f2c902403296a39a96a7ee62dec249332059aac044417b8488ad2ef9",
+  "validator_sha256": "2342d4189ec5c0e98cf185bc2f374367ee5eade3a04c326186581f267b95f1ef",
+  "summary": {
+    "scope": "pakeApp relative-path method only",
+    "rows": 65,
+    "positive_results": 50,
+    "expected_exceptions": 15,
+    "undefined_create_function_controls": 10,
+    "explicit_value_type_key_contract": true,
+    "exact_diagnostics_native_stderr": true,
+    "generation_acceptance": false,
+    "application_acceptance": false
+  }
+}

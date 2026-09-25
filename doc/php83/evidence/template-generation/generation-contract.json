@@ -1,0 +1,259 @@
+{
+  "derivation": "Template bytes independently read from hash-pinned original source stage; expected outputs generated from explicit task argument/token maps. Only human-visible action logs and native lint diagnostic wording are frozen from observed74/83 baseline; not functional output goldens.",
+  "templates": {
+    "vendor/symfony-data/generator/sfPropelAdmin/default/skeleton/actions/actions.class.php": {
+      "sha256": "81b2e299d72ece711fab3a82dba6c5399c5747091a4b6a9de60b1cc5b31e798a",
+      "base64": "PD9waHAKCi8qKgogKiAjI01PRFVMRV9OQU1FIyMgYWN0aW9ucy4KICoKICogQHBhY2thZ2UgICAgIyNQUk9KRUNUX05BTUUjIwogKiBAc3VicGFja2FnZSAjI01PRFVMRV9OQU1FIyMKICogQGF1dGhvciAgICAgIyNBVVRIT1JfTkFNRSMjCiAqIEB2ZXJzaW9uICAgIFNWTjogJElkOiBhY3Rpb25zLmNsYXNzLnBocCAyMjg4IDIwMDYtMTAtMDIgMTU6MjI6MTNaIGZhYmllbiAkCiAqLwpjbGFzcyAjI01PRFVMRV9OQU1FIyNBY3Rpb25zIGV4dGVuZHMgYXV0byMjTU9EVUxFX05BTUUjI0FjdGlvbnMKewp9Cg=="
+    },
+    "vendor/symfony-data/generator/sfPropelAdmin/default/skeleton/config/generator.yml": {
+      "sha256": "ef5e14a92e58ac50ade678a287d236f8ff34fec9bf7dc5d4602401a63f39f6f2",
+      "base64": "Z2VuZXJhdG9yOgogIGNsYXNzOiAgICAgICAgICAgICAgc2ZQcm9wZWxBZG1pbkdlbmVyYXRvcgogIHBhcmFtOgogICAgbW9kZWxfY2xhc3M6ICAgICAgIyNNT0RFTF9DTEFTUyMjCiAgICB0aGVtZTogICAgICAgICAgICAjI1RIRU1FIyMK"
+    },
+    "vendor/symfony-data/generator/sfPropelCrud/default/skeleton/actions/actions.class.php": {
+      "sha256": "81b2e299d72ece711fab3a82dba6c5399c5747091a4b6a9de60b1cc5b31e798a",
+      "base64": "PD9waHAKCi8qKgogKiAjI01PRFVMRV9OQU1FIyMgYWN0aW9ucy4KICoKICogQHBhY2thZ2UgICAgIyNQUk9KRUNUX05BTUUjIwogKiBAc3VicGFja2FnZSAjI01PRFVMRV9OQU1FIyMKICogQGF1dGhvciAgICAgIyNBVVRIT1JfTkFNRSMjCiAqIEB2ZXJzaW9uICAgIFNWTjogJElkOiBhY3Rpb25zLmNsYXNzLnBocCAyMjg4IDIwMDYtMTAtMDIgMTU6MjI6MTNaIGZhYmllbiAkCiAqLwpjbGFzcyAjI01PRFVMRV9OQU1FIyNBY3Rpb25zIGV4dGVuZHMgYXV0byMjTU9EVUxFX05BTUUjI0FjdGlvbnMKewp9Cg=="
+    },
+    "vendor/symfony-data/generator/sfPropelCrud/default/skeleton/config/generator.yml": {
+      "sha256": "5ef36996b1c4f938fe80cc97a0d90d4a1332f6076ef928f0085bb8bb90a55e57",
+      "base64": "Z2VuZXJhdG9yOgogIGNsYXNzOiAgICAgICAgICAgICAgc2ZQcm9wZWxDcnVkR2VuZXJhdG9yCiAgcGFyYW06CiAgICBtb2RlbF9jbGFzczogICAgICAjI01PREVMX0NMQVNTIyMKICAgIHRoZW1lOiAgICAgICAgICAgIGRlZmF1bHQK"
+    },
+    "vendor/symfony-data/skeleton/batch/default.php": {
+      "sha256": "a82525ec83207e9193da1bb002310eb03fcba6dd30ab20b0ac9973bb97299479",
+      "base64": "PD9waHAKCi8qKgogKiAjI0JBVENIX05BTUUjIyBiYXRjaCBzY3JpcHQKICoKICogSGVyZSBnb2VzIGEgYnJpZWYgZGVzY3JpcHRpb24gb2YgdGhlIHB1cnBvc2Ugb2YgdGhlIGJhdGNoIHNjcmlwdAogKgogKiBAcGFja2FnZSAgICAjI1BST0pFQ1RfTkFNRSMjCiAqIEBzdWJwYWNrYWdlIGJhdGNoCiAqIEB2ZXJzaW9uICAgICRJZCQKICovCgpkZWZpbmUoJ1NGX1JPT1RfRElSJywgICAgcmVhbHBhdGgoZGlybmFtZShfX2ZpbGVfXykuJy8uLicpKTsKZGVmaW5lKCdTRl9BUFAnLCAgICAgICAgICcjI0FQUF9OQU1FIyMnKTsKZGVmaW5lKCdTRl9FTlZJUk9OTUVOVCcsICcjI0VOVl9OQU1FIyMnKTsKZGVmaW5lKCdTRl9ERUJVRycsICAgICAgICMjREVCVUcjIyk7CgpyZXF1aXJlX29uY2UoU0ZfUk9PVF9ESVIuRElSRUNUT1JZX1NFUEFSQVRPUi4nYXBwcycuRElSRUNUT1JZX1NFUEFSQVRPUi5TRl9BUFAuRElSRUNUT1JZX1NFUEFSQVRPUi4nY29uZmlnJy5ESVJFQ1RPUllfU0VQQVJBVE9SLidjb25maWcucGhwJyk7CgovLyBpbml0aWFsaXplIGRhdGFiYXNlIG1hbmFnZXIKLy8kZGF0YWJhc2VNYW5hZ2VyID0gbmV3IHNmRGF0YWJhc2VNYW5hZ2VyKCk7Ci8vJGRhdGFiYXNlTWFuYWdlci0+aW5pdGlhbGl6ZSgpOwoKLy8gYmF0Y2ggcHJvY2VzcyBoZXJlCg=="
+    },
+    "vendor/symfony-data/skeleton/batch/rotate_log.php": {
+      "sha256": "d8d4b03a7f63d8df562772783c78466b16bf1e87467d54ebd08dea03047f7cb6",
+      "base64": "PD9waHAKCi8qKgogKiBMb2cgcm90YXRpb24gYmF0Y2ggc2NyaXB0CiAqCiAqIFRoaXMgc2NyaXB0IGlzIHVzZWQgdG8gbWFuYWdlIGxvZyByb3RhdGlvbiwgYW5kIHNob3VsZCBiZSBjYWxsZWQgYXV0b21hdGljYWxseSBieSBhIGNyb24gdGFzayBkYWlseQogKgogKiBAcGFja2FnZSAgICAjI1BST0pFQ1RfTkFNRSMjCiAqIEBzdWJwYWNrYWdlIGJhdGNoCiAqIEB2ZXJzaW9uICAgICRJZDogcm90YXRlX2xvZy5waHAgMzE0OCAyMDA3LTAxLTA0IDE5OjM0OjI4WiBmYWJpZW4gJAogKi8KCmRlZmluZSgnU0ZfUk9PVF9ESVInLCAgICByZWFscGF0aChkaXJuYW1lKF9fZmlsZV9fKS4nLy4uJykpOwpkZWZpbmUoJ1NGX0FQUCcsICAgICAgICAgJyMjQVBQX05BTUUjIycpOwpkZWZpbmUoJ1NGX0VOVklST05NRU5UJywgJyMjRU5WX05BTUUjIycpOwpkZWZpbmUoJ1NGX0RFQlVHJywgICAgICAgIyNERUJVRyMjKTsKCnJlcXVpcmVfb25jZShTRl9ST09UX0RJUi5ESVJFQ1RPUllfU0VQQVJBVE9SLidhcHBzJy5ESVJFQ1RPUllfU0VQQVJBVE9SLlNGX0FQUC5ESVJFQ1RPUllfU0VQQVJBVE9SLidjb25maWcnLkRJUkVDVE9SWV9TRVBBUkFUT1IuJ2NvbmZpZy5waHAnKTsKCmlmIChzZkNvbmZpZzo6Z2V0KCdzZl9sb2dnaW5nX2VuYWJsZWQnKSAmJiBzZkNvbmZpZzo6Z2V0KCdzZl9sb2dnaW5nX3JvdGF0ZScpKQp7CiAgc2ZMb2dNYW5hZ2VyOjpyb3RhdGUoU0ZfQVBQLCBTRl9FTlZJUk9OTUVOVCwgc2ZDb25maWc6OmdldCgnc2ZfbG9nZ2luZ19wZXJpb2QnKSwgc2ZDb25maWc6OmdldCgnc2ZfbG9nZ2luZ19oaXN0b3J5JykpOwp9Cg=="
+    },
+    "vendor/symfony-data/skeleton/controller/controller.php": {
+      "sha256": "dc64d95afab4440fd7274516c03467a473a0b595c42132d9a34f7ebf1a635fed",
+      "base64": "PD9waHAKCmRlZmluZSgnU0ZfUk9PVF9ESVInLCAgICByZWFscGF0aChkaXJuYW1lKF9fZmlsZV9fKS4nLy4uJykpOwpkZWZpbmUoJ1NGX0FQUCcsICAgICAgICAgJyMjQVBQX05BTUUjIycpOwpkZWZpbmUoJ1NGX0VOVklST05NRU5UJywgJyMjRU5WX05BTUUjIycpOwpkZWZpbmUoJ1NGX0RFQlVHJywgICAgICAgIyNERUJVRyMjKTsKCnJlcXVpcmVfb25jZShTRl9ST09UX0RJUi5ESVJFQ1RPUllfU0VQQVJBVE9SLidhcHBzJy5ESVJFQ1RPUllfU0VQQVJBVE9SLlNGX0FQUC5ESVJFQ1RPUllfU0VQQVJBVE9SLidjb25maWcnLkRJUkVDVE9SWV9TRVBBUkFUT1IuJ2NvbmZpZy5waHAnKTsKCnNmQ29udGV4dDo6Z2V0SW5zdGFuY2UoKS0+Z2V0Q29udHJvbGxlcigpLT5kaXNwYXRjaCgpOwo="
+    },
+    "vendor/symfony-data/skeleton/module/module/actions/actions.class.php": {
+      "sha256": "2275a76643e292bbd645d2f6b94a4e32055eaf6e851f6dffae2169a128d4b95c",
+      "base64": "PD9waHAKCi8qKgogKiAjI01PRFVMRV9OQU1FIyMgYWN0aW9ucy4KICoKICogQHBhY2thZ2UgICAgIyNQUk9KRUNUX05BTUUjIwogKiBAc3VicGFja2FnZSAjI01PRFVMRV9OQU1FIyMKICogQGF1dGhvciAgICAgIyNBVVRIT1JfTkFNRSMjCiAqIEB2ZXJzaW9uICAgIFNWTjogJElkOiBhY3Rpb25zLmNsYXNzLnBocCAyNjkyIDIwMDYtMTEtMTUgMjE6MDM6NTVaIGZhYmllbiAkCiAqLwpjbGFzcyAjI01PRFVMRV9OQU1FIyNBY3Rpb25zIGV4dGVuZHMgc2ZBY3Rpb25zCnsKICAvKioKICAgKiBFeGVjdXRlcyBpbmRleCBhY3Rpb24KICAgKgogICAqLwogIHB1YmxpYyBmdW5jdGlvbiBleGVjdXRlSW5kZXgoKQogIHsKICAgICR0aGlzLT5mb3J3YXJkKCdkZWZhdWx0JywgJ21vZHVsZScpOwogIH0KfQo="
+    },
+    "vendor/symfony-data/skeleton/module/module/templates/indexSuccess.php": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "base64": ""
+    },
+    "vendor/symfony-data/skeleton/module/test/actionsTest.php": {
+      "sha256": "4a58540e0ef888745ed5c35e2e6b9a920748147fad358a4be08a060a00b0f265",
+      "base64": "PD9waHAKCmluY2x1ZGUoZGlybmFtZShfX0ZJTEVfXykuJy8uLi8uLi9ib290c3RyYXAvZnVuY3Rpb25hbC5waHAnKTsKCi8vIGNyZWF0ZSBhIG5ldyB0ZXN0IGJyb3dzZXIKJGJyb3dzZXIgPSBuZXcgc2ZUZXN0QnJvd3NlcigpOwokYnJvd3Nlci0+aW5pdGlhbGl6ZSgpOwoKJGJyb3dzZXItPgogIGdldCgnLyMjTU9EVUxFX05BTUUjIy9pbmRleCcpLT4KICBpc1N0YXR1c0NvZGUoMjAwKS0+CiAgaXNSZXF1ZXN0UGFyYW1ldGVyKCdtb2R1bGUnLCAnIyNNT0RVTEVfTkFNRSMjJyktPgogIGlzUmVxdWVzdFBhcmFtZXRlcignYWN0aW9uJywgJ2luZGV4JyktPgogIGNoZWNrUmVzcG9uc2VFbGVtZW50KCdib2R5JywgJyEvVGhpcyBpcyBhIHRlbXBvcmFyeSBwYWdlLycpCjsK"
+    }
+  },
+  "logs": {
+    "74|original|module": ">> dir+      /tmp/template-audit/apps/auditapp/modules/AuditModule/actions\n>> file+     /tmp/template-audit/apps/audita...odule/actions/actions.class.php\n>> dir+      /tmp/template-audit/apps/auditapp/modules/AuditModule/lib\n>> dir+      /tmp/template-audit/apps/auditapp/modules/AuditModule/templates\n>> file+     /tmp/template-audit/apps/audita...dule/templates/indexSuccess.php\n>> dir+      /tmp/template-audit/apps/auditapp/modules/AuditModule/validate\n>> dir+      /tmp/template-audit/apps/auditapp/modules/AuditModule/config\n>> file+     /tmp/template-audit/test/functi...tapp/AuditModuleActionsTest.php\n>> tokens    /tmp/template-audit/test/functi...tapp/AuditModuleActionsTest.php\n>> tokens    /tmp/template-audit/apps/audita...odule/actions/actions.class.php\n>> tokens    /tmp/template-audit/apps/audita...dule/templates/indexSuccess.php\n",
+    "74|original|admin": ">> dir+      /tmp/template-audit/apps/auditapp/modules/AuditAdmin/actions\n>> file+     /tmp/template-audit/apps/audita...Admin/actions/actions.class.php\n>> dir+      /tmp/template-audit/apps/auditapp/modules/AuditAdmin/config\n>> file+     /tmp/template-audit/apps/audita...AuditAdmin/config/generator.yml\n>> tokens    /tmp/template-audit/apps/audita...Admin/actions/actions.class.php\n>> tokens    /tmp/template-audit/apps/audita...AuditAdmin/config/generator.yml\n",
+    "74|original|crud": ">> dir+      /tmp/template-audit/apps/auditapp/modules/AuditCrud/actions\n>> file+     /tmp/template-audit/apps/audita...tCrud/actions/actions.class.php\n>> dir+      /tmp/template-audit/apps/auditapp/modules/AuditCrud/lib\n>> dir+      /tmp/template-audit/apps/auditapp/modules/AuditCrud/templates\n>> dir+      /tmp/template-audit/apps/auditapp/modules/AuditCrud/validate\n>> dir+      /tmp/template-audit/apps/auditapp/modules/AuditCrud/config\n>> file+     /tmp/template-audit/apps/audita.../AuditCrud/config/generator.yml\n>> file+     /tmp/template-audit/test/functi...ditapp/AuditCrudActionsTest.php\n>> tokens    /tmp/template-audit/test/functi...ditapp/AuditCrudActionsTest.php\n>> tokens    /tmp/template-audit/apps/audita...tCrud/actions/actions.class.php\n>> tokens    /tmp/template-audit/apps/audita.../AuditCrud/config/generator.yml\n",
+    "74|original|default-default": ">> file+     /tmp/template-audit/batch/audit_job.php\n>> tokens    /tmp/template-audit/batch/audit_job.php\n",
+    "74|original|default-true": ">> file+     /tmp/template-audit/batch/audit_job.php\n>> tokens    /tmp/template-audit/batch/audit_job.php\n",
+    "74|original|default-false": ">> file+     /tmp/template-audit/batch/audit_job.php\n>> tokens    /tmp/template-audit/batch/audit_job.php\n",
+    "74|original|default-zero": ">> file+     /tmp/template-audit/batch/audit_job.php\n>> tokens    /tmp/template-audit/batch/audit_job.php\n",
+    "74|original|default-wordfalse": ">> file+     /tmp/template-audit/batch/audit_job.php\n>> tokens    /tmp/template-audit/batch/audit_job.php\n",
+    "74|original|rotate-default": ">> file+     /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n>> tokens    /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n",
+    "74|original|rotate-true": ">> file+     /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n>> tokens    /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n",
+    "74|original|rotate-false": ">> file+     /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n>> tokens    /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n",
+    "74|original|rotate-zero": ">> file+     /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n>> tokens    /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n",
+    "74|original|rotate-wordfalse": ">> file+     /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n>> tokens    /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n",
+    "74|original|controller-default": ">> file+     /tmp/template-audit/web/audit_front.php\n>> tokens    /tmp/template-audit/web/audit_front.php\n",
+    "74|original|controller-true": ">> file+     /tmp/template-audit/web/audit_front.php\n>> tokens    /tmp/template-audit/web/audit_front.php\n",
+    "74|original|controller-false": ">> file+     /tmp/template-audit/web/audit_front.php\n>> tokens    /tmp/template-audit/web/audit_front.php\n",
+    "74|original|controller-zero": ">> file+     /tmp/template-audit/web/audit_front.php\n>> tokens    /tmp/template-audit/web/audit_front.php\n",
+    "74|original|controller-wordfalse": ">> file+     /tmp/template-audit/web/audit_front.php\n>> tokens    /tmp/template-audit/web/audit_front.php\n",
+    "74|exp10|module": ">> dir+      /tmp/template-audit/apps/auditapp/modules/AuditModule/actions\n>> file+     /tmp/template-audit/apps/audita...odule/actions/actions.class.php\n>> dir+      /tmp/template-audit/apps/auditapp/modules/AuditModule/lib\n>> dir+      /tmp/template-audit/apps/auditapp/modules/AuditModule/templates\n>> file+     /tmp/template-audit/apps/audita...dule/templates/indexSuccess.php\n>> dir+      /tmp/template-audit/apps/auditapp/modules/AuditModule/validate\n>> dir+      /tmp/template-audit/apps/auditapp/modules/AuditModule/config\n>> file+     /tmp/template-audit/test/functi...tapp/AuditModuleActionsTest.php\n>> tokens    /tmp/template-audit/test/functi...tapp/AuditModuleActionsTest.php\n>> tokens    /tmp/template-audit/apps/audita...odule/actions/actions.class.php\n>> tokens    /tmp/template-audit/apps/audita...dule/templates/indexSuccess.php\n",
+    "74|exp10|admin": ">> dir+      /tmp/template-audit/apps/auditapp/modules/AuditAdmin/actions\n>> file+     /tmp/template-audit/apps/audita...Admin/actions/actions.class.php\n>> dir+      /tmp/template-audit/apps/auditapp/modules/AuditAdmin/config\n>> file+     /tmp/template-audit/apps/audita...AuditAdmin/config/generator.yml\n>> tokens    /tmp/template-audit/apps/audita...Admin/actions/actions.class.php\n>> tokens    /tmp/template-audit/apps/audita...AuditAdmin/config/generator.yml\n",
+    "74|exp10|crud": ">> dir+      /tmp/template-audit/apps/auditapp/modules/AuditCrud/actions\n>> file+     /tmp/template-audit/apps/audita...tCrud/actions/actions.class.php\n>> dir+      /tmp/template-audit/apps/auditapp/modules/AuditCrud/lib\n>> dir+      /tmp/template-audit/apps/auditapp/modules/AuditCrud/templates\n>> dir+      /tmp/template-audit/apps/auditapp/modules/AuditCrud/validate\n>> dir+      /tmp/template-audit/apps/auditapp/modules/AuditCrud/config\n>> file+     /tmp/template-audit/apps/audita.../AuditCrud/config/generator.yml\n>> file+     /tmp/template-audit/test/functi...ditapp/AuditCrudActionsTest.php\n>> tokens    /tmp/template-audit/test/functi...ditapp/AuditCrudActionsTest.php\n>> tokens    /tmp/template-audit/apps/audita...tCrud/actions/actions.class.php\n>> tokens    /tmp/template-audit/apps/audita.../AuditCrud/config/generator.yml\n",
+    "74|exp10|default-default": ">> file+     /tmp/template-audit/batch/audit_job.php\n>> tokens    /tmp/template-audit/batch/audit_job.php\n",
+    "74|exp10|default-true": ">> file+     /tmp/template-audit/batch/audit_job.php\n>> tokens    /tmp/template-audit/batch/audit_job.php\n",
+    "74|exp10|default-false": ">> file+     /tmp/template-audit/batch/audit_job.php\n>> tokens    /tmp/template-audit/batch/audit_job.php\n",
+    "74|exp10|default-zero": ">> file+     /tmp/template-audit/batch/audit_job.php\n>> tokens    /tmp/template-audit/batch/audit_job.php\n",
+    "74|exp10|default-wordfalse": ">> file+     /tmp/template-audit/batch/audit_job.php\n>> tokens    /tmp/template-audit/batch/audit_job.php\n",
+    "74|exp10|rotate-default": ">> file+     /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n>> tokens    /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n",
+    "74|exp10|rotate-true": ">> file+     /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n>> tokens    /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n",
+    "74|exp10|rotate-false": ">> file+     /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n>> tokens    /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n",
+    "74|exp10|rotate-zero": ">> file+     /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n>> tokens    /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n",
+    "74|exp10|rotate-wordfalse": ">> file+     /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n>> tokens    /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n",
+    "74|exp10|controller-default": ">> file+     /tmp/template-audit/web/audit_front.php\n>> tokens    /tmp/template-audit/web/audit_front.php\n",
+    "74|exp10|controller-true": ">> file+     /tmp/template-audit/web/audit_front.php\n>> tokens    /tmp/template-audit/web/audit_front.php\n",
+    "74|exp10|controller-false": ">> file+     /tmp/template-audit/web/audit_front.php\n>> tokens    /tmp/template-audit/web/audit_front.php\n",
+    "74|exp10|controller-zero": ">> file+     /tmp/template-audit/web/audit_front.php\n>> tokens    /tmp/template-audit/web/audit_front.php\n",
+    "74|exp10|controller-wordfalse": ">> file+     /tmp/template-audit/web/audit_front.php\n>> tokens    /tmp/template-audit/web/audit_front.php\n",
+    "83|exp10|module": "",
+    "83|exp10|admin": "",
+    "83|exp10|crud": "",
+    "83|exp10|default-default": ">> file+     /tmp/template-audit/batch/audit_job.php\n",
+    "83|exp10|default-true": ">> file+     /tmp/template-audit/batch/audit_job.php\n",
+    "83|exp10|default-false": ">> file+     /tmp/template-audit/batch/audit_job.php\n",
+    "83|exp10|default-zero": ">> file+     /tmp/template-audit/batch/audit_job.php\n",
+    "83|exp10|default-wordfalse": ">> file+     /tmp/template-audit/batch/audit_job.php\n",
+    "83|exp10|rotate-default": ">> file+     /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n",
+    "83|exp10|rotate-true": ">> file+     /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n",
+    "83|exp10|rotate-false": ">> file+     /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n",
+    "83|exp10|rotate-zero": ">> file+     /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n",
+    "83|exp10|rotate-wordfalse": ">> file+     /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n",
+    "83|exp10|controller-default": ">> file+     /tmp/template-audit/web/audit_front.php\n",
+    "83|exp10|controller-true": ">> file+     /tmp/template-audit/web/audit_front.php\n",
+    "83|exp10|controller-false": ">> file+     /tmp/template-audit/web/audit_front.php\n",
+    "83|exp10|controller-zero": ">> file+     /tmp/template-audit/web/audit_front.php\n",
+    "83|exp10|controller-wordfalse": ">> file+     /tmp/template-audit/web/audit_front.php\n",
+    "74|candidate|module": ">> dir+      /tmp/template-audit/apps/auditapp/modules/AuditModule/actions\n>> file+     /tmp/template-audit/apps/audita...odule/actions/actions.class.php\n>> dir+      /tmp/template-audit/apps/auditapp/modules/AuditModule/lib\n>> dir+      /tmp/template-audit/apps/auditapp/modules/AuditModule/templates\n>> file+     /tmp/template-audit/apps/audita...dule/templates/indexSuccess.php\n>> dir+      /tmp/template-audit/apps/auditapp/modules/AuditModule/validate\n>> dir+      /tmp/template-audit/apps/auditapp/modules/AuditModule/config\n>> file+     /tmp/template-audit/test/functi...tapp/AuditModuleActionsTest.php\n>> tokens    /tmp/template-audit/test/functi...tapp/AuditModuleActionsTest.php\n>> tokens    /tmp/template-audit/apps/audita...odule/actions/actions.class.php\n>> tokens    /tmp/template-audit/apps/audita...dule/templates/indexSuccess.php\n",
+    "74|candidate|admin": ">> dir+      /tmp/template-audit/apps/auditapp/modules/AuditAdmin/actions\n>> file+     /tmp/template-audit/apps/audita...Admin/actions/actions.class.php\n>> dir+      /tmp/template-audit/apps/auditapp/modules/AuditAdmin/config\n>> file+     /tmp/template-audit/apps/audita...AuditAdmin/config/generator.yml\n>> tokens    /tmp/template-audit/apps/audita...Admin/actions/actions.class.php\n>> tokens    /tmp/template-audit/apps/audita...AuditAdmin/config/generator.yml\n",
+    "74|candidate|crud": ">> dir+      /tmp/template-audit/apps/auditapp/modules/AuditCrud/actions\n>> file+     /tmp/template-audit/apps/audita...tCrud/actions/actions.class.php\n>> dir+      /tmp/template-audit/apps/auditapp/modules/AuditCrud/lib\n>> dir+      /tmp/template-audit/apps/auditapp/modules/AuditCrud/templates\n>> dir+      /tmp/template-audit/apps/auditapp/modules/AuditCrud/validate\n>> dir+      /tmp/template-audit/apps/auditapp/modules/AuditCrud/config\n>> file+     /tmp/template-audit/apps/audita.../AuditCrud/config/generator.yml\n>> file+     /tmp/template-audit/test/functi...ditapp/AuditCrudActionsTest.php\n>> tokens    /tmp/template-audit/test/functi...ditapp/AuditCrudActionsTest.php\n>> tokens    /tmp/template-audit/apps/audita...tCrud/actions/actions.class.php\n>> tokens    /tmp/template-audit/apps/audita.../AuditCrud/config/generator.yml\n",
+    "74|candidate|default-default": ">> file+     /tmp/template-audit/batch/audit_job.php\n>> tokens    /tmp/template-audit/batch/audit_job.php\n",
+    "74|candidate|default-true": ">> file+     /tmp/template-audit/batch/audit_job.php\n>> tokens    /tmp/template-audit/batch/audit_job.php\n",
+    "74|candidate|default-false": ">> file+     /tmp/template-audit/batch/audit_job.php\n>> tokens    /tmp/template-audit/batch/audit_job.php\n",
+    "74|candidate|default-zero": ">> file+     /tmp/template-audit/batch/audit_job.php\n>> tokens    /tmp/template-audit/batch/audit_job.php\n",
+    "74|candidate|default-wordfalse": ">> file+     /tmp/template-audit/batch/audit_job.php\n>> tokens    /tmp/template-audit/batch/audit_job.php\n",
+    "74|candidate|rotate-default": ">> file+     /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n>> tokens    /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n",
+    "74|candidate|rotate-true": ">> file+     /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n>> tokens    /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n",
+    "74|candidate|rotate-false": ">> file+     /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n>> tokens    /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n",
+    "74|candidate|rotate-zero": ">> file+     /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n>> tokens    /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n",
+    "74|candidate|rotate-wordfalse": ">> file+     /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n>> tokens    /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n",
+    "74|candidate|controller-default": ">> file+     /tmp/template-audit/web/audit_front.php\n>> tokens    /tmp/template-audit/web/audit_front.php\n",
+    "74|candidate|controller-true": ">> file+     /tmp/template-audit/web/audit_front.php\n>> tokens    /tmp/template-audit/web/audit_front.php\n",
+    "74|candidate|controller-false": ">> file+     /tmp/template-audit/web/audit_front.php\n>> tokens    /tmp/template-audit/web/audit_front.php\n",
+    "74|candidate|controller-zero": ">> file+     /tmp/template-audit/web/audit_front.php\n>> tokens    /tmp/template-audit/web/audit_front.php\n",
+    "74|candidate|controller-wordfalse": ">> file+     /tmp/template-audit/web/audit_front.php\n>> tokens    /tmp/template-audit/web/audit_front.php\n",
+    "83|candidate|module": ">> dir+      /tmp/template-audit/apps/auditapp/modules/AuditModule/actions\n>> file+     /tmp/template-audit/apps/audita...odule/actions/actions.class.php\n>> dir+      /tmp/template-audit/apps/auditapp/modules/AuditModule/lib\n>> dir+      /tmp/template-audit/apps/auditapp/modules/AuditModule/templates\n>> file+     /tmp/template-audit/apps/audita...dule/templates/indexSuccess.php\n>> dir+      /tmp/template-audit/apps/auditapp/modules/AuditModule/validate\n>> dir+      /tmp/template-audit/apps/auditapp/modules/AuditModule/config\n>> file+     /tmp/template-audit/test/functi...tapp/AuditModuleActionsTest.php\n>> tokens    /tmp/template-audit/test/functi...tapp/AuditModuleActionsTest.php\n>> tokens    /tmp/template-audit/apps/audita...odule/actions/actions.class.php\n>> tokens    /tmp/template-audit/apps/audita...dule/templates/indexSuccess.php\n",
+    "83|candidate|admin": ">> dir+      /tmp/template-audit/apps/auditapp/modules/AuditAdmin/actions\n>> file+     /tmp/template-audit/apps/audita...Admin/actions/actions.class.php\n>> dir+      /tmp/template-audit/apps/auditapp/modules/AuditAdmin/config\n>> file+     /tmp/template-audit/apps/audita...AuditAdmin/config/generator.yml\n>> tokens    /tmp/template-audit/apps/audita...Admin/actions/actions.class.php\n>> tokens    /tmp/template-audit/apps/audita...AuditAdmin/config/generator.yml\n",
+    "83|candidate|crud": ">> dir+      /tmp/template-audit/apps/auditapp/modules/AuditCrud/actions\n>> file+     /tmp/template-audit/apps/audita...tCrud/actions/actions.class.php\n>> dir+      /tmp/template-audit/apps/auditapp/modules/AuditCrud/lib\n>> dir+      /tmp/template-audit/apps/auditapp/modules/AuditCrud/templates\n>> dir+      /tmp/template-audit/apps/auditapp/modules/AuditCrud/validate\n>> dir+      /tmp/template-audit/apps/auditapp/modules/AuditCrud/config\n>> file+     /tmp/template-audit/apps/audita.../AuditCrud/config/generator.yml\n>> file+     /tmp/template-audit/test/functi...ditapp/AuditCrudActionsTest.php\n>> tokens    /tmp/template-audit/test/functi...ditapp/AuditCrudActionsTest.php\n>> tokens    /tmp/template-audit/apps/audita...tCrud/actions/actions.class.php\n>> tokens    /tmp/template-audit/apps/audita.../AuditCrud/config/generator.yml\n",
+    "83|candidate|default-default": ">> file+     /tmp/template-audit/batch/audit_job.php\n>> tokens    /tmp/template-audit/batch/audit_job.php\n",
+    "83|candidate|default-true": ">> file+     /tmp/template-audit/batch/audit_job.php\n>> tokens    /tmp/template-audit/batch/audit_job.php\n",
+    "83|candidate|default-false": ">> file+     /tmp/template-audit/batch/audit_job.php\n>> tokens    /tmp/template-audit/batch/audit_job.php\n",
+    "83|candidate|default-zero": ">> file+     /tmp/template-audit/batch/audit_job.php\n>> tokens    /tmp/template-audit/batch/audit_job.php\n",
+    "83|candidate|default-wordfalse": ">> file+     /tmp/template-audit/batch/audit_job.php\n>> tokens    /tmp/template-audit/batch/audit_job.php\n",
+    "83|candidate|rotate-default": ">> file+     /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n>> tokens    /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n",
+    "83|candidate|rotate-true": ">> file+     /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n>> tokens    /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n",
+    "83|candidate|rotate-false": ">> file+     /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n>> tokens    /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n",
+    "83|candidate|rotate-zero": ">> file+     /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n>> tokens    /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n",
+    "83|candidate|rotate-wordfalse": ">> file+     /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n>> tokens    /tmp/template-audit/batch/rotate_log_auditapp_prod.php\n",
+    "83|candidate|controller-default": ">> file+     /tmp/template-audit/web/audit_front.php\n>> tokens    /tmp/template-audit/web/audit_front.php\n",
+    "83|candidate|controller-true": ">> file+     /tmp/template-audit/web/audit_front.php\n>> tokens    /tmp/template-audit/web/audit_front.php\n",
+    "83|candidate|controller-false": ">> file+     /tmp/template-audit/web/audit_front.php\n>> tokens    /tmp/template-audit/web/audit_front.php\n",
+    "83|candidate|controller-zero": ">> file+     /tmp/template-audit/web/audit_front.php\n>> tokens    /tmp/template-audit/web/audit_front.php\n",
+    "83|candidate|controller-wordfalse": ">> file+     /tmp/template-audit/web/audit_front.php\n>> tokens    /tmp/template-audit/web/audit_front.php\n"
+  },
+  "lint_failures": {
+    "default-default|74": {
+      "stdout": "Errors parsing Standard input code\n",
+      "stderr": "Parse error: syntax error, unexpected ';', expecting ')' in Standard input code on line 18\n"
+    },
+    "default-default|83": {
+      "stdout": "Errors parsing Standard input code\n",
+      "stderr": "Parse error: syntax error, unexpected token \";\", expecting \")\" in Standard input code on line 18\n"
+    },
+    "default-true|74": {
+      "stdout": "Errors parsing Standard input code\n",
+      "stderr": "Parse error: syntax error, unexpected ';', expecting ')' in Standard input code on line 18\n"
+    },
+    "default-true|83": {
+      "stdout": "Errors parsing Standard input code\n",
+      "stderr": "Parse error: syntax error, unexpected token \";\", expecting \")\" in Standard input code on line 18\n"
+    },
+    "default-false|74": {
+      "stdout": "Errors parsing Standard input code\n",
+      "stderr": "Parse error: syntax error, unexpected ';', expecting ')' in Standard input code on line 18\n"
+    },
+    "default-false|83": {
+      "stdout": "Errors parsing Standard input code\n",
+      "stderr": "Parse error: syntax error, unexpected token \";\", expecting \")\" in Standard input code on line 18\n"
+    },
+    "default-zero|74": {
+      "stdout": "Errors parsing Standard input code\n",
+      "stderr": "Parse error: syntax error, unexpected ';', expecting ')' in Standard input code on line 18\n"
+    },
+    "default-zero|83": {
+      "stdout": "Errors parsing Standard input code\n",
+      "stderr": "Parse error: syntax error, unexpected token \";\", expecting \")\" in Standard input code on line 18\n"
+    },
+    "default-wordfalse|74": {
+      "stdout": "Errors parsing Standard input code\n",
+      "stderr": "Parse error: syntax error, unexpected ';', expecting ')' in Standard input code on line 18\n"
+    },
+    "default-wordfalse|83": {
+      "stdout": "Errors parsing Standard input code\n",
+      "stderr": "Parse error: syntax error, unexpected token \";\", expecting \")\" in Standard input code on line 18\n"
+    },
+    "rotate-default|74": {
+      "stdout": "Errors parsing Standard input code\n",
+      "stderr": "Parse error: syntax error, unexpected ';', expecting ')' in Standard input code on line 18\n"
+    },
+    "rotate-default|83": {
+      "stdout": "Errors parsing Standard input code\n",
+      "stderr": "Parse error: syntax error, unexpected token \";\", expecting \")\" in Standard input code on line 18\n"
+    },
+    "rotate-true|74": {
+      "stdout": "Errors parsing Standard input code\n",
+      "stderr": "Parse error: syntax error, unexpected ';', expecting ')' in Standard input code on line 18\n"
+    },
+    "rotate-true|83": {
+      "stdout": "Errors parsing Standard input code\n",
+      "stderr": "Parse error: syntax error, unexpected token \";\", expecting \")\" in Standard input code on line 18\n"
+    },
+    "rotate-false|74": {
+      "stdout": "Errors parsing Standard input code\n",
+      "stderr": "Parse error: syntax error, unexpected ';', expecting ')' in Standard input code on line 18\n"
+    },
+    "rotate-false|83": {
+      "stdout": "Errors parsing Standard input code\n",
+      "stderr": "Parse error: syntax error, unexpected token \";\", expecting \")\" in Standard input code on line 18\n"
+    },
+    "rotate-zero|74": {
+      "stdout": "Errors parsing Standard input code\n",
+      "stderr": "Parse error: syntax error, unexpected ';', expecting ')' in Standard input code on line 18\n"
+    },
+    "rotate-zero|83": {
+      "stdout": "Errors parsing Standard input code\n",
+      "stderr": "Parse error: syntax error, unexpected token \";\", expecting \")\" in Standard input code on line 18\n"
+    },
+    "rotate-wordfalse|74": {
+      "stdout": "Errors parsing Standard input code\n",
+      "stderr": "Parse error: syntax error, unexpected ';', expecting ')' in Standard input code on line 18\n"
+    },
+    "rotate-wordfalse|83": {
+      "stdout": "Errors parsing Standard input code\n",
+      "stderr": "Parse error: syntax error, unexpected token \";\", expecting \")\" in Standard input code on line 18\n"
+    },
+    "controller-default|74": {
+      "stdout": "Errors parsing Standard input code\n",
+      "stderr": "Parse error: syntax error, unexpected ';', expecting ')' in Standard input code on line 8\n"
+    },
+    "controller-default|83": {
+      "stdout": "Errors parsing Standard input code\n",
+      "stderr": "Parse error: syntax error, unexpected token \";\", expecting \")\" in Standard input code on line 8\n"
+    },
+    "controller-true|74": {
+      "stdout": "Errors parsing Standard input code\n",
+      "stderr": "Parse error: syntax error, unexpected ';', expecting ')' in Standard input code on line 8\n"
+    },
+    "controller-true|83": {
+      "stdout": "Errors parsing Standard input code\n",
+      "stderr": "Parse error: syntax error, unexpected token \";\", expecting \")\" in Standard input code on line 8\n"
+    },
+    "controller-false|74": {
+      "stdout": "Errors parsing Standard input code\n",
+      "stderr": "Parse error: syntax error, unexpected ';', expecting ')' in Standard input code on line 8\n"
+    },
+    "controller-false|83": {
+      "stdout": "Errors parsing Standard input code\n",
+      "stderr": "Parse error: syntax error, unexpected token \";\", expecting \")\" in Standard input code on line 8\n"
+    },
+    "controller-zero|74": {
+      "stdout": "Errors parsing Standard input code\n",
+      "stderr": "Parse error: syntax error, unexpected ';', expecting ')' in Standard input code on line 8\n"
+    },
+    "controller-zero|83": {
+      "stdout": "Errors parsing Standard input code\n",
+      "stderr": "Parse error: syntax error, unexpected token \";\", expecting \")\" in Standard input code on line 8\n"
+    },
+    "controller-wordfalse|74": {
+      "stdout": "Errors parsing Standard input code\n",
+      "stderr": "Parse error: syntax error, unexpected ';', expecting ')' in Standard input code on line 8\n"
+    },
+    "controller-wordfalse|83": {
+      "stdout": "Errors parsing Standard input code\n",
+      "stderr": "Parse error: syntax error, unexpected token \";\", expecting \")\" in Standard input code on line 8\n"
+    }
+  }
+}

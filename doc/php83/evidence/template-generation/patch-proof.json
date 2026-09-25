@@ -1,0 +1,15 @@
+{
+  "exit": 0,
+  "stdout": "patching file vendor/symfony/vendor/pake/pakeApp.class.php\n",
+  "stderr": "",
+  "after_sha256": "d5bdc4612a5c9ae76fe8f594eaefeff1059175f0a36d756a1010612830bf39b8",
+  "staged_files": 32,
+  "prior_exp10_changes": [
+    "vendor/symfony/vendor/pake/pakeFinder.class.php",
+    "vendor/symfony/vendor/pake/pakeGetopt.class.php",
+    "vendor/symfony/vendor/pake/pakeYaml.class.php"
+  ],
+  "new_changed_files": [
+    "vendor/symfony/vendor/pake/pakeApp.class.php"
+  ]
+}

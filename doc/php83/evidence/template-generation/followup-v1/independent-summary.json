@@ -1,0 +1,38 @@
+{
+  "scope": "negative30 and isolated DEBUG literal arity4 only",
+  "actual_executor": "Claude CLI",
+  "cli_exit": 0,
+  "local_tests": 34,
+  "collector_exits": {
+    "negative": 2,
+    "arity": 2
+  },
+  "validator_exits": {
+    "negative": 0,
+    "arity": 0
+  },
+  "reports": {
+    "negative": {
+      "primary_sha256": "8cfdbd33707a3e2e735e506ac65bdfedd1007d40d1e2c3912efd58fa380f6886",
+      "repeat_sha256": "8cfdbd33707a3e2e735e506ac65bdfedd1007d40d1e2c3912efd58fa380f6886",
+      "byte_identical": true
+    },
+    "arity": {
+      "primary_sha256": "cd899dac3304d39665448e10cc40c5874099f81650870ebb72ef5658d8957d5d",
+      "repeat_sha256": "cd899dac3304d39665448e10cc40c5874099f81650870ebb72ef5658d8957d5d",
+      "byte_identical": true
+    }
+  },
+  "frozen_inputs_unchanged": true,
+  "generation_success_claim": false,
+  "application_acceptance": false,
+  "baseline74_released": true,
+  "limitations": [
+    "Same harness and immutable stages; independent executor, not independently designed implementation.",
+    "Native diagnostic spelling/log contract is derived from retained primary observations; functional exception/output/literal outcomes are explicit separate expectations.",
+    "Readonly-output exit0 with no output is legacy behavior, not success.",
+    "Runtime body checks family prefix; exact binary/module identity is independently pinned by pre/post snapshots.",
+    "Validator output exists/write check is not atomic against concurrent writers; outputs were unique with one owner.",
+    "No generated application execution, DEBUG source repair, SQL or release acceptance."
+  ]
+}

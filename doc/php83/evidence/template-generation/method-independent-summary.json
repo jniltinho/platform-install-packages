@@ -1,0 +1,21 @@
+{
+  "actual_executor": "Claude CLI",
+  "cli_exit": 0,
+  "reported_test_count": 39,
+  "reported_local_test_exit": 0,
+  "reported_observation_exit": 2,
+  "reported_validator_exit": 0,
+  "primary_sha256": "9fb502d6f2c902403296a39a96a7ee62dec249332059aac044417b8488ad2ef9",
+  "independent_sha256": "9fb502d6f2c902403296a39a96a7ee62dec249332059aac044417b8488ad2ef9",
+  "reports_byte_identical": true,
+  "rows": 65,
+  "runtime_stage_before_after_identical": true,
+  "bounded_method_contract": "PASS",
+  "generation_executed": false,
+  "application_acceptance": false,
+  "remaining_validator_limitations": [
+    "Canonical JSON comparison sorts object keys; numeric key7 string-vs-int not represented separately.",
+    "Explicit command/generated_syntax_acceptance/snapshot_program_sha256/pending-terminal absence checks were reviewed manually by Claude but are not validator assertions."
+  ],
+  "scope": "Independent of Codex source/harness author; same lab and fixture, not independent environment coverage."
+}

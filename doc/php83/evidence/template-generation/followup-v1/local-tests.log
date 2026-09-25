@@ -1,0 +1,11 @@
+test_empty (test_prepare.ExtractTests.test_empty) ... ok
+test_injection (test_prepare.ExtractTests.test_injection) ... ok
+test_missing (test_prepare.ExtractTests.test_missing) ... ok
+test_multiple (test_prepare.ExtractTests.test_multiple) ... ok
+test_no_application_boot (test_prepare.ExtractTests.test_no_application_boot) ... ok
+test_true (test_prepare.ExtractTests.test_true) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.000s
+
+OK

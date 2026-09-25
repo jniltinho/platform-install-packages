@@ -1,0 +1,47 @@
+{
+  "grok": {
+    "exit": 124,
+    "bound_seconds": 120,
+    "actual_tests_executed": 0,
+    "status": "TIMEOUT_INCOMPLETE",
+    "public_evidence": "grok-public.jsonl",
+    "initial_option_parse_failure_recorded": "grok-invalid-options.exit"
+  },
+  "fallback": {
+    "executor": "OpenCode",
+    "resolved_model": "opencode/muse-spark-1.3-contributor-free",
+    "exit": 0,
+    "bound_seconds": 180,
+    "actual_tests_executed": 10,
+    "commands": [
+      {
+        "input": {
+          "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/template-generation -p 'test_*.py' -v",
+          "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+        },
+        "exit": 0,
+        "output": "test_ambiguous (test_build.BuildTests.test_ambiguous) ... ok\ntest_archive_parent (test_build.BuildTests.test_archive_parent) ... ok\ntest_archive_positive (test_build.BuildTests.test_archive_positive) ... ok\ntest_archive_symlink (test_build.BuildTests.test_archive_symlink) ... ok\ntest_archive_wrong_pin (test_build.BuildTests.test_archive_wrong_pin) ... ok\ntest_closure_has_no_capture (test_build.BuildTests.test_closure_has_no_capture) ... ok\ntest_exact_transform (test_build.BuildTests.test_exact_transform) ... ok\ntest_missing (test_build.BuildTests.test_missing) ... ok\ntest_missing_input (test_build.BuildTests.test_missing_input) ... ok\ntest_wrong_pin (test_build.BuildTests.test_wrong_pin) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.001s\n\nOK\n"
+      },
+      {
+        "input": {
+          "command": "bash -n tools/php83/template-generation/run.sh; echo exit:$?",
+          "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+        },
+        "exit": 0,
+        "output": "exit:0\n"
+      },
+      {
+        "input": {
+          "command": "sha256sum patches/php83/held/pake-relative-path/pake-relative-path.patch; python3 -c \"import json,hashlib; m=json.load(open('patches/php83/held/pake-relative-path/manifest.json')); h=hashlib.sha256(open('patches/php83/held/pake-relative-path/pake-relative-path.patch','rb').read()).hexdigest(); print('manifest_patch_sha256:'+m['patch_sha256']); print('actual_patch_sha256:'+h); print('match:'+str(h==m['patch_sha256']))\"",
+          "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+        },
+        "exit": 0,
+        "output": "93a43c503389b43f81493d1c5a14858b7f1fffc38a6c231fe7c3743885e2785e  patches/php83/held/pake-relative-path/pake-relative-path.patch\nmanifest_patch_sha256:93a43c503389b43f81493d1c5a14858b7f1fffc38a6c231fe7c3743885e2785e\nactual_patch_sha256:93a43c503389b43f81493d1c5a14858b7f1fffc38a6c231fe7c3743885e2785e\nmatch:True\n"
+      }
+    ],
+    "public_evidence": "opencode-public.jsonl",
+    "permission_denials": 0
+  },
+  "reviewed_phase": "r1 collector, preserved reviewed-r1-collect.py",
+  "followup": "r2 collector changed after actualCLI terminal;21localtests passed but independentr2review pending; noVM"
+}

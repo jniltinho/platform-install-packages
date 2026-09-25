@@ -1,0 +1,182 @@
+{
+  "schema": 1,
+  "status": "HELD",
+  "target": "vendor/symfony/vendor/pake/pakeApp.class.php",
+  "before_sha256": "72f538165dd3226b46c35ddac7700c0f3a6046e74f4646b74ca5bd541d59b120",
+  "after_sha256": "d5bdc4612a5c9ae76fe8f594eaefeff1059175f0a36d756a1010612830bf39b8",
+  "patch_sha256": "93a43c503389b43f81493d1c5a14858b7f1fffc38a6c231fe7c3743885e2785e",
+  "archives": {
+    "original": [
+      "/tmp/kaltura-php83-audit/Rigel-18.20.0.zip",
+      "58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28"
+    ],
+    "exp10": [
+      "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83-artifacts/exp10/Rigel-18.20.0-php83-experimental.exp10.zip",
+      "de177e6cbaedf3a3207661c2325f466cce37febb73190f3a49d31f24b740c053"
+    ]
+  },
+  "files": {
+    "vendor/symfony-data/generator/sfPropelAdmin/default/skeleton/actions/actions.class.php": {
+      "original": "81b2e299d72ece711fab3a82dba6c5399c5747091a4b6a9de60b1cc5b31e798a",
+      "exp10": "81b2e299d72ece711fab3a82dba6c5399c5747091a4b6a9de60b1cc5b31e798a",
+      "candidate": "81b2e299d72ece711fab3a82dba6c5399c5747091a4b6a9de60b1cc5b31e798a"
+    },
+    "vendor/symfony-data/generator/sfPropelAdmin/default/skeleton/config/generator.yml": {
+      "original": "ef5e14a92e58ac50ade678a287d236f8ff34fec9bf7dc5d4602401a63f39f6f2",
+      "exp10": "ef5e14a92e58ac50ade678a287d236f8ff34fec9bf7dc5d4602401a63f39f6f2",
+      "candidate": "ef5e14a92e58ac50ade678a287d236f8ff34fec9bf7dc5d4602401a63f39f6f2"
+    },
+    "vendor/symfony-data/generator/sfPropelCrud/default/skeleton/actions/actions.class.php": {
+      "original": "81b2e299d72ece711fab3a82dba6c5399c5747091a4b6a9de60b1cc5b31e798a",
+      "exp10": "81b2e299d72ece711fab3a82dba6c5399c5747091a4b6a9de60b1cc5b31e798a",
+      "candidate": "81b2e299d72ece711fab3a82dba6c5399c5747091a4b6a9de60b1cc5b31e798a"
+    },
+    "vendor/symfony-data/generator/sfPropelCrud/default/skeleton/config/generator.yml": {
+      "original": "5ef36996b1c4f938fe80cc97a0d90d4a1332f6076ef928f0085bb8bb90a55e57",
+      "exp10": "5ef36996b1c4f938fe80cc97a0d90d4a1332f6076ef928f0085bb8bb90a55e57",
+      "candidate": "5ef36996b1c4f938fe80cc97a0d90d4a1332f6076ef928f0085bb8bb90a55e57"
+    },
+    "vendor/symfony-data/generator/sfPropelCrud/default/skeleton/lib/.sf": {
+      "original": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exp10": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "candidate": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "vendor/symfony-data/generator/sfPropelCrud/default/skeleton/templates/.sf": {
+      "original": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exp10": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "candidate": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "vendor/symfony-data/generator/sfPropelCrud/default/skeleton/validate/.sf": {
+      "original": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exp10": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "candidate": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "vendor/symfony-data/skeleton/batch/default.php": {
+      "original": "a82525ec83207e9193da1bb002310eb03fcba6dd30ab20b0ac9973bb97299479",
+      "exp10": "a82525ec83207e9193da1bb002310eb03fcba6dd30ab20b0ac9973bb97299479",
+      "candidate": "a82525ec83207e9193da1bb002310eb03fcba6dd30ab20b0ac9973bb97299479"
+    },
+    "vendor/symfony-data/skeleton/batch/rotate_log.php": {
+      "original": "d8d4b03a7f63d8df562772783c78466b16bf1e87467d54ebd08dea03047f7cb6",
+      "exp10": "d8d4b03a7f63d8df562772783c78466b16bf1e87467d54ebd08dea03047f7cb6",
+      "candidate": "d8d4b03a7f63d8df562772783c78466b16bf1e87467d54ebd08dea03047f7cb6"
+    },
+    "vendor/symfony-data/skeleton/controller/controller.php": {
+      "original": "dc64d95afab4440fd7274516c03467a473a0b595c42132d9a34f7ebf1a635fed",
+      "exp10": "dc64d95afab4440fd7274516c03467a473a0b595c42132d9a34f7ebf1a635fed",
+      "candidate": "dc64d95afab4440fd7274516c03467a473a0b595c42132d9a34f7ebf1a635fed"
+    },
+    "vendor/symfony-data/skeleton/module/module/actions/actions.class.php": {
+      "original": "2275a76643e292bbd645d2f6b94a4e32055eaf6e851f6dffae2169a128d4b95c",
+      "exp10": "2275a76643e292bbd645d2f6b94a4e32055eaf6e851f6dffae2169a128d4b95c",
+      "candidate": "2275a76643e292bbd645d2f6b94a4e32055eaf6e851f6dffae2169a128d4b95c"
+    },
+    "vendor/symfony-data/skeleton/module/module/config/.sf": {
+      "original": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exp10": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "candidate": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "vendor/symfony-data/skeleton/module/module/lib/.sf": {
+      "original": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exp10": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "candidate": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "vendor/symfony-data/skeleton/module/module/templates/indexSuccess.php": {
+      "original": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exp10": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "candidate": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "vendor/symfony-data/skeleton/module/module/validate/.sf": {
+      "original": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exp10": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "candidate": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "vendor/symfony-data/skeleton/module/test/actionsTest.php": {
+      "original": "4a58540e0ef888745ed5c35e2e6b9a920748147fad358a4be08a060a00b0f265",
+      "exp10": "4a58540e0ef888745ed5c35e2e6b9a920748147fad358a4be08a060a00b0f265",
+      "candidate": "4a58540e0ef888745ed5c35e2e6b9a920748147fad358a4be08a060a00b0f265"
+    },
+    "vendor/symfony-data/tasks/sfPakeGenerator.php": {
+      "original": "67682683048afeaef9ed55bd95a5920792b2c6ab3b4ec11c804985ead4b347eb",
+      "exp10": "67682683048afeaef9ed55bd95a5920792b2c6ab3b4ec11c804985ead4b347eb",
+      "candidate": "67682683048afeaef9ed55bd95a5920792b2c6ab3b4ec11c804985ead4b347eb"
+    },
+    "vendor/symfony-data/tasks/sfPakePropelAdminGenerator.php": {
+      "original": "3075daa287f8498823633a1fdf3f96db328848a8f80c4e02e4726c5ce3865f2c",
+      "exp10": "3075daa287f8498823633a1fdf3f96db328848a8f80c4e02e4726c5ce3865f2c",
+      "candidate": "3075daa287f8498823633a1fdf3f96db328848a8f80c4e02e4726c5ce3865f2c"
+    },
+    "vendor/symfony-data/tasks/sfPakePropelCrudGenerator.php": {
+      "original": "268f26c959581da241d56e2dcaba7c95ed111b54072472fab3b6fe77c67f5815",
+      "exp10": "268f26c959581da241d56e2dcaba7c95ed111b54072472fab3b6fe77c67f5815",
+      "candidate": "268f26c959581da241d56e2dcaba7c95ed111b54072472fab3b6fe77c67f5815"
+    },
+    "vendor/symfony/config/sfConfig.class.php": {
+      "original": "4627df1ceb38bbf1cadeab089707d2f1ec069d04786c9e98df94a9067d2c8da7",
+      "exp10": "4627df1ceb38bbf1cadeab089707d2f1ec069d04786c9e98df94a9067d2c8da7",
+      "candidate": "4627df1ceb38bbf1cadeab089707d2f1ec069d04786c9e98df94a9067d2c8da7"
+    },
+    "vendor/symfony/config/sfLoader.class.php": {
+      "original": "9763c9a7cac325e6578b69985a2acd4705832179379f7d7a8901effa5eaab2ee",
+      "exp10": "9763c9a7cac325e6578b69985a2acd4705832179379f7d7a8901effa5eaab2ee",
+      "candidate": "9763c9a7cac325e6578b69985a2acd4705832179379f7d7a8901effa5eaab2ee"
+    },
+    "vendor/symfony/vendor/pake/pakeApp.class.php": {
+      "original": "72f538165dd3226b46c35ddac7700c0f3a6046e74f4646b74ca5bd541d59b120",
+      "exp10": "72f538165dd3226b46c35ddac7700c0f3a6046e74f4646b74ca5bd541d59b120",
+      "candidate": "d5bdc4612a5c9ae76fe8f594eaefeff1059175f0a36d756a1010612830bf39b8"
+    },
+    "vendor/symfony/vendor/pake/pakeColor.class.php": {
+      "original": "186264afbad4c2fe0e702c343b002fafd609ab81f0be697ce2f72c4698bc6ccf",
+      "exp10": "186264afbad4c2fe0e702c343b002fafd609ab81f0be697ce2f72c4698bc6ccf",
+      "candidate": "186264afbad4c2fe0e702c343b002fafd609ab81f0be697ce2f72c4698bc6ccf"
+    },
+    "vendor/symfony/vendor/pake/pakeException.class.php": {
+      "original": "2e07c3d2a6b19c078b30aa0d7397bfe740ec64e8bc914cbd6b891393bcb79e57",
+      "exp10": "2e07c3d2a6b19c078b30aa0d7397bfe740ec64e8bc914cbd6b891393bcb79e57",
+      "candidate": "2e07c3d2a6b19c078b30aa0d7397bfe740ec64e8bc914cbd6b891393bcb79e57"
+    },
+    "vendor/symfony/vendor/pake/pakeFileTask.class.php": {
+      "original": "19ee18205235a140f29060d7ac6bed81b41008793699c3e231bc0de6528dc798",
+      "exp10": "19ee18205235a140f29060d7ac6bed81b41008793699c3e231bc0de6528dc798",
+      "candidate": "19ee18205235a140f29060d7ac6bed81b41008793699c3e231bc0de6528dc798"
+    },
+    "vendor/symfony/vendor/pake/pakeFinder.class.php": {
+      "original": "9adef4dc3d354b31230852b849cff083812c483fb12c8ec23ff7e4f2ae724fd1",
+      "exp10": "f29bb5e68e7d20d3b6807b0d115222e3146ed9e59257aef735c2720fa147505b",
+      "candidate": "f29bb5e68e7d20d3b6807b0d115222e3146ed9e59257aef735c2720fa147505b"
+    },
+    "vendor/symfony/vendor/pake/pakeFunction.php": {
+      "original": "bc97788a21544864e55836ad7194ace356ac0cfac4fc3025faa822e6d3cef305",
+      "exp10": "bc97788a21544864e55836ad7194ace356ac0cfac4fc3025faa822e6d3cef305",
+      "candidate": "bc97788a21544864e55836ad7194ace356ac0cfac4fc3025faa822e6d3cef305"
+    },
+    "vendor/symfony/vendor/pake/pakeGetopt.class.php": {
+      "original": "0eccb66f094c62bbb3292cbeda1f3f9667bc873e988a882f0bf645586460a734",
+      "exp10": "19d140a6eaa1cd45b3ad45dcff478d43715e285bdf0e5cbecd5a116cb3fbf8ca",
+      "candidate": "19d140a6eaa1cd45b3ad45dcff478d43715e285bdf0e5cbecd5a116cb3fbf8ca"
+    },
+    "vendor/symfony/vendor/pake/pakeGlobToRegex.class.php": {
+      "original": "fca94caf12205ab5429acd0ff5f48be79f2dc8b86622d504bcf2a98badf73d65",
+      "exp10": "fca94caf12205ab5429acd0ff5f48be79f2dc8b86622d504bcf2a98badf73d65",
+      "candidate": "fca94caf12205ab5429acd0ff5f48be79f2dc8b86622d504bcf2a98badf73d65"
+    },
+    "vendor/symfony/vendor/pake/pakeNumberCompare.class.php": {
+      "original": "c48caa979420561ffd0a980c0c1b8e61f59812d90e89c8efdd9ae3664600157c",
+      "exp10": "c48caa979420561ffd0a980c0c1b8e61f59812d90e89c8efdd9ae3664600157c",
+      "candidate": "c48caa979420561ffd0a980c0c1b8e61f59812d90e89c8efdd9ae3664600157c"
+    },
+    "vendor/symfony/vendor/pake/pakeTask.class.php": {
+      "original": "555f0d43c238f06d517a81a587dd25e53f977bdca992589d290de10288fd2630",
+      "exp10": "555f0d43c238f06d517a81a587dd25e53f977bdca992589d290de10288fd2630",
+      "candidate": "555f0d43c238f06d517a81a587dd25e53f977bdca992589d290de10288fd2630"
+    },
+    "vendor/symfony/vendor/pake/pakeYaml.class.php": {
+      "original": "4c04f1e193a3feb729b907faaadedf9980aee596740a37b7506b40e644373634",
+      "exp10": "362f5e60d975e89b3f21194726803a586f565bd795a2c9a3ee5dfbcc963e1b00",
+      "candidate": "362f5e60d975e89b3f21194726803a586f565bd795a2c9a3ee5dfbcc963e1b00"
+    }
+  },
+  "captured_variables": [],
+  "runtime_executed": false
+}

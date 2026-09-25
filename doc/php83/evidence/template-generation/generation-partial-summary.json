@@ -1,0 +1,348 @@
+{
+  "status": "INCOMPLETE37_OF90",
+  "terminal_error": {
+    "type": "AttributeError",
+    "message": "'list' object has no attribute 'items'"
+  },
+  "rows": [
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "module",
+      "exit": 0,
+      "exception": null,
+      "output_count": 3,
+      "lint_failures": []
+    },
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "admin",
+      "exit": 0,
+      "exception": null,
+      "output_count": 2,
+      "lint_failures": []
+    },
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "crud",
+      "exit": 0,
+      "exception": null,
+      "output_count": 3,
+      "lint_failures": []
+    },
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "default-default",
+      "exit": 0,
+      "exception": null,
+      "output_count": 1,
+      "lint_failures": []
+    },
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "default-true",
+      "exit": 0,
+      "exception": null,
+      "output_count": 1,
+      "lint_failures": []
+    },
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "default-false",
+      "exit": 0,
+      "exception": null,
+      "output_count": 1,
+      "lint_failures": []
+    },
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "default-zero",
+      "exit": 0,
+      "exception": null,
+      "output_count": 1,
+      "lint_failures": []
+    },
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "default-wordfalse",
+      "exit": 0,
+      "exception": null,
+      "output_count": 1,
+      "lint_failures": []
+    },
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "rotate-default",
+      "exit": 0,
+      "exception": null,
+      "output_count": 1,
+      "lint_failures": []
+    },
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "rotate-true",
+      "exit": 0,
+      "exception": null,
+      "output_count": 1,
+      "lint_failures": []
+    },
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "rotate-false",
+      "exit": 0,
+      "exception": null,
+      "output_count": 1,
+      "lint_failures": []
+    },
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "rotate-zero",
+      "exit": 0,
+      "exception": null,
+      "output_count": 1,
+      "lint_failures": []
+    },
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "rotate-wordfalse",
+      "exit": 0,
+      "exception": null,
+      "output_count": 1,
+      "lint_failures": []
+    },
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "controller-default",
+      "exit": 0,
+      "exception": null,
+      "output_count": 1,
+      "lint_failures": []
+    },
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "controller-true",
+      "exit": 0,
+      "exception": null,
+      "output_count": 1,
+      "lint_failures": []
+    },
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "controller-false",
+      "exit": 0,
+      "exception": null,
+      "output_count": 1,
+      "lint_failures": []
+    },
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "controller-zero",
+      "exit": 0,
+      "exception": null,
+      "output_count": 1,
+      "lint_failures": []
+    },
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "controller-wordfalse",
+      "exit": 0,
+      "exception": null,
+      "output_count": 1,
+      "lint_failures": []
+    },
+    {
+      "runtime": "74",
+      "variant": "exp10",
+      "case": "module",
+      "exit": 0,
+      "exception": null,
+      "output_count": 3,
+      "lint_failures": []
+    },
+    {
+      "runtime": "74",
+      "variant": "exp10",
+      "case": "admin",
+      "exit": 0,
+      "exception": null,
+      "output_count": 2,
+      "lint_failures": []
+    },
+    {
+      "runtime": "74",
+      "variant": "exp10",
+      "case": "crud",
+      "exit": 0,
+      "exception": null,
+      "output_count": 3,
+      "lint_failures": []
+    },
+    {
+      "runtime": "74",
+      "variant": "exp10",
+      "case": "default-default",
+      "exit": 0,
+      "exception": null,
+      "output_count": 1,
+      "lint_failures": []
+    },
+    {
+      "runtime": "74",
+      "variant": "exp10",
+      "case": "default-true",
+      "exit": 0,
+      "exception": null,
+      "output_count": 1,
+      "lint_failures": []
+    },
+    {
+      "runtime": "74",
+      "variant": "exp10",
+      "case": "default-false",
+      "exit": 0,
+      "exception": null,
+      "output_count": 1,
+      "lint_failures": []
+    },
+    {
+      "runtime": "74",
+      "variant": "exp10",
+      "case": "default-zero",
+      "exit": 0,
+      "exception": null,
+      "output_count": 1,
+      "lint_failures": []
+    },
+    {
+      "runtime": "74",
+      "variant": "exp10",
+      "case": "default-wordfalse",
+      "exit": 0,
+      "exception": null,
+      "output_count": 1,
+      "lint_failures": []
+    },
+    {
+      "runtime": "74",
+      "variant": "exp10",
+      "case": "rotate-default",
+      "exit": 0,
+      "exception": null,
+      "output_count": 1,
+      "lint_failures": []
+    },
+    {
+      "runtime": "74",
+      "variant": "exp10",
+      "case": "rotate-true",
+      "exit": 0,
+      "exception": null,
+      "output_count": 1,
+      "lint_failures": []
+    },
+    {
+      "runtime": "74",
+      "variant": "exp10",
+      "case": "rotate-false",
+      "exit": 0,
+      "exception": null,
+      "output_count": 1,
+      "lint_failures": []
+    },
+    {
+      "runtime": "74",
+      "variant": "exp10",
+      "case": "rotate-zero",
+      "exit": 0,
+      "exception": null,
+      "output_count": 1,
+      "lint_failures": []
+    },
+    {
+      "runtime": "74",
+      "variant": "exp10",
+      "case": "rotate-wordfalse",
+      "exit": 0,
+      "exception": null,
+      "output_count": 1,
+      "lint_failures": []
+    },
+    {
+      "runtime": "74",
+      "variant": "exp10",
+      "case": "controller-default",
+      "exit": 0,
+      "exception": null,
+      "output_count": 1,
+      "lint_failures": []
+    },
+    {
+      "runtime": "74",
+      "variant": "exp10",
+      "case": "controller-true",
+      "exit": 0,
+      "exception": null,
+      "output_count": 1,
+      "lint_failures": []
+    },
+    {
+      "runtime": "74",
+      "variant": "exp10",
+      "case": "controller-false",
+      "exit": 0,
+      "exception": null,
+      "output_count": 1,
+      "lint_failures": []
+    },
+    {
+      "runtime": "74",
+      "variant": "exp10",
+      "case": "controller-zero",
+      "exit": 0,
+      "exception": null,
+      "output_count": 1,
+      "lint_failures": []
+    },
+    {
+      "runtime": "74",
+      "variant": "exp10",
+      "case": "controller-wordfalse",
+      "exit": 0,
+      "exception": null,
+      "output_count": 1,
+      "lint_failures": []
+    },
+    {
+      "runtime": "83",
+      "variant": "exp10",
+      "case": "module",
+      "exit": 10,
+      "exception": {
+        "class": "Error",
+        "message": "Call to undefined function create_function()",
+        "file": "/audit/source/vendor/symfony/vendor/pake/pakeApp.class.php",
+        "line": 357
+      },
+      "output_count": 0,
+      "lint_failures": []
+    }
+  ],
+  "generation_acceptance": false
+}
