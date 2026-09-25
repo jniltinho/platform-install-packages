@@ -40,6 +40,8 @@ if ($case === 'registry') {
     } catch (Zend_Exception $error) {
         $out[] = array('missing-exception', get_class($error));
     }
+} elseif ($case === 'api-bootstrap' || $case === 'api-dispatch') {
+    require __DIR__ . '/api-bootstrap.php';
 } elseif ($case === 'symfony-yaml' || $case === 'symfony' || $case === 'symfony-bootstrap') {
     require __DIR__ . '/symfony.php';
 } elseif ($case === 'registry-action-stack') {

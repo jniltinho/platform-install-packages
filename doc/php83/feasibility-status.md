@@ -357,3 +357,10 @@ reordering only). Both bootstrap comparisons and post-bootstrap escaping tests
 pass. Reverting only that order reproduces the fatal on 8.3. All eight held
 source files were restored afterward; HTTP/API/worker acceptance and diagnostics
 triage remain pending, and no patch entered the active ZIP.
+
+[API bootstrap preflight](api-bootstrap.md) now passes on both runtimes using
+private synthetic configuration. Real dispatcher execution reaches permission
+prefetch but fails on both PHPs at the unconfigured Propel datasource. This is a
+lab setup prerequisite, not a newly confirmed PHP 8.3 defect or API acceptance.
+Two bootstrap comparisons, eight JSON comparisons and 41 offline tests pass;
+no application patches or active ZIP changes were made in this step.
