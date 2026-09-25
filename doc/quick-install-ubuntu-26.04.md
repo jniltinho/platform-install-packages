@@ -13,6 +13,38 @@ The project's AIO lab uses 4 CPUs and 8 GiB RAM. Allow additional disk space for
 packages, uploaded originals and transcoded media. Choose a stable server IP.
 Permit web access only from trusted clients; do not expose MariaDB or Elasticsearch.
 
+## Automated server installation
+
+Download or clone this repository, inspect the
+[Bash quick installer](quick-install-ubuntu-26.04.sh), then run it from the
+repository root on the **new target machine**:
+
+```bash
+# Read-only checks; no downloads or installation.
+sudo bash doc/quick-install-ubuntu-26.04.sh \
+  --host 192.168.56.40 --admin-email admin@example.com --check
+
+# Install the server and optionally the console package.
+sudo bash doc/quick-install-ubuntu-26.04.sh \
+  --host 192.168.56.40 --admin-email admin@example.com --with-console
+```
+
+Replace the IP and email. The IP must belong to the target machine. The script
+asks for `INSTALL` confirmation and a password twice, without echo. It verifies
+release checksums and a pinned installer checksum before execution, generates a
+root-only database password, and checks services/API afterward. Omit
+`--with-console` to install only the server. `--help` lists the options.
+
+**The console package is not configured or started automatically:** complete
+step 5 below (publisher credentials, TLS and local console account). The script
+refuses existing database/Kaltura/Apache/console state and prior runs; it is not
+an upgrade or recovery tool. If it fails, preserve state and investigate rather
+than deleting directories to bypass its checks. It does not open firewall ports
+or change PHP versions to work around unavailable dependencies.
+
+Alternatively, follow the manual steps below. Do not run both installation
+paths on the same machine.
+
 ## 1. Prepare the machine
 
 Open a root Bash shell and keep using it for the server steps:
@@ -172,5 +204,13 @@ More detail: [Ubuntu 26.04 build/install](install-kaltura-ubuntu-26.04.md),
 [architecture](../kaltura-console/docs/architecture.md),
 [validation matrix](../kaltura-console/docs/validation.md).
 
-This quick guide was checked against the release assets and repository scripts;
-writing it did not provision another Ubuntu 26.04 machine.
+This quick guide was checked against the release assets and repository scripts.
+The wrapper has offline argument/validation/checksum tests:
+
+```bash
+bash doc/tests/quick-install-ubuntu-26.04-test.sh
+```
+
+These tests do not run apt or install services. The wrapper has not yet been
+run end-to-end on a fresh Ubuntu 26.04 machine; writing it did not provision
+another machine or modify the existing deployment.
