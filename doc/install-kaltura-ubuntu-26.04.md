@@ -1,5 +1,7 @@
 # Ubuntu 26.04 (resolute) Single-server All-In-One
 
+For prebuilt packages, start with the [quick install guide](quick-install-ubuntu-26.04.md).
+
 Kaltura CE **Rigel-18.20.0** `.deb` packages for Ubuntu 26.04 LTS (amd64). They use the same recipes as [Ubuntu 24.04](install-kaltura-noble.md); this page covers only what differs. They are built and tested with Vagrant/VirtualBox from `deb/ubuntu-26.04/`.
 
 ## Differences from noble
