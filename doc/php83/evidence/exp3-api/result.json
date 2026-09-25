@@ -1,0 +1,70 @@
+{
+  "schema": 1,
+  "date": "2026-09-25",
+  "input_commit": "dab53972",
+  "scope": "exp3 synthetic SQL Apache HTTP and trusted HTTPS, not full application acceptance",
+  "artifact_sha256": "1c64edb5ff34308cedfcea3c7879187c21417b6bd1a8e083d70d580bedc985e3",
+  "functional_matrix": "PASS independently Codex and Claude",
+  "application_acceptance": false,
+  "local_tests": {
+    "codex": 122,
+    "claude": 122,
+    "opencode_final": 122,
+    "cursor_final_focused": 3
+  },
+  "cli_attempts": {
+    "claude": {
+      "exit": 0,
+      "note": "see retained review; CLI exit is not itself test success"
+    },
+    "claude-final": {
+      "exit": 0,
+      "note": "see retained review; CLI exit is not itself test success"
+    },
+    "grok": {
+      "exit": 124,
+      "note": "timeout, not execution approval"
+    },
+    "cursor": {
+      "exit": 124,
+      "note": "timeout, not execution approval"
+    },
+    "cursor-retry": {
+      "exit": 0,
+      "note": "see retained review; CLI exit is not itself test success"
+    },
+    "cursor-final": {
+      "exit": 0,
+      "note": "see retained review; CLI exit is not itself test success"
+    },
+    "opencode": {
+      "exit": 0,
+      "note": "see retained review; CLI exit is not itself test success"
+    },
+    "opencode-final": {
+      "exit": 0,
+      "note": "see retained review; CLI exit is not itself test success"
+    }
+  },
+  "current_files_sha256": {
+    "tools/php83/exp3-api/verify-source.py": "433f6aa75f993a9d5ab91be83df0099d87dec41db7dc18397e8217bccacb7904",
+    "tools/php83/exp3-api/collect.py": "01315927bea3203b81b868e16d1a9719f6e847281b7b869ee56ff60e60fd8abd",
+    "tools/php83/exp3-api/start-db.sh": "8bd1240b7763579651d38fa6619ddc2eba39f98a2de4781271cfab6605949f77",
+    "tools/php83/exp3-api/run-apache.sh": "fd86809320d2fafe07c2ce74886780753dbc955f4010d0cb8784e403973aab7e",
+    "tools/php83/test_exp3_api_collector.py": "8fb200a83d4dbb2aadd960445e471287853d5f4a090a589f958bfdbc51590af8"
+  },
+  "source_diagnostics_open": true,
+  "candidate83_diagnostic_groups": 41,
+  "candidate83_diagnostic_events": 1767,
+  "case_checkboxes_closed": 0,
+  "production_changes": false,
+  "limitations": [
+    "Original baseline source and copied runtime not rehashed this cycle",
+    "No structured partial result on exception",
+    "Synthetic schema reset per request",
+    "No AIO/FPM/cache/media/performance acceptance",
+    "Retained isolated database directories, services stopped",
+    "Initial local selector failure retained; final frozen runs pass",
+    "Reviewer initial hash/stdout/secret interpretations corrected against actual evidence"
+  ]
+}

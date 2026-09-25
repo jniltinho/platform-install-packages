@@ -1,0 +1,19 @@
+Vou executar o unittest, ler os `diagnostics()` e confrontar o finding de secret com `codex.json`.Confirmando o seletor do teste, o helper MySQL e o finding de secret anterior.**Veredito:** unittest OK (3/0); seletor congelado correto; `codex.json` sem stderr bruto nem KS — finding de “possible secret” não se sustenta no artefato.
+
+### Unittest
+`PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83 -p test_exp3_api_collector.py` → **Ran 3 tests, OK, exit 0**.
+
+### Seletor (freeze)
+Em `test_exp3_api_collector.py:42`:
+`next(c for c in calls if c.startswith('bash ') and 'start-db.sh' in c)` — não pega a lista do `sha256sum`.
+
+### `diagnostics()`
+- **`collect-api-apache.py`**: strip de prefixo `[…]`, agrega só `severity/path/line/count` (PHP + `ApplicationDiagnostic`); comentário explícito: sem SQL/args/KS.
+- **`collect-api-mysql.py`**: **não tem** `diagnostics()`; o import serve a `comparisons()`. O path MySQL antigo ainda grava `stderr` bruto no *seu* report — fora do collector exp3.
+- **exp3** (`collect.py:48`): `old.diagnostics(run.stderr)` + `stderr_sha256`; sem campo `stderr`.
+
+### Finding vs `codex.json`
+- Chaves por record: `diagnostics`, `stderr_sha256` — **sem** `stderr`.
+- Sem `password`/`KS=`/`secret=`; `wrong-secret` só como label whitelist do cenário.
+- Hash de stderr (possível conteúdo sensível no lab) é proveniência unidirecional, não vazamento no JSON.
+- `functional_checks_passed: true`, `application_acceptance: false` — **sem aprovação full-app**.

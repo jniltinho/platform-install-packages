@@ -16,6 +16,14 @@ and [execution contract](../../openspec/changes/migrate-kaltura-php83/design.md)
 - No new VM/application test, release, package integration or `.20` mutation in
   this batch. No release ETA or application completion percentage is inferred.
 
+## Latest progress: exp3 SQL / Apache / trusted TLS
+
+The actual ZIP now passes the bounded synthetic SQL/session HTTP + trusted HTTPS
+matrix on PHP 7.4 and 8.3; original 8.3 fails at the expected PDO declaration.
+Claude independently executes the same matrix. Candidate 8.3 still has 41
+sanitized diagnostic groups / 1,767 events, so no full-case acceptance follows.
+[Results, isolation and remaining scope](exp3-api.md). Local suite: 122 tests.
+
 ## Latest progress: actual exp3 runtime regression
 
 The built ZIP now ran in both isolated labs: 48 rows, 44 zero exits and four
@@ -32,8 +40,8 @@ the original archive and exp2. Selection includes the demonstrated JSON/PDO/date
 parser repairs; Symfony, Registry, DebugPDO alternatives and APCu remain explicit
 separate work. [Selection, artifact and remaining tests](exp3-candidate.md).
 
-The built ZIP has completed the first focused CLI matrix above. SQL/HTTP/TLS
-regression of its extracted bytes remains pending; no original or detailed
+The built ZIP has completed the first focused CLI matrix above. Bounded SQL/HTTP/TLS
+regression is now recorded above; full application regression remains pending; no original or detailed
 acceptance checkbox is closed.
 
 ## Latest progress: configuration cache over Apache

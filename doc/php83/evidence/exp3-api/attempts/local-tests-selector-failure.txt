@@ -1,0 +1,35 @@
+.............................................FFF..........................................................................
+======================================================================
+FAIL: test_malformed_startup_stops_known_unit (test_exp3_api_collector.Exp3CleanupTests.test_malformed_startup_stops_known_unit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/test_exp3_api_collector.py", line 48, in test_malformed_startup_stops_known_unit
+    self.check_failure('not json')
+  File "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/test_exp3_api_collector.py", line 44, in check_failure
+    self.assertRegex(token, r'^[a-f0-9]{32}$')
+AssertionError: Regex didn't match: '^[a-f0-9]{32}$' not found in 'tests/api-http-client.py'
+
+======================================================================
+FAIL: test_startup_timeout_stops_known_unit (test_exp3_api_collector.Exp3CleanupTests.test_startup_timeout_stops_known_unit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/test_exp3_api_collector.py", line 54, in test_startup_timeout_stops_known_unit
+    self.check_failure(subprocess.TimeoutExpired('startup', 120))
+  File "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/test_exp3_api_collector.py", line 44, in check_failure
+    self.assertRegex(token, r'^[a-f0-9]{32}$')
+AssertionError: Regex didn't match: '^[a-f0-9]{32}$' not found in 'tests/api-http-client.py'
+
+======================================================================
+FAIL: test_untrusted_identity_cannot_choose_cleanup_target (test_exp3_api_collector.Exp3CleanupTests.test_untrusted_identity_cannot_choose_cleanup_target)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/test_exp3_api_collector.py", line 51, in test_untrusted_identity_cannot_choose_cleanup_target
+    self.check_failure(json.dumps({'datadir':'/var/lib/mysql', 'unit':'mysql'}))
+  File "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/test_exp3_api_collector.py", line 44, in check_failure
+    self.assertRegex(token, r'^[a-f0-9]{32}$')
+AssertionError: Regex didn't match: '^[a-f0-9]{32}$' not found in 'tests/api-http-client.py'
+
+----------------------------------------------------------------------
+Ran 122 tests in 0.068s
+
+FAILED (failures=3)

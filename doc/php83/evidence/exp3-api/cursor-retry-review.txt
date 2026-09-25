@@ -1,0 +1,6 @@
+Vou rodar só o unittest pedido e ler os dois arquivos indicados.**122 testes, exit 1** (3 falhas: `Exp3CleanupTests` — token esperado `^[a-f0-9]{32}$`, obtido `tests/api-http-client.py`). Pass funcional ≠ aceite da aplicação.
+
+**Achados (segurança/evidência):**
+1. Os 3 fails mostram que o teste de cleanup está pegando um path de fixture (`tests/api-http-client.py` do `sha256sum`), não o token hex do `start-db.sh`/`systemctl stop` — a barreira “identidade não confiada não escolhe alvo” deixou de cobrir o fluxo real.
+2. `start-db.sh` em falha retém `/tmp/kaltura-pdo-mysql.$1` sem remoção; `collect.py` só faz `systemctl stop` no `finally` — datadir fica no lab.
+3. stdout não-whitelist vira `''` (anti-KS), mas stderr/diagnostics seguem no relatório — risco de vazamento se KS/segredos aparecerem no stderr.

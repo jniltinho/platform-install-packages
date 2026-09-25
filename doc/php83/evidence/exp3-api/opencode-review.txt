@@ -1,0 +1,45 @@
+Independent review — running scoped tests and checking isolation without touching files.
+
+AGENTS.md and the prior evidence noted — now pulling the remaining harness files and executing the local checks.
+
+Local suite is green — now narrowing the review to the exp3 collector's specific guards.
+
+Evidence linkage mapped — now verifying the last isolation control.
+
+AGENTS.md read. Independent local review only — no edits, no SSH, no VMs, nothing reverted.
+
+## Case / executor / command
+
+- Case: `exp3-api` static review + local harness tests. Executor + reviewer: OpenCode (Muse Spark 1.3 Free), acting as independent local reviewer/executor — not Grok, not Codex, not the evidence author.
+- Source/patch/harness: working-tree files are untracked (`git status`: `?? tools/php83/exp3-api/`, `?? doc/php83/evidence/exp3-api/`), so no commit identity. Current SHA256: `collect.py` `01315927…e60fd8abd`, `start-db.sh` `8bd1240b…5949f77`, `verify-source.py` `433f6aa7…8217bccacb7904`.
+- Environment: local repo only (`platform-install-packages-php83`). No external paths, no SSH, no VM.
+- Command: `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83 -p 'test_*.py'`
+- Result: **exit 0, Ran 119 tests, OK (0.069s).**
+
+## What the 119 tests do / do not prove
+
+- Executed: local `tools/php83` unit tests only. `grep` for `exp3-api|collect.py|start-db|verify-source|EXPECTED_STDOUT|stdout_whitelisted` across `tools/php83` finds matches only in `exp3-api/collect.py` and `start-db.sh` — **no `test_*.py` covers the exp3-api collector**. So the green run is harness health, not exp3 functional evidence.
+- Not executed (per constraints): `collect.py` remote path, `start-db.sh`, `run-apache.sh`, `verify-source.py`. This review of those files is static only — a review is not execution evidence.
+
+## Bounded findings: `collect.py`
+
+- Isolation: refuses to overwrite prior evidence; pins remote fixtures by SHA256 and aborts on drift; per-run tokenized DB (`/tmp/kaltura-pdo-mysql.<hex>`, unit `php83-exp3-api-<hex>`); DB identity echoed back and equality-checked.
+- Cleanup: `finally` stops the unit and records `is-active` output; `passed` requires `cleanup['stopped']`. Note: `stopped` counts `unknown` as stopped — consistent with `systemd-run --collect` auto-cleanup, but a coarse signal if read alone.
+- Evidence / anti-false-acceptance: stdout stored only when `''` or exactly `EXPECTED_STDOUT`, otherwise redacted to `''` with `stdout_sha256` retained; `passed` requires baseline stdout == exact expected, all records whitelisted, `83/original` must fail **with** the `KalturaPDO::query()` signature string, both `exp3` trees byte-match baseline stdout, and cleanup stopped. `application_acceptance` hardcoded `False`. No whole-app claim.
+
+## Bounded findings: `start-db.sh`, `verify-source.py`, `run-apache.sh`
+
+- `start-db.sh`: hostname (`kaltura-php74-baseline`) + uid (1000) + 32-hex-token guards, `mkdir -m 700`, `mariadb-install-db --no-defaults`, `systemd-run` with `PrivateNetwork`, `RestrictAddressFamilies=AF_UNIX`, `ProtectSystem=strict`, `ReadWritePaths=$d`, `MemoryMax=1G`, `RuntimeMaxSec=600`, `--skip-networking`/socket-only. Failure trap stops the unit but **retains `$d`** for diagnosis — bounded `/tmp` residue by design.
+- `verify-source.py`: asserts zip SHA `1c64edb5…985e3`, rejects symlinks (top + recursive), rejects absolute/`..` zip paths, asserts byte-equality zip↔disk in both directions plus exact file-set equality. No network.
+- `run-apache.sh`: hostname + arg allowlists (`74|83`, `original|exp3`), datadir regex + socket + `realpath`/non-symlink checks, `systemd-run` sandbox (`PrivateNetwork`, restricted address families, `ProtectSystem=strict`, `ProtectHome`, `PrivateTmp`, read-only binds of tree/scripts/runtime, inaccessible `/opt/kaltura /root` DB paths). Static only, not executed.
+
+## `codex.json` (predates hardening — do not reuse as current pass)
+
+- Reports `functional_checks_passed: True`, `application_acceptance: False`, comparisons `[{74,True},{83,True}]`, cleanup `stopped: True`, 4 records with the expected `(74/original:0, 74/exp3:0, 83/original:1+signature, 83/exp3:0)` pattern. Scope: `actual exp3 ZIP web/index.php, synthetic SQL, Apache HTTP/trustedHTTPS; NOT AIO/FPM acceptance`.
+- Limitation: `collector_sha256` (`01315927…`) matches current `collect.py`, but the recorded harness hashes for `api/start-db.sh` (`ec7fecff…`) and `api/verify-source.py` (`8c9be009…`) **differ from the current working-tree files** — so this artifact does not attest the current hardened harness. Untracked, uncommitted, and not re-executed here.
+
+## Untested scope / gates
+
+- Untested: exp3 functional behavior on current files; remote fixture state; VM/SSH path; AIO/FPM acceptance (explicitly out of scope in both collector and evidence).
+- Failures: none in the executed local suite. No release gate approved, no completion percentage, no production change.
+

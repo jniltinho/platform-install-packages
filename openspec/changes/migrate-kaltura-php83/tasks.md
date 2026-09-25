@@ -129,3 +129,10 @@ expected original-8.3 syntax controls. Diagnostics remain open and SQL/HTTP/TLS
 artifact regression is pending, so the case remains unchecked. The initial
 minimal-consumer harness failure is retained with its guarded correction. See
 `doc/php83/exp3-runtime.md`.
+
+Additional T1-01/T1-02 partial evidence: actual exp3 ZIP synthetic SQL + Apache
+HTTP/trusted-HTTPS session/auth matrix matches original 7.4; expected original
+8.3 PDO signature failure retained. Codex and Claude execute independently.
+41 candidate-8.3 diagnostic groups / 1,767 events remain unresolved; this is
+not full AIO/FPM/session-persistence/media acceptance. See `doc/php83/exp3-api.md`.
+No checkbox is closed by the bounded matrix.

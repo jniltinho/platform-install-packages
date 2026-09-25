@@ -1,0 +1,53 @@
+O coletor passou com exit 0. A suíte local também passou, mas só na segunda execução: na primeira, 3 testes falharam porque outro agente editou o arquivo de teste enquanto eu rodava. Não alterei nenhum código-fonte.
+
+## Execução no lab (executor: Claude CLI)
+
+- **Comando:** exatamente o especificado.
+- **Resultado:** `claude.exit` = `0`, `claude.stderr` vazio (0 bytes).
+- **Artefato:** ZIP com sha256 `1c64edb5…985e3`, 15183 arquivos extraídos conferidos. Os hashes dos 8 arquivos do harness no lab conferem com os locais. Hash do `collect.py` = `01315927…8abd`.
+- **DB próprio:** `php83-exp3-api-5dc56220520544fba69be24fffb6bd5a`, com datadir `/tmp/kaltura-pdo-mysql.5dc562…`. Depois do `stop`, o serviço ficou `inactive` (`stopped: true`). Não fiz nenhuma outra operação na VM.
+
+| Runtime/árvore | rc | stdout | falha de assinatura | Diagnósticos (total/locais) |
+|---|---|---|---|---|
+| 7.4 original | 0 | igual ao esperado | não | 6 ApplicationDiagnostic (`dateUtils.class.php:100`) |
+| 7.4 exp3 | 0 | igual ao baseline | não | nenhum |
+| 8.3 original (controle) | 1 | igual ao baseline | **sim** | 14 Deprecated + Fatal em `KalturaPDO.php:188` |
+| 8.3 exp3 | 0 | igual ao baseline | não | **1287 ApplicationDiagnostic (21 locais) + 480 Deprecated (20 locais)** |
+
+- **Diagnósticos do 8.3 exp3:** a maior parte vem de `vendor/propel/util` (826 ApplicationDiagnostic + 240 Deprecated). O restante está em `alpha/apps/kaltura/lib`, Zend (144 Deprecated), `api_v3` (reflection, exceptions), `infra/log`, `infra/storage` e `aws Credentials`.
+- **Runtimes:** 7.4.33 e 8.3.6, ambos `apache2handler`, com `ini_is_expected: true`.
+
+## Comparação codex × claude
+
+- **Iguais:** artifact, harness, hashes dos helpers importados, hash do coletor, comparisons, controle de assinatura, `functional_checks_passed`, diagnostics e `runtime_observations` de todas as 4 linhas, e o sha do stdout.
+- **Diferentes, como esperado:** a unidade/token do DB e o `stderr_sha256` (timestamps e tokens mudam a cada execução).
+- **Sanitização:** busquei `ks=`, `secret`, `djJ8` e `password` no `claude.json`. Só aparecem os rótulos esperados (`wrong-secret`, `INVALID_KS`) no stdout aprovado; nenhum KS ou log bruto.
+
+## Testes locais
+
+`PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83 -p 'test_*.py'`
+
+- **1ª execução:** 3 falhas, exit 1. O teste pegava o token no comando `sha256sum`, que também contém `api/start-db.sh`.
+- **O que aconteceu:** outro agente corrigiu `test_exp3_api_collector.py` às 14:28:08, durante a minha execução. A correção filtra por `c.startswith('bash ')`.
+- **2ª e 3ª execuções:** 122 testes OK, exit 0, com o teste no sha256 `8fb200a8…0af8`.
+
+## Revisão independente
+
+As três correções anteriores funcionam:
+- **Alvo do cleanup:** o token e a unidade são gerados localmente. Uma identidade não confiável vinda do lab só gera erro e não escolhe o que será parado, o que o teste confirma.
+- **Cleanup no JSON:** aparece no JSON quando a execução termina.
+- **Hashes:** os hashes dos helpers importados agora ficam registrados.
+- **Symlinks:** `verify-source.py` rejeita symlinks e confere o conteúdo e o conjunto exato de arquivos.
+- **Proteções dos scripts:** `start-db.sh` falha se o diretório já existir e para a própria unidade se algo der errado. `run-apache.sh` valida o hostname, os argumentos e o datadir (realpath, sem symlink) e roda sem privilégios, com rede privada.
+
+## Limitações que restam
+
+1. **Critério de aprovação:** o `passed` não leva em conta os diagnósticos. O 8.3 exp3 passa mesmo com 480 Deprecated e 1287 ApplicationDiagnostic. Paridade funcional não quer dizer execução limpa.
+2. **Registro em caso de falha:** o JSON não é gravado. O resultado do `stop` só aparece no traceback ou exit ≠ 0, sem nada estruturado.
+3. **Estado do lab:** o datadir em `/tmp` fica no lab depois do `stop`; só o serviço é parado. O coletor aceita `unknown` como estado parado.
+4. **Identidades não verificadas por hash:** o runtime 8.3 copiado (`/home/vagrant/php-mysql-probe/runtime83`) e a árvore original 7.4 (`php74-audit/packaged`). Só a versão e os módulos observados são registrados.
+5. **Cobertura dos testes:** os 3 testes do coletor cobrem apenas falhas na subida do DB. Não cobrem a lógica de aprovação, o `stop` que falha nem o stdout fora do esperado.
+6. **Escopo:** Apache com PHP 8.3 copiado, não o AIO 8.3 completo. Nada de FPM nem aceitação da aplicação (`application_acceptance: false`).
+7. **Revisão independente pendente:** esta é a revisão do Claude. Pelo AGENTS.md, ainda falta pelo menos um revisor rotativo (Grok, ou OpenCode como alternativa, e Cursor Agent), coordenado pelo Codex.
+
+Não há aprovação da aplicação completa. Estes resultados não autorizam release, cutover nem operações na `.20`.

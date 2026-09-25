@@ -1,0 +1,22 @@
+Frozen source check — running the 122-test suite and verifying evidence hashes.
+
+Suite green — 122 passed. Now cross-checking the evidence hashes.
+
+Found the evidence targets — computing local hashes and reviewing the new collector tests.
+
+All hashes match. Confirming the three new fault tests individually.
+
+Read-only follow-up, no SSH/edits, source frozen.
+
+Commands:
+1. `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83 -p "test_*.py"` → Ran 122 tests, OK, exit 0.
+2. Python `hashlib.sha256` compare `doc/php83/evidence/exp3-api/codex.json` vs local `tools/php83/exp3-api/` → all match:
+   - `api/start-db.sh`: expected `8bd1240b…5949f77` = actual, True
+   - `api/verify-source.py`: expected `433f6aa7…cb7904` = actual, True
+   - `collector_sha256`: expected `01315927…fd8abd` = `collect.py` actual, True
+3. `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest tools.php83.test_exp3_api_collector -v` → Ran 3 tests, OK, exit 0.
+
+Correction: prior review mixed old/new reports during rerun — corrected: current `codex.json` harness hashes and `collector_sha256` all match local frozen files.
+
+New `tools/php83/test_exp3_api_collector.py` (54 lines): fault-injection only, mocks `collector.remote`, never SSH/DB. `check_failure` asserts: failure raises `(ValueError,RuntimeError,TimeoutExpired)`, no `report.json` written, 32-hex token parsed from `start-db` call, final call is `systemctl stop php83-exp3-api-<token>`. Covers malformed startup, untrusted identity (`/var/lib/mysql`/`mysql` cannot choose cleanup target), startup timeout.
+

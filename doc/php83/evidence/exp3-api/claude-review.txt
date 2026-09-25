@@ -1,0 +1,51 @@
+# Resultado da execução exp3-api (Claude CLI)
+
+A matriz passou: exit **0**, `functional_checks_passed: true`, 3 linhas positivas e o controle 8.3/original parando no HTTP. Meu DB foi parado. Isso não é aceite da aplicação (`application_acceptance: false`).
+
+## Identificação
+- **Caso:** exp3-api, matriz Apache HTTP e HTTPS confiável (PHP 7.4/8.3 × original/exp3). **Executor:** Claude CLI. **Revisor:** Claude revisou o próprio harness; como o AGENTS.md diz, isso não é revisão independente e ainda falta a de outro CLI.
+- **Ambiente:** VM `kaltura-php74-baseline` (lab .74, via `127.0.0.1:2201`). Nada foi feito na .20. O módulo 8.3 é `/home/vagrant/php-mysql-probe/runtime83`, copiado da .83 (não é o AIO completo da .83).
+- **Fonte:** o SHA-256 do ZIP é `1c64edb5…985e3` e os **15183** arquivos extraídos conferem.
+- **Harness:** `collector_sha256` é `5fcfa0e3…9357`. Os hashes do harness, do coletor e do artefato são idênticos aos da execução do Codex.
+- **Comando:** exatamente o pedido. Saídas: `claude.exit` = `0`, `claude.stderr` com 0 bytes, `claude.stdout` e `claude.json`.
+
+## Asserções e paridade
+| Runtime/árvore | rc | stdout | Assinatura `KalturaPDO::query()` | Requests |
+|---|---|---|---|---|
+| 7.4/original (baseline) | 0 | igual ao esperado (984 B) | não | 24 |
+| 7.4/exp3 | 0 | igual ao baseline | não | 24 |
+| 8.3/original (controle) | **1** | vazio | **sim** (erro fatal em `KalturaPDO.php:188`) | 1 |
+| 8.3/exp3 | 0 | igual ao baseline | não | 24 |
+
+- As duas comparações exp3 (`74` e `83`) deram `matches_baseline: true`.
+- Paridade com o Codex: stdout, rc e diagnósticos iguais nas 4 linhas.
+- Busca por padrões de KS (`ks=`, `djJ8`) nas saídas salvas: 0 ocorrências.
+
+## Limpeza do DB
+- Unit `php83-exp3-api-u7suDp0F`: o coletor registrou `inactive`, e conferi de novo por conta própria: continua `inactive`, sem processo `mariadbd` nem unit listada.
+- **Limitação:** o diretório `/tmp/kaltura-pdo-mysql.u7suDp0F` (dados, `bootstrap.log`, `server.log`) ficou na VM. O coletor não apaga nada. Não copiei esses arquivos.
+
+## Avisos de diagnóstico que continuam
+- **8.3/exp3:** 20 locais com `Deprecated` por request, em `KalturaPDO.php:127` e `:188`, `kConf.php:7`, `KalturaFrontController.php:23`, `Zend/Config.php`, `PropelPDO.php` e `PropelConfiguration.php`. Há também muitas `ApplicationDiagnostic`, por exemplo `Criteria.php:1375` ×694.
+  - Na linha 188, o fatal do original virou Deprecated no exp3. A interpretação é minha: provavelmente é um aviso de compatibilidade de retorno que ainda sobrou.
+- **7.4:** só `dateUtils.class.php:100` ×6 no original.
+- A condição de aprovação não olha esses diagnósticos.
+
+## Revisão do harness
+Pontos fortes:
+- **Guardas:** `hostname`, UID 1000, regex e `realpath` no datadir, e checagem de `@@datadir` antes do `DROP DATABASE`.
+- **Isolamento:** `PrivateNetwork`, `ProtectSystem=strict`, `/opt/kaltura` e o MySQL instalado inacessíveis, tmpfs privados para `cache` e `configurations`.
+- **Integridade:** o coletor recusa sobrescrever evidência e compara hashes do fixture remoto.
+- **Saídas:** stdout em whitelist exata; do stderr só ficam o hash e locais/contagens.
+- **Controle negativo:** HTTPS sem a CA sintética é rejeitado.
+
+Lacunas:
+1. Os hashes de `collect-api-apache.py` e `collect-api-mysql.py`, importados pelo coletor, não entram no relatório (só o do próprio coletor).
+2. O SSH usa `StrictHostKeyChecking no` e `UserKnownHostsFile /dev/null`, então a identidade da VM vem só do `hostname`.
+3. Se o JSON do `start-db.sh` falhar no parse, a unit fica rodando até o `RuntimeMaxSec=600`, porque o `finally` ainda não foi armado.
+4. `verify-source.py` compara só conteúdo e lista de arquivos, não permissões nem symlinks.
+5. A aprovação não exige ausência de novos Deprecated ou diagnósticos no 8.3.
+6. O controle 8.3/original só prova falha e a string de assinatura, não em qual request falhou; o fato de ter havido 1 request indica que foi o primeiro.
+
+## Fora do escopo
+Não foram testados FPM, o AIO instalado, outros serviços da API além de `session`, e cache APCu (ele é explicitamente rejeitado). Não houve alterações em serviço instalado nem na .20. Não editei nada além dos 4 arquivos `claude.*`.
