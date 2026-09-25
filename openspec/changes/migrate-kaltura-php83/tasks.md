@@ -32,7 +32,9 @@
 - [ ] 4.1 Rehearse 7.4-to-8.3 upgrade with representative synthetic existing data in an isolated lab clone; verify accounts, partner secrets, media, configuration and job state are preserved without schema/engine changes.
 - [ ] 4.2 Rehearse failed-cutover recovery from a coherent restricted snapshot; verify matched application/runtime/config/DB/media restoration and baseline login/playback, documenting the maintenance/write-freeze boundary.
 - [ ] 4.3 Write migration, provider-update, rollback and limitations documentation with the evidence matrix; verify commands/links and re-check PHP 8.3 security-support dates before proposing a release candidate.
-- [ ] 4.4 Obtain release approval only after all distro, runtime and recovery gates pass; verify uniquely versioned DEB/RPM artifacts and checksums, leaving old releases unchanged; synchronize main specs/archive only after this gate, and create no migration tag earlier. Any actual `.20` cutover requires separate explicit target/window/backup approval.
+- [ ] 4.4 Obtain release approval only after all distro, runtime and recovery gates pass; verify uniquely versioned DEB/RPM artifacts and checksums, leaving old releases unchanged; synchronize main specs/archive only after this gate and the publication checks in 4.5, and create no migration tag earlier. Any actual `.20` cutover requires separate explicit target/window/backup approval.
+
+- [ ] 4.5 After task 4.4 approval, publish the versioned PHP 8.3 source ZIP as an asset of the same GitHub release as the Ubuntu DEB and Rocky Linux RPM repository bundles; include its source/patch manifest and installation instructions, and cover the ZIP, manifest and package bundles in SHA256SUMS. Verify downloaded release assets against their checksums and the accepted source/patch identities; preserve the original upstream ZIP and all existing releases, and never relabel the incomplete experimental ZIP as an accepted release.
 
 ## Partial phase-1 evidence (2026-09-25)
 

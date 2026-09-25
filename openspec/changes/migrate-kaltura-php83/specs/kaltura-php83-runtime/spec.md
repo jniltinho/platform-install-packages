@@ -77,6 +77,13 @@ The migration SHALL preserve the original source archive and published PHP 7.4 a
 - **THEN** the full functional regression, performance review and isolated recovery rehearsal gates must have passed
 - **AND** separate operator approval for the target, maintenance window and verified backups is required; experimental patch authorization alone is insufficient
 
+#### Scenario: Publish accepted source with packages
+- **WHEN** all distro, runtime and recovery gates pass and the operator approves the migration release
+- **THEN** the versioned PHP 8.3 source ZIP is published as an asset of the same GitHub release as the DEB/RPM repository bundles
+- **AND** that release includes its source/patch manifest, installation instructions and SHA256SUMS covering the ZIP, manifest and package bundles
+- **AND** downloaded assets are verified against the accepted identities, while the upstream ZIP and previous releases remain unchanged
+- **AND** an incomplete experimental ZIP is not relabeled as an accepted release
+
 ### Requirement: Evidence-based component improvements
 Dependency updates SHALL be evaluated separately from compatibility repairs, with pinned versions, license/support review, regression evidence, a revert path and an explicit per-component selection decision. Performance improvement SHALL be claimed only from comparable baseline/candidate measurements. Unrelated features or wholesale framework/application replacement SHALL require a revised approved scope.
 
