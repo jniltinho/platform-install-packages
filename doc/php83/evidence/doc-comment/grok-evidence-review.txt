@@ -1,0 +1,63 @@
+Read-only advisory audit of supplied focused summaries and PRE-patch Apache report; no tests executed by Grok. Full focused stderr and the later Apache-after report were not included in its input.
+
+The pasted documents support unchanged parse and serialize results for six synthetic comments, and unchanged HTTP probe stdout on the runs that finished. They leave the dynamic-property diagnostic claim unproven. This reading uses only the hunk and the two JSON files.
+
+### Focused file
+
+`doc/php83/evidence/doc-comment/focused.json` has four harness flags, all `matches_baseline: true` (PHP 7.4 and 8.3, standard and minimal). The eight records omit `mode`. What can be checked directly is the payload: every record is return code 0, `diagnostics: null`, and the same stdout.
+
+That stdout matches the pasted harness shape: six parsed arrays plus the legacy flag.
+
+| Fixture | `disableRelativeTimeParams` |
+| --- | --- |
+| Empty comment | `[]` |
+| `@disableRelativeTime $createdAt` | `["createdAt"]` |
+| Two distinct tags | `["createdAt","updatedAt"]` |
+| Duplicate tag | `["createdAt","createdAt"]` |
+| `@disableRelativeTime $` | `[""]` |
+| Lowercase tag | `[]` |
+| One-key legacy blob | loadable, value `["createdAt"]` |
+
+The six `serialized_sha256` values are the same on PHP 7.4 and 8.3, original and candidate. For objects built by this harness, the full serialized image is stable across those cells, including the duplicate and empty-name cases. The same hash on the empty comment means the candidate’s new declared property did not add a serialized field that the original objects lacked in these six cases.
+
+`diagnostics: null` is on the original PHP 8.3 rows as well as the candidate rows. Apache uses `[]` for an empty diagnostic list. Null here is an uncollected channel, so this file cannot show that a dynamic-property diagnostic disappeared.
+
+The legacy payload is a well-formed public-property blob (`O:23:"KalturaDocCommentParser"` and `s:25:"disableRelativeTimeParams"` match those names) with only that one field. It shows that name unserializes to `["createdAt"]`. It is not a full cache entry.
+
+### Apache file
+
+`doc/php83/evidence/api-web/apache.json` flags runtime 74 and runtime 83 as `matches_baseline: true`. Those objects name neither the tree nor the baseline.
+
+The finished runs share one stdout: session start/get for modes 0 and 2, GET and POST; rejections `missing` → `SERVICE_FORBIDDEN`, `malformed` and `expired` → `INVALID_KS`, `wrong-secret` and `escalation` → `START_SESSION_ERROR`; then `untrusted-ca-rejected`. That block is repeated twice. PHP 7.4 original, PHP 7.4 candidate, and PHP 8.3 candidate all print that same text. The probe never reads a doc comment or a relative-time parameter.
+
+The PHP 8.3 original record is return code 1, empty stdout, and a fatal at `KalturaPDO.php:188`. It never reached the probe, so there is no paired web baseline for parser diagnostics.
+
+Diagnostic sets diverge from the stdout:
+
+- PHP 7.4 original has one `ApplicationDiagnostic` at `dateUtils.class.php:100` (count 6). PHP 7.4 candidate has `[]`. The HTTP text still matches.
+- PHP 8.3 candidate still has `ApplicationDiagnostic` at `KalturaDocCommentParser.php:402` with count 2968, plus a wide set of other `ApplicationDiagnostic` and `Deprecated` rows. The hunk inserts `disableRelativeTimeParams` beside `$utf8truncate`, with no initializer. Line 402 is a different line, and it is still the hot parser line in the only PHP 8.3 web run that printed output.
+- The same candidate record reports `Deprecated` at `KalturaPDO.php:188` (count 24), where the original record reported a fatal. A new public property on `KalturaDocCommentParser` has no path that changes that PDO outcome. These trees are not shown to differ only by this hunk.
+
+No diagnostic object includes message text. Nothing in either file names `Creation of dynamic property` or `$disableRelativeTimeParams` as a diagnostic.
+
+### Claim by claim
+
+Fresh parse and serialize behavior for the six comments is the part the focused stdout actually carries: visible arrays, equal hashes, return code 0 on both runtimes and both trees.
+
+HTTP session, KS rejection, and untrusted-CA behavior are the same on every Apache run that produced stdout. That probe does not touch this property.
+
+Removal of dynamic-property diagnostics is not established. The focused channel is null on both trees. The web run that finishes still counts 2968 `ApplicationDiagnostic` events on the parser at line 402, and the original PHP 8.3 web run died before a parser count existed.
+
+### Missing checks
+
+1. **Message-level pair on PHP 8.3.** Run original and candidate with an error handler that records severity, message, file, and line. Parse one comment that sets the tag and one that does not, then unserialize a full original blob. Pass only if the candidate has zero messages for dynamic `KalturaDocCommentParser::$disableRelativeTimeParams`, the original has that message when the property is created dynamically, and the candidate adds no null-to-array deprecation from the uninitialized declaration. Store `[]` when there are no events.
+
+2. **Historical cache blobs.** Unserialize two original-tree payloads on the candidate: one full public-property image that already contains `disableRelativeTimeParams`, and one full image that omits the key. Compare the restored array, `get_object_vars`, and the re-serialized hash. The current one-key blob does not stand in for either cache entry.
+
+3. **Mixed docblock and the consumer.** Use one real service comment that places `@disableRelativeTime $createdAt` among the other tags this parser stores, and require full object equality (the serialize hash, not only this array) between original and candidate. Then call the relative-time filter: `createdAt` stays absolute, and an unmarked timestamp still converts. The Apache session script does not cover that path.
+
+### Patch scope and release scope
+
+For this hunk, the six-fixture serialize identity is usable evidence of unchanged parser output on that harness. Sign-off of “dynamic-property diagnostics are gone” waits on check 1. The unexplained PHP 7.4 loss of the `dateUtils` row, with stdout unchanged, means this package’s diagnostic diff is not a clean signal for the hunk.
+
+The PHP 8.3 fatal at `KalturaPDO.php:188` on the original tree, the `Deprecated` that remains there on the candidate, and the remaining `ApplicationDiagnostic` volume (including parser line 402) are product runtime gaps. They sit outside a declaration of `disableRelativeTimeParams`, and this evidence does not show that declaration caused the fatal to become a continued run. They are separate from accepting or rejecting this property.

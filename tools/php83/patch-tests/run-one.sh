@@ -10,7 +10,7 @@ case "${1:-}" in
  candidate) tree=/home/vagrant/php-patch-tests/candidate ;;
  *) exit 64 ;;
 esac
-case "${2:-}" in api-dispatch|api-bootstrap|symfony-yaml|symfony|symfony-bootstrap|registry|registry-action-stack|registry-bootstrap|registry-storage|legacy-json|zend-json|analytics-partner|debug-pdo|debug-pdo-logging|debug-pdo-stringify|debug-pdo-edges|environment) ;; *) exit 64 ;; esac
+case "${2:-}" in doc-comment|api-dispatch|api-bootstrap|symfony-yaml|symfony|symfony-bootstrap|registry|registry-action-stack|registry-bootstrap|registry-storage|legacy-json|zend-json|analytics-partner|debug-pdo|debug-pdo-logging|debug-pdo-stringify|debug-pdo-edges|environment) ;; *) exit 64 ;; esac
 ini=()
 case "${3:-standard}" in
  standard) ;;

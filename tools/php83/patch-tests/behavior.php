@@ -13,7 +13,9 @@ if ($case === 'environment') {
         'iconv_loaded' => extension_loaded('iconv'))), "\n";
     exit(0);
 }
-if ($case === 'registry') {
+if ($case === 'doc-comment') {
+    require __DIR__ . '/doc-comment.php';
+} elseif ($case === 'registry') {
     require_once 'Zend/Registry.php';
     foreach (array(0, 1, 2, 3) as $flags) {
         $registry = new Zend_Registry(array('null' => null, 'false' => false,

@@ -1,0 +1,7 @@
+{
+  "status": "held; explicit existing public property declaration",
+  "path": "api_v3/lib/reflection/KalturaDocCommentParser.php",
+  "before_sha256": "5941bf6b13c889997f2d7158594f65c4bdd89ae142379864eddc782f8d53970d",
+  "after_sha256": "7b843ea1900763216df77bba2b6b091582c41e716a2989754cadc22e77f29f5e",
+  "patch_sha256": "22887d8226fd003985f6773d2a2f82df26e66792ef4a92a0f42ab0ef0551c8f0"
+}

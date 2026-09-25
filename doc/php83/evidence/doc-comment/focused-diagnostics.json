@@ -1,0 +1,16 @@
+[
+  {
+    "mode": "standard",
+    "message": "Creation of dynamic property KalturaDocCommentParser::$disableRelativeTimeParams is deprecated",
+    "original_count": 13,
+    "candidate_count": 0,
+    "candidate_stderr_empty": true
+  },
+  {
+    "mode": "minimal",
+    "message": "Creation of dynamic property KalturaDocCommentParser::$disableRelativeTimeParams is deprecated",
+    "original_count": 13,
+    "candidate_count": 0,
+    "candidate_stderr_empty": true
+  }
+]

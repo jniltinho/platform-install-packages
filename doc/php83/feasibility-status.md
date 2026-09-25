@@ -404,3 +404,11 @@ than emitted in the JSON body; their remediation remains a migration gate.
 under cli-server and a separate Apache mod_php instance. HTTP and trusted HTTPS
 match original 7.4, and an untrusted CA is rejected. No new application patch;
 full installed AIO, FPM, diagnostic remediation and release gates remain open.
+
+## First high-volume diagnostic repair
+
+[The held doc-comment declaration](doc-comment-property.md) removes 4,408
+selected construction/cache-restoration diagnostic occurrences from the Apache
+HTTP/HTTPS workload with unchanged responses, fixture hashes and focused
+original-7.4 serialization comparisons. Other diagnostics and all release gates
+remain open; no production artifact was promoted.

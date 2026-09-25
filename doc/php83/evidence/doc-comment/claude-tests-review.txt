@@ -1,0 +1,24 @@
+Read-only CLI test execution and advisory review; supplied evidence, no repository exploration.
+
+## Execução dos testes
+
+- **Comando:** `python3 -m unittest discover -s tools/php83 -p 'test_*.py'`
+- **Exit status:** 0 (`OK`)
+- **Testes:** 60 executados, todos passaram, nenhum pulado ou com erro (0.034s)
+
+## Revisão da evidência fornecida
+
+Li apenas o patch e o teste focado que você colou; não abri nenhum outro arquivo.
+
+**Pontos que se sustentam:**
+- **Valores parseados:** o construtor sempre define a propriedade com `getDisableRelativeTimeParams()`, que sempre retorna um array iniciado como `[]`. Então declarar a propriedade sem default não muda nenhum valor parseado. As fixtures cobrem os casos relevantes: vazio, um nome, vários, duplicado mantido, `$` vazio virando `''` e tag em minúsculas ignorada.
+- **Ordem de serialização:** declarar a propriedade poderia mudar a posição dela no `serialize()`, já que antes era uma propriedade dinâmica anexada no fim. Segundo a sua evidência, o coletor comparou os SHA256 com o original 7.4 nos modos minimal e standard, e as quatro comparações passaram. Na prática, isso mostra que os bytes serializados não mudaram.
+- **Cache legado:** a string `O:23:"KalturaDocCommentParser":1:{s:25:...}` está bem formada (23 e 25 caracteres conferem) e é lida corretamente. Como você já disse, esse é um caso extra e não prova que o cache completo é aceito.
+- **Apache:** os diagnósticos selecionados caíram de 4408 para 0, com hashes do harness e stdout idênticos.
+
+**Ressalvas menores (nenhuma bloqueia):**
+1. **O teste focado não detecta o deprecation por si só.** No 8.3 a criação de propriedade dinâmica é apenas um `E_DEPRECATED`, então o teste provavelmente passaria mesmo sem o patch. A única prova de que o deprecation foi eliminado é o diagnóstico do Apache (4408 → 0). Se o harness não converte deprecations em exceção, vale uma asserção explícita via `set_error_handler`.
+2. **Sem default, a propriedade fica `null` num objeto desserializado sem essa chave.** Hoje não há risco, porque o construtor do 7.4 sempre a definia e todo cache gerado por ele contém a chave. Usar `= array()` como default seria mais defensivo. Isso não mudaria os bytes serializados, já que o construtor sobrescreve o valor, mas não é necessário.
+3. **Estilo:** o patch indenta com espaços e a linha de contexto acima (`public $utf8truncate;`) usa tab. Porém o contexto logo abaixo (`/** Parse a docComment`) também usa espaços, então o arquivo já mistura os dois. É só estética.
+
+Não faço aprovação de release.
