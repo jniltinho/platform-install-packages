@@ -40,6 +40,7 @@ Contact the authors or email community@kaltura.org if you have other ideas.
 * [Single-server All-In-One Ubuntu Noble (24.04) Installation](doc/install-kaltura-noble.md) : Rigel-18.20.0, built and tested with Vagrant from `deb/noble/`.
 * [Single-server All-In-One Ubuntu 26.04 (resolute) Installation](doc/install-kaltura-ubuntu-26.04.md): Rigel-18.20.0, built and tested with Vagrant from `deb/ubuntu-26.04/`.
 * [Single-server All-In-One Rocky Linux 9 (RPM) Installation](doc/install-kaltura-rocky9.md): Rigel-18.20.0, built and tested with Vagrant from `rpm/el9/`.
+* [HTTPS, Let's Encrypt and the Kaltura Console at /console](doc/kaltura-ssl-and-console.md): SSL for Apache and the VOD packager, valid certificates, and the console behind the Kaltura vhost.
 * [Single-server All-In-One Docker container Installation](doc/install-docker.md).
 * [Deploying a Kaltura Cluster (RPM)](doc/rpm-cluster-deployment-instructions.md)
 * [Deploying a Kaltura Cluster (deb)](doc/deb-cluster-deployment-instructions.md)
