@@ -21,7 +21,7 @@ if [ ! -f /etc/yum.repos.d/rpmfusion-free.repo ]; then
 	$SUDO dnf config-manager --set-enabled crb
 	$SUDO dnf -y -q install https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-9.noarch.rpm
 fi
-$SUDO dnf -y -q install rpm-build createrepo_c rsync wget curl unzip zip bzip2 tar perl gcc gcc-c++ make \
+$SUDO dnf -y -q install --allowerasing which rpm-build createrepo_c rsync wget curl unzip zip bzip2 tar perl gcc gcc-c++ make \
 	systemd initscripts chkconfig byacc flex pam-devel openssl-devel zlib-devel pcre-devel \
 	librdkafka-devel ffmpeg-devel mariadb-connector-c-devel expat-devel unixODBC-devel >/dev/null
 
