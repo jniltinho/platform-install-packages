@@ -30,6 +30,8 @@ Prebuilt packages are on the [Releases page](https://github.com/jniltinho/platfo
 
 ## Quick start
 
+**Ubuntu 26.04:** follow the [quick install guide](doc/quick-install-ubuntu-26.04.md) for verified package downloads, server and console setup, HTTPS and first login.
+
 Extract the repository tarball for your distribution, then run the All-In-One installer from a checkout of this repository:
 
 ```bash
@@ -111,6 +113,7 @@ HTTPS is validated on Ubuntu 24.04. The Rocky Linux 9 HTTPS settings are documen
 ## Documentation
 
 * [Ubuntu 24.04 installation](doc/install-kaltura-noble.md)
+* [Ubuntu 26.04 quick install — server and console](doc/quick-install-ubuntu-26.04.md)
 * [Ubuntu 26.04 installation](doc/install-kaltura-ubuntu-26.04.md)
 * [Rocky Linux 9 installation](doc/install-kaltura-rocky9.md)
 * [HTTPS, Let's Encrypt and the Kaltura Console at /console](doc/kaltura-ssl-and-console.md)

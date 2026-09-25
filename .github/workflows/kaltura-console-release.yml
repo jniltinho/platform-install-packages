@@ -67,11 +67,21 @@ jobs:
         with:
           name: kaltura-console-linux-amd64
           path: dist
+      - name: Classify release version
+        id: version
+        env:
+          REF_NAME: ${{ github.ref_name }}
+        run: |
+          VERSION="${REF_NAME#kaltura-console/v}"
+          case "$VERSION" in
+            *-*) echo "prerelease=true" >> "$GITHUB_OUTPUT" ;;
+            *) echo "prerelease=false" >> "$GITHUB_OUTPUT" ;;
+          esac
       - name: Publish tagged release
         uses: softprops/action-gh-release@v2
         with:
           body_path: kaltura-console/CHANGELOG.md
-          prerelease: ${{ contains(github.ref_name, '-') }}
+          prerelease: ${{ steps.version.outputs.prerelease == 'true' }}
           fail_on_unmatched_files: true
           files: |
             dist/*.tar.gz

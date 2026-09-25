@@ -12,8 +12,8 @@
 ## 3. Documentation and integration
 
 - [x] 3.1 Document best-quality progressive playback, bandwidth trade-offs and exact validation evidence; verify links and update CHANGELOG.
-- [ ] 3.2 Coordinate a branch/PR from main with Claude, verify CI, synchronize the completed delta and archive this change; publish only an agreed unused console version tag after merge.
+- [x] 3.2 Coordinate a branch/PR from main with Claude, verify CI, synchronize the completed delta and archive this change; publish only an agreed unused console version tag after merge.
 
 ### Evidence
 
-See kaltura-console/docs/validation.md, Playback quality acceptance. rc10 .20: Full HD source and delivered stream 1920×1080 at60000/1001fps; browser playback/fullscreen and Range206 passed. Existing720p entry nowdelivers720p60. Full E2E and make lint test package passed. Only integration/release closure remains.
+See kaltura-console/docs/validation.md, Playback quality acceptance. rc10 .20: Full HD source and delivered stream 1920×1080 at60000/1001fps; browser playback/fullscreen and Range206 passed. Existing720p entry nowdelivers720p60. Full E2E and make lint test package passed. PR #2 merged as 3bd3b189; main CI 36099650606 passed. Delta synchronized in 575fca20. Console v0.1.0 published by workflow 36100724453; all three downloaded package checksums verified. Archived after release acceptance.

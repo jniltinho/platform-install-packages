@@ -112,6 +112,21 @@ The console SHALL serve `/media/{id}/stream` and `/media/{id}/thumbnail` (GET an
 - **WHEN** the Kaltura delivery host is unreachable
 - **THEN** the console answers HTTP 502 without leaking upstream details
 
+The console SHALL explicitly choose the highest-resolution ready MP4/H.264 asset owned by the requested entry. At equal resolution it SHALL prefer a compatible original; otherwise it SHALL prefer the higher bitrate. Selection SHALL NOT request upscaling or silently use an unready/incompatible asset. If no compatible asset is ready, playback SHALL return a controlled unavailable response without weakening proxy security.
+
+#### Scenario: High-resolution asset available
+- **WHEN** an entry has ready 360p and 1080p compatible assets
+- **THEN** progressive playback delivers the 1080p asset rather than the default low-quality rendition
+
+#### Scenario: Preserve a compatible original
+- **WHEN** a ready original is MP4/H.264 at 1080p60 and a derived asset has the same resolution
+- **THEN** playback chooses the original and preserves its frame rate without another transcode
+
+#### Scenario: Unsafe or unavailable asset
+- **WHEN** an asset belongs to another entry, has an invalid identifier, is not ready or uses an unsupported format/codec
+- **THEN** it is excluded from selection
+- **AND** no compatible candidate results in a controlled unavailable response
+
 ### Requirement: User management
 An `admin` SHALL list, add, change the role of, reset the password of, and delete console users. E-mails SHALL be unique. The last admin SHALL NOT be deleted or demoted, and admins SHALL NOT delete themselves.
 

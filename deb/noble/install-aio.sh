@@ -18,8 +18,8 @@ SERVICE_URL=$PROTO://$HOST_IP
 MYSQL_ROOT_PASSWD=${MYSQL_ROOT_PASSWD:-kaltura-root}
 ADMIN_EMAIL=${ADMIN_EMAIL:-admin@kaltura.local}
 ADMIN_PASSWD=${ADMIN_PASSWD:-Adm1n#Video}
-# apt source for the Kaltura packages: the local build, or the GitHub release
-# e.g. KALTURA_APT=https://github.com/jniltinho/platform-install-packages/releases/download/noble-deb-18.20.0-1
+# apt source: local build or extracted kaltura-server/v18.20.0-1 repo archive.
+# e.g. KALTURA_APT=file:/opt/kaltura-repo/noble (not the GitHub download URL)
 KALTURA_APT=${KALTURA_APT:-file:/vagrant/deb/noble/repo}
 APT="apt-get install -y -q -o Dpkg::Options::=--force-confold"
 
