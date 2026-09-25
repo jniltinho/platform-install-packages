@@ -1,0 +1,227 @@
+{
+  "schema": 1,
+  "status": "frozen after reviewed build, repeated ZIP verification and exp9 delta; approved for isolated paired syntax experiment",
+  "pins": {
+    "exp9": "cb61e4cd11009bbf9e6e362dfafa5ef2f4af22da817c75fedbd7741a08e44cbc",
+    "exp10": "de177e6cbaedf3a3207661c2325f466cce37febb73190f3a49d31f24b740c053"
+  },
+  "targets": [
+    {
+      "path": "alpha/apps/kaltura/lib/myCaptchaImage.class.php",
+      "exp9_sha256": "8e402b0ccd11d8a62e65e0623463fac5812b1e068d48c2dfa4050618c6f5aa21",
+      "exp10_sha256": "a13dacebf63e5240cf437c54d0d8bd04897b621a5625a9e06b784b7541b4d973"
+    },
+    {
+      "path": "alpha/apps/kaltura/lib/s3/S3.php",
+      "exp9_sha256": "aaf68bbaa4067ab58168be51fa450f06decb432cc98eafc5a37c6defce8dd8fe",
+      "exp10_sha256": "2bc562aaaca70d998c26d2c4ee0c238b4ed32236bfc079a6a4061f8e1a43bf1a"
+    },
+    {
+      "path": "alpha/apps/kaltura/lib/storage/urlTokenizers/kAkamaiSecureHDUrlTokenizer.php",
+      "exp9_sha256": "ade9029930b0cdca877262ccac5ad7ae37bcaa577a5822c74763c4039540416c",
+      "exp10_sha256": "f2343a155810f2f1a11790eb10d496eb3510790fcdb05f784f2c02efd4e27f41"
+    },
+    {
+      "path": "infra/general/S3.php",
+      "exp9_sha256": "2bb3f488e8305b6399cf7ed041e382333216204fbc02187bef02c1e6e4ce3acb",
+      "exp10_sha256": "223b95984a9db2d91f93d1d3e6aaafd69159ed0b3ea221c0c84810ca18618929"
+    },
+    {
+      "path": "vendor/IP2Location/IP2Location.inc.php",
+      "exp9_sha256": "142e90a7337ab3561c8df0ed2bfa9dd2e33af7e80d5e2af1bc89712c2f139ced",
+      "exp10_sha256": "d7c0b4db2284abc4e46ba9ad2d0aed5cf18fd20df8615edf6524610aced64d00"
+    },
+    {
+      "path": "vendor/PHPMailer/extras/htmlfilter.php",
+      "exp9_sha256": "ea02afbfef091267eb86dc47afb302900dd312d987767051a6e5697592dc78a8",
+      "exp10_sha256": "ca6dcde0ce637642af97df27e3e4abcd882f0b7bc8d083136b5240bdf7903e7a"
+    },
+    {
+      "path": "vendor/ZendFramework/library/Zend/View/Helper/Navigation/Sitemap.php",
+      "exp9_sha256": "5220cde25a81eda81b9744080c615ffc5e36017b33a53dc7a909871078af7957",
+      "exp10_sha256": "0f1f798d01bf50f8772f4f477ccfe41a356cf91368869fda63bf7fb758535317"
+    },
+    {
+      "path": "vendor/google-api-php-client-1.1.2/src/Google/Utils.php",
+      "exp9_sha256": "deaa15a8550814910dd96bd4679459df366cf98c8ea71c60d27fc6f75e6eb433",
+      "exp10_sha256": "702aef5136606a005e331bb74181a480e7b3226f41f51127acd70e926f765dec"
+    },
+    {
+      "path": "vendor/google-api-php-client/src/service/Google_Utils.php",
+      "exp9_sha256": "525c9b2e69ae8d3b3039c486cc3417a52cb55107c329ce2f34cd1671b4f28fcd",
+      "exp10_sha256": "27a4c379d02366d618bf84490d0ba2d0bbd1944fe9ea0547f1dd862c7382adb0"
+    },
+    {
+      "path": "vendor/htmlpurifier/library/HTMLPurifier/ChildDef/Custom.php",
+      "exp9_sha256": "e33babccfe0f50fe87c55bd010fe5ed27d9baa18dc62527f027a2bef9d0e0149",
+      "exp10_sha256": "259d05d70ba1a7e20afee5ab30968d478b42bd0475c21c9ea0a9e44265f582e4"
+    },
+    {
+      "path": "vendor/htmlpurifier/library/HTMLPurifier/Encoder.php",
+      "exp9_sha256": "b1b735e555c6dc070cf7a39ed2fd111b983a1fe1312561b92a63825cae9d34fc",
+      "exp10_sha256": "657cb46cabdce5c915043ac6e8546467186f44a98c2f5f60b0e5079259ea5d7b"
+    },
+    {
+      "path": "vendor/htmlpurifier/library/HTMLPurifier/TagTransform/Font.php",
+      "exp9_sha256": "c0c2e803fdb13990a69d085b8723e0d1dd3abc1a2433aa536f409e9ab074bd9b",
+      "exp10_sha256": "d3534502c2d64bfc6cb8473ccaac00f330a8ce14d549fd9910d4723a327cb64a"
+    },
+    {
+      "path": "vendor/propel/engine/GeneratorConfig.php",
+      "exp9_sha256": "1b6b36c3af5f7b2cdf417a4eed35bf843aa44b3c1e86f5e11db0a3faa47599ee",
+      "exp10_sha256": "c6da06c81d7c24bd99d31e56a4df96f83fc1cff63a306e72cbe494b7670e9059"
+    },
+    {
+      "path": "vendor/propel/engine/database/transform/XmlToAppData.php",
+      "exp9_sha256": "75311115454e3d967137cb77db84216d6c48cf70478f3662530b7383261516b2",
+      "exp10_sha256": "238e3a7b8afa62e34604277c7d4becc49d5654818d933d15d561ca2af5db6c87"
+    },
+    {
+      "path": "vendor/propel/validator/MatchValidator.php",
+      "exp9_sha256": "b916a75bd40c96c3b19402e9e94a95f9da48fd3d91446e5b412ac78504a07746",
+      "exp10_sha256": "e91e78eba7f42d4262710b440e17f9bed84a02426527776de6987c62df1858a0"
+    },
+    {
+      "path": "vendor/propel/validator/NotMatchValidator.php",
+      "exp9_sha256": "6ece40c0d22b4f29e64789be2d6f7a77c1b6a2cf9a54942a4210266b4cb4ad24",
+      "exp10_sha256": "0b7bf422c61da3b15389d5685829584247b6fca64fbaabbeb19155052bf2085c"
+    },
+    {
+      "path": "vendor/symfony/controller/sfRouting.class.php",
+      "exp9_sha256": "52a0fb006d480654a2f233514729b9bd61001efd930b3745d6a25472abf5bbdb",
+      "exp10_sha256": "26190ee57d75efe0ccdc6d55621639fc5ccb33b5657f2b741599cf2cbcfcf226"
+    },
+    {
+      "path": "vendor/symfony/helper/UrlHelper.php",
+      "exp9_sha256": "ed19a9a3a785e96a05dd263d0c1718d28b8bedacb3a9238d971ebb4070cfacc4",
+      "exp10_sha256": "68bf9a9ea831f1caaf83d17e393a50e6a403046bce4e483be13a197a6d846ebe"
+    },
+    {
+      "path": "vendor/symfony/i18n/sfDateFormat.class.php",
+      "exp9_sha256": "30c09e9cb2099a41a42beaad255c27abe8da0369231c6622cb13724c1ab52d91",
+      "exp10_sha256": "0f65583956ce9e075bb37ea0f4bfa97e516c395a3c21be0f24d415692a082d3e"
+    },
+    {
+      "path": "vendor/symfony/i18n/sfNumberFormat.class.php",
+      "exp9_sha256": "859516d015730cb68978a39c70acc062b4dbbd103f3492582355be7b0b8f4997",
+      "exp10_sha256": "8ba67a4753f5846501740c63582875b66fc743455eac34ce8529a81aa26578f9"
+    },
+    {
+      "path": "vendor/symfony/i18n/sfNumberFormatInfo.class.php",
+      "exp9_sha256": "8734733838790b2d980f2f2a4fa64435c1f24766434329f8aba347540c8df075",
+      "exp10_sha256": "9eac158d6b2d05b79dedae0b906cf3dca810b094f990f135b0a4f9b5d62db27a"
+    },
+    {
+      "path": "vendor/symfony/util/Spyc.class.php",
+      "exp9_sha256": "6cdd311eeaedd77d69cab14f8730597f935527aa0b9776e91be6b4da1af91a2c",
+      "exp10_sha256": "d0fced9f083a1961d7a391710f727b60645f0b3e0b76bd53cdc81b62365f5ce3"
+    },
+    {
+      "path": "vendor/symfony/util/sfFinder.class.php",
+      "exp9_sha256": "a318b76683cb32035412bb5e576a31ac21b82c99f5b991e0963b6aa5e74b2e3c",
+      "exp10_sha256": "8ba0951504ec25d3a4c4fdb384e76a62d4fbec0f334026b6cdc1aab9a21af933"
+    },
+    {
+      "path": "vendor/symfony/vendor/creole/drivers/pgsql/PgSQLResultSet.php",
+      "exp9_sha256": "6b9e5e44a2974919e7af21879f24cd7c3f006c83ad8a72dfa4f150c161dc6aff",
+      "exp10_sha256": "5ef6c7852273355797604f05b91ec1a8d6ced2e4af2d49a37fdf93866c38fc5a"
+    },
+    {
+      "path": "vendor/symfony/vendor/creole/util/sql/SQLStatementExtractor.php",
+      "exp9_sha256": "b2376ee910ad81054acb486c19175b9734f742a9e01f305669a4df5a4e71fc8e",
+      "exp10_sha256": "9e7c4e1e0211c172df232f9d4f94ff22944444a74aa20aaabdc6f5fe6d849a8c"
+    },
+    {
+      "path": "vendor/symfony/vendor/pake/pakeFinder.class.php",
+      "exp9_sha256": "9adef4dc3d354b31230852b849cff083812c483fb12c8ec23ff7e4f2ae724fd1",
+      "exp10_sha256": "f29bb5e68e7d20d3b6807b0d115222e3146ed9e59257aef735c2720fa147505b"
+    },
+    {
+      "path": "vendor/symfony/vendor/pake/pakeGetopt.class.php",
+      "exp9_sha256": "0eccb66f094c62bbb3292cbeda1f3f9667bc873e988a882f0bf645586460a734",
+      "exp10_sha256": "19d140a6eaa1cd45b3ad45dcff478d43715e285bdf0e5cbecd5a116cb3fbf8ca"
+    },
+    {
+      "path": "vendor/symfony/vendor/pake/pakeYaml.class.php",
+      "exp9_sha256": "4c04f1e193a3feb729b907faaadedf9980aee596740a37b7506b40e644373634",
+      "exp10_sha256": "362f5e60d975e89b3f21194726803a586f565bd795a2c9a3ee5dfbcc963e1b00"
+    },
+    {
+      "path": "vendor/symfony/vendor/phing/Phing.php",
+      "exp9_sha256": "0a8a42e467fed195d87f08eddd37f47c8502a14eba17b615308215e8230bb950",
+      "exp10_sha256": "12eacae906f4d1a1eb286cd6e4b7abd425dff2db241668431389e1d99bd2dd19"
+    },
+    {
+      "path": "vendor/symfony/vendor/phing/lib/Capsule.php",
+      "exp9_sha256": "4413e03eea4deab268c4df43654a95f2832e9d65d514c58e4c27b54713f8e479",
+      "exp10_sha256": "8b3cc412f7aad016ddcb326ee88aaffae0ce3242693a1d111a394e2ac400383d"
+    },
+    {
+      "path": "vendor/symfony/vendor/phing/system/io/BufferedReader.php",
+      "exp9_sha256": "519f605ad05b7f9a531436c70c2106d8373c478353a9bea2828edb1d61a8a6aa",
+      "exp10_sha256": "9381f82e07b410eae3fc9c11bbf2fba3d502fee91d9f8529e37721a359f01290"
+    },
+    {
+      "path": "vendor/symfony/vendor/phing/system/io/UnixFileSystem.php",
+      "exp9_sha256": "6b2be485a6d663ea518eff34069ed72609082679b2abf38b93830b9f53fdf3ec",
+      "exp10_sha256": "4f8491e496a0824afa42f3f900e137d1a9272eadfda40523f363ab8e4035fe30"
+    },
+    {
+      "path": "vendor/symfony/vendor/phing/system/io/Win32FileSystem.php",
+      "exp9_sha256": "0053d619bcf928de2028fb7be0aa383fa507d99acecbf429f857ee2f2f69312b",
+      "exp10_sha256": "2faab654d8562bef738011070f24b4fd00ab61aa51a22f69b055af138eed2a99"
+    },
+    {
+      "path": "vendor/symfony/vendor/phing/system/util/Properties.php",
+      "exp9_sha256": "ff11c5458a0bd3e42431bd503ecbabbb05c3962731739c122c346458fbd27cb7",
+      "exp10_sha256": "714f7ffc26cb8973210af0849f07799bb4582ba181ddf13d375e2b440c1c4e6d"
+    },
+    {
+      "path": "vendor/symfony/vendor/phing/tasks/system/CvsPassTask.php",
+      "exp9_sha256": "7e639057ee4c4e36627769a8eb4c02cfd43316e412fcc14d2cadf5a058dbcf65",
+      "exp10_sha256": "e599463f6840a7fb754f18a34e971ef283f688abe7fae28f0534129558721d7c"
+    },
+    {
+      "path": "vendor/symfony/vendor/phing/tasks/system/PropertyTask.php",
+      "exp9_sha256": "d7438f1c032d68c43530e0f56c3180cc8ab2776c0ed7c3dce47701876e42213c",
+      "exp10_sha256": "2b50acf5092da69b6f82e920ae158b4cbfd3164e6c934327026fc5f4eb708dc0"
+    },
+    {
+      "path": "vendor/symfony/vendor/phing/types/Path.php",
+      "exp9_sha256": "fc4ab9e9d26c05eae839c88e19bbfe14a46369beb3271e1425c4f37b3260231d",
+      "exp10_sha256": "b481b02f3618accffbae4a85a9d4b706a09bc1cdbcfb3724675b9657b4a8f8f8"
+    },
+    {
+      "path": "vendor/symfony/vendor/phing/util/FileUtils.php",
+      "exp9_sha256": "e142a918fc0e5a794a8340128f69118a98b665c01f4a3c9b52ce70d9427c290a",
+      "exp10_sha256": "642626dc9711dd2ba394936c1fa566e3ceba3b380fd9cf4c8d0eea64820c4cf8"
+    },
+    {
+      "path": "vendor/symfony/vendor/phing/util/PathTokenizer.php",
+      "exp9_sha256": "c7f35dd598a48d72d16ae4105b15f8eeb101af568625faed43c3f89eb37370a7",
+      "exp10_sha256": "cdb6868915df709985283fc1f98d9726a21bb95c5847d8d2de4d1ee3685d50f3"
+    },
+    {
+      "path": "vendor/symfony/vendor/phing/util/StringHelper.php",
+      "exp9_sha256": "8b9c26dc7060af8fb30b6101d01e6b0574bfbb6efdc7b34dabdf27dbe6ee574a",
+      "exp10_sha256": "a598140b5daabf4a81c7fe351d34877032dcb3d005ea0d3a86992efe3b390cab"
+    },
+    {
+      "path": "vendor/symfony/vendor/propel-generator/classes/propel/engine/builder/DataModelBuilder.php",
+      "exp9_sha256": "3d7fb936cdd229bc4e9171017589a83a63ef8ac2f1d1cbafd152afcd97b36e0f",
+      "exp10_sha256": "4be92fde934721dd9a013006d048d852b38c56d08ee1b1bdf0654fd5dd7ff9e4"
+    },
+    {
+      "path": "vendor/symfony/vendor/propel-generator/classes/propel/engine/database/transform/XmlToAppData.php",
+      "exp9_sha256": "6499d96463d59b2f291ef2dc2817467d0a57623f39234ff119dfc0d6d47fa49c",
+      "exp10_sha256": "2508ff261f8146c6b6bff27b291967f99cc38d78902772f5da0f5fa7a6d1f6d7"
+    },
+    {
+      "path": "vendor/symfony/vendor/propel-generator/classes/propel/phing/AbstractPropelDataModelTask.php",
+      "exp9_sha256": "e604840d3ba4170112bd5326021236c7e22aa0199ca110b7ff1466bdd222b189",
+      "exp10_sha256": "788a06debcdffd58fec037c36199d0a220d4b8668e44d3ea10777f8fc603037b"
+    }
+  ],
+  "selection_manifest": "doc/php83/evidence/exp10-candidate/manifest.json",
+  "selection_manifest_sha256": "db4c2b6dfff31f9fd64e05f29e0ccd79b2049e85e7c27ee29b2783605db387aa"
+}

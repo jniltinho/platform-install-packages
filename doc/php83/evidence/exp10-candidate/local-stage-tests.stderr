@@ -1,0 +1,15 @@
+test_archive_drift_rejected (test_stage.SelectionTests.test_archive_drift_rejected) ... ok
+test_cumulative_omission_rejected (test_stage.SelectionTests.test_cumulative_omission_rejected) ... ok
+test_full16_plus43_inputs (test_stage.SelectionTests.test_full16_plus43_inputs) ... ok
+test_patch_byte_drift_rejected (test_stage.SelectionTests.test_patch_byte_drift_rejected) ... ok
+test_patch_leaf_collision_rejected (test_stage.SelectionTests.test_patch_leaf_collision_rejected) ... ok
+test_provenance_drift_rejected (test_stage.SelectionTests.test_provenance_drift_rejected) ... ok
+test_reordering_prior_entries_rejected (test_stage.SelectionTests.test_reordering_prior_entries_rejected) ... ok
+test_source_overlap_rejected (test_stage.SelectionTests.test_source_overlap_rejected) ... ok
+test_unsafe_patch_source_rejected (test_stage.SelectionTests.test_unsafe_patch_source_rejected) ... ok
+test_upstream_target_hash_drift_rejected (test_stage.SelectionTests.test_upstream_target_hash_drift_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.022s
+
+OK

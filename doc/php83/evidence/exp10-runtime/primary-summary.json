@@ -1,0 +1,139 @@
+{
+  "schema": 1,
+  "logical_rows": 48,
+  "positive_rows_exit0": 44,
+  "expected_original83_json_fatals": 4,
+  "exp10_positive_rows": 12,
+  "exp9_positive_rows": 12,
+  "typed_comparisons": [
+    {
+      "source": "exp9",
+      "ini": "standard",
+      "case": "legacy-json",
+      "json_type_preserving_output_equal": true
+    },
+    {
+      "source": "exp9",
+      "ini": "standard",
+      "case": "zend-json",
+      "json_type_preserving_output_equal": true
+    },
+    {
+      "source": "exp9",
+      "ini": "standard",
+      "case": "doc-comment",
+      "json_type_preserving_output_equal": true
+    },
+    {
+      "source": "exp9",
+      "ini": "standard",
+      "case": "doc-comment-export",
+      "json_type_preserving_output_equal": true
+    },
+    {
+      "source": "exp9",
+      "ini": "standard",
+      "case": "doc-comment-consumer",
+      "json_type_preserving_output_equal": true
+    },
+    {
+      "source": "exp9",
+      "ini": "minimal",
+      "case": "legacy-json",
+      "json_type_preserving_output_equal": true
+    },
+    {
+      "source": "exp9",
+      "ini": "minimal",
+      "case": "zend-json",
+      "json_type_preserving_output_equal": true
+    },
+    {
+      "source": "exp9",
+      "ini": "minimal",
+      "case": "doc-comment",
+      "json_type_preserving_output_equal": true
+    },
+    {
+      "source": "exp9",
+      "ini": "minimal",
+      "case": "doc-comment-export",
+      "json_type_preserving_output_equal": true
+    },
+    {
+      "source": "exp9",
+      "ini": "minimal",
+      "case": "doc-comment-consumer",
+      "json_type_preserving_output_equal": true
+    },
+    {
+      "source": "exp10",
+      "ini": "standard",
+      "case": "legacy-json",
+      "json_type_preserving_output_equal": true
+    },
+    {
+      "source": "exp10",
+      "ini": "standard",
+      "case": "zend-json",
+      "json_type_preserving_output_equal": true
+    },
+    {
+      "source": "exp10",
+      "ini": "standard",
+      "case": "doc-comment",
+      "json_type_preserving_output_equal": true
+    },
+    {
+      "source": "exp10",
+      "ini": "standard",
+      "case": "doc-comment-export",
+      "json_type_preserving_output_equal": true
+    },
+    {
+      "source": "exp10",
+      "ini": "standard",
+      "case": "doc-comment-consumer",
+      "json_type_preserving_output_equal": true
+    },
+    {
+      "source": "exp10",
+      "ini": "minimal",
+      "case": "legacy-json",
+      "json_type_preserving_output_equal": true
+    },
+    {
+      "source": "exp10",
+      "ini": "minimal",
+      "case": "zend-json",
+      "json_type_preserving_output_equal": true
+    },
+    {
+      "source": "exp10",
+      "ini": "minimal",
+      "case": "doc-comment",
+      "json_type_preserving_output_equal": true
+    },
+    {
+      "source": "exp10",
+      "ini": "minimal",
+      "case": "doc-comment-export",
+      "json_type_preserving_output_equal": true
+    },
+    {
+      "source": "exp10",
+      "ini": "minimal",
+      "case": "doc-comment-consumer",
+      "json_type_preserving_output_equal": true
+    }
+  ],
+  "runtime83_before_after_equal": true,
+  "runtime74_before_after_equal": true,
+  "report_sha256": {
+    "cli74-primary.json": "b27f2df4e7ebac9a92eec5ee06d00ff057b1ec2c43cb28d24fa9f54c589b313b",
+    "cli83-primary.json": "716779b577fde1ed20253170bc3ae261ba2ae7aedf2516bbec40e938eebb9859",
+    "api-primary.json": "fb99528a1bf0fe1520249d2a0d6082f1af2c8564db4f46c7dac3c7526457f19f",
+    "curly-primary.json": "64ea3092f536e6431127e9a54ec922d29a537a84442bc97da7c2e4d22ce70657"
+  },
+  "application_acceptance": false
+}

@@ -1,0 +1,1 @@
+{"additional_disjoint_entries": 43, "all_patch_and_upstream_input_hashes_match": true, "manifest_sha256": "db4c2b6dfff31f9fd64e05f29e0ccd79b2049e85e7c27ee29b2783605db387aa", "prior_entries_preserved": 16, "selection_only": true, "source_or_leaf_collisions": 0, "staged": true, "targets": 59, "zip_built": false}

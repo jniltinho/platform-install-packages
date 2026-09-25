@@ -349,3 +349,17 @@ validator; OpenCode executes23 tests and an independent byte audit after Grok's
 bounded timeout. Broader runtime effects and integration remain open; patches
 stay held, exp9 remains unchanged. Original tasks0/24 and detailed3/27 are not
 advanced by this partial T0-04/T1-01 evidence.
+
+## Exp10 artifact integration
+
+[Exp10 integration](exp10-integration.md) adds the43 pure curly-offset repairs to
+all16 preserved exp9 targets in a separately named, twice-identical experimental
+ZIP. Actual archive verification and exp9 delta independently match. Whole-source
+PHP8.3 compiler rejections decrease54→11 across11,784 files per artifact, with no
+incomplete rows; unchanged-source outcomes/diagnostics are identical. Two newly
+parsable files expose existing declaration diagnostics, not accepted exceptions.
+Actual API contracts and48 CLI rows retain prior behavior;18 API diagnostic
+groups/503events remain unchanged. The actual ZIP passes68 selected-method cases
+across three additional class files. No aggregate task closes: original0/24,
+detailed3/27; remaining language failures, full runtime/distro/performance/recovery
+and release gates stay open.

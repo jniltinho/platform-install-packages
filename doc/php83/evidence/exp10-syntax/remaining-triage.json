@@ -1,0 +1,137 @@
+{
+  "schema": 1,
+  "scope": "read-only join of primary compiler results to previous classified exact-source triage, not new VM execution",
+  "inputs": {
+    "doc/php83/evidence/exp10-syntax/primary.json": "f60068a6f6c4d1231c4e781ba83b23246d0c65acd5debfd1f331acd876b745bc",
+    "doc/php83/evidence/compiler-triage/primary-r2.json": "045a0aa4de641f9fa11a24abfbe39c07b3d74a83647f19a8979aa8654f414a69"
+  },
+  "remaining_rejections": [
+    {
+      "path": "alpha/apps/kaltura/lib/baseObjectUtils.class.php",
+      "source_sha256": "1834b0ce9ab903af000e95c6a1c065a8dfaa64a91cd454a57de3b44824ee9e03",
+      "exit": 255,
+      "diagnostics": "Errors parsing alpha/apps/kaltura/lib/baseObjectUtils.class.php\nFatal error: Unparenthesized `a ? b : c ? d : e` is not supported. Use either `(a ? b : c) ? d : e` or `a ? b : (c ? d : e)` in alpha/apps/kaltura/lib/baseObjectUtils.class.php on line 474",
+      "triage_category": "unparenthesized_nested_ternary",
+      "historical_baseline_classification": "new_php83_rejection",
+      "same_source_and_compiler_result_as_triage": true
+    },
+    {
+      "path": "vendor/aws/Doctrine/Common/Cache/RiakCache.php",
+      "source_sha256": "0ec9e10a5c35033e6ebd154630565a63431831c53fac0a33b98f32d0652f79db",
+      "exit": 255,
+      "diagnostics": "Errors parsing vendor/aws/Doctrine/Common/Cache/RiakCache.php\nFatal error: Cannot use Riak\\Object as Object because 'Object' is a special class name in vendor/aws/Doctrine/Common/Cache/RiakCache.php on line 26",
+      "triage_category": "reserved_object_import_alias",
+      "historical_baseline_classification": "baseline_rejection_retained",
+      "same_source_and_compiler_result_as_triage": true
+    },
+    {
+      "path": "vendor/htmlpurifier/library/HTMLPurifier.autoload.php",
+      "source_sha256": "b845e45b8428bb01d9870cd55a5ad005c4e005329cd5cf418a4642f9b96803fa",
+      "exit": 255,
+      "diagnostics": "Errors parsing vendor/htmlpurifier/library/HTMLPurifier.autoload.php\nFatal error: __autoload() is no longer supported, use spl_autoload_register() instead in vendor/htmlpurifier/library/HTMLPurifier.autoload.php on line 17",
+      "triage_category": "removed_autoload_declaration",
+      "historical_baseline_classification": "new_php83_rejection",
+      "same_source_and_compiler_result_as_triage": true
+    },
+    {
+      "path": "vendor/symfony-data/bin/symfony.php",
+      "source_sha256": "f934f3d5d56a5b5430bf37a6741f2a782ff377f858d0327e4056c6d2dc45234a",
+      "exit": 255,
+      "diagnostics": "Errors parsing vendor/symfony-data/bin/symfony.php\nFatal error: __autoload() is no longer supported, use spl_autoload_register() instead in vendor/symfony-data/bin/symfony.php on line 107",
+      "triage_category": "removed_autoload_declaration",
+      "historical_baseline_classification": "new_php83_rejection",
+      "same_source_and_compiler_result_as_triage": true
+    },
+    {
+      "path": "vendor/symfony-data/generator/sfPropelAdmin/default/skeleton/actions/actions.class.php",
+      "source_sha256": "81b2e299d72ece711fab3a82dba6c5399c5747091a4b6a9de60b1cc5b31e798a",
+      "exit": 255,
+      "diagnostics": "Errors parsing vendor/symfony-data/generator/sfPropelAdmin/default/skeleton/actions/actions.class.php\nParse error: syntax error, unexpected token \"{\", expecting identifier in vendor/symfony-data/generator/sfPropelAdmin/default/skeleton/actions/actions.class.php on line 12",
+      "triage_category": "unexpanded_generator_skeleton_placeholder",
+      "historical_baseline_classification": "baseline_rejection_retained",
+      "same_source_and_compiler_result_as_triage": true
+    },
+    {
+      "path": "vendor/symfony-data/generator/sfPropelCrud/default/skeleton/actions/actions.class.php",
+      "source_sha256": "81b2e299d72ece711fab3a82dba6c5399c5747091a4b6a9de60b1cc5b31e798a",
+      "exit": 255,
+      "diagnostics": "Errors parsing vendor/symfony-data/generator/sfPropelCrud/default/skeleton/actions/actions.class.php\nParse error: syntax error, unexpected token \"{\", expecting identifier in vendor/symfony-data/generator/sfPropelCrud/default/skeleton/actions/actions.class.php on line 12",
+      "triage_category": "unexpanded_generator_skeleton_placeholder",
+      "historical_baseline_classification": "baseline_rejection_retained",
+      "same_source_and_compiler_result_as_triage": true
+    },
+    {
+      "path": "vendor/symfony-data/skeleton/batch/default.php",
+      "source_sha256": "a82525ec83207e9193da1bb002310eb03fcba6dd30ab20b0ac9973bb97299479",
+      "exit": 255,
+      "diagnostics": "Errors parsing vendor/symfony-data/skeleton/batch/default.php\nParse error: syntax error, unexpected token \";\", expecting \")\" in vendor/symfony-data/skeleton/batch/default.php on line 18",
+      "triage_category": "unexpanded_generator_skeleton_placeholder",
+      "historical_baseline_classification": "baseline_rejection_retained",
+      "same_source_and_compiler_result_as_triage": true
+    },
+    {
+      "path": "vendor/symfony-data/skeleton/batch/rotate_log.php",
+      "source_sha256": "d8d4b03a7f63d8df562772783c78466b16bf1e87467d54ebd08dea03047f7cb6",
+      "exit": 255,
+      "diagnostics": "Errors parsing vendor/symfony-data/skeleton/batch/rotate_log.php\nParse error: syntax error, unexpected token \";\", expecting \")\" in vendor/symfony-data/skeleton/batch/rotate_log.php on line 18",
+      "triage_category": "unexpanded_generator_skeleton_placeholder",
+      "historical_baseline_classification": "baseline_rejection_retained",
+      "same_source_and_compiler_result_as_triage": true
+    },
+    {
+      "path": "vendor/symfony-data/skeleton/controller/controller.php",
+      "source_sha256": "dc64d95afab4440fd7274516c03467a473a0b595c42132d9a34f7ebf1a635fed",
+      "exit": 255,
+      "diagnostics": "Errors parsing vendor/symfony-data/skeleton/controller/controller.php\nParse error: syntax error, unexpected token \";\", expecting \")\" in vendor/symfony-data/skeleton/controller/controller.php on line 8",
+      "triage_category": "unexpanded_generator_skeleton_placeholder",
+      "historical_baseline_classification": "baseline_rejection_retained",
+      "same_source_and_compiler_result_as_triage": true
+    },
+    {
+      "path": "vendor/symfony-data/skeleton/module/module/actions/actions.class.php",
+      "source_sha256": "2275a76643e292bbd645d2f6b94a4e32055eaf6e851f6dffae2169a128d4b95c",
+      "exit": 255,
+      "diagnostics": "Errors parsing vendor/symfony-data/skeleton/module/module/actions/actions.class.php\nParse error: syntax error, unexpected token \"{\", expecting identifier in vendor/symfony-data/skeleton/module/module/actions/actions.class.php on line 12",
+      "triage_category": "unexpanded_generator_skeleton_placeholder",
+      "historical_baseline_classification": "baseline_rejection_retained",
+      "same_source_and_compiler_result_as_triage": true
+    },
+    {
+      "path": "vendor/symfony/util/sfCore.class.php",
+      "source_sha256": "09f1cdbd38be0e97939bc56ac4ae7895ccf9c7622098afeb46f40adbef6def46",
+      "exit": 255,
+      "diagnostics": "Errors parsing vendor/symfony/util/sfCore.class.php\nFatal error: __autoload() is no longer supported, use spl_autoload_register() instead in vendor/symfony/util/sfCore.class.php on line 188",
+      "triage_category": "removed_autoload_declaration",
+      "historical_baseline_classification": "new_php83_rejection",
+      "same_source_and_compiler_result_as_triage": true
+    }
+  ],
+  "remaining_category_counts": {
+    "unparenthesized_nested_ternary": 1,
+    "reserved_object_import_alias": 1,
+    "removed_autoload_declaration": 3,
+    "unexpanded_generator_skeleton_placeholder": 6
+  },
+  "historical_classification_counts": {
+    "new_php83_rejection": 4,
+    "baseline_rejection_retained": 7
+  },
+  "newly_accepted_diagnostic_files": [
+    {
+      "path": "vendor/symfony/vendor/phing/tasks/system/CvsPassTask.php",
+      "source_sha256": "e599463f6840a7fb754f18a34e971ef283f688abe7fae28f0534129558721d7c",
+      "diagnostics": "Warning: Private methods cannot be final as they are never overridden by other classes in vendor/symfony/vendor/phing/tasks/system/CvsPassTask.php on line 141",
+      "prior_exp9_exit": 255,
+      "exp10_exit": 0
+    },
+    {
+      "path": "vendor/symfony/vendor/phing/util/FileUtils.php",
+      "source_sha256": "642626dc9711dd2ba394936c1fa566e3ceba3b380fd9cf4c8d0eea64820c4cf8",
+      "diagnostics": "Deprecated: Optional parameter $overwrite declared before required parameter $project is implicitly treated as a required parameter in vendor/symfony/vendor/phing/util/FileUtils.php on line 74\nDeprecated: Optional parameter $preserveLastModified declared before required parameter $project is implicitly treated as a required parameter in vendor/symfony/vendor/phing/util/FileUtils.php on line 74\nDeprecated: Optional parameter $filterChains declared before required parameter $project is implicitly treated as a required parameter in vendor/symfony/vendor/phing/util/FileUtils.php on line 74",
+      "prior_exp9_exit": 255,
+      "exp10_exit": 0
+    }
+  ],
+  "candidate_all_files_compile": false,
+  "application_acceptance": false
+}

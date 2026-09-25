@@ -1,0 +1,438 @@
+{
+  "schema": 1,
+  "scope": "paired PHP8.3 -n syntax only, no application runtime acceptance",
+  "runtime": {
+    "command": "/usr/bin/php8.3",
+    "resolved_path": "/usr/bin/php8.3",
+    "sha256": "1c564e6bafa56d03359c3774be6f4c77d0edecabd2075e18556940a56747c8d7",
+    "version": "PHP 8.3.6 (cli) (built: Sep  2 2026 12:56:02) (NTS)\nCopyright (c) The PHP Group\nZend Engine v4.3.6, Copyright (c) Zend Technologies\n",
+    "modules": "[PHP Modules]\nCore\ndate\nfilter\nhash\njson\nlibxml\nopenssl\npcntl\npcre\nrandom\nReflection\nsession\nsodium\nSPL\nstandard\nzlib\n\n[Zend Modules]\n\n",
+    "ini": "Configuration File (php.ini) Path: /etc/php/8.3/cli\nLoaded Configuration File:         (none)\nScan for additional .ini files in: (none)\nAdditional .ini files parsed:      (none)\n",
+    "linked_library_sha256": {
+      "/lib/x86_64-linux-gnu/libargon2.so.1": "3c593c01d1c3497b1276537a1002c90ce3beb729a3520087608838cf8bbd847d",
+      "/lib/x86_64-linux-gnu/libc.so.6": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0",
+      "/lib/x86_64-linux-gnu/libcrypto.so.3": "c19c2cf8d7cf91c4f273b1d3bbc56a9d19c91a739bfe57ad630756ee8ede7b77",
+      "/lib/x86_64-linux-gnu/libgcc_s.so.1": "02f3f192bf5f79b811f1e34a650fea443d407408703448906585232383957f60",
+      "/lib/x86_64-linux-gnu/libicudata.so.74": "ddbb3718b8bd9cbd780e5ab08b4503c30a6c4fa0706ebe5d074ed6b596c1714e",
+      "/lib/x86_64-linux-gnu/libicuuc.so.74": "7560aadde38e5f4237a47a1ddd5891f9b36768a77a60faae30beee003ac01901",
+      "/lib/x86_64-linux-gnu/liblzma.so.5": "a9793942a8a5f6f4d0f523ef9e0a5be4f0033f2c6c28520cd2b4e706d53c6e17",
+      "/lib/x86_64-linux-gnu/libm.so.6": "f06f2ce1f1833df5f41cf13b6447ff07bea993ad9b27297d3428c2f70ab3f0e7",
+      "/lib/x86_64-linux-gnu/libpcre2-8.so.0": "e00576d71d81d3ba0cfa4903c835a44a8723aac96f72f79ff75200b4cff9071b",
+      "/lib/x86_64-linux-gnu/libsodium.so.23": "7de3e60f9f7df83a7299aa1b8b7a88013ace3233f70c9f63698dd331781d557e",
+      "/lib/x86_64-linux-gnu/libssl.so.3": "63597a81ef19496ad0423cbaaf04d5b0244c7a9e261e331a5a7f3ac0fcdb9590",
+      "/lib/x86_64-linux-gnu/libstdc++.so.6": "a68762c86d371e6041f03f03a33a78fa235809ae7d81c90185940c93c3535aed",
+      "/lib/x86_64-linux-gnu/libxml2.so.2": "3061d35b168d1eb472bba5d2c52931e408364770ec9b00ae1100aacd0c35c7da",
+      "/lib/x86_64-linux-gnu/libz.so.1": "9b64150b28505a33d6bc3ecf709c279f6de97a1c184dbda65d06ee4537f6d286",
+      "/lib64/ld-linux-x86-64.so.2": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+    },
+    "environment": {
+      "LC_ALL": "C",
+      "TZ": "UTC"
+    }
+  },
+  "harness": {
+    "run.sh": "60194b705d7a5d421df4f85750c0429598693bed82e07e20e2b12b90a8efbe12",
+    "stage.py": "a0a2aad1167b1375555721958c31326a90309f889484c36bad7709b1aa553df3",
+    "scan.py": "221d657f6dd990a94a2b36b80ef313d3c72c3376ec35c3be6760477a035318be",
+    "README.md": "39caaa9632546c1fdd459294296540e5e1feb08aaa0f0785c09998021c5064a4",
+    "input-contract.json": "a38d5c3b219f8da6a3d7f848e68ae937444c91a4cddcd579f0e0de9f8b7cf4b8",
+    "test_scan.py": "44c8353009d76aa6639f71cb99960e38dcdf811f1374001bcaecb9fe99f4b867"
+  },
+  "flags": [
+    "-n",
+    "-d",
+    "short_open_tag=1",
+    "-d",
+    "error_reporting=32767",
+    "-d",
+    "display_errors=stderr",
+    "-d",
+    "log_errors=0",
+    "-l"
+  ],
+  "workers": 4,
+  "delta": [
+    {
+      "path": "alpha/apps/kaltura/lib/myCaptchaImage.class.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    },
+    {
+      "path": "alpha/apps/kaltura/lib/s3/S3.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    },
+    {
+      "path": "alpha/apps/kaltura/lib/storage/urlTokenizers/kAkamaiSecureHDUrlTokenizer.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    },
+    {
+      "path": "infra/general/S3.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    },
+    {
+      "path": "vendor/IP2Location/IP2Location.inc.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    },
+    {
+      "path": "vendor/PHPMailer/extras/htmlfilter.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    },
+    {
+      "path": "vendor/ZendFramework/library/Zend/View/Helper/Navigation/Sitemap.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    },
+    {
+      "path": "vendor/google-api-php-client-1.1.2/src/Google/Utils.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    },
+    {
+      "path": "vendor/google-api-php-client/src/service/Google_Utils.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    },
+    {
+      "path": "vendor/htmlpurifier/library/HTMLPurifier/ChildDef/Custom.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    },
+    {
+      "path": "vendor/htmlpurifier/library/HTMLPurifier/Encoder.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    },
+    {
+      "path": "vendor/htmlpurifier/library/HTMLPurifier/TagTransform/Font.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    },
+    {
+      "path": "vendor/propel/engine/GeneratorConfig.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    },
+    {
+      "path": "vendor/propel/engine/database/transform/XmlToAppData.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    },
+    {
+      "path": "vendor/propel/validator/MatchValidator.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    },
+    {
+      "path": "vendor/propel/validator/NotMatchValidator.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    },
+    {
+      "path": "vendor/symfony/controller/sfRouting.class.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    },
+    {
+      "path": "vendor/symfony/helper/UrlHelper.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    },
+    {
+      "path": "vendor/symfony/i18n/sfDateFormat.class.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    },
+    {
+      "path": "vendor/symfony/i18n/sfNumberFormat.class.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    },
+    {
+      "path": "vendor/symfony/i18n/sfNumberFormatInfo.class.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    },
+    {
+      "path": "vendor/symfony/util/Spyc.class.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    },
+    {
+      "path": "vendor/symfony/util/sfFinder.class.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    },
+    {
+      "path": "vendor/symfony/vendor/creole/drivers/pgsql/PgSQLResultSet.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    },
+    {
+      "path": "vendor/symfony/vendor/creole/util/sql/SQLStatementExtractor.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    },
+    {
+      "path": "vendor/symfony/vendor/pake/pakeFinder.class.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    },
+    {
+      "path": "vendor/symfony/vendor/pake/pakeGetopt.class.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    },
+    {
+      "path": "vendor/symfony/vendor/pake/pakeYaml.class.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    },
+    {
+      "path": "vendor/symfony/vendor/phing/Phing.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    },
+    {
+      "path": "vendor/symfony/vendor/phing/lib/Capsule.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    },
+    {
+      "path": "vendor/symfony/vendor/phing/system/io/BufferedReader.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    },
+    {
+      "path": "vendor/symfony/vendor/phing/system/io/UnixFileSystem.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    },
+    {
+      "path": "vendor/symfony/vendor/phing/system/io/Win32FileSystem.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    },
+    {
+      "path": "vendor/symfony/vendor/phing/system/util/Properties.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    },
+    {
+      "path": "vendor/symfony/vendor/phing/tasks/system/CvsPassTask.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    },
+    {
+      "path": "vendor/symfony/vendor/phing/tasks/system/PropertyTask.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    },
+    {
+      "path": "vendor/symfony/vendor/phing/types/Path.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    },
+    {
+      "path": "vendor/symfony/vendor/phing/util/FileUtils.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    },
+    {
+      "path": "vendor/symfony/vendor/phing/util/PathTokenizer.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    },
+    {
+      "path": "vendor/symfony/vendor/phing/util/StringHelper.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    },
+    {
+      "path": "vendor/symfony/vendor/propel-generator/classes/propel/engine/builder/DataModelBuilder.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    },
+    {
+      "path": "vendor/symfony/vendor/propel-generator/classes/propel/engine/database/transform/XmlToAppData.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    },
+    {
+      "path": "vendor/symfony/vendor/propel-generator/classes/propel/phing/AbstractPropelDataModelTask.php",
+      "source_changed": true,
+      "exp9_exit": 255,
+      "exp10_exit": 0,
+      "diagnostics_changed": true
+    }
+  ],
+  "collection_complete": true,
+  "comparison": {
+    "checks": {
+      "both_scan_all_11784_files": true,
+      "43_selected_targets": true,
+      "all_targets_previously_rejected": true,
+      "all_targets_now_accepted": true,
+      "unchanged_sources_same_outcome_and_diagnostics": true,
+      "remaining_rejected_paths_unchanged": true,
+      "no_incomplete_subprocesses": true,
+      "observed_exp9_rejections_54": true,
+      "observed_exp10_rejections_11": true
+    },
+    "bounded_regression_pass": true,
+    "unchanged_outcome_differences": [],
+    "target_rejections_after": [],
+    "remaining_rejected_paths": [
+      "alpha/apps/kaltura/lib/baseObjectUtils.class.php",
+      "vendor/aws/Doctrine/Common/Cache/RiakCache.php",
+      "vendor/htmlpurifier/library/HTMLPurifier.autoload.php",
+      "vendor/symfony-data/bin/symfony.php",
+      "vendor/symfony-data/generator/sfPropelAdmin/default/skeleton/actions/actions.class.php",
+      "vendor/symfony-data/generator/sfPropelCrud/default/skeleton/actions/actions.class.php",
+      "vendor/symfony-data/skeleton/batch/default.php",
+      "vendor/symfony-data/skeleton/batch/rotate_log.php",
+      "vendor/symfony-data/skeleton/controller/controller.php",
+      "vendor/symfony-data/skeleton/module/module/actions/actions.class.php",
+      "vendor/symfony/util/sfCore.class.php"
+    ],
+    "scope": "43-target compiler repair only; remaining rejections are not waived"
+  },
+  "candidate_all_files_compile": false,
+  "application_acceptance": false,
+  "variants": {
+    "exp9": {
+      "zip_sha256": "cb61e4cd11009bbf9e6e362dfafa5ef2f4af22da817c75fedbd7741a08e44cbc",
+      "verified_source_files": 15193,
+      "selected_extensions": [
+        ".inc",
+        ".php",
+        ".php5",
+        ".phtml"
+      ],
+      "summary": {
+        "files_scanned": 11784,
+        "compiler_rejected": 54,
+        "compiler_accepted": 11730,
+        "incomplete": 0,
+        "diagnostic_files": 118,
+        "accepted_with_diagnostics": 64
+      }
+    },
+    "exp10": {
+      "zip_sha256": "de177e6cbaedf3a3207661c2325f466cce37febb73190f3a49d31f24b740c053",
+      "verified_source_files": 15236,
+      "selected_extensions": [
+        ".inc",
+        ".php",
+        ".php5",
+        ".phtml"
+      ],
+      "summary": {
+        "files_scanned": 11784,
+        "compiler_rejected": 11,
+        "compiler_accepted": 11773,
+        "incomplete": 0,
+        "diagnostic_files": 77,
+        "accepted_with_diagnostics": 66
+      }
+    }
+  },
+  "execution": {
+    "executor": "Codex delegated candidate_plan agent",
+    "command": "ssh -F /tmp/kaltura-php83-ssh.conf php83 'bash /home/vagrant/php-candidate-syntax-exp10/tools/run.sh'",
+    "exit": 0,
+    "independent_repeat": "pending Claude CLI",
+    "primary_json_sha256": "f60068a6f6c4d1231c4e781ba83b23246d0c65acd5debfd1f331acd876b745bc",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "guest_harness_matches_frozen_local": true,
+    "initial_precheck": "Raw hash-list diff failed solely due to locale glob ordering. Exact filename-to-hash comparison passed before scanner launch; no script bytes changed."
+  }
+}

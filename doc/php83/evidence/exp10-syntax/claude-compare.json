@@ -1,0 +1,108 @@
+{
+  "schema": 1,
+  "reports_equal_except_record_duration_ns": true,
+  "independent_logical_rows": 23568,
+  "collection_complete": true,
+  "comparison": {
+    "checks": {
+      "both_scan_all_11784_files": true,
+      "43_selected_targets": true,
+      "all_targets_previously_rejected": true,
+      "all_targets_now_accepted": true,
+      "unchanged_sources_same_outcome_and_diagnostics": true,
+      "remaining_rejected_paths_unchanged": true,
+      "no_incomplete_subprocesses": true,
+      "observed_exp9_rejections_54": true,
+      "observed_exp10_rejections_11": true
+    },
+    "bounded_regression_pass": true,
+    "unchanged_outcome_differences": [],
+    "target_rejections_after": [],
+    "remaining_rejected_paths": [
+      "alpha/apps/kaltura/lib/baseObjectUtils.class.php",
+      "vendor/aws/Doctrine/Common/Cache/RiakCache.php",
+      "vendor/htmlpurifier/library/HTMLPurifier.autoload.php",
+      "vendor/symfony-data/bin/symfony.php",
+      "vendor/symfony-data/generator/sfPropelAdmin/default/skeleton/actions/actions.class.php",
+      "vendor/symfony-data/generator/sfPropelCrud/default/skeleton/actions/actions.class.php",
+      "vendor/symfony-data/skeleton/batch/default.php",
+      "vendor/symfony-data/skeleton/batch/rotate_log.php",
+      "vendor/symfony-data/skeleton/controller/controller.php",
+      "vendor/symfony-data/skeleton/module/module/actions/actions.class.php",
+      "vendor/symfony/util/sfCore.class.php"
+    ],
+    "scope": "43-target compiler repair only; remaining rejections are not waived"
+  },
+  "variants": {
+    "exp9": {
+      "files_scanned": 11784,
+      "compiler_rejected": 54,
+      "compiler_accepted": 11730,
+      "incomplete": 0,
+      "diagnostic_files": 118,
+      "accepted_with_diagnostics": 64
+    },
+    "exp10": {
+      "files_scanned": 11784,
+      "compiler_rejected": 11,
+      "compiler_accepted": 11773,
+      "incomplete": 0,
+      "diagnostic_files": 77,
+      "accepted_with_diagnostics": 66
+    }
+  },
+  "newly_accepted_with_diagnostics": [
+    {
+      "path": "vendor/symfony/vendor/phing/tasks/system/CvsPassTask.php",
+      "sha256": "e599463f6840a7fb754f18a34e971ef283f688abe7fae28f0534129558721d7c",
+      "command": [
+        "/usr/bin/php8.3",
+        "-n",
+        "-d",
+        "short_open_tag=1",
+        "-d",
+        "error_reporting=32767",
+        "-d",
+        "display_errors=stderr",
+        "-d",
+        "log_errors=0",
+        "-l",
+        "/audit/exp10/vendor/symfony/vendor/phing/tasks/system/CvsPassTask.php"
+      ],
+      "exit": 0,
+      "diagnostics": "Warning: Private methods cannot be final as they are never overridden by other classes in vendor/symfony/vendor/phing/tasks/system/CvsPassTask.php on line 141"
+    },
+    {
+      "path": "vendor/symfony/vendor/phing/util/FileUtils.php",
+      "sha256": "642626dc9711dd2ba394936c1fa566e3ceba3b380fd9cf4c8d0eea64820c4cf8",
+      "command": [
+        "/usr/bin/php8.3",
+        "-n",
+        "-d",
+        "short_open_tag=1",
+        "-d",
+        "error_reporting=32767",
+        "-d",
+        "display_errors=stderr",
+        "-d",
+        "log_errors=0",
+        "-l",
+        "/audit/exp10/vendor/symfony/vendor/phing/util/FileUtils.php"
+      ],
+      "exit": 0,
+      "diagnostics": "Deprecated: Optional parameter $overwrite declared before required parameter $project is implicitly treated as a required parameter in vendor/symfony/vendor/phing/util/FileUtils.php on line 74\nDeprecated: Optional parameter $preserveLastModified declared before required parameter $project is implicitly treated as a required parameter in vendor/symfony/vendor/phing/util/FileUtils.php on line 74\nDeprecated: Optional parameter $filterChains declared before required parameter $project is implicitly treated as a required parameter in vendor/symfony/vendor/phing/util/FileUtils.php on line 74"
+    }
+  ],
+  "candidate_all_files_compile": false,
+  "application_acceptance": false,
+  "scope": "independent repetition of bounded compiler repair; no whole-candidate acceptance",
+  "inputs_sha256": {
+    "../../../doc/php83/evidence/exp10-syntax/primary.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "../../../doc/php83/evidence/exp10-syntax/primary.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "../../../doc/php83/evidence/exp10-syntax/primary.json": "f60068a6f6c4d1231c4e781ba83b23246d0c65acd5debfd1f331acd876b745bc",
+    "../../../doc/php83/evidence/exp10-syntax/claude-scan.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "../../../doc/php83/evidence/exp10-syntax/claude-scan.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "../../../doc/php83/evidence/exp10-syntax/claude-scan.json": "fe40ae1fa33ef695045c2621640ffa1965999f2e5bbe4cadda11b2064c2676a1"
+  },
+  "comparator_sha256": "20776a6bad7d29d516e8ac1bc71aef20f83f2940d42cdb82d31d432fa50ce0b4"
+}

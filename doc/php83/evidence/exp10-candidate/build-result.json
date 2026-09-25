@@ -1,0 +1,32 @@
+{
+  "phase": "Reviewed exp10 dual build and exact artifact deltas",
+  "executor": "Codex delegated artifact build task",
+  "zip_sha256": "de177e6cbaedf3a3207661c2325f466cce37febb73190f3a49d31f24b740c053",
+  "repeat_sha256": "de177e6cbaedf3a3207661c2325f466cce37febb73190f3a49d31f24b740c053",
+  "original_zip_sha256": "58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28",
+  "build_exits": {
+    "stage": 0,
+    "primary": 0,
+    "repeat": 0
+  },
+  "verifier_exit": 0,
+  "previous_delta_verifier_exit": 0,
+  "original_to_exp10_source_changes": 59,
+  "exp9_to_exp10_source_changes": 43,
+  "metadata_members": 61,
+  "prior16_source_results_preserved": true,
+  "regular_files": 15236,
+  "zip_entries": 18088,
+  "all_prior_application_members_preserved": true,
+  "identities": {
+    "tools/php83/build-experimental-zip.py": "055443730325459ff2f4e5ad093542e3aa544f6d82af8b21174027f5cdbf523e",
+    "tools/php83/verify-experimental-zip.py": "211a0c187a53e4444fd0b5bfd0be972544ff66f21e7ce2d78c1c6aa2206ee6bc",
+    "tools/php83/exp10-candidate/stage.py": "9accb4ada6b1e0e48e304a66877d2b46fc9f8b8d67ac51d78d9b5eae96a70cf0",
+    "doc/php83/evidence/exp10-candidate/verify-previous-delta.py": "a0583b7994b6e8fbaf27fa8ad9a8489d8cea4e16779f03b6b296717f10b66ea3",
+    "doc/php83/evidence/exp10-candidate/manifest.json": "db4c2b6dfff31f9fd64e05f29e0ccd79b2049e85e7c27ee29b2783605db387aa"
+  },
+  "output_directories_preexisting": false,
+  "build_failures": [],
+  "no_vm_or_release_operations": true,
+  "application_acceptance": false
+}

@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "phase": "prepared-not-executed",
+  "artifact_pin_present": false,
+  "harness_sha256": {
+    "tools/php83/exp10-api/README.md": "6e3368a303f2b433957903bba0dc1d4abdbff3a3d38abece7914d7a463e7e030",
+    "tools/php83/exp10-api/artifact.py": "ac11b9a5581173837f6cd0d772157a69182ab7cc61804371554df7f727cef99e",
+    "tools/php83/exp10-api/collect-curly.py": "bce58746d070601c7535522bce217988910ac12903b134e98f2bf1ea6004494e",
+    "tools/php83/exp10-api/collect.py": "ad24ce1f41a999f6a6209017b9825c2527094f6895b812cc332d18a59657ed02",
+    "tools/php83/exp10-api/run-apache.sh": "ca411b3048600db231459b87ea00a8f10f0983a4f3af134629e48265d40214c0",
+    "tools/php83/exp10-api/run-curly.sh": "4f5bad453269e0babf7b2e1dc01054140aa15df8aa1ff2425578a64111e2aa45",
+    "tools/php83/exp10-api/stage.sh": "065606b1dc6f9f85e7b97c70c6c023de604114052dbab1934c563b0c60e13dde",
+    "tools/php83/exp10-api/start-db.sh": "80ec639d37b2963742a30ed0f65d197e186631f6b0fe2df53660d27468346d0e",
+    "tools/php83/exp10-api/test_collector.py": "0340f51bdb10b06a3929503ab8d2cbe98996501971a9918f9441e08400d3b580",
+    "tools/php83/exp10-api/test_pin.py": "4e31224ee608511a6b1a5fbed850d48a4973aaec82ef2584ab4d1435ce06c2c9",
+    "tools/php83/exp10-api/verify-source.py": "11f1cd56c9de8a90f6e0b5c7018db1b0112784ba33d839ca7a7b14cd915a7ace",
+    "tools/php83/exp10-regression/batch.py": "fec025e939870f01d23061b6ef435fd7c0a1322678b114aa62d3851f07ad1685",
+    "tools/php83/exp10-regression/run-one.sh": "3d3b235452c84cbe585a68903e9d4e205cfbdb8a42dcec37145793a5283d8eb5"
+  },
+  "api_rows": 4,
+  "cli_rows": 48,
+  "actual_exp10_class_processes": 3,
+  "actual_exp10_class_cases": 68,
+  "local_tests": 15,
+  "vm_calls": 0,
+  "sql_executed": false,
+  "application_acceptance": false
+}

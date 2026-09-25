@@ -253,3 +253,11 @@ three-file before74/candidate74/candidate83 behavior yields204 checked rows,
 independently identical; retained Google overreads and changed diagnostic severity
 are explicit. See `doc/php83/curly-offsets.md`. All patches remain held, not
 selected in exp9; broader source/runtime acceptance and original gates stay open.
+
+T0-04/T1-01/T1-02 partial artifact integration: exp10 preserves16 prior targets and
+adds43 pure curly repairs, with two identical ZIPs and independent archive delta.
+Whole-source scan11784 each records54→11 compiler rejections, no unchanged-file
+regression, and two newlyvisible declaration-diagnostic files. Four API/48 CLI
+rows and68 actualartifact class cases pass bounded contracts;18groups503APIevents
+remain unresolved. See `doc/php83/exp10-integration.md`; no full-case checkbox or
+production/package/release gate closes.

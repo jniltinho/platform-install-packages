@@ -1,0 +1,6 @@
+39caaa9632546c1fdd459294296540e5e1feb08aaa0f0785c09998021c5064a4  tools/php83/exp10-syntax/README.md
+a38d5c3b219f8da6a3d7f848e68ae937444c91a4cddcd579f0e0de9f8b7cf4b8  tools/php83/exp10-syntax/input-contract.json
+60194b705d7a5d421df4f85750c0429598693bed82e07e20e2b12b90a8efbe12  tools/php83/exp10-syntax/run.sh
+221d657f6dd990a94a2b36b80ef313d3c72c3376ec35c3be6760477a035318be  tools/php83/exp10-syntax/scan.py
+a0a2aad1167b1375555721958c31326a90309f889484c36bad7709b1aa553df3  tools/php83/exp10-syntax/stage.py
+44c8353009d76aa6639f71cb99960e38dcdf811f1374001bcaecb9fe99f4b867  tools/php83/exp10-syntax/test_scan.py

@@ -1,0 +1,561 @@
+{
+  "schema": 1,
+  "scope": "actual exp10 artifact, three class files, 68 cases; no all59-file runtime acceptance",
+  "artifact": {
+    "zip_sha256": "de177e6cbaedf3a3207661c2325f466cce37febb73190f3a49d31f24b740c053",
+    "verified_extracted_files": 15236
+  },
+  "harness": {
+    "/home/vagrant/php-exp10-regression/api/run-curly.sh": "4f5bad453269e0babf7b2e1dc01054140aa15df8aa1ff2425578a64111e2aa45",
+    "/home/vagrant/php-exp10-regression/api/verify-source.py": "11f1cd56c9de8a90f6e0b5c7018db1b0112784ba33d839ca7a7b14cd915a7ace",
+    "/home/vagrant/php-exp10-regression/api/artifact.py": "ac11b9a5581173837f6cd0d772157a69182ab7cc61804371554df7f727cef99e",
+    "/home/vagrant/php-exp10-regression/tests/curly-offsets-probe.php": "7cd251fd9120fa86b4a1e4b2f2bdc9705da78db76ea158dda2b5c42068448a8a"
+  },
+  "collector_sha256": "bce58746d070601c7535522bce217988910ac12903b134e98f2bf1ea6004494e",
+  "imported_validator_sha256": "23348881516b35800ca359e2b2fd6a667c375a0dcb8eb0904eb3fb4256fa5b7c",
+  "prior_corpus_sha256": "0b506f100680f0a5e02fa1af71ed34ffe7cbd16a85c50375010dae63c5b64991",
+  "records": [
+    {
+      "case": "google-old",
+      "command": "bash /home/vagrant/php-exp10-regression/api/run-curly.sh google-old",
+      "exit": 0,
+      "validation_error": null,
+      "result": {
+        "case": "google-old",
+        "php": "8.3.6",
+        "source_path": "vendor/google-api-php-client/src/service/Google_Utils.php",
+        "source_sha256": "27a4c379d02366d618bf84490d0ba2d0bbd1944fe9ea0547f1dd862c7382adb0",
+        "load_diagnostics": [],
+        "rows": [
+          {
+            "case": "length-empty",
+            "value": 0,
+            "diagnostics": []
+          },
+          {
+            "case": "length-ascii",
+            "value": 3,
+            "diagnostics": []
+          },
+          {
+            "case": "length-nul",
+            "value": 3,
+            "diagnostics": []
+          },
+          {
+            "case": "length-binary",
+            "value": 2,
+            "diagnostics": []
+          },
+          {
+            "case": "length-two-byte",
+            "value": 3,
+            "diagnostics": [
+              {
+                "phase": "length-two-byte",
+                "severity": 2,
+                "file": "Google_Utils.php",
+                "line": 58,
+                "category": "uninitialized-string-offset",
+                "message_sha256": "7339cf0c3e68b965ca0c7defb257171af289e729ebdd64835a08b5911a023869"
+              }
+            ]
+          },
+          {
+            "case": "length-four-byte",
+            "value": 7,
+            "diagnostics": [
+              {
+                "phase": "length-four-byte",
+                "severity": 2,
+                "file": "Google_Utils.php",
+                "line": 58,
+                "category": "uninitialized-string-offset",
+                "message_sha256": "5d99e8dc9b12448210a60143457e1eb78faaaa9d67fbad6a3094f2fe3895e83c"
+              },
+              {
+                "phase": "length-four-byte",
+                "severity": 2,
+                "file": "Google_Utils.php",
+                "line": 58,
+                "category": "uninitialized-string-offset",
+                "message_sha256": "eb335af6247ea16f689d6366c247813bd4e799a7f4b13ade2f479a53c8e3e6b9"
+              },
+              {
+                "phase": "length-four-byte",
+                "severity": 2,
+                "file": "Google_Utils.php",
+                "line": 58,
+                "category": "uninitialized-string-offset",
+                "message_sha256": "dbe198866e1ed60adc7a262a34849be4f0fe7982b1d512d8e13a35880aefb51a"
+              }
+            ]
+          },
+          {
+            "case": "length-mixed",
+            "value": 5,
+            "diagnostics": [
+              {
+                "phase": "length-mixed",
+                "severity": 2,
+                "file": "Google_Utils.php",
+                "line": 58,
+                "category": "uninitialized-string-offset",
+                "message_sha256": "5d99e8dc9b12448210a60143457e1eb78faaaa9d67fbad6a3094f2fe3895e83c"
+              }
+            ]
+          },
+          {
+            "case": "base64-encode-empty",
+            "value": "",
+            "diagnostics": []
+          },
+          {
+            "case": "base64-decode-empty",
+            "value": "",
+            "diagnostics": []
+          },
+          {
+            "case": "base64-encode-ascii",
+            "value": "Zm9v",
+            "diagnostics": []
+          },
+          {
+            "case": "base64-decode-ascii",
+            "value": "666f6f",
+            "diagnostics": []
+          },
+          {
+            "case": "base64-encode-unicode",
+            "value": "w6k",
+            "diagnostics": []
+          },
+          {
+            "case": "base64-decode-unicode",
+            "value": "c3a9",
+            "diagnostics": []
+          },
+          {
+            "case": "base64-encode-binary",
+            "value": "AP8",
+            "diagnostics": []
+          },
+          {
+            "case": "base64-decode-binary",
+            "value": "00ff",
+            "diagnostics": []
+          },
+          {
+            "case": "normalize-map",
+            "value": {
+              "hello": 2,
+              "world": null
+            },
+            "diagnostics": []
+          },
+          {
+            "case": "normalize-nonarray",
+            "value": [],
+            "diagnostics": []
+          },
+          {
+            "case": "native-array-types",
+            "value": [
+              "zero",
+              false,
+              null,
+              false
+            ],
+            "diagnostics": []
+          },
+          {
+            "case": "native-string-bytes",
+            "value": [
+              "41",
+              "00",
+              "ff"
+            ],
+            "diagnostics": []
+          },
+          {
+            "case": "native-string-overread",
+            "value": "",
+            "diagnostics": [
+              {
+                "phase": "native-string-overread",
+                "severity": 2,
+                "file": "probe.php",
+                "line": 64,
+                "category": "uninitialized-string-offset",
+                "message_sha256": "7339cf0c3e68b965ca0c7defb257171af289e729ebdd64835a08b5911a023869"
+              }
+            ]
+          }
+        ]
+      },
+      "matches_prior_actual_candidate83": true,
+      "stdout_sha256": "de5bef6e83f28e718d4efd3ab9ebb557767413531b5f90e93f877725db39ce6b",
+      "stderr_sha256": "212a5667040af746f687f106146a3b11eb4b8a4fd43d2d0f80f325775a323b0a"
+    },
+    {
+      "case": "google-new",
+      "command": "bash /home/vagrant/php-exp10-regression/api/run-curly.sh google-new",
+      "exit": 0,
+      "validation_error": null,
+      "result": {
+        "case": "google-new",
+        "php": "8.3.6",
+        "source_path": "vendor/google-api-php-client-1.1.2/src/Google/Utils.php",
+        "source_sha256": "702aef5136606a005e331bb74181a480e7b3226f41f51127acd70e926f765dec",
+        "load_diagnostics": [],
+        "rows": [
+          {
+            "case": "length-empty",
+            "value": 0,
+            "diagnostics": []
+          },
+          {
+            "case": "length-ascii",
+            "value": 3,
+            "diagnostics": []
+          },
+          {
+            "case": "length-nul",
+            "value": 3,
+            "diagnostics": []
+          },
+          {
+            "case": "length-binary",
+            "value": 2,
+            "diagnostics": []
+          },
+          {
+            "case": "length-two-byte",
+            "value": 3,
+            "diagnostics": [
+              {
+                "phase": "length-two-byte",
+                "severity": 2,
+                "file": "Utils.php",
+                "line": 65,
+                "category": "uninitialized-string-offset",
+                "message_sha256": "7339cf0c3e68b965ca0c7defb257171af289e729ebdd64835a08b5911a023869"
+              }
+            ]
+          },
+          {
+            "case": "length-four-byte",
+            "value": 7,
+            "diagnostics": [
+              {
+                "phase": "length-four-byte",
+                "severity": 2,
+                "file": "Utils.php",
+                "line": 65,
+                "category": "uninitialized-string-offset",
+                "message_sha256": "5d99e8dc9b12448210a60143457e1eb78faaaa9d67fbad6a3094f2fe3895e83c"
+              },
+              {
+                "phase": "length-four-byte",
+                "severity": 2,
+                "file": "Utils.php",
+                "line": 65,
+                "category": "uninitialized-string-offset",
+                "message_sha256": "eb335af6247ea16f689d6366c247813bd4e799a7f4b13ade2f479a53c8e3e6b9"
+              },
+              {
+                "phase": "length-four-byte",
+                "severity": 2,
+                "file": "Utils.php",
+                "line": 65,
+                "category": "uninitialized-string-offset",
+                "message_sha256": "dbe198866e1ed60adc7a262a34849be4f0fe7982b1d512d8e13a35880aefb51a"
+              }
+            ]
+          },
+          {
+            "case": "length-mixed",
+            "value": 5,
+            "diagnostics": [
+              {
+                "phase": "length-mixed",
+                "severity": 2,
+                "file": "Utils.php",
+                "line": 65,
+                "category": "uninitialized-string-offset",
+                "message_sha256": "5d99e8dc9b12448210a60143457e1eb78faaaa9d67fbad6a3094f2fe3895e83c"
+              }
+            ]
+          },
+          {
+            "case": "base64-encode-empty",
+            "value": "",
+            "diagnostics": []
+          },
+          {
+            "case": "base64-decode-empty",
+            "value": "",
+            "diagnostics": []
+          },
+          {
+            "case": "base64-encode-ascii",
+            "value": "Zm9v",
+            "diagnostics": []
+          },
+          {
+            "case": "base64-decode-ascii",
+            "value": "666f6f",
+            "diagnostics": []
+          },
+          {
+            "case": "base64-encode-unicode",
+            "value": "w6k",
+            "diagnostics": []
+          },
+          {
+            "case": "base64-decode-unicode",
+            "value": "c3a9",
+            "diagnostics": []
+          },
+          {
+            "case": "base64-encode-binary",
+            "value": "AP8",
+            "diagnostics": []
+          },
+          {
+            "case": "base64-decode-binary",
+            "value": "00ff",
+            "diagnostics": []
+          },
+          {
+            "case": "normalize-map",
+            "value": {
+              "hello": 2,
+              "world": null
+            },
+            "diagnostics": []
+          },
+          {
+            "case": "normalize-nonarray",
+            "value": [],
+            "diagnostics": []
+          },
+          {
+            "case": "native-array-types",
+            "value": [
+              "zero",
+              false,
+              null,
+              false
+            ],
+            "diagnostics": []
+          },
+          {
+            "case": "native-string-bytes",
+            "value": [
+              "41",
+              "00",
+              "ff"
+            ],
+            "diagnostics": []
+          },
+          {
+            "case": "native-string-overread",
+            "value": "",
+            "diagnostics": [
+              {
+                "phase": "native-string-overread",
+                "severity": 2,
+                "file": "probe.php",
+                "line": 64,
+                "category": "uninitialized-string-offset",
+                "message_sha256": "7339cf0c3e68b965ca0c7defb257171af289e729ebdd64835a08b5911a023869"
+              }
+            ]
+          }
+        ]
+      },
+      "matches_prior_actual_candidate83": true,
+      "stdout_sha256": "0441d0e8409a813f2c1524121bbad08d92d3d68c7a52d896070385cd4c273d30",
+      "stderr_sha256": "4fe9c7c56f531036b08f19b70eba79b584bbd6792ac299eac94ce6d93d503afc"
+    },
+    {
+      "case": "purifier",
+      "command": "bash /home/vagrant/php-exp10-regression/api/run-curly.sh purifier",
+      "exit": 0,
+      "validation_error": null,
+      "result": {
+        "case": "purifier",
+        "php": "8.3.6",
+        "source_path": "vendor/htmlpurifier/library/HTMLPurifier/Encoder.php",
+        "source_sha256": "657cb46cabdce5c915043ac6e8546467186f44a98c2f5f60b0e5079259ea5d7b",
+        "load_diagnostics": [],
+        "rows": [
+          {
+            "case": "clean-empty",
+            "value": "",
+            "diagnostics": []
+          },
+          {
+            "case": "clean-ascii",
+            "value": "616263",
+            "diagnostics": []
+          },
+          {
+            "case": "clean-unicode",
+            "value": "c3a9f09f9880",
+            "diagnostics": []
+          },
+          {
+            "case": "clean-nul-ascii",
+            "value": "41",
+            "diagnostics": []
+          },
+          {
+            "case": "clean-invalid-lead",
+            "value": "42",
+            "diagnostics": []
+          },
+          {
+            "case": "clean-stray-continuation",
+            "value": "41",
+            "diagnostics": []
+          },
+          {
+            "case": "clean-overlong",
+            "value": "",
+            "diagnostics": []
+          },
+          {
+            "case": "clean-truncated",
+            "value": "",
+            "diagnostics": []
+          },
+          {
+            "case": "clean-surrogate",
+            "value": "",
+            "diagnostics": []
+          },
+          {
+            "case": "clean-unicode-control",
+            "value": "",
+            "diagnostics": []
+          },
+          {
+            "case": "clean-allowed-control",
+            "value": "090a0d",
+            "diagnostics": []
+          },
+          {
+            "case": "clean-nul-unicode",
+            "value": "c3a9f09f9880",
+            "diagnostics": []
+          },
+          {
+            "case": "unichr--1",
+            "value": "",
+            "diagnostics": []
+          },
+          {
+            "case": "unichr-0",
+            "value": "00",
+            "diagnostics": []
+          },
+          {
+            "case": "unichr-65",
+            "value": "41",
+            "diagnostics": []
+          },
+          {
+            "case": "unichr-127",
+            "value": "7f",
+            "diagnostics": []
+          },
+          {
+            "case": "unichr-128",
+            "value": "c280",
+            "diagnostics": []
+          },
+          {
+            "case": "unichr-233",
+            "value": "c3a9",
+            "diagnostics": []
+          },
+          {
+            "case": "unichr-2047",
+            "value": "dfbf",
+            "diagnostics": []
+          },
+          {
+            "case": "unichr-2048",
+            "value": "e0a080",
+            "diagnostics": []
+          },
+          {
+            "case": "unichr-55296",
+            "value": "",
+            "diagnostics": []
+          },
+          {
+            "case": "unichr-128512",
+            "value": "f09f9880",
+            "diagnostics": []
+          },
+          {
+            "case": "unichr-1114111",
+            "value": "f48fbfbf",
+            "diagnostics": []
+          },
+          {
+            "case": "unichr-1114112",
+            "value": "",
+            "diagnostics": []
+          },
+          {
+            "case": "ascii-entities",
+            "value": "A&#233;&#128512;",
+            "diagnostics": []
+          },
+          {
+            "case": "native-array-types",
+            "value": [
+              "zero",
+              false,
+              null,
+              false
+            ],
+            "diagnostics": []
+          },
+          {
+            "case": "native-string-bytes",
+            "value": [
+              "41",
+              "00",
+              "ff"
+            ],
+            "diagnostics": []
+          },
+          {
+            "case": "native-string-overread",
+            "value": "",
+            "diagnostics": [
+              {
+                "phase": "native-string-overread",
+                "severity": 2,
+                "file": "probe.php",
+                "line": 64,
+                "category": "uninitialized-string-offset",
+                "message_sha256": "7339cf0c3e68b965ca0c7defb257171af289e729ebdd64835a08b5911a023869"
+              }
+            ]
+          }
+        ]
+      },
+      "matches_prior_actual_candidate83": true,
+      "stdout_sha256": "47d903c9353fa68153b51c5d624778a6e355e756a33bb3694b877d60ba6f6f48",
+      "stderr_sha256": "2f36c0f1143f63fdea8fe34c06c855e001276c7a3566cf9154a20fe2f3a26b21"
+    }
+  ],
+  "functional_checks_passed": true,
+  "application_acceptance": false
+}

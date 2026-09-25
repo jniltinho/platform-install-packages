@@ -1,0 +1,9 @@
+Work only /home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83. Exclusive php83lab NOW for independent full exp9/exp10 syntaxrepeat and36CLI repeat; no baseline74 (notneeded), noagents/installs/sourceedits/.20. Allsourcesstagedverified, no restage.
+Execute sequentially with nooverwrite outputguards:
+1 ssh -T -F /tmp/kaltura-php83-ssh.conf php83 'python3 -' <doc/php83/evidence/exp10-runtime/snapshot-php83.py >doc/php83/evidence/exp10-runtime/claude-runtime83-before.json
+2 ssh -T -F /tmp/kaltura-php83-ssh.conf php83 'bash /home/vagrant/php-candidate-syntax-exp10/tools/run.sh' >doc/php83/evidence/exp10-syntax/claude-scan.json
+3 ssh -T -F /tmp/kaltura-php83-ssh.conf php83 'python3 /home/vagrant/php-exp10-regression/exp10-regression/batch.py' >doc/php83/evidence/exp10-runtime/claude-cli83.json
+4 repeatsnapshot step1 to claude-runtime83-after.json
+Capture actualeachcommandexit/stderr; scan can take120secs, allow upto240 secs. Syntaxexpect11784each/54→11rejections, all43target255→0, unchangedfileoutcomesexact, no incomplete; candidate_all_files_compile false. Candidateacceptedwithdiagnostics66 includes newlyvisiblefinalprivateCvsPassTask and3optionalbefore-requiredFileUtils, notwaived.
+CLI36rows32positive4expectedoriginal83JSONfatal255; exp9/exp10all12positive each, compareprimarylogicalrows stdout/stderr/exit ignoring duration/time only; use typedJSON comparisons against cli74-primary whereappropriate. Runtime83snapshotsbeforeafterexact (39objects moduleslibs). Reviewactualsources/harnesshashes and compareprimary-scanfields ignoring onlyduration_ns. Run28 local exp10-syntax tests. Noall-appacceptance;18APIgroups503events unchanged fromseparatebaselineClaude.
+Onlyrequestednewreportfiles maybewritten, no overwrite or sourcechange. Final conciseEnglish commands/exits/counts and concretefindings. If comparisonhelper exists tools/php83/exp10-syntax/compare.py inspectitsCLIandexecute onlyifneededinputsavailable; don'tedit.

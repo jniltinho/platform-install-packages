@@ -1,0 +1,37 @@
+[
+  [
+    "cli74-primary",
+    [
+      "ssh",
+      "-T",
+      "-F",
+      "/tmp/kaltura-php74-ssh.conf",
+      "baseline74",
+      "python3 /home/vagrant/php-exp10-regression/exp10-regression/batch.py"
+    ]
+  ],
+  [
+    "api-primary",
+    [
+      "python3",
+      "tools/php83/exp10-api/collect.py",
+      "doc/php83/evidence/exp10-runtime/api-primary.json"
+    ]
+  ],
+  [
+    "curly-primary",
+    [
+      "python3",
+      "tools/php83/exp10-api/collect-curly.py",
+      "doc/php83/evidence/exp10-runtime/curly-primary.json"
+    ]
+  ],
+  [
+    "runtime-after",
+    [
+      "python3",
+      "tools/php83/exp10-api/runtime-identity.py",
+      "doc/php83/evidence/exp10-runtime/runtime-after.json"
+    ]
+  ]
+]
