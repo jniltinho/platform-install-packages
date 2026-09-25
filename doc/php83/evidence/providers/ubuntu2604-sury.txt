@@ -1,0 +1,1628 @@
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+The following additional packages will be installed:
+  adduser bash-completion dirmngr gnupg-l10n gnupg-utils gpg gpg-agent
+  gpg-wks-client gpgconf gpgsm krb5-locales libassuan9 libbrotli1 libcurl4t64
+  libffi8 libgnutls30t64 libgssapi-krb5-2 libhogweed6t64 libidn2-0
+  libk5crypto3 libkeyutils1 libkrb5-3 libkrb5support0 libksba8 libldap-common
+  libldap2 libnettle8t64 libnghttp2-14 libnpth0t64 libp11-kit0 libpsl5t64
+  libreadline8t64 librtmp1 libsasl2-2 libsasl2-modules libsasl2-modules-db
+  libsqlite3-0 libssh2-1t64 libtasn1-6 libunistring5 openssl pinentry-curses
+  publicsuffix readline-common
+Suggested packages:
+  liblocale-gettext-perl perl cron quota ecryptfs-utils dbus-user-session
+  libpam-systemd pinentry-gnome3 tor gpg-wks-server parcimonie xloadimage
+  scdaemon tpm2daemon gnutls-bin krb5-doc krb5-user
+  libsasl2-modules-gssapi-mit | libsasl2-modules-gssapi-heimdal
+  libsasl2-modules-ldap libsasl2-modules-otp libsasl2-modules-sql pinentry-doc
+  readline-doc
+The following NEW packages will be installed:
+  adduser bash-completion ca-certificates curl dirmngr gnupg gnupg-l10n
+  gnupg-utils gpg gpg-agent gpg-wks-client gpgconf gpgsm krb5-locales
+  libassuan9 libbrotli1 libcurl4t64 libffi8 libgnutls30t64 libgssapi-krb5-2
+  libhogweed6t64 libidn2-0 libk5crypto3 libkeyutils1 libkrb5-3 libkrb5support0
+  libksba8 libldap-common libldap2 libnettle8t64 libnghttp2-14 libnpth0t64
+  libp11-kit0 libpsl5t64 libreadline8t64 librtmp1 libsasl2-2 libsasl2-modules
+  libsasl2-modules-db libsqlite3-0 libssh2-1t64 libtasn1-6 libunistring5
+  openssl pinentry-curses publicsuffix readline-common
+0 upgraded, 47 newly installed, 0 to remove and 1 not upgraded.
+Need to get 10.1 MB of archives.
+After this operation, 28.8 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 adduser all 3.153ubuntu1 [194 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 openssl amd64 3.5.5-1ubuntu3.5 [1243 kB]
+Get:3 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 ca-certificates all 20260601~26.04.1 [139 kB]
+Get:4 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 krb5-locales all 1.22.1-2ubuntu4.1 [13.6 kB]
+Get:5 http://archive.ubuntu.com/ubuntu resolute/main amd64 libffi8 amd64 3.5.2-4 [26.3 kB]
+Get:6 http://archive.ubuntu.com/ubuntu resolute/main amd64 libnettle8t64 amd64 3.10.2-1 [185 kB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute/main amd64 libhogweed6t64 amd64 3.10.2-1 [201 kB]
+Get:8 http://archive.ubuntu.com/ubuntu resolute/main amd64 libunistring5 amd64 1.3-2build1 [610 kB]
+Get:9 http://archive.ubuntu.com/ubuntu resolute/main amd64 libidn2-0 amd64 2.3.8-4build1 [67.6 kB]
+Get:10 http://archive.ubuntu.com/ubuntu resolute/main amd64 libp11-kit0 amd64 0.26.2-2 [313 kB]
+Get:11 http://archive.ubuntu.com/ubuntu resolute/main amd64 libtasn1-6 amd64 4.21.0-2 [45.3 kB]
+Get:12 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libgnutls30t64 amd64 3.8.12-2ubuntu1.1 [1029 kB]
+Get:13 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libkrb5support0 amd64 1.22.1-2ubuntu4.1 [33.5 kB]
+Get:14 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libk5crypto3 amd64 1.22.1-2ubuntu4.1 [82.0 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute/main amd64 libkeyutils1 amd64 1.6.3-6ubuntu3 [10.6 kB]
+Get:16 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libkrb5-3 amd64 1.22.1-2ubuntu4.1 [361 kB]
+Get:17 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libgssapi-krb5-2 amd64 1.22.1-2ubuntu4.1 [147 kB]
+Get:18 http://archive.ubuntu.com/ubuntu resolute/main amd64 readline-common all 8.3-4 [61.5 kB]
+Get:19 http://archive.ubuntu.com/ubuntu resolute/main amd64 libreadline8t64 amd64 8.3-4 [164 kB]
+Get:20 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libsqlite3-0 amd64 3.46.1-9ubuntu0.3 [720 kB]
+Get:21 http://archive.ubuntu.com/ubuntu resolute/main amd64 bash-completion all 1:2.16.0-8build1 [214 kB]
+Get:22 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libnghttp2-14 amd64 1.68.0-2ubuntu0.2 [71.0 kB]
+Get:23 http://archive.ubuntu.com/ubuntu resolute/main amd64 libpsl5t64 amd64 0.21.2-1.1build2 [59.5 kB]
+Get:24 http://archive.ubuntu.com/ubuntu resolute/main amd64 publicsuffix all 20260129.1928-1 [139 kB]
+Get:25 http://archive.ubuntu.com/ubuntu resolute/main amd64 libbrotli1 amd64 1.2.0-3build1 [343 kB]
+Get:26 http://archive.ubuntu.com/ubuntu resolute/main amd64 libsasl2-modules-db amd64 2.1.28+dfsg1-9ubuntu3 [21.1 kB]
+Get:27 http://archive.ubuntu.com/ubuntu resolute/main amd64 libsasl2-2 amd64 2.1.28+dfsg1-9ubuntu3 [54.0 kB]
+Get:28 http://archive.ubuntu.com/ubuntu resolute/main amd64 libldap-common all 2.6.10+dfsg-1ubuntu5 [36.0 kB]
+Get:29 http://archive.ubuntu.com/ubuntu resolute/main amd64 libldap2 amd64 2.6.10+dfsg-1ubuntu5 [204 kB]
+Get:30 http://archive.ubuntu.com/ubuntu resolute/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-3 [59.0 kB]
+Get:31 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libssh2-1t64 amd64 1.11.1-1ubuntu0.26.04.4 [138 kB]
+Get:32 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libcurl4t64 amd64 8.18.0-1ubuntu2.7 [428 kB]
+Get:33 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 curl amd64 8.18.0-1ubuntu2.7 [272 kB]
+Get:34 http://archive.ubuntu.com/ubuntu resolute/main amd64 libassuan9 amd64 3.0.2-2build1 [41.3 kB]
+Get:35 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 gpgconf amd64 2.4.8-4ubuntu3.1 [106 kB]
+Get:36 http://archive.ubuntu.com/ubuntu resolute/main amd64 libksba8 amd64 1.6.7-2build1 [125 kB]
+Get:37 http://archive.ubuntu.com/ubuntu resolute/main amd64 libnpth0t64 amd64 1.8-3build1 [9302 B]
+Get:38 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 dirmngr amd64 2.4.8-4ubuntu3.1 [327 kB]
+Get:39 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 gpg amd64 2.4.8-4ubuntu3.1 [637 kB]
+Get:40 http://archive.ubuntu.com/ubuntu resolute/main amd64 pinentry-curses amd64 1.3.2-3ubuntu1 [41.1 kB]
+Get:41 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 gpg-agent amd64 2.4.8-4ubuntu3.1 [236 kB]
+Get:42 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 gpgsm amd64 2.4.8-4ubuntu3.1 [239 kB]
+Get:43 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 gnupg all 2.4.8-4ubuntu3.1 [311 kB]
+Get:44 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 gnupg-l10n all 2.4.8-4ubuntu3.1 [68.8 kB]
+Get:45 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 gnupg-utils amd64 2.4.8-4ubuntu3.1 [127 kB]
+Get:46 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 gpg-wks-client amd64 2.4.8-4ubuntu3.1 [71.9 kB]
+Get:47 http://archive.ubuntu.com/ubuntu resolute/main amd64 libsasl2-modules amd64 2.1.28+dfsg1-9ubuntu3 [71.3 kB]
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.40.1 /usr/local/share/perl/5.40.1 /usr/lib/x86_64-linux-gnu/perl5/5.40 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.40 /usr/share/perl/5.40 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8, <STDIN> line 47.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Preconfiguring packages ...
+Fetched 10.1 MB in 3s (3595 kB/s)
+Selecting previously unselected package adduser.
+(Reading database ...
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 7724 files and directories currently installed.)
+Preparing to unpack .../adduser_3.153ubuntu1_all.deb ...
+Unpacking adduser (3.153ubuntu1) ...
+Setting up adduser (3.153ubuntu1) ...
+Selecting previously unselected package openssl.
+(Reading database ...
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 7808 files and directories currently installed.)
+Preparing to unpack .../00-openssl_3.5.5-1ubuntu3.5_amd64.deb ...
+Unpacking openssl (3.5.5-1ubuntu3.5) ...
+Selecting previously unselected package ca-certificates.
+Preparing to unpack .../01-ca-certificates_20260601~26.04.1_all.deb ...
+Unpacking ca-certificates (20260601~26.04.1) ...
+Selecting previously unselected package krb5-locales.
+Preparing to unpack .../02-krb5-locales_1.22.1-2ubuntu4.1_all.deb ...
+Unpacking krb5-locales (1.22.1-2ubuntu4.1) ...
+Selecting previously unselected package libffi8:amd64.
+Preparing to unpack .../03-libffi8_3.5.2-4_amd64.deb ...
+Unpacking libffi8:amd64 (3.5.2-4) ...
+Selecting previously unselected package libnettle8t64:amd64.
+Preparing to unpack .../04-libnettle8t64_3.10.2-1_amd64.deb ...
+Unpacking libnettle8t64:amd64 (3.10.2-1) ...
+Selecting previously unselected package libhogweed6t64:amd64.
+Preparing to unpack .../05-libhogweed6t64_3.10.2-1_amd64.deb ...
+Unpacking libhogweed6t64:amd64 (3.10.2-1) ...
+Selecting previously unselected package libunistring5:amd64.
+Preparing to unpack .../06-libunistring5_1.3-2build1_amd64.deb ...
+Unpacking libunistring5:amd64 (1.3-2build1) ...
+Selecting previously unselected package libidn2-0:amd64.
+Preparing to unpack .../07-libidn2-0_2.3.8-4build1_amd64.deb ...
+Unpacking libidn2-0:amd64 (2.3.8-4build1) ...
+Selecting previously unselected package libp11-kit0:amd64.
+Preparing to unpack .../08-libp11-kit0_0.26.2-2_amd64.deb ...
+Unpacking libp11-kit0:amd64 (0.26.2-2) ...
+Selecting previously unselected package libtasn1-6:amd64.
+Preparing to unpack .../09-libtasn1-6_4.21.0-2_amd64.deb ...
+Unpacking libtasn1-6:amd64 (4.21.0-2) ...
+Selecting previously unselected package libgnutls30t64:amd64.
+Preparing to unpack .../10-libgnutls30t64_3.8.12-2ubuntu1.1_amd64.deb ...
+Unpacking libgnutls30t64:amd64 (3.8.12-2ubuntu1.1) ...
+Selecting previously unselected package libkrb5support0:amd64.
+Preparing to unpack .../11-libkrb5support0_1.22.1-2ubuntu4.1_amd64.deb ...
+Unpacking libkrb5support0:amd64 (1.22.1-2ubuntu4.1) ...
+Selecting previously unselected package libk5crypto3:amd64.
+Preparing to unpack .../12-libk5crypto3_1.22.1-2ubuntu4.1_amd64.deb ...
+Unpacking libk5crypto3:amd64 (1.22.1-2ubuntu4.1) ...
+Selecting previously unselected package libkeyutils1:amd64.
+Preparing to unpack .../13-libkeyutils1_1.6.3-6ubuntu3_amd64.deb ...
+Unpacking libkeyutils1:amd64 (1.6.3-6ubuntu3) ...
+Selecting previously unselected package libkrb5-3:amd64.
+Preparing to unpack .../14-libkrb5-3_1.22.1-2ubuntu4.1_amd64.deb ...
+Unpacking libkrb5-3:amd64 (1.22.1-2ubuntu4.1) ...
+Selecting previously unselected package libgssapi-krb5-2:amd64.
+Preparing to unpack .../15-libgssapi-krb5-2_1.22.1-2ubuntu4.1_amd64.deb ...
+Unpacking libgssapi-krb5-2:amd64 (1.22.1-2ubuntu4.1) ...
+Selecting previously unselected package readline-common.
+Preparing to unpack .../16-readline-common_8.3-4_all.deb ...
+Unpacking readline-common (8.3-4) ...
+Selecting previously unselected package libreadline8t64:amd64.
+Preparing to unpack .../17-libreadline8t64_8.3-4_amd64.deb ...
+Adding 'diversion of /lib/x86_64-linux-gnu/libhistory.so.8 to /lib/x86_64-linux-gnu/libhistory.so.8.usr-is-merged by libreadline8t64'
+Adding 'diversion of /lib/x86_64-linux-gnu/libhistory.so.8.2 to /lib/x86_64-linux-gnu/libhistory.so.8.2.usr-is-merged by libreadline8t64'
+Adding 'diversion of /lib/x86_64-linux-gnu/libreadline.so.8 to /lib/x86_64-linux-gnu/libreadline.so.8.usr-is-merged by libreadline8t64'
+Adding 'diversion of /lib/x86_64-linux-gnu/libreadline.so.8.2 to /lib/x86_64-linux-gnu/libreadline.so.8.2.usr-is-merged by libreadline8t64'
+Unpacking libreadline8t64:amd64 (8.3-4) ...
+Selecting previously unselected package libsqlite3-0:amd64.
+Preparing to unpack .../18-libsqlite3-0_3.46.1-9ubuntu0.3_amd64.deb ...
+Unpacking libsqlite3-0:amd64 (3.46.1-9ubuntu0.3) ...
+Selecting previously unselected package bash-completion.
+Preparing to unpack .../19-bash-completion_1%3a2.16.0-8build1_all.deb ...
+Unpacking bash-completion (1:2.16.0-8build1) ...
+Selecting previously unselected package libnghttp2-14:amd64.
+Preparing to unpack .../20-libnghttp2-14_1.68.0-2ubuntu0.2_amd64.deb ...
+Unpacking libnghttp2-14:amd64 (1.68.0-2ubuntu0.2) ...
+Selecting previously unselected package libpsl5t64:amd64.
+Preparing to unpack .../21-libpsl5t64_0.21.2-1.1build2_amd64.deb ...
+Unpacking libpsl5t64:amd64 (0.21.2-1.1build2) ...
+Selecting previously unselected package publicsuffix.
+Preparing to unpack .../22-publicsuffix_20260129.1928-1_all.deb ...
+Unpacking publicsuffix (20260129.1928-1) ...
+Selecting previously unselected package libbrotli1:amd64.
+Preparing to unpack .../23-libbrotli1_1.2.0-3build1_amd64.deb ...
+Unpacking libbrotli1:amd64 (1.2.0-3build1) ...
+Selecting previously unselected package libsasl2-modules-db:amd64.
+Preparing to unpack .../24-libsasl2-modules-db_2.1.28+dfsg1-9ubuntu3_amd64.deb ...
+Unpacking libsasl2-modules-db:amd64 (2.1.28+dfsg1-9ubuntu3) ...
+Selecting previously unselected package libsasl2-2:amd64.
+Preparing to unpack .../25-libsasl2-2_2.1.28+dfsg1-9ubuntu3_amd64.deb ...
+Unpacking libsasl2-2:amd64 (2.1.28+dfsg1-9ubuntu3) ...
+Selecting previously unselected package libldap-common.
+Preparing to unpack .../26-libldap-common_2.6.10+dfsg-1ubuntu5_all.deb ...
+Unpacking libldap-common (2.6.10+dfsg-1ubuntu5) ...
+Selecting previously unselected package libldap2:amd64.
+Preparing to unpack .../27-libldap2_2.6.10+dfsg-1ubuntu5_amd64.deb ...
+Unpacking libldap2:amd64 (2.6.10+dfsg-1ubuntu5) ...
+Selecting previously unselected package librtmp1:amd64.
+Preparing to unpack .../28-librtmp1_2.4+20151223.gitfa8646d.1-3_amd64.deb ...
+Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-3) ...
+Selecting previously unselected package libssh2-1t64:amd64.
+Preparing to unpack .../29-libssh2-1t64_1.11.1-1ubuntu0.26.04.4_amd64.deb ...
+Unpacking libssh2-1t64:amd64 (1.11.1-1ubuntu0.26.04.4) ...
+Selecting previously unselected package libcurl4t64:amd64.
+Preparing to unpack .../30-libcurl4t64_8.18.0-1ubuntu2.7_amd64.deb ...
+Unpacking libcurl4t64:amd64 (8.18.0-1ubuntu2.7) ...
+Selecting previously unselected package curl.
+Preparing to unpack .../31-curl_8.18.0-1ubuntu2.7_amd64.deb ...
+Unpacking curl (8.18.0-1ubuntu2.7) ...
+Selecting previously unselected package libassuan9:amd64.
+Preparing to unpack .../32-libassuan9_3.0.2-2build1_amd64.deb ...
+Unpacking libassuan9:amd64 (3.0.2-2build1) ...
+Selecting previously unselected package gpgconf.
+Preparing to unpack .../33-gpgconf_2.4.8-4ubuntu3.1_amd64.deb ...
+Unpacking gpgconf (2.4.8-4ubuntu3.1) ...
+Selecting previously unselected package libksba8:amd64.
+Preparing to unpack .../34-libksba8_1.6.7-2build1_amd64.deb ...
+Unpacking libksba8:amd64 (1.6.7-2build1) ...
+Selecting previously unselected package libnpth0t64:amd64.
+Preparing to unpack .../35-libnpth0t64_1.8-3build1_amd64.deb ...
+Unpacking libnpth0t64:amd64 (1.8-3build1) ...
+Selecting previously unselected package dirmngr.
+Preparing to unpack .../36-dirmngr_2.4.8-4ubuntu3.1_amd64.deb ...
+Unpacking dirmngr (2.4.8-4ubuntu3.1) ...
+Selecting previously unselected package gpg.
+Preparing to unpack .../37-gpg_2.4.8-4ubuntu3.1_amd64.deb ...
+Unpacking gpg (2.4.8-4ubuntu3.1) ...
+Selecting previously unselected package pinentry-curses.
+Preparing to unpack .../38-pinentry-curses_1.3.2-3ubuntu1_amd64.deb ...
+Unpacking pinentry-curses (1.3.2-3ubuntu1) ...
+Selecting previously unselected package gpg-agent.
+Preparing to unpack .../39-gpg-agent_2.4.8-4ubuntu3.1_amd64.deb ...
+Unpacking gpg-agent (2.4.8-4ubuntu3.1) ...
+Selecting previously unselected package gpgsm.
+Preparing to unpack .../40-gpgsm_2.4.8-4ubuntu3.1_amd64.deb ...
+Unpacking gpgsm (2.4.8-4ubuntu3.1) ...
+Selecting previously unselected package gnupg.
+Preparing to unpack .../41-gnupg_2.4.8-4ubuntu3.1_all.deb ...
+Unpacking gnupg (2.4.8-4ubuntu3.1) ...
+Selecting previously unselected package gnupg-l10n.
+Preparing to unpack .../42-gnupg-l10n_2.4.8-4ubuntu3.1_all.deb ...
+Unpacking gnupg-l10n (2.4.8-4ubuntu3.1) ...
+Selecting previously unselected package gnupg-utils.
+Preparing to unpack .../43-gnupg-utils_2.4.8-4ubuntu3.1_amd64.deb ...
+Unpacking gnupg-utils (2.4.8-4ubuntu3.1) ...
+Selecting previously unselected package gpg-wks-client.
+Preparing to unpack .../44-gpg-wks-client_2.4.8-4ubuntu3.1_amd64.deb ...
+Unpacking gpg-wks-client (2.4.8-4ubuntu3.1) ...
+Selecting previously unselected package libsasl2-modules:amd64.
+Preparing to unpack .../45-libsasl2-modules_2.1.28+dfsg1-9ubuntu3_amd64.deb ...
+Unpacking libsasl2-modules:amd64 (2.1.28+dfsg1-9ubuntu3) ...
+Setting up libksba8:amd64 (1.6.7-2build1) ...
+Setting up libnpth0t64:amd64 (1.8-3build1) ...
+Setting up libkeyutils1:amd64 (1.6.3-6ubuntu3) ...
+Setting up libbrotli1:amd64 (1.2.0-3build1) ...
+Setting up libsqlite3-0:amd64 (3.46.1-9ubuntu0.3) ...
+Setting up libsasl2-modules:amd64 (2.1.28+dfsg1-9ubuntu3) ...
+Setting up libnghttp2-14:amd64 (1.68.0-2ubuntu0.2) ...
+Setting up krb5-locales (1.22.1-2ubuntu4.1) ...
+Setting up libldap-common (2.6.10+dfsg-1ubuntu5) ...
+Setting up libkrb5support0:amd64 (1.22.1-2ubuntu4.1) ...
+Setting up libsasl2-modules-db:amd64 (2.1.28+dfsg1-9ubuntu3) ...
+Setting up libnettle8t64:amd64 (3.10.2-1) ...
+Setting up gnupg-l10n (2.4.8-4ubuntu3.1) ...
+Setting up bash-completion (1:2.16.0-8build1) ...
+Setting up libunistring5:amd64 (1.3-2build1) ...
+Setting up libk5crypto3:amd64 (1.22.1-2ubuntu4.1) ...
+Setting up libsasl2-2:amd64 (2.1.28+dfsg1-9ubuntu3) ...
+Setting up libffi8:amd64 (3.5.2-4) ...
+Setting up libhogweed6t64:amd64 (3.10.2-1) ...
+Setting up libassuan9:amd64 (3.0.2-2build1) ...
+Setting up libtasn1-6:amd64 (4.21.0-2) ...
+Setting up libkrb5-3:amd64 (1.22.1-2ubuntu4.1) ...
+Setting up libssh2-1t64:amd64 (1.11.1-1ubuntu0.26.04.4) ...
+Setting up openssl (3.5.5-1ubuntu3.5) ...
+Setting up readline-common (8.3-4) ...
+Setting up publicsuffix (20260129.1928-1) ...
+Setting up libldap2:amd64 (2.6.10+dfsg-1ubuntu5) ...
+Setting up gnupg-utils (2.4.8-4ubuntu3.1) ...
+Setting up pinentry-curses (1.3.2-3ubuntu1) ...
+Setting up libidn2-0:amd64 (2.3.8-4build1) ...
+Setting up ca-certificates (20260601~26.04.1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.40.1 /usr/local/share/perl/5.40.1 /usr/lib/x86_64-linux-gnu/perl5/5.40 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.40 /usr/share/perl/5.40 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Updating certificates in /etc/ssl/certs...
+121 added, 0 removed; done.
+Setting up libp11-kit0:amd64 (0.26.2-2) ...
+Setting up libgssapi-krb5-2:amd64 (1.22.1-2ubuntu4.1) ...
+Setting up libreadline8t64:amd64 (8.3-4) ...
+Setting up gpgconf (2.4.8-4ubuntu3.1) ...
+Setting up gpg (2.4.8-4ubuntu3.1) ...
+Setting up libgnutls30t64:amd64 (3.8.12-2ubuntu1.1) ...
+Setting up gpg-agent (2.4.8-4ubuntu3.1) ...
+Setting up gpgsm (2.4.8-4ubuntu3.1) ...
+Setting up libpsl5t64:amd64 (0.21.2-1.1build2) ...
+Setting up dirmngr (2.4.8-4ubuntu3.1) ...
+Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-3) ...
+Setting up gnupg (2.4.8-4ubuntu3.1) ...
+Setting up gpg-wks-client (2.4.8-4ubuntu3.1) ...
+Setting up libcurl4t64:amd64 (8.18.0-1ubuntu2.7) ...
+Setting up curl (8.18.0-1ubuntu2.7) ...
+Processing triggers for libc-bin (2.43-2ubuntu2.4) ...
+Processing triggers for ca-certificates (20260601~26.04.1) ...
+Updating certificates in /etc/ssl/certs...
+0 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+done.
+gpg: directory '/root/.gnupg' created
+gpg: keybox '/root/.gnupg/pubring.kbx' created
+pub   rsa3072 2019-03-18 [SC] [expires: 2028-02-04]
+      1505 8500 A023 5D97 F5D1  0063 B188 E2B6 95BD 4743
+uid                      DEB.SURY.ORG Automatic Signing Key <deb@sury.org>
+sub   rsa3072 2019-03-18 [E] [expires: 2028-02-04]
+
+gpg: /root/.gnupg/trustdb.gpg: trustdb created
+Get:1 https://packages.sury.org/php resolute InRelease [6103 B]
+Get:2 https://packages.sury.org/php resolute/main amd64 Packages [300 kB]
+Hit:3 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:6 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Fetched 307 kB in 1s (316 kB/s)
+Reading package lists...
+php8.3-cli:
+  Installed: (none)
+  Candidate: 8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d
+  Version table:
+     8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d 500
+        500 https://packages.sury.org/php resolute/main amd64 Packages
+libapache2-mod-php8.3:
+  Installed: (none)
+  Candidate: 8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d
+  Version table:
+     8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d 500
+        500 https://packages.sury.org/php resolute/main amd64 Packages
+php8.3-memcache:
+  Installed: (none)
+  Candidate: 8.2-7+0~20260712.47+ubuntu26.04~1.gbp06e5ea
+  Version table:
+     8.2-7+0~20260712.47+ubuntu26.04~1.gbp06e5ea 500
+        500 https://packages.sury.org/php resolute/main amd64 Packages
+php8.3-ssh2:
+  Installed: (none)
+  Candidate: 1.4.1-5+0~20260622.38+ubuntu26.04~1.gbp3ed928
+  Version table:
+     1.4.1-5+0~20260622.38+ubuntu26.04~1.gbp3ed928 500
+        500 https://packages.sury.org/php resolute/main amd64 Packages
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+The following additional packages will be installed:
+  apache2 apache2-bin apache2-data apache2-utils cron cron-daemon-common dbus
+  dbus-bin dbus-daemon dbus-session-bus-common dbus-system-bus-common dmsetup
+  fontconfig-config fonts-dejavu-core fonts-dejavu-mono libabsl20260107
+  libaom3 libapparmor1 libapr1t64 libaprutil1-dbd-sqlite3 libaprutil1-ldap
+  libaprutil1t64 libargon2-1 libavif16 libcryptsetup12 libdav1d7 libdbus-1-3
+  libdeflate0 libdevmapper1.02.1 libedit2 libexpat1 libfontconfig1
+  libfreetype6 libgav1-2 libgd3 libgdbm-compat4t64 libgdbm6t64
+  libheif-plugin-aomdec libheif-plugin-aomenc libheif1 libicu78 libimagequant0
+  libjansson4 libjbig0 libjpeg-turbo8 libjpeg8 libjson-c5 libkmod2 liblerc4
+  liblua5.4-0 libonig5 libperl5.40 libpng16-16t64 libsharpyuv0 libsodium23
+  libsystemd-shared libtext-charwidth-perl libtext-wrapi18n-perl libtiff6
+  libwebp7 libx11-6 libx11-data libxau6 libxcb1 libxdmcp6 libxml2-16 libxpm4
+  libxslt1.1 libyuv0 libzip5 linux-sysctl-defaults media-types netbase perl
+  perl-modules-5.40 php-common php8.3-common php8.3-opcache php8.3-readline
+  psmisc ssl-cert systemd systemd-cryptsetup systemd-resolved
+  systemd-timesyncd tzdata ucf
+Suggested packages:
+  apache2-doc apache2-suexec-pristine | apache2-suexec-custom ufw www-browser
+  anacron logrotate checksecurity supercat bat default-mta
+  | mail-transport-agent default-dbus-session-bus | dbus-session-bus php-pear
+  libgd-tools gdbm-l10n libheif-plugin-libde265 libheif-plugin-x265
+  libheif-plugin-ffmpegdec libheif-plugin-jpegdec libheif-plugin-jpegenc
+  libheif-plugin-j2kdec libheif-plugin-j2kenc libheif-plugin-kvazaar
+  libheif-plugin-rav1e libheif-plugin-svtenc libarchive13t64 libbpf1 libdw1t64
+  libelf1t64 libfido2-1 libpwquality1 libqrencode4 libtss2-esys-3.0.2-0t64
+  libtss2-mu-4.0.1-0t64 libtss2-rc0t64 perl-doc libterm-readline-gnu-perl
+  | libterm-readline-perl-perl make libtap-harness-archive-perl memcached
+  systemd-container systemd-homed systemd-userdbd systemd-boot systemd-repart
+  libtss2-tcti-device0 polkitd
+The following NEW packages will be installed:
+  apache2 apache2-bin apache2-data apache2-utils cron cron-daemon-common dbus
+  dbus-bin dbus-daemon dbus-session-bus-common dbus-system-bus-common dmsetup
+  fontconfig-config fonts-dejavu-core fonts-dejavu-mono libabsl20260107
+  libaom3 libapache2-mod-php8.3 libapparmor1 libapr1t64
+  libaprutil1-dbd-sqlite3 libaprutil1-ldap libaprutil1t64 libargon2-1
+  libavif16 libcryptsetup12 libdav1d7 libdbus-1-3 libdeflate0
+  libdevmapper1.02.1 libedit2 libexpat1 libfontconfig1 libfreetype6 libgav1-2
+  libgd3 libgdbm-compat4t64 libgdbm6t64 libheif-plugin-aomdec
+  libheif-plugin-aomenc libheif1 libicu78 libimagequant0 libjansson4 libjbig0
+  libjpeg-turbo8 libjpeg8 libjson-c5 libkmod2 liblerc4 liblua5.4-0 libonig5
+  libperl5.40 libpng16-16t64 libsharpyuv0 libsodium23 libsystemd-shared
+  libtext-charwidth-perl libtext-wrapi18n-perl libtiff6 libwebp7 libx11-6
+  libx11-data libxau6 libxcb1 libxdmcp6 libxml2-16 libxpm4 libxslt1.1 libyuv0
+  libzip5 linux-sysctl-defaults media-types netbase perl perl-modules-5.40
+  php-common php8.3-apcu php8.3-bcmath php8.3-cli php8.3-common php8.3-curl
+  php8.3-gd php8.3-gmp php8.3-intl php8.3-ldap php8.3-mbstring php8.3-memcache
+  php8.3-mysql php8.3-opcache php8.3-readline php8.3-ssh2 php8.3-xml
+  php8.3-zip psmisc ssl-cert systemd systemd-cryptsetup systemd-resolved
+  systemd-timesyncd tzdata ucf
+0 upgraded, 102 newly installed, 0 to remove and 1 not upgraded.
+Need to get 46.2 MB of archives.
+After this operation, 183 MB of additional disk space will be used.
+Get:1 https://packages.sury.org/php resolute/main amd64 php-common all 2:101~+0~20260503.72+ubuntu26.04~1.gbp7da167 [12.8 kB]
+Get:2 https://packages.sury.org/php resolute/main amd64 php8.3-common amd64 8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d [775 kB]
+Get:3 https://packages.sury.org/php resolute/main amd64 php8.3-opcache amd64 8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d [372 kB]
+Get:4 https://packages.sury.org/php resolute/main amd64 php8.3-readline amd64 8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d [13.6 kB]
+Get:5 https://packages.sury.org/php resolute/main amd64 php8.3-cli amd64 8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d [1960 kB]
+Get:6 https://packages.sury.org/php resolute/main amd64 libapache2-mod-php8.3 amd64 8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d [1894 kB]
+Get:7 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libexpat1 amd64 2.7.4-1ubuntu0.2 [98.8 kB]
+Get:8 https://packages.sury.org/php resolute/main amd64 php8.3-apcu amd64 5.1.28-2+0~20260623.59+ubuntu26.04~1.gbp4679cd [46.7 kB]
+Get:9 https://packages.sury.org/php resolute/main amd64 php8.3-memcache amd64 8.2-7+0~20260712.47+ubuntu26.04~1.gbp06e5ea [56.6 kB]
+Get:10 https://packages.sury.org/php resolute/main amd64 php8.3-ssh2 amd64 1.4.1-5+0~20260622.38+ubuntu26.04~1.gbp3ed928 [31.6 kB]
+Get:11 https://packages.sury.org/php resolute/main amd64 libgd3 amd64 2.3.3-14+0~20260731.21+ubuntu26.04~1.gbp938f32 [130 kB]
+Get:12 https://packages.sury.org/php resolute/main amd64 php8.3-bcmath amd64 8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d [17.5 kB]
+Get:13 https://packages.sury.org/php resolute/main amd64 php8.3-curl amd64 8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d [41.6 kB]
+Get:14 https://packages.sury.org/php resolute/main amd64 php8.3-gd amd64 8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d [32.4 kB]
+Get:15 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libsystemd-shared amd64 259.5-0ubuntu3.4 [2462 kB]
+Get:16 https://packages.sury.org/php resolute/main amd64 php8.3-gmp amd64 8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d [24.0 kB]
+Get:17 https://packages.sury.org/php resolute/main amd64 php8.3-intl amd64 8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d [157 kB]
+Get:18 https://packages.sury.org/php resolute/main amd64 php8.3-ldap amd64 8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d [35.1 kB]
+Get:19 https://packages.sury.org/php resolute/main amd64 php8.3-mbstring amd64 8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d [517 kB]
+Get:20 https://packages.sury.org/php resolute/main amd64 php8.3-mysql amd64 8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d [128 kB]
+Get:21 https://packages.sury.org/php resolute/main amd64 php8.3-xml amd64 8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d [129 kB]
+Get:22 https://packages.sury.org/php resolute/main amd64 php8.3-zip amd64 8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d [30.4 kB]
+Get:23 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 systemd amd64 259.5-0ubuntu3.4 [3129 kB]
+Get:24 http://archive.ubuntu.com/ubuntu resolute/main amd64 cron-daemon-common all 3.0pl1-200ubuntu1 [15.7 kB]
+Get:25 http://archive.ubuntu.com/ubuntu resolute/main amd64 cron amd64 3.0pl1-200ubuntu1 [88.6 kB]
+Get:26 http://archive.ubuntu.com/ubuntu resolute/main amd64 psmisc amd64 23.7-2ubuntu2 [179 kB]
+Get:27 http://archive.ubuntu.com/ubuntu resolute/main amd64 libtext-charwidth-perl amd64 0.04-11build4 [9530 B]
+Get:28 http://archive.ubuntu.com/ubuntu resolute/main amd64 libtext-wrapi18n-perl all 0.06-10 [7694 B]
+Get:29 http://archive.ubuntu.com/ubuntu resolute/main amd64 ucf all 3.0052ubuntu1 [44.3 kB]
+Get:30 http://archive.ubuntu.com/ubuntu resolute/main amd64 libedit2 amd64 3.1-20251016-1 [96.9 kB]
+Get:31 http://archive.ubuntu.com/ubuntu resolute/main amd64 media-types all 14.0.0build1 [31.4 kB]
+Get:32 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 tzdata all 2026c-0ubuntu0.26.04.1 [193 kB]
+Get:33 http://archive.ubuntu.com/ubuntu resolute/main amd64 libargon2-1 amd64 0~20190702+dfsg-5 [21.3 kB]
+Get:34 http://archive.ubuntu.com/ubuntu resolute/main amd64 libsodium23 amd64 1.0.18-2 [165 kB]
+Get:35 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libxml2-16 amd64 2.15.2+dfsg-0.1ubuntu0.2 [606 kB]
+Get:36 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 perl-modules-5.40 all 5.40.1-7ubuntu0.3 [3212 kB]
+Get:37 http://archive.ubuntu.com/ubuntu resolute/main amd64 libgdbm6t64 amd64 1.26-1build1 [36.5 kB]
+Get:38 http://archive.ubuntu.com/ubuntu resolute/main amd64 libgdbm-compat4t64 amd64 1.26-1build1 [6796 B]
+Get:39 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libperl5.40 amd64 5.40.1-7ubuntu0.3 [4889 kB]
+Get:40 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 perl amd64 5.40.1-7ubuntu0.3 [262 kB]
+Get:41 http://archive.ubuntu.com/ubuntu resolute/main amd64 libapr1t64 amd64 1.7.6-3 [109 kB]
+Get:42 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libaprutil1t64 amd64 1.6.3-3ubuntu3.1 [93.3 kB]
+Get:43 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libaprutil1-dbd-sqlite3 amd64 1.6.3-3ubuntu3.1 [11.4 kB]
+Get:44 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libaprutil1-ldap amd64 1.6.3-3ubuntu3.1 [9228 B]
+Get:45 http://archive.ubuntu.com/ubuntu resolute/main amd64 libjansson4 amd64 2.14-2build4 [33.2 kB]
+Get:46 http://archive.ubuntu.com/ubuntu resolute/main amd64 liblua5.4-0 amd64 5.4.8-1build1 [163 kB]
+Get:47 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 apache2-bin amd64 2.4.66-2ubuntu2.4 [1355 kB]
+Get:48 http://archive.ubuntu.com/ubuntu resolute/main amd64 libdbus-1-3 amd64 1.16.2-2ubuntu4 [186 kB]
+Get:49 http://archive.ubuntu.com/ubuntu resolute/main amd64 dbus-bin amd64 1.16.2-2ubuntu4 [40.1 kB]
+Get:50 http://archive.ubuntu.com/ubuntu resolute/main amd64 dbus-session-bus-common all 1.16.2-2ubuntu4 [54.5 kB]
+Get:51 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libapparmor1 amd64 5.0.2-0ubuntu1~26.04.1 [51.3 kB]
+Get:52 http://archive.ubuntu.com/ubuntu resolute/main amd64 dbus-daemon amd64 1.16.2-2ubuntu4 [119 kB]
+Get:53 http://archive.ubuntu.com/ubuntu resolute/main amd64 dbus-system-bus-common all 1.16.2-2ubuntu4 [55.9 kB]
+Get:54 http://archive.ubuntu.com/ubuntu resolute/main amd64 dbus amd64 1.16.2-2ubuntu4 [24.2 kB]
+Get:55 http://archive.ubuntu.com/ubuntu resolute/main amd64 libdevmapper1.02.1 amd64 2:1.02.205-2ubuntu3 [142 kB]
+Get:56 http://archive.ubuntu.com/ubuntu resolute/main amd64 dmsetup amd64 2:1.02.205-2ubuntu3 [79.4 kB]
+Get:57 http://archive.ubuntu.com/ubuntu resolute/main amd64 libjson-c5 amd64 0.18+ds-3 [35.9 kB]
+Get:58 http://archive.ubuntu.com/ubuntu resolute/main amd64 libcryptsetup12 amd64 2:2.8.4-1ubuntu4 [271 kB]
+Get:59 http://archive.ubuntu.com/ubuntu resolute/main amd64 libkmod2 amd64 34.2-2ubuntu2 [50.9 kB]
+Get:60 http://archive.ubuntu.com/ubuntu resolute/main amd64 linux-sysctl-defaults all 4.15ubuntu5 [6208 B]
+Get:61 http://archive.ubuntu.com/ubuntu resolute/main amd64 netbase all 6.5build1 [13.0 kB]
+Get:62 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 systemd-cryptsetup amd64 259.5-0ubuntu3.4 [124 kB]
+Get:63 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 systemd-resolved amd64 259.5-0ubuntu3.4 [299 kB]
+Get:64 http://archive.ubuntu.com/ubuntu resolute/main amd64 libpng16-16t64 amd64 1.6.57-1 [194 kB]
+Get:65 http://archive.ubuntu.com/ubuntu resolute/main amd64 libxau6 amd64 1:1.0.11-1build2 [7502 B]
+Get:66 http://archive.ubuntu.com/ubuntu resolute/main amd64 libxdmcp6 amd64 1:1.1.5-2 [10.8 kB]
+Get:67 http://archive.ubuntu.com/ubuntu resolute/main amd64 libxcb1 amd64 1.17.0-2ubuntu1 [49.0 kB]
+Get:68 http://archive.ubuntu.com/ubuntu resolute/main amd64 libx11-data all 2:1.8.13-1 [114 kB]
+Get:69 http://archive.ubuntu.com/ubuntu resolute/main amd64 libx11-6 amd64 2:1.8.13-1 [657 kB]
+Get:70 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 apache2-data all 2.4.66-2ubuntu2.4 [163 kB]
+Get:71 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 apache2-utils amd64 2.4.66-2ubuntu2.4 [94.7 kB]
+Get:72 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 apache2 amd64 2.4.66-2ubuntu2.4 [101 kB]
+Get:73 http://archive.ubuntu.com/ubuntu resolute/main amd64 fonts-dejavu-mono all 2.37-8build1 [502 kB]
+Get:74 http://archive.ubuntu.com/ubuntu resolute/main amd64 fonts-dejavu-core all 2.37-8build1 [834 kB]
+Get:75 http://archive.ubuntu.com/ubuntu resolute/main amd64 fontconfig-config amd64 2.17.1-3ubuntu1 [38.5 kB]
+Get:76 http://archive.ubuntu.com/ubuntu resolute/main amd64 libabsl20260107 amd64 20260107.0-4 [588 kB]
+Get:77 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libaom3 amd64 3.13.1-2ubuntu0.1 [1969 kB]
+Get:78 http://archive.ubuntu.com/ubuntu resolute/universe amd64 libdav1d7 amd64 1.5.3-1 [626 kB]
+Get:79 http://archive.ubuntu.com/ubuntu resolute/universe amd64 libgav1-2 amd64 0.20.0-2build1 [402 kB]
+Get:80 http://archive.ubuntu.com/ubuntu resolute/main amd64 libjpeg-turbo8 amd64 2.1.5-4ubuntu4 [153 kB]
+Get:81 http://archive.ubuntu.com/ubuntu resolute/main amd64 libjpeg8 amd64 8c-2ubuntu12 [2142 B]
+Get:82 http://archive.ubuntu.com/ubuntu resolute/main amd64 libyuv0 amd64 0.0.1922.20260106-1 [184 kB]
+Get:83 http://archive.ubuntu.com/ubuntu resolute/universe amd64 libavif16 amd64 1.3.0-1ubuntu4 [119 kB]
+Get:84 http://archive.ubuntu.com/ubuntu resolute/main amd64 libdeflate0 amd64 1.23-2ubuntu1 [51.7 kB]
+Get:85 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libfreetype6 amd64 2.14.2+dfsg-1ubuntu0.1 [409 kB]
+Get:86 http://archive.ubuntu.com/ubuntu resolute/main amd64 libfontconfig1 amd64 2.17.1-3ubuntu1 [144 kB]
+Get:87 http://archive.ubuntu.com/ubuntu resolute/main amd64 libsharpyuv0 amd64 1.5.0-0.1build1 [17.6 kB]
+Get:88 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libheif-plugin-aomdec amd64 1.21.2-3ubuntu0.5 [14.9 kB]
+Get:89 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libheif1 amd64 1.21.2-3ubuntu0.5 [547 kB]
+Get:90 http://archive.ubuntu.com/ubuntu resolute/main amd64 libimagequant0 amd64 4.4.1-1 [264 kB]
+Get:91 http://archive.ubuntu.com/ubuntu resolute/main amd64 libjbig0 amd64 2.1-6.1ubuntu3 [30.0 kB]
+Get:92 http://archive.ubuntu.com/ubuntu resolute/main amd64 liblerc4 amd64 4.0.0+ds-5ubuntu2 [207 kB]
+Get:93 http://archive.ubuntu.com/ubuntu resolute/main amd64 libwebp7 amd64 1.5.0-0.1build1 [264 kB]
+Get:94 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libtiff6 amd64 4.7.0-3ubuntu5 [206 kB]
+Get:95 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libxpm4 amd64 1:3.5.17-1ubuntu0.26.04.1 [37.2 kB]
+Get:96 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 libheif-plugin-aomenc amd64 1.21.2-3ubuntu0.5 [20.9 kB]
+Get:97 http://archive.ubuntu.com/ubuntu resolute/main amd64 libicu78 amd64 78.2-2ubuntu1 [11.5 MB]
+Get:98 http://archive.ubuntu.com/ubuntu resolute/main amd64 libonig5 amd64 6.9.10-1build1 [174 kB]
+Get:99 http://archive.ubuntu.com/ubuntu resolute/main amd64 libxslt1.1 amd64 1.1.45-0.1 [165 kB]
+Get:100 http://archive.ubuntu.com/ubuntu resolute/universe amd64 libzip5 amd64 1.11.4-2 [63.3 kB]
+Get:101 http://archive.ubuntu.com/ubuntu resolute/main amd64 ssl-cert all 1.1.3ubuntu2 [18.8 kB]
+Get:102 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 systemd-timesyncd amd64 259.5-0ubuntu3.4 [41.2 kB]
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.40.1 /usr/local/share/perl/5.40.1 /usr/lib/x86_64-linux-gnu/perl5/5.40 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.40 /usr/share/perl/5.40 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8, <STDIN> line 102.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Preconfiguring packages ...
+Fetched 46.2 MB in 8s (5655 kB/s)
+Selecting previously unselected package libexpat1:amd64.
+(Reading database ...
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 9883 files and directories currently installed.)
+Preparing to unpack .../libexpat1_2.7.4-1ubuntu0.2_amd64.deb ...
+Unpacking libexpat1:amd64 (2.7.4-1ubuntu0.2) ...
+Selecting previously unselected package libsystemd-shared:amd64.
+Preparing to unpack .../libsystemd-shared_259.5-0ubuntu3.4_amd64.deb ...
+Unpacking libsystemd-shared:amd64 (259.5-0ubuntu3.4) ...
+Setting up libsystemd-shared:amd64 (259.5-0ubuntu3.4) ...
+Selecting previously unselected package systemd.
+(Reading database ...
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 9899 files and directories currently installed.)
+Preparing to unpack .../systemd_259.5-0ubuntu3.4_amd64.deb ...
+Unpacking systemd (259.5-0ubuntu3.4) ...
+Selecting previously unselected package cron-daemon-common.
+Preparing to unpack .../cron-daemon-common_3.0pl1-200ubuntu1_all.deb ...
+Unpacking cron-daemon-common (3.0pl1-200ubuntu1) ...
+Setting up systemd (259.5-0ubuntu3.4) ...
+Created symlink '/etc/systemd/system/getty.target.wants/getty@tty1.service' → '/usr/lib/systemd/system/getty@.service'.
+Created symlink '/etc/systemd/system/multi-user.target.wants/remote-fs.target' → '/usr/lib/systemd/system/remote-fs.target'.
+Created symlink '/etc/systemd/system/sysinit.target.wants/systemd-pstore.service' → '/usr/lib/systemd/system/systemd-pstore.service'.
+Initializing machine ID from random generator.
+Creating group 'systemd-journal' with GID 999.
+Creating group 'systemd-network' with GID 998.
+Creating user 'systemd-network' (systemd Network Management) with UID 998 and GID 998.
+/usr/lib/tmpfiles.d/cron-daemon-common.conf:1: Failed to resolve group 'crontab': Unknown group
+Setting up cron-daemon-common (3.0pl1-200ubuntu1) ...
+Creating group 'crontab' with GID 997.
+Selecting previously unselected package cron.
+(Reading database ...
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 10895 files and directories currently installed.)
+Preparing to unpack .../00-cron_3.0pl1-200ubuntu1_amd64.deb ...
+Unpacking cron (3.0pl1-200ubuntu1) ...
+Selecting previously unselected package psmisc.
+Preparing to unpack .../01-psmisc_23.7-2ubuntu2_amd64.deb ...
+Unpacking psmisc (23.7-2ubuntu2) ...
+Selecting previously unselected package php-common.
+Preparing to unpack .../02-php-common_2%3a101~+0~20260503.72+ubuntu26.04~1.gbp7da167_all.deb ...
+Unpacking php-common (2:101~+0~20260503.72+ubuntu26.04~1.gbp7da167) ...
+Selecting previously unselected package libtext-charwidth-perl:amd64.
+Preparing to unpack .../03-libtext-charwidth-perl_0.04-11build4_amd64.deb ...
+Unpacking libtext-charwidth-perl:amd64 (0.04-11build4) ...
+Selecting previously unselected package libtext-wrapi18n-perl.
+Preparing to unpack .../04-libtext-wrapi18n-perl_0.06-10_all.deb ...
+Unpacking libtext-wrapi18n-perl (0.06-10) ...
+Selecting previously unselected package ucf.
+Preparing to unpack .../05-ucf_3.0052ubuntu1_all.deb ...
+Moving old data out of the way
+Unpacking ucf (3.0052ubuntu1) ...
+Selecting previously unselected package php8.3-common.
+Preparing to unpack .../06-php8.3-common_8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d_amd64.deb ...
+Unpacking php8.3-common (8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d) ...
+Selecting previously unselected package libedit2:amd64.
+Preparing to unpack .../07-libedit2_3.1-20251016-1_amd64.deb ...
+Unpacking libedit2:amd64 (3.1-20251016-1) ...
+Selecting previously unselected package media-types.
+Preparing to unpack .../08-media-types_14.0.0build1_all.deb ...
+Unpacking media-types (14.0.0build1) ...
+Selecting previously unselected package php8.3-opcache.
+Preparing to unpack .../09-php8.3-opcache_8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d_amd64.deb ...
+Unpacking php8.3-opcache (8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d) ...
+Selecting previously unselected package php8.3-readline.
+Preparing to unpack .../10-php8.3-readline_8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d_amd64.deb ...
+Unpacking php8.3-readline (8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d) ...
+Selecting previously unselected package tzdata.
+Preparing to unpack .../11-tzdata_2026c-0ubuntu0.26.04.1_all.deb ...
+Unpacking tzdata (2026c-0ubuntu0.26.04.1) ...
+Selecting previously unselected package libargon2-1:amd64.
+Preparing to unpack .../12-libargon2-1_0~20190702+dfsg-5_amd64.deb ...
+Unpacking libargon2-1:amd64 (0~20190702+dfsg-5) ...
+Selecting previously unselected package libsodium23:amd64.
+Preparing to unpack .../13-libsodium23_1.0.18-2_amd64.deb ...
+Unpacking libsodium23:amd64 (1.0.18-2) ...
+Selecting previously unselected package libxml2-16:amd64.
+Preparing to unpack .../14-libxml2-16_2.15.2+dfsg-0.1ubuntu0.2_amd64.deb ...
+Unpacking libxml2-16:amd64 (2.15.2+dfsg-0.1ubuntu0.2) ...
+Selecting previously unselected package php8.3-cli.
+Preparing to unpack .../15-php8.3-cli_8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d_amd64.deb ...
+Unpacking php8.3-cli (8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d) ...
+Selecting previously unselected package perl-modules-5.40.
+Preparing to unpack .../16-perl-modules-5.40_5.40.1-7ubuntu0.3_all.deb ...
+Unpacking perl-modules-5.40 (5.40.1-7ubuntu0.3) ...
+Selecting previously unselected package libgdbm6t64:amd64.
+Preparing to unpack .../17-libgdbm6t64_1.26-1build1_amd64.deb ...
+Unpacking libgdbm6t64:amd64 (1.26-1build1) ...
+Selecting previously unselected package libgdbm-compat4t64:amd64.
+Preparing to unpack .../18-libgdbm-compat4t64_1.26-1build1_amd64.deb ...
+Unpacking libgdbm-compat4t64:amd64 (1.26-1build1) ...
+Selecting previously unselected package libperl5.40:amd64.
+Preparing to unpack .../19-libperl5.40_5.40.1-7ubuntu0.3_amd64.deb ...
+Unpacking libperl5.40:amd64 (5.40.1-7ubuntu0.3) ...
+Selecting previously unselected package perl.
+Preparing to unpack .../20-perl_5.40.1-7ubuntu0.3_amd64.deb ...
+Unpacking perl (5.40.1-7ubuntu0.3) ...
+Selecting previously unselected package libapr1t64:amd64.
+Preparing to unpack .../21-libapr1t64_1.7.6-3_amd64.deb ...
+Unpacking libapr1t64:amd64 (1.7.6-3) ...
+Selecting previously unselected package libaprutil1t64:amd64.
+Preparing to unpack .../22-libaprutil1t64_1.6.3-3ubuntu3.1_amd64.deb ...
+Unpacking libaprutil1t64:amd64 (1.6.3-3ubuntu3.1) ...
+Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+Preparing to unpack .../23-libaprutil1-dbd-sqlite3_1.6.3-3ubuntu3.1_amd64.deb ...
+Unpacking libaprutil1-dbd-sqlite3:amd64 (1.6.3-3ubuntu3.1) ...
+Selecting previously unselected package libaprutil1-ldap:amd64.
+Preparing to unpack .../24-libaprutil1-ldap_1.6.3-3ubuntu3.1_amd64.deb ...
+Unpacking libaprutil1-ldap:amd64 (1.6.3-3ubuntu3.1) ...
+Selecting previously unselected package libjansson4:amd64.
+Preparing to unpack .../25-libjansson4_2.14-2build4_amd64.deb ...
+Unpacking libjansson4:amd64 (2.14-2build4) ...
+Selecting previously unselected package liblua5.4-0:amd64.
+Preparing to unpack .../26-liblua5.4-0_5.4.8-1build1_amd64.deb ...
+Unpacking liblua5.4-0:amd64 (5.4.8-1build1) ...
+Selecting previously unselected package apache2-bin.
+Preparing to unpack .../27-apache2-bin_2.4.66-2ubuntu2.4_amd64.deb ...
+Unpacking apache2-bin (2.4.66-2ubuntu2.4) ...
+Selecting previously unselected package libapache2-mod-php8.3.
+Preparing to unpack .../28-libapache2-mod-php8.3_8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d_amd64.deb ...
+Unpacking libapache2-mod-php8.3 (8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d) ...
+Setting up psmisc (23.7-2ubuntu2) ...
+Setting up php-common (2:101~+0~20260503.72+ubuntu26.04~1.gbp7da167) ...
+Created symlink '/etc/systemd/system/timers.target.wants/phpsessionclean.timer' → '/usr/lib/systemd/system/phpsessionclean.timer'.
+Selecting previously unselected package php8.3-apcu.
+(Reading database ...
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 14067 files and directories currently installed.)
+Preparing to unpack .../00-php8.3-apcu_5.1.28-2+0~20260623.59+ubuntu26.04~1.gbp4679cd_amd64.deb ...
+Unpacking php8.3-apcu (5.1.28-2+0~20260623.59+ubuntu26.04~1.gbp4679cd) ...
+Selecting previously unselected package php8.3-memcache.
+Preparing to unpack .../01-php8.3-memcache_8.2-7+0~20260712.47+ubuntu26.04~1.gbp06e5ea_amd64.deb ...
+Unpacking php8.3-memcache (8.2-7+0~20260712.47+ubuntu26.04~1.gbp06e5ea) ...
+Selecting previously unselected package php8.3-ssh2.
+Preparing to unpack .../02-php8.3-ssh2_1.4.1-5+0~20260622.38+ubuntu26.04~1.gbp3ed928_amd64.deb ...
+Unpacking php8.3-ssh2 (1.4.1-5+0~20260622.38+ubuntu26.04~1.gbp3ed928) ...
+Selecting previously unselected package libdbus-1-3:amd64.
+Preparing to unpack .../03-libdbus-1-3_1.16.2-2ubuntu4_amd64.deb ...
+Unpacking libdbus-1-3:amd64 (1.16.2-2ubuntu4) ...
+Selecting previously unselected package dbus-bin.
+Preparing to unpack .../04-dbus-bin_1.16.2-2ubuntu4_amd64.deb ...
+Unpacking dbus-bin (1.16.2-2ubuntu4) ...
+Selecting previously unselected package dbus-session-bus-common.
+Preparing to unpack .../05-dbus-session-bus-common_1.16.2-2ubuntu4_all.deb ...
+Unpacking dbus-session-bus-common (1.16.2-2ubuntu4) ...
+Selecting previously unselected package libapparmor1:amd64.
+Preparing to unpack .../06-libapparmor1_5.0.2-0ubuntu1~26.04.1_amd64.deb ...
+Unpacking libapparmor1:amd64 (5.0.2-0ubuntu1~26.04.1) ...
+Selecting previously unselected package dbus-daemon.
+Preparing to unpack .../07-dbus-daemon_1.16.2-2ubuntu4_amd64.deb ...
+Unpacking dbus-daemon (1.16.2-2ubuntu4) ...
+Selecting previously unselected package dbus-system-bus-common.
+Preparing to unpack .../08-dbus-system-bus-common_1.16.2-2ubuntu4_all.deb ...
+Unpacking dbus-system-bus-common (1.16.2-2ubuntu4) ...
+Selecting previously unselected package dbus.
+Preparing to unpack .../09-dbus_1.16.2-2ubuntu4_amd64.deb ...
+Unpacking dbus (1.16.2-2ubuntu4) ...
+Selecting previously unselected package libdevmapper1.02.1:amd64.
+Preparing to unpack .../10-libdevmapper1.02.1_2%3a1.02.205-2ubuntu3_amd64.deb ...
+Unpacking libdevmapper1.02.1:amd64 (2:1.02.205-2ubuntu3) ...
+Selecting previously unselected package dmsetup.
+Preparing to unpack .../11-dmsetup_2%3a1.02.205-2ubuntu3_amd64.deb ...
+Unpacking dmsetup (2:1.02.205-2ubuntu3) ...
+Selecting previously unselected package libjson-c5:amd64.
+Preparing to unpack .../12-libjson-c5_0.18+ds-3_amd64.deb ...
+Unpacking libjson-c5:amd64 (0.18+ds-3) ...
+Selecting previously unselected package libcryptsetup12:amd64.
+Preparing to unpack .../13-libcryptsetup12_2%3a2.8.4-1ubuntu4_amd64.deb ...
+Unpacking libcryptsetup12:amd64 (2:2.8.4-1ubuntu4) ...
+Selecting previously unselected package libkmod2:amd64.
+Preparing to unpack .../14-libkmod2_34.2-2ubuntu2_amd64.deb ...
+Unpacking libkmod2:amd64 (34.2-2ubuntu2) ...
+Selecting previously unselected package linux-sysctl-defaults.
+Preparing to unpack .../15-linux-sysctl-defaults_4.15ubuntu5_all.deb ...
+Unpacking linux-sysctl-defaults (4.15ubuntu5) ...
+Selecting previously unselected package netbase.
+Preparing to unpack .../16-netbase_6.5build1_all.deb ...
+Unpacking netbase (6.5build1) ...
+Selecting previously unselected package systemd-cryptsetup.
+Preparing to unpack .../17-systemd-cryptsetup_259.5-0ubuntu3.4_amd64.deb ...
+Unpacking systemd-cryptsetup (259.5-0ubuntu3.4) ...
+Selecting previously unselected package systemd-resolved.
+Preparing to unpack .../18-systemd-resolved_259.5-0ubuntu3.4_amd64.deb ...
+Unpacking systemd-resolved (259.5-0ubuntu3.4) ...
+Selecting previously unselected package libpng16-16t64:amd64.
+Preparing to unpack .../19-libpng16-16t64_1.6.57-1_amd64.deb ...
+Unpacking libpng16-16t64:amd64 (1.6.57-1) ...
+Selecting previously unselected package libxau6:amd64.
+Preparing to unpack .../20-libxau6_1%3a1.0.11-1build2_amd64.deb ...
+Unpacking libxau6:amd64 (1:1.0.11-1build2) ...
+Selecting previously unselected package libxdmcp6:amd64.
+Preparing to unpack .../21-libxdmcp6_1%3a1.1.5-2_amd64.deb ...
+Unpacking libxdmcp6:amd64 (1:1.1.5-2) ...
+Selecting previously unselected package libxcb1:amd64.
+Preparing to unpack .../22-libxcb1_1.17.0-2ubuntu1_amd64.deb ...
+Unpacking libxcb1:amd64 (1.17.0-2ubuntu1) ...
+Selecting previously unselected package libx11-data.
+Preparing to unpack .../23-libx11-data_2%3a1.8.13-1_all.deb ...
+Unpacking libx11-data (2:1.8.13-1) ...
+Selecting previously unselected package libx11-6:amd64.
+Preparing to unpack .../24-libx11-6_2%3a1.8.13-1_amd64.deb ...
+Unpacking libx11-6:amd64 (2:1.8.13-1) ...
+Selecting previously unselected package apache2-data.
+Preparing to unpack .../25-apache2-data_2.4.66-2ubuntu2.4_all.deb ...
+Unpacking apache2-data (2.4.66-2ubuntu2.4) ...
+Selecting previously unselected package apache2-utils.
+Preparing to unpack .../26-apache2-utils_2.4.66-2ubuntu2.4_amd64.deb ...
+Unpacking apache2-utils (2.4.66-2ubuntu2.4) ...
+Selecting previously unselected package apache2.
+Preparing to unpack .../27-apache2_2.4.66-2ubuntu2.4_amd64.deb ...
+Unpacking apache2 (2.4.66-2ubuntu2.4) ...
+Selecting previously unselected package fonts-dejavu-mono.
+Preparing to unpack .../28-fonts-dejavu-mono_2.37-8build1_all.deb ...
+Unpacking fonts-dejavu-mono (2.37-8build1) ...
+Selecting previously unselected package fonts-dejavu-core.
+Preparing to unpack .../29-fonts-dejavu-core_2.37-8build1_all.deb ...
+Unpacking fonts-dejavu-core (2.37-8build1) ...
+Selecting previously unselected package fontconfig-config.
+Preparing to unpack .../30-fontconfig-config_2.17.1-3ubuntu1_amd64.deb ...
+Unpacking fontconfig-config (2.17.1-3ubuntu1) ...
+Selecting previously unselected package libabsl20260107:amd64.
+Preparing to unpack .../31-libabsl20260107_20260107.0-4_amd64.deb ...
+Unpacking libabsl20260107:amd64 (20260107.0-4) ...
+Selecting previously unselected package libaom3:amd64.
+Preparing to unpack .../32-libaom3_3.13.1-2ubuntu0.1_amd64.deb ...
+Unpacking libaom3:amd64 (3.13.1-2ubuntu0.1) ...
+Selecting previously unselected package libdav1d7:amd64.
+Preparing to unpack .../33-libdav1d7_1.5.3-1_amd64.deb ...
+Unpacking libdav1d7:amd64 (1.5.3-1) ...
+Selecting previously unselected package libgav1-2:amd64.
+Preparing to unpack .../34-libgav1-2_0.20.0-2build1_amd64.deb ...
+Unpacking libgav1-2:amd64 (0.20.0-2build1) ...
+Selecting previously unselected package libjpeg-turbo8:amd64.
+Preparing to unpack .../35-libjpeg-turbo8_2.1.5-4ubuntu4_amd64.deb ...
+Unpacking libjpeg-turbo8:amd64 (2.1.5-4ubuntu4) ...
+Selecting previously unselected package libjpeg8:amd64.
+Preparing to unpack .../36-libjpeg8_8c-2ubuntu12_amd64.deb ...
+Unpacking libjpeg8:amd64 (8c-2ubuntu12) ...
+Selecting previously unselected package libyuv0:amd64.
+Preparing to unpack .../37-libyuv0_0.0.1922.20260106-1_amd64.deb ...
+Unpacking libyuv0:amd64 (0.0.1922.20260106-1) ...
+Selecting previously unselected package libavif16:amd64.
+Preparing to unpack .../38-libavif16_1.3.0-1ubuntu4_amd64.deb ...
+Unpacking libavif16:amd64 (1.3.0-1ubuntu4) ...
+Selecting previously unselected package libdeflate0:amd64.
+Preparing to unpack .../39-libdeflate0_1.23-2ubuntu1_amd64.deb ...
+Unpacking libdeflate0:amd64 (1.23-2ubuntu1) ...
+Selecting previously unselected package libfreetype6:amd64.
+Preparing to unpack .../40-libfreetype6_2.14.2+dfsg-1ubuntu0.1_amd64.deb ...
+Unpacking libfreetype6:amd64 (2.14.2+dfsg-1ubuntu0.1) ...
+Selecting previously unselected package libfontconfig1:amd64.
+Preparing to unpack .../41-libfontconfig1_2.17.1-3ubuntu1_amd64.deb ...
+Unpacking libfontconfig1:amd64 (2.17.1-3ubuntu1) ...
+Selecting previously unselected package libsharpyuv0:amd64.
+Preparing to unpack .../42-libsharpyuv0_1.5.0-0.1build1_amd64.deb ...
+Unpacking libsharpyuv0:amd64 (1.5.0-0.1build1) ...
+Selecting previously unselected package libheif-plugin-aomdec:amd64.
+Preparing to unpack .../43-libheif-plugin-aomdec_1.21.2-3ubuntu0.5_amd64.deb ...
+Unpacking libheif-plugin-aomdec:amd64 (1.21.2-3ubuntu0.5) ...
+Selecting previously unselected package libheif1:amd64.
+Preparing to unpack .../44-libheif1_1.21.2-3ubuntu0.5_amd64.deb ...
+Unpacking libheif1:amd64 (1.21.2-3ubuntu0.5) ...
+Selecting previously unselected package libimagequant0:amd64.
+Preparing to unpack .../45-libimagequant0_4.4.1-1_amd64.deb ...
+Unpacking libimagequant0:amd64 (4.4.1-1) ...
+Selecting previously unselected package libjbig0:amd64.
+Preparing to unpack .../46-libjbig0_2.1-6.1ubuntu3_amd64.deb ...
+Unpacking libjbig0:amd64 (2.1-6.1ubuntu3) ...
+Selecting previously unselected package liblerc4:amd64.
+Preparing to unpack .../47-liblerc4_4.0.0+ds-5ubuntu2_amd64.deb ...
+Unpacking liblerc4:amd64 (4.0.0+ds-5ubuntu2) ...
+Selecting previously unselected package libwebp7:amd64.
+Preparing to unpack .../48-libwebp7_1.5.0-0.1build1_amd64.deb ...
+Unpacking libwebp7:amd64 (1.5.0-0.1build1) ...
+Selecting previously unselected package libtiff6:amd64.
+Preparing to unpack .../49-libtiff6_4.7.0-3ubuntu5_amd64.deb ...
+Unpacking libtiff6:amd64 (4.7.0-3ubuntu5) ...
+Selecting previously unselected package libxpm4:amd64.
+Preparing to unpack .../50-libxpm4_1%3a3.5.17-1ubuntu0.26.04.1_amd64.deb ...
+Unpacking libxpm4:amd64 (1:3.5.17-1ubuntu0.26.04.1) ...
+Selecting previously unselected package libgd3:amd64.
+Preparing to unpack .../51-libgd3_2.3.3-14+0~20260731.21+ubuntu26.04~1.gbp938f32_amd64.deb ...
+Unpacking libgd3:amd64 (2.3.3-14+0~20260731.21+ubuntu26.04~1.gbp938f32) ...
+Selecting previously unselected package libheif-plugin-aomenc:amd64.
+Preparing to unpack .../52-libheif-plugin-aomenc_1.21.2-3ubuntu0.5_amd64.deb ...
+Unpacking libheif-plugin-aomenc:amd64 (1.21.2-3ubuntu0.5) ...
+Selecting previously unselected package libicu78:amd64.
+Preparing to unpack .../53-libicu78_78.2-2ubuntu1_amd64.deb ...
+Unpacking libicu78:amd64 (78.2-2ubuntu1) ...
+Selecting previously unselected package libonig5:amd64.
+Preparing to unpack .../54-libonig5_6.9.10-1build1_amd64.deb ...
+Unpacking libonig5:amd64 (6.9.10-1build1) ...
+Selecting previously unselected package libxslt1.1:amd64.
+Preparing to unpack .../55-libxslt1.1_1.1.45-0.1_amd64.deb ...
+Unpacking libxslt1.1:amd64 (1.1.45-0.1) ...
+Selecting previously unselected package libzip5:amd64.
+Preparing to unpack .../56-libzip5_1.11.4-2_amd64.deb ...
+Unpacking libzip5:amd64 (1.11.4-2) ...
+Selecting previously unselected package php8.3-bcmath.
+Preparing to unpack .../57-php8.3-bcmath_8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d_amd64.deb ...
+Unpacking php8.3-bcmath (8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d) ...
+Selecting previously unselected package php8.3-curl.
+Preparing to unpack .../58-php8.3-curl_8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d_amd64.deb ...
+Unpacking php8.3-curl (8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d) ...
+Selecting previously unselected package php8.3-gd.
+Preparing to unpack .../59-php8.3-gd_8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d_amd64.deb ...
+Unpacking php8.3-gd (8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d) ...
+Selecting previously unselected package php8.3-gmp.
+Preparing to unpack .../60-php8.3-gmp_8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d_amd64.deb ...
+Unpacking php8.3-gmp (8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d) ...
+Selecting previously unselected package php8.3-intl.
+Preparing to unpack .../61-php8.3-intl_8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d_amd64.deb ...
+Unpacking php8.3-intl (8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d) ...
+Selecting previously unselected package php8.3-ldap.
+Preparing to unpack .../62-php8.3-ldap_8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d_amd64.deb ...
+Unpacking php8.3-ldap (8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d) ...
+Selecting previously unselected package php8.3-mbstring.
+Preparing to unpack .../63-php8.3-mbstring_8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d_amd64.deb ...
+Unpacking php8.3-mbstring (8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d) ...
+Selecting previously unselected package php8.3-mysql.
+Preparing to unpack .../64-php8.3-mysql_8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d_amd64.deb ...
+Unpacking php8.3-mysql (8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d) ...
+Selecting previously unselected package php8.3-xml.
+Preparing to unpack .../65-php8.3-xml_8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d_amd64.deb ...
+Unpacking php8.3-xml (8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d) ...
+Selecting previously unselected package php8.3-zip.
+Preparing to unpack .../66-php8.3-zip_8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d_amd64.deb ...
+Unpacking php8.3-zip (8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d) ...
+Selecting previously unselected package ssl-cert.
+Preparing to unpack .../67-ssl-cert_1.1.3ubuntu2_all.deb ...
+Unpacking ssl-cert (1.1.3ubuntu2) ...
+Selecting previously unselected package systemd-timesyncd.
+Preparing to unpack .../68-systemd-timesyncd_259.5-0ubuntu3.4_amd64.deb ...
+Unpacking systemd-timesyncd (259.5-0ubuntu3.4) ...
+Setting up libexpat1:amd64 (2.7.4-1ubuntu0.2) ...
+Setting up media-types (14.0.0build1) ...
+Setting up libtext-charwidth-perl:amd64 (0.04-11build4) ...
+Setting up libsharpyuv0:amd64 (1.5.0-0.1build1) ...
+Setting up libaom3:amd64 (3.13.1-2ubuntu0.1) ...
+Setting up libxau6:amd64 (1:1.0.11-1build2) ...
+Setting up libxdmcp6:amd64 (1:1.1.5-2) ...
+Setting up libapparmor1:amd64 (5.0.2-0ubuntu1~26.04.1) ...
+Setting up libxcb1:amd64 (1.17.0-2ubuntu1) ...
+Setting up libsodium23:amd64 (1.0.18-2) ...
+Setting up liblerc4:amd64 (4.0.0+ds-5ubuntu2) ...
+Setting up libgdbm6t64:amd64 (1.26-1build1) ...
+Setting up libgdbm-compat4t64:amd64 (1.26-1build1) ...
+Setting up libzip5:amd64 (1.11.4-2) ...
+Setting up libxml2-16:amd64 (2.15.2+dfsg-0.1ubuntu0.2) ...
+Setting up libargon2-1:amd64 (0~20190702+dfsg-5) ...
+Setting up libedit2:amd64 (3.1-20251016-1) ...
+Setting up cron (3.0pl1-200ubuntu1) ...
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of start.
+Created symlink '/etc/systemd/system/multi-user.target.wants/cron.service' → '/usr/lib/systemd/system/cron.service'.
+Setting up libdeflate0:amd64 (1.23-2ubuntu1) ...
+Setting up libtext-wrapi18n-perl (0.06-10) ...
+Setting up libjbig0:amd64 (2.1-6.1ubuntu3) ...
+Setting up libjansson4:amd64 (2.14-2build4) ...
+Setting up tzdata (2026c-0ubuntu0.26.04.1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+
+Current default time zone: 'Etc/UTC'
+Local time is now:      Fri Sep 25 11:52:28 UTC 2026.
+Universal Time is now:  Fri Sep 25 11:52:28 UTC 2026.
+Run 'dpkg-reconfigure tzdata' if you wish to change it.
+
+Setting up libicu78:amd64 (78.2-2ubuntu1) ...
+Setting up linux-sysctl-defaults (4.15ubuntu5) ...
+Setting up libx11-data (2:1.8.13-1) ...
+Setting up ssl-cert (1.1.3ubuntu2) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Created symlink '/etc/systemd/system/multi-user.target.wants/ssl-cert.service' → '/usr/lib/systemd/system/ssl-cert.service'.
+Setting up libdbus-1-3:amd64 (1.16.2-2ubuntu4) ...
+Setting up libimagequant0:amd64 (4.4.1-1) ...
+Setting up fonts-dejavu-mono (2.37-8build1) ...
+Setting up libpng16-16t64:amd64 (1.6.57-1) ...
+Setting up systemd-timesyncd (259.5-0ubuntu3.4) ...
+Creating group 'systemd-timesync' with GID 996.
+Creating user 'systemd-timesync' (systemd Time Synchronization) with UID 996 and GID 996.
+Created symlink '/etc/systemd/system/dbus-org.freedesktop.timesync1.service' → '/usr/lib/systemd/system/systemd-timesyncd.service'.
+Created symlink '/etc/systemd/system/sysinit.target.wants/systemd-timesyncd.service' → '/usr/lib/systemd/system/systemd-timesyncd.service'.
+Setting up fonts-dejavu-core (2.37-8build1) ...
+Setting up ucf (3.0052ubuntu1) ...
+Setting up libjpeg-turbo8:amd64 (2.1.5-4ubuntu4) ...
+Setting up libwebp7:amd64 (1.5.0-0.1build1) ...
+Setting up libdevmapper1.02.1:amd64 (2:1.02.205-2ubuntu3) ...
+Setting up libdav1d7:amd64 (1.5.3-1) ...
+Setting up perl-modules-5.40 (5.40.1-7ubuntu0.3) ...
+Setting up dmsetup (2:1.02.205-2ubuntu3) ...
+Setting up dbus-session-bus-common (1.16.2-2ubuntu4) ...
+Setting up libapr1t64:amd64 (1.7.6-3) ...
+Setting up libxslt1.1:amd64 (1.1.45-0.1) ...
+Setting up liblua5.4-0:amd64 (5.4.8-1build1) ...
+Setting up libx11-6:amd64 (2:1.8.13-1) ...
+Setting up libabsl20260107:amd64 (20260107.0-4) ...
+Setting up netbase (6.5build1) ...
+Setting up apache2-data (2.4.66-2ubuntu2.4) ...
+Setting up dbus-system-bus-common (1.16.2-2ubuntu4) ...
+Creating group 'messagebus' with GID 995.
+Creating user 'messagebus' (System Message Bus) with UID 995 and GID 995.
+Setting up libjson-c5:amd64 (0.18+ds-3) ...
+Setting up dbus-bin (1.16.2-2ubuntu4) ...
+Setting up libonig5:amd64 (6.9.10-1build1) ...
+Setting up libkmod2:amd64 (34.2-2ubuntu2) ...
+Setting up libjpeg8:amd64 (8c-2ubuntu12) ...
+Setting up libaprutil1t64:amd64 (1.6.3-3ubuntu3.1) ...
+Setting up libxpm4:amd64 (1:3.5.17-1ubuntu0.26.04.1) ...
+Setting up fontconfig-config (2.17.1-3ubuntu1) ...
+Setting up php8.3-common (8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Creating config file /etc/php/8.3/mods-available/calendar.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Creating config file /etc/php/8.3/mods-available/ctype.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Creating config file /etc/php/8.3/mods-available/exif.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Creating config file /etc/php/8.3/mods-available/fileinfo.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Creating config file /etc/php/8.3/mods-available/ffi.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Creating config file /etc/php/8.3/mods-available/ftp.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Creating config file /etc/php/8.3/mods-available/gettext.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Creating config file /etc/php/8.3/mods-available/iconv.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Creating config file /etc/php/8.3/mods-available/pdo.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Creating config file /etc/php/8.3/mods-available/phar.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Creating config file /etc/php/8.3/mods-available/posix.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Creating config file /etc/php/8.3/mods-available/shmop.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Creating config file /etc/php/8.3/mods-available/sockets.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Creating config file /etc/php/8.3/mods-available/sysvmsg.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Creating config file /etc/php/8.3/mods-available/sysvsem.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Creating config file /etc/php/8.3/mods-available/sysvshm.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Creating config file /etc/php/8.3/mods-available/tokenizer.ini with new version
+Setting up dbus-daemon (1.16.2-2ubuntu4) ...
+Setting up libaprutil1-ldap:amd64 (1.6.3-3ubuntu3.1) ...
+Setting up libaprutil1-dbd-sqlite3:amd64 (1.6.3-3ubuntu3.1) ...
+Setting up php8.3-zip (8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Creating config file /etc/php/8.3/mods-available/zip.ini with new version
+Setting up php8.3-mysql (8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Creating config file /etc/php/8.3/mods-available/mysqlnd.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Creating config file /etc/php/8.3/mods-available/mysqli.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Creating config file /etc/php/8.3/mods-available/pdo_mysql.ini with new version
+Setting up libperl5.40:amd64 (5.40.1-7ubuntu0.3) ...
+Setting up perl (5.40.1-7ubuntu0.3) ...
+Setting up php8.3-mbstring (8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Creating config file /etc/php/8.3/mods-available/mbstring.ini with new version
+Setting up php8.3-readline (8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Creating config file /etc/php/8.3/mods-available/readline.ini with new version
+Setting up libfreetype6:amd64 (2.14.2+dfsg-1ubuntu0.1) ...
+Setting up php8.3-gmp (8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Creating config file /etc/php/8.3/mods-available/gmp.ini with new version
+Setting up dbus (1.16.2-2ubuntu4) ...
+Setting up libgav1-2:amd64 (0.20.0-2build1) ...
+Setting up php8.3-ldap (8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Creating config file /etc/php/8.3/mods-available/ldap.ini with new version
+Setting up php8.3-bcmath (8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Creating config file /etc/php/8.3/mods-available/bcmath.ini with new version
+Setting up libtiff6:amd64 (4.7.0-3ubuntu5) ...
+Setting up libcryptsetup12:amd64 (2:2.8.4-1ubuntu4) ...
+Setting up php8.3-xml (8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Creating config file /etc/php/8.3/mods-available/dom.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Creating config file /etc/php/8.3/mods-available/simplexml.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Creating config file /etc/php/8.3/mods-available/xml.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Creating config file /etc/php/8.3/mods-available/xmlreader.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Creating config file /etc/php/8.3/mods-available/xmlwriter.ini with new version
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Creating config file /etc/php/8.3/mods-available/xsl.ini with new version
+Setting up libfontconfig1:amd64 (2.17.1-3ubuntu1) ...
+Setting up php8.3-opcache (8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Creating config file /etc/php/8.3/mods-available/opcache.ini with new version
+Setting up libyuv0:amd64 (0.0.1922.20260106-1) ...
+Setting up systemd-resolved (259.5-0ubuntu3.4) ...
+Converting /etc/resolv.conf to a symlink to /run/systemd/resolve/stub-resolv.conf...
+mv: cannot move '/etc/resolv.conf' to '/etc/.resolv.conf.systemd-resolved.bak': Device or resource busy
+Cannot take a backup of /etc/resolv.conf.
+ln: Already exists
+Cannot install symlink from /etc/resolv.conf to ../run/systemd/resolve/stub-resolv.conf
+Creating group 'systemd-resolve' with GID 994.
+Creating user 'systemd-resolve' (systemd Resolver) with UID 994 and GID 994.
+Created symlink '/etc/systemd/system/dbus-org.freedesktop.resolve1.service' → '/usr/lib/systemd/system/systemd-resolved.service'.
+Created symlink '/etc/systemd/system/sysinit.target.wants/systemd-resolved.service' → '/usr/lib/systemd/system/systemd-resolved.service'.
+Created symlink '/etc/systemd/system/sockets.target.wants/systemd-resolved-varlink.socket' → '/usr/lib/systemd/system/systemd-resolved-varlink.socket'.
+Created symlink '/etc/systemd/system/sockets.target.wants/systemd-resolved-monitor.socket' → '/usr/lib/systemd/system/systemd-resolved-monitor.socket'.
+Setting up apache2-utils (2.4.66-2ubuntu2.4) ...
+Setting up libavif16:amd64 (1.3.0-1ubuntu4) ...
+Setting up php8.3-curl (8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Creating config file /etc/php/8.3/mods-available/curl.ini with new version
+Setting up php8.3-intl (8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Creating config file /etc/php/8.3/mods-available/intl.ini with new version
+Setting up php8.3-cli (8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d) ...
+update-alternatives: using /usr/bin/php8.3 to provide /usr/bin/php (php) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/php.1.gz because associated file /usr/share/man/man1/php8.3.1.gz (of link group php) does not exist
+update-alternatives: using /usr/bin/phar8.3 to provide /usr/bin/phar (phar) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/phar.1.gz because associated file /usr/share/man/man1/phar8.3.1.gz (of link group phar) does not exist
+update-alternatives: using /usr/bin/phar.phar8.3 to provide /usr/bin/phar.phar (phar.phar) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/phar.phar.1.gz because associated file /usr/share/man/man1/phar.phar8.3.1.gz (of link group phar.phar) does not exist
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Creating config file /etc/php/8.3/cli/php.ini with new version
+Setting up apache2-bin (2.4.66-2ubuntu2.4) ...
+Setting up systemd-cryptsetup (259.5-0ubuntu3.4) ...
+Setting up libapache2-mod-php8.3 (8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d) ...
+Package apache2 is not configured yet. Will defer actions by package libapache2-mod-php8.3.
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Creating config file /etc/php/8.3/apache2/php.ini with new version
+No module matches
+Setting up php8.3-apcu (5.1.28-2+0~20260623.59+ubuntu26.04~1.gbp4679cd) ...
+Setting up php8.3-memcache (8.2-7+0~20260712.47+ubuntu26.04~1.gbp06e5ea) ...
+Setting up php8.3-ssh2 (1.4.1-5+0~20260622.38+ubuntu26.04~1.gbp3ed928) ...
+Setting up apache2 (2.4.66-2ubuntu2.4) ...
+Enabling module mpm_event.
+Enabling module authz_core.
+Enabling module authz_host.
+Enabling module authn_core.
+Enabling module auth_basic.
+Enabling module access_compat.
+Enabling module authn_file.
+Enabling module authz_user.
+Enabling module alias.
+Enabling module dir.
+Enabling module autoindex.
+Enabling module env.
+Enabling module mime.
+Enabling module negotiation.
+Enabling module setenvif.
+Enabling module filter.
+Enabling module deflate.
+Enabling module status.
+Enabling module reqtimeout.
+Enabling conf charset.
+Enabling conf localized-error-pages.
+Enabling conf other-vhosts-access-log.
+Enabling conf security.
+Enabling conf serve-cgi-bin.
+Enabling site 000-default.
+info: Switch to mpm prefork for package libapache2-mod-php8.3
+Module mpm_event disabled.
+Enabling module mpm_prefork.
+info: Executing deferred 'a2enmod php8.3' for package libapache2-mod-php8.3
+Enabling module php8.3.
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of start.
+Created symlink '/etc/systemd/system/multi-user.target.wants/apache2.service' → '/usr/lib/systemd/system/apache2.service'.
+Created symlink '/etc/systemd/system/multi-user.target.wants/apache-htcacheclean.service' → '/usr/lib/systemd/system/apache-htcacheclean.service'.
+Setting up libheif-plugin-aomdec:amd64 (1.21.2-3ubuntu0.5) ...
+Setting up libheif1:amd64 (1.21.2-3ubuntu0.5) ...
+Setting up libgd3:amd64 (2.3.3-14+0~20260731.21+ubuntu26.04~1.gbp938f32) ...
+Setting up php8.3-gd (8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+debconf: unable to initialize frontend: Teletype
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Noninteractive
+Creating config file /etc/php/8.3/mods-available/gd.ini with new version
+Setting up libheif-plugin-aomenc:amd64 (1.21.2-3ubuntu0.5) ...
+Processing triggers for libc-bin (2.43-2ubuntu2.4) ...
+Processing triggers for systemd (259.5-0ubuntu3.4) ...
+Processing triggers for procps (2:4.0.4-9ubuntu1) ...
+procps: Applying updated sysctl configuration
+sysctl: setting key "kernel.core_pattern", ignoring: Read-only file system
+sysctl: setting key "kernel.sysrq", ignoring: Read-only file system
+sysctl: setting key "kernel.core_uses_pid", ignoring: Read-only file system
+sysctl: setting key "net.ipv4.conf.default.rp_filter", ignoring: Read-only file system
+sysctl: setting key "net.ipv4.conf.eth0.rp_filter", ignoring: Read-only file system
+sysctl: setting key "net.ipv4.conf.lo.rp_filter", ignoring: Read-only file system
+sysctl: setting key "net.ipv4.conf.default.accept_source_route", ignoring: Read-only file system
+sysctl: setting key "net.ipv4.conf.eth0.accept_source_route", ignoring: Read-only file system
+sysctl: setting key "net.ipv4.conf.lo.accept_source_route", ignoring: Read-only file system
+sysctl: setting key "net.ipv4.conf.default.promote_secondaries", ignoring: Read-only file system
+sysctl: setting key "net.ipv4.conf.eth0.promote_secondaries", ignoring: Read-only file system
+sysctl: setting key "net.ipv4.conf.lo.promote_secondaries", ignoring: Read-only file system
+sysctl: setting key "net.ipv4.ping_group_range", ignoring: Read-only file system
+sysctl: setting key "fs.protected_hardlinks", ignoring: Read-only file system
+sysctl: setting key "fs.protected_symlinks", ignoring: Read-only file system
+sysctl: setting key "fs.protected_regular", ignoring: Read-only file system
+sysctl: setting key "fs.protected_fifos", ignoring: Read-only file system
+sysctl: setting key "vm.max_map_count", ignoring: Read-only file system
+sysctl: setting key "kernel.pid_max", ignoring: Read-only file system
+sysctl: setting key "kernel.printk", ignoring: Read-only file system
+sysctl: setting key "net.ipv6.conf.all.use_tempaddr", ignoring: Read-only file system
+sysctl: setting key "net.ipv6.conf.default.use_tempaddr", ignoring: Read-only file system
+sysctl: setting key "kernel.kptr_restrict", ignoring: Read-only file system
+sysctl: setting key "kernel.sysrq", ignoring: Read-only file system
+sysctl: setting key "vm.max_map_count", ignoring: Read-only file system
+sysctl: setting key "net.ipv4.conf.default.rp_filter", ignoring: Read-only file system
+sysctl: setting key "net.ipv4.conf.all.rp_filter", ignoring: Read-only file system
+sysctl: setting key "kernel.yama.ptrace_scope", ignoring: Read-only file system
+sysctl: setting key "vm.mmap_min_addr", ignoring: Read-only file system
+Processing triggers for php8.3-cli (8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d) ...
+Processing triggers for libapache2-mod-php8.3 (8.3.35-1+0~20260925.87+ubuntu26.04~1.gbp19383d) ...
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of restart.
+PHP 8.3.35 (cli) (built: Sep 25 2026 05:12:11) (NTS)
+Copyright (c) The PHP Group
+Zend Engine v4.3.35, Copyright (c) Zend Technologies
+    with Zend OPcache v8.3.35, Copyright (c), by Zend Technologies
+[PHP Modules]
+apcu
+bcmath
+calendar
+Core
+ctype
+curl
+date
+dom
+exif
+FFI
+fileinfo
+filter
+ftp
+gd
+gettext
+gmp
+hash
+iconv
+intl
+json
+ldap
+libxml
+mbstring
+memcache
+mysqli
+mysqlnd
+openssl
+pcntl
+pcre
+PDO
+pdo_mysql
+Phar
+posix
+random
+readline
+Reflection
+session
+shmop
+SimpleXML
+sockets
+sodium
+SPL
+ssh2
+standard
+sysvmsg
+sysvsem
+sysvshm
+tokenizer
+xml
+xmlreader
+xmlwriter
+xsl
+Zend OPcache
+zip
+zlib
+
+[Zend Modules]
+Zend OPcache
+

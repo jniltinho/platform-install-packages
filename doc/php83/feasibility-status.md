@@ -153,3 +153,58 @@ The first broad phase-1 task group remains incomplete. Next: map compiler/static
 findings to exercised entrypoints, finish license/dependency/overlay attribution,
 freeze and run the benchmark fixtures, execute controlled PHP 8.3 runtime probes,
 and resolve the Ubuntu 26.04/EL9 provider matrices before the go/no-go decision.
+
+## Independent Claude/Grok review and first runtime differential
+
+Both CLIs reviewed supplied public-source snippets and phase-1 evidence with
+all tools disabled; neither inspected or modified the VMs. Both advised keeping
+compiler, static, library-runtime and full application acceptance evidence
+separate, prioritizing first-party/bootstrap dependencies, and not silently
+excluding optional code or duplicate player versions. Claude recommended tighter
+OS-level isolation before expanding beyond the fixed no-I/O probes. Neither
+review is a migration approval.
+
+Five identical fixed library probes ran against extracted, unpatched public
+payloads on `.74` and `.83`. All five exit successfully on PHP 7.4. On PHP 8.3:
+
+- `Zend_Registry::set/get` fails with `TypeError`: its `offsetExists` passes an
+  object to `array_key_exists` at `Zend/Registry.php:206`.
+- Legacy `Services_JSON` fails on removed curly-brace offset syntax.
+- Empty-options `Zend_Application`, a simple `Zend_Config` lookup and load-only
+  Propel/PDO subclass discovery succeed, with legacy deprecation diagnostics.
+  These successes do not establish full bootstrap, database or API compatibility.
+
+An initial Propel harness include-path omission failed on both versions; it was
+corrected before the recorded comparison and is not an application regression.
+The runner is not an OS sandbox; only the reviewed fixed no-I/O probes were run.
+Reports and harness hash: [runtime evidence](evidence/runtime-probes/).
+
+Temporary Apache include tracing on synthetic `.74` observed API ping (325 files),
+Admin login (361) and KMC shell (281), all HTTP 200. Zend Registry was included in
+the Admin login flow; that does not establish which Registry methods executed.
+The KMC shell included three PHP 8.3 compiler-rejected Symfony files:
+`controller/sfRouting.class.php`, `helper/UrlHelper.php` and `util/sfCore.class.php`.
+API ping and Admin login had no intersection with the 79 rejected paths; absence
+in these limited requests does not prove a path unreachable in other flows. Instrumentation was
+disabled, its Apache configuration removed, and Apache reloaded afterward.
+No production application or data was involved.
+
+The compiler differential is 51 new server-tree rejections plus 21 legacy-player
+paths (seven distinct player-file contents). All remain tracked: deduplication
+is for triage, not permission to drop a supported feature. Phase 1 remains open.
+
+## Disposable Ubuntu 26.04 / EL9 provider probes
+
+[Provider commands, image digests and logs](evidence/providers/) now establish
+successful installation of the requested PHP 8.3 packages on Ubuntu 26.04 using
+Sury's signed **matching `resolute` suite**, and on Rocky Linux 9 using Remi's
+`php:remi-8.3` stream with EPEL/CRB. Both report CLI PHP 8.3.35. This is stronger
+than repository URL availability, but is not application or complete ABI/SAPI
+acceptance. The Ubuntu Apache module was installed, not HTTP-tested; EL9 FPM
+module discovery was tested, not an application FastCGI request.
+
+Native Ubuntu 26.04 did not resolve the requested PHP 8.3 packages. EL9 native
+AppStream exposes PHP 8.3, but the partial listing did not include memcache/ssh2;
+its exit-zero result is not a full dependency-resolution success. Full mandatory
+extension coverage, provider selection and unattended application acceptance
+remain pending. Existing packaging and workflows remain unchanged.

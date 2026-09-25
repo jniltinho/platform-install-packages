@@ -1,0 +1,55 @@
+Unable to find image 'rockylinux:9' locally
+9: Pulling from library/rockylinux
+446f83f14b23: Pulling fs layer
+446f83f14b23: Download complete
+446f83f14b23: Pull complete
+Digest: sha256:d7be1c094cc5845ee815d4632fe377514ee6ebcf8efaed6892889657e5ddaaa6
+Status: Downloaded newer image for rockylinux:9
+NAME="Rocky Linux"
+VERSION="9.3 (Blue Onyx)"
+ID="rocky"
+ID_LIKE="rhel centos fedora"
+VERSION_ID="9.3"
+PLATFORM_ID="platform:el9"
+PRETTY_NAME="Rocky Linux 9.3 (Blue Onyx)"
+ANSI_COLOR="0;32"
+LOGO="fedora-logo-icon"
+CPE_NAME="cpe:/o:rocky:rocky:9::baseos"
+HOME_URL="https://rockylinux.org/"
+BUG_REPORT_URL="https://bugs.rockylinux.org/"
+SUPPORT_END="2032-05-31"
+ROCKY_SUPPORT_PRODUCT="Rocky-Linux-9"
+ROCKY_SUPPORT_PRODUCT_VERSION="9.3"
+REDHAT_SUPPORT_PRODUCT="Rocky Linux"
+REDHAT_SUPPORT_PRODUCT_VERSION="9.3"
+Rocky Linux 9 - AppStream
+Name Stream Profiles                   Summary
+php  8.1    common [d], devel, minimal PHP scripting language
+php  8.2    common [d], devel, minimal PHP scripting language
+php  8.3    common [d], devel, minimal PHP scripting language
+
+Hint: [d]efault, [e]nabled, [x]disabled, [i]nstalled
+Dependencies resolved.
+================================================================================
+ Package           Architecture     Version             Repository         Size
+================================================================================
+Enabling module streams:
+ php                                8.3
+
+Transaction Summary
+================================================================================
+
+Complete!
+Last metadata expiration check: 0:00:01 ago on Fri Sep 25 11:45:36 2026.
+Available Packages
+php-cli.x86_64            8.3.33-1.module+el9.8.0+40285+1bc4c2b4       appstream
+php-fpm.x86_64            8.3.33-1.module+el9.8.0+40285+1bc4c2b4       appstream
+php-gd.x86_64             8.3.33-1.module+el9.8.0+40285+1bc4c2b4       appstream
+php-gmp.x86_64            8.3.33-1.module+el9.8.0+40285+1bc4c2b4       appstream
+php-intl.x86_64           8.3.33-1.module+el9.8.0+40285+1bc4c2b4       appstream
+php-ldap.x86_64           8.3.33-1.module+el9.8.0+40285+1bc4c2b4       appstream
+php-mbstring.x86_64       8.3.33-1.module+el9.8.0+40285+1bc4c2b4       appstream
+php-mysqlnd.x86_64        8.3.33-1.module+el9.8.0+40285+1bc4c2b4       appstream
+php-pecl-apcu.x86_64      5.1.23-1.module+el9.7.0+40005+715283ec       appstream
+php-pecl-zip.x86_64       1.22.3-1.module+el9.7.0+40005+715283ec       appstream
+php-xml.x86_64            8.3.33-1.module+el9.8.0+40285+1bc4c2b4       appstream

@@ -1,0 +1,24 @@
+[
+  {
+    "label": "api-ping",
+    "included_file_count": 325,
+    "compiler_rejection_intersection": [],
+    "zend_registry_included": false
+  },
+  {
+    "label": "admin-login",
+    "included_file_count": 361,
+    "compiler_rejection_intersection": [],
+    "zend_registry_included": true
+  },
+  {
+    "label": "kmc-shell",
+    "included_file_count": 281,
+    "compiler_rejection_intersection": [
+      "/opt/kaltura/app/vendor/symfony/controller/sfRouting.class.php",
+      "/opt/kaltura/app/vendor/symfony/helper/UrlHelper.php",
+      "/opt/kaltura/app/vendor/symfony/util/sfCore.class.php"
+    ],
+    "zend_registry_included": false
+  }
+]

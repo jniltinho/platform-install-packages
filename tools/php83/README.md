@@ -53,3 +53,30 @@ synthetic workload client, not a retrofit of the legacy sanity script.
 ```sh
 python3 -m unittest discover -s tools/php83 -p 'test_*.py'
 ```
+
+## Fixed library runtime probes and temporary include tracing
+
+Run only against the checksum-verified, extracted public package payload, never
+against a configured production tree. Copy both probe files to the same lab
+folder, then run (substitute the matching lab's root and interpreter):
+
+```sh
+python3 run-runtime-probes.py /path/to/extracted/opt/kaltura/app php8.3 result.json
+```
+
+Each probe gets a separate process and 30-second timeout. The runner disables
+URL fopen/include, but this is **not an OS network sandbox**. The five fixed
+probes do not open a DB/network connection or read application configuration;
+do not extend this to arbitrary `require` scans without OS-level isolation.
+The JSON contains interpreter version, harness hash and per-probe output/status.
+Exit zero from the runner means collection completed, not that all probes passed.
+A load-only Propel success does not imply DB functionality. Environment and
+extension versions differ between the baseline and candidate.
+
+`include-trace.php` is temporary Apache `auto_prepend_file` instrumentation for
+the disposable synthetic `.74` only. It records allowlisted labels, included
+Kaltura file paths and last error *type*, never request content, URLs or errors.
+Use a non-web-accessible `/var/lib/kaltura-audit-traces` directory writable by
+Apache. Enable only for controlled requests and remove the Apache directive
+and reload afterward. The collected inclusion set is not method-call coverage;
+absence does not prove a file is unreachable. Do not deploy this to `.20`.
