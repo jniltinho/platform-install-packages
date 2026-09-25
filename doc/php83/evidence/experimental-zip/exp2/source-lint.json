@@ -1,0 +1,98 @@
+[
+  {
+    "runtime": "php74",
+    "tree": "original",
+    "path": "alpha/apps/kaltura/lib/Services_JSON.class.php",
+    "sha256": "6b83716ffb5a10a641293508a58443e3117f24613da4be0c7b038e1cc0851aa9",
+    "lint_exit": 0,
+    "diagnostics": "No syntax errors detected in <public-app>/alpha/apps/kaltura/lib/Services_JSON.class.php\n"
+  },
+  {
+    "runtime": "php74",
+    "tree": "candidate",
+    "path": "alpha/apps/kaltura/lib/Services_JSON.class.php",
+    "sha256": "f8611508758756f0a2264cc1a7aa022d8a8af8d80a0abdeba49a9a30e23d1358",
+    "lint_exit": 0,
+    "diagnostics": "No syntax errors detected in <public-app>/alpha/apps/kaltura/lib/Services_JSON.class.php\n"
+  },
+  {
+    "runtime": "php74",
+    "tree": "original",
+    "path": "vendor/ZendFramework/library/Zend/Json/Encoder.php",
+    "sha256": "7af0946f20f81f7cbef204f9cdb907d9c52407fa7e4797bd613d12f778baf720",
+    "lint_exit": 0,
+    "diagnostics": "No syntax errors detected in <public-app>/vendor/ZendFramework/library/Zend/Json/Encoder.php\n"
+  },
+  {
+    "runtime": "php74",
+    "tree": "candidate",
+    "path": "vendor/ZendFramework/library/Zend/Json/Encoder.php",
+    "sha256": "e74ee2fae9c48c2d99859ee0821f17293d2586e73a2ff9844ec530b2d6a5bf64",
+    "lint_exit": 0,
+    "diagnostics": "No syntax errors detected in <public-app>/vendor/ZendFramework/library/Zend/Json/Encoder.php\n"
+  },
+  {
+    "runtime": "php74",
+    "tree": "original",
+    "path": "vendor/ZendFramework/library/Zend/Json/Decoder.php",
+    "sha256": "7336a0a91cdb2da465642e3322d77cae04f788c6b3e937cd2e1cbd4aff0aa996",
+    "lint_exit": 0,
+    "diagnostics": "No syntax errors detected in <public-app>/vendor/ZendFramework/library/Zend/Json/Decoder.php\n"
+  },
+  {
+    "runtime": "php74",
+    "tree": "candidate",
+    "path": "vendor/ZendFramework/library/Zend/Json/Decoder.php",
+    "sha256": "1d3ef5a95568db6dfe2db823766965a4b887f4689b2a182835b9390695360673",
+    "lint_exit": 0,
+    "diagnostics": "No syntax errors detected in <public-app>/vendor/ZendFramework/library/Zend/Json/Decoder.php\n"
+  },
+  {
+    "runtime": "php83",
+    "tree": "original",
+    "path": "alpha/apps/kaltura/lib/Services_JSON.class.php",
+    "sha256": "6b83716ffb5a10a641293508a58443e3117f24613da4be0c7b038e1cc0851aa9",
+    "lint_exit": 255,
+    "diagnostics": "Errors parsing <public-app>/alpha/apps/kaltura/lib/Services_JSON.class.php\n"
+  },
+  {
+    "runtime": "php83",
+    "tree": "candidate",
+    "path": "alpha/apps/kaltura/lib/Services_JSON.class.php",
+    "sha256": "f8611508758756f0a2264cc1a7aa022d8a8af8d80a0abdeba49a9a30e23d1358",
+    "lint_exit": 0,
+    "diagnostics": "No syntax errors detected in <public-app>/alpha/apps/kaltura/lib/Services_JSON.class.php\n"
+  },
+  {
+    "runtime": "php83",
+    "tree": "original",
+    "path": "vendor/ZendFramework/library/Zend/Json/Encoder.php",
+    "sha256": "7af0946f20f81f7cbef204f9cdb907d9c52407fa7e4797bd613d12f778baf720",
+    "lint_exit": 255,
+    "diagnostics": "Errors parsing <public-app>/vendor/ZendFramework/library/Zend/Json/Encoder.php\n"
+  },
+  {
+    "runtime": "php83",
+    "tree": "candidate",
+    "path": "vendor/ZendFramework/library/Zend/Json/Encoder.php",
+    "sha256": "e74ee2fae9c48c2d99859ee0821f17293d2586e73a2ff9844ec530b2d6a5bf64",
+    "lint_exit": 0,
+    "diagnostics": "No syntax errors detected in <public-app>/vendor/ZendFramework/library/Zend/Json/Encoder.php\n"
+  },
+  {
+    "runtime": "php83",
+    "tree": "original",
+    "path": "vendor/ZendFramework/library/Zend/Json/Decoder.php",
+    "sha256": "7336a0a91cdb2da465642e3322d77cae04f788c6b3e937cd2e1cbd4aff0aa996",
+    "lint_exit": 255,
+    "diagnostics": "Errors parsing <public-app>/vendor/ZendFramework/library/Zend/Json/Decoder.php\n"
+  },
+  {
+    "runtime": "php83",
+    "tree": "candidate",
+    "path": "vendor/ZendFramework/library/Zend/Json/Decoder.php",
+    "sha256": "1d3ef5a95568db6dfe2db823766965a4b887f4689b2a182835b9390695360673",
+    "lint_exit": 0,
+    "diagnostics": "No syntax errors detected in <public-app>/vendor/ZendFramework/library/Zend/Json/Decoder.php\n"
+  }
+]

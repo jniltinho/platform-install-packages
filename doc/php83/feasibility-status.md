@@ -239,3 +239,23 @@ fixtures exposed a PHP 8.3 difference after an earlier narrower differential
 passed; the scratch ZIP is therefore held, not approved or published. JSON offset
 repairs passed the current standard/minimal-INI differential corpus. No task is
 closed or application deployed based on these partial results.
+
+## First experimental source artifact: exp2
+
+The [JSON-only experimental ZIP](experimental-zip.md) is now assembled with three
+minimal source patches (54 offset syntax replacements). Two builds using the
+recorded Python/zlib toolchain match byte-for-byte. All original ZIP entries
+remain; only the three declared source files and added experimental metadata
+differ. The verifier checks file, patch, manifest and builder identities.
+
+Eight differential JSON comparisons pass against unpatched PHP 7.4 across both
+candidate runtimes and standard/minimal INI modes; each codec tests 13 values.
+Both without-mbstring/iconv configurations are recorded. Compiler checks pass
+for the patched files on both runtimes. Deprecation diagnostics are retained.
+This is not full application acceptance or a performance claim.
+
+The Registry cast patch remains held after the extended property fixture failed;
+its unchanged source, DebugPDO and Symfony still block a complete PHP 8.3 switch.
+No dependency upgrade was selected, no production package/CI reference changed,
+and no GitHub migration release or `.20` deploy occurred. Tasks 1.3/1.5/1.6 and
+later gates remain open despite this first bounded artifact.

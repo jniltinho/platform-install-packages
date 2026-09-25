@@ -1,0 +1,7 @@
+{
+  "patch": "Registry-cast.patch",
+  "sha256": "12809d136010cfcb4deb70b5ef9d63fea5da9571d057c957c6396ce5861b5415",
+  "path": "vendor/ZendFramework/library/Zend/Registry.php",
+  "before_sha256": "304ba8242c81790f11dadcf7a39e63b7047f8ea33fc3de03b748cab70397b48d",
+  "after_sha256": "1334c98e9bce7142376e24a629f634cb8412bd502ddee6f6a3950e9e67ef77b1"
+}

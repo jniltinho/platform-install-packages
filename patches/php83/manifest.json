@@ -1,0 +1,34 @@
+{
+  "upstream_sha256": "58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28",
+  "upstream_root": "server-Rigel-18.20.0",
+  "status": "experimental; not full PHP 8.3 compatibility",
+  "revision": "exp2",
+  "patches": [
+    {
+      "patch": "0002-Services_JSON.class.patch",
+      "sha256": "126eaa808a590c753f2a06d91de5e5b78da7a45ac02f50f172c84e825cf13df0",
+      "path": "alpha/apps/kaltura/lib/Services_JSON.class.php",
+      "before_sha256": "6b83716ffb5a10a641293508a58443e3117f24613da4be0c7b038e1cc0851aa9",
+      "after_sha256": "f8611508758756f0a2264cc1a7aa022d8a8af8d80a0abdeba49a9a30e23d1358"
+    },
+    {
+      "patch": "0003-Encoder.patch",
+      "sha256": "d39935bc38dbe62d54d02e065a801810acc5635e24cc28de7515556092b2f490",
+      "path": "vendor/ZendFramework/library/Zend/Json/Encoder.php",
+      "before_sha256": "7af0946f20f81f7cbef204f9cdb907d9c52407fa7e4797bd613d12f778baf720",
+      "after_sha256": "e74ee2fae9c48c2d99859ee0821f17293d2586e73a2ff9844ec530b2d6a5bf64"
+    },
+    {
+      "patch": "0004-Decoder.patch",
+      "sha256": "bbd82723f3232be8d0d50827e0d4c4ffb8b37ffe16afb11b1151b9e4c2beac93",
+      "path": "vendor/ZendFramework/library/Zend/Json/Decoder.php",
+      "before_sha256": "7336a0a91cdb2da465642e3322d77cae04f788c6b3e937cd2e1cbd4aff0aa996",
+      "after_sha256": "1d3ef5a95568db6dfe2db823766965a4b887f4689b2a182835b9390695360673"
+    }
+  ],
+  "known_limitations": [
+    "JSON offset syntax repairs only; not a complete PHP 8.3 port",
+    "Zend Registry, DebugPDO, Symfony and other audit findings remain unresolved",
+    "Deprecations remain unsuppressed; no full application or performance acceptance"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "zip_sha256": "99233ac6638f02072b3394159340edd1e2388b243bafadca3fe33b6bbafa97a0",
+  "repeat_build_sha256": "99233ac6638f02072b3394159340edd1e2388b243bafadca3fe33b6bbafa97a0",
+  "upstream_sha256": "58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28",
+  "builder_sha256": "055443730325459ff2f4e5ad093542e3aa544f6d82af8b21174027f5cdbf523e",
+  "manifest_sha256": "35dde289089ce2a3675a044515c0c78f7bf6e9d188e6534da2118cfc623dd1c8",
+  "verifier_sha256": "211a0c187a53e4444fd0b5bfd0be972544ff66f21e7ce2d78c1c6aa2206ee6bc",
+  "original_entries": 18027,
+  "changed_files": [
+    "server-Rigel-18.20.0/alpha/apps/kaltura/lib/Services_JSON.class.php",
+    "server-Rigel-18.20.0/vendor/ZendFramework/library/Zend/Json/Decoder.php",
+    "server-Rigel-18.20.0/vendor/ZendFramework/library/Zend/Json/Encoder.php"
+  ],
+  "added_metadata": [
+    "server-Rigel-18.20.0/.php83-experimental/0002-Services_JSON.class.patch",
+    "server-Rigel-18.20.0/.php83-experimental/0003-Encoder.patch",
+    "server-Rigel-18.20.0/.php83-experimental/0004-Decoder.patch",
+    "server-Rigel-18.20.0/.php83-experimental/README.txt",
+    "server-Rigel-18.20.0/.php83-experimental/manifest.json"
+  ],
+  "missing_original_entries": [],
+  "two_builds_identical": true,
+  "all_other_original_entry_bytes_identical": true,
+  "archive_and_entry_comments_preserved": true,
+  "metadata_policy": "sorted entries; fixed timestamps; normalized modes; recorded Python/zlib"
+}
