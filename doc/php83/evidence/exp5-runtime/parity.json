@@ -1,0 +1,143 @@
+{
+  "schema": 1,
+  "logical_rows": 48,
+  "zero_exits": 44,
+  "expected_original83_fatals": 4,
+  "candidate_rows_exit0": 24,
+  "comparisons": [
+    {
+      "runtime": "74",
+      "ini": "standard",
+      "case": "legacy-json",
+      "typed_output_equal": true
+    },
+    {
+      "runtime": "74",
+      "ini": "standard",
+      "case": "zend-json",
+      "typed_output_equal": true
+    },
+    {
+      "runtime": "74",
+      "ini": "standard",
+      "case": "doc-comment",
+      "typed_output_equal": true
+    },
+    {
+      "runtime": "74",
+      "ini": "standard",
+      "case": "doc-comment-export",
+      "typed_output_equal": true
+    },
+    {
+      "runtime": "74",
+      "ini": "standard",
+      "case": "doc-comment-consumer",
+      "typed_output_equal": true
+    },
+    {
+      "runtime": "74",
+      "ini": "minimal",
+      "case": "legacy-json",
+      "typed_output_equal": true
+    },
+    {
+      "runtime": "74",
+      "ini": "minimal",
+      "case": "zend-json",
+      "typed_output_equal": true
+    },
+    {
+      "runtime": "74",
+      "ini": "minimal",
+      "case": "doc-comment",
+      "typed_output_equal": true
+    },
+    {
+      "runtime": "74",
+      "ini": "minimal",
+      "case": "doc-comment-export",
+      "typed_output_equal": true
+    },
+    {
+      "runtime": "74",
+      "ini": "minimal",
+      "case": "doc-comment-consumer",
+      "typed_output_equal": true
+    },
+    {
+      "runtime": "83",
+      "ini": "standard",
+      "case": "legacy-json",
+      "typed_output_equal": true
+    },
+    {
+      "runtime": "83",
+      "ini": "standard",
+      "case": "zend-json",
+      "typed_output_equal": true
+    },
+    {
+      "runtime": "83",
+      "ini": "standard",
+      "case": "doc-comment",
+      "typed_output_equal": true
+    },
+    {
+      "runtime": "83",
+      "ini": "standard",
+      "case": "doc-comment-export",
+      "typed_output_equal": true
+    },
+    {
+      "runtime": "83",
+      "ini": "standard",
+      "case": "doc-comment-consumer",
+      "typed_output_equal": true
+    },
+    {
+      "runtime": "83",
+      "ini": "minimal",
+      "case": "legacy-json",
+      "typed_output_equal": true
+    },
+    {
+      "runtime": "83",
+      "ini": "minimal",
+      "case": "zend-json",
+      "typed_output_equal": true
+    },
+    {
+      "runtime": "83",
+      "ini": "minimal",
+      "case": "doc-comment",
+      "typed_output_equal": true
+    },
+    {
+      "runtime": "83",
+      "ini": "minimal",
+      "case": "doc-comment-export",
+      "typed_output_equal": true
+    },
+    {
+      "runtime": "83",
+      "ini": "minimal",
+      "case": "doc-comment-consumer",
+      "typed_output_equal": true
+    }
+  ],
+  "independent": [
+    {
+      "runtime": "74",
+      "independent_report_equal": true,
+      "all_local_harness_hashes_equal": true
+    },
+    {
+      "runtime": "83",
+      "independent_report_equal": true,
+      "all_local_harness_hashes_equal": true
+    }
+  ],
+  "normalization": "typed JSON canonical serialization; doc-comment-export compares exact entries, retaining producer version and source hash separately; environment not a parity case",
+  "application_acceptance": false
+}

@@ -1,0 +1,11 @@
+--- a/alpha/apps/kaltura/lib/myCustomData.class.php
++++ b/alpha/apps/kaltura/lib/myCustomData.class.php
+@@ -25,7 +25,7 @@
+ 			$this->data = array();
+ 		try
+ 		{
+-			$this->data = @unserialize( $str );
++			$this->data = @unserialize( $str ?? '' );
+ 			if ( $this->data == null )
+ 			{
+ 				$this->data = array();

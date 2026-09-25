@@ -1,0 +1,16 @@
+Running read-only checks and test batch — no edits.
+
+Tests pass — now reviewing evidence files.
+
+Evidence files are large — computing exact verification counts locally.
+
+Ran `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83 -p "test_*.py"` locally read-only: 122 tests in 0.073s OK exit 0.
+Reviewed `doc/php83/evidence/exp5-api/codex.json` and `claude.json`: harnesses identical, both hold 6 records covering 74 original/exp4/exp5 and 83 original/exp4/exp5.
+Normalized API outputs unchanged where claimed: stdout_sha256 `787d33cd...` for all 74 trees and 83 exp4/exp5 with returncode 0, while only 83 original differs with rc 1 and empty sha `e3b0c442...`.
+On PHP 8.3 exp4 shows 40 groups with 1073 events and exp5 shows 35 groups with 931 events, that is 5 groups and 142 events removed with 35 groups and 931 remaining.
+Reviewed `doc/php83/evidence/null-batch/manifest.json`: 12 patches total, last five are `myCustomData-null-argument`, `Partner-null-permission-name`, `PermissionPeer-null-dependency`, `KalturaLog-null-analytics`, `KalturaFrontController-null-user`, status experimental exp4 plus five null-only fixes with no full acceptance.
+Reviewed `doc/php83/evidence/null-probe/codex.json`: 4 rows for 74/83 by exp4/exp5, each exit 0 with 41 contract rows, comparisons `all_41_contract_rows_equal` true for 74 and 83, `functional_checks_passed` true and `application_acceptance` false.
+Invalid and non-null behavior preserved same-runtime: 74 null/empty/false map to `ALWAYS_ALLOWED_ACTIONS` and `a:0:{}` with analytics and front-user variants unchanged, and 83 exp5 array/object remain `TypeError` except front-user array returning `"Array"`.
+Reviewed `tools/php83/null-probe/collect.py` with 39 lines: scope honestly declares no PermissionPeer SQL dependency branches and grep finds that phrase only in the scope string with no SQL/Mysql/PDO/Criteria code branches, only SSH hash check plus `verify-source.py` plus `run.sh` plus 41-row and same-runtime equality asserts.
+Limitations remain: Grok case stays NOT_EXECUTED/BLOCKED on reported timeout exit 124 with no retry here, evidence is synthetic Apache HTTP plus real bootstrap with in-memory sink only, full-app acceptance false, cache/framework/media/distro/performance/recovery gates open, and no production/CI/release/`.20` authorization.
+No whole-app approval given, and no edits or SSH were executed while other agents work here.

@@ -107,3 +107,9 @@ The historical 19-row disposition ledger above remains unchanged; later exp3
 selection is recorded separately in `exp3-candidate.md`. Criteria is not selected
 into exp3 and has only focused runtime approval, not SQL/application acceptance.
 See [Criteria experiment](criteria-null-alias.md).
+
+The subsequent exp5 null-only batch adds five explicitly reviewed experiments:
+25 total patches, 3 active in unchanged exp2 / 22 held; strict identity/application
+audit at [`null-batch/patch-inventory.json`](evidence/null-batch/patch-inventory.json).
+The separate exp5 manifest selects twelve patches for isolated integration, not
+production acceptance. See [exp5 evidence](exp5-null-batch.md).

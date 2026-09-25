@@ -1,0 +1,11 @@
+--- a/infra/log/KalturaLog.php
++++ b/infra/log/KalturaLog.php
+@@ -119,7 +119,7 @@
+ 		$message = '';
+ 		foreach ($data as $value)
+ 		{
+-			$message .= strtr($value, ',', ' ') . ',';
++			$message .= strtr($value ?? '', ',', ' ') . ',';
+ 		}
+ 		$message = substr($message, 0, -1);
+ 		self::logByType($message, self::LOG_TYPE_ANALYTICS, self::NOTICE);

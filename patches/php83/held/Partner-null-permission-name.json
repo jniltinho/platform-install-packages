@@ -1,0 +1,7 @@
+{
+  "status": "held; explicit null-only experiment; behavior and integrated acceptance pending",
+  "path": "alpha/lib/model/Partner.php",
+  "before_sha256": "27dfd30c3f0190e29a86489c10f154b8098f8d2b2b4a8928799056ee4c3d6f07",
+  "after_sha256": "9fd78239a94da6268a92f72b335acffffde05a49152798cd611a0153b876e714",
+  "patch_sha256": "f4df85e938f6d8bea307583d28a2f626990540cb0c6b343c592e1f98dc15bbad"
+}

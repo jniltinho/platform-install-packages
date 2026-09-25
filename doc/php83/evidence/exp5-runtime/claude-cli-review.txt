@@ -1,0 +1,12 @@
+Execução concluída e verificada. Segue o relatório:
+
+1. Rodei os dois comandos em sequência, sem nenhum outro SSH. `claude-74.exit`=0 e `claude-83.exit`=0, e os dois `.stderr` ficaram vazios. As evidências estão em `doc/php83/evidence/exp5-runtime/claude-{74,83}.*`.
+2. **Contagem de linhas:** foram 48 no total (24 por VM). Deram exit 0 em 44 delas: todas as 24 do PHP 7.4 (12 `original` + 12 `exp5`) e 20 do PHP 8.3 (8 `original` + 12 `exp5`).
+3. **Os 4 fatais esperados** estão todos em `original` no PHP 8.3 (exit 255), nos casos `legacy-json` e `zend-json`, com as ini `standard` e `minimal`. Todos são "Array and string offset access syntax with curly braces is no longer supported", em `Services_JSON.class.php:176` e `Zend/Json/Encoder.php:557`.
+4. **Candidato:** as 24 linhas `exp5` deram exit 0 nos dois runtimes.
+5. **Comparação com codex:** depois de remover `recorded_at_utc` e `duration_ns`, os relatórios `claude-74`/`codex-74` e `claude-83`/`codex-83` são idênticos, inclusive stdout, stderr, exits e mapa de hashes do harness.
+6. **Identidade da fonte:** `zip_sha256=ef4d3e67…9bbcf5`, 15189 arquivos extraídos verificados. Os hosts foram `kaltura-php74-baseline` e `kaltura-php83-lab`, e `application_acceptance=false` nos dois.
+7. **Identidade do harness:** o `batch.py` remoto (`a0c9e0ba…`) bate com o `tools/php83/exp5-regression/batch.py` local. Os 48 arquivos em `tests/` são os mesmos nas duas VMs.
+8. **Revisão dos runners:** a diferença entre `batch.py` exp4 e exp5 se limita a caminhos e nomes `exp4`→`exp5` e ao hash esperado do zip (`a1ce4c46…`→`ef4d3e67…`).
+9. O `run-one.sh` do exp5 não existe localmente, então revisei de forma indireta. Troquei `exp4`→`exp5` em `tools/php83/exp4-regression/run-one.sh` e o resultado tem o mesmo hash registrado pela VM (`81094819…`). Isso confirma que a única diferença também é a revisão.
+10. **Limitações:** são apenas 12 casos de CLI por runtime, e revisão não é evidência de execução. Não há aprovação da aplicação completa. Não houve execução por Grok nem por Cursor, e nenhum arquivo foi editado ou revertido além dos 6 `claude-*` criados.

@@ -1,0 +1,1 @@
+PASS: 41 actual-class cases preserve same-runtime behavior on PHP7.4/8.3; diagnostics retained

@@ -1,0 +1,7 @@
+{
+  "status": "held; explicit null-only experiment; behavior and integrated acceptance pending",
+  "path": "infra/log/KalturaLog.php",
+  "before_sha256": "9b7a7c3dd37616ffd2ac9720ece862641c43bb687a2db4e8fc9cbcb259ff5449",
+  "after_sha256": "dd2a01851114e821a88f266dd060e55a80d7cd795001369c9c14e7d2a794381f",
+  "patch_sha256": "a52e6e27158728d00ee6c84397d6064cf222de87a248c4733d7c07c52c598d93"
+}

@@ -1,0 +1,670 @@
+{
+  "schema": 1,
+  "scope": "real PermissionPeer::filterDependencies, actual KalturaPDO/SQL, ten synthetic dependency cases",
+  "artifacts": {
+    "exp4": {
+      "zip_sha256": "a1ce4c46792667b07a733e622a3ee71dd01c87a94f7841edfc72d58746ab9d08",
+      "verified_extracted_files": 15184
+    },
+    "exp5": {
+      "zip_sha256": "ef4d3e67c077014ba4837c83eec57ee7e0bf3548e444337ee92b19dad27bbcf5",
+      "verified_extracted_files": 15189
+    }
+  },
+  "harness": {
+    "null-probe/dependencies.php": "fb173cd2e6932c95b7d465237be4c4d046961db6eef9e267f6371efe5dd763aa",
+    "null-probe/run-dependencies.sh": "3387d7748e8dd08ea8d4c1d143c1c91fdc2745f2ed94cc3d9e6cd7021ecc8b8d",
+    "tests/api-bootstrap.php": "1606c3c5ed88e13a2281eda5b8a17b5dcb0298e69b35f7ca3f92cc5f708cd88e",
+    "tests/api-permission-schema.sql": "096a5750c3f0e4dab37fb43598a7b57f2b55b85031685341e0c9df36aa2c8877",
+    "api/start-db.sh": "f3b9785212ff4dcfbafc60bf38c497a1f1fdeb5fe162840d97b5b00d24237363"
+  },
+  "collector_sha256": "9782d4b7ae5b2f947d351d12e963982912512a450e2f224aae742df9203cd583",
+  "imported_collector_sha256": "5c48a8575650887b5604e94270c8195d73ed4e8824ce786dd054419a4248050b",
+  "rows": [
+    {
+      "runtime": "74",
+      "source": "exp4",
+      "exit": 0,
+      "matches_expected": true,
+      "stdout": [
+        [
+          "empty",
+          []
+        ],
+        [
+          "null",
+          [
+            "ROOT"
+          ]
+        ],
+        [
+          "empty-dependency",
+          [
+            "ROOT"
+          ]
+        ],
+        [
+          "zero-dependency",
+          [
+            "ROOT"
+          ]
+        ],
+        [
+          "satisfied",
+          [
+            "ROOT",
+            "CHILD"
+          ]
+        ],
+        [
+          "missing",
+          []
+        ],
+        [
+          "transitive",
+          []
+        ],
+        [
+          "whitespace-csv",
+          [
+            "ROOT",
+            "CHILD"
+          ]
+        ],
+        [
+          "partner-feature",
+          [
+            "CHILD"
+          ]
+        ],
+        [
+          "wrong-partner",
+          []
+        ]
+      ],
+      "stderr_sha256": "4edcefc6f5163b208a879fb58857d29cc5db528f33da98e4f7fd91140c0fd89f",
+      "diagnostics": [
+        {
+          "severity": "Warning",
+          "path": "/audit/app/alpha/apps/kaltura/lib/db/KalturaPDO.php",
+          "line": 201,
+          "count": 1
+        },
+        {
+          "severity": "Warning",
+          "path": "/audit/tests/api-bootstrap.php",
+          "line": 90,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "runtime": "74",
+      "source": "exp5",
+      "exit": 0,
+      "matches_expected": true,
+      "stdout": [
+        [
+          "empty",
+          []
+        ],
+        [
+          "null",
+          [
+            "ROOT"
+          ]
+        ],
+        [
+          "empty-dependency",
+          [
+            "ROOT"
+          ]
+        ],
+        [
+          "zero-dependency",
+          [
+            "ROOT"
+          ]
+        ],
+        [
+          "satisfied",
+          [
+            "ROOT",
+            "CHILD"
+          ]
+        ],
+        [
+          "missing",
+          []
+        ],
+        [
+          "transitive",
+          []
+        ],
+        [
+          "whitespace-csv",
+          [
+            "ROOT",
+            "CHILD"
+          ]
+        ],
+        [
+          "partner-feature",
+          [
+            "CHILD"
+          ]
+        ],
+        [
+          "wrong-partner",
+          []
+        ]
+      ],
+      "stderr_sha256": "aac7ea6042a184321b0c2e4ea365a65666ed735e160f8fbae253aec1ecd0e984",
+      "diagnostics": [
+        {
+          "severity": "Warning",
+          "path": "/audit/app/alpha/apps/kaltura/lib/db/KalturaPDO.php",
+          "line": 201,
+          "count": 1
+        },
+        {
+          "severity": "Warning",
+          "path": "/audit/tests/api-bootstrap.php",
+          "line": 90,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "runtime": "83",
+      "source": "exp4",
+      "exit": 0,
+      "matches_expected": true,
+      "stdout": [
+        [
+          "empty",
+          []
+        ],
+        [
+          "null",
+          [
+            "ROOT"
+          ]
+        ],
+        [
+          "empty-dependency",
+          [
+            "ROOT"
+          ]
+        ],
+        [
+          "zero-dependency",
+          [
+            "ROOT"
+          ]
+        ],
+        [
+          "satisfied",
+          [
+            "ROOT",
+            "CHILD"
+          ]
+        ],
+        [
+          "missing",
+          []
+        ],
+        [
+          "transitive",
+          []
+        ],
+        [
+          "whitespace-csv",
+          [
+            "ROOT",
+            "CHILD"
+          ]
+        ],
+        [
+          "partner-feature",
+          [
+            "CHILD"
+          ]
+        ],
+        [
+          "wrong-partner",
+          []
+        ]
+      ],
+      "stderr_sha256": "e0f1d664e66b6176943211c529f523a86b5b47e517d69535ce35784bf8236b79",
+      "diagnostics": [
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/alpha/apps/kaltura/lib/criteriaFilter.class.php",
+          "line": 51,
+          "count": 10
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/alpha/apps/kaltura/lib/db/KalturaPDO.php",
+          "line": 127,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/alpha/apps/kaltura/lib/db/KalturaPDO.php",
+          "line": 188,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/alpha/apps/kaltura/lib/db/KalturaStatement.php",
+          "line": 20,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/alpha/apps/kaltura/lib/db/KalturaStatement.php",
+          "line": 31,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/alpha/config/kConf.php",
+          "line": 7,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/alpha/lib/model/PermissionPeer.php",
+          "line": 329,
+          "count": 3
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/ZendFramework/library/Zend/Config.php",
+          "line": 248,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/ZendFramework/library/Zend/Config.php",
+          "line": 258,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/ZendFramework/library/Zend/Config.php",
+          "line": 269,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/ZendFramework/library/Zend/Config.php",
+          "line": 278,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/ZendFramework/library/Zend/Config.php",
+          "line": 292,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/ZendFramework/library/Zend/Config.php",
+          "line": 304,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/ZendFramework/library/Zend/Log/Formatter/Simple.php",
+          "line": 80,
+          "count": 3
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/propel/util/Criteria.php",
+          "line": 1259,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/propel/util/Criteria.php",
+          "line": 1263,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/propel/util/Criteria.php",
+          "line": 1267,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/propel/util/Criteria.php",
+          "line": 1271,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/propel/util/Criteria.php",
+          "line": 1275,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/propel/util/Criteria.php",
+          "line": 193,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/propel/util/PropelConfiguration.php",
+          "line": 60,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/propel/util/PropelConfiguration.php",
+          "line": 68,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/propel/util/PropelConfiguration.php",
+          "line": 76,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/propel/util/PropelConfiguration.php",
+          "line": 84,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/propel/util/PropelPDO.php",
+          "line": 123,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/propel/util/PropelPDO.php",
+          "line": 139,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/propel/util/PropelPDO.php",
+          "line": 161,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/propel/util/PropelPDO.php",
+          "line": 206,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/propel/util/PropelPDO.php",
+          "line": 225,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/propel/util/PropelPDO.php",
+          "line": 244,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "runtime": "83",
+      "source": "exp5",
+      "exit": 0,
+      "matches_expected": true,
+      "stdout": [
+        [
+          "empty",
+          []
+        ],
+        [
+          "null",
+          [
+            "ROOT"
+          ]
+        ],
+        [
+          "empty-dependency",
+          [
+            "ROOT"
+          ]
+        ],
+        [
+          "zero-dependency",
+          [
+            "ROOT"
+          ]
+        ],
+        [
+          "satisfied",
+          [
+            "ROOT",
+            "CHILD"
+          ]
+        ],
+        [
+          "missing",
+          []
+        ],
+        [
+          "transitive",
+          []
+        ],
+        [
+          "whitespace-csv",
+          [
+            "ROOT",
+            "CHILD"
+          ]
+        ],
+        [
+          "partner-feature",
+          [
+            "CHILD"
+          ]
+        ],
+        [
+          "wrong-partner",
+          []
+        ]
+      ],
+      "stderr_sha256": "44f01a65a0dadacb8aa967ea41e9a2ea5903aa0ad5982bbd320f21cfa023ee95",
+      "diagnostics": [
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/alpha/apps/kaltura/lib/criteriaFilter.class.php",
+          "line": 51,
+          "count": 10
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/alpha/apps/kaltura/lib/db/KalturaPDO.php",
+          "line": 127,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/alpha/apps/kaltura/lib/db/KalturaPDO.php",
+          "line": 188,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/alpha/apps/kaltura/lib/db/KalturaStatement.php",
+          "line": 20,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/alpha/apps/kaltura/lib/db/KalturaStatement.php",
+          "line": 31,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/alpha/config/kConf.php",
+          "line": 7,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/ZendFramework/library/Zend/Config.php",
+          "line": 248,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/ZendFramework/library/Zend/Config.php",
+          "line": 258,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/ZendFramework/library/Zend/Config.php",
+          "line": 269,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/ZendFramework/library/Zend/Config.php",
+          "line": 278,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/ZendFramework/library/Zend/Config.php",
+          "line": 292,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/ZendFramework/library/Zend/Config.php",
+          "line": 304,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/ZendFramework/library/Zend/Log/Formatter/Simple.php",
+          "line": 80,
+          "count": 3
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/propel/util/Criteria.php",
+          "line": 1259,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/propel/util/Criteria.php",
+          "line": 1263,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/propel/util/Criteria.php",
+          "line": 1267,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/propel/util/Criteria.php",
+          "line": 1271,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/propel/util/Criteria.php",
+          "line": 1275,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/propel/util/Criteria.php",
+          "line": 193,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/propel/util/PropelConfiguration.php",
+          "line": 60,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/propel/util/PropelConfiguration.php",
+          "line": 68,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/propel/util/PropelConfiguration.php",
+          "line": 76,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/propel/util/PropelConfiguration.php",
+          "line": 84,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/propel/util/PropelPDO.php",
+          "line": 123,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/propel/util/PropelPDO.php",
+          "line": 139,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/propel/util/PropelPDO.php",
+          "line": 161,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/propel/util/PropelPDO.php",
+          "line": 206,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/propel/util/PropelPDO.php",
+          "line": 225,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/propel/util/PropelPDO.php",
+          "line": 244,
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "cleanup": {
+    "unit": "php83-exp5-api-13d5b1b6ec4d4cbb8f4791571d320d53",
+    "state": "inactive",
+    "stopped": true
+  },
+  "functional_checks_passed": true,
+  "application_acceptance": false
+}

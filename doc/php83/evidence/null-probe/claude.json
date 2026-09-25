@@ -1,0 +1,1650 @@
+{
+  "schema": 1,
+  "scope": "41 actual-class cases, real bootstrap, in-memory logging sink; no PermissionPeer SQL dependency branches",
+  "harness": {
+    "null-probe/probe.php": "281a7809f91595b0727f7585f38a419174cd0a3373c935491250c1438d9c463f",
+    "null-probe/run.sh": "5f08afe1543a5265e918b145fa97f7d073dda1d3c9d32ec2262de5670eb4ed6c",
+    "tests/api-bootstrap.php": "1606c3c5ed88e13a2281eda5b8a17b5dcb0298e69b35f7ca3f92cc5f708cd88e"
+  },
+  "collector_sha256": "03e8145297a396d4cdf29bae585affff7bdd743208c8984bd3e0731f2e49b842",
+  "rows": [
+    {
+      "runtime": "74",
+      "source": "exp4",
+      "artifact": {
+        "zip_sha256": "a1ce4c46792667b07a733e622a3ee71dd01c87a94f7841edfc72d58746ab9d08",
+        "verified_extracted_files": 15184
+      },
+      "exit": 0,
+      "result": {
+        "php": "7.4.33",
+        "rows": [
+          [
+            "partner",
+            "null",
+            "return",
+            "ALWAYS_ALLOWED_ACTIONS"
+          ],
+          [
+            "custom-data",
+            "null",
+            "return",
+            "a:0:{}"
+          ],
+          [
+            "analytics",
+            "null",
+            "return",
+            [
+              ""
+            ]
+          ],
+          [
+            "front-user",
+            "null",
+            "return",
+            "\"\""
+          ],
+          [
+            "partner",
+            "empty",
+            "return",
+            "ALWAYS_ALLOWED_ACTIONS"
+          ],
+          [
+            "custom-data",
+            "empty",
+            "return",
+            "a:0:{}"
+          ],
+          [
+            "analytics",
+            "empty",
+            "return",
+            [
+              ""
+            ]
+          ],
+          [
+            "front-user",
+            "empty",
+            "return",
+            "\"\""
+          ],
+          [
+            "partner",
+            "false",
+            "return",
+            "ALWAYS_ALLOWED_ACTIONS"
+          ],
+          [
+            "custom-data",
+            "false",
+            "return",
+            "a:0:{}"
+          ],
+          [
+            "analytics",
+            "false",
+            "return",
+            [
+              ""
+            ]
+          ],
+          [
+            "front-user",
+            "false",
+            "return",
+            "\"\""
+          ],
+          [
+            "partner",
+            "zero",
+            "return",
+            "ALWAYS_ALLOWED_ACTIONS,0"
+          ],
+          [
+            "custom-data",
+            "zero",
+            "return",
+            "a:0:{}"
+          ],
+          [
+            "analytics",
+            "zero",
+            "return",
+            [
+              "0"
+            ]
+          ],
+          [
+            "front-user",
+            "zero",
+            "return",
+            "\"0\""
+          ],
+          [
+            "partner",
+            "zero-string",
+            "return",
+            "ALWAYS_ALLOWED_ACTIONS,0"
+          ],
+          [
+            "custom-data",
+            "zero-string",
+            "return",
+            "a:0:{}"
+          ],
+          [
+            "analytics",
+            "zero-string",
+            "return",
+            [
+              "0"
+            ]
+          ],
+          [
+            "front-user",
+            "zero-string",
+            "return",
+            "\"0\""
+          ],
+          [
+            "partner",
+            "space",
+            "return",
+            "ALWAYS_ALLOWED_ACTIONS,  "
+          ],
+          [
+            "custom-data",
+            "space",
+            "return",
+            "a:0:{}"
+          ],
+          [
+            "analytics",
+            "space",
+            "return",
+            [
+              "  "
+            ]
+          ],
+          [
+            "front-user",
+            "space",
+            "return",
+            "\"  \""
+          ],
+          [
+            "partner",
+            "dummy",
+            "return",
+            "DUMMY"
+          ],
+          [
+            "custom-data",
+            "dummy",
+            "return",
+            "a:0:{}"
+          ],
+          [
+            "analytics",
+            "dummy",
+            "return",
+            [
+              "DUMMY"
+            ]
+          ],
+          [
+            "front-user",
+            "dummy",
+            "return",
+            "\"DUMMY\""
+          ],
+          [
+            "partner",
+            "commas",
+            "return",
+            "DUMMY"
+          ],
+          [
+            "custom-data",
+            "commas",
+            "return",
+            "a:0:{}"
+          ],
+          [
+            "analytics",
+            "commas",
+            "return",
+            [
+              " DUMMY "
+            ]
+          ],
+          [
+            "front-user",
+            "commas",
+            "return",
+            "\" DUMMY \""
+          ],
+          [
+            "partner",
+            "array",
+            "return",
+            "ALWAYS_ALLOWED_ACTIONS,Array"
+          ],
+          [
+            "custom-data",
+            "array",
+            "return",
+            "a:0:{}"
+          ],
+          [
+            "analytics",
+            "array",
+            "return",
+            [
+              ""
+            ]
+          ],
+          [
+            "front-user",
+            "array",
+            "return",
+            "\"Array\""
+          ],
+          [
+            "partner",
+            "object",
+            "error",
+            "Error"
+          ],
+          [
+            "custom-data",
+            "object",
+            "return",
+            "a:0:{}"
+          ],
+          [
+            "analytics",
+            "object",
+            "return",
+            [
+              ""
+            ]
+          ],
+          [
+            "front-user",
+            "object",
+            "error",
+            "Error"
+          ],
+          [
+            "custom-data",
+            "legacy-namespace",
+            {
+              "plain": {
+                "nested": 123
+              },
+              "ns": {
+                "key": "v"
+              }
+            },
+            "a:2:{s:5:\"plain\";a:1:{s:6:\"nested\";i:123;}s:2:\"ns\";a:1:{s:3:\"key\";s:1:\"v\";}}"
+          ]
+        ],
+        "diagnostics": [
+          [
+            8,
+            "unserialize(): Error at offset 0 of 1 bytes",
+            "/audit/app/alpha/apps/kaltura/lib/myCustomData.class.php",
+            28
+          ],
+          [
+            8,
+            "unserialize(): Error at offset 0 of 1 bytes",
+            "/audit/app/alpha/apps/kaltura/lib/myCustomData.class.php",
+            28
+          ],
+          [
+            8,
+            "unserialize(): Error at offset 0 of 2 bytes",
+            "/audit/app/alpha/apps/kaltura/lib/myCustomData.class.php",
+            28
+          ],
+          [
+            8,
+            "unserialize(): Error at offset 0 of 5 bytes",
+            "/audit/app/alpha/apps/kaltura/lib/myCustomData.class.php",
+            28
+          ],
+          [
+            8,
+            "unserialize(): Error at offset 0 of 7 bytes",
+            "/audit/app/alpha/apps/kaltura/lib/myCustomData.class.php",
+            28
+          ],
+          [
+            2,
+            "trim() expects parameter 1 to be string, array given",
+            "/audit/app/alpha/lib/model/Partner.php",
+            1431
+          ],
+          [
+            8,
+            "Array to string conversion",
+            "/audit/app/alpha/lib/model/Partner.php",
+            1432
+          ],
+          [
+            2,
+            "unserialize() expects parameter 1 to be string, array given",
+            "/audit/app/alpha/apps/kaltura/lib/myCustomData.class.php",
+            28
+          ],
+          [
+            2,
+            "strtr() expects parameter 1 to be string, array given",
+            "/audit/app/infra/log/KalturaLog.php",
+            122
+          ],
+          [
+            8,
+            "Array to string conversion",
+            "/audit/app/api_v3/lib/KalturaFrontController.php",
+            76
+          ],
+          [
+            2,
+            "trim() expects parameter 1 to be string, object given",
+            "/audit/app/alpha/lib/model/Partner.php",
+            1431
+          ],
+          [
+            2,
+            "unserialize() expects parameter 1 to be string, object given",
+            "/audit/app/alpha/apps/kaltura/lib/myCustomData.class.php",
+            28
+          ],
+          [
+            2,
+            "strtr() expects parameter 1 to be string, object given",
+            "/audit/app/infra/log/KalturaLog.php",
+            122
+          ]
+        ]
+      },
+      "bootstrap_stderr": ""
+    },
+    {
+      "runtime": "74",
+      "source": "exp5",
+      "artifact": {
+        "zip_sha256": "ef4d3e67c077014ba4837c83eec57ee7e0bf3548e444337ee92b19dad27bbcf5",
+        "verified_extracted_files": 15189
+      },
+      "exit": 0,
+      "result": {
+        "php": "7.4.33",
+        "rows": [
+          [
+            "partner",
+            "null",
+            "return",
+            "ALWAYS_ALLOWED_ACTIONS"
+          ],
+          [
+            "custom-data",
+            "null",
+            "return",
+            "a:0:{}"
+          ],
+          [
+            "analytics",
+            "null",
+            "return",
+            [
+              ""
+            ]
+          ],
+          [
+            "front-user",
+            "null",
+            "return",
+            "\"\""
+          ],
+          [
+            "partner",
+            "empty",
+            "return",
+            "ALWAYS_ALLOWED_ACTIONS"
+          ],
+          [
+            "custom-data",
+            "empty",
+            "return",
+            "a:0:{}"
+          ],
+          [
+            "analytics",
+            "empty",
+            "return",
+            [
+              ""
+            ]
+          ],
+          [
+            "front-user",
+            "empty",
+            "return",
+            "\"\""
+          ],
+          [
+            "partner",
+            "false",
+            "return",
+            "ALWAYS_ALLOWED_ACTIONS"
+          ],
+          [
+            "custom-data",
+            "false",
+            "return",
+            "a:0:{}"
+          ],
+          [
+            "analytics",
+            "false",
+            "return",
+            [
+              ""
+            ]
+          ],
+          [
+            "front-user",
+            "false",
+            "return",
+            "\"\""
+          ],
+          [
+            "partner",
+            "zero",
+            "return",
+            "ALWAYS_ALLOWED_ACTIONS,0"
+          ],
+          [
+            "custom-data",
+            "zero",
+            "return",
+            "a:0:{}"
+          ],
+          [
+            "analytics",
+            "zero",
+            "return",
+            [
+              "0"
+            ]
+          ],
+          [
+            "front-user",
+            "zero",
+            "return",
+            "\"0\""
+          ],
+          [
+            "partner",
+            "zero-string",
+            "return",
+            "ALWAYS_ALLOWED_ACTIONS,0"
+          ],
+          [
+            "custom-data",
+            "zero-string",
+            "return",
+            "a:0:{}"
+          ],
+          [
+            "analytics",
+            "zero-string",
+            "return",
+            [
+              "0"
+            ]
+          ],
+          [
+            "front-user",
+            "zero-string",
+            "return",
+            "\"0\""
+          ],
+          [
+            "partner",
+            "space",
+            "return",
+            "ALWAYS_ALLOWED_ACTIONS,  "
+          ],
+          [
+            "custom-data",
+            "space",
+            "return",
+            "a:0:{}"
+          ],
+          [
+            "analytics",
+            "space",
+            "return",
+            [
+              "  "
+            ]
+          ],
+          [
+            "front-user",
+            "space",
+            "return",
+            "\"  \""
+          ],
+          [
+            "partner",
+            "dummy",
+            "return",
+            "DUMMY"
+          ],
+          [
+            "custom-data",
+            "dummy",
+            "return",
+            "a:0:{}"
+          ],
+          [
+            "analytics",
+            "dummy",
+            "return",
+            [
+              "DUMMY"
+            ]
+          ],
+          [
+            "front-user",
+            "dummy",
+            "return",
+            "\"DUMMY\""
+          ],
+          [
+            "partner",
+            "commas",
+            "return",
+            "DUMMY"
+          ],
+          [
+            "custom-data",
+            "commas",
+            "return",
+            "a:0:{}"
+          ],
+          [
+            "analytics",
+            "commas",
+            "return",
+            [
+              " DUMMY "
+            ]
+          ],
+          [
+            "front-user",
+            "commas",
+            "return",
+            "\" DUMMY \""
+          ],
+          [
+            "partner",
+            "array",
+            "return",
+            "ALWAYS_ALLOWED_ACTIONS,Array"
+          ],
+          [
+            "custom-data",
+            "array",
+            "return",
+            "a:0:{}"
+          ],
+          [
+            "analytics",
+            "array",
+            "return",
+            [
+              ""
+            ]
+          ],
+          [
+            "front-user",
+            "array",
+            "return",
+            "\"Array\""
+          ],
+          [
+            "partner",
+            "object",
+            "error",
+            "Error"
+          ],
+          [
+            "custom-data",
+            "object",
+            "return",
+            "a:0:{}"
+          ],
+          [
+            "analytics",
+            "object",
+            "return",
+            [
+              ""
+            ]
+          ],
+          [
+            "front-user",
+            "object",
+            "error",
+            "Error"
+          ],
+          [
+            "custom-data",
+            "legacy-namespace",
+            {
+              "plain": {
+                "nested": 123
+              },
+              "ns": {
+                "key": "v"
+              }
+            },
+            "a:2:{s:5:\"plain\";a:1:{s:6:\"nested\";i:123;}s:2:\"ns\";a:1:{s:3:\"key\";s:1:\"v\";}}"
+          ]
+        ],
+        "diagnostics": [
+          [
+            8,
+            "unserialize(): Error at offset 0 of 1 bytes",
+            "/audit/app/alpha/apps/kaltura/lib/myCustomData.class.php",
+            28
+          ],
+          [
+            8,
+            "unserialize(): Error at offset 0 of 1 bytes",
+            "/audit/app/alpha/apps/kaltura/lib/myCustomData.class.php",
+            28
+          ],
+          [
+            8,
+            "unserialize(): Error at offset 0 of 2 bytes",
+            "/audit/app/alpha/apps/kaltura/lib/myCustomData.class.php",
+            28
+          ],
+          [
+            8,
+            "unserialize(): Error at offset 0 of 5 bytes",
+            "/audit/app/alpha/apps/kaltura/lib/myCustomData.class.php",
+            28
+          ],
+          [
+            8,
+            "unserialize(): Error at offset 0 of 7 bytes",
+            "/audit/app/alpha/apps/kaltura/lib/myCustomData.class.php",
+            28
+          ],
+          [
+            2,
+            "trim() expects parameter 1 to be string, array given",
+            "/audit/app/alpha/lib/model/Partner.php",
+            1431
+          ],
+          [
+            8,
+            "Array to string conversion",
+            "/audit/app/alpha/lib/model/Partner.php",
+            1432
+          ],
+          [
+            2,
+            "unserialize() expects parameter 1 to be string, array given",
+            "/audit/app/alpha/apps/kaltura/lib/myCustomData.class.php",
+            28
+          ],
+          [
+            2,
+            "strtr() expects parameter 1 to be string, array given",
+            "/audit/app/infra/log/KalturaLog.php",
+            122
+          ],
+          [
+            8,
+            "Array to string conversion",
+            "/audit/app/api_v3/lib/KalturaFrontController.php",
+            76
+          ],
+          [
+            2,
+            "trim() expects parameter 1 to be string, object given",
+            "/audit/app/alpha/lib/model/Partner.php",
+            1431
+          ],
+          [
+            2,
+            "unserialize() expects parameter 1 to be string, object given",
+            "/audit/app/alpha/apps/kaltura/lib/myCustomData.class.php",
+            28
+          ],
+          [
+            2,
+            "strtr() expects parameter 1 to be string, object given",
+            "/audit/app/infra/log/KalturaLog.php",
+            122
+          ]
+        ]
+      },
+      "bootstrap_stderr": ""
+    },
+    {
+      "runtime": "83",
+      "source": "exp4",
+      "artifact": {
+        "zip_sha256": "a1ce4c46792667b07a733e622a3ee71dd01c87a94f7841edfc72d58746ab9d08",
+        "verified_extracted_files": 15184
+      },
+      "exit": 0,
+      "result": {
+        "php": "8.3.6",
+        "rows": [
+          [
+            "partner",
+            "null",
+            "return",
+            "ALWAYS_ALLOWED_ACTIONS"
+          ],
+          [
+            "custom-data",
+            "null",
+            "return",
+            "a:0:{}"
+          ],
+          [
+            "analytics",
+            "null",
+            "return",
+            [
+              ""
+            ]
+          ],
+          [
+            "front-user",
+            "null",
+            "return",
+            "\"\""
+          ],
+          [
+            "partner",
+            "empty",
+            "return",
+            "ALWAYS_ALLOWED_ACTIONS"
+          ],
+          [
+            "custom-data",
+            "empty",
+            "return",
+            "a:0:{}"
+          ],
+          [
+            "analytics",
+            "empty",
+            "return",
+            [
+              ""
+            ]
+          ],
+          [
+            "front-user",
+            "empty",
+            "return",
+            "\"\""
+          ],
+          [
+            "partner",
+            "false",
+            "return",
+            "ALWAYS_ALLOWED_ACTIONS"
+          ],
+          [
+            "custom-data",
+            "false",
+            "return",
+            "a:0:{}"
+          ],
+          [
+            "analytics",
+            "false",
+            "return",
+            [
+              ""
+            ]
+          ],
+          [
+            "front-user",
+            "false",
+            "return",
+            "\"\""
+          ],
+          [
+            "partner",
+            "zero",
+            "return",
+            "ALWAYS_ALLOWED_ACTIONS,0"
+          ],
+          [
+            "custom-data",
+            "zero",
+            "return",
+            "a:0:{}"
+          ],
+          [
+            "analytics",
+            "zero",
+            "return",
+            [
+              "0"
+            ]
+          ],
+          [
+            "front-user",
+            "zero",
+            "return",
+            "\"0\""
+          ],
+          [
+            "partner",
+            "zero-string",
+            "return",
+            "ALWAYS_ALLOWED_ACTIONS,0"
+          ],
+          [
+            "custom-data",
+            "zero-string",
+            "return",
+            "a:0:{}"
+          ],
+          [
+            "analytics",
+            "zero-string",
+            "return",
+            [
+              "0"
+            ]
+          ],
+          [
+            "front-user",
+            "zero-string",
+            "return",
+            "\"0\""
+          ],
+          [
+            "partner",
+            "space",
+            "return",
+            "ALWAYS_ALLOWED_ACTIONS,  "
+          ],
+          [
+            "custom-data",
+            "space",
+            "return",
+            "a:0:{}"
+          ],
+          [
+            "analytics",
+            "space",
+            "return",
+            [
+              "  "
+            ]
+          ],
+          [
+            "front-user",
+            "space",
+            "return",
+            "\"  \""
+          ],
+          [
+            "partner",
+            "dummy",
+            "return",
+            "DUMMY"
+          ],
+          [
+            "custom-data",
+            "dummy",
+            "return",
+            "a:0:{}"
+          ],
+          [
+            "analytics",
+            "dummy",
+            "return",
+            [
+              "DUMMY"
+            ]
+          ],
+          [
+            "front-user",
+            "dummy",
+            "return",
+            "\"DUMMY\""
+          ],
+          [
+            "partner",
+            "commas",
+            "return",
+            "DUMMY"
+          ],
+          [
+            "custom-data",
+            "commas",
+            "return",
+            "a:0:{}"
+          ],
+          [
+            "analytics",
+            "commas",
+            "return",
+            [
+              " DUMMY "
+            ]
+          ],
+          [
+            "front-user",
+            "commas",
+            "return",
+            "\" DUMMY \""
+          ],
+          [
+            "partner",
+            "array",
+            "error",
+            "TypeError"
+          ],
+          [
+            "custom-data",
+            "array",
+            "error",
+            "TypeError"
+          ],
+          [
+            "analytics",
+            "array",
+            "error",
+            "TypeError"
+          ],
+          [
+            "front-user",
+            "array",
+            "return",
+            "\"Array\""
+          ],
+          [
+            "partner",
+            "object",
+            "error",
+            "TypeError"
+          ],
+          [
+            "custom-data",
+            "object",
+            "error",
+            "TypeError"
+          ],
+          [
+            "analytics",
+            "object",
+            "error",
+            "TypeError"
+          ],
+          [
+            "front-user",
+            "object",
+            "error",
+            "TypeError"
+          ],
+          [
+            "custom-data",
+            "legacy-namespace",
+            {
+              "plain": {
+                "nested": 123
+              },
+              "ns": {
+                "key": "v"
+              }
+            },
+            "a:2:{s:5:\"plain\";a:1:{s:6:\"nested\";i:123;}s:2:\"ns\";a:1:{s:3:\"key\";s:1:\"v\";}}"
+          ]
+        ],
+        "diagnostics": [
+          [
+            8192,
+            "unserialize(): Passing null to parameter #1 ($data) of type string is deprecated",
+            "/audit/app/alpha/apps/kaltura/lib/myCustomData.class.php",
+            28
+          ],
+          [
+            8192,
+            "trim(): Passing null to parameter #1 ($string) of type string is deprecated",
+            "/audit/app/alpha/lib/model/Partner.php",
+            1431
+          ],
+          [
+            8192,
+            "unserialize(): Passing null to parameter #1 ($data) of type string is deprecated",
+            "/audit/app/alpha/apps/kaltura/lib/myCustomData.class.php",
+            28
+          ],
+          [
+            8192,
+            "strtr(): Passing null to parameter #1 ($string) of type string is deprecated",
+            "/audit/app/infra/log/KalturaLog.php",
+            122
+          ],
+          [
+            8192,
+            "str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated",
+            "/audit/app/api_v3/lib/KalturaFrontController.php",
+            76
+          ],
+          [
+            8192,
+            "strtr(): Passing null to parameter #1 ($string) of type string is deprecated",
+            "/audit/app/infra/log/KalturaLog.php",
+            122
+          ],
+          [
+            8192,
+            "strtr(): Passing null to parameter #1 ($string) of type string is deprecated",
+            "/audit/app/infra/log/KalturaLog.php",
+            122
+          ],
+          [
+            8192,
+            "strtr(): Passing null to parameter #1 ($string) of type string is deprecated",
+            "/audit/app/infra/log/KalturaLog.php",
+            122
+          ],
+          [
+            8192,
+            "unserialize(): Passing null to parameter #1 ($data) of type string is deprecated",
+            "/audit/app/alpha/apps/kaltura/lib/myCustomData.class.php",
+            28
+          ],
+          [
+            8192,
+            "strtr(): Passing null to parameter #1 ($string) of type string is deprecated",
+            "/audit/app/infra/log/KalturaLog.php",
+            122
+          ],
+          [
+            8192,
+            "strtr(): Passing null to parameter #1 ($string) of type string is deprecated",
+            "/audit/app/infra/log/KalturaLog.php",
+            122
+          ],
+          [
+            8192,
+            "strtr(): Passing null to parameter #1 ($string) of type string is deprecated",
+            "/audit/app/infra/log/KalturaLog.php",
+            122
+          ],
+          [
+            8192,
+            "unserialize(): Passing null to parameter #1 ($data) of type string is deprecated",
+            "/audit/app/alpha/apps/kaltura/lib/myCustomData.class.php",
+            28
+          ],
+          [
+            8192,
+            "strtr(): Passing null to parameter #1 ($string) of type string is deprecated",
+            "/audit/app/infra/log/KalturaLog.php",
+            122
+          ],
+          [
+            8192,
+            "strtr(): Passing null to parameter #1 ($string) of type string is deprecated",
+            "/audit/app/infra/log/KalturaLog.php",
+            122
+          ],
+          [
+            8192,
+            "strtr(): Passing null to parameter #1 ($string) of type string is deprecated",
+            "/audit/app/infra/log/KalturaLog.php",
+            122
+          ],
+          [
+            8192,
+            "unserialize(): Passing null to parameter #1 ($data) of type string is deprecated",
+            "/audit/app/alpha/apps/kaltura/lib/myCustomData.class.php",
+            28
+          ],
+          [
+            2,
+            "unserialize(): Error at offset 0 of 1 bytes",
+            "/audit/app/alpha/apps/kaltura/lib/myCustomData.class.php",
+            28
+          ],
+          [
+            8192,
+            "strtr(): Passing null to parameter #1 ($string) of type string is deprecated",
+            "/audit/app/infra/log/KalturaLog.php",
+            122
+          ],
+          [
+            8192,
+            "strtr(): Passing null to parameter #1 ($string) of type string is deprecated",
+            "/audit/app/infra/log/KalturaLog.php",
+            122
+          ],
+          [
+            8192,
+            "strtr(): Passing null to parameter #1 ($string) of type string is deprecated",
+            "/audit/app/infra/log/KalturaLog.php",
+            122
+          ],
+          [
+            8192,
+            "unserialize(): Passing null to parameter #1 ($data) of type string is deprecated",
+            "/audit/app/alpha/apps/kaltura/lib/myCustomData.class.php",
+            28
+          ],
+          [
+            2,
+            "unserialize(): Error at offset 0 of 1 bytes",
+            "/audit/app/alpha/apps/kaltura/lib/myCustomData.class.php",
+            28
+          ],
+          [
+            8192,
+            "strtr(): Passing null to parameter #1 ($string) of type string is deprecated",
+            "/audit/app/infra/log/KalturaLog.php",
+            122
+          ],
+          [
+            8192,
+            "strtr(): Passing null to parameter #1 ($string) of type string is deprecated",
+            "/audit/app/infra/log/KalturaLog.php",
+            122
+          ],
+          [
+            8192,
+            "strtr(): Passing null to parameter #1 ($string) of type string is deprecated",
+            "/audit/app/infra/log/KalturaLog.php",
+            122
+          ],
+          [
+            8192,
+            "unserialize(): Passing null to parameter #1 ($data) of type string is deprecated",
+            "/audit/app/alpha/apps/kaltura/lib/myCustomData.class.php",
+            28
+          ],
+          [
+            2,
+            "unserialize(): Error at offset 0 of 2 bytes",
+            "/audit/app/alpha/apps/kaltura/lib/myCustomData.class.php",
+            28
+          ],
+          [
+            8192,
+            "strtr(): Passing null to parameter #1 ($string) of type string is deprecated",
+            "/audit/app/infra/log/KalturaLog.php",
+            122
+          ],
+          [
+            8192,
+            "strtr(): Passing null to parameter #1 ($string) of type string is deprecated",
+            "/audit/app/infra/log/KalturaLog.php",
+            122
+          ],
+          [
+            8192,
+            "strtr(): Passing null to parameter #1 ($string) of type string is deprecated",
+            "/audit/app/infra/log/KalturaLog.php",
+            122
+          ],
+          [
+            8192,
+            "unserialize(): Passing null to parameter #1 ($data) of type string is deprecated",
+            "/audit/app/alpha/apps/kaltura/lib/myCustomData.class.php",
+            28
+          ],
+          [
+            2,
+            "unserialize(): Error at offset 0 of 5 bytes",
+            "/audit/app/alpha/apps/kaltura/lib/myCustomData.class.php",
+            28
+          ],
+          [
+            8192,
+            "strtr(): Passing null to parameter #1 ($string) of type string is deprecated",
+            "/audit/app/infra/log/KalturaLog.php",
+            122
+          ],
+          [
+            8192,
+            "strtr(): Passing null to parameter #1 ($string) of type string is deprecated",
+            "/audit/app/infra/log/KalturaLog.php",
+            122
+          ],
+          [
+            8192,
+            "strtr(): Passing null to parameter #1 ($string) of type string is deprecated",
+            "/audit/app/infra/log/KalturaLog.php",
+            122
+          ],
+          [
+            8192,
+            "unserialize(): Passing null to parameter #1 ($data) of type string is deprecated",
+            "/audit/app/alpha/apps/kaltura/lib/myCustomData.class.php",
+            28
+          ],
+          [
+            2,
+            "unserialize(): Error at offset 0 of 7 bytes",
+            "/audit/app/alpha/apps/kaltura/lib/myCustomData.class.php",
+            28
+          ],
+          [
+            8192,
+            "strtr(): Passing null to parameter #1 ($string) of type string is deprecated",
+            "/audit/app/infra/log/KalturaLog.php",
+            122
+          ],
+          [
+            8192,
+            "strtr(): Passing null to parameter #1 ($string) of type string is deprecated",
+            "/audit/app/infra/log/KalturaLog.php",
+            122
+          ],
+          [
+            8192,
+            "strtr(): Passing null to parameter #1 ($string) of type string is deprecated",
+            "/audit/app/infra/log/KalturaLog.php",
+            122
+          ],
+          [
+            8192,
+            "unserialize(): Passing null to parameter #1 ($data) of type string is deprecated",
+            "/audit/app/alpha/apps/kaltura/lib/myCustomData.class.php",
+            28
+          ],
+          [
+            2,
+            "Array to string conversion",
+            "/audit/app/api_v3/lib/KalturaFrontController.php",
+            76
+          ],
+          [
+            8192,
+            "strtr(): Passing null to parameter #1 ($string) of type string is deprecated",
+            "/audit/app/infra/log/KalturaLog.php",
+            122
+          ],
+          [
+            8192,
+            "strtr(): Passing null to parameter #1 ($string) of type string is deprecated",
+            "/audit/app/infra/log/KalturaLog.php",
+            122
+          ],
+          [
+            8192,
+            "strtr(): Passing null to parameter #1 ($string) of type string is deprecated",
+            "/audit/app/infra/log/KalturaLog.php",
+            122
+          ],
+          [
+            8192,
+            "unserialize(): Passing null to parameter #1 ($data) of type string is deprecated",
+            "/audit/app/alpha/apps/kaltura/lib/myCustomData.class.php",
+            28
+          ]
+        ]
+      },
+      "bootstrap_stderr": "Deprecated: Function libxml_disable_entity_loader() is deprecated in /audit/app/alpha/config/kConf.php on line 7\nDeprecated: Return type of Zend_Config::count() should either be compatible with Countable::count(): int, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/ZendFramework/library/Zend/Config.php on line 248\nDeprecated: Return type of Zend_Config::current() should either be compatible with Iterator::current(): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/ZendFramework/library/Zend/Config.php on line 258\nDeprecated: Return type of Zend_Config::next() should either be compatible with Iterator::next(): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/ZendFramework/library/Zend/Config.php on line 278\nDeprecated: Return type of Zend_Config::key() should either be compatible with Iterator::key(): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/ZendFramework/library/Zend/Config.php on line 269\nDeprecated: Return type of Zend_Config::valid() should either be compatible with Iterator::valid(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/ZendFramework/library/Zend/Config.php on line 304\nDeprecated: Return type of Zend_Config::rewind() should either be compatible with Iterator::rewind(): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/ZendFramework/library/Zend/Config.php on line 292\n"
+    },
+    {
+      "runtime": "83",
+      "source": "exp5",
+      "artifact": {
+        "zip_sha256": "ef4d3e67c077014ba4837c83eec57ee7e0bf3548e444337ee92b19dad27bbcf5",
+        "verified_extracted_files": 15189
+      },
+      "exit": 0,
+      "result": {
+        "php": "8.3.6",
+        "rows": [
+          [
+            "partner",
+            "null",
+            "return",
+            "ALWAYS_ALLOWED_ACTIONS"
+          ],
+          [
+            "custom-data",
+            "null",
+            "return",
+            "a:0:{}"
+          ],
+          [
+            "analytics",
+            "null",
+            "return",
+            [
+              ""
+            ]
+          ],
+          [
+            "front-user",
+            "null",
+            "return",
+            "\"\""
+          ],
+          [
+            "partner",
+            "empty",
+            "return",
+            "ALWAYS_ALLOWED_ACTIONS"
+          ],
+          [
+            "custom-data",
+            "empty",
+            "return",
+            "a:0:{}"
+          ],
+          [
+            "analytics",
+            "empty",
+            "return",
+            [
+              ""
+            ]
+          ],
+          [
+            "front-user",
+            "empty",
+            "return",
+            "\"\""
+          ],
+          [
+            "partner",
+            "false",
+            "return",
+            "ALWAYS_ALLOWED_ACTIONS"
+          ],
+          [
+            "custom-data",
+            "false",
+            "return",
+            "a:0:{}"
+          ],
+          [
+            "analytics",
+            "false",
+            "return",
+            [
+              ""
+            ]
+          ],
+          [
+            "front-user",
+            "false",
+            "return",
+            "\"\""
+          ],
+          [
+            "partner",
+            "zero",
+            "return",
+            "ALWAYS_ALLOWED_ACTIONS,0"
+          ],
+          [
+            "custom-data",
+            "zero",
+            "return",
+            "a:0:{}"
+          ],
+          [
+            "analytics",
+            "zero",
+            "return",
+            [
+              "0"
+            ]
+          ],
+          [
+            "front-user",
+            "zero",
+            "return",
+            "\"0\""
+          ],
+          [
+            "partner",
+            "zero-string",
+            "return",
+            "ALWAYS_ALLOWED_ACTIONS,0"
+          ],
+          [
+            "custom-data",
+            "zero-string",
+            "return",
+            "a:0:{}"
+          ],
+          [
+            "analytics",
+            "zero-string",
+            "return",
+            [
+              "0"
+            ]
+          ],
+          [
+            "front-user",
+            "zero-string",
+            "return",
+            "\"0\""
+          ],
+          [
+            "partner",
+            "space",
+            "return",
+            "ALWAYS_ALLOWED_ACTIONS,  "
+          ],
+          [
+            "custom-data",
+            "space",
+            "return",
+            "a:0:{}"
+          ],
+          [
+            "analytics",
+            "space",
+            "return",
+            [
+              "  "
+            ]
+          ],
+          [
+            "front-user",
+            "space",
+            "return",
+            "\"  \""
+          ],
+          [
+            "partner",
+            "dummy",
+            "return",
+            "DUMMY"
+          ],
+          [
+            "custom-data",
+            "dummy",
+            "return",
+            "a:0:{}"
+          ],
+          [
+            "analytics",
+            "dummy",
+            "return",
+            [
+              "DUMMY"
+            ]
+          ],
+          [
+            "front-user",
+            "dummy",
+            "return",
+            "\"DUMMY\""
+          ],
+          [
+            "partner",
+            "commas",
+            "return",
+            "DUMMY"
+          ],
+          [
+            "custom-data",
+            "commas",
+            "return",
+            "a:0:{}"
+          ],
+          [
+            "analytics",
+            "commas",
+            "return",
+            [
+              " DUMMY "
+            ]
+          ],
+          [
+            "front-user",
+            "commas",
+            "return",
+            "\" DUMMY \""
+          ],
+          [
+            "partner",
+            "array",
+            "error",
+            "TypeError"
+          ],
+          [
+            "custom-data",
+            "array",
+            "error",
+            "TypeError"
+          ],
+          [
+            "analytics",
+            "array",
+            "error",
+            "TypeError"
+          ],
+          [
+            "front-user",
+            "array",
+            "return",
+            "\"Array\""
+          ],
+          [
+            "partner",
+            "object",
+            "error",
+            "TypeError"
+          ],
+          [
+            "custom-data",
+            "object",
+            "error",
+            "TypeError"
+          ],
+          [
+            "analytics",
+            "object",
+            "error",
+            "TypeError"
+          ],
+          [
+            "front-user",
+            "object",
+            "error",
+            "TypeError"
+          ],
+          [
+            "custom-data",
+            "legacy-namespace",
+            {
+              "plain": {
+                "nested": 123
+              },
+              "ns": {
+                "key": "v"
+              }
+            },
+            "a:2:{s:5:\"plain\";a:1:{s:6:\"nested\";i:123;}s:2:\"ns\";a:1:{s:3:\"key\";s:1:\"v\";}}"
+          ]
+        ],
+        "diagnostics": [
+          [
+            2,
+            "unserialize(): Error at offset 0 of 1 bytes",
+            "/audit/app/alpha/apps/kaltura/lib/myCustomData.class.php",
+            28
+          ],
+          [
+            2,
+            "unserialize(): Error at offset 0 of 1 bytes",
+            "/audit/app/alpha/apps/kaltura/lib/myCustomData.class.php",
+            28
+          ],
+          [
+            2,
+            "unserialize(): Error at offset 0 of 2 bytes",
+            "/audit/app/alpha/apps/kaltura/lib/myCustomData.class.php",
+            28
+          ],
+          [
+            2,
+            "unserialize(): Error at offset 0 of 5 bytes",
+            "/audit/app/alpha/apps/kaltura/lib/myCustomData.class.php",
+            28
+          ],
+          [
+            2,
+            "unserialize(): Error at offset 0 of 7 bytes",
+            "/audit/app/alpha/apps/kaltura/lib/myCustomData.class.php",
+            28
+          ],
+          [
+            2,
+            "Array to string conversion",
+            "/audit/app/api_v3/lib/KalturaFrontController.php",
+            76
+          ]
+        ]
+      },
+      "bootstrap_stderr": "Deprecated: Function libxml_disable_entity_loader() is deprecated in /audit/app/alpha/config/kConf.php on line 7\nDeprecated: Return type of Zend_Config::count() should either be compatible with Countable::count(): int, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/ZendFramework/library/Zend/Config.php on line 248\nDeprecated: Return type of Zend_Config::current() should either be compatible with Iterator::current(): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/ZendFramework/library/Zend/Config.php on line 258\nDeprecated: Return type of Zend_Config::next() should either be compatible with Iterator::next(): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/ZendFramework/library/Zend/Config.php on line 278\nDeprecated: Return type of Zend_Config::key() should either be compatible with Iterator::key(): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/ZendFramework/library/Zend/Config.php on line 269\nDeprecated: Return type of Zend_Config::valid() should either be compatible with Iterator::valid(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/ZendFramework/library/Zend/Config.php on line 304\nDeprecated: Return type of Zend_Config::rewind() should either be compatible with Iterator::rewind(): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/ZendFramework/library/Zend/Config.php on line 292\n"
+    }
+  ],
+  "comparisons": [
+    {
+      "runtime": "74",
+      "all_41_contract_rows_equal": true
+    },
+    {
+      "runtime": "83",
+      "all_41_contract_rows_equal": true
+    }
+  ],
+  "functional_checks_passed": true,
+  "application_acceptance": false
+}

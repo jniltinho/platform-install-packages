@@ -1,0 +1,7 @@
+{
+  "status": "held; explicit null-only experiment; behavior and integrated acceptance pending",
+  "path": "api_v3/lib/KalturaFrontController.php",
+  "before_sha256": "5f2eeffe526d4a0ee245b6f10f4e9600e0f7c8bcb4a52eef41e3a66bbd9ab7a1",
+  "after_sha256": "189607dca3b5ef33270d8e4dfe081daf6a76f39d5fd49066ee0b83f24c62d71a",
+  "patch_sha256": "e5a93a5868f21fd56a71a826be884ecd13a0eabf1e2c97e85c42527622297603"
+}

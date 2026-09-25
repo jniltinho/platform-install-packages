@@ -1,0 +1,15 @@
+Os dois coletores terminaram com exit 0, e o resultado normalizado bate com a execução primária do Codex. Nenhum fonte foi editado e só usei os labs aprovados que os scripts definem.
+
+1. Rodei `python3 tools/php83/null-probe/collect-dependencies.py doc/php83/evidence/null-probe/claude-dependencies.json …` com o comando exato pedido. Exit `0`, `passed: true`, e a unit do banco sintético próprio `php83-exp5-api-13d5b1b6…` ficou `inactive`, com `stopped: true`.
+2. Rodei `python3 tools/php83/null-probe/collect.py doc/php83/evidence/null-probe/claude.json …`. Exit `0`, stderr vazio e stdout `PASS: 41 actual-class cases…`.
+3. **Dependências:** confirmei 4 linhas (74/83 × exp4/exp5), todas com exit 0 e `matches_expected=true`, cada uma com os 10 casos SQL reais de `PermissionPeer::filterDependencies`.
+4. Tirando `cleanup` e `stderr_sha256`, o relatório é idêntico ao `codex-dependencies.json`. As contagens de diagnósticos por linha foram 2, 2, 30 e 29, e ficaram preservadas.
+5. **Classes reais:** confirmei 4 linhas com 41 casos cada (PHP 7.4.33 e 8.3.6). As linhas de exp4 e exp5 são iguais dentro de cada runtime, e runtime/source/exit/artifact/result são idênticos aos do `codex.json`.
+6. Os diagnósticos na 8.3 caíram de 47 (exp4) para 6 (exp5); na 7.4 ficaram em 13 e 13.
+7. Os erros registrados são contrato herdado, iguais entre exp4 e exp5: na 7.4, `Error` em partner/object e front-user/object. Na 8.3, `TypeError` em partner, custom-data e analytics com array e object, além de front-user/object.
+8. **Aceitação falsa (revisão das fixtures):** o `probe.php` relança `RuntimeException`, então uma falha de asserção interrompe a execução e nunca vira uma linha de "error" aprovada. O efeito colateral é que exceções da própria aplicação que herdam de `RuntimeException` (por exemplo `PDOException`) também abortam a execução em vez de virar linha.
+9. **Limitação:** só dois ramos têm valor esperado absoluto no probe: partner com `DUMMY` e partner com `null`, que deve cair no padrão `ALWAYS_ALLOWED_ACTIONS`. As outras 39 linhas só comparam exp4 com exp5, então um defeito presente nas duas versões passaria.
+10. A negação de dependência (casos `missing`, `transitive` e `wrong-partner`) só existe na fixture SQL, onde os 10 casos têm resultado esperado absoluto. Essa fixture testa dependência `null`, `''` e `'0'`, mas não `false`, array nem object.
+11. O front-user cria o controller por reflection sem construtor e verifica só o campo 5 do log. O logger é substituído por um sink em memória; não é a aplicação inteira.
+12. O `collect.py` grava o stderr bruto do bootstrap no JSON, que é igual ao do Codex. A frase "diagnostics retained" no stdout é texto fixo no script, não algo que ele verifica.
+13. Isto continua sem aceitação da aplicação completa (`application_acceptance: false`). Nenhuma revisão por outra CLI foi feita neste ciclo, então a revisão independente segue pendente.

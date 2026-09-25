@@ -1,0 +1,41 @@
+{
+  "removed": [
+    {
+      "severity": "ApplicationDiagnostic",
+      "path": "/audit/app/alpha/apps/kaltura/lib/myCustomData.class.php",
+      "line": 28,
+      "count": 22
+    },
+    {
+      "severity": "ApplicationDiagnostic",
+      "path": "/audit/app/alpha/lib/model/Partner.php",
+      "line": 1431,
+      "count": 20
+    },
+    {
+      "severity": "ApplicationDiagnostic",
+      "path": "/audit/app/alpha/lib/model/PermissionPeer.php",
+      "line": 329,
+      "count": 32
+    },
+    {
+      "severity": "ApplicationDiagnostic",
+      "path": "/audit/app/api_v3/lib/KalturaFrontController.php",
+      "line": 76,
+      "count": 14
+    },
+    {
+      "severity": "ApplicationDiagnostic",
+      "path": "/audit/app/infra/log/KalturaLog.php",
+      "line": 122,
+      "count": 54
+    }
+  ],
+  "other_groups_unchanged": true,
+  "before_groups": 40,
+  "after_groups": 35,
+  "before_events": 1073,
+  "after_events": 931,
+  "performance_claim": false,
+  "application_acceptance": false
+}

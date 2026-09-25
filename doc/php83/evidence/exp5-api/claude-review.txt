@@ -1,0 +1,16 @@
+Execução concluída sem problemas, e as duas saídas candidatas são idênticas ao original em PHP 7.4.
+
+1. **Coletor:** `collect.py doc/php83/evidence/exp5-api/claude.json` terminou com exit 0 (`claude.exit`), `functional_checks_passed: true` e `claude.stderr` vazio. O DB sintético próprio (`php83-exp5-api-2c3433eb…`) foi parado e ficou `inactive`. Não rodei nenhum outro comando na VM e não escrevi na `.20`.
+2. **Registros:** original74, exp4 e exp5 (em 7.4 e 8.3) saíram com rc 0 e o mesmo `stdout_sha256` `787d33cd…`. O original83 falhou (rc 1, stdout vazio) com `signature_failure=true`, que é o controle esperado.
+3. **Candidatos vs. original74:** as quatro comparações exp4 e exp5, em 7.4 e 8.3, deram `matches_baseline: true`.
+4. **Manifesto:** `null-batch/manifest.json` tem 12 patches. Os 5 últimos (myCustomData, Partner, PermissionPeer, KalturaLog, KalturaFrontController) têm SHA-256 igual aos arquivos em `patches/php83/held/`.
+5. **claude.json vs. codex.json:** a comparação normalizada, ignorando `duration_ns` e `stderr_sha256`, ficou idêntica nos 6 registros. Também batem artifact, previous_artifact, harness, collector_sha256, diagnostics e runtime_observations.
+6. **Diagnósticos em 8.3:** o exp4 tem 40 grupos e 1073 eventos, e o exp5 tem 35 grupos e 931. Saíram exatamente os 5 sites dos patches, somando 142 eventos: myCustomData:28 (22), Partner:1431 (20), PermissionPeer:329 (32), KalturaFrontController:76 (14) e KalturaLog:122 (54). Nenhum grupo foi adicionado e nenhuma contagem restante mudou, então os 142 foram removidos sem esconder outros diagnósticos.
+7. **Diagnósticos em 7.4:** o original tem 1 grupo (`dateUtils.class.php:100`, 6 eventos), e o exp4 e o exp5 têm 0.
+8. **Testes locais:** `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83 -p 'test_*.py'` rodou 122 testes, OK, exit 0.
+
+**Casos de borda sem cobertura:**
+9. A matriz HTTP só testa session start/get com kind 0 e 2 e 5 rejeições. Nenhum probe exercita diretamente os caminhos com null: parceiro sem nome de permissão, dependência de permissão ausente, analytics de log com null, requisição sem usuário e customData com argumento null. Por isso a semântica de permissões, serialização e logging depois dos patches não foi comparada, como o próprio `known_limitations` do manifesto admite.
+10. Os diagnósticos são agrupados só por path e linha, sem a mensagem. Um aviso novo e diferente na mesma linha poderia ficar mascarado.
+
+Tudo isso vale só para o harness de API (web/index.php com SQL sintético e Apache). Não cobre AIO/FPM, cache, mídia, distro nem performance, então não há aprovação da aplicação completa nem autorização de release, CI ou `.20`.

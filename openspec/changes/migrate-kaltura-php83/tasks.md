@@ -155,3 +155,9 @@ exp4 API fixture accounted for in seven source-supported categories, with
 artifact-pinned excerpts and 22 native runtime return contracts on 7.4/8.3.
 This is not global static-finding/reachability coverage or accepted exceptions.
 See `doc/php83/exp4-diagnostic-triage.md`; all relevant acceptance tasks stay open.
+
+T1-01/T1-02 partial: exp5 integrates five explicit-null input guards in a separate
+reproducible twelve-patch ZIP. Real SQL/HTTP/trusted-TLS contract remains equal;
+exactly 142 events removed, 35 groups/931 remain. Forty-one actual-class cases
+and ten real PermissionPeer SQL dependency cases pass on exp4/exp5 × 7.4/8.3;
+no full acceptance inferred. See `doc/php83/exp5-null-batch.md`.

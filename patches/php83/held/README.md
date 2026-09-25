@@ -39,3 +39,9 @@ acceptance is asserted for the JSON-only ZIP.
 Eight focused alias contracts pass on PHP 7.4/8.3; the actual SQL/API integration
 is still pending. It is not part of exp2 or exp3. See
 `../../../doc/php83/criteria-null-alias.md` for identities and limitations.
+
+The five `*-null-*` experiments for myCustomData, Partner, PermissionPeer,
+KalturaLog and KalturaFrontController are explicit null-only input guards,
+selected separately into exp5. They preserve non-null paths in the focused
+controls and real API matrix; no permission policy, property visibility or
+serialization format change is selected. See `../../../doc/php83/exp5-null-batch.md`.

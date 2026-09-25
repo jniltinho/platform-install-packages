@@ -16,6 +16,14 @@ and [execution contract](../../openspec/changes/migrate-kaltura-php83/design.md)
 - No new VM/application test, release, package integration or `.20` mutation in
   this batch. No release ETA or application completion percentage is inferred.
 
+## Latest progress: exp5 null-only batch
+
+Five one-line null-only repairs were integrated in a reproducible twelve-patch
+ZIP. Actual API/SQL/HTTP/trusted-HTTPS comparison removes exactly five groups /
+142 events (35 groups / 931 remain), preserving functional contracts. Added
+41 actual-class edge cases and ten real SQL dependency cases pass before/after
+on both runtimes. [Evidence and limits](exp5-null-batch.md). No full acceptance.
+
 ## Latest progress: remaining exp4 diagnostic triage
 
 All 40 observed groups / 1,073 events now have source-pinned candidate-cause

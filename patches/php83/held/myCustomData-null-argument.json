@@ -1,0 +1,7 @@
+{
+  "status": "held; explicit null-only experiment; behavior and integrated acceptance pending",
+  "path": "alpha/apps/kaltura/lib/myCustomData.class.php",
+  "before_sha256": "d318d8a9629f90e68bccc6dde92adbff9d369a61d65c911e80eac0527b83d5a2",
+  "after_sha256": "03712d6f301ad2567b3a842fcef84f89c07018f661a85eb43d203d8289c143d5",
+  "patch_sha256": "7ced5100e5423719bbd6ece41405e3ee70af5b028dd74ea4d23dd5eab2e2e6d0"
+}

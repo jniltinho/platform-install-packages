@@ -1,0 +1,9 @@
+Vou ler o AGENTS.md, o manifesto e depois executar o verificador e os testes locais conforme o escopo.Executando o verificador e os testes em paralelo e lendo os 5 patches finais do manifesto.Verificador e testes ok; lendo o JSON gerado e o formato esperado do relatório.Confirmando que o relatório do verificador está íntegro e alinhado ao `verification.json`.**Veredito:** artefato exp5 íntegro (builds idênticos); last5 são null-only; harness local OK — sem aceite de ramos de permissão.
+
+1. `python3 tools/php83/verify-experimental-zip.py … cursor-verification.json` → exit **0**; `zip_sha256`/`repeat` = `ef4d3e67…bbcf5`; 18027 entradas originais; **12** source changes; **14** metadata; builds idênticos; restante byte-igual.
+2. `cursor-verification.json` = `verification.json`.
+3. `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83 -p 'test_*.py'` → exit **0**, **122** OK (só harness).
+4. last5 do manifesto: 5 ficheiros, 5 hunks, 1 linha cada — só `?? ''` em inputs de `unserialize`/`trim`/`strtr`/ternário; sem alterações de property/return type.
+5. FrontController: `((uid ? uid : ks_uid) ?? '')` — parênteses do ternário corretos.
+6. nonnull inalterado nos diffs; Partner/PermissionPeer mudam só o caminho null→`trim('')` (ramos de permissão **não** testados aqui — **não** aceites).
+7. Riscos: serialização (`myCustomData`), analytics (`KalturaLog`), e permissões sem comparação API/lab; 12 patches ≠ aceite de app/release/.20.
