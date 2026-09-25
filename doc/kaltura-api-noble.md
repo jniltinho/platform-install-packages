@@ -97,15 +97,19 @@ curl -s -d "service=media&action=addContent&format=1&ks=$KS&entryId=$ENTRY&resou
 
 `baseEntry.addFromUploadedFile` (`entry:objectType=KalturaBaseEntry&uploadTokenId=$TOK&type=-1`) does the same in one call. `/opt/kaltura/bin/upload_test.php` uses it.
 
-Entry `status` values:
+Entry `status` values (`alpha/lib/enums/entryStatus.php` in 18.20):
 
 | Value | Meaning |
 |---|---|
+| -2 | ERROR_IMPORTING |
 | -1 | ERROR_CONVERTING |
 | 0 | IMPORT |
 | 1 | PRECONVERT (transcoding) |
 | 2 | READY |
+| 3 | DELETED |
 | 4 | PENDING |
+| 5 | MODERATE (deprecated) |
+| 6 | BLOCKED (deprecated) |
 | 7 | NO_CONTENT |
 
 ## Entries

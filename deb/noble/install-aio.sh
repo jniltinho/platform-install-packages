@@ -9,7 +9,9 @@ SERVICE_URL=http://$HOST_IP
 MYSQL_ROOT_PASSWD=${MYSQL_ROOT_PASSWD:-kaltura-root}
 ADMIN_EMAIL=${ADMIN_EMAIL:-admin@kaltura.local}
 ADMIN_PASSWD=${ADMIN_PASSWD:-Adm1n#Video}
-REPO_DIR=${REPO_DIR:-/vagrant/deb/noble/repo}
+# apt source for the Kaltura packages: the local build, or the GitHub release
+# e.g. KALTURA_APT=https://github.com/jniltinho/platform-install-packages/releases/download/noble-deb-18.20.0-1
+KALTURA_APT=${KALTURA_APT:-file:/vagrant/deb/noble/repo}
 APT="apt-get install -y -q -o Dpkg::Options::=--force-confold"
 
 # --- repositories ---
@@ -20,7 +22,7 @@ if [ ! -f /etc/apt/sources.list.d/kaltura-local.list ]; then
 	add-apt-repository -y ppa:ondrej/php
 	curl -fsSL https://artifacts.elastic.co/GPG-KEY-elasticsearch | gpg --dearmor -o /usr/share/keyrings/elastic.gpg
 	echo "deb [signed-by=/usr/share/keyrings/elastic.gpg] https://artifacts.elastic.co/packages/7.x/apt stable main" > /etc/apt/sources.list.d/elastic-7.x.list
-	echo "deb [trusted=yes] file:$REPO_DIR ./" > /etc/apt/sources.list.d/kaltura-local.list
+	echo "deb [trusted=yes] $KALTURA_APT ./" > /etc/apt/sources.list.d/kaltura-local.list
 fi
 apt-get update -q
 

@@ -41,16 +41,23 @@ The admin password must be 8 to 14 characters long and include a digit, a lowerc
 
 ## Installing on your own server
 
+Prebuilt packages are published in the GitHub release [`noble-deb-18.20.0-1`](https://github.com/jniltinho/platform-install-packages/releases/tag/noble-deb-18.20.0-1). The release is a flat apt repository, so it can be used directly:
+
+```bash
+echo "deb [trusted=yes] https://github.com/jniltinho/platform-install-packages/releases/download/noble-deb-18.20.0-1 ./" > /etc/apt/sources.list.d/kaltura.list
+```
+
+To build the packages yourself, use `vagrant up build` as above. The remaining steps are the same in both cases:
+
 ```bash
 add-apt-repository -y multiverse
 add-apt-repository -y ppa:ondrej/php
 curl -fsSL https://artifacts.elastic.co/GPG-KEY-elasticsearch | gpg --dearmor -o /usr/share/keyrings/elastic.gpg
 echo "deb [signed-by=/usr/share/keyrings/elastic.gpg] https://artifacts.elastic.co/packages/7.x/apt stable main" > /etc/apt/sources.list.d/elastic-7.x.list
-echo "deb [trusted=yes] file:/path/to/repo ./" > /etc/apt/sources.list.d/kaltura.list
 apt-get update
 ```
 
-Then follow `deb/noble/install-aio.sh`. It is the reference procedure for the MariaDB settings, the debconf answers and the install order. Order matters: `kaltura-db` needs the front and Sphinx to be up before it runs.
+Then follow `deb/noble/install-aio.sh`, or run it directly with `KALTURA_APT=https://github.com/jniltinho/platform-install-packages/releases/download/noble-deb-18.20.0-1 HOST_IP=<your ip> bash install-aio.sh`. It is the reference procedure for the MariaDB settings, the debconf answers and the install order. Order matters: `kaltura-db` needs the front and Sphinx to be up before it runs.
 
 ## Sources
 
