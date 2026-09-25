@@ -38,6 +38,7 @@ Contact the authors or email community@kaltura.org if you have other ideas.
 * [Single-server All-In-One Ubuntu Xenial (16.04) Installation](doc/install-kaltura-xenial.md).
 * [Single-server All-In-One Ubuntu Focal (20.04) Installation](doc/install-kaltura-focal.md).
 * [Single-server All-In-One Ubuntu Noble (24.04) Installation](doc/install-kaltura-noble.md) : Rigel-18.20.0, built and tested with Vagrant from `deb/noble/`.
+* [Single-server All-In-One Rocky Linux 9 (RPM) Installation](doc/install-kaltura-rocky9.md): Rigel-18.20.0, built and tested with Vagrant from `rpm/el9/`.
 * [Single-server All-In-One Docker container Installation](doc/install-docker.md).
 * [Deploying a Kaltura Cluster (RPM)](doc/rpm-cluster-deployment-instructions.md)
 * [Deploying a Kaltura Cluster (deb)](doc/deb-cluster-deployment-instructions.md)

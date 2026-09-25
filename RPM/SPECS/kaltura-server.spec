@@ -7,7 +7,12 @@ Group: Server/Platform
 URL: http://kaltura.org
 Buildroot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch
+%if 0%{?rhel} >= 9
+# EL9: no DWH/pentaho and no Flash widgets, their sources are gone
+Requires: kaltura-front, kaltura-batch, kaltura-sphinx, kaltura-html5lib, kaltura-nginx, kaltura-elasticsearch
+%else
 Requires: kaltura-front, kaltura-batch, kaltura-sphinx, kaltura-dwh, kaltura-widgets, kaltura-html5lib,kaltura-nginx, kaltura-elasticsearch
+%endif
 
 %description
 Kaltura is the world's first Open Source Online Video Platform, transforming the way people work, 

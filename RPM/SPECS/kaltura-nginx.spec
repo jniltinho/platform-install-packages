@@ -35,6 +35,15 @@ BuildRequires: openssl-devel >= 1.0.1
 Epoch: 1
 %endif
 
+%if 0%{?rhel} >= 9
+Group: System Environment/Daemons
+Requires(pre): shadow-utils
+Requires: systemd
+Requires: openssl
+BuildRequires: systemd
+BuildRequires: openssl-devel
+%endif
+
 %if 0%{?suse_version}
 Group: Productivity/Networking/Web/Servers
 BuildRequires: libopenssl-devel
@@ -101,8 +110,14 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 BuildRequires: zlib-devel
 BuildRequires: pcre-devel
 BuildRequires: librdkafka-devel
+%if 0%{?rhel} >= 9
+# EL9: link the RPM Fusion ffmpeg libraries (headers in /usr/include/ffmpeg)
+BuildRequires: ffmpeg-devel
+Requires: kaltura-ffmpeg
+%else
 BuildRequires: kaltura-ffmpeg-devel
 Requires: kaltura-ffmpeg
+%endif
 Requires: librdkafka
 
 Provides: webserver
@@ -130,8 +145,14 @@ done
 
 
 %build
+%if 0%{?rhel} >= 9
+C_INCLUDE_PATH=%{_includedir}/ffmpeg
+# gcc 11 turns several module warnings into errors
+%define optflags -O3 -Wno-error
+%else
 LIBRARY_PATH=/opt/kaltura/ffmpeg-%{ffmpeg_ver}/lib
 C_INCLUDE_PATH=/opt/kaltura/ffmpeg-%{ffmpeg_ver}/include
+%endif
 export LIBRARY_PATH C_INCLUDE_PATH
 
 ./configure \

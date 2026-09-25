@@ -45,12 +45,23 @@ Source44: kCrossKalturaDistributionJobProviderData.php
 Source45: CrossKalturaDistributionProfile.php
 Source46: CrossKalturaDistributionPlugin.php
 Source47: CrossKalturaEntryObjectsContainer.php
+# upstream php.yml minus log_errors: symfony aborts every alpha request (KMC, playManifest)
+# with "specifies key log_errors which cannot be overrided" (kaltura/server#9492)
 Source48: php.yml
 
 URL: https://github.com/kaltura/server/tree/%{codename}-%{version}
 Buildroot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch
+%if 0%{?rhel} >= 9
+# EL9: MariaDB client from the distro, s-nail replaces mailx, mediainfo from EPEL
+Requires: rsync,mariadb,kaltura-monit,kaltura-postinst,cronie, php-cli, php-xml, php-curl, php-mysqli, php-pdo_mysql, php-gd, php-gmp, php-ldap, php-mbstring, php-process, chrony, s-nail, mediainfo
+# some bundled vendor/test scripts carry ambiguous python shebangs; leave them untouched
+%undefine __brp_mangle_shebangs
+# alpha/scripts/utils/apiGrep.py (a developer utility) is forced to python2, which EL9 lacks
+%global __requires_exclude ^/usr/bin/python2$
+%else
 Requires: rsync,mysql,kaltura-monit,kaltura-postinst,cronie, php-cli, php-xml, php-curl, php-mysqli, php-pdo_mysql, php-gd, php-gmp, php-ldap, php-mbstring, php-process, chrony, mailx
+%endif
 
 %description
 Kaltura is the world's first Open Source Online Video Platform, transforming the way people work, 
@@ -122,6 +133,10 @@ find  $RPM_BUILD_ROOT%{prefix}/app -name "*.sh" -type f -exec chmod +x {} \;
 
 sed -i 's@^IsmIndex@;IsmIndex@g' $RPM_BUILD_ROOT%{confdir}/plugins.template.ini
 sed -i 's#^;ElasticSearch#ElasticSearch#g' $RPM_BUILD_ROOT%{confdir}/plugins.template.ini
+# the Admin Console always shows the Audit Trail tab; without the plugin it returns HTTP 500
+sed -i 's@^; Audit$@Audit@' $RPM_BUILD_ROOT%{confdir}/plugins.template.ini
+# upstream 18.20.0 bug: missing comma before partner_id_status in app_token
+perl -0pi -e 's/\(`kuser_id`\)\n(\s*KEY `partner_id_status`)/(`kuser_id`),\n$1/' $RPM_BUILD_ROOT%{prefix}/app/deployment/base/sql/01.kaltura_ce_tables.sql
 sed -i "s#^;kmc_version = @KMC_VERSION@#kmc_version = %{_kmc_version}#g" $RPM_BUILD_ROOT%{confdir}/local.template.ini
 sed -i 's#@KMCNG_VERSION@#%{_kmcng_version}#' $RPM_BUILD_ROOT%{confdir}/local.template.ini
 sed -i 's@^otp_required_partners\[\]@;otp_required_partners\[\]@g' $RPM_BUILD_ROOT%{confdir}/local.template.ini
@@ -147,6 +162,8 @@ sed -i 's#\(@DWH_DIR@\)$#\1 -k %{prefix}/pentaho/pdi/kitchen.sh#g' $RPM_BUILD_RO
 sed -i 's@2\s*=\s*"kmcng"@;2 = "kmcng"@g' $RPM_BUILD_ROOT%{confdir}/elasticDynamicMap.template.ini
 sed -i 's@sphinx_log@kaltura_sphinx_log.sphinx_log@g' $RPM_BUILD_ROOT%{prefix}/app/deployment/updates/sql/2020_11_05_sphinx_log_dc_id_index.sql
 rm $RPM_BUILD_ROOT%{prefix}/clients-generator/sources/android/DemoApplication/libs/libWVphoneAPI.so
+# prebuilt iOS (Mach-O) demo library: nothing uses it and brp-strip fails on it
+rm -f $RPM_BUILD_ROOT%{prefix}/clients-generator/sources/objc/DemoApplication/libWViPhoneAPI.a
 #rm $RPM_BUILD_ROOT%{prefix}/clients-generator/sources/android2/DemoApplication/libs/libWVphoneAPI.so
 rm $RPM_BUILD_ROOT%{confdir}/.project
 # we have our own that is provided with the kaltura-monit package
@@ -190,7 +207,6 @@ cp %{SOURCE38} $RPM_BUILD_ROOT%{prefix}/app/start/css/landing-page.css
 mkdir -p $RPM_BUILD_ROOT%{webdir}/content
 tar zxf %{SOURCE10} -C $RPM_BUILD_ROOT%{webdir}/content
 
-# tmp patch until https://github.com/kaltura/server/pull/9492 is merged
 cp %{SOURCE48} $RPM_BUILD_ROOT%{prefix}/app/vendor/symfony-data/config/php.yml
 
 
@@ -210,6 +226,10 @@ cat > $RPM_BUILD_ROOT%{_sysconfdir}/ld.so.conf.d/kaltura_base.conf << EOF
 %{prefix}/lib
 
 EOF
+%if 0%{?rhel} >= 9
+# kaltura-base-config.sh points bin_path_mediainfo at %{prefix}/bin/mediainfo
+ln -s %{_bindir}/mediainfo $RPM_BUILD_ROOT%{prefix}/bin/mediainfo
+%endif
 
 %clean
 rm -rf %{buildroot}
@@ -367,6 +387,9 @@ fi
 %defattr(-, root,root, 0755)
 %dir %{confdir}/monit/monit.d
 %dir %{prefix}/bin
+%if 0%{?rhel} >= 9
+%{prefix}/bin/mediainfo
+%endif
 %dir %{prefix}/lib
 %dir %{prefix}/include
 %dir %{prefix}/share
