@@ -1,0 +1,16 @@
+1. Executei o comando de testes pedido: `Ran 122 tests in 0.068s`, `OK`, exit 0. Isso valida apenas o harness; não diz nada sobre a aceitação da aplicação.
+2. Somei o `classification.json`: são exatamente **40 grupos e 1.073 eventos**. Os totais declarados coincidem com os somados, e o documento repete os mesmos números nas suas sete categorias. Em return contracts são 27 grupos e 618 eventos; dynamic properties, 2/156; null em argumentos string, 5/142; reflection, 2/84; serialization, 2/48; libxml, 1/24; optional antes de required, 1/1.
+3. O `native-74.json` (PHP 7.4.33) e o `native-83.json` (PHP 8.3.6) trazem **22 contratos cada**, com os mesmos pares classe/método e na mesma ordem. Os arquivos `.exit` registram 0 e os `.stderr` estão vazios.
+4. No 7.4, nenhum dos 22 métodos tem tipo de retorno. No 8.3, todos os 22 têm `tentative_return` e nenhum tem `declared_return`. Ou seja, o 8.3 só avisa (deprecation); nenhum desses retornos é imposto como erro fatal.
+5. Os tipos do 8.3 funcionam como metadado do interpretador, não como anotação comprovadamente segura. `bool`, `int`, `void` e `Traversable` são sintaxe válida no 7.4. Já `mixed` (em `getAttribute`, `Iterator::key`/`current` e `ArrayAccess::offsetGet`) e as uniões (`int|false` e `PDOStatement|false`) quebram o parse no 7.4.
+6. O documento trata isso corretamente. Diz que a evidência nativa "não estabelece segurança" para subclasses legadas, que `bool` pode converter silenciosamente um retorno null/int e `void` pode conflitar com valores retornados, e que não há aprovação para aplicar `ReturnTypeWillChange` em massa.
+7. A ordem dos lotes me parece defensável, com riscos corretamente separados: primeiro null explícito, depois propriedades declaradas, return contracts por classe e por ramo de retorno, reflection/serialization/XML com fixtures próprias e, por último, um candidato combinado versionado à parte.
+
+Riscos não resolvidos:
+
+8. O `classification.json` não liga cada uma das 27 localizações de return contracts a um contrato nativo específico. Por exemplo, os grupos em `KalturaAPIException.php:40` e `Criteria.php:193` ou `1259–1275` só apontam para um método nativo por inferência; não verifiquei isso, porque ler o código-fonte estava fora do escopo.
+9. As mensagens brutas dos diagnósticos não foram guardadas, por sigilo. A classificação inteira é, portanto, hipótese sustentada pela localização no código, não texto de erro confirmado. Nove das localizações dessa categoria, com 142 eventos, são classificadas como `ApplicationDiagnostic`, não `Deprecated`, e a causa exata delas continua sem confirmação.
+10. Que o Codex rodou isso via SSH está afirmado no documento; não verifiquei, porque só li os JSON e os `.exit`.
+11. Não houve inspeção de ramos de retorno nem de subclasses. Nenhuma anotação está provada segura, e nenhum grupo está aceito como resolvido.
+
+Não fiz edição, SSH nem escrita de relatório.

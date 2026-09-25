@@ -149,3 +149,9 @@ in the synthetic SQL/Apache/HTTP/trusted-TLS matrix; normalized contracts match
 original 7.4. The 694 Criteria1375 events disappear, while all other 40 groups /
 1,073 events remain unchanged. Full acceptance stays open. See
 `doc/php83/exp4-candidate.md`; original/exp2/exp3 preserved.
+
+Partial diagnostic triage for T0-04/T1-01: all 40 groups / 1,073 events from the
+exp4 API fixture accounted for in seven source-supported categories, with
+artifact-pinned excerpts and 22 native runtime return contracts on 7.4/8.3.
+This is not global static-finding/reachability coverage or accepted exceptions.
+See `doc/php83/exp4-diagnostic-triage.md`; all relevant acceptance tasks stay open.

@@ -1,0 +1,297 @@
+{
+  "schema": 1,
+  "scope": "exact 40 diagnostic location/severity groups from exp4 API fixture, not global source scan",
+  "artifact_sha256": "a1ce4c46792667b07a733e622a3ee71dd01c87a94f7841edfc72d58746ab9d08",
+  "status": "source-supported triage; no diagnostic accepted as exception",
+  "groups": [
+    {
+      "category": "dynamic-properties",
+      "locations": [
+        {
+          "path": "alpha/apps/kaltura/lib/criteriaFilter.class.php",
+          "line": 51,
+          "severity": "ApplicationDiagnostic",
+          "count": 132
+        },
+        {
+          "path": "api_v3/lib/KalturaFrontController.php",
+          "line": 23,
+          "severity": "Deprecated",
+          "count": 24
+        }
+      ],
+      "group_count": 2,
+      "events": 156
+    },
+    {
+      "category": "native-return-contracts",
+      "locations": [
+        {
+          "path": "alpha/apps/kaltura/lib/db/KalturaStatement.php",
+          "line": 20,
+          "severity": "ApplicationDiagnostic",
+          "count": 22
+        },
+        {
+          "path": "alpha/apps/kaltura/lib/db/KalturaStatement.php",
+          "line": 31,
+          "severity": "ApplicationDiagnostic",
+          "count": 22
+        },
+        {
+          "path": "api_v3/lib/exceptions/KalturaAPIException.php",
+          "line": 40,
+          "severity": "ApplicationDiagnostic",
+          "count": 10
+        },
+        {
+          "path": "vendor/propel/util/Criteria.php",
+          "line": 1259,
+          "severity": "ApplicationDiagnostic",
+          "count": 22
+        },
+        {
+          "path": "vendor/propel/util/Criteria.php",
+          "line": 1263,
+          "severity": "ApplicationDiagnostic",
+          "count": 22
+        },
+        {
+          "path": "vendor/propel/util/Criteria.php",
+          "line": 1267,
+          "severity": "ApplicationDiagnostic",
+          "count": 22
+        },
+        {
+          "path": "vendor/propel/util/Criteria.php",
+          "line": 1271,
+          "severity": "ApplicationDiagnostic",
+          "count": 22
+        },
+        {
+          "path": "vendor/propel/util/Criteria.php",
+          "line": 1275,
+          "severity": "ApplicationDiagnostic",
+          "count": 22
+        },
+        {
+          "path": "vendor/propel/util/Criteria.php",
+          "line": 193,
+          "severity": "ApplicationDiagnostic",
+          "count": 22
+        },
+        {
+          "path": "alpha/apps/kaltura/lib/db/KalturaPDO.php",
+          "line": 127,
+          "severity": "Deprecated",
+          "count": 24
+        },
+        {
+          "path": "alpha/apps/kaltura/lib/db/KalturaPDO.php",
+          "line": 188,
+          "severity": "Deprecated",
+          "count": 24
+        },
+        {
+          "path": "vendor/ZendFramework/library/Zend/Config.php",
+          "line": 248,
+          "severity": "Deprecated",
+          "count": 24
+        },
+        {
+          "path": "vendor/ZendFramework/library/Zend/Config.php",
+          "line": 258,
+          "severity": "Deprecated",
+          "count": 24
+        },
+        {
+          "path": "vendor/ZendFramework/library/Zend/Config.php",
+          "line": 269,
+          "severity": "Deprecated",
+          "count": 24
+        },
+        {
+          "path": "vendor/ZendFramework/library/Zend/Config.php",
+          "line": 278,
+          "severity": "Deprecated",
+          "count": 24
+        },
+        {
+          "path": "vendor/ZendFramework/library/Zend/Config.php",
+          "line": 292,
+          "severity": "Deprecated",
+          "count": 24
+        },
+        {
+          "path": "vendor/ZendFramework/library/Zend/Config.php",
+          "line": 304,
+          "severity": "Deprecated",
+          "count": 24
+        },
+        {
+          "path": "vendor/propel/util/PropelConfiguration.php",
+          "line": 60,
+          "severity": "Deprecated",
+          "count": 24
+        },
+        {
+          "path": "vendor/propel/util/PropelConfiguration.php",
+          "line": 68,
+          "severity": "Deprecated",
+          "count": 24
+        },
+        {
+          "path": "vendor/propel/util/PropelConfiguration.php",
+          "line": 76,
+          "severity": "Deprecated",
+          "count": 24
+        },
+        {
+          "path": "vendor/propel/util/PropelConfiguration.php",
+          "line": 84,
+          "severity": "Deprecated",
+          "count": 24
+        },
+        {
+          "path": "vendor/propel/util/PropelPDO.php",
+          "line": 123,
+          "severity": "Deprecated",
+          "count": 24
+        },
+        {
+          "path": "vendor/propel/util/PropelPDO.php",
+          "line": 139,
+          "severity": "Deprecated",
+          "count": 24
+        },
+        {
+          "path": "vendor/propel/util/PropelPDO.php",
+          "line": 161,
+          "severity": "Deprecated",
+          "count": 24
+        },
+        {
+          "path": "vendor/propel/util/PropelPDO.php",
+          "line": 206,
+          "severity": "Deprecated",
+          "count": 24
+        },
+        {
+          "path": "vendor/propel/util/PropelPDO.php",
+          "line": 225,
+          "severity": "Deprecated",
+          "count": 24
+        },
+        {
+          "path": "vendor/propel/util/PropelPDO.php",
+          "line": 244,
+          "severity": "Deprecated",
+          "count": 24
+        }
+      ],
+      "group_count": 27,
+      "events": 618
+    },
+    {
+      "category": "possible-null-string-arguments",
+      "locations": [
+        {
+          "path": "alpha/apps/kaltura/lib/myCustomData.class.php",
+          "line": 28,
+          "severity": "ApplicationDiagnostic",
+          "count": 22
+        },
+        {
+          "path": "alpha/lib/model/Partner.php",
+          "line": 1431,
+          "severity": "ApplicationDiagnostic",
+          "count": 20
+        },
+        {
+          "path": "alpha/lib/model/PermissionPeer.php",
+          "line": 329,
+          "severity": "ApplicationDiagnostic",
+          "count": 32
+        },
+        {
+          "path": "api_v3/lib/KalturaFrontController.php",
+          "line": 76,
+          "severity": "ApplicationDiagnostic",
+          "count": 14
+        },
+        {
+          "path": "infra/log/KalturaLog.php",
+          "line": 122,
+          "severity": "ApplicationDiagnostic",
+          "count": 54
+        }
+      ],
+      "group_count": 5,
+      "events": 142
+    },
+    {
+      "category": "optional-before-required",
+      "locations": [
+        {
+          "path": "api_v3/lib/KalturaEntryService.php",
+          "line": 1836,
+          "severity": "ApplicationDiagnostic",
+          "count": 1
+        }
+      ],
+      "group_count": 1,
+      "events": 1
+    },
+    {
+      "category": "reflection-getClass",
+      "locations": [
+        {
+          "path": "api_v3/lib/reflection/KalturaActionReflector.php",
+          "line": 129,
+          "severity": "ApplicationDiagnostic",
+          "count": 74
+        },
+        {
+          "path": "api_v3/lib/reflection/KalturaActionReflector.php",
+          "line": 153,
+          "severity": "ApplicationDiagnostic",
+          "count": 10
+        }
+      ],
+      "group_count": 2,
+      "events": 84
+    },
+    {
+      "category": "legacy-serialization",
+      "locations": [
+        {
+          "path": "infra/storage/RefreshableRole.class.php",
+          "line": 21,
+          "severity": "ApplicationDiagnostic",
+          "count": 24
+        },
+        {
+          "path": "vendor/aws/Aws/Common/Credentials/AbstractCredentialsDecorator.php",
+          "line": 22,
+          "severity": "ApplicationDiagnostic",
+          "count": 24
+        }
+      ],
+      "group_count": 2,
+      "events": 48
+    },
+    {
+      "category": "libxml-entity-loader",
+      "locations": [
+        {
+          "path": "alpha/config/kConf.php",
+          "line": 7,
+          "severity": "Deprecated",
+          "count": 24
+        }
+      ],
+      "group_count": 1,
+      "events": 24
+    }
+  ]
+}

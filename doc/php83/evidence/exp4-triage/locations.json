@@ -1,0 +1,1406 @@
+{
+  "artifact_sha256": "a1ce4c46792667b07a733e622a3ee71dd01c87a94f7841edfc72d58746ab9d08",
+  "scope": "exact 40 diagnostic location/severity groups from exp4 API fixture, not global source scan",
+  "rows": [
+    {
+      "severity": "ApplicationDiagnostic",
+      "path": "/audit/app/alpha/apps/kaltura/lib/criteriaFilter.class.php",
+      "line": 51,
+      "count": 132,
+      "source_path": "alpha/apps/kaltura/lib/criteriaFilter.class.php",
+      "source_sha256": "fc4cefcbff304a0b176af4e22f608c087e8d781b092acdec888459b7fec2bc13",
+      "source_excerpt": [
+        {
+          "line": 49,
+          "text": "\t\tif ( ! isset ( $criteria_to_filter->creteria_filter_attached ) )"
+        },
+        {
+          "line": 50,
+          "text": "\t\t{"
+        },
+        {
+          "line": 51,
+          "text": "\t\t\t$criteria_to_filter->creteria_filter_attached = true;"
+        },
+        {
+          "line": 52,
+          "text": "\t\t\t$this->copyCriteriaConstraints($this->criteria, $criteria_to_filter);"
+        },
+        {
+          "line": 53,
+          "text": "\t\t}"
+        },
+        {
+          "line": 54,
+          "text": "\t}"
+        }
+      ],
+      "classification_status": "pending independent source review; raw diagnostic messages intentionally absent"
+    },
+    {
+      "severity": "ApplicationDiagnostic",
+      "path": "/audit/app/alpha/apps/kaltura/lib/db/KalturaStatement.php",
+      "line": 20,
+      "count": 22,
+      "source_path": "alpha/apps/kaltura/lib/db/KalturaStatement.php",
+      "source_sha256": "a80d6029db03e1880adf240b157489d6f25b47163c394d0b0969300416378d70",
+      "source_excerpt": [
+        {
+          "line": 18,
+          "text": "\t}"
+        },
+        {
+          "line": 19,
+          "text": "\t"
+        },
+        {
+          "line": 20,
+          "text": "\tpublic function bindValue ($parameter, $value, $data_type = null)"
+        },
+        {
+          "line": 21,
+          "text": "\t{"
+        },
+        {
+          "line": 22,
+          "text": "\t\t$index = count($this->values) + 1;"
+        },
+        {
+          "line": 23,
+          "text": "\t\tif(is_null($value))"
+        }
+      ],
+      "classification_status": "pending independent source review; raw diagnostic messages intentionally absent"
+    },
+    {
+      "severity": "ApplicationDiagnostic",
+      "path": "/audit/app/alpha/apps/kaltura/lib/db/KalturaStatement.php",
+      "line": 31,
+      "count": 22,
+      "source_path": "alpha/apps/kaltura/lib/db/KalturaStatement.php",
+      "source_sha256": "a80d6029db03e1880adf240b157489d6f25b47163c394d0b0969300416378d70",
+      "source_excerpt": [
+        {
+          "line": 29,
+          "text": "\t}"
+        },
+        {
+          "line": 30,
+          "text": ""
+        },
+        {
+          "line": 31,
+          "text": "\tpublic function execute ($input_parameters = null) "
+        },
+        {
+          "line": 32,
+          "text": "\t{"
+        },
+        {
+          "line": 33,
+          "text": "\t\tif (!kQueryCache::isCurrentQueryHandled())"
+        },
+        {
+          "line": 34,
+          "text": "\t\t\tkApiCache::disableConditionalCache();"
+        }
+      ],
+      "classification_status": "pending independent source review; raw diagnostic messages intentionally absent"
+    },
+    {
+      "severity": "ApplicationDiagnostic",
+      "path": "/audit/app/alpha/apps/kaltura/lib/myCustomData.class.php",
+      "line": 28,
+      "count": 22,
+      "source_path": "alpha/apps/kaltura/lib/myCustomData.class.php",
+      "source_sha256": "d318d8a9629f90e68bccc6dde92adbff9d369a61d65c911e80eac0527b83d5a2",
+      "source_excerpt": [
+        {
+          "line": 26,
+          "text": "\t\ttry"
+        },
+        {
+          "line": 27,
+          "text": "\t\t{"
+        },
+        {
+          "line": 28,
+          "text": "\t\t\t$this->data = @unserialize( $str );"
+        },
+        {
+          "line": 29,
+          "text": "\t\t\tif ( $this->data == null )"
+        },
+        {
+          "line": 30,
+          "text": "\t\t\t{"
+        },
+        {
+          "line": 31,
+          "text": "\t\t\t\t$this->data = array();"
+        }
+      ],
+      "classification_status": "pending independent source review; raw diagnostic messages intentionally absent"
+    },
+    {
+      "severity": "ApplicationDiagnostic",
+      "path": "/audit/app/alpha/lib/model/Partner.php",
+      "line": 1431,
+      "count": 20,
+      "source_path": "alpha/lib/model/Partner.php",
+      "source_sha256": "27dfd30c3f0190e29a86489c10f154b8098f8d2b2b4a8928799056ee4c3d6f07",
+      "source_excerpt": [
+        {
+          "line": 1429,
+          "text": "\t\t// add ALWAYS_ALLOWED_ACTIONS only when always_allowed_permission_names was not specified explicitly"
+        },
+        {
+          "line": 1430,
+          "text": "\t\t// it's required to support the scenario where ALWAYS_ALLOWED_ACTIONS should be disabled (by specifying a \"dummy\" permission in always_allowed_permission_names)"
+        },
+        {
+          "line": 1431,
+          "text": "\t\tif (!trim($names)) {"
+        },
+        {
+          "line": 1432,
+          "text": "\t\t\t$names = PermissionName::ALWAYS_ALLOWED_ACTIONS.','.$names;"
+        },
+        {
+          "line": 1433,
+          "text": "\t\t}"
+        },
+        {
+          "line": 1434,
+          "text": "\t\t$names = trim($names, ',');"
+        }
+      ],
+      "classification_status": "pending independent source review; raw diagnostic messages intentionally absent"
+    },
+    {
+      "severity": "ApplicationDiagnostic",
+      "path": "/audit/app/alpha/lib/model/PermissionPeer.php",
+      "line": 329,
+      "count": 32,
+      "source_path": "alpha/lib/model/PermissionPeer.php",
+      "source_sha256": "95f41a27363ab23d76a2f52259f9a325139da1174fdefd17500479b2c1a2ad16",
+      "source_excerpt": [
+        {
+          "line": 327,
+          "text": "\t\t\tforeach ($permissions as $key => $permission)"
+        },
+        {
+          "line": 328,
+          "text": "\t\t\t{"
+        },
+        {
+          "line": 329,
+          "text": "\t\t\t\t$dependsOn = trim($permission->getDependsOnPermissionNames());"
+        },
+        {
+          "line": 330,
+          "text": "\t\t\t\t$dependsOn = explode(',', $dependsOn);"
+        },
+        {
+          "line": 331,
+          "text": "\t\t\t\tif ($dependsOn)"
+        },
+        {
+          "line": 332,
+          "text": "\t\t\t\t{"
+        }
+      ],
+      "classification_status": "pending independent source review; raw diagnostic messages intentionally absent"
+    },
+    {
+      "severity": "ApplicationDiagnostic",
+      "path": "/audit/app/api_v3/lib/KalturaEntryService.php",
+      "line": 1836,
+      "count": 1,
+      "source_path": "api_v3/lib/KalturaEntryService.php",
+      "source_sha256": "9495b584f73df1f4a11812efa964f57f42562159a405693b71e1731d53fe4dd5",
+      "source_excerpt": [
+        {
+          "line": 1834,
+          "text": "\t}"
+        },
+        {
+          "line": 1835,
+          "text": "\t"
+        },
+        {
+          "line": 1836,
+          "text": "\tprotected function anonymousRankEntry($entryId, $entryType = null, $rank)"
+        },
+        {
+          "line": 1837,
+          "text": "\t{"
+        },
+        {
+          "line": 1838,
+          "text": "\t\t$dbEntry = entryPeer::retrieveByPK($entryId);"
+        },
+        {
+          "line": 1839,
+          "text": "\t\tif (!$dbEntry || ($entryType !== null && $dbEntry->getType() != $entryType))"
+        }
+      ],
+      "classification_status": "pending independent source review; raw diagnostic messages intentionally absent"
+    },
+    {
+      "severity": "ApplicationDiagnostic",
+      "path": "/audit/app/api_v3/lib/KalturaFrontController.php",
+      "line": 76,
+      "count": 14,
+      "source_path": "api_v3/lib/KalturaFrontController.php",
+      "source_sha256": "5f2eeffe526d4a0ee245b6f10f4e9600e0f7c8bcb4a52eef41e3a66bbd9ab7a1",
+      "source_excerpt": [
+        {
+          "line": 74,
+          "text": "\t\t\t'ks' => kCurrentContext::$ks,"
+        },
+        {
+          "line": 75,
+          "text": "\t\t\t'isAdmin' => intval(kCurrentContext::$is_admin_session),"
+        },
+        {
+          "line": 76,
+          "text": "\t\t\t'kuserId' => '\"' . str_replace('\"', '\\\\\"', (kCurrentContext::$uid ? kCurrentContext::$uid : kCurrentContext::$ks_uid)) . '\"',"
+        },
+        {
+          "line": 77,
+          "text": "\t\t\t'duration' => $duration,"
+        },
+        {
+          "line": 78,
+          "text": "\t\t\t'success' => intval($success),"
+        },
+        {
+          "line": 79,
+          "text": "\t\t\t'errorCode' => $errorCode,"
+        }
+      ],
+      "classification_status": "pending independent source review; raw diagnostic messages intentionally absent"
+    },
+    {
+      "severity": "ApplicationDiagnostic",
+      "path": "/audit/app/api_v3/lib/exceptions/KalturaAPIException.php",
+      "line": 40,
+      "count": 10,
+      "source_path": "api_v3/lib/exceptions/KalturaAPIException.php",
+      "source_sha256": "7f8352e8fb01c6913f85ae35b4b7acb36466c5d9a0f6b9d5f6581ea84655abcb",
+      "source_excerpt": [
+        {
+          "line": 38,
+          "text": "\t}"
+        },
+        {
+          "line": 39,
+          "text": "\t"
+        },
+        {
+          "line": 40,
+          "text": "\tpublic function __wakeup()"
+        },
+        {
+          "line": 41,
+          "text": "\t{"
+        },
+        {
+          "line": 42,
+          "text": "\t\t//When running on PHP7 the code string does not get un-serialized"
+        },
+        {
+          "line": 43,
+          "text": "\t\t//(This is probably due to the fact that the Exception base class has a code attribute which is of type int)"
+        }
+      ],
+      "classification_status": "pending independent source review; raw diagnostic messages intentionally absent"
+    },
+    {
+      "severity": "ApplicationDiagnostic",
+      "path": "/audit/app/api_v3/lib/reflection/KalturaActionReflector.php",
+      "line": 129,
+      "count": 74,
+      "source_path": "api_v3/lib/reflection/KalturaActionReflector.php",
+      "source_sha256": "0b00d1466c92138c71e8b3141a26affbd248476c0a138f3b470f0717c49ce607",
+      "source_excerpt": [
+        {
+          "line": 127,
+          "text": "\t\t\t\t$parsedDocComment = new KalturaDocCommentParser( $docComment, array("
+        },
+        {
+          "line": 128,
+          "text": "\t\t\t\t\tKalturaDocCommentParser::DOCCOMMENT_REPLACENET_PARAM_NAME => $name , ) );"
+        },
+        {
+          "line": 129,
+          "text": "\t\t\t\t$paramClass = $reflectionParam->getClass(); // type hinting for objects"
+        },
+        {
+          "line": 130,
+          "text": "\t\t\t\tif ($paramClass)"
+        },
+        {
+          "line": 131,
+          "text": "\t\t\t\t{"
+        },
+        {
+          "line": 132,
+          "text": "\t\t\t\t\t$type = $paramClass->getName();"
+        }
+      ],
+      "classification_status": "pending independent source review; raw diagnostic messages intentionally absent"
+    },
+    {
+      "severity": "ApplicationDiagnostic",
+      "path": "/audit/app/api_v3/lib/reflection/KalturaActionReflector.php",
+      "line": 153,
+      "count": 10,
+      "source_path": "api_v3/lib/reflection/KalturaActionReflector.php",
+      "source_sha256": "0b00d1466c92138c71e8b3141a26affbd248476c0a138f3b470f0717c49ce607",
+      "source_excerpt": [
+        {
+          "line": 151,
+          "text": "\t\t\t\t\t$paramInfo->setOptional(true);"
+        },
+        {
+          "line": 152,
+          "text": "\t\t\t\t}"
+        },
+        {
+          "line": 153,
+          "text": "\t\t\t\telse if ($reflectionParam->getClass() && $reflectionParam->allowsNull()) // for object parameter"
+        },
+        {
+          "line": 154,
+          "text": "\t\t\t\t{"
+        },
+        {
+          "line": 155,
+          "text": "\t\t\t\t\t$paramInfo->setOptional(true);"
+        },
+        {
+          "line": 156,
+          "text": "\t\t\t\t}"
+        }
+      ],
+      "classification_status": "pending independent source review; raw diagnostic messages intentionally absent"
+    },
+    {
+      "severity": "ApplicationDiagnostic",
+      "path": "/audit/app/infra/log/KalturaLog.php",
+      "line": 122,
+      "count": 54,
+      "source_path": "infra/log/KalturaLog.php",
+      "source_sha256": "9b7a7c3dd37616ffd2ac9720ece862641c43bb687a2db4e8fc9cbcb259ff5449",
+      "source_excerpt": [
+        {
+          "line": 120,
+          "text": "\t\tforeach ($data as $value)"
+        },
+        {
+          "line": 121,
+          "text": "\t\t{"
+        },
+        {
+          "line": 122,
+          "text": "\t\t\t$message .= strtr($value, ',', ' ') . ',';"
+        },
+        {
+          "line": 123,
+          "text": "\t\t}"
+        },
+        {
+          "line": 124,
+          "text": "\t\t$message = substr($message, 0, -1);"
+        },
+        {
+          "line": 125,
+          "text": "\t\tself::logByType($message, self::LOG_TYPE_ANALYTICS, self::NOTICE);"
+        }
+      ],
+      "classification_status": "pending independent source review; raw diagnostic messages intentionally absent"
+    },
+    {
+      "severity": "ApplicationDiagnostic",
+      "path": "/audit/app/infra/storage/RefreshableRole.class.php",
+      "line": 21,
+      "count": 24,
+      "source_path": "infra/storage/RefreshableRole.class.php",
+      "source_sha256": "ef633fde54c30ebdf5b4b2fc10835a390a977e7a92dd99d83dcc56e85ed1bd82",
+      "source_excerpt": [
+        {
+          "line": 19,
+          "text": "use Guzzle\\Cache\\DoctrineCacheAdapter;"
+        },
+        {
+          "line": 20,
+          "text": ""
+        },
+        {
+          "line": 21,
+          "text": "class RefreshableRole extends AbstractRefreshableCredentials"
+        },
+        {
+          "line": 22,
+          "text": "{"
+        },
+        {
+          "line": 23,
+          "text": "\tconst ROLE_SESSION_NAME_PREFIX = \"kaltura_s3_access_\";"
+        },
+        {
+          "line": 24,
+          "text": "\tconst ASSUME_ROLE_CREDENTIALS_EXPIRY_TIME = 43200;"
+        }
+      ],
+      "classification_status": "pending independent source review; raw diagnostic messages intentionally absent"
+    },
+    {
+      "severity": "ApplicationDiagnostic",
+      "path": "/audit/app/vendor/aws/Aws/Common/Credentials/AbstractCredentialsDecorator.php",
+      "line": 22,
+      "count": 24,
+      "source_path": "vendor/aws/Aws/Common/Credentials/AbstractCredentialsDecorator.php",
+      "source_sha256": "e7e265a862684685f90d7911bfc0367ceacf23710108b4e3846322cbba896375",
+      "source_excerpt": [
+        {
+          "line": 20,
+          "text": " * Abstract credentials decorator"
+        },
+        {
+          "line": 21,
+          "text": " */"
+        },
+        {
+          "line": 22,
+          "text": "class AbstractCredentialsDecorator implements CredentialsInterface"
+        },
+        {
+          "line": 23,
+          "text": "{"
+        },
+        {
+          "line": 24,
+          "text": "    /**"
+        },
+        {
+          "line": 25,
+          "text": "     * @var CredentialsInterface Wrapped credentials object"
+        }
+      ],
+      "classification_status": "pending independent source review; raw diagnostic messages intentionally absent"
+    },
+    {
+      "severity": "ApplicationDiagnostic",
+      "path": "/audit/app/vendor/propel/util/Criteria.php",
+      "line": 1259,
+      "count": 22,
+      "source_path": "vendor/propel/util/Criteria.php",
+      "source_sha256": "9b36246d143a11ab1ffd8b31966cf86d4a7563e78cca216f344727ba3d232d19",
+      "source_excerpt": [
+        {
+          "line": 1257,
+          "text": "\t}"
+        },
+        {
+          "line": 1258,
+          "text": ""
+        },
+        {
+          "line": 1259,
+          "text": "\tpublic function rewind() {"
+        },
+        {
+          "line": 1260,
+          "text": "\t\t$this->idx = 0;"
+        },
+        {
+          "line": 1261,
+          "text": "\t}"
+        },
+        {
+          "line": 1262,
+          "text": ""
+        }
+      ],
+      "classification_status": "pending independent source review; raw diagnostic messages intentionally absent"
+    },
+    {
+      "severity": "ApplicationDiagnostic",
+      "path": "/audit/app/vendor/propel/util/Criteria.php",
+      "line": 1263,
+      "count": 22,
+      "source_path": "vendor/propel/util/Criteria.php",
+      "source_sha256": "9b36246d143a11ab1ffd8b31966cf86d4a7563e78cca216f344727ba3d232d19",
+      "source_excerpt": [
+        {
+          "line": 1261,
+          "text": "\t}"
+        },
+        {
+          "line": 1262,
+          "text": ""
+        },
+        {
+          "line": 1263,
+          "text": "\tpublic function valid() {"
+        },
+        {
+          "line": 1264,
+          "text": "\t\treturn $this->idx < $this->criteriaSize;"
+        },
+        {
+          "line": 1265,
+          "text": "\t}"
+        },
+        {
+          "line": 1266,
+          "text": ""
+        }
+      ],
+      "classification_status": "pending independent source review; raw diagnostic messages intentionally absent"
+    },
+    {
+      "severity": "ApplicationDiagnostic",
+      "path": "/audit/app/vendor/propel/util/Criteria.php",
+      "line": 1267,
+      "count": 22,
+      "source_path": "vendor/propel/util/Criteria.php",
+      "source_sha256": "9b36246d143a11ab1ffd8b31966cf86d4a7563e78cca216f344727ba3d232d19",
+      "source_excerpt": [
+        {
+          "line": 1265,
+          "text": "\t}"
+        },
+        {
+          "line": 1266,
+          "text": ""
+        },
+        {
+          "line": 1267,
+          "text": "\tpublic function key() {"
+        },
+        {
+          "line": 1268,
+          "text": "\t\treturn $this->criteriaKeys[$this->idx];"
+        },
+        {
+          "line": 1269,
+          "text": "\t}"
+        },
+        {
+          "line": 1270,
+          "text": ""
+        }
+      ],
+      "classification_status": "pending independent source review; raw diagnostic messages intentionally absent"
+    },
+    {
+      "severity": "ApplicationDiagnostic",
+      "path": "/audit/app/vendor/propel/util/Criteria.php",
+      "line": 1271,
+      "count": 22,
+      "source_path": "vendor/propel/util/Criteria.php",
+      "source_sha256": "9b36246d143a11ab1ffd8b31966cf86d4a7563e78cca216f344727ba3d232d19",
+      "source_excerpt": [
+        {
+          "line": 1269,
+          "text": "\t}"
+        },
+        {
+          "line": 1270,
+          "text": ""
+        },
+        {
+          "line": 1271,
+          "text": "\tpublic function current() {"
+        },
+        {
+          "line": 1272,
+          "text": "\t\treturn $this->criteria->getCriterion($this->criteriaKeys[$this->idx]);"
+        },
+        {
+          "line": 1273,
+          "text": "\t}"
+        },
+        {
+          "line": 1274,
+          "text": ""
+        }
+      ],
+      "classification_status": "pending independent source review; raw diagnostic messages intentionally absent"
+    },
+    {
+      "severity": "ApplicationDiagnostic",
+      "path": "/audit/app/vendor/propel/util/Criteria.php",
+      "line": 1275,
+      "count": 22,
+      "source_path": "vendor/propel/util/Criteria.php",
+      "source_sha256": "9b36246d143a11ab1ffd8b31966cf86d4a7563e78cca216f344727ba3d232d19",
+      "source_excerpt": [
+        {
+          "line": 1273,
+          "text": "\t}"
+        },
+        {
+          "line": 1274,
+          "text": ""
+        },
+        {
+          "line": 1275,
+          "text": "\tpublic function next() {"
+        },
+        {
+          "line": 1276,
+          "text": "\t\t$this->idx++;"
+        },
+        {
+          "line": 1277,
+          "text": "\t}"
+        },
+        {
+          "line": 1278,
+          "text": ""
+        }
+      ],
+      "classification_status": "pending independent source review; raw diagnostic messages intentionally absent"
+    },
+    {
+      "severity": "ApplicationDiagnostic",
+      "path": "/audit/app/vendor/propel/util/Criteria.php",
+      "line": 193,
+      "count": 22,
+      "source_path": "vendor/propel/util/Criteria.php",
+      "source_sha256": "9b36246d143a11ab1ffd8b31966cf86d4a7563e78cca216f344727ba3d232d19",
+      "source_excerpt": [
+        {
+          "line": 191,
+          "text": "\t * you to foreach () over a Criteria object."
+        },
+        {
+          "line": 192,
+          "text": "\t */"
+        },
+        {
+          "line": 193,
+          "text": "\tpublic function getIterator()"
+        },
+        {
+          "line": 194,
+          "text": "\t{"
+        },
+        {
+          "line": 195,
+          "text": "\t\treturn new CriterionIterator($this);"
+        },
+        {
+          "line": 196,
+          "text": "\t}"
+        }
+      ],
+      "classification_status": "pending independent source review; raw diagnostic messages intentionally absent"
+    },
+    {
+      "severity": "Deprecated",
+      "path": "/audit/app/alpha/apps/kaltura/lib/db/KalturaPDO.php",
+      "line": 127,
+      "count": 24,
+      "source_path": "alpha/apps/kaltura/lib/db/KalturaPDO.php",
+      "source_sha256": "aeb012822d0af7c5fe0e6ea4221f789fc8c886f0c53dbb729a51bc9463a30f0e",
+      "source_excerpt": [
+        {
+          "line": 125,
+          "text": "\t * @see PDO::exec()"
+        },
+        {
+          "line": 126,
+          "text": "\t */"
+        },
+        {
+          "line": 127,
+          "text": "\tpublic function exec($sql)"
+        },
+        {
+          "line": 128,
+          "text": "\t{"
+        },
+        {
+          "line": 129,
+          "text": "\t\t$comment = $this->getCommentWrapped();"
+        },
+        {
+          "line": 130,
+          "text": "\t\t$sql = $comment . $sql;"
+        }
+      ],
+      "classification_status": "pending independent source review; raw diagnostic messages intentionally absent"
+    },
+    {
+      "severity": "Deprecated",
+      "path": "/audit/app/alpha/apps/kaltura/lib/db/KalturaPDO.php",
+      "line": 188,
+      "count": 24,
+      "source_path": "alpha/apps/kaltura/lib/db/KalturaPDO.php",
+      "source_sha256": "aeb012822d0af7c5fe0e6ea4221f789fc8c886f0c53dbb729a51bc9463a30f0e",
+      "source_excerpt": [
+        {
+          "line": 186,
+          "text": "\t * @see PDO::query()"
+        },
+        {
+          "line": 187,
+          "text": "\t */"
+        },
+        {
+          "line": 188,
+          "text": "\tpublic function query(...$args)"
+        },
+        {
+          "line": 189,
+          "text": "\t{"
+        },
+        {
+          "line": 190,
+          "text": "\t\tkApiCache::disableConditionalCache();"
+        },
+        {
+          "line": 191,
+          "text": "\t"
+        }
+      ],
+      "classification_status": "pending independent source review; raw diagnostic messages intentionally absent"
+    },
+    {
+      "severity": "Deprecated",
+      "path": "/audit/app/alpha/config/kConf.php",
+      "line": 7,
+      "count": 24,
+      "source_path": "alpha/config/kConf.php",
+      "source_sha256": "d02983c560f6813c3546f2294a324d7a955f669e5b867d56d9a878c397cfa015",
+      "source_excerpt": [
+        {
+          "line": 5,
+          "text": " */"
+        },
+        {
+          "line": 6,
+          "text": "setlocale(LC_ALL, 'en_US.UTF-8');"
+        },
+        {
+          "line": 7,
+          "text": "libxml_disable_entity_loader(true);"
+        },
+        {
+          "line": 8,
+          "text": ""
+        },
+        {
+          "line": 9,
+          "text": "// to make sure stream calls to localhost machine"
+        },
+        {
+          "line": 10,
+          "text": "stream_wrapper_unregister ('http');"
+        }
+      ],
+      "classification_status": "pending independent source review; raw diagnostic messages intentionally absent"
+    },
+    {
+      "severity": "Deprecated",
+      "path": "/audit/app/api_v3/lib/KalturaFrontController.php",
+      "line": 23,
+      "count": 24,
+      "source_path": "api_v3/lib/KalturaFrontController.php",
+      "source_sha256": "5f2eeffe526d4a0ee245b6f10f4e9600e0f7c8bcb4a52eef41e3a66bbd9ab7a1",
+      "source_excerpt": [
+        {
+          "line": 21,
+          "text": "\tprivate function __construct()"
+        },
+        {
+          "line": 22,
+          "text": "\t{"
+        },
+        {
+          "line": 23,
+          "text": "\t\t$this->dispatcher = KalturaDispatcher::getInstance();"
+        },
+        {
+          "line": 24,
+          "text": "\t\t"
+        },
+        {
+          "line": 25,
+          "text": "\t\t$this->params = requestUtils::getRequestParams();"
+        },
+        {
+          "line": 26,
+          "text": "\t\t"
+        }
+      ],
+      "classification_status": "pending independent source review; raw diagnostic messages intentionally absent"
+    },
+    {
+      "severity": "Deprecated",
+      "path": "/audit/app/vendor/ZendFramework/library/Zend/Config.php",
+      "line": 248,
+      "count": 24,
+      "source_path": "vendor/ZendFramework/library/Zend/Config.php",
+      "source_sha256": "065597c625046207683d14682bffcdbfd0aed862ad456a3dbefcf9b538e97a2f",
+      "source_excerpt": [
+        {
+          "line": 246,
+          "text": "     * @return int"
+        },
+        {
+          "line": 247,
+          "text": "     */"
+        },
+        {
+          "line": 248,
+          "text": "    public function count()"
+        },
+        {
+          "line": 249,
+          "text": "    {"
+        },
+        {
+          "line": 250,
+          "text": "        return $this->_count;"
+        },
+        {
+          "line": 251,
+          "text": "    }"
+        }
+      ],
+      "classification_status": "pending independent source review; raw diagnostic messages intentionally absent"
+    },
+    {
+      "severity": "Deprecated",
+      "path": "/audit/app/vendor/ZendFramework/library/Zend/Config.php",
+      "line": 258,
+      "count": 24,
+      "source_path": "vendor/ZendFramework/library/Zend/Config.php",
+      "source_sha256": "065597c625046207683d14682bffcdbfd0aed862ad456a3dbefcf9b538e97a2f",
+      "source_excerpt": [
+        {
+          "line": 256,
+          "text": "     * @return mixed"
+        },
+        {
+          "line": 257,
+          "text": "     */"
+        },
+        {
+          "line": 258,
+          "text": "    public function current()"
+        },
+        {
+          "line": 259,
+          "text": "    {"
+        },
+        {
+          "line": 260,
+          "text": "        $this->_skipNextIteration = false;"
+        },
+        {
+          "line": 261,
+          "text": "        return current($this->_data);"
+        }
+      ],
+      "classification_status": "pending independent source review; raw diagnostic messages intentionally absent"
+    },
+    {
+      "severity": "Deprecated",
+      "path": "/audit/app/vendor/ZendFramework/library/Zend/Config.php",
+      "line": 269,
+      "count": 24,
+      "source_path": "vendor/ZendFramework/library/Zend/Config.php",
+      "source_sha256": "065597c625046207683d14682bffcdbfd0aed862ad456a3dbefcf9b538e97a2f",
+      "source_excerpt": [
+        {
+          "line": 267,
+          "text": "     * @return mixed"
+        },
+        {
+          "line": 268,
+          "text": "     */"
+        },
+        {
+          "line": 269,
+          "text": "    public function key()"
+        },
+        {
+          "line": 270,
+          "text": "    {"
+        },
+        {
+          "line": 271,
+          "text": "        return key($this->_data);"
+        },
+        {
+          "line": 272,
+          "text": "    }"
+        }
+      ],
+      "classification_status": "pending independent source review; raw diagnostic messages intentionally absent"
+    },
+    {
+      "severity": "Deprecated",
+      "path": "/audit/app/vendor/ZendFramework/library/Zend/Config.php",
+      "line": 278,
+      "count": 24,
+      "source_path": "vendor/ZendFramework/library/Zend/Config.php",
+      "source_sha256": "065597c625046207683d14682bffcdbfd0aed862ad456a3dbefcf9b538e97a2f",
+      "source_excerpt": [
+        {
+          "line": 276,
+          "text": "     *"
+        },
+        {
+          "line": 277,
+          "text": "     */"
+        },
+        {
+          "line": 278,
+          "text": "    public function next()"
+        },
+        {
+          "line": 279,
+          "text": "    {"
+        },
+        {
+          "line": 280,
+          "text": "        if ($this->_skipNextIteration) {"
+        },
+        {
+          "line": 281,
+          "text": "            $this->_skipNextIteration = false;"
+        }
+      ],
+      "classification_status": "pending independent source review; raw diagnostic messages intentionally absent"
+    },
+    {
+      "severity": "Deprecated",
+      "path": "/audit/app/vendor/ZendFramework/library/Zend/Config.php",
+      "line": 292,
+      "count": 24,
+      "source_path": "vendor/ZendFramework/library/Zend/Config.php",
+      "source_sha256": "065597c625046207683d14682bffcdbfd0aed862ad456a3dbefcf9b538e97a2f",
+      "source_excerpt": [
+        {
+          "line": 290,
+          "text": "     *"
+        },
+        {
+          "line": 291,
+          "text": "     */"
+        },
+        {
+          "line": 292,
+          "text": "    public function rewind()"
+        },
+        {
+          "line": 293,
+          "text": "    {"
+        },
+        {
+          "line": 294,
+          "text": "        $this->_skipNextIteration = false;"
+        },
+        {
+          "line": 295,
+          "text": "        reset($this->_data);"
+        }
+      ],
+      "classification_status": "pending independent source review; raw diagnostic messages intentionally absent"
+    },
+    {
+      "severity": "Deprecated",
+      "path": "/audit/app/vendor/ZendFramework/library/Zend/Config.php",
+      "line": 304,
+      "count": 24,
+      "source_path": "vendor/ZendFramework/library/Zend/Config.php",
+      "source_sha256": "065597c625046207683d14682bffcdbfd0aed862ad456a3dbefcf9b538e97a2f",
+      "source_excerpt": [
+        {
+          "line": 302,
+          "text": "     * @return boolean"
+        },
+        {
+          "line": 303,
+          "text": "     */"
+        },
+        {
+          "line": 304,
+          "text": "    public function valid()"
+        },
+        {
+          "line": 305,
+          "text": "    {"
+        },
+        {
+          "line": 306,
+          "text": "        return $this->_index < $this->_count;"
+        },
+        {
+          "line": 307,
+          "text": "    }"
+        }
+      ],
+      "classification_status": "pending independent source review; raw diagnostic messages intentionally absent"
+    },
+    {
+      "severity": "Deprecated",
+      "path": "/audit/app/vendor/propel/util/PropelConfiguration.php",
+      "line": 60,
+      "count": 24,
+      "source_path": "vendor/propel/util/PropelConfiguration.php",
+      "source_sha256": "955aa16a6da6e24d80ab2f87deb79c64f9182c45a7066b9ea12c93d135812980",
+      "source_excerpt": [
+        {
+          "line": 58,
+          "text": "\t * @see        http://www.php.net/ArrayAccess"
+        },
+        {
+          "line": 59,
+          "text": "\t */"
+        },
+        {
+          "line": 60,
+          "text": "\tpublic function offsetExists($offset)"
+        },
+        {
+          "line": 61,
+          "text": "\t{"
+        },
+        {
+          "line": 62,
+          "text": "\t\treturn isset($this->parameter[$offset]) || array_key_exists($offset, $this->parameters);"
+        },
+        {
+          "line": 63,
+          "text": "\t}"
+        }
+      ],
+      "classification_status": "pending independent source review; raw diagnostic messages intentionally absent"
+    },
+    {
+      "severity": "Deprecated",
+      "path": "/audit/app/vendor/propel/util/PropelConfiguration.php",
+      "line": 68,
+      "count": 24,
+      "source_path": "vendor/propel/util/PropelConfiguration.php",
+      "source_sha256": "955aa16a6da6e24d80ab2f87deb79c64f9182c45a7066b9ea12c93d135812980",
+      "source_excerpt": [
+        {
+          "line": 66,
+          "text": "\t * @see        http://www.php.net/ArrayAccess"
+        },
+        {
+          "line": 67,
+          "text": "\t */"
+        },
+        {
+          "line": 68,
+          "text": "\tpublic function offsetSet($offset, $value)"
+        },
+        {
+          "line": 69,
+          "text": "\t{"
+        },
+        {
+          "line": 70,
+          "text": "\t\t$this->parameter[$offset] = $value;"
+        },
+        {
+          "line": 71,
+          "text": "\t}"
+        }
+      ],
+      "classification_status": "pending independent source review; raw diagnostic messages intentionally absent"
+    },
+    {
+      "severity": "Deprecated",
+      "path": "/audit/app/vendor/propel/util/PropelConfiguration.php",
+      "line": 76,
+      "count": 24,
+      "source_path": "vendor/propel/util/PropelConfiguration.php",
+      "source_sha256": "955aa16a6da6e24d80ab2f87deb79c64f9182c45a7066b9ea12c93d135812980",
+      "source_excerpt": [
+        {
+          "line": 74,
+          "text": "\t * @see        http://www.php.net/ArrayAccess"
+        },
+        {
+          "line": 75,
+          "text": "\t */"
+        },
+        {
+          "line": 76,
+          "text": "\tpublic function offsetGet($offset)"
+        },
+        {
+          "line": 77,
+          "text": "\t{"
+        },
+        {
+          "line": 78,
+          "text": "\t\treturn $this->parameters[$offset];"
+        },
+        {
+          "line": 79,
+          "text": "\t}"
+        }
+      ],
+      "classification_status": "pending independent source review; raw diagnostic messages intentionally absent"
+    },
+    {
+      "severity": "Deprecated",
+      "path": "/audit/app/vendor/propel/util/PropelConfiguration.php",
+      "line": 84,
+      "count": 24,
+      "source_path": "vendor/propel/util/PropelConfiguration.php",
+      "source_sha256": "955aa16a6da6e24d80ab2f87deb79c64f9182c45a7066b9ea12c93d135812980",
+      "source_excerpt": [
+        {
+          "line": 82,
+          "text": "\t * @see        http://www.php.net/ArrayAccess"
+        },
+        {
+          "line": 83,
+          "text": "\t */"
+        },
+        {
+          "line": 84,
+          "text": "\tpublic function offsetUnset($offset)"
+        },
+        {
+          "line": 85,
+          "text": "\t{"
+        },
+        {
+          "line": 86,
+          "text": "\t\tunset($this->parameters[$offset]);"
+        },
+        {
+          "line": 87,
+          "text": "\t}"
+        }
+      ],
+      "classification_status": "pending independent source review; raw diagnostic messages intentionally absent"
+    },
+    {
+      "severity": "Deprecated",
+      "path": "/audit/app/vendor/propel/util/PropelPDO.php",
+      "line": 123,
+      "count": 24,
+      "source_path": "vendor/propel/util/PropelPDO.php",
+      "source_sha256": "9e4f602f50bc24432107f34a2f3b4a995518fe28c46be9dc8f642dbb9ca74d22",
+      "source_excerpt": [
+        {
+          "line": 121,
+          "text": "\t * Overrides PDO::beginTransaction() to prevent errors due to already-in-progress transaction."
+        },
+        {
+          "line": 122,
+          "text": "\t */"
+        },
+        {
+          "line": 123,
+          "text": "\tpublic function beginTransaction()"
+        },
+        {
+          "line": 124,
+          "text": "\t{"
+        },
+        {
+          "line": 125,
+          "text": "\t\t$return = true;"
+        },
+        {
+          "line": 126,
+          "text": "\t\t$opcount = $this->getNestedTransactionCount();"
+        }
+      ],
+      "classification_status": "pending independent source review; raw diagnostic messages intentionally absent"
+    },
+    {
+      "severity": "Deprecated",
+      "path": "/audit/app/vendor/propel/util/PropelPDO.php",
+      "line": 139,
+      "count": 24,
+      "source_path": "vendor/propel/util/PropelPDO.php",
+      "source_sha256": "9e4f602f50bc24432107f34a2f3b4a995518fe28c46be9dc8f642dbb9ca74d22",
+      "source_excerpt": [
+        {
+          "line": 137,
+          "text": "\t * transaction nesting level."
+        },
+        {
+          "line": 138,
+          "text": "\t */"
+        },
+        {
+          "line": 139,
+          "text": "\tpublic function commit()"
+        },
+        {
+          "line": 140,
+          "text": "\t{"
+        },
+        {
+          "line": 141,
+          "text": "\t\t$return = true;"
+        },
+        {
+          "line": 142,
+          "text": "\t\t$opcount = $this->getNestedTransactionCount();"
+        }
+      ],
+      "classification_status": "pending independent source review; raw diagnostic messages intentionally absent"
+    },
+    {
+      "severity": "Deprecated",
+      "path": "/audit/app/vendor/propel/util/PropelPDO.php",
+      "line": 161,
+      "count": 24,
+      "source_path": "vendor/propel/util/PropelPDO.php",
+      "source_sha256": "9e4f602f50bc24432107f34a2f3b4a995518fe28c46be9dc8f642dbb9ca74d22",
+      "source_excerpt": [
+        {
+          "line": 159,
+          "text": "\t * @return     boolean Whether operation was successful."
+        },
+        {
+          "line": 160,
+          "text": "\t */"
+        },
+        {
+          "line": 161,
+          "text": "\tpublic function rollBack()"
+        },
+        {
+          "line": 162,
+          "text": "\t{"
+        },
+        {
+          "line": 163,
+          "text": "\t\t$return = true;"
+        },
+        {
+          "line": 164,
+          "text": "\t\t$opcount = $this->getNestedTransactionCount();"
+        }
+      ],
+      "classification_status": "pending independent source review; raw diagnostic messages intentionally absent"
+    },
+    {
+      "severity": "Deprecated",
+      "path": "/audit/app/vendor/propel/util/PropelPDO.php",
+      "line": 206,
+      "count": 24,
+      "source_path": "vendor/propel/util/PropelPDO.php",
+      "source_sha256": "9e4f602f50bc24432107f34a2f3b4a995518fe28c46be9dc8f642dbb9ca74d22",
+      "source_excerpt": [
+        {
+          "line": 204,
+          "text": "\t * @param      mixed $value The attribute value."
+        },
+        {
+          "line": 205,
+          "text": "\t */"
+        },
+        {
+          "line": 206,
+          "text": "\tpublic function setAttribute($attribute, $value)"
+        },
+        {
+          "line": 207,
+          "text": "\t{"
+        },
+        {
+          "line": 208,
+          "text": "\t\tswitch($attribute) {"
+        },
+        {
+          "line": 209,
+          "text": "\t\t\tcase self::PROPEL_ATTR_CACHE_PREPARES:"
+        }
+      ],
+      "classification_status": "pending independent source review; raw diagnostic messages intentionally absent"
+    },
+    {
+      "severity": "Deprecated",
+      "path": "/audit/app/vendor/propel/util/PropelPDO.php",
+      "line": 225,
+      "count": 24,
+      "source_path": "vendor/propel/util/PropelPDO.php",
+      "source_sha256": "9e4f602f50bc24432107f34a2f3b4a995518fe28c46be9dc8f642dbb9ca74d22",
+      "source_excerpt": [
+        {
+          "line": 223,
+          "text": "\t * @param      int $attribute The attribute to get (e.g. PropelPDO::PROPEL_ATTR_CACHE_PREPARES)."
+        },
+        {
+          "line": 224,
+          "text": "\t */"
+        },
+        {
+          "line": 225,
+          "text": "\tpublic function getAttribute($attribute)"
+        },
+        {
+          "line": 226,
+          "text": "\t{"
+        },
+        {
+          "line": 227,
+          "text": "\t\tswitch($attribute) {"
+        },
+        {
+          "line": 228,
+          "text": "\t\t\tcase self::PROPEL_ATTR_CACHE_PREPARES:"
+        }
+      ],
+      "classification_status": "pending independent source review; raw diagnostic messages intentionally absent"
+    },
+    {
+      "severity": "Deprecated",
+      "path": "/audit/app/vendor/propel/util/PropelPDO.php",
+      "line": 244,
+      "count": 24,
+      "source_path": "vendor/propel/util/PropelPDO.php",
+      "source_sha256": "9e4f602f50bc24432107f34a2f3b4a995518fe28c46be9dc8f642dbb9ca74d22",
+      "source_excerpt": [
+        {
+          "line": 242,
+          "text": "\t * @return     PDOStatement"
+        },
+        {
+          "line": 243,
+          "text": "\t */"
+        },
+        {
+          "line": 244,
+          "text": "\tpublic function prepare($sql, $driver_options = array())"
+        },
+        {
+          "line": 245,
+          "text": "\t{"
+        },
+        {
+          "line": 246,
+          "text": "\t\tif ($this->cachePreparedStatements) {"
+        },
+        {
+          "line": 247,
+          "text": "\t\t\t$key = $sql;"
+        }
+      ],
+      "classification_status": "pending independent source review; raw diagnostic messages intentionally absent"
+    }
+  ]
+}

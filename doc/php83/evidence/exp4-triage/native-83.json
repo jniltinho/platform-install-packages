@@ -1,0 +1,138 @@
+{
+    "php": "8.3.6",
+    "sapi": "cli",
+    "rows": [
+        {
+            "class": "PDOStatement",
+            "method": "bindValue",
+            "declared_return": null,
+            "tentative_return": "bool"
+        },
+        {
+            "class": "PDOStatement",
+            "method": "execute",
+            "declared_return": null,
+            "tentative_return": "bool"
+        },
+        {
+            "class": "PDO",
+            "method": "exec",
+            "declared_return": null,
+            "tentative_return": "int|false"
+        },
+        {
+            "class": "PDO",
+            "method": "query",
+            "declared_return": null,
+            "tentative_return": "PDOStatement|false"
+        },
+        {
+            "class": "PDO",
+            "method": "beginTransaction",
+            "declared_return": null,
+            "tentative_return": "bool"
+        },
+        {
+            "class": "PDO",
+            "method": "commit",
+            "declared_return": null,
+            "tentative_return": "bool"
+        },
+        {
+            "class": "PDO",
+            "method": "rollBack",
+            "declared_return": null,
+            "tentative_return": "bool"
+        },
+        {
+            "class": "PDO",
+            "method": "setAttribute",
+            "declared_return": null,
+            "tentative_return": "bool"
+        },
+        {
+            "class": "PDO",
+            "method": "getAttribute",
+            "declared_return": null,
+            "tentative_return": "mixed"
+        },
+        {
+            "class": "PDO",
+            "method": "prepare",
+            "declared_return": null,
+            "tentative_return": "PDOStatement|false"
+        },
+        {
+            "class": "IteratorAggregate",
+            "method": "getIterator",
+            "declared_return": null,
+            "tentative_return": "Traversable"
+        },
+        {
+            "class": "Iterator",
+            "method": "rewind",
+            "declared_return": null,
+            "tentative_return": "void"
+        },
+        {
+            "class": "Iterator",
+            "method": "valid",
+            "declared_return": null,
+            "tentative_return": "bool"
+        },
+        {
+            "class": "Iterator",
+            "method": "key",
+            "declared_return": null,
+            "tentative_return": "mixed"
+        },
+        {
+            "class": "Iterator",
+            "method": "current",
+            "declared_return": null,
+            "tentative_return": "mixed"
+        },
+        {
+            "class": "Iterator",
+            "method": "next",
+            "declared_return": null,
+            "tentative_return": "void"
+        },
+        {
+            "class": "Countable",
+            "method": "count",
+            "declared_return": null,
+            "tentative_return": "int"
+        },
+        {
+            "class": "ArrayAccess",
+            "method": "offsetExists",
+            "declared_return": null,
+            "tentative_return": "bool"
+        },
+        {
+            "class": "ArrayAccess",
+            "method": "offsetSet",
+            "declared_return": null,
+            "tentative_return": "void"
+        },
+        {
+            "class": "ArrayAccess",
+            "method": "offsetGet",
+            "declared_return": null,
+            "tentative_return": "mixed"
+        },
+        {
+            "class": "ArrayAccess",
+            "method": "offsetUnset",
+            "declared_return": null,
+            "tentative_return": "void"
+        },
+        {
+            "class": "Exception",
+            "method": "__wakeup",
+            "declared_return": null,
+            "tentative_return": "void"
+        }
+    ]
+}

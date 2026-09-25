@@ -1,0 +1,15 @@
+Fixing your reflection-serialization triage — collecting bounded evidence for remaining groups.
+
+Local harness green (122 tests) — now pulling exact artifact source for your assigned groups.
+
+Artifact sources verified — now tracing callers and serialization impacts.
+
+Evidence complete — drafting your bounded triage report.
+
+Report written: `doc/php83/evidence/exp4-triage/opencode-reflection-serialization.md` (sole writable output; no source/patch/manifest/doc edits).
+
+- Harness: `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83 -p 'test_*.py'` → **122 tests OK, exit 0**. Harness-only, not an application claim. No live PHP (`php: command not found`).
+- Fixtures: `locations.json` verified **40 groups / 1073 events**, artifact `a1ce4c46…`; `coverage.json` generation `2026-09-25T12:19:00Z`.
+- Graph Tier2 `kaltura-rigel-18.20.0-full`: 6/6 assigned files `metadata_match/no_recorded_issue` (best-effort); snippets + `anonymousRankEntry` inbound (3 callers) verified; exact artifact source via `zipfile.read` (root `server-Rigel-18.20.0/`).
+- Triaged only: EntryService:1836 (optional-before-required, 3 callers mapped), APIException:40 (`__wakeup` vs tentative `void` per native-83.json php-8.3.6), ActionReflector:129/153 (`getClass` → `getType` helper with self/parent/union handling), RefreshableRole:21 + AbstractCredentialsDecorator:22 (`Serializable` chain → add `__serialize/__unserialize`, keep old methods), kConf:7 (`libxml_disable_entity_loader` → version-guarded + `LIBXML_NONET`/null-loader per sink, XXE fixtures required).
+- Raw messages absent: all severities are source-supported inference, blockers listed, nothing marked accepted. No blanket casts, suppression, `ReturnTypeWillChange` sweep, or upgrade recommendation.

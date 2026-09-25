@@ -16,6 +16,13 @@ and [execution contract](../../openspec/changes/migrate-kaltura-php83/design.md)
 - No new VM/application test, release, package integration or `.20` mutation in
   this batch. No release ETA or application completion percentage is inferred.
 
+## Latest progress: remaining exp4 diagnostic triage
+
+All 40 observed groups / 1,073 events now have source-pinned candidate-cause
+accounting across seven categories. A read-only native reflection probe records
+22 contracts on PHP 7.4/8.3. This is bounded triage, not a complete static audit
+or acceptance of any warning. [Repair batches and required tests](exp4-diagnostic-triage.md).
+
 ## Latest progress: exp4 actual ZIP integration
 
 A separately built seven-patch ZIP now runs the synthetic SQL/HTTP/trusted-HTTPS
