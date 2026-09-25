@@ -83,3 +83,28 @@ commit; the embedded commit identifies the earlier base.
   a successful fresh install or package build does not imply those checks.
 - Merge the integration PR only after the agreed CI and three-distribution
   E2E gates are green. Preserve existing VMs and user data.
+
+## Playback quality acceptance — 2026-09-25 UTC
+
+Package `0.1.0~rc10` was installed on the remaining Noble `.20` VM. Operator
+configuration checksum was unchanged, and existing accounts/media were retained.
+The other VMs had been retired after their earlier validation; no new quality
+claim is made for those deployments.
+
+- Before: the default manifest chose 640×360, about 400 kbps video and 30 fps.
+- Existing 720p demo after selection fix: authenticated console stream measured
+  by ffprobe at 1280×720, 60000/1001 fps and 3,340,341 bps.
+- New Full HD demo: genuine source downloaded without re-encoding; the
+  authenticated console stream measured 1920×1080, 60000/1001 fps and
+  5,664,015 bps. Browser video dimensions were 1920×1080, playback and fullscreen
+  succeeded, and Range returned HTTP 206 with exactly 1024 bytes.
+- Full browser E2E passed again: login, upload phases, READY, playback/Range,
+  edit/delete, user administration, health, languages, mobile and logout.
+- `make lint test package VERSION=0.1.0-rc10` passed, including CGO-disabled
+  and race tests, frontend checks, 13 Vitest tests, and DEB/RPM packaging.
+- Regression tests cover ready/compatible entry-owned asset selection, original
+  preference, bitrate/tie ordering, missing/invalid assets, list failures,
+  HTTP/HTTPS manifest protocol, GET/HEAD/Range and existing redirect protections.
+
+Full HD does not recover detail already lost by the source encoder; best-quality
+progressive delivery increases bandwidth and is not adaptive streaming.

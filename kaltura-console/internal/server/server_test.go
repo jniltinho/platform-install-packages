@@ -119,6 +119,11 @@ func TestProxyMatrix(t *testing.T) {
 							}
 							return
 						}
+						if r.Form.Get("service") == "flavorAsset" {
+							_, err := fmt.Fprint(w, `{"objects":[{"id":"0_ijklmnop","entryId":"0_abcdefgh","status":2,"fileExt":"mp4","videoCodecId":"avc1","width":1920,"height":1080}]}`)
+							require.NoError(t, err)
+							return
+						}
 						if _, err := fmt.Fprint(w, `{"id":"0_abcdefgh","partnerId":102}`); err != nil {
 							t.Errorf("writing fake response: %v", err)
 						}
@@ -127,6 +132,7 @@ func TestProxyMatrix(t *testing.T) {
 					require.Empty(t, r.Header.Get("Cookie"))
 					require.Empty(t, r.Header.Get("Authorization"))
 					require.Equal(t, "bytes=1-2", r.Header.Get("Range"))
+					require.Contains(t, r.URL.Path, "/flavorIds/0_ijklmnop/")
 					w.Header().Set("Content-Type", "video/mp4")
 					w.Header().Set("Cache-Control", "public, max-age=3600")
 					w.Header().Set("Content-Range", "bytes 1-2/3")
