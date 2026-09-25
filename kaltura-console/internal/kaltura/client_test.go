@@ -229,3 +229,12 @@ func TestHelpers(t *testing.T) {
 	assert.Equal(t, GroupOther, EntryStatusGroup(7))
 	assert.Equal(t, "Não aplicável", FlavorStatusLabel(4))
 }
+
+func TestPlaybackURLProtocol(t *testing.T) {
+	for _, protocol := range []string{"http", "https"} {
+		t.Run(protocol, func(t *testing.T) {
+			c := NewClient(Config{ServiceURL: protocol + "://k/api_v3", PartnerID: 102, PlaybackHost: protocol + "://k/"})
+			assert.Equal(t, protocol+"://k/p/102/sp/10200/playManifest/entryId/0_abcdefgh/format/url/protocol/"+protocol+"/a.mp4", c.PlaybackURL("0_abcdefgh"))
+		})
+	}
+}

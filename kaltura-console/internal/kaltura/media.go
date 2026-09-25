@@ -178,7 +178,12 @@ func (c *Client) deliveryBase(entryID string) string {
 
 // PlaybackURL is the progressive MP4 playManifest URL of an entry.
 func (c *Client) PlaybackURL(entryID string) string {
-	return c.deliveryBase(entryID) + "/playManifest/entryId/" + entryID + "/format/url/protocol/http/a.mp4"
+	protocol := "http"
+	if strings.HasPrefix(strings.ToLower(c.cfg.PlaybackHost), "https://") {
+		protocol = "https"
+	}
+	return c.deliveryBase(entryID) + "/playManifest/entryId/" + entryID +
+		"/format/url/protocol/" + protocol + "/a.mp4"
 }
 
 // ThumbnailURL is the thumbnail URL of an entry.
