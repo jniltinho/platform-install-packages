@@ -1,0 +1,44 @@
+{
+  "source": "deployment/base/sql/01.kaltura_ce_tables.sql",
+  "source_sha256": "4e790bfe524452ba6e92e5c5e6b79f7908a80f201c0f98c6848734ffb43e8350",
+  "fixture_sha256": "096a5750c3f0e4dab37fb43598a7b57f2b55b85031685341e0c9df36aa2c8877",
+  "tables": [
+    {
+      "table": "partner",
+      "start_line": 1745,
+      "end_line": 1794,
+      "sha256": "14086352037b74a3fab3bde61dfbedb1307dd684986d44558eaa600b62f2765b"
+    },
+    {
+      "table": "permission",
+      "start_line": 1903,
+      "end_line": 1920,
+      "sha256": "ed5a71f480455c96bdac8bd4c216647249bc567f86b48da0bb1249a78a6f89ff"
+    },
+    {
+      "table": "kuser",
+      "start_line": 1373,
+      "end_line": 1427,
+      "sha256": "1ef318183f693d8a34f6d8161ecec3d94fba0de3c3ec648c684920fc61a5f785"
+    },
+    {
+      "table": "user_role",
+      "start_line": 2577,
+      "end_line": 2593,
+      "sha256": "3dbeffccea525462fd91ef340b675bb186f5972489fe351f91121c0312abcc6b"
+    },
+    {
+      "table": "permission_item",
+      "start_line": 1924,
+      "end_line": 1938,
+      "sha256": "b54447cb51764b53b52e97db9c4c81ad9de3e3b4f96341c1499408ecc6c848ac"
+    },
+    {
+      "table": "permission_to_permission_item",
+      "start_line": 1942,
+      "end_line": 1951,
+      "sha256": "d16b4881b6344246db1d2ddc83f738e43d0360867822e578051fb0a61d8ee78e"
+    }
+  ],
+  "seed": "Synthetic global partner and anonymous role granting only system.getTime; all secrets NULL; no users"
+}

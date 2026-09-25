@@ -1,0 +1,30 @@
+--- a/alpha/apps/kaltura/lib/db/KalturaPDO.php
++++ b/alpha/apps/kaltura/lib/db/KalturaPDO.php
+@@ -185,13 +185,11 @@
+ 	/* (non-PHPdoc)
+ 	 * @see PDO::query()
+ 	 */
+-	public function query()
++	public function query(...$args)
+ 	{
+ 		kApiCache::disableConditionalCache();
+ 	
+-		$args = func_get_args();
+-		
+-		$sql = $args[0];
++		$sql = array_key_exists('query', $args) ? $args['query'] : ($args[0] ?? null);
+ 		KalturaLog::debug($sql);
+ 		
+ 		$comment = $this->getCommentWrapped();
+@@ -200,10 +198,7 @@
+ 		$sqlStart = microtime(true);
+ 		try
+ 		{
+-			if (version_compare(PHP_VERSION, '5.3', '<'))
+-				$result = call_user_func_array(array($this, 'parent::query'), $args);
+-			else
+-				$result = call_user_func_array('parent::query', $args);
++			$result = parent::query(...$args);
+ 		}
+ 		catch(PropelException $pex)
+ 		{

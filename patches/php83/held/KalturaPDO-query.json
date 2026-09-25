@@ -1,0 +1,7 @@
+{
+  "status": "held; API/database integration experiment",
+  "path": "alpha/apps/kaltura/lib/db/KalturaPDO.php",
+  "before_sha256": "97b756bed876d42da87f6a023b6ecf7af7c2b8454bb382da56ba9c54acae848d",
+  "after_sha256": "aeb012822d0af7c5fe0e6ea4221f789fc8c886f0c53dbb729a51bc9463a30f0e",
+  "patch_sha256": "51403c941fa0197b9f484c5acfa443a8a8435fc69098712df39a6e49471a43fe"
+}

@@ -364,3 +364,12 @@ prefetch but fails on both PHPs at the unconfigured Propel datasource. This is a
 lab setup prerequisite, not a newly confirmed PHP 8.3 defect or API acceptance.
 Two bootstrap comparisons, eight JSON comparisons and 41 offline tests pass;
 no application patches or active ZIP changes were made in this step.
+
+[API/MariaDB integration](api-mysql.md) closes the previous missing-datasource
+fixture gap: real DbManager/KalturaPDO and permission queries now allow only the
+synthetically granted system.getTime and reject ungranted getVersion on both
+runtimes. A newly confirmed KalturaPDO query signature fatal is repaired in a
+held patch; original 8.3 failure remains recorded. Eleven native-PDO forwarding
+controls pass within their runtimes. This is six-table CLI integration, not full
+HTTP/authenticated acceptance. Original source restored and probe server stopped;
+active ZIP and release gates unchanged.

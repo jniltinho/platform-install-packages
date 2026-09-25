@@ -1,0 +1,31 @@
+# Revisão: `KalturaPDO::query(...$args)`
+
+**Veredito:** o patch está correto e tem risco baixo. Há um ponto a verificar (deprecação do tipo de retorno) e dois testes a acrescentar. O comportamento atual é preservado: o `$sql` com comentário continua sendo usado só no log/monitoramento, e os `$args` originais continuam sendo repassados.
+
+## O que está correto
+
+- **Assinatura:** um parâmetro variádico sem tipo é compatível pelo LSP com `PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs)`. Isso elimina o fatal da versão sem argumentos. A mesma sintaxe funciona no 7.4.
+- **`parent::query(...$args)`:** a troca é necessária. O callable em string `'parent::query'` passado a `call_user_func_array` está deprecado desde o 8.2. Remover o ramo `version_compare(..., '5.3')` é seguro, porque aquele código já estava morto.
+- **Argumentos de fetch mode:** chamadas como `query($sql, PDO::FETCH_CLASS, 'X', [...])` e `query($sql, PDO::FETCH_COLUMN, 0)` são repassadas intactas.
+- **Argumentos nomeados (só no 8.x):**
+  - Em `query(query: 'SELECT 1')`, o valor cai em `$args['query']`. O spread com chaves string, suportado desde o 8.1, reencaminha como argumento nomeado. A extração do `$sql` cobre esse caso.
+  - Uma chamada mista como `query('...', fetchMode: X)` também funciona.
+  - No 7.4 nunca chegam chaves string, então o erro "Cannot unpack array with string keys" não ocorre.
+- **Chamada sem argumentos:**
+  - `?? null` evita o aviso de índice indefinido. Isso é uma melhoria mínima e aceitável: remove um notice, sem mudar a lógica.
+  - Depois disso, `parent::query()` lança `ArgumentCountError` no 8.x, onde o 7.4 dava warning e retornava `false`. Essa diferença vem do próprio PDO e não do patch.
+  - O `catch(PropelException)` não captura esse `Error`, então ele propaga. Isso é aceitável, porque nenhum chamador legítimo faz essa chamada.
+
+## Pontos a verificar
+
+1. **Tipo de retorno provisório (8.1+):** `PDO::query` declara `: PDOStatement|false` como tipo provisório. Sem esse tipo ou sem `#[\ReturnTypeWillChange]`, o PHP emite `E_DEPRECATED` na declaração da classe. Confirme com `error_reporting(E_ALL)` que o log do 8.3 está limpo. Se não estiver:
+   - A correção direcionada, sem supressão global, é colocar `#[\ReturnTypeWillChange]` sozinho na linha acima do método. No 7.4, `#[` é lido como comentário.
+   - Não use o union type, porque ele quebra o 7.4.
+   - Se `PropelPDO` também sobrescreve `query`, verifique o mesmo ponto lá.
+2. **Métodos irmãos:** vale checar os outros overrides de `PDO` em `KalturaPDO`/`PropelPDO` (`exec`, `prepare`, `beginTransaction`, etc.). O fatal de assinatura não depende de eles serem chamados, mas a deprecação do tipo provisório tem a mesma causa em todos.
+3. **Borda irrelevante:** se o mesmo valor for passado por posição e por nome, o PHP lança "overwrites previous argument" no parent. Isso só acontece com uso inválido e não precisa de tratamento.
+
+## Testes a acrescentar em `behavior.php`
+
+- **Nos dois PHPs:** `query($sql, PDO::FETCH_COLUMN, 0)` e `FETCH_CLASS` com argumentos de construtor. Assim o repasse do variádico fica coberto além do caso de argumento único do `system.getTime`.
+- **Só no 8.3:** `query(query: $sql)` e um teste que falhe se houver qualquer `E_DEPRECATED` em `KalturaPDO`/`PropelPDO` com `E_ALL`.
