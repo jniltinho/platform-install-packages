@@ -1,0 +1,12 @@
+[
+  {
+    "runtime": "74",
+    "stdout": "85ffdb6aefb5b538813de368177148e24071da8513f6aaadc8adccdc822cb6cc  /home/vagrant/php-patch-tests/candidate/vendor/propel/util/DebugPDO.php\nNo syntax errors detected in /home/vagrant/php-patch-tests/candidate/vendor/propel/util/DebugPDO.php\n",
+    "stderr": ""
+  },
+  {
+    "runtime": "83",
+    "stdout": "85ffdb6aefb5b538813de368177148e24071da8513f6aaadc8adccdc822cb6cc  /home/vagrant/php-patch-tests/candidate/vendor/propel/util/DebugPDO.php\nNo syntax errors detected in /home/vagrant/php-patch-tests/candidate/vendor/propel/util/DebugPDO.php\n",
+    "stderr": ""
+  }
+]

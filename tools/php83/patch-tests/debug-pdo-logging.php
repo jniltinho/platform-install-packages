@@ -20,7 +20,10 @@ Propel::setConfiguration(array('debugpdo' => array('logging' => array(
 $db = new DebugPDO('sqlite::memory:');
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $sql = "SELECT 'alpha' AS name";
-$out[] = array('row', $db->query($sql, PDO::FETCH_COLUMN, 0)->fetchAll());
+$statement = PHP_VERSION_ID >= 80000
+    ? eval('return $db->query(query: $sql, fetchMode: PDO::FETCH_NUM);')
+    : $db->query($sql, PDO::FETCH_NUM);
+$out[] = array('row', $statement->fetchAll(PDO::FETCH_COLUMN, 0));
 $expected = array('method: DebugPDO::query | querycount: 0 | ' . $sql);
 if ($logger->messages !== $expected || $db->getQueryCount() !== 1 || $db->getLastExecutedQuery() !== $sql) {
     throw new RuntimeException('Successful query logging/accounting mismatch');

@@ -36,6 +36,8 @@ if (PHP_VERSION_ID >= 80000) {
     $calls['unknown-name'] = eval('return function ($db) { return $db->query(query: "SELECT \'alpha\' AS name", unknown: 123)->fetchAll(); };');
     $calls['variadic-name'] = eval('return function ($db) { return $db->query(query: "SELECT \'alpha\' AS name", fetchModeArgs: 123)->fetchAll(); };');
     $calls['mixed-named'] = eval('return function ($db) { return $db->query("SELECT \'alpha\' AS name", fetchMode: PDO::FETCH_NUM)->fetchAll(); };');
+    $calls['missing-query-named-mode'] = eval('return function ($db) { return $db->query(fetchMode: PDO::FETCH_NUM); };');
+    $calls['explicit-null-named-query'] = eval('return function ($db) { return $db->query(query: null, fetchMode: PDO::FETCH_NUM); };');
 }
 foreach (array(PDO::ERRMODE_EXCEPTION, PDO::ERRMODE_SILENT) as $mode) {
     foreach ($calls as $name => $call) {

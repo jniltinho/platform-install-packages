@@ -36,7 +36,7 @@ for number, host in [('74', 'baseline74'), ('83', 'php83')]:
             failures.append(f'{host}/{tree}: execution failed')
             continue
         values = json.loads(run.stdout)
-        wanted = 12 if number == '74' else 20
+        wanted = 12 if number == '74' else 24
         if len(values) - 1 != wanted:
             failures.append(f'{host}/{tree}: unexpected case count')
         for value in values[1:]:
@@ -57,5 +57,5 @@ report = {'policy': 'Native return/error controls; diagnostics retained, not wai
                                        folder / 'run-one.sh', Path(__file__)]},
           'records': records, 'failures': failures}
 args.output.write_text(json.dumps(report, indent=2) + '\n')
-print(json.dumps({'failures': failures, 'candidate_native_comparisons': 32}))
+print(json.dumps({'failures': failures, 'candidate_native_comparisons': 36}))
 sys.exit(bool(failures))

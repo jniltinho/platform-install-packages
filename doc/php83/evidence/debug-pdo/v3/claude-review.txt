@@ -1,0 +1,16 @@
+Não vejo regressão de forwarding no v3. Ele é mais fiel que o v1 e o v2 porque não reconstrói argumentos. Seguem os pontos concretos que ainda merecem checagem.
+
+**Forwarding: sem regressão aparente**
+- **`query(fetchMode: X)` sem SQL:** `$args` fica `['fetchMode' => X]` e `parent::query(fetchMode: X)` lança o `ArgumentCountError` nativo antes do log. Isso corrige o defeito do v2.
+- **Mistura posicional + nomeado:** `query('S', fetchMode: X)` e `query(fetchMode: X, query: 'S')` funcionam. Com spread de chaves string, a ordem não importa.
+- **SQL duplicado:** `query('S', query: 'T')` gera `$args = [0 => 'S', 'query' => 'T']`. O spread lança "Named parameter $query overwrites previous argument", o mesmo tipo e mensagem do nativo. Só o file/line do erro passa a apontar para `DebugPDO.php`, como já acontecia com `call_user_func_array`.
+- **PHP 7.4:** não existem argumentos nomeados, então `$args` é sempre lista e o comportamento é equivalente ao `func_get_args()`. Isso bate com o seu resultado idêntico, incluindo o `return false` com zero argumentos seguido do notice em `$args[0]`, que já existia no original.
+
+**Riscos residuais concretos**
+1. **Cadeia de herança.** `parent::query` só equivale a `PDO::query` se nenhuma classe intermediária, como `PropelPDO`, sobrescrever `query()`. Se alguma sobrescrever com `query()` sem variádico, o spread nomeado lança "Unknown named parameter". Vale confirmar no código real, não só na fixture.
+2. **Subclasses de `DebugPDO`.** Qualquer classe no Kaltura que estenda `DebugPDO` e declare `query()` sem parâmetros passa a ser incompatível com `query(...$args)`, e isso é fatal em tempo de compilação. Vale procurar por `extends DebugPDO`.
+3. **Tentative return type no 8.1+.** O diff não adiciona `#[\ReturnTypeWillChange]` nem `: PDOStatement|false`. Se o original já emitia deprecation, isso não é regressão, mas o ponto continua em aberto.
+4. **Seleção do SQL para log.** `array_key_exists('query', $args) ? ... : $args[0]` só roda após sucesso do parent, e nesse caso uma das duas chaves sempre existe. Está correto, mas depende de o parent lançar exceção em todos os casos inválidos. No 7.4 com zero argumentos ele não lança, e aí aparece o notice herdado do original.
+5. **Pendências já conhecidas.** O diagnóstico de tipos SQL no MySQL ainda precisa ser repetido para o v3, e o bloqueio de paridade de tipos numéricos continua. Nenhum dos dois é afetado por esta mudança.
+
+Sem aprovação de release.

@@ -1,0 +1,8 @@
+{
+  "path": "vendor/propel/util/DebugPDO.php",
+  "patch": "DebugPDO-query-v3.patch",
+  "sha256": "f966cf320b74717d134b4dd8710e5deafcbd77f890775cf643868e4cb4ab541e",
+  "before_sha256": "6178d39fd2c11c2bd2dcc220c4234f72dfb11364c11d381e7f7bfaf55089e021",
+  "after_sha256": "85ffdb6aefb5b538813de368177148e24071da8513f6aaadc8adccdc822cb6cc",
+  "status": "held: variadic forwarding alternative against original; not stacked on v1/v2"
+}

@@ -10,6 +10,12 @@ not a patch to stack after `DebugPDO-query.patch`. It fixes the reproduced
 named-argument loss and removes the deprecated parent callable; default
 cross-runtime numeric-type parity still fails, so v2 is also held.
 
+V2 additionally fails the reproduced named-fetchMode-without-SQL boundary.
+`DebugPDO-query-v3.patch` forwards the original variadic arguments directly and
+passes that control. It is another standalone alternative against the original,
+not an incremental patch. V3 remains held: numeric/API behavior and runtime
+diagnostics are not accepted merely because forwarding tests pass.
+
 The Registry cast experiment is retained solely for review and reproduction.
 The active `../manifest.json` does not list it. Do not add it through wildcard
 patch discovery.

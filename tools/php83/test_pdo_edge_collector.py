@@ -12,7 +12,7 @@ from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[2]
 SCRIPT = ROOT / 'tools/php83/patch-tests/collect-pdo-edges.py'
-EVIDENCE = ROOT / 'doc/php83/evidence/debug-pdo/v2-extended/edges.json'
+EVIDENCE = ROOT / 'doc/php83/evidence/debug-pdo/v3/edges.json'
 
 
 class EdgeCollectorTests(unittest.TestCase):

@@ -291,3 +291,10 @@ match the synthetic 7.4 rows; emulated prepares with stringify disabled change
 integer/float result types on 8.3. DebugPDO matches native PDO within each tested
 configuration. No global attribute was changed; application connection settings
 and JSON contracts remain unverified. The server was stopped after collection.
+
+Grok's missing-SQL boundary finding was confirmed against v2 and corrected in a
+smaller held v3 variadic-forwarding alternative. All 36 native-PDO controls,
+named-SQL logging, 33 offline tests and eight JSON comparisons pass. Repeated
+MariaDB tests preserve the same known numeric-type difference; no waiver or
+global connection setting was added. V3 is not in the active ZIP. See the
+DebugPDO experiment document and `evidence/debug-pdo/v3/`.

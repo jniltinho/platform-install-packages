@@ -171,3 +171,42 @@ The v2 Grok CLI review still had no response at collection time; it is not count
 as approval. Next: isolated MySQL numeric/JSON behavior and remaining runtime
 diagnostics, without applying stringify-fetches globally or waiving default
 parity. These SQLite controls alone do not prove application compatibility.
+
+## V3: preserve missing versus explicitly null SQL
+
+The Grok v2 finding was reproduced: `query(fetchMode: PDO::FETCH_NUM)` raises
+native `ArgumentCountError`, while v2 raised `ValueError` after injecting its
+optional null SQL default. An explicitly supplied null query raises ValueError
+on both. See `evidence/debug-pdo/v3/v2-counterexample.json`; both error modes
+were exercised. V2 must not be promoted as-is.
+
+Held v3 is a smaller standalone alternative: `query(...$args)` directly calls
+`parent::query(...$args)` without reconstructing or adding arguments. After the
+parent returns, logging selects the named `query` key if present, otherwise
+the original positional key. PHP7.4's legacy zero-argument behavior, including
+its diagnostic, remains unchanged; PHP8.3 delegates missing-argument rejection
+to PDO. It is not stacked after v1/v2.
+
+Recorded results under `evidence/debug-pdo/v3/`:
+
+- 36 native return/error controls pass: 12 on 7.4, 24 on 8.3. The collector also
+  checks successful expected values, not only equality of two failures.
+- Logging now exercises named SQL on 8.3 versus positional SQL on 7.4; exact
+  message/accounting parity passes, including subsequent query failures.
+- SQLite default numeric-type parity still fails. The separate stringify
+  diagnostic passes but remains diagnostic only.
+- The disposable MariaDB matrix was repeated for v3. All native-PDO controls
+  pass; the same cross-runtime difference persists only in the tested
+  emulated-prepares/stringify-false configuration. No global attribute changed.
+- Source hashes match both labs; syntax checks and zero-fuzz patch application
+  pass. All 33 offline tests and eight JSON comparisons pass.
+
+Claude reviewed the v3 forwarding diff without tools and reported no apparent
+forwarding regression. The advisory review is saved; its request to repeat
+MySQL was completed after submission. Return-type diagnostics, broader
+inheritance/caller reachability and application hydration/API contracts remain
+open. No release approval or broad task completion follows.
+
+The disposable DB server was stopped and both candidate DebugPDO files restored
+to their original hash after testing. V3 remains held outside the active
+manifest; exp2, main and `.20` are unchanged.
