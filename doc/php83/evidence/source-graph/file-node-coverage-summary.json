@@ -1,0 +1,9 @@
+{
+  "project": "kaltura-rigel-18.20.0-full",
+  "generation": "2026-09-25T12:19:00Z",
+  "checked": 14227,
+  "counts": {
+    "no_recorded_issue/metadata_match": 13493,
+    "partial/metadata_match": 734
+  }
+}

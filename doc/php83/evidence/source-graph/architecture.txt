@@ -1,0 +1,138 @@
+project: kaltura-rigel-18.20.0-full
+total_nodes: 231336
+total_edges: 800641
+node_labels: 16  (cols: label count)
+  Method 109587
+  Class 46553
+  Variable 38270
+  File 14227
+  Module 14048
+  Function 4052
+  Folder 2776
+  Section 1071
+  Interface 648
+  Route 62
+  Field 22
+  EnvVar 15
+  Decorator 2
+  Branch 1
+  Enum 1
+  Project 1
+edge_types: 22  (cols: type count)
+  DEFINES 214508
+  CALLS 171406
+  USAGE 169244
+  DEFINES_METHOD 109582
+  SIMILAR_TO 59186
+  WRITES 17094
+  CONTAINS_FILE 14227
+  OVERRIDE 14157
+  INHERITS 12695
+  IMPORTS 7042
+  THROWS 4842
+  IMPLEMENTS 3019
+  CONTAINS_FOLDER 2508
+  CONFIGURES 465
+  TESTS 245
+  SEMANTICALLY_RELATED 164
+  ASYNC_CALLS 128
+  RAISES 86
+  HTTP_CALLS 28
+  DECORATES 9
+  CALL_REFERENCE 5
+  HAS_BRANCH 1
+languages: 10  (cols: language files)
+  PHP 11619
+  SQL 391
+  JavaScript 252
+  CSS 57
+  HTML 56
+  YAML 52
+  Bash 18
+  SCSS 13
+  Java 11
+  Python 9
+packages: 8  (cols: name nodes fan_in fan_out)
+  0-full 160829 0 0
+  str 3 0 0
+  list 3 0 0
+  dict 2 0 0
+  int 1 0 0
+  range 1 0 0
+  len 1 0 0
+  print 1 0 0
+entry_points: 9  (cols: qn file)
+  kaltura-rigel-18.20.0-full.admin_console.web.tools.swfobject.main admin_console/web/tools/swfobject.js
+  kaltura-rigel-18.20.0-full.alpha.scripts.utils.moveFileSyncToDifferentStorage.main alpha/scripts/utils/moveFileSyncToDifferentStorage.php
+  kaltura-rigel-18.20.0-full.deployment.base.scripts.index.ApiSearchObjectsGenerator.main deployment/base/scripts/index/ApiSearchObjectsGenerator.php
+  kaltura-rigel-18.20.0-full.deployment.base.scripts.index.IndexObjectsGenerator.main deployment/base/scripts/index/IndexObjectsGenerator.php
+  kaltura-rigel-18.20.0-full.plugins.content.caption.base.scripts.convertcaption.main plugins/content/caption/base/scripts/convertcaption.py
+  kaltura-rigel-18.20.0-full.plugins.scheduled_task.scripts.removeDuplicateMRData.main plugins/scheduled_task/scripts/removeDuplicateMRData.php
+  kaltura-rigel-18.20.0-full.plugins.scheduled_task.scripts.resetOldMR.main plugins/scheduled_task/scripts/resetOldMR.php
+  kaltura-rigel-18.20.0-full.plugins.search.providers.elastic_search.scripts.elasticClusterProvisioning.main plugins/search/providers/elastic_search/scripts/elasticClusterProvisioning.php
+  kaltura-rigel-18.20.0-full.vendor.symfony.vendor.phing.tasks.system.CvsPassTask.main vendor/symfony/vendor/phing/tasks/system/CvsPassTask.php
+routes: 20  (cols: method path handler)
+  - showAdvancedOptions -
+  - player -
+  - deliveryType -
+  - embedType -
+  - secureEmbed -
+  - includeSeo -
+  - "*(?:''|\\\"\\\")" -
+  - :checked -
+  - *[*^$|!~]?= -
+  - :enabled -
+  - ,.*: -
+  - / -
+  - <g_vml_:shape -
+  - " m " -
+  - " l " -
+  - " x " -
+  - " c " -
+  - " \">" -
+  - "<g_vml_:fill type=\"" -
+  - "<g_vml_:fill color=\"" -
+hotspots: 10  (cols: qn fan_in)
+  kaltura-rigel-18.20.0-full.vendor.google-api-php-client-1.1.2.src.Google.Service.Resource.Google_Service_Resource.call 2087
+  kaltura-rigel-18.20.0-full.infra.general.kString.class.kString.explode 1398
+  kaltura-rigel-18.20.0-full.vendor.symfony.vendor.pake.pakeException.class.pakeException.strlen 990
+  kaltura-rigel-18.20.0-full.plugins.scheduled_task.admin.FilterPaginatorList.Kaltura_FilterPaginatorList.count 948
+  kaltura-rigel-18.20.0-full.alpha.apps.kaltura.lib.fastdb.fastdb.class.fdb.count 857
+  kaltura-rigel-18.20.0-full.vendor.symfony.log.sfLogger.class.sfLogger.err 821
+  kaltura-rigel-18.20.0-full.alpha.lib.model.categoryEntry.categoryEntry.add 819
+  kaltura-rigel-18.20.0-full.infra.general.kArray.class.kArray.trim 795
+  kaltura-rigel-18.20.0-full.vendor.propel.util.Criteria.Criteria.setDbName 787
+  kaltura-rigel-18.20.0-full.vendor.google-api-php-client.src.service.Google_ServiceResource.Google_ServiceResource.__call 753
+boundaries: 7  (cols: from to calls)
+  0-full range 14
+  0-full str 9
+  0-full len 9
+  0-full list 8
+  0-full int 5
+  0-full print 2
+  0-full dict 1
+layers: 11  (cols: name layer reason)
+  - api "has HTTP route definitions"
+  *: api "has HTTP route definitions"
+  0-full entry "has entry points, only outbound calls"
+  com/Web-Media/Video/2008/May/pumafinal api "has HTTP route definitions"
+  dict leaf "only inbound calls, no outbound"
+  int core "high fan-in (5 in, 0 out)"
+  len core "high fan-in (9 in, 0 out)"
+  list core "high fan-in (8 in, 0 out)"
+  print leaf "only inbound calls, no outbound"
+  range core "high fan-in (14 in, 0 out)"
+  str core "high fan-in (9 in, 0 out)"
+clusters: 12  (cols: id label members cohesion top_nodes packages edge_types)
+  3773 "20" 105 0.9125 doSelectOne;getReadyFileSyncForKey;file_put_contents;resolve;moveFromFile "20" CALLS
+  3780 "20" 91 0.8849 doSelect;doSelect;getNewCriterion;doSelectStmt;setUseCriteriaFilter "20" CALLS
+  4465 "20" 69 0.9681 add;doSelect;handleAllGroups;createObjects;handleMultiRequest "20" CALLS
+  3808 "20" 66 0.8652 copyInto;setByPosition;fromArray;setByPosition;fromArray "20" CALLS
+  1 "20" 58 1 __construct;Google_Service_Dfareporting_AccountActiveAdSummaries_Resource;Google_Service_Dfareporting_AccountPermissionGroups_Resource;Google_Service_Dfareporting_AccountPermissions_Resource;Google_Service_Dfareporting_AccountUserProfiles_Resource "20" CALLS
+  4486 "20" 54 1 IP2Location_get_ipv6_record;IP2Location_get_record;IP2Location_ip_is_ipv4;count;findAddressInTree "20" CALLS
+  4032 "20" 53 1 addClassBody;addConstants;addUpdateLoadedNode;isNestedSetLeftKey;isNestedSetRightKey "20" CALLS
+  3772 "20" 46 0.8852 file_exists;writeBaseFilterForType;getPluginInstances;getPlugins;extract "20" CALLS
+  4513 "20" 42 1 getType;getPlatform;getDomain;appendXml;getSqlString "20" CALLS
+  3774 "20" 38 0.8511 file_get_contents;generate;load;loadTypes;__construct "20" CALLS
+  4509 "20" 35 1 _process;_validateRule;setOptions;getEscaped;isValid "20" CALLS
+  4038 "20" 34 0.8974 setByPosition;fromArray;copyInto;save;setUpdatedAt "20" CALLS

@@ -1,0 +1,46 @@
+{
+  "archive_sha256": "58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28",
+  "project": "kaltura-rigel-18.20.0-full",
+  "generation": "2026-09-25T12:19:00Z",
+  "source_files": 15175,
+  "graph_status_counts": {
+    "file_node_present": 13492,
+    "no_file_node": 430,
+    "partial_parse": 734,
+    "excluded:ignored-suffix": 519
+  },
+  "top_level_file_counts": {
+    ".github": 1,
+    ".gitignore": 1,
+    "README.md": 1,
+    "VERSION.txt": 1,
+    "admin_console": 382,
+    "alpha": 2193,
+    "api_v3": 1208,
+    "batch": 284,
+    "configurations": 95,
+    "deployment": 1234,
+    "doc": 2,
+    "generator": 1,
+    "infra": 251,
+    "license.txt": 1,
+    "plugins": 4233,
+    "release-notes.md": 1,
+    "start": 58,
+    "tests": 112,
+    "ui_infra": 26,
+    "var_console": 91,
+    "vendor": 4999
+  },
+  "analysis_only_metadata_differences": [
+    ".gitignore",
+    "deployment/base/scripts/.gitignore",
+    "plugins/schedule/base/.gitignore",
+    "vendor/avro/flix-tech/confluent-schema-registry-api/.gitignore"
+  ],
+  "analysis_only_added_files": [
+    ".cbmignore",
+    ".codebase-memory.json"
+  ],
+  "raw_tree_bytes_verified": true
+}

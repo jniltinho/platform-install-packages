@@ -223,3 +223,19 @@ paths and denied internet socket creation before executing PHP. No DB connection
 or configured application tree was used. Expanded reports preserve diagnostics,
 module lists, included public-file hashes and harness identities. No application
 patch, package change, `.20` action or task completion is implied.
+
+## Shared full-source graph
+
+The operator requested a shared Rigel source graph for Codex, Claude and Grok.
+[Source graph guide](source-graph.md) records project
+`kaltura-rigel-18.20.0-full`, byte-verified source provenance, the full 15,175-file
+inventory and all recorded coverage gaps. Vendor/previously ignored directories
+and `.phtml` templates are included through an analysis-only copy; original
+application source is unchanged. Claude and Grok independently confirmed MCP
+search/coverage access. This improves discovery, not runtime compatibility proof.
+
+Minimal source-patch work is still experimental. Expanded Registry property
+fixtures exposed a PHP 8.3 difference after an earlier narrower differential
+passed; the scratch ZIP is therefore held, not approved or published. JSON offset
+repairs passed the current standard/minimal-INI differential corpus. No task is
+closed or application deployed based on these partial results.
