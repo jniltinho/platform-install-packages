@@ -1,0 +1,96 @@
+Stalled Grok check noted — running your fallback validation and evidence review now.
+Worktree guardrails and harness scripts confirmed — now executing tests and inspecting runtime evidence.
+Local checks passed — now comparing the 7.4 and 8.3 fixtures for the independent review.
+AGENTS.md (migration worktree `proposal/migrate-kaltura-php83`) read. Coordination rules acknowledged.
+
+Grok outcome (separate from fallback): terminal timeout 120, exit 124, no final JSON — recorded as NOT_EXECUTED/BLOCKED, not a test result.
+
+Fallback identity: OpenCode with Zen `opencode/muse-spark-1.3-contributor-free` — fulfilling Grok executor/reviewer role, not reported as Grok.
+
+No edits / SSH / VM commands in this session. Cwd-only reads + local unittest.
+
+## 1. Execution (fallback, local)
+
+Command:
+
+`PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83 -p 'test_*.py'`
+
+Environment: this worktree host only, not lab VMs.
+Result: `Ran 119 tests in 0.070s OK`, exit 0.
+
+This is harness self-check evidence only. Not lab runtime evidence.
+
+## 2. Independent review (not execution)
+
+Reviewed:
+
+- `tools/php83/exp3-regression/batch.py` (25 lines)
+- `tools/php83/exp3-regression/run-one.sh` (49 lines)
+- `tools/php83/exp3-regression/stage.sh` (26 lines)
+- `doc/php83/evidence/exp3-runtime/codex-74.json`
+- `doc/php83/evidence/exp3-runtime/codex-83.json`
+
+Harness / source identities (both JSONs):
+
+- `zip_sha256: 1c64edb5ff34308cedfcea3c7879187c21417b6bd1a8e083d70d580bedc985e3`
+- `verified_extracted_files: 15183`, matches `stage.sh` expected sha.
+- `harness` hashes equal between 74/83 (`harness_equal: True`).
+- `application_acceptance: false` in both.
+- `codex-74.exit: 0`, `codex-83.exit: 0` (batch wrapper exits, not acceptance).
+- Hosts: `kaltura-php74-baseline` php 7.4.33, `kaltura-php83-lab` php 8.3.6.
+- Rows: 24 each = 2 sources (`original`, `exp3`) x 2 ini (`standard`, `minimal`) x 6 cases.
+
+`batch.py` review:
+
+- Host guard `hostname in (kaltura-php74-baseline, kaltura-php83-lab)` else exit 64. Correct isolation.
+- Asserts zip sha, then asserts extracted `source/` bytes equal zip contents and file list equals `rglob`, counts regular files. Satisfies “artifact regular files all verified before batch”.
+- Loops source/ini/case, `subprocess.run(..., timeout=70)`, retains `exit/stdout/stderr/duration_ns`, never forces OK. `application_acceptance: False` hardcoded.
+
+`run-one.sh` review:
+
+- Host -> runtime mapping, source -> tree mapping, case allowlist, ini handling. Refuses unexpected with exit 64.
+- Minimal consumer guard fix retained at lines 23-25: `doc-comment-consumer + minimal` adds `-d extension=posix -d extension=ctype -d extension=iconv`, comment explicitly says keep POSIX euid guard intact, do not weaken guard. Correct vs weakening.
+- Sandboxing via `systemd-run`: `User=nobody`, `PrivateNetwork=yes`, `SystemCallFilter=~socket socketpair`, `ProtectSystem=strict`, `BindReadOnlyPaths`, `MemoryMax=512M`, `RuntimeMaxSec=60`. Cache overlays are private ephemeral `/audit/app/cache`, `/audit/app/configurations`, never host payload.
+- Initial minimal consumer guard failure retained in `attempts/` — this review did not delete/rewrite history.
+
+`stage.sh` review:
+
+- Explicit bootstrap only for `74/baseline74` and `83/php83` aliases, hostname check, zip sha check, `mkdir`, `cat > exp3.zip`, `tar` only `patch-tests + run-one.sh + batch.py`, path traversal assert `is_relative_to(source)`, prints `EXTRACTED_VERIFIED_EXP3`. No production writes.
+
+## 3. Exact JSON fixture comparison, same case/ini
+
+Method: parsed both codex JSONs, compared `stdout` exactly, with stated exclusions.
+
+- `environment`: EXCLUDED (legit metadata). Confirmed diff is only php version/modules/ini: 7.4.33/53 mods vs 8.3.6/54 mods standard; 15 vs 16 minimal. Not a regression.
+- `doc-comment-export`: compare `entries` only. `producer_php` (7.4.33 vs 8.3.6) and `source_sha256` differing between `original` (5941bf…) vs `exp3` (7b843e…) are legit producer/source metadata.
+  - `original/standard`: entries equal, len 6, True.
+  - `original/minimal`: entries equal, len 6, True.
+  - `exp3/standard`: entries equal, len 6, True.
+  - `exp3/minimal`: entries equal, len 6, True.
+- All other fixture `stdout` exact, same case/ini 74 vs 83:
+  - `exp3/{standard,minimal}/{legacy-json,zend-json,doc-comment,doc-comment-consumer}`: `stdout_exact=True`.
+  - `original/{standard,minimal}/{doc-comment,doc-comment-consumer}`: `stdout_exact=True`.
+  - `original/{standard,minimal}/{legacy-json,zend-json}`: `stdout` differs because 83 exits 255 with empty stdout — these are the 4 fatal controls, expected.
+
+## 4. Exits + deprecations (do not infer acceptance from exit 0)
+
+codex-83 `original` 4 fatals (controls):
+
+- `original/standard/minimal x legacy-json/zend-json`: exit 255, `Fatal error: Array and string offset access syntax with curly braces is no longer supported` at `Services_JSON.class.php:176`, `Zend/Json/Encoder.php:557`.
+
+All other 20 rows in codex-83 exit 0, BUT `stderr` deprecations remain, e.g.:
+
+- `exp3 legacy-json`: `Services_JSON::$use` creation deprecated `:155`.
+- `exp3 zend-json`: `Zend_Json_Decoder::$_tokenValue` deprecated `:312` (repeated).
+- `original/exp3 doc-comment, doc-comment-export` on 8.3: `KalturaDocCommentParser::$disableRelativeTimeParams` dynamic property `:402`.
+- `doc-comment-consumer` on 8.3: `libxml_disable_entity_loader()`, `Zend_Config::count/current/next/key/valid/rewind` return types, optional `$entryType` before required `$rank`, `ReflectionParameter::getClass`, dynamic properties. Full stderr truncated at 2000 chars in evidence — exact count not asserted.
+
+codex-74: all 24 exits 0, but `original legacy/zend-json` carry curly-brace `Deprecated`, `exp3 legacy-json` carries PHP4-constructor `Deprecated`. Exit 0 ≠ no warnings.
+
+## 5. Gaps / limits / gates
+
+- Executed here: local 119 unittest OK only. Lab batch not re-executed (SSH/VM prohibited this turn).
+- Reviewed here: codex-74/83 JSONs. Review is not execution evidence per AGENTS.md.
+- Claude/Cursor/Codex CLI coordination not performed in this fallback session; `claude.json/cursor.json` exist in evidence dir but were not independently re-run here. Report gap explicitly.
+- Untested scope: anything outside 6 cases x 2 ini x 2 sources; full app acceptance explicitly `false`; truncated stderr limits warning completeness.
+- Release gates: no completion %, no release date, no acceptance claim. Deprecations and 4 original fatals on 8.3 remain open.

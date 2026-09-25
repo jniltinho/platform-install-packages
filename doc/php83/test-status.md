@@ -16,6 +16,14 @@ and [execution contract](../../openspec/changes/migrate-kaltura-php83/design.md)
 - No new VM/application test, release, package integration or `.20` mutation in
   this batch. No release ETA or application completion percentage is inferred.
 
+## Latest progress: actual exp3 runtime regression
+
+The built ZIP now ran in both isolated labs: 48 rows, 44 zero exits and four
+expected original-8.3 JSON syntax controls. All 24 candidate rows exit zero;
+20 typed-output/serialized-entry comparisons match original PHP 7.4. Claude and
+Cursor independently reran the corrected harness. PHP deprecations remain open,
+so no full acceptance checkbox is closed. [Evidence and diagnostic gaps](exp3-runtime.md).
+
 ## Latest progress: integrated experimental source artifact
 
 The separate six-patch **exp3** ZIP was built twice with identical hashes and
@@ -24,8 +32,9 @@ the original archive and exp2. Selection includes the demonstrated JSON/PDO/date
 parser repairs; Symfony, Registry, DebugPDO alternatives and APCu remain explicit
 separate work. [Selection, artifact and remaining tests](exp3-candidate.md).
 
-The built ZIP is staged for regression. Prior ad-hoc-tree tests do not count as
-execution of this artifact; no original or detailed acceptance checkbox closed.
+The built ZIP has completed the first focused CLI matrix above. SQL/HTTP/TLS
+regression of its extracted bytes remains pending; no original or detailed
+acceptance checkbox is closed.
 
 ## Latest progress: configuration cache over Apache
 

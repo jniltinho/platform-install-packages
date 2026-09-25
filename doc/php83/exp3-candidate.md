@@ -172,3 +172,11 @@ SHA256 values are unchanged. [Structured result](evidence/exp3-candidate/result.
 and [current experimental disposition ledger](evidence/exp3-candidate/selection-ledger.json)
 retain the six selected, one rejected and twelve deferred decisions. The earlier
 batch-2 ledger remains historical, not silently rewritten.
+
+## Subsequent artifact-based execution
+
+The [first focused CLI regression](exp3-runtime.md) now executes this ZIP's
+extracted files on 7.4 and 8.3 with independent reruns. All candidate rows return
+zero and typed-output/parser-entry parity holds, but deprecations remain. This
+supersedes the earlier NOT_RUN staging status only for that bounded matrix;
+PDO/date SQL/session, Apache/TLS and wider application gates remain open.

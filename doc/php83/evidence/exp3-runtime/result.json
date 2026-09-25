@@ -1,0 +1,216 @@
+{
+  "schema": 1,
+  "recorded_at_utc": "2026-09-25T17:15:55.124175+00:00",
+  "input_commit": "3afc532ed1a5c0d8f08c094a3bb7a7a09cf9b7d9",
+  "state": "PARTIAL",
+  "case_ids": [
+    "T1-01",
+    "T1-03"
+  ],
+  "zip_sha256": "1c64edb5ff34308cedfcea3c7879187c21417b6bd1a8e083d70d580bedc985e3",
+  "logical_rows": 48,
+  "zero_exit_rows": 44,
+  "expected_original83_fatal_controls": 4,
+  "unexpected_exit_rows": 0,
+  "candidate_rows_exit0": 24,
+  "functional_parity_comparisons": [
+    {
+      "runtime": "74",
+      "ini": "standard",
+      "case": "legacy-json",
+      "functional_parity": true,
+      "stderr_present": true
+    },
+    {
+      "runtime": "74",
+      "ini": "standard",
+      "case": "zend-json",
+      "functional_parity": true,
+      "stderr_present": false
+    },
+    {
+      "runtime": "74",
+      "ini": "standard",
+      "case": "doc-comment",
+      "functional_parity": true,
+      "stderr_present": false
+    },
+    {
+      "runtime": "74",
+      "ini": "standard",
+      "case": "doc-comment-export",
+      "functional_parity": true,
+      "stderr_present": false
+    },
+    {
+      "runtime": "74",
+      "ini": "standard",
+      "case": "doc-comment-consumer",
+      "functional_parity": true,
+      "stderr_present": true
+    },
+    {
+      "runtime": "74",
+      "ini": "minimal",
+      "case": "legacy-json",
+      "functional_parity": true,
+      "stderr_present": true
+    },
+    {
+      "runtime": "74",
+      "ini": "minimal",
+      "case": "zend-json",
+      "functional_parity": true,
+      "stderr_present": false
+    },
+    {
+      "runtime": "74",
+      "ini": "minimal",
+      "case": "doc-comment",
+      "functional_parity": true,
+      "stderr_present": false
+    },
+    {
+      "runtime": "74",
+      "ini": "minimal",
+      "case": "doc-comment-export",
+      "functional_parity": true,
+      "stderr_present": false
+    },
+    {
+      "runtime": "74",
+      "ini": "minimal",
+      "case": "doc-comment-consumer",
+      "functional_parity": true,
+      "stderr_present": false
+    },
+    {
+      "runtime": "83",
+      "ini": "standard",
+      "case": "legacy-json",
+      "functional_parity": true,
+      "stderr_present": true
+    },
+    {
+      "runtime": "83",
+      "ini": "standard",
+      "case": "zend-json",
+      "functional_parity": true,
+      "stderr_present": true
+    },
+    {
+      "runtime": "83",
+      "ini": "standard",
+      "case": "doc-comment",
+      "functional_parity": true,
+      "stderr_present": false
+    },
+    {
+      "runtime": "83",
+      "ini": "standard",
+      "case": "doc-comment-export",
+      "functional_parity": true,
+      "stderr_present": false
+    },
+    {
+      "runtime": "83",
+      "ini": "standard",
+      "case": "doc-comment-consumer",
+      "functional_parity": true,
+      "stderr_present": true
+    },
+    {
+      "runtime": "83",
+      "ini": "minimal",
+      "case": "legacy-json",
+      "functional_parity": true,
+      "stderr_present": true
+    },
+    {
+      "runtime": "83",
+      "ini": "minimal",
+      "case": "zend-json",
+      "functional_parity": true,
+      "stderr_present": true
+    },
+    {
+      "runtime": "83",
+      "ini": "minimal",
+      "case": "doc-comment",
+      "functional_parity": true,
+      "stderr_present": false
+    },
+    {
+      "runtime": "83",
+      "ini": "minimal",
+      "case": "doc-comment-export",
+      "functional_parity": true,
+      "stderr_present": false
+    },
+    {
+      "runtime": "83",
+      "ini": "minimal",
+      "case": "doc-comment-consumer",
+      "functional_parity": true,
+      "stderr_present": true
+    }
+  ],
+  "independent_reruns_match": true,
+  "diagnostics_clean": false,
+  "application_acceptance": false,
+  "source_staging": "isolated php-exp3-regression directories; preexisting candidate paths not replaced",
+  "initial_harness_failure": "minimal consumer omitted POSIX needed by euid guard; initial failed evidence retained, guard not weakened; POSIX/ctype/iconv explicitly loaded for this case only",
+  "normalization": [
+    "independent report timestamps and elapsed duration only",
+    "export parity compares six complete serialized entries; producer runtime and source hash remain separately checked"
+  ],
+  "evidence": {
+    "attempts/claude.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "attempts/claude.json": "c64775b591d9acabdffd57cb8fa0a5dd693ed2fdbb2777876c6917f6539e1d3f",
+    "attempts/claude.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "attempts/cursor.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "attempts/cursor.json": "7008e920d294ba314a757700e3a585537ed9225869cdf6762dfab008397e33fa",
+    "attempts/cursor.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "attempts/run-one.sh.txt": "c2963b967938c62314dfe021e62214f04ab24e58d04a0e5fa8cd18ae40c0026f",
+    "candidate-diagnostics.json": "55a64c5f8dc0f6820566f720280f5c53561a1051ce5d15c74196c36e2c65174c",
+    "claude-cli.err": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "claude-cli.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "claude-cli.txt": "b16c39be41a2a92511ab6937700caa7d239f1d254266789f1047ddb1d29af9f6",
+    "claude-prompt.txt": "640ac4a8cdba782136f285d098e0631b900bcb8f328aaa84a9c558eb54b61992",
+    "claude-retest-cli.err": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "claude-retest-cli.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "claude-retest-cli.txt": "f6f64ade4f993cda8404b2c8ed36b7833d13adad475b0faa442bf387b2a3f040",
+    "claude-retest-prompt.txt": "b8fac23806fb71e54a196074598011282d9643b80ca661e569f08e92ff35d0ef",
+    "claude.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "claude.json": "e22d896aabfffa6d85b842619eb624d82db7bd68bfd7f4b375524c737cc7af44",
+    "claude.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "codex-74.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "codex-74.json": "6ee137d8c71d2327ee656fa380fbf608d535b16f476e497c0508bb59e00c340a",
+    "codex-74.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "codex-83.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "codex-83.json": "0883bd3ec3a54b5e2d774b4eae63caa6186b0571f2b7736af9019bd2efe12e00",
+    "codex-83.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "codex-local-tests.txt": "bdbf033e6b126b4ff6691a460d785e08d3d965e8816ab2a6529c5b5e7ff48ddb",
+    "collect-record.py.txt": "f4a16a11a73b49a3d9e2cd4485adbce663aebf7a5599bc20f31b8b00d84df4e3",
+    "cursor-cli.err": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cursor-cli.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "cursor-cli.txt": "a119451dcb56ff974bfa294867d9b653836e00c34bae48959d5c6b060d0fbe3d",
+    "cursor-prompt.txt": "51c5544526800bfb19ef4b228decd2b366be47e3433993bcb951cc82d2d41108",
+    "cursor-retest-cli.err": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cursor-retest-cli.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "cursor-retest-cli.txt": "bc42db6cefe13901976ae775d73fd7dcb5ab4212422058e8fc40505bac6739b4",
+    "cursor-retest-prompt.txt": "b367d7dde2d2f93f245be0fc1e863d63648130970d41e15e4b4b3dd127263cca",
+    "cursor.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "cursor.json": "cd1cdc51eb4cd886f4e1bb728bced4c4c73b3dae4117503f5b1210816e911c12",
+    "cursor.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "grok-cli.err": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "grok-cli.exit": "ca2ebdf97d7469496b1f4b78958f9dc8447efdcb623953fee7b6996b762f6fff",
+    "grok-prompt.txt": "37a6e81f0f279054381a2876e2811e7fa5b2cc4099ea83cab530d798ee9d6ba8",
+    "opencode-cli.err": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "opencode-cli.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "opencode-cli.txt": "e22ce40f5c2a94cd93ed94251a25e95a962a2113a2311ea9bc6ec7c9813c2846",
+    "opencode-correction.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "opencode-correction.txt": "7f741141b87b98d3a0305b681cca41e5a5b7eb3e7a5cbf267b2636a3af338122",
+    "opencode-prompt.txt": "4cc366f5285d04163d8041cd890b9fab22a2fc52fbf7021104d9642da6a6fc43"
+  }
+}

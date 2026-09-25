@@ -1,0 +1,38 @@
+Execução concluída. Rodei o comando aprovado uma única vez, limitado por `timeout 200`. Gravei apenas os três arquivos `claude.*` de nível superior. A tentativa anterior segue intacta em `attempts/`.
+
+## Execução
+- **Caso:** exp3 focused regression, 24 linhas. **Executor:** Claude CLI.
+- **Host:** `kaltura-php74-baseline`, PHP 7.4.33. Este comando roda **só no baseline 7.4**; nenhuma linha é PHP 8.3.
+- **Tempo registrado:** `2026-09-25T17:18:25Z`.
+- **Resultado:** `claude.exit` = **0**. `claude.stderr` está vazio (0 bytes) e `claude.json` tem 74.496 bytes.
+- **Identidades:**
+  - ZIP `1c64edb5…c985e3`, confere com a asserção do batch.
+  - 15.183 arquivos extraídos, todos comparados byte a byte e sem arquivos a mais.
+  - `batch.py` `29eec76a…` e `run-one.sh` `78917641…`: batem com a cópia local em `tools/php83/exp3-regression/`.
+- `application_acceptance: false`.
+
+## Linhas: 24 de 24, todas com exit 0
+
+| origem/ini | environment | legacy-json | zend-json | doc-comment | export | consumer |
+|---|---|---|---|---|---|---|
+| original/standard | 0 | 0 (Deprecated) | 0 (Deprecated) | 0 | 0 | 0 (stderr) |
+| original/minimal | 0 | 0 (Deprecated) | 0 (Deprecated) | 0 | 0 | 0 |
+| exp3/standard | 0 | 0 (Deprecated) | 0 | 0 | 0 | 0 (stderr) |
+| exp3/minimal | 0 | 0 (Deprecated) | 0 | 0 | 0 | 0 |
+
+## Diagnósticos que continuam no stderr (não é PASS completo)
+- **original, legacy-json:** cerca de 6,6 KB de `Deprecated` por chaves `{}` como offset em `Services_JSON.class.php`.
+- **original, zend-json:** cerca de 2,2 KB do mesmo aviso em `Zend/Json/Encoder.php`.
+- **exp3, legacy-json:** o aviso de chaves sumiu, mas sobram 2 `Deprecated` de construtor com o nome da classe (`Services_JSON_Error`, linhas 801 e 815). No exp3, zend-json ficou limpo.
+- **consumer/standard, nas duas origens:** 3× `Missing host or port in config, can't connect without it`. É ruído de configuração do cache/rede isolado, não um fatal. Em minimal não aparece.
+
+## Comparações
+- **Contra a execução do Codex 74 (`codex-74.json`):** as 24 linhas são idênticas em exit, stdout e stderr, e os hashes do harness também. Isso reproduz o resultado de forma independente.
+- **Contra a minha tentativa anterior:** só mudaram as duas linhas `minimal/doc-comment-consumer`. Antes davam exit 255 com `RuntimeException: API fixture requires the unprivileged audit runner`, porque faltava o POSIX com `-n`. Agora dão exit 0 com o mesmo stdout do modo standard. O único arquivo do harness que mudou foi `run-one.sh`, o que está de acordo com a correção informada. A checagem de euid continuou valendo e agora passa.
+- **Saída original vs exp3:** o stdout é igual em tudo, menos em `doc-comment-export`. Ali difere apenas o `source_sha256`, o que é esperado com código-fonte diferente. Os hashes das entradas serializadas são os mesmos.
+
+## Limitações
+- Não verifiquei nada de PHP 8.3 nesta execução. Os 4 fatais esperados do original 8.3 estão só em `codex-83.json`, que não rodei nem revisei aqui.
+- O papel que cumpri é o de executor. A revisão independente cabe a outro CLI, e Grok/Cursor precisam ser registrados à parte.
+- Harness verde não significa aceitação da aplicação: não houve Apache/FPM, banco nem fluxo real da API. Também não há percentual de conclusão nem gates de release decididos.
+- Não fiz nenhum outro comando na VM nem alterei scripts ou a aplicação.

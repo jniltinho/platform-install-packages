@@ -1,0 +1,36 @@
+O comando aprovado rodou uma vez, com limite de 200 s, e terminou com **exit 0**. Produziu 24 linhas, e 22 delas saíram com exit 0. As duas falhas vêm de uma limitação do harness, não do código da aplicação. O teste rodou em **PHP 7.4.33**, não em 8.3, então não há controle de falha esperada em 8.3 nesta execução.
+
+## Execução
+- **Caso:** regressão focada do exp3, 2 fontes (original/exp3) × 2 ini (standard/minimal) × 6 casos.
+- **Executor:** Claude CLI (esta sessão).
+- **Revisor independente:** não designado aqui. Codex coordena e precisa atribuir a revisão a outro CLI.
+- **Host:** `kaltura-php74-baseline` via `baseline74`.
+- **Comando:** exatamente o aprovado, só com `timeout 200` em volta.
+- **Exit:** `claude.exit` = `0`, `claude.stderr` vazio (0 bytes), `claude.json` com 75094 bytes.
+- **ZIP:** sha256 `1c64edb5…985e3`, o esperado. `batch.py` verificou os 15183 arquivos extraídos contra o arquivo, byte a byte, e a lista de arquivos bateu antes do lote.
+- **Identidade do harness:** os hashes registrados na VM de `batch.py` (`29eec76a…`) e `run-one.sh` (`c2963b96…`) batem com as cópias locais. O `tests/api-bootstrap.php` (`1606c3c5…`) bate com `tools/php83/patch-tests/api-bootstrap.php`.
+- O relatório registra `application_acceptance: false`.
+
+## Resultados (24 linhas)
+| ini | caso | original | exp3 | observação |
+|---|---|---|---|---|
+| ambos | environment | 0 | 0 | stdout idêntico |
+| ambos | legacy-json | 0 | 0 | stdout idêntico; o aviso Deprecated de chaves `{}` caiu de 40 para 0 linhas; ficam 2 avisos de construtor PHP4 (`Services_JSON_Error`) |
+| ambos | zend-json | 0 | 0 | stdout idêntico; os 14 avisos de chaves `{}` sumiram no exp3 |
+| ambos | doc-comment | 0 | 0 | stdout idêntico |
+| ambos | doc-comment-export | 0 | 0 | as 6 entradas e `producer_php` são idênticas; só `source_sha256` muda, como esperado, porque o arquivo foi alterado pelo patch |
+| standard | doc-comment-consumer | 0 | 0 | stdout idêntico; 3 linhas `Missing host or port in config` nos dois, esperado porque a rede está desabilitada e não há configuração |
+| minimal | doc-comment-consumer | **255** | **255** | falha igual nas duas fontes, detalhada abaixo |
+
+## Diagnóstico das 2 falhas
+`RuntimeException: API fixture requires the unprivileged audit runner` em `api-bootstrap.php:15`. O guard exige `function_exists('posix_geteuid')`. No 7.4 o `-n` só carrega `json` de volta, então a extensão `posix` fica fora e o guard dispara antes de qualquer código da aplicação. Portanto essas duas linhas não dizem nada sobre o exp3. O erro foi preservado; nada foi forçado para exit 0.
+
+## Revisão e limitações
+- **Execução em 7.4, não 8.3:** a execução mostra que o exp3 não regrediu nesses 6 casos em PHP 7.4. Não prova nada sobre PHP 8.3, e as falhas de controle esperadas no original em 8.3 não foram exercitadas.
+- **Consumer no modo minimal:** o caso não foi testado de fato, pelo motivo acima.
+- **Isolamento:** conferido no `run-one.sh`: roda como `nobody`, com `PrivateNetwork`, sockets bloqueados, `ProtectSystem=strict`, árvore montada só para leitura, `/opt/kaltura` inacessível, `tmpfs` privado para `cache`/`configurations` e limites de 512M/60s.
+- **Timeout do lote:** cada linha tem timeout de 70 s, então 24 linhas podem passar dos 200 s no pior caso. Aqui o lote inteiro levou cerca de 1,5 s.
+- **Grok, Cursor Agent e revisão independente:** não executados nem revisados nesta sessão. Isso é revisão do executor e não substitui a validação independente exigida pelo AGENTS.md.
+- **Não demonstrado:** a aceitação completa da aplicação, HTTP/Apache/FPM, banco de dados e serviços.
+
+Não houve nenhum comando extra na VM nem edição de scripts ou da aplicação. `claude.json`, `claude.stderr` e `claude.exit` ficaram em `doc/php83/evidence/exp3-runtime/`, sem commit.

@@ -1,0 +1,19 @@
+Rechecking authoritative exp3 JSON and batch capture — read-only.
+Corrected findings only (read-only, prior raw review retained):
+
+* `doc/php83/evidence/exp3-runtime/codex-83.json` authoritative `rows[source=exp3]` stderr lengths:
+  * `standard/minimal environment: 0`
+  * `standard/minimal legacy-json: 148`
+  * `standard/minimal zend-json: 2132`
+  * `standard/minimal doc-comment: 0`
+  * `standard/minimal doc-comment-export: 0`
+  * `standard doc-comment-consumer: 3950`, `minimal doc-comment-consumer: 3779`
+  * All `exit: 0`.
+
+* Correction 1 — no 2000 truncation in storage: lengths `2132, 3950, 3779` exceed 2000, proving full string stored. `2000` was printed-preview slicing only.
+
+* Correction 2 — `exp3` parser not grouped with `original` dynamic-property warning: verified by `tools/php83/exp3-regression/batch.py:24`:
+  `'stderr':run.stderr` — whole capture, no slice.
+
+* `original` deprecations remain true; `exp3 doc-comment/doc-comment-export` stderr `0` = declared-property repair as stated.
+

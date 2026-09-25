@@ -1,0 +1,46 @@
+Vou ler AGENTS.md e os scripts do harness, depois executar só o comando lab aprovado e gravar os outputs `cursor.*`.Scripts revisados: o harness mínimo do consumer carrega `posix`/`ctype`/`iconv` com `-n`. Executando o batch aprovado (bound 200s), sobrescrevendo só `cursor.*`.Batch concluído. Analisando contagens, exits e falhas nos resultados.## Execução Cursor (retest)
+
+Comando aprovado rodou em `kaltura-php83-lab`; outputs só em `doc/php83/evidence/exp3-runtime/cursor.{json,stderr,exit}`. Tentativa anterior permanece em `attempts/`. Sem edições de app/scripts; sem outros comandos VM.
+
+| Campo | Valor |
+|---|---|
+| Wrapper exit | `0` |
+| `cursor.stderr` | vazio (0 bytes) |
+| Rows | **24** (original/exp3 × standard/minimal × 6 cases) |
+| ZIP SHA-256 | `1c64edb5…c985e3` (bate com assert do batch) |
+| Arquivos verificados | 15183 |
+| `application_acceptance` | `false` |
+| Host / horário | `kaltura-php83-lab` / `2026-09-25T17:18:48Z` |
+| Harness `run-one.sh` | SHA `78917641…` (consumer minimal com posix/ctype/iconv + `-n`) |
+
+### Contagens de exit
+
+- **20** exit `0` · **4** exit `255`
+- **exp3:** 12/12 exit `0`
+- **original:** 8 exit `0`, **4** exit `255` (controles esperados)
+
+### Falhas (originais 8.3 — fatals JSON esperados)
+
+| Source | Ini | Case | Exit | Diagnóstico |
+|---|---|---|---|---|
+| original | standard | legacy-json | 255 | Fatal: curly-brace offset em `Services_JSON.class.php:176` |
+| original | standard | zend-json | 255 | Fatal: curly-brace offset em `Zend/Json/Encoder.php:557` |
+| original | minimal | legacy-json | 255 | idem Services_JSON |
+| original | minimal | zend-json | 255 | idem Zend Encoder |
+
+### Warnings stderr (não é PASS limpo)
+
+**16/24** rows com stderr. Em **exp3** (todas exit 0), warnings persistem em:
+
+- `legacy-json` (std/min): Deprecated dynamic property `Services_JSON::$use`
+- `zend-json` (std/min): Deprecated dynamic properties em `Zend_Json_Decoder`
+- `doc-comment-consumer` (std/min): Deprecated `libxml_disable_entity_loader`, return types Zend_Config, etc.
+
+Consumer minimal passou exit 0 com as extensões explícitas; isso **não** elimina deprecations nem prova aceitação de aplicação.
+
+### Constraints / escopo
+
+- Executor: Cursor Agent CLI nesta sessão; **review independente ≠ esta execução**.
+- Escopo: harness sintético isolado (nobody, network off, readonly bind, cache overlay privado).
+- **Não** é aceitação full-app; gates de release/package/deploy fora de escopo.
+- Batch não força exit all-zero: fatals originais preservados (exit 255).

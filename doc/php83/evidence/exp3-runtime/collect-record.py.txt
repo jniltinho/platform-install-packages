@@ -1,0 +1,63 @@
+import copy,datetime,hashlib,json,subprocess
+from pathlib import Path
+base=Path('doc/php83/evidence/exp3-runtime');tmp=Path('/tmp/php83-exp3-cycle')
+sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
+reports={v:json.loads((base/f'codex-{v}.json').read_text()) for v in ['74','83']}
+comparisons=[]
+ref={(r['ini'],r['case']):r for r in reports['74']['rows'] if r['source']=='original'}
+for v,agent in [('74','claude'),('83','cursor')]:
+ primary=reports[v]; other=json.loads((base/f'{agent}.json').read_text())
+ assert primary['verified_extracted_files']==15183 and primary['zip_sha256']=='1c64edb5ff34308cedfcea3c7879187c21417b6bd1a8e083d70d580bedc985e3'
+ for r in [primary,other]:
+  assert len(r['rows'])==24
+  assert len({(x['source'],x['ini'],x['case']) for x in r['rows']})==24
+  assert r['harness']['exp3-regression/run-one.sh']==sha('tools/php83/exp3-regression/run-one.sh')
+  assert r['harness']['exp3-regression/batch.py']==sha('tools/php83/exp3-regression/batch.py')
+  for x in r['rows']:
+   if x['case']=='environment':
+    env=json.loads(x['stdout']);assert env['sapi']=='cli' and env['php'].startswith('7.4.' if v=='74' else '8.3.')
+   expected=255 if v=='83' and x['source']=='original' and x['case'] in ('legacy-json','zend-json') else 0
+   assert x['exit']==expected
+   if expected:assert 'curly braces is no longer supported' in x['stderr']
+ a=copy.deepcopy(primary);b=copy.deepcopy(other)
+ for r in [a,b]:
+  del r['recorded_at_utc']
+  for row in r['rows']:del row['duration_ns']
+ assert a==b,(v,'independent report drift')
+ for row in primary['rows']:
+  if row['source']!='exp3' or row['case']=='environment':continue
+  baseline=json.loads(ref[row['ini'],row['case']]['stdout']); value=json.loads(row['stdout'])
+  if row['case']=='doc-comment-export':
+   assert value['producer_php'].startswith('7.4.' if v=='74' else '8.3.')
+   manifest=json.loads(Path('doc/php83/evidence/exp3-candidate/manifest.json').read_text())
+   expected=next(e['after_sha256'] for e in manifest['patches'] if e['path'].endswith('KalturaDocCommentParser.php'))
+   assert value['source_sha256']==expected
+   baseline=baseline['entries'];value=value['entries']
+  # JSON re-encoding preserves bool/int/float distinctions unlike Python ==.
+  assert json.dumps(value,sort_keys=True)==json.dumps(baseline,sort_keys=True),(v,row['case'])
+  comparisons.append({'runtime':v,'ini':row['ini'],'case':row['case'],'functional_parity':True,'stderr_present':bool(row['stderr'])})
+for name in ['claude','cursor','claude-retest','cursor-retest']:
+ x=json.loads((tmp/(name+'.json')).read_text());(base/(name+'-cli.txt')).write_text(x.get('result',x.get('text',''))+'\n')
+ for suffix in ['exit','err']:(base/(name+'-cli.'+suffix)).write_bytes((tmp/(name+'.'+suffix)).read_bytes())
+for name in ['claude','cursor','grok','claude-retest','cursor-retest','opencode']:
+ (base/(name+'-prompt.txt')).write_bytes((tmp/(name+'-prompt.txt')).read_bytes())
+for name in ['grok','opencode']:
+ for suffix in ['exit','err']:(base/(name+'-cli.'+suffix)).write_bytes((tmp/(name+'.'+suffix)).read_bytes())
+texts=[]
+for line in (tmp/'opencode.jsonl').read_text().splitlines():
+ x=json.loads(line)
+ if x.get('type')=='text':texts.append(x['part']['text'])
+(base/'opencode-cli.txt').write_text('\n'.join(texts)+'\n')
+rows=[r for x in reports.values() for r in x['rows']]
+diags={}
+for v,r in reports.items():
+ for row in r['rows']:
+  if row['source']!='exp3':continue
+  for line in row['stderr'].splitlines():
+   if line.strip():
+    entry=diags.setdefault(line,{'events':0,'rows':[]});entry['events']+=1
+    key=f'{v}:{row["ini"]}:{row["case"]}'
+    if key not in entry['rows']:entry['rows'].append(key)
+(base/'candidate-diagnostics.json').write_text(json.dumps({'scope':'observed stderr lines, not distinct bug counts or accepted exceptions','lines':diags},indent=2)+'\n')
+result={'schema':1,'recorded_at_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'input_commit':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),'state':'PARTIAL','case_ids':['T1-01','T1-03'],'zip_sha256':reports['74']['zip_sha256'],'logical_rows':48,'zero_exit_rows':sum(r['exit']==0 for r in rows),'expected_original83_fatal_controls':4,'unexpected_exit_rows':0,'candidate_rows_exit0':24,'functional_parity_comparisons':comparisons,'independent_reruns_match':True,'diagnostics_clean':False,'application_acceptance':False,'source_staging':'isolated php-exp3-regression directories; preexisting candidate paths not replaced','initial_harness_failure':'minimal consumer omitted POSIX needed by euid guard; initial failed evidence retained, guard not weakened; POSIX/ctype/iconv explicitly loaded for this case only','normalization':['independent report timestamps and elapsed duration only','export parity compares six complete serialized entries; producer runtime and source hash remain separately checked'],'evidence':{str(p.relative_to(base)):sha(p) for p in sorted(base.rglob('*')) if p.is_file() and p.name!='result.json'}}
+(base/'result.json').write_text(json.dumps(result,indent=2)+'\n');print('48 rows, 44 exit0 +4 expected controls;20 typed parity checks; independent reruns match; diagnostics OPEN')

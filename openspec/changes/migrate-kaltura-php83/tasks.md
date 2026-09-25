@@ -122,3 +122,10 @@ selects the existing JSON repairs plus KalturaPDO query, date ternary and parser
 property repairs. The original exp2 selection/artifact is preserved. Actual ZIP
 construction and regression on its extracted bytes are tracked separately in
 `doc/php83/exp3-candidate.md`; no full-case completion is inferred from selection.
+
+T1-01/5.7 now has focused execution of the actual extracted exp3 ZIP: 48 CLI rows,
+20 candidate functional comparisons, independent Claude/Cursor reruns, and four
+expected original-8.3 syntax controls. Diagnostics remain open and SQL/HTTP/TLS
+artifact regression is pending, so the case remains unchecked. The initial
+minimal-consumer harness failure is retained with its guarded correction. See
+`doc/php83/exp3-runtime.md`.
