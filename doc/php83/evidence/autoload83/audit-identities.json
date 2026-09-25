@@ -1,0 +1,59 @@
+{
+  "schema": 1,
+  "scope": "read-only source/exp10 identity checks and exact application to temporary copies; no PHP/VM/runtime execution",
+  "source_root": "/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/server-Rigel-18.20.0",
+  "exp10_zip_sha256": "de177e6cbaedf3a3207661c2325f466cce37febb73190f3a49d31f24b740c053",
+  "files": [
+    {
+      "status": "held; experimental SPL autoload repair pending actual entrypoint/parity execution and independent CLI review",
+      "path": "vendor/htmlpurifier/library/HTMLPurifier.autoload.php",
+      "patch": "HTMLPurifier-autoload.patch",
+      "sha256": "f1038cce8807ccb7f139fa9608a2b27c25bfd2a4eccc71a6f71b036bc8e32d20",
+      "before_sha256": "b845e45b8428bb01d9870cd55a5ad005c4e005329cd5cf418a4642f9b96803fa",
+      "after_sha256": "3ae42813026c862d3a778d44fa027a3845f7c3e637bf352b7c46d4b41bc04414",
+      "source_patch": "patches/php83/held/autoload83/HTMLPurifier-autoload.patch",
+      "metadata_path": "patches/php83/held/autoload83/HTMLPurifier-autoload.json",
+      "exact_apply_exit": 0,
+      "exact_apply_output": "patching file vendor/htmlpurifier/library/HTMLPurifier.autoload.php\n",
+      "exp10_bytes_equal_original": true
+    },
+    {
+      "status": "held; experimental SPL autoload repair pending actual entrypoint/parity execution and independent CLI review",
+      "path": "vendor/symfony-data/bin/symfony.php",
+      "patch": "symfony-cli-autoload.patch",
+      "sha256": "2ff7fdf8f13d0fb14f23bce79a0f5c6ade5c569a1ce6e3bc3a677ac45a0d4e05",
+      "before_sha256": "f934f3d5d56a5b5430bf37a6741f2a782ff377f858d0327e4056c6d2dc45234a",
+      "after_sha256": "9c3c561f44e20dee9b51ecfa580884bc895dcc2c71381692a4e2f20f6e0b44b8",
+      "source_patch": "patches/php83/held/autoload83/symfony-cli-autoload.patch",
+      "metadata_path": "patches/php83/held/autoload83/symfony-cli-autoload.json",
+      "exact_apply_exit": 0,
+      "exact_apply_output": "patching file vendor/symfony-data/bin/symfony.php\n",
+      "exp10_bytes_equal_original": true
+    },
+    {
+      "path": "vendor/symfony/util/sfCore.class.php",
+      "sha256": "7a5b4cb0453336d6ad71f5e107df6d8d68c93d4991d75480c69636ee39e85db7",
+      "before_sha256": "09f1cdbd38be0e97939bc56ac4ae7895ccf9c7622098afeb46f40adbef6def46",
+      "after_sha256": "19a644c1c1ad033c4e5ddf438fe5165ace3b9886427af2861c5763ad39bbd60d",
+      "source_patch": "patches/php83/held/sfCore.class.php.patch",
+      "metadata_path": "patches/php83/held/symfony-bootstrap.json",
+      "status": "reuse byte-identical earlier held sfCore repair; not newly authored",
+      "exact_apply_exit": 0,
+      "exact_apply_output": "patching file vendor/symfony/util/sfCore.class.php\n",
+      "exp10_bytes_equal_original": true
+    }
+  ],
+  "direct_source_identities": {
+    "vendor/htmlpurifier/library/HTMLPurifier.autoload.php": "b845e45b8428bb01d9870cd55a5ad005c4e005329cd5cf418a4642f9b96803fa",
+    "vendor/htmlpurifier/library/HTMLPurifier/Bootstrap.php": "f680c41e5eaa84334b4d7cdb9ae7dee119867c6da5700ea8195a9e0ac0c05744",
+    "vendor/htmlpurifier/library/HTMLPurifier.auto.php": "0b4383576c91d617d9e8d320e97ca100d0252c7b9b87a47bc1075bfc8c5cc587",
+    "vendor/symfony-data/bin/symfony.php": "f934f3d5d56a5b5430bf37a6741f2a782ff377f858d0327e4056c6d2dc45234a",
+    "vendor/symfony/util/sfCore.class.php": "09f1cdbd38be0e97939bc56ac4ae7895ccf9c7622098afeb46f40adbef6def46",
+    "vendor/symfony/vendor/pake/pakeFunction.php": "bc97788a21544864e55836ad7194ace356ac0cfac4fc3025faa822e6d3cef305",
+    "vendor/symfony/vendor/pake/pakeGetopt.class.php": "0eccb66f094c62bbb3292cbeda1f3f9667bc873e988a882f0bf645586460a734",
+    "vendor/symfony/symfony.php": "715f020ca2f521c36c543e396e51172dc840bac84b3896e27baf5b54110d8b6e",
+    "vendor/symfony/config/sfConfig.class.php": "4627df1ceb38bbf1cadeab089707d2f1ec069d04786c9e98df94a9067d2c8da7"
+  },
+  "candidate_promoted": false,
+  "application_acceptance": false
+}

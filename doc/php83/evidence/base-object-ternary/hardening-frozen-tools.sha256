@@ -1,0 +1,5 @@
+ec730688bf7613ae1c7385c476a0ac4d2146b113f4f9888080e64f0cb08aa3d5  tools/php83/base-object-ternary/build.py
+976c5460fa86152213a5d3a8230055d0117de26e00b0a67effe15bfff3b514d7  tools/php83/base-object-ternary/collect.py
+f9ea1a65cd05b135cd1c9d1426b1c6e1ba2b2ee0583c063a0baadd13571a508b  tools/php83/base-object-ternary/probe.php
+156ab3ff94702edfeeae65b8dfc6495d9ddd9712d3cfb99ff4a1bc27b9394769  tools/php83/base-object-ternary/run.sh
+a52eaff4d95cbc16c23eb94ec98c76adc46be4af646089f83d9bf5df67453d46  tools/php83/base-object-ternary/test_ternary.py

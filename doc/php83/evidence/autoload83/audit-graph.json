@@ -1,0 +1,81 @@
+{
+  "project": "kaltura-rigel-18.20.0-full",
+  "tier": 2,
+  "generation": "2026-09-25T12:19:00Z",
+  "status": "ready",
+  "nodes": 231336,
+  "edges": 800641,
+  "scope": "bounded autoload repair surface; graph traces are advisory and not exhaustive runtime reachability",
+  "traces": [
+    {
+      "qualified_name": "kaltura-rigel-18.20.0-full.vendor.htmlpurifier.library.HTMLPurifier.Bootstrap.HTMLPurifier_Bootstrap.registerAutoload",
+      "trace": [
+        "function: kaltura-rigel-18.20.0-full.vendor.htmlpurifier.library.HTMLPurifier.Bootstrap.HTMLPurifier_Bootstrap.registerAutoload\ndirection: both\ncallees_total: 0\ncallees: 0  (rows: name hop; qn = group prefix + \".\" + name)\ncallers_total: 1\ncallers: 1  (rows: name hop; qn = group prefix + \".\" + name)\nkaltura-rigel-18.20.0-full.vendor.htmlpurifier.library.HTMLPurifier:\n  autoload 1\n"
+      ],
+      "snippet": {
+        "name": "registerAutoload",
+        "qualified_name": "kaltura-rigel-18.20.0-full.vendor.htmlpurifier.library.HTMLPurifier.Bootstrap.HTMLPurifier_Bootstrap.registerAutoload",
+        "label": "Method",
+        "file_path": "/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/graph-view/vendor/htmlpurifier/library/HTMLPurifier/Bootstrap.php",
+        "start_line": 79,
+        "end_line": 121,
+        "source": "    public static function registerAutoload()\n    {\n        $autoload = array('HTMLPurifier_Bootstrap', 'autoload');\n        if (($funcs = spl_autoload_functions()) === false) {\n            spl_autoload_register($autoload);\n        } elseif (function_exists('spl_autoload_unregister')) {\n            if (version_compare(PHP_VERSION, '5.3.0', '>=')) {\n                // prepend flag exists, no need for shenanigans\n                spl_autoload_register($autoload, true, true);\n            } else {\n                $buggy  = version_compare(PHP_VERSION, '5.2.11', '<');\n                $compat = version_compare(PHP_VERSION, '5.1.2', '<=') &&\n                          version_compare(PHP_VERSION, '5.1.0', '>=');\n                foreach ($funcs as $func) {\n                    if ($buggy && is_array($func)) {\n                        // :TRICKY: There are some compatibility issues and some\n                        // places where we need to error out\n                        $reflector = new ReflectionMethod($func[0], $func[1]);\n                        if (!$reflector->isStatic()) {\n                            throw new Exception(\n                                'HTML Purifier autoloader registrar is not compatible\n                                with non-static object methods due to PHP Bug #44144;\n                                Please do not use HTMLPurifier.autoload.php (or any\n                                file that includes this file); instead, place the code:\n                                spl_autoload_register(array(\\'HTMLPurifier_Bootstrap\\', \\'autoload\\'))\n                                after your own autoloaders.'\n                            );\n                        }\n                        // Suprisingly, spl_autoload_register supports the\n                        // Class::staticMethod callback format, although call_user_func doesn't\n                        if ($compat) {\n                            $func = implode('::', $func);\n                        }\n                    }\n                    spl_autoload_unregister($func);\n                }\n                spl_autoload_register($autoload);\n                foreach ($funcs as $func) {\n                    spl_autoload_register($func);\n                }\n            }\n        }\n    }\n",
+        "callers": 1,
+        "callees": 0
+      }
+    },
+    {
+      "qualified_name": "kaltura-rigel-18.20.0-full.vendor.symfony-data.bin.symfony.__autoload",
+      "trace": [
+        "function: kaltura-rigel-18.20.0-full.vendor.symfony-data.bin.symfony.__autoload\ndirection: both\ncallees_total: 3\ncallees: 3  (rows: name hop; qn = group prefix + \".\" + name)\nkaltura-rigel-18.20.0-full.vendor.symfony-data.bin.symfony.simpleAutoloader:\n  __autoload 1\n  initialize 1\nkaltura-rigel-18.20.0-full.vendor.symfony.config.sfConfig.class.sfConfig:\n  get 1\ncallers_total: 0\ncallers: 0  (rows: name hop; qn = group prefix + \".\" + name)\n"
+      ],
+      "snippet": {
+        "name": "__autoload",
+        "qualified_name": "kaltura-rigel-18.20.0-full.vendor.symfony-data.bin.symfony.__autoload",
+        "label": "Function",
+        "file_path": "/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/graph-view/vendor/symfony-data/bin/symfony.php",
+        "start_line": 107,
+        "end_line": 118,
+        "source": "function __autoload($class)\n{\n  static $initialized = false;\n\n  if (!$initialized)\n  {\n    simpleAutoloader::initialize(sfConfig::get('sf_symfony_lib_dir'));\n    $initialized = true;\n  }\n\n  return simpleAutoloader::__autoload($class);\n}\n",
+        "callers": 0,
+        "callees": 3
+      }
+    },
+    {
+      "qualified_name": "kaltura-rigel-18.20.0-full.vendor.symfony.util.sfCore.class.sfCore.initAutoload",
+      "trace": [
+        "function: kaltura-rigel-18.20.0-full.vendor.symfony.util.sfCore.class.sfCore.initAutoload\ndirection: both\ncallees_total: 1\ncallees: 1  (rows: name hop; qn = group prefix + \".\" + name)\nkaltura-rigel-18.20.0-full.vendor.symfony.util.sfCore.class.sfCore:\n  addAutoloadCallable 1\ncallers_total: 1\ncallers: 1  (rows: name hop; qn = group prefix + \".\" + name)\nkaltura-rigel-18.20.0-full.vendor.symfony:\n  symfony 1\n"
+      ],
+      "snippet": {
+        "name": "initAutoload",
+        "qualified_name": "kaltura-rigel-18.20.0-full.vendor.symfony.util.sfCore.class.sfCore.initAutoload",
+        "label": "Method",
+        "file_path": "/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/graph-view/vendor/symfony/util/sfCore.class.php",
+        "start_line": 178,
+        "end_line": 212,
+        "source": "  static public function initAutoload()\n  {\n    if (function_exists('spl_autoload_register'))\n    {\n      ini_set('unserialize_callback_func', 'spl_autoload_call');\n    }\n    else if (!function_exists('__autoload'))\n    {\n      ini_set('unserialize_callback_func', '__autoload');\n\n      function __autoload($class)\n      {\n        foreach (sfCore::getAutoloadCallables() as $callable)\n        {\n          if (call_user_func($callable, $class))\n          {\n            return true;\n          }\n        }\n\n        // unspecified class\n        // do not print an error if the autoload came from class_exists\n        $trace = debug_backtrace();\n        if (count($trace) < 1 || ($trace[1]['function'] != 'class_exists' && $trace[1]['function'] != 'is_a'))\n        {\n          $error = sprintf('Autoloading of class \"%s\" failed. Try to clear the symfony cache and refresh. [err0003]', $class);\n          $e = new sfAutoloadException($error);\n\n          $e->printStackTrace();\n        }\n      }\n    }\n\n    self::addAutoloadCallable(array('sfCore', 'splAutoload'));\n  }\n",
+        "callers": 1,
+        "callees": 1
+      }
+    },
+    {
+      "qualified_name": "kaltura-rigel-18.20.0-full.vendor.symfony.util.sfCore.class.sfCore.initSimpleAutoload",
+      "trace": [
+        "function: kaltura-rigel-18.20.0-full.vendor.symfony.util.sfCore.class.sfCore.initSimpleAutoload\ndirection: both\ncallees_total: 3\ncallees: 3  (rows: name hop; qn = group prefix + \".\" + name)\nkaltura-rigel-18.20.0-full.alpha.apps.kaltura.lib.storage.kFileSyncUtils.class.kFileSyncUtils:\n  file_get_contents 1\nkaltura-rigel-18.20.0-full.vendor.symfony.util.sfFinder.class:\n  ignore_version_control 1\n  in 1\ncallers_total: 0\ncallers: 0  (rows: name hop; qn = group prefix + \".\" + name)\n"
+      ],
+      "snippet": {
+        "name": "initSimpleAutoload",
+        "qualified_name": "kaltura-rigel-18.20.0-full.vendor.symfony.util.sfCore.class.sfCore.initSimpleAutoload",
+        "label": "Method",
+        "file_path": "/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/graph-view/vendor/symfony/util/sfCore.class.php",
+        "start_line": 233,
+        "end_line": 269,
+        "source": "  static public function initSimpleAutoload($dirs)\n  {\n    require_once(dirname(__FILE__).'/sfFinder.class.php');\n    self::$classes = array();\n    $finder = sfFinder::type('file')->ignore_version_control()->name('*.php');\n    foreach ((array) $dirs as $dir)\n    {\n      $files = $finder->in(glob($dir));\n      if (is_array($files))\n      {\n        foreach ($files as $file)\n        {\n          preg_match_all('~^\\s*(?:abstract\\s+|final\\s+)?(?:class|interface)\\s+(\\w+)~mi', file_get_contents($file), $classes);\n          foreach ($classes[1] as $class)\n          {\n            self::$classes[$class] = $file;\n          }\n        }\n      }\n    }\n\n    if (function_exists('spl_autoload_register'))\n    {\n      ini_set('unserialize_callback_func', 'spl_autoload_call');\n\n      spl_autoload_register(array('sfCore', 'splSimpleAutoload'));\n    }\n    elseif (!function_exists('__autoload'))\n    {\n      ini_set('unserialize_callback_func', '__autoload');\n\n      function __autoload($class)\n      {\n        return sfCore::splSimpleAutoload($class);\n      }\n    }\n  }\n",
+        "callers": 0,
+        "callees": 3
+      }
+    }
+  ],
+  "ignored_graph_inference": "initSimpleAutoload trace resolves built-in file_get_contents to kFileSyncUtils.file_get_contents; direct source uses built-in file_get_contents. This graph edge is not relied upon.",
+  "pagination": "Relevant name search returned7 has_morefalse; depth1 traces not truncated."
+}

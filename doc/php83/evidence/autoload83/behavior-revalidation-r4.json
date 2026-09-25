@@ -1,0 +1,384 @@
+{
+  "mode": "local replay only; no new VM execution",
+  "collector_sha256": "c047f66ddcda290cb92bdf943d9610dbe39595bf2ee2a462eebbcff5b1982624",
+  "reports": [
+    {
+      "input": "doc/php83/evidence/autoload83/primary-r3.json",
+      "input_sha256": "825e9147e227c5f3472e4ec01e420bd7bdbada56920cda035d65915859295904",
+      "records": [
+        {
+          "runtime": "74",
+          "variant": "original",
+          "case": "hp",
+          "status": "PASS",
+          "error": null
+        },
+        {
+          "runtime": "74",
+          "variant": "original",
+          "case": "core-simple",
+          "status": "PASS",
+          "error": null
+        },
+        {
+          "runtime": "74",
+          "variant": "original",
+          "case": "core-full",
+          "status": "PASS",
+          "error": null
+        },
+        {
+          "runtime": "74",
+          "variant": "original",
+          "case": "cli-version",
+          "status": "PASS",
+          "error": null
+        },
+        {
+          "runtime": "74",
+          "variant": "original",
+          "case": "cli-version-queue",
+          "status": "PASS",
+          "error": null
+        },
+        {
+          "runtime": "74",
+          "variant": "original",
+          "case": "cli-tasks",
+          "status": "FAIL",
+          "error": "Real entrypoint failed (not waived)"
+        },
+        {
+          "runtime": "74",
+          "variant": "original",
+          "case": "cli-tasks-configured",
+          "status": "PASS",
+          "error": null
+        },
+        {
+          "runtime": "74",
+          "variant": "candidate",
+          "case": "hp",
+          "status": "PASS",
+          "error": null
+        },
+        {
+          "runtime": "74",
+          "variant": "candidate",
+          "case": "core-simple",
+          "status": "PASS",
+          "error": null
+        },
+        {
+          "runtime": "74",
+          "variant": "candidate",
+          "case": "core-full",
+          "status": "PASS",
+          "error": null
+        },
+        {
+          "runtime": "74",
+          "variant": "candidate",
+          "case": "cli-version",
+          "status": "PASS",
+          "error": null
+        },
+        {
+          "runtime": "74",
+          "variant": "candidate",
+          "case": "cli-version-queue",
+          "status": "PASS",
+          "error": null
+        },
+        {
+          "runtime": "74",
+          "variant": "candidate",
+          "case": "cli-tasks",
+          "status": "FAIL",
+          "error": "Real entrypoint failed (not waived)"
+        },
+        {
+          "runtime": "74",
+          "variant": "candidate",
+          "case": "cli-tasks-configured",
+          "status": "PASS",
+          "error": null
+        },
+        {
+          "runtime": "83",
+          "variant": "candidate",
+          "case": "hp",
+          "status": "PASS",
+          "error": null
+        },
+        {
+          "runtime": "83",
+          "variant": "candidate",
+          "case": "core-simple",
+          "status": "PASS",
+          "error": null
+        },
+        {
+          "runtime": "83",
+          "variant": "candidate",
+          "case": "core-full",
+          "status": "PASS",
+          "error": null
+        },
+        {
+          "runtime": "83",
+          "variant": "candidate",
+          "case": "cli-version",
+          "status": "PASS",
+          "error": null
+        },
+        {
+          "runtime": "83",
+          "variant": "candidate",
+          "case": "cli-version-queue",
+          "status": "PASS",
+          "error": null
+        },
+        {
+          "runtime": "83",
+          "variant": "candidate",
+          "case": "cli-tasks",
+          "status": "FAIL",
+          "error": "Real entrypoint failed (not waived)"
+        },
+        {
+          "runtime": "83",
+          "variant": "candidate",
+          "case": "cli-tasks-configured",
+          "status": "PASS",
+          "error": null
+        },
+        {
+          "runtime": "74",
+          "variant": "original",
+          "case": "hp-legacy",
+          "status": "PASS",
+          "error": null
+        },
+        {
+          "runtime": "74",
+          "variant": "candidate",
+          "case": "hp-legacy",
+          "status": "PASS",
+          "error": null
+        },
+        {
+          "runtime": "83",
+          "variant": "original",
+          "case": "fatal-hp",
+          "status": "EXPECTED_FATAL",
+          "error": null
+        },
+        {
+          "runtime": "83",
+          "variant": "original",
+          "case": "fatal-core",
+          "status": "EXPECTED_FATAL",
+          "error": null
+        },
+        {
+          "runtime": "83",
+          "variant": "original",
+          "case": "fatal-cli",
+          "status": "EXPECTED_FATAL",
+          "error": null
+        }
+      ],
+      "exact_expected_counts": true
+    },
+    {
+      "input": "doc/php83/evidence/autoload83/claude-primary.json",
+      "input_sha256": "825e9147e227c5f3472e4ec01e420bd7bdbada56920cda035d65915859295904",
+      "records": [
+        {
+          "runtime": "74",
+          "variant": "original",
+          "case": "hp",
+          "status": "PASS",
+          "error": null
+        },
+        {
+          "runtime": "74",
+          "variant": "original",
+          "case": "core-simple",
+          "status": "PASS",
+          "error": null
+        },
+        {
+          "runtime": "74",
+          "variant": "original",
+          "case": "core-full",
+          "status": "PASS",
+          "error": null
+        },
+        {
+          "runtime": "74",
+          "variant": "original",
+          "case": "cli-version",
+          "status": "PASS",
+          "error": null
+        },
+        {
+          "runtime": "74",
+          "variant": "original",
+          "case": "cli-version-queue",
+          "status": "PASS",
+          "error": null
+        },
+        {
+          "runtime": "74",
+          "variant": "original",
+          "case": "cli-tasks",
+          "status": "FAIL",
+          "error": "Real entrypoint failed (not waived)"
+        },
+        {
+          "runtime": "74",
+          "variant": "original",
+          "case": "cli-tasks-configured",
+          "status": "PASS",
+          "error": null
+        },
+        {
+          "runtime": "74",
+          "variant": "candidate",
+          "case": "hp",
+          "status": "PASS",
+          "error": null
+        },
+        {
+          "runtime": "74",
+          "variant": "candidate",
+          "case": "core-simple",
+          "status": "PASS",
+          "error": null
+        },
+        {
+          "runtime": "74",
+          "variant": "candidate",
+          "case": "core-full",
+          "status": "PASS",
+          "error": null
+        },
+        {
+          "runtime": "74",
+          "variant": "candidate",
+          "case": "cli-version",
+          "status": "PASS",
+          "error": null
+        },
+        {
+          "runtime": "74",
+          "variant": "candidate",
+          "case": "cli-version-queue",
+          "status": "PASS",
+          "error": null
+        },
+        {
+          "runtime": "74",
+          "variant": "candidate",
+          "case": "cli-tasks",
+          "status": "FAIL",
+          "error": "Real entrypoint failed (not waived)"
+        },
+        {
+          "runtime": "74",
+          "variant": "candidate",
+          "case": "cli-tasks-configured",
+          "status": "PASS",
+          "error": null
+        },
+        {
+          "runtime": "83",
+          "variant": "candidate",
+          "case": "hp",
+          "status": "PASS",
+          "error": null
+        },
+        {
+          "runtime": "83",
+          "variant": "candidate",
+          "case": "core-simple",
+          "status": "PASS",
+          "error": null
+        },
+        {
+          "runtime": "83",
+          "variant": "candidate",
+          "case": "core-full",
+          "status": "PASS",
+          "error": null
+        },
+        {
+          "runtime": "83",
+          "variant": "candidate",
+          "case": "cli-version",
+          "status": "PASS",
+          "error": null
+        },
+        {
+          "runtime": "83",
+          "variant": "candidate",
+          "case": "cli-version-queue",
+          "status": "PASS",
+          "error": null
+        },
+        {
+          "runtime": "83",
+          "variant": "candidate",
+          "case": "cli-tasks",
+          "status": "FAIL",
+          "error": "Real entrypoint failed (not waived)"
+        },
+        {
+          "runtime": "83",
+          "variant": "candidate",
+          "case": "cli-tasks-configured",
+          "status": "PASS",
+          "error": null
+        },
+        {
+          "runtime": "74",
+          "variant": "original",
+          "case": "hp-legacy",
+          "status": "PASS",
+          "error": null
+        },
+        {
+          "runtime": "74",
+          "variant": "candidate",
+          "case": "hp-legacy",
+          "status": "PASS",
+          "error": null
+        },
+        {
+          "runtime": "83",
+          "variant": "original",
+          "case": "fatal-hp",
+          "status": "EXPECTED_FATAL",
+          "error": null
+        },
+        {
+          "runtime": "83",
+          "variant": "original",
+          "case": "fatal-core",
+          "status": "EXPECTED_FATAL",
+          "error": null
+        },
+        {
+          "runtime": "83",
+          "variant": "original",
+          "case": "fatal-cli",
+          "status": "EXPECTED_FATAL",
+          "error": null
+        }
+      ],
+      "exact_expected_counts": true
+    }
+  ]
+}

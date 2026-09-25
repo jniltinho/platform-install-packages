@@ -1,0 +1,41 @@
+{
+  "schema": 1,
+  "status": "planned; no runtime execution by source-audit author",
+  "scope": "three held global-autoload compiler repairs and real loader/entrypoint behavior; not full application acceptance",
+  "base_candidate": "exp10, immutable ZIP de177e6cbaedf3a3207661c2325f466cce37febb73190f3a49d31f24b740c053",
+  "selection": [
+    "patches/php83/held/autoload83/HTMLPurifier-autoload.patch",
+    "patches/php83/held/autoload83/symfony-cli-autoload.patch",
+    "patches/php83/held/sfCore.class.php.patch"
+  ],
+  "cases": [
+    {
+      "id": "compiler-controls",
+      "requirements": ["All three exact targets: unchanged PHP 7.4 compiles, unchanged PHP 8.3 rejects removed global declarations; candidate 7.4 and 8.3 compile.", "Retain all diagnostics; a compiler pass is not loader execution."]
+    },
+    {
+      "id": "purifier-real-registration",
+      "requirements": ["Use actual Bootstrap and registration source; known-class hit, missing and unrelated class misses, and require_once repetition.", "Verify prepending relative to two existing callbacks, preserved relative order, and no duplicate effective registration.", "PHP 7.4-only legacy-global fixture confirms explicitly retained callback; do not compile forbidden global declarations under PHP 8.3.", "Test callback errors/exceptions propagate; no catches or suppression added to application code."]
+    },
+    {
+      "id": "sfcore-real-loaders-and-serialization",
+      "requirements": ["Actual initSimpleAutoload scans synthetic class files with the real finder; compare path resolution, known/missing class behavior and repeated registration with original 7.4.", "Actual initAutoload registration and configuration-map path, preserving pre-existing callback ordering and unserialize_callback_func=spl_autoload_call.", "Fresh-process serialized-object loading via autoload, not only serialization of an already loaded class; compare public object fields and exact intended class.", "Any extra dependency repair needed for full loader execution remains separately identified and gated."]
+    },
+    {
+      "id": "symfony-real-cli-lazy-loading",
+      "requirements": ["Run actual whole CLI entrypoint --version/-V and -T in a controlled project, not only extracted function bodies.", "Version path must not force class-path initialization before sfConfig setup; later task/class lookups must initialize once and retain subsequent class additions.", "Test mapped class hits, ordered registeredCallable fallbacks, missing class behavior and propagation of callback exceptions.", "Retain original baseline and candidate dependency failures as failures; avoid replacing real entrypoint/dependencies with successful stubs."]
+    },
+    {
+      "id": "symfony-preexisting-spl-composition",
+      "requirements": ["Compare the actual CLI with an existing SPL queue; existing handlers retain relative order and first-handler hits.", "Explicitly demonstrate the intentional new appended Symfony miss fallback, distinct from the original implicit global loader not automatically registered in SPL.", "Record this composition delta rather than asserting universal cross-runtime/baseline output parity.", "Normal require_once/repeated registration cases do not establish arbitrary duplicate plain require safety for existing class declarations."]
+    }
+  ],
+  "execution_contract": [
+    "No production .20, live application, SQL, CI, release or main writes.",
+    "Serialize each shared VM workload under the coordinator's exclusive owner; source trees are verified disposable copies.",
+    "Record original/candidate/patch/fixture/runtime identities, actual command, exit, diagnostics and executor/reviewer separately.",
+    "Use actual Claude, Grok, Cursor roles and explicitly attributed authorized fallback as required by AGENTS.md.",
+    "No integrated candidate promotion or broad task closure follows merely from this held repair plan."
+  ],
+  "application_acceptance": false
+}

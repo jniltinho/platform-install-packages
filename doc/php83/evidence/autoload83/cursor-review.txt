@@ -1,0 +1,40 @@
+Vou atuar como revisor/executor independente no escopo read-only: ler as identidades pinadas, executar os três comandos de teste e revisar os artefatos boundados.Testes gravados; em seguida leio as saídas e reviso os artefatos pinados.Agora reviso collectors, fixtures, probes e documentação boundada.Verificando hashes pinados, prepare/build e possíveis gaps nos contratos.## Veredito (Cursor CLI — revisor/executor independente)
+
+Execução local autorizada **PASS**; revisão estática dos 3 patches + collectors **sem bugs bloqueadores**. Isto **não** é aprovação de runtime, aplicação ou release.
+
+### Identidades
+- `cursor-input-identities.json`: **24/24** SHA256 OK
+- Escopo: só leitura + unittests; sem `collect.py`/`run.sh`/`prepare.py`/`build.py` de entrada; sem VM/SQL/SSH/rede
+
+### Comandos e saídas reais
+| Comando | Ran | Exit | Evidência |
+|---|---:|---:|---|
+| `unittest … base-object-ternary` | **10** | **0** | `cursor-ternary-tests.{stdout,stderr,exit}` |
+| `unittest … autoload83` | **15** | **0** | `cursor-autoload-tests.{stdout,stderr,exit}` |
+| `bash -n` nos dois `run.sh` | — | **0** | `cursor-bash-n.exit` |
+
+(Unittest `-v` foi para stderr; stdout vazio — captura correta.)
+
+### Autoload — 3 efeitos mínimos
+1. **HTMLPurifier** (`HTMLPurifier-autoload.patch`): ramo no-SPL `__autoload` → `RuntimeException`; ramo SPL/retenção de `__autoload` intacto.
+2. **sfCore** (`sfCore.class.php.patch` L181–35 / L257–53): dois fallbacks no-SPL → `RuntimeException`; `spl_autoload_call` + registro SPL preservados.
+3. **Symfony CLI** (`symfony-cli-autoload.patch` L107–118): `__autoload` nomeado → `spl_autoload_register(function…)` **append**; corpo/`static $initialized`/`simpleAutoloader::__autoload` iguais.
+
+Contratos checados no collector (`collect.py` L36–46, L22–28):
+- Fatal original83 exige `exit==255` **e** `body['fatal']` **e** `'__autoload() is no longer supported' in stderr` — não qualquer nonzero (`test_collect.py` L20–22; rechecagem local confirma).
+- Entrypoint real: `exit==0` sem waive; falhas CLI permanecem FAIL (`L40`).
+- Delta de fila intencional: `cli-version-queue` original miss fallback; candidate append `Closure` (`test_collect.py` L23–25).
+- Probe: `E_ALL`, handler `return false`, fatals/exceptions no shutdown; fixtures sintéticas; `prepare.py` PIN ZIP/hash/refuse-dest; `run.sh` hostname `kaltura-php74-baseline` + sandbox.
+
+**Observação (não blocker local):** `expected('cli-tasks')=={}` — conteúdo positivo da lista `-T` não é assertado; stdout/stderr ficam no record para revisão humana. Compilação-só ≠ comportamento completo (`autoload83.md`).
+
+### Ternary
+- Patch: só `(` `)` preservando associação **esquerda** PHP 7.4 (`base-object-ternary.patch` L8–10; `build.py` L13–14) — **não** “corrige” XML legacy para direita.
+- Collector rejeita missing cases, drift de fonte/hash, exit ruim, diagnostics extras, side-effect drift (`test_ternary.py` L14–31; `collect.py` L20–45).
+- Distinção: testes = transform local + validação de **`primary-r2.json` gravado**; **não** execução PHP/SSH nova.
+
+### Blockers
+**NONE** (neste escopo local mocked/static).
+
+### Não reivindicado
+Runtime/entrypoint na VM, paridade de aplicação, integração/pacote/release.

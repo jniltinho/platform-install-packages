@@ -10,20 +10,22 @@ use `check_index_coverage` for every file that supports a graph-based conclusion
 
 ## PHP 8.3 migration test coordination
 
-For every migration validation cycle, involve the Claude CLI, Grok CLI and
-Cursor Agent CLI (`agent`) in both test execution and independent review over
-the cycle. Assign explicit, non-overlapping cases and rotate reviewers; an
-author's review alone is not independent validation. Codex coordinates the
-results. Use the actual CLIs, not another agent merely named after them.
+For every migration validation cycle, prioritize the actual Claude CLI, Cursor
+Agent CLI (`agent`) and OpenCode CLI for test execution and independent review.
+Assign explicit, non-overlapping cases and rotate reviewers; an author's review
+alone is not independent validation. Codex coordinates the results. Use the
+actual CLIs, not another agent merely named after them.
 
-If Grok stalls or encounters a tool, quota or execution problem, use OpenCode
-with Zen's Muse Spark 1.3 Free as the operator-authorized fallback. Resolve its
-exact model ID from `opencode models opencode` (currently
-`opencode/muse-spark-1.3-contributor-free`); do not silently substitute a paid
-model. Bound Grok attempts (normally 120 seconds for local batch checks), stop
-or confirm completion of its attempt before reassigning execution, and record
-Grok's outcome separately from the fallback's actual result. The fallback may
-fulfil Grok's assigned executor/reviewer role, but must not be reported as Grok.
+The operator requested that Grok be deprioritized because it is malfunctioning;
+do not require another Grok attempt in each cycle. Preserve previous Grok failures
+separately, and use it only when there is a concrete reason to retry. Prefer
+OpenCode with Zen's Muse Spark 1.3 Free, resolving the exact installed model ID
+(currently `opencode/muse-spark-1.3-contributor-free`). The operator also explicitly
+authorized OpenCode MiniMax 3; resolve an installed MiniMax-M3 provider/model ID
+before use and verify actual availability. Do not buy plans, add credentials or
+silently substitute another paid model. Bound every external CLI attempt, confirm
+it is terminal before reassigning its work, and record each actual executor's
+result separately. Tool/quota/authentication failures never count as passes.
 
 Run independent reviews and isolated tests in parallel. Never run competing
 writers, destructive fixtures or benchmark workloads against the same VM,

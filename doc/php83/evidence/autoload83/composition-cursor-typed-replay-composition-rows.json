@@ -1,0 +1,274 @@
+{
+  "composition-primary-r2": [
+    {
+      "case": "hp-append",
+      "runtime": "74",
+      "variant": "original",
+      "exit": 0,
+      "original_status": "PASS",
+      "replay_status": "PASS",
+      "error": null
+    },
+    {
+      "case": "hp-prepend",
+      "runtime": "74",
+      "variant": "original",
+      "exit": 0,
+      "original_status": "PASS",
+      "replay_status": "PASS",
+      "error": null
+    },
+    {
+      "case": "hp-throw",
+      "runtime": "74",
+      "variant": "original",
+      "exit": 0,
+      "original_status": "PASS",
+      "replay_status": "PASS",
+      "error": null
+    },
+    {
+      "case": "hp-repeat",
+      "runtime": "74",
+      "variant": "original",
+      "exit": 0,
+      "original_status": "PASS",
+      "replay_status": "PASS",
+      "error": null
+    },
+    {
+      "case": "core-repeat",
+      "runtime": "74",
+      "variant": "original",
+      "exit": 0,
+      "original_status": "PASS",
+      "replay_status": "PASS",
+      "error": null
+    },
+    {
+      "case": "cli-append",
+      "runtime": "74",
+      "variant": "original",
+      "exit": 0,
+      "original_status": "PASS",
+      "replay_status": "PASS",
+      "error": null
+    },
+    {
+      "case": "cli-prepend",
+      "runtime": "74",
+      "variant": "original",
+      "exit": 0,
+      "original_status": "PASS",
+      "replay_status": "PASS",
+      "error": null
+    },
+    {
+      "case": "cli-throw-front",
+      "runtime": "74",
+      "variant": "original",
+      "exit": 0,
+      "original_status": "PASS",
+      "replay_status": "PASS",
+      "error": null
+    },
+    {
+      "case": "cli-throw-tail",
+      "runtime": "74",
+      "variant": "original",
+      "exit": 0,
+      "original_status": "PASS",
+      "replay_status": "PASS",
+      "error": null
+    },
+    {
+      "case": "cli-repeat",
+      "runtime": "74",
+      "variant": "original",
+      "exit": 255,
+      "original_status": "EXPECTED_FATAL",
+      "replay_status": "EXPECTED_FATAL",
+      "error": null
+    },
+    {
+      "case": "hp-append",
+      "runtime": "74",
+      "variant": "candidate",
+      "exit": 0,
+      "original_status": "PASS",
+      "replay_status": "PASS",
+      "error": null
+    },
+    {
+      "case": "hp-prepend",
+      "runtime": "74",
+      "variant": "candidate",
+      "exit": 0,
+      "original_status": "PASS",
+      "replay_status": "PASS",
+      "error": null
+    },
+    {
+      "case": "hp-throw",
+      "runtime": "74",
+      "variant": "candidate",
+      "exit": 0,
+      "original_status": "PASS",
+      "replay_status": "PASS",
+      "error": null
+    },
+    {
+      "case": "hp-repeat",
+      "runtime": "74",
+      "variant": "candidate",
+      "exit": 0,
+      "original_status": "PASS",
+      "replay_status": "PASS",
+      "error": null
+    },
+    {
+      "case": "core-repeat",
+      "runtime": "74",
+      "variant": "candidate",
+      "exit": 0,
+      "original_status": "PASS",
+      "replay_status": "PASS",
+      "error": null
+    },
+    {
+      "case": "cli-append",
+      "runtime": "74",
+      "variant": "candidate",
+      "exit": 0,
+      "original_status": "PASS",
+      "replay_status": "PASS",
+      "error": null
+    },
+    {
+      "case": "cli-prepend",
+      "runtime": "74",
+      "variant": "candidate",
+      "exit": 0,
+      "original_status": "PASS",
+      "replay_status": "PASS",
+      "error": null
+    },
+    {
+      "case": "cli-throw-front",
+      "runtime": "74",
+      "variant": "candidate",
+      "exit": 0,
+      "original_status": "PASS",
+      "replay_status": "PASS",
+      "error": null
+    },
+    {
+      "case": "cli-throw-tail",
+      "runtime": "74",
+      "variant": "candidate",
+      "exit": 0,
+      "original_status": "PASS",
+      "replay_status": "PASS",
+      "error": null
+    },
+    {
+      "case": "cli-repeat",
+      "runtime": "74",
+      "variant": "candidate",
+      "exit": 255,
+      "original_status": "EXPECTED_FATAL",
+      "replay_status": "EXPECTED_FATAL",
+      "error": null
+    },
+    {
+      "case": "hp-append",
+      "runtime": "83",
+      "variant": "candidate",
+      "exit": 0,
+      "original_status": "PASS",
+      "replay_status": "PASS",
+      "error": null
+    },
+    {
+      "case": "hp-prepend",
+      "runtime": "83",
+      "variant": "candidate",
+      "exit": 0,
+      "original_status": "PASS",
+      "replay_status": "PASS",
+      "error": null
+    },
+    {
+      "case": "hp-throw",
+      "runtime": "83",
+      "variant": "candidate",
+      "exit": 0,
+      "original_status": "PASS",
+      "replay_status": "PASS",
+      "error": null
+    },
+    {
+      "case": "hp-repeat",
+      "runtime": "83",
+      "variant": "candidate",
+      "exit": 0,
+      "original_status": "PASS",
+      "replay_status": "PASS",
+      "error": null
+    },
+    {
+      "case": "core-repeat",
+      "runtime": "83",
+      "variant": "candidate",
+      "exit": 0,
+      "original_status": "PASS",
+      "replay_status": "PASS",
+      "error": null
+    },
+    {
+      "case": "cli-append",
+      "runtime": "83",
+      "variant": "candidate",
+      "exit": 0,
+      "original_status": "PASS",
+      "replay_status": "PASS",
+      "error": null
+    },
+    {
+      "case": "cli-prepend",
+      "runtime": "83",
+      "variant": "candidate",
+      "exit": 0,
+      "original_status": "PASS",
+      "replay_status": "PASS",
+      "error": null
+    },
+    {
+      "case": "cli-throw-front",
+      "runtime": "83",
+      "variant": "candidate",
+      "exit": 0,
+      "original_status": "PASS",
+      "replay_status": "PASS",
+      "error": null
+    },
+    {
+      "case": "cli-throw-tail",
+      "runtime": "83",
+      "variant": "candidate",
+      "exit": 0,
+      "original_status": "PASS",
+      "replay_status": "PASS",
+      "error": null
+    },
+    {
+      "case": "cli-repeat",
+      "runtime": "83",
+      "variant": "candidate",
+      "exit": 255,
+      "original_status": "EXPECTED_FATAL",
+      "replay_status": "EXPECTED_FATAL",
+      "error": null
+    }
+  ]
+}

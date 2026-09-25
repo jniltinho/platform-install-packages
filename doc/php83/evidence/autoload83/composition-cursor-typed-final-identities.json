@@ -1,0 +1,23 @@
+{
+  "unchanged": true,
+  "files": {
+    "tools/php83/autoload83/collect.py": "74590346e0005c9e17e9d8323d6ecebcc2daa1adb61282856824871e910f34ef",
+    "tools/php83/autoload83/fixtures/extra/FixtureFirstHit.php": "f570bf3db1fa4834bdfa6a6b10b93cd4ea11b88e345acd4c96b7432e58683121",
+    "tools/php83/autoload83/fixtures/extra/FixtureLegacyHit.php": "445bbb3f305409abbb5d77dc7be380963b64d2830cfbb9b1281a70711f93192b",
+    "tools/php83/autoload83/fixtures/legacy.php": "ff98b5737b533b7246f2a386815bfc6e49d6d85e3111c7194ea1ccaee7c95e7a",
+    "tools/php83/autoload83/fixtures/map/FixtureMapped.php": "57dc8378ff5857e91e9d89e31196ae9fc9f6a06cc472928571d08a5f8a83a74c",
+    "tools/php83/autoload83/fixtures/map/FixtureUnserialize.php": "5e81e566d6c6ef90b2c849821f5f1f8619558352a37f3ec4e855d44dcf77e941",
+    "tools/php83/autoload83/fixtures/project/lib/model/FixtureFallback.php": "e614a3fe105d62d2043cb2c648360f6a5bbaef238831f16dbca5510b96478854",
+    "tools/php83/autoload83/prepare.py": "7b0755d035b132e20e15c679206617a73e40801271fec75a5b20cdcf997a9871",
+    "tools/php83/autoload83/probe.php": "a153741717d8bd925c1ee3ac856a35c172cdbc1ccd91bbb9ef5fcd55f3f902bc",
+    "tools/php83/autoload83/run.sh": "bb6994c51a78d612108966d3c133d3c985858933c95e45333f2135d2ec2ad2f6",
+    "tools/php83/autoload83/test_collect.py": "bfde44f46316e1f8fe131b84aa48b07e496f715814c089f9ac45e837776982c3",
+    "tools/php83/autoload83/test_prepare.py": "26ce5b81563079bdfb2808f968f5c086843d86ea7b7e6c43acd348ddca473eed",
+    "tools/php83/autoload83-composition/collect.py": "0dcad1a511e4c08c023a23cb06eb9f30f435baa115a5b516f452ec47cd195220",
+    "tools/php83/autoload83-composition/fixtures/cli-shadow.php": "e614a3fe105d62d2043cb2c648360f6a5bbaef238831f16dbca5510b96478854",
+    "tools/php83/autoload83-composition/fixtures/hp-shadow.php": "a1090f7943c611c893aa3442398e069532e851e40d74351d7e902aafb8224cb3",
+    "tools/php83/autoload83-composition/probe.php": "b0f38e869a428840aecfe21e30e9a1d9d024248dafec8b67774810eb05cf11b8",
+    "tools/php83/autoload83-composition/run.sh": "50811acb100214d40733325b0d363f15f4bdde9cd21ee9cb6e6eed0dc7583702",
+    "tools/php83/autoload83-composition/test_composition.py": "6d242b1afd801c6c11559f24e0a9d62946fd4943880d3e20746a87c933697908"
+  }
+}

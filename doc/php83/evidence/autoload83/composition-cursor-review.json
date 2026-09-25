@@ -1,0 +1,273 @@
+{
+  "executor": "Cursor Agent CLI (actual independent reviewer/executor)",
+  "role": "composition+base local unittest + retained-evidence replay + adversarial static review",
+  "cwd": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83",
+  "scope_limits": [
+    "only write doc/php83/evidence/autoload83/composition-cursor-*",
+    "NO tools/patches/source/prior-evidence/git/VM edits",
+    "NO SSH / PHP runtime / SQL / network / service / package / release",
+    "NO collect.py main / inventory",
+    "NO spawn other agents"
+  ],
+  "application_acceptance": false,
+  "release_approval": false,
+  "commands": [
+    {
+      "cmd": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/autoload83-composition -p 'test_*.py' -v",
+      "stdout": "doc/php83/evidence/autoload83/composition-cursor-tests-composition.stdout",
+      "stderr": "doc/php83/evidence/autoload83/composition-cursor-tests-composition.stderr",
+      "exit_file": "doc/php83/evidence/autoload83/composition-cursor-tests-composition.exit",
+      "exit": 0,
+      "tests_ran": 13,
+      "result": "OK"
+    },
+    {
+      "cmd": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/autoload83 -p 'test_*.py' -v",
+      "stdout": "doc/php83/evidence/autoload83/composition-cursor-tests-base.stdout",
+      "stderr": "doc/php83/evidence/autoload83/composition-cursor-tests-base.stderr",
+      "exit_file": "doc/php83/evidence/autoload83/composition-cursor-tests-base.exit",
+      "exit": 0,
+      "tests_ran": 21,
+      "result": "OK"
+    }
+  ],
+  "local_tests": {
+    "composition_actual": 13,
+    "composition_expected_hint": 13,
+    "base_actual": 21,
+    "base_expected_hint": 21,
+    "composition_exit": 0,
+    "base_exit": 0,
+    "not_runtime_proof": true
+  },
+  "input_report_hashes": {
+    "primary-r3": "825e9147e227c5f3472e4ec01e420bd7bdbada56920cda035d65915859295904",
+    "claude-primary": "825e9147e227c5f3472e4ec01e420bd7bdbada56920cda035d65915859295904",
+    "composition-primary-r2": "b626f1630c5f337d3e65da50310ef326328dbb1525e850c4b51410c7d438ee67",
+    "composition-harness-final": "1ca911186610216c249597658d831d1f8aa2b83043b85e43822d478088948484",
+    "primary_eq_claude": true
+  },
+  "replay": {
+    "method": "importlib unique module names; validate() only; never main/inventory/SSH",
+    "artifacts": [
+      "composition-cursor-replay.json",
+      "composition-cursor-replay.stdout",
+      "composition-cursor-replay.stderr",
+      "composition-cursor-replay.exit",
+      "composition-cursor-replay-base-rows.json",
+      "composition-cursor-replay-composition-rows.json"
+    ],
+    "primary-r3": {
+      "sha256": "825e9147e227c5f3472e4ec01e420bd7bdbada56920cda035d65915859295904",
+      "original_status": "FAIL",
+      "counts": {
+        "PASS": 20,
+        "EXPECTED_FATAL": 3,
+        "VALUEERROR": 3,
+        "OTHER": 0,
+        "total": 26
+      },
+      "valueerror_message": "Real entrypoint failed (not waived)",
+      "cli_tasks_VALUEERROR": 3,
+      "NOT_26_passes": true,
+      "configured_loaded_37": true,
+      "configured_same_tasks": [
+        "init-project",
+        "init-module",
+        "propel-build-model"
+      ],
+      "files_per_tree": 1630
+    },
+    "claude-primary": {
+      "sha256": "825e9147e227c5f3472e4ec01e420bd7bdbada56920cda035d65915859295904",
+      "identical_to_primary_r3": true,
+      "counts": {
+        "PASS": 20,
+        "EXPECTED_FATAL": 3,
+        "VALUEERROR": 3,
+        "OTHER": 0,
+        "total": 26
+      }
+    },
+    "composition-primary-r2": {
+      "sha256": "b626f1630c5f337d3e65da50310ef326328dbb1525e850c4b51410c7d438ee67",
+      "original_status": "PASS",
+      "counts": {
+        "PASS": 27,
+        "EXPECTED_FATAL": 3,
+        "VALUEERROR": 0,
+        "OTHER": 0,
+        "total": 30
+      },
+      "EXPECTED_FATAL_cases": [
+        "cli-repeat x3 runtimes/variants"
+      ],
+      "whitelist": "variant/\u2192/audit/source/; fixtures/\u2192/audit/fixtures/; probe\u2192/audit/probe.php; own fixtures\u2192/audit/composition-fixtures/"
+    }
+  },
+  "adversarial_review": {
+    "run_sh": {
+      "base_socket_deny": true,
+      "comp_socket_deny": true,
+      "base_bind_readonly": true,
+      "comp_bind_readonly": true,
+      "comp_binds_composition_fixtures": true,
+      "private_network": true
+    },
+    "probes": {
+      "base_casts_loaded_object": true,
+      "comp_casts_loaded_object": true,
+      "comp_cli_repeat_finish_before_require": true,
+      "comp_finish_static_idempotent_guard": true,
+      "error_handler_returns_false_base": true,
+      "error_handler_returns_false_comp": true,
+      "no_eval_comp": true,
+      "base_includes_probe_in_loaded": false,
+      "comp_requires_probe_in_loaded": true
+    },
+    "in_memory_mutations": [
+      {
+        "label": "baseline_should_pass",
+        "outcome": "PASS",
+        "caught": false
+      },
+      {
+        "label": "empty_loaded",
+        "outcome": "VALUEERROR",
+        "error": "Actual loader not loaded",
+        "caught": true
+      },
+      {
+        "label": "winner_row_shadow_lie",
+        "outcome": "VALUEERROR",
+        "error": "Unexpected exact rows/traces",
+        "caught": true
+      },
+      {
+        "label": "events_claim_final_after_throw",
+        "outcome": "PASS",
+        "caught": false
+      },
+      {
+        "label": "throw_front_no_final_handler",
+        "events": [
+          [
+            "later",
+            "FixtureFallback"
+          ],
+          [
+            "later",
+            "FixtureMissing"
+          ]
+        ],
+        "winner": null,
+        "hit_loaded": false,
+        "all_later": true
+      },
+      {
+        "label": "native74_implicit_autoload_vs_candidate_closure",
+        "original_queue_after": [
+          "laterLoader",
+          "finalLoader"
+        ],
+        "candidate_queue_after": [
+          "Closure",
+          "laterLoader",
+          "finalLoader"
+        ],
+        "original_winner_shadow": "/audit/composition-fixtures/cli-shadow.php",
+        "candidate_winner_real": "/audit/fixtures/project/lib/model/FixtureFallback.php",
+        "original_missing___autoload_in_queue": true,
+        "candidate_has_Closure": true
+      },
+      {
+        "label": "core_repeat_not_idempotent",
+        "internal_callables_len": 2,
+        "splAutoload_in_queue_after": 1,
+        "splSimple_in_queue": 1
+      },
+      {
+        "label": "cli_repeat_native_fatal_lines",
+        "74_original_has_redeclare_107": true,
+        "83_candidate_has_class_36": true
+      },
+      {
+        "label": "base_empty_loaded",
+        "error": "Required actual source/fixture not loaded"
+      },
+      {
+        "label": "base_loaded_list_shape",
+        "error": "Loaded inventory must be an object",
+        "note": "prior bug: JSON [] made .items() crash; now type check rejects before .items()"
+      }
+    ],
+    "concrete_findings": [
+      {
+        "id": "native74_autoload_removal",
+        "where": "composition collect.expected cli-append/prepend; PHP SPL removes implicit __autoload on first spl_autoload_register",
+        "detail": "original queue-after omits __autoload after laterLoader register; candidate keeps Closure; original cli-append winner is composition-fixtures/cli-shadow.php, candidate winner is real FixtureFallback.php",
+        "lines": "tools/php83/autoload83-composition/collect.py:22-34"
+      },
+      {
+        "id": "throw_propagates_no_subsequent",
+        "where": "composition expected throw-front/throw-tail + probe laterLoader mode=throw",
+        "detail": "throw-front: winner=None, events only later*; no finalLoader. throw-tail candidate can load then miss throws.",
+        "lines": "probe.php:9-18,26-35; collect.py:25-41"
+      },
+      {
+        "id": "cli_repeat_pre_fatal_flush",
+        "where": "composition probe.php composition(cli-repeat) + collect diagnostic_contract",
+        "detail": "finish() emits COMPOSITION_RESULT before second full CLI include; static $reported makes post-fatal finish a no-op so body may lack fatal; EXPECTED_FATAL gated on exit=255 + exact stderr (original redeclare __autoload:107 vs candidate class simpleAutoloader:36)",
+        "lines": "probe.php:47-53,22-28; collect.py:55-78"
+      },
+      {
+        "id": "core_repeat_not_idempotence",
+        "where": "expected(core-repeat)",
+        "detail": "internal-callables length 2 but queue-after counts sfCore::splAutoload once \u2014 duplicate init recorded without claiming full SPL idempotence/parity",
+        "lines": "collect.py:19-21; test_composition.py:16-17"
+      },
+      {
+        "id": "exact_diagnostics_contract",
+        "where": "base validate_diagnostics + composition diagnostic_contract",
+        "detail": "severity 8192, file/line, message_sha256 of exact deprecation strings; composition also exact-matches native stderr text",
+        "lines": "autoload83/collect.py:62-78; composition/collect.py:44-75"
+      },
+      {
+        "id": "loaded_object_hardening",
+        "where": "base probe finish cast + validate type(dict)",
+        "detail": "Prior independent reviews missed loaded=[] JSON array crashing .items(); current base casts to object and rejects empty/non-dict. Composition similarly casts. Local tests now include empty-loaded rejection \u2014 still NOT runtime proof.",
+        "lines": "autoload83/probe.php:33-40; collect.py:85-88; test_collect.py:28-30"
+      },
+      {
+        "id": "sandbox_readonly_socket",
+        "where": "both run.sh",
+        "detail": "PrivateNetwork + SystemCallFilter deny socket/socketpair EPERM; BindReadOnlyPaths for source/probe/fixtures(/composition-fixtures); InaccessiblePaths for mysql/kaltura",
+        "lines": "run.sh:9-16 (both)"
+      },
+      {
+        "id": "emptyproject_cli_tasks_not_waived",
+        "where": "primary-r3/claude-primary replay",
+        "detail": "3x cli-tasks raise ValueError Real entrypoint failed (not waived); overall FAIL; configured cases load 37 files and list same three tasks; tree 1630"
+      }
+    ],
+    "limitations": [
+      "This Cursor cycle did NOT execute PHP/SSH/runtime matrix; only local unittest + retained validate() replay.",
+      "Passing 13+21 local tests does not prove VM process correctness or full application autoload acceptance.",
+      "cli-repeat JSON is intentionally pre-fatal; fatal identity is stderr/exit only \u2014 body.fatal may be absent due to finish() static guard.",
+      "Base and composition use different loaded path schemas (relative vs /audit absolute); contracts are harness-specific.",
+      "Comparisons in base main (row equality / listing equality) were not re-executed; only per-record validate().",
+      "No whole-application, package, CI, or release gate is satisfied by this review.",
+      "Prior missed loaded=[] bug shows tests can lag collectors \u2014 do not infer absence of further bugs from green suite."
+    ]
+  },
+  "freeze_after": {
+    "pinned_paths": 21,
+    "all_match": true,
+    "drift": [],
+    "permission_failures": [],
+    "harness_final_files_match": true,
+    "harness_drift": [],
+    "report_hashes_match_pinned": true,
+    "success": true
+  }
+}

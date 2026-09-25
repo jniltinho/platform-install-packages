@@ -1,0 +1,29 @@
+{
+  "input_hashes": {
+    "patches/php83/held/autoload83/HTMLPurifier-autoload.json": "d914414f8fa00ff793f714797c3788241b1231dcbf99296640adbbe110874b2d",
+    "patches/php83/held/autoload83/HTMLPurifier-autoload.patch": "f1038cce8807ccb7f139fa9608a2b27c25bfd2a4eccc71a6f71b036bc8e32d20",
+    "patches/php83/held/autoload83/symfony-cli-autoload.json": "b3052352913617f362807c75a6cb30cc0b72c5731d291282440c6cad0f5b8ecb",
+    "patches/php83/held/autoload83/symfony-cli-autoload.patch": "2ff7fdf8f13d0fb14f23bce79a0f5c6ade5c569a1ce6e3bc3a677ac45a0d4e05",
+    "patches/php83/held/base-object-ternary/base-object-ternary.patch": "22508c21d41ac68949b76504dd201bf8a3e589ebc7188c44350f26effcf505ac",
+    "patches/php83/held/base-object-ternary/manifest.json": "df50a1afaf236d33153f8e2f6e1b865457875c6657c87ec1aa0b345fee709700",
+    "patches/php83/held/sfCore.class.php.patch": "7a5b4cb0453336d6ad71f5e107df6d8d68c93d4991d75480c69636ee39e85db7",
+    "tools/php83/autoload83/collect.py": "419649bf25ef4e486295131eaf0fcbaefd0bca4c6bea9dcb785d1dda5e908a0e",
+    "tools/php83/autoload83/fixtures/extra/FixtureFirstHit.php": "f570bf3db1fa4834bdfa6a6b10b93cd4ea11b88e345acd4c96b7432e58683121",
+    "tools/php83/autoload83/fixtures/extra/FixtureLegacyHit.php": "445bbb3f305409abbb5d77dc7be380963b64d2830cfbb9b1281a70711f93192b",
+    "tools/php83/autoload83/fixtures/legacy.php": "ff98b5737b533b7246f2a386815bfc6e49d6d85e3111c7194ea1ccaee7c95e7a",
+    "tools/php83/autoload83/fixtures/map/FixtureMapped.php": "57dc8378ff5857e91e9d89e31196ae9fc9f6a06cc472928571d08a5f8a83a74c",
+    "tools/php83/autoload83/fixtures/map/FixtureUnserialize.php": "5e81e566d6c6ef90b2c849821f5f1f8619558352a37f3ec4e855d44dcf77e941",
+    "tools/php83/autoload83/fixtures/project/lib/model/FixtureFallback.php": "e614a3fe105d62d2043cb2c648360f6a5bbaef238831f16dbca5510b96478854",
+    "tools/php83/autoload83/prepare.py": "bac1263344c204c19a53e23d59ae6292573fc3dc17d2f2b2c837f849c77f736b",
+    "tools/php83/autoload83/probe.php": "934320fb400a97fad29cd87bb67d87bdbef8b59ff025d6ac19bccf7a14df0ca9",
+    "tools/php83/autoload83/run.sh": "03188f9647049ddc653c646eed5e28205ca165bc2c1078089b6f372caae92ca5",
+    "tools/php83/autoload83/test_collect.py": "7ac237404e20d368a99c81b08c7996a8bc559334242b4109135acf8047cfed16",
+    "tools/php83/autoload83/test_prepare.py": "26ce5b81563079bdfb2808f968f5c086843d86ea7b7e6c43acd348ddca473eed",
+    "tools/php83/base-object-ternary/build.py": "ec730688bf7613ae1c7385c476a0ac4d2146b113f4f9888080e64f0cb08aa3d5",
+    "tools/php83/base-object-ternary/collect.py": "020f489cf9006280bd5ece08c4b5d7237ff11898e45e8bc439e60b59967d840f",
+    "tools/php83/base-object-ternary/probe.php": "f9ea1a65cd05b135cd1c9d1426b1c6e1ba2b2ee0583c063a0baadd13571a508b",
+    "tools/php83/base-object-ternary/run.sh": "156ab3ff94702edfeeae65b8dfc6495d9ddd9712d3cfb99ff4a1bc27b9394769",
+    "tools/php83/base-object-ternary/test_ternary.py": "b5b6f832ff0de1decf891d7b59e997acadb47d4ad1015a08faaf069312d441d6"
+  },
+  "changed_during_review": {}
+}

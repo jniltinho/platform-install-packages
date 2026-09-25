@@ -1,0 +1,30 @@
+Vou executar o ciclo final local de autoload: conferir o escopo congelado, rodar os unittests e depois o replay read-only da evidência.Freeze bateu; 19 testes OK. Seguindo com o replay de `primary-r3.json` e a revisão independente.Replay bateu 20/3/3. Vou checar o detalhe de `files_per_tree` (usuário citou 37) e o stderr dos `cli-tasks` emptyproject.Confirmado: `files_per_tree=1630`; `37` é só o `loaded` dos 3 `cli-tasks-configured`. Gravando a revisão independente completa.## Achados públicos — Cursor FINAL autoload (local)
+
+**Veredito local:** 19 unittests OK; replay de `primary-r3` bate 20 PASS + 3 EXPECTED_FATAL + 3 FAIL. Relatório primário permanece **FAIL** (`failed_checks=3`). Sem aceite de aplicação/release.
+
+### Comandos / contagens / exits
+| Ação | Resultado |
+|------|-----------|
+| `unittest discover -s tools/php83/autoload83 -p 'test_*.py' -v` | **19** testes, OK, **exit 0** |
+| Import `collect` (sem `main`) + `validate` em cada row de `primary-r3.json` | **exit 0** (contagens batem) |
+
+Evidência: `doc/php83/evidence/autoload83/cursor-autoload-final-tests.*`, `cursor-autoload-final-replay.*`, `cursor-autoload-final-review.*`
+
+### Replay (26 processos)
+- **20 PASS** (inclui 3× `cli-tasks-configured` com listing real)
+- **3 EXPECTED_FATAL** (`fatal-hp/core/cli`, exit 255, `fatal.file==target`, stderr com `__autoload() is no longer supported`)
+- **3 FAIL** — todos `cli-tasks` emptyproject, exit 1, `Class 'kConf' not found` — **não waived**
+- Listings configurados: 3-way idênticos; header + `init-project` / `init-module` / `propel-build-model`
+- **Nunca** rotular “26 pass”
+
+### Freeze de source
+17 paths em `cursor-autoload-final-input-identities.json`: **MATCH antes e depois**; inalterados na execução.  
+`files_per_tree=1630` (árvore selected). **37** = `loaded` só nos 3 `cli-tasks-configured`, não seleção do stage nem todo caso (emptyproject `cli-tasks` tem `loaded=14`).
+
+### Bugs / limites / correção da review anterior
+- Collector atual exige `loaded` dict + `required_loaded`; probe faz cast para object — corrige crash `loaded=[]` no shutdown. Suite antiga de **15** testes não cobria isso; suite atual **19** inclui `test_empty_loaded_rejected`.
+- Delta SPL append do CLI aceito só com ordem/first-hits preservados + fallback no candidate; **não** paridade universal 74.
+- **Não testados** (não são pass): handler later-added/prepended, winner de classe duplicada, exceptions no callback, include repetido, no-SPL além do throw dos patches.
+- 19 testes locais ≠ execução PHP nova; replay do primary retido ≠ VM independente (Claude).
+
+**Sem aprovação de aplicação/release.**

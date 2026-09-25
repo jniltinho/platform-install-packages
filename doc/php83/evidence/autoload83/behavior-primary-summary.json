@@ -1,0 +1,360 @@
+{
+  "status": "PARTIAL; overall matrix FAIL preserved",
+  "positive_pass": 20,
+  "expected_fatal": 3,
+  "real_empty_project_fail": 3,
+  "matrix_rows": 26,
+  "collector_exit": 1,
+  "runtime_unchanged": true,
+  "source_unchanged": true,
+  "comparisons": [
+    {
+      "case": "hp",
+      "before_candidate74_functional_rows_equal": true
+    },
+    {
+      "case": "hp-legacy",
+      "before_candidate74_functional_rows_equal": true
+    },
+    {
+      "case": "core-simple",
+      "before_candidate74_functional_rows_equal": true
+    },
+    {
+      "case": "core-full",
+      "before_candidate74_functional_rows_equal": true
+    },
+    {
+      "case": "cli-tasks-configured",
+      "three_variant_task_listing_identical": true
+    }
+  ],
+  "diagnostics": [
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "hp",
+      "diagnostics": [
+        {
+          "phase": "load",
+          "severity": 8192,
+          "file": "vendor/htmlpurifier/library/HTMLPurifier.autoload.php",
+          "line": 17,
+          "message_sha256": "edba75523862d0c47ea6df049ac8da6373cc9c532dbbc8a20f7f2d17428035c4"
+        }
+      ]
+    },
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "core-simple",
+      "diagnostics": [
+        {
+          "phase": "load",
+          "severity": 8192,
+          "file": "vendor/symfony/util/sfCore.class.php",
+          "line": 188,
+          "message_sha256": "edba75523862d0c47ea6df049ac8da6373cc9c532dbbc8a20f7f2d17428035c4"
+        },
+        {
+          "phase": "load",
+          "severity": 8192,
+          "file": "vendor/symfony/util/sfCore.class.php",
+          "line": 264,
+          "message_sha256": "edba75523862d0c47ea6df049ac8da6373cc9c532dbbc8a20f7f2d17428035c4"
+        }
+      ]
+    },
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "core-full",
+      "diagnostics": [
+        {
+          "phase": "load",
+          "severity": 8192,
+          "file": "vendor/symfony/util/sfCore.class.php",
+          "line": 188,
+          "message_sha256": "edba75523862d0c47ea6df049ac8da6373cc9c532dbbc8a20f7f2d17428035c4"
+        },
+        {
+          "phase": "load",
+          "severity": 8192,
+          "file": "vendor/symfony/util/sfCore.class.php",
+          "line": 264,
+          "message_sha256": "edba75523862d0c47ea6df049ac8da6373cc9c532dbbc8a20f7f2d17428035c4"
+        }
+      ]
+    },
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "cli-version",
+      "diagnostics": [
+        {
+          "phase": "cli",
+          "severity": 8192,
+          "file": "vendor/symfony-data/bin/symfony.php",
+          "line": 107,
+          "message_sha256": "edba75523862d0c47ea6df049ac8da6373cc9c532dbbc8a20f7f2d17428035c4"
+        },
+        {
+          "phase": "cli",
+          "severity": 8192,
+          "file": "vendor/symfony/vendor/pake/pakeYaml.class.php",
+          "line": 54,
+          "message_sha256": "17a31f70da746c9bf8fbbba0667eca93eaf0541bb20115ea641cdbbf9947d4a9"
+        }
+      ]
+    },
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "cli-version-queue",
+      "diagnostics": [
+        {
+          "phase": "cli",
+          "severity": 8192,
+          "file": "vendor/symfony-data/bin/symfony.php",
+          "line": 107,
+          "message_sha256": "edba75523862d0c47ea6df049ac8da6373cc9c532dbbc8a20f7f2d17428035c4"
+        },
+        {
+          "phase": "cli",
+          "severity": 8192,
+          "file": "vendor/symfony/vendor/pake/pakeYaml.class.php",
+          "line": 54,
+          "message_sha256": "17a31f70da746c9bf8fbbba0667eca93eaf0541bb20115ea641cdbbf9947d4a9"
+        }
+      ]
+    },
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "cli-tasks",
+      "diagnostics": [
+        {
+          "phase": "cli",
+          "severity": 8192,
+          "file": "vendor/symfony-data/bin/symfony.php",
+          "line": 107,
+          "message_sha256": "edba75523862d0c47ea6df049ac8da6373cc9c532dbbc8a20f7f2d17428035c4"
+        },
+        {
+          "phase": "cli",
+          "severity": 8192,
+          "file": "vendor/symfony/vendor/pake/pakeYaml.class.php",
+          "line": 54,
+          "message_sha256": "17a31f70da746c9bf8fbbba0667eca93eaf0541bb20115ea641cdbbf9947d4a9"
+        }
+      ]
+    },
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "cli-tasks-configured",
+      "diagnostics": [
+        {
+          "phase": "cli",
+          "severity": 8192,
+          "file": "vendor/symfony-data/bin/symfony.php",
+          "line": 107,
+          "message_sha256": "edba75523862d0c47ea6df049ac8da6373cc9c532dbbc8a20f7f2d17428035c4"
+        },
+        {
+          "phase": "cli",
+          "severity": 8192,
+          "file": "vendor/symfony/vendor/pake/pakeYaml.class.php",
+          "line": 54,
+          "message_sha256": "17a31f70da746c9bf8fbbba0667eca93eaf0541bb20115ea641cdbbf9947d4a9"
+        }
+      ]
+    },
+    {
+      "runtime": "74",
+      "variant": "candidate",
+      "case": "hp",
+      "diagnostics": []
+    },
+    {
+      "runtime": "74",
+      "variant": "candidate",
+      "case": "core-simple",
+      "diagnostics": []
+    },
+    {
+      "runtime": "74",
+      "variant": "candidate",
+      "case": "core-full",
+      "diagnostics": []
+    },
+    {
+      "runtime": "74",
+      "variant": "candidate",
+      "case": "cli-version",
+      "diagnostics": [
+        {
+          "phase": "cli",
+          "severity": 8192,
+          "file": "vendor/symfony/vendor/pake/pakeYaml.class.php",
+          "line": 54,
+          "message_sha256": "17a31f70da746c9bf8fbbba0667eca93eaf0541bb20115ea641cdbbf9947d4a9"
+        }
+      ]
+    },
+    {
+      "runtime": "74",
+      "variant": "candidate",
+      "case": "cli-version-queue",
+      "diagnostics": [
+        {
+          "phase": "cli",
+          "severity": 8192,
+          "file": "vendor/symfony/vendor/pake/pakeYaml.class.php",
+          "line": 54,
+          "message_sha256": "17a31f70da746c9bf8fbbba0667eca93eaf0541bb20115ea641cdbbf9947d4a9"
+        }
+      ]
+    },
+    {
+      "runtime": "74",
+      "variant": "candidate",
+      "case": "cli-tasks",
+      "diagnostics": [
+        {
+          "phase": "cli",
+          "severity": 8192,
+          "file": "vendor/symfony/vendor/pake/pakeYaml.class.php",
+          "line": 54,
+          "message_sha256": "17a31f70da746c9bf8fbbba0667eca93eaf0541bb20115ea641cdbbf9947d4a9"
+        }
+      ]
+    },
+    {
+      "runtime": "74",
+      "variant": "candidate",
+      "case": "cli-tasks-configured",
+      "diagnostics": [
+        {
+          "phase": "cli",
+          "severity": 8192,
+          "file": "vendor/symfony/vendor/pake/pakeYaml.class.php",
+          "line": 54,
+          "message_sha256": "17a31f70da746c9bf8fbbba0667eca93eaf0541bb20115ea641cdbbf9947d4a9"
+        }
+      ]
+    },
+    {
+      "runtime": "83",
+      "variant": "candidate",
+      "case": "hp",
+      "diagnostics": []
+    },
+    {
+      "runtime": "83",
+      "variant": "candidate",
+      "case": "core-simple",
+      "diagnostics": []
+    },
+    {
+      "runtime": "83",
+      "variant": "candidate",
+      "case": "core-full",
+      "diagnostics": []
+    },
+    {
+      "runtime": "83",
+      "variant": "candidate",
+      "case": "cli-version",
+      "diagnostics": []
+    },
+    {
+      "runtime": "83",
+      "variant": "candidate",
+      "case": "cli-version-queue",
+      "diagnostics": []
+    },
+    {
+      "runtime": "83",
+      "variant": "candidate",
+      "case": "cli-tasks",
+      "diagnostics": []
+    },
+    {
+      "runtime": "83",
+      "variant": "candidate",
+      "case": "cli-tasks-configured",
+      "diagnostics": [
+        {
+          "phase": "synthetic-config",
+          "severity": 8192,
+          "file": "alpha/config/kConf.php",
+          "line": 7,
+          "message_sha256": "8831c0051c720e1fcc279bb141fe8353b0e7b184b45a6cf31a8bee5f36d0ae62"
+        }
+      ]
+    },
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "hp-legacy",
+      "diagnostics": [
+        {
+          "phase": "setup",
+          "severity": 8192,
+          "file": "/audit/fixtures/legacy.php",
+          "line": 2,
+          "message_sha256": "edba75523862d0c47ea6df049ac8da6373cc9c532dbbc8a20f7f2d17428035c4"
+        },
+        {
+          "phase": "load",
+          "severity": 8192,
+          "file": "vendor/htmlpurifier/library/HTMLPurifier.autoload.php",
+          "line": 17,
+          "message_sha256": "edba75523862d0c47ea6df049ac8da6373cc9c532dbbc8a20f7f2d17428035c4"
+        }
+      ]
+    },
+    {
+      "runtime": "74",
+      "variant": "candidate",
+      "case": "hp-legacy",
+      "diagnostics": [
+        {
+          "phase": "setup",
+          "severity": 8192,
+          "file": "/audit/fixtures/legacy.php",
+          "line": 2,
+          "message_sha256": "edba75523862d0c47ea6df049ac8da6373cc9c532dbbc8a20f7f2d17428035c4"
+        }
+      ]
+    },
+    {
+      "runtime": "83",
+      "variant": "original",
+      "case": "fatal-hp",
+      "diagnostics": []
+    },
+    {
+      "runtime": "83",
+      "variant": "original",
+      "case": "fatal-core",
+      "diagnostics": []
+    },
+    {
+      "runtime": "83",
+      "variant": "original",
+      "case": "fatal-cli",
+      "diagnostics": []
+    }
+  ],
+  "missing_cases": [
+    "Later appended/prepended SPL callbacks",
+    "Duplicate-class winner across handlers",
+    "Callback exception propagation",
+    "Repeated direct includes/class redeclaration",
+    "SPL unavailable guard",
+    "Complete application/SQL/cache-miss/network behavior"
+  ],
+  "independent_review_pending": true
+}

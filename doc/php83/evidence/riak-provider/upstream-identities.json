@@ -1,0 +1,37 @@
+{
+  "scope": "read-only upstream retrieval, no builds or installations",
+  "commit": "8144814d8b655e5b6b12f9fe39961245a5e915f1",
+  "commit_date": "2017-03-13T13:56:09Z",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "0037c187a6f50b234a5392432839e5f76d70b10b1f299e0aa96bc0bca5992db9",
+      "bytes": 14101,
+      "url": "https://github.com/php-riak/php_riak/blob/8144814d8b655e5b6b12f9fe39961245a5e915f1/README.md"
+    },
+    {
+      "path": ".travis.yml",
+      "sha256": "6308d4e0c6fa2fa9ad027f5f76556a05d899c33346b095aabac43147df0dff11",
+      "bytes": 491,
+      "url": "https://github.com/php-riak/php_riak/blob/8144814d8b655e5b6b12f9fe39961245a5e915f1/.travis.yml"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358,
+      "url": "https://github.com/php-riak/php_riak/blob/8144814d8b655e5b6b12f9fe39961245a5e915f1/LICENSE"
+    },
+    {
+      "path": "php_riak.h",
+      "sha256": "c89f7e8337a1712247c52b1aae9e055ac540b437408cad0bcc08420826185d5b",
+      "bytes": 902,
+      "url": "https://github.com/php-riak/php_riak/blob/8144814d8b655e5b6b12f9fe39961245a5e915f1/php_riak.h"
+    },
+    {
+      "path": "riak/object.c",
+      "sha256": "f43192f9efc9c4f81cb55aae2d4308a70c4f52366b21cc0c7e97a6671cc95eb5",
+      "bytes": 27429,
+      "url": "https://github.com/php-riak/php_riak/blob/8144814d8b655e5b6b12f9fe39961245a5e915f1/riak/object.c"
+    }
+  ]
+}

@@ -261,3 +261,22 @@ regression, and two newlyvisible declaration-diagnostic files. Four API/48 CLI
 rows and68 actualartifact class cases pass bounded contracts;18groups503APIevents
 remain unresolved. See `doc/php83/exp10-integration.md`; no full-case checkbox or
 production/package/release gate closes.
+
+T0-04/T1-01 partial held ternary repair: exactly two parentheses preserve native
+PHP74 left association. Actual primary and Claude repeat each execute147 cases
+per positive mode (441 rows) plus original83 expectedfatal; source and native
+diagnostics match exactly. Five existing Iterator deprecations remain. A detected
+duplicate-mode validation gap is repaired;21tests and retained-record revalidation
+pass actual Cursor follow-up. Only130 cases have fixed independent goldens;17use
+actual native74 behavioral parity. See `doc/php83/base-object-ternary.md`. Patch
+remains held, not integrated into exp10; no aggregate checkbox/gate closes.
+
+T0-04/T1-01 partial held autoload repairs: three exact source patches validated
+with actual full files, configured task listing and controlled class fixtures.
+Primary and Claude repeat each retain20positive/3fatal/3empty-projectFAIL across26
+processes; separately30composition processes give27positive/3redeclarationfatal,
+independently repeated with exact native records and stable runtime identities.
+Intentional SPL composition differences are explicit. Typed validator guards,
+23base+15composition tests and actual CLI outcomes (including quota/timeout) are
+recorded in `doc/php83/autoload83.md`. No task-body/fullapplication acceptance,
+package integration or release gate closes. exp11 selection/build is separate.

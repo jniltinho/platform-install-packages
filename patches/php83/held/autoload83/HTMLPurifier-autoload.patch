@@ -1,0 +1,16 @@
+--- a/vendor/htmlpurifier/library/HTMLPurifier.autoload.php
++++ b/vendor/htmlpurifier/library/HTMLPurifier.autoload.php
+@@ -13,11 +13,8 @@
+         // Be polite and ensure that userland autoload gets retained
+         spl_autoload_register('__autoload');
+     }
+-} elseif (!function_exists('__autoload')) {
+-    function __autoload($class)
+-    {
+-        return HTMLPurifier_Bootstrap::autoload($class);
+-    }
++} else {
++    throw new RuntimeException('SPL autoload support is required.');
+ }
+ 
+ if (ini_get('zend.ze1_compatibility_mode')) {

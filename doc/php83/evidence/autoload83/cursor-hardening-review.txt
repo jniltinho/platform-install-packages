@@ -1,0 +1,32 @@
+Vou executar só a validação local autorizada e a revisão adversária do coletor ternário endurecido, sem tocar em ferramentas, patches ou runtime PHP.Hashes batem com os pins. Em seguida: unittest, leitura adversária do coletor e revalidação dos reports.21 testes passaram. Agora: revalidação dos reports e sondagens adversárias em memória.Confirmando o buraco histórico no coletor antigo e gravando o artefato de revisão.## Conclusão (Cursor follow-up — ternário endurecido)
+
+Pins batem; **21** testes locais OK; revalidação de ambos os reports OK. O buraco histórico do coletor antigo (duplicata `candidate74`) está fechado. Sem aprovação PHP/app/release.
+
+### Comandos e resultados
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/base-object-ternary -p 'test_*.py' -v
+# → Ran 21 tests / OK / exit 0
+# evidência: cursor-hardening-tests.{stdout,stderr,exit}
+```
+
+Replay (só `importlib` + `validate`; sem `main`/SSH/PHP):
+- `primary-r2.json` (`a3fd0120…`) → **OK**
+- `claude.json` (`3ba35723…`) → **OK**
+- exit **0** → `cursor-hardening-replay.*`
+
+Pins: `collect.py`=`976c5460…`, `test_ternary.py`=`a52eaff4…`.
+
+### Ordem real dos modos
+
+Código (`collect.py:8`): `original74, candidate74, candidate83, original83` — **não** a ordem do prompt (`…, original83, candidate83`). Fatal em `records[3]` (`collect.py:54-57`).
+
+### Correção da garantia anterior
+
+A revisão Cursor anterior (**10** testes, “no blockers” / missing-case) foi **demasiado ampla**. O coletor antigo (`reviewed-r2-collect.py:21-23,46`) só exigia `len==4` e colapsava modos num dict; duplicar `candidate74` no lugar de `candidate83` ainda devolvia `positive_rows=441`. O endurecido rejeita via igualdade exata de `MODES` (`collect.py:26`; `test_duplicate_mode` em `test_ternary.py:35`). Confirmei em memória: `dup_c74_over_c83` → **REJECTED**. Crash `loaded=[]` do autoload fica **fora** deste follow-up.
+
+### Achado restante
+
+**Limitação:** golden table só cobre índices `0..129` (`collect.py:49-53`). Casos `130..146` (probe `flat`/`alias`/`map`/`invoke`/`nested`/callers, `probe.php:30-38`) só exigem igualdade entre modos vs `original74`. Tamper hostil de `rows[130]` nos três modos positivos → **ACCEPTED**.
+
+Demais ameaças sondadas (swap/reorder, exit bool/string/255 errado, fatal errado, diags, extras) → rejeitadas. Evidência: `doc/php83/evidence/autoload83/cursor-hardening-review.json`.

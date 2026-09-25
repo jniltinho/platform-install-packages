@@ -1,0 +1,10 @@
+{
+  "mode": "local read-only import and in-memory mutation; no guest execution or edits",
+  "source_report": "doc/php83/evidence/autoload83/composition-primary-r2.json",
+  "report_sha256": "b626f1630c5f337d3e65da50310ef326328dbb1525e850c4b51410c7d438ee67",
+  "collector_sha256": "32f94442156d25e1f5673a9acd1d8d23cad7d0d4667bbc1cf60279d19c6d26e3",
+  "case": "83/candidate/cli-append",
+  "mutation": "row hit.value.loaded boolean true replaced with integer 1",
+  "observed_validator_result": "PASS",
+  "finding": "Python structural equality conflates bool and integer; genuine retained native result remains boolean; collector hardening required after review freeze"
+}

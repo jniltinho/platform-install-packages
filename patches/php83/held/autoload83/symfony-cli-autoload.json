@@ -1,0 +1,8 @@
+{
+  "status": "held; experimental SPL autoload repair pending actual entrypoint/parity execution and independent CLI review",
+  "path": "vendor/symfony-data/bin/symfony.php",
+  "patch": "symfony-cli-autoload.patch",
+  "sha256": "2ff7fdf8f13d0fb14f23bce79a0f5c6ade5c569a1ce6e3bc3a677ac45a0d4e05",
+  "before_sha256": "f934f3d5d56a5b5430bf37a6741f2a782ff377f858d0327e4056c6d2dc45234a",
+  "after_sha256": "9c3c561f44e20dee9b51ecfa580884bc895dcc2c71381692a4e2f20f6e0b44b8"
+}

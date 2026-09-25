@@ -1,0 +1,47 @@
+{
+  "reason": "Collector AttributeError on PHP JSON empty array loaded field; native control outputs preserved separately without changing frozen harness",
+  "records": [
+    {
+      "case": "fatal-hp",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-autoload83-r1/run.sh 83 original fatal-hp"
+      ],
+      "exit": 255,
+      "stdout": "\nAUTOLOAD_RESULT {\"case\":\"fatal-hp\",\"php\":\"8.3.6\",\"rows\":[],\"diagnostics\":[],\"loaded\":[],\"fatal\":{\"severity\":64,\"file\":\"vendor/htmlpurifier/library/HTMLPurifier.autoload.php\",\"line\":17,\"message_sha256\":\"f4ddbad43242def9ac94f60935242e6dfdd7ec4883eeb1daaaebb8585b53ffe0\"}}\n",
+      "stderr": "Fatal error: __autoload() is no longer supported, use spl_autoload_register() instead in /audit/source/vendor/htmlpurifier/library/HTMLPurifier.autoload.php on line 17\n"
+    },
+    {
+      "case": "fatal-core",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-autoload83-r1/run.sh 83 original fatal-core"
+      ],
+      "exit": 255,
+      "stdout": "\nAUTOLOAD_RESULT {\"case\":\"fatal-core\",\"php\":\"8.3.6\",\"rows\":[],\"diagnostics\":[],\"loaded\":[],\"fatal\":{\"severity\":64,\"file\":\"vendor/symfony/util/sfCore.class.php\",\"line\":188,\"message_sha256\":\"f4ddbad43242def9ac94f60935242e6dfdd7ec4883eeb1daaaebb8585b53ffe0\"}}\n",
+      "stderr": "Fatal error: __autoload() is no longer supported, use spl_autoload_register() instead in /audit/source/vendor/symfony/util/sfCore.class.php on line 188\n"
+    },
+    {
+      "case": "fatal-cli",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-autoload83-r1/run.sh 83 original fatal-cli"
+      ],
+      "exit": 255,
+      "stdout": "\nAUTOLOAD_RESULT {\"case\":\"fatal-cli\",\"php\":\"8.3.6\",\"rows\":[],\"diagnostics\":[],\"loaded\":[],\"fatal\":{\"severity\":64,\"file\":\"vendor/symfony-data/bin/symfony.php\",\"line\":107,\"message_sha256\":\"f4ddbad43242def9ac94f60935242e6dfdd7ec4883eeb1daaaebb8585b53ffe0\"}}\n",
+      "stderr": "Fatal error: __autoload() is no longer supported, use spl_autoload_register() instead in /audit/source/vendor/symfony-data/bin/symfony.php on line 107\n"
+    }
+  ]
+}

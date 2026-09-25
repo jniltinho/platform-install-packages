@@ -1,0 +1,108 @@
+{
+  "project": "kaltura-rigel-18.20.0-full",
+  "signal": "best_effort",
+  "indexed_at": "2026-09-25T12:19:00Z",
+  "metadata": {
+    "generation": "2026-09-25T12:19:00Z",
+    "index_mode": "full",
+    "recorded_at": "2026-09-25T12:19:04Z",
+    "recording_status": "complete",
+    "ignored_files_stored": 519,
+    "ignored_files_total": 519,
+    "hash_records_complete": true,
+    "coverage_version": 3,
+    "generation_matches": true
+  },
+  "paths": [
+    {
+      "requested_path": "vendor/htmlpurifier/library/HTMLPurifier.autoload.php",
+      "path": "vendor/htmlpurifier/library/HTMLPurifier.autoload.php",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "vendor/htmlpurifier/library/HTMLPurifier/Bootstrap.php",
+      "path": "vendor/htmlpurifier/library/HTMLPurifier/Bootstrap.php",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "vendor/htmlpurifier/library/HTMLPurifier.auto.php",
+      "path": "vendor/htmlpurifier/library/HTMLPurifier.auto.php",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "vendor/symfony-data/bin/symfony.php",
+      "path": "vendor/symfony-data/bin/symfony.php",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "vendor/symfony/util/sfCore.class.php",
+      "path": "vendor/symfony/util/sfCore.class.php",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "vendor/symfony/vendor/pake/pakeFunction.php",
+      "path": "vendor/symfony/vendor/pake/pakeFunction.php",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "vendor/symfony/vendor/pake/pakeGetopt.class.php",
+      "path": "vendor/symfony/vendor/pake/pakeGetopt.class.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/symfony/vendor/pake/pakeGetopt.class.php",
+          "kind": "parse_partial",
+          "detail": "1-275",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 1,
+              "end": 275
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/symfony/symfony.php",
+      "path": "vendor/symfony/symfony.php",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "vendor/symfony/config/sfConfig.class.php",
+      "path": "vendor/symfony/config/sfConfig.class.php",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    }
+  ],
+  "scopes": [],
+  "caveat": "Best-effort signal only. No recorded issue does not prove graph or source completeness; read flagged source and qualify claims when metadata is changed or unavailable.",
+  "direct_source_fallback": {
+    "vendor/symfony/vendor/pake/pakeGetopt.class.php": "Read full recorded partial range 1-275 directly from immutable source; top-level class guard and explicit requires relevant. No graph completeness claim."
+  }
+}

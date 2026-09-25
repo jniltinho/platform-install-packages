@@ -1,0 +1,63 @@
+{
+  "frozen_ok": true,
+  "mutation_caught": 24,
+  "mutation_total": 28,
+  "baselines_ok": [
+    {
+      "label": "comp_baseline_pass",
+      "caught": false,
+      "error": null,
+      "detail": "PASS"
+    },
+    {
+      "label": "comp74_baseline",
+      "caught": false,
+      "error": null,
+      "detail": "PASS"
+    },
+    {
+      "label": "base_baseline",
+      "caught": false,
+      "error": null,
+      "detail": "PASS"
+    },
+    {
+      "label": "base74_original_baseline",
+      "caught": false,
+      "error": null,
+      "detail": "PASS"
+    }
+  ],
+  "baselines_bad": [],
+  "uncaught_nonbaseline": [],
+  "adv_now": "REJECTED:Unexpected exact rows/traces",
+  "genuine": "PASS",
+  "replay": {
+    "primary-r3": {
+      "PASS": 20,
+      "EXPECTED_FATAL": 3,
+      "FAIL_as_VALUEERROR": 3,
+      "OTHER": 0,
+      "total": 26,
+      "matches_expected": true
+    },
+    "claude-primary": {
+      "PASS": 20,
+      "EXPECTED_FATAL": 3,
+      "FAIL_as_VALUEERROR": 3,
+      "OTHER": 0,
+      "total": 26,
+      "matches_expected": true
+    },
+    "composition-primary-r2": {
+      "PASS": 27,
+      "EXPECTED_FATAL": 3,
+      "FAIL_as_VALUEERROR": 0,
+      "OTHER": 0,
+      "total": 30,
+      "matches_expected": true
+    },
+    "primary_eq_claude_sha": true,
+    "NOT_blanket_26_pass": true
+  }
+}

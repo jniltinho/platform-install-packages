@@ -1,0 +1,56 @@
+# Cursor typed follow-up review (autoload83 composition)
+
+Executor: Cursor Agent CLI (actual). Role: independent typed-contract checkpoint.
+Scope: local unittest + importlib validate replay + in-memory mutations only.
+NO VM/SSH/application PHP/SQL/network/git/CI; no tool edits. application_acceptance=false.
+
+## Commands / counts / exits
+
+1. 
+   - Ran **15** tests (expected 15), exit **0**, OK
+2. 
+   - Ran **23** tests (expected 23), exit **0**, OK
+
+Frozen hash inputs (composition-harness-typed-final.json): **unchanged** (True).
+
+## Mutations / adversarial
+
+Prior Cursor review (13 composition + 21 base) did **not** catch bool/int equality; author adversarial r1 did (True->1 accepted via Python ==).
+
+This follow-up (typed collectors):
+- hit.loaded True->1 / 1.0: REJECTED (both collectors' strict_equal path)
+- miss/false booleans -> 0 / 0.0: REJECTED
+- exits False / 0.0 / 255.0: REJECTED ()
+- diagnostic severity/line float or bool: REJECTED (base explicit type check; composition via strict_equal diagnostics)
+- extra / missing rows: REJECTED
+- Author r1 mutation on retained composition-primary-r2 83/candidate/cli-append: now **REJECTED**; genuine row still **PASS**
+- Attack mutations caught: 24/28 (4 baselines intentionally PASS)
+
+Does **not** prove all malformed data impossible.
+
+## Retained replay (validate only; never main/inventory/SSH)
+
+| Report | PASS | EXPECTED_FATAL | FAIL(as VALUEERROR) | match |
+|---|---:|---:|---:|---|
+| primary-r3 | 20 | 3 | 3 cli-tasks | yes |
+| claude-primary | 20 | 3 | 3 cli-tasks | yes (same sha as primary-r3) |
+| composition-primary-r2 | 27 | 3 | 0 | yes |
+
+VALUEERROR message for cli-tasks: . NOT blanket 26-pass. Old failures preserved.
+
+## Contract preserved
+
+- Native74 composition deltas: cli-append original winner shadow vs candidate FixtureFallback; queue without vs with Closure.
+- Duplicate-include fatals: original  redeclare line 107 vs candidate  line 36.
+- , .
+
+## Limitations
+
+- No guest runtime here (Claude owns runtime).
+- Harness PASS ≠ application acceptance / release.
+- Unit coverage is selected type-confusion cases, not an exhaustive malformed-payload proof.
+- Composition relies on strict_equal for diagnostic type distinction vs base's explicit .
+
+## Verdict
+
+Typed contract checkpoint **PASS** for local tests + retained genuine replay + targeted type-confusion mutations under freeze. No application acceptance.

@@ -1,0 +1,12 @@
+Independent actual Cursor follow-up, bounded 150 seconds. Cwd /home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83. Read AGENTS.md. NO VM, SSH, application PHP, SQL, network/backend, source/patch/tool edits, git, CI/releases. Only write doc/php83/evidence/autoload83/composition-cursor-typed-* evidence. Tools frozen in composition-harness-typed-final.json. Other agents active; Claude separately owns runtime.
+
+Prior actual Cursor review passed 13composition+21base tests but an author adversarial mutation found integer1 replacing booleantrue in hit.loaded accepted due Python equality. Evidence composition-author-adversarial-r1.json. New collectors use strict canonical JSON equality and require type(exit) is int; base diagnostic line/severity require int. Do not imply your prior review caught this or that current tests prove all malformed data impossible.
+
+Actually execute, saving each stdout/stderr/exit:
+PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/autoload83-composition -p 'test_*.py' -v
+PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/autoload83 -p 'test_*.py' -v
+Expected15 and23; report actual.
+
+Review frozen collect.py/test*.py in both directories, specifically bool->1/1.0, false->0/0.0 and noninteger exits includingFalse/0.0/255.0; typed diagnostic severity/line in both; reject extra/missing rows. Run extra in-memory mutations if useful, no edits. For retained reports, you may import validators and replay like previous composition-cursor-replay artifacts (inspect prior script or records, NEVER invoke main/inventory/SSH). Current composition-typed-revalidation.json already records author replay; independently verify relevant retained genuine data pass with expected exact outcomes: primary-r3 and claude-primary base reports20PASS+3EXPECTED_FATAL+3specificcli-tasksFAIL; composition-primary-r2 27PASS+3EXPECTED_FATAL. No blanket26pass or application acceptance.
+
+Preserve strict/native74 composition deltas, duplicateinclude different fatal declaration source/line, and old failures. Verify frozen hash inputs remain unchanged. Return/write concise public review with actualcommands/counts/exits, mutations/replay performed and findings/limitations. Only your prefix evidence; no background tasks or spawning. No broad scope expansion; checkpoint final typed contract only.

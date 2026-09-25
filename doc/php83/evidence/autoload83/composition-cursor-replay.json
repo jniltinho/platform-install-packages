@@ -1,0 +1,1011 @@
+{
+  "executor": "Cursor Agent CLI (composer)",
+  "role": "independent retained-evidence replay (no collect.main, no SSH/PHP)",
+  "timestamp_utc": "2026-09-25T21:17:59.826407+00:00",
+  "input_report_hashes": {
+    "primary-r3": "825e9147e227c5f3472e4ec01e420bd7bdbada56920cda035d65915859295904",
+    "claude-primary": "825e9147e227c5f3472e4ec01e420bd7bdbada56920cda035d65915859295904",
+    "composition-primary-r2": "b626f1630c5f337d3e65da50310ef326328dbb1525e850c4b51410c7d438ee67"
+  },
+  "base_replays": {
+    "primary-r3": {
+      "label": "primary-r3",
+      "path": "doc/php83/evidence/autoload83/primary-r3.json",
+      "sha256": "825e9147e227c5f3472e4ec01e420bd7bdbada56920cda035d65915859295904",
+      "original_status": "FAIL",
+      "original_failed_checks": 3,
+      "matrix_rows": 26,
+      "files_per_tree": 1630,
+      "tree_file_count_from_hashes": 3268,
+      "counts": {
+        "PASS": 20,
+        "EXPECTED_FATAL": 3,
+        "VALUEERROR": 3,
+        "OTHER": 0,
+        "total": 26
+      },
+      "valueerror_messages": [
+        "Real entrypoint failed (not waived)"
+      ],
+      "cli_tasks_valueerrors": [
+        {
+          "case": "cli-tasks",
+          "runtime": "74",
+          "variant": "original",
+          "exit": 1,
+          "replay_error": "Real entrypoint failed (not waived)",
+          "original_status": "FAIL"
+        },
+        {
+          "case": "cli-tasks",
+          "runtime": "74",
+          "variant": "candidate",
+          "exit": 1,
+          "replay_error": "Real entrypoint failed (not waived)",
+          "original_status": "FAIL"
+        },
+        {
+          "case": "cli-tasks",
+          "runtime": "83",
+          "variant": "candidate",
+          "exit": 1,
+          "replay_error": "Real entrypoint failed (not waived)",
+          "original_status": "FAIL"
+        }
+      ],
+      "configured_spot": [
+        {
+          "runtime": "74",
+          "variant": "original",
+          "exit": 0,
+          "loaded_count": 37,
+          "tasks_found": [
+            "init-project",
+            "init-module",
+            "propel-build-model"
+          ],
+          "listing_startswith_available": true
+        },
+        {
+          "runtime": "74",
+          "variant": "candidate",
+          "exit": 0,
+          "loaded_count": 37,
+          "tasks_found": [
+            "init-project",
+            "init-module",
+            "propel-build-model"
+          ],
+          "listing_startswith_available": true
+        },
+        {
+          "runtime": "83",
+          "variant": "candidate",
+          "exit": 0,
+          "loaded_count": 37,
+          "tasks_found": [
+            "init-project",
+            "init-module",
+            "propel-build-model"
+          ],
+          "listing_startswith_available": true
+        }
+      ],
+      "rows": [
+        {
+          "case": "hp",
+          "runtime": "74",
+          "variant": "original",
+          "exit": 0,
+          "original_status": "PASS",
+          "original_validation_error": null,
+          "replay_status": "PASS"
+        },
+        {
+          "case": "core-simple",
+          "runtime": "74",
+          "variant": "original",
+          "exit": 0,
+          "original_status": "PASS",
+          "original_validation_error": null,
+          "replay_status": "PASS"
+        },
+        {
+          "case": "core-full",
+          "runtime": "74",
+          "variant": "original",
+          "exit": 0,
+          "original_status": "PASS",
+          "original_validation_error": null,
+          "replay_status": "PASS"
+        },
+        {
+          "case": "cli-version",
+          "runtime": "74",
+          "variant": "original",
+          "exit": 0,
+          "original_status": "PASS",
+          "original_validation_error": null,
+          "replay_status": "PASS"
+        },
+        {
+          "case": "cli-version-queue",
+          "runtime": "74",
+          "variant": "original",
+          "exit": 0,
+          "original_status": "PASS",
+          "original_validation_error": null,
+          "replay_status": "PASS"
+        },
+        {
+          "case": "cli-tasks",
+          "runtime": "74",
+          "variant": "original",
+          "exit": 1,
+          "original_status": "FAIL",
+          "original_validation_error": "Real entrypoint failed (not waived)",
+          "replay_status": "VALUEERROR",
+          "replay_error": "Real entrypoint failed (not waived)"
+        },
+        {
+          "case": "cli-tasks-configured",
+          "runtime": "74",
+          "variant": "original",
+          "exit": 0,
+          "original_status": "PASS",
+          "original_validation_error": null,
+          "replay_status": "PASS"
+        },
+        {
+          "case": "hp",
+          "runtime": "74",
+          "variant": "candidate",
+          "exit": 0,
+          "original_status": "PASS",
+          "original_validation_error": null,
+          "replay_status": "PASS"
+        },
+        {
+          "case": "core-simple",
+          "runtime": "74",
+          "variant": "candidate",
+          "exit": 0,
+          "original_status": "PASS",
+          "original_validation_error": null,
+          "replay_status": "PASS"
+        },
+        {
+          "case": "core-full",
+          "runtime": "74",
+          "variant": "candidate",
+          "exit": 0,
+          "original_status": "PASS",
+          "original_validation_error": null,
+          "replay_status": "PASS"
+        },
+        {
+          "case": "cli-version",
+          "runtime": "74",
+          "variant": "candidate",
+          "exit": 0,
+          "original_status": "PASS",
+          "original_validation_error": null,
+          "replay_status": "PASS"
+        },
+        {
+          "case": "cli-version-queue",
+          "runtime": "74",
+          "variant": "candidate",
+          "exit": 0,
+          "original_status": "PASS",
+          "original_validation_error": null,
+          "replay_status": "PASS"
+        },
+        {
+          "case": "cli-tasks",
+          "runtime": "74",
+          "variant": "candidate",
+          "exit": 1,
+          "original_status": "FAIL",
+          "original_validation_error": "Real entrypoint failed (not waived)",
+          "replay_status": "VALUEERROR",
+          "replay_error": "Real entrypoint failed (not waived)"
+        },
+        {
+          "case": "cli-tasks-configured",
+          "runtime": "74",
+          "variant": "candidate",
+          "exit": 0,
+          "original_status": "PASS",
+          "original_validation_error": null,
+          "replay_status": "PASS"
+        },
+        {
+          "case": "hp",
+          "runtime": "83",
+          "variant": "candidate",
+          "exit": 0,
+          "original_status": "PASS",
+          "original_validation_error": null,
+          "replay_status": "PASS"
+        },
+        {
+          "case": "core-simple",
+          "runtime": "83",
+          "variant": "candidate",
+          "exit": 0,
+          "original_status": "PASS",
+          "original_validation_error": null,
+          "replay_status": "PASS"
+        },
+        {
+          "case": "core-full",
+          "runtime": "83",
+          "variant": "candidate",
+          "exit": 0,
+          "original_status": "PASS",
+          "original_validation_error": null,
+          "replay_status": "PASS"
+        },
+        {
+          "case": "cli-version",
+          "runtime": "83",
+          "variant": "candidate",
+          "exit": 0,
+          "original_status": "PASS",
+          "original_validation_error": null,
+          "replay_status": "PASS"
+        },
+        {
+          "case": "cli-version-queue",
+          "runtime": "83",
+          "variant": "candidate",
+          "exit": 0,
+          "original_status": "PASS",
+          "original_validation_error": null,
+          "replay_status": "PASS"
+        },
+        {
+          "case": "cli-tasks",
+          "runtime": "83",
+          "variant": "candidate",
+          "exit": 1,
+          "original_status": "FAIL",
+          "original_validation_error": "Real entrypoint failed (not waived)",
+          "replay_status": "VALUEERROR",
+          "replay_error": "Real entrypoint failed (not waived)"
+        },
+        {
+          "case": "cli-tasks-configured",
+          "runtime": "83",
+          "variant": "candidate",
+          "exit": 0,
+          "original_status": "PASS",
+          "original_validation_error": null,
+          "replay_status": "PASS"
+        },
+        {
+          "case": "hp-legacy",
+          "runtime": "74",
+          "variant": "original",
+          "exit": 0,
+          "original_status": "PASS",
+          "original_validation_error": null,
+          "replay_status": "PASS"
+        },
+        {
+          "case": "hp-legacy",
+          "runtime": "74",
+          "variant": "candidate",
+          "exit": 0,
+          "original_status": "PASS",
+          "original_validation_error": null,
+          "replay_status": "PASS"
+        },
+        {
+          "case": "fatal-hp",
+          "runtime": "83",
+          "variant": "original",
+          "exit": 255,
+          "original_status": "EXPECTED_FATAL",
+          "original_validation_error": null,
+          "replay_status": "EXPECTED_FATAL"
+        },
+        {
+          "case": "fatal-core",
+          "runtime": "83",
+          "variant": "original",
+          "exit": 255,
+          "original_status": "EXPECTED_FATAL",
+          "original_validation_error": null,
+          "replay_status": "EXPECTED_FATAL"
+        },
+        {
+          "case": "fatal-cli",
+          "runtime": "83",
+          "variant": "original",
+          "exit": 255,
+          "original_status": "EXPECTED_FATAL",
+          "original_validation_error": null,
+          "replay_status": "EXPECTED_FATAL"
+        }
+      ]
+    },
+    "claude-primary": {
+      "label": "claude-primary",
+      "path": "doc/php83/evidence/autoload83/claude-primary.json",
+      "sha256": "825e9147e227c5f3472e4ec01e420bd7bdbada56920cda035d65915859295904",
+      "original_status": "FAIL",
+      "original_failed_checks": 3,
+      "matrix_rows": 26,
+      "files_per_tree": 1630,
+      "tree_file_count_from_hashes": 3268,
+      "counts": {
+        "PASS": 20,
+        "EXPECTED_FATAL": 3,
+        "VALUEERROR": 3,
+        "OTHER": 0,
+        "total": 26
+      },
+      "valueerror_messages": [
+        "Real entrypoint failed (not waived)"
+      ],
+      "cli_tasks_valueerrors": [
+        {
+          "case": "cli-tasks",
+          "runtime": "74",
+          "variant": "original",
+          "exit": 1,
+          "replay_error": "Real entrypoint failed (not waived)",
+          "original_status": "FAIL"
+        },
+        {
+          "case": "cli-tasks",
+          "runtime": "74",
+          "variant": "candidate",
+          "exit": 1,
+          "replay_error": "Real entrypoint failed (not waived)",
+          "original_status": "FAIL"
+        },
+        {
+          "case": "cli-tasks",
+          "runtime": "83",
+          "variant": "candidate",
+          "exit": 1,
+          "replay_error": "Real entrypoint failed (not waived)",
+          "original_status": "FAIL"
+        }
+      ],
+      "configured_spot": [
+        {
+          "runtime": "74",
+          "variant": "original",
+          "exit": 0,
+          "loaded_count": 37,
+          "tasks_found": [
+            "init-project",
+            "init-module",
+            "propel-build-model"
+          ],
+          "listing_startswith_available": true
+        },
+        {
+          "runtime": "74",
+          "variant": "candidate",
+          "exit": 0,
+          "loaded_count": 37,
+          "tasks_found": [
+            "init-project",
+            "init-module",
+            "propel-build-model"
+          ],
+          "listing_startswith_available": true
+        },
+        {
+          "runtime": "83",
+          "variant": "candidate",
+          "exit": 0,
+          "loaded_count": 37,
+          "tasks_found": [
+            "init-project",
+            "init-module",
+            "propel-build-model"
+          ],
+          "listing_startswith_available": true
+        }
+      ],
+      "rows": [
+        {
+          "case": "hp",
+          "runtime": "74",
+          "variant": "original",
+          "exit": 0,
+          "original_status": "PASS",
+          "original_validation_error": null,
+          "replay_status": "PASS"
+        },
+        {
+          "case": "core-simple",
+          "runtime": "74",
+          "variant": "original",
+          "exit": 0,
+          "original_status": "PASS",
+          "original_validation_error": null,
+          "replay_status": "PASS"
+        },
+        {
+          "case": "core-full",
+          "runtime": "74",
+          "variant": "original",
+          "exit": 0,
+          "original_status": "PASS",
+          "original_validation_error": null,
+          "replay_status": "PASS"
+        },
+        {
+          "case": "cli-version",
+          "runtime": "74",
+          "variant": "original",
+          "exit": 0,
+          "original_status": "PASS",
+          "original_validation_error": null,
+          "replay_status": "PASS"
+        },
+        {
+          "case": "cli-version-queue",
+          "runtime": "74",
+          "variant": "original",
+          "exit": 0,
+          "original_status": "PASS",
+          "original_validation_error": null,
+          "replay_status": "PASS"
+        },
+        {
+          "case": "cli-tasks",
+          "runtime": "74",
+          "variant": "original",
+          "exit": 1,
+          "original_status": "FAIL",
+          "original_validation_error": "Real entrypoint failed (not waived)",
+          "replay_status": "VALUEERROR",
+          "replay_error": "Real entrypoint failed (not waived)"
+        },
+        {
+          "case": "cli-tasks-configured",
+          "runtime": "74",
+          "variant": "original",
+          "exit": 0,
+          "original_status": "PASS",
+          "original_validation_error": null,
+          "replay_status": "PASS"
+        },
+        {
+          "case": "hp",
+          "runtime": "74",
+          "variant": "candidate",
+          "exit": 0,
+          "original_status": "PASS",
+          "original_validation_error": null,
+          "replay_status": "PASS"
+        },
+        {
+          "case": "core-simple",
+          "runtime": "74",
+          "variant": "candidate",
+          "exit": 0,
+          "original_status": "PASS",
+          "original_validation_error": null,
+          "replay_status": "PASS"
+        },
+        {
+          "case": "core-full",
+          "runtime": "74",
+          "variant": "candidate",
+          "exit": 0,
+          "original_status": "PASS",
+          "original_validation_error": null,
+          "replay_status": "PASS"
+        },
+        {
+          "case": "cli-version",
+          "runtime": "74",
+          "variant": "candidate",
+          "exit": 0,
+          "original_status": "PASS",
+          "original_validation_error": null,
+          "replay_status": "PASS"
+        },
+        {
+          "case": "cli-version-queue",
+          "runtime": "74",
+          "variant": "candidate",
+          "exit": 0,
+          "original_status": "PASS",
+          "original_validation_error": null,
+          "replay_status": "PASS"
+        },
+        {
+          "case": "cli-tasks",
+          "runtime": "74",
+          "variant": "candidate",
+          "exit": 1,
+          "original_status": "FAIL",
+          "original_validation_error": "Real entrypoint failed (not waived)",
+          "replay_status": "VALUEERROR",
+          "replay_error": "Real entrypoint failed (not waived)"
+        },
+        {
+          "case": "cli-tasks-configured",
+          "runtime": "74",
+          "variant": "candidate",
+          "exit": 0,
+          "original_status": "PASS",
+          "original_validation_error": null,
+          "replay_status": "PASS"
+        },
+        {
+          "case": "hp",
+          "runtime": "83",
+          "variant": "candidate",
+          "exit": 0,
+          "original_status": "PASS",
+          "original_validation_error": null,
+          "replay_status": "PASS"
+        },
+        {
+          "case": "core-simple",
+          "runtime": "83",
+          "variant": "candidate",
+          "exit": 0,
+          "original_status": "PASS",
+          "original_validation_error": null,
+          "replay_status": "PASS"
+        },
+        {
+          "case": "core-full",
+          "runtime": "83",
+          "variant": "candidate",
+          "exit": 0,
+          "original_status": "PASS",
+          "original_validation_error": null,
+          "replay_status": "PASS"
+        },
+        {
+          "case": "cli-version",
+          "runtime": "83",
+          "variant": "candidate",
+          "exit": 0,
+          "original_status": "PASS",
+          "original_validation_error": null,
+          "replay_status": "PASS"
+        },
+        {
+          "case": "cli-version-queue",
+          "runtime": "83",
+          "variant": "candidate",
+          "exit": 0,
+          "original_status": "PASS",
+          "original_validation_error": null,
+          "replay_status": "PASS"
+        },
+        {
+          "case": "cli-tasks",
+          "runtime": "83",
+          "variant": "candidate",
+          "exit": 1,
+          "original_status": "FAIL",
+          "original_validation_error": "Real entrypoint failed (not waived)",
+          "replay_status": "VALUEERROR",
+          "replay_error": "Real entrypoint failed (not waived)"
+        },
+        {
+          "case": "cli-tasks-configured",
+          "runtime": "83",
+          "variant": "candidate",
+          "exit": 0,
+          "original_status": "PASS",
+          "original_validation_error": null,
+          "replay_status": "PASS"
+        },
+        {
+          "case": "hp-legacy",
+          "runtime": "74",
+          "variant": "original",
+          "exit": 0,
+          "original_status": "PASS",
+          "original_validation_error": null,
+          "replay_status": "PASS"
+        },
+        {
+          "case": "hp-legacy",
+          "runtime": "74",
+          "variant": "candidate",
+          "exit": 0,
+          "original_status": "PASS",
+          "original_validation_error": null,
+          "replay_status": "PASS"
+        },
+        {
+          "case": "fatal-hp",
+          "runtime": "83",
+          "variant": "original",
+          "exit": 255,
+          "original_status": "EXPECTED_FATAL",
+          "original_validation_error": null,
+          "replay_status": "EXPECTED_FATAL"
+        },
+        {
+          "case": "fatal-core",
+          "runtime": "83",
+          "variant": "original",
+          "exit": 255,
+          "original_status": "EXPECTED_FATAL",
+          "original_validation_error": null,
+          "replay_status": "EXPECTED_FATAL"
+        },
+        {
+          "case": "fatal-cli",
+          "runtime": "83",
+          "variant": "original",
+          "exit": 255,
+          "original_status": "EXPECTED_FATAL",
+          "original_validation_error": null,
+          "replay_status": "EXPECTED_FATAL"
+        }
+      ]
+    }
+  },
+  "composition_replay": {
+    "label": "composition-primary-r2",
+    "path": "doc/php83/evidence/autoload83/composition-primary-r2.json",
+    "sha256": "b626f1630c5f337d3e65da50310ef326328dbb1525e850c4b51410c7d438ee67",
+    "original_status": "PASS",
+    "original_failed_checks": 0,
+    "counts": {
+      "PASS": 27,
+      "EXPECTED_FATAL": 3,
+      "VALUEERROR": 0,
+      "OTHER": 0,
+      "total": 30
+    },
+    "rows": [
+      {
+        "case": "hp-append",
+        "runtime": "74",
+        "variant": "original",
+        "exit": 0,
+        "original_status": "PASS",
+        "original_validation_error": null,
+        "stderr_sha256": "cff3ee152266e54d25edf9b83e6fdf4ac3f100e4561b89644cd91c3808614265",
+        "stderr_len": 158,
+        "replay_status": "PASS"
+      },
+      {
+        "case": "hp-prepend",
+        "runtime": "74",
+        "variant": "original",
+        "exit": 0,
+        "original_status": "PASS",
+        "original_validation_error": null,
+        "stderr_sha256": "cff3ee152266e54d25edf9b83e6fdf4ac3f100e4561b89644cd91c3808614265",
+        "stderr_len": 158,
+        "replay_status": "PASS"
+      },
+      {
+        "case": "hp-throw",
+        "runtime": "74",
+        "variant": "original",
+        "exit": 0,
+        "original_status": "PASS",
+        "original_validation_error": null,
+        "stderr_sha256": "cff3ee152266e54d25edf9b83e6fdf4ac3f100e4561b89644cd91c3808614265",
+        "stderr_len": 158,
+        "replay_status": "PASS"
+      },
+      {
+        "case": "hp-repeat",
+        "runtime": "74",
+        "variant": "original",
+        "exit": 0,
+        "original_status": "PASS",
+        "original_validation_error": null,
+        "stderr_sha256": "2af73589a36f153373905f957580a46bf95dc99ea06f0849c4d33d99a4bf92ad",
+        "stderr_len": 316,
+        "replay_status": "PASS"
+      },
+      {
+        "case": "core-repeat",
+        "runtime": "74",
+        "variant": "original",
+        "exit": 0,
+        "original_status": "PASS",
+        "original_validation_error": null,
+        "stderr_sha256": "1155a81e095682aad14b0e364c6a4530614b6b8b64f9356c5f22c2062153ca68",
+        "stderr_len": 284,
+        "replay_status": "PASS"
+      },
+      {
+        "case": "cli-append",
+        "runtime": "74",
+        "variant": "original",
+        "exit": 0,
+        "original_status": "PASS",
+        "original_validation_error": null,
+        "stderr_sha256": "3ab556f94256d2eee3ef534dd324843c6a4a4e2312c51ee36d6d7de4dcdf501d",
+        "stderr_len": 364,
+        "replay_status": "PASS"
+      },
+      {
+        "case": "cli-prepend",
+        "runtime": "74",
+        "variant": "original",
+        "exit": 0,
+        "original_status": "PASS",
+        "original_validation_error": null,
+        "stderr_sha256": "3ab556f94256d2eee3ef534dd324843c6a4a4e2312c51ee36d6d7de4dcdf501d",
+        "stderr_len": 364,
+        "replay_status": "PASS"
+      },
+      {
+        "case": "cli-throw-front",
+        "runtime": "74",
+        "variant": "original",
+        "exit": 0,
+        "original_status": "PASS",
+        "original_validation_error": null,
+        "stderr_sha256": "3ab556f94256d2eee3ef534dd324843c6a4a4e2312c51ee36d6d7de4dcdf501d",
+        "stderr_len": 364,
+        "replay_status": "PASS"
+      },
+      {
+        "case": "cli-throw-tail",
+        "runtime": "74",
+        "variant": "original",
+        "exit": 0,
+        "original_status": "PASS",
+        "original_validation_error": null,
+        "stderr_sha256": "3ab556f94256d2eee3ef534dd324843c6a4a4e2312c51ee36d6d7de4dcdf501d",
+        "stderr_len": 364,
+        "replay_status": "PASS"
+      },
+      {
+        "case": "cli-repeat",
+        "runtime": "74",
+        "variant": "original",
+        "exit": 255,
+        "original_status": "EXPECTED_FATAL",
+        "original_validation_error": null,
+        "stderr_sha256": "372230a1e7fafff94ed8cab626ecaad577963157d4df976e32fadc700849ac40",
+        "stderr_len": 692,
+        "replay_status": "EXPECTED_FATAL"
+      },
+      {
+        "case": "hp-append",
+        "runtime": "74",
+        "variant": "candidate",
+        "exit": 0,
+        "original_status": "PASS",
+        "original_validation_error": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_len": 0,
+        "replay_status": "PASS"
+      },
+      {
+        "case": "hp-prepend",
+        "runtime": "74",
+        "variant": "candidate",
+        "exit": 0,
+        "original_status": "PASS",
+        "original_validation_error": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_len": 0,
+        "replay_status": "PASS"
+      },
+      {
+        "case": "hp-throw",
+        "runtime": "74",
+        "variant": "candidate",
+        "exit": 0,
+        "original_status": "PASS",
+        "original_validation_error": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_len": 0,
+        "replay_status": "PASS"
+      },
+      {
+        "case": "hp-repeat",
+        "runtime": "74",
+        "variant": "candidate",
+        "exit": 0,
+        "original_status": "PASS",
+        "original_validation_error": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_len": 0,
+        "replay_status": "PASS"
+      },
+      {
+        "case": "core-repeat",
+        "runtime": "74",
+        "variant": "candidate",
+        "exit": 0,
+        "original_status": "PASS",
+        "original_validation_error": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_len": 0,
+        "replay_status": "PASS"
+      },
+      {
+        "case": "cli-append",
+        "runtime": "74",
+        "variant": "candidate",
+        "exit": 0,
+        "original_status": "PASS",
+        "original_validation_error": null,
+        "stderr_sha256": "dd6a651b257843c41799fdcc324341499868f067238eab8c9be9426060a27432",
+        "stderr_len": 223,
+        "replay_status": "PASS"
+      },
+      {
+        "case": "cli-prepend",
+        "runtime": "74",
+        "variant": "candidate",
+        "exit": 0,
+        "original_status": "PASS",
+        "original_validation_error": null,
+        "stderr_sha256": "dd6a651b257843c41799fdcc324341499868f067238eab8c9be9426060a27432",
+        "stderr_len": 223,
+        "replay_status": "PASS"
+      },
+      {
+        "case": "cli-throw-front",
+        "runtime": "74",
+        "variant": "candidate",
+        "exit": 0,
+        "original_status": "PASS",
+        "original_validation_error": null,
+        "stderr_sha256": "dd6a651b257843c41799fdcc324341499868f067238eab8c9be9426060a27432",
+        "stderr_len": 223,
+        "replay_status": "PASS"
+      },
+      {
+        "case": "cli-throw-tail",
+        "runtime": "74",
+        "variant": "candidate",
+        "exit": 0,
+        "original_status": "PASS",
+        "original_validation_error": null,
+        "stderr_sha256": "dd6a651b257843c41799fdcc324341499868f067238eab8c9be9426060a27432",
+        "stderr_len": 223,
+        "replay_status": "PASS"
+      },
+      {
+        "case": "cli-repeat",
+        "runtime": "74",
+        "variant": "candidate",
+        "exit": 255,
+        "original_status": "EXPECTED_FATAL",
+        "original_validation_error": null,
+        "stderr_sha256": "2250e9c835c0de749b5b33baff8f8b39f2cd4bebe43bdc413349d73769293c88",
+        "stderr_len": 374,
+        "replay_status": "EXPECTED_FATAL"
+      },
+      {
+        "case": "hp-append",
+        "runtime": "83",
+        "variant": "candidate",
+        "exit": 0,
+        "original_status": "PASS",
+        "original_validation_error": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_len": 0,
+        "replay_status": "PASS"
+      },
+      {
+        "case": "hp-prepend",
+        "runtime": "83",
+        "variant": "candidate",
+        "exit": 0,
+        "original_status": "PASS",
+        "original_validation_error": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_len": 0,
+        "replay_status": "PASS"
+      },
+      {
+        "case": "hp-throw",
+        "runtime": "83",
+        "variant": "candidate",
+        "exit": 0,
+        "original_status": "PASS",
+        "original_validation_error": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_len": 0,
+        "replay_status": "PASS"
+      },
+      {
+        "case": "hp-repeat",
+        "runtime": "83",
+        "variant": "candidate",
+        "exit": 0,
+        "original_status": "PASS",
+        "original_validation_error": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_len": 0,
+        "replay_status": "PASS"
+      },
+      {
+        "case": "core-repeat",
+        "runtime": "83",
+        "variant": "candidate",
+        "exit": 0,
+        "original_status": "PASS",
+        "original_validation_error": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_len": 0,
+        "replay_status": "PASS"
+      },
+      {
+        "case": "cli-append",
+        "runtime": "83",
+        "variant": "candidate",
+        "exit": 0,
+        "original_status": "PASS",
+        "original_validation_error": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_len": 0,
+        "replay_status": "PASS"
+      },
+      {
+        "case": "cli-prepend",
+        "runtime": "83",
+        "variant": "candidate",
+        "exit": 0,
+        "original_status": "PASS",
+        "original_validation_error": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_len": 0,
+        "replay_status": "PASS"
+      },
+      {
+        "case": "cli-throw-front",
+        "runtime": "83",
+        "variant": "candidate",
+        "exit": 0,
+        "original_status": "PASS",
+        "original_validation_error": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_len": 0,
+        "replay_status": "PASS"
+      },
+      {
+        "case": "cli-throw-tail",
+        "runtime": "83",
+        "variant": "candidate",
+        "exit": 0,
+        "original_status": "PASS",
+        "original_validation_error": null,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_len": 0,
+        "replay_status": "PASS"
+      },
+      {
+        "case": "cli-repeat",
+        "runtime": "83",
+        "variant": "candidate",
+        "exit": 255,
+        "original_status": "EXPECTED_FATAL",
+        "original_validation_error": null,
+        "stderr_sha256": "df3a8424ab7f26891c141c6adc7710cb69c749d8f1b275ec23c3e19685c2c9ee",
+        "stderr_len": 151,
+        "replay_status": "EXPECTED_FATAL"
+      }
+    ],
+    "whitelist_note": "derived per-record from source_identity.hashes + harness own fixtures/probe",
+    "harness_keys": [
+      "fixtures/cli-shadow.php",
+      "fixtures/hp-shadow.php",
+      "probe.php",
+      "run.sh"
+    ]
+  }
+}

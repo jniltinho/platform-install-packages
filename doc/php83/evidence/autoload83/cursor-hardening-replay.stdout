@@ -1,0 +1,89 @@
+collect.py sha256=976c5460fa86152213a5d3a8230055d0117de26e00b0a67effe15bfff3b514d7
+collect.py pin_match=True
+MODES=['original74', 'candidate74', 'candidate83', 'original83']
+--- file=/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/base-object-ternary/primary-r2.json
+file_sha256=a3fd012036acf09548c498ba76add02da20eaef7ec96fefab466803ce742ca51
+record_modes=['original74', 'candidate74', 'candidate83', 'original83']
+record_count=4
+validate_ok=True summary={"application_acceptance": false, "functional_cases_per_positive_mode": 147, "load_deprecation_removed_explicitly": true, "original83_expected_fatal": true, "positive_rows": 441, "retained_php83_dependency_deprecations": 5}
+--- file=/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/base-object-ternary/claude.json
+file_sha256=3ba3572300440c85afcddbf64cbe58e444e2b4547c13e19300f905f6ddc3d876
+record_modes=['original74', 'candidate74', 'candidate83', 'original83']
+record_count=4
+validate_ok=True summary={"application_acceptance": false, "functional_cases_per_positive_mode": 147, "load_deprecation_removed_explicitly": true, "original83_expected_fatal": true, "positive_rows": 441, "retained_php83_dependency_deprecations": 5}
+--- outcomes_json ---
+[
+  {
+    "path": "doc/php83/evidence/base-object-ternary/primary-r2.json",
+    "sha256": "a3fd012036acf09548c498ba76add02da20eaef7ec96fefab466803ce742ca51",
+    "modes": [
+      "original74",
+      "candidate74",
+      "candidate83",
+      "original83"
+    ],
+    "ok": true,
+    "summary": {
+      "functional_cases_per_positive_mode": 147,
+      "positive_rows": 441,
+      "original83_expected_fatal": true,
+      "load_deprecation_removed_explicitly": true,
+      "retained_php83_dependency_deprecations": 5,
+      "application_acceptance": false
+    },
+    "error": null
+  },
+  {
+    "path": "doc/php83/evidence/base-object-ternary/claude.json",
+    "sha256": "3ba3572300440c85afcddbf64cbe58e444e2b4547c13e19300f905f6ddc3d876",
+    "modes": [
+      "original74",
+      "candidate74",
+      "candidate83",
+      "original83"
+    ],
+    "ok": true,
+    "summary": {
+      "functional_cases_per_positive_mode": 147,
+      "positive_rows": 441,
+      "original83_expected_fatal": true,
+      "load_deprecation_removed_explicitly": true,
+      "retained_php83_dependency_deprecations": 5,
+      "application_acceptance": false
+    },
+    "error": null
+  }
+]
+--- hostile_mutations ---
+dup_c74_over_c83: REJECTED (ValueError: Exact four ordered unique runtime controls required)
+swap_c74_c83: REJECTED (ValueError: Exact four ordered unique runtime controls required)
+swap_c83_o83: REJECTED (ValueError: Exact four ordered unique runtime controls required)
+bool_true_exit_o83: REJECTED (ValueError: Unexpected process exit)
+exit255_on_o74: REJECTED (ValueError: Unexpected process exit)
+o83_as_success: REJECTED (ValueError: Unexpected process exit)
+wrong_fatal_msg: REJECTED (ValueError: Exact original83 fatal channel contract mismatch)
+shared_nonmatrix_drift: ACCEPTED (unexpected if threat)
+string_exit: REJECTED (ValueError: Unexpected process exit)
+drop_c83_diag: REJECTED (ValueError: Unexpected diagnostics)
+five_records: REJECTED (ValueError: Exact four ordered unique runtime controls required)
+bool_false_c74: REJECTED (ValueError: Unexpected process exit)
+--- hostile_summary ---
+{
+  "dup_c74_over_c83": "REJECTED:Exact four ordered unique runtime controls required",
+  "swap_c74_c83": "REJECTED:Exact four ordered unique runtime controls required",
+  "swap_c83_o83": "REJECTED:Exact four ordered unique runtime controls required",
+  "bool_true_exit_o83": "REJECTED:Unexpected process exit",
+  "exit255_on_o74": "REJECTED:Unexpected process exit",
+  "o83_as_success": "REJECTED:Unexpected process exit",
+  "wrong_fatal_msg": "REJECTED:Exact original83 fatal channel contract mismatch",
+  "shared_nonmatrix_drift": "ACCEPTED",
+  "string_exit": "REJECTED:Unexpected process exit",
+  "drop_c83_diag": "REJECTED:Unexpected diagnostics",
+  "five_records": "REJECTED:Exact four ordered unique runtime controls required",
+  "bool_false_c74": "REJECTED:Unexpected process exit"
+}
+--- coverage_notes ---
+MODES_actual=original74,candidate74,candidate83,original83
+MODES_user_prompt_claim=original74,candidate74,original83,candidate83
+order_claim_mismatch= True
+shared_nonmatrix_drift_accepted= True

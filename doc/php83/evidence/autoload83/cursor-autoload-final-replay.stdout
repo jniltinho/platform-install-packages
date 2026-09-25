@@ -1,0 +1,17 @@
+primary_sha256=825e9147e227c5f3472e4ec01e420bd7bdbada56920cda035d65915859295904
+primary_status=FAIL matrix_rows=26 failed_checks=3 files_per_tree=1630
+replay PASS=20 EXPECTED_FATAL=3 FAIL=3
+recorded_status={'PASS': 20, 'FAIL': 3, 'EXPECTED_FATAL': 3}
+configured_listing_identical=True header_tasks_ok=True
+failures:
+  74/original/cli-tasks: exit=1 err='Real entrypoint failed (not waived)'
+  74/candidate/cli-tasks: exit=1 err='Real entrypoint failed (not waived)'
+  83/candidate/cli-tasks: exit=1 err='Real entrypoint failed (not waived)'
+configured listings:
+  74/original: exit=0 status=PASS listing_sha=290f27066601e7eaba875addff54e7b0a4be5d9a55908d8dece6ced84012284e checks={'startswith_header': True, 'has_init-project': True, 'has_init-module': True, 'has_propel-build-model': True, 'listing_sha256': '290f27066601e7eaba875addff54e7b0a4be5d9a55908d8dece6ced84012284e', 'listing_len': 2773}
+  74/candidate: exit=0 status=PASS listing_sha=290f27066601e7eaba875addff54e7b0a4be5d9a55908d8dece6ced84012284e checks={'startswith_header': True, 'has_init-project': True, 'has_init-module': True, 'has_propel-build-model': True, 'listing_sha256': '290f27066601e7eaba875addff54e7b0a4be5d9a55908d8dece6ced84012284e', 'listing_len': 2773}
+  83/candidate: exit=0 status=PASS listing_sha=290f27066601e7eaba875addff54e7b0a4be5d9a55908d8dece6ced84012284e checks={'startswith_header': True, 'has_init-project': True, 'has_init-module': True, 'has_propel-build-model': True, 'listing_sha256': '290f27066601e7eaba875addff54e7b0a4be5d9a55908d8dece6ced84012284e', 'listing_len': 2773}
+fatal controls:
+  83/original/fatal-hp: exit=255 status=EXPECTED_FATAL fatal={'severity': 64, 'file': 'vendor/htmlpurifier/library/HTMLPurifier.autoload.php', 'line': 17, 'message_sha256': 'f4ddbad43242def9ac94f60935242e6dfdd7ec4883eeb1daaaebb8585b53ffe0'}
+  83/original/fatal-core: exit=255 status=EXPECTED_FATAL fatal={'severity': 64, 'file': 'vendor/symfony/util/sfCore.class.php', 'line': 188, 'message_sha256': 'f4ddbad43242def9ac94f60935242e6dfdd7ec4883eeb1daaaebb8585b53ffe0'}
+  83/original/fatal-cli: exit=255 status=EXPECTED_FATAL fatal={'severity': 64, 'file': 'vendor/symfony-data/bin/symfony.php', 'line': 107, 'message_sha256': 'f4ddbad43242def9ac94f60935242e6dfdd7ec4883eeb1daaaebb8585b53ffe0'}

@@ -1,0 +1,8 @@
+{
+  "status": "held; experimental SPL autoload repair pending actual entrypoint/parity execution and independent CLI review",
+  "path": "vendor/htmlpurifier/library/HTMLPurifier.autoload.php",
+  "patch": "HTMLPurifier-autoload.patch",
+  "sha256": "f1038cce8807ccb7f139fa9608a2b27c25bfd2a4eccc71a6f71b036bc8e32d20",
+  "before_sha256": "b845e45b8428bb01d9870cd55a5ad005c4e005329cd5cf418a4642f9b96803fa",
+  "after_sha256": "3ae42813026c862d3a778d44fa027a3845f7c3e637bf352b7c46d4b41bc04414"
+}

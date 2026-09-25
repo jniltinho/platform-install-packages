@@ -1,0 +1,126 @@
+{
+  "executor": "Cursor Agent CLI (actual independent typed follow-up)",
+  "role": "typed-contract checkpoint review",
+  "timestamp_utc": "2026-09-25T21:24:41.242442+00:00",
+  "cwd": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83",
+  "application_acceptance": false,
+  "release_approval": false,
+  "prior_review_missed_bool_int_equality": true,
+  "note": "Prior Cursor review (13+21) did not catch True==1 acceptance; author adversarial r1 did. This follow-up does not claim exhaustive malformed-data impossibility.",
+  "commands": [
+    {
+      "cmd": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/autoload83-composition -p 'test_*.py' -v",
+      "stdout": "composition-cursor-typed-tests-composition.stdout",
+      "stderr": "composition-cursor-typed-tests-composition.stderr",
+      "exit": 0,
+      "tests_ran": 15,
+      "expected": 15,
+      "result": "OK"
+    },
+    {
+      "cmd": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/autoload83 -p 'test_*.py' -v",
+      "stdout": "composition-cursor-typed-tests-base.stdout",
+      "stderr": "composition-cursor-typed-tests-base.stderr",
+      "exit": 0,
+      "tests_ran": 23,
+      "expected": 23,
+      "result": "OK"
+    }
+  ],
+  "replay_exit": 0,
+  "frozen_hash_inputs_unchanged": true,
+  "identities_after": "composition-cursor-typed-identities-after.json",
+  "mutations_summary": {
+    "total": 28,
+    "caught": 24,
+    "baselines_pass": 4,
+    "uncaught_attack_mutations": [],
+    "adversarial_author_r1_now": {
+      "source": "composition-primary-r2.json 83/candidate/cli-append",
+      "mutation": "hit.loaded True -> 1",
+      "previous_author_result": "PASS (Python ==)",
+      "typed_validator_now": "REJECTED:Unexpected exact rows/traces",
+      "genuine_unmutated": "PASS"
+    }
+  },
+  "replay_summary": {
+    "primary-r3": {
+      "PASS": 20,
+      "EXPECTED_FATAL": 3,
+      "FAIL_as_VALUEERROR": 3,
+      "OTHER": 0,
+      "total": 26,
+      "matches_expected": true
+    },
+    "claude-primary": {
+      "PASS": 20,
+      "EXPECTED_FATAL": 3,
+      "FAIL_as_VALUEERROR": 3,
+      "OTHER": 0,
+      "total": 26,
+      "matches_expected": true
+    },
+    "composition-primary-r2": {
+      "PASS": 27,
+      "EXPECTED_FATAL": 3,
+      "FAIL_as_VALUEERROR": 0,
+      "OTHER": 0,
+      "total": 30,
+      "matches_expected": true
+    },
+    "primary_eq_claude_sha": true,
+    "NOT_blanket_26_pass": true
+  },
+  "contract_spotchecks": {
+    "native74_cli_append_winner_original": "/audit/composition-fixtures/cli-shadow.php",
+    "native74_cli_append_winner_candidate": "/audit/fixtures/project/lib/model/FixtureFallback.php",
+    "native74_queue_original": [
+      "laterLoader",
+      "finalLoader"
+    ],
+    "native74_queue_candidate": [
+      "Closure",
+      "laterLoader",
+      "finalLoader"
+    ],
+    "cli_repeat_74_original_redeclare_107": true,
+    "cli_repeat_83_candidate_class_36": true,
+    "strict_equal_true_vs_1_distinct": true,
+    "strict_equal_false_vs_0_distinct": true,
+    "strict_equal_true_vs_true": true,
+    "comp_reports_application_acceptance_false_literal": true
+  },
+  "findings": [
+    "Frozen typed collectors use strict_equal (canonical JSON) for row/fatal/diagnostic equality; type(exit) is int; base diagnostic severity/line require type is int.",
+    "Author adversarial True->1 on hit.loaded now REJECTED (Unexpected exact rows/traces); genuine unmutated 83/candidate/cli-append still PASS.",
+    "Extra mutations reject 1/1.0 for true booleans, 0/0.0 for false booleans, False/0.0/255.0 exits, float/bool diagnostic severity/line, extra and missing rows \u2014 in both collectors.",
+    "Retained primary-r3==claude-primary: 20 PASS + 3 EXPECTED_FATAL + 3 cli-tasks VALUEERROR ('Real entrypoint failed (not waived)'); not 26 passes.",
+    "composition-primary-r2: 27 PASS + 3 EXPECTED_FATAL (cli-repeat x3); application_acceptance false.",
+    "Native74 composition deltas preserved (cli-append shadow vs FixtureFallback; queue without vs with Closure).",
+    "Duplicate-include fatals remain distinct: original redeclare __autoload line 107 vs candidate class simpleAutoloader line 36."
+  ],
+  "limitations": [
+    "Local unittest + validator import only; Claude owns runtime; no guest SSH/PHP execution in this follow-up.",
+    "Unit tests cover selected type-confusion cases; they do not prove all malformed payloads impossible.",
+    "Composition diagnostics type-safety rides on strict_equal vs expected list (no separate per-field type(severity) is int like base).",
+    "Passing harness tests is not application acceptance or release approval."
+  ],
+  "artifacts": [
+    "composition-cursor-typed-tests-composition.stdout",
+    "composition-cursor-typed-tests-composition.stderr",
+    "composition-cursor-typed-tests-composition.exit",
+    "composition-cursor-typed-tests-base.stdout",
+    "composition-cursor-typed-tests-base.stderr",
+    "composition-cursor-typed-tests-base.exit",
+    "composition-cursor-typed-replay.stdout",
+    "composition-cursor-typed-replay.stderr",
+    "composition-cursor-typed-replay.exit",
+    "composition-cursor-typed-replay.json",
+    "composition-cursor-typed-replay-base-rows.json",
+    "composition-cursor-typed-replay-composition-rows.json",
+    "composition-cursor-typed-mutations.json",
+    "composition-cursor-typed-identities-after.json",
+    "composition-cursor-typed-review.json",
+    "composition-cursor-typed-review.txt"
+  ]
+}

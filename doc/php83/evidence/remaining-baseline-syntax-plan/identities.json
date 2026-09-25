@@ -1,0 +1,744 @@
+{
+  "scope": "read-only plan evidence, not runtime or generation execution",
+  "archive_pins": {
+    "original": "58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28",
+    "exp10": "de177e6cbaedf3a3207661c2325f466cce37febb73190f3a49d31f24b740c053"
+  },
+  "sources": [
+    {
+      "path": "vendor/aws/Doctrine/Common/Cache/RiakCache.php",
+      "immutable_sha256": "0ec9e10a5c35033e6ebd154630565a63431831c53fac0a33b98f32d0652f79db",
+      "archive_sha256": {
+        "original": "0ec9e10a5c35033e6ebd154630565a63431831c53fac0a33b98f32d0652f79db",
+        "exp10": "0ec9e10a5c35033e6ebd154630565a63431831c53fac0a33b98f32d0652f79db"
+      },
+      "direct_source": [
+        {
+          "line": 26,
+          "text": "use Riak\\Object;"
+        },
+        {
+          "line": 63,
+          "text": "            if ( ! $response->hasObject()) {"
+        },
+        {
+          "line": 69,
+          "text": "                ? $this->resolveConflict($id, $response->getVClock(), $response->getObjectList())"
+        },
+        {
+          "line": 70,
+          "text": "                : $response->getFirstObject();"
+        },
+        {
+          "line": 105,
+          "text": "            if ( ! $response->hasObject()) {"
+        },
+        {
+          "line": 109,
+          "text": "            $object = $response->getFirstObject();"
+        },
+        {
+          "line": 132,
+          "text": "            $object = new Object($id);"
+        },
+        {
+          "line": 201,
+          "text": "     * Check if a given Riak Object have expired."
+        },
+        {
+          "line": 203,
+          "text": "     * @param \\Riak\\Object $object"
+        },
+        {
+          "line": 207,
+          "text": "    private function isExpired(Object $object)"
+        },
+        {
+          "line": 233,
+          "text": "     * @return \\Riak\\Object"
+        },
+        {
+          "line": 238,
+          "text": "        $winner = $objectList[count($objectList)];"
+        },
+        {
+          "line": 243,
+          "text": "        $mergedObject = new Object($id);"
+        },
+        {
+          "line": 244,
+          "text": "        $mergedObject->setContent($winner->getContent());"
+        },
+        {
+          "line": 246,
+          "text": "        $this->bucket->put($mergedObject, $putInput);"
+        },
+        {
+          "line": 248,
+          "text": "        return $mergedObject;"
+        }
+      ]
+    },
+    {
+      "path": "vendor/aws/Doctrine/Common/Cache/CacheProvider.php",
+      "immutable_sha256": "ce360a132e33644997b37111cc8d2219c520eb14923ab811336ada1cf450a349",
+      "archive_sha256": {
+        "original": "ce360a132e33644997b37111cc8d2219c520eb14923ab811336ada1cf450a349",
+        "exp10": "ce360a132e33644997b37111cc8d2219c520eb14923ab811336ada1cf450a349"
+      }
+    },
+    {
+      "path": "vendor/symfony/vendor/pake/pakeApp.class.php",
+      "immutable_sha256": "72f538165dd3226b46c35ddac7700c0f3a6046e74f4646b74ca5bd541d59b120",
+      "archive_sha256": {
+        "original": "72f538165dd3226b46c35ddac7700c0f3a6046e74f4646b74ca5bd541d59b120",
+        "exp10": "72f538165dd3226b46c35ddac7700c0f3a6046e74f4646b74ca5bd541d59b120"
+      },
+      "direct_source": [
+        {
+          "line": 332,
+          "text": "  public static function get_files_from_argument($arg, $target_dir = '', $relative = false)"
+        },
+        {
+          "line": 333,
+          "text": "  {"
+        },
+        {
+          "line": 334,
+          "text": "    $files = array();"
+        },
+        {
+          "line": 335,
+          "text": "    if (is_array($arg))"
+        },
+        {
+          "line": 336,
+          "text": "    {"
+        },
+        {
+          "line": 337,
+          "text": "      $files = $arg;"
+        },
+        {
+          "line": 338,
+          "text": "    }"
+        },
+        {
+          "line": 339,
+          "text": "    else if (is_string($arg))"
+        },
+        {
+          "line": 340,
+          "text": "    {"
+        },
+        {
+          "line": 341,
+          "text": "      $files[] = $arg;"
+        },
+        {
+          "line": 342,
+          "text": "    }"
+        },
+        {
+          "line": 343,
+          "text": "    else if ($arg instanceof pakeFinder)"
+        },
+        {
+          "line": 344,
+          "text": "    {"
+        },
+        {
+          "line": 345,
+          "text": "      $files = $arg->in($target_dir);"
+        },
+        {
+          "line": 346,
+          "text": "    }"
+        },
+        {
+          "line": 347,
+          "text": "    else"
+        },
+        {
+          "line": 348,
+          "text": "    {"
+        },
+        {
+          "line": 349,
+          "text": "      throw new pakeException('Wrong argument type (must be a list, a string or a pakeFinder object).');"
+        },
+        {
+          "line": 350,
+          "text": "    }"
+        },
+        {
+          "line": 351,
+          "text": ""
+        },
+        {
+          "line": 352,
+          "text": "    if ($relative && $target_dir)"
+        },
+        {
+          "line": 353,
+          "text": "    {"
+        },
+        {
+          "line": 354,
+          "text": "      $files = preg_replace('/^'.preg_quote(realpath($target_dir), '/').'/', '', $files);"
+        },
+        {
+          "line": 355,
+          "text": ""
+        },
+        {
+          "line": 356,
+          "text": "      // remove leading /"
+        },
+        {
+          "line": 357,
+          "text": "      $files = array_map(create_function('$f', 'return 0 === strpos($f, DIRECTORY_SEPARATOR) ? substr($f, 1) : $f;'), $files);"
+        },
+        {
+          "line": 358,
+          "text": "    }"
+        },
+        {
+          "line": 359,
+          "text": ""
+        },
+        {
+          "line": 360,
+          "text": "    return $files;"
+        },
+        {
+          "line": 361,
+          "text": "  }"
+        }
+      ]
+    },
+    {
+      "path": "vendor/symfony/vendor/pake/pakeFunction.php",
+      "immutable_sha256": "bc97788a21544864e55836ad7194ace356ac0cfac4fc3025faa822e6d3cef305",
+      "archive_sha256": {
+        "original": "bc97788a21544864e55836ad7194ace356ac0cfac4fc3025faa822e6d3cef305",
+        "exp10": "bc97788a21544864e55836ad7194ace356ac0cfac4fc3025faa822e6d3cef305"
+      }
+    },
+    {
+      "path": "vendor/symfony-data/tasks/sfPakeGenerator.php",
+      "immutable_sha256": "67682683048afeaef9ed55bd95a5920792b2c6ab3b4ec11c804985ead4b347eb",
+      "archive_sha256": {
+        "original": "67682683048afeaef9ed55bd95a5920792b2c6ab3b4ec11c804985ead4b347eb",
+        "exp10": "67682683048afeaef9ed55bd95a5920792b2c6ab3b4ec11c804985ead4b347eb"
+      }
+    },
+    {
+      "path": "vendor/symfony-data/tasks/sfPakePropelAdminGenerator.php",
+      "immutable_sha256": "3075daa287f8498823633a1fdf3f96db328848a8f80c4e02e4726c5ce3865f2c",
+      "archive_sha256": {
+        "original": "3075daa287f8498823633a1fdf3f96db328848a8f80c4e02e4726c5ce3865f2c",
+        "exp10": "3075daa287f8498823633a1fdf3f96db328848a8f80c4e02e4726c5ce3865f2c"
+      }
+    },
+    {
+      "path": "vendor/symfony-data/tasks/sfPakePropelCrudGenerator.php",
+      "immutable_sha256": "268f26c959581da241d56e2dcaba7c95ed111b54072472fab3b6fe77c67f5815",
+      "archive_sha256": {
+        "original": "268f26c959581da241d56e2dcaba7c95ed111b54072472fab3b6fe77c67f5815",
+        "exp10": "268f26c959581da241d56e2dcaba7c95ed111b54072472fab3b6fe77c67f5815"
+      }
+    },
+    {
+      "path": "vendor/symfony/config/sfLoader.class.php",
+      "immutable_sha256": "9763c9a7cac325e6578b69985a2acd4705832179379f7d7a8901effa5eaab2ee",
+      "archive_sha256": {
+        "original": "9763c9a7cac325e6578b69985a2acd4705832179379f7d7a8901effa5eaab2ee",
+        "exp10": "9763c9a7cac325e6578b69985a2acd4705832179379f7d7a8901effa5eaab2ee"
+      }
+    },
+    {
+      "path": "vendor/symfony-data/generator/sfPropelAdmin/default/skeleton/actions/actions.class.php",
+      "immutable_sha256": "81b2e299d72ece711fab3a82dba6c5399c5747091a4b6a9de60b1cc5b31e798a",
+      "archive_sha256": {
+        "original": "81b2e299d72ece711fab3a82dba6c5399c5747091a4b6a9de60b1cc5b31e798a",
+        "exp10": "81b2e299d72ece711fab3a82dba6c5399c5747091a4b6a9de60b1cc5b31e798a"
+      },
+      "direct_source": [
+        {
+          "line": 1,
+          "text": "<?php"
+        },
+        {
+          "line": 2,
+          "text": ""
+        },
+        {
+          "line": 3,
+          "text": "/**"
+        },
+        {
+          "line": 4,
+          "text": " * ##MODULE_NAME## actions."
+        },
+        {
+          "line": 5,
+          "text": " *"
+        },
+        {
+          "line": 6,
+          "text": " * @package    ##PROJECT_NAME##"
+        },
+        {
+          "line": 7,
+          "text": " * @subpackage ##MODULE_NAME##"
+        },
+        {
+          "line": 8,
+          "text": " * @author     ##AUTHOR_NAME##"
+        },
+        {
+          "line": 9,
+          "text": " * @version    SVN: $Id: actions.class.php 2288 2006-10-02 15:22:13Z fabien $"
+        },
+        {
+          "line": 10,
+          "text": " */"
+        },
+        {
+          "line": 11,
+          "text": "class ##MODULE_NAME##Actions extends auto##MODULE_NAME##Actions"
+        },
+        {
+          "line": 12,
+          "text": "{"
+        },
+        {
+          "line": 13,
+          "text": "}"
+        }
+      ]
+    },
+    {
+      "path": "vendor/symfony-data/generator/sfPropelCrud/default/skeleton/actions/actions.class.php",
+      "immutable_sha256": "81b2e299d72ece711fab3a82dba6c5399c5747091a4b6a9de60b1cc5b31e798a",
+      "archive_sha256": {
+        "original": "81b2e299d72ece711fab3a82dba6c5399c5747091a4b6a9de60b1cc5b31e798a",
+        "exp10": "81b2e299d72ece711fab3a82dba6c5399c5747091a4b6a9de60b1cc5b31e798a"
+      },
+      "direct_source": [
+        {
+          "line": 1,
+          "text": "<?php"
+        },
+        {
+          "line": 2,
+          "text": ""
+        },
+        {
+          "line": 3,
+          "text": "/**"
+        },
+        {
+          "line": 4,
+          "text": " * ##MODULE_NAME## actions."
+        },
+        {
+          "line": 5,
+          "text": " *"
+        },
+        {
+          "line": 6,
+          "text": " * @package    ##PROJECT_NAME##"
+        },
+        {
+          "line": 7,
+          "text": " * @subpackage ##MODULE_NAME##"
+        },
+        {
+          "line": 8,
+          "text": " * @author     ##AUTHOR_NAME##"
+        },
+        {
+          "line": 9,
+          "text": " * @version    SVN: $Id: actions.class.php 2288 2006-10-02 15:22:13Z fabien $"
+        },
+        {
+          "line": 10,
+          "text": " */"
+        },
+        {
+          "line": 11,
+          "text": "class ##MODULE_NAME##Actions extends auto##MODULE_NAME##Actions"
+        },
+        {
+          "line": 12,
+          "text": "{"
+        },
+        {
+          "line": 13,
+          "text": "}"
+        }
+      ]
+    },
+    {
+      "path": "vendor/symfony-data/skeleton/batch/default.php",
+      "immutable_sha256": "a82525ec83207e9193da1bb002310eb03fcba6dd30ab20b0ac9973bb97299479",
+      "archive_sha256": {
+        "original": "a82525ec83207e9193da1bb002310eb03fcba6dd30ab20b0ac9973bb97299479",
+        "exp10": "a82525ec83207e9193da1bb002310eb03fcba6dd30ab20b0ac9973bb97299479"
+      },
+      "direct_source": [
+        {
+          "line": 1,
+          "text": "<?php"
+        },
+        {
+          "line": 2,
+          "text": ""
+        },
+        {
+          "line": 3,
+          "text": "/**"
+        },
+        {
+          "line": 4,
+          "text": " * ##BATCH_NAME## batch script"
+        },
+        {
+          "line": 5,
+          "text": " *"
+        },
+        {
+          "line": 6,
+          "text": " * Here goes a brief description of the purpose of the batch script"
+        },
+        {
+          "line": 7,
+          "text": " *"
+        },
+        {
+          "line": 8,
+          "text": " * @package    ##PROJECT_NAME##"
+        },
+        {
+          "line": 9,
+          "text": " * @subpackage batch"
+        },
+        {
+          "line": 10,
+          "text": " * @version    $Id$"
+        },
+        {
+          "line": 11,
+          "text": " */"
+        },
+        {
+          "line": 12,
+          "text": ""
+        },
+        {
+          "line": 13,
+          "text": "define('SF_ROOT_DIR',    realpath(dirname(__file__).'/..'));"
+        },
+        {
+          "line": 14,
+          "text": "define('SF_APP',         '##APP_NAME##');"
+        },
+        {
+          "line": 15,
+          "text": "define('SF_ENVIRONMENT', '##ENV_NAME##');"
+        },
+        {
+          "line": 16,
+          "text": "define('SF_DEBUG',       ##DEBUG##);"
+        },
+        {
+          "line": 17,
+          "text": ""
+        },
+        {
+          "line": 18,
+          "text": "require_once(SF_ROOT_DIR.DIRECTORY_SEPARATOR.'apps'.DIRECTORY_SEPARATOR.SF_APP.DIRECTORY_SEPARATOR.'config'.DIRECTORY_SEPARATOR.'config.php');"
+        },
+        {
+          "line": 19,
+          "text": ""
+        },
+        {
+          "line": 20,
+          "text": "// initialize database manager"
+        },
+        {
+          "line": 21,
+          "text": "//$databaseManager = new sfDatabaseManager();"
+        },
+        {
+          "line": 22,
+          "text": "//$databaseManager->initialize();"
+        },
+        {
+          "line": 23,
+          "text": ""
+        },
+        {
+          "line": 24,
+          "text": "// batch process here"
+        }
+      ]
+    },
+    {
+      "path": "vendor/symfony-data/skeleton/batch/rotate_log.php",
+      "immutable_sha256": "d8d4b03a7f63d8df562772783c78466b16bf1e87467d54ebd08dea03047f7cb6",
+      "archive_sha256": {
+        "original": "d8d4b03a7f63d8df562772783c78466b16bf1e87467d54ebd08dea03047f7cb6",
+        "exp10": "d8d4b03a7f63d8df562772783c78466b16bf1e87467d54ebd08dea03047f7cb6"
+      },
+      "direct_source": [
+        {
+          "line": 1,
+          "text": "<?php"
+        },
+        {
+          "line": 2,
+          "text": ""
+        },
+        {
+          "line": 3,
+          "text": "/**"
+        },
+        {
+          "line": 4,
+          "text": " * Log rotation batch script"
+        },
+        {
+          "line": 5,
+          "text": " *"
+        },
+        {
+          "line": 6,
+          "text": " * This script is used to manage log rotation, and should be called automatically by a cron task daily"
+        },
+        {
+          "line": 7,
+          "text": " *"
+        },
+        {
+          "line": 8,
+          "text": " * @package    ##PROJECT_NAME##"
+        },
+        {
+          "line": 9,
+          "text": " * @subpackage batch"
+        },
+        {
+          "line": 10,
+          "text": " * @version    $Id: rotate_log.php 3148 2007-01-04 19:34:28Z fabien $"
+        },
+        {
+          "line": 11,
+          "text": " */"
+        },
+        {
+          "line": 12,
+          "text": ""
+        },
+        {
+          "line": 13,
+          "text": "define('SF_ROOT_DIR',    realpath(dirname(__file__).'/..'));"
+        },
+        {
+          "line": 14,
+          "text": "define('SF_APP',         '##APP_NAME##');"
+        },
+        {
+          "line": 15,
+          "text": "define('SF_ENVIRONMENT', '##ENV_NAME##');"
+        },
+        {
+          "line": 16,
+          "text": "define('SF_DEBUG',       ##DEBUG##);"
+        },
+        {
+          "line": 17,
+          "text": ""
+        },
+        {
+          "line": 18,
+          "text": "require_once(SF_ROOT_DIR.DIRECTORY_SEPARATOR.'apps'.DIRECTORY_SEPARATOR.SF_APP.DIRECTORY_SEPARATOR.'config'.DIRECTORY_SEPARATOR.'config.php');"
+        },
+        {
+          "line": 19,
+          "text": ""
+        },
+        {
+          "line": 20,
+          "text": "if (sfConfig::get('sf_logging_enabled') && sfConfig::get('sf_logging_rotate'))"
+        },
+        {
+          "line": 21,
+          "text": "{"
+        },
+        {
+          "line": 22,
+          "text": "  sfLogManager::rotate(SF_APP, SF_ENVIRONMENT, sfConfig::get('sf_logging_period'), sfConfig::get('sf_logging_history'));"
+        },
+        {
+          "line": 23,
+          "text": "}"
+        }
+      ]
+    },
+    {
+      "path": "vendor/symfony-data/skeleton/controller/controller.php",
+      "immutable_sha256": "dc64d95afab4440fd7274516c03467a473a0b595c42132d9a34f7ebf1a635fed",
+      "archive_sha256": {
+        "original": "dc64d95afab4440fd7274516c03467a473a0b595c42132d9a34f7ebf1a635fed",
+        "exp10": "dc64d95afab4440fd7274516c03467a473a0b595c42132d9a34f7ebf1a635fed"
+      },
+      "direct_source": [
+        {
+          "line": 1,
+          "text": "<?php"
+        },
+        {
+          "line": 2,
+          "text": ""
+        },
+        {
+          "line": 3,
+          "text": "define('SF_ROOT_DIR',    realpath(dirname(__file__).'/..'));"
+        },
+        {
+          "line": 4,
+          "text": "define('SF_APP',         '##APP_NAME##');"
+        },
+        {
+          "line": 5,
+          "text": "define('SF_ENVIRONMENT', '##ENV_NAME##');"
+        },
+        {
+          "line": 6,
+          "text": "define('SF_DEBUG',       ##DEBUG##);"
+        },
+        {
+          "line": 7,
+          "text": ""
+        },
+        {
+          "line": 8,
+          "text": "require_once(SF_ROOT_DIR.DIRECTORY_SEPARATOR.'apps'.DIRECTORY_SEPARATOR.SF_APP.DIRECTORY_SEPARATOR.'config'.DIRECTORY_SEPARATOR.'config.php');"
+        },
+        {
+          "line": 9,
+          "text": ""
+        },
+        {
+          "line": 10,
+          "text": "sfContext::getInstance()->getController()->dispatch();"
+        }
+      ]
+    },
+    {
+      "path": "vendor/symfony-data/skeleton/module/module/actions/actions.class.php",
+      "immutable_sha256": "2275a76643e292bbd645d2f6b94a4e32055eaf6e851f6dffae2169a128d4b95c",
+      "archive_sha256": {
+        "original": "2275a76643e292bbd645d2f6b94a4e32055eaf6e851f6dffae2169a128d4b95c",
+        "exp10": "2275a76643e292bbd645d2f6b94a4e32055eaf6e851f6dffae2169a128d4b95c"
+      },
+      "direct_source": [
+        {
+          "line": 1,
+          "text": "<?php"
+        },
+        {
+          "line": 2,
+          "text": ""
+        },
+        {
+          "line": 3,
+          "text": "/**"
+        },
+        {
+          "line": 4,
+          "text": " * ##MODULE_NAME## actions."
+        },
+        {
+          "line": 5,
+          "text": " *"
+        },
+        {
+          "line": 6,
+          "text": " * @package    ##PROJECT_NAME##"
+        },
+        {
+          "line": 7,
+          "text": " * @subpackage ##MODULE_NAME##"
+        },
+        {
+          "line": 8,
+          "text": " * @author     ##AUTHOR_NAME##"
+        },
+        {
+          "line": 9,
+          "text": " * @version    SVN: $Id: actions.class.php 2692 2006-11-15 21:03:55Z fabien $"
+        },
+        {
+          "line": 10,
+          "text": " */"
+        },
+        {
+          "line": 11,
+          "text": "class ##MODULE_NAME##Actions extends sfActions"
+        },
+        {
+          "line": 12,
+          "text": "{"
+        },
+        {
+          "line": 13,
+          "text": "  /**"
+        },
+        {
+          "line": 14,
+          "text": "   * Executes index action"
+        },
+        {
+          "line": 15,
+          "text": "   *"
+        },
+        {
+          "line": 16,
+          "text": "   */"
+        },
+        {
+          "line": 17,
+          "text": "  public function executeIndex()"
+        },
+        {
+          "line": 18,
+          "text": "  {"
+        },
+        {
+          "line": 19,
+          "text": "    $this->forward('default', 'module');"
+        },
+        {
+          "line": 20,
+          "text": "  }"
+        },
+        {
+          "line": 21,
+          "text": "}"
+        }
+      ]
+    }
+  ],
+  "input_documents": {
+    "doc/php83/evidence/compiler-triage/template-consumers.json": "b91979ee36394421919f1ae8f5418b69be2a4a5dd745bb46a8e01e187f55cb50",
+    "doc/php83/evidence/compiler-triage/primary-r2.json": "045a0aa4de641f9fa11a24abfbe39c07b3d74a83647f19a8979aa8654f414a69",
+    "doc/php83/evidence/exp10-syntax/remaining-triage.json": "0596ce6d5b7211c5bbee198dcedea741755ec5015edc5eb68c5bacf0e990e769",
+    "openspec/changes/migrate-kaltura-php83/proposal.md": "df5e7c79e1d8f07c85c72ef8e297c347d1d427fc6b395b555f9d97db8cc5e59f",
+    "openspec/changes/migrate-kaltura-php83/tasks.md": "2a440e961e4122d96495456dac1da4d7f960818a49e8afc3febf19792359008e"
+  }
+}

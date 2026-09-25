@@ -1,0 +1,26 @@
+test_actual_record_validation (test_ternary.Proof.test_actual_record_validation) ... ok
+test_boolean_exit (test_ternary.Proof.test_boolean_exit) ... ok
+test_duplicate_mode (test_ternary.Proof.test_duplicate_mode) ... ok
+test_explicit_harness_set (test_ternary.Proof.test_explicit_harness_set) ... ok
+test_extra_diagnostic (test_ternary.Proof.test_extra_diagnostic) ... ok
+test_extra_fatal_stderr (test_ternary.Proof.test_extra_fatal_stderr) ... ok
+test_extra_mode (test_ternary.Proof.test_extra_mode) ... ok
+test_extra_native_stderr (test_ternary.Proof.test_extra_native_stderr) ... ok
+test_fatal_stdout (test_ternary.Proof.test_fatal_stdout) ... ok
+test_missing_case (test_ternary.Proof.test_missing_case) ... ok
+test_missing_mode (test_ternary.Proof.test_missing_mode) ... ok
+test_missing_native_stderr (test_ternary.Proof.test_missing_native_stderr) ... ok
+test_reordered_modes (test_ternary.Proof.test_reordered_modes) ... ok
+test_side_effect (test_ternary.Proof.test_side_effect) ... ok
+test_source_drift (test_ternary.Proof.test_source_drift) ... ok
+test_source_hash (test_ternary.Proof.test_source_hash) ... ok
+test_stderr_hash_drift (test_ternary.Proof.test_stderr_hash_drift) ... ok
+test_timeout (test_ternary.Proof.test_timeout) ... ok
+test_two_bytes_only (test_ternary.Proof.test_two_bytes_only) ... ok
+test_unknown_mode (test_ternary.Proof.test_unknown_mode) ... ok
+test_wrong_association (test_ternary.Proof.test_wrong_association) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.005s
+
+OK

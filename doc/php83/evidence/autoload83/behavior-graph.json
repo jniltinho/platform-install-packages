@@ -1,0 +1,159 @@
+{
+  "project": "kaltura-rigel-18.20.0-full",
+  "status": {
+    "status": "ready",
+    "nodes": 231336,
+    "edges": 800641
+  },
+  "coverage": {
+    "project": "kaltura-rigel-18.20.0-full",
+    "signal": "best_effort",
+    "indexed_at": "2026-09-25T12:19:00Z",
+    "metadata": {
+      "generation": "2026-09-25T12:19:00Z",
+      "index_mode": "full",
+      "recorded_at": "2026-09-25T12:19:04Z",
+      "recording_status": "complete",
+      "ignored_files_stored": 519,
+      "ignored_files_total": 519,
+      "hash_records_complete": true,
+      "coverage_version": 3,
+      "generation_matches": true
+    },
+    "paths": [
+      {
+        "requested_path": "vendor/htmlpurifier/library/HTMLPurifier.autoload.php",
+        "path": "vendor/htmlpurifier/library/HTMLPurifier.autoload.php",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": "vendor/htmlpurifier/library/HTMLPurifier/Bootstrap.php",
+        "path": "vendor/htmlpurifier/library/HTMLPurifier/Bootstrap.php",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": "vendor/htmlpurifier/library/HTMLPurifier/EntityLookup.php",
+        "path": "vendor/htmlpurifier/library/HTMLPurifier/EntityLookup.php",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": "vendor/symfony/util/sfCore.class.php",
+        "path": "vendor/symfony/util/sfCore.class.php",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": "vendor/symfony/util/sfFinder.class.php",
+        "path": "vendor/symfony/util/sfFinder.class.php",
+        "status": "partial",
+        "freshness": "metadata_match",
+        "recommended_action": "read_ranges_and_verify_scope",
+        "coverage": [
+          {
+            "path": "vendor/symfony/util/sfFinder.class.php",
+            "kind": "parse_partial",
+            "detail": "1-724",
+            "match": "exact",
+            "ranges": [
+              {
+                "start": 1,
+                "end": 724
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "requested_path": "vendor/symfony/util/sfContext.class.php",
+        "path": "vendor/symfony/util/sfContext.class.php",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": "vendor/symfony/config/sfConfig.class.php",
+        "path": "vendor/symfony/config/sfConfig.class.php",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": "vendor/symfony-data/bin/symfony.php",
+        "path": "vendor/symfony-data/bin/symfony.php",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": "vendor/symfony/vendor/pake/pakeFunction.php",
+        "path": "vendor/symfony/vendor/pake/pakeFunction.php",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      }
+    ],
+    "scopes": [],
+    "caveat": "Best-effort signal only. No recorded issue does not prove graph or source completeness; read flagged source and qualify claims when metadata is changed or unavailable."
+  },
+  "snippets": [
+    {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"name\":\"registerAutoload\",\"qualified_name\":\"kaltura-rigel-18.20.0-full.vendor.htmlpurifier.library.HTMLPurifier.Bootstrap.HTMLPurifier_Bootstrap.registerAutoload\",\"label\":\"Method\",\"file_path\":\"/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/graph-view/vendor/htmlpurifier/library/HTMLPurifier/Bootstrap.php\",\"start_line\":79,\"end_line\":121,\"source\":\"    public static function registerAutoload()\\n    {\\n        $autoload = array('HTMLPurifier_Bootstrap', 'autoload');\\n        if (($funcs = spl_autoload_functions()) === false) {\\n            spl_autoload_register($autoload);\\n        } elseif (function_exists('spl_autoload_unregister')) {\\n            if (version_compare(PHP_VERSION, '5.3.0', '>=')) {\\n                // prepend flag exists, no need for shenanigans\\n                spl_autoload_register($autoload, true, true);\\n            } else {\\n                $buggy  = version_compare(PHP_VERSION, '5.2.11', '<');\\n                $compat = version_compare(PHP_VERSION, '5.1.2', '<=') &&\\n                          version_compare(PHP_VERSION, '5.1.0', '>=');\\n                foreach ($funcs as $func) {\\n                    if ($buggy && is_array($func)) {\\n                        // :TRICKY: There are some compatibility issues and some\\n                        // places where we need to error out\\n                        $reflector = new ReflectionMethod($func[0], $func[1]);\\n                        if (!$reflector->isStatic()) {\\n                            throw new Exception(\\n                                'HTML Purifier autoloader registrar is not compatible\\n                                with non-static object methods due to PHP Bug #44144;\\n                                Please do not use HTMLPurifier.autoload.php (or any\\n                                file that includes this file); instead, place the code:\\n                                spl_autoload_register(array(\\\\'HTMLPurifier_Bootstrap\\\\', \\\\'autoload\\\\'))\\n                                after your own autoloaders.'\\n                            );\\n                        }\\n                        // Suprisingly, spl_autoload_register supports the\\n                        // Class::staticMethod callback format, although call_user_func doesn't\\n                        if ($compat) {\\n                            $func = implode('::', $func);\\n                        }\\n                    }\\n                    spl_autoload_unregister($func);\\n                }\\n                spl_autoload_register($autoload);\\n                foreach ($funcs as $func) {\\n                    spl_autoload_register($func);\\n                }\\n            }\\n        }\\n    }\\n\",\"callers\":1,\"callees\":0}"
+        }
+      ],
+      "structuredContent": {
+        "name": "registerAutoload",
+        "qualified_name": "kaltura-rigel-18.20.0-full.vendor.htmlpurifier.library.HTMLPurifier.Bootstrap.HTMLPurifier_Bootstrap.registerAutoload",
+        "label": "Method",
+        "file_path": "/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/graph-view/vendor/htmlpurifier/library/HTMLPurifier/Bootstrap.php",
+        "start_line": 79,
+        "end_line": 121,
+        "source": "    public static function registerAutoload()\n    {\n        $autoload = array('HTMLPurifier_Bootstrap', 'autoload');\n        if (($funcs = spl_autoload_functions()) === false) {\n            spl_autoload_register($autoload);\n        } elseif (function_exists('spl_autoload_unregister')) {\n            if (version_compare(PHP_VERSION, '5.3.0', '>=')) {\n                // prepend flag exists, no need for shenanigans\n                spl_autoload_register($autoload, true, true);\n            } else {\n                $buggy  = version_compare(PHP_VERSION, '5.2.11', '<');\n                $compat = version_compare(PHP_VERSION, '5.1.2', '<=') &&\n                          version_compare(PHP_VERSION, '5.1.0', '>=');\n                foreach ($funcs as $func) {\n                    if ($buggy && is_array($func)) {\n                        // :TRICKY: There are some compatibility issues and some\n                        // places where we need to error out\n                        $reflector = new ReflectionMethod($func[0], $func[1]);\n                        if (!$reflector->isStatic()) {\n                            throw new Exception(\n                                'HTML Purifier autoloader registrar is not compatible\n                                with non-static object methods due to PHP Bug #44144;\n                                Please do not use HTMLPurifier.autoload.php (or any\n                                file that includes this file); instead, place the code:\n                                spl_autoload_register(array(\\'HTMLPurifier_Bootstrap\\', \\'autoload\\'))\n                                after your own autoloaders.'\n                            );\n                        }\n                        // Suprisingly, spl_autoload_register supports the\n                        // Class::staticMethod callback format, although call_user_func doesn't\n                        if ($compat) {\n                            $func = implode('::', $func);\n                        }\n                    }\n                    spl_autoload_unregister($func);\n                }\n                spl_autoload_register($autoload);\n                foreach ($funcs as $func) {\n                    spl_autoload_register($func);\n                }\n            }\n        }\n    }\n",
+        "callers": 1,
+        "callees": 0
+      },
+      "isError": false
+    },
+    {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"name\":\"initSimpleAutoload\",\"qualified_name\":\"kaltura-rigel-18.20.0-full.vendor.symfony.util.sfCore.class.sfCore.initSimpleAutoload\",\"label\":\"Method\",\"file_path\":\"/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/graph-view/vendor/symfony/util/sfCore.class.php\",\"start_line\":233,\"end_line\":269,\"source\":\"  static public function initSimpleAutoload($dirs)\\n  {\\n    require_once(dirname(__FILE__).'/sfFinder.class.php');\\n    self::$classes = array();\\n    $finder = sfFinder::type('file')->ignore_version_control()->name('*.php');\\n    foreach ((array) $dirs as $dir)\\n    {\\n      $files = $finder->in(glob($dir));\\n      if (is_array($files))\\n      {\\n        foreach ($files as $file)\\n        {\\n          preg_match_all('~^\\\\s*(?:abstract\\\\s+|final\\\\s+)?(?:class|interface)\\\\s+(\\\\w+)~mi', file_get_contents($file), $classes);\\n          foreach ($classes[1] as $class)\\n          {\\n            self::$classes[$class] = $file;\\n          }\\n        }\\n      }\\n    }\\n\\n    if (function_exists('spl_autoload_register'))\\n    {\\n      ini_set('unserialize_callback_func', 'spl_autoload_call');\\n\\n      spl_autoload_register(array('sfCore', 'splSimpleAutoload'));\\n    }\\n    elseif (!function_exists('__autoload'))\\n    {\\n      ini_set('unserialize_callback_func', '__autoload');\\n\\n      function __autoload($class)\\n      {\\n        return sfCore::splSimpleAutoload($class);\\n      }\\n    }\\n  }\\n\",\"callers\":0,\"callees\":3}"
+        }
+      ],
+      "structuredContent": {
+        "name": "initSimpleAutoload",
+        "qualified_name": "kaltura-rigel-18.20.0-full.vendor.symfony.util.sfCore.class.sfCore.initSimpleAutoload",
+        "label": "Method",
+        "file_path": "/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/graph-view/vendor/symfony/util/sfCore.class.php",
+        "start_line": 233,
+        "end_line": 269,
+        "source": "  static public function initSimpleAutoload($dirs)\n  {\n    require_once(dirname(__FILE__).'/sfFinder.class.php');\n    self::$classes = array();\n    $finder = sfFinder::type('file')->ignore_version_control()->name('*.php');\n    foreach ((array) $dirs as $dir)\n    {\n      $files = $finder->in(glob($dir));\n      if (is_array($files))\n      {\n        foreach ($files as $file)\n        {\n          preg_match_all('~^\\s*(?:abstract\\s+|final\\s+)?(?:class|interface)\\s+(\\w+)~mi', file_get_contents($file), $classes);\n          foreach ($classes[1] as $class)\n          {\n            self::$classes[$class] = $file;\n          }\n        }\n      }\n    }\n\n    if (function_exists('spl_autoload_register'))\n    {\n      ini_set('unserialize_callback_func', 'spl_autoload_call');\n\n      spl_autoload_register(array('sfCore', 'splSimpleAutoload'));\n    }\n    elseif (!function_exists('__autoload'))\n    {\n      ini_set('unserialize_callback_func', '__autoload');\n\n      function __autoload($class)\n      {\n        return sfCore::splSimpleAutoload($class);\n      }\n    }\n  }\n",
+        "callers": 0,
+        "callees": 3
+      },
+      "isError": false
+    }
+  ],
+  "limitations": [
+    "sfFinder source lines1-724 partial: direct source read fallback performed; actual execution still pending",
+    "Graph no_recorded_issue is best-effort, not proof of completeness"
+  ]
+}

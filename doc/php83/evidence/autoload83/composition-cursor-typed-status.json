@@ -1,0 +1,37 @@
+{
+  "cli_terminal_exit": 124,
+  "cli_status": "TIMEOUT; no final CLI response, not an exit0 CLI run",
+  "bounded_seconds": 150,
+  "actual_local_commands_completed": {
+    "composition_unittest_exit": 0,
+    "base_unittest_exit": 0,
+    "replay_exit": 0
+  },
+  "review_json_present": true,
+  "review_text_formatting_limitation": "Some inline-code fragments absent in text; prefer JSON for exact commands/contracts",
+  "frozen_inputs_unchanged": true,
+  "files": {
+    "doc/php83/evidence/autoload83/composition-cursor-typed-cli.exit": "ca2ebdf97d7469496b1f4b78958f9dc8447efdcb623953fee7b6996b762f6fff",
+    "doc/php83/evidence/autoload83/composition-cursor-typed-cli.json": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "doc/php83/evidence/autoload83/composition-cursor-typed-cli.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "doc/php83/evidence/autoload83/composition-cursor-typed-final-identities.json": "f9832f0b35ea835e576f78d7429da865568b46902b439387678af5b6aafb6e13",
+    "doc/php83/evidence/autoload83/composition-cursor-typed-identities-after.json": "ccddd1475fb2e3de7683947782ca380e9e54dfb5a2e7f3a7b6fb6b37eee6a27d",
+    "doc/php83/evidence/autoload83/composition-cursor-typed-input-identities.json": "f170cc2e6f1c965916c5f1f0f5f5877de173c60abf1daa80767b86091b34206b",
+    "doc/php83/evidence/autoload83/composition-cursor-typed-mutations.json": "9c19e1dbfe2b076da2ddc09dc921ef0de9abd454ea0ac215c86267e9b31c4ba3",
+    "doc/php83/evidence/autoload83/composition-cursor-typed-prompt.txt": "46ca6bc5265af4931ff9af5b6a35d04157419ff5ec62cdc01cd8cb3ce122cc4b",
+    "doc/php83/evidence/autoload83/composition-cursor-typed-replay-base-rows.json": "3ca7d5a24cd25d5100a11f5301ebf6b32ea1cb050d776c035b36dd8832459173",
+    "doc/php83/evidence/autoload83/composition-cursor-typed-replay-composition-rows.json": "6562524509fc110cde05aacf9e641cd7580ddd1091af96f49bdcd868aa7b0ade",
+    "doc/php83/evidence/autoload83/composition-cursor-typed-replay.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "doc/php83/evidence/autoload83/composition-cursor-typed-replay.json": "fc2fa623783bd40038aeb9d38d050a187acb705656dd9fdb76852e2ba1a1cdac",
+    "doc/php83/evidence/autoload83/composition-cursor-typed-replay.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "doc/php83/evidence/autoload83/composition-cursor-typed-replay.stdout": "fc8953dfaffa0e8ea023f143aae370c7dd09e36e3d368de1155cf2129618f04b",
+    "doc/php83/evidence/autoload83/composition-cursor-typed-review.json": "09c3a10b69c7bad9ae3172e1b0a0e67955e5f7d02bd0fcaabf5a09e7f532645f",
+    "doc/php83/evidence/autoload83/composition-cursor-typed-review.txt": "ddb7babac992f134f5774fb21be5c930c889dc99cdbc44f2da139a92761a93a4",
+    "doc/php83/evidence/autoload83/composition-cursor-typed-tests-base.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "doc/php83/evidence/autoload83/composition-cursor-typed-tests-base.stderr": "c84a2d76e3f1e93fdecea75fed859a9977a5c3b48e01d410479a529adb8b7030",
+    "doc/php83/evidence/autoload83/composition-cursor-typed-tests-base.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "doc/php83/evidence/autoload83/composition-cursor-typed-tests-composition.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "doc/php83/evidence/autoload83/composition-cursor-typed-tests-composition.stderr": "3dc49b885a92340a112091d16ac80bcd6fb90902738ed7429bb49339b2535455",
+    "doc/php83/evidence/autoload83/composition-cursor-typed-tests-composition.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

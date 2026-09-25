@@ -1,0 +1,19 @@
+{
+  "doc/php83/evidence/autoload83/behavior-harness-final.json": "e782a802c6e99397f01fca504641efc4ebc7cb9c7628f34210ee697a134e6c05",
+  "doc/php83/evidence/autoload83/primary-r3.json": "825e9147e227c5f3472e4ec01e420bd7bdbada56920cda035d65915859295904",
+  "patches/php83/held/autoload83/HTMLPurifier-autoload.patch": "f1038cce8807ccb7f139fa9608a2b27c25bfd2a4eccc71a6f71b036bc8e32d20",
+  "patches/php83/held/autoload83/symfony-cli-autoload.patch": "2ff7fdf8f13d0fb14f23bce79a0f5c6ade5c569a1ce6e3bc3a677ac45a0d4e05",
+  "patches/php83/held/sfCore.class.php.patch": "7a5b4cb0453336d6ad71f5e107df6d8d68c93d4991d75480c69636ee39e85db7",
+  "tools/php83/autoload83/collect.py": "254eb5d08dba29e613970fb102555a1e9018d454318e03afcce6f95f50b922e0",
+  "tools/php83/autoload83/fixtures/extra/FixtureFirstHit.php": "f570bf3db1fa4834bdfa6a6b10b93cd4ea11b88e345acd4c96b7432e58683121",
+  "tools/php83/autoload83/fixtures/extra/FixtureLegacyHit.php": "445bbb3f305409abbb5d77dc7be380963b64d2830cfbb9b1281a70711f93192b",
+  "tools/php83/autoload83/fixtures/legacy.php": "ff98b5737b533b7246f2a386815bfc6e49d6d85e3111c7194ea1ccaee7c95e7a",
+  "tools/php83/autoload83/fixtures/map/FixtureMapped.php": "57dc8378ff5857e91e9d89e31196ae9fc9f6a06cc472928571d08a5f8a83a74c",
+  "tools/php83/autoload83/fixtures/map/FixtureUnserialize.php": "5e81e566d6c6ef90b2c849821f5f1f8619558352a37f3ec4e855d44dcf77e941",
+  "tools/php83/autoload83/fixtures/project/lib/model/FixtureFallback.php": "e614a3fe105d62d2043cb2c648360f6a5bbaef238831f16dbca5510b96478854",
+  "tools/php83/autoload83/prepare.py": "7b0755d035b132e20e15c679206617a73e40801271fec75a5b20cdcf997a9871",
+  "tools/php83/autoload83/probe.php": "a153741717d8bd925c1ee3ac856a35c172cdbc1ccd91bbb9ef5fcd55f3f902bc",
+  "tools/php83/autoload83/run.sh": "bb6994c51a78d612108966d3c133d3c985858933c95e45333f2135d2ec2ad2f6",
+  "tools/php83/autoload83/test_collect.py": "5e60a8c72de5ebd3199d5e28abfd50ecb82a56ee0e18ec93b67e1d939f178749",
+  "tools/php83/autoload83/test_prepare.py": "26ce5b81563079bdfb2808f968f5c086843d86ea7b7e6c43acd348ddca473eed"
+}

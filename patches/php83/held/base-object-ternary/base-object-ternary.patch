@@ -1,0 +1,13 @@
+--- a/alpha/apps/kaltura/lib/baseObjectUtils.class.php
++++ b/alpha/apps/kaltura/lib/baseObjectUtils.class.php
+@@ -471,8 +471,8 @@
+ 				$res .= ' ' . $attr . '="' . kString::xmlEncode($val) . '"';
+ 			}
+ 		}
+-		$res .= $xml_element_name == NULL ? "" :
+-			$close_xml_element ? "/>\n" : ">\n" ;
++		$res .= ($xml_element_name == NULL ? "" :
++			$close_xml_element) ? "/>\n" : ">\n" ;
+ 		return $res;		
+ 	}
+ 	

@@ -1,0 +1,53 @@
+{
+  "model": "opencode/muse-spark-1.3-contributor-free",
+  "resolved_with": "opencode models opencode",
+  "bound_seconds": 180,
+  "process_exit": 0,
+  "actual_commands": [
+    {
+      "command": {
+        "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=tools/php83/base-object-ternary python3 -m unittest -v test_ternary.Proof.test_actual_record_validation test_ternary.Proof.test_timeout test_ternary.Proof.test_boolean_exit test_ternary.Proof.test_wrong_association test_ternary.Proof.test_extra_diagnostic test_ternary.Proof.test_source_hash test_ternary.Proof.test_missing_case test_ternary.Proof.test_side_effect",
+        "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+      },
+      "exit": 0,
+      "output": "test_actual_record_validation (test_ternary.Proof.test_actual_record_validation) ... ok\ntest_timeout (test_ternary.Proof.test_timeout) ... ok\ntest_boolean_exit (test_ternary.Proof.test_boolean_exit) ... ok\ntest_wrong_association (test_ternary.Proof.test_wrong_association) ... ok\ntest_extra_diagnostic (test_ternary.Proof.test_extra_diagnostic) ... ok\ntest_source_hash (test_ternary.Proof.test_source_hash) ... ok\ntest_missing_case (test_ternary.Proof.test_missing_case) ... ok\ntest_side_effect (test_ternary.Proof.test_side_effect) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.003s\n\nOK\n"
+    },
+    {
+      "command": {
+        "command": "sha256sum patches/php83/held/base-object-ternary/base-object-ternary.patch",
+        "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+      },
+      "exit": 0,
+      "output": "22508c21d41ac68949b76504dd201bf8a3e589ebc7188c44350f26effcf505ac  patches/php83/held/base-object-ternary/base-object-ternary.patch\n"
+    }
+  ],
+  "tests_executed": 8,
+  "tests_not_executed": [
+    "test_two_bytes_only",
+    "test_source_drift"
+  ],
+  "prior_denied_operations_not_retried": [
+    {
+      "tool": "read",
+      "input": {
+        "filePath": "/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/server-Rigel-18.20.0/vendor/htmlpurifier/library/HTMLPurifier.autoload.php"
+      },
+      "error": "The user rejected permission to use this specific tool call."
+    },
+    {
+      "tool": "read",
+      "input": {
+        "filePath": "/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/server-Rigel-18.20.0/vendor/symfony-data/bin/symfony.php"
+      },
+      "error": "The user rejected permission to use this specific tool call."
+    }
+  ],
+  "review_text": "Validation (repository-only, read-only):\n\nCommand:\n`PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=tools/php83/base-object-ternary python3 -m unittest -v` with 8 tests.\nResult: exit 0, `Ran 8 tests ... OK` \u2014 all pass.\n\nTests executed: `test_actual_record_validation, test_timeout, test_boolean_exit, test_wrong_association, test_extra_diagnostic, test_source_hash, test_missing_case, test_side_effect`.\nNOT_EXECUTED (per scope): `test_two_bytes_only, test_source_drift` \u2014 require external immutable source; not run.\n\nFindings:\n- Patch `base-object-ternary.patch`: exactly two inserted parens: `$res .= ($xml_element_name == NULL ? \"\" : $close_xml_element) ? ...`, preserving PHP 7.4 left-associativity. Matches `build.py:transform()` old/new.\n- Manifest SHA256: `22508c21...f505ac` == `sha256sum` of local patch bytes \u2014 match.\n- Manifest: `status HELD`, `inserted_bytes 2`, 8 files; only `baseObjectUtils.class.php` has before!=after (`1834b0ce...` -> `cd74355a...`); others before==after.\n- Collector fail-closed (`collect.py:validate`): requires 4 records, strict `type(exit) is int` (rejects `False`), exit 0/255 by mode, version prefixes, row equality, manifest hash match, diagnostics 1/5/0 + exact Iterator/deprecation messages + 10x13 golden table, original83 fatal substring; raises `ValueError` otherwise. `main` refuses overwrite, checks identity before/after. `build.py` pins upstream hash, `count(old)==1`, len+2/newline check.\n\nLimitations: no independent runtime execution (collector main/VM, build main not run); evidence record file trusted as-is; no artifact promotion, no whole-application acceptance (`application_acceptance: False`).\n",
+  "independent_runtime_execution": false,
+  "known_review_limitation": "Parent independently found duplicate runtime mode acceptance; this reviewer did not identify it. The eight existing local tests passing do not validate unique four-mode enforcement. Frozen tools unchanged pending hardening grant.",
+  "evidence_sha256": {
+    "opencode-local-run.jsonl": "0caccedcc8136552983eb85fa78aea8d01872c66adb62827b883fb83998d8bee",
+    "opencode-local-run.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "opencode-local-prompt.txt": "b1a816e76b4a08e06cfb6ee2f2417091ffe9b26f758565f4fbbe1d3a1986f53b"
+  }
+}

@@ -1,0 +1,350 @@
+{
+  "executor": "Cursor Agent CLI (actual independent typed follow-up)",
+  "role": "typed-contract checkpoint: unittest + in-memory mutations + retained replay",
+  "timestamp_utc": "2026-09-25T21:24:15.447241+00:00",
+  "cwd": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83",
+  "scope": "composition-cursor-typed-* evidence only; no VM/SSH/PHP/SQL/network/git/CI; no tool edits",
+  "application_acceptance": false,
+  "prior_review_did_not_catch_bool_int": true,
+  "tests_do_not_prove_all_malformed_impossible": true,
+  "frozen_hash_inputs_unchanged": true,
+  "frozen_hash_check_count": 18,
+  "frozen_hash_mismatches": [],
+  "collectors": {
+    "base": "74590346e0005c9e17e9d8323d6ecebcc2daa1adb61282856824871e910f34ef",
+    "composition": "0dcad1a511e4c08c023a23cb06eb9f30f435baa115a5b516f452ec47cd195220"
+  },
+  "contract_spotchecks": {
+    "native74_cli_append_winner_original": "/audit/composition-fixtures/cli-shadow.php",
+    "native74_cli_append_winner_candidate": "/audit/fixtures/project/lib/model/FixtureFallback.php",
+    "native74_queue_original": [
+      "laterLoader",
+      "finalLoader"
+    ],
+    "native74_queue_candidate": [
+      "Closure",
+      "laterLoader",
+      "finalLoader"
+    ],
+    "cli_repeat_74_original_redeclare_107": true,
+    "cli_repeat_83_candidate_class_36": true,
+    "strict_equal_true_vs_1_distinct": true,
+    "strict_equal_false_vs_0_distinct": true,
+    "strict_equal_true_vs_true": true,
+    "comp_reports_application_acceptance_false_literal": true
+  },
+  "mutations": [
+    {
+      "label": "comp_baseline_pass",
+      "caught": false,
+      "error": null,
+      "detail": "PASS"
+    },
+    {
+      "label": "comp_hit_loaded_true_to_1",
+      "caught": true,
+      "error": "Unexpected exact rows/traces",
+      "detail": null
+    },
+    {
+      "label": "comp_hit_loaded_true_to_1.0",
+      "caught": true,
+      "error": "Unexpected exact rows/traces",
+      "detail": null
+    },
+    {
+      "label": "comp_miss_loaded_false_to_0",
+      "caught": true,
+      "error": "Unexpected exact rows/traces",
+      "detail": null
+    },
+    {
+      "label": "comp_miss_loaded_false_to_0.0",
+      "caught": true,
+      "error": "Unexpected exact rows/traces",
+      "detail": null
+    },
+    {
+      "label": "comp_exit_False",
+      "caught": true,
+      "error": "Exit must be an integer, not bool/float",
+      "detail": null
+    },
+    {
+      "label": "comp_exit_0.0",
+      "caught": true,
+      "error": "Exit must be an integer, not bool/float",
+      "detail": null
+    },
+    {
+      "label": "comp_exit_255.0",
+      "caught": true,
+      "error": "Exit must be an integer, not bool/float",
+      "detail": null
+    },
+    {
+      "label": "comp74_baseline",
+      "caught": false,
+      "error": null,
+      "detail": "PASS"
+    },
+    {
+      "label": "comp_diag_severity_float",
+      "caught": true,
+      "error": "Unexpected exact diagnostics",
+      "detail": null
+    },
+    {
+      "label": "comp_diag_line_float",
+      "caught": true,
+      "error": "Unexpected exact diagnostics",
+      "detail": null
+    },
+    {
+      "label": "comp_diag_severity_bool",
+      "caught": true,
+      "error": "Unexpected exact diagnostics",
+      "detail": null
+    },
+    {
+      "label": "comp_extra_row",
+      "caught": true,
+      "error": "Unexpected exact rows/traces",
+      "detail": null
+    },
+    {
+      "label": "comp_missing_events_row",
+      "caught": true,
+      "error": "Unexpected exact rows/traces",
+      "detail": null
+    },
+    {
+      "label": "base_baseline",
+      "caught": false,
+      "error": null,
+      "detail": "PASS"
+    },
+    {
+      "label": "base_bool_true_to_1",
+      "caught": true,
+      "error": "Expectation mismatch: actual-class-hit",
+      "detail": null
+    },
+    {
+      "label": "base_bool_true_to_1.0",
+      "caught": true,
+      "error": "Expectation mismatch: actual-class-hit",
+      "detail": null
+    },
+    {
+      "label": "base_bool_false_to_0",
+      "caught": true,
+      "error": "Expectation mismatch: prefix-miss",
+      "detail": null
+    },
+    {
+      "label": "base_bool_false_to_0.0",
+      "caught": true,
+      "error": "Expectation mismatch: prefix-miss",
+      "detail": null
+    },
+    {
+      "label": "base_exit_False",
+      "caught": true,
+      "error": "Exit must be an integer, not bool/float",
+      "detail": null
+    },
+    {
+      "label": "base_exit_0.0",
+      "caught": true,
+      "error": "Exit must be an integer, not bool/float",
+      "detail": null
+    },
+    {
+      "label": "base_exit_255.0",
+      "caught": true,
+      "error": "Exit must be an integer, not bool/float",
+      "detail": null
+    },
+    {
+      "label": "base74_original_baseline",
+      "caught": false,
+      "error": null,
+      "detail": "PASS"
+    },
+    {
+      "label": "base_diag_severity_float",
+      "caught": true,
+      "error": "Diagnostic severity/line must be integer",
+      "detail": null
+    },
+    {
+      "label": "base_diag_line_float",
+      "caught": true,
+      "error": "Diagnostic severity/line must be integer",
+      "detail": null
+    },
+    {
+      "label": "base_diag_severity_bool_true",
+      "caught": true,
+      "error": "Diagnostic severity/line must be integer",
+      "detail": null
+    },
+    {
+      "label": "base_extra_row",
+      "caught": true,
+      "error": "Wrong exact case inventory",
+      "detail": null
+    },
+    {
+      "label": "base_missing_hits",
+      "caught": true,
+      "error": "Wrong exact case inventory",
+      "detail": null
+    }
+  ],
+  "adversarial_author_r1_now": {
+    "source": "composition-primary-r2.json 83/candidate/cli-append",
+    "mutation": "hit.loaded True -> 1",
+    "previous_author_result": "PASS (Python ==)",
+    "typed_validator_now": "REJECTED:Unexpected exact rows/traces",
+    "genuine_unmutated": "PASS"
+  },
+  "replay_summary": {
+    "primary-r3": {
+      "PASS": 20,
+      "EXPECTED_FATAL": 3,
+      "FAIL_as_VALUEERROR": 3,
+      "OTHER": 0,
+      "total": 26,
+      "matches_expected": true
+    },
+    "claude-primary": {
+      "PASS": 20,
+      "EXPECTED_FATAL": 3,
+      "FAIL_as_VALUEERROR": 3,
+      "OTHER": 0,
+      "total": 26,
+      "matches_expected": true
+    },
+    "composition-primary-r2": {
+      "PASS": 27,
+      "EXPECTED_FATAL": 3,
+      "FAIL_as_VALUEERROR": 0,
+      "OTHER": 0,
+      "total": 30,
+      "matches_expected": true
+    },
+    "primary_eq_claude_sha": true,
+    "NOT_blanket_26_pass": true
+  },
+  "replays": {
+    "primary-r3": {
+      "label": "primary-r3",
+      "path": "doc/php83/evidence/autoload83/primary-r3.json",
+      "sha256": "825e9147e227c5f3472e4ec01e420bd7bdbada56920cda035d65915859295904",
+      "original_status": "FAIL",
+      "original_failed_checks": 3,
+      "matrix_rows": 26,
+      "files_per_tree": 1630,
+      "counts": {
+        "PASS": 20,
+        "VALUEERROR": 3,
+        "EXPECTED_FATAL": 3,
+        "total": 26
+      },
+      "cli_tasks_valueerrors": [
+        {
+          "case": "cli-tasks",
+          "runtime": "74",
+          "variant": "original",
+          "exit": 1,
+          "original_status": "FAIL",
+          "replay_status": "VALUEERROR",
+          "error": "Real entrypoint failed (not waived)"
+        },
+        {
+          "case": "cli-tasks",
+          "runtime": "74",
+          "variant": "candidate",
+          "exit": 1,
+          "original_status": "FAIL",
+          "replay_status": "VALUEERROR",
+          "error": "Real entrypoint failed (not waived)"
+        },
+        {
+          "case": "cli-tasks",
+          "runtime": "83",
+          "variant": "candidate",
+          "exit": 1,
+          "original_status": "FAIL",
+          "replay_status": "VALUEERROR",
+          "error": "Real entrypoint failed (not waived)"
+        }
+      ],
+      "valueerror_messages": [
+        "Real entrypoint failed (not waived)"
+      ]
+    },
+    "claude-primary": {
+      "label": "claude-primary",
+      "path": "doc/php83/evidence/autoload83/claude-primary.json",
+      "sha256": "825e9147e227c5f3472e4ec01e420bd7bdbada56920cda035d65915859295904",
+      "original_status": "FAIL",
+      "original_failed_checks": 3,
+      "matrix_rows": 26,
+      "files_per_tree": 1630,
+      "counts": {
+        "PASS": 20,
+        "VALUEERROR": 3,
+        "EXPECTED_FATAL": 3,
+        "total": 26
+      },
+      "cli_tasks_valueerrors": [
+        {
+          "case": "cli-tasks",
+          "runtime": "74",
+          "variant": "original",
+          "exit": 1,
+          "original_status": "FAIL",
+          "replay_status": "VALUEERROR",
+          "error": "Real entrypoint failed (not waived)"
+        },
+        {
+          "case": "cli-tasks",
+          "runtime": "74",
+          "variant": "candidate",
+          "exit": 1,
+          "original_status": "FAIL",
+          "replay_status": "VALUEERROR",
+          "error": "Real entrypoint failed (not waived)"
+        },
+        {
+          "case": "cli-tasks",
+          "runtime": "83",
+          "variant": "candidate",
+          "exit": 1,
+          "original_status": "FAIL",
+          "replay_status": "VALUEERROR",
+          "error": "Real entrypoint failed (not waived)"
+        }
+      ],
+      "valueerror_messages": [
+        "Real entrypoint failed (not waived)"
+      ]
+    },
+    "composition-primary-r2": {
+      "label": "composition-primary-r2",
+      "path": "doc/php83/evidence/autoload83/composition-primary-r2.json",
+      "sha256": "b626f1630c5f337d3e65da50310ef326328dbb1525e850c4b51410c7d438ee67",
+      "original_status": "PASS",
+      "original_failed_checks": 0,
+      "application_acceptance": false,
+      "counts": {
+        "PASS": 27,
+        "EXPECTED_FATAL": 3,
+        "total": 30
+      }
+    }
+  }
+}

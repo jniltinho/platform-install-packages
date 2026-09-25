@@ -1,0 +1,51 @@
+{
+  "executor": "cursor-cli",
+  "role": "independent-reviewer-executor",
+  "scope": "local-readonly-unittest-and-static-review",
+  "application_acceptance": false,
+  "runtime_execution": false,
+  "commands": {
+    "ternary_unittest": {
+      "exit": 0,
+      "ran": 10,
+      "ok": true,
+      "evidence": [
+        "cursor-ternary-tests.stdout",
+        "cursor-ternary-tests.stderr",
+        "cursor-ternary-tests.exit"
+      ]
+    },
+    "autoload_unittest": {
+      "exit": 0,
+      "ran": 15,
+      "ok": true,
+      "evidence": [
+        "cursor-autoload-tests.stdout",
+        "cursor-autoload-tests.stderr",
+        "cursor-autoload-tests.exit"
+      ]
+    },
+    "bash_n": {
+      "exit": 0,
+      "targets": [
+        "tools/php83/autoload83/run.sh",
+        "tools/php83/base-object-ternary/run.sh"
+      ],
+      "evidence": [
+        "cursor-bash-n.exit"
+      ]
+    }
+  },
+  "pinned_inputs": {
+    "file": "cursor-input-identities.json",
+    "checked": 24,
+    "mismatches": 0
+  },
+  "blockers": "NONE",
+  "observations": [
+    "autoload collect fatal gate requires exit 255 + body.fatal + '__autoload() is no longer supported' in stderr (not any nonzero)",
+    "cli-tasks expected() is empty; failures not waived (exit!=0/fatal/exception fail) but positive task-list content is not asserted",
+    "ternary tests validate local transform + recorded primary-r2.json; not live PHP/SSH",
+    "autoload unit tests are mocked validate/prepare only; collect.py/run.sh not executed"
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "executor": "cursor-agent-cli-followup",
+  "role": "independent-executor-adversarial-reviewer",
+  "scope": "hardened-ternary-collector-local-only",
+  "application_acceptance": false,
+  "runtime_php_execution": false,
+  "frozen_pins_verified": {
+    "collect.py": "976c5460fa86152213a5d3a8230055d0117de26e00b0a67effe15bfff3b514d7",
+    "test_ternary.py": "a52eaff4d95cbc16c23eb94ec98c76adc46be4af646089f83d9bf5df67453d46",
+    "match": true
+  },
+  "unittest": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/base-object-ternary -p 'test_*.py' -v",
+    "ran": 21,
+    "ok": true,
+    "exit": 0,
+    "evidence": [
+      "cursor-hardening-tests.stdout",
+      "cursor-hardening-tests.stderr",
+      "cursor-hardening-tests.exit"
+    ]
+  },
+  "replay_validate": {
+    "method": "importlib.util.spec_from_file_location + module.validate(records); no module.main/SSH/PHP",
+    "exit": 0,
+    "evidence": [
+      "cursor-hardening-replay.stdout",
+      "cursor-hardening-replay.stderr",
+      "cursor-hardening-replay.exit"
+    ],
+    "primary_r2": {
+      "path": "doc/php83/evidence/base-object-ternary/primary-r2.json",
+      "sha256": "a3fd012036acf09548c498ba76add02da20eaef7ec96fefab466803ce742ca51",
+      "ok": true
+    },
+    "claude": {
+      "path": "doc/php83/evidence/base-object-ternary/claude.json",
+      "sha256": "3ba3572300440c85afcddbf64cbe58e444e2b4547c13e19300f905f6ddc3d876",
+      "ok": true
+    }
+  },
+  "modes_contract": {
+    "actual_MODES": [
+      "original74",
+      "candidate74",
+      "candidate83",
+      "original83"
+    ],
+    "collect_py_line": 8,
+    "fatal_index": 3,
+    "note": "Prompt wording original74,candidate74,original83,candidate83 does NOT match code; code places original83 last"
+  },
+  "previous_assurance_correction": {
+    "prior_cursor_claim": "missing-case coverage / no blockers (10 ternary tests on old collector)",
+    "actual_defect": "OLD collector accepted duplicate candidate74 replacing candidate83 while still reporting positive_rows=441",
+    "hardened_status": "NOW rejected by exact MODES equality (collect.py:26-27); covered by test_duplicate_mode (test_ternary.py:35)",
+    "autoload_loaded_empty_crash": "OUT OF SCOPE for this ternary follow-up; prior runtime worker finding remains separate"
+  },
+  "findings": [
+    {
+      "id": "NONMATRIX_ORACLE_TRUST",
+      "severity": "limitation",
+      "summary": "validate() golden-checks only matrix indices 0..129; cases 130..146 (flat/alias/map/invoke/nested/caller-*) only require cross-mode equality against original74. Hostile in-memory tamper of rows[130] on all three positive modes was ACCEPTED.",
+      "paths": [
+        "tools/php83/base-object-ternary/collect.py:49-53",
+        "tools/php83/base-object-ternary/probe.php:30-38"
+      ]
+    },
+    {
+      "id": "EXIT_TYPE_COVERAGE_PARTIAL",
+      "severity": "observation",
+      "summary": "boolean False exit is unit-tested; string/'True'/nonzero-non255 exits rejected by code but only partially covered by named tests (timeout=124, boolean False).",
+      "paths": [
+        "tools/php83/base-object-ternary/collect.py:27",
+        "tools/php83/base-object-ternary/test_ternary.py:18-23"
+      ]
+    }
+  ],
+  "guards_verified_reject": [
+    "dup candidate74 over candidate83",
+    "swap/reorder modes",
+    "boolean/string/wrong exits",
+    "wrong original83 fatal message",
+    "diagnostic count/hash/stderr parity",
+    "extra/missing modes"
+  ],
+  "blockers_for_hardened_ternary_local_gate": [],
+  "remaining_limitations": [
+    "No new PHP/SSH/VM runtime in this follow-up",
+    "No application/release acceptance",
+    "Non-matrix 17 cases lack independent golden values",
+    "Autoload loaded=[] shutdown crash not addressed here"
+  ]
+}

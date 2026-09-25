@@ -1,0 +1,85 @@
+{
+  "scope": "Exact input identities and strict patch replay; not application acceptance",
+  "archives": {
+    "/tmp/kaltura-php83-audit/Rigel-18.20.0.zip": {
+      "sha256": "58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28",
+      "all_eight_source_hashes_match": true
+    },
+    "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83-artifacts/exp10/Rigel-18.20.0-php83-experimental.exp10.zip": {
+      "sha256": "de177e6cbaedf3a3207661c2325f466cce37febb73190f3a49d31f24b740c053",
+      "all_eight_source_hashes_match": true
+    }
+  },
+  "sources": [
+    {
+      "path": "alpha/apps/kaltura/lib/baseObjectUtils.class.php",
+      "before_sha256": "1834b0ce9ab903af000e95c6a1c065a8dfaa64a91cd454a57de3b44824ee9e03",
+      "after_sha256": "cd74355a19c1366f26a8dd31be503e439fd5d39fa2152de947e7f264e7dff218"
+    },
+    {
+      "path": "alpha/apps/kaltura/lib/myBaseObject.class.php",
+      "before_sha256": "567e77bcb1a4b504dd239f7048565ff1a2ee378459ec88844401a9167bd6be6a",
+      "after_sha256": "567e77bcb1a4b504dd239f7048565ff1a2ee378459ec88844401a9167bd6be6a"
+    },
+    {
+      "path": "alpha/apps/kaltura/lib/kAssetUtils.class.php",
+      "before_sha256": "4ee947a8fe89b6ee9fc5e5f97b641f4dbf411a47666892d4d90950bfc011e03b",
+      "after_sha256": "4ee947a8fe89b6ee9fc5e5f97b641f4dbf411a47666892d4d90950bfc011e03b"
+    },
+    {
+      "path": "infra/general/kString.class.php",
+      "before_sha256": "df428ba6ae157a814f63b9b9359054bfa931376947d2a3419511355b9dd7f383",
+      "after_sha256": "df428ba6ae157a814f63b9b9359054bfa931376947d2a3419511355b9dd7f383"
+    },
+    {
+      "path": "vendor/propel/om/BaseObject.php",
+      "before_sha256": "4e07ae2f83189a14f9eca9b4916f25e3bcdaa1822ceb36797962b29b8a6dc686",
+      "after_sha256": "4e07ae2f83189a14f9eca9b4916f25e3bcdaa1822ceb36797962b29b8a6dc686"
+    },
+    {
+      "path": "vendor/propel/util/BasePeer.php",
+      "before_sha256": "fcf184d451bd49d19801115ed6564106bb074972668875dadfa9f5f0bbdece93",
+      "after_sha256": "fcf184d451bd49d19801115ed6564106bb074972668875dadfa9f5f0bbdece93"
+    },
+    {
+      "path": "alpha/lib/enums/entryStatus.php",
+      "before_sha256": "c85fdad5fe092afc7644e09acb06f6f04d405e80f0b2e93558cb627d366b5ad8",
+      "after_sha256": "c85fdad5fe092afc7644e09acb06f6f04d405e80f0b2e93558cb627d366b5ad8"
+    },
+    {
+      "path": "infra/general/BaseEnum.php",
+      "before_sha256": "98e5caef8d0a43dff294e570e5a1d23e4c82e3b7ae6d56e52a6c71cb9c04c024",
+      "after_sha256": "98e5caef8d0a43dff294e570e5a1d23e4c82e3b7ae6d56e52a6c71cb9c04c024"
+    }
+  ],
+  "strict_patch_replay": {
+    "command": [
+      "patch",
+      "--batch",
+      "--fuzz=0",
+      "-p1",
+      "-i",
+      "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/patches/php83/held/base-object-ternary/base-object-ternary.patch"
+    ],
+    "exit": 0,
+    "stdout": "patching file alpha/apps/kaltura/lib/baseObjectUtils.class.php\n",
+    "stderr": ""
+  },
+  "r2_runtime_before_after_exact": true,
+  "graph": {
+    "project": "kaltura-rigel-18.20.0-full",
+    "generation": "2026-09-25T12:19:00Z",
+    "paths": [
+      "alpha/apps/kaltura/lib/baseObjectUtils.class.php",
+      "alpha/apps/kaltura/lib/myBaseObject.class.php",
+      "alpha/apps/kaltura/lib/kAssetUtils.class.php",
+      "infra/general/kString.class.php",
+      "vendor/propel/om/BaseObject.php",
+      "vendor/propel/util/BasePeer.php",
+      "alpha/lib/enums/entryStatus.php",
+      "infra/general/BaseEnum.php"
+    ],
+    "each_path_coverage": "no_recorded_issue; metadata_match",
+    "caveat": "best effort; direct source inspected for relied method bodies; no exhaustive caller claims"
+  }
+}

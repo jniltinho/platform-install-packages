@@ -1,0 +1,20 @@
+--- a/vendor/symfony-data/bin/symfony.php
++++ b/vendor/symfony-data/bin/symfony.php
+@@ -104,7 +104,7 @@
+   }
+ }
+ 
+-function __autoload($class)
++spl_autoload_register(function ($class)
+ {
+   static $initialized = false;
+ 
+@@ -115,7 +115,7 @@
+   }
+ 
+   return simpleAutoloader::__autoload($class);
+-}
++});
+ 
+ // trap -V before pake
+ if (in_array('-V', $argv) || in_array('--version', $argv))

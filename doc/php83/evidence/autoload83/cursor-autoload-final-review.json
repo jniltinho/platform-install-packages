@@ -1,0 +1,284 @@
+{
+  "executor": "Cursor Agent CLI (composer)",
+  "role": "FINAL independent autoload local execution/review",
+  "cwd": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83",
+  "scope_limits": [
+    "read-only local source/evidence review",
+    "unittest + import validate only",
+    "NO collect.main / prepare.main / shellrunner / PHP",
+    "NO git/VM/SSH/SQL/network/service/package/release",
+    "evidence writes only under doc/php83/evidence/autoload83/cursor-autoload-final-*"
+  ],
+  "source_freeze": {
+    "input_identities": "doc/php83/evidence/autoload83/cursor-autoload-final-input-identities.json",
+    "paths_pinned": 17,
+    "all_match_before_and_after": true,
+    "unchanged_during_run": true
+  },
+  "commands_executed": [
+    {
+      "cmd": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/autoload83 -p 'test_*.py' -v",
+      "stdout": "doc/php83/evidence/autoload83/cursor-autoload-final-tests.stdout",
+      "stderr": "doc/php83/evidence/autoload83/cursor-autoload-final-tests.stderr",
+      "exit_file": "doc/php83/evidence/autoload83/cursor-autoload-final-tests.exit",
+      "exit": 0,
+      "tests_ran": 19,
+      "result": "OK",
+      "note": "unittest -v writes to stderr; stdout empty"
+    },
+    {
+      "cmd": "import collect (no main); load primary-r3.json; validate each row",
+      "exit_file": "doc/php83/evidence/autoload83/cursor-autoload-final-replay.exit",
+      "exit": 0,
+      "result": "replay counts match expectation"
+    }
+  ],
+  "local_tests": {
+    "count_actual": 19,
+    "collect_tests": 12,
+    "prepare_tests": 7,
+    "exit": 0,
+    "includes_empty_loaded_rejected": true,
+    "includes_original83_real_fatal": true,
+    "includes_expected_queue_delta": true,
+    "not_new_php_execution": true
+  },
+  "primary_r3": {
+    "path": "doc/php83/evidence/autoload83/primary-r3.json",
+    "sha256": "825e9147e227c5f3472e4ec01e420bd7bdbada56920cda035d65915859295904",
+    "status": "FAIL",
+    "matrix_rows": 26,
+    "failed_checks": 3,
+    "files_per_tree": 1630,
+    "stage": "/home/vagrant/php-autoload83-r2",
+    "zip_sha256": "de177e6cbaedf3a3207661c2325f466cce37febb73190f3a49d31f24b740c053",
+    "collector_sha256": "254eb5d08dba29e613970fb102555a1e9018d454318e03afcce6f95f50b922e0",
+    "inventory_unchanged": true,
+    "application_acceptance": false
+  },
+  "replay_counts": {
+    "rows": 26,
+    "PASS": 20,
+    "EXPECTED_FATAL": 3,
+    "FAIL": 3,
+    "PASS_plus_EXPECTED_FATAL": 23,
+    "expected_PASS": 20,
+    "expected_EXPECTED_FATAL": 3,
+    "expected_FAIL": 3,
+    "matches_expectation": true
+  },
+  "never_label_all_26_pass": true,
+  "emptyproject_cli_tasks_FAIL": {
+    "count": 3,
+    "cases": [
+      {
+        "runtime": "74",
+        "variant": "original",
+        "exit": 1,
+        "status": "FAIL",
+        "error_signal": "Class kConf not found",
+        "loaded_count": 14
+      },
+      {
+        "runtime": "74",
+        "variant": "candidate",
+        "exit": 1,
+        "status": "FAIL",
+        "error_signal": "Class kConf not found",
+        "loaded_count": 14
+      },
+      {
+        "runtime": "83",
+        "variant": "candidate",
+        "exit": 1,
+        "status": "FAIL",
+        "error_signal": "Class kConf not found",
+        "loaded_count": 14
+      }
+    ],
+    "not_waived": true
+  },
+  "configured_cli_tasks_PASS": {
+    "count": 3,
+    "listing_detail": [
+      {
+        "runtime": "74",
+        "variant": "original",
+        "identical_to_first": true,
+        "header": true,
+        "tasks": {
+          "init-project": true,
+          "init-module": true,
+          "propel-build-model": true
+        },
+        "listing_sha256": "290f27066601e7eaba875addff54e7b0a4be5d9a55908d8dece6ced84012284e",
+        "loaded_count": 37,
+        "exit": 0,
+        "status": "PASS"
+      },
+      {
+        "runtime": "74",
+        "variant": "candidate",
+        "identical_to_first": true,
+        "header": true,
+        "tasks": {
+          "init-project": true,
+          "init-module": true,
+          "propel-build-model": true
+        },
+        "listing_sha256": "290f27066601e7eaba875addff54e7b0a4be5d9a55908d8dece6ced84012284e",
+        "loaded_count": 37,
+        "exit": 0,
+        "status": "PASS"
+      },
+      {
+        "runtime": "83",
+        "variant": "candidate",
+        "identical_to_first": true,
+        "header": true,
+        "tasks": {
+          "init-project": true,
+          "init-module": true,
+          "propel-build-model": true
+        },
+        "listing_sha256": "290f27066601e7eaba875addff54e7b0a4be5d9a55908d8dece6ced84012284e",
+        "loaded_count": 37,
+        "exit": 0,
+        "status": "PASS"
+      }
+    ],
+    "three_way_listing_identical": true,
+    "positive_content_verified": true,
+    "loaded_count_is_37_only_here": true
+  },
+  "identity_clarification": {
+    "files_per_tree_actual": 1630,
+    "prompt_phrase_37_selected_per_tree": "INCORRECT if read as files_per_tree; actual selected source files per variant tree is 1630",
+    "loaded_37_meaning": "cli-tasks-configured processes each report loaded inventory size 37; not stage selection size; not every case",
+    "emptyproject_cli_tasks_loaded": 14,
+    "not_37_loaded_by_every_case": true
+  },
+  "fatal_controls": [
+    {
+      "case": "fatal-hp",
+      "exit": 255,
+      "status": "EXPECTED_FATAL",
+      "fatal_file": "vendor/htmlpurifier/library/HTMLPurifier.autoload.php",
+      "target_path": "vendor/htmlpurifier/library/HTMLPurifier.autoload.php",
+      "target_matches_fatal": true,
+      "stderr_forbidden_global": true
+    },
+    {
+      "case": "fatal-core",
+      "exit": 255,
+      "status": "EXPECTED_FATAL",
+      "fatal_file": "vendor/symfony/util/sfCore.class.php",
+      "target_path": "vendor/symfony/util/sfCore.class.php",
+      "target_matches_fatal": true,
+      "stderr_forbidden_global": true
+    },
+    {
+      "case": "fatal-cli",
+      "exit": 255,
+      "status": "EXPECTED_FATAL",
+      "fatal_file": "vendor/symfony-data/bin/symfony.php",
+      "target_path": "vendor/symfony-data/bin/symfony.php",
+      "target_matches_fatal": true,
+      "stderr_forbidden_global": true
+    }
+  ],
+  "independent_source_review": {
+    "collect_py": {
+      "sha256": "254eb5d08dba29e613970fb102555a1e9018d454318e03afcce6f95f50b922e0",
+      "findings": [
+        "Real entrypoint nonzero exit / fatal / exception => FAIL (not waived)",
+        "required_loaded + type(dict) + hash checks reject empty maps and array-shaped loaded",
+        "probe.php casts loaded to object so JSON empty becomes {}; collector rejects non-dict",
+        "original83 fatal controls require exit255, stderr phrase, fatal.file==target, no continued rows",
+        "strict exact case inventory, diagnostics, queue/hits expectations",
+        "cli-tasks-configured asserts listing header + init-project/init-module/propel-build-model and 3-way listing equality in main()",
+        "matrix reports overall FAIL when emptyproject cli-tasks fail (failed_checks=3); application_acceptance False"
+      ]
+    },
+    "prepare_py": {
+      "sha256": "7b0755d035b132e20e15c679206617a73e40801271fec75a5b20cdcf997a9871",
+      "findings": [
+        "ZIP pin + exact patch before/after identities; refuse existing dest; >1000 selected files",
+        "files_per_tree = len(selected) => 1630 in primary-r3 identity",
+        "never runs application PHP"
+      ]
+    },
+    "probe_php": {
+      "sha256": "a153741717d8bd925c1ee3ac856a35c172cdbc1ccd91bbb9ef5fcd55f3f902bc",
+      "findings": [
+        "Full entrypoints only; diagnostics return false (native stderr preserved)",
+        "loaded cast to object before JSON encode (fixes prior loaded=[] shutdown crash)",
+        "fatal-* require original __autoload declaration path; postExit exception recorded",
+        "cli-tasks-configured uses real kConf/cache classes with synthetic session store"
+      ]
+    },
+    "patches": {
+      "HTMLPurifier": "removes global __autoload definition; else throws RuntimeException requiring SPL",
+      "sfCore": "same pattern in initAutoload and initSimpleAutoload branches",
+      "symfony-cli": "replaces function __autoload with spl_autoload_register(closure) APPEND; not prepend",
+      "composition_delta_accepted": "explicit anonymous SPL append; earlier handlers order/first-hits preserved; candidate fallback-hit observed on cli-version-queue; NOT universal 74 queue parity"
+    },
+    "tests_coverage": {
+      "guards_present": [
+        "empty loaded rejected",
+        "nonzero not pass",
+        "source mismatch",
+        "wrong callback order",
+        "duplicate/extra rows",
+        "unexpected diagnostics",
+        "original83 requires real fatal stderr",
+        "expected queue delta (fallback-hit false original / true candidate + Closure append)",
+        "three patches + patch hashes + bad zip refused + sandbox network denied"
+      ],
+      "untested_composition_controls_NOT_executed_pass": [
+        "later-added handler after registration",
+        "prepended handler (spl_autoload_register prepend=true)",
+        "duplicate-class winner across overlapping maps",
+        "exception thrown from autoload callback",
+        "repeated include of already-loaded entrypoint",
+        "SPL disabled / no-SPL branch behavior beyond RuntimeException text in patches"
+      ]
+    }
+  },
+  "correction_of_prior_overbroad_review": {
+    "prior_15_tests_missed": "loaded=[] JSON array from empty inventory crashed collector .items(); 15-test suite lacked empty-loaded/object-shape coverage for fatal shutdown path",
+    "current_19_tests": "adds test_empty_loaded_rejected among other strict guards; verified actual count 19 OK",
+    "prior_overbroad": "initial Cursor review understated blockers / did not catch collector shutdown bug; coordinator documented this",
+    "this_review": "does NOT claim all 26 PASS; preserves 3 emptyproject FAIL; replay is retained-primary import validate not independent VM run (Claude owns VM repeat)"
+  },
+  "loaded_distribution": {
+    "hp:4": 3,
+    "core-simple:7": 3,
+    "core-full:7": 3,
+    "cli-version:14": 3,
+    "cli-version-queue:14": 1,
+    "cli-tasks:14": 3,
+    "cli-tasks-configured:37": 3,
+    "cli-version-queue:15": 2,
+    "hp-legacy:6": 2,
+    "fatal-hp:0": 1,
+    "fatal-core:0": 1,
+    "fatal-cli:0": 1
+  },
+  "limitations": [
+    "Local unittest/importvalidate only; not new PHP execution",
+    "Replay of retained primary-r3 is not independent VM run",
+    "No SQL/config-cache generation/no-SPL branch/full application testing",
+    "CLI queue composition delta is intentional candidate behavior, not universal 74 parity",
+    "Missing composition controls listed above remain untested",
+    "Overall primary status FAIL due to 3 emptyproject cli-tasks kConf failures",
+    "No full application / release approval"
+  ],
+  "verdict": {
+    "local_tests": "PASS (19/19 exit 0)",
+    "replay_validate": "matches expectation: 20 PASS + 3 EXPECTED_FATAL + 3 FAIL",
+    "primary_report_status": "FAIL (failed_checks=3) \u2014 correctly preserved",
+    "application_acceptance": false,
+    "release_approval": false
+  }
+}

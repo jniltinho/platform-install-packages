@@ -1,0 +1,617 @@
+{
+  "executor": "cursor-agent-cli",
+  "role": "independent-final-local-execution-review",
+  "scope": "read-only unittest + import validate replay; no collect.main/prepare.main/PHP/VM",
+  "primary_report": {
+    "path": "doc/php83/evidence/autoload83/primary-r3.json",
+    "sha256": "825e9147e227c5f3472e4ec01e420bd7bdbada56920cda035d65915859295904",
+    "status": "FAIL",
+    "matrix_rows": 26,
+    "failed_checks": 3,
+    "inventory_unchanged": true,
+    "collector_sha256": "254eb5d08dba29e613970fb102555a1e9018d454318e03afcce6f95f50b922e0",
+    "files_per_tree": 1630,
+    "stage": "/home/vagrant/php-autoload83-r2",
+    "comparisons": [
+      {
+        "case": "hp",
+        "before_candidate74_functional_rows_equal": true
+      },
+      {
+        "case": "hp-legacy",
+        "before_candidate74_functional_rows_equal": true
+      },
+      {
+        "case": "core-simple",
+        "before_candidate74_functional_rows_equal": true
+      },
+      {
+        "case": "core-full",
+        "before_candidate74_functional_rows_equal": true
+      },
+      {
+        "case": "cli-tasks-configured",
+        "three_variant_task_listing_identical": true
+      }
+    ],
+    "limitations": [
+      "Diagnostic equivalence requires independent review; warnings are never suppressed",
+      "CLI queue composition delta explicitly expected",
+      "No SQL/config-cache generation/no-SPL branch/full application testing"
+    ],
+    "record_count": 26
+  },
+  "replay_counts": {
+    "rows": 26,
+    "PASS": 20,
+    "EXPECTED_FATAL": 3,
+    "FAIL": 3,
+    "PASS_plus_EXPECTED_FATAL": 23,
+    "expected_PASS": 20,
+    "expected_EXPECTED_FATAL": 3,
+    "expected_FAIL": 3,
+    "matches_expectation": true
+  },
+  "recorded_status_counts": {
+    "PASS": 20,
+    "FAIL": 3,
+    "EXPECTED_FATAL": 3
+  },
+  "replay_status_counts": {
+    "PASS": 20,
+    "FAIL": 3,
+    "EXPECTED_FATAL": 3
+  },
+  "caught_failures": [
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "cli-tasks",
+      "error": "Real entrypoint failed (not waived)",
+      "recorded_status": "FAIL",
+      "exit": 1
+    },
+    {
+      "runtime": "74",
+      "variant": "candidate",
+      "case": "cli-tasks",
+      "error": "Real entrypoint failed (not waived)",
+      "recorded_status": "FAIL",
+      "exit": 1
+    },
+    {
+      "runtime": "83",
+      "variant": "candidate",
+      "case": "cli-tasks",
+      "error": "Real entrypoint failed (not waived)",
+      "recorded_status": "FAIL",
+      "exit": 1
+    }
+  ],
+  "emptyproject_cli_tasks": [
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "cli-tasks",
+      "command": "bash /home/vagrant/php-autoload83-r2/run.sh 74 original cli-tasks",
+      "exit": 1,
+      "recorded_status": "FAIL",
+      "recorded_validation_error": "Real entrypoint failed (not waived)",
+      "replay_status": "FAIL",
+      "replay_error": "Real entrypoint failed (not waived)",
+      "stdout_sha256": "2747c7cbefa561d4d816a01f3173ed9c86a639687013bc11d3a7fc498475114e",
+      "stderr_sha256": "ceae61a1dd8b3a41207c2fbe5565e72aed32a4932b40b86217dde9ba937a41b4",
+      "stdout_len": 2324,
+      "stderr_len": 479,
+      "stderr_excerpt": "Deprecated: __autoload() is deprecated, use spl_autoload_register() instead in /audit/source/vendor/symfony-data/bin/symfony.php on line 107\nDeprecated: Methods with the same name as their class will not be constructors in a future version of PHP; pakeYAMLNode has a deprecated constructor in /audit/source/vendor/symfony/vendor/pake/pakeYaml.class.php on line 54\n\n                           \n  [Erro",
+      "target": {
+        "path": "vendor/symfony-data/bin/symfony.php",
+        "sha256": "f934f3d5d56a5b5430bf37a6741f2a782ff377f858d0327e4056c6d2dc45234a"
+      },
+      "loaded_count": 14,
+      "loaded_keys_sample": [
+        "source/vendor/symfony-data/bin/symfony.php",
+        "source/vendor/symfony-data/config/constants.php",
+        "source/vendor/symfony/config/sfConfig.class.php",
+        "source/vendor/symfony/vendor/pake/pakeApp.class.php",
+        "source/vendor/symfony/vendor/pake/pakeColor.class.php",
+        "source/vendor/symfony/vendor/pake/pakeException.class.php",
+        "source/vendor/symfony/vendor/pake/pakeFileTask.class.php",
+        "source/vendor/symfony/vendor/pake/pakeFinder.class.php"
+      ],
+      "fatal": null,
+      "php": "7.4.33",
+      "rows_count": 1,
+      "listing_checks": null
+    },
+    {
+      "runtime": "74",
+      "variant": "candidate",
+      "case": "cli-tasks",
+      "command": "bash /home/vagrant/php-autoload83-r2/run.sh 74 candidate cli-tasks",
+      "exit": 1,
+      "recorded_status": "FAIL",
+      "recorded_validation_error": "Real entrypoint failed (not waived)",
+      "replay_status": "FAIL",
+      "replay_error": "Real entrypoint failed (not waived)",
+      "stdout_sha256": "8a29fef222839ec144367595d31d750026b9edc96981c13a76052b4e1b0ca23f",
+      "stderr_sha256": "8eae733d12f2275f4ca560ba064a0de6106a7d78aac4596e1b0c218333090ffa",
+      "stdout_len": 2152,
+      "stderr_len": 338,
+      "stderr_excerpt": "Deprecated: Methods with the same name as their class will not be constructors in a future version of PHP; pakeYAMLNode has a deprecated constructor in /audit/source/vendor/symfony/vendor/pake/pakeYaml.class.php on line 54\n\n                           \n  [Error]                  \n  Class 'kConf' not found  \n                           \n\n\n",
+      "target": {
+        "path": "vendor/symfony-data/bin/symfony.php",
+        "sha256": "9c3c561f44e20dee9b51ecfa580884bc895dcc2c71381692a4e2f20f6e0b44b8"
+      },
+      "loaded_count": 14,
+      "loaded_keys_sample": [
+        "source/vendor/symfony-data/bin/symfony.php",
+        "source/vendor/symfony-data/config/constants.php",
+        "source/vendor/symfony/config/sfConfig.class.php",
+        "source/vendor/symfony/vendor/pake/pakeApp.class.php",
+        "source/vendor/symfony/vendor/pake/pakeColor.class.php",
+        "source/vendor/symfony/vendor/pake/pakeException.class.php",
+        "source/vendor/symfony/vendor/pake/pakeFileTask.class.php",
+        "source/vendor/symfony/vendor/pake/pakeFinder.class.php"
+      ],
+      "fatal": null,
+      "php": "7.4.33",
+      "rows_count": 1,
+      "listing_checks": null
+    },
+    {
+      "runtime": "83",
+      "variant": "candidate",
+      "case": "cli-tasks",
+      "command": "bash /home/vagrant/php-autoload83-r2/run.sh 83 candidate cli-tasks",
+      "exit": 1,
+      "recorded_status": "FAIL",
+      "recorded_validation_error": "Real entrypoint failed (not waived)",
+      "replay_status": "FAIL",
+      "replay_error": "Real entrypoint failed (not waived)",
+      "stdout_sha256": "48b86c0d3eda9711dc213c1cd5d2b873fba7ef7022480017b459202307372b1e",
+      "stderr_sha256": "1913b8d2d4f0de30a43ecb56115afb7a12e653c3424a7d27db65f6a96420fe4f",
+      "stdout_len": 1971,
+      "stderr_len": 115,
+      "stderr_excerpt": "\n                           \n  [Error]                  \n  Class \"kConf\" not found  \n                           \n\n\n",
+      "target": {
+        "path": "vendor/symfony-data/bin/symfony.php",
+        "sha256": "9c3c561f44e20dee9b51ecfa580884bc895dcc2c71381692a4e2f20f6e0b44b8"
+      },
+      "loaded_count": 14,
+      "loaded_keys_sample": [
+        "source/vendor/symfony-data/bin/symfony.php",
+        "source/vendor/symfony-data/config/constants.php",
+        "source/vendor/symfony/config/sfConfig.class.php",
+        "source/vendor/symfony/vendor/pake/pakeApp.class.php",
+        "source/vendor/symfony/vendor/pake/pakeColor.class.php",
+        "source/vendor/symfony/vendor/pake/pakeException.class.php",
+        "source/vendor/symfony/vendor/pake/pakeFileTask.class.php",
+        "source/vendor/symfony/vendor/pake/pakeFinder.class.php"
+      ],
+      "fatal": null,
+      "php": "8.3.6",
+      "rows_count": 1,
+      "listing_checks": null
+    }
+  ],
+  "configured_cli_tasks": [
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "cli-tasks-configured",
+      "command": "bash /home/vagrant/php-autoload83-r2/run.sh 74 original cli-tasks-configured",
+      "exit": 0,
+      "recorded_status": "PASS",
+      "recorded_validation_error": null,
+      "replay_status": "PASS",
+      "replay_error": null,
+      "stdout_sha256": "310be29e0cde9f6f46bdb965f135699e5437926a754bab3884eceaf12f8919d4",
+      "stderr_sha256": "3ab556f94256d2eee3ef534dd324843c6a4a4e2312c51ee36d6d7de4dcdf501d",
+      "stdout_len": 7909,
+      "stderr_len": 364,
+      "stderr_excerpt": "Deprecated: __autoload() is deprecated, use spl_autoload_register() instead in /audit/source/vendor/symfony-data/bin/symfony.php on line 107\nDeprecated: Methods with the same name as their class will not be constructors in a future version of PHP; pakeYAMLNode has a deprecated constructor in /audit/source/vendor/symfony/vendor/pake/pakeYaml.class.php on line 54\n",
+      "target": {
+        "path": "vendor/symfony-data/bin/symfony.php",
+        "sha256": "f934f3d5d56a5b5430bf37a6741f2a782ff377f858d0327e4056c6d2dc45234a"
+      },
+      "loaded_count": 37,
+      "loaded_keys_sample": [
+        "source/alpha/config/cache/kBaseConfCache.php",
+        "source/alpha/config/cache/kBaseMemcacheConf.php",
+        "source/alpha/config/cache/kCacheConfFactory.php",
+        "source/alpha/config/cache/kKeyCacheInterface.php",
+        "source/alpha/config/cache/kLocalMemCacheConf.php",
+        "source/alpha/config/cache/kMapCacheInterface.php",
+        "source/alpha/config/cache/kRemoteMemCacheConf.php",
+        "source/alpha/config/cache/kSessionConf.php"
+      ],
+      "fatal": null,
+      "php": "7.4.33",
+      "rows_count": 3,
+      "listing_checks": {
+        "startswith_header": true,
+        "has_init-project": true,
+        "has_init-module": true,
+        "has_propel-build-model": true,
+        "listing_sha256": "290f27066601e7eaba875addff54e7b0a4be5d9a55908d8dece6ced84012284e",
+        "listing_len": 2773
+      }
+    },
+    {
+      "runtime": "74",
+      "variant": "candidate",
+      "case": "cli-tasks-configured",
+      "command": "bash /home/vagrant/php-autoload83-r2/run.sh 74 candidate cli-tasks-configured",
+      "exit": 0,
+      "recorded_status": "PASS",
+      "recorded_validation_error": null,
+      "replay_status": "PASS",
+      "replay_error": null,
+      "stdout_sha256": "d32a6381e5a63e8353cfbcb2a9c15b7219a62bd4ff0ea4c004721220535e0677",
+      "stderr_sha256": "dd6a651b257843c41799fdcc324341499868f067238eab8c9be9426060a27432",
+      "stdout_len": 7737,
+      "stderr_len": 223,
+      "stderr_excerpt": "Deprecated: Methods with the same name as their class will not be constructors in a future version of PHP; pakeYAMLNode has a deprecated constructor in /audit/source/vendor/symfony/vendor/pake/pakeYaml.class.php on line 54\n",
+      "target": {
+        "path": "vendor/symfony-data/bin/symfony.php",
+        "sha256": "9c3c561f44e20dee9b51ecfa580884bc895dcc2c71381692a4e2f20f6e0b44b8"
+      },
+      "loaded_count": 37,
+      "loaded_keys_sample": [
+        "source/alpha/config/cache/kBaseConfCache.php",
+        "source/alpha/config/cache/kBaseMemcacheConf.php",
+        "source/alpha/config/cache/kCacheConfFactory.php",
+        "source/alpha/config/cache/kKeyCacheInterface.php",
+        "source/alpha/config/cache/kLocalMemCacheConf.php",
+        "source/alpha/config/cache/kMapCacheInterface.php",
+        "source/alpha/config/cache/kRemoteMemCacheConf.php",
+        "source/alpha/config/cache/kSessionConf.php"
+      ],
+      "fatal": null,
+      "php": "7.4.33",
+      "rows_count": 3,
+      "listing_checks": {
+        "startswith_header": true,
+        "has_init-project": true,
+        "has_init-module": true,
+        "has_propel-build-model": true,
+        "listing_sha256": "290f27066601e7eaba875addff54e7b0a4be5d9a55908d8dece6ced84012284e",
+        "listing_len": 2773
+      }
+    },
+    {
+      "runtime": "83",
+      "variant": "candidate",
+      "case": "cli-tasks-configured",
+      "command": "bash /home/vagrant/php-autoload83-r2/run.sh 83 candidate cli-tasks-configured",
+      "exit": 0,
+      "recorded_status": "PASS",
+      "recorded_validation_error": null,
+      "replay_status": "PASS",
+      "replay_error": null,
+      "stdout_sha256": "8fbd863c5745a94f086ed1e7fa5edc1b4eac0522b31fb2ee19cad91960ec93e6",
+      "stderr_sha256": "321261d8cfa800df6792029329c82f4d57bafab453869a06fb98ff3b53d41042",
+      "stdout_len": 7725,
+      "stderr_len": 116,
+      "stderr_excerpt": "Deprecated: Function libxml_disable_entity_loader() is deprecated in /audit/source/alpha/config/kConf.php on line 7\n",
+      "target": {
+        "path": "vendor/symfony-data/bin/symfony.php",
+        "sha256": "9c3c561f44e20dee9b51ecfa580884bc895dcc2c71381692a4e2f20f6e0b44b8"
+      },
+      "loaded_count": 37,
+      "loaded_keys_sample": [
+        "source/alpha/config/cache/kBaseConfCache.php",
+        "source/alpha/config/cache/kBaseMemcacheConf.php",
+        "source/alpha/config/cache/kCacheConfFactory.php",
+        "source/alpha/config/cache/kKeyCacheInterface.php",
+        "source/alpha/config/cache/kLocalMemCacheConf.php",
+        "source/alpha/config/cache/kMapCacheInterface.php",
+        "source/alpha/config/cache/kRemoteMemCacheConf.php",
+        "source/alpha/config/cache/kSessionConf.php"
+      ],
+      "fatal": null,
+      "php": "8.3.6",
+      "rows_count": 3,
+      "listing_checks": {
+        "startswith_header": true,
+        "has_init-project": true,
+        "has_init-module": true,
+        "has_propel-build-model": true,
+        "listing_sha256": "290f27066601e7eaba875addff54e7b0a4be5d9a55908d8dece6ced84012284e",
+        "listing_len": 2773
+      }
+    }
+  ],
+  "configured_listing": {
+    "count": 3,
+    "three_way_identical": true,
+    "listing_sha256": [
+      "290f27066601e7eaba875addff54e7b0a4be5d9a55908d8dece6ced84012284e",
+      "290f27066601e7eaba875addff54e7b0a4be5d9a55908d8dece6ced84012284e",
+      "290f27066601e7eaba875addff54e7b0a4be5d9a55908d8dece6ced84012284e"
+    ],
+    "header_and_tasks_ok": true
+  },
+  "fatal_controls": [
+    {
+      "runtime": "83",
+      "variant": "original",
+      "case": "fatal-hp",
+      "command": "bash /home/vagrant/php-autoload83-r2/run.sh 83 original fatal-hp",
+      "exit": 255,
+      "recorded_status": "EXPECTED_FATAL",
+      "recorded_validation_error": null,
+      "replay_status": "EXPECTED_FATAL",
+      "replay_error": null,
+      "stdout_sha256": "a946166b6a4f854472abf6a662ef8aefa952dcb3c08738cfe05cc478d3ebae3c",
+      "stderr_sha256": "f9bc40321b10ba6d9727e6379f0c149fd270bf4ba07f85d68449b030fda8d2b7",
+      "stdout_len": 421,
+      "stderr_len": 168,
+      "stderr_excerpt": "Fatal error: __autoload() is no longer supported, use spl_autoload_register() instead in /audit/source/vendor/htmlpurifier/library/HTMLPurifier.autoload.php on line 17\n",
+      "target": {
+        "path": "vendor/htmlpurifier/library/HTMLPurifier.autoload.php",
+        "sha256": "b845e45b8428bb01d9870cd55a5ad005c4e005329cd5cf418a4642f9b96803fa"
+      },
+      "loaded_count": 0,
+      "loaded_keys_sample": null,
+      "fatal": {
+        "severity": 64,
+        "file": "vendor/htmlpurifier/library/HTMLPurifier.autoload.php",
+        "line": 17,
+        "message_sha256": "f4ddbad43242def9ac94f60935242e6dfdd7ec4883eeb1daaaebb8585b53ffe0"
+      },
+      "php": "8.3.6",
+      "rows_count": 0,
+      "listing_checks": null
+    },
+    {
+      "runtime": "83",
+      "variant": "original",
+      "case": "fatal-core",
+      "command": "bash /home/vagrant/php-autoload83-r2/run.sh 83 original fatal-core",
+      "exit": 255,
+      "recorded_status": "EXPECTED_FATAL",
+      "recorded_validation_error": null,
+      "replay_status": "EXPECTED_FATAL",
+      "replay_error": null,
+      "stdout_sha256": "76b029a9d1b0e8bc658ff42d1129ebe10624f0221f292441d8ca1338d95ae5bf",
+      "stderr_sha256": "02957aa5b08f7589dd9cc8ebf1492a139e5950cabb39d52770de7153536e82ca",
+      "stdout_len": 390,
+      "stderr_len": 152,
+      "stderr_excerpt": "Fatal error: __autoload() is no longer supported, use spl_autoload_register() instead in /audit/source/vendor/symfony/util/sfCore.class.php on line 188\n",
+      "target": {
+        "path": "vendor/symfony/util/sfCore.class.php",
+        "sha256": "09f1cdbd38be0e97939bc56ac4ae7895ccf9c7622098afeb46f40adbef6def46"
+      },
+      "loaded_count": 0,
+      "loaded_keys_sample": null,
+      "fatal": {
+        "severity": 64,
+        "file": "vendor/symfony/util/sfCore.class.php",
+        "line": 188,
+        "message_sha256": "f4ddbad43242def9ac94f60935242e6dfdd7ec4883eeb1daaaebb8585b53ffe0"
+      },
+      "php": "8.3.6",
+      "rows_count": 0,
+      "listing_checks": null
+    },
+    {
+      "runtime": "83",
+      "variant": "original",
+      "case": "fatal-cli",
+      "command": "bash /home/vagrant/php-autoload83-r2/run.sh 83 original fatal-cli",
+      "exit": 255,
+      "recorded_status": "EXPECTED_FATAL",
+      "recorded_validation_error": null,
+      "replay_status": "EXPECTED_FATAL",
+      "replay_error": null,
+      "stdout_sha256": "74a94a61d2049974128bcaa03138b19535e3c3ceb7da71a642fd17e710881cbe",
+      "stderr_sha256": "996ddefe700de6e069505cbd78346047cee287b89c1f123e877c6e44fe1fa526",
+      "stdout_len": 387,
+      "stderr_len": 151,
+      "stderr_excerpt": "Fatal error: __autoload() is no longer supported, use spl_autoload_register() instead in /audit/source/vendor/symfony-data/bin/symfony.php on line 107\n",
+      "target": {
+        "path": "vendor/symfony-data/bin/symfony.php",
+        "sha256": "f934f3d5d56a5b5430bf37a6741f2a782ff377f858d0327e4056c6d2dc45234a"
+      },
+      "loaded_count": 0,
+      "loaded_keys_sample": null,
+      "fatal": {
+        "severity": 64,
+        "file": "vendor/symfony-data/bin/symfony.php",
+        "line": 107,
+        "message_sha256": "f4ddbad43242def9ac94f60935242e6dfdd7ec4883eeb1daaaebb8585b53ffe0"
+      },
+      "php": "8.3.6",
+      "rows_count": 0,
+      "listing_checks": null
+    }
+  ],
+  "pass_count_verified": 20,
+  "files_per_tree_note": "files_per_tree is selected source files per variant tree at prepare time; not loaded-file count per case",
+  "loaded_counts_by_case": [
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "hp",
+      "loaded_count": 4,
+      "replay_status": "PASS"
+    },
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "core-simple",
+      "loaded_count": 7,
+      "replay_status": "PASS"
+    },
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "core-full",
+      "loaded_count": 7,
+      "replay_status": "PASS"
+    },
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "cli-version",
+      "loaded_count": 14,
+      "replay_status": "PASS"
+    },
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "cli-version-queue",
+      "loaded_count": 14,
+      "replay_status": "PASS"
+    },
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "cli-tasks",
+      "loaded_count": 14,
+      "replay_status": "FAIL"
+    },
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "cli-tasks-configured",
+      "loaded_count": 37,
+      "replay_status": "PASS"
+    },
+    {
+      "runtime": "74",
+      "variant": "candidate",
+      "case": "hp",
+      "loaded_count": 4,
+      "replay_status": "PASS"
+    },
+    {
+      "runtime": "74",
+      "variant": "candidate",
+      "case": "core-simple",
+      "loaded_count": 7,
+      "replay_status": "PASS"
+    },
+    {
+      "runtime": "74",
+      "variant": "candidate",
+      "case": "core-full",
+      "loaded_count": 7,
+      "replay_status": "PASS"
+    },
+    {
+      "runtime": "74",
+      "variant": "candidate",
+      "case": "cli-version",
+      "loaded_count": 14,
+      "replay_status": "PASS"
+    },
+    {
+      "runtime": "74",
+      "variant": "candidate",
+      "case": "cli-version-queue",
+      "loaded_count": 15,
+      "replay_status": "PASS"
+    },
+    {
+      "runtime": "74",
+      "variant": "candidate",
+      "case": "cli-tasks",
+      "loaded_count": 14,
+      "replay_status": "FAIL"
+    },
+    {
+      "runtime": "74",
+      "variant": "candidate",
+      "case": "cli-tasks-configured",
+      "loaded_count": 37,
+      "replay_status": "PASS"
+    },
+    {
+      "runtime": "83",
+      "variant": "candidate",
+      "case": "hp",
+      "loaded_count": 4,
+      "replay_status": "PASS"
+    },
+    {
+      "runtime": "83",
+      "variant": "candidate",
+      "case": "core-simple",
+      "loaded_count": 7,
+      "replay_status": "PASS"
+    },
+    {
+      "runtime": "83",
+      "variant": "candidate",
+      "case": "core-full",
+      "loaded_count": 7,
+      "replay_status": "PASS"
+    },
+    {
+      "runtime": "83",
+      "variant": "candidate",
+      "case": "cli-version",
+      "loaded_count": 14,
+      "replay_status": "PASS"
+    },
+    {
+      "runtime": "83",
+      "variant": "candidate",
+      "case": "cli-version-queue",
+      "loaded_count": 15,
+      "replay_status": "PASS"
+    },
+    {
+      "runtime": "83",
+      "variant": "candidate",
+      "case": "cli-tasks",
+      "loaded_count": 14,
+      "replay_status": "FAIL"
+    },
+    {
+      "runtime": "83",
+      "variant": "candidate",
+      "case": "cli-tasks-configured",
+      "loaded_count": 37,
+      "replay_status": "PASS"
+    },
+    {
+      "runtime": "74",
+      "variant": "original",
+      "case": "hp-legacy",
+      "loaded_count": 6,
+      "replay_status": "PASS"
+    },
+    {
+      "runtime": "74",
+      "variant": "candidate",
+      "case": "hp-legacy",
+      "loaded_count": 6,
+      "replay_status": "PASS"
+    },
+    {
+      "runtime": "83",
+      "variant": "original",
+      "case": "fatal-hp",
+      "loaded_count": 0,
+      "replay_status": "EXPECTED_FATAL"
+    },
+    {
+      "runtime": "83",
+      "variant": "original",
+      "case": "fatal-core",
+      "loaded_count": 0,
+      "replay_status": "EXPECTED_FATAL"
+    },
+    {
+      "runtime": "83",
+      "variant": "original",
+      "case": "fatal-cli",
+      "loaded_count": 0,
+      "replay_status": "EXPECTED_FATAL"
+    }
+  ]
+}

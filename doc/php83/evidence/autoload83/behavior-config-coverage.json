@@ -1,0 +1,133 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"project\":\"kaltura-rigel-18.20.0-full\",\"signal\":\"best_effort\",\"indexed_at\":\"2026-09-25T12:19:00Z\",\"metadata\":{\"generation\":\"2026-09-25T12:19:00Z\",\"index_mode\":\"full\",\"recorded_at\":\"2026-09-25T12:19:04Z\",\"recording_status\":\"complete\",\"ignored_files_stored\":519,\"ignored_files_total\":519,\"hash_records_complete\":true,\"coverage_version\":3,\"generation_matches\":true},\"paths\":[{\"requested_path\":\"alpha/config/kConf.php\",\"path\":\"alpha/config/kConf.php\",\"status\":\"no_recorded_issue\",\"freshness\":\"metadata_match\",\"recommended_action\":\"use_graph_with_best_effort_caveat\",\"coverage\":[]},{\"requested_path\":\"alpha/config/kConfCacheManager.php\",\"path\":\"alpha/config/kConfCacheManager.php\",\"status\":\"no_recorded_issue\",\"freshness\":\"metadata_match\",\"recommended_action\":\"use_graph_with_best_effort_caveat\",\"coverage\":[]},{\"requested_path\":\"infra/kEnvironment.php\",\"path\":\"infra/kEnvironment.php\",\"status\":\"no_recorded_issue\",\"freshness\":\"metadata_match\",\"recommended_action\":\"use_graph_with_best_effort_caveat\",\"coverage\":[]},{\"requested_path\":\"infra/general/iniUtils.php\",\"path\":\"infra/general/iniUtils.php\",\"status\":\"no_recorded_issue\",\"freshness\":\"metadata_match\",\"recommended_action\":\"use_graph_with_best_effort_caveat\",\"coverage\":[]},{\"requested_path\":\"vendor/symfony-data/config/constants.php\",\"path\":\"vendor/symfony-data/config/constants.php\",\"status\":\"no_recorded_issue\",\"freshness\":\"metadata_match\",\"recommended_action\":\"use_graph_with_best_effort_caveat\",\"coverage\":[]},{\"requested_path\":\"alpha/config/cache/kSessionConf.php\",\"path\":\"alpha/config/cache/kSessionConf.php\",\"status\":\"no_recorded_issue\",\"freshness\":\"metadata_match\",\"recommended_action\":\"use_graph_with_best_effort_caveat\",\"coverage\":[]},{\"requested_path\":\"alpha/config/cache/kBaseConfCache.php\",\"path\":\"alpha/config/cache/kBaseConfCache.php\",\"status\":\"no_recorded_issue\",\"freshness\":\"metadata_match\",\"recommended_action\":\"use_graph_with_best_effort_caveat\",\"coverage\":[]},{\"requested_path\":\"alpha/config/cache/kCacheConfFactory.php\",\"path\":\"alpha/config/cache/kCacheConfFactory.php\",\"status\":\"no_recorded_issue\",\"freshness\":\"metadata_match\",\"recommended_action\":\"use_graph_with_best_effort_caveat\",\"coverage\":[]},{\"requested_path\":\"alpha/config/cache/kLocalMemCacheConf.php\",\"path\":\"alpha/config/cache/kLocalMemCacheConf.php\",\"status\":\"no_recorded_issue\",\"freshness\":\"metadata_match\",\"recommended_action\":\"use_graph_with_best_effort_caveat\",\"coverage\":[]},{\"requested_path\":\"alpha/config/cache/kRemoteMemCacheConf.php\",\"path\":\"alpha/config/cache/kRemoteMemCacheConf.php\",\"status\":\"no_recorded_issue\",\"freshness\":\"metadata_match\",\"recommended_action\":\"use_graph_with_best_effort_caveat\",\"coverage\":[]},{\"requested_path\":\"alpha/config/cache/kBaseMemcacheConf.php\",\"path\":\"alpha/config/cache/kBaseMemcacheConf.php\",\"status\":\"no_recorded_issue\",\"freshness\":\"metadata_match\",\"recommended_action\":\"use_graph_with_best_effort_caveat\",\"coverage\":[]},{\"requested_path\":\"alpha/config/cache/kMapCacheInterface.php\",\"path\":\"alpha/config/cache/kMapCacheInterface.php\",\"status\":\"no_recorded_issue\",\"freshness\":\"metadata_match\",\"recommended_action\":\"use_graph_with_best_effort_caveat\",\"coverage\":[]},{\"requested_path\":\"alpha/config/cache/kKeyCacheInterface.php\",\"path\":\"alpha/config/cache/kKeyCacheInterface.php\",\"status\":\"no_recorded_issue\",\"freshness\":\"metadata_match\",\"recommended_action\":\"use_graph_with_best_effort_caveat\",\"coverage\":[]}],\"scopes\":[],\"caveat\":\"Best-effort signal only. No recorded issue does not prove graph or source completeness; read flagged source and qualify claims when metadata is changed or unavailable.\"}"
+    }
+  ],
+  "structuredContent": {
+    "project": "kaltura-rigel-18.20.0-full",
+    "signal": "best_effort",
+    "indexed_at": "2026-09-25T12:19:00Z",
+    "metadata": {
+      "generation": "2026-09-25T12:19:00Z",
+      "index_mode": "full",
+      "recorded_at": "2026-09-25T12:19:04Z",
+      "recording_status": "complete",
+      "ignored_files_stored": 519,
+      "ignored_files_total": 519,
+      "hash_records_complete": true,
+      "coverage_version": 3,
+      "generation_matches": true
+    },
+    "paths": [
+      {
+        "requested_path": "alpha/config/kConf.php",
+        "path": "alpha/config/kConf.php",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": "alpha/config/kConfCacheManager.php",
+        "path": "alpha/config/kConfCacheManager.php",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": "infra/kEnvironment.php",
+        "path": "infra/kEnvironment.php",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": "infra/general/iniUtils.php",
+        "path": "infra/general/iniUtils.php",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": "vendor/symfony-data/config/constants.php",
+        "path": "vendor/symfony-data/config/constants.php",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": "alpha/config/cache/kSessionConf.php",
+        "path": "alpha/config/cache/kSessionConf.php",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": "alpha/config/cache/kBaseConfCache.php",
+        "path": "alpha/config/cache/kBaseConfCache.php",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": "alpha/config/cache/kCacheConfFactory.php",
+        "path": "alpha/config/cache/kCacheConfFactory.php",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": "alpha/config/cache/kLocalMemCacheConf.php",
+        "path": "alpha/config/cache/kLocalMemCacheConf.php",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": "alpha/config/cache/kRemoteMemCacheConf.php",
+        "path": "alpha/config/cache/kRemoteMemCacheConf.php",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": "alpha/config/cache/kBaseMemcacheConf.php",
+        "path": "alpha/config/cache/kBaseMemcacheConf.php",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": "alpha/config/cache/kMapCacheInterface.php",
+        "path": "alpha/config/cache/kMapCacheInterface.php",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": "alpha/config/cache/kKeyCacheInterface.php",
+        "path": "alpha/config/cache/kKeyCacheInterface.php",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      }
+    ],
+    "scopes": [],
+    "caveat": "Best-effort signal only. No recorded issue does not prove graph or source completeness; read flagged source and qualify claims when metadata is changed or unavailable."
+  },
+  "isError": false
+}

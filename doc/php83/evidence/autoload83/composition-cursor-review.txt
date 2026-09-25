@@ -1,0 +1,34 @@
+# composition-cursor independent review (Cursor Agent CLI)
+
+## Verdict
+Local only: composition unittests 13 OK (exit 0); base unittests 21 OK (exit 0).
+Retained replay: primary-r3/claude-primary = 20 PASS + 3 EXPECTED_FATAL + 3 VALUEERROR (NOT 26 passes; original FAIL).
+composition-primary-r2 = 27 PASS + 3 EXPECTED_FATAL / 30.
+Freeze after: OK.
+NO application/release approval.
+
+## Commands
+1) PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/autoload83-composition -p 'test_*.py' -v
+   -> Ran 13 tests, exit 0
+2) PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/autoload83 -p 'test_*.py' -v
+   -> Ran 21 tests, exit 0
+
+## Exact 3-report replay
+- primary-r3 (825e9147…95904): PASS=20 EXPECTED_FATAL=3 VALUEERROR=3
+- claude-primary (825e9147…95904): identical file hash + identical replay counts
+- composition-primary-r2 (b626f163…ee67): PASS=27 EXPECTED_FATAL=3 / 30
+
+cli-tasks x3: ValueError 'Real entrypoint failed (not waived)' (empty-project, not waived).
+cli-tasks-configured x3: loaded_count=37; same tasks init-project/init-module/propel-build-model; files_per_tree=1630.
+
+## Concrete adversarial findings
+- native74: first SPL registration drops implicit __autoload; candidate keeps Closure; shadow vs real winner encoded in composition expected (cli-append).
+- throw-front: exception propagates; events later-only; no subsequent finalLoader; winner=None.
+- cli-repeat: probe finish() flushes JSON before second full include; static $reported skips post-fatal body.fatal; collector trusts exit=255 + exact stderr (redeclare __autoload:107 vs class simpleAutoloader:36).
+- core-repeat: internal-callables duplicate != queue idempotence/fullparity.
+- diagnostics: exact SHA/severity/file/line + composition exact stderr.
+- run.sh: BindReadOnlyPaths + socket/socketpair denial + PrivateNetwork.
+- loaded=[] prior miss: base now rejects empty/non-dict; tests cover empty-loaded; still do not infer runtime correctness from green local suite.
+
+## Limitations
+No PHP/SSH/runtime re-execution this cycle. Unittests ≠ application acceptance. No release/package/CI approval.

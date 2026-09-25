@@ -1,0 +1,6 @@
+input_hashes={"primary-r3": "825e9147e227c5f3472e4ec01e420bd7bdbada56920cda035d65915859295904", "claude-primary": "825e9147e227c5f3472e4ec01e420bd7bdbada56920cda035d65915859295904", "composition-primary-r2": "b626f1630c5f337d3e65da50310ef326328dbb1525e850c4b51410c7d438ee67", "composition-harness-final": "1ca911186610216c249597658d831d1f8aa2b83043b85e43822d478088948484", "primary_eq_claude": true}
+primary-r3: PASS=20 EXPECTED_FATAL=3 VALUEERROR=3 total=26 original=FAIL
+claude-primary: PASS=20 EXPECTED_FATAL=3 VALUEERROR=3 total=26 original=FAIL
+composition-primary-r2: PASS=27 EXPECTED_FATAL=3 VALUEERROR=0 total=30 original=PASS
+cli-tasks VALUEERROR msg: Real entrypoint failed (not waived) x3
+cli-tasks-configured: loaded=37 each; tasks init-project,init-module,propel-build-model; files_per_tree=1630

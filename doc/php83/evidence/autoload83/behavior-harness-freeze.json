@@ -1,0 +1,21 @@
+{
+  "status": "local-preparation; PHP lint/runtime pending exclusive baseline74 slot",
+  "files": {
+    "tools/php83/autoload83/collect.py": "419649bf25ef4e486295131eaf0fcbaefd0bca4c6bea9dcb785d1dda5e908a0e",
+    "tools/php83/autoload83/fixtures/extra/FixtureFirstHit.php": "f570bf3db1fa4834bdfa6a6b10b93cd4ea11b88e345acd4c96b7432e58683121",
+    "tools/php83/autoload83/fixtures/extra/FixtureLegacyHit.php": "445bbb3f305409abbb5d77dc7be380963b64d2830cfbb9b1281a70711f93192b",
+    "tools/php83/autoload83/fixtures/legacy.php": "ff98b5737b533b7246f2a386815bfc6e49d6d85e3111c7194ea1ccaee7c95e7a",
+    "tools/php83/autoload83/fixtures/map/FixtureMapped.php": "57dc8378ff5857e91e9d89e31196ae9fc9f6a06cc472928571d08a5f8a83a74c",
+    "tools/php83/autoload83/fixtures/map/FixtureUnserialize.php": "5e81e566d6c6ef90b2c849821f5f1f8619558352a37f3ec4e855d44dcf77e941",
+    "tools/php83/autoload83/fixtures/project/lib/model/FixtureFallback.php": "e614a3fe105d62d2043cb2c648360f6a5bbaef238831f16dbca5510b96478854",
+    "tools/php83/autoload83/prepare.py": "bac1263344c204c19a53e23d59ae6292573fc3dc17d2f2b2c837f849c77f736b",
+    "tools/php83/autoload83/probe.php": "934320fb400a97fad29cd87bb67d87bdbef8b59ff025d6ac19bccf7a14df0ca9",
+    "tools/php83/autoload83/run.sh": "03188f9647049ddc653c646eed5e28205ca165bc2c1078089b6f372caae92ca5",
+    "tools/php83/autoload83/test_collect.py": "7ac237404e20d368a99c81b08c7996a8bc559334242b4109135acf8047cfed16",
+    "tools/php83/autoload83/test_prepare.py": "26ce5b81563079bdfb2808f968f5c086843d86ea7b7e6c43acd348ddca473eed"
+  },
+  "local_tests": 15,
+  "stage_local": "/tmp/php-autoload83-r1",
+  "runtime_identity_helper": "tools/php83/exp10-api/runtime-identity.py",
+  "runtime_identity_helper_sha256": "f2985a7d3f054c3a743535009e0ad2937545d05e1c0d9e7c936a24acf13da463"
+}

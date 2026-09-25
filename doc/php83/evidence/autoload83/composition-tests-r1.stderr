@@ -1,0 +1,13 @@
+test_all_cases_have_exact_event_contract (test_composition.CompositionTests.test_all_cases_have_exact_event_contract) ... ok
+test_cli_append_native74_delta (test_composition.CompositionTests.test_cli_append_native74_delta) ... ok
+test_core_internal_duplicates_not_idempotence (test_composition.CompositionTests.test_core_internal_duplicates_not_idempotence) ... ok
+test_no_source_extraction (test_composition.CompositionTests.test_no_source_extraction) ... ok
+test_prepend_wins_both (test_composition.CompositionTests.test_prepend_wins_both) ... ok
+test_thirty_process_matrix (test_composition.CompositionTests.test_thirty_process_matrix) ... ok
+test_throw_front_no_later_handler (test_composition.CompositionTests.test_throw_front_no_later_handler) ... ok
+test_throw_tail_candidate_hit_then_exception (test_composition.CompositionTests.test_throw_tail_candidate_hit_then_exception) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.000s
+
+OK

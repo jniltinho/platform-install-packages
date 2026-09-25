@@ -1,0 +1,23 @@
+test_duplicate_row (test_collect.CollectorTests.test_duplicate_row) ... ok
+test_empty_loaded_rejected (test_collect.CollectorTests.test_empty_loaded_rejected) ... ok
+test_expected_queue_delta (test_collect.CollectorTests.test_expected_queue_delta) ... ok
+test_extra_row_rejected (test_collect.CollectorTests.test_extra_row_rejected) ... ok
+test_hp_expected (test_collect.CollectorTests.test_hp_expected) ... ok
+test_nonzero_not_pass (test_collect.CollectorTests.test_nonzero_not_pass) ... ok
+test_original83_requires_real_fatal (test_collect.CollectorTests.test_original83_requires_real_fatal) ... ok
+test_source_mismatch (test_collect.CollectorTests.test_source_mismatch) ... ok
+test_wrong_callback_order (test_collect.CollectorTests.test_wrong_callback_order) ... ok
+test_wrong_hit_trace_rejected (test_collect.CollectorTests.test_wrong_hit_trace_rejected) ... ok
+test_wrong_runtime (test_collect.CollectorTests.test_wrong_runtime) ... ok
+test_bad_zip_refused_before_destination (test_prepare.PreparationTests.test_bad_zip_refused_before_destination) ... ok
+test_distinct_full_entrypoints (test_prepare.PreparationTests.test_distinct_full_entrypoints) ... ok
+test_native_diagnostics_not_suppressed (test_prepare.PreparationTests.test_native_diagnostics_not_suppressed) ... ok
+test_no_source_function_extraction (test_prepare.PreparationTests.test_no_source_function_extraction) ... ok
+test_patch_hashes (test_prepare.PreparationTests.test_patch_hashes) ... ok
+test_sandbox_network_denied (test_prepare.PreparationTests.test_sandbox_network_denied) ... ok
+test_three_patches (test_prepare.PreparationTests.test_three_patches) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.001s
+
+OK
