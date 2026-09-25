@@ -13,7 +13,12 @@ Source3: zz-%{name}.ini
 
 URL: http://kaltura.org
 Buildroot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
+%if 0%{?rhel} >= 9
+# EL9: distro sshpass; no kaltura-playkit-bundler (its source is private now)
+Requires: httpd, php, php-fpm, curl, kaltura-base, kaltura-ffmpeg, ImageMagick, memcached, php-pecl-memcache, php-mysqli, php-pdo_mysql, php-pecl-apc, mod_ssl, sshpass, openssl, kaltura-html5-studio, kaltura-html5lib, kaltura-kmcng, kaltura-html5lib3, kaltura-html5-studio3, kaltura-html5-analytics
+%else
 Requires: httpd, php, curl, kaltura-base, kaltura-ffmpeg, ImageMagick, memcached, php-pecl-memcache, php-mysqli, php-pdo_mysql, php-pecl-apc, mod_ssl,kaltura-sshpass, openssl,memcached, kaltura-html5-studio, kaltura-html5lib, kaltura-kmcng, kaltura-html5lib3, kaltura-html5-studio3, kaltura-html5-analytics, kaltura-playkit-bundler
+%endif
 #php-pecl-zendopcache
 Requires(post): chkconfig
 Requires(preun): chkconfig

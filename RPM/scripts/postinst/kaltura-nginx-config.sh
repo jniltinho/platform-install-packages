@@ -99,6 +99,8 @@ else
 		read -e SSL_KEY
 	fi
 fi
+# the upstream host must be a bare host[:port], not a URL
+WWW_HOST=`echo $WWW_HOST | sed -e 's@^https\?://@@' -e 's@/.*@@'`
 if [ -f /etc/nginx/nginx.conf ];then
 	mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.old
 fi

@@ -15,7 +15,12 @@ Source1: kaltura-batch
 Source3: batch.ini.template 
 URL: http://kaltura.org
 Buildroot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
+%if 0%{?rhel} >= 9
+# EL9: distro sshpass
+Requires: kaltura-base, kaltura-ffmpeg, kaltura-ffmpeg-aux, php, curl, httpd, sox, ImageMagick, sshpass, php-pecl-memcache,php-pecl-apc,memcached, mod_ssl
+%else
 Requires: kaltura-base, kaltura-ffmpeg, kaltura-ffmpeg-aux, php, curl, httpd, sox, ImageMagick, kaltura-sshpass, php-pecl-memcache,php-pecl-apc,memcached,, mod_ssl
+%endif
 #php-pecl-zendopcache
 %{?el7:Requires: php-pecl-zendopcache}
 #PreReq: httpd
