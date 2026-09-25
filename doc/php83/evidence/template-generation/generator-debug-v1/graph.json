@@ -1,0 +1,507 @@
+{
+  "projects": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"projects\":[{\"name\":\"home-nilton-Projetos-CRIARE-NOVOS-painel-golang\",\"root_path\":\"/home/nilton/Projetos/CRIARE/NOVOS/painel-golang\",\"branch\":\"main\",\"nodes\":3915,\"edges\":10692,\"size_bytes\":16580608},{\"name\":\"home-nilton-Projetos-CRIARE-NOVOS-postfix-filter\",\"root_path\":\"/home/nilton/Projetos/CRIARE/NOVOS/postfix-filter\",\"branch\":\"main\",\"nodes\":16168,\"edges\":50485,\"size_bytes\":60489728},{\"name\":\"home-nilton-Projetos-nilton-CURSOS-CANAL_LINUXPRO\",\"root_path\":\"/home/nilton/Projetos/nilton/CURSOS/CANAL_LINUXPRO\",\"nodes\":2,\"edges\":1,\"size_bytes\":2162688},{\"name\":\"home-nilton-Projetos-nilton-CURSOS-curso-gitlab\",\"root_path\":\"/home/nilton/Projetos/nilton/CURSOS/curso-gitlab\",\"branch\":\"main\",\"nodes\":842,\"edges\":1100,\"size_bytes\":3997696},{\"name\":\"home-nilton-Projetos-nilton-CURSOS-mail-postfix\",\"root_path\":\"/home/nilton/Projetos/nilton/CURSOS/mail-postfix\",\"branch\":\"master\",\"nodes\":21688,\"edges\":25847,\"size_bytes\":40370176},{\"name\":\"home-nilton-Projetos-nilton-NOVOS-platform-install-packages-int\",\"root_path\":\"/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-int\",\"nodes\":9633,\"edges\":17149,\"size_bytes\":31457280},{\"name\":\"home-nilton-Projetos-nilton-NOVOS-platform-install-packages\",\"root_path\":\"/home/nilton/Projetos/nilton/NOVOS/platform-install-packages\",\"branch\":\"main\",\"nodes\":9934,\"edges\":17666,\"size_bytes\":31260672},{\"name\":\"home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-asynq-gen-a\",\"root_path\":\"/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/asynq/gen-a\",\"nodes\":2,\"edges\":1,\"size_bytes\":2162688},{\"name\":\"home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-asynq-gen-b\",\"root_path\":\"/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/asynq/gen-b\",\"nodes\":2,\"edges\":1,\"size_bytes\":2162688},{\"name\":\"home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-asynq-gen-c\",\"root_path\":\"/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/asynq/gen-c\",\"nodes\":2,\"edges\":1,\"size_bytes\":2162688},{\"name\":\"home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-asynq-gen-d\",\"root_path\":\"/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/asynq/gen-d\",\"nodes\":2,\"edges\":1,\"size_bytes\":2162688},{\"name\":\"home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-cxmt-lpddr6-v4\",\"root_path\":\"/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/cxmt-lpddr6-v4\",\"nodes\":2,\"edges\":1,\"size_bytes\":2162688},{\"name\":\"home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-databasus\",\"root_path\":\"/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/databasus\",\"nodes\":2,\"edges\":1,\"size_bytes\":2162688},{\"name\":\"home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-davinci-resolve-211\",\"root_path\":\"/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/davinci-resolve-211\",\"nodes\":2,\"edges\":1,\"size_bytes\":2162688},{\"name\":\"home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-dkim-dmarc-postfix-edit\",\"root_path\":\"/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/dkim-dmarc-postfix/edit\",\"nodes\":2,\"edges\":1,\"size_bytes\":2162688},{\"name\":\"home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-dkim-dmarc-postfix\",\"root_path\":\"/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/dkim-dmarc-postfix\",\"nodes\":2,\"edges\":1,\"size_bytes\":2162688},{\"name\":\"home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-keydb-e1\",\"root_path\":\"/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/keydb/e1\",\"nodes\":2,\"edges\":1,\"size_bytes\":2162688},{\"name\":\"home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-keydb-g1\",\"root_path\":\"/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/keydb/g1\",\"nodes\":2,\"edges\":1,\"size_bytes\":2162688},{\"name\":\"home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-keydb-g2\",\"root_path\":\"/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/keydb/g2\",\"nodes\":2,\"edges\":1,\"size_bytes\":2162688},{\"name\":\"home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-keydb-g3\",\"root_path\":\"/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/keydb/g3\",\"nodes\":2,\"edges\":1,\"size_bytes\":2162688},{\"name\":\"home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-keydb-g4\",\"root_path\":\"/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/keydb/g4\",\"nodes\":2,\"edges\":1,\"size_bytes\":2162688},{\"name\":\"home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-kurumin-v4\",\"root_path\":\"/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/kurumin-v4\",\"nodes\":2,\"edges\":1,\"size_bytes\":2162688},{\"name\":\"home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-linus-torvalds-v2\",\"root_path\":\"/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/linus-torvalds-v2\",\"nodes\":64,\"edges\":63,\"size_bytes\":2162688},{\"name\":\"home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-llama-model-cli-v2\",\"root_path\":\"/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/llama-model-cli-v2\",\"nodes\":2,\"edges\":1,\"size_bytes\":2162688},{\"name\":\"home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-mariadb-galera-v4\",\"root_path\":\"/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/mariadb-galera-v4\",\"nodes\":2,\"edges\":1,\"size_bytes\":2162688},{\"name\":\"home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-mariadb-galera-v5-edit-capa\",\"root_path\":\"/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/mariadb-galera-v5/edit-capa\",\"nodes\":2,\"edges\":1,\"size_bytes\":2162688},{\"name\":\"home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-mariadb-galera-v5-edit-sst\",\"root_path\":\"/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/mariadb-galera-v5/edit-sst\",\"nodes\":2,\"edges\":1,\"size_bytes\":2162688},{\"name\":\"home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-mariadb-galera-v5-sst-v2\",\"root_path\":\"/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/mariadb-galera-v5/sst/v2\",\"nodes\":2,\"edges\":1,\"size_bytes\":2162688},{\"name\":\"home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-mariadb-galera-v5-sst\",\"root_path\":\"/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/mariadb-galera-v5/sst\",\"nodes\":2,\"edges\":1,\"size_bytes\":2162688},{\"name\":\"home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-mariadb-galera-v5-v2\",\"root_path\":\"/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/mariadb-galera-v5/v2\",\"nodes\":2,\"edges\":1,\"size_bytes\":2162688},{\"name\":\"home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-mariadb-galera-v5\",\"root_path\":\"/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/mariadb-galera-v5\",\"nodes\":2,\"edges\":1,\"size_bytes\":2162688},{\"name\":\"home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-nagios-v4\",\"root_path\":\"/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/nagios-v4\",\"nodes\":2,\"edges\":1,\"size_bytes\":2162688},{\"name\":\"home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-nagiosql-v4\",\"root_path\":\"/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/nagiosql-v4\",\"nodes\":2,\"edges\":1,\"size_bytes\":2162688},{\"name\":\"home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-ollama-v4\",\"root_path\":\"/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/ollama-v4\",\"nodes\":2,\"edges\":1,\"size_bytes\":2162688},{\"name\":\"home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-prometheus-v4\",\"root_path\":\"/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/prometheus-v4\",\"nodes\":2,\"edges\":1,\"size_bytes\":2162688},{\"name\":\"home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-tls-postfix-dovecot\",\"root_path\":\"/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/tls-postfix-dovecot\",\"nodes\":2,\"edges\":1,\"size_bytes\":2162688},{\"name\":\"home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-usuarios-linux-git\",\"root_path\":\"/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/usuarios-linux-git\",\"nodes\":2,\"edges\":1,\"size_bytes\":2162688},{\"name\":\"home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-valkey-cluster-edit-a\",\"root_path\":\"/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/valkey-cluster/edit-a\",\"nodes\":2,\"edges\":1,\"size_bytes\":2162688},{\"name\":\"home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-valkey-cluster-gen-a\",\"root_path\":\"/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/valkey-cluster/gen-a\",\"nodes\":2,\"edges\":1,\"size_bytes\":2162688},{\"name\":\"home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-valkey-cluster-gen-b\",\"root_path\":\"/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/valkey-cluster/gen-b\",\"nodes\":2,\"edges\":1,\"size_bytes\":2162688},{\"name\":\"home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-ilustracoes-mariadb-galera-sst-v2\",\"root_path\":\"/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/ilustracoes/mariadb-galera-sst-v2\",\"nodes\":4,\"edges\":3,\"size_bytes\":2293760},{\"name\":\"home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch\",\"root_path\":\"/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch\",\"nodes\":9,\"edges\":8,\"size_bytes\":2162688},{\"name\":\"home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratchpad-L11-editores-video-linux-v1\",\"root_path\":\"/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratchpad/L11/editores-video-linux-v1\",\"nodes\":2,\"edges\":1,\"size_bytes\":2162688},{\"name\":\"home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratchpad-L11-editores-video-linux-v2\",\"root_path\":\"/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratchpad/L11/editores-video-linux-v2\",\"nodes\":2,\"edges\":1,\"size_bytes\":2162688},{\"name\":\"home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratchpad-L11-tomcat-openjdk-v4\",\"root_path\":\"/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratchpad/L11/tomcat-openjdk-v4\",\"nodes\":2,\"edges\":1,\"size_bytes\":2162688},{\"name\":\"home-nilton-Projetos-nilton-NOVOS-site-linuxpro\",\"root_path\":\"/home/nilton/Projetos/nilton/NOVOS/site-linuxpro\",\"nodes\":2364,\"edges\":27101,\"size_bytes\":17760256},{\"name\":\"home-nilton-Projetos-nilton-go-cubemail\",\"root_path\":\"/home/nilton/Projetos/nilton/go-cubemail\",\"branch\":\"main\",\"nodes\":5079,\"edges\":10881,\"size_bytes\":17039360},{\"name\":\"home-nilton-Projetos-nilton-go-imapsync\",\"root_path\":\"/home/nilton/Projetos/nilton/go-imapsync\",\"branch\":\"main\",\"nodes\":623,\"edges\":1189,\"size_bytes\":3997696},{\"name\":\"home-nilton-Projetos-nilton-go-ispconfig\",\"root_path\":\"/home/nilton/Projetos/nilton/go-ispconfig\",\"branch\":\"main\",\"nodes\":14402,\"edges\":43450,\"size_bytes\":45481984},{\"name\":\"home-nilton-Projetos-nilton-go-postfixadmin\",\"root_path\":\"/home/nilton/Projetos/nilton/go-postfixadmin\",\"branch\":\"main\",\"nodes\":4864,\"edges\":12008,\"size_bytes\":15532032}],\"total\":77,\"offset\":0,\"limit\":50,\"returned\":50,\"has_more\":true}"
+      }
+    ],
+    "structuredContent": {
+      "projects": [
+        {
+          "name": "home-nilton-Projetos-CRIARE-NOVOS-painel-golang",
+          "root_path": "/home/nilton/Projetos/CRIARE/NOVOS/painel-golang",
+          "branch": "main",
+          "nodes": 3915,
+          "edges": 10692,
+          "size_bytes": 16580608
+        },
+        {
+          "name": "home-nilton-Projetos-CRIARE-NOVOS-postfix-filter",
+          "root_path": "/home/nilton/Projetos/CRIARE/NOVOS/postfix-filter",
+          "branch": "main",
+          "nodes": 16168,
+          "edges": 50485,
+          "size_bytes": 60489728
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-CURSOS-CANAL_LINUXPRO",
+          "root_path": "/home/nilton/Projetos/nilton/CURSOS/CANAL_LINUXPRO",
+          "nodes": 2,
+          "edges": 1,
+          "size_bytes": 2162688
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-CURSOS-curso-gitlab",
+          "root_path": "/home/nilton/Projetos/nilton/CURSOS/curso-gitlab",
+          "branch": "main",
+          "nodes": 842,
+          "edges": 1100,
+          "size_bytes": 3997696
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-CURSOS-mail-postfix",
+          "root_path": "/home/nilton/Projetos/nilton/CURSOS/mail-postfix",
+          "branch": "master",
+          "nodes": 21688,
+          "edges": 25847,
+          "size_bytes": 40370176
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-NOVOS-platform-install-packages-int",
+          "root_path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-int",
+          "nodes": 9633,
+          "edges": 17149,
+          "size_bytes": 31457280
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-NOVOS-platform-install-packages",
+          "root_path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages",
+          "branch": "main",
+          "nodes": 9934,
+          "edges": 17666,
+          "size_bytes": 31260672
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-asynq-gen-a",
+          "root_path": "/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/asynq/gen-a",
+          "nodes": 2,
+          "edges": 1,
+          "size_bytes": 2162688
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-asynq-gen-b",
+          "root_path": "/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/asynq/gen-b",
+          "nodes": 2,
+          "edges": 1,
+          "size_bytes": 2162688
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-asynq-gen-c",
+          "root_path": "/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/asynq/gen-c",
+          "nodes": 2,
+          "edges": 1,
+          "size_bytes": 2162688
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-asynq-gen-d",
+          "root_path": "/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/asynq/gen-d",
+          "nodes": 2,
+          "edges": 1,
+          "size_bytes": 2162688
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-cxmt-lpddr6-v4",
+          "root_path": "/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/cxmt-lpddr6-v4",
+          "nodes": 2,
+          "edges": 1,
+          "size_bytes": 2162688
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-databasus",
+          "root_path": "/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/databasus",
+          "nodes": 2,
+          "edges": 1,
+          "size_bytes": 2162688
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-davinci-resolve-211",
+          "root_path": "/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/davinci-resolve-211",
+          "nodes": 2,
+          "edges": 1,
+          "size_bytes": 2162688
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-dkim-dmarc-postfix-edit",
+          "root_path": "/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/dkim-dmarc-postfix/edit",
+          "nodes": 2,
+          "edges": 1,
+          "size_bytes": 2162688
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-dkim-dmarc-postfix",
+          "root_path": "/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/dkim-dmarc-postfix",
+          "nodes": 2,
+          "edges": 1,
+          "size_bytes": 2162688
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-keydb-e1",
+          "root_path": "/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/keydb/e1",
+          "nodes": 2,
+          "edges": 1,
+          "size_bytes": 2162688
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-keydb-g1",
+          "root_path": "/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/keydb/g1",
+          "nodes": 2,
+          "edges": 1,
+          "size_bytes": 2162688
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-keydb-g2",
+          "root_path": "/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/keydb/g2",
+          "nodes": 2,
+          "edges": 1,
+          "size_bytes": 2162688
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-keydb-g3",
+          "root_path": "/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/keydb/g3",
+          "nodes": 2,
+          "edges": 1,
+          "size_bytes": 2162688
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-keydb-g4",
+          "root_path": "/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/keydb/g4",
+          "nodes": 2,
+          "edges": 1,
+          "size_bytes": 2162688
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-kurumin-v4",
+          "root_path": "/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/kurumin-v4",
+          "nodes": 2,
+          "edges": 1,
+          "size_bytes": 2162688
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-linus-torvalds-v2",
+          "root_path": "/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/linus-torvalds-v2",
+          "nodes": 64,
+          "edges": 63,
+          "size_bytes": 2162688
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-llama-model-cli-v2",
+          "root_path": "/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/llama-model-cli-v2",
+          "nodes": 2,
+          "edges": 1,
+          "size_bytes": 2162688
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-mariadb-galera-v4",
+          "root_path": "/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/mariadb-galera-v4",
+          "nodes": 2,
+          "edges": 1,
+          "size_bytes": 2162688
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-mariadb-galera-v5-edit-capa",
+          "root_path": "/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/mariadb-galera-v5/edit-capa",
+          "nodes": 2,
+          "edges": 1,
+          "size_bytes": 2162688
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-mariadb-galera-v5-edit-sst",
+          "root_path": "/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/mariadb-galera-v5/edit-sst",
+          "nodes": 2,
+          "edges": 1,
+          "size_bytes": 2162688
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-mariadb-galera-v5-sst-v2",
+          "root_path": "/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/mariadb-galera-v5/sst/v2",
+          "nodes": 2,
+          "edges": 1,
+          "size_bytes": 2162688
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-mariadb-galera-v5-sst",
+          "root_path": "/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/mariadb-galera-v5/sst",
+          "nodes": 2,
+          "edges": 1,
+          "size_bytes": 2162688
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-mariadb-galera-v5-v2",
+          "root_path": "/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/mariadb-galera-v5/v2",
+          "nodes": 2,
+          "edges": 1,
+          "size_bytes": 2162688
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-mariadb-galera-v5",
+          "root_path": "/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/mariadb-galera-v5",
+          "nodes": 2,
+          "edges": 1,
+          "size_bytes": 2162688
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-nagios-v4",
+          "root_path": "/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/nagios-v4",
+          "nodes": 2,
+          "edges": 1,
+          "size_bytes": 2162688
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-nagiosql-v4",
+          "root_path": "/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/nagiosql-v4",
+          "nodes": 2,
+          "edges": 1,
+          "size_bytes": 2162688
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-ollama-v4",
+          "root_path": "/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/ollama-v4",
+          "nodes": 2,
+          "edges": 1,
+          "size_bytes": 2162688
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-prometheus-v4",
+          "root_path": "/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/prometheus-v4",
+          "nodes": 2,
+          "edges": 1,
+          "size_bytes": 2162688
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-tls-postfix-dovecot",
+          "root_path": "/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/tls-postfix-dovecot",
+          "nodes": 2,
+          "edges": 1,
+          "size_bytes": 2162688
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-usuarios-linux-git",
+          "root_path": "/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/usuarios-linux-git",
+          "nodes": 2,
+          "edges": 1,
+          "size_bytes": 2162688
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-valkey-cluster-edit-a",
+          "root_path": "/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/valkey-cluster/edit-a",
+          "nodes": 2,
+          "edges": 1,
+          "size_bytes": 2162688
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-valkey-cluster-gen-a",
+          "root_path": "/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/valkey-cluster/gen-a",
+          "nodes": 2,
+          "edges": 1,
+          "size_bytes": 2162688
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-capas-valkey-cluster-gen-b",
+          "root_path": "/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/capas/valkey-cluster/gen-b",
+          "nodes": 2,
+          "edges": 1,
+          "size_bytes": 2162688
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch-ilustracoes-mariadb-galera-sst-v2",
+          "root_path": "/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch/ilustracoes/mariadb-galera-sst-v2",
+          "nodes": 4,
+          "edges": 3,
+          "size_bytes": 2293760
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratch",
+          "root_path": "/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratch",
+          "nodes": 9,
+          "edges": 8,
+          "size_bytes": 2162688
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratchpad-L11-editores-video-linux-v1",
+          "root_path": "/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratchpad/L11/editores-video-linux-v1",
+          "nodes": 2,
+          "edges": 1,
+          "size_bytes": 2162688
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratchpad-L11-editores-video-linux-v2",
+          "root_path": "/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratchpad/L11/editores-video-linux-v2",
+          "nodes": 2,
+          "edges": 1,
+          "size_bytes": 2162688
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-NOVOS-site-linuxpro-scratchpad-L11-tomcat-openjdk-v4",
+          "root_path": "/home/nilton/Projetos/nilton/NOVOS/site-linuxpro/scratchpad/L11/tomcat-openjdk-v4",
+          "nodes": 2,
+          "edges": 1,
+          "size_bytes": 2162688
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-NOVOS-site-linuxpro",
+          "root_path": "/home/nilton/Projetos/nilton/NOVOS/site-linuxpro",
+          "nodes": 2364,
+          "edges": 27101,
+          "size_bytes": 17760256
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-go-cubemail",
+          "root_path": "/home/nilton/Projetos/nilton/go-cubemail",
+          "branch": "main",
+          "nodes": 5079,
+          "edges": 10881,
+          "size_bytes": 17039360
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-go-imapsync",
+          "root_path": "/home/nilton/Projetos/nilton/go-imapsync",
+          "branch": "main",
+          "nodes": 623,
+          "edges": 1189,
+          "size_bytes": 3997696
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-go-ispconfig",
+          "root_path": "/home/nilton/Projetos/nilton/go-ispconfig",
+          "branch": "main",
+          "nodes": 14402,
+          "edges": 43450,
+          "size_bytes": 45481984
+        },
+        {
+          "name": "home-nilton-Projetos-nilton-go-postfixadmin",
+          "root_path": "/home/nilton/Projetos/nilton/go-postfixadmin",
+          "branch": "main",
+          "nodes": 4864,
+          "edges": 12008,
+          "size_bytes": 15532032
+        }
+      ],
+      "total": 77,
+      "offset": 0,
+      "limit": 50,
+      "returned": 50,
+      "has_more": true
+    },
+    "isError": false
+  },
+  "search": {
+    "content": [
+      {
+        "type": "text",
+        "text": "total: 4\nresults: 4  (rows: name label lines in out; qn = group prefix + \".\" + name)\nkaltura-rigel-18.20.0-full.vendor.symfony-data.tasks.sfPakeGenerator (vendor/symfony-data/tasks/sfPakeGenerator.php):\n  _batch_default Function 192-222 0 10\n  _batch_rotate_log Function 224-255 0 10\n  run_init_batch Function 168-190 0 4\n  run_init_controller Function 257-284 0 10\nhas_more: false\n"
+      }
+    ],
+    "isError": false
+  },
+  "coverage": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"project\":\"kaltura-rigel-18.20.0-full\",\"signal\":\"best_effort\",\"indexed_at\":\"2026-09-25T12:19:00Z\",\"metadata\":{\"generation\":\"2026-09-25T12:19:00Z\",\"index_mode\":\"full\",\"recorded_at\":\"2026-09-25T12:19:04Z\",\"recording_status\":\"complete\",\"ignored_files_stored\":519,\"ignored_files_total\":519,\"hash_records_complete\":true,\"coverage_version\":3,\"generation_matches\":true},\"paths\":[{\"requested_path\":\"vendor/symfony-data/tasks/sfPakeGenerator.php\",\"path\":\"vendor/symfony-data/tasks/sfPakeGenerator.php\",\"status\":\"no_recorded_issue\",\"freshness\":\"metadata_match\",\"recommended_action\":\"use_graph_with_best_effort_caveat\",\"coverage\":[]}],\"scopes\":[],\"caveat\":\"Best-effort signal only. No recorded issue does not prove graph or source completeness; read flagged source and qualify claims when metadata is changed or unavailable.\"}"
+      }
+    ],
+    "structuredContent": {
+      "project": "kaltura-rigel-18.20.0-full",
+      "signal": "best_effort",
+      "indexed_at": "2026-09-25T12:19:00Z",
+      "metadata": {
+        "generation": "2026-09-25T12:19:00Z",
+        "index_mode": "full",
+        "recorded_at": "2026-09-25T12:19:04Z",
+        "recording_status": "complete",
+        "ignored_files_stored": 519,
+        "ignored_files_total": 519,
+        "hash_records_complete": true,
+        "coverage_version": 3,
+        "generation_matches": true
+      },
+      "paths": [
+        {
+          "requested_path": "vendor/symfony-data/tasks/sfPakeGenerator.php",
+          "path": "vendor/symfony-data/tasks/sfPakeGenerator.php",
+          "status": "no_recorded_issue",
+          "freshness": "metadata_match",
+          "recommended_action": "use_graph_with_best_effort_caveat",
+          "coverage": []
+        }
+      ],
+      "scopes": [],
+      "caveat": "Best-effort signal only. No recorded issue does not prove graph or source completeness; read flagged source and qualify claims when metadata is changed or unavailable."
+    },
+    "isError": false
+  },
+  "snippets": {
+    "run_init_batch": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"name\":\"run_init_batch\",\"qualified_name\":\"kaltura-rigel-18.20.0-full.vendor.symfony-data.tasks.sfPakeGenerator.run_init_batch\",\"label\":\"Function\",\"file_path\":\"/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/graph-view/vendor/symfony-data/tasks/sfPakeGenerator.php\",\"start_line\":168,\"end_line\":190,\"source\":\"function run_init_batch($task, $args)\\n{\\n  // handling two required arguments (application and batch name)\\n  if (count($args) < 1)\\n  {\\n    throw new Exception('You must provide the batch skeleton name');\\n  }\\n\\n  // TODO: add finder here to locate batch skeleton locally or in symfony dirs, and send path to skeletons function\\n  $batch = '_batch_'.$args[0];\\n\\n  if (!function_exists($batch))\\n  {\\n    throw new Exception(sprintf('The specified batch \\\"%s\\\" does not exist.', $args[0]));\\n  }\\n\\n  $batch($task, $args);\\n\\n  if (!file_exists(sfConfig::get('sf_symfony_data_dir').'/skeleton/batch/'.$args[0].'.php'))\\n  {\\n    throw new Exception('The skeleton you specified could not be found.');\\n  }\\n}\\n\",\"callers\":0,\"callees\":2}"
+        }
+      ],
+      "structuredContent": {
+        "name": "run_init_batch",
+        "qualified_name": "kaltura-rigel-18.20.0-full.vendor.symfony-data.tasks.sfPakeGenerator.run_init_batch",
+        "label": "Function",
+        "file_path": "/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/graph-view/vendor/symfony-data/tasks/sfPakeGenerator.php",
+        "start_line": 168,
+        "end_line": 190,
+        "source": "function run_init_batch($task, $args)\n{\n  // handling two required arguments (application and batch name)\n  if (count($args) < 1)\n  {\n    throw new Exception('You must provide the batch skeleton name');\n  }\n\n  // TODO: add finder here to locate batch skeleton locally or in symfony dirs, and send path to skeletons function\n  $batch = '_batch_'.$args[0];\n\n  if (!function_exists($batch))\n  {\n    throw new Exception(sprintf('The specified batch \"%s\" does not exist.', $args[0]));\n  }\n\n  $batch($task, $args);\n\n  if (!file_exists(sfConfig::get('sf_symfony_data_dir').'/skeleton/batch/'.$args[0].'.php'))\n  {\n    throw new Exception('The skeleton you specified could not be found.');\n  }\n}\n",
+        "callers": 0,
+        "callees": 2
+      },
+      "isError": false
+    },
+    "_batch_default": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"name\":\"_batch_default\",\"qualified_name\":\"kaltura-rigel-18.20.0-full.vendor.symfony-data.tasks.sfPakeGenerator._batch_default\",\"label\":\"Function\",\"file_path\":\"/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/graph-view/vendor/symfony-data/tasks/sfPakeGenerator.php\",\"start_line\":192,\"end_line\":222,\"source\":\"function _batch_default($task, $args)\\n{\\n  if (count($args) < 2)\\n  {\\n    throw new Exception('You must provide the destination script name');\\n  }\\n  if (count($args) < 3)\\n  {\\n    throw new Exception('You must provide the application name');\\n  }\\n\\n  $batch = $args[1];\\n  $app   = $args[2];\\n\\n  // handling two optional arguments (environment and debug)\\n  $env   = isset($args[3]) ? $args[3] : 'dev';\\n  $debug = isset($args[4]) ? $args[4] : true;\\n\\n  $constants = array(\\n    'PROJECT_NAME' => $task->get_property('name', 'symfony'),\\n    'APP_NAME'     => $app,\\n    'BATCH_NAME'   => $batch,\\n    'ENV_NAME'     => $env,\\n    'DEBUG'        => (boolean) $debug,\\n  );\\n\\n  $sf_bin_dir = sfConfig::get('sf_bin_dir');\\n\\n  pake_copy(sfConfig::get('sf_symfony_data_dir').'/skeleton/batch/default.php', $sf_bin_dir.'/'.$batch.'.php');\\n  pake_replace_tokens($batch.'.php', $sf_bin_dir, '##', '##', $constants);\\n}\\n\",\"callers\":0,\"callees\":5}"
+        }
+      ],
+      "structuredContent": {
+        "name": "_batch_default",
+        "qualified_name": "kaltura-rigel-18.20.0-full.vendor.symfony-data.tasks.sfPakeGenerator._batch_default",
+        "label": "Function",
+        "file_path": "/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/graph-view/vendor/symfony-data/tasks/sfPakeGenerator.php",
+        "start_line": 192,
+        "end_line": 222,
+        "source": "function _batch_default($task, $args)\n{\n  if (count($args) < 2)\n  {\n    throw new Exception('You must provide the destination script name');\n  }\n  if (count($args) < 3)\n  {\n    throw new Exception('You must provide the application name');\n  }\n\n  $batch = $args[1];\n  $app   = $args[2];\n\n  // handling two optional arguments (environment and debug)\n  $env   = isset($args[3]) ? $args[3] : 'dev';\n  $debug = isset($args[4]) ? $args[4] : true;\n\n  $constants = array(\n    'PROJECT_NAME' => $task->get_property('name', 'symfony'),\n    'APP_NAME'     => $app,\n    'BATCH_NAME'   => $batch,\n    'ENV_NAME'     => $env,\n    'DEBUG'        => (boolean) $debug,\n  );\n\n  $sf_bin_dir = sfConfig::get('sf_bin_dir');\n\n  pake_copy(sfConfig::get('sf_symfony_data_dir').'/skeleton/batch/default.php', $sf_bin_dir.'/'.$batch.'.php');\n  pake_replace_tokens($batch.'.php', $sf_bin_dir, '##', '##', $constants);\n}\n",
+        "callers": 0,
+        "callees": 5
+      },
+      "isError": false
+    },
+    "_batch_rotate_log": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"name\":\"_batch_rotate_log\",\"qualified_name\":\"kaltura-rigel-18.20.0-full.vendor.symfony-data.tasks.sfPakeGenerator._batch_rotate_log\",\"label\":\"Function\",\"file_path\":\"/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/graph-view/vendor/symfony-data/tasks/sfPakeGenerator.php\",\"start_line\":224,\"end_line\":255,\"source\":\"function _batch_rotate_log($task, $args)\\n{\\n  if (count($args) < 2)\\n  {\\n    throw new Exception('You must provide the application');\\n  }\\n  if (count($args) < 3)\\n  {\\n    throw new Exception('You must provide the environment');\\n  }\\n\\n  $app = $args[1];\\n  $env = $args[2];\\n  $batch = 'rotate_log_'.$app.'_'.$env;\\n\\n  // handling two optional arguments (environment and debug)\\n  $env   = isset($args[3]) ? $args[3] : 'dev';\\n  $debug = isset($args[4]) ? $args[4] : true;\\n\\n  $constants = array(\\n    'PROJECT_NAME' => $task->get_property('name', 'symfony'),\\n    'APP_NAME'     => $app,\\n    'BATCH_NAME'   => $batch,\\n    'ENV_NAME'     => $env,\\n    'DEBUG'        => (boolean) $debug,\\n  );\\n\\n  $sf_bin_dir = sfConfig::get('sf_bin_dir');\\n\\n  pake_copy(sfConfig::get('sf_symfony_data_dir').'/skeleton/batch/rotate_log.php', $sf_bin_dir.'/'.$batch.'.php');\\n  pake_replace_tokens($batch.'.php', $sf_bin_dir, '##', '##', $constants);\\n}\\n\",\"callers\":0,\"callees\":5}"
+        }
+      ],
+      "structuredContent": {
+        "name": "_batch_rotate_log",
+        "qualified_name": "kaltura-rigel-18.20.0-full.vendor.symfony-data.tasks.sfPakeGenerator._batch_rotate_log",
+        "label": "Function",
+        "file_path": "/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/graph-view/vendor/symfony-data/tasks/sfPakeGenerator.php",
+        "start_line": 224,
+        "end_line": 255,
+        "source": "function _batch_rotate_log($task, $args)\n{\n  if (count($args) < 2)\n  {\n    throw new Exception('You must provide the application');\n  }\n  if (count($args) < 3)\n  {\n    throw new Exception('You must provide the environment');\n  }\n\n  $app = $args[1];\n  $env = $args[2];\n  $batch = 'rotate_log_'.$app.'_'.$env;\n\n  // handling two optional arguments (environment and debug)\n  $env   = isset($args[3]) ? $args[3] : 'dev';\n  $debug = isset($args[4]) ? $args[4] : true;\n\n  $constants = array(\n    'PROJECT_NAME' => $task->get_property('name', 'symfony'),\n    'APP_NAME'     => $app,\n    'BATCH_NAME'   => $batch,\n    'ENV_NAME'     => $env,\n    'DEBUG'        => (boolean) $debug,\n  );\n\n  $sf_bin_dir = sfConfig::get('sf_bin_dir');\n\n  pake_copy(sfConfig::get('sf_symfony_data_dir').'/skeleton/batch/rotate_log.php', $sf_bin_dir.'/'.$batch.'.php');\n  pake_replace_tokens($batch.'.php', $sf_bin_dir, '##', '##', $constants);\n}\n",
+        "callers": 0,
+        "callees": 5
+      },
+      "isError": false
+    },
+    "run_init_controller": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"name\":\"run_init_controller\",\"qualified_name\":\"kaltura-rigel-18.20.0-full.vendor.symfony-data.tasks.sfPakeGenerator.run_init_controller\",\"label\":\"Function\",\"file_path\":\"/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/graph-view/vendor/symfony-data/tasks/sfPakeGenerator.php\",\"start_line\":257,\"end_line\":284,\"source\":\"function run_init_controller($task, $args)\\n{\\n  // handling two required arguments (application and batch name)\\n  if (count($args) < 2)\\n  {\\n    throw new Exception('You must provide the environment name');\\n  }\\n\\n  $app = $args[0];\\n  $env = $args[1];\\n\\n  // handling two optional arguments (environment and debug)\\n  $controller   = isset($args[2]) ? $args[2] : $app.'_'.$env;\\n  $debug        = isset($args[3]) ? $args[3] : true;\\n\\n  $constants = array(\\n    'PROJECT_NAME'    => $task->get_property('name', 'symfony'),\\n    'APP_NAME'        => $app,\\n    'CONTROLLER_NAME' => $controller,\\n    'ENV_NAME'        => $env,\\n    'DEBUG'           => (boolean) $debug,\\n  );\\n\\n  $sf_web_dir = sfConfig::get('sf_web_dir');\\n\\n  pake_copy(sfConfig::get('sf_symfony_data_dir').'/skeleton/controller/controller.php', $sf_web_dir.'/'.$controller.'.php');\\n  pake_replace_tokens($controller.'.php', $sf_web_dir, '##', '##', $constants);\\n}\\n\",\"callers\":0,\"callees\":5}"
+        }
+      ],
+      "structuredContent": {
+        "name": "run_init_controller",
+        "qualified_name": "kaltura-rigel-18.20.0-full.vendor.symfony-data.tasks.sfPakeGenerator.run_init_controller",
+        "label": "Function",
+        "file_path": "/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/graph-view/vendor/symfony-data/tasks/sfPakeGenerator.php",
+        "start_line": 257,
+        "end_line": 284,
+        "source": "function run_init_controller($task, $args)\n{\n  // handling two required arguments (application and batch name)\n  if (count($args) < 2)\n  {\n    throw new Exception('You must provide the environment name');\n  }\n\n  $app = $args[0];\n  $env = $args[1];\n\n  // handling two optional arguments (environment and debug)\n  $controller   = isset($args[2]) ? $args[2] : $app.'_'.$env;\n  $debug        = isset($args[3]) ? $args[3] : true;\n\n  $constants = array(\n    'PROJECT_NAME'    => $task->get_property('name', 'symfony'),\n    'APP_NAME'        => $app,\n    'CONTROLLER_NAME' => $controller,\n    'ENV_NAME'        => $env,\n    'DEBUG'           => (boolean) $debug,\n  );\n\n  $sf_web_dir = sfConfig::get('sf_web_dir');\n\n  pake_copy(sfConfig::get('sf_symfony_data_dir').'/skeleton/controller/controller.php', $sf_web_dir.'/'.$controller.'.php');\n  pake_replace_tokens($controller.'.php', $sf_web_dir, '##', '##', $constants);\n}\n",
+        "callers": 0,
+        "callees": 5
+      },
+      "isError": false
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "status": "BOUNDED_GENERATOR_DEBUG_CONTRACT_VALIDATED",
+  "source_patch_status": "HELD_NOT_SELECTED_IN_ZIP",
+  "local_tests": 40,
+  "actual_reviews": [
+    "Claude prep23",
+    "OpenCode MiniMax prep35",
+    "Claude prep40",
+    "Claude runtime repeat40"
+  ],
+  "primary_generation": {
+    "rows": 72,
+    "collector_exit": 2,
+    "validator_exit": 0,
+    "changed_outputs": 12,
+    "unchanged_rows": 60
+  },
+  "primary_literal": {
+    "rows": 4,
+    "exit": 0,
+    "constant_types": "integer0/integer1",
+    "diagnostics": 0,
+    "exceptions": 0
+  },
+  "independent_reports": {
+    "generation": {
+      "byte_identical": true,
+      "sha256": "94ba682b8bbf7d34ab20a3e7bd623fcb7d3a0283fcb01a4cdbd7da5f52cb52d2"
+    },
+    "generation-validation": {
+      "byte_identical": true,
+      "sha256": "b4bcd9fa2b8ed873306d2ad86585f7bae9f8987c4619d9ce914e38cf51f47379"
+    },
+    "arity": {
+      "byte_identical": true,
+      "sha256": "f07efacd7c62c281ef65792e033d341d9726ddd5ed601a72bc806ece1ef6108e"
+    }
+  },
+  "frozen_inputs_unchanged": true,
+  "source_runtime_before_after_equal": true,
+  "application_acceptance": false,
+  "generated_application_execution": false,
+  "both_labs_released": true,
+  "limits": [
+    "same harness and stages; independent executor not independently designed implementation",
+    "native diagnostics/logs use retained historical observations",
+    "only18 controlled generator cases and isolated define literal calls",
+    "no ZIP/package selection, SQL, backend or whole generated application execution"
+  ]
+}

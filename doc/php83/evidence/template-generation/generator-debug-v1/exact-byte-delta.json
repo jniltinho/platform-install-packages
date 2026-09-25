@@ -1,0 +1,165 @@
+{
+  "source_report_sha256": "94ba682b8bbf7d34ab20a3e7bd623fcb7d3a0283fcb01a4cdbd7da5f52cb52d2",
+  "direct_pair_comparison": "prerequisite vs debug within actual72 report",
+  "changed_rows": 12,
+  "unchanged_debug_rows": 24,
+  "unchanged_prerequisite_rows": 36,
+  "deltas": [
+    {
+      "runtime": "74",
+      "case": "default-false",
+      "changes": [
+        {
+          "path": "batch/audit_job.php",
+          "before_sha256": "1a5fef645f4e10a9b923829f240f143b0013869be77fbd552d222d798c3ac1e6",
+          "after_sha256": "ea6f3d0b8f4b10c0af325bba32baf7775f6e33ec772f828545a4351f5c9c6807",
+          "inserted_byte_hex": "30",
+          "offset": 342
+        }
+      ]
+    },
+    {
+      "runtime": "74",
+      "case": "default-zero",
+      "changes": [
+        {
+          "path": "batch/audit_job.php",
+          "before_sha256": "1a5fef645f4e10a9b923829f240f143b0013869be77fbd552d222d798c3ac1e6",
+          "after_sha256": "ea6f3d0b8f4b10c0af325bba32baf7775f6e33ec772f828545a4351f5c9c6807",
+          "inserted_byte_hex": "30",
+          "offset": 342
+        }
+      ]
+    },
+    {
+      "runtime": "74",
+      "case": "rotate-false",
+      "changes": [
+        {
+          "path": "batch/rotate_log_auditapp_prod.php",
+          "before_sha256": "0eca545c784339967f706c71bc5c05548c030c575ebb8b31d70de1f7bae0f9a8",
+          "after_sha256": "6ed664fe2e0d35adea65b6deeada6c97070321daffb5c87c3a84c84c5463e546",
+          "inserted_byte_hex": "30",
+          "offset": 430
+        }
+      ]
+    },
+    {
+      "runtime": "74",
+      "case": "rotate-zero",
+      "changes": [
+        {
+          "path": "batch/rotate_log_auditapp_prod.php",
+          "before_sha256": "0eca545c784339967f706c71bc5c05548c030c575ebb8b31d70de1f7bae0f9a8",
+          "after_sha256": "6ed664fe2e0d35adea65b6deeada6c97070321daffb5c87c3a84c84c5463e546",
+          "inserted_byte_hex": "30",
+          "offset": 430
+        }
+      ]
+    },
+    {
+      "runtime": "74",
+      "case": "controller-false",
+      "changes": [
+        {
+          "path": "web/audit_front.php",
+          "before_sha256": "330b8c1731c4ef50475abeb06410aab33a7b257eb825557b7b20a9fac75523b7",
+          "after_sha256": "e354f02f1d1d8b553d805455f885fdec8d5646b7ee81c09df8ba397e5ecbc930",
+          "inserted_byte_hex": "30",
+          "offset": 164
+        }
+      ]
+    },
+    {
+      "runtime": "74",
+      "case": "controller-zero",
+      "changes": [
+        {
+          "path": "web/audit_front.php",
+          "before_sha256": "330b8c1731c4ef50475abeb06410aab33a7b257eb825557b7b20a9fac75523b7",
+          "after_sha256": "e354f02f1d1d8b553d805455f885fdec8d5646b7ee81c09df8ba397e5ecbc930",
+          "inserted_byte_hex": "30",
+          "offset": 164
+        }
+      ]
+    },
+    {
+      "runtime": "83",
+      "case": "default-false",
+      "changes": [
+        {
+          "path": "batch/audit_job.php",
+          "before_sha256": "1a5fef645f4e10a9b923829f240f143b0013869be77fbd552d222d798c3ac1e6",
+          "after_sha256": "ea6f3d0b8f4b10c0af325bba32baf7775f6e33ec772f828545a4351f5c9c6807",
+          "inserted_byte_hex": "30",
+          "offset": 342
+        }
+      ]
+    },
+    {
+      "runtime": "83",
+      "case": "default-zero",
+      "changes": [
+        {
+          "path": "batch/audit_job.php",
+          "before_sha256": "1a5fef645f4e10a9b923829f240f143b0013869be77fbd552d222d798c3ac1e6",
+          "after_sha256": "ea6f3d0b8f4b10c0af325bba32baf7775f6e33ec772f828545a4351f5c9c6807",
+          "inserted_byte_hex": "30",
+          "offset": 342
+        }
+      ]
+    },
+    {
+      "runtime": "83",
+      "case": "rotate-false",
+      "changes": [
+        {
+          "path": "batch/rotate_log_auditapp_prod.php",
+          "before_sha256": "0eca545c784339967f706c71bc5c05548c030c575ebb8b31d70de1f7bae0f9a8",
+          "after_sha256": "6ed664fe2e0d35adea65b6deeada6c97070321daffb5c87c3a84c84c5463e546",
+          "inserted_byte_hex": "30",
+          "offset": 430
+        }
+      ]
+    },
+    {
+      "runtime": "83",
+      "case": "rotate-zero",
+      "changes": [
+        {
+          "path": "batch/rotate_log_auditapp_prod.php",
+          "before_sha256": "0eca545c784339967f706c71bc5c05548c030c575ebb8b31d70de1f7bae0f9a8",
+          "after_sha256": "6ed664fe2e0d35adea65b6deeada6c97070321daffb5c87c3a84c84c5463e546",
+          "inserted_byte_hex": "30",
+          "offset": 430
+        }
+      ]
+    },
+    {
+      "runtime": "83",
+      "case": "controller-false",
+      "changes": [
+        {
+          "path": "web/audit_front.php",
+          "before_sha256": "330b8c1731c4ef50475abeb06410aab33a7b257eb825557b7b20a9fac75523b7",
+          "after_sha256": "e354f02f1d1d8b553d805455f885fdec8d5646b7ee81c09df8ba397e5ecbc930",
+          "inserted_byte_hex": "30",
+          "offset": 164
+        }
+      ]
+    },
+    {
+      "runtime": "83",
+      "case": "controller-zero",
+      "changes": [
+        {
+          "path": "web/audit_front.php",
+          "before_sha256": "330b8c1731c4ef50475abeb06410aab33a7b257eb825557b7b20a9fac75523b7",
+          "after_sha256": "e354f02f1d1d8b553d805455f885fdec8d5646b7ee81c09df8ba397e5ecbc930",
+          "inserted_byte_hex": "30",
+          "offset": 164
+        }
+      ]
+    }
+  ]
+}

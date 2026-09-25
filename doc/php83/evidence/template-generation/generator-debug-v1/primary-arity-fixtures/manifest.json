@@ -1,0 +1,53 @@
+{
+  "status": "PREPARED_NOT_EXECUTED",
+  "source_report_sha256": "94ba682b8bbf7d34ab20a3e7bd623fcb7d3a0283fcb01a4cdbd7da5f52cb52d2",
+  "sources": [
+    {
+      "case": "default-true",
+      "path": "batch/audit_job.php",
+      "generated_sha256": "944df3f3d218c1f456dcca194a9242fb115133aa23c1a37b3c1cf44693966e9c",
+      "statement": "define('SF_DEBUG',       1);"
+    },
+    {
+      "case": "default-false",
+      "path": "batch/audit_job.php",
+      "generated_sha256": "ea6f3d0b8f4b10c0af325bba32baf7775f6e33ec772f828545a4351f5c9c6807",
+      "statement": "define('SF_DEBUG',       0);"
+    },
+    {
+      "case": "default-zero",
+      "path": "batch/audit_job.php",
+      "generated_sha256": "ea6f3d0b8f4b10c0af325bba32baf7775f6e33ec772f828545a4351f5c9c6807",
+      "statement": "define('SF_DEBUG',       0);"
+    },
+    {
+      "case": "rotate-false",
+      "path": "batch/rotate_log_auditapp_prod.php",
+      "generated_sha256": "6ed664fe2e0d35adea65b6deeada6c97070321daffb5c87c3a84c84c5463e546",
+      "statement": "define('SF_DEBUG',       0);"
+    },
+    {
+      "case": "rotate-zero",
+      "path": "batch/rotate_log_auditapp_prod.php",
+      "generated_sha256": "6ed664fe2e0d35adea65b6deeada6c97070321daffb5c87c3a84c84c5463e546",
+      "statement": "define('SF_DEBUG',       0);"
+    },
+    {
+      "case": "controller-false",
+      "path": "web/audit_front.php",
+      "generated_sha256": "e354f02f1d1d8b553d805455f885fdec8d5646b7ee81c09df8ba397e5ecbc930",
+      "statement": "define('SF_DEBUG',       0);"
+    },
+    {
+      "case": "controller-zero",
+      "path": "web/audit_front.php",
+      "generated_sha256": "e354f02f1d1d8b553d805455f885fdec8d5646b7ee81c09df8ba397e5ecbc930",
+      "statement": "define('SF_DEBUG',       0);"
+    }
+  ],
+  "fixture_sha256": {
+    "one.php": "d6082efd6c940200f1f593e34b22bccaf18d3deda9e7a90a3fff1f0b19b992bb",
+    "zero.php": "ac4ba3810b27a874e7308ddedd13e6b4fbe09eb68b166669cdc0badc913a0adc"
+  },
+  "generated_application_execution": false
+}

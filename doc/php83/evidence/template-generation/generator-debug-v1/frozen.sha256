@@ -1,0 +1,10 @@
+9e417fd7114858ff1fa3948f664f6b445ee436a383fe8b177501cfbc46bbefd1  tools/php83/template-generation/generator-debug-v1/build.py
+5b4a7d98f0b1ce3f79791f8511bc0147bfec5dfefd0e69886aa424a29b3d0e2a  tools/php83/template-generation/generator-debug-v1/collect.py
+e4f42ed3de677319819f8991f6628296d155b7bc1ed99a1c7d86a4746c5190af  tools/php83/template-generation/generator-debug-v1/test_build.py
+46d99c46e375afd0fde5cc11329ca00ed70b4be60c749a86e89876cc43d5df39  tools/php83/template-generation/generator-debug-v1/test_collect.py
+ff0efd7bd90f143fe31446f51ca674537b8e3f023caa1cde3cd0797140a90bb8  tools/php83/template-generation/generator-debug-v1/test_validate.py
+d58c0b0e93b975f87f5568bf0d97224e0354e257c8b9d054bc89b71305688bb1  tools/php83/template-generation/generator-debug-v1/validate.py
+ab48f924e69de6cc62823edcd9bc1ea7411d27ca1ffff85900796641b69382e3  tools/php83/template-generation/generator-debug-v1/run.sh
+b261fcecc7d66e0cef4498fe5a037e488199d752de7cf02434704aa060424f5b  tools/php83/template-generation/generator-debug-v1/probe.php
+2c9d61197bbe27c448792d256c93a6645018e022d38eec089c938c9660000f0b  doc/php83/evidence/template-generation/generator-debug-v1/manifest.json
+9adf53c8aa4d682f8115c68b8c24bf11ae35c0d2ac352fc69b82720b24a79e63  doc/php83/evidence/template-generation/generator-debug-v1/generator-debug.patch

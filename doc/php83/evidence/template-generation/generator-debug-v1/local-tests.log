@@ -1,0 +1,12 @@
+test_byte_delta (test_build.DebugTests.test_byte_delta) ... ok
+test_line_preservation (test_build.DebugTests.test_line_preservation) ... ok
+test_missing (test_build.DebugTests.test_missing) ... ok
+test_pin (test_build.DebugTests.test_pin) ... ok
+test_reject_drift (test_build.DebugTests.test_reject_drift) ... ok
+test_reject_reapplication (test_build.DebugTests.test_reject_reapplication) ... ok
+test_three_only (test_build.DebugTests.test_three_only) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.109s
+
+OK

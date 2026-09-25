@@ -1,0 +1,29 @@
+--- a/vendor/symfony-data/tasks/sfPakeGenerator.php
++++ b/vendor/symfony-data/tasks/sfPakeGenerator.php
+@@ -212,7 +212,7 @@
+     'APP_NAME'     => $app,
+     'BATCH_NAME'   => $batch,
+     'ENV_NAME'     => $env,
+-    'DEBUG'        => (boolean) $debug,
++    'DEBUG'        => (int) (boolean) $debug,
+   );
+ 
+   $sf_bin_dir = sfConfig::get('sf_bin_dir');
+@@ -245,7 +245,7 @@
+     'APP_NAME'     => $app,
+     'BATCH_NAME'   => $batch,
+     'ENV_NAME'     => $env,
+-    'DEBUG'        => (boolean) $debug,
++    'DEBUG'        => (int) (boolean) $debug,
+   );
+ 
+   $sf_bin_dir = sfConfig::get('sf_bin_dir');
+@@ -274,7 +274,7 @@
+     'APP_NAME'        => $app,
+     'CONTROLLER_NAME' => $controller,
+     'ENV_NAME'        => $env,
+-    'DEBUG'           => (boolean) $debug,
++    'DEBUG'           => (int) (boolean) $debug,
+   );
+ 
+   $sf_web_dir = sfConfig::get('sf_web_dir');

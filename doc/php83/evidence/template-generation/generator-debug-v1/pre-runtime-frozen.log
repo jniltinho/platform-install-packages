@@ -1,0 +1,17 @@
+tools/php83/template-generation/generator-debug-v1/build.py: OK
+tools/php83/template-generation/generator-debug-v1/collect.py: OK
+tools/php83/template-generation/generator-debug-v1/collect_arity.py: OK
+tools/php83/template-generation/generator-debug-v1/prepare_arity.py: OK
+tools/php83/template-generation/generator-debug-v1/test_arity.py: OK
+tools/php83/template-generation/generator-debug-v1/test_build.py: OK
+tools/php83/template-generation/generator-debug-v1/test_collect.py: OK
+tools/php83/template-generation/generator-debug-v1/test_validate.py: OK
+tools/php83/template-generation/generator-debug-v1/validate.py: OK
+tools/php83/template-generation/generator-debug-v1/run.sh: OK
+tools/php83/template-generation/generator-debug-v1/arity-run.sh: OK
+tools/php83/template-generation/generator-debug-v1/probe.php: OK
+tools/php83/template-generation/build.py: OK
+doc/php83/evidence/template-generation/case-plan.json: OK
+doc/php83/evidence/template-generation/generator-debug-v1/manifest.json: OK
+doc/php83/evidence/template-generation/generator-debug-v1/generator-debug.patch: OK
+doc/php83/evidence/template-generation/generator-debug-v1/case-plan.md: OK

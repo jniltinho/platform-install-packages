@@ -1,0 +1,12 @@
+{
+  "summary": {
+    "rows": 72,
+    "changed_debug_outputs": 12,
+    "unchanged_output_rows": 60,
+    "application_acceptance": false,
+    "native_contract_source": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/template-generation/generation-primary-r4.json",
+    "native_contract_independent_oracle": false
+  },
+  "input_sha256": "94ba682b8bbf7d34ab20a3e7bd623fcb7d3a0283fcb01a4cdbd7da5f52cb52d2",
+  "validator_sha256": "25c480cd0b0410eaa2d3306375844f35b856e7f8c8b87af9d11747d6fa6b00a8"
+}

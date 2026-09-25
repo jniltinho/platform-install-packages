@@ -1,0 +1,48 @@
+test_byte_delta (test_build.DebugTests.test_byte_delta) ... ERROR
+test_line_preservation (test_build.DebugTests.test_line_preservation) ... ERROR
+test_missing (test_build.DebugTests.test_missing) ... ok
+test_pin (test_build.DebugTests.test_pin) ... ok
+test_reject_drift (test_build.DebugTests.test_reject_drift) ... ok
+test_reject_reapplication (test_build.DebugTests.test_reject_reapplication) ... ok
+test_three_only (test_build.DebugTests.test_three_only) ... ERROR
+
+======================================================================
+ERROR: test_byte_delta (test_build.DebugTests.test_byte_delta)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/template-generation/generator-debug-v1/test_build.py", line 10, in test_byte_delta
+    def test_byte_delta(self):self.assertEqual(len(b.transform(self.raw))-len(self.raw),18)
+                                                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/template-generation/generator-debug-v1/build.py", line 14, in transform
+    if [i+1 for i,x in enumerate(lines) if OLD in x]!=[216,249,278]:raise ValueError('Unexpected DEBUG positions')
+                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unexpected DEBUG positions
+
+======================================================================
+ERROR: test_line_preservation (test_build.DebugTests.test_line_preservation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/template-generation/generator-debug-v1/test_build.py", line 11, in test_line_preservation
+    def test_line_preservation(self):self.assertEqual(b.transform(self.raw).count(b'\n'),self.raw.count(b'\n'))
+                                                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/template-generation/generator-debug-v1/build.py", line 14, in transform
+    if [i+1 for i,x in enumerate(lines) if OLD in x]!=[216,249,278]:raise ValueError('Unexpected DEBUG positions')
+                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unexpected DEBUG positions
+
+======================================================================
+ERROR: test_three_only (test_build.DebugTests.test_three_only)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/template-generation/generator-debug-v1/test_build.py", line 9, in test_three_only
+    changed=b.transform(self.raw);self.assertEqual(changed.count(b.NEW),3);self.assertEqual(changed.replace(b.NEW,b.OLD),self.raw)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/template-generation/generator-debug-v1/build.py", line 14, in transform
+    if [i+1 for i,x in enumerate(lines) if OLD in x]!=[216,249,278]:raise ValueError('Unexpected DEBUG positions')
+                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unexpected DEBUG positions
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.105s
+
+FAILED (errors=3)

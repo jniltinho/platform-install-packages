@@ -1,0 +1,7 @@
+{
+  "exit": 0,
+  "stdout": "patching file vendor/symfony-data/tasks/sfPakeGenerator.php\n",
+  "stderr": "",
+  "after_sha256": "6958f51ba82e9f4922eb8a7437dc1301ffd81032dd168f9c70516dee21f9e6d9",
+  "exact": true
+}

@@ -1,0 +1,17 @@
+{
+  "sha256": "67682683048afeaef9ed55bd95a5920792b2c6ab3b4ec11c804985ead4b347eb",
+  "occurrences": [
+    {
+      "line": 215,
+      "text": "    'DEBUG'        => (boolean) $debug,"
+    },
+    {
+      "line": 248,
+      "text": "    'DEBUG'        => (boolean) $debug,"
+    },
+    {
+      "line": 277,
+      "text": "    'DEBUG'           => (boolean) $debug,"
+    }
+  ]
+}
