@@ -232,3 +232,12 @@ original8.3; candidate8.3 has no captured warnings. The held patch intentionally
 uses native `mixed` and is not a candidate7.4 support claim. Full integration is
 pending; see [configuration return evidence](config-return-contracts.md).
 No full acceptance task is closed.
+
+## exp7 PHP8.3-only configuration return integration
+
+Reproducible fourteen-patch ZIP; actual API/SQL/HTTP/trusted-TLS parity retained
+and six Zend_Config diagnostic locations removed (144 events). Remaining bounded
+API diagnostics: 27 groups/703 events. CLI: 60 rows including original7.4 baseline
+and exp6 counterfactual; all 12 exp7 rows pass. Local suite: 126 tests.
+See [exp7 evidence](exp7-config-integration.md). Acceptance remains 0/24 and
+3/27 detailed tasks; no release or production change is approved by this cycle.

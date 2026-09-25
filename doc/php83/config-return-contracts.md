@@ -15,8 +15,10 @@ alone is not compatibility. The runner refuses candidate execution on the 7.4
 host; the unchanged original class on 7.4 remains the behavioral baseline.
 A later combined ZIP must use original7.4 versus candidate8.3 regression, not
 mislabel an expected candidate7.4 failure as a successful control. Original
-archives and the exp6 artifact remain immutable; no combined ZIP includes this
-patch yet. Package/runtime provider and release gates remain unchanged.
+archives and the exp6 artifact remain immutable. This page records focused
+held-patch evidence; the subsequent [exp7 integration](exp7-config-integration.md)
+adds it to a separately built ZIP and tests real API/CLI paths. Package/runtime
+provider and release gates remain unchanged.
 
 ## Source and subclass checks
 
@@ -109,8 +111,9 @@ Mid-iteration copy state is observed before rewind, but continuation without
 rewind and direct protected-index assertions remain untested. Advisory prose is
 not authoritative test evidence.
 
-Remaining work includes combined ZIP/API SQL/HTTP/trusted-TLS regression, real
-bootstrap/service/cache use, malformed config/error paths, scheduler constructors,
+The later exp7 cycle supplies bounded combined ZIP/API SQL/HTTP/trusted-TLS and
+CLI integration. Remaining work includes broader service/cache use, malformed
+config/error paths, scheduler constructors,
 external subclass inventory, and full AIO/media/distro/performance/recovery tests.
 These 16 rows do not establish full application acceptance or resolve all return
 contracts elsewhere. No acceptance checkbox or release gate closes.

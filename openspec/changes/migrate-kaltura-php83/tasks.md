@@ -179,3 +179,10 @@ native return declarations for the PHP8.3-only target. Sixteen actual-class rows
 match original7.4/original8.3/candidate8.3; six observed return warnings disappear
 without suppression. Combined ZIP/API and broader configuration/scheduler/cache
 coverage remain open. See `doc/php83/config-return-contracts.md`.
+
+T1-01/T1-02 partial integration: separate PHP8.3-only exp7 ZIP integrates the
+Zend_Config native return declarations. Five API rows and 60 CLI rows retain
+original7.4 functional comparisons plus exp6 counterfactuals. Exactly 144 events
+are removed; 27 groups/703 events remain. Four local fault-injection/matrix tests
+raise the suite to 126. See `doc/php83/exp7-config-integration.md`; no full-case
+checkbox closes and candidate7.4 support is explicitly not claimed.

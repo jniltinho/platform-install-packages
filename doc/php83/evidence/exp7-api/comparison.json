@@ -1,0 +1,79 @@
+{
+  "independent_rows": [
+    {
+      "runtime": "74",
+      "tree": "original",
+      "independent_equal": true,
+      "diagnostic_groups": 1,
+      "diagnostic_events": 6
+    },
+    {
+      "runtime": "74",
+      "tree": "exp6",
+      "independent_equal": true,
+      "diagnostic_groups": 0,
+      "diagnostic_events": 0
+    },
+    {
+      "runtime": "83",
+      "tree": "original",
+      "independent_equal": true,
+      "diagnostic_groups": 15,
+      "diagnostic_events": 15
+    },
+    {
+      "runtime": "83",
+      "tree": "exp6",
+      "independent_equal": true,
+      "diagnostic_groups": 33,
+      "diagnostic_events": 847
+    },
+    {
+      "runtime": "83",
+      "tree": "exp7",
+      "independent_equal": true,
+      "diagnostic_groups": 27,
+      "diagnostic_events": 703
+    }
+  ],
+  "removed": [
+    {
+      "severity": "Deprecated",
+      "path": "/audit/app/vendor/ZendFramework/library/Zend/Config.php",
+      "line": 248,
+      "count": 24
+    },
+    {
+      "severity": "Deprecated",
+      "path": "/audit/app/vendor/ZendFramework/library/Zend/Config.php",
+      "line": 258,
+      "count": 24
+    },
+    {
+      "severity": "Deprecated",
+      "path": "/audit/app/vendor/ZendFramework/library/Zend/Config.php",
+      "line": 269,
+      "count": 24
+    },
+    {
+      "severity": "Deprecated",
+      "path": "/audit/app/vendor/ZendFramework/library/Zend/Config.php",
+      "line": 278,
+      "count": 24
+    },
+    {
+      "severity": "Deprecated",
+      "path": "/audit/app/vendor/ZendFramework/library/Zend/Config.php",
+      "line": 292,
+      "count": 24
+    },
+    {
+      "severity": "Deprecated",
+      "path": "/audit/app/vendor/ZendFramework/library/Zend/Config.php",
+      "line": 304,
+      "count": 24
+    }
+  ],
+  "new_or_changed_groups": [],
+  "application_acceptance": false
+}

@@ -1,0 +1,7 @@
+Vou executar a verificação do zip experimental e comparar o manifest/exp7 com o exp6 — sem VM, commits ou alterações de fonte.Verificação passou (exit 0). Agora leio o JSON de saída, o manifest e comparo harnesses exp6×exp7.Comparando os pontos de matriz e identidade dos harnesses exp6×exp7.**Veredito:** `verify-experimental-zip.py` saiu **0**; builds exp7/exp7-repeat idênticos; matriz harness alinhada ao alvo intencional; execução VM **não** feita.
+
+**Identidades:** upstream `58d534d0…ab28`; zip/repeat `a0934bbd…482a`; builder `05544373…523e`; manifest `5721c0d1…2b08`; verifier `211a0c18…e6bc`; collector `2fc4917e…a15f`. Manifest `revision=exp7`, `target_php=8.3`, 14 patches (exp6 + `Zend-Config-return-types.patch`), 14 arquivos alterados / 16 metadados, `two_builds_identical` e bytes restantes iguais ao original.
+
+**Harness vs exp6:** raiz `php-exp7-regression`, pin do zip `a0934…`, referência prévia = artefato **exp6**; API `api_cases` = `74:{original,exp6}` + `83:{original,exp6,exp7}`; CLI host74 = original/exp6 (24), host83 = original/exp6/exp7 (36) → 60 rows; `74:exp7` retorna **64** em `run-one.sh`/`run-apache.sh` e é declarado `unsupported_cases`.
+
+**Gaps:** sem stage/collect/batch em VM (escopo); `application_acceptance=false`; gates diagnostics/cache/framework/media/distro/performance/recovery abertos; evidência local só `local-tests.txt` 126 OK — não é aceite de aplicação; original74 permanece baseline funcional, mixed nativo não suportado em 7.4.

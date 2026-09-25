@@ -1,0 +1,19 @@
+Tudo passou: a API saiu com código 0 e os lotes CLI em 7.4 e 8.3 também saíram com 0. Todas as linhas coincidem com os relatórios do Codex, exceto o `stderr_sha256` da API, e isso é esperado.
+
+1. **Comandos executados:** primeiro `python3 -m unittest tools/php83/test_exp7_api_collector.py`, com 4 testes OK. Depois rodei `python3 tools/php83/exp7-api/collect.py doc/php83/evidence/exp7-api/claude.json`, sem `-O`, com saída 0, `functional_checks_passed: true`, stderr vazio e a unidade `php83-exp7-api-e2905203…` parada ("inactive").
+2. **API, 5 linhas:** o original e o exp6 no 7.4 saíram com 0. No 8.3, o original saiu com 1 por causa de `Declaration of KalturaPDO::query()`, que é o controle esperado, e o exp6 e o exp7 saíram com 0. O stdout está dentro da lista permitida e é igual ao do original74 nas linhas exp6/exp7.
+3. **Candidato no 7.4:** o caso exp7 no 7.4 não foi executado e aparece declarado em `unsupported_cases` como "native mixed return types". O `run-apache.sh` barra o caso `74:exp7` com código 64, então não é uma falha escondida.
+4. **API comparada com o Codex:** artifact, previous_artifact, hashes do harness e do coletor, diagnostics, runtime_observations e flags são idênticos. Apenas o `stderr_sha256` difere, o que é esperado com token e DB novos em cada execução. Não achei padrões de KS no `claude.json`.
+5. **Diagnósticos da API de exp6 para exp7 (8.3):** somem os 6 locais `Deprecated` de `Zend/Config.php` (linhas 248, 258, 269, 278, 292, 304), com 24 ocorrências cada. O total cai de 847 para 703 ocorrências e de 33 para 27 locais. Nenhum diagnóstico novo apareceu e nenhuma contagem restante mudou.
+6. **CLI:** rodei `ssh -T -F /tmp/kaltura-php74-ssh.conf baseline74 'python3 …/batch.py'` e depois o mesmo com `/tmp/kaltura-php83-ssh.conf php83`, um após o outro. Os dois saíram com 0, stderr vazio e saída salva em `claude-74.json` e `claude-83.json`.
+7. **Linhas do CLI:** o 7.4 tem 24 linhas (original e exp6), todas com saída 0, e `unsupported_cases=['exp7/php74']`. O 8.3 tem 36 linhas: exp6 e exp7 saem com 0 nas 12 linhas cada. O original sai com 0 em 8 e com 255 em 4 linhas (`legacy-json` e `zend-json`, em standard e minimal), por causa do fatal de chaves `{}` em `Services_JSON.class.php:176` e `Zend/Json/Encoder.php:557`.
+8. **CLI comparado com o Codex:** `exit`, `stdout` e `stderr` são idênticos nas 60 linhas. ZIP `a0934bbd…`, 15191 arquivos, harness e previous_artifact também batem.
+9. **CLI de exp6 para exp7:** a única diferença está em `doc-comment-consumer` (standard e minimal), onde somem os mesmos 6 `Deprecated` de Zend Config e nada novo aparece. O exp6 no 8.3 continua registrado como comparação.
+10. **Revisão do harness:** o `collect.py` não bloqueia `python3 -O`, mas também não usa `assert`, e os verificadores remotos (`verify-source.py`, `batch.py`) bloqueiam. O `batch.py` guarda stdout/stderr completos, mas só dos casos CLI, sem KS.
+11. **Lacunas nos testes do coletor:** o `test_exp7_api_collector.py` cobre só a limpeza em falhas de inicialização (JSON inválido, identidade não confiável, timeout) e a matriz de 5 casos. Ele não testa o critério `passed`, a lista de stdout permitida nem o controle de assinatura do 8.3.
+12. **Limites:** isto cobre apenas o `web/index.php` do ZIP exp7 com Apache e SQL sintético, mais os 6 casos CLI focados. Não é aceitação AIO/FPM nem da aplicação inteira. Não mexi em produção, pacotes ou commits, e os arquivos novos continuam não rastreados.
+
+Arquivos gerados:
+- `doc/php83/evidence/exp7-api/claude.{json,stdout,stderr,exit}`
+- `doc/php83/evidence/exp7-runtime/claude-74.{json,stderr,exit}`
+- `doc/php83/evidence/exp7-runtime/claude-83.{json,stderr,exit}`
