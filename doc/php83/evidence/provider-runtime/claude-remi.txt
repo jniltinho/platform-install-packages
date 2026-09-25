@@ -1,0 +1,30 @@
+## Remi (Rocky 9): execução independente passou, exit 0
+
+**Verificação do wrapper** (`/tmp/php83-provider-runtime/run-independent.sh`, dono nilton, não modificado):
+- Usa apenas o container `php83-provider-independent-remi-20260925`.
+- A imagem é `rockylinux@sha256:d7be1c09…aaa6`, fixada por digest.
+- Roda com `--rm` e limites `--cpus=1 --memory=1g --pids-limit=256`.
+- Não usa `-v`, `-p`, `--privileged` nem `--network host`.
+- Os probes entram via stdin a partir de `probes.tar` (sha256 `fcdb2ae9…ae3f`), e o log vai para `independent/remi.log`.
+- O `rocky.sh` confere o fingerprint GPG da Remi (`B1ABF71E…478F8947`), faz `rpmkeys --checksig` e instala com `gpgcheck=1`.
+- O httpd escuta só em `127.0.0.1:18083`, dentro do container.
+
+**Comando:** `bash /tmp/php83-provider-runtime/run-independent.sh remi`
+**Exit:** `0` (também gravado em `independent/remi.exit`)
+**Log:** `independent/remi.log`, 1220 linhas, sha256 `6c66a60dc7dd1055bd3120440e2809bb68de0d111c4696ba10a5a41abfb9a753`
+
+**Resultados:**
+- **Versão do PHP:** 8.3.35 (NTS, x86_64), vindo do módulo `php:remi-8.3` (`8.3.35-1.module_php.8.3.el9.remi`). Os pacotes são assinados com a Key ID `b19527f1478f8947`.
+- **CLI:** SAPI `cli`, `ok:true`, `failures:[]`. Todos os módulos exigidos estão presentes, inclusive `pcntl`.
+- **GET:** SAPI `fpm-fcgi` via Apache → socket Unix do FPM, `ok:true`, `failures:[]`.
+- **POST:** SAPI `fpm-fcgi`, `ok:true`, `failures:[]`, com o mesmo nonce do CLI e do GET.
+- **POST negativo:** `PHP83_PROVIDER_NEGATIVE_POST_OK`.
+- **Smoke tests:** todos `true` (pdo_mysql, json, mbstring, gmp, bcmath, xml, gd, curl, intl, zip, ldap, ssh2, memcache, apcu, opcache).
+- **Marcador final:** `PHP83_PROVIDER_COMPLETE rocky`.
+
+**Limitações:**
+- Nenhum pacote fornece `php-pecl-apc` (`LEGACY_APC_CAPABILITY_NOT_PROVIDED`). Isso é esperado, mas qualquer dependência RPM do Kaltura em APC continua sendo uma lacuna.
+- Não conferi se sobrou algum container. O wrapper usa `--rm` e trap de cleanup, e não rodei outros comandos Docker, como pedido.
+- Isto é evidência só do runtime do provedor. Não houve teste da aplicação Kaltura nem de banco, então não vale como aceitação do Kaltura.
+
+Não alterei nada no repositório, no git, na VM nem em outros targets.

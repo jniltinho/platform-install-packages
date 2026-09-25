@@ -1,0 +1,13 @@
+{
+  "base_commit": "27d300215be19030c7075b21f54e8cd918e2d8a9",
+  "at": "2026-09-25T16:18:33.368231+00:00",
+  "metadata_sha256": {
+    "deb/kaltura-base/debian/control": "a885a85670537eee081e3bb6f233fe47953b8193b79a07183e47eb2d7174bc54",
+    "deb/kaltura-front/debian/control": "fb55cad3657310088d39d1230100bf4a8643173ca3dc12f87beea703902dd70d",
+    "deb/kaltura-batch/debian/control": "37cd9aee7052502e1170c02d5dffe9a850458e9e1e3fa730e14bb43077c7e54f",
+    "RPM/SPECS/kaltura-base.spec": "a87885167390912487fc71c697fe76d9185ea6defd62d584d1b58ea231a652d9",
+    "RPM/SPECS/kaltura-front.spec": "0dc17fe82338708742d120a88a5fd2db3146ad44e996b5095257e8337bf44deb",
+    "RPM/SPECS/kaltura-batch.spec": "223cdf3584f12210b8073e36b23b36b6de6c8c6c23fb3f24714be4eb35b268f1"
+  },
+  "scope": "Declared packaging dependencies only, not complete application extension inventory; production metadata unchanged"
+}

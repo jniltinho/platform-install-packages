@@ -1,0 +1,7 @@
+{
+  "error": "remi: Invalid CLI JSON",
+  "full_T4_01_acceptance": false,
+  "ok": false,
+  "schema": 1,
+  "scope": "provider-cli-web-synthetic-smoke-only"
+}

@@ -1,0 +1,20 @@
+Revisão somente leitura: `bash -n` nos scripts e leitura dos arquivos — sem installers, Docker, rede ou edições.## Veredito
+
+`bash -n tools/php83/provider-probes/*.sh` → **exit 0**. Sem aprovação de aplicação.
+
+## O que está correto (escopo do probe)
+
+- **Fail-closed in-container:** `PHP83_DISPOSABLE_CONTAINER=yes` + `/.dockerenv` + root; sem `-v`/`-p`/`docker run` nestes arquivos.
+- **Loopback:** só `127.0.0.1:18083`; curl com `--noproxy '*'`.
+- **PHP 8.3 / SAPI / GET·POST:** `probe.php` exige 8.3, SAPI, nonce, GET vazio / POST com marker; `validate_json` + POST negativo HTTP 500.
+- **Sury:** suite **`resolute`** explícita — não PPA nem suite Debian genérica.
+- **Remi:** fingerprint 2019 + `localpkg_gpgcheck=1` — mismatch deve **falhar** até revisão oficial da chave (não alargar).
+- **Módulos:** união conservadora + smoke; APC legado só observação no Rocky, não inventário de app.
+
+## Bugs / gaps acionáveis
+
+1. **Sury (origem assimétrica):** `sha256sum` do keyring é só impresso; não há pin SHA256/fingerprint antes do `dpkg -i` (Remi tem gate duro). Risco: keyring trocado passa até o apt assinar o que vier.
+2. **Ready-wait (`common.sh`):** após 40 falhas o loop não dá `exit`; o fail-closed fica no `curl --fail` seguinte — OK, mas mascara “Apache/FPM nunca subiu” vs “probe inválido”.
+3. **Ubuntu Apache:** sem `a2enmod php8.3`/`mpm_prefork` explícito — depende do postinst do pacote; se o módulo não ativar, o sintoma é SAPI/500, não erro de enable.
+
+Não executar installers/containers daqui; orquestração disposable continua com o root.

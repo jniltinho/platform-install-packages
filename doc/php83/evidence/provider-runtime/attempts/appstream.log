@@ -1,0 +1,35 @@
+NAME="Rocky Linux"
+VERSION="9.3 (Blue Onyx)"
+ID="rocky"
+ID_LIKE="rhel centos fedora"
+VERSION_ID="9.3"
+PLATFORM_ID="platform:el9"
+PRETTY_NAME="Rocky Linux 9.3 (Blue Onyx)"
+ANSI_COLOR="0;32"
+LOGO="fedora-logo-icon"
+CPE_NAME="cpe:/o:rocky:rocky:9::baseos"
+HOME_URL="https://rockylinux.org/"
+BUG_REPORT_URL="https://bugs.rockylinux.org/"
+SUPPORT_END="2032-05-31"
+ROCKY_SUPPORT_PRODUCT="Rocky-Linux-9"
+ROCKY_SUPPORT_PRODUCT_VERSION="9.3"
+REDHAT_SUPPORT_PRODUCT="Rocky Linux"
+REDHAT_SUPPORT_PRODUCT_VERSION="9.3"
+Rocky Linux 9 - BaseOS                           10 MB/s |  32 MB     00:03    
+Rocky Linux 9 - AppStream                        11 MB/s |  25 MB     00:02    
+Rocky Linux 9 - Extras                           28 kB/s |  17 kB     00:00    
+Dependencies resolved.
+================================================================================
+ Package           Architecture     Version             Repository         Size
+================================================================================
+Enabling module streams:
+ php                                8.3                                        
+
+Transaction Summary
+================================================================================
+
+Complete!
+Last metadata expiration check: 0:00:01 ago on Fri Sep 25 16:19:14 2026.
+No match for argument: php-pecl-memcache
+No match for argument: php-pecl-ssh2
+Error: Unable to find a match: php-pecl-memcache php-pecl-ssh2

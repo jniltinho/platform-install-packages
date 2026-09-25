@@ -1,0 +1,36 @@
+Auditei só os arquivos pedidos, sem editar nada, usando Bash somente leitura.
+
+## Dependências PHP declaradas
+
+**DEB (sem ramo por distro; tudo fixado em `php7.4-*`, ou seja, baseline histórico)**
+- base `deb/kaltura-base/debian/control:19-29`: cli, xml, curl, mysql, mbstring, gd, gmp, ldap, memcache, zip, intl
+- front `deb/kaltura-front/debian/control:9-18` e batch `deb/kaltura-batch/debian/control:9-18` (listas iguais): `libapache2-mod-php7.4`, cli, mysql, xsl, curl, gmp, gd, apcu, memcache, ssh2. Os dois também pedem o daemon `memcached` na `:25`.
+- Nenhum desses controls declara PHP 8.3. `deb/noble`, `deb/ubuntu-26.04` e `deb/php83-lab` não têm `control` nas três primeiras profundidades.
+
+**RPM, ramo ativo `%if 0%{?rhel} >= 9`**
+- base `RPM/SPECS/kaltura-base.spec:57`: cli, xml, curl, mysqli, pdo_mysql, gd, gmp, ldap, mbstring, process
+- front `kaltura-front.spec:18`: `php`, `php-fpm`, `php-pecl-memcache`, mysqli, pdo_mysql, `php-pecl-apc`
+- batch `kaltura-batch.spec:20`: `php`, `php-pecl-memcache`, `php-pecl-apc`, sem `php-fpm`
+
+**RPM, ramo histórico `%else` (EL<9)**
+- base `:63`: mesmo conjunto de PHP que o EL9.
+- front `:20`: igual ao EL9, sem `php-fpm`.
+- batch `:22`: igual ao EL9 (tem uma vírgula dupla, `memcached,,`), mais `php-pecl-zendopcache` só no EL7 (`:25`). No front ele está comentado (`:22`).
+
+## O que os probes devem esperar (`php -m` e SAPI)
+
+- Módulos comuns: `curl`, `mbstring`, `gd`, `gmp`, `ldap`, `mysqli`, `pdo_mysql`, `mysqlnd`, `xml`, `dom`, `SimpleXML`, `libxml`
+- Só pelos DEB: `xsl`, `zip`, `intl`, `ssh2`, `apcu`. Os specs RPM não pedem zip, intl nem ssh2 nos Requires atuais, embora o changelog diga que ssh2 foi adicionado (`kaltura-batch.spec:787`). O `xsl` no EL depende do que o pacote `php-xml` traz; não verifiquei.
+- SAPI: nos DEB, front e batch esperam `apache2handler` e `cli`. No RPM EL9, o front espera `fpm-fcgi`. Para o batch EL9 (`php` + `httpd`, sem fpm) o SAPI fica indefinido. No histórico EL7, provavelmente mod_php.
+- Nenhum pacote pede `bcmath`. O README reconhece isso (`doc/php83/evidence/providers/README.md:27`).
+
+## Incertezas
+
+1. **APC vs APCu:** os RPM pedem `php-pecl-apc` (front `:18`/`:20`, batch `:20`/`:22`; changelog `kaltura-batch.spec:638`), mas o probe Remi instala `php-pecl-apcu` (`README.md:82`). Em PHP 8 não existe APC nem `apcu_bc`. Falta confirmar se algum provider ainda tem o nome `php-pecl-apc` como alias e se alguma coisa precisa das funções `apc_*`. Não li o código da aplicação.
+2. **memcache vs memcached:** todos os pacotes pedem a extensão PECL `memcache` mais o daemon `memcached`. O probe deve exigir `memcache`; a extensão `memcached` não prova nada. O AppStream do Rocky não tem memcache nem ssh2 (`README.md:20`).
+3. **php-process:** só aparece no base RPM (`:57`/`:63`). O conjunto esperado (`posix`, `sysv*`, `shmop` e talvez `pcntl`) muda conforme o provider. No Debian não há pacote equivalente; esses módulos vêm de `common`/`cli`. Nenhum probe do README instala `php-process` (`:82`).
+4. **Lacunas de cobertura dos probes:** o comando Sury (`README.md:59`) não inclui `php8.3-xsl`. O comando Remi não inclui `php-process` nem o nome `apc`. O README já diz que FPM `-m` e Apache não foram exercitados por request (`:24-26`).
+
+## Limitações
+
+Isto só lista o que está declarado nos seis arquivos de pacote. Não é um inventário completo das extensões que a aplicação usa, não confirma o que cada pacote do provider realmente contém e não aprova nenhum provider.

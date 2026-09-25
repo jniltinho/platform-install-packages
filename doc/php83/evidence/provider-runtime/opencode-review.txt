@@ -1,0 +1,18 @@
+Read-only probe review — syntax-checking scripts without touching host or network.
+
+Files read; now syntax-checking the shell probes.
+
+Executed by OpenCode Muse Spark (`opencode/muse-spark-1.3-contributor-free`) as authorized fallback after Grok 120s timeout ended — not Grok. Root owns disposable containers; no host execution here.
+
+Syntax: `bash -n` exit 0 for `common.sh`, `ubuntu.sh`, `rocky.sh`. Read-only; no installer/Docker/network/MCP/git run.
+
+Correctness, fail-closed scope (isolated provider probes only, no app approval):
+
+1. Origin verification is observational, not enforcing: Ubuntu prints `apt-cache policy` but never greps `packages.sury.org resolute main signed-by`; Rocky prints `repolist -v`/`SIGPGP` but never asserts signer. Human must inspect. Do not silently substitute PPA/Debian suites; Sury resolute suite as observed.
+2. Sury trust: sha256-pin before `dpkg -i` over fresh official HTTPS is explicit (good), but inner `gpg --show-keys` is log-only — no fingerprint assert. Any hash update needs review.
+3. Remi: `fingerprint B1ABF71E…8F8947` + URL regex + `rpmkeys --checksig` + `localpkg_gpgcheck=1` correctly preserves failure. Release RPM observed signed by `478F8947`; do not add 2019 key to bypass — keep failing until official key review.
+4. Rocky `sed s/^Listen.*/127.0.0.1:18083/` has no post-check; if no `Listen` line, httpd may listen on default. Add `grep -q 127.0.0.1:18083 httpd.conf || exit 1`.
+5. Readiness loop (40×0.25s) has no explicit timeout failure; falls through to GET. Add `|| exit 1` with distinct message.
+6. Container safety relies on Root invocation (disposable Docker, no host mounts/ports); scripts enforce `PHP83_DISPOSABLE_CONTAINER=yes + /.dockerenv`, root, loopback `127.0.0.1:18083`, Unix-socket FPM, `policy-rc.d 101`. Correct.
+7. `probe.php` fail-closed version/SAPI/nonce/GET-POST/negative-500 correct; union-module smoke is not full app inventory nor APC compat — `LEGACY_APC_CAPABILITY_NOT_PROVIDED` expected, informational only.
+

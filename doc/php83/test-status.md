@@ -7,7 +7,7 @@ and [execution contract](../../openspec/changes/migrate-kaltura-php83/design.md)
 ## Counts and boundaries
 
 - Original acceptance obligations: **0 of 24 complete**.
-- Detailed cases: **3 of 27 complete**, **24 not yet executed under
+- Detailed cases: **3 of 27 complete**, **1 partial (T4-01)**, **23 not yet executed under
   the new case contract**. Older evidence is retained; NOT_RUN here does not mean
   no historical investigation exists.
 - T0-01: **68 distinct local Python tests passed**, independently executed by
@@ -15,6 +15,25 @@ and [execution contract](../../openspec/changes/migrate-kaltura-php83/design.md)
   distinct tests. These include mocks and do not establish PHP runtime acceptance.
 - No new VM/application test, release, package integration or `.20` mutation in
   this batch. No release ETA or application completion percentage is inferred.
+
+## Latest progress: real provider SAPIs (partial T4-01)
+
+CLI and real HTTP GET/POST/invalid-POST probes passed for Noble native 8.3.6,
+Resolute Sury 8.3.35 and Rocky Remi 8.3.35. Claude independently reran Noble/Remi;
+Cursor reran Resolute. Strict evidence collection agrees across primary and
+independent runs, with fresh nonces. Full local harness: **109 tests pass**.
+
+The native Rocky transaction cannot resolve memcache/ssh2 in its configured
+repositories. The tested Remi stack does not provide the legacy `php-pecl-apc`
+capability still required by current RPM metadata. Cache API compatibility and
+final provider/ABI policy must be reconciled: **5.16 and original 1.4 remain open**.
+No Kaltura install/media/upgrade acceptance, package/CI integration or `.20` change.
+
+[Provider evidence and limitations](provider-runtime.md),
+[structured audit record](evidence/provider-runtime/result.json).
+Grok timed out; OpenCode reviewed scripts but could not perform the independent
+Remi rerun because its CLI denied `/tmp` access. Claude completed that rerun;
+no tool denial is counted as PASS. All owned containers were removed.
 
 ## Latest batch: inventory and coverage
 
@@ -96,11 +115,10 @@ static/reachable-path triage, a reviewed integrated candidate, the two additiona
 provider/distros, full browser/media/job regression, benchmark acceptance and
 upgrade/recovery rehearsal. Small passing probes do not close these gaps.
 
-1. Execute **T0-04**: complete dependency/license/active-entrypoint and static
+1. Investigate the confirmed **APC/APCu source-cache dependency gap**, then
+   reconcile T4-01 provider/ABI requirements without changing production packages.
+2. Execute **T0-04**: complete dependency/license/active-entrypoint and static
    finding classification, retaining unknown reachability rather than assuming
    unused code.
-2. Execute **T4-01** provider-resolution portion in disposable environments:
-   establish the remaining Ubuntu 26.04 / Rocky 9 provider and extension facts
-   before production integration.
 3. Execute **T0-05**: finish comparable baseline fixture/run evidence and the
    frozen workload. VM ownership and existing isolation/approval gates apply.

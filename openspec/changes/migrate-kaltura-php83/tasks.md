@@ -99,3 +99,8 @@ See `doc/php83/patch-inventory.md`, `doc/php83/coverage-matrix.md` and
 `doc/php83/evidence/batch2-inventory/`. No held patch was promoted.
 See `doc/php83/test-status.md` and `doc/php83/evidence/batch1-local/`.
 The original 24 acceptance tasks remain unchecked.
+
+T4-01 / 5.16 now has partial real CLI/Apache/FPM provider evidence on all three
+targets and independent reruns (`doc/php83/provider-runtime.md`). It remains
+unchecked: legacy APC dependency/use and full extension/ABI/provider policy
+reconciliation are still open. No package/CI or VM changes were made.

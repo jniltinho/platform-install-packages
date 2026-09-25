@@ -1,0 +1,17 @@
+Vou ler o wrapper primeiro, confirmar o isolamento do alvo `resolute` e só então executar o comando exato.Wrapper confirmado: container `php83-provider-independent-resolute-20260925`, imagem Ubuntu pinada, sem mounts/ports/privilege/hostnetwork; log/exit em `/tmp/php83-provider-runtime/independent/`. Executando o alvo exclusivo.## Resolute — evidência fresca (provider runtime)
+
+**Comando:** `bash /tmp/php83-provider-runtime/run-independent.sh resolute`  
+**Exit:** `0` (`/tmp/php83-provider-runtime/independent/resolute.exit`)
+
+**Wrapper (somente leitura):** container `php83-provider-independent-resolute-20260925`; imagem `ubuntu@sha256:da6fc2be…`; `--cpus=1 --memory=1g --pids-limit=256`; sem mounts/ports/privileged/hostnetwork; tar stdin → probes; log/exit em `/tmp/php83-provider-runtime/independent/`.
+
+**Ambiente:** Ubuntu 26.04 Resolute; PHP **8.3.35** (Sury); pacotes públicos só no container descartável.
+
+| Escopo | Resultado |
+|--------|-----------|
+| **CLI** | `ok:true`, sapi=`cli`, method=`CLI`, failures=`[]` |
+| **GET** | `ok:true`, sapi=`apache2handler`, method=`GET`, failures=`[]` |
+| **POST** | `ok:true`, sapi=`apache2handler`, method=`POST`, failures=`[]` |
+| **negativePOST** | `PHP83_PROVIDER_NEGATIVE_POST_OK` |
+
+Markers: `PHP83_PROVIDER_COMPLETE ubuntu`; server log isolado em `/tmp/provider-httpd.log` (dentro do container). Collector JSON intacto (`schema:1`). Evidência de runtime provider — **não** aceitação Kaltura.

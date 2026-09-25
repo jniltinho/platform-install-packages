@@ -1,0 +1,1220 @@
+Rocky Linux 9 - BaseOS                           12 MB/s |  32 MB     00:02    
+Rocky Linux 9 - AppStream                        12 MB/s |  25 MB     00:02    
+Rocky Linux 9 - Extras                           29 kB/s |  17 kB     00:00    
+Package ca-certificates-2023.2.60_v7.0.306-90.1.el9_2.noarch is already installed.
+Package gnupg2-2.3.3-4.el9.x86_64 is already installed.
+Dependencies resolved.
+================================================================================
+ Package                    Arch     Version                     Repo      Size
+================================================================================
+Installing:
+ dnf-plugins-core           noarch   4.3.0-26.el9                baseos    35 k
+Upgrading:
+ ca-certificates            noarch   2025.2.80_v9.0.305-91.el9   baseos   948 k
+ gnupg2                     x86_64   2.3.3-5.el9_7               baseos   2.5 M
+Installing dependencies:
+ dbus-libs                  x86_64   1:1.12.20-8.el9             baseos   151 k
+ python3-dateutil           noarch   1:2.9.0.post0-1.el9_7       baseos   290 k
+ python3-dbus               x86_64   1.2.18-2.el9.0.1            baseos   131 k
+ python3-dnf-plugins-core   noarch   4.3.0-26.el9                baseos   245 k
+ python3-six                noarch   1.15.0-9.el9                baseos    36 k
+ python3-systemd            x86_64   234-19.el9                  baseos    82 k
+
+Transaction Summary
+================================================================================
+Install  7 Packages
+Upgrade  2 Packages
+
+Total download size: 4.3 M
+Downloading Packages:
+(1/9): dnf-plugins-core-4.3.0-26.el9.noarch.rpm 390 kB/s |  35 kB     00:00    
+(2/9): dbus-libs-1.12.20-8.el9.x86_64.rpm       1.4 MB/s | 151 kB     00:00    
+(3/9): python3-dbus-1.2.18-2.el9.0.1.x86_64.rpm 3.2 MB/s | 131 kB     00:00    
+(4/9): python3-dateutil-2.9.0.post0-1.el9_7.noa 1.8 MB/s | 290 kB     00:00    
+(5/9): python3-dnf-plugins-core-4.3.0-26.el9.no 3.9 MB/s | 245 kB     00:00    
+(6/9): python3-six-1.15.0-9.el9.noarch.rpm      846 kB/s |  36 kB     00:00    
+(7/9): python3-systemd-234-19.el9.x86_64.rpm    3.9 MB/s |  82 kB     00:00    
+(8/9): ca-certificates-2025.2.80_v9.0.305-91.el 7.4 MB/s | 948 kB     00:00    
+(9/9): gnupg2-2.3.3-5.el9_7.x86_64.rpm          7.4 MB/s | 2.5 MB     00:00    
+--------------------------------------------------------------------------------
+Total                                           4.5 MB/s | 4.3 MB     00:00     
+Rocky Linux 9 - BaseOS                          1.7 MB/s | 1.7 kB     00:00    
+Importing GPG key 0x350D275D:
+ Userid     : "Rocky Enterprise Software Foundation - Release key 2022 <releng@rockylinux.org>"
+ Fingerprint: 21CB 256A E16F C54C 6E65 2949 702D 426D 350D 275D
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-Rocky-9
+Key imported successfully
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                        1/1 
+  Installing       : python3-systemd-234-19.el9.x86_64                     1/11 
+  Installing       : python3-six-1.15.0-9.el9.noarch                       2/11 
+  Installing       : python3-dateutil-1:2.9.0.post0-1.el9_7.noarch         3/11 
+  Installing       : dbus-libs-1:1.12.20-8.el9.x86_64                      4/11 
+  Installing       : python3-dbus-1.2.18-2.el9.0.1.x86_64                  5/11 
+  Installing       : python3-dnf-plugins-core-4.3.0-26.el9.noarch          6/11 
+  Installing       : dnf-plugins-core-4.3.0-26.el9.noarch                  7/11 
+  Upgrading        : gnupg2-2.3.3-5.el9_7.x86_64                           8/11 
+  Running scriptlet: ca-certificates-2025.2.80_v9.0.305-91.el9.noarch      9/11 
+  Upgrading        : ca-certificates-2025.2.80_v9.0.305-91.el9.noarch      9/11 
+  Running scriptlet: ca-certificates-2025.2.80_v9.0.305-91.el9.noarch      9/11 
+  Cleanup          : ca-certificates-2023.2.60_v7.0.306-90.1.el9_2.noar   10/11 
+  Cleanup          : gnupg2-2.3.3-4.el9.x86_64                            11/11 
+  Running scriptlet: ca-certificates-2025.2.80_v9.0.305-91.el9.noarch     11/11 
+  Running scriptlet: gnupg2-2.3.3-4.el9.x86_64                            11/11 
+  Verifying        : dbus-libs-1:1.12.20-8.el9.x86_64                      1/11 
+  Verifying        : dnf-plugins-core-4.3.0-26.el9.noarch                  2/11 
+  Verifying        : python3-dateutil-1:2.9.0.post0-1.el9_7.noarch         3/11 
+  Verifying        : python3-dbus-1.2.18-2.el9.0.1.x86_64                  4/11 
+  Verifying        : python3-dnf-plugins-core-4.3.0-26.el9.noarch          5/11 
+  Verifying        : python3-six-1.15.0-9.el9.noarch                       6/11 
+  Verifying        : python3-systemd-234-19.el9.x86_64                     7/11 
+  Verifying        : ca-certificates-2025.2.80_v9.0.305-91.el9.noarch      8/11 
+  Verifying        : ca-certificates-2023.2.60_v7.0.306-90.1.el9_2.noar    9/11 
+  Verifying        : gnupg2-2.3.3-5.el9_7.x86_64                          10/11 
+  Verifying        : gnupg2-2.3.3-4.el9.x86_64                            11/11 
+
+Upgraded:
+  ca-certificates-2025.2.80_v9.0.305-91.el9.noarch  gnupg2-2.3.3-5.el9_7.x86_64 
+Installed:
+  dbus-libs-1:1.12.20-8.el9.x86_64                                              
+  dnf-plugins-core-4.3.0-26.el9.noarch                                          
+  python3-dateutil-1:2.9.0.post0-1.el9_7.noarch                                 
+  python3-dbus-1.2.18-2.el9.0.1.x86_64                                          
+  python3-dnf-plugins-core-4.3.0-26.el9.noarch                                  
+  python3-six-1.15.0-9.el9.noarch                                               
+  python3-systemd-234-19.el9.x86_64                                             
+
+Complete!
+Rocky Linux 9 - BaseOS                          3.6 kB/s | 4.3 kB     00:01    
+Rocky Linux 9 - AppStream                       9.3 kB/s | 4.8 kB     00:00    
+Rocky Linux 9 - CRB                             5.3 MB/s | 5.6 MB     00:01    
+Dependencies resolved.
+================================================================================
+ Package               Architecture    Version            Repository       Size
+================================================================================
+Installing:
+ epel-release          noarch          9-10.el9           extras           19 k
+
+Transaction Summary
+================================================================================
+Install  1 Package
+
+Total download size: 19 k
+Installed size: 26 k
+Downloading Packages:
+epel-release-9-10.el9.noarch.rpm                194 kB/s |  19 kB     00:00    
+--------------------------------------------------------------------------------
+Total                                            34 kB/s |  19 kB     00:00     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                        1/1 
+  Installing       : epel-release-9-10.el9.noarch                           1/1 
+  Running scriptlet: epel-release-9-10.el9.noarch                           1/1 
+Many EPEL packages require the CodeReady Builder (CRB) repository.
+It is recommended that you run /usr/bin/crb enable to enable the CRB repository.
+
+  Verifying        : epel-release-9-10.el9.noarch                           1/1 
+
+Installed:
+  epel-release-9-10.el9.noarch                                                  
+
+Complete!
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  3183  100  3183    0     0   5133      0 --:--:-- --:--:-- --:--:--  5125
+gpg: directory '/root/.gnupg' created
+gpg: keybox '/root/.gnupg/pubring.kbx' created
+gpg: /root/.gnupg/trustdb.gpg: trustdb created
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 33949  100 33949    0     0  41050      0 --:--:-- --:--:-- --:--:-- 41001
+/tmp/remi-release.rpm: digests signatures OK
+Extra Packages for Enterprise Linux 9 - x86_64  7.6 MB/s |  20 MB     00:02    
+Extra Packages for Enterprise Linux 9 openh264  4.8 kB/s | 2.5 kB     00:00    
+Dependencies resolved.
+================================================================================
+ Package           Arch      Version                      Repository       Size
+================================================================================
+Installing:
+ remi-release      noarch    9.8-1.el9.remi               @commandline     33 k
+Upgrading:
+ dnf               noarch    4.14.0-34.el9_8.rocky.0.1    baseos          467 k
+ dnf-data          noarch    4.14.0-34.el9_8.rocky.0.1    baseos           36 k
+ libdnf            x86_64    0.69.0-18.el9.rocky.0.1      baseos          654 k
+ python3-dnf       noarch    4.14.0-34.el9_8.rocky.0.1    baseos          412 k
+ python3-hawkey    x86_64    0.69.0-18.el9.rocky.0.1      baseos          101 k
+ python3-libdnf    x86_64    0.69.0-18.el9.rocky.0.1      baseos          771 k
+ rocky-gpg-keys    noarch    9.8-1.2.el9                  baseos           25 k
+ rocky-release     noarch    9.8-1.2.el9                  baseos           22 k
+ rocky-repos       noarch    9.8-1.2.el9                  baseos           12 k
+ yum               noarch    4.14.0-34.el9_8.rocky.0.1    baseos           90 k
+
+Transaction Summary
+================================================================================
+Install   1 Package
+Upgrade  10 Packages
+
+Total size: 2.6 M
+Total download size: 2.5 M
+Downloading Packages:
+(1/10): dnf-data-4.14.0-34.el9_8.rocky.0.1.noar 484 kB/s |  36 kB     00:00    
+(2/10): libdnf-0.69.0-18.el9.rocky.0.1.x86_64.r 5.1 MB/s | 654 kB     00:00    
+(3/10): dnf-4.14.0-34.el9_8.rocky.0.1.noarch.rp 2.9 MB/s | 467 kB     00:00    
+(4/10): python3-dnf-4.14.0-34.el9_8.rocky.0.1.n 4.2 MB/s | 412 kB     00:00    
+(5/10): python3-hawkey-0.69.0-18.el9.rocky.0.1. 2.0 MB/s | 101 kB     00:00    
+(6/10): rocky-release-9.8-1.2.el9.noarch.rpm    2.0 MB/s |  22 kB     00:00    
+(7/10): rocky-gpg-keys-9.8-1.2.el9.noarch.rpm   1.3 MB/s |  25 kB     00:00    
+(8/10): rocky-repos-9.8-1.2.el9.noarch.rpm      779 kB/s |  12 kB     00:00    
+(9/10): yum-4.14.0-34.el9_8.rocky.0.1.noarch.rp 3.0 MB/s |  90 kB     00:00    
+(10/10): python3-libdnf-0.69.0-18.el9.rocky.0.1 6.5 MB/s | 771 kB     00:00    
+--------------------------------------------------------------------------------
+Total                                           3.4 MB/s | 2.5 MB     00:00     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                        1/1 
+  Upgrading        : libdnf-0.69.0-18.el9.rocky.0.1.x86_64                 1/21 
+  Upgrading        : python3-libdnf-0.69.0-18.el9.rocky.0.1.x86_64         2/21 
+  Upgrading        : python3-hawkey-0.69.0-18.el9.rocky.0.1.x86_64         3/21 
+  Upgrading        : rocky-gpg-keys-9.8-1.2.el9.noarch                     4/21 
+  Upgrading        : rocky-release-9.8-1.2.el9.noarch                      5/21 
+  Upgrading        : rocky-repos-9.8-1.2.el9.noarch                        6/21 
+warning: /etc/yum.repos.d/rocky.repo created as /etc/yum.repos.d/rocky.repo.rpmnew
+
+  Upgrading        : dnf-data-4.14.0-34.el9_8.rocky.0.1.noarch             7/21 
+  Upgrading        : python3-dnf-4.14.0-34.el9_8.rocky.0.1.noarch          8/21 
+  Upgrading        : dnf-4.14.0-34.el9_8.rocky.0.1.noarch                  9/21 
+  Running scriptlet: dnf-4.14.0-34.el9_8.rocky.0.1.noarch                  9/21 
+  Upgrading        : yum-4.14.0-34.el9_8.rocky.0.1.noarch                 10/21 
+  Installing       : remi-release-9.8-1.el9.remi.noarch                   11/21 
+  Cleanup          : yum-4.14.0-8.el9.noarch                              12/21 
+  Running scriptlet: dnf-4.14.0-8.el9.noarch                              13/21 
+  Cleanup          : dnf-4.14.0-8.el9.noarch                              13/21 
+  Running scriptlet: dnf-4.14.0-8.el9.noarch                              13/21 
+  Cleanup          : python3-dnf-4.14.0-8.el9.noarch                      14/21 
+  Cleanup          : rocky-release-9.3-1.1.el9.noarch                     15/21 
+  Cleanup          : python3-hawkey-0.69.0-6.el9_3.x86_64                 16/21 
+  Cleanup          : rocky-repos-9.3-1.1.el9.noarch                       17/21 
+  Cleanup          : rocky-gpg-keys-9.3-1.1.el9.noarch                    18/21 
+  Cleanup          : dnf-data-4.14.0-8.el9.noarch                         19/21 
+  Cleanup          : python3-libdnf-0.69.0-6.el9_3.x86_64                 20/21 
+  Cleanup          : libdnf-0.69.0-6.el9_3.x86_64                         21/21 
+  Running scriptlet: libdnf-0.69.0-6.el9_3.x86_64                         21/21 
+  Verifying        : remi-release-9.8-1.el9.remi.noarch                    1/21 
+  Verifying        : dnf-4.14.0-34.el9_8.rocky.0.1.noarch                  2/21 
+  Verifying        : dnf-4.14.0-8.el9.noarch                               3/21 
+  Verifying        : dnf-data-4.14.0-34.el9_8.rocky.0.1.noarch             4/21 
+  Verifying        : dnf-data-4.14.0-8.el9.noarch                          5/21 
+  Verifying        : libdnf-0.69.0-18.el9.rocky.0.1.x86_64                 6/21 
+  Verifying        : libdnf-0.69.0-6.el9_3.x86_64                          7/21 
+  Verifying        : python3-dnf-4.14.0-34.el9_8.rocky.0.1.noarch          8/21 
+  Verifying        : python3-dnf-4.14.0-8.el9.noarch                       9/21 
+  Verifying        : python3-hawkey-0.69.0-18.el9.rocky.0.1.x86_64        10/21 
+  Verifying        : python3-hawkey-0.69.0-6.el9_3.x86_64                 11/21 
+  Verifying        : python3-libdnf-0.69.0-18.el9.rocky.0.1.x86_64        12/21 
+  Verifying        : python3-libdnf-0.69.0-6.el9_3.x86_64                 13/21 
+  Verifying        : rocky-gpg-keys-9.8-1.2.el9.noarch                    14/21 
+  Verifying        : rocky-gpg-keys-9.3-1.1.el9.noarch                    15/21 
+  Verifying        : rocky-release-9.8-1.2.el9.noarch                     16/21 
+  Verifying        : rocky-release-9.3-1.1.el9.noarch                     17/21 
+  Verifying        : rocky-repos-9.8-1.2.el9.noarch                       18/21 
+  Verifying        : rocky-repos-9.3-1.1.el9.noarch                       19/21 
+  Verifying        : yum-4.14.0-34.el9_8.rocky.0.1.noarch                 20/21 
+  Verifying        : yum-4.14.0-8.el9.noarch                              21/21 
+
+Upgraded:
+  dnf-4.14.0-34.el9_8.rocky.0.1.noarch                                          
+  dnf-data-4.14.0-34.el9_8.rocky.0.1.noarch                                     
+  libdnf-0.69.0-18.el9.rocky.0.1.x86_64                                         
+  python3-dnf-4.14.0-34.el9_8.rocky.0.1.noarch                                  
+  python3-hawkey-0.69.0-18.el9.rocky.0.1.x86_64                                 
+  python3-libdnf-0.69.0-18.el9.rocky.0.1.x86_64                                 
+  rocky-gpg-keys-9.8-1.2.el9.noarch                                             
+  rocky-release-9.8-1.2.el9.noarch                                              
+  rocky-repos-9.8-1.2.el9.noarch                                                
+  yum-4.14.0-34.el9_8.rocky.0.1.noarch                                          
+Installed:
+  remi-release-9.8-1.el9.remi.noarch                                            
+
+Complete!
+Remi's Modular repository for Enterprise Linux  352 kB/s | 1.0 MB     00:02    
+Safe Remi's RPM repository for Enterprise Linux 539 kB/s | 1.6 MB     00:02    
+Last metadata expiration check: 0:00:01 ago on Fri Sep 25 16:24:45 2026.
+Dependencies resolved.
+Nothing to do.
+Complete!
+Last metadata expiration check: 0:00:02 ago on Fri Sep 25 16:24:45 2026.
+Dependencies resolved.
+================================================================================
+ Package           Architecture     Version             Repository         Size
+================================================================================
+Enabling module streams:
+ php                                remi-8.3                                   
+
+Transaction Summary
+================================================================================
+
+Complete!
+Last metadata expiration check: 0:00:03 ago on Fri Sep 25 16:24:45 2026.
+Dependencies resolved.
+======================================================================================
+ Package                  Arch    Version                          Repository     Size
+======================================================================================
+Installing:
+ httpd                    x86_64  2.4.62-13.el9_8.6                appstream      46 k
+ php-bcmath               x86_64  8.3.35-1.module_php.8.3.el9.remi remi-modular   44 k
+ php-cli                  x86_64  8.3.35-1.module_php.8.3.el9.remi remi-modular  5.6 M
+ php-common               x86_64  8.3.35-1.module_php.8.3.el9.remi remi-modular  1.3 M
+ php-fpm                  x86_64  8.3.35-1.module_php.8.3.el9.remi remi-modular  1.9 M
+ php-gd                   x86_64  8.3.35-1.module_php.8.3.el9.remi remi-modular   62 k
+ php-gmp                  x86_64  8.3.35-1.module_php.8.3.el9.remi remi-modular   44 k
+ php-intl                 x86_64  8.3.35-1.module_php.8.3.el9.remi remi-modular  234 k
+ php-ldap                 x86_64  8.3.35-1.module_php.8.3.el9.remi remi-modular   62 k
+ php-mbstring             x86_64  8.3.35-1.module_php.8.3.el9.remi remi-modular  577 k
+ php-mysqlnd              x86_64  8.3.35-1.module_php.8.3.el9.remi remi-modular  216 k
+ php-opcache              x86_64  8.3.35-1.module_php.8.3.el9.remi remi-modular  574 k
+ php-pecl-apcu            x86_64  5.1.28-1.module_php.8.3.el9.remi remi-modular   77 k
+ php-pecl-memcache        x86_64  8.2-3.el9.remi.8.3               remi-modular  101 k
+ php-pecl-ssh2            x86_64  1.5.0-1.module_php.8.3.el9.remi  remi-modular   46 k
+ php-pecl-zip             x86_64  1.22.8-1.module_php.8.3.el9.remi remi-modular   79 k
+ php-process              x86_64  8.3.35-1.module_php.8.3.el9.remi remi-modular   65 k
+ php-xml                  x86_64  8.3.35-1.module_php.8.3.el9.remi remi-modular  217 k
+Upgrading:
+ libacl                   x86_64  2.4.0-1.el9_8                    baseos         25 k
+ openssl                  x86_64  1:3.5.8-1.el9_8                  baseos        1.4 M
+ openssl-libs             x86_64  1:3.5.8-1.el9_8                  baseos        2.3 M
+ systemd-libs             x86_64  252-67.el9_8.6.rocky.0.1         baseos        637 k
+Installing dependencies:
+ acl                      x86_64  2.4.0-1.el9_8                    baseos         74 k
+ apr                      x86_64  1.7.0-12.el9_3                   appstream     122 k
+ apr-util                 x86_64  1.6.1-23.el9_8.1                 appstream      94 k
+ apr-util-bdb             x86_64  1.6.1-23.el9_8.1                 appstream      12 k
+ capstone                 x86_64  4.0.2-13.el9_8                   appstream     755 k
+ dbus                     x86_64  1:1.12.20-8.el9                  baseos        6.8 k
+ dbus-broker              x86_64  28-9.el9_8                       baseos        169 k
+ dbus-common              noarch  1:1.12.20-8.el9                  baseos         14 k
+ dejavu-sans-fonts        noarch  2.37-18.el9                      baseos        1.3 M
+ fontconfig               x86_64  2.14.0-2.el9_1                   appstream     274 k
+ fonts-filesystem         noarch  1:2.0.5-7.el9.1                  baseos        9.0 k
+ freetype                 x86_64  2.10.4-10.el9_5                  baseos        386 k
+ fribidi                  x86_64  1.0.10-6.el9.2                   appstream      84 k
+ gd3php                   x86_64  2.3.3-9.el9.remi                 remi-safe     136 k
+ gdk-pixbuf2              x86_64  2.42.6-6.el9_7.1                 appstream     465 k
+ graphite2                x86_64  1.3.14-9.el9                     baseos         94 k
+ harfbuzz                 x86_64  2.7.4-10.el9                     baseos        623 k
+ highway                  x86_64  1.3.0-1.el9                      epel          553 k
+ httpd-core               x86_64  2.4.62-13.el9_8.6                appstream     1.4 M
+ httpd-filesystem         noarch  2.4.62-13.el9_8.6                appstream      13 k
+ httpd-tools              x86_64  2.4.62-13.el9_8.6                appstream      79 k
+ jbigkit-libs             x86_64  2.1-23.el9                       appstream      52 k
+ kmod-libs                x86_64  28-11.el9                        baseos         62 k
+ langpacks-core-font-en   noarch  3.0-16.el9                       appstream     9.5 k
+ libX11                   x86_64  1.8.12-1.el9                     appstream     647 k
+ libX11-common            noarch  1.8.12-1.el9                     appstream     144 k
+ libXau                   x86_64  1.0.9-8.el9                      appstream      30 k
+ libXpm                   x86_64  3.5.13-10.el9                    appstream      58 k
+ libaom                   x86_64  3.13.1-1.el9                     epel          1.8 M
+ libavif                  x86_64  0.11.1-5.el9                     epel           80 k
+ libbrotli                x86_64  1.0.9-9.el9_7                    baseos        312 k
+ libdav1d                 x86_64  1.5.4-1.el9                      epel          633 k
+ libedit                  x86_64  3.1-39.20210216cvs.el9           baseos        103 k
+ libicu74                 x86_64  74.2-1.el9.remi                  remi-safe      10 M
+ libimagequant            x86_64  2.17.0-1.el9                     epel           62 k
+ libjpeg-turbo            x86_64  2.0.90-7.el9                     appstream     174 k
+ libjxl                   x86_64  0.7.2-2.el9                      epel          982 k
+ libpng                   x86_64  2:1.6.37-15.el9_8.2              baseos        116 k
+ libraqm                  x86_64  0.8.0-1.el9                      epel           19 k
+ libseccomp               x86_64  2.5.2-2.el9                      baseos         71 k
+ libssh2                  x86_64  1.11.1-9.el9                     epel          141 k
+ libtiff                  x86_64  4.4.0-18.el9_8.1                 appstream     197 k
+ libvmaf                  x86_64  2.3.0-2.el9                      epel          177 k
+ libwebp                  x86_64  1.2.0-8.el9                      appstream     276 k
+ libxcb                   x86_64  1.13.1-9.el9                     appstream     224 k
+ libxslt                  x86_64  1.1.34-14.el9_7.1                appstream     240 k
+ mailcap                  noarch  2.1.49-5.el9.0.2                 baseos         32 k
+ oniguruma5php            x86_64  6.9.10-1.el9.remi                remi-safe     222 k
+ openssl-fips-provider    x86_64  1:3.5.8-1.el9_8                  baseos        814 k
+ php-pdo                  x86_64  8.3.35-1.module_php.8.3.el9.remi remi-modular  116 k
+ rav1e-libs               x86_64  0.8.1-2.el9                      epel          1.1 M
+ remi-libzip              x86_64  1.11.4-1.el9.remi                remi-safe      70 k
+ rocky-logos-httpd        noarch  90.17-1.el9                      appstream      24 k
+ shared-mime-info         x86_64  2.1-5.el9                        baseos        372 k
+ svt-av1-libs             x86_64  0.9.0-1.el9                      epel          1.7 M
+ systemd                  x86_64  252-67.el9_8.6.rocky.0.1         baseos        4.0 M
+ systemd-pam              x86_64  252-67.el9_8.6.rocky.0.1         baseos        244 k
+ systemd-rpm-macros       noarch  252-67.el9_8.6.rocky.0.1         baseos         32 k
+ xml-common               noarch  0.6.3-58.el9                     appstream      31 k
+Installing weak dependencies:
+ apr-util-openssl         x86_64  1.6.1-23.el9_8.1                 appstream      14 k
+ jxl-pixbuf-loader        x86_64  0.7.2-2.el9                      epel           52 k
+ mod_http2                x86_64  2.0.26-6.el9_8.2                 appstream     163 k
+ mod_lua                  x86_64  2.4.62-13.el9_8.6                appstream      60 k
+ nginx-filesystem         noarch  2:1.20.1-28.el9_8.6.rocky.0.1    appstream      11 k
+
+Transaction Summary
+======================================================================================
+Install  82 Packages
+Upgrade   4 Packages
+
+Total download size: 48 M
+Downloading Packages:
+(1/86): jxl-pixbuf-loader-0.7.2-2.el9.x86_64.rp 217 kB/s |  52 kB     00:00    
+(2/86): libavif-0.11.1-5.el9.x86_64.rpm         668 kB/s |  80 kB     00:00    
+(3/86): highway-1.3.0-1.el9.x86_64.rpm          1.2 MB/s | 553 kB     00:00    
+(4/86): libimagequant-2.17.0-1.el9.x86_64.rpm   863 kB/s |  62 kB     00:00    
+(5/86): libaom-3.13.1-1.el9.x86_64.rpm          3.3 MB/s | 1.8 MB     00:00    
+(6/86): libdav1d-1.5.4-1.el9.x86_64.rpm         2.4 MB/s | 633 kB     00:00    
+(7/86): libraqm-0.8.0-1.el9.x86_64.rpm          291 kB/s |  19 kB     00:00    
+(8/86): libjxl-0.7.2-2.el9.x86_64.rpm           5.9 MB/s | 982 kB     00:00    
+(9/86): libvmaf-2.3.0-2.el9.x86_64.rpm          2.6 MB/s | 177 kB     00:00    
+(10/86): libssh2-1.11.1-9.el9.x86_64.rpm        1.9 MB/s | 141 kB     00:00    
+(11/86): rav1e-libs-0.8.1-2.el9.x86_64.rpm      7.3 MB/s | 1.1 MB     00:00    
+(12/86): svt-av1-libs-0.9.0-1.el9.x86_64.rpm    7.0 MB/s | 1.7 MB     00:00    
+(13/86): php-bcmath-8.3.35-1.module_php.8.3.el9  42 kB/s |  44 kB     00:01    
+(14/86): php-common-8.3.35-1.module_php.8.3.el9 704 kB/s | 1.3 MB     00:01    
+(15/86): php-fpm-8.3.35-1.module_php.8.3.el9.re 1.5 MB/s | 1.9 MB     00:01    
+(16/86): php-gd-8.3.35-1.module_php.8.3.el9.rem 226 kB/s |  62 kB     00:00    
+(17/86): php-gmp-8.3.35-1.module_php.8.3.el9.re 211 kB/s |  44 kB     00:00    
+(18/86): php-intl-8.3.35-1.module_php.8.3.el9.r 1.1 MB/s | 234 kB     00:00    
+(19/86): php-ldap-8.3.35-1.module_php.8.3.el9.r 288 kB/s |  62 kB     00:00    
+(20/86): php-mbstring-8.3.35-1.module_php.8.3.e 1.4 MB/s | 577 kB     00:00    
+(21/86): php-mysqlnd-8.3.35-1.module_php.8.3.el 863 kB/s | 216 kB     00:00    
+(22/86): php-opcache-8.3.35-1.module_php.8.3.el 2.3 MB/s | 574 kB     00:00    
+(23/86): php-pdo-8.3.35-1.module_php.8.3.el9.re 312 kB/s | 116 kB     00:00    
+(24/86): php-pecl-apcu-5.1.28-1.module_php.8.3. 364 kB/s |  77 kB     00:00    
+(25/86): php-pecl-memcache-8.2-3.el9.remi.8.3.x 477 kB/s | 101 kB     00:00    
+(26/86): php-pecl-ssh2-1.5.0-1.module_php.8.3.e 204 kB/s |  46 kB     00:00    
+(27/86): php-cli-8.3.35-1.module_php.8.3.el9.re 1.6 MB/s | 5.6 MB     00:03    
+(28/86): php-pecl-zip-1.22.8-1.module_php.8.3.e 376 kB/s |  79 kB     00:00    
+(29/86): php-process-8.3.35-1.module_php.8.3.el 290 kB/s |  65 kB     00:00    
+(30/86): php-xml-8.3.35-1.module_php.8.3.el9.re 961 kB/s | 217 kB     00:00    
+(31/86): gd3php-2.3.3-9.el9.remi.x86_64.rpm     634 kB/s | 136 kB     00:00    
+(32/86): libicu74-74.2-1.el9.remi.x86_64.rpm    4.0 MB/s |  10 MB     00:02    
+(33/86): oniguruma5php-6.9.10-1.el9.remi.x86_64  84 kB/s | 222 kB     00:02    
+(34/86): remi-libzip-1.11.4-1.el9.remi.x86_64.r  28 kB/s |  70 kB     00:02    
+(35/86): acl-2.4.0-1.el9_8.x86_64.rpm           1.0 MB/s |  74 kB     00:00    
+(36/86): dbus-1.12.20-8.el9.x86_64.rpm          361 kB/s | 6.8 kB     00:00    
+(37/86): dbus-broker-28-9.el9_8.x86_64.rpm      5.4 MB/s | 169 kB     00:00    
+(38/86): dbus-common-1.12.20-8.el9.noarch.rpm   698 kB/s |  14 kB     00:00    
+(39/86): fonts-filesystem-2.0.5-7.el9.1.noarch. 521 kB/s | 9.0 kB     00:00    
+(40/86): freetype-2.10.4-10.el9_5.x86_64.rpm    7.1 MB/s | 386 kB     00:00    
+(41/86): graphite2-1.3.14-9.el9.x86_64.rpm      1.3 MB/s |  94 kB     00:00    
+(42/86): dejavu-sans-fonts-2.37-18.el9.noarch.r 7.9 MB/s | 1.3 MB     00:00    
+(43/86): harfbuzz-2.7.4-10.el9.x86_64.rpm       5.4 MB/s | 623 kB     00:00    
+(44/86): kmod-libs-28-11.el9.x86_64.rpm         750 kB/s |  62 kB     00:00    
+(45/86): libpng-1.6.37-15.el9_8.2.x86_64.rpm    3.4 MB/s | 116 kB     00:00    
+(46/86): libedit-3.1-39.20210216cvs.el9.x86_64. 2.3 MB/s | 103 kB     00:00    
+(47/86): libbrotli-1.0.9-9.el9_7.x86_64.rpm     4.2 MB/s | 312 kB     00:00    
+(48/86): mailcap-2.1.49-5.el9.0.2.noarch.rpm    440 kB/s |  32 kB     00:00    
+(49/86): openssl-fips-provider-3.5.8-1.el9_8.x8 8.9 MB/s | 814 kB     00:00    
+(50/86): libseccomp-2.5.2-2.el9.x86_64.rpm      653 kB/s |  71 kB     00:00    
+(51/86): systemd-pam-252-67.el9_8.6.rocky.0.1.x 4.2 MB/s | 244 kB     00:00    
+(52/86): systemd-rpm-macros-252-67.el9_8.6.rock 157 kB/s |  32 kB     00:00    
+(53/86): shared-mime-info-2.1-5.el9.x86_64.rpm  1.2 MB/s | 372 kB     00:00    
+(54/86): systemd-252-67.el9_8.6.rocky.0.1.x86_6  10 MB/s | 4.0 MB     00:00    
+(55/86): apr-util-1.6.1-23.el9_8.1.x86_64.rpm   553 kB/s |  94 kB     00:00    
+(56/86): apr-1.7.0-12.el9_3.x86_64.rpm          687 kB/s | 122 kB     00:00    
+(57/86): apr-util-bdb-1.6.1-23.el9_8.1.x86_64.r 236 kB/s |  12 kB     00:00    
+(58/86): apr-util-openssl-1.6.1-23.el9_8.1.x86_ 1.0 MB/s |  14 kB     00:00    
+(59/86): capstone-4.0.2-13.el9_8.x86_64.rpm     9.0 MB/s | 755 kB     00:00    
+(60/86): fontconfig-2.14.0-2.el9_1.x86_64.rpm   3.0 MB/s | 274 kB     00:00    
+(61/86): fribidi-1.0.10-6.el9.2.x86_64.rpm      1.0 MB/s |  84 kB     00:00    
+(62/86): gdk-pixbuf2-2.42.6-6.el9_7.1.x86_64.rp 7.8 MB/s | 465 kB     00:00    
+(63/86): httpd-2.4.62-13.el9_8.6.x86_64.rpm     793 kB/s |  46 kB     00:00    
+(64/86): httpd-core-2.4.62-13.el9_8.6.x86_64.rp 9.7 MB/s | 1.4 MB     00:00    
+(65/86): httpd-filesystem-2.4.62-13.el9_8.6.noa 138 kB/s |  13 kB     00:00    
+(66/86): httpd-tools-2.4.62-13.el9_8.6.x86_64.r 782 kB/s |  79 kB     00:00    
+(67/86): jbigkit-libs-2.1-23.el9.x86_64.rpm     2.8 MB/s |  52 kB     00:00    
+(68/86): langpacks-core-font-en-3.0-16.el9.noar 469 kB/s | 9.5 kB     00:00    
+(69/86): libX11-1.8.12-1.el9.x86_64.rpm          14 MB/s | 647 kB     00:00    
+(70/86): libX11-common-1.8.12-1.el9.noarch.rpm  2.9 MB/s | 144 kB     00:00    
+(71/86): libXau-1.0.9-8.el9.x86_64.rpm          637 kB/s |  30 kB     00:00    
+(72/86): libXpm-3.5.13-10.el9.x86_64.rpm        2.8 MB/s |  58 kB     00:00    
+(73/86): libjpeg-turbo-2.0.90-7.el9.x86_64.rpm  5.6 MB/s | 174 kB     00:00    
+(74/86): libtiff-4.4.0-18.el9_8.1.x86_64.rpm    5.1 MB/s | 197 kB     00:00    
+(75/86): libwebp-1.2.0-8.el9.x86_64.rpm         6.2 MB/s | 276 kB     00:00    
+(76/86): libxcb-1.13.1-9.el9.x86_64.rpm         6.0 MB/s | 224 kB     00:00    
+(77/86): libxslt-1.1.34-14.el9_7.1.x86_64.rpm   5.8 MB/s | 240 kB     00:00    
+(78/86): mod_http2-2.0.26-6.el9_8.2.x86_64.rpm  3.8 MB/s | 163 kB     00:00    
+(79/86): mod_lua-2.4.62-13.el9_8.6.x86_64.rpm   1.7 MB/s |  60 kB     00:00    
+(80/86): nginx-filesystem-1.20.1-28.el9_8.6.roc 470 kB/s |  11 kB     00:00    
+(81/86): rocky-logos-httpd-90.17-1.el9.noarch.r 1.6 MB/s |  24 kB     00:00    
+(82/86): xml-common-0.6.3-58.el9.noarch.rpm     2.0 MB/s |  31 kB     00:00    
+(83/86): libacl-2.4.0-1.el9_8.x86_64.rpm        1.3 MB/s |  25 kB     00:00    
+(84/86): openssl-3.5.8-1.el9_8.x86_64.rpm        14 MB/s | 1.4 MB     00:00    
+(85/86): systemd-libs-252-67.el9_8.6.rocky.0.1. 4.5 MB/s | 637 kB     00:00    
+(86/86): openssl-libs-3.5.8-1.el9_8.x86_64.rpm  8.4 MB/s | 2.3 MB     00:00    
+--------------------------------------------------------------------------------
+Total                                           4.3 MB/s |  48 MB     00:11     
+Extra Packages for Enterprise Linux 9 - x86_64  1.6 MB/s | 1.6 kB     00:00    
+Importing GPG key 0x3228467C:
+ Userid     : "Fedora (epel9) <epel@fedoraproject.org>"
+ Fingerprint: FF8A D134 4597 106E CE81 3B91 8A38 72BF 3228 467C
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-9
+Key imported successfully
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                        1/1 
+  Upgrading        : libacl-2.4.0-1.el9_8.x86_64                           1/90 
+  Installing       : libjpeg-turbo-2.0.90-7.el9.x86_64                     2/90 
+  Installing       : apr-1.7.0-12.el9_3.x86_64                             3/90 
+  Installing       : libpng-2:1.6.37-15.el9_8.2.x86_64                     4/90 
+  Installing       : libbrotli-1.0.9-9.el9_7.x86_64                        5/90 
+  Installing       : libwebp-1.2.0-8.el9.x86_64                            6/90 
+  Running scriptlet: httpd-filesystem-2.4.62-13.el9_8.6.noarch             7/90 
+  Installing       : httpd-filesystem-2.4.62-13.el9_8.6.noarch             7/90 
+  Installing       : shared-mime-info-2.1-5.el9.x86_64                     8/90 
+  Running scriptlet: shared-mime-info-2.1-5.el9.x86_64                     8/90 
+  Installing       : fonts-filesystem-1:2.0.5-7.el9.1.noarch               9/90 
+  Installing       : dejavu-sans-fonts-2.37-18.el9.noarch                 10/90 
+  Installing       : langpacks-core-font-en-3.0-16.el9.noarch             11/90 
+  Installing       : gdk-pixbuf2-2.42.6-6.el9_7.1.x86_64                  12/90 
+  Installing       : acl-2.4.0-1.el9_8.x86_64                             13/90 
+  Upgrading        : openssl-libs-1:3.5.8-1.el9_8.x86_64                  14/90 
+  Installing       : openssl-fips-provider-1:3.5.8-1.el9_8.x86_64         15/90 
+  Running scriptlet: php-common-8.3.35-1.module_php.8.3.el9.remi.x86_64   16/90 
+  Installing       : php-common-8.3.35-1.module_php.8.3.el9.remi.x86_64   16/90 
+  Upgrading        : systemd-libs-252-67.el9_8.6.rocky.0.1.x86_64         17/90 
+  Running scriptlet: systemd-libs-252-67.el9_8.6.rocky.0.1.x86_64         17/90 
+  Installing       : php-pdo-8.3.35-1.module_php.8.3.el9.remi.x86_64      18/90 
+  Installing       : libssh2-1.11.1-9.el9.x86_64                          19/90 
+  Installing       : remi-libzip-1.11.4-1.el9.remi.x86_64                 20/90 
+  Installing       : kmod-libs-28-11.el9.x86_64                           21/90 
+  Installing       : apr-util-bdb-1.6.1-23.el9_8.1.x86_64                 22/90 
+  Installing       : apr-util-1.6.1-23.el9_8.1.x86_64                     23/90 
+  Installing       : apr-util-openssl-1.6.1-23.el9_8.1.x86_64             24/90 
+  Installing       : httpd-tools-2.4.62-13.el9_8.6.x86_64                 25/90 
+  Running scriptlet: xml-common-0.6.3-58.el9.noarch                       26/90 
+  Installing       : xml-common-0.6.3-58.el9.noarch                       26/90 
+  Installing       : rocky-logos-httpd-90.17-1.el9.noarch                 27/90 
+  Running scriptlet: nginx-filesystem-2:1.20.1-28.el9_8.6.rocky.0.1.noa   28/90 
+  Installing       : nginx-filesystem-2:1.20.1-28.el9_8.6.rocky.0.1.noa   28/90 
+  Installing       : libxslt-1.1.34-14.el9_7.1.x86_64                     29/90 
+  Installing       : libXau-1.0.9-8.el9.x86_64                            30/90 
+  Installing       : libxcb-1.13.1-9.el9.x86_64                           31/90 
+  Installing       : libX11-common-1.8.12-1.el9.noarch                    32/90 
+  Installing       : libX11-1.8.12-1.el9.x86_64                           33/90 
+  Installing       : libXpm-3.5.13-10.el9.x86_64                          34/90 
+  Installing       : jbigkit-libs-2.1-23.el9.x86_64                       35/90 
+  Installing       : libtiff-4.4.0-18.el9_8.1.x86_64                      36/90 
+  Installing       : fribidi-1.0.10-6.el9.2.x86_64                        37/90 
+  Installing       : capstone-4.0.2-13.el9_8.x86_64                       38/90 
+  Installing       : systemd-rpm-macros-252-67.el9_8.6.rocky.0.1.noarch   39/90 
+  Installing       : mailcap-2.1.49-5.el9.0.2.noarch                      40/90 
+  Installing       : httpd-core-2.4.62-13.el9_8.6.x86_64                  41/90 
+  Installing       : mod_lua-2.4.62-13.el9_8.6.x86_64                     42/90 
+  Installing       : libseccomp-2.5.2-2.el9.x86_64                        43/90 
+  Installing       : dbus-1:1.12.20-8.el9.x86_64                          44/90 
+  Installing       : systemd-pam-252-67.el9_8.6.rocky.0.1.x86_64          45/90 
+  Running scriptlet: systemd-252-67.el9_8.6.rocky.0.1.x86_64              46/90 
+  Installing       : systemd-252-67.el9_8.6.rocky.0.1.x86_64              46/90 
+  Running scriptlet: systemd-252-67.el9_8.6.rocky.0.1.x86_64              46/90 
+  Installing       : dbus-common-1:1.12.20-8.el9.noarch                   47/90 
+  Running scriptlet: dbus-common-1:1.12.20-8.el9.noarch                   47/90 
+Created symlink /etc/systemd/system/sockets.target.wants/dbus.socket → /usr/lib/systemd/system/dbus.socket.
+Created symlink /etc/systemd/user/sockets.target.wants/dbus.socket → /usr/lib/systemd/user/dbus.socket.
+
+  Installing       : dbus-broker-28-9.el9_8.x86_64                        48/90 
+  Running scriptlet: dbus-broker-28-9.el9_8.x86_64                        48/90 
+Created symlink /etc/systemd/system/dbus.service → /usr/lib/systemd/system/dbus-broker.service.
+Created symlink /etc/systemd/user/dbus.service → /usr/lib/systemd/user/dbus-broker.service.
+
+  Installing       : mod_http2-2.0.26-6.el9_8.2.x86_64                    49/90 
+  Installing       : httpd-2.4.62-13.el9_8.6.x86_64                       50/90 
+  Running scriptlet: httpd-2.4.62-13.el9_8.6.x86_64                       50/90 
+  Installing       : libedit-3.1-39.20210216cvs.el9.x86_64                51/90 
+  Installing       : graphite2-1.3.14-9.el9.x86_64                        52/90 
+  Installing       : harfbuzz-2.7.4-10.el9.x86_64                         53/90 
+  Installing       : freetype-2.10.4-10.el9_5.x86_64                      54/90 
+  Installing       : libraqm-0.8.0-1.el9.x86_64                           55/90 
+  Installing       : fontconfig-2.14.0-2.el9_1.x86_64                     56/90 
+  Running scriptlet: fontconfig-2.14.0-2.el9_1.x86_64                     56/90 
+  Installing       : oniguruma5php-6.9.10-1.el9.remi.x86_64               57/90 
+  Installing       : libicu74-74.2-1.el9.remi.x86_64                      58/90 
+  Installing       : svt-av1-libs-0.9.0-1.el9.x86_64                      59/90 
+  Installing       : rav1e-libs-0.8.1-2.el9.x86_64                        60/90 
+  Installing       : libvmaf-2.3.0-2.el9.x86_64                           61/90 
+  Installing       : libimagequant-2.17.0-1.el9.x86_64                    62/90 
+  Installing       : libdav1d-1.5.4-1.el9.x86_64                          63/90 
+  Installing       : highway-1.3.0-1.el9.x86_64                           64/90 
+  Installing       : jxl-pixbuf-loader-0.7.2-2.el9.x86_64                 65/90 
+  Installing       : libjxl-0.7.2-2.el9.x86_64                            66/90 
+  Installing       : libaom-3.13.1-1.el9.x86_64                           67/90 
+  Installing       : libavif-0.11.1-5.el9.x86_64                          68/90 
+  Installing       : gd3php-2.3.3-9.el9.remi.x86_64                       69/90 
+  Installing       : php-gd-8.3.35-1.module_php.8.3.el9.remi.x86_64       70/90 
+  Installing       : php-intl-8.3.35-1.module_php.8.3.el9.remi.x86_64     71/90 
+  Installing       : php-mbstring-8.3.35-1.module_php.8.3.el9.remi.x86_   72/90 
+  Installing       : php-cli-8.3.35-1.module_php.8.3.el9.remi.x86_64      73/90 
+  Installing       : php-fpm-8.3.35-1.module_php.8.3.el9.remi.x86_64      74/90 
+  Running scriptlet: php-fpm-8.3.35-1.module_php.8.3.el9.remi.x86_64      74/90 
+  Installing       : php-opcache-8.3.35-1.module_php.8.3.el9.remi.x86_6   75/90 
+  Installing       : php-xml-8.3.35-1.module_php.8.3.el9.remi.x86_64      76/90 
+  Installing       : php-pecl-zip-1.22.8-1.module_php.8.3.el9.remi.x86_   77/90 
+  Installing       : php-pecl-ssh2-1.5.0-1.module_php.8.3.el9.remi.x86_   78/90 
+  Installing       : php-mysqlnd-8.3.35-1.module_php.8.3.el9.remi.x86_6   79/90 
+  Installing       : php-bcmath-8.3.35-1.module_php.8.3.el9.remi.x86_64   80/90 
+  Installing       : php-gmp-8.3.35-1.module_php.8.3.el9.remi.x86_64      81/90 
+  Installing       : php-ldap-8.3.35-1.module_php.8.3.el9.remi.x86_64     82/90 
+  Installing       : php-pecl-apcu-5.1.28-1.module_php.8.3.el9.remi.x86   83/90 
+  Installing       : php-pecl-memcache-8.2-3.el9.remi.8.3.x86_64          84/90 
+  Installing       : php-process-8.3.35-1.module_php.8.3.el9.remi.x86_6   85/90 
+  Upgrading        : openssl-1:3.5.8-1.el9_8.x86_64                       86/90 
+  Cleanup          : openssl-1:3.0.7-24.el9.x86_64                        87/90 
+  Cleanup          : systemd-libs-252-18.el9.x86_64                       88/90 
+  Cleanup          : openssl-libs-1:3.0.7-24.el9.x86_64                   89/90 
+  Cleanup          : libacl-2.3.1-3.el9.x86_64                            90/90 
+  Running scriptlet: httpd-2.4.62-13.el9_8.6.x86_64                       90/90 
+  Running scriptlet: fontconfig-2.14.0-2.el9_1.x86_64                     90/90 
+  Running scriptlet: libacl-2.3.1-3.el9.x86_64                            90/90 
+  Verifying        : highway-1.3.0-1.el9.x86_64                            1/90 
+  Verifying        : jxl-pixbuf-loader-0.7.2-2.el9.x86_64                  2/90 
+  Verifying        : libaom-3.13.1-1.el9.x86_64                            3/90 
+  Verifying        : libavif-0.11.1-5.el9.x86_64                           4/90 
+  Verifying        : libdav1d-1.5.4-1.el9.x86_64                           5/90 
+  Verifying        : libimagequant-2.17.0-1.el9.x86_64                     6/90 
+  Verifying        : libjxl-0.7.2-2.el9.x86_64                             7/90 
+  Verifying        : libraqm-0.8.0-1.el9.x86_64                            8/90 
+  Verifying        : libssh2-1.11.1-9.el9.x86_64                           9/90 
+  Verifying        : libvmaf-2.3.0-2.el9.x86_64                           10/90 
+  Verifying        : rav1e-libs-0.8.1-2.el9.x86_64                        11/90 
+  Verifying        : svt-av1-libs-0.9.0-1.el9.x86_64                      12/90 
+  Verifying        : php-bcmath-8.3.35-1.module_php.8.3.el9.remi.x86_64   13/90 
+  Verifying        : php-cli-8.3.35-1.module_php.8.3.el9.remi.x86_64      14/90 
+  Verifying        : php-common-8.3.35-1.module_php.8.3.el9.remi.x86_64   15/90 
+  Verifying        : php-fpm-8.3.35-1.module_php.8.3.el9.remi.x86_64      16/90 
+  Verifying        : php-gd-8.3.35-1.module_php.8.3.el9.remi.x86_64       17/90 
+  Verifying        : php-gmp-8.3.35-1.module_php.8.3.el9.remi.x86_64      18/90 
+  Verifying        : php-intl-8.3.35-1.module_php.8.3.el9.remi.x86_64     19/90 
+  Verifying        : php-ldap-8.3.35-1.module_php.8.3.el9.remi.x86_64     20/90 
+  Verifying        : php-mbstring-8.3.35-1.module_php.8.3.el9.remi.x86_   21/90 
+  Verifying        : php-mysqlnd-8.3.35-1.module_php.8.3.el9.remi.x86_6   22/90 
+  Verifying        : php-opcache-8.3.35-1.module_php.8.3.el9.remi.x86_6   23/90 
+  Verifying        : php-pdo-8.3.35-1.module_php.8.3.el9.remi.x86_64      24/90 
+  Verifying        : php-pecl-apcu-5.1.28-1.module_php.8.3.el9.remi.x86   25/90 
+  Verifying        : php-pecl-memcache-8.2-3.el9.remi.8.3.x86_64          26/90 
+  Verifying        : php-pecl-ssh2-1.5.0-1.module_php.8.3.el9.remi.x86_   27/90 
+  Verifying        : php-pecl-zip-1.22.8-1.module_php.8.3.el9.remi.x86_   28/90 
+  Verifying        : php-process-8.3.35-1.module_php.8.3.el9.remi.x86_6   29/90 
+  Verifying        : php-xml-8.3.35-1.module_php.8.3.el9.remi.x86_64      30/90 
+  Verifying        : gd3php-2.3.3-9.el9.remi.x86_64                       31/90 
+  Verifying        : libicu74-74.2-1.el9.remi.x86_64                      32/90 
+  Verifying        : oniguruma5php-6.9.10-1.el9.remi.x86_64               33/90 
+  Verifying        : remi-libzip-1.11.4-1.el9.remi.x86_64                 34/90 
+  Verifying        : acl-2.4.0-1.el9_8.x86_64                             35/90 
+  Verifying        : dbus-1:1.12.20-8.el9.x86_64                          36/90 
+  Verifying        : dbus-broker-28-9.el9_8.x86_64                        37/90 
+  Verifying        : dbus-common-1:1.12.20-8.el9.noarch                   38/90 
+  Verifying        : dejavu-sans-fonts-2.37-18.el9.noarch                 39/90 
+  Verifying        : fonts-filesystem-1:2.0.5-7.el9.1.noarch              40/90 
+  Verifying        : freetype-2.10.4-10.el9_5.x86_64                      41/90 
+  Verifying        : graphite2-1.3.14-9.el9.x86_64                        42/90 
+  Verifying        : harfbuzz-2.7.4-10.el9.x86_64                         43/90 
+  Verifying        : kmod-libs-28-11.el9.x86_64                           44/90 
+  Verifying        : libbrotli-1.0.9-9.el9_7.x86_64                       45/90 
+  Verifying        : libedit-3.1-39.20210216cvs.el9.x86_64                46/90 
+  Verifying        : libpng-2:1.6.37-15.el9_8.2.x86_64                    47/90 
+  Verifying        : libseccomp-2.5.2-2.el9.x86_64                        48/90 
+  Verifying        : mailcap-2.1.49-5.el9.0.2.noarch                      49/90 
+  Verifying        : openssl-fips-provider-1:3.5.8-1.el9_8.x86_64         50/90 
+  Verifying        : shared-mime-info-2.1-5.el9.x86_64                    51/90 
+  Verifying        : systemd-252-67.el9_8.6.rocky.0.1.x86_64              52/90 
+  Verifying        : systemd-pam-252-67.el9_8.6.rocky.0.1.x86_64          53/90 
+  Verifying        : systemd-rpm-macros-252-67.el9_8.6.rocky.0.1.noarch   54/90 
+  Verifying        : apr-1.7.0-12.el9_3.x86_64                            55/90 
+  Verifying        : apr-util-1.6.1-23.el9_8.1.x86_64                     56/90 
+  Verifying        : apr-util-bdb-1.6.1-23.el9_8.1.x86_64                 57/90 
+  Verifying        : apr-util-openssl-1.6.1-23.el9_8.1.x86_64             58/90 
+  Verifying        : capstone-4.0.2-13.el9_8.x86_64                       59/90 
+  Verifying        : fontconfig-2.14.0-2.el9_1.x86_64                     60/90 
+  Verifying        : fribidi-1.0.10-6.el9.2.x86_64                        61/90 
+  Verifying        : gdk-pixbuf2-2.42.6-6.el9_7.1.x86_64                  62/90 
+  Verifying        : httpd-2.4.62-13.el9_8.6.x86_64                       63/90 
+  Verifying        : httpd-core-2.4.62-13.el9_8.6.x86_64                  64/90 
+  Verifying        : httpd-filesystem-2.4.62-13.el9_8.6.noarch            65/90 
+  Verifying        : httpd-tools-2.4.62-13.el9_8.6.x86_64                 66/90 
+  Verifying        : jbigkit-libs-2.1-23.el9.x86_64                       67/90 
+  Verifying        : langpacks-core-font-en-3.0-16.el9.noarch             68/90 
+  Verifying        : libX11-1.8.12-1.el9.x86_64                           69/90 
+  Verifying        : libX11-common-1.8.12-1.el9.noarch                    70/90 
+  Verifying        : libXau-1.0.9-8.el9.x86_64                            71/90 
+  Verifying        : libXpm-3.5.13-10.el9.x86_64                          72/90 
+  Verifying        : libjpeg-turbo-2.0.90-7.el9.x86_64                    73/90 
+  Verifying        : libtiff-4.4.0-18.el9_8.1.x86_64                      74/90 
+  Verifying        : libwebp-1.2.0-8.el9.x86_64                           75/90 
+  Verifying        : libxcb-1.13.1-9.el9.x86_64                           76/90 
+  Verifying        : libxslt-1.1.34-14.el9_7.1.x86_64                     77/90 
+  Verifying        : mod_http2-2.0.26-6.el9_8.2.x86_64                    78/90 
+  Verifying        : mod_lua-2.4.62-13.el9_8.6.x86_64                     79/90 
+  Verifying        : nginx-filesystem-2:1.20.1-28.el9_8.6.rocky.0.1.noa   80/90 
+  Verifying        : rocky-logos-httpd-90.17-1.el9.noarch                 81/90 
+  Verifying        : xml-common-0.6.3-58.el9.noarch                       82/90 
+  Verifying        : libacl-2.4.0-1.el9_8.x86_64                          83/90 
+  Verifying        : libacl-2.3.1-3.el9.x86_64                            84/90 
+  Verifying        : openssl-1:3.5.8-1.el9_8.x86_64                       85/90 
+  Verifying        : openssl-1:3.0.7-24.el9.x86_64                        86/90 
+  Verifying        : openssl-libs-1:3.5.8-1.el9_8.x86_64                  87/90 
+  Verifying        : openssl-libs-1:3.0.7-24.el9.x86_64                   88/90 
+  Verifying        : systemd-libs-252-67.el9_8.6.rocky.0.1.x86_64         89/90 
+  Verifying        : systemd-libs-252-18.el9.x86_64                       90/90 
+
+Upgraded:
+  libacl-2.4.0-1.el9_8.x86_64                                                   
+  openssl-1:3.5.8-1.el9_8.x86_64                                                
+  openssl-libs-1:3.5.8-1.el9_8.x86_64                                           
+  systemd-libs-252-67.el9_8.6.rocky.0.1.x86_64                                  
+Installed:
+  acl-2.4.0-1.el9_8.x86_64                                                      
+  apr-1.7.0-12.el9_3.x86_64                                                     
+  apr-util-1.6.1-23.el9_8.1.x86_64                                              
+  apr-util-bdb-1.6.1-23.el9_8.1.x86_64                                          
+  apr-util-openssl-1.6.1-23.el9_8.1.x86_64                                      
+  capstone-4.0.2-13.el9_8.x86_64                                                
+  dbus-1:1.12.20-8.el9.x86_64                                                   
+  dbus-broker-28-9.el9_8.x86_64                                                 
+  dbus-common-1:1.12.20-8.el9.noarch                                            
+  dejavu-sans-fonts-2.37-18.el9.noarch                                          
+  fontconfig-2.14.0-2.el9_1.x86_64                                              
+  fonts-filesystem-1:2.0.5-7.el9.1.noarch                                       
+  freetype-2.10.4-10.el9_5.x86_64                                               
+  fribidi-1.0.10-6.el9.2.x86_64                                                 
+  gd3php-2.3.3-9.el9.remi.x86_64                                                
+  gdk-pixbuf2-2.42.6-6.el9_7.1.x86_64                                           
+  graphite2-1.3.14-9.el9.x86_64                                                 
+  harfbuzz-2.7.4-10.el9.x86_64                                                  
+  highway-1.3.0-1.el9.x86_64                                                    
+  httpd-2.4.62-13.el9_8.6.x86_64                                                
+  httpd-core-2.4.62-13.el9_8.6.x86_64                                           
+  httpd-filesystem-2.4.62-13.el9_8.6.noarch                                     
+  httpd-tools-2.4.62-13.el9_8.6.x86_64                                          
+  jbigkit-libs-2.1-23.el9.x86_64                                                
+  jxl-pixbuf-loader-0.7.2-2.el9.x86_64                                          
+  kmod-libs-28-11.el9.x86_64                                                    
+  langpacks-core-font-en-3.0-16.el9.noarch                                      
+  libX11-1.8.12-1.el9.x86_64                                                    
+  libX11-common-1.8.12-1.el9.noarch                                             
+  libXau-1.0.9-8.el9.x86_64                                                     
+  libXpm-3.5.13-10.el9.x86_64                                                   
+  libaom-3.13.1-1.el9.x86_64                                                    
+  libavif-0.11.1-5.el9.x86_64                                                   
+  libbrotli-1.0.9-9.el9_7.x86_64                                                
+  libdav1d-1.5.4-1.el9.x86_64                                                   
+  libedit-3.1-39.20210216cvs.el9.x86_64                                         
+  libicu74-74.2-1.el9.remi.x86_64                                               
+  libimagequant-2.17.0-1.el9.x86_64                                             
+  libjpeg-turbo-2.0.90-7.el9.x86_64                                             
+  libjxl-0.7.2-2.el9.x86_64                                                     
+  libpng-2:1.6.37-15.el9_8.2.x86_64                                             
+  libraqm-0.8.0-1.el9.x86_64                                                    
+  libseccomp-2.5.2-2.el9.x86_64                                                 
+  libssh2-1.11.1-9.el9.x86_64                                                   
+  libtiff-4.4.0-18.el9_8.1.x86_64                                               
+  libvmaf-2.3.0-2.el9.x86_64                                                    
+  libwebp-1.2.0-8.el9.x86_64                                                    
+  libxcb-1.13.1-9.el9.x86_64                                                    
+  libxslt-1.1.34-14.el9_7.1.x86_64                                              
+  mailcap-2.1.49-5.el9.0.2.noarch                                               
+  mod_http2-2.0.26-6.el9_8.2.x86_64                                             
+  mod_lua-2.4.62-13.el9_8.6.x86_64                                              
+  nginx-filesystem-2:1.20.1-28.el9_8.6.rocky.0.1.noarch                         
+  oniguruma5php-6.9.10-1.el9.remi.x86_64                                        
+  openssl-fips-provider-1:3.5.8-1.el9_8.x86_64                                  
+  php-bcmath-8.3.35-1.module_php.8.3.el9.remi.x86_64                            
+  php-cli-8.3.35-1.module_php.8.3.el9.remi.x86_64                               
+  php-common-8.3.35-1.module_php.8.3.el9.remi.x86_64                            
+  php-fpm-8.3.35-1.module_php.8.3.el9.remi.x86_64                               
+  php-gd-8.3.35-1.module_php.8.3.el9.remi.x86_64                                
+  php-gmp-8.3.35-1.module_php.8.3.el9.remi.x86_64                               
+  php-intl-8.3.35-1.module_php.8.3.el9.remi.x86_64                              
+  php-ldap-8.3.35-1.module_php.8.3.el9.remi.x86_64                              
+  php-mbstring-8.3.35-1.module_php.8.3.el9.remi.x86_64                          
+  php-mysqlnd-8.3.35-1.module_php.8.3.el9.remi.x86_64                           
+  php-opcache-8.3.35-1.module_php.8.3.el9.remi.x86_64                           
+  php-pdo-8.3.35-1.module_php.8.3.el9.remi.x86_64                               
+  php-pecl-apcu-5.1.28-1.module_php.8.3.el9.remi.x86_64                         
+  php-pecl-memcache-8.2-3.el9.remi.8.3.x86_64                                   
+  php-pecl-ssh2-1.5.0-1.module_php.8.3.el9.remi.x86_64                          
+  php-pecl-zip-1.22.8-1.module_php.8.3.el9.remi.x86_64                          
+  php-process-8.3.35-1.module_php.8.3.el9.remi.x86_64                           
+  php-xml-8.3.35-1.module_php.8.3.el9.remi.x86_64                               
+  rav1e-libs-0.8.1-2.el9.x86_64                                                 
+  remi-libzip-1.11.4-1.el9.remi.x86_64                                          
+  rocky-logos-httpd-90.17-1.el9.noarch                                          
+  shared-mime-info-2.1-5.el9.x86_64                                             
+  svt-av1-libs-0.9.0-1.el9.x86_64                                               
+  systemd-252-67.el9_8.6.rocky.0.1.x86_64                                       
+  systemd-pam-252-67.el9_8.6.rocky.0.1.x86_64                                   
+  systemd-rpm-macros-252-67.el9_8.6.rocky.0.1.noarch                            
+  xml-common-0.6.3-58.el9.noarch                                                
+
+Complete!
+PHP83_PROVIDER_PACKAGES_BEGIN
+Last metadata expiration check: 0:00:18 ago on Fri Sep 25 16:24:45 2026.
+Remi's Modular repository for Enterprise Linux 9 - x86_64
+Name Stream       Profiles                   Summary               
+php  remi-8.3 [e] common [d], devel, minimal PHP scripting language
+
+Hint: [d]efault, [e]nabled, [x]disabled, [i]nstalled
+Loaded plugins: builddep, changelog, config-manager, copr, debug, debuginfo-install, download, generate_completion_cache, groups-manager, needs-restarting, playground, repoclosure, repodiff, repograph, repomanage, reposync, system-upgrade
+DNF version: 4.14.0
+cachedir: /var/cache/dnf
+Last metadata expiration check: 0:00:19 ago on Fri Sep 25 16:24:45 2026.
+Repo-id            : appstream
+Repo-name          : Rocky Linux 9 - AppStream
+Repo-revision      : 9.8
+Repo-distro-tags      : [cpe:/o:rocky:rocky:9.8]:  ,  , ., 8, 9, L, R, c, i, k, n, o, u, x, y
+Repo-updated       : Fri Sep 25 06:08:01 2026
+Repo-pkgs          : 9914
+Repo-available-pkgs: 8727
+Repo-size          : 27 G
+Repo-mirrors       : https://mirrors.rockylinux.org/mirrorlist?arch=x86_64&repo=AppStream-9
+Repo-baseurl       : https://br.mirrors.cicku.me/rocky/9.8/AppStream/x86_64/os/ (4 more)
+Repo-expire        : 21600 second(s) (last: Fri Sep 25 16:24:27 2026)
+Repo-filename      : /etc/yum.repos.d/rocky.repo
+
+Repo-id            : baseos
+Repo-name          : Rocky Linux 9 - BaseOS
+Repo-revision      : 9.8
+Repo-distro-tags      : [cpe:/o:rocky:rocky:9.8]:  ,  , ., 8, 9, L, R, c, i, k, n, o, u, x, y
+Repo-updated       : Fri Sep 25 06:07:53 2026
+Repo-pkgs          : 2882
+Repo-available-pkgs: 2882
+Repo-size          : 14 G
+Repo-mirrors       : https://mirrors.rockylinux.org/mirrorlist?arch=x86_64&repo=BaseOS-9
+Repo-baseurl       : https://br.mirrors.cicku.me/rocky/9.8/BaseOS/x86_64/os/ (4 more)
+Repo-expire        : 21600 second(s) (last: Fri Sep 25 16:24:26 2026)
+Repo-filename      : /etc/yum.repos.d/rocky.repo
+
+Repo-id            : crb
+Repo-name          : Rocky Linux 9 - CRB
+Repo-revision      : 9.8
+Repo-distro-tags      : [cpe:/o:rocky:rocky:9.8]:  ,  , ., 8, 9, L, R, c, i, k, n, o, u, x, y
+Repo-updated       : Fri Sep 25 06:08:00 2026
+Repo-pkgs          : 2837
+Repo-available-pkgs: 2831
+Repo-size          : 36 G
+Repo-mirrors       : https://mirrors.rockylinux.org/mirrorlist?arch=x86_64&repo=CRB-9
+Repo-baseurl       : https://br.mirrors.cicku.me/rocky/9.8/CRB/x86_64/os/ (4 more)
+Repo-expire        : 21600 second(s) (last: Fri Sep 25 16:24:27 2026)
+Repo-filename      : /etc/yum.repos.d/rocky.repo
+
+Repo-id            : epel
+Repo-name          : Extra Packages for Enterprise Linux 9 - x86_64
+Repo-revision      : 1790300639
+Repo-updated       : Fri Sep 25 01:44:31 2026
+Repo-pkgs          : 26676
+Repo-available-pkgs: 26617
+Repo-size          : 19 G
+Repo-metalink      : https://mirrors.fedoraproject.org/metalink?repo=epel-9&arch=x86_64&infra=container&content=pub/rocky
+  Updated          : Fri Sep 25 16:24:32 2026
+Repo-baseurl       : http://mirror.hnd.cl/epel/9/Everything/x86_64/ (472 more)
+Repo-expire        : 172800 second(s) (last: Fri Sep 25 16:24:32 2026)
+Repo-filename      : /etc/yum.repos.d/epel.repo
+
+Repo-id            : epel-cisco-openh264
+Repo-name          : Extra Packages for Enterprise Linux 9 openh264 (From Cisco) - x86_64
+Repo-revision      : 1684772361
+Repo-updated       : Mon May 22 16:19:21 2023
+Repo-pkgs          : 4
+Repo-available-pkgs: 4
+Repo-size          : 904 k
+Repo-metalink      : https://mirrors.fedoraproject.org/metalink?repo=epel-cisco-openh264-9&arch=x86_64
+  Updated          : Fri Sep 25 16:24:37 2026
+Repo-baseurl       : https://codecs.fedoraproject.org/openh264/epel/9/x86_64/os/ (0 more)
+Repo-expire        : 1209600 second(s) (last: Fri Sep 25 16:24:37 2026)
+Repo-filename      : /etc/yum.repos.d/epel-cisco-openh264.repo
+
+Repo-id            : extras
+Repo-name          : Rocky Linux 9 - Extras
+Repo-revision      : 9.8
+Repo-distro-tags      : [cpe:/o:rocky:rocky:9.8]:  ,  , ., 8, 9, L, R, c, i, k, n, o, u, x, y
+Repo-updated       : Tue Sep  1 05:55:47 2026
+Repo-pkgs          : 57
+Repo-available-pkgs: 57
+Repo-size          : 3.4 M
+Repo-mirrors       : https://mirrors.rockylinux.org/mirrorlist?arch=x86_64&repo=extras-9
+Repo-baseurl       : https://mirror.uepg.br/rocky-linux/9.8/extras/x86_64/os/ (4 more)
+Repo-expire        : 21600 second(s) (last: Fri Sep 25 16:24:22 2026)
+Repo-filename      : /etc/yum.repos.d/rocky-extras.repo
+
+Repo-id            : remi-modular
+Repo-name          : Remi's Modular repository for Enterprise Linux 9 - x86_64
+Repo-revision      : 1790169722
+Repo-updated       : Wed Sep 23 13:22:02 2026
+Repo-pkgs          : 3076
+Repo-available-pkgs: 422
+Repo-size          : 1.3 G
+Repo-mirrors       : http://cdn.remirepo.net/enterprise/9/modular/x86_64/mirror
+Repo-baseurl       : https://rpms.remirepo.net/enterprise/9/modular/x86_64/ (49 more)
+Repo-expire        : 172800 second(s) (last: Fri Sep 25 16:24:42 2026)
+Repo-filename      : /etc/yum.repos.d/remi-modular.repo
+
+Repo-id            : remi-safe
+Repo-name          : Safe Remi's RPM repository for Enterprise Linux 9 - x86_64
+Repo-revision      : 1790169391
+Repo-updated       : Wed Sep 23 13:16:31 2026
+Repo-pkgs          : 3180
+Repo-available-pkgs: 3180
+Repo-size          : 1.1 G
+Repo-mirrors       : http://cdn.remirepo.net/enterprise/9/safe/x86_64/mirror
+Repo-baseurl       : https://rpms.remirepo.net/enterprise/9/safe/x86_64/ (49 more)
+Repo-expire        : 172800 second(s) (last: Fri Sep 25 16:24:45 2026)
+Repo-filename      : /etc/yum.repos.d/remi-safe.repo
+Total packages: 48626
+Installed Packages
+httpd.x86_64                 2.4.62-13.el9_8.6                     @appstream   
+php-bcmath.x86_64            8.3.35-1.module_php.8.3.el9.remi      @remi-modular
+php-cli.x86_64               8.3.35-1.module_php.8.3.el9.remi      @remi-modular
+php-common.x86_64            8.3.35-1.module_php.8.3.el9.remi      @remi-modular
+php-fpm.x86_64               8.3.35-1.module_php.8.3.el9.remi      @remi-modular
+php-gd.x86_64                8.3.35-1.module_php.8.3.el9.remi      @remi-modular
+php-gmp.x86_64               8.3.35-1.module_php.8.3.el9.remi      @remi-modular
+php-intl.x86_64              8.3.35-1.module_php.8.3.el9.remi      @remi-modular
+php-ldap.x86_64              8.3.35-1.module_php.8.3.el9.remi      @remi-modular
+php-mbstring.x86_64          8.3.35-1.module_php.8.3.el9.remi      @remi-modular
+php-mysqlnd.x86_64           8.3.35-1.module_php.8.3.el9.remi      @remi-modular
+php-opcache.x86_64           8.3.35-1.module_php.8.3.el9.remi      @remi-modular
+php-pdo.x86_64               8.3.35-1.module_php.8.3.el9.remi      @remi-modular
+php-pecl-apcu.x86_64         5.1.28-1.module_php.8.3.el9.remi      @remi-modular
+php-pecl-memcache.x86_64     8.2-3.el9.remi.8.3                    @remi-modular
+php-pecl-ssh2.x86_64         1.5.0-1.module_php.8.3.el9.remi       @remi-modular
+php-pecl-zip.x86_64          1.22.8-1.module_php.8.3.el9.remi      @remi-modular
+php-process.x86_64           8.3.35-1.module_php.8.3.el9.remi      @remi-modular
+php-xml.x86_64               8.3.35-1.module_php.8.3.el9.remi      @remi-modular
+acl	2.4.0-1.el9_8	x86_64	RSA/SHA256, Tue Jul 21 17:12:34 2026, Key ID 702d426d350d275d
+alternatives	1.24-1.el9	x86_64	RSA/SHA256, Mon Oct 30 09:34:45 2023, Key ID 702d426d350d275d
+apr	1.7.0-12.el9_3	x86_64	RSA/SHA256, Mon Dec 11 19:46:23 2023, Key ID 702d426d350d275d
+apr-util	1.6.1-23.el9_8.1	x86_64	RSA/SHA256, Thu Sep 10 16:02:14 2026, Key ID 702d426d350d275d
+apr-util-bdb	1.6.1-23.el9_8.1	x86_64	RSA/SHA256, Thu Sep 10 16:02:13 2026, Key ID 702d426d350d275d
+apr-util-openssl	1.6.1-23.el9_8.1	x86_64	RSA/SHA256, Thu Sep 10 16:02:13 2026, Key ID 702d426d350d275d
+audit-libs	3.0.7-104.el9	x86_64	RSA/SHA256, Sat Oct 28 08:04:04 2023, Key ID 702d426d350d275d
+basesystem	11-13.el9	noarch	RSA/SHA256, Wed May 11 11:12:32 2022, Key ID 702d426d350d275d
+bash	5.1.8-6.el9_1	x86_64	RSA/SHA256, Mon Jan 23 22:49:22 2023, Key ID 702d426d350d275d
+binutils	2.35.2-42.el9	x86_64	RSA/SHA256, Tue Oct 24 01:07:31 2023, Key ID 702d426d350d275d
+binutils-gold	2.35.2-42.el9	x86_64	RSA/SHA256, Tue Oct 24 01:07:31 2023, Key ID 702d426d350d275d
+bzip2-libs	1.0.8-8.el9	x86_64	RSA/SHA256, Mon May 16 12:12:58 2022, Key ID 702d426d350d275d
+ca-certificates	2025.2.80_v9.0.305-91.el9	noarch	RSA/SHA256, Fri Nov 21 00:28:14 2025, Key ID 702d426d350d275d
+capstone	4.0.2-13.el9_8	x86_64	RSA/SHA256, Wed Jul 15 01:49:40 2026, Key ID 702d426d350d275d
+coreutils-single	8.32-34.el9	x86_64	RSA/SHA256, Sun Apr 23 23:30:19 2023, Key ID 702d426d350d275d
+cracklib	2.9.6-27.el9	x86_64	RSA/SHA256, Tue May 31 17:44:28 2022, Key ID 702d426d350d275d
+cracklib-dicts	2.9.6-27.el9	x86_64	RSA/SHA256, Tue May 31 17:44:29 2022, Key ID 702d426d350d275d
+crypto-policies	20230731-1.git94f0e2c.el9_3.1	noarch	RSA/SHA256, Wed Nov  8 05:06:54 2023, Key ID 702d426d350d275d
+crypto-policies-scripts	20230731-1.git94f0e2c.el9_3.1	noarch	RSA/SHA256, Wed Nov  8 05:06:54 2023, Key ID 702d426d350d275d
+curl-minimal	7.76.1-26.el9_3.2.0.1	x86_64	RSA/SHA256, Sat Nov 11 03:07:36 2023, Key ID 702d426d350d275d
+cyrus-sasl-lib	2.1.27-21.el9	x86_64	RSA/SHA256, Mon Apr 17 05:21:50 2023, Key ID 702d426d350d275d
+dbus	1.12.20-8.el9	x86_64	RSA/SHA256, Tue Oct 31 09:06:34 2023, Key ID 702d426d350d275d
+dbus-broker	28-9.el9_8	x86_64	RSA/SHA256, Tue Sep  1 01:10:47 2026, Key ID 702d426d350d275d
+dbus-common	1.12.20-8.el9	noarch	RSA/SHA256, Tue Oct 31 09:06:35 2023, Key ID 702d426d350d275d
+dbus-libs	1.12.20-8.el9	x86_64	RSA/SHA256, Tue Oct 31 09:06:34 2023, Key ID 702d426d350d275d
+dejavu-sans-fonts	2.37-18.el9	noarch	RSA/SHA256, Wed May 11 11:14:19 2022, Key ID 702d426d350d275d
+dnf	4.14.0-34.el9_8.rocky.0.1	noarch	RSA/SHA256, Wed May 20 10:14:00 2026, Key ID 702d426d350d275d
+dnf-data	4.14.0-34.el9_8.rocky.0.1	noarch	RSA/SHA256, Wed May 20 10:14:04 2026, Key ID 702d426d350d275d
+dnf-plugins-core	4.3.0-26.el9	noarch	RSA/SHA256, Mon Feb 23 02:14:39 2026, Key ID 702d426d350d275d
+elfutils-debuginfod-client	0.189-3.el9	x86_64	RSA/SHA256, Tue Oct 24 03:39:19 2023, Key ID 702d426d350d275d
+elfutils-default-yama-scope	0.189-3.el9	noarch	RSA/SHA256, Tue Oct 24 03:39:22 2023, Key ID 702d426d350d275d
+elfutils-libelf	0.189-3.el9	x86_64	RSA/SHA256, Tue Oct 24 03:39:19 2023, Key ID 702d426d350d275d
+elfutils-libs	0.189-3.el9	x86_64	RSA/SHA256, Tue Oct 24 03:39:18 2023, Key ID 702d426d350d275d
+epel-release	9-10.el9	noarch	RSA/SHA256, Wed Nov 26 04:04:49 2025, Key ID 702d426d350d275d
+expat	2.5.0-1.el9	x86_64	RSA/SHA256, Thu Apr 20 08:36:27 2023, Key ID 702d426d350d275d
+file-libs	5.39-14.el9	x86_64	RSA/SHA256, Wed Nov  1 18:52:43 2023, Key ID 702d426d350d275d
+filesystem	3.16-2.el9	x86_64	RSA/SHA256, Mon May 16 12:32:55 2022, Key ID 702d426d350d275d
+findutils	4.8.0-6.el9	x86_64	RSA/SHA256, Sun Nov  5 04:04:03 2023, Key ID 702d426d350d275d
+fontconfig	2.14.0-2.el9_1	x86_64	RSA/SHA256, Tue Jan 24 01:24:16 2023, Key ID 702d426d350d275d
+fonts-filesystem	2.0.5-7.el9.1	noarch	RSA/SHA256, Fri May 13 12:49:58 2022, Key ID 702d426d350d275d
+freetype	2.10.4-10.el9_5	x86_64	RSA/SHA256, Mon Mar 31 15:43:51 2025, Key ID 702d426d350d275d
+fribidi	1.0.10-6.el9.2	x86_64	RSA/SHA256, Wed Oct 26 07:38:06 2022, Key ID 702d426d350d275d
+gawk	5.1.0-6.el9	x86_64	RSA/SHA256, Mon Jun 13 01:33:50 2022, Key ID 702d426d350d275d
+gd3php	2.3.3-9.el9.remi	x86_64	RSA/SHA256, Thu Nov 17 08:09:04 2022, Key ID b19527f1478f8947
+gdbm-libs	1.19-4.el9	x86_64	RSA/SHA256, Mon Jun 13 17:35:08 2022, Key ID 702d426d350d275d
+gdk-pixbuf2	2.42.6-6.el9_7.1	x86_64	RSA/SHA256, Mon Apr 27 12:12:32 2026, Key ID 702d426d350d275d
+glib2	2.68.4-11.el9	x86_64	RSA/SHA256, Thu Nov  2 17:42:22 2023, Key ID 702d426d350d275d
+glibc	2.34-83.el9.7	x86_64	RSA/SHA256, Sat Oct 21 17:51:05 2023, Key ID 702d426d350d275d
+glibc-common	2.34-83.el9.7	x86_64	RSA/SHA256, Sat Oct 21 17:51:05 2023, Key ID 702d426d350d275d
+glibc-minimal-langpack	2.34-83.el9.7	x86_64	RSA/SHA256, Sat Oct 21 17:50:53 2023, Key ID 702d426d350d275d
+gmp	6.2.0-13.el9	x86_64	RSA/SHA256, Fri Nov  3 21:50:03 2023, Key ID 702d426d350d275d
+gnupg2	2.3.3-5.el9_7	x86_64	RSA/SHA256, Mon Jan 19 03:59:22 2026, Key ID 702d426d350d275d
+gnutls	3.7.6-23.el9	x86_64	RSA/SHA256, Fri Nov  3 07:24:28 2023, Key ID 702d426d350d275d
+gpg-pubkey	3228467c-613798eb	(none)	(none)
+gpg-pubkey	350d275d-6279464b	(none)	(none)
+gpg-pubkey	478f8947-5ff329c5	(none)	(none)
+gpgme	1.15.1-6.el9	x86_64	RSA/SHA256, Fri May 13 15:40:59 2022, Key ID 702d426d350d275d
+graphite2	1.3.14-9.el9	x86_64	RSA/SHA256, Mon May 16 14:47:40 2022, Key ID 702d426d350d275d
+grep	3.6-5.el9	x86_64	RSA/SHA256, Mon May 16 14:54:02 2022, Key ID 702d426d350d275d
+gzip	1.12-1.el9	x86_64	RSA/SHA256, Sun Oct 30 00:20:10 2022, Key ID 702d426d350d275d
+harfbuzz	2.7.4-10.el9	x86_64	RSA/SHA256, Tue Apr  9 01:43:30 2024, Key ID 702d426d350d275d
+highway	1.3.0-1.el9	x86_64	RSA/SHA256, Mon Dec  8 11:25:35 2025, Key ID 8a3872bf3228467c
+hostname	3.23-6.el9	x86_64	RSA/SHA256, Mon May 16 12:29:05 2022, Key ID 702d426d350d275d
+httpd	2.4.62-13.el9_8.6	x86_64	RSA/SHA256, Wed Aug 26 00:07:30 2026, Key ID 702d426d350d275d
+httpd-core	2.4.62-13.el9_8.6	x86_64	RSA/SHA256, Wed Aug 26 00:07:29 2026, Key ID 702d426d350d275d
+httpd-filesystem	2.4.62-13.el9_8.6	noarch	RSA/SHA256, Wed Aug 26 00:07:30 2026, Key ID 702d426d350d275d
+httpd-tools	2.4.62-13.el9_8.6	x86_64	RSA/SHA256, Wed Aug 26 00:07:28 2026, Key ID 702d426d350d275d
+ima-evm-utils	1.4-4.el9	x86_64	RSA/SHA256, Thu May 26 11:30:04 2022, Key ID 702d426d350d275d
+jbigkit-libs	2.1-23.el9	x86_64	RSA/SHA256, Thu May 26 01:55:59 2022, Key ID 702d426d350d275d
+json-c	0.14-11.el9	x86_64	RSA/SHA256, Thu May 26 11:40:23 2022, Key ID 702d426d350d275d
+jxl-pixbuf-loader	0.7.2-2.el9	x86_64	RSA/SHA256, Tue Aug 12 22:17:46 2025, Key ID 8a3872bf3228467c
+keyutils-libs	1.6.3-1.el9	x86_64	RSA/SHA256, Mon Apr 17 21:32:22 2023, Key ID 702d426d350d275d
+kmod-libs	28-11.el9	x86_64	RSA/SHA256, Thu Nov  6 09:30:50 2025, Key ID 702d426d350d275d
+krb5-libs	1.21.1-1.el9	x86_64	RSA/SHA256, Mon Oct 30 20:06:24 2023, Key ID 702d426d350d275d
+langpacks-core-font-en	3.0-16.el9	noarch	RSA/SHA256, Tue May 17 15:27:03 2022, Key ID 702d426d350d275d
+less	590-2.el9_2	x86_64	RSA/SHA256, Thu Jun 22 17:34:32 2023, Key ID 702d426d350d275d
+libX11	1.8.12-1.el9	x86_64	RSA/SHA256, Tue Dec 30 21:04:28 2025, Key ID 702d426d350d275d
+libX11-common	1.8.12-1.el9	noarch	RSA/SHA256, Tue Dec 30 21:04:34 2025, Key ID 702d426d350d275d
+libXau	1.0.9-8.el9	x86_64	RSA/SHA256, Wed May 25 21:17:38 2022, Key ID 702d426d350d275d
+libXpm	3.5.13-10.el9	x86_64	RSA/SHA256, Tue Apr  9 18:37:03 2024, Key ID 702d426d350d275d
+libacl	2.4.0-1.el9_8	x86_64	RSA/SHA256, Tue Jul 21 17:12:31 2026, Key ID 702d426d350d275d
+libaom	3.13.1-1.el9	x86_64	RSA/SHA256, Fri Sep 19 17:03:51 2025, Key ID 8a3872bf3228467c
+libarchive	3.5.3-4.el9	x86_64	RSA/SHA256, Fri Apr 21 16:26:23 2023, Key ID 702d426d350d275d
+libassuan	2.5.5-3.el9	x86_64	RSA/SHA256, Mon May 16 12:29:38 2022, Key ID 702d426d350d275d
+libattr	2.5.1-3.el9	x86_64	RSA/SHA256, Wed May 25 21:18:48 2022, Key ID 702d426d350d275d
+libavif	0.11.1-5.el9	x86_64	RSA/SHA256, Mon Nov 11 19:01:49 2024, Key ID 8a3872bf3228467c
+libblkid	2.37.4-15.el9	x86_64	RSA/SHA256, Mon Nov  6 01:28:24 2023, Key ID 702d426d350d275d
+libbrotli	1.0.9-9.el9_7	x86_64	RSA/SHA256, Fri Feb  6 05:05:20 2026, Key ID 702d426d350d275d
+libcap	2.48-9.el9_2	x86_64	RSA/SHA256, Tue Sep 19 18:39:10 2023, Key ID 702d426d350d275d
+libcap-ng	0.8.2-7.el9	x86_64	RSA/SHA256, Mon May 16 12:20:18 2022, Key ID 702d426d350d275d
+libcom_err	1.46.5-3.el9	x86_64	RSA/SHA256, Mon Oct 31 04:06:00 2022, Key ID 702d426d350d275d
+libcomps	0.1.18-1.el9	x86_64	RSA/SHA256, Tue Jun 14 00:00:15 2022, Key ID 702d426d350d275d
+libcurl-minimal	7.76.1-26.el9_3.2.0.1	x86_64	RSA/SHA256, Sat Nov 11 03:07:36 2023, Key ID 702d426d350d275d
+libdav1d	1.5.4-1.el9	x86_64	RSA/SHA256, Tue Sep 15 15:00:50 2026, Key ID 8a3872bf3228467c
+libdb	5.3.28-53.el9	x86_64	RSA/SHA256, Mon May 16 12:26:55 2022, Key ID 702d426d350d275d
+libdnf	0.69.0-18.el9.rocky.0.1	x86_64	RSA/SHA256, Mon Feb 23 05:18:17 2026, Key ID 702d426d350d275d
+libeconf	0.4.1-3.el9_2	x86_64	RSA/SHA256, Tue Aug  1 21:33:35 2023, Key ID 702d426d350d275d
+libedit	3.1-39.20210216cvs.el9	x86_64	RSA/SHA256, Wed Jan 28 17:39:02 2026, Key ID 702d426d350d275d
+libevent	2.1.12-6.el9	x86_64	RSA/SHA256, Mon Jun 13 01:35:58 2022, Key ID 702d426d350d275d
+libfdisk	2.37.4-15.el9	x86_64	RSA/SHA256, Mon Nov  6 01:28:26 2023, Key ID 702d426d350d275d
+libffi	3.4.2-8.el9	x86_64	RSA/SHA256, Sun Oct 29 09:32:24 2023, Key ID 702d426d350d275d
+libgcc	11.4.1-2.1.el9	x86_64	RSA/SHA256, Sat Oct 21 11:32:03 2023, Key ID 702d426d350d275d
+libgcrypt	1.10.0-10.el9_2	x86_64	RSA/SHA256, Tue May  9 12:10:58 2023, Key ID 702d426d350d275d
+libgomp	11.4.1-2.1.el9	x86_64	RSA/SHA256, Sat Oct 21 11:32:00 2023, Key ID 702d426d350d275d
+libgpg-error	1.42-5.el9	x86_64	RSA/SHA256, Thu May 26 03:56:16 2022, Key ID 702d426d350d275d
+libicu74	74.2-1.el9.remi	x86_64	RSA/SHA256, Fri Aug 30 07:35:09 2024, Key ID b19527f1478f8947
+libidn2	2.3.0-7.el9	x86_64	RSA/SHA256, Mon May 16 12:20:27 2022, Key ID 702d426d350d275d
+libimagequant	2.17.0-1.el9	x86_64	RSA/SHA256, Thu Dec 16 05:07:42 2021, Key ID 8a3872bf3228467c
+libjpeg-turbo	2.0.90-7.el9	x86_64	RSA/SHA256, Thu Apr 18 06:02:21 2024, Key ID 702d426d350d275d
+libjxl	0.7.2-2.el9	x86_64	RSA/SHA256, Tue Aug 12 22:17:46 2025, Key ID 8a3872bf3228467c
+libksba	1.5.1-6.el9_1	x86_64	RSA/SHA256, Tue Feb  7 16:13:20 2023, Key ID 702d426d350d275d
+libmodulemd	2.13.0-2.el9	x86_64	RSA/SHA256, Thu May 26 04:30:32 2022, Key ID 702d426d350d275d
+libmount	2.37.4-15.el9	x86_64	RSA/SHA256, Mon Nov  6 01:28:25 2023, Key ID 702d426d350d275d
+libnghttp2	1.43.0-5.el9_3.1	x86_64	RSA/SHA256, Wed Nov  8 05:38:27 2023, Key ID 702d426d350d275d
+libpng	1.6.37-15.el9_8.2	x86_64	RSA/SHA256, Wed Jun 24 00:42:27 2026, Key ID 702d426d350d275d
+libpwquality	1.4.4-8.el9	x86_64	RSA/SHA256, Wed May 25 21:11:57 2022, Key ID 702d426d350d275d
+libraqm	0.8.0-1.el9	x86_64	RSA/SHA256, Thu Jan 27 15:54:28 2022, Key ID 8a3872bf3228467c
+librepo	1.14.5-1.el9	x86_64	RSA/SHA256, Mon Apr 17 05:20:11 2023, Key ID 702d426d350d275d
+libreport-filesystem	2.15.2-6.el9.rocky.0.2	noarch	RSA/SHA256, Mon Jun  6 17:21:58 2022, Key ID 702d426d350d275d
+libseccomp	2.5.2-2.el9	x86_64	RSA/SHA256, Thu May 26 00:44:41 2022, Key ID 702d426d350d275d
+libselinux	3.5-1.el9	x86_64	RSA/SHA256, Mon Apr 17 05:28:40 2023, Key ID 702d426d350d275d
+libsemanage	3.5-2.el9	x86_64	RSA/SHA256, Thu Oct 26 00:51:48 2023, Key ID 702d426d350d275d
+libsepol	3.5-1.el9	x86_64	RSA/SHA256, Mon Apr 17 05:24:02 2023, Key ID 702d426d350d275d
+libsigsegv	2.13-4.el9	x86_64	RSA/SHA256, Sat May 14 23:01:08 2022, Key ID 702d426d350d275d
+libsmartcols	2.37.4-15.el9	x86_64	RSA/SHA256, Mon Nov  6 01:28:27 2023, Key ID 702d426d350d275d
+libsolv	0.7.24-2.el9	x86_64	RSA/SHA256, Tue Oct 31 21:42:50 2023, Key ID 702d426d350d275d
+libssh2	1.11.1-9.el9	x86_64	RSA/SHA256, Fri Jun 26 07:59:59 2026, Key ID 8a3872bf3228467c
+libstdc++	11.4.1-2.1.el9	x86_64	RSA/SHA256, Sat Oct 21 11:31:58 2023, Key ID 702d426d350d275d
+libtasn1	4.16.0-8.el9_1	x86_64	RSA/SHA256, Tue Jan 24 01:04:23 2023, Key ID 702d426d350d275d
+libtiff	4.4.0-18.el9_8.1	x86_64	RSA/SHA256, Tue Jul 21 15:53:39 2026, Key ID 702d426d350d275d
+libunistring	0.9.10-15.el9	x86_64	RSA/SHA256, Mon May 16 12:24:07 2022, Key ID 702d426d350d275d
+libusbx	1.0.26-1.el9	x86_64	RSA/SHA256, Sun Oct 30 00:50:07 2022, Key ID 702d426d350d275d
+libuser	0.63-13.el9	x86_64	RSA/SHA256, Mon Oct 30 19:51:26 2023, Key ID 702d426d350d275d
+libutempter	1.2.1-6.el9	x86_64	RSA/SHA256, Mon May 16 12:22:25 2022, Key ID 702d426d350d275d
+libuuid	2.37.4-15.el9	x86_64	RSA/SHA256, Mon Nov  6 01:28:25 2023, Key ID 702d426d350d275d
+libverto	0.3.2-3.el9	x86_64	RSA/SHA256, Mon May 16 12:19:30 2022, Key ID 702d426d350d275d
+libvmaf	2.3.0-2.el9	x86_64	RSA/SHA256, Fri Dec 17 18:12:24 2021, Key ID 8a3872bf3228467c
+libwebp	1.2.0-8.el9	x86_64	RSA/SHA256, Mon Nov  6 06:48:43 2023, Key ID 702d426d350d275d
+libxcb	1.13.1-9.el9	x86_64	RSA/SHA256, Wed May 25 21:49:15 2022, Key ID 702d426d350d275d
+libxcrypt	4.4.18-3.el9	x86_64	RSA/SHA256, Thu May 26 05:15:11 2022, Key ID 702d426d350d275d
+libxml2	2.9.13-4.el9	x86_64	RSA/SHA256, Sat Oct 28 08:50:57 2023, Key ID 702d426d350d275d
+libxslt	1.1.34-14.el9_7.1	x86_64	RSA/SHA256, Mon Apr  6 23:26:20 2026, Key ID 702d426d350d275d
+libyaml	0.2.5-7.el9	x86_64	RSA/SHA256, Thu May 26 11:33:25 2022, Key ID 702d426d350d275d
+libzstd	1.5.1-2.el9	x86_64	RSA/SHA256, Thu May 26 16:49:53 2022, Key ID 702d426d350d275d
+lua-libs	5.4.4-4.el9	x86_64	RSA/SHA256, Wed Oct 18 05:41:43 2023, Key ID 702d426d350d275d
+lz4-libs	1.9.3-5.el9	x86_64	RSA/SHA256, Mon May 16 12:18:16 2022, Key ID 702d426d350d275d
+mailcap	2.1.49-5.el9.0.2	noarch	RSA/SHA256, Fri Nov 21 19:04:18 2025, Key ID 702d426d350d275d
+mod_http2	2.0.26-6.el9_8.2	x86_64	RSA/SHA256, Wed Aug 26 00:12:50 2026, Key ID 702d426d350d275d
+mod_lua	2.4.62-13.el9_8.6	x86_64	RSA/SHA256, Wed Aug 26 00:07:28 2026, Key ID 702d426d350d275d
+mpfr	4.1.0-7.el9	x86_64	RSA/SHA256, Thu May 26 03:11:57 2022, Key ID 702d426d350d275d
+ncurses-base	6.2-10.20210508.el9	noarch	RSA/SHA256, Sun Nov  5 22:46:01 2023, Key ID 702d426d350d275d
+ncurses-libs	6.2-10.20210508.el9	x86_64	RSA/SHA256, Sun Nov  5 22:45:58 2023, Key ID 702d426d350d275d
+nettle	3.8-3.el9_0	x86_64	RSA/SHA256, Tue Oct 11 08:22:31 2022, Key ID 702d426d350d275d
+nginx-filesystem	1.20.1-28.el9_8.6.rocky.0.1	noarch	RSA/SHA256, Fri Sep 11 04:45:26 2026, Key ID 702d426d350d275d
+npth	1.6-8.el9	x86_64	RSA/SHA256, Thu May 26 12:17:28 2022, Key ID 702d426d350d275d
+oniguruma5php	6.9.10-1.el9.remi	x86_64	RSA/SHA256, Sat Jan  4 08:19:26 2025, Key ID b19527f1478f8947
+openldap	2.6.3-1.el9	x86_64	RSA/SHA256, Sat Oct 28 09:11:57 2023, Key ID 702d426d350d275d
+openssl	3.5.8-1.el9_8	x86_64	RSA/SHA256, Mon Sep 14 14:43:33 2026, Key ID 702d426d350d275d
+openssl-fips-provider	3.5.8-1.el9_8	x86_64	RSA/SHA256, Mon Sep 14 14:43:32 2026, Key ID 702d426d350d275d
+openssl-libs	3.5.8-1.el9_8	x86_64	RSA/SHA256, Mon Sep 14 14:43:34 2026, Key ID 702d426d350d275d
+p11-kit	0.24.1-2.el9	x86_64	RSA/SHA256, Thu May 26 14:52:54 2022, Key ID 702d426d350d275d
+p11-kit-trust	0.24.1-2.el9	x86_64	RSA/SHA256, Thu May 26 14:52:54 2022, Key ID 702d426d350d275d
+pam	1.5.1-15.el9	x86_64	RSA/SHA256, Sat Oct 28 09:28:56 2023, Key ID 702d426d350d275d
+passwd	0.80-12.el9	x86_64	RSA/SHA256, Sun May 15 00:03:53 2022, Key ID 702d426d350d275d
+pcre	8.44-3.el9.3	x86_64	RSA/SHA256, Thu May 26 11:38:21 2022, Key ID 702d426d350d275d
+pcre2	10.40-2.el9	x86_64	RSA/SHA256, Sun Oct 30 07:50:41 2022, Key ID 702d426d350d275d
+pcre2-syntax	10.40-2.el9	noarch	RSA/SHA256, Sun Oct 30 07:50:44 2022, Key ID 702d426d350d275d
+php-bcmath	8.3.35-1.module_php.8.3.el9.remi	x86_64	RSA/SHA512, Tue Sep 22 12:37:39 2026, Key ID b19527f1478f8947
+php-cli	8.3.35-1.module_php.8.3.el9.remi	x86_64	RSA/SHA512, Tue Sep 22 12:37:37 2026, Key ID b19527f1478f8947
+php-common	8.3.35-1.module_php.8.3.el9.remi	x86_64	RSA/SHA512, Tue Sep 22 12:37:38 2026, Key ID b19527f1478f8947
+php-fpm	8.3.35-1.module_php.8.3.el9.remi	x86_64	RSA/SHA512, Tue Sep 22 12:37:40 2026, Key ID b19527f1478f8947
+php-gd	8.3.35-1.module_php.8.3.el9.remi	x86_64	RSA/SHA512, Tue Sep 22 12:37:39 2026, Key ID b19527f1478f8947
+php-gmp	8.3.35-1.module_php.8.3.el9.remi	x86_64	RSA/SHA512, Tue Sep 22 12:37:40 2026, Key ID b19527f1478f8947
+php-intl	8.3.35-1.module_php.8.3.el9.remi	x86_64	RSA/SHA512, Tue Sep 22 12:37:39 2026, Key ID b19527f1478f8947
+php-ldap	8.3.35-1.module_php.8.3.el9.remi	x86_64	RSA/SHA512, Tue Sep 22 12:37:39 2026, Key ID b19527f1478f8947
+php-mbstring	8.3.35-1.module_php.8.3.el9.remi	x86_64	RSA/SHA512, Tue Sep 22 12:37:38 2026, Key ID b19527f1478f8947
+php-mysqlnd	8.3.35-1.module_php.8.3.el9.remi	x86_64	RSA/SHA512, Tue Sep 22 12:37:37 2026, Key ID b19527f1478f8947
+php-opcache	8.3.35-1.module_php.8.3.el9.remi	x86_64	RSA/SHA512, Tue Sep 22 12:37:38 2026, Key ID b19527f1478f8947
+php-pdo	8.3.35-1.module_php.8.3.el9.remi	x86_64	RSA/SHA512, Tue Sep 22 12:37:38 2026, Key ID b19527f1478f8947
+php-pecl-apcu	5.1.28-1.module_php.8.3.el9.remi	x86_64	RSA/SHA256, Mon Dec  8 07:46:52 2025, Key ID b19527f1478f8947
+php-pecl-memcache	8.2-3.el9.remi.8.3	x86_64	RSA/SHA256, Wed Aug 30 18:39:09 2023, Key ID b19527f1478f8947
+php-pecl-ssh2	1.5.0-1.module_php.8.3.el9.remi	x86_64	RSA/SHA512, Tue Apr  7 06:32:33 2026, Key ID b19527f1478f8947
+php-pecl-zip	1.22.8-1.module_php.8.3.el9.remi	x86_64	RSA/SHA512, Fri Mar  6 08:42:08 2026, Key ID b19527f1478f8947
+php-process	8.3.35-1.module_php.8.3.el9.remi	x86_64	RSA/SHA512, Tue Sep 22 12:37:38 2026, Key ID b19527f1478f8947
+php-xml	8.3.35-1.module_php.8.3.el9.remi	x86_64	RSA/SHA512, Tue Sep 22 12:37:39 2026, Key ID b19527f1478f8947
+popt	1.18-8.el9	x86_64	RSA/SHA256, Mon May 16 12:31:10 2022, Key ID 702d426d350d275d
+python3	3.9.18-1.el9_3	x86_64	RSA/SHA256, Wed Nov  8 01:08:33 2023, Key ID 702d426d350d275d
+python3-dateutil	2.9.0.post0-1.el9_7	noarch	RSA/SHA256, Tue Nov 11 18:09:01 2025, Key ID 702d426d350d275d
+python3-dbus	1.2.18-2.el9.0.1	x86_64	RSA/SHA256, Sat May  4 04:33:27 2024, Key ID 702d426d350d275d
+python3-dnf	4.14.0-34.el9_8.rocky.0.1	noarch	RSA/SHA256, Wed May 20 10:13:56 2026, Key ID 702d426d350d275d
+python3-dnf-plugins-core	4.3.0-26.el9	noarch	RSA/SHA256, Mon Feb 23 02:14:23 2026, Key ID 702d426d350d275d
+python3-gpg	1.15.1-6.el9	x86_64	RSA/SHA256, Fri May 13 15:40:58 2022, Key ID 702d426d350d275d
+python3-hawkey	0.69.0-18.el9.rocky.0.1	x86_64	RSA/SHA256, Mon Feb 23 05:18:12 2026, Key ID 702d426d350d275d
+python3-libcomps	0.1.18-1.el9	x86_64	RSA/SHA256, Tue Jun 14 00:00:16 2022, Key ID 702d426d350d275d
+python3-libdnf	0.69.0-18.el9.rocky.0.1	x86_64	RSA/SHA256, Mon Feb 23 05:18:28 2026, Key ID 702d426d350d275d
+python3-libs	3.9.18-1.el9_3	x86_64	RSA/SHA256, Wed Nov  8 01:08:32 2023, Key ID 702d426d350d275d
+python3-pip-wheel	21.2.3-7.el9	noarch	RSA/SHA256, Wed Oct 18 05:01:54 2023, Key ID 702d426d350d275d
+python3-rpm	4.16.1.3-25.el9	x86_64	RSA/SHA256, Wed Oct 18 06:05:35 2023, Key ID 702d426d350d275d
+python3-setuptools-wheel	53.0.0-12.el9	noarch	RSA/SHA256, Mon Apr 24 02:53:24 2023, Key ID 702d426d350d275d
+python3-six	1.15.0-9.el9	noarch	RSA/SHA256, Wed May 11 11:12:53 2022, Key ID 702d426d350d275d
+python3-systemd	234-19.el9	x86_64	RSA/SHA256, Mon Nov  4 21:08:59 2024, Key ID 702d426d350d275d
+rav1e-libs	0.8.1-2.el9	x86_64	RSA/SHA256, Mon Jan 12 22:47:31 2026, Key ID 8a3872bf3228467c
+readline	8.1-4.el9	x86_64	RSA/SHA256, Mon May 16 12:20:39 2022, Key ID 702d426d350d275d
+remi-libzip	1.11.4-1.el9.remi	x86_64	RSA/SHA256, Mon May 26 07:41:46 2025, Key ID b19527f1478f8947
+remi-release	9.8-1.el9.remi	noarch	RSA/SHA512, Thu Aug 27 06:01:57 2026, Key ID b19527f1478f8947
+rocky-gpg-keys	9.8-1.2.el9	noarch	RSA/SHA256, Fri Aug 14 10:23:32 2026, Key ID 702d426d350d275d
+rocky-logos-httpd	90.17-1.el9	noarch	RSA/SHA256, Fri Dec 26 06:18:29 2025, Key ID 702d426d350d275d
+rocky-release	9.8-1.2.el9	noarch	RSA/SHA256, Fri Aug 14 10:23:33 2026, Key ID 702d426d350d275d
+rocky-repos	9.8-1.2.el9	noarch	RSA/SHA256, Fri Aug 14 10:23:32 2026, Key ID 702d426d350d275d
+rootfiles	8.1-31.el9	noarch	RSA/SHA256, Wed May 11 11:12:58 2022, Key ID 702d426d350d275d
+rpm	4.16.1.3-25.el9	x86_64	RSA/SHA256, Wed Oct 18 06:05:37 2023, Key ID 702d426d350d275d
+rpm-build-libs	4.16.1.3-25.el9	x86_64	RSA/SHA256, Wed Oct 18 06:05:37 2023, Key ID 702d426d350d275d
+rpm-libs	4.16.1.3-25.el9	x86_64	RSA/SHA256, Wed Oct 18 06:05:38 2023, Key ID 702d426d350d275d
+rpm-sign-libs	4.16.1.3-25.el9	x86_64	RSA/SHA256, Wed Oct 18 06:05:33 2023, Key ID 702d426d350d275d
+sed	4.8-9.el9	x86_64	RSA/SHA256, Mon May 16 14:50:13 2022, Key ID 702d426d350d275d
+setup	2.13.7-9.el9	noarch	RSA/SHA256, Sat Apr 22 02:41:56 2023, Key ID 702d426d350d275d
+shadow-utils	4.9-8.el9	x86_64	RSA/SHA256, Mon Oct 30 19:57:53 2023, Key ID 702d426d350d275d
+shared-mime-info	2.1-5.el9	x86_64	RSA/SHA256, Thu Apr 20 05:16:57 2023, Key ID 702d426d350d275d
+sqlite-libs	3.34.1-6.el9_1	x86_64	RSA/SHA256, Tue Jan 24 00:00:41 2023, Key ID 702d426d350d275d
+svt-av1-libs	0.9.0-1.el9	x86_64	RSA/SHA256, Sun Nov 20 02:16:23 2022, Key ID 8a3872bf3228467c
+systemd	252-67.el9_8.6.rocky.0.1	x86_64	RSA/SHA256, Wed Sep 16 10:59:38 2026, Key ID 702d426d350d275d
+systemd-libs	252-67.el9_8.6.rocky.0.1	x86_64	RSA/SHA256, Wed Sep 16 10:59:43 2026, Key ID 702d426d350d275d
+systemd-pam	252-67.el9_8.6.rocky.0.1	x86_64	RSA/SHA256, Wed Sep 16 10:59:41 2026, Key ID 702d426d350d275d
+systemd-rpm-macros	252-67.el9_8.6.rocky.0.1	noarch	RSA/SHA256, Wed Sep 16 10:59:43 2026, Key ID 702d426d350d275d
+tar	1.34-6.el9_1	x86_64	RSA/SHA256, Tue Feb 28 17:01:01 2023, Key ID 702d426d350d275d
+tpm2-tss	3.2.2-2.el9	x86_64	RSA/SHA256, Wed Nov  1 05:34:09 2023, Key ID 702d426d350d275d
+tzdata	2023c-1.el9	noarch	RSA/SHA256, Thu Mar 30 15:06:00 2023, Key ID 702d426d350d275d
+usermode	1.114-4.el9	x86_64	RSA/SHA256, Mon May 16 12:25:10 2022, Key ID 702d426d350d275d
+util-linux	2.37.4-15.el9	x86_64	RSA/SHA256, Mon Nov  6 01:28:25 2023, Key ID 702d426d350d275d
+util-linux-core	2.37.4-15.el9	x86_64	RSA/SHA256, Mon Nov  6 01:28:24 2023, Key ID 702d426d350d275d
+vim-minimal	8.2.2637-20.el9_1	x86_64	RSA/SHA256, Tue Feb 28 17:15:26 2023, Key ID 702d426d350d275d
+xml-common	0.6.3-58.el9	noarch	RSA/SHA256, Wed Jun  1 13:42:14 2022, Key ID 702d426d350d275d
+xz-libs	5.2.5-8.el9_0	x86_64	RSA/SHA256, Wed Jun 15 06:27:06 2022, Key ID 702d426d350d275d
+yum	4.14.0-34.el9_8.rocky.0.1	noarch	RSA/SHA256, Wed May 20 10:14:07 2026, Key ID 702d426d350d275d
+zlib	1.2.11-40.el9	x86_64	RSA/SHA256, Sat Oct 28 09:18:19 2023, Key ID 702d426d350d275d
+PHP83_PROVIDER_LEGACY_APC_CAPABILITY_BEGIN
+no package provides php-pecl-apc
+LEGACY_APC_CAPABILITY_NOT_PROVIDED
+PHP83_PROVIDER_LEGACY_APC_CAPABILITY_END
+Configuration File (php.ini) Path: /etc
+Loaded Configuration File:         /etc/php.ini
+Scan for additional .ini files in: /etc/php.d
+Additional .ini files parsed:      /etc/php.d/10-opcache.ini,
+/etc/php.d/20-bcmath.ini,
+/etc/php.d/20-bz2.ini,
+/etc/php.d/20-calendar.ini,
+/etc/php.d/20-ctype.ini,
+/etc/php.d/20-curl.ini,
+/etc/php.d/20-dom.ini,
+/etc/php.d/20-exif.ini,
+/etc/php.d/20-fileinfo.ini,
+/etc/php.d/20-ftp.ini,
+/etc/php.d/20-gd.ini,
+/etc/php.d/20-gettext.ini,
+/etc/php.d/20-gmp.ini,
+/etc/php.d/20-iconv.ini,
+/etc/php.d/20-intl.ini,
+/etc/php.d/20-ldap.ini,
+/etc/php.d/20-mbstring.ini,
+/etc/php.d/20-mysqlnd.ini,
+/etc/php.d/20-pdo.ini,
+/etc/php.d/20-phar.ini,
+/etc/php.d/20-posix.ini,
+/etc/php.d/20-shmop.ini,
+/etc/php.d/20-simplexml.ini,
+/etc/php.d/20-sqlite3.ini,
+/etc/php.d/20-sysvmsg.ini,
+/etc/php.d/20-sysvsem.ini,
+/etc/php.d/20-sysvshm.ini,
+/etc/php.d/20-tokenizer.ini,
+/etc/php.d/20-xml.ini,
+/etc/php.d/20-xmlwriter.ini,
+/etc/php.d/20-xsl.ini,
+/etc/php.d/30-mysqli.ini,
+/etc/php.d/30-pdo_mysql.ini,
+/etc/php.d/30-pdo_sqlite.ini,
+/etc/php.d/30-xmlreader.ini,
+/etc/php.d/30-zip.ini,
+/etc/php.d/40-apcu.ini,
+/etc/php.d/40-memcache.ini,
+/etc/php.d/40-ssh2.ini
+
+PHP 8.3.35 (cli) (built: Sep 22 2026 10:53:51) (NTS gcc x86_64)
+Copyright (c) The PHP Group
+Zend Engine v4.3.35, Copyright (c) Zend Technologies
+    with Zend OPcache v8.3.35, Copyright (c), by Zend Technologies
+NAME="Rocky Linux"
+VERSION="9.8 (Blue Onyx)"
+RELEASE_TYPE="stable"
+ID="rocky"
+ID_LIKE="rhel centos fedora"
+VERSION_ID="9.8"
+PLATFORM_ID="platform:el9"
+PRETTY_NAME="Rocky Linux 9.8 (Blue Onyx)"
+ANSI_COLOR="0;32"
+LOGO="fedora-logo-icon"
+CPE_NAME="cpe:/o:rocky:rocky:9::baseos"
+HOME_URL="https://rockylinux.org/"
+VENDOR_NAME="RESF"
+VENDOR_URL="https://resf.org/"
+BUG_REPORT_URL="https://bugs.rockylinux.org/"
+SUPPORT_END="2032-05-31"
+ROCKY_SUPPORT_PRODUCT="Rocky-Linux-9"
+ROCKY_SUPPORT_PRODUCT_VERSION="9.8"
+REDHAT_SUPPORT_PRODUCT="Rocky Linux"
+REDHAT_SUPPORT_PRODUCT_VERSION="9.8"
+PHP83_PROVIDER_PACKAGES_END
+[25-Sep-2026 16:25:04] NOTICE: configuration file /tmp/provider-fpm.conf test is successful
+Syntax OK
+PHP83_PROVIDER_CLI_BEGIN
+[25-Sep-2026 16:25:04] NOTICE: fpm is running, pid 463
+[25-Sep-2026 16:25:04] NOTICE: ready to handle connections
+[25-Sep-2026 16:25:04] NOTICE: systemd monitor interval set to 10000ms
+{"schema":1,"ok":true,"php":"8.3.35","sapi":"cli","expected_sapi":"cli","method":"CLI","nonce":"php83-fb13a42f-f654-4939-80c7-f1cced3a7c2b","ini":"/etc/php.ini","scanned_ini":"/etc/php.d/10-opcache.ini,\n/etc/php.d/20-bcmath.ini,\n/etc/php.d/20-bz2.ini,\n/etc/php.d/20-calendar.ini,\n/etc/php.d/20-ctype.ini,\n/etc/php.d/20-curl.ini,\n/etc/php.d/20-dom.ini,\n/etc/php.d/20-exif.ini,\n/etc/php.d/20-fileinfo.ini,\n/etc/php.d/20-ftp.ini,\n/etc/php.d/20-gd.ini,\n/etc/php.d/20-gettext.ini,\n/etc/php.d/20-gmp.ini,\n/etc/php.d/20-iconv.ini,\n/etc/php.d/20-intl.ini,\n/etc/php.d/20-ldap.ini,\n/etc/php.d/20-mbstring.ini,\n/etc/php.d/20-mysqlnd.ini,\n/etc/php.d/20-pdo.ini,\n/etc/php.d/20-phar.ini,\n/etc/php.d/20-posix.ini,\n/etc/php.d/20-shmop.ini,\n/etc/php.d/20-simplexml.ini,\n/etc/php.d/20-sqlite3.ini,\n/etc/php.d/20-sysvmsg.ini,\n/etc/php.d/20-sysvsem.ini,\n/etc/php.d/20-sysvshm.ini,\n/etc/php.d/20-tokenizer.ini,\n/etc/php.d/20-xml.ini,\n/etc/php.d/20-xmlwriter.ini,\n/etc/php.d/20-xsl.ini,\n/etc/php.d/30-mysqli.ini,\n/etc/php.d/30-pdo_mysql.ini,\n/etc/php.d/30-pdo_sqlite.ini,\n/etc/php.d/30-xmlreader.ini,\n/etc/php.d/30-zip.ini,\n/etc/php.d/40-apcu.ini,\n/etc/php.d/40-memcache.ini,\n/etc/php.d/40-ssh2.ini\n","modules":["Core","PDO","Phar","Reflection","SPL","SimpleXML","Zend OPcache","apcu","bcmath","bz2","calendar","ctype","curl","date","dom","exif","fileinfo","filter","ftp","gd","gettext","gmp","hash","iconv","intl","json","ldap","libxml","mbstring","memcache","mysqli","mysqlnd","openssl","pcntl","pcre","pdo_mysql","pdo_sqlite","posix","random","readline","session","shmop","sockets","sqlite3","ssh2","standard","sysvmsg","sysvsem","sysvshm","tokenizer","xml","xmlreader","xmlwriter","xsl","zip","zlib"],"required":["bcmath","ctype","curl","dom","fileinfo","filter","gd","gmp","iconv","intl","json","ldap","libxml","mbstring","mysqli","mysqlnd","openssl","pcre","PDO","pdo_mysql","posix","session","SimpleXML","sockets","ssh2","tokenizer","xml","xmlreader","xmlwriter","xsl","zip","zlib","apcu","memcache","Zend OPcache","pcntl"],"smoke":{"pdo_mysql":true,"json":true,"mbstring":true,"gmp":true,"bcmath":true,"xml":true,"gd":true,"curl":true,"intl":true,"zip":true,"ldap":true,"ssh2":true,"memcache":true,"apcu":true,"opcache":true},"failures":[]}
+PHP83_PROVIDER_CLI_END
+PHP83_PROVIDER_GET_BEGIN
+{"schema":1,"ok":true,"php":"8.3.35","sapi":"fpm-fcgi","expected_sapi":"fpm-fcgi","method":"GET","nonce":"php83-fb13a42f-f654-4939-80c7-f1cced3a7c2b","ini":"/etc/php.ini","scanned_ini":"/etc/php.d/10-opcache.ini,\n/etc/php.d/20-bcmath.ini,\n/etc/php.d/20-bz2.ini,\n/etc/php.d/20-calendar.ini,\n/etc/php.d/20-ctype.ini,\n/etc/php.d/20-curl.ini,\n/etc/php.d/20-dom.ini,\n/etc/php.d/20-exif.ini,\n/etc/php.d/20-fileinfo.ini,\n/etc/php.d/20-ftp.ini,\n/etc/php.d/20-gd.ini,\n/etc/php.d/20-gettext.ini,\n/etc/php.d/20-gmp.ini,\n/etc/php.d/20-iconv.ini,\n/etc/php.d/20-intl.ini,\n/etc/php.d/20-ldap.ini,\n/etc/php.d/20-mbstring.ini,\n/etc/php.d/20-mysqlnd.ini,\n/etc/php.d/20-pdo.ini,\n/etc/php.d/20-phar.ini,\n/etc/php.d/20-posix.ini,\n/etc/php.d/20-shmop.ini,\n/etc/php.d/20-simplexml.ini,\n/etc/php.d/20-sqlite3.ini,\n/etc/php.d/20-sysvmsg.ini,\n/etc/php.d/20-sysvsem.ini,\n/etc/php.d/20-sysvshm.ini,\n/etc/php.d/20-tokenizer.ini,\n/etc/php.d/20-xml.ini,\n/etc/php.d/20-xmlwriter.ini,\n/etc/php.d/20-xsl.ini,\n/etc/php.d/30-mysqli.ini,\n/etc/php.d/30-pdo_mysql.ini,\n/etc/php.d/30-pdo_sqlite.ini,\n/etc/php.d/30-xmlreader.ini,\n/etc/php.d/30-zip.ini,\n/etc/php.d/40-apcu.ini,\n/etc/php.d/40-memcache.ini,\n/etc/php.d/40-ssh2.ini\n","modules":["Core","PDO","Phar","Reflection","SPL","SimpleXML","Zend OPcache","apcu","bcmath","bz2","calendar","cgi-fcgi","ctype","curl","date","dom","exif","fileinfo","filter","ftp","gd","gettext","gmp","hash","iconv","intl","json","ldap","libxml","mbstring","memcache","mysqli","mysqlnd","openssl","pcre","pdo_mysql","pdo_sqlite","posix","random","session","shmop","sockets","sqlite3","ssh2","standard","sysvmsg","sysvsem","sysvshm","tokenizer","xml","xmlreader","xmlwriter","xsl","zip","zlib"],"required":["bcmath","ctype","curl","dom","fileinfo","filter","gd","gmp","iconv","intl","json","ldap","libxml","mbstring","mysqli","mysqlnd","openssl","pcre","PDO","pdo_mysql","posix","session","SimpleXML","sockets","ssh2","tokenizer","xml","xmlreader","xmlwriter","xsl","zip","zlib","apcu","memcache","Zend OPcache"],"smoke":{"pdo_mysql":true,"json":true,"mbstring":true,"gmp":true,"bcmath":true,"xml":true,"gd":true,"curl":true,"intl":true,"zip":true,"ldap":true,"ssh2":true,"memcache":true,"apcu":true,"opcache":true},"failures":[]}
+PHP83_PROVIDER_GET_END
+PHP83_PROVIDER_POST_BEGIN
+{"schema":1,"ok":true,"php":"8.3.35","sapi":"fpm-fcgi","expected_sapi":"fpm-fcgi","method":"POST","nonce":"php83-fb13a42f-f654-4939-80c7-f1cced3a7c2b","ini":"/etc/php.ini","scanned_ini":"/etc/php.d/10-opcache.ini,\n/etc/php.d/20-bcmath.ini,\n/etc/php.d/20-bz2.ini,\n/etc/php.d/20-calendar.ini,\n/etc/php.d/20-ctype.ini,\n/etc/php.d/20-curl.ini,\n/etc/php.d/20-dom.ini,\n/etc/php.d/20-exif.ini,\n/etc/php.d/20-fileinfo.ini,\n/etc/php.d/20-ftp.ini,\n/etc/php.d/20-gd.ini,\n/etc/php.d/20-gettext.ini,\n/etc/php.d/20-gmp.ini,\n/etc/php.d/20-iconv.ini,\n/etc/php.d/20-intl.ini,\n/etc/php.d/20-ldap.ini,\n/etc/php.d/20-mbstring.ini,\n/etc/php.d/20-mysqlnd.ini,\n/etc/php.d/20-pdo.ini,\n/etc/php.d/20-phar.ini,\n/etc/php.d/20-posix.ini,\n/etc/php.d/20-shmop.ini,\n/etc/php.d/20-simplexml.ini,\n/etc/php.d/20-sqlite3.ini,\n/etc/php.d/20-sysvmsg.ini,\n/etc/php.d/20-sysvsem.ini,\n/etc/php.d/20-sysvshm.ini,\n/etc/php.d/20-tokenizer.ini,\n/etc/php.d/20-xml.ini,\n/etc/php.d/20-xmlwriter.ini,\n/etc/php.d/20-xsl.ini,\n/etc/php.d/30-mysqli.ini,\n/etc/php.d/30-pdo_mysql.ini,\n/etc/php.d/30-pdo_sqlite.ini,\n/etc/php.d/30-xmlreader.ini,\n/etc/php.d/30-zip.ini,\n/etc/php.d/40-apcu.ini,\n/etc/php.d/40-memcache.ini,\n/etc/php.d/40-ssh2.ini\n","modules":["Core","PDO","Phar","Reflection","SPL","SimpleXML","Zend OPcache","apcu","bcmath","bz2","calendar","cgi-fcgi","ctype","curl","date","dom","exif","fileinfo","filter","ftp","gd","gettext","gmp","hash","iconv","intl","json","ldap","libxml","mbstring","memcache","mysqli","mysqlnd","openssl","pcre","pdo_mysql","pdo_sqlite","posix","random","session","shmop","sockets","sqlite3","ssh2","standard","sysvmsg","sysvsem","sysvshm","tokenizer","xml","xmlreader","xmlwriter","xsl","zip","zlib"],"required":["bcmath","ctype","curl","dom","fileinfo","filter","gd","gmp","iconv","intl","json","ldap","libxml","mbstring","mysqli","mysqlnd","openssl","pcre","PDO","pdo_mysql","posix","session","SimpleXML","sockets","ssh2","tokenizer","xml","xmlreader","xmlwriter","xsl","zip","zlib","apcu","memcache","Zend OPcache"],"smoke":{"pdo_mysql":true,"json":true,"mbstring":true,"gmp":true,"bcmath":true,"xml":true,"gd":true,"curl":true,"intl":true,"zip":true,"ldap":true,"ssh2":true,"memcache":true,"apcu":true,"opcache":true},"failures":[]}
+PHP83_PROVIDER_POST_END
+PHP83_PROVIDER_NEGATIVE_POST_OK
+PHP83_PROVIDER_COMPLETE rocky
+[25-Sep-2026 16:25:04] NOTICE: Terminating ...
+[25-Sep-2026 16:25:04] NOTICE: exiting, bye-bye!

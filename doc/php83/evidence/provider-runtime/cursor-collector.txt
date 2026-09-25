@@ -1,0 +1,15 @@
+Revisão independente do collector offline: leio os dois arquivos e executo exatamente o unittest pedido.**Revisão independente — harness offline do collector**
+
+**Execução:** `exit 0` · **109** testes · **OK** (0.057s). Sem alterações; sem Docker/VM/rede/MCP/delegação.
+
+**Checagens do collector (código):**
+- **35 web + pcntl CLI:** `REQUIRED_MODULES` (35) e CLI exige igualdade com `REQUIRED_MODULES | {pcntl}`
+- **15 smoke keys:** `SMOKE_KEYS` com match exato e todos `True`
+- **ok / failures:** `ok is True`, `failures == []`
+- **version / SAPI / method:** regex `8.3.…`, SAPI/`expected_sapi` por método, `method` literal
+- **nonce:** mesmo valor não-vazio em CLI/GET/POST
+- **markers:** únicos, ordem `BEGIN<END` por método, depois `NEGATIVE_POST_OK` e um `COMPLETE {distro}`
+- **exit:** `exit_text.strip() == "0"`
+- **T4:** `full_T4_01_acceptance: False`; escopo `provider-cli-web-synthetic-smoke-only`
+
+**Bloqueadores:** nenhum neste harness. Isto valida só o collector/sintético — não é evidência de execução real de provider nem aceite T4.

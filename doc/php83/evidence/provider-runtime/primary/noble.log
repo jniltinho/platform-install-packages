@@ -1,0 +1,1144 @@
+Get:1 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB]
+Get:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Get:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Get:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+Get:5 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [50.0 kB]
+Get:6 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB]
+Get:7 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1547 kB]
+Get:8 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB]
+Get:9 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1905 kB]
+Get:10 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1299 kB]
+Get:11 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB]
+Get:12 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB]
+Get:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1633 kB]
+Get:14 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [56.2 kB]
+Get:15 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2160 kB]
+Get:16 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [2048 kB]
+Get:17 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [36.0 kB]
+Get:18 http://archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Packages [671 B]
+Get:19 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.0 kB]
+Fetched 33.0 MB in 5s (6641 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  adduser dirmngr gnupg-utils gpg gpg-agent gpgconf gpgsm keyboxd libbrotli1
+  libcurl4t64 libgssapi-krb5-2 libk5crypto3 libkeyutils1 libkrb5-3
+  libkrb5support0 libksba8 libldap2 libnghttp2-14 libpsl5t64 libreadline8t64
+  librtmp1 libsasl2-2 libsasl2-modules-db libsqlite3-0 libssh-4 openssl
+  pinentry-curses readline-common
+Suggested packages:
+  liblocale-gettext-perl perl cron quota ecryptfs-utils dbus-user-session
+  libpam-systemd pinentry-gnome3 tor parcimonie xloadimage gpg-wks-server
+  scdaemon krb5-doc krb5-user pinentry-doc readline-doc
+Recommended packages:
+  gnupg-l10n gpg-wks-client krb5-locales libldap-common publicsuffix
+  libsasl2-modules
+The following NEW packages will be installed:
+  adduser ca-certificates curl dirmngr gnupg gnupg-utils gpg gpg-agent gpgconf
+  gpgsm keyboxd libbrotli1 libcurl4t64 libgssapi-krb5-2 libk5crypto3
+  libkeyutils1 libkrb5-3 libkrb5support0 libksba8 libldap2 libnghttp2-14
+  libpsl5t64 libreadline8t64 librtmp1 libsasl2-2 libsasl2-modules-db
+  libsqlite3-0 libssh-4 openssl pinentry-curses readline-common
+0 upgraded, 31 newly installed, 0 to remove and 3 not upgraded.
+Need to get 6477 kB of archives.
+After this operation, 16.0 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu noble/main amd64 adduser all 3.137ubuntu1 [101 kB]
+Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openssl amd64 3.0.13-0ubuntu3.15 [1003 kB]
+Get:3 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 ca-certificates all 20260601~24.04.1 [139 kB]
+Get:4 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libkrb5support0 amd64 1.20.1-6ubuntu2.10 [34.9 kB]
+Get:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libk5crypto3 amd64 1.20.1-6ubuntu2.10 [81.9 kB]
+Get:6 http://archive.ubuntu.com/ubuntu noble/main amd64 libkeyutils1 amd64 1.6.3-3build1 [9490 B]
+Get:7 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libkrb5-3 amd64 1.20.1-6ubuntu2.10 [348 kB]
+Get:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgssapi-krb5-2 amd64 1.20.1-6ubuntu2.10 [143 kB]
+Get:9 http://archive.ubuntu.com/ubuntu noble/main amd64 readline-common all 8.2-4build1 [56.5 kB]
+Get:10 http://archive.ubuntu.com/ubuntu noble/main amd64 libreadline8t64 amd64 8.2-4build1 [153 kB]
+Get:11 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsqlite3-0 amd64 3.45.1-1ubuntu2.8 [702 kB]
+Get:12 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libnghttp2-14 amd64 1.59.0-1ubuntu0.4 [74.6 kB]
+Get:13 http://archive.ubuntu.com/ubuntu noble/main amd64 libpsl5t64 amd64 0.21.2-1.1build1 [57.1 kB]
+Get:14 http://archive.ubuntu.com/ubuntu noble/main amd64 libbrotli1 amd64 1.1.0-2build2 [331 kB]
+Get:15 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsasl2-modules-db amd64 2.1.28+dfsg1-5ubuntu3.1 [20.4 kB]
+Get:16 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsasl2-2 amd64 2.1.28+dfsg1-5ubuntu3.1 [53.2 kB]
+Get:17 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libldap2 amd64 2.6.10+dfsg-0ubuntu0.24.04.1 [198 kB]
+Get:18 http://archive.ubuntu.com/ubuntu noble/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2build7 [56.3 kB]
+Get:19 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libssh-4 amd64 0.10.6-2ubuntu0.5 [191 kB]
+Get:20 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcurl4t64 amd64 8.5.0-2ubuntu10.15 [343 kB]
+Get:21 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 curl amd64 8.5.0-2ubuntu10.15 [227 kB]
+Get:22 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gpgconf amd64 2.4.4-2ubuntu17.6 [104 kB]
+Get:23 http://archive.ubuntu.com/ubuntu noble/main amd64 libksba8 amd64 1.6.6-1build1 [122 kB]
+Get:24 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 dirmngr amd64 2.4.4-2ubuntu17.6 [323 kB]
+Get:25 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gnupg-utils amd64 2.4.4-2ubuntu17.6 [109 kB]
+Get:26 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gpg amd64 2.4.4-2ubuntu17.6 [565 kB]
+Get:27 http://archive.ubuntu.com/ubuntu noble/main amd64 pinentry-curses amd64 1.2.1-3ubuntu5 [35.2 kB]
+Get:28 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gpg-agent amd64 2.4.4-2ubuntu17.6 [227 kB]
+Get:29 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gpgsm amd64 2.4.4-2ubuntu17.6 [232 kB]
+Get:30 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 keyboxd amd64 2.4.4-2ubuntu17.6 [78.3 kB]
+Get:31 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gnupg all 2.4.4-2ubuntu17.6 [359 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 6477 kB in 3s (2515 kB/s)
+Selecting previously unselected package adduser.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4381 files and directories currently installed.)
+Preparing to unpack .../adduser_3.137ubuntu1_all.deb ...
+Unpacking adduser (3.137ubuntu1) ...
+Setting up adduser (3.137ubuntu1) ...
+Selecting previously unselected package openssl.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4429 files and directories currently installed.)
+Preparing to unpack .../00-openssl_3.0.13-0ubuntu3.15_amd64.deb ...
+Unpacking openssl (3.0.13-0ubuntu3.15) ...
+Selecting previously unselected package ca-certificates.
+Preparing to unpack .../01-ca-certificates_20260601~24.04.1_all.deb ...
+Unpacking ca-certificates (20260601~24.04.1) ...
+Selecting previously unselected package libkrb5support0:amd64.
+Preparing to unpack .../02-libkrb5support0_1.20.1-6ubuntu2.10_amd64.deb ...
+Unpacking libkrb5support0:amd64 (1.20.1-6ubuntu2.10) ...
+Selecting previously unselected package libk5crypto3:amd64.
+Preparing to unpack .../03-libk5crypto3_1.20.1-6ubuntu2.10_amd64.deb ...
+Unpacking libk5crypto3:amd64 (1.20.1-6ubuntu2.10) ...
+Selecting previously unselected package libkeyutils1:amd64.
+Preparing to unpack .../04-libkeyutils1_1.6.3-3build1_amd64.deb ...
+Unpacking libkeyutils1:amd64 (1.6.3-3build1) ...
+Selecting previously unselected package libkrb5-3:amd64.
+Preparing to unpack .../05-libkrb5-3_1.20.1-6ubuntu2.10_amd64.deb ...
+Unpacking libkrb5-3:amd64 (1.20.1-6ubuntu2.10) ...
+Selecting previously unselected package libgssapi-krb5-2:amd64.
+Preparing to unpack .../06-libgssapi-krb5-2_1.20.1-6ubuntu2.10_amd64.deb ...
+Unpacking libgssapi-krb5-2:amd64 (1.20.1-6ubuntu2.10) ...
+Selecting previously unselected package readline-common.
+Preparing to unpack .../07-readline-common_8.2-4build1_all.deb ...
+Unpacking readline-common (8.2-4build1) ...
+Selecting previously unselected package libreadline8t64:amd64.
+Preparing to unpack .../08-libreadline8t64_8.2-4build1_amd64.deb ...
+Adding 'diversion of /lib/x86_64-linux-gnu/libhistory.so.8 to /lib/x86_64-linux-gnu/libhistory.so.8.usr-is-merged by libreadline8t64'
+Adding 'diversion of /lib/x86_64-linux-gnu/libhistory.so.8.2 to /lib/x86_64-linux-gnu/libhistory.so.8.2.usr-is-merged by libreadline8t64'
+Adding 'diversion of /lib/x86_64-linux-gnu/libreadline.so.8 to /lib/x86_64-linux-gnu/libreadline.so.8.usr-is-merged by libreadline8t64'
+Adding 'diversion of /lib/x86_64-linux-gnu/libreadline.so.8.2 to /lib/x86_64-linux-gnu/libreadline.so.8.2.usr-is-merged by libreadline8t64'
+Unpacking libreadline8t64:amd64 (8.2-4build1) ...
+Selecting previously unselected package libsqlite3-0:amd64.
+Preparing to unpack .../09-libsqlite3-0_3.45.1-1ubuntu2.8_amd64.deb ...
+Unpacking libsqlite3-0:amd64 (3.45.1-1ubuntu2.8) ...
+Selecting previously unselected package libnghttp2-14:amd64.
+Preparing to unpack .../10-libnghttp2-14_1.59.0-1ubuntu0.4_amd64.deb ...
+Unpacking libnghttp2-14:amd64 (1.59.0-1ubuntu0.4) ...
+Selecting previously unselected package libpsl5t64:amd64.
+Preparing to unpack .../11-libpsl5t64_0.21.2-1.1build1_amd64.deb ...
+Unpacking libpsl5t64:amd64 (0.21.2-1.1build1) ...
+Selecting previously unselected package libbrotli1:amd64.
+Preparing to unpack .../12-libbrotli1_1.1.0-2build2_amd64.deb ...
+Unpacking libbrotli1:amd64 (1.1.0-2build2) ...
+Selecting previously unselected package libsasl2-modules-db:amd64.
+Preparing to unpack .../13-libsasl2-modules-db_2.1.28+dfsg1-5ubuntu3.1_amd64.deb ...
+Unpacking libsasl2-modules-db:amd64 (2.1.28+dfsg1-5ubuntu3.1) ...
+Selecting previously unselected package libsasl2-2:amd64.
+Preparing to unpack .../14-libsasl2-2_2.1.28+dfsg1-5ubuntu3.1_amd64.deb ...
+Unpacking libsasl2-2:amd64 (2.1.28+dfsg1-5ubuntu3.1) ...
+Selecting previously unselected package libldap2:amd64.
+Preparing to unpack .../15-libldap2_2.6.10+dfsg-0ubuntu0.24.04.1_amd64.deb ...
+Unpacking libldap2:amd64 (2.6.10+dfsg-0ubuntu0.24.04.1) ...
+Selecting previously unselected package librtmp1:amd64.
+Preparing to unpack .../16-librtmp1_2.4+20151223.gitfa8646d.1-2build7_amd64.deb ...
+Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2build7) ...
+Selecting previously unselected package libssh-4:amd64.
+Preparing to unpack .../17-libssh-4_0.10.6-2ubuntu0.5_amd64.deb ...
+Unpacking libssh-4:amd64 (0.10.6-2ubuntu0.5) ...
+Selecting previously unselected package libcurl4t64:amd64.
+Preparing to unpack .../18-libcurl4t64_8.5.0-2ubuntu10.15_amd64.deb ...
+Unpacking libcurl4t64:amd64 (8.5.0-2ubuntu10.15) ...
+Selecting previously unselected package curl.
+Preparing to unpack .../19-curl_8.5.0-2ubuntu10.15_amd64.deb ...
+Unpacking curl (8.5.0-2ubuntu10.15) ...
+Selecting previously unselected package gpgconf.
+Preparing to unpack .../20-gpgconf_2.4.4-2ubuntu17.6_amd64.deb ...
+Unpacking gpgconf (2.4.4-2ubuntu17.6) ...
+Selecting previously unselected package libksba8:amd64.
+Preparing to unpack .../21-libksba8_1.6.6-1build1_amd64.deb ...
+Unpacking libksba8:amd64 (1.6.6-1build1) ...
+Selecting previously unselected package dirmngr.
+Preparing to unpack .../22-dirmngr_2.4.4-2ubuntu17.6_amd64.deb ...
+Unpacking dirmngr (2.4.4-2ubuntu17.6) ...
+Selecting previously unselected package gnupg-utils.
+Preparing to unpack .../23-gnupg-utils_2.4.4-2ubuntu17.6_amd64.deb ...
+Unpacking gnupg-utils (2.4.4-2ubuntu17.6) ...
+Selecting previously unselected package gpg.
+Preparing to unpack .../24-gpg_2.4.4-2ubuntu17.6_amd64.deb ...
+Unpacking gpg (2.4.4-2ubuntu17.6) ...
+Selecting previously unselected package pinentry-curses.
+Preparing to unpack .../25-pinentry-curses_1.2.1-3ubuntu5_amd64.deb ...
+Unpacking pinentry-curses (1.2.1-3ubuntu5) ...
+Selecting previously unselected package gpg-agent.
+Preparing to unpack .../26-gpg-agent_2.4.4-2ubuntu17.6_amd64.deb ...
+Unpacking gpg-agent (2.4.4-2ubuntu17.6) ...
+Selecting previously unselected package gpgsm.
+Preparing to unpack .../27-gpgsm_2.4.4-2ubuntu17.6_amd64.deb ...
+Unpacking gpgsm (2.4.4-2ubuntu17.6) ...
+Selecting previously unselected package keyboxd.
+Preparing to unpack .../28-keyboxd_2.4.4-2ubuntu17.6_amd64.deb ...
+Unpacking keyboxd (2.4.4-2ubuntu17.6) ...
+Selecting previously unselected package gnupg.
+Preparing to unpack .../29-gnupg_2.4.4-2ubuntu17.6_all.deb ...
+Unpacking gnupg (2.4.4-2ubuntu17.6) ...
+Setting up libksba8:amd64 (1.6.6-1build1) ...
+Setting up pinentry-curses (1.2.1-3ubuntu5) ...
+Setting up libkeyutils1:amd64 (1.6.3-3build1) ...
+Setting up libbrotli1:amd64 (1.1.0-2build2) ...
+Setting up libsqlite3-0:amd64 (3.45.1-1ubuntu2.8) ...
+Setting up libpsl5t64:amd64 (0.21.2-1.1build1) ...
+Setting up libnghttp2-14:amd64 (1.59.0-1ubuntu0.4) ...
+Setting up libkrb5support0:amd64 (1.20.1-6ubuntu2.10) ...
+Setting up libsasl2-modules-db:amd64 (2.1.28+dfsg1-5ubuntu3.1) ...
+Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2build7) ...
+Setting up libk5crypto3:amd64 (1.20.1-6ubuntu2.10) ...
+Setting up libsasl2-2:amd64 (2.1.28+dfsg1-5ubuntu3.1) ...
+Setting up libkrb5-3:amd64 (1.20.1-6ubuntu2.10) ...
+Setting up openssl (3.0.13-0ubuntu3.15) ...
+Setting up readline-common (8.2-4build1) ...
+Setting up libldap2:amd64 (2.6.10+dfsg-0ubuntu0.24.04.1) ...
+Setting up gnupg-utils (2.4.4-2ubuntu17.6) ...
+Setting up ca-certificates (20260601~24.04.1) ...
+Updating certificates in /etc/ssl/certs...
+121 added, 0 removed; done.
+Setting up libgssapi-krb5-2:amd64 (1.20.1-6ubuntu2.10) ...
+Setting up libssh-4:amd64 (0.10.6-2ubuntu0.5) ...
+Setting up libreadline8t64:amd64 (8.2-4build1) ...
+Setting up gpgconf (2.4.4-2ubuntu17.6) ...
+Setting up gpg (2.4.4-2ubuntu17.6) ...
+Setting up gpg-agent (2.4.4-2ubuntu17.6) ...
+Setting up libcurl4t64:amd64 (8.5.0-2ubuntu10.15) ...
+Setting up gpgsm (2.4.4-2ubuntu17.6) ...
+Setting up dirmngr (2.4.4-2ubuntu17.6) ...
+Setting up keyboxd (2.4.4-2ubuntu17.6) ...
+Setting up gnupg (2.4.4-2ubuntu17.6) ...
+Setting up curl (8.5.0-2ubuntu10.15) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.9) ...
+Processing triggers for ca-certificates (20260601~24.04.1) ...
+Updating certificates in /etc/ssl/certs...
+0 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+done.
+PHP83_PROVIDER_POLICY_BEGIN
+php8.3-cli:
+  Installed: (none)
+  Candidate: 8.3.6-0ubuntu0.24.04.11
+  Version table:
+     8.3.6-0ubuntu0.24.04.11 500
+        500 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages
+        500 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages
+     8.3.6-0maysync1 500
+        500 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages
+libapache2-mod-php8.3:
+  Installed: (none)
+  Candidate: 8.3.6-0ubuntu0.24.04.11
+  Version table:
+     8.3.6-0ubuntu0.24.04.11 500
+        500 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages
+        500 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages
+     8.3.6-0maysync1 500
+        500 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages
+php8.3-common:
+  Installed: (none)
+  Candidate: 8.3.6-0ubuntu0.24.04.11
+  Version table:
+     8.3.6-0ubuntu0.24.04.11 500
+        500 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages
+        500 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages
+     8.3.6-0maysync1 500
+        500 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages
+php8.3-mysql:
+  Installed: (none)
+  Candidate: 8.3.6-0ubuntu0.24.04.11
+  Version table:
+     8.3.6-0ubuntu0.24.04.11 500
+        500 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages
+        500 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages
+     8.3.6-0maysync1 500
+        500 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages
+php8.3-xml:
+  Installed: (none)
+  Candidate: 8.3.6-0ubuntu0.24.04.11
+  Version table:
+     8.3.6-0ubuntu0.24.04.11 500
+        500 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages
+        500 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages
+     8.3.6-0maysync1 500
+        500 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages
+php8.3-xsl:
+  Installed: (none)
+  Candidate: 8.3.6-0ubuntu0.24.04.11
+  Version table:
+     8.3.6-0ubuntu0.24.04.11 500
+        500 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages
+        500 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages
+     8.3.6-0maysync1 500
+        500 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages
+php8.3-curl:
+  Installed: (none)
+  Candidate: 8.3.6-0ubuntu0.24.04.11
+  Version table:
+     8.3.6-0ubuntu0.24.04.11 500
+        500 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages
+        500 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages
+     8.3.6-0maysync1 500
+        500 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages
+php8.3-mbstring:
+  Installed: (none)
+  Candidate: 8.3.6-0ubuntu0.24.04.11
+  Version table:
+     8.3.6-0ubuntu0.24.04.11 500
+        500 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages
+        500 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages
+     8.3.6-0maysync1 500
+        500 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages
+php8.3-gd:
+  Installed: (none)
+  Candidate: 8.3.6-0ubuntu0.24.04.11
+  Version table:
+     8.3.6-0ubuntu0.24.04.11 500
+        500 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages
+        500 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages
+     8.3.6-0maysync1 500
+        500 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages
+php8.3-gmp:
+  Installed: (none)
+  Candidate: 8.3.6-0ubuntu0.24.04.11
+  Version table:
+     8.3.6-0ubuntu0.24.04.11 500
+        500 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages
+        500 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages
+     8.3.6-0maysync1 500
+        500 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages
+php8.3-ldap:
+  Installed: (none)
+  Candidate: 8.3.6-0ubuntu0.24.04.11
+  Version table:
+     8.3.6-0ubuntu0.24.04.11 500
+        500 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages
+        500 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages
+     8.3.6-0maysync1 500
+        500 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages
+php8.3-intl:
+  Installed: (none)
+  Candidate: 8.3.6-0ubuntu0.24.04.11
+  Version table:
+     8.3.6-0ubuntu0.24.04.11 500
+        500 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages
+        500 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages
+     8.3.6-0maysync1 500
+        500 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages
+php8.3-zip:
+  Installed: (none)
+  Candidate: 8.3.6-0ubuntu0.24.04.11
+  Version table:
+     8.3.6-0ubuntu0.24.04.11 500
+        500 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages
+        500 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages
+     8.3.6-0maysync1 500
+        500 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages
+php8.3-apcu:
+  Installed: (none)
+  Candidate: 5.1.22+4.0.11-2ubuntu1
+  Version table:
+     5.1.22+4.0.11-2ubuntu1 500
+        500 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages
+php8.3-memcache:
+  Installed: (none)
+  Candidate: 8.0+4.0.5.2+3.0.9~20170802.e702b5f9+-8ubuntu1
+  Version table:
+     8.0+4.0.5.2+3.0.9~20170802.e702b5f9+-8ubuntu1 500
+        500 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages
+php8.3-ssh2:
+  Installed: (none)
+  Candidate: 1.3.1+0.13-7ubuntu3
+  Version table:
+     1.3.1+0.13-7ubuntu3 500
+        500 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages
+php8.3-bcmath:
+  Installed: (none)
+  Candidate: 8.3.6-0ubuntu0.24.04.11
+  Version table:
+     8.3.6-0ubuntu0.24.04.11 500
+        500 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages
+        500 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages
+     8.3.6-0maysync1 500
+        500 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages
+php8.3-opcache:
+  Installed: (none)
+  Candidate: 8.3.6-0ubuntu0.24.04.11
+  Version table:
+     8.3.6-0ubuntu0.24.04.11 500
+        500 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages
+        500 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages
+     8.3.6-0maysync1 500
+        500 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages
+apache2:
+  Installed: (none)
+  Candidate: 2.4.58-1ubuntu8.15
+  Version table:
+     2.4.58-1ubuntu8.15 500
+        500 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages
+        500 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages
+     2.4.58-1ubuntu8 500
+        500 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages
+PHP83_PROVIDER_POLICY_END
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  apache2-bin apache2-data apache2-utils fontconfig-config fonts-dejavu-core
+  fonts-dejavu-mono libaom3 libapr1t64 libaprutil1-dbd-sqlite3
+  libaprutil1-ldap libaprutil1t64 libargon2-1 libbsd0 libdeflate0 libedit2
+  libexpat1 libfontconfig1 libfreetype6 libgd3 libgdbm-compat4t64 libgdbm6t64
+  libheif-plugin-aomdec libheif1 libicu74 libjansson4 libjbig0 libjpeg-turbo8
+  libjpeg8 liblerc4 liblua5.4-0 libonig5 libperl5.38t64 libpng16-16t64
+  libsharpyuv0 libsodium23 libssh2-1t64 libtiff6 libwebp7 libx11-6 libx11-data
+  libxau6 libxcb1 libxdmcp6 libxml2 libxpm4 libxslt1.1 libzip4t64 media-types
+  perl perl-base perl-modules-5.38 php-common php8.3-readline psmisc tzdata
+  ucf
+Suggested packages:
+  apache2-doc apache2-suexec-pristine | apache2-suexec-custom www-browser ufw
+  php-pear libgd-tools gdbm-l10n libheif-plugin-libde265 libheif-plugin-x265
+  libheif-plugin-ffmpegdec libheif-plugin-jpegdec libheif-plugin-jpegenc
+  libheif-plugin-j2kdec libheif-plugin-j2kenc libheif-plugin-rav1e
+  libheif-plugin-svtenc perl-doc libterm-readline-gnu-perl
+  | libterm-readline-perl-perl make libtap-harness-archive-perl memcached
+Recommended packages:
+  ssl-cert libheif-plugin-aomenc netbase
+The following NEW packages will be installed:
+  apache2 apache2-bin apache2-data apache2-utils fontconfig-config
+  fonts-dejavu-core fonts-dejavu-mono libaom3 libapache2-mod-php8.3 libapr1t64
+  libaprutil1-dbd-sqlite3 libaprutil1-ldap libaprutil1t64 libargon2-1 libbsd0
+  libdeflate0 libedit2 libexpat1 libfontconfig1 libfreetype6 libgd3
+  libgdbm-compat4t64 libgdbm6t64 libheif-plugin-aomdec libheif1 libicu74
+  libjansson4 libjbig0 libjpeg-turbo8 libjpeg8 liblerc4 liblua5.4-0 libonig5
+  libperl5.38t64 libpng16-16t64 libsharpyuv0 libsodium23 libssh2-1t64 libtiff6
+  libwebp7 libx11-6 libx11-data libxau6 libxcb1 libxdmcp6 libxml2 libxpm4
+  libxslt1.1 libzip4t64 media-types perl perl-modules-5.38 php-common
+  php8.3-apcu php8.3-bcmath php8.3-cli php8.3-common php8.3-curl php8.3-gd
+  php8.3-gmp php8.3-intl php8.3-ldap php8.3-mbstring php8.3-memcache
+  php8.3-mysql php8.3-opcache php8.3-readline php8.3-ssh2 php8.3-xml
+  php8.3-xsl php8.3-zip psmisc tzdata ucf
+The following packages will be upgraded:
+  perl-base
+1 upgraded, 74 newly installed, 0 to remove and 2 not upgraded.
+Need to get 37.6 MB of archives.
+After this operation, 147 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 perl-base amd64 5.38.2-3.2ubuntu0.6 [1826 kB]
+Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 perl-modules-5.38 all 5.38.2-3.2ubuntu0.6 [3110 kB]
+Get:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libgdbm6t64 amd64 1.23-5.1build1 [34.4 kB]
+Get:4 http://archive.ubuntu.com/ubuntu noble/main amd64 libgdbm-compat4t64 amd64 1.23-5.1build1 [6710 B]
+Get:5 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libperl5.38t64 amd64 5.38.2-3.2ubuntu0.6 [4864 kB]
+Get:6 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 perl amd64 5.38.2-3.2ubuntu0.6 [231 kB]
+Get:7 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libapr1t64 amd64 1.7.2-3.1ubuntu0.1 [108 kB]
+Get:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libexpat1 amd64 2.6.1-2ubuntu0.6 [98.9 kB]
+Get:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libaprutil1t64 amd64 1.6.3-1.1ubuntu7.1 [92.7 kB]
+Get:10 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libaprutil1-dbd-sqlite3 amd64 1.6.3-1.1ubuntu7.1 [11.2 kB]
+Get:11 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libaprutil1-ldap amd64 1.6.3-1.1ubuntu7.1 [9120 B]
+Get:12 http://archive.ubuntu.com/ubuntu noble/main amd64 libjansson4 amd64 2.14-2build2 [32.8 kB]
+Get:13 http://archive.ubuntu.com/ubuntu noble/main amd64 liblua5.4-0 amd64 5.4.6-3build2 [166 kB]
+Get:14 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libicu74 amd64 74.2-1ubuntu3.1 [10.9 MB]
+Get:15 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libxml2 amd64 2.9.14+dfsg-1.3ubuntu3.9 [765 kB]
+Get:16 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 apache2-bin amd64 2.4.58-1ubuntu8.15 [1338 kB]
+Get:17 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 apache2-data all 2.4.58-1ubuntu8.15 [163 kB]
+Get:18 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 apache2-utils amd64 2.4.58-1ubuntu8.15 [99.7 kB]
+Get:19 http://archive.ubuntu.com/ubuntu noble/main amd64 media-types all 10.1.0 [27.5 kB]
+Get:20 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 apache2 amd64 2.4.58-1ubuntu8.15 [90.2 kB]
+Get:21 http://archive.ubuntu.com/ubuntu noble/main amd64 psmisc amd64 23.7-1build1 [179 kB]
+Get:22 http://archive.ubuntu.com/ubuntu noble/main amd64 php-common all 2:93ubuntu2 [13.9 kB]
+Get:23 http://archive.ubuntu.com/ubuntu noble/main amd64 ucf all 3.0043+nmu1 [56.5 kB]
+Get:24 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 php8.3-common amd64 8.3.6-0ubuntu0.24.04.11 [742 kB]
+Get:25 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libbsd0 amd64 0.12.1-1build1.1 [41.2 kB]
+Get:26 http://archive.ubuntu.com/ubuntu noble/main amd64 libedit2 amd64 3.1-20230828-1build1 [97.6 kB]
+Get:27 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 php8.3-opcache amd64 8.3.6-0ubuntu0.24.04.11 [372 kB]
+Get:28 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 php8.3-readline amd64 8.3.6-0ubuntu0.24.04.11 [13.5 kB]
+Get:29 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 tzdata all 2026c-0ubuntu0.24.04.1 [280 kB]
+Get:30 http://archive.ubuntu.com/ubuntu noble/main amd64 libargon2-1 amd64 0~20190702+dfsg-4build1 [20.8 kB]
+Get:31 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsodium23 amd64 1.0.18-1ubuntu0.24.04.1 [161 kB]
+Get:32 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 php8.3-cli amd64 8.3.6-0ubuntu0.24.04.11 [1915 kB]
+Get:33 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libapache2-mod-php8.3 amd64 8.3.6-0ubuntu0.24.04.11 [1850 kB]
+Get:34 http://archive.ubuntu.com/ubuntu noble/universe amd64 php8.3-apcu amd64 5.1.22+4.0.11-2ubuntu1 [45.1 kB]
+Get:35 http://archive.ubuntu.com/ubuntu noble/universe amd64 php8.3-memcache amd64 8.0+4.0.5.2+3.0.9~20170802.e702b5f9+-8ubuntu1 [56.7 kB]
+Get:36 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libssh2-1t64 amd64 1.11.0-4.1ubuntu0.24.04.4 [121 kB]
+Get:37 http://archive.ubuntu.com/ubuntu noble/universe amd64 php8.3-ssh2 amd64 1.3.1+0.13-7ubuntu3 [31.4 kB]
+Get:38 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpng16-16t64 amd64 1.6.43-5ubuntu0.6 [189 kB]
+Get:39 http://archive.ubuntu.com/ubuntu noble/main amd64 libxau6 amd64 1:1.0.9-1build6 [7160 B]
+Get:40 http://archive.ubuntu.com/ubuntu noble/main amd64 libxdmcp6 amd64 1:1.1.3-0ubuntu6 [10.3 kB]
+Get:41 http://archive.ubuntu.com/ubuntu noble/main amd64 libxcb1 amd64 1.15-1ubuntu2 [47.7 kB]
+Get:42 http://archive.ubuntu.com/ubuntu noble/main amd64 libx11-data all 2:1.8.7-1build1 [115 kB]
+Get:43 http://archive.ubuntu.com/ubuntu noble/main amd64 libx11-6 amd64 2:1.8.7-1build1 [650 kB]
+Get:44 http://archive.ubuntu.com/ubuntu noble/main amd64 fonts-dejavu-mono all 2.37-8 [502 kB]
+Get:45 http://archive.ubuntu.com/ubuntu noble/main amd64 fonts-dejavu-core all 2.37-8 [835 kB]
+Get:46 http://archive.ubuntu.com/ubuntu noble/main amd64 fontconfig-config amd64 2.15.0-1.1ubuntu2 [37.3 kB]
+Get:47 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libaom3 amd64 3.8.2-2ubuntu0.2 [1942 kB]
+Get:48 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libdeflate0 amd64 1.19-1build1.1 [43.9 kB]
+Get:49 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libfreetype6 amd64 2.13.2+dfsg-1ubuntu0.1 [402 kB]
+Get:50 http://archive.ubuntu.com/ubuntu noble/main amd64 libfontconfig1 amd64 2.15.0-1.1ubuntu2 [139 kB]
+Get:51 http://archive.ubuntu.com/ubuntu noble/main amd64 libsharpyuv0 amd64 1.3.2-0.4build3 [15.8 kB]
+Get:52 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libheif-plugin-aomdec amd64 1.17.6-1ubuntu4.8 [11.6 kB]
+Get:53 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libheif1 amd64 1.17.6-1ubuntu4.8 [277 kB]
+Get:54 http://archive.ubuntu.com/ubuntu noble/main amd64 libjpeg-turbo8 amd64 2.1.5-2ubuntu2 [150 kB]
+Get:55 http://archive.ubuntu.com/ubuntu noble/main amd64 libjpeg8 amd64 8c-2ubuntu11 [2148 B]
+Get:56 http://archive.ubuntu.com/ubuntu noble/main amd64 libjbig0 amd64 2.1-6.1ubuntu2 [29.7 kB]
+Get:57 http://archive.ubuntu.com/ubuntu noble/main amd64 liblerc4 amd64 4.0.0+ds-4ubuntu2 [179 kB]
+Get:58 http://archive.ubuntu.com/ubuntu noble/main amd64 libwebp7 amd64 1.3.2-0.4build3 [230 kB]
+Get:59 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libtiff6 amd64 4.5.1+git230720-4ubuntu2.5 [200 kB]
+Get:60 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libxpm4 amd64 1:3.5.17-1ubuntu0.24.04.1 [36.7 kB]
+Get:61 http://archive.ubuntu.com/ubuntu noble/main amd64 libgd3 amd64 2.3.3-9ubuntu5 [128 kB]
+Get:62 http://archive.ubuntu.com/ubuntu noble/main amd64 libonig5 amd64 6.9.9-1build1 [172 kB]
+Get:63 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libxslt1.1 amd64 1.1.39-0exp1ubuntu0.24.04.3 [168 kB]
+Get:64 http://archive.ubuntu.com/ubuntu noble/universe amd64 libzip4t64 amd64 1.7.3-1.1ubuntu2 [53.6 kB]
+Get:65 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 php8.3-bcmath amd64 8.3.6-0ubuntu0.24.04.11 [16.6 kB]
+Get:66 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 php8.3-curl amd64 8.3.6-0ubuntu0.24.04.11 [40.3 kB]
+Get:67 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 php8.3-gd amd64 8.3.6-0ubuntu0.24.04.11 [31.2 kB]
+Get:68 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 php8.3-gmp amd64 8.3.6-0ubuntu0.24.04.11 [23.4 kB]
+Get:69 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 php8.3-intl amd64 8.3.6-0ubuntu0.24.04.11 [157 kB]
+Get:70 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 php8.3-ldap amd64 8.3.6-0ubuntu0.24.04.11 [33.6 kB]
+Get:71 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 php8.3-mbstring amd64 8.3.6-0ubuntu0.24.04.11 [512 kB]
+Get:72 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 php8.3-mysql amd64 8.3.6-0ubuntu0.24.04.11 [127 kB]
+Get:73 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 php8.3-xml amd64 8.3.6-0ubuntu0.24.04.11 [126 kB]
+Get:74 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 php8.3-xsl all 8.3.6-0ubuntu0.24.04.11 [8846 B]
+Get:75 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 php8.3-zip amd64 8.3.6-0ubuntu0.24.04.11 [29.5 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 37.6 MB in 7s (5703 kB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 5184 files and directories currently installed.)
+Preparing to unpack .../perl-base_5.38.2-3.2ubuntu0.6_amd64.deb ...
+Unpacking perl-base (5.38.2-3.2ubuntu0.6) over (5.38.2-3.2ubuntu0.4) ...
+Setting up perl-base (5.38.2-3.2ubuntu0.6) ...
+Selecting previously unselected package perl-modules-5.38.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 5184 files and directories currently installed.)
+Preparing to unpack .../00-perl-modules-5.38_5.38.2-3.2ubuntu0.6_all.deb ...
+Unpacking perl-modules-5.38 (5.38.2-3.2ubuntu0.6) ...
+Selecting previously unselected package libgdbm6t64:amd64.
+Preparing to unpack .../01-libgdbm6t64_1.23-5.1build1_amd64.deb ...
+Unpacking libgdbm6t64:amd64 (1.23-5.1build1) ...
+Selecting previously unselected package libgdbm-compat4t64:amd64.
+Preparing to unpack .../02-libgdbm-compat4t64_1.23-5.1build1_amd64.deb ...
+Unpacking libgdbm-compat4t64:amd64 (1.23-5.1build1) ...
+Selecting previously unselected package libperl5.38t64:amd64.
+Preparing to unpack .../03-libperl5.38t64_5.38.2-3.2ubuntu0.6_amd64.deb ...
+Unpacking libperl5.38t64:amd64 (5.38.2-3.2ubuntu0.6) ...
+Selecting previously unselected package perl.
+Preparing to unpack .../04-perl_5.38.2-3.2ubuntu0.6_amd64.deb ...
+Unpacking perl (5.38.2-3.2ubuntu0.6) ...
+Selecting previously unselected package libapr1t64:amd64.
+Preparing to unpack .../05-libapr1t64_1.7.2-3.1ubuntu0.1_amd64.deb ...
+Unpacking libapr1t64:amd64 (1.7.2-3.1ubuntu0.1) ...
+Selecting previously unselected package libexpat1:amd64.
+Preparing to unpack .../06-libexpat1_2.6.1-2ubuntu0.6_amd64.deb ...
+Unpacking libexpat1:amd64 (2.6.1-2ubuntu0.6) ...
+Selecting previously unselected package libaprutil1t64:amd64.
+Preparing to unpack .../07-libaprutil1t64_1.6.3-1.1ubuntu7.1_amd64.deb ...
+Unpacking libaprutil1t64:amd64 (1.6.3-1.1ubuntu7.1) ...
+Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+Preparing to unpack .../08-libaprutil1-dbd-sqlite3_1.6.3-1.1ubuntu7.1_amd64.deb ...
+Unpacking libaprutil1-dbd-sqlite3:amd64 (1.6.3-1.1ubuntu7.1) ...
+Selecting previously unselected package libaprutil1-ldap:amd64.
+Preparing to unpack .../09-libaprutil1-ldap_1.6.3-1.1ubuntu7.1_amd64.deb ...
+Unpacking libaprutil1-ldap:amd64 (1.6.3-1.1ubuntu7.1) ...
+Selecting previously unselected package libjansson4:amd64.
+Preparing to unpack .../10-libjansson4_2.14-2build2_amd64.deb ...
+Unpacking libjansson4:amd64 (2.14-2build2) ...
+Selecting previously unselected package liblua5.4-0:amd64.
+Preparing to unpack .../11-liblua5.4-0_5.4.6-3build2_amd64.deb ...
+Unpacking liblua5.4-0:amd64 (5.4.6-3build2) ...
+Selecting previously unselected package libicu74:amd64.
+Preparing to unpack .../12-libicu74_74.2-1ubuntu3.1_amd64.deb ...
+Unpacking libicu74:amd64 (74.2-1ubuntu3.1) ...
+Selecting previously unselected package libxml2:amd64.
+Preparing to unpack .../13-libxml2_2.9.14+dfsg-1.3ubuntu3.9_amd64.deb ...
+Unpacking libxml2:amd64 (2.9.14+dfsg-1.3ubuntu3.9) ...
+Selecting previously unselected package apache2-bin.
+Preparing to unpack .../14-apache2-bin_2.4.58-1ubuntu8.15_amd64.deb ...
+Unpacking apache2-bin (2.4.58-1ubuntu8.15) ...
+Selecting previously unselected package apache2-data.
+Preparing to unpack .../15-apache2-data_2.4.58-1ubuntu8.15_all.deb ...
+Unpacking apache2-data (2.4.58-1ubuntu8.15) ...
+Selecting previously unselected package apache2-utils.
+Preparing to unpack .../16-apache2-utils_2.4.58-1ubuntu8.15_amd64.deb ...
+Unpacking apache2-utils (2.4.58-1ubuntu8.15) ...
+Selecting previously unselected package media-types.
+Preparing to unpack .../17-media-types_10.1.0_all.deb ...
+Unpacking media-types (10.1.0) ...
+Selecting previously unselected package apache2.
+Preparing to unpack .../18-apache2_2.4.58-1ubuntu8.15_amd64.deb ...
+Unpacking apache2 (2.4.58-1ubuntu8.15) ...
+Selecting previously unselected package psmisc.
+Preparing to unpack .../19-psmisc_23.7-1build1_amd64.deb ...
+Unpacking psmisc (23.7-1build1) ...
+Selecting previously unselected package php-common.
+Preparing to unpack .../20-php-common_2%3a93ubuntu2_all.deb ...
+Unpacking php-common (2:93ubuntu2) ...
+Selecting previously unselected package ucf.
+Preparing to unpack .../21-ucf_3.0043+nmu1_all.deb ...
+Moving old data out of the way
+Unpacking ucf (3.0043+nmu1) ...
+Selecting previously unselected package php8.3-common.
+Preparing to unpack .../22-php8.3-common_8.3.6-0ubuntu0.24.04.11_amd64.deb ...
+Unpacking php8.3-common (8.3.6-0ubuntu0.24.04.11) ...
+Selecting previously unselected package libbsd0:amd64.
+Preparing to unpack .../23-libbsd0_0.12.1-1build1.1_amd64.deb ...
+Unpacking libbsd0:amd64 (0.12.1-1build1.1) ...
+Selecting previously unselected package libedit2:amd64.
+Preparing to unpack .../24-libedit2_3.1-20230828-1build1_amd64.deb ...
+Unpacking libedit2:amd64 (3.1-20230828-1build1) ...
+Selecting previously unselected package php8.3-opcache.
+Preparing to unpack .../25-php8.3-opcache_8.3.6-0ubuntu0.24.04.11_amd64.deb ...
+Unpacking php8.3-opcache (8.3.6-0ubuntu0.24.04.11) ...
+Selecting previously unselected package php8.3-readline.
+Preparing to unpack .../26-php8.3-readline_8.3.6-0ubuntu0.24.04.11_amd64.deb ...
+Unpacking php8.3-readline (8.3.6-0ubuntu0.24.04.11) ...
+Selecting previously unselected package tzdata.
+Preparing to unpack .../27-tzdata_2026c-0ubuntu0.24.04.1_all.deb ...
+Unpacking tzdata (2026c-0ubuntu0.24.04.1) ...
+Selecting previously unselected package libargon2-1:amd64.
+Preparing to unpack .../28-libargon2-1_0~20190702+dfsg-4build1_amd64.deb ...
+Unpacking libargon2-1:amd64 (0~20190702+dfsg-4build1) ...
+Selecting previously unselected package libsodium23:amd64.
+Preparing to unpack .../29-libsodium23_1.0.18-1ubuntu0.24.04.1_amd64.deb ...
+Unpacking libsodium23:amd64 (1.0.18-1ubuntu0.24.04.1) ...
+Selecting previously unselected package php8.3-cli.
+Preparing to unpack .../30-php8.3-cli_8.3.6-0ubuntu0.24.04.11_amd64.deb ...
+Unpacking php8.3-cli (8.3.6-0ubuntu0.24.04.11) ...
+Selecting previously unselected package libapache2-mod-php8.3.
+Preparing to unpack .../31-libapache2-mod-php8.3_8.3.6-0ubuntu0.24.04.11_amd64.deb ...
+Unpacking libapache2-mod-php8.3 (8.3.6-0ubuntu0.24.04.11) ...
+Setting up psmisc (23.7-1build1) ...
+Setting up php-common (2:93ubuntu2) ...
+Selecting previously unselected package php8.3-apcu.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 8770 files and directories currently installed.)
+Preparing to unpack .../00-php8.3-apcu_5.1.22+4.0.11-2ubuntu1_amd64.deb ...
+Unpacking php8.3-apcu (5.1.22+4.0.11-2ubuntu1) ...
+Selecting previously unselected package php8.3-memcache.
+Preparing to unpack .../01-php8.3-memcache_8.0+4.0.5.2+3.0.9~20170802.e702b5f9+-8ubuntu1_amd64.deb ...
+Unpacking php8.3-memcache (8.0+4.0.5.2+3.0.9~20170802.e702b5f9+-8ubuntu1) ...
+Selecting previously unselected package libssh2-1t64:amd64.
+Preparing to unpack .../02-libssh2-1t64_1.11.0-4.1ubuntu0.24.04.4_amd64.deb ...
+Unpacking libssh2-1t64:amd64 (1.11.0-4.1ubuntu0.24.04.4) ...
+Selecting previously unselected package php8.3-ssh2.
+Preparing to unpack .../03-php8.3-ssh2_1.3.1+0.13-7ubuntu3_amd64.deb ...
+Unpacking php8.3-ssh2 (1.3.1+0.13-7ubuntu3) ...
+Selecting previously unselected package libpng16-16t64:amd64.
+Preparing to unpack .../04-libpng16-16t64_1.6.43-5ubuntu0.6_amd64.deb ...
+Unpacking libpng16-16t64:amd64 (1.6.43-5ubuntu0.6) ...
+Selecting previously unselected package libxau6:amd64.
+Preparing to unpack .../05-libxau6_1%3a1.0.9-1build6_amd64.deb ...
+Unpacking libxau6:amd64 (1:1.0.9-1build6) ...
+Selecting previously unselected package libxdmcp6:amd64.
+Preparing to unpack .../06-libxdmcp6_1%3a1.1.3-0ubuntu6_amd64.deb ...
+Unpacking libxdmcp6:amd64 (1:1.1.3-0ubuntu6) ...
+Selecting previously unselected package libxcb1:amd64.
+Preparing to unpack .../07-libxcb1_1.15-1ubuntu2_amd64.deb ...
+Unpacking libxcb1:amd64 (1.15-1ubuntu2) ...
+Selecting previously unselected package libx11-data.
+Preparing to unpack .../08-libx11-data_2%3a1.8.7-1build1_all.deb ...
+Unpacking libx11-data (2:1.8.7-1build1) ...
+Selecting previously unselected package libx11-6:amd64.
+Preparing to unpack .../09-libx11-6_2%3a1.8.7-1build1_amd64.deb ...
+Unpacking libx11-6:amd64 (2:1.8.7-1build1) ...
+Selecting previously unselected package fonts-dejavu-mono.
+Preparing to unpack .../10-fonts-dejavu-mono_2.37-8_all.deb ...
+Unpacking fonts-dejavu-mono (2.37-8) ...
+Selecting previously unselected package fonts-dejavu-core.
+Preparing to unpack .../11-fonts-dejavu-core_2.37-8_all.deb ...
+Unpacking fonts-dejavu-core (2.37-8) ...
+Selecting previously unselected package fontconfig-config.
+Preparing to unpack .../12-fontconfig-config_2.15.0-1.1ubuntu2_amd64.deb ...
+Unpacking fontconfig-config (2.15.0-1.1ubuntu2) ...
+Selecting previously unselected package libaom3:amd64.
+Preparing to unpack .../13-libaom3_3.8.2-2ubuntu0.2_amd64.deb ...
+Unpacking libaom3:amd64 (3.8.2-2ubuntu0.2) ...
+Selecting previously unselected package libdeflate0:amd64.
+Preparing to unpack .../14-libdeflate0_1.19-1build1.1_amd64.deb ...
+Unpacking libdeflate0:amd64 (1.19-1build1.1) ...
+Selecting previously unselected package libfreetype6:amd64.
+Preparing to unpack .../15-libfreetype6_2.13.2+dfsg-1ubuntu0.1_amd64.deb ...
+Unpacking libfreetype6:amd64 (2.13.2+dfsg-1ubuntu0.1) ...
+Selecting previously unselected package libfontconfig1:amd64.
+Preparing to unpack .../16-libfontconfig1_2.15.0-1.1ubuntu2_amd64.deb ...
+Unpacking libfontconfig1:amd64 (2.15.0-1.1ubuntu2) ...
+Selecting previously unselected package libsharpyuv0:amd64.
+Preparing to unpack .../17-libsharpyuv0_1.3.2-0.4build3_amd64.deb ...
+Unpacking libsharpyuv0:amd64 (1.3.2-0.4build3) ...
+Selecting previously unselected package libheif-plugin-aomdec:amd64.
+Preparing to unpack .../18-libheif-plugin-aomdec_1.17.6-1ubuntu4.8_amd64.deb ...
+Unpacking libheif-plugin-aomdec:amd64 (1.17.6-1ubuntu4.8) ...
+Selecting previously unselected package libheif1:amd64.
+Preparing to unpack .../19-libheif1_1.17.6-1ubuntu4.8_amd64.deb ...
+Unpacking libheif1:amd64 (1.17.6-1ubuntu4.8) ...
+Selecting previously unselected package libjpeg-turbo8:amd64.
+Preparing to unpack .../20-libjpeg-turbo8_2.1.5-2ubuntu2_amd64.deb ...
+Unpacking libjpeg-turbo8:amd64 (2.1.5-2ubuntu2) ...
+Selecting previously unselected package libjpeg8:amd64.
+Preparing to unpack .../21-libjpeg8_8c-2ubuntu11_amd64.deb ...
+Unpacking libjpeg8:amd64 (8c-2ubuntu11) ...
+Selecting previously unselected package libjbig0:amd64.
+Preparing to unpack .../22-libjbig0_2.1-6.1ubuntu2_amd64.deb ...
+Unpacking libjbig0:amd64 (2.1-6.1ubuntu2) ...
+Selecting previously unselected package liblerc4:amd64.
+Preparing to unpack .../23-liblerc4_4.0.0+ds-4ubuntu2_amd64.deb ...
+Unpacking liblerc4:amd64 (4.0.0+ds-4ubuntu2) ...
+Selecting previously unselected package libwebp7:amd64.
+Preparing to unpack .../24-libwebp7_1.3.2-0.4build3_amd64.deb ...
+Unpacking libwebp7:amd64 (1.3.2-0.4build3) ...
+Selecting previously unselected package libtiff6:amd64.
+Preparing to unpack .../25-libtiff6_4.5.1+git230720-4ubuntu2.5_amd64.deb ...
+Unpacking libtiff6:amd64 (4.5.1+git230720-4ubuntu2.5) ...
+Selecting previously unselected package libxpm4:amd64.
+Preparing to unpack .../26-libxpm4_1%3a3.5.17-1ubuntu0.24.04.1_amd64.deb ...
+Unpacking libxpm4:amd64 (1:3.5.17-1ubuntu0.24.04.1) ...
+Selecting previously unselected package libgd3:amd64.
+Preparing to unpack .../27-libgd3_2.3.3-9ubuntu5_amd64.deb ...
+Unpacking libgd3:amd64 (2.3.3-9ubuntu5) ...
+Selecting previously unselected package libonig5:amd64.
+Preparing to unpack .../28-libonig5_6.9.9-1build1_amd64.deb ...
+Unpacking libonig5:amd64 (6.9.9-1build1) ...
+Selecting previously unselected package libxslt1.1:amd64.
+Preparing to unpack .../29-libxslt1.1_1.1.39-0exp1ubuntu0.24.04.3_amd64.deb ...
+Unpacking libxslt1.1:amd64 (1.1.39-0exp1ubuntu0.24.04.3) ...
+Selecting previously unselected package libzip4t64:amd64.
+Preparing to unpack .../30-libzip4t64_1.7.3-1.1ubuntu2_amd64.deb ...
+Unpacking libzip4t64:amd64 (1.7.3-1.1ubuntu2) ...
+Selecting previously unselected package php8.3-bcmath.
+Preparing to unpack .../31-php8.3-bcmath_8.3.6-0ubuntu0.24.04.11_amd64.deb ...
+Unpacking php8.3-bcmath (8.3.6-0ubuntu0.24.04.11) ...
+Selecting previously unselected package php8.3-curl.
+Preparing to unpack .../32-php8.3-curl_8.3.6-0ubuntu0.24.04.11_amd64.deb ...
+Unpacking php8.3-curl (8.3.6-0ubuntu0.24.04.11) ...
+Selecting previously unselected package php8.3-gd.
+Preparing to unpack .../33-php8.3-gd_8.3.6-0ubuntu0.24.04.11_amd64.deb ...
+Unpacking php8.3-gd (8.3.6-0ubuntu0.24.04.11) ...
+Selecting previously unselected package php8.3-gmp.
+Preparing to unpack .../34-php8.3-gmp_8.3.6-0ubuntu0.24.04.11_amd64.deb ...
+Unpacking php8.3-gmp (8.3.6-0ubuntu0.24.04.11) ...
+Selecting previously unselected package php8.3-intl.
+Preparing to unpack .../35-php8.3-intl_8.3.6-0ubuntu0.24.04.11_amd64.deb ...
+Unpacking php8.3-intl (8.3.6-0ubuntu0.24.04.11) ...
+Selecting previously unselected package php8.3-ldap.
+Preparing to unpack .../36-php8.3-ldap_8.3.6-0ubuntu0.24.04.11_amd64.deb ...
+Unpacking php8.3-ldap (8.3.6-0ubuntu0.24.04.11) ...
+Selecting previously unselected package php8.3-mbstring.
+Preparing to unpack .../37-php8.3-mbstring_8.3.6-0ubuntu0.24.04.11_amd64.deb ...
+Unpacking php8.3-mbstring (8.3.6-0ubuntu0.24.04.11) ...
+Selecting previously unselected package php8.3-mysql.
+Preparing to unpack .../38-php8.3-mysql_8.3.6-0ubuntu0.24.04.11_amd64.deb ...
+Unpacking php8.3-mysql (8.3.6-0ubuntu0.24.04.11) ...
+Selecting previously unselected package php8.3-xml.
+Preparing to unpack .../39-php8.3-xml_8.3.6-0ubuntu0.24.04.11_amd64.deb ...
+Unpacking php8.3-xml (8.3.6-0ubuntu0.24.04.11) ...
+Selecting previously unselected package php8.3-xsl.
+Preparing to unpack .../40-php8.3-xsl_8.3.6-0ubuntu0.24.04.11_all.deb ...
+Unpacking php8.3-xsl (8.3.6-0ubuntu0.24.04.11) ...
+Selecting previously unselected package php8.3-zip.
+Preparing to unpack .../41-php8.3-zip_8.3.6-0ubuntu0.24.04.11_amd64.deb ...
+Unpacking php8.3-zip (8.3.6-0ubuntu0.24.04.11) ...
+Setting up libexpat1:amd64 (2.6.1-2ubuntu0.6) ...
+Setting up media-types (10.1.0) ...
+Setting up libsharpyuv0:amd64 (1.3.2-0.4build3) ...
+Setting up libaom3:amd64 (3.8.2-2ubuntu0.2) ...
+Setting up libxau6:amd64 (1:1.0.9-1build6) ...
+Setting up libsodium23:amd64 (1.0.18-1ubuntu0.24.04.1) ...
+Setting up liblerc4:amd64 (4.0.0+ds-4ubuntu2) ...
+Setting up libgdbm6t64:amd64 (1.23-5.1build1) ...
+Setting up libgdbm-compat4t64:amd64 (1.23-5.1build1) ...
+Setting up libargon2-1:amd64 (0~20190702+dfsg-4build1) ...
+Setting up libdeflate0:amd64 (1.19-1build1.1) ...
+Setting up libjbig0:amd64 (2.1-6.1ubuntu2) ...
+Setting up libjansson4:amd64 (2.14-2build2) ...
+Setting up tzdata (2026c-0ubuntu0.24.04.1) ...
+
+Current default time zone: 'Etc/UTC'
+Local time is now:      Fri Sep 25 16:32:36 UTC 2026.
+Universal Time is now:  Fri Sep 25 16:32:36 UTC 2026.
+Run 'dpkg-reconfigure tzdata' if you wish to change it.
+
+Setting up libx11-data (2:1.8.7-1build1) ...
+Setting up perl-modules-5.38 (5.38.2-3.2ubuntu0.6) ...
+Setting up fonts-dejavu-mono (2.37-8) ...
+Setting up libpng16-16t64:amd64 (1.6.43-5ubuntu0.6) ...
+Setting up fonts-dejavu-core (2.37-8) ...
+Setting up ucf (3.0043+nmu1) ...
+Setting up libjpeg-turbo8:amd64 (2.1.5-2ubuntu2) ...
+Setting up libwebp7:amd64 (1.3.2-0.4build3) ...
+Setting up libicu74:amd64 (74.2-1ubuntu3.1) ...
+Setting up libapr1t64:amd64 (1.7.2-3.1ubuntu0.1) ...
+Setting up liblua5.4-0:amd64 (5.4.6-3build2) ...
+Setting up apache2-data (2.4.58-1ubuntu8.15) ...
+Setting up libperl5.38t64:amd64 (5.38.2-3.2ubuntu0.6) ...
+Setting up libssh2-1t64:amd64 (1.11.0-4.1ubuntu0.24.04.4) ...
+Setting up libzip4t64:amd64 (1.7.3-1.1ubuntu2) ...
+Setting up libbsd0:amd64 (0.12.1-1build1.1) ...
+Setting up libxml2:amd64 (2.9.14+dfsg-1.3ubuntu3.9) ...
+Setting up libonig5:amd64 (6.9.9-1build1) ...
+Setting up libjpeg8:amd64 (8c-2ubuntu11) ...
+Setting up libaprutil1t64:amd64 (1.6.3-1.1ubuntu7.1) ...
+Setting up libxdmcp6:amd64 (1:1.1.3-0ubuntu6) ...
+Setting up libxcb1:amd64 (1.15-1ubuntu2) ...
+Setting up fontconfig-config (2.15.0-1.1ubuntu2) ...
+Setting up libedit2:amd64 (3.1-20230828-1build1) ...
+Setting up php8.3-common (8.3.6-0ubuntu0.24.04.11) ...
+
+Creating config file /etc/php/8.3/mods-available/calendar.ini with new version
+
+Creating config file /etc/php/8.3/mods-available/ctype.ini with new version
+
+Creating config file /etc/php/8.3/mods-available/exif.ini with new version
+
+Creating config file /etc/php/8.3/mods-available/fileinfo.ini with new version
+
+Creating config file /etc/php/8.3/mods-available/ffi.ini with new version
+
+Creating config file /etc/php/8.3/mods-available/ftp.ini with new version
+
+Creating config file /etc/php/8.3/mods-available/gettext.ini with new version
+
+Creating config file /etc/php/8.3/mods-available/iconv.ini with new version
+
+Creating config file /etc/php/8.3/mods-available/pdo.ini with new version
+
+Creating config file /etc/php/8.3/mods-available/phar.ini with new version
+
+Creating config file /etc/php/8.3/mods-available/posix.ini with new version
+
+Creating config file /etc/php/8.3/mods-available/shmop.ini with new version
+
+Creating config file /etc/php/8.3/mods-available/sockets.ini with new version
+
+Creating config file /etc/php/8.3/mods-available/sysvmsg.ini with new version
+
+Creating config file /etc/php/8.3/mods-available/sysvsem.ini with new version
+
+Creating config file /etc/php/8.3/mods-available/sysvshm.ini with new version
+
+Creating config file /etc/php/8.3/mods-available/tokenizer.ini with new version
+Setting up libaprutil1-ldap:amd64 (1.6.3-1.1ubuntu7.1) ...
+Setting up libaprutil1-dbd-sqlite3:amd64 (1.6.3-1.1ubuntu7.1) ...
+Setting up php8.3-zip (8.3.6-0ubuntu0.24.04.11) ...
+
+Creating config file /etc/php/8.3/mods-available/zip.ini with new version
+Setting up php8.3-mysql (8.3.6-0ubuntu0.24.04.11) ...
+
+Creating config file /etc/php/8.3/mods-available/mysqlnd.ini with new version
+
+Creating config file /etc/php/8.3/mods-available/mysqli.ini with new version
+
+Creating config file /etc/php/8.3/mods-available/pdo_mysql.ini with new version
+Setting up perl (5.38.2-3.2ubuntu0.6) ...
+Setting up php8.3-mbstring (8.3.6-0ubuntu0.24.04.11) ...
+
+Creating config file /etc/php/8.3/mods-available/mbstring.ini with new version
+Setting up php8.3-readline (8.3.6-0ubuntu0.24.04.11) ...
+
+Creating config file /etc/php/8.3/mods-available/readline.ini with new version
+Setting up libfreetype6:amd64 (2.13.2+dfsg-1ubuntu0.1) ...
+Setting up php8.3-gmp (8.3.6-0ubuntu0.24.04.11) ...
+
+Creating config file /etc/php/8.3/mods-available/gmp.ini with new version
+Setting up php8.3-ldap (8.3.6-0ubuntu0.24.04.11) ...
+
+Creating config file /etc/php/8.3/mods-available/ldap.ini with new version
+Setting up php8.3-bcmath (8.3.6-0ubuntu0.24.04.11) ...
+
+Creating config file /etc/php/8.3/mods-available/bcmath.ini with new version
+Setting up libtiff6:amd64 (4.5.1+git230720-4ubuntu2.5) ...
+Setting up libxslt1.1:amd64 (1.1.39-0exp1ubuntu0.24.04.3) ...
+Setting up libx11-6:amd64 (2:1.8.7-1build1) ...
+Setting up php8.3-xml (8.3.6-0ubuntu0.24.04.11) ...
+
+Creating config file /etc/php/8.3/mods-available/dom.ini with new version
+
+Creating config file /etc/php/8.3/mods-available/simplexml.ini with new version
+
+Creating config file /etc/php/8.3/mods-available/xml.ini with new version
+
+Creating config file /etc/php/8.3/mods-available/xmlreader.ini with new version
+
+Creating config file /etc/php/8.3/mods-available/xmlwriter.ini with new version
+
+Creating config file /etc/php/8.3/mods-available/xsl.ini with new version
+Setting up libfontconfig1:amd64 (2.15.0-1.1ubuntu2) ...
+Setting up php8.3-opcache (8.3.6-0ubuntu0.24.04.11) ...
+
+Creating config file /etc/php/8.3/mods-available/opcache.ini with new version
+Setting up apache2-utils (2.4.58-1ubuntu8.15) ...
+Setting up php8.3-xsl (8.3.6-0ubuntu0.24.04.11) ...
+Setting up libxpm4:amd64 (1:3.5.17-1ubuntu0.24.04.1) ...
+Setting up php8.3-curl (8.3.6-0ubuntu0.24.04.11) ...
+
+Creating config file /etc/php/8.3/mods-available/curl.ini with new version
+Setting up php8.3-intl (8.3.6-0ubuntu0.24.04.11) ...
+
+Creating config file /etc/php/8.3/mods-available/intl.ini with new version
+Setting up php8.3-cli (8.3.6-0ubuntu0.24.04.11) ...
+update-alternatives: using /usr/bin/php8.3 to provide /usr/bin/php (php) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/php.1.gz because associated file /usr/share/man/man1/php8.3.1.gz (of link group php) doesn't exist
+update-alternatives: using /usr/bin/phar8.3 to provide /usr/bin/phar (phar) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/phar.1.gz because associated file /usr/share/man/man1/phar8.3.1.gz (of link group phar) doesn't exist
+update-alternatives: using /usr/bin/phar.phar8.3 to provide /usr/bin/phar.phar (phar.phar) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/phar.phar.1.gz because associated file /usr/share/man/man1/phar.phar8.3.1.gz (of link group phar.phar) doesn't exist
+
+Creating config file /etc/php/8.3/cli/php.ini with new version
+Setting up apache2-bin (2.4.58-1ubuntu8.15) ...
+Setting up libapache2-mod-php8.3 (8.3.6-0ubuntu0.24.04.11) ...
+Package apache2 is not configured yet. Will defer actions by package libapache2-mod-php8.3.
+
+Creating config file /etc/php/8.3/apache2/php.ini with new version
+No module matches 
+Setting up php8.3-apcu (5.1.22+4.0.11-2ubuntu1) ...
+Setting up php8.3-memcache (8.0+4.0.5.2+3.0.9~20170802.e702b5f9+-8ubuntu1) ...
+Setting up php8.3-ssh2 (1.3.1+0.13-7ubuntu3) ...
+Setting up apache2 (2.4.58-1ubuntu8.15) ...
+Enabling module mpm_event.
+Enabling module authz_core.
+Enabling module authz_host.
+Enabling module authn_core.
+Enabling module auth_basic.
+Enabling module access_compat.
+Enabling module authn_file.
+Enabling module authz_user.
+Enabling module alias.
+Enabling module dir.
+Enabling module autoindex.
+Enabling module env.
+Enabling module mime.
+Enabling module negotiation.
+Enabling module setenvif.
+Enabling module filter.
+Enabling module deflate.
+Enabling module status.
+Enabling module reqtimeout.
+Enabling conf charset.
+Enabling conf localized-error-pages.
+Enabling conf other-vhosts-access-log.
+Enabling conf security.
+Enabling conf serve-cgi-bin.
+Enabling site 000-default.
+info: Switch to mpm prefork for package libapache2-mod-php8.3
+Module mpm_event disabled.
+Enabling module mpm_prefork.
+info: Executing deferred 'a2enmod php8.3' for package libapache2-mod-php8.3
+Enabling module php8.3.
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of start.
+Setting up libheif-plugin-aomdec:amd64 (1.17.6-1ubuntu4.8) ...
+Setting up libheif1:amd64 (1.17.6-1ubuntu4.8) ...
+Setting up libgd3:amd64 (2.3.3-9ubuntu5) ...
+Setting up php8.3-gd (8.3.6-0ubuntu0.24.04.11) ...
+
+Creating config file /etc/php/8.3/mods-available/gd.ini with new version
+Processing triggers for libc-bin (2.39-0ubuntu8.9) ...
+Processing triggers for php8.3-cli (8.3.6-0ubuntu0.24.04.11) ...
+Processing triggers for libapache2-mod-php8.3 (8.3.6-0ubuntu0.24.04.11) ...
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of restart.
+PHP83_PROVIDER_PACKAGES_BEGIN
+apache2	2.4.58-1ubuntu8.15	amd64
+libapache2-mod-php		
+libapache2-mod-php8.3	8.3.6-0ubuntu0.24.04.11	amd64
+php-amqp		
+php-apcu		
+php-ast		
+php-bcmath		
+php-calendar		
+php-cli		
+php-common	2:93ubuntu2	all
+php-crypt-gpg		
+php-ctype		
+php-curl		
+php-dom		
+php-ds		
+php-exif		
+php-facedetect		
+php-ffi		
+php-fileinfo		
+php-ftp		
+php-gd		
+php-gearman		
+php-gmagick		
+php-gmp		
+php-gnupg		
+php-iconv		
+php-igbinary		
+php-imagick		
+php-intl		
+php-json		
+php-ldap		
+php-libvirt-php		
+php-lua		
+php-mailparse		
+php-mbstring		
+php-memcache		
+php-memcached		
+php-mongodb		
+php-msgpack		
+php-mysqli		
+php-mysqlnd		
+php-mysqlnd-ms		
+php-oauth		
+php-opcache		
+php-pcov		
+php-pdo		
+php-pdo-mysql		
+php-pear		
+php-pecl-http		
+php-phar		
+php-posix		
+php-ps		
+php-psr		
+php-radius		
+php-raphf		
+php-readline		
+php-redis		
+php-rrd		
+php-shmop		
+php-simplexml		
+php-smbclient		
+php-sockets		
+php-ssh2		
+php-stomp		
+php-sysvmsg		
+php-sysvsem		
+php-sysvshm		
+php-tideways		
+php-tokenizer		
+php-uopz		
+php-uploadprogress		
+php-uuid		
+php-xcache		
+php-xdebug		
+php-xml		
+php-xmlreader		
+php-xmlrpc		
+php-xmlwriter		
+php-xsl		
+php-yac		
+php-yaml		
+php-zip		
+php-zmq		
+php5.6-common		
+php5.6-json		
+php7.0-common		
+php7.0-curl		
+php7.1-common		
+php7.2-common		
+php7.2-sodium		
+php7.3-common		
+php7.4-common		
+php8.0-common		
+php8.1-common		
+php8.2-common		
+php8.3-apcu	5.1.22+4.0.11-2ubuntu1	amd64
+php8.3-bcmath	8.3.6-0ubuntu0.24.04.11	amd64
+php8.3-calendar		
+php8.3-cli	8.3.6-0ubuntu0.24.04.11	amd64
+php8.3-common	8.3.6-0ubuntu0.24.04.11	amd64
+php8.3-ctype		
+php8.3-curl	8.3.6-0ubuntu0.24.04.11	amd64
+php8.3-dom		
+php8.3-exif		
+php8.3-ffi		
+php8.3-fileinfo		
+php8.3-ftp		
+php8.3-gd	8.3.6-0ubuntu0.24.04.11	amd64
+php8.3-gettext		
+php8.3-gmp	8.3.6-0ubuntu0.24.04.11	amd64
+php8.3-iconv		
+php8.3-intl	8.3.6-0ubuntu0.24.04.11	amd64
+php8.3-json		
+php8.3-ldap	8.3.6-0ubuntu0.24.04.11	amd64
+php8.3-mbstring	8.3.6-0ubuntu0.24.04.11	amd64
+php8.3-memcache	8.0+4.0.5.2+3.0.9~20170802.e702b5f9+-8ubuntu1	amd64
+php8.3-mysql	8.3.6-0ubuntu0.24.04.11	amd64
+php8.3-mysqli		
+php8.3-mysqlnd		
+php8.3-opcache	8.3.6-0ubuntu0.24.04.11	amd64
+php8.3-pdo		
+php8.3-pdo-mysql		
+php8.3-phar		
+php8.3-posix		
+php8.3-readline	8.3.6-0ubuntu0.24.04.11	amd64
+php8.3-shmop		
+php8.3-simplexml		
+php8.3-sockets		
+php8.3-ssh2	1.3.1+0.13-7ubuntu3	amd64
+php8.3-sysvmsg		
+php8.3-sysvsem		
+php8.3-sysvshm		
+php8.3-tokenizer		
+php8.3-xml	8.3.6-0ubuntu0.24.04.11	amd64
+php8.3-xmlreader		
+php8.3-xmlwriter		
+php8.3-xsl	8.3.6-0ubuntu0.24.04.11	all
+php8.3-zip	8.3.6-0ubuntu0.24.04.11	amd64
+phpapi-20230831		
+Configuration File (php.ini) Path: /etc/php/8.3/cli
+Loaded Configuration File:         /etc/php/8.3/cli/php.ini
+Scan for additional .ini files in: /etc/php/8.3/cli/conf.d
+Additional .ini files parsed:      /etc/php/8.3/cli/conf.d/10-mysqlnd.ini,
+/etc/php/8.3/cli/conf.d/10-opcache.ini,
+/etc/php/8.3/cli/conf.d/10-pdo.ini,
+/etc/php/8.3/cli/conf.d/15-xml.ini,
+/etc/php/8.3/cli/conf.d/20-apcu.ini,
+/etc/php/8.3/cli/conf.d/20-bcmath.ini,
+/etc/php/8.3/cli/conf.d/20-calendar.ini,
+/etc/php/8.3/cli/conf.d/20-ctype.ini,
+/etc/php/8.3/cli/conf.d/20-curl.ini,
+/etc/php/8.3/cli/conf.d/20-dom.ini,
+/etc/php/8.3/cli/conf.d/20-exif.ini,
+/etc/php/8.3/cli/conf.d/20-ffi.ini,
+/etc/php/8.3/cli/conf.d/20-fileinfo.ini,
+/etc/php/8.3/cli/conf.d/20-ftp.ini,
+/etc/php/8.3/cli/conf.d/20-gd.ini,
+/etc/php/8.3/cli/conf.d/20-gettext.ini,
+/etc/php/8.3/cli/conf.d/20-gmp.ini,
+/etc/php/8.3/cli/conf.d/20-iconv.ini,
+/etc/php/8.3/cli/conf.d/20-intl.ini,
+/etc/php/8.3/cli/conf.d/20-ldap.ini,
+/etc/php/8.3/cli/conf.d/20-mbstring.ini,
+/etc/php/8.3/cli/conf.d/20-memcache.ini,
+/etc/php/8.3/cli/conf.d/20-mysqli.ini,
+/etc/php/8.3/cli/conf.d/20-pdo_mysql.ini,
+/etc/php/8.3/cli/conf.d/20-phar.ini,
+/etc/php/8.3/cli/conf.d/20-posix.ini,
+/etc/php/8.3/cli/conf.d/20-readline.ini,
+/etc/php/8.3/cli/conf.d/20-shmop.ini,
+/etc/php/8.3/cli/conf.d/20-simplexml.ini,
+/etc/php/8.3/cli/conf.d/20-sockets.ini,
+/etc/php/8.3/cli/conf.d/20-ssh2.ini,
+/etc/php/8.3/cli/conf.d/20-sysvmsg.ini,
+/etc/php/8.3/cli/conf.d/20-sysvsem.ini,
+/etc/php/8.3/cli/conf.d/20-sysvshm.ini,
+/etc/php/8.3/cli/conf.d/20-tokenizer.ini,
+/etc/php/8.3/cli/conf.d/20-xmlreader.ini,
+/etc/php/8.3/cli/conf.d/20-xmlwriter.ini,
+/etc/php/8.3/cli/conf.d/20-xsl.ini,
+/etc/php/8.3/cli/conf.d/20-zip.ini
+
+PHP 8.3.6 (cli) (built: Sep  2 2026 12:56:02) (NTS)
+Copyright (c) The PHP Group
+Zend Engine v4.3.6, Copyright (c) Zend Technologies
+    with Zend OPcache v8.3.6, Copyright (c), by Zend Technologies
+PRETTY_NAME="Ubuntu 24.04.5 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.5 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+PHP83_PROVIDER_PACKAGES_END
+Syntax OK
+PHP83_PROVIDER_CLI_BEGIN
+{"schema":1,"ok":true,"php":"8.3.6","sapi":"cli","expected_sapi":"cli","method":"CLI","nonce":"php83-da340705-ff36-40f8-a67d-dc2d3c1d8edd","ini":"/etc/php/8.3/cli/php.ini","scanned_ini":"/etc/php/8.3/cli/conf.d/10-mysqlnd.ini,\n/etc/php/8.3/cli/conf.d/10-opcache.ini,\n/etc/php/8.3/cli/conf.d/10-pdo.ini,\n/etc/php/8.3/cli/conf.d/15-xml.ini,\n/etc/php/8.3/cli/conf.d/20-apcu.ini,\n/etc/php/8.3/cli/conf.d/20-bcmath.ini,\n/etc/php/8.3/cli/conf.d/20-calendar.ini,\n/etc/php/8.3/cli/conf.d/20-ctype.ini,\n/etc/php/8.3/cli/conf.d/20-curl.ini,\n/etc/php/8.3/cli/conf.d/20-dom.ini,\n/etc/php/8.3/cli/conf.d/20-exif.ini,\n/etc/php/8.3/cli/conf.d/20-ffi.ini,\n/etc/php/8.3/cli/conf.d/20-fileinfo.ini,\n/etc/php/8.3/cli/conf.d/20-ftp.ini,\n/etc/php/8.3/cli/conf.d/20-gd.ini,\n/etc/php/8.3/cli/conf.d/20-gettext.ini,\n/etc/php/8.3/cli/conf.d/20-gmp.ini,\n/etc/php/8.3/cli/conf.d/20-iconv.ini,\n/etc/php/8.3/cli/conf.d/20-intl.ini,\n/etc/php/8.3/cli/conf.d/20-ldap.ini,\n/etc/php/8.3/cli/conf.d/20-mbstring.ini,\n/etc/php/8.3/cli/conf.d/20-memcache.ini,\n/etc/php/8.3/cli/conf.d/20-mysqli.ini,\n/etc/php/8.3/cli/conf.d/20-pdo_mysql.ini,\n/etc/php/8.3/cli/conf.d/20-phar.ini,\n/etc/php/8.3/cli/conf.d/20-posix.ini,\n/etc/php/8.3/cli/conf.d/20-readline.ini,\n/etc/php/8.3/cli/conf.d/20-shmop.ini,\n/etc/php/8.3/cli/conf.d/20-simplexml.ini,\n/etc/php/8.3/cli/conf.d/20-sockets.ini,\n/etc/php/8.3/cli/conf.d/20-ssh2.ini,\n/etc/php/8.3/cli/conf.d/20-sysvmsg.ini,\n/etc/php/8.3/cli/conf.d/20-sysvsem.ini,\n/etc/php/8.3/cli/conf.d/20-sysvshm.ini,\n/etc/php/8.3/cli/conf.d/20-tokenizer.ini,\n/etc/php/8.3/cli/conf.d/20-xmlreader.ini,\n/etc/php/8.3/cli/conf.d/20-xmlwriter.ini,\n/etc/php/8.3/cli/conf.d/20-xsl.ini,\n/etc/php/8.3/cli/conf.d/20-zip.ini\n","modules":["Core","FFI","PDO","Phar","Reflection","SPL","SimpleXML","Zend OPcache","apcu","bcmath","calendar","ctype","curl","date","dom","exif","fileinfo","filter","ftp","gd","gettext","gmp","hash","iconv","intl","json","ldap","libxml","mbstring","memcache","mysqli","mysqlnd","openssl","pcntl","pcre","pdo_mysql","posix","random","readline","session","shmop","sockets","sodium","ssh2","standard","sysvmsg","sysvsem","sysvshm","tokenizer","xml","xmlreader","xmlwriter","xsl","zip","zlib"],"required":["bcmath","ctype","curl","dom","fileinfo","filter","gd","gmp","iconv","intl","json","ldap","libxml","mbstring","mysqli","mysqlnd","openssl","pcre","PDO","pdo_mysql","posix","session","SimpleXML","sockets","ssh2","tokenizer","xml","xmlreader","xmlwriter","xsl","zip","zlib","apcu","memcache","Zend OPcache","pcntl"],"smoke":{"pdo_mysql":true,"json":true,"mbstring":true,"gmp":true,"bcmath":true,"xml":true,"gd":true,"curl":true,"intl":true,"zip":true,"ldap":true,"ssh2":true,"memcache":true,"apcu":true,"opcache":true},"failures":[]}
+PHP83_PROVIDER_CLI_END
+PHP83_PROVIDER_GET_BEGIN
+{"schema":1,"ok":true,"php":"8.3.6","sapi":"apache2handler","expected_sapi":"apache2handler","method":"GET","nonce":"php83-da340705-ff36-40f8-a67d-dc2d3c1d8edd","ini":"/etc/php/8.3/apache2/php.ini","scanned_ini":"/etc/php/8.3/apache2/conf.d/10-mysqlnd.ini,\n/etc/php/8.3/apache2/conf.d/10-opcache.ini,\n/etc/php/8.3/apache2/conf.d/10-pdo.ini,\n/etc/php/8.3/apache2/conf.d/15-xml.ini,\n/etc/php/8.3/apache2/conf.d/20-apcu.ini,\n/etc/php/8.3/apache2/conf.d/20-bcmath.ini,\n/etc/php/8.3/apache2/conf.d/20-calendar.ini,\n/etc/php/8.3/apache2/conf.d/20-ctype.ini,\n/etc/php/8.3/apache2/conf.d/20-curl.ini,\n/etc/php/8.3/apache2/conf.d/20-dom.ini,\n/etc/php/8.3/apache2/conf.d/20-exif.ini,\n/etc/php/8.3/apache2/conf.d/20-ffi.ini,\n/etc/php/8.3/apache2/conf.d/20-fileinfo.ini,\n/etc/php/8.3/apache2/conf.d/20-ftp.ini,\n/etc/php/8.3/apache2/conf.d/20-gd.ini,\n/etc/php/8.3/apache2/conf.d/20-gettext.ini,\n/etc/php/8.3/apache2/conf.d/20-gmp.ini,\n/etc/php/8.3/apache2/conf.d/20-iconv.ini,\n/etc/php/8.3/apache2/conf.d/20-intl.ini,\n/etc/php/8.3/apache2/conf.d/20-ldap.ini,\n/etc/php/8.3/apache2/conf.d/20-mbstring.ini,\n/etc/php/8.3/apache2/conf.d/20-memcache.ini,\n/etc/php/8.3/apache2/conf.d/20-mysqli.ini,\n/etc/php/8.3/apache2/conf.d/20-pdo_mysql.ini,\n/etc/php/8.3/apache2/conf.d/20-phar.ini,\n/etc/php/8.3/apache2/conf.d/20-posix.ini,\n/etc/php/8.3/apache2/conf.d/20-readline.ini,\n/etc/php/8.3/apache2/conf.d/20-shmop.ini,\n/etc/php/8.3/apache2/conf.d/20-simplexml.ini,\n/etc/php/8.3/apache2/conf.d/20-sockets.ini,\n/etc/php/8.3/apache2/conf.d/20-ssh2.ini,\n/etc/php/8.3/apache2/conf.d/20-sysvmsg.ini,\n/etc/php/8.3/apache2/conf.d/20-sysvsem.ini,\n/etc/php/8.3/apache2/conf.d/20-sysvshm.ini,\n/etc/php/8.3/apache2/conf.d/20-tokenizer.ini,\n/etc/php/8.3/apache2/conf.d/20-xmlreader.ini,\n/etc/php/8.3/apache2/conf.d/20-xmlwriter.ini,\n/etc/php/8.3/apache2/conf.d/20-xsl.ini,\n/etc/php/8.3/apache2/conf.d/20-zip.ini\n","modules":["Core","FFI","PDO","Phar","Reflection","SPL","SimpleXML","Zend OPcache","apache2handler","apcu","bcmath","calendar","ctype","curl","date","dom","exif","fileinfo","filter","ftp","gd","gettext","gmp","hash","iconv","intl","json","ldap","libxml","mbstring","memcache","mysqli","mysqlnd","openssl","pcre","pdo_mysql","posix","random","readline","session","shmop","sockets","sodium","ssh2","standard","sysvmsg","sysvsem","sysvshm","tokenizer","xml","xmlreader","xmlwriter","xsl","zip","zlib"],"required":["bcmath","ctype","curl","dom","fileinfo","filter","gd","gmp","iconv","intl","json","ldap","libxml","mbstring","mysqli","mysqlnd","openssl","pcre","PDO","pdo_mysql","posix","session","SimpleXML","sockets","ssh2","tokenizer","xml","xmlreader","xmlwriter","xsl","zip","zlib","apcu","memcache","Zend OPcache"],"smoke":{"pdo_mysql":true,"json":true,"mbstring":true,"gmp":true,"bcmath":true,"xml":true,"gd":true,"curl":true,"intl":true,"zip":true,"ldap":true,"ssh2":true,"memcache":true,"apcu":true,"opcache":true},"failures":[]}
+PHP83_PROVIDER_GET_END
+PHP83_PROVIDER_POST_BEGIN
+{"schema":1,"ok":true,"php":"8.3.6","sapi":"apache2handler","expected_sapi":"apache2handler","method":"POST","nonce":"php83-da340705-ff36-40f8-a67d-dc2d3c1d8edd","ini":"/etc/php/8.3/apache2/php.ini","scanned_ini":"/etc/php/8.3/apache2/conf.d/10-mysqlnd.ini,\n/etc/php/8.3/apache2/conf.d/10-opcache.ini,\n/etc/php/8.3/apache2/conf.d/10-pdo.ini,\n/etc/php/8.3/apache2/conf.d/15-xml.ini,\n/etc/php/8.3/apache2/conf.d/20-apcu.ini,\n/etc/php/8.3/apache2/conf.d/20-bcmath.ini,\n/etc/php/8.3/apache2/conf.d/20-calendar.ini,\n/etc/php/8.3/apache2/conf.d/20-ctype.ini,\n/etc/php/8.3/apache2/conf.d/20-curl.ini,\n/etc/php/8.3/apache2/conf.d/20-dom.ini,\n/etc/php/8.3/apache2/conf.d/20-exif.ini,\n/etc/php/8.3/apache2/conf.d/20-ffi.ini,\n/etc/php/8.3/apache2/conf.d/20-fileinfo.ini,\n/etc/php/8.3/apache2/conf.d/20-ftp.ini,\n/etc/php/8.3/apache2/conf.d/20-gd.ini,\n/etc/php/8.3/apache2/conf.d/20-gettext.ini,\n/etc/php/8.3/apache2/conf.d/20-gmp.ini,\n/etc/php/8.3/apache2/conf.d/20-iconv.ini,\n/etc/php/8.3/apache2/conf.d/20-intl.ini,\n/etc/php/8.3/apache2/conf.d/20-ldap.ini,\n/etc/php/8.3/apache2/conf.d/20-mbstring.ini,\n/etc/php/8.3/apache2/conf.d/20-memcache.ini,\n/etc/php/8.3/apache2/conf.d/20-mysqli.ini,\n/etc/php/8.3/apache2/conf.d/20-pdo_mysql.ini,\n/etc/php/8.3/apache2/conf.d/20-phar.ini,\n/etc/php/8.3/apache2/conf.d/20-posix.ini,\n/etc/php/8.3/apache2/conf.d/20-readline.ini,\n/etc/php/8.3/apache2/conf.d/20-shmop.ini,\n/etc/php/8.3/apache2/conf.d/20-simplexml.ini,\n/etc/php/8.3/apache2/conf.d/20-sockets.ini,\n/etc/php/8.3/apache2/conf.d/20-ssh2.ini,\n/etc/php/8.3/apache2/conf.d/20-sysvmsg.ini,\n/etc/php/8.3/apache2/conf.d/20-sysvsem.ini,\n/etc/php/8.3/apache2/conf.d/20-sysvshm.ini,\n/etc/php/8.3/apache2/conf.d/20-tokenizer.ini,\n/etc/php/8.3/apache2/conf.d/20-xmlreader.ini,\n/etc/php/8.3/apache2/conf.d/20-xmlwriter.ini,\n/etc/php/8.3/apache2/conf.d/20-xsl.ini,\n/etc/php/8.3/apache2/conf.d/20-zip.ini\n","modules":["Core","FFI","PDO","Phar","Reflection","SPL","SimpleXML","Zend OPcache","apache2handler","apcu","bcmath","calendar","ctype","curl","date","dom","exif","fileinfo","filter","ftp","gd","gettext","gmp","hash","iconv","intl","json","ldap","libxml","mbstring","memcache","mysqli","mysqlnd","openssl","pcre","pdo_mysql","posix","random","readline","session","shmop","sockets","sodium","ssh2","standard","sysvmsg","sysvsem","sysvshm","tokenizer","xml","xmlreader","xmlwriter","xsl","zip","zlib"],"required":["bcmath","ctype","curl","dom","fileinfo","filter","gd","gmp","iconv","intl","json","ldap","libxml","mbstring","mysqli","mysqlnd","openssl","pcre","PDO","pdo_mysql","posix","session","SimpleXML","sockets","ssh2","tokenizer","xml","xmlreader","xmlwriter","xsl","zip","zlib","apcu","memcache","Zend OPcache"],"smoke":{"pdo_mysql":true,"json":true,"mbstring":true,"gmp":true,"bcmath":true,"xml":true,"gd":true,"curl":true,"intl":true,"zip":true,"ldap":true,"ssh2":true,"memcache":true,"apcu":true,"opcache":true},"failures":[]}
+PHP83_PROVIDER_POST_END
+PHP83_PROVIDER_NEGATIVE_POST_OK
+PHP83_PROVIDER_COMPLETE ubuntu
+SERVER_LOG /tmp/provider-httpd.log

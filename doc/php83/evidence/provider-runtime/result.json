@@ -1,0 +1,122 @@
+{
+  "recorded_at": "2026-09-25T16:36:33.021548+00:00",
+  "base_commit": "27d300215be19030c7075b21f54e8cd918e2d8a9",
+  "scope": "T4-01 provider runtime portion; NOT full acceptance",
+  "full_T4_01_acceptance": false,
+  "files_sha256": {
+    "tools/php83/provider-probes/rocky.sh": "f0fe7c7e96614e7990c557295ff28c9658dff850b7ddc10ad97305e6feb299e5",
+    "tools/php83/provider-probes/probe.php": "75263eb9952ea0f2d60ff6c539db62ab75edaa0984a6960569bf5baa088f32ee",
+    "tools/php83/provider-probes/README.md": "51d3732377dcddfff2930005fd507012e88eb7ef7b48fc4d3aa37048901c25f9",
+    "tools/php83/provider-probes/common.sh": "db4ef96719bd9213a344b960529b8f9cbd7e75485da3eed473518237b3b973db",
+    "tools/php83/provider-probes/ubuntu.sh": "29cc35e8426be6fb160dc74e41c1884144c3708d34c68e0ad43d8b363f910dc5",
+    "tools/php83/collect-provider-evidence.py": "69eed29d714d7f2f70bb24d9ece4a11c6ac6a9addd3ed0a3861a9a521cc29f71",
+    "tools/php83/test_provider_evidence.py": "8716a9bad34c2327bb012cfd8396169771c23eafd28fa87220e7805baf46a793",
+    "doc/php83/provider-runtime.md": "b540f46fe74c566526614842a361e6305f754b2348c820364240090064f50e32",
+    "doc/php83/evidence/provider-runtime/attempts/appstream.exit": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "doc/php83/evidence/provider-runtime/attempts/appstream.log": "54ef9bee743ced8c9415c05f9d9754be24204bdee88f709db8013019d0ced665",
+    "doc/php83/evidence/provider-runtime/attempts/collector-interleaving.json": "fc0033e8af891c942f39d6c23a4585d575adaabb97d4f752a974be2883708ca7",
+    "doc/php83/evidence/provider-runtime/attempts/noble-envvars-failed.log": "ad85323d459530efb3615814d7115c651a3bd8f305ed90926a3418d276b21ca8",
+    "doc/php83/evidence/provider-runtime/attempts/remi-interleaved-independent.log": "6c66a60dc7dd1055bd3120440e2809bb68de0d111c4696ba10a5a41abfb9a753",
+    "doc/php83/evidence/provider-runtime/attempts/remi-interleaved-primary.log": "cd2453d51cf9cc3d8621f7eb7b0cdfe2543d4b90d8ae4d66da6983959de6d83f",
+    "doc/php83/evidence/provider-runtime/attempts/remi-key2019-rejected.log": "c2054692372b69abc2c717b882b745758ce0f492b391734f90b72d6fbdae3654",
+    "doc/php83/evidence/provider-runtime/attempts/resolute-envvars-failed.log": "dcbf63e95bc20de8548ffd52aa93aae4afb29bf754928ed238b34ed7a33173b2",
+    "doc/php83/evidence/provider-runtime/claude-final-rerun.txt": "2a5989c01455d8ca9bf742c4f9af7fc20a1c1a6ee357ed9486ae3b5ad8894dcc",
+    "doc/php83/evidence/provider-runtime/claude-independent.txt": "efdda680da1cecdda86960555e49d4cd4d9480c30b602ff9bd373de2ed752a42",
+    "doc/php83/evidence/provider-runtime/claude-remi.txt": "eb952d68721b8969f09e2552de4a3cbe146ed56610953f430e22d20edc3e1456",
+    "doc/php83/evidence/provider-runtime/cursor-collector.txt": "f9607e7ca69eda2c293aa14d660c35b2e84f488bfbf92cf5cd91ddf51eeeadec",
+    "doc/php83/evidence/provider-runtime/cursor-final-rerun.txt": "9443556635a82c92b4b80ea5fbfe96b6bd81590fd4e43533aa115cbb10e0c5ff",
+    "doc/php83/evidence/provider-runtime/cursor-independent.txt": "f9f5ed287c97bd05a0898ad13c9d502b9fa83fdbd10a0b990c7555c7ebd1b220",
+    "doc/php83/evidence/provider-runtime/cursor-review.txt": "e46a495a17644a1be180b6c4dfa0a355c03ab8905a6bd5c905356ead6bd53e39",
+    "doc/php83/evidence/provider-runtime/independent/noble.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "doc/php83/evidence/provider-runtime/independent/noble.log": "8e261b608a439037af1a4a431ec590697aef876bdf800d6bcdc6de0988578494",
+    "doc/php83/evidence/provider-runtime/independent/remi.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "doc/php83/evidence/provider-runtime/independent/remi.log": "cd57947c6e9ca05356a4b3dc6e7fec0213270a49a724cad3f15a6fb86b2b745b",
+    "doc/php83/evidence/provider-runtime/independent/resolute.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "doc/php83/evidence/provider-runtime/independent/resolute.log": "d3413bf04b168f6fb093d869cb8ca43c4f69e2e2bbdd551ae8d1048a3a6b6a0e",
+    "doc/php83/evidence/provider-runtime/independent-report.json": "bfe7c8700183e31720f2b899c55b902b82ee0100f7458c9c9ee9334585e3742e",
+    "doc/php83/evidence/provider-runtime/input-identities.json": "7de2968c8fc548bca441414f01aa5868f59199ffeb7587a8ab0699b03209c3a4",
+    "doc/php83/evidence/provider-runtime/opencode-independent-tool-errors.json": "03e649fcd578b95fc5bf098b50a51cd24be3f6824879e37f5469875a195eed5c",
+    "doc/php83/evidence/provider-runtime/opencode-independent.txt": "c51244140f22996f54aaddd89641424ca6af15b0887928dbe1ddfc107b1610ab",
+    "doc/php83/evidence/provider-runtime/opencode-review.txt": "8c4682a260342bf42eb98ca12ec1905a216b1f15c64253c462c252c6beadbad5",
+    "doc/php83/evidence/provider-runtime/primary/noble.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "doc/php83/evidence/provider-runtime/primary/noble.log": "48bb4189bfca8fd705f095112821ee720ab2d3cab42a14ab788071036fa028d5",
+    "doc/php83/evidence/provider-runtime/primary/remi.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "doc/php83/evidence/provider-runtime/primary/remi.log": "ed5c3ff33626ea205595d21cbeed4b88b268a3f9aff26e82cb416e8015a223ad",
+    "doc/php83/evidence/provider-runtime/primary/resolute.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "doc/php83/evidence/provider-runtime/primary/resolute.log": "953658827c42f1237de25f104bce19f27cd3eeaa6b7d1d808c7fba60f60f87de",
+    "doc/php83/evidence/provider-runtime/primary-report.json": "07a7911a3af862b92715a4c13425d75a1144dceadc343396faf591b7a5e04d4d",
+    "doc/php83/evidence/provider-runtime/requirements-review.txt": "e83f7996f1dc76f10a42efe398ee641cb92d4f8e9a51bb0ae0d01dbe0a1e0864",
+    "doc/php83/evidence/provider-runtime/run-independent.txt": "d611be8cff720dc7babd02d3a2d0a28a9c56d78cbc44b972fce34c993b21f6ce",
+    "doc/php83/evidence/provider-runtime/run-primary.txt": "8d3bfa9b44d026fcf09f1d95e9eaab31b361f9763b821d32996bea66560eb904",
+    "doc/php83/evidence/provider-runtime/tests.txt": "c91a6a7c828e8f268c6996a9c9ddc8e6f3d44975cb882c622e9f714e47524791"
+  },
+  "executed_bundle_sha256": "07f211e9e233af705915811e199d2c277960fc555eb325dd1dce6c4c88ea4c2b",
+  "images": {
+    "noble": "ubuntu@sha256:008173c23f95b170204355c12626cb5a965d779a7e1283b09e9cffbb1bf33ca3",
+    "resolute": "ubuntu@sha256:da6fc2be547864451aa253836dd926da33623312df4a9a243e35dc877c378a78",
+    "remi": "rockylinux@sha256:d7be1c094cc5845ee815d4632fe377514ee6ebcf8efaed6892889657e5ddaaa6"
+  },
+  "final_probe_exit_codes": {
+    "primary": {
+      "noble": 0,
+      "resolute": 0,
+      "remi": 0
+    },
+    "independent": {
+      "noble": 0,
+      "resolute": 0,
+      "remi": 0
+    }
+  },
+  "independent_executors": {
+    "noble": "Claude CLI",
+    "resolute": "Cursor Agent CLI",
+    "remi": "Claude CLI after OpenCode permission rejection"
+  },
+  "comparison": "CLI/GET/POST structured values identical except independently fresh nonce; all negative-POST cases passed",
+  "distinct_cases": 12,
+  "independent_reruns_do_not_add_distinct_cases": true,
+  "local_harness_tests": 109,
+  "new_collector_tests": 29,
+  "independent_harness_executor": "Cursor Agent CLI",
+  "attempts": [
+    {
+      "target": "Rocky native AppStream full transaction",
+      "exit": 1,
+      "observation": "php-pecl-memcache and php-pecl-ssh2 not found"
+    },
+    {
+      "target": "initial Noble/Resolute scripts",
+      "exit": 1,
+      "observation": "Apache packaged envvars unset optional variable; corrected only shell sourcing context"
+    },
+    {
+      "target": "initial Remi bootstrap",
+      "exit": 1,
+      "observation": "2019 key did not verify release RPM; actual2021key matched official fingerprint, verification retained"
+    },
+    {
+      "target": "first Remi logs",
+      "collector_ok": false,
+      "observation": "startup notices interleaved with JSON; logs isolated and retained, all final matrices rerun"
+    },
+    {
+      "target": "Grok script review",
+      "process_exit": 124,
+      "observation": "120second deadline; fallback OpenCode reviewed scripts and ran syntax checks"
+    },
+    {
+      "target": "OpenCode independent Remi attempt",
+      "process_exit": 0,
+      "execution": "NOT_EXECUTED",
+      "observation": "external_directory /tmp auto-rejected by CLI; Claude reran instead"
+    }
+  ],
+  "cleanup": "no php83-provider containers remain",
+  "vm_changes": false,
+  "package_or_ci_integration_changes": false,
+  "open_findings": [
+    "Legacy php-pecl-apc dependency has no provider in tested Remi stack; APCu semantic use reconciliation outstanding",
+    "Full mandatory-extension use, ABI, supported provider/update policy and final provider selection remain open"
+  ]
+}

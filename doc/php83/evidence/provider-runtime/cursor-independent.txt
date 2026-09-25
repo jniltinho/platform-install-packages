@@ -1,0 +1,18 @@
+Vou ler o wrapper autorizado e confirmar o isolamento do alvo `resolute` antes de executar exatamente o comando indicado.Wrapper confirmado: container `php83-provider-independent-resolute-20260925`, imagem pinned, sem mounts/ports/privilege/hostnetwork; logs em `/tmp/php83-provider-runtime/independent/`. Executando o alvo exclusivo.Lendo o log e o exit file do alvo `resolute`.O Grep pegou o workspace; lendo o log em `/tmp` diretamente.**Alvo:** `resolute` (exclusivo) — evidência de provider runtime, não aceitação Kaltura.
+
+**Wrapper:** confirmado sem alteração — container `php83-provider-independent-resolute-20260925`, imagem `ubuntu@sha256:da6fc2be…c378a78`, sem mounts/ports/privilege/hostnetwork; stdin tar + log/exit em `/tmp/php83-provider-runtime/independent/`.
+
+**Comando:** `bash /tmp/php83-provider-runtime/run-independent.sh resolute`  
+**Exit:** `0` (`resolute.exit` = `0`; shell exit 0)
+
+| Probe | Resultado |
+|--------|-----------|
+| PHP | **8.3.35** |
+| SAPI web | **apache2handler** (expected match) |
+| CLI | `ok:true`, sapi `cli` |
+| GET | `ok:true`, apache2handler |
+| POST | `ok:true`, apache2handler |
+| negative POST | `PHP83_PROVIDER_NEGATIVE_POST_OK` |
+| complete | `PHP83_PROVIDER_COMPLETE ubuntu` |
+
+Escopo: CLI + GET + POST + rejeição POST inválido, tudo `ok` / markers presentes. Sem app/DB. Container limpo pelo trap do wrapper.

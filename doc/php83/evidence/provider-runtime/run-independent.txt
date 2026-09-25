@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -uo pipefail
+name="php83-provider-independent-$1-20260925"
+case "$1" in
+noble) image=ubuntu@sha256:008173c23f95b170204355c12626cb5a965d779a7e1283b09e9cffbb1bf33ca3; script=ubuntu.sh;;
+resolute) image=ubuntu@sha256:da6fc2be547864451aa253836dd926da33623312df4a9a243e35dc877c378a78; script=ubuntu.sh;;
+remi) image=rockylinux@sha256:d7be1c094cc5845ee815d4632fe377514ee6ebcf8efaed6892889657e5ddaaa6; script=rocky.sh;;
+*) exit 2;;
+esac
+cleanup(){ docker rm -f "$name" >/dev/null 2>&1 || true; }
+trap cleanup EXIT
+docker run --rm -i --name "$name" --cpus=1 --memory=1g --pids-limit=256 -e PHP83_DISPOSABLE_CONTAINER=yes "$image" bash -c "mkdir /tmp/probe; tar -xf - -C /tmp/probe; exec bash /tmp/probe/provider-probes/$script" < /tmp/php83-provider-runtime/probes.tar > "/tmp/php83-provider-runtime/independent/$1.log" 2>&1
+result=$?
+echo "$result" > "/tmp/php83-provider-runtime/independent/$1.exit"
+echo "$1 exit=$result"
+tail -4 "/tmp/php83-provider-runtime/independent/$1.log"
+exit "$result"

@@ -1,0 +1,23 @@
+Executei os dois alvos em sequência e ambos terminaram com exit 0. O NOBLE e o REMI passaram em CLI, GET, POST e POST negativo.
+
+**Antes de rodar:** li o `run-independent.sh` e ele cumpre o combinado. Cada alvo usa um container com nome próprio (`php83-provider-independent-<alvo>-20260925`) e imagem fixada por digest. Não há mounts, portas publicadas, `--privileged` nem rede do host. Os limites são `--cpus=1`, `--memory=1g` e `--pids-limit=256`, e o `trap` só remove o próprio container. Os logs ficam em `/tmp/php83-provider-runtime/independent/`.
+
+**Identidades dos arquivos:**
+- `probes.tar`: sha256 `07f211e9…c4c88ea4c2b`
+- `run-independent.sh`: sha256 `d611be8c…c93b21f6ce`
+
+| Alvo | Comando | Exit | PHP | CLI | GET | POST | POST negativo |
+|---|---|---|---|---|---|---|---|
+| NOBLE (Ubuntu 24.04, pacotes da distro) | `bash /tmp/php83-provider-runtime/run-independent.sh noble` | **0** | 8.3.6 NTS | ok, sapi=cli | ok, sapi=apache2handler | ok, sapi=apache2handler | `PHP83_PROVIDER_NEGATIVE_POST_OK` |
+| REMI (Rocky + Remi) | `bash /tmp/php83-provider-runtime/run-independent.sh remi` | **0** | 8.3.35 NTS | ok, sapi=cli | ok, sapi=fpm-fcgi | ok, sapi=fpm-fcgi | `PHP83_PROVIDER_NEGATIVE_POST_OK` |
+
+- **Nonce:** em cada alvo, CLI, GET e POST devolveram o mesmo nonce, e o SAPI veio sempre igual ao esperado.
+- **Marcadores finais:** `PHP83_PROVIDER_COMPLETE ubuntu` no NOBLE e `PHP83_PROVIDER_COMPLETE rocky` no REMI.
+- **Correção de logs:** no REMI, os NOTICEs do FPM ("ready to handle connections", "Terminating", "exiting") aparecem só depois dos frames JSON. Isso confirma que a correção funcionou: as mensagens do servidor foram guardadas, não suprimidas.
+- **Exit gravado:** os arquivos `noble.exit` e `remi.exit` contêm `0`.
+
+**Limitações:**
+- Não rodei nenhum outro comando Docker, então não conferi com `docker ps` se os containers foram removidos. Isso depende só do `--rm` e do `trap` do script.
+- Busquei Fatal/Warning/FAIL/ERROR nos logs por grep e não li os logs inteiros.
+- No meio dos meus runs apareceu um `independent/resolute.log` com horário 13:33. Não é meu, e não mexi nele.
+- Isto é evidência de que os provedores de PHP 8.3 funcionam em containers descartáveis, **não é aceitação do Kaltura**. Não houve aplicação nem banco de dados, e nada foi alterado em repo, VM ou MCP.
