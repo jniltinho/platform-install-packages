@@ -1,0 +1,1 @@
+Fatal error: Cannot use 'Riak\Object' as class name as it is reserved in /audit/probe/candidate/vendor/aws/Doctrine/Common/Cache/RiakCache.php on line 207

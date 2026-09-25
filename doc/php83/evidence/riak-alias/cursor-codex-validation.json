@@ -1,0 +1,25 @@
+{
+  "executor_cli_exit": 0,
+  "records": [
+    {
+      "variant": "original",
+      "exit": 255,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "3c188471f941f3294da5bf44aee4774e7980203b5b44fc6cca7c7add192fdc7c",
+      "exact_primary_exit_stdout_stderr": true
+    },
+    {
+      "variant": "candidate",
+      "exit": 255,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "b579297f7136be6b231ea0a52bdf10c13e90fedf748c253b196a47c0d42de111",
+      "exact_primary_exit_stdout_stderr": true
+    }
+  ],
+  "four_runtime_reports_equal": true,
+  "stage_reports_equal": true,
+  "local_frozen_inputs_unchanged": true,
+  "candidate_status": "REJECTED_COMPILER_FAILURE",
+  "backend_acceptance": false,
+  "native83_released": true
+}

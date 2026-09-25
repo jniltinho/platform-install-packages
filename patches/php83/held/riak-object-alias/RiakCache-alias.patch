@@ -1,0 +1,38 @@
+--- a/vendor/aws/Doctrine/Common/Cache/RiakCache.php
++++ b/vendor/aws/Doctrine/Common/Cache/RiakCache.php
+@@ -23,7 +23,7 @@
+ use Riak\Connection;
+ use Riak\Input;
+ use Riak\Exception;
+-use Riak\Object;
++use Riak\Object as RiakObject;
+ 
+ /**
+  * Riak cache provider.
+@@ -129,7 +129,7 @@
+     protected function doSave($id, $data, $lifeTime = 0)
+     {
+         try {
+-            $object = new Object($id);
++            $object = new RiakObject($id);
+ 
+             $object->setContent(serialize($data));
+ 
+@@ -204,7 +204,7 @@
+      *
+      * @return boolean
+      */
+-    private function isExpired(Object $object)
++    private function isExpired(RiakObject $object)
+     {
+         $metadataMap = $object->getMetadataMap();
+ 
+@@ -240,7 +240,7 @@
+         $putInput = new Input\PutInput();
+         $putInput->setVClock($vClock);
+ 
+-        $mergedObject = new Object($id);
++        $mergedObject = new RiakObject($id);
+         $mergedObject->setContent($winner->getContent());
+ 
+         $this->bucket->put($mergedObject, $putInput);

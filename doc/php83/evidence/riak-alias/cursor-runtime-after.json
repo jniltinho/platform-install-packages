@@ -1,0 +1,431 @@
+{
+  "collector_sha256": "ec8f5473fc599259b343ebc3713b55b24753959de559c10a5cbe1254909bb429",
+  "command": [
+    "ssh",
+    "-T",
+    "-F",
+    "/tmp/kaltura-php83-ssh.conf",
+    "php83",
+    "python3 -"
+  ],
+  "identity": {
+    "files": {
+      "/usr/bin/php8.3": "1c564e6bafa56d03359c3774be6f4c77d0edecabd2075e18556940a56747c8d7",
+      "/usr/lib/php/20230831/apcu.so": "c364351ed24b6451971bf7d961a53b997fdcaed9b913c1fec9b755e049608218",
+      "/usr/lib/php/20230831/calendar.so": "fafe94df2bcb4de81c4ebfc79d5bcaf44c73269c93304ca14d47e0012a22e1fa",
+      "/usr/lib/php/20230831/ctype.so": "2865fdd0589a6bf2029a1f436a06ac3072cdf50477f8384146181fe56ef5de51",
+      "/usr/lib/php/20230831/curl.so": "a9d29521ee6ba41efad24476a1eb4ce4bdc6fe9dd72e07f369fbdda21a883f8f",
+      "/usr/lib/php/20230831/dom.so": "d10bacb7c950aa4a603743b3b1a039592c9dc2d1efa8227ceb446f1df4dd2e21",
+      "/usr/lib/php/20230831/exif.so": "74b58c0d9516888d59a6961e651071a8bda474a58126d5c1f8afe289a5755cb0",
+      "/usr/lib/php/20230831/ffi.so": "8202552d21044032e251383c3ffdc64cf2c5db3719a893dee0765d048a537263",
+      "/usr/lib/php/20230831/fileinfo.so": "24ffb85f12b0010476d0f784628b844bd1106395ada40cbe6510239ef2b28bd6",
+      "/usr/lib/php/20230831/ftp.so": "5a786171a6de17968a53f3d42d5740294de66d9c821bc631d305b0a4c30c4493",
+      "/usr/lib/php/20230831/gd.so": "fcf3fbfb9a41f04f1e6809aab2a2b697a059ca2cb2731b3071ff42eccff90000",
+      "/usr/lib/php/20230831/gettext.so": "be38421adaab389c6eb1e4e35b9839c96e1c9f2f72cf410780f1df4db7424a8d",
+      "/usr/lib/php/20230831/gmp.so": "2ead95cccfd93852f2e35402090cfe246eb65e143e3ddcd44a903cd3e9cecfcf",
+      "/usr/lib/php/20230831/iconv.so": "79ba2593b71ee8277b3a8e2a530c542f901129c78016b7a87d39fe4c2a50ea24",
+      "/usr/lib/php/20230831/intl.so": "72540c8eea7cf517748b7b7f1490b98da42904c578d37d20a957d2d9dc90884a",
+      "/usr/lib/php/20230831/ldap.so": "c5a724d101e11ea2f4b622e197c7e3de1ee62c181020455e92ae75d7aec4a970",
+      "/usr/lib/php/20230831/mbstring.so": "a6086c078f33dfe34a25b2f9ceb33bae5e08e0d789f61af88c4298d2dbeb7a63",
+      "/usr/lib/php/20230831/memcache.so": "b8b7c08f92695a8fbb5a16569c2d9692ca35dc59f67bd82862f513881c421afe",
+      "/usr/lib/php/20230831/mysqli.so": "d3a53d5188fded0d172e087c7fb4193ec0ed777b1862f4577424229a4ac6f030",
+      "/usr/lib/php/20230831/mysqlnd.so": "d1a2e94f8925980d5b8a14ea99dbfc238456c59f645a661c32096a7d1e2158e7",
+      "/usr/lib/php/20230831/opcache.so": "9d090f6752f28de27e3bcba562815d30659a2242d02212268b88a0330bb92331",
+      "/usr/lib/php/20230831/pdo.so": "76f70811680b2c14c84a46db50798a1a9183e36f13764a6a76ec4e822b27e1cc",
+      "/usr/lib/php/20230831/pdo_mysql.so": "0e97b1b5a3b3ee1d7508a7628dd0f55481c64b385a169649332fd43d5ad4e46d",
+      "/usr/lib/php/20230831/phar.so": "eec9a6756cfe51253b0aa53c7a2751236db2292c6ea4e7e599f3cbe7e930b3cb",
+      "/usr/lib/php/20230831/posix.so": "69b52174a246f0d0873089dd42b298db3bfd2e929d5ad7f7db663d32e1a69423",
+      "/usr/lib/php/20230831/readline.so": "0a04ed6bb9f0c311c88914e190ac8a9678b60afa51b960b878e7a46ea4c925b4",
+      "/usr/lib/php/20230831/shmop.so": "9141e14867e22fdd596e66ba13dfc05b859715a2af93f31e605f5e97f88f3772",
+      "/usr/lib/php/20230831/simplexml.so": "43d85cdc12be748b13db316f88cae630dab52e96e7cafc54e632fc209c530ea4",
+      "/usr/lib/php/20230831/sockets.so": "233161c3dab07e355c84a90f8a6a933a581f2b3a6e09e065fd39dfbaf63185ac",
+      "/usr/lib/php/20230831/ssh2.so": "3f4380155900b9dac6bbed0425c1f408d2a32bf4354adfba2717e8a207a5c3e3",
+      "/usr/lib/php/20230831/sysvmsg.so": "26e64d7783f4e31cec71da22bb9872e76884b9913e0ae6fd3da562bb94ba1246",
+      "/usr/lib/php/20230831/sysvsem.so": "4b12cecd2b487da872ea6890841e79a663d31751da432fc9a8c31bfa30b472a9",
+      "/usr/lib/php/20230831/sysvshm.so": "2bd1d4fed00b1ffe485eb62a89e7dc6abab4d04343d87b5ae3323261d965a638",
+      "/usr/lib/php/20230831/tokenizer.so": "df382431be0c4ceb5cd99df184f40b7522b0718d6f9db1260097dd2c28fb95ee",
+      "/usr/lib/php/20230831/xml.so": "1bd6c927694328fd229173a91f97fae79b9f50e13a6f0893d8fe85b0cbdae5b1",
+      "/usr/lib/php/20230831/xmlreader.so": "b370da4f32a7878d6e6f23f0159dbcce13503e27a935b83d1601edd2482803fe",
+      "/usr/lib/php/20230831/xmlwriter.so": "4adf013ef5ba887aeb4e01f285e009f73c5293c45bbc891046119fe10f232239",
+      "/usr/lib/php/20230831/xsl.so": "f4c71ea55e58d1e595441f7c8e3384edf2a405f0f24133a54b25fe5d7591dda8",
+      "/usr/lib/php/20230831/zip.so": "95d41ccb660311aff1d187c03200b70514d5fb09ef5061337617eb747e08f826"
+    },
+    "host": "kaltura-php83-lab",
+    "linked_libraries": {
+      "/usr/bin/php8.3": {
+        "/lib/x86_64-linux-gnu/libargon2.so.1": "3c593c01d1c3497b1276537a1002c90ce3beb729a3520087608838cf8bbd847d",
+        "/lib/x86_64-linux-gnu/libc.so.6": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0",
+        "/lib/x86_64-linux-gnu/libcrypto.so.3": "c19c2cf8d7cf91c4f273b1d3bbc56a9d19c91a739bfe57ad630756ee8ede7b77",
+        "/lib/x86_64-linux-gnu/libgcc_s.so.1": "02f3f192bf5f79b811f1e34a650fea443d407408703448906585232383957f60",
+        "/lib/x86_64-linux-gnu/libicudata.so.74": "ddbb3718b8bd9cbd780e5ab08b4503c30a6c4fa0706ebe5d074ed6b596c1714e",
+        "/lib/x86_64-linux-gnu/libicuuc.so.74": "7560aadde38e5f4237a47a1ddd5891f9b36768a77a60faae30beee003ac01901",
+        "/lib/x86_64-linux-gnu/liblzma.so.5": "a9793942a8a5f6f4d0f523ef9e0a5be4f0033f2c6c28520cd2b4e706d53c6e17",
+        "/lib/x86_64-linux-gnu/libm.so.6": "f06f2ce1f1833df5f41cf13b6447ff07bea993ad9b27297d3428c2f70ab3f0e7",
+        "/lib/x86_64-linux-gnu/libpcre2-8.so.0": "e00576d71d81d3ba0cfa4903c835a44a8723aac96f72f79ff75200b4cff9071b",
+        "/lib/x86_64-linux-gnu/libsodium.so.23": "7de3e60f9f7df83a7299aa1b8b7a88013ace3233f70c9f63698dd331781d557e",
+        "/lib/x86_64-linux-gnu/libssl.so.3": "63597a81ef19496ad0423cbaaf04d5b0244c7a9e261e331a5a7f3ac0fcdb9590",
+        "/lib/x86_64-linux-gnu/libstdc++.so.6": "a68762c86d371e6041f03f03a33a78fa235809ae7d81c90185940c93c3535aed",
+        "/lib/x86_64-linux-gnu/libxml2.so.2": "3061d35b168d1eb472bba5d2c52931e408364770ec9b00ae1100aacd0c35c7da",
+        "/lib/x86_64-linux-gnu/libz.so.1": "9b64150b28505a33d6bc3ecf709c279f6de97a1c184dbda65d06ee4537f6d286",
+        "/lib64/ld-linux-x86-64.so.2": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+      },
+      "/usr/lib/php/20230831/apcu.so": {
+        "/lib/x86_64-linux-gnu/libc.so.6": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0",
+        "/lib64/ld-linux-x86-64.so.2": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+      },
+      "/usr/lib/php/20230831/calendar.so": {
+        "/lib/x86_64-linux-gnu/libc.so.6": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0",
+        "/lib64/ld-linux-x86-64.so.2": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+      },
+      "/usr/lib/php/20230831/ctype.so": {
+        "/lib/x86_64-linux-gnu/libc.so.6": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0",
+        "/lib64/ld-linux-x86-64.so.2": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+      },
+      "/usr/lib/php/20230831/curl.so": {
+        "/lib/x86_64-linux-gnu/libbrotlicommon.so.1": "a91ead095d2c80520c55a89057bbe10b031a075340442e63f44b310f93883a1b",
+        "/lib/x86_64-linux-gnu/libbrotlidec.so.1": "64d8a5019d4c294b89fde1193343ea324bbd8603652554e5545f0a01595fa2c5",
+        "/lib/x86_64-linux-gnu/libc.so.6": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0",
+        "/lib/x86_64-linux-gnu/libcom_err.so.2": "022943b3b11c860b049bce41342f1c2594941b7b401d95dfdf235521099fee08",
+        "/lib/x86_64-linux-gnu/libcrypto.so.3": "c19c2cf8d7cf91c4f273b1d3bbc56a9d19c91a739bfe57ad630756ee8ede7b77",
+        "/lib/x86_64-linux-gnu/libcurl.so.4": "cf6398ebba028cc7dcc5425208bb2da2d0706b885a7c9c4cbac3d453e512c1f6",
+        "/lib/x86_64-linux-gnu/libffi.so.8": "00f593fe192f2851b8ce23b25cec2488d769beb5a8f63e8c9e563071e1075153",
+        "/lib/x86_64-linux-gnu/libgmp.so.10": "0ccdfb6d6f5c039465f6d002cf7e4c072d48ac6a2cffc8dd6c748dec31592804",
+        "/lib/x86_64-linux-gnu/libgnutls.so.30": "96137275400f39510c9a533c6ad8a921e94266e664e7e09c9ad6ea9f23277c23",
+        "/lib/x86_64-linux-gnu/libgssapi_krb5.so.2": "b9a20df712d206654477c079f03b568276933e91cbe237e62af791f0f3ab8d8b",
+        "/lib/x86_64-linux-gnu/libhogweed.so.6": "c3c606139d4f7776efa4dbd4a6b62e30c916b07a0cafd8c3ef173d6f093607e3",
+        "/lib/x86_64-linux-gnu/libidn2.so.0": "6e632fd9a3125db60bbc623719bbc17b0470330321c5b1c57f1ff7190e5551ad",
+        "/lib/x86_64-linux-gnu/libk5crypto.so.3": "8394027f2be7c2cc7b2da4797476a8b688a21f75ee231941fa2df8d00ba79d08",
+        "/lib/x86_64-linux-gnu/libkeyutils.so.1": "f48214417757f18793ed6e180cc14ee1d6f04252a518fc7270e8ca1d0b4260fe",
+        "/lib/x86_64-linux-gnu/libkrb5.so.3": "52c143c9c77a223a4dac5449eac41fd2490e37c8a30430f1559c1421f4f8ed73",
+        "/lib/x86_64-linux-gnu/libkrb5support.so.0": "8e1ef5a40f7b0d5b0fbcd6e4f28dd50b263650338a2bb72503be34632f3629d6",
+        "/lib/x86_64-linux-gnu/liblber.so.2": "6f6935b26c962d5b51ef2011332472cfd96ff244a4edc9d47120be6faa70e602",
+        "/lib/x86_64-linux-gnu/libldap.so.2": "4a0664ab6a8a66c685e78d5604b79df330f5710f0c5e2c382536a8325dc4c2a4",
+        "/lib/x86_64-linux-gnu/libnettle.so.8": "a245ed916229583d6fe0b07657b3ed945bc148c28cc08b5266295f620d2b91cc",
+        "/lib/x86_64-linux-gnu/libnghttp2.so.14": "398c6d2025210279f4c7413ebdb7f4c63bc5afda5ec3b1ccc58885a65acc2b78",
+        "/lib/x86_64-linux-gnu/libp11-kit.so.0": "c6b469a006685ebf2075e200180c3b21f41b88ad722c5697d736ea558cfe3ea1",
+        "/lib/x86_64-linux-gnu/libpsl.so.5": "ae6c5a9aecc249fc66e03c16ec6c4385d09d7e12e0ea7694bb831ab4fee8133c",
+        "/lib/x86_64-linux-gnu/libresolv.so.2": "878e927be164fde61bf85f44c27901a1d569526f5c8f058990e8a4edc3df1fa0",
+        "/lib/x86_64-linux-gnu/librtmp.so.1": "15a2a75e8c437b9c99971b5ee10278ab110beef1a56d1d9e5d6759ea140e98ac",
+        "/lib/x86_64-linux-gnu/libsasl2.so.2": "a0f410ad093236856eee59c4ff2838dc04d932ea0993400f23ed77d67d85af34",
+        "/lib/x86_64-linux-gnu/libssh.so.4": "ef858714c882f2ff837c1a2dc2c7fb95f25316111453aeee984814cc5a0a5d04",
+        "/lib/x86_64-linux-gnu/libssl.so.3": "63597a81ef19496ad0423cbaaf04d5b0244c7a9e261e331a5a7f3ac0fcdb9590",
+        "/lib/x86_64-linux-gnu/libtasn1.so.6": "7c9c7830afbaac7b07ec21ddaa6b4d606423432c264efd2636e8ca9734b4d7b6",
+        "/lib/x86_64-linux-gnu/libunistring.so.5": "7bcf825cd449892db5105ad2aed91dcf94a27b796426600c765720c584c54dd1",
+        "/lib/x86_64-linux-gnu/libz.so.1": "9b64150b28505a33d6bc3ecf709c279f6de97a1c184dbda65d06ee4537f6d286",
+        "/lib/x86_64-linux-gnu/libzstd.so.1": "0a2128bc10841fb29e76d08d945864dfb0b6a66da5df6df5d8299197439e54bb",
+        "/lib64/ld-linux-x86-64.so.2": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+      },
+      "/usr/lib/php/20230831/dom.so": {
+        "/lib/x86_64-linux-gnu/libc.so.6": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0",
+        "/lib/x86_64-linux-gnu/libgcc_s.so.1": "02f3f192bf5f79b811f1e34a650fea443d407408703448906585232383957f60",
+        "/lib/x86_64-linux-gnu/libicudata.so.74": "ddbb3718b8bd9cbd780e5ab08b4503c30a6c4fa0706ebe5d074ed6b596c1714e",
+        "/lib/x86_64-linux-gnu/libicuuc.so.74": "7560aadde38e5f4237a47a1ddd5891f9b36768a77a60faae30beee003ac01901",
+        "/lib/x86_64-linux-gnu/liblzma.so.5": "a9793942a8a5f6f4d0f523ef9e0a5be4f0033f2c6c28520cd2b4e706d53c6e17",
+        "/lib/x86_64-linux-gnu/libm.so.6": "f06f2ce1f1833df5f41cf13b6447ff07bea993ad9b27297d3428c2f70ab3f0e7",
+        "/lib/x86_64-linux-gnu/libstdc++.so.6": "a68762c86d371e6041f03f03a33a78fa235809ae7d81c90185940c93c3535aed",
+        "/lib/x86_64-linux-gnu/libxml2.so.2": "3061d35b168d1eb472bba5d2c52931e408364770ec9b00ae1100aacd0c35c7da",
+        "/lib/x86_64-linux-gnu/libz.so.1": "9b64150b28505a33d6bc3ecf709c279f6de97a1c184dbda65d06ee4537f6d286",
+        "/lib64/ld-linux-x86-64.so.2": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+      },
+      "/usr/lib/php/20230831/exif.so": {
+        "/lib/x86_64-linux-gnu/libc.so.6": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0",
+        "/lib64/ld-linux-x86-64.so.2": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+      },
+      "/usr/lib/php/20230831/ffi.so": {
+        "/lib/x86_64-linux-gnu/libc.so.6": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0",
+        "/lib/x86_64-linux-gnu/libffi.so.8": "00f593fe192f2851b8ce23b25cec2488d769beb5a8f63e8c9e563071e1075153",
+        "/lib64/ld-linux-x86-64.so.2": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+      },
+      "/usr/lib/php/20230831/fileinfo.so": {
+        "/lib/x86_64-linux-gnu/libc.so.6": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0",
+        "/lib64/ld-linux-x86-64.so.2": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+      },
+      "/usr/lib/php/20230831/ftp.so": {
+        "/lib/x86_64-linux-gnu/libc.so.6": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0",
+        "/lib/x86_64-linux-gnu/libcrypto.so.3": "c19c2cf8d7cf91c4f273b1d3bbc56a9d19c91a739bfe57ad630756ee8ede7b77",
+        "/lib/x86_64-linux-gnu/libssl.so.3": "63597a81ef19496ad0423cbaaf04d5b0244c7a9e261e331a5a7f3ac0fcdb9590",
+        "/lib64/ld-linux-x86-64.so.2": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+      },
+      "/usr/lib/php/20230831/gd.so": {
+        "/lib/x86_64-linux-gnu/libLerc.so.4": "a0ee52df526738293bdd232ddaefbb0d1d9c2da775a82fc6730e7cd394da560c",
+        "/lib/x86_64-linux-gnu/libX11.so.6": "c5b5d782bd9cab3420a62df88f5c991507edf3331a89f98464ddbc538c37b879",
+        "/lib/x86_64-linux-gnu/libXau.so.6": "8040da3f8516c1acfe39f04ff022480cdb273705ba5e7a4ca70bbdb1527cd67a",
+        "/lib/x86_64-linux-gnu/libXdmcp.so.6": "667d97d6da16016400ab10de9f83ef4ab209ceb6adf68ff9650225ec13e723b0",
+        "/lib/x86_64-linux-gnu/libXpm.so.4": "a9fe78df2fe7ae078915f16c4991b934d0d9de7bd12dd5fcb1859dedc9a5e578",
+        "/lib/x86_64-linux-gnu/libbrotlicommon.so.1": "a91ead095d2c80520c55a89057bbe10b031a075340442e63f44b310f93883a1b",
+        "/lib/x86_64-linux-gnu/libbrotlidec.so.1": "64d8a5019d4c294b89fde1193343ea324bbd8603652554e5545f0a01595fa2c5",
+        "/lib/x86_64-linux-gnu/libbsd.so.0": "e86cd4f0019f42c2ba5e60602e0edc8694d2948377d98c3654d0f6bddb5254bb",
+        "/lib/x86_64-linux-gnu/libbz2.so.1.0": "218c4abdabce31161f3c2778762986d1fe06633705c7eb004a740946a5ccdfff",
+        "/lib/x86_64-linux-gnu/libc.so.6": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0",
+        "/lib/x86_64-linux-gnu/libdeflate.so.0": "608c8d7e4345a9ff4b57aa853ce0c355cf2e1d5ec11b8bee86fb4760bba8a15f",
+        "/lib/x86_64-linux-gnu/libexpat.so.1": "7ae38be4b2f909d25c5ca3107ed04bc3128a8a24ea7adfe30102c3f04089c9c3",
+        "/lib/x86_64-linux-gnu/libfontconfig.so.1": "a94b4059b27766f563894c8f7e61762b6f6b2e25c59ef36b730164d4b75c6c98",
+        "/lib/x86_64-linux-gnu/libfreetype.so.6": "fd0e52814df60ceb150c70a734f706528ef5d20ebbef8654ea526eadc70e473a",
+        "/lib/x86_64-linux-gnu/libgcc_s.so.1": "02f3f192bf5f79b811f1e34a650fea443d407408703448906585232383957f60",
+        "/lib/x86_64-linux-gnu/libgd.so.3": "8f5ab348f13c15ba5f0c25b01f7663fdeb7cafd84357ab74b488d8f33f361911",
+        "/lib/x86_64-linux-gnu/libheif.so.1": "a044d8797cf5626bca42846fdd2fc97153483ecec1cc4f5b0ae9f35fc4ef92cb",
+        "/lib/x86_64-linux-gnu/libjbig.so.0": "6fea8a26ef5e0d2a36d296d7d0ec0c1f0894bf796b5824317bea88c090833a62",
+        "/lib/x86_64-linux-gnu/libjpeg.so.8": "ac09f2cd6f8a3b8e3cb123999ce275f9bcbe31c6cf9e20212c8f297772591d15",
+        "/lib/x86_64-linux-gnu/liblzma.so.5": "a9793942a8a5f6f4d0f523ef9e0a5be4f0033f2c6c28520cd2b4e706d53c6e17",
+        "/lib/x86_64-linux-gnu/libm.so.6": "f06f2ce1f1833df5f41cf13b6447ff07bea993ad9b27297d3428c2f70ab3f0e7",
+        "/lib/x86_64-linux-gnu/libmd.so.0": "423e18586b6ea740f4465afd64f7a9a4cb7264ed979c8e7256f9085af5345fef",
+        "/lib/x86_64-linux-gnu/libpng16.so.16": "29896eea00b1567c55044ff497ebd7a8bd5594ac3e0b5a52fbcda619ce8badc2",
+        "/lib/x86_64-linux-gnu/libsharpyuv.so.0": "b2e62799e5dbd783a0671d53be99f7c6489567a5332a1e8f471e6bb250f294dc",
+        "/lib/x86_64-linux-gnu/libstdc++.so.6": "a68762c86d371e6041f03f03a33a78fa235809ae7d81c90185940c93c3535aed",
+        "/lib/x86_64-linux-gnu/libtiff.so.6": "aad9b47982a23560b6f6657adcd70a1141d0971bd4f2eb5b3753745f3e8feee4",
+        "/lib/x86_64-linux-gnu/libwebp.so.7": "9664db51ec65209078abbb8bc7b699888a43ecc2f3c74ce8dd4e497175aa5bf0",
+        "/lib/x86_64-linux-gnu/libxcb.so.1": "7958a0136b121bdc4c708968569ad152a9ed208ab026e2537b1005dde64ca440",
+        "/lib/x86_64-linux-gnu/libz.so.1": "9b64150b28505a33d6bc3ecf709c279f6de97a1c184dbda65d06ee4537f6d286",
+        "/lib/x86_64-linux-gnu/libzstd.so.1": "0a2128bc10841fb29e76d08d945864dfb0b6a66da5df6df5d8299197439e54bb",
+        "/lib64/ld-linux-x86-64.so.2": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+      },
+      "/usr/lib/php/20230831/gettext.so": {
+        "/lib/x86_64-linux-gnu/libc.so.6": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0",
+        "/lib64/ld-linux-x86-64.so.2": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+      },
+      "/usr/lib/php/20230831/gmp.so": {
+        "/lib/x86_64-linux-gnu/libc.so.6": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0",
+        "/lib/x86_64-linux-gnu/libgmp.so.10": "0ccdfb6d6f5c039465f6d002cf7e4c072d48ac6a2cffc8dd6c748dec31592804",
+        "/lib64/ld-linux-x86-64.so.2": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+      },
+      "/usr/lib/php/20230831/iconv.so": {
+        "/lib/x86_64-linux-gnu/libc.so.6": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0",
+        "/lib64/ld-linux-x86-64.so.2": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+      },
+      "/usr/lib/php/20230831/intl.so": {
+        "/lib/x86_64-linux-gnu/libc.so.6": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0",
+        "/lib/x86_64-linux-gnu/libgcc_s.so.1": "02f3f192bf5f79b811f1e34a650fea443d407408703448906585232383957f60",
+        "/lib/x86_64-linux-gnu/libicudata.so.74": "ddbb3718b8bd9cbd780e5ab08b4503c30a6c4fa0706ebe5d074ed6b596c1714e",
+        "/lib/x86_64-linux-gnu/libicui18n.so.74": "3550b194eb2cf2e6f798f033eb9ca279d498c21296b4a18790ce158d2023e47b",
+        "/lib/x86_64-linux-gnu/libicuio.so.74": "750b18b8bd63c4b60dd346de67fee24d08cc8da3dfc4cc3f709e514dc57a8493",
+        "/lib/x86_64-linux-gnu/libicuuc.so.74": "7560aadde38e5f4237a47a1ddd5891f9b36768a77a60faae30beee003ac01901",
+        "/lib/x86_64-linux-gnu/libm.so.6": "f06f2ce1f1833df5f41cf13b6447ff07bea993ad9b27297d3428c2f70ab3f0e7",
+        "/lib/x86_64-linux-gnu/libstdc++.so.6": "a68762c86d371e6041f03f03a33a78fa235809ae7d81c90185940c93c3535aed",
+        "/lib64/ld-linux-x86-64.so.2": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+      },
+      "/usr/lib/php/20230831/ldap.so": {
+        "/lib/x86_64-linux-gnu/libc.so.6": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0",
+        "/lib/x86_64-linux-gnu/libcrypto.so.3": "c19c2cf8d7cf91c4f273b1d3bbc56a9d19c91a739bfe57ad630756ee8ede7b77",
+        "/lib/x86_64-linux-gnu/libffi.so.8": "00f593fe192f2851b8ce23b25cec2488d769beb5a8f63e8c9e563071e1075153",
+        "/lib/x86_64-linux-gnu/libgmp.so.10": "0ccdfb6d6f5c039465f6d002cf7e4c072d48ac6a2cffc8dd6c748dec31592804",
+        "/lib/x86_64-linux-gnu/libgnutls.so.30": "96137275400f39510c9a533c6ad8a921e94266e664e7e09c9ad6ea9f23277c23",
+        "/lib/x86_64-linux-gnu/libhogweed.so.6": "c3c606139d4f7776efa4dbd4a6b62e30c916b07a0cafd8c3ef173d6f093607e3",
+        "/lib/x86_64-linux-gnu/libidn2.so.0": "6e632fd9a3125db60bbc623719bbc17b0470330321c5b1c57f1ff7190e5551ad",
+        "/lib/x86_64-linux-gnu/liblber.so.2": "6f6935b26c962d5b51ef2011332472cfd96ff244a4edc9d47120be6faa70e602",
+        "/lib/x86_64-linux-gnu/libldap.so.2": "4a0664ab6a8a66c685e78d5604b79df330f5710f0c5e2c382536a8325dc4c2a4",
+        "/lib/x86_64-linux-gnu/libnettle.so.8": "a245ed916229583d6fe0b07657b3ed945bc148c28cc08b5266295f620d2b91cc",
+        "/lib/x86_64-linux-gnu/libp11-kit.so.0": "c6b469a006685ebf2075e200180c3b21f41b88ad722c5697d736ea558cfe3ea1",
+        "/lib/x86_64-linux-gnu/libsasl2.so.2": "a0f410ad093236856eee59c4ff2838dc04d932ea0993400f23ed77d67d85af34",
+        "/lib/x86_64-linux-gnu/libtasn1.so.6": "7c9c7830afbaac7b07ec21ddaa6b4d606423432c264efd2636e8ca9734b4d7b6",
+        "/lib/x86_64-linux-gnu/libunistring.so.5": "7bcf825cd449892db5105ad2aed91dcf94a27b796426600c765720c584c54dd1",
+        "/lib64/ld-linux-x86-64.so.2": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+      },
+      "/usr/lib/php/20230831/mbstring.so": {
+        "/lib/x86_64-linux-gnu/libc.so.6": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0",
+        "/lib/x86_64-linux-gnu/libonig.so.5": "373f89146c922f948c69197f80a9b321a2689666de1b70ca3cee09e6f765fa42",
+        "/lib64/ld-linux-x86-64.so.2": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+      },
+      "/usr/lib/php/20230831/memcache.so": {
+        "/lib/x86_64-linux-gnu/libc.so.6": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0",
+        "/lib/x86_64-linux-gnu/libz.so.1": "9b64150b28505a33d6bc3ecf709c279f6de97a1c184dbda65d06ee4537f6d286",
+        "/lib64/ld-linux-x86-64.so.2": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+      },
+      "/usr/lib/php/20230831/mysqli.so": {
+        "/lib/x86_64-linux-gnu/libc.so.6": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0",
+        "/lib64/ld-linux-x86-64.so.2": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+      },
+      "/usr/lib/php/20230831/mysqlnd.so": {
+        "/lib/x86_64-linux-gnu/libc.so.6": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0",
+        "/lib64/ld-linux-x86-64.so.2": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+      },
+      "/usr/lib/php/20230831/opcache.so": {
+        "/lib/x86_64-linux-gnu/libc.so.6": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0",
+        "/lib/x86_64-linux-gnu/libgcc_s.so.1": "02f3f192bf5f79b811f1e34a650fea443d407408703448906585232383957f60",
+        "/lib64/ld-linux-x86-64.so.2": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+      },
+      "/usr/lib/php/20230831/pdo.so": {
+        "/lib/x86_64-linux-gnu/libc.so.6": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0",
+        "/lib64/ld-linux-x86-64.so.2": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+      },
+      "/usr/lib/php/20230831/pdo_mysql.so": {
+        "/lib/x86_64-linux-gnu/libc.so.6": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0",
+        "/lib64/ld-linux-x86-64.so.2": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+      },
+      "/usr/lib/php/20230831/phar.so": {
+        "/lib/x86_64-linux-gnu/libc.so.6": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0",
+        "/lib64/ld-linux-x86-64.so.2": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+      },
+      "/usr/lib/php/20230831/posix.so": {
+        "/lib/x86_64-linux-gnu/libc.so.6": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0",
+        "/lib64/ld-linux-x86-64.so.2": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+      },
+      "/usr/lib/php/20230831/readline.so": {
+        "/lib/x86_64-linux-gnu/libbsd.so.0": "e86cd4f0019f42c2ba5e60602e0edc8694d2948377d98c3654d0f6bddb5254bb",
+        "/lib/x86_64-linux-gnu/libc.so.6": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0",
+        "/lib/x86_64-linux-gnu/libedit.so.2": "195c607216f8581dbf516346ed38f4c73500cac4b84e18eb0a4fd49931e4cd56",
+        "/lib/x86_64-linux-gnu/libmd.so.0": "423e18586b6ea740f4465afd64f7a9a4cb7264ed979c8e7256f9085af5345fef",
+        "/lib/x86_64-linux-gnu/libtinfo.so.6": "61f693cd7f8e55ad3ab518b20a00c01adb46ef829cf90773c97615a73f99e09b",
+        "/lib64/ld-linux-x86-64.so.2": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+      },
+      "/usr/lib/php/20230831/shmop.so": {
+        "/lib/x86_64-linux-gnu/libc.so.6": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0",
+        "/lib64/ld-linux-x86-64.so.2": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+      },
+      "/usr/lib/php/20230831/simplexml.so": {
+        "/lib/x86_64-linux-gnu/libc.so.6": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0",
+        "/lib/x86_64-linux-gnu/libgcc_s.so.1": "02f3f192bf5f79b811f1e34a650fea443d407408703448906585232383957f60",
+        "/lib/x86_64-linux-gnu/libicudata.so.74": "ddbb3718b8bd9cbd780e5ab08b4503c30a6c4fa0706ebe5d074ed6b596c1714e",
+        "/lib/x86_64-linux-gnu/libicuuc.so.74": "7560aadde38e5f4237a47a1ddd5891f9b36768a77a60faae30beee003ac01901",
+        "/lib/x86_64-linux-gnu/liblzma.so.5": "a9793942a8a5f6f4d0f523ef9e0a5be4f0033f2c6c28520cd2b4e706d53c6e17",
+        "/lib/x86_64-linux-gnu/libm.so.6": "f06f2ce1f1833df5f41cf13b6447ff07bea993ad9b27297d3428c2f70ab3f0e7",
+        "/lib/x86_64-linux-gnu/libstdc++.so.6": "a68762c86d371e6041f03f03a33a78fa235809ae7d81c90185940c93c3535aed",
+        "/lib/x86_64-linux-gnu/libxml2.so.2": "3061d35b168d1eb472bba5d2c52931e408364770ec9b00ae1100aacd0c35c7da",
+        "/lib/x86_64-linux-gnu/libz.so.1": "9b64150b28505a33d6bc3ecf709c279f6de97a1c184dbda65d06ee4537f6d286",
+        "/lib64/ld-linux-x86-64.so.2": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+      },
+      "/usr/lib/php/20230831/sockets.so": {
+        "/lib/x86_64-linux-gnu/libc.so.6": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0",
+        "/lib64/ld-linux-x86-64.so.2": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+      },
+      "/usr/lib/php/20230831/ssh2.so": {
+        "/lib/x86_64-linux-gnu/libc.so.6": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0",
+        "/lib/x86_64-linux-gnu/libcrypto.so.3": "c19c2cf8d7cf91c4f273b1d3bbc56a9d19c91a739bfe57ad630756ee8ede7b77",
+        "/lib/x86_64-linux-gnu/libssh2.so.1": "130773431b58cc41e0d8567851b7a609e3fee3703de94e71085396a3e1302e95",
+        "/lib/x86_64-linux-gnu/libz.so.1": "9b64150b28505a33d6bc3ecf709c279f6de97a1c184dbda65d06ee4537f6d286",
+        "/lib64/ld-linux-x86-64.so.2": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+      },
+      "/usr/lib/php/20230831/sysvmsg.so": {
+        "/lib/x86_64-linux-gnu/libc.so.6": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0",
+        "/lib64/ld-linux-x86-64.so.2": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+      },
+      "/usr/lib/php/20230831/sysvsem.so": {
+        "/lib/x86_64-linux-gnu/libc.so.6": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0",
+        "/lib64/ld-linux-x86-64.so.2": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+      },
+      "/usr/lib/php/20230831/sysvshm.so": {
+        "/lib/x86_64-linux-gnu/libc.so.6": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0",
+        "/lib64/ld-linux-x86-64.so.2": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+      },
+      "/usr/lib/php/20230831/tokenizer.so": {
+        "/lib/x86_64-linux-gnu/libc.so.6": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0",
+        "/lib64/ld-linux-x86-64.so.2": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+      },
+      "/usr/lib/php/20230831/xml.so": {
+        "/lib/x86_64-linux-gnu/libc.so.6": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0",
+        "/lib/x86_64-linux-gnu/libgcc_s.so.1": "02f3f192bf5f79b811f1e34a650fea443d407408703448906585232383957f60",
+        "/lib/x86_64-linux-gnu/libicudata.so.74": "ddbb3718b8bd9cbd780e5ab08b4503c30a6c4fa0706ebe5d074ed6b596c1714e",
+        "/lib/x86_64-linux-gnu/libicuuc.so.74": "7560aadde38e5f4237a47a1ddd5891f9b36768a77a60faae30beee003ac01901",
+        "/lib/x86_64-linux-gnu/liblzma.so.5": "a9793942a8a5f6f4d0f523ef9e0a5be4f0033f2c6c28520cd2b4e706d53c6e17",
+        "/lib/x86_64-linux-gnu/libm.so.6": "f06f2ce1f1833df5f41cf13b6447ff07bea993ad9b27297d3428c2f70ab3f0e7",
+        "/lib/x86_64-linux-gnu/libstdc++.so.6": "a68762c86d371e6041f03f03a33a78fa235809ae7d81c90185940c93c3535aed",
+        "/lib/x86_64-linux-gnu/libxml2.so.2": "3061d35b168d1eb472bba5d2c52931e408364770ec9b00ae1100aacd0c35c7da",
+        "/lib/x86_64-linux-gnu/libz.so.1": "9b64150b28505a33d6bc3ecf709c279f6de97a1c184dbda65d06ee4537f6d286",
+        "/lib64/ld-linux-x86-64.so.2": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+      },
+      "/usr/lib/php/20230831/xmlreader.so": {
+        "/lib/x86_64-linux-gnu/libc.so.6": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0",
+        "/lib/x86_64-linux-gnu/libgcc_s.so.1": "02f3f192bf5f79b811f1e34a650fea443d407408703448906585232383957f60",
+        "/lib/x86_64-linux-gnu/libicudata.so.74": "ddbb3718b8bd9cbd780e5ab08b4503c30a6c4fa0706ebe5d074ed6b596c1714e",
+        "/lib/x86_64-linux-gnu/libicuuc.so.74": "7560aadde38e5f4237a47a1ddd5891f9b36768a77a60faae30beee003ac01901",
+        "/lib/x86_64-linux-gnu/liblzma.so.5": "a9793942a8a5f6f4d0f523ef9e0a5be4f0033f2c6c28520cd2b4e706d53c6e17",
+        "/lib/x86_64-linux-gnu/libm.so.6": "f06f2ce1f1833df5f41cf13b6447ff07bea993ad9b27297d3428c2f70ab3f0e7",
+        "/lib/x86_64-linux-gnu/libstdc++.so.6": "a68762c86d371e6041f03f03a33a78fa235809ae7d81c90185940c93c3535aed",
+        "/lib/x86_64-linux-gnu/libxml2.so.2": "3061d35b168d1eb472bba5d2c52931e408364770ec9b00ae1100aacd0c35c7da",
+        "/lib/x86_64-linux-gnu/libz.so.1": "9b64150b28505a33d6bc3ecf709c279f6de97a1c184dbda65d06ee4537f6d286",
+        "/lib64/ld-linux-x86-64.so.2": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+      },
+      "/usr/lib/php/20230831/xmlwriter.so": {
+        "/lib/x86_64-linux-gnu/libc.so.6": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0",
+        "/lib/x86_64-linux-gnu/libgcc_s.so.1": "02f3f192bf5f79b811f1e34a650fea443d407408703448906585232383957f60",
+        "/lib/x86_64-linux-gnu/libicudata.so.74": "ddbb3718b8bd9cbd780e5ab08b4503c30a6c4fa0706ebe5d074ed6b596c1714e",
+        "/lib/x86_64-linux-gnu/libicuuc.so.74": "7560aadde38e5f4237a47a1ddd5891f9b36768a77a60faae30beee003ac01901",
+        "/lib/x86_64-linux-gnu/liblzma.so.5": "a9793942a8a5f6f4d0f523ef9e0a5be4f0033f2c6c28520cd2b4e706d53c6e17",
+        "/lib/x86_64-linux-gnu/libm.so.6": "f06f2ce1f1833df5f41cf13b6447ff07bea993ad9b27297d3428c2f70ab3f0e7",
+        "/lib/x86_64-linux-gnu/libstdc++.so.6": "a68762c86d371e6041f03f03a33a78fa235809ae7d81c90185940c93c3535aed",
+        "/lib/x86_64-linux-gnu/libxml2.so.2": "3061d35b168d1eb472bba5d2c52931e408364770ec9b00ae1100aacd0c35c7da",
+        "/lib/x86_64-linux-gnu/libz.so.1": "9b64150b28505a33d6bc3ecf709c279f6de97a1c184dbda65d06ee4537f6d286",
+        "/lib64/ld-linux-x86-64.so.2": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+      },
+      "/usr/lib/php/20230831/xsl.so": {
+        "/lib/x86_64-linux-gnu/libc.so.6": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0",
+        "/lib/x86_64-linux-gnu/libexslt.so.0": "2e455cecd03012453e2a57eb1521da5bf6e5e0bb467ff5829bafc2934e483c7c",
+        "/lib/x86_64-linux-gnu/libgcc_s.so.1": "02f3f192bf5f79b811f1e34a650fea443d407408703448906585232383957f60",
+        "/lib/x86_64-linux-gnu/libgcrypt.so.20": "f207cbaa2f5ad2acb0a0991f79c2329808493af500ca8cf25dfc386e6639bf1b",
+        "/lib/x86_64-linux-gnu/libgpg-error.so.0": "6cb18a007bfcb623029f4528a36b46578fea7dc34c2b505b8e6e0d99e6348cd1",
+        "/lib/x86_64-linux-gnu/libicudata.so.74": "ddbb3718b8bd9cbd780e5ab08b4503c30a6c4fa0706ebe5d074ed6b596c1714e",
+        "/lib/x86_64-linux-gnu/libicuuc.so.74": "7560aadde38e5f4237a47a1ddd5891f9b36768a77a60faae30beee003ac01901",
+        "/lib/x86_64-linux-gnu/liblzma.so.5": "a9793942a8a5f6f4d0f523ef9e0a5be4f0033f2c6c28520cd2b4e706d53c6e17",
+        "/lib/x86_64-linux-gnu/libm.so.6": "f06f2ce1f1833df5f41cf13b6447ff07bea993ad9b27297d3428c2f70ab3f0e7",
+        "/lib/x86_64-linux-gnu/libstdc++.so.6": "a68762c86d371e6041f03f03a33a78fa235809ae7d81c90185940c93c3535aed",
+        "/lib/x86_64-linux-gnu/libxml2.so.2": "3061d35b168d1eb472bba5d2c52931e408364770ec9b00ae1100aacd0c35c7da",
+        "/lib/x86_64-linux-gnu/libxslt.so.1": "c360c773ecdae0c205d458fa83646b393cb124508be13e621ff73d312712dc4d",
+        "/lib/x86_64-linux-gnu/libz.so.1": "9b64150b28505a33d6bc3ecf709c279f6de97a1c184dbda65d06ee4537f6d286",
+        "/lib64/ld-linux-x86-64.so.2": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+      },
+      "/usr/lib/php/20230831/zip.so": {
+        "/lib/x86_64-linux-gnu/libbz2.so.1.0": "218c4abdabce31161f3c2778762986d1fe06633705c7eb004a740946a5ccdfff",
+        "/lib/x86_64-linux-gnu/libc.so.6": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0",
+        "/lib/x86_64-linux-gnu/libcrypto.so.3": "c19c2cf8d7cf91c4f273b1d3bbc56a9d19c91a739bfe57ad630756ee8ede7b77",
+        "/lib/x86_64-linux-gnu/libz.so.1": "9b64150b28505a33d6bc3ecf709c279f6de97a1c184dbda65d06ee4537f6d286",
+        "/lib/x86_64-linux-gnu/libzip.so.4": "686612e6af220e2de954795ac7184695ebe3660541b13fa793cf5dc6ed352b5b",
+        "/lib64/ld-linux-x86-64.so.2": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+      }
+    },
+    "runtimes": {
+      "minimal": {
+        "configuration_sha256": {},
+        "ini": "Configuration File (php.ini) Path: /etc/php/8.3/cli\nLoaded Configuration File:         (none)\nScan for additional .ini files in: (none)\nAdditional .ini files parsed:      (none)\n",
+        "modules": "[PHP Modules]\nCore\ndate\nfilter\nhash\njson\nlibxml\nopenssl\npcntl\npcre\nrandom\nReflection\nsession\nsodium\nSPL\nstandard\nzlib\n\n[Zend Modules]\n\n",
+        "version": "PHP 8.3.6 (cli) (built: Sep  2 2026 12:56:02) (NTS)\nCopyright (c) The PHP Group\nZend Engine v4.3.6, Copyright (c) Zend Technologies\n"
+      },
+      "standard": {
+        "configuration_sha256": {
+          "/etc/php/8.3/cli/conf.d/10-mysqlnd.ini": "d4d13801f80a56f3169a19670688aceed7c9ffbdb65c9f3aaf6903682d04b77c",
+          "/etc/php/8.3/cli/conf.d/10-opcache.ini": "771a555df8ff6f9c223aa992dbd2aff8ef50c47c662d3529558e91f9c43d7976",
+          "/etc/php/8.3/cli/conf.d/10-pdo.ini": "b072d1e70a5173af7e968b4abf908e017f5f8675d30dda36ea7443dc410d2e5d",
+          "/etc/php/8.3/cli/conf.d/15-xml.ini": "f9b66ab39ad805f56f3a9814296853fbc0a78763b9cbc22102185ad49caf5a1a",
+          "/etc/php/8.3/cli/conf.d/20-apcu.ini": "923e8d58d32fbb9bf6b4835948f6c88daa3c58d462ecec574eedf5a075903f14",
+          "/etc/php/8.3/cli/conf.d/20-calendar.ini": "0fbe835f25a303eb942760930f734275c2a5e60049835b0d9bd9f97c9b996d7d",
+          "/etc/php/8.3/cli/conf.d/20-ctype.ini": "05e736f9509116eec00fe4fa1b4e0fea51a2fb311262cd46a35ea1f177eb9ff9",
+          "/etc/php/8.3/cli/conf.d/20-curl.ini": "056ea15ff36d9ca3ea051f330334d19daf4cf847c4dbd6ab61f022f6d4680f77",
+          "/etc/php/8.3/cli/conf.d/20-dom.ini": "5154eb26dc415ce9f083a905e01e27b81b31cfa94e197f6c28b2b0adf97e9d16",
+          "/etc/php/8.3/cli/conf.d/20-exif.ini": "e7bbc905937019e082d5ad1dd6482b3bb9eaebc47c3939066e5099c1b7b5e9f5",
+          "/etc/php/8.3/cli/conf.d/20-ffi.ini": "005d8a46015f79bc5e03e393e7c455eeb675e456515740537317235fa12458f9",
+          "/etc/php/8.3/cli/conf.d/20-fileinfo.ini": "c8a2d1dd0161a50e0ddd031f0abc7a5acfe8559f5ec18423e567f519c456dfcc",
+          "/etc/php/8.3/cli/conf.d/20-ftp.ini": "464d61d9d251d63efb02af8698c21125962a18992470080bf8929770292302f9",
+          "/etc/php/8.3/cli/conf.d/20-gd.ini": "529070e61cd43b073a76f86313b1c7e5afbe15d4e6a74073516aea65492260f5",
+          "/etc/php/8.3/cli/conf.d/20-gettext.ini": "f502d4781c78fff2b7db83e1f37db6c8bb4648ec0d2ce00decdc079a9b551738",
+          "/etc/php/8.3/cli/conf.d/20-gmp.ini": "865842ede3e0d5a9481c8c345da4ac6b1c85bacc6578e8053e953f87a25dfd82",
+          "/etc/php/8.3/cli/conf.d/20-iconv.ini": "922d70e6a207418f4bf87c4dda8685cd19c278c50cf1332b0a11a33e7c32d893",
+          "/etc/php/8.3/cli/conf.d/20-intl.ini": "00ac15ae3929d147bf478345fd7e37132046adb8c4037cd3096e5b0f9bb72736",
+          "/etc/php/8.3/cli/conf.d/20-ldap.ini": "042c327153e2b24caa7c1d8ffd9666312743cf7f9b309dcbce5e37f7a6d72c4f",
+          "/etc/php/8.3/cli/conf.d/20-mbstring.ini": "fcd6a0b89f22754336df3c355c89521f92692739f5f45ec8c389993c28f4ac35",
+          "/etc/php/8.3/cli/conf.d/20-memcache.ini": "1f41582989a54305be4ae82067d9c20ac1ced02a41437709977f7403d5da09ef",
+          "/etc/php/8.3/cli/conf.d/20-mysqli.ini": "04976eae2dd34c791ce55300ef5ff38f14354b51b1fe8b43cbcf97fa0b43c0a6",
+          "/etc/php/8.3/cli/conf.d/20-pdo_mysql.ini": "994167f720c3d6ee7b13397cfd5b1b4a2f72ec0eaaa39947cbf4590f00abec58",
+          "/etc/php/8.3/cli/conf.d/20-phar.ini": "fd62472e0bf8b260ed712068086a2a55b9dd71bf13b1f0e07897eeea3bf723e2",
+          "/etc/php/8.3/cli/conf.d/20-posix.ini": "e1a5a7c827fc17ff94cf87beed916be62d6b025346b4a274adb8d835785109b0",
+          "/etc/php/8.3/cli/conf.d/20-readline.ini": "fa6d93d1de1704dd7b40708204dec039308bd867d549c4cf4aef597d40d4394f",
+          "/etc/php/8.3/cli/conf.d/20-shmop.ini": "134aafee92de1f650b7eb500cd6336bd33149bdd3fab4fba939894fc7ffc8193",
+          "/etc/php/8.3/cli/conf.d/20-simplexml.ini": "3354077a833a93a9bdf9f2c95696518e1e84fedc699b82ea706fc538ade7ba46",
+          "/etc/php/8.3/cli/conf.d/20-sockets.ini": "eb31eeb6aeb34f31c1c695dbac0c9a69f909874f01341679382da0646641318c",
+          "/etc/php/8.3/cli/conf.d/20-ssh2.ini": "79f7d1777182b9a2059ad312a668221a4d944eec4fa289c53779d059edbf5ac5",
+          "/etc/php/8.3/cli/conf.d/20-sysvmsg.ini": "ab104d16fcb223c3fff2af1880490f879e940561732d66571f69a15d498321d8",
+          "/etc/php/8.3/cli/conf.d/20-sysvsem.ini": "2f7f5db8fddca372e034f3c7bb34f5abd861621fa5282bd0808bd320e2867e85",
+          "/etc/php/8.3/cli/conf.d/20-sysvshm.ini": "4218981bb40ed218b01846cbdc85b436133859b2b051f740f992db14a702b2fc",
+          "/etc/php/8.3/cli/conf.d/20-tokenizer.ini": "5915e8a8256d4ba7b8b021ce1bcb9456ae86cd98e1100b6b57e098ccf169e6a9",
+          "/etc/php/8.3/cli/conf.d/20-xmlreader.ini": "462c31de0661cabc4571d8155354a0796c4fd637b6cd3b577a44a176c71c4054",
+          "/etc/php/8.3/cli/conf.d/20-xmlwriter.ini": "323558d46fce7a4fcb0a3b1506ad8ba79af7e00dffa9d3303873ccd2e1062313",
+          "/etc/php/8.3/cli/conf.d/20-xsl.ini": "063186af1bde876f789579827791c6ea25b7d2159d0ce58b5e614f835be98624",
+          "/etc/php/8.3/cli/conf.d/20-zip.ini": "e4165361247b83cf23e551269f0a75f1e544c5161080e776ab8e2d6281eca128",
+          "/etc/php/8.3/cli/php.ini": "b8573764f63e098e77e37cfbb8a41adccc25a0c03cbc323c74f5b73e4a59aebf"
+        },
+        "ini": "Configuration File (php.ini) Path: /etc/php/8.3/cli\nLoaded Configuration File:         /etc/php/8.3/cli/php.ini\nScan for additional .ini files in: /etc/php/8.3/cli/conf.d\nAdditional .ini files parsed:      /etc/php/8.3/cli/conf.d/10-mysqlnd.ini,\n/etc/php/8.3/cli/conf.d/10-opcache.ini,\n/etc/php/8.3/cli/conf.d/10-pdo.ini,\n/etc/php/8.3/cli/conf.d/15-xml.ini,\n/etc/php/8.3/cli/conf.d/20-apcu.ini,\n/etc/php/8.3/cli/conf.d/20-calendar.ini,\n/etc/php/8.3/cli/conf.d/20-ctype.ini,\n/etc/php/8.3/cli/conf.d/20-curl.ini,\n/etc/php/8.3/cli/conf.d/20-dom.ini,\n/etc/php/8.3/cli/conf.d/20-exif.ini,\n/etc/php/8.3/cli/conf.d/20-ffi.ini,\n/etc/php/8.3/cli/conf.d/20-fileinfo.ini,\n/etc/php/8.3/cli/conf.d/20-ftp.ini,\n/etc/php/8.3/cli/conf.d/20-gd.ini,\n/etc/php/8.3/cli/conf.d/20-gettext.ini,\n/etc/php/8.3/cli/conf.d/20-gmp.ini,\n/etc/php/8.3/cli/conf.d/20-iconv.ini,\n/etc/php/8.3/cli/conf.d/20-intl.ini,\n/etc/php/8.3/cli/conf.d/20-ldap.ini,\n/etc/php/8.3/cli/conf.d/20-mbstring.ini,\n/etc/php/8.3/cli/conf.d/20-memcache.ini,\n/etc/php/8.3/cli/conf.d/20-mysqli.ini,\n/etc/php/8.3/cli/conf.d/20-pdo_mysql.ini,\n/etc/php/8.3/cli/conf.d/20-phar.ini,\n/etc/php/8.3/cli/conf.d/20-posix.ini,\n/etc/php/8.3/cli/conf.d/20-readline.ini,\n/etc/php/8.3/cli/conf.d/20-shmop.ini,\n/etc/php/8.3/cli/conf.d/20-simplexml.ini,\n/etc/php/8.3/cli/conf.d/20-sockets.ini,\n/etc/php/8.3/cli/conf.d/20-ssh2.ini,\n/etc/php/8.3/cli/conf.d/20-sysvmsg.ini,\n/etc/php/8.3/cli/conf.d/20-sysvsem.ini,\n/etc/php/8.3/cli/conf.d/20-sysvshm.ini,\n/etc/php/8.3/cli/conf.d/20-tokenizer.ini,\n/etc/php/8.3/cli/conf.d/20-xmlreader.ini,\n/etc/php/8.3/cli/conf.d/20-xmlwriter.ini,\n/etc/php/8.3/cli/conf.d/20-xsl.ini,\n/etc/php/8.3/cli/conf.d/20-zip.ini\n\n",
+        "modules": "[PHP Modules]\napcu\ncalendar\nCore\nctype\ncurl\ndate\ndom\nexif\nFFI\nfileinfo\nfilter\nftp\ngd\ngettext\ngmp\nhash\niconv\nintl\njson\nldap\nlibxml\nmbstring\nmemcache\nmysqli\nmysqlnd\nopenssl\npcntl\npcre\nPDO\npdo_mysql\nPhar\nposix\nrandom\nreadline\nReflection\nsession\nshmop\nSimpleXML\nsockets\nsodium\nSPL\nssh2\nstandard\nsysvmsg\nsysvsem\nsysvshm\ntokenizer\nxml\nxmlreader\nxmlwriter\nxsl\nZend OPcache\nzip\nzlib\n\n[Zend Modules]\nZend OPcache\n\n",
+        "version": "PHP 8.3.6 (cli) (built: Sep  2 2026 12:56:02) (NTS)\nCopyright (c) The PHP Group\nZend Engine v4.3.6, Copyright (c) Zend Technologies\n    with Zend OPcache v8.3.6, Copyright (c), by Zend Technologies\n"
+      }
+    }
+  },
+  "exit": 0,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

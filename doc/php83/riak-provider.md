@@ -47,3 +47,12 @@ integration is NOT_EXECUTED/provider unavailable in the inspected lab. Do not
 remove the driver, substitute a stub, label it unused from graph absence, or waive
 this finding to obtain a green whole-source report. Other migration work continues;
 this is not a declaration that the entire goal is blocked.
+
+### Follow-up correction: an import alias alone is insufficient
+
+The held [alias experiment](riak-alias.md) now actually executes the complete
+original/candidate source on native PHP7.4 and PHP8.3. Both candidate processes
+still terminate with a compiler fatal: the resolved `Riak\Object` argument type
+is reserved at line207, after the renamed import no longer fails at line26.
+Thus the upstream alias spelling cited above does not establish a compiling
+repair. No candidate is selected; native provider/backend work remains open.

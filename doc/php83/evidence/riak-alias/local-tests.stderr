@@ -1,0 +1,11 @@
+test_candidate_drift (test_prepare.Guards.test_candidate_drift) ... ok
+test_exact_source_delta (test_prepare.Guards.test_exact_source_delta) ... ok
+test_existing_rejected (test_prepare.Guards.test_existing_rejected) ... ok
+test_patch_drift (test_prepare.Guards.test_patch_drift) ... ok
+test_source_drift (test_prepare.Guards.test_source_drift) ... ok
+test_zip_drift (test_prepare.Guards.test_zip_drift) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.372s
+
+OK

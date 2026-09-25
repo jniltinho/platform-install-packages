@@ -1,0 +1,13 @@
+{
+  "original_zip_sha256": "58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28",
+  "files": {
+    "vendor/aws/Doctrine/Common/Cache/Cache.php": "b2854de037a033c9f5ddc58c26049f2ff71b5261cc2d485c91f1211e6eaf84d5",
+    "vendor/aws/Doctrine/Common/Cache/FlushableCache.php": "540f2ade2696c02449545905e65ecafa0a14dc83183aeb578b9a16125b974af8",
+    "vendor/aws/Doctrine/Common/Cache/ClearableCache.php": "fd42dfdc424afe0229a0e6aefe21f347264b64dae8c6d2924cacb987018ab5d4",
+    "vendor/aws/Doctrine/Common/Cache/MultiGetCache.php": "59483c94fbeb2692a6cf8ca4af190bfee5fd445ae96fecc5d1d91b663966e0b1",
+    "vendor/aws/Doctrine/Common/Cache/CacheProvider.php": "ce360a132e33644997b37111cc8d2219c520eb14923ab811336ada1cf450a349",
+    "vendor/aws/Doctrine/Common/Cache/RiakCache.php": "0ec9e10a5c35033e6ebd154630565a63431831c53fac0a33b98f32d0652f79db"
+  },
+  "candidate_sha256": "09e82c42d564da26a479f30ebe8137470ba2d1e372413eff8d919f20df1b6e38",
+  "patch_sha256": "13af9aa7e254f7e28e7f9a197a8b97eb4dca641f9bc70e416bfcac640880405a"
+}

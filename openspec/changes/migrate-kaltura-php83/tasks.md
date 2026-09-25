@@ -309,3 +309,10 @@ corrections retain unmanifested vendor-root files and metadata-only packages.
 See `doc/php83/dependency-attribution-followup.md`. Zero entire-directory license
 closures are claimed; package overlays, transitive scopes and missing attribution
 remain open. The historical unknown ledger is not relabeled complete.
+
+T0-04/5.4 and T1-01/5.7 negative finding: the held Riak import-alias-only patch
+fails actual native74/83 compilation at the resolved `Riak\Object` parameter type,
+not merely the original import alias. Actual Cursor repeats native83 rejection;
+no Reflection/backend code is reached and no patch is selected. See
+`doc/php83/riak-alias.md`. This corrects the insufficient upstream-alias hypothesis;
+all seven exp11 rejected files and provider compatibility gates remain open.

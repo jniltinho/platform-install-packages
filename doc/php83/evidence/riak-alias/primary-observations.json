@@ -1,0 +1,71 @@
+{
+  "status": "OBSERVATIONS_PENDING_VALIDATION",
+  "records": [
+    {
+      "runtime": "74",
+      "variant": "original",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-riak-alias/run.sh original 7d18f710b12d978e5867b188ad26160222e63ac87cdae1fc3313f832f8fcd217"
+      ],
+      "exit": 255,
+      "stdout": "",
+      "stderr": "Fatal error: Cannot use Riak\\Object as Object because 'Object' is a special class name in /audit/probe/original/vendor/aws/Doctrine/Common/Cache/RiakCache.php on line 26\n",
+      "duration_ns": 205075671
+    },
+    {
+      "runtime": "74",
+      "variant": "candidate",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-riak-alias/run.sh candidate 7d18f710b12d978e5867b188ad26160222e63ac87cdae1fc3313f832f8fcd217"
+      ],
+      "exit": 255,
+      "stdout": "",
+      "stderr": "Fatal error: Cannot use 'Riak\\Object' as class name as it is reserved in /audit/probe/candidate/vendor/aws/Doctrine/Common/Cache/RiakCache.php on line 207\n",
+      "duration_ns": 205193069
+    },
+    {
+      "runtime": "83",
+      "variant": "original",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php83-ssh.conf",
+        "php83",
+        "bash /home/vagrant/php-riak-alias/run.sh original 7d18f710b12d978e5867b188ad26160222e63ac87cdae1fc3313f832f8fcd217"
+      ],
+      "exit": 255,
+      "stdout": "",
+      "stderr": "Fatal error: Cannot use Riak\\Object as Object because 'Object' is a special class name in /audit/probe/original/vendor/aws/Doctrine/Common/Cache/RiakCache.php on line 26\n",
+      "duration_ns": 211872955
+    },
+    {
+      "runtime": "83",
+      "variant": "candidate",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php83-ssh.conf",
+        "php83",
+        "bash /home/vagrant/php-riak-alias/run.sh candidate 7d18f710b12d978e5867b188ad26160222e63ac87cdae1fc3313f832f8fcd217"
+      ],
+      "exit": 255,
+      "stdout": "",
+      "stderr": "Fatal error: Cannot use 'Riak\\Object' as class name as it is reserved in /audit/probe/candidate/vendor/aws/Doctrine/Common/Cache/RiakCache.php on line 207\n",
+      "duration_ns": 198326137
+    }
+  ],
+  "manifest_sha256": "7d18f710b12d978e5867b188ad26160222e63ac87cdae1fc3313f832f8fcd217",
+  "backend_acceptance": false
+}

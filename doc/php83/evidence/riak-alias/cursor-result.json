@@ -1,0 +1,129 @@
+{
+  "case": "riak-alias independent native83 rejection repeat",
+  "executor": "Cursor Agent (Composer)",
+  "reviewer": "Cursor Agent (Composer) \u2014 same executor; not independent of itself",
+  "status": "CANDIDATE_REJECTED_COMPILER_FAILURE",
+  "outcome": "candidate REJECTED",
+  "repeat_validates_primary_runtime83": true,
+  "reflection_probe_reached": false,
+  "backend_acceptance": false,
+  "patch_selected": false,
+  "manifest_sha256": "7d18f710b12d978e5867b188ad26160222e63ac87cdae1fc3313f832f8fcd217",
+  "environment": {
+    "ssh_config": "/tmp/kaltura-php83-ssh.conf",
+    "alias": "php83",
+    "host_observed": "kaltura-php83-lab",
+    "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+  },
+  "commands": {
+    "runtime_before": [
+      "env",
+      "PYTHONDONTWRITEBYTECODE=1",
+      "python3",
+      "doc/php83/evidence/exp10-runtime/snapshot-php83.py",
+      "doc/php83/evidence/riak-alias/cursor-runtime-before.json"
+    ],
+    "original": [
+      "ssh",
+      "-T",
+      "-F",
+      "/tmp/kaltura-php83-ssh.conf",
+      "php83",
+      "bash /home/vagrant/php-riak-alias/run.sh original 7d18f710b12d978e5867b188ad26160222e63ac87cdae1fc3313f832f8fcd217"
+    ],
+    "candidate": [
+      "ssh",
+      "-T",
+      "-F",
+      "/tmp/kaltura-php83-ssh.conf",
+      "php83",
+      "bash /home/vagrant/php-riak-alias/run.sh candidate 7d18f710b12d978e5867b188ad26160222e63ac87cdae1fc3313f832f8fcd217"
+    ],
+    "runtime_after": [
+      "env",
+      "PYTHONDONTWRITEBYTECODE=1",
+      "python3",
+      "doc/php83/evidence/exp10-runtime/snapshot-php83.py",
+      "doc/php83/evidence/riak-alias/cursor-runtime-after.json"
+    ]
+  },
+  "exits": {
+    "runtime_before": 0,
+    "original": 255,
+    "candidate": 255,
+    "runtime_after": 0,
+    "stage_before": 0,
+    "stage_after": 0
+  },
+  "comparison_to_primary_runtime83": {
+    "original": {
+      "exit_match": true,
+      "stdout_match": true,
+      "stderr_match": true,
+      "got_exit": 255,
+      "want_exit": 255,
+      "got_stdout_len": 0,
+      "want_stdout_len": 0,
+      "got_stderr": "Fatal error: Cannot use Riak\\Object as Object because 'Object' is a special class name in /audit/probe/original/vendor/aws/Doctrine/Common/Cache/RiakCache.php on line 26\n",
+      "want_stderr": "Fatal error: Cannot use Riak\\Object as Object because 'Object' is a special class name in /audit/probe/original/vendor/aws/Doctrine/Common/Cache/RiakCache.php on line 26\n"
+    },
+    "candidate": {
+      "exit_match": true,
+      "stdout_match": true,
+      "stderr_match": true,
+      "got_exit": 255,
+      "want_exit": 255,
+      "got_stdout_len": 0,
+      "want_stdout_len": 0,
+      "got_stderr": "Fatal error: Cannot use 'Riak\\Object' as class name as it is reserved in /audit/probe/candidate/vendor/aws/Doctrine/Common/Cache/RiakCache.php on line 207\n",
+      "want_stderr": "Fatal error: Cannot use 'Riak\\Object' as class name as it is reserved in /audit/probe/candidate/vendor/aws/Doctrine/Common/Cache/RiakCache.php on line 207\n"
+    },
+    "duration_excluded": true
+  },
+  "runtime_identity": {
+    "cursor_before_equals_after": true,
+    "cursor_before_equals_root_runtime83_before": true,
+    "cursor_after_equals_root_runtime83_after": true,
+    "root_before_equals_after": true
+  },
+  "stage": {
+    "file_count_before": 14,
+    "file_count_after": 14,
+    "identities_sha256_before": "7d18f710b12d978e5867b188ad26160222e63ac87cdae1fc3313f832f8fcd217",
+    "identities_sha256_after": "7d18f710b12d978e5867b188ad26160222e63ac87cdae1fc3313f832f8fcd217",
+    "files_equal_before_after": true,
+    "manifest_pin_match": true,
+    "mismatch_before": [],
+    "mismatch_after": []
+  },
+  "preparation_frozen": {
+    "match_before": true,
+    "match_after": true,
+    "hashes_before": {
+      "tools/php83/riak-alias/source-pins.json": "a89adfc47643efb32f95f0f52a766d7d7baf195eef6eabd484f8662f31c68d0c",
+      "tools/php83/riak-alias/probe.php": "db98f85f7460b66405939d64a744e1ef784944bd34c88eae438abc7678f15be0",
+      "tools/php83/riak-alias/run.sh": "0ba5a4629057fc70787e585b0da5ce1309e7f57a1008d55ac99684028d7597fa",
+      "tools/php83/riak-alias/prepare.py": "2ed327efc7ea6ee94f80a073cc36c564448ad17b4a25a308953bde8e3e778e03",
+      "tools/php83/riak-alias/test_prepare.py": "945f1104e1e33af49664de23d33f1e9f1f74165093e194a68253be8374bd482e",
+      "patches/php83/held/riak-object-alias/RiakCache-alias.patch": "13af9aa7e254f7e28e7f9a197a8b97eb4dca641f9bc70e416bfcac640880405a"
+    },
+    "hashes_after": {
+      "tools/php83/riak-alias/source-pins.json": "a89adfc47643efb32f95f0f52a766d7d7baf195eef6eabd484f8662f31c68d0c",
+      "tools/php83/riak-alias/probe.php": "db98f85f7460b66405939d64a744e1ef784944bd34c88eae438abc7678f15be0",
+      "tools/php83/riak-alias/run.sh": "0ba5a4629057fc70787e585b0da5ce1309e7f57a1008d55ac99684028d7597fa",
+      "tools/php83/riak-alias/prepare.py": "2ed327efc7ea6ee94f80a073cc36c564448ad17b4a25a308953bde8e3e778e03",
+      "tools/php83/riak-alias/test_prepare.py": "945f1104e1e33af49664de23d33f1e9f1f74165093e194a68253be8374bd482e",
+      "patches/php83/held/riak-object-alias/RiakCache-alias.patch": "13af9aa7e254f7e28e7f9a197a8b97eb4dca641f9bc70e416bfcac640880405a"
+    }
+  },
+  "failure_summary": {
+    "original": "reserved Object alias at RiakCache.php line 26",
+    "candidate": "resolved Riak\\Object parameter type reserved at RiakCache.php line 207"
+  },
+  "elapsed_seconds": 2.028,
+  "scope_notes": [
+    "Exclusive php83 only; no baseline74/.20",
+    "No source/stage writes; no backend/provider",
+    "Outcome remains candidate REJECTED even when repeat validates"
+  ]
+}

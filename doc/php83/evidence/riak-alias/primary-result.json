@@ -1,0 +1,13 @@
+{
+  "status": "CANDIDATE_REJECTED_COMPILER_FAILURE",
+  "records": 4,
+  "original_failures": 2,
+  "candidate_failures": 2,
+  "candidate_failure": "Resolved Riak\\Object parameter class name is reserved at line207 despite local alias rename",
+  "reflection_probe_reached": false,
+  "runtime_identity_before_after_equal": true,
+  "backend_acceptance": false,
+  "patch_selected": false,
+  "independent_runtime_repeat": "actual Cursor CLI exit0; native83 original/candidate 255 exactstdout/stderr;14stagefiles and runtimeidentities unchanged; native74 not independently repeated",
+  "borrowed_identity_wrapper_context": "Baseline74 wrapper retains exp11 artifact_pin metadata; used only for interpreter/module/library/INI byte identity, not Riak source attestation. Source attestation uses separate pinned Riak manifest in runner."
+}
