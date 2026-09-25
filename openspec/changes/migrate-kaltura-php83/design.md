@@ -69,3 +69,127 @@ Non-goals: wholesale Kaltura/framework replacement; changing DB engine/schema; D
 ## Phase-1 review boundary (2026-09-25)
 
 Claude reviewed the planning artifacts without repository/tool access; its findings are advisory, not runtime evidence. The operator approved incorporating the corrections. Source inventory, syntax/static checks, synthetic probes and provider resolution may proceed. The subsequent operator confirmation also permits minimal lab-only source patches and the separate reproducible PHP 8.3 ZIP, without marking feasibility complete or approving package/CI changes. No migration tags, main-spec synchronization or archive before task 4.4. Production data extraction requires separate approval. PHPCompatibility and PHPCS versions plus dependencies must be pinned with checksums/lockfile, checked for PHP 8.3 coverage, and run with `testVersion=7.4-8.3`; syntax checks and E_ALL runtime probes remain separate evidence.
+
+## Approved test execution plan (2026-09-25)
+
+The operator approved this refinement after parallel planning reviews by the
+Claude, Grok and Cursor CLIs. Those reviews are advisory, not test execution.
+This section operationalizes Decisions 1–9 without changing the proposal or
+specification gates. The original 24 tasks remain acceptance obligations;
+the detailed cases in tasks.md are their execution breakdown, not extra release
+scope or an estimate of work completed.
+
+### Seven test gates
+
+| Gate | Required evidence | Entry / exit boundary |
+|---|---|---|
+| T0 Inventory and coverage | Source, published baseline, ordered patches, harness and fixture hashes; dependency/license/entrypoint inventory; static findings; task-to-case mapping and uncovered paths | Freeze identities and expected results before execution. Unknown coverage is explicit, not PASS. |
+| T1 PHP compatibility | Original/candidate differential tests on 7.4 and 8.3; individual fixes then the selected combined patch set; PDO types/errors, JSON/XML, dates/locales, serialization, cron/CLI/workers | Expected original-8.3 failures are controls, not candidate successes. Selected patch omissions or unexpected diagnostics block acceptance. |
+| T2 API, security and UI | Real HTTP/trusted HTTPS authorization and response contracts, cross-partner denials, KS failures, real cache backends, eSearch, Admin Console/KMC and Go console | Mock-client and isolated parser tests cannot substitute for full-service or browser evidence. |
+| T3 Media and jobs | Frozen short and Full HD/60 fps fixtures; upload-to-READY, flavors/thumbnails, HLS segments and progressive Range; corrupt/empty input and worker failure/retry | Assert actual delivered stream properties and terminal job states, not just status 200 or READY. |
+| T4 Three distributions and packages | Ubuntu 24.04, Ubuntu 26.04, Rocky 9; coherent 8.3 provider/extensions/SAPI; fresh install, reprovision and reboot; build/CI rejection cases | Provider resolution may proceed in disposable environments; production package/CI integration still requires task 1.5 approval. Missing providers are BLOCKED, not N/A. |
+| T5 Performance and diagnostics | Decision 7's identical-resource protocol, two warmups and at least five measured rounds; API median/p95, transcode and queue timings; classified diagnostics | More than 20% regression requires explicit review. Shared-host contention or unstable runs are INCONCLUSIVE and require repetition, not PASS. |
+| T6 Upgrade, recovery and release | Synthetic-state upgrade, matched-state rollback, approved ZIP/DEB/RPM identities, double-build ZIP reproducibility and downloaded asset verification | Full distro/runtime/recovery acceptance plus operator release approval precede publication; `.20` cutover has a separate approval boundary. |
+
+A candidate is an explicitly selected, reviewed patch manifest, not necessarily
+all patches in `held/`. Record each held patch as selected, rejected or deferred
+with its reason. The JSON-only exp2 ZIP is neither the complete candidate nor a
+release. Its bounded evidence remains useful only for its exact tested scope.
+Changing source, selected patches, harness, runtime or configuration makes
+previous dependent results stale until rerun or a documented impact review;
+retain their history, never silently transfer PASS to a new candidate.
+
+### Case and evidence contract
+
+Expand each case into applicable distro × SAPI × transport × fixture rows before
+running it. Record a stable case/run ID, original parent task(s), executor and
+independent reviewer, timestamp, commit and source/patch/harness/fixture hashes,
+OS/runtime/module/INI/provider identities, target allowlist, preconditions,
+exact command, expected result, observed result, exit code, duration, sanitized
+log/report paths, defect IDs, cleanup and retest outcome. Do not record credentials,
+KS values, cookies, private keys or production data. Commands, timeouts, profile
+and stream tolerances must be reviewed before execution rather than inferred
+from a successful output. Normalize only explicitly listed volatile fields;
+never normalize away types, authorization failures or semantic changes.
+
+Execution states are NOT_RUN, RUNNING, PASS, FAIL, BLOCKED and INCONCLUSIVE.
+A justified N/A requires a named scope rationale and reviewer; mandatory distro
+or functional requirements cannot be waived this way. PARTIAL describes aggregate
+coverage or older limited evidence, never a passing execution. An unavailable CLI
+is BLOCKED/NOT_EXECUTED, not application FAIL and never PASS. Track unknown paths
+and new findings alongside the denominator; do not conceal them by shrinking it.
+
+Report after each batch: planned applicable rows, executed rows, PASS/FAIL/
+BLOCKED/INCONCLUSIVE/NOT_RUN counts, stale results, critical defects and release
+prerequisites, new discoveries, and the next three runnable cases. Report the
+original 24 acceptance tasks separately from detailed-case counts. Neither count
+is a completion percentage or release ETA. All applicable rows and independent
+review must pass before closing a case; close a parent only when its entire
+original acceptance text is satisfied. Syntax validation of this plan does not
+complete any application test.
+
+### Parallel execution and independent review
+
+Follow AGENTS.md: involve the actual Claude, Grok and Cursor (`agent`) CLIs in
+execution and review over every validation cycle; Codex integrates results.
+Default ownership is Claude for differential PHP/API, Grok for negative/security
+cases, Cursor for coverage/artifact/distro checks. Rotate reviewers:
+Claude → Grok, Grok → Cursor, Cursor → Claude. A blocked reviewer remains visible;
+another independent authorized reviewer may provide additional evidence without
+pretending that the blocked CLI ran. Review alone is not execution; arrange an
+independent rerun of critical cases on the same frozen inputs.
+
+Parallelize only independent read-only checks or tests in distinct disposable
+clones. Reserve each VM/DB/worktree for one mutation owner and each benchmark host
+for one workload; serialize if separate clones or an exclusive reservation are
+unavailable. Protect `.20`, reject unexpected DNS/redirect targets, use synthetic
+data and restore disposable state in cleanup. Do not bypass CLI protections.
+
+### Specific regression boundaries
+
+- Assert PDO numeric/string/NULL/false behavior through actual API contracts and
+  generated clients, not just driver return values. Include negative DB paths.
+- Exercise original 7.4 serialized objects with 8.3, cold/warm real caches and
+  documented invalidation. A mixed 7.4/8.3 rollout is not approved: demonstrate
+  that cutover drains/stops old workers. Do not add mixed-runtime support or claim
+  arbitrary 8.3 writes can be read by 7.4; rollback restores a coherent snapshot.
+- Include KS crypto interoperability, expiry/clock skew, privilege tampering,
+  cross-partner denial, XML external-entity rejection without external network
+  access, timezone/locale behavior, and active install/plugin/cron entrypoints.
+  Optional capabilities are inventoried before inclusion; do not silently add
+  DRM/live/DWH or DB/schema upgrades to this change.
+- Test browser login/session/ACL behavior and search indexing/query parity. Check
+  Apache/FPM body handling and OS service/security-policy behavior in the actual
+  target topology. No bypass of TLS verification or SELinux/AppArmor to pass.
+- Separate worker orchestration/queue latency from ffmpeg conversion time. Keep
+  profiles and OPcache/JIT settings recorded and comparable; record sample counts
+  and dispersion. Resolve unstable measurements before applying the 20% gate.
+- Rehearse failure after synthetic candidate writes while intake is restricted;
+  restore the matched baseline and explicitly account for discarded experimental
+  writes. This is recovery rehearsal, not a promise of lossless post-cutover
+  downgrade or permission to alter production.
+
+### First execution batch
+
+T0-01: Claude runs the existing local harness suite; Grok independently reviews
+and reruns the bounded command. T0-02: Cursor audits source/patch/ZIP identities
+and selection gaps; Claude reviews. T0-03: Grok maps each original task to cases,
+existing evidence and uncovered scope; Cursor reviews. All are local-only; no
+VM, package, CI or release mutation is authorized by this batch. Record tool
+failures separately. Subsequent lab cases start only after target ownership,
+commands and candidate identities are frozen. These are assignments, not claims
+that execution has already happened.
+
+### Refinement validation
+
+All three actual CLIs returned planning reviews of the supplied proposal,
+updated design/tasks and delta specs with no blocking planning findings. Claude
+identified non-blocking baseline-timing and approval-boundary ambiguities;
+the final case wording now explicitly covers baseline runtime/extension/timing
+reports, baseline-versus-candidate measurements separated from optional upgrades,
+and feasibility approval for both additional distro integrations. Cursor and
+Grok confirmed the parent mapping and preserved gates. These were document-only
+reviews, not independent runtime execution or release sign-off. Local strict
+OpenSpec validation and checks for preserved original text, 24 mapped parents,
+27 unique cases and zero completed checkboxes passed. Application execution
+remains the next apply-phase activity.
