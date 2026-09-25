@@ -6,7 +6,7 @@ The binary SHALL provide these Cobra commands:
 - `migrate`;
 - `user add|passwd|list|delete`;
 - `token add|list|revoke`, for MCP API tokens;
-- `mcp`, which serves MCP over stdio;
+- `mcp --as <email>`, which serves MCP over stdio as an existing console user;
 - `config init`;
 - `version`, which prints the version, commit and build date injected at build time.
 

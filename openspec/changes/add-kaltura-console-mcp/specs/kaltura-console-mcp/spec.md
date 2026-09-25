@@ -12,9 +12,29 @@ The console SHALL serve the Model Context Protocol over stdio, with `kaltura-con
 - **THEN** the server answers with its name, version and tool list
 
 #### Scenario: stdio
-- **WHEN** a local client starts `kaltura-console mcp --config /etc/kaltura-console/config.toml`
+- **WHEN** a local client starts `kaltura-console mcp --as viewer@example.com --config /etc/kaltura-console/config.toml`, and that user exists
 - **THEN** the client can list and call the read-only tools
+- **AND** each call is audited as that user
 - **AND** no network port is opened
+
+#### Scenario: stdio without identity
+- **WHEN** `kaltura-console mcp` runs without `--as`, or with an unknown or disabled user
+- **THEN** it exits non-zero before serving any request
+
+### Requirement: Host and Origin validation
+The HTTP endpoint SHALL reject with HTTP 403, before authentication, any request that:
+- has a `Host` (or trusted forwarded host) not in `[mcp] allowed_hosts`;
+- or carries an `Origin` header not in `[mcp] allowed_origins`.
+
+`allowed_origins` SHALL default to empty. The endpoint SHALL refuse plain HTTP unless the listener is bound to loopback only.
+
+#### Scenario: DNS rebinding
+- **WHEN** a request with a valid token arrives with `Host: attacker.example`
+- **THEN** the response is HTTP 403 and no Kaltura call is made
+
+#### Scenario: Browser origin
+- **WHEN** a request carries `Origin: https://evil.example` and `allowed_origins` is empty
+- **THEN** the response is HTTP 403
 
 ### Requirement: Bearer token authentication
 The HTTP endpoint SHALL accept only `Authorization: Bearer` API tokens and SHALL ignore session cookies. Tokens SHALL be generated with at least 32 random bytes, shown once, and stored only as a SHA-256 hash with a short display prefix. A token SHALL be rejected when it is unknown, revoked or expired, or when its user is deleted.
@@ -40,11 +60,16 @@ The Kaltura `admin_secret` and any KS SHALL NOT appear in MCP responses, tool er
 - **AND** it contains no secret, KS or signed URL query string
 
 ### Requirement: Least-privilege Kaltura sessions
-Read tools SHALL call Kaltura with a short-lived USER KS for the console user, with privileges limited to the call. Read tools SHALL NOT use `disableentitlement`. Write tools SHALL use an admin KS only for admin tokens with writes enabled.
+Tools SHALL call Kaltura with a short-lived USER KS for the console user, with privileges limited to the method, and SHALL NOT use `disableentitlement`. A tool whose method the USER KS cannot serve SHALL fail closed with an "unavailable" error, or not be registered. It SHALL NOT fall back to an admin KS.
 
 #### Scenario: Read tool session
 - **WHEN** a viewer token calls `get_entry`
 - **THEN** the Kaltura request uses a USER KS whose privileges do not include `disableentitlement`
+
+#### Scenario: CE refuses the USER KS
+- **WHEN** Kaltura rejects a tool's method for the USER KS
+- **THEN** the tool returns an "unavailable" error
+- **AND** no admin KS is created for that call
 
 ### Requirement: Read-only tools
 The server SHALL provide these tools:
@@ -52,8 +77,7 @@ The server SHALL provide these tools:
 - `get_entry`;
 - `get_entry_status`;
 - `list_flavors`;
-- `get_playback_urls`: HLS and MP4, using the `playback_host` scheme;
-- `get_thumbnail_url`;
+- `get_playback_links`: status, duration, flavors (resolution, bitrate, codec) and the console UI URL of the entry;
 - `list_categories`;
 - `list_captions`;
 - `get_caption`: truncated to a configurable size, with a `truncated` flag;
@@ -65,20 +89,17 @@ List results SHALL be capped by `max_results`.
 - **WHEN** a viewer token calls `search_entries` with `query = "luta"`
 - **THEN** the result lists the matching entries with id, name, status, duration and created date, at most `max_results` items
 
-#### Scenario: HTTPS playback URLs
-- **WHEN** `playback_host` is `https://media.example.com` and a client calls `get_playback_urls` for a READY entry
-- **THEN** every returned URL uses `https`
+#### Scenario: Links without credentials
+- **WHEN** a client calls `get_playback_links` for a READY entry
+- **THEN** the result contains the console entry page URL and flavor metadata
+- **AND** no URL contains a KS, a signed query string or the MCP token
 
-### Requirement: Opt-in write tools
-`upload_media`, `update_media` and `delete_media` SHALL be registered only when `[mcp] allow_write = true`, and SHALL be callable only with an admin token.
+### Requirement: Read-only scope
+This change SHALL NOT expose any tool that creates, updates or deletes Kaltura objects.
 
-#### Scenario: Writes disabled
-- **WHEN** `allow_write` is false
-- **THEN** `tools/list` does not include the write tools
-
-#### Scenario: Viewer tries to delete
-- **WHEN** `allow_write` is true and a viewer token calls `delete_media`
-- **THEN** the call returns a permission error and no Kaltura call is made
+#### Scenario: Tool list
+- **WHEN** a client lists the tools
+- **THEN** no tool uploads, updates or deletes media
 
 ### Requirement: No analytics tools
 The server SHALL NOT expose analytics or `report` service tools, because the DWH is not packaged. The documentation SHALL state this.
@@ -88,7 +109,7 @@ The server SHALL NOT expose analytics or `report` service tools, because the DWH
 - **THEN** no tool name starts with `get_analytics`
 
 ### Requirement: Rate limit and audit
-HTTP calls SHALL be rate-limited per token (default 60/min, configurable). Every tool call SHALL be recorded in `mcp_audit` with these fields: time, token prefix, user, tool, entry id, result, duration. The record SHALL NOT include caption text, file content, secrets or KS values.
+HTTP calls SHALL be rate-limited per token (default 60/min, configurable). Every tool call SHALL be recorded in `mcp_audit` with these fields: time, transport, user, token prefix (HTTP only), tool, entry id, result, duration. The record SHALL NOT include caption text, file content, secrets or KS values.
 
 #### Scenario: Rate limit
 - **WHEN** a token exceeds its per-minute limit
@@ -100,7 +121,7 @@ HTTP calls SHALL be rate-limited per token (default 60/min, configurable). Every
 
 ### Requirement: Client setup documentation
 The console documentation SHALL show how to register the server in Claude Code and in Codex:
-- stdio on the Kaltura host;
+- stdio on the Kaltura host with `--as`, including its trust boundary: the local operator can read the config and therefore holds the admin secret;
 - Streamable HTTP over HTTPS with a bearer token;
 - how to create, list and revoke tokens.
 

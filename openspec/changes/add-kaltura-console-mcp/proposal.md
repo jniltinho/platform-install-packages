@@ -21,30 +21,36 @@ The existing [zoharbabin/kaltura-mcp](https://github.com/zoharbabin/kaltura-mcp)
   - `get_entry`;
   - `get_entry_status`: transcoding status;
   - `list_flavors`;
-  - `get_playback_urls`: HLS and MP4, with the scheme taken from `playback_host`;
+  - `get_playback_links`: links to the entry in the console UI, which the user opens with an explicit browser login;
   - `get_thumbnail_url`;
   - `list_categories`;
   - `list_captions` and `get_caption`;
   - `get_health`: ping plus counters.
-- **Write tools, opt-in and outside the MVP:** `upload_media`, `update_media` and `delete_media`. Off by default; when enabled, admin tokens only.
+- **No write tools in this change.** Upload, update and delete through MCP are left for a separate change, with its own review.
 - **Authentication:**
   - Per-user API tokens managed by the new `kaltura-console token add|list|revoke` command and a UI page.
   - Tokens are stored only as hashes, can expire, and are scoped to the user's role.
   - The Kaltura admin secret never leaves the server.
   - Every call is recorded in an audit log.
   - HTTP calls are rate-limited per token.
-- **Least privilege.** Read tools use a USER KS whose privileges are limited to the call; entitlement is never disabled.
+- **Least privilege.**
+  - Read tools use a USER KS whose privileges are limited to the call. Entitlement is never disabled.
+  - A tool the USER KS cannot serve on CE fails closed. There is no silent fallback to an admin KS.
+- **stdio identity.** The stdio mode requires `--as <email>` naming an existing console user. That user becomes the identity for roles and audit.
+- **HTTP hardening.** The HTTP endpoint validates `Origin` and `Host` against configured allow lists, to block DNS rebinding.
 - **Documentation:** how to register the server in Claude Code (`claude mcp add`) and in Codex, locally over stdio and remotely over HTTPS with a bearer token.
 
 Out of scope:
 - analytics or `report` tools (no DWH);
 - live streaming;
+- write tools (upload, update, delete);
+- media streaming through MCP, or signed media URLs;
 - OAuth authorization server flows (bearer tokens only);
 - changes to the Kaltura server packages.
 
 ## Impact
 
-- **Code:** `kaltura-console/` gains `internal/mcp` and the `cmd` subcommands `mcp` and `token`. It adds one migration (`api_tokens`, `mcp_audit`), a UI page for tokens, and one dependency (`github.com/modelcontextprotocol/go-sdk`).
+- **Code:** `kaltura-console/` gains `internal/mcp` and the `cmd` subcommands `mcp` and `token`. It adds one migration (`api_tokens`, `mcp_audit`), a UI page for tokens, `[mcp]` config keys (including `allowed_origins` and `allowed_hosts`), and one dependency (`github.com/modelcontextprotocol/go-sdk`).
 - **Specs:**
   - new `kaltura-console-mcp`;
   - `kaltura-console-ops` CLI requirement modified: new `mcp` and `token` commands.
