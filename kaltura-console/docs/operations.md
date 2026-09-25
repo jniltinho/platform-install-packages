@@ -208,3 +208,17 @@ Ordinary removal retains state. **Explicit Debian purge deletes `/var/lib/kaltur
 | Upload 502 | API/upload endpoint, chunked-body support, timeout and Kaltura logs; inspect orphan entry cleanup |
 | Video never becomes READY | Kaltura conversion workers/flavors; console does not run transcoding |
 | New database unexpectedly empty | Wrong `--config`/DSN or working directory; do not create replacement admins until scope is verified |
+
+### Session isolation across prefix changes
+
+Root deployments keep the `kconsole_session` cookie name. Non-root deployments
+use a deterministic prefix-specific suffix in addition to `Path=<base_path>`.
+This intentionally requires a fresh login after a prefix change and prevents an
+old root cookie from re-authenticating the prefixed console after logout.
+
+### PHP-FPM upload compatibility
+
+The upstream multipart request has an exact Content-Length computed from small
+framing plus the staged file size. File bytes still stream without a file-sized
+memory buffer. This is required for PHP-FPM deployments that silently ignore
+chunked multipart uploads.

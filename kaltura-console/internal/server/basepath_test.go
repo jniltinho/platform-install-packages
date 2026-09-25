@@ -20,6 +20,7 @@ func TestPrefixedRoutesAndTrustedProxy(t *testing.T) {
 	require.NoError(t, err)
 	h.e = e
 	h.s = s
+	require.Equal(t, 401, h.request("GET", "/console/api/session", "", true, false).Code, "root session cookie must not authenticate a prefix deployment")
 	for _, tt := range []struct {
 		name, path string
 		code       int
@@ -58,6 +59,7 @@ func TestPrefixedRoutesAndTrustedProxy(t *testing.T) {
 			require.Equal(t, 200, w.Code, w.Body.String())
 			cookie := w.Result().Cookies()[0]
 			require.Equal(t, "/console", cookie.Path)
+			require.NotEqual(t, sessionCookie, cookie.Name)
 			require.Equal(t, tt.secure, cookie.Secure)
 			require.Equal(t, "private, no-store", w.Header().Get("Cache-Control"))
 			var sess sessionView

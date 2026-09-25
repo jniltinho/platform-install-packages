@@ -5,6 +5,10 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Fixed
+- Stream uploads with an exact multipart Content-Length for PHP-FPM on Rocky 9.
+- Namespace prefixed session cookies so old root cookies cannot reactivate a login after logout.
+
 ### Changed
 - Smooth page transitions matching painel-golang (150 ms fade, 6 px entrance),
   with persistent navigation, a stable internally scrolling card and reduced-motion support.

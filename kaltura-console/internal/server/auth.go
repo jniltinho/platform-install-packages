@@ -1,8 +1,10 @@
 package server
 
 import (
+	"crypto/sha256"
 	"crypto/subtle"
 	"errors"
+	"fmt"
 	"net/http"
 	"net/url"
 	"strconv"
@@ -57,7 +59,7 @@ func (s *Server) sessionMiddleware(next echo.HandlerFunc) echo.HandlerFunc {
 		if isMutating(r.Method) && !s.sameOrigin(r) {
 			return echo.NewHTTPError(http.StatusForbidden, "origem inválida")
 		}
-		ck, err := c.Cookie(sessionCookie)
+		ck, err := c.Cookie(s.sessionCookieName())
 		if err != nil || ck.Value == "" {
 			return next(c)
 		}
@@ -109,12 +111,22 @@ func (s *Server) requireAdmin(next echo.HandlerFunc) echo.HandlerFunc {
 	}
 }
 
+// A prefixed deployment must not consume a still-valid cookie from the root app.
+// Otherwise clearing its own Path cookie on logout could reactivate the old session.
+func (s *Server) sessionCookieName() string {
+	if s.cfg.Server.BasePath == "" {
+		return sessionCookie
+	}
+	sum := sha256.Sum256([]byte(s.cfg.Server.BasePath))
+	return fmt.Sprintf("%s_%x", sessionCookie, sum[:8])
+}
+
 func (s *Server) cookie(value string, maxAge int, r *http.Request) *http.Cookie {
 	path := s.cfg.Server.BasePath
 	if path == "" {
 		path = "/"
 	}
-	return &http.Cookie{Name: sessionCookie, Value: value, Path: path, MaxAge: maxAge,
+	return &http.Cookie{Name: s.sessionCookieName(), Value: value, Path: path, MaxAge: maxAge,
 		HttpOnly: true, Secure: s.isHTTPS(r), SameSite: http.SameSiteLaxMode}
 }
 

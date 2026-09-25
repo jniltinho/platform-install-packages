@@ -1,10 +1,12 @@
 package kaltura
 
 import (
+	"bytes"
 	"context"
 	"errors"
 	"fmt"
 	"io"
+	"math"
 	"mime/multipart"
 	"net/http"
 	"net/url"
@@ -91,14 +93,39 @@ func (c *Client) uploadOnce(ctx context.Context, ks, token, path, fileName strin
 	}
 	defer f.Close() //nolint:errcheck // read-only
 
+	info, err := f.Stat()
+	if err != nil {
+		return err
+	}
+	if !info.Mode().IsRegular() {
+		return errors.New("upload source must be a regular file")
+	}
+	fields := map[string]string{
+		"service": "uploadToken", "action": "upload", "format": "1",
+		"partnerId": strconv.Itoa(c.cfg.PartnerID), "ks": ks, "uploadTokenId": token,
+	}
 	pr, pw := io.Pipe()
 	mw := multipart.NewWriter(pw)
+	// PHP-FPM may silently discard chunked multipart bodies. Measure only framing,
+	// then stream the file with an exact Content-Length (no file-sized buffer).
+	var framing bytes.Buffer
+	measure := multipart.NewWriter(&framing)
+	if err := measure.SetBoundary(mw.Boundary()); err != nil {
+		return err
+	}
+	if err := writeUploadBody(measure, bytes.NewReader(nil), fileName, fields, nil); err != nil {
+		return err
+	}
+	if err := measure.Close(); err != nil {
+		return err
+	}
+	if info.Size() > math.MaxInt64-int64(framing.Len()) {
+		return errors.New("upload size exceeds HTTP content length")
+	}
+	contentLength := info.Size() + int64(framing.Len())
 	done := make(chan error, 1)
 	go func() {
-		err := writeUploadBody(mw, f, fileName, map[string]string{
-			"service": "uploadToken", "action": "upload", "format": "1",
-			"partnerId": strconv.Itoa(c.cfg.PartnerID), "ks": ks, "uploadTokenId": token,
-		}, progress)
+		err := writeUploadBody(mw, f, fileName, fields, progress)
 		if err == nil {
 			err = mw.Close()
 		}
@@ -113,6 +140,7 @@ func (c *Client) uploadOnce(ctx context.Context, ks, token, path, fileName strin
 		return err
 	}
 	req.Header.Set("Content-Type", mw.FormDataContentType())
+	req.ContentLength = contentLength
 	resp, err := c.http.Do(req)
 	// Whatever happened, stop the writer (a no-op if it already finished)
 	// and wait for it, so an early upstream response never leaks it.

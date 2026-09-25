@@ -43,6 +43,8 @@ func (f *fakeAPI) handler(t *testing.T) http.HandlerFunc {
 		var service, action, ks string
 		var fileLen int
 		if isMultipart {
+			require.Greater(t, r.ContentLength, int64(0), "PHP-FPM requires multipart Content-Length")
+			require.Empty(t, r.TransferEncoding, "multipart must not be chunked")
 			mr, err := r.MultipartReader()
 			require.NoError(t, err)
 			for {
