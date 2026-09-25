@@ -1,0 +1,40 @@
+Advisory review before final hardening; no tool/repository access.
+
+# Revisão do teste HTTP sintético
+
+O isolamento está bem desenhado: netns privado, bind só em loopback, reset guardado por datadir e checagem de `REMOTE_ADDR` e path. Não vejo risco de segurança real. Os pontos abaixo são quase todos riscos de **falso positivo**, em ordem de prioridade.
+
+## Falsos positivos
+
+1. **Deprecations e warnings não reprovam o teste.** Com `log_errors` para stderr, um `Deprecated` ou `Warning` do PHP 8.3 passa despercebido desde que o JSON esteja certo. Para uma migração, esse é o sinal principal. O `collect`/`inner` deveria falhar, ou ao menos contar e registrar como evidência, linhas `PHP (Deprecated|Warning|Notice|Fatal)` no `$log`.
+
+2. **O bootstrap pode sobrescrever `error_reporting` e `display_errors`.** Você define os valores *antes* do `require api-bootstrap.php`. O Kaltura (kConf, KalturaLog, handlers) pode alterá-los depois. Reaplique os `ini_set` e o `error_reporting` depois do `require`, ou faça um `assert` sobre eles.
+
+3. **Motivo do `INVALID_KS` não é verificado.** `expired` e `malformed` só conferem o `code`. Se `expiry=-60` for normalizado para o default, ou se o KS falhar por outro motivo, o teste passa mesmo assim. Duas correções:
+   - Confira a `message`, que no Kaltura traz o motivo (`EXPIRED` versus inválido/formato).
+   - Garanta que o token expirado é bem formado, por exemplo decodificando o base64 no cliente e checando que o `expiry` está no passado.
+
+4. **Cache persiste entre requests, mas o DB não.** O tmpfs de cache e a APCu, se `apc.enable_cli` estiver ativo no cli-server, sobrevivem ao reset. As requests 2 em diante podem servir role/permissão do cache em vez de consultar o SQL. Nesse caso, `SERVICE_FORBIDDEN` e os acessos permitidos não provariam a checagem real. Há duas saídas:
+   - Desligar a APCu e limpar o diretório de cache a cada request no router.
+   - Rodar um negativo como primeira request, o que dá uma prova parcial.
+
+5. **`PDO::exec` com multi-statement pode engolir erros.** Em MySQL, um erro depois da primeira instrução do `api-session-schema.sql` pode não gerar exceção, deixando o schema parcial silenciosamente. Adicione um `SELECT COUNT(*)` de sanidade nas tabelas e linhas semeadas antes do `run()`.
+
+6. **O binário PHP em teste não é comprovado.** Nada na resposta ou na evidência prova que `"$@"` é o 7.4 ou o 8.3 esperado. Registre `"$@" -v` no log, ou mande `PHP_VERSION` em um header de lab e faça o cliente conferir.
+
+## Segurança e higiene
+
+7. **A regra de não expor token não vale para o log do servidor.** O `cat "$log" >&2` pode despejar KS e secrets que o Kaltura loga ao registrar os parâmetros da request. São valores sintéticos, então o risco é baixo. Mas se `doc/php83/evidence/api-http/` captura esse stderr, a evidência vai conter tokens. Redija antes de gravar com `sed -E 's/(ks|secret)=[^&" ]+/\1=REDACTED/g'`.
+
+8. **Escrita do `cache.ini`.** Confirme que `/audit/app/configurations` é o tmpfs privado e não um bind da árvore-fonte. Caso contrário, o teste altera o código auditado.
+
+9. **Concorrência.** O reset por request só é seguro enquanto o servidor for single-worker. Force `PHP_CLI_SERVER_WORKERS` vazio ou igual a 1 no `inner.sh`.
+
+## Menores
+
+- Não há caso cross-partner via HTTP (existia no teste do dispatcher). Um KS de 83001 com `partnerId=83002` custa uma linha.
+- O header `Content-Type` em GET sem body é inofensivo.
+- O `exit status` com o trap está correto: o `|| true` no `wait` não mascara falhas.
+- As strings `'0'`, `'2'` e `'83001'` no contrato estão corretas, desde que as saídas do 7.4 original e do 8.3 batam. Esse é o ponto que a comparação cross-version já cobre.
+
+**Prioridade mínima:** itens 1, 3 e 4. Sem eles, "JSON OK" no 8.3 não prova ausência de regressão.

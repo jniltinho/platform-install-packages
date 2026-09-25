@@ -1,0 +1,47 @@
+{
+  "session": {
+    "comparisons": [
+      {
+        "runtime": "74",
+        "matches_baseline": true
+      },
+      {
+        "runtime": "83",
+        "matches_baseline": true
+      }
+    ],
+    "harness_hashes": {
+      "api-bootstrap.php": "22db5454284b0af4841245665baf8c82274453bba1c82adbdb5b6b11b5d3d49d",
+      "api-permission-schema.sql": "096a5750c3f0e4dab37fb43598a7b57f2b55b85031685341e0c9df36aa2c8877",
+      "api-session.php": "ce428f515191a60c5bee16d4c27ebdb36aab4e1ec6f9e6a3e08d6000695eb701",
+      "api-session-schema.sql": "9a8a29a4cac6ffa07c40b94a8d475d3ddefd3553534dc16d82eec4ba0590fe1e",
+      "run-api-session.sh": "aa19fc6016c0e8621379c1adefce3c3b61018a55bb9a9e1db2caf22792dfac9c",
+      "collect-api-mysql.py": "7ba48e7d045968b08d536dc604e067686772309cd093d23b7ccfae5507a86863",
+      "collect-api-session.py": "cd7eebf7b7762466f7f0f6d51919176a2eeae313572ca35a2cb93d0c2f54653b"
+    },
+    "report_sha256": "2ce332040770ab2183e02487f66ae68cc76ea0ee85d44fde641ee065a9a15ce3"
+  },
+  "auth": {
+    "comparisons": [
+      {
+        "runtime": "74",
+        "matches_baseline": true
+      },
+      {
+        "runtime": "83",
+        "matches_baseline": true
+      }
+    ],
+    "harness_hashes": {
+      "api-bootstrap.php": "22db5454284b0af4841245665baf8c82274453bba1c82adbdb5b6b11b5d3d49d",
+      "api-permission-schema.sql": "096a5750c3f0e4dab37fb43598a7b57f2b55b85031685341e0c9df36aa2c8877",
+      "api-session.php": "ce428f515191a60c5bee16d4c27ebdb36aab4e1ec6f9e6a3e08d6000695eb701",
+      "api-session-schema.sql": "9a8a29a4cac6ffa07c40b94a8d475d3ddefd3553534dc16d82eec4ba0590fe1e",
+      "run-api-auth-dispatch.sh": "4d487e9aba1d6b8a7c20e1592a376b2c9b24246ce57aebf650ad638fcd871372",
+      "api-auth-dispatch.php": "e7ed6455d8f830d616f901d9a4606a80433bfaa0a14ca2d0e0c53f4ee6cb0a35",
+      "collect-api-mysql.py": "7ba48e7d045968b08d536dc604e067686772309cd093d23b7ccfae5507a86863",
+      "collect-api-auth-dispatch.py": "ed79177ba4bb311cdcd45e6977ad10f5b0a64b551c3d25f2fbede8f91378eb22"
+    },
+    "report_sha256": "59143d883722291c3352903ad37cf80d3bb0af2ddc8826ea9aa71d5915966bd6"
+  }
+}

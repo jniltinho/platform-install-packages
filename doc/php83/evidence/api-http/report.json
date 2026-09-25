@@ -1,0 +1,286 @@
+{
+  "scope": "Loopback HTTP cli-server adapter + real front controller and JSON; NOT production web/index.php, Apache/FPM or HTTPS acceptance",
+  "logs": "Only diagnostic locations/counts retained; full stderr hash is provenance, not sanitized log content",
+  "harness_hashes": {
+    "api-bootstrap.php": "22db5454284b0af4841245665baf8c82274453bba1c82adbdb5b6b11b5d3d49d",
+    "api-permission-schema.sql": "096a5750c3f0e4dab37fb43598a7b57f2b55b85031685341e0c9df36aa2c8877",
+    "api-session-schema.sql": "9a8a29a4cac6ffa07c40b94a8d475d3ddefd3553534dc16d82eec4ba0590fe1e",
+    "run-api-http.sh": "90c4abe216e059bc2946272a01650d4864caad9e52aae3674a3418acd1fadd3a",
+    "api-http-router.php": "245ee3fe4d95563d4b8044dc850f9b6bdcab583c81760d3b7e0306ae6c29c422",
+    "api-http-inner.sh": "e867809a2b5cd34e49c238ab14de151be9a28e9c78025622d2cf271c43ad0cce",
+    "api-http-client.py": "ca8af9ffa682f929a1b12213579f8caa5fdd95030d96cafb0b07fbe27750d9fc",
+    "collect-api-mysql.py": "7ba48e7d045968b08d536dc604e067686772309cd093d23b7ccfae5507a86863",
+    "collect-api-http.py": "ee98437f23a597dd5264f997a2d296370178924b6a829f6cb47f69368a129677"
+  },
+  "remote_harness_hashes": {
+    "api-bootstrap.php": "22db5454284b0af4841245665baf8c82274453bba1c82adbdb5b6b11b5d3d49d",
+    "api-permission-schema.sql": "096a5750c3f0e4dab37fb43598a7b57f2b55b85031685341e0c9df36aa2c8877",
+    "api-session-schema.sql": "9a8a29a4cac6ffa07c40b94a8d475d3ddefd3553534dc16d82eec4ba0590fe1e",
+    "run-api-http.sh": "90c4abe216e059bc2946272a01650d4864caad9e52aae3674a3418acd1fadd3a",
+    "api-http-router.php": "245ee3fe4d95563d4b8044dc850f9b6bdcab583c81760d3b7e0306ae6c29c422",
+    "api-http-inner.sh": "e867809a2b5cd34e49c238ab14de151be9a28e9c78025622d2cf271c43ad0cce",
+    "api-http-client.py": "ca8af9ffa682f929a1b12213579f8caa5fdd95030d96cafb0b07fbe27750d9fc"
+  },
+  "comparisons": [
+    {
+      "runtime": "74",
+      "matches_baseline": true
+    },
+    {
+      "runtime": "83",
+      "matches_baseline": true
+    }
+  ],
+  "original83_signature_failure_reproduced": true,
+  "records": [
+    {
+      "runtime": "74",
+      "tree": "original",
+      "returncode": 0,
+      "stdout": "[[\"http-session-start\", 0, true], [\"http-session-get\", 0, \"GET\", true], [\"http-session-get\", 0, \"POST\", true], [\"http-session-start\", 2, true], [\"http-session-get\", 2, \"GET\", true], [\"http-session-get\", 2, \"POST\", true], [\"http-rejected\", \"missing\", \"SERVICE_FORBIDDEN\"], [\"http-rejected\", \"malformed\", \"INVALID_KS\"], [\"http-rejected\", \"expired\", \"INVALID_KS\"], [\"http-rejected\", \"wrong-secret\", \"START_SESSION_ERROR\"], [\"http-rejected\", \"escalation\", \"START_SESSION_ERROR\"]]\n",
+      "diagnostics": [
+        {
+          "severity": "ApplicationDiagnostic",
+          "path": "/audit/app/alpha/apps/kaltura/lib/dateUtils.class.php",
+          "line": 100,
+          "count": 3
+        }
+      ],
+      "signature_failure": false,
+      "stderr_sha256": "2a9e88c8d008e087e070e06e2d2e920a2e5d61285f484cf86896cc15de4095f2"
+    },
+    {
+      "runtime": "74",
+      "tree": "candidate",
+      "returncode": 0,
+      "stdout": "[[\"http-session-start\", 0, true], [\"http-session-get\", 0, \"GET\", true], [\"http-session-get\", 0, \"POST\", true], [\"http-session-start\", 2, true], [\"http-session-get\", 2, \"GET\", true], [\"http-session-get\", 2, \"POST\", true], [\"http-rejected\", \"missing\", \"SERVICE_FORBIDDEN\"], [\"http-rejected\", \"malformed\", \"INVALID_KS\"], [\"http-rejected\", \"expired\", \"INVALID_KS\"], [\"http-rejected\", \"wrong-secret\", \"START_SESSION_ERROR\"], [\"http-rejected\", \"escalation\", \"START_SESSION_ERROR\"]]\n",
+      "diagnostics": [],
+      "signature_failure": false,
+      "stderr_sha256": "59102886ad85f88bcb6d9c0818c370c79f60d69ff377bea10fefbb02292515b6"
+    },
+    {
+      "runtime": "83",
+      "tree": "original",
+      "returncode": 1,
+      "stdout": "",
+      "diagnostics": [
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/alpha/apps/kaltura/lib/db/KalturaPDO.php",
+          "line": 127,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/ZendFramework/library/Zend/Config.php",
+          "line": 258,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/ZendFramework/library/Zend/Config.php",
+          "line": 269,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/ZendFramework/library/Zend/Config.php",
+          "line": 278,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/ZendFramework/library/Zend/Config.php",
+          "line": 292,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/ZendFramework/library/Zend/Config.php",
+          "line": 304,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/propel/util/PropelPDO.php",
+          "line": 123,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/propel/util/PropelPDO.php",
+          "line": 139,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/propel/util/PropelPDO.php",
+          "line": 161,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/propel/util/PropelPDO.php",
+          "line": 206,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/propel/util/PropelPDO.php",
+          "line": 225,
+          "count": 1
+        },
+        {
+          "severity": "Deprecated",
+          "path": "/audit/app/vendor/propel/util/PropelPDO.php",
+          "line": 244,
+          "count": 1
+        },
+        {
+          "severity": "Fatal error",
+          "path": "/audit/app/alpha/apps/kaltura/lib/db/KalturaPDO.php",
+          "line": 188,
+          "count": 1
+        }
+      ],
+      "signature_failure": true,
+      "stderr_sha256": "ebbeed812f0c98e0837e616a9aef7d8b3f61c257c805d06a4ad6679ca0631551"
+    },
+    {
+      "runtime": "83",
+      "tree": "candidate",
+      "returncode": 0,
+      "stdout": "[[\"http-session-start\", 0, true], [\"http-session-get\", 0, \"GET\", true], [\"http-session-get\", 0, \"POST\", true], [\"http-session-start\", 2, true], [\"http-session-get\", 2, \"GET\", true], [\"http-session-get\", 2, \"POST\", true], [\"http-rejected\", \"missing\", \"SERVICE_FORBIDDEN\"], [\"http-rejected\", \"malformed\", \"INVALID_KS\"], [\"http-rejected\", \"expired\", \"INVALID_KS\"], [\"http-rejected\", \"wrong-secret\", \"START_SESSION_ERROR\"], [\"http-rejected\", \"escalation\", \"START_SESSION_ERROR\"]]\n",
+      "diagnostics": [
+        {
+          "severity": "ApplicationDiagnostic",
+          "path": "/audit/app/alpha/apps/kaltura/lib/criteriaFilter.class.php",
+          "line": 51,
+          "count": 66
+        },
+        {
+          "severity": "ApplicationDiagnostic",
+          "path": "/audit/app/alpha/apps/kaltura/lib/myCustomData.class.php",
+          "line": 28,
+          "count": 11
+        },
+        {
+          "severity": "ApplicationDiagnostic",
+          "path": "/audit/app/alpha/lib/model/Partner.php",
+          "line": 1431,
+          "count": 10
+        },
+        {
+          "severity": "ApplicationDiagnostic",
+          "path": "/audit/app/alpha/lib/model/PermissionPeer.php",
+          "line": 329,
+          "count": 16
+        },
+        {
+          "severity": "ApplicationDiagnostic",
+          "path": "/audit/app/api_v3/lib/KalturaEntryService.php",
+          "line": 1836,
+          "count": 1
+        },
+        {
+          "severity": "ApplicationDiagnostic",
+          "path": "/audit/app/api_v3/lib/KalturaFrontController.php",
+          "line": 76,
+          "count": 7
+        },
+        {
+          "severity": "ApplicationDiagnostic",
+          "path": "/audit/app/api_v3/lib/exceptions/KalturaAPIException.php",
+          "line": 40,
+          "count": 5
+        },
+        {
+          "severity": "ApplicationDiagnostic",
+          "path": "/audit/app/api_v3/lib/reflection/KalturaActionReflector.php",
+          "line": 129,
+          "count": 37
+        },
+        {
+          "severity": "ApplicationDiagnostic",
+          "path": "/audit/app/api_v3/lib/reflection/KalturaActionReflector.php",
+          "line": 153,
+          "count": 5
+        },
+        {
+          "severity": "ApplicationDiagnostic",
+          "path": "/audit/app/api_v3/lib/reflection/KalturaDocCommentParser.php",
+          "line": 402,
+          "count": 2909
+        },
+        {
+          "severity": "ApplicationDiagnostic",
+          "path": "/audit/app/api_v3/lib/reflection/KalturaServicesMap.php",
+          "line": 45,
+          "count": 720
+        },
+        {
+          "severity": "ApplicationDiagnostic",
+          "path": "/audit/app/infra/log/KalturaLog.php",
+          "line": 122,
+          "count": 27
+        },
+        {
+          "severity": "ApplicationDiagnostic",
+          "path": "/audit/app/infra/storage/RefreshableRole.class.php",
+          "line": 21,
+          "count": 12
+        },
+        {
+          "severity": "ApplicationDiagnostic",
+          "path": "/audit/app/vendor/aws/Aws/Common/Credentials/AbstractCredentialsDecorator.php",
+          "line": 22,
+          "count": 12
+        },
+        {
+          "severity": "ApplicationDiagnostic",
+          "path": "/audit/app/vendor/propel/util/Criteria.php",
+          "line": 1259,
+          "count": 11
+        },
+        {
+          "severity": "ApplicationDiagnostic",
+          "path": "/audit/app/vendor/propel/util/Criteria.php",
+          "line": 1263,
+          "count": 11
+        },
+        {
+          "severity": "ApplicationDiagnostic",
+          "path": "/audit/app/vendor/propel/util/Criteria.php",
+          "line": 1267,
+          "count": 11
+        },
+        {
+          "severity": "ApplicationDiagnostic",
+          "path": "/audit/app/vendor/propel/util/Criteria.php",
+          "line": 1271,
+          "count": 11
+        },
+        {
+          "severity": "ApplicationDiagnostic",
+          "path": "/audit/app/vendor/propel/util/Criteria.php",
+          "line": 1275,
+          "count": 11
+        },
+        {
+          "severity": "ApplicationDiagnostic",
+          "path": "/audit/app/vendor/propel/util/Criteria.php",
+          "line": 1375,
+          "count": 347
+        },
+        {
+          "severity": "ApplicationDiagnostic",
+          "path": "/audit/app/vendor/propel/util/Criteria.php",
+          "line": 193,
+          "count": 11
+        }
+      ],
+      "signature_failure": false,
+      "stderr_sha256": "59fce719807ad5b505b60bd1e69fa143a96d5925e3d07613ba7e16d1b4f0b91d"
+    }
+  ]
+}

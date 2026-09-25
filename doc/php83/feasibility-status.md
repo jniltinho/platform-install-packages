@@ -389,3 +389,11 @@ synthetic SQL in both runtimes, including exact denial codes and successful
 context recovery after each negative case. No additional application repair
 was required; the harness now loads runtime-matching iconv. HTTP/SAPI and
 release gates remain open.
+
+## Loopback HTTP/JSON follow-up
+
+[HTTP front-controller checks](api-http.md) now pass on original 7.4 and both
+candidates, including session.start/get, GET/POST, exact JSON string types and
+negative auth responses. This uses a synthetic cli-server adapter, not the
+production entrypoint, Apache/FPM or HTTPS. E_ALL diagnostics are logged rather
+than emitted in the JSON body; their remediation remains a migration gate.

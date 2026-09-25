@@ -11,7 +11,7 @@ $_SERVER['REMOTE_ADDR'] = '127.0.0.1';
 $_SERVER['HTTP_HOST'] = 'synthetic.invalid';
 $_SERVER['REQUEST_URI'] = '/api_v3/index.php?service=system&action=ping';
 // These files live only in the runner's private tmpfs, never host config.
-if ($root !== '/audit/app' || !function_exists('posix_geteuid') || posix_geteuid() !== ($case === 'api-mysql' ? 1000 : 65534)) {
+if ($root !== '/audit/app' || !function_exists('posix_geteuid') || posix_geteuid() !== (in_array($case, array('api-mysql', 'api-http'), true) ? 1000 : 65534)) {
     throw new RuntimeException('API fixture requires the unprivileged audit runner');
 }
 $mounts = file('/proc/self/mountinfo');
@@ -26,6 +26,9 @@ foreach (array('/audit/app/configurations', '/audit/app/cache') as $requiredMoun
 }
 file_put_contents($root . '/configurations/local.ini', "date_default_timezone = UTC\nquery_cache_enabled = false\nenable_cache = false\nmax_num_instances_in_pool = 100\n");
 file_put_contents($root . '/configurations/logger.ini', "[api_v3]\nwriters.stream.name = Zend_Log_Writer_Stream\nwriters.stream.stream = php://stderr\nwriters.stream.formatters.simple.name = Zend_Log_Formatter_Simple\nwriters.stream.formatters.simple.format = %message%\n");
+if ($case === 'api-http') {
+    file_put_contents($root . '/configurations/local.ini', "[api_strict_error_map]\n", FILE_APPEND);
+}
 require_once $root . '/api_v3/bootstrap.php';
 $out[] = array('api-bootstrap-returned', true);
 foreach (array('KalturaFrontController', 'KalturaDispatcher', 'SystemService') as $class) {
@@ -34,7 +37,7 @@ foreach (array('KalturaFrontController', 'KalturaDispatcher', 'SystemService') a
 }
 
 // Anonymous dispatch experiment: real reflection/permission pipeline, no mocks.
-if ($case === 'api-mysql') {
+if ($case === 'api-mysql' || $case === 'api-http') {
     $dsn = 'mysql:unix_socket=/audit/db/mysql.sock;dbname=php83_api_probe';
     $setup = new PDO('mysql:unix_socket=/audit/db/mysql.sock', 'vagrant');
     $setup->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
