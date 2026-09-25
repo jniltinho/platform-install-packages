@@ -1,0 +1,8 @@
+{
+  "status": "held; explicit PHP 8.3 return contracts, focused validation pending",
+  "minimum_runtime": "8.0; mixed is not a universal type on PHP 7.4",
+  "path": "vendor/ZendFramework/library/Zend/Config.php",
+  "before_sha256": "065597c625046207683d14682bffcdbfd0aed862ad456a3dbefcf9b538e97a2f",
+  "after_sha256": "ccdbe8edbc8498fd52a3ac9456fe1085edbd09e77d4f332f7c279b94825e805b",
+  "patch_sha256": "602bb21bd0a34b33c01dd1146654b4b023245936a41e4d9168068641f219f276"
+}

@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "primary_sha256": "9b34e5bebd6d5a357825d38456fa4fb153e0a8a16249aca20052a4da88de208e",
+  "independent_sha256": "9b34e5bebd6d5a357825d38456fa4fb153e0a8a16249aca20052a4da88de208e",
+  "full_reports_equal": true,
+  "logical_variants": 3,
+  "cases_per_variant": 16,
+  "original83_return_deprecations": 6,
+  "candidate83_diagnostics": 0,
+  "candidate74_guard_exit": 64,
+  "claude_cli_exit": 0,
+  "cursor_cli_exit": 0,
+  "grok_cli_exit": 124,
+  "grok_status": "timeout; no completed validation result",
+  "opencode_cli_exit": 0,
+  "fallback_model": "opencode/muse-spark-1.3-contributor-free",
+  "local_tests": 122,
+  "patch_inventory": {
+    "active": 3,
+    "held": 24,
+    "all_hash_and_application_checks": "PASS"
+  },
+  "application_acceptance": false,
+  "zip_integration": "pending; exp6 remains unchanged"
+}

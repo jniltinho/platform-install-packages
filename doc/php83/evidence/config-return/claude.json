@@ -1,0 +1,1802 @@
+{
+  "schema": 1,
+  "patch": {
+    "status": "held; explicit PHP 8.3 return contracts, focused validation pending",
+    "minimum_runtime": "8.0; mixed is not a universal type on PHP 7.4",
+    "path": "vendor/ZendFramework/library/Zend/Config.php",
+    "before_sha256": "065597c625046207683d14682bffcdbfd0aed862ad456a3dbefcf9b538e97a2f",
+    "after_sha256": "ccdbe8edbc8498fd52a3ac9456fe1085edbd09e77d4f332f7c279b94825e805b",
+    "patch_sha256": "602bb21bd0a34b33c01dd1146654b4b023245936a41e4d9168068641f219f276"
+  },
+  "harness": {
+    "probe.php": "27dd36897f973d0f4e972cb6843951c4799b6a3928cb50ca332930d02dba4fd9",
+    "run.sh": "984915102b33b83bb18b64cd9d77050966f6591f4b836ba41a922ced9fe2c97f",
+    "candidate.php": "ccdbe8edbc8498fd52a3ac9456fe1085edbd09e77d4f332f7c279b94825e805b"
+  },
+  "collector_sha256": "c93fb17a96932f03b5332eb313bd15b755a3b69766b4a298969ab3551f0ada8d",
+  "records": [
+    {
+      "runtime": "74",
+      "variant": "original",
+      "command": "bash /home/vagrant/php-config-return/run.sh original",
+      "exit": 0,
+      "stderr": "",
+      "artifact": {
+        "zip_sha256": "da11cbb9cc58e4e67d4eb8c875d651f272941c7d37d1209c63a02a48e4ba30be",
+        "verified_extracted_files": 15190
+      },
+      "result": {
+        "php": "7.4.33",
+        "rows": [
+          [
+            "empty",
+            {
+              "rewind": null,
+              "count": 0,
+              "builtin_count": 0,
+              "items": [],
+              "end": [
+                false,
+                null,
+                [
+                  "boolean",
+                  false
+                ],
+                null
+              ]
+            },
+            []
+          ],
+          [
+            "values",
+            {
+              "rewind": null,
+              "count": 5,
+              "builtin_count": 5,
+              "items": [
+                [
+                  "null",
+                  [
+                    "NULL",
+                    null
+                  ],
+                  null
+                ],
+                [
+                  "false",
+                  [
+                    "boolean",
+                    false
+                  ],
+                  null
+                ],
+                [
+                  "zero",
+                  [
+                    "integer",
+                    0
+                  ],
+                  null
+                ],
+                [
+                  "str",
+                  [
+                    "string",
+                    "0"
+                  ],
+                  null
+                ],
+                [
+                  "nested",
+                  [
+                    "config",
+                    {
+                      "leaf": 17
+                    }
+                  ],
+                  null
+                ]
+              ],
+              "end": [
+                false,
+                null,
+                [
+                  "boolean",
+                  false
+                ],
+                null
+              ]
+            },
+            {
+              "null": null,
+              "false": false,
+              "zero": 0,
+              "str": "0",
+              "nested": {
+                "leaf": 17
+              }
+            }
+          ],
+          [
+            "keys",
+            {
+              "rewind": null,
+              "count": 3,
+              "builtin_count": 3,
+              "items": [
+                [
+                  7,
+                  [
+                    "string",
+                    "seven"
+                  ],
+                  null
+                ],
+                [
+                  "08",
+                  [
+                    "string",
+                    "eight"
+                  ],
+                  null
+                ],
+                [
+                  -1,
+                  [
+                    "string",
+                    "minus"
+                  ],
+                  null
+                ]
+              ],
+              "end": [
+                false,
+                null,
+                [
+                  "boolean",
+                  false
+                ],
+                null
+              ]
+            },
+            {
+              "7": "seven",
+              "08": "eight",
+              "-1": "minus"
+            }
+          ],
+          [
+            "mutation",
+            null,
+            {
+              "rewind": null,
+              "count": 3,
+              "builtin_count": 3,
+              "items": [
+                [
+                  "b",
+                  [
+                    "integer",
+                    20
+                  ],
+                  null
+                ],
+                [
+                  "c",
+                  [
+                    "integer",
+                    3
+                  ],
+                  null
+                ],
+                [
+                  "d",
+                  [
+                    "integer",
+                    4
+                  ],
+                  null
+                ]
+              ],
+              "end": [
+                false,
+                null,
+                [
+                  "boolean",
+                  false
+                ],
+                null
+              ]
+            },
+            {
+              "b": 20,
+              "c": 3,
+              "d": 4
+            }
+          ],
+          [
+            "merge-clone-serialize",
+            {
+              "rewind": null,
+              "count": 3,
+              "builtin_count": 3,
+              "items": [
+                [
+                  "nested",
+                  [
+                    "config",
+                    {
+                      "a": 1,
+                      "b": 3
+                    }
+                  ],
+                  null
+                ],
+                [
+                  "x",
+                  [
+                    "integer",
+                    2
+                  ],
+                  null
+                ],
+                [
+                  "y",
+                  [
+                    "integer",
+                    4
+                  ],
+                  null
+                ]
+              ],
+              "end": [
+                false,
+                null,
+                [
+                  "boolean",
+                  false
+                ],
+                null
+              ]
+            },
+            "bc0d8c6d7dc4e185acd945a79567e5b2e76dbf8792159d66ad642b595aa91df7",
+            {
+              "nested": {
+                "a": 99,
+                "b": 3
+              },
+              "x": 2,
+              "y": 4
+            }
+          ],
+          [
+            "read-only",
+            "set",
+            "Zend_Config_Exception",
+            "Zend_Config is read only"
+          ],
+          [
+            "read-only",
+            "unset",
+            "Zend_Config_Exception",
+            "Zend_Config is read only"
+          ],
+          [
+            "read-only",
+            "nested-set",
+            "Zend_Config_Exception",
+            "Zend_Config is read only"
+          ],
+          [
+            "ini",
+            {
+              "rewind": null,
+              "count": 2,
+              "builtin_count": 2,
+              "items": [
+                [
+                  "x",
+                  [
+                    "string",
+                    "2"
+                  ],
+                  null
+                ],
+                [
+                  "nested",
+                  [
+                    "config",
+                    {
+                      "a": "first",
+                      "b": "second"
+                    }
+                  ],
+                  null
+                ]
+              ],
+              "end": [
+                false,
+                null,
+                [
+                  "boolean",
+                  false
+                ],
+                null
+              ]
+            },
+            {
+              "x": "2",
+              "nested": {
+                "a": "first",
+                "b": "second"
+              }
+            },
+            "child"
+          ],
+          [
+            "xml",
+            {
+              "rewind": null,
+              "count": 2,
+              "builtin_count": 2,
+              "items": [
+                [
+                  "x",
+                  [
+                    "string",
+                    "1"
+                  ],
+                  null
+                ],
+                [
+                  "y",
+                  [
+                    "string",
+                    "2"
+                  ],
+                  null
+                ]
+              ],
+              "end": [
+                false,
+                null,
+                [
+                  "boolean",
+                  false
+                ],
+                null
+              ]
+            },
+            {
+              "x": "1",
+              "y": "2"
+            },
+            "child"
+          ],
+          [
+            "inherited",
+            "KSchedulerConfig",
+            {
+              "rewind": null,
+              "count": 1,
+              "builtin_count": 1,
+              "items": [
+                [
+                  "task",
+                  [
+                    "config",
+                    {
+                      "enabled": true
+                    }
+                  ],
+                  null
+                ]
+              ],
+              "end": [
+                false,
+                null,
+                [
+                  "boolean",
+                  false
+                ],
+                null
+              ]
+            }
+          ],
+          [
+            "inherited",
+            "KSchedularTaskConfig",
+            {
+              "rewind": null,
+              "count": 1,
+              "builtin_count": 1,
+              "items": [
+                [
+                  "task",
+                  [
+                    "config",
+                    {
+                      "enabled": true
+                    }
+                  ],
+                  null
+                ]
+              ],
+              "end": [
+                false,
+                null,
+                [
+                  "boolean",
+                  false
+                ],
+                null
+              ]
+            }
+          ],
+          [
+            "foreach-unset",
+            [
+              [
+                "a",
+                1
+              ],
+              [
+                "b",
+                2
+              ],
+              [
+                "c",
+                3
+              ]
+            ],
+            {
+              "b": 2,
+              "c": 3
+            },
+            2
+          ],
+          [
+            "mid-iteration",
+            "clone",
+            [
+              "a",
+              1,
+              true,
+              3
+            ],
+            {
+              "rewind": null,
+              "count": 3,
+              "builtin_count": 3,
+              "items": [
+                [
+                  "a",
+                  [
+                    "integer",
+                    1
+                  ],
+                  null
+                ],
+                [
+                  "b",
+                  [
+                    "integer",
+                    2
+                  ],
+                  null
+                ],
+                [
+                  "c",
+                  [
+                    "integer",
+                    3
+                  ],
+                  null
+                ]
+              ],
+              "end": [
+                false,
+                null,
+                [
+                  "boolean",
+                  false
+                ],
+                null
+              ]
+            }
+          ],
+          [
+            "mid-iteration",
+            "serialize",
+            [
+              "a",
+              1,
+              true,
+              3
+            ],
+            {
+              "rewind": null,
+              "count": 3,
+              "builtin_count": 3,
+              "items": [
+                [
+                  "a",
+                  [
+                    "integer",
+                    1
+                  ],
+                  null
+                ],
+                [
+                  "b",
+                  [
+                    "integer",
+                    2
+                  ],
+                  null
+                ],
+                [
+                  "c",
+                  [
+                    "integer",
+                    3
+                  ],
+                  null
+                ]
+              ],
+              "end": [
+                false,
+                null,
+                [
+                  "boolean",
+                  false
+                ],
+                null
+              ]
+            }
+          ],
+          [
+            "mixed-object",
+            {
+              "rewind": null,
+              "count": 1,
+              "builtin_count": 1,
+              "items": [
+                [
+                  "object",
+                  [
+                    "object",
+                    {
+                      "marker": "synthetic"
+                    }
+                  ],
+                  null
+                ]
+              ],
+              "end": [
+                false,
+                null,
+                [
+                  "boolean",
+                  false
+                ],
+                null
+              ]
+            }
+          ]
+        ],
+        "contracts": {
+          "count": null,
+          "current": null,
+          "key": null,
+          "next": null,
+          "rewind": null,
+          "valid": null
+        },
+        "warnings": []
+      }
+    },
+    {
+      "runtime": "83",
+      "variant": "original",
+      "command": "bash /home/vagrant/php-config-return/run.sh original",
+      "exit": 0,
+      "stderr": "",
+      "artifact": {
+        "zip_sha256": "da11cbb9cc58e4e67d4eb8c875d651f272941c7d37d1209c63a02a48e4ba30be",
+        "verified_extracted_files": 15190
+      },
+      "result": {
+        "php": "8.3.6",
+        "rows": [
+          [
+            "empty",
+            {
+              "rewind": null,
+              "count": 0,
+              "builtin_count": 0,
+              "items": [],
+              "end": [
+                false,
+                null,
+                [
+                  "boolean",
+                  false
+                ],
+                null
+              ]
+            },
+            []
+          ],
+          [
+            "values",
+            {
+              "rewind": null,
+              "count": 5,
+              "builtin_count": 5,
+              "items": [
+                [
+                  "null",
+                  [
+                    "NULL",
+                    null
+                  ],
+                  null
+                ],
+                [
+                  "false",
+                  [
+                    "boolean",
+                    false
+                  ],
+                  null
+                ],
+                [
+                  "zero",
+                  [
+                    "integer",
+                    0
+                  ],
+                  null
+                ],
+                [
+                  "str",
+                  [
+                    "string",
+                    "0"
+                  ],
+                  null
+                ],
+                [
+                  "nested",
+                  [
+                    "config",
+                    {
+                      "leaf": 17
+                    }
+                  ],
+                  null
+                ]
+              ],
+              "end": [
+                false,
+                null,
+                [
+                  "boolean",
+                  false
+                ],
+                null
+              ]
+            },
+            {
+              "null": null,
+              "false": false,
+              "zero": 0,
+              "str": "0",
+              "nested": {
+                "leaf": 17
+              }
+            }
+          ],
+          [
+            "keys",
+            {
+              "rewind": null,
+              "count": 3,
+              "builtin_count": 3,
+              "items": [
+                [
+                  7,
+                  [
+                    "string",
+                    "seven"
+                  ],
+                  null
+                ],
+                [
+                  "08",
+                  [
+                    "string",
+                    "eight"
+                  ],
+                  null
+                ],
+                [
+                  -1,
+                  [
+                    "string",
+                    "minus"
+                  ],
+                  null
+                ]
+              ],
+              "end": [
+                false,
+                null,
+                [
+                  "boolean",
+                  false
+                ],
+                null
+              ]
+            },
+            {
+              "7": "seven",
+              "08": "eight",
+              "-1": "minus"
+            }
+          ],
+          [
+            "mutation",
+            null,
+            {
+              "rewind": null,
+              "count": 3,
+              "builtin_count": 3,
+              "items": [
+                [
+                  "b",
+                  [
+                    "integer",
+                    20
+                  ],
+                  null
+                ],
+                [
+                  "c",
+                  [
+                    "integer",
+                    3
+                  ],
+                  null
+                ],
+                [
+                  "d",
+                  [
+                    "integer",
+                    4
+                  ],
+                  null
+                ]
+              ],
+              "end": [
+                false,
+                null,
+                [
+                  "boolean",
+                  false
+                ],
+                null
+              ]
+            },
+            {
+              "b": 20,
+              "c": 3,
+              "d": 4
+            }
+          ],
+          [
+            "merge-clone-serialize",
+            {
+              "rewind": null,
+              "count": 3,
+              "builtin_count": 3,
+              "items": [
+                [
+                  "nested",
+                  [
+                    "config",
+                    {
+                      "a": 1,
+                      "b": 3
+                    }
+                  ],
+                  null
+                ],
+                [
+                  "x",
+                  [
+                    "integer",
+                    2
+                  ],
+                  null
+                ],
+                [
+                  "y",
+                  [
+                    "integer",
+                    4
+                  ],
+                  null
+                ]
+              ],
+              "end": [
+                false,
+                null,
+                [
+                  "boolean",
+                  false
+                ],
+                null
+              ]
+            },
+            "bc0d8c6d7dc4e185acd945a79567e5b2e76dbf8792159d66ad642b595aa91df7",
+            {
+              "nested": {
+                "a": 99,
+                "b": 3
+              },
+              "x": 2,
+              "y": 4
+            }
+          ],
+          [
+            "read-only",
+            "set",
+            "Zend_Config_Exception",
+            "Zend_Config is read only"
+          ],
+          [
+            "read-only",
+            "unset",
+            "Zend_Config_Exception",
+            "Zend_Config is read only"
+          ],
+          [
+            "read-only",
+            "nested-set",
+            "Zend_Config_Exception",
+            "Zend_Config is read only"
+          ],
+          [
+            "ini",
+            {
+              "rewind": null,
+              "count": 2,
+              "builtin_count": 2,
+              "items": [
+                [
+                  "x",
+                  [
+                    "string",
+                    "2"
+                  ],
+                  null
+                ],
+                [
+                  "nested",
+                  [
+                    "config",
+                    {
+                      "a": "first",
+                      "b": "second"
+                    }
+                  ],
+                  null
+                ]
+              ],
+              "end": [
+                false,
+                null,
+                [
+                  "boolean",
+                  false
+                ],
+                null
+              ]
+            },
+            {
+              "x": "2",
+              "nested": {
+                "a": "first",
+                "b": "second"
+              }
+            },
+            "child"
+          ],
+          [
+            "xml",
+            {
+              "rewind": null,
+              "count": 2,
+              "builtin_count": 2,
+              "items": [
+                [
+                  "x",
+                  [
+                    "string",
+                    "1"
+                  ],
+                  null
+                ],
+                [
+                  "y",
+                  [
+                    "string",
+                    "2"
+                  ],
+                  null
+                ]
+              ],
+              "end": [
+                false,
+                null,
+                [
+                  "boolean",
+                  false
+                ],
+                null
+              ]
+            },
+            {
+              "x": "1",
+              "y": "2"
+            },
+            "child"
+          ],
+          [
+            "inherited",
+            "KSchedulerConfig",
+            {
+              "rewind": null,
+              "count": 1,
+              "builtin_count": 1,
+              "items": [
+                [
+                  "task",
+                  [
+                    "config",
+                    {
+                      "enabled": true
+                    }
+                  ],
+                  null
+                ]
+              ],
+              "end": [
+                false,
+                null,
+                [
+                  "boolean",
+                  false
+                ],
+                null
+              ]
+            }
+          ],
+          [
+            "inherited",
+            "KSchedularTaskConfig",
+            {
+              "rewind": null,
+              "count": 1,
+              "builtin_count": 1,
+              "items": [
+                [
+                  "task",
+                  [
+                    "config",
+                    {
+                      "enabled": true
+                    }
+                  ],
+                  null
+                ]
+              ],
+              "end": [
+                false,
+                null,
+                [
+                  "boolean",
+                  false
+                ],
+                null
+              ]
+            }
+          ],
+          [
+            "foreach-unset",
+            [
+              [
+                "a",
+                1
+              ],
+              [
+                "b",
+                2
+              ],
+              [
+                "c",
+                3
+              ]
+            ],
+            {
+              "b": 2,
+              "c": 3
+            },
+            2
+          ],
+          [
+            "mid-iteration",
+            "clone",
+            [
+              "a",
+              1,
+              true,
+              3
+            ],
+            {
+              "rewind": null,
+              "count": 3,
+              "builtin_count": 3,
+              "items": [
+                [
+                  "a",
+                  [
+                    "integer",
+                    1
+                  ],
+                  null
+                ],
+                [
+                  "b",
+                  [
+                    "integer",
+                    2
+                  ],
+                  null
+                ],
+                [
+                  "c",
+                  [
+                    "integer",
+                    3
+                  ],
+                  null
+                ]
+              ],
+              "end": [
+                false,
+                null,
+                [
+                  "boolean",
+                  false
+                ],
+                null
+              ]
+            }
+          ],
+          [
+            "mid-iteration",
+            "serialize",
+            [
+              "a",
+              1,
+              true,
+              3
+            ],
+            {
+              "rewind": null,
+              "count": 3,
+              "builtin_count": 3,
+              "items": [
+                [
+                  "a",
+                  [
+                    "integer",
+                    1
+                  ],
+                  null
+                ],
+                [
+                  "b",
+                  [
+                    "integer",
+                    2
+                  ],
+                  null
+                ],
+                [
+                  "c",
+                  [
+                    "integer",
+                    3
+                  ],
+                  null
+                ]
+              ],
+              "end": [
+                false,
+                null,
+                [
+                  "boolean",
+                  false
+                ],
+                null
+              ]
+            }
+          ],
+          [
+            "mixed-object",
+            {
+              "rewind": null,
+              "count": 1,
+              "builtin_count": 1,
+              "items": [
+                [
+                  "object",
+                  [
+                    "object",
+                    {
+                      "marker": "synthetic"
+                    }
+                  ],
+                  null
+                ]
+              ],
+              "end": [
+                false,
+                null,
+                [
+                  "boolean",
+                  false
+                ],
+                null
+              ]
+            }
+          ]
+        ],
+        "contracts": {
+          "count": null,
+          "current": null,
+          "key": null,
+          "next": null,
+          "rewind": null,
+          "valid": null
+        },
+        "warnings": [
+          [
+            8192,
+            "Return type of Zend_Config::count() should either be compatible with Countable::count(): int, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+            "/audit/app/vendor/ZendFramework/library/Zend/Config.php",
+            248
+          ],
+          [
+            8192,
+            "Return type of Zend_Config::current() should either be compatible with Iterator::current(): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+            "/audit/app/vendor/ZendFramework/library/Zend/Config.php",
+            258
+          ],
+          [
+            8192,
+            "Return type of Zend_Config::next() should either be compatible with Iterator::next(): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+            "/audit/app/vendor/ZendFramework/library/Zend/Config.php",
+            278
+          ],
+          [
+            8192,
+            "Return type of Zend_Config::key() should either be compatible with Iterator::key(): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+            "/audit/app/vendor/ZendFramework/library/Zend/Config.php",
+            269
+          ],
+          [
+            8192,
+            "Return type of Zend_Config::valid() should either be compatible with Iterator::valid(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+            "/audit/app/vendor/ZendFramework/library/Zend/Config.php",
+            304
+          ],
+          [
+            8192,
+            "Return type of Zend_Config::rewind() should either be compatible with Iterator::rewind(): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+            "/audit/app/vendor/ZendFramework/library/Zend/Config.php",
+            292
+          ]
+        ]
+      }
+    },
+    {
+      "runtime": "83",
+      "variant": "candidate",
+      "command": "bash /home/vagrant/php-config-return/run.sh candidate",
+      "exit": 0,
+      "stderr": "",
+      "artifact": {
+        "zip_sha256": "da11cbb9cc58e4e67d4eb8c875d651f272941c7d37d1209c63a02a48e4ba30be",
+        "verified_extracted_files": 15190
+      },
+      "result": {
+        "php": "8.3.6",
+        "rows": [
+          [
+            "empty",
+            {
+              "rewind": null,
+              "count": 0,
+              "builtin_count": 0,
+              "items": [],
+              "end": [
+                false,
+                null,
+                [
+                  "boolean",
+                  false
+                ],
+                null
+              ]
+            },
+            []
+          ],
+          [
+            "values",
+            {
+              "rewind": null,
+              "count": 5,
+              "builtin_count": 5,
+              "items": [
+                [
+                  "null",
+                  [
+                    "NULL",
+                    null
+                  ],
+                  null
+                ],
+                [
+                  "false",
+                  [
+                    "boolean",
+                    false
+                  ],
+                  null
+                ],
+                [
+                  "zero",
+                  [
+                    "integer",
+                    0
+                  ],
+                  null
+                ],
+                [
+                  "str",
+                  [
+                    "string",
+                    "0"
+                  ],
+                  null
+                ],
+                [
+                  "nested",
+                  [
+                    "config",
+                    {
+                      "leaf": 17
+                    }
+                  ],
+                  null
+                ]
+              ],
+              "end": [
+                false,
+                null,
+                [
+                  "boolean",
+                  false
+                ],
+                null
+              ]
+            },
+            {
+              "null": null,
+              "false": false,
+              "zero": 0,
+              "str": "0",
+              "nested": {
+                "leaf": 17
+              }
+            }
+          ],
+          [
+            "keys",
+            {
+              "rewind": null,
+              "count": 3,
+              "builtin_count": 3,
+              "items": [
+                [
+                  7,
+                  [
+                    "string",
+                    "seven"
+                  ],
+                  null
+                ],
+                [
+                  "08",
+                  [
+                    "string",
+                    "eight"
+                  ],
+                  null
+                ],
+                [
+                  -1,
+                  [
+                    "string",
+                    "minus"
+                  ],
+                  null
+                ]
+              ],
+              "end": [
+                false,
+                null,
+                [
+                  "boolean",
+                  false
+                ],
+                null
+              ]
+            },
+            {
+              "7": "seven",
+              "08": "eight",
+              "-1": "minus"
+            }
+          ],
+          [
+            "mutation",
+            null,
+            {
+              "rewind": null,
+              "count": 3,
+              "builtin_count": 3,
+              "items": [
+                [
+                  "b",
+                  [
+                    "integer",
+                    20
+                  ],
+                  null
+                ],
+                [
+                  "c",
+                  [
+                    "integer",
+                    3
+                  ],
+                  null
+                ],
+                [
+                  "d",
+                  [
+                    "integer",
+                    4
+                  ],
+                  null
+                ]
+              ],
+              "end": [
+                false,
+                null,
+                [
+                  "boolean",
+                  false
+                ],
+                null
+              ]
+            },
+            {
+              "b": 20,
+              "c": 3,
+              "d": 4
+            }
+          ],
+          [
+            "merge-clone-serialize",
+            {
+              "rewind": null,
+              "count": 3,
+              "builtin_count": 3,
+              "items": [
+                [
+                  "nested",
+                  [
+                    "config",
+                    {
+                      "a": 1,
+                      "b": 3
+                    }
+                  ],
+                  null
+                ],
+                [
+                  "x",
+                  [
+                    "integer",
+                    2
+                  ],
+                  null
+                ],
+                [
+                  "y",
+                  [
+                    "integer",
+                    4
+                  ],
+                  null
+                ]
+              ],
+              "end": [
+                false,
+                null,
+                [
+                  "boolean",
+                  false
+                ],
+                null
+              ]
+            },
+            "bc0d8c6d7dc4e185acd945a79567e5b2e76dbf8792159d66ad642b595aa91df7",
+            {
+              "nested": {
+                "a": 99,
+                "b": 3
+              },
+              "x": 2,
+              "y": 4
+            }
+          ],
+          [
+            "read-only",
+            "set",
+            "Zend_Config_Exception",
+            "Zend_Config is read only"
+          ],
+          [
+            "read-only",
+            "unset",
+            "Zend_Config_Exception",
+            "Zend_Config is read only"
+          ],
+          [
+            "read-only",
+            "nested-set",
+            "Zend_Config_Exception",
+            "Zend_Config is read only"
+          ],
+          [
+            "ini",
+            {
+              "rewind": null,
+              "count": 2,
+              "builtin_count": 2,
+              "items": [
+                [
+                  "x",
+                  [
+                    "string",
+                    "2"
+                  ],
+                  null
+                ],
+                [
+                  "nested",
+                  [
+                    "config",
+                    {
+                      "a": "first",
+                      "b": "second"
+                    }
+                  ],
+                  null
+                ]
+              ],
+              "end": [
+                false,
+                null,
+                [
+                  "boolean",
+                  false
+                ],
+                null
+              ]
+            },
+            {
+              "x": "2",
+              "nested": {
+                "a": "first",
+                "b": "second"
+              }
+            },
+            "child"
+          ],
+          [
+            "xml",
+            {
+              "rewind": null,
+              "count": 2,
+              "builtin_count": 2,
+              "items": [
+                [
+                  "x",
+                  [
+                    "string",
+                    "1"
+                  ],
+                  null
+                ],
+                [
+                  "y",
+                  [
+                    "string",
+                    "2"
+                  ],
+                  null
+                ]
+              ],
+              "end": [
+                false,
+                null,
+                [
+                  "boolean",
+                  false
+                ],
+                null
+              ]
+            },
+            {
+              "x": "1",
+              "y": "2"
+            },
+            "child"
+          ],
+          [
+            "inherited",
+            "KSchedulerConfig",
+            {
+              "rewind": null,
+              "count": 1,
+              "builtin_count": 1,
+              "items": [
+                [
+                  "task",
+                  [
+                    "config",
+                    {
+                      "enabled": true
+                    }
+                  ],
+                  null
+                ]
+              ],
+              "end": [
+                false,
+                null,
+                [
+                  "boolean",
+                  false
+                ],
+                null
+              ]
+            }
+          ],
+          [
+            "inherited",
+            "KSchedularTaskConfig",
+            {
+              "rewind": null,
+              "count": 1,
+              "builtin_count": 1,
+              "items": [
+                [
+                  "task",
+                  [
+                    "config",
+                    {
+                      "enabled": true
+                    }
+                  ],
+                  null
+                ]
+              ],
+              "end": [
+                false,
+                null,
+                [
+                  "boolean",
+                  false
+                ],
+                null
+              ]
+            }
+          ],
+          [
+            "foreach-unset",
+            [
+              [
+                "a",
+                1
+              ],
+              [
+                "b",
+                2
+              ],
+              [
+                "c",
+                3
+              ]
+            ],
+            {
+              "b": 2,
+              "c": 3
+            },
+            2
+          ],
+          [
+            "mid-iteration",
+            "clone",
+            [
+              "a",
+              1,
+              true,
+              3
+            ],
+            {
+              "rewind": null,
+              "count": 3,
+              "builtin_count": 3,
+              "items": [
+                [
+                  "a",
+                  [
+                    "integer",
+                    1
+                  ],
+                  null
+                ],
+                [
+                  "b",
+                  [
+                    "integer",
+                    2
+                  ],
+                  null
+                ],
+                [
+                  "c",
+                  [
+                    "integer",
+                    3
+                  ],
+                  null
+                ]
+              ],
+              "end": [
+                false,
+                null,
+                [
+                  "boolean",
+                  false
+                ],
+                null
+              ]
+            }
+          ],
+          [
+            "mid-iteration",
+            "serialize",
+            [
+              "a",
+              1,
+              true,
+              3
+            ],
+            {
+              "rewind": null,
+              "count": 3,
+              "builtin_count": 3,
+              "items": [
+                [
+                  "a",
+                  [
+                    "integer",
+                    1
+                  ],
+                  null
+                ],
+                [
+                  "b",
+                  [
+                    "integer",
+                    2
+                  ],
+                  null
+                ],
+                [
+                  "c",
+                  [
+                    "integer",
+                    3
+                  ],
+                  null
+                ]
+              ],
+              "end": [
+                false,
+                null,
+                [
+                  "boolean",
+                  false
+                ],
+                null
+              ]
+            }
+          ],
+          [
+            "mixed-object",
+            {
+              "rewind": null,
+              "count": 1,
+              "builtin_count": 1,
+              "items": [
+                [
+                  "object",
+                  [
+                    "object",
+                    {
+                      "marker": "synthetic"
+                    }
+                  ],
+                  null
+                ]
+              ],
+              "end": [
+                false,
+                null,
+                [
+                  "boolean",
+                  false
+                ],
+                null
+              ]
+            }
+          ]
+        ],
+        "contracts": {
+          "count": "int",
+          "current": "mixed",
+          "key": "mixed",
+          "next": "void",
+          "rewind": "void",
+          "valid": "bool"
+        },
+        "warnings": []
+      }
+    }
+  ],
+  "functional_checks_passed": true,
+  "candidate_runtime": "8.3 only; no candidate7.4 compatibility claim",
+  "application_acceptance": false
+}

@@ -1,0 +1,15 @@
+Executei `python3 tools/php83/config-return/collect.py doc/php83/evidence/config-return/claude.json` uma única vez. Terminou com exit 0 e stderr vazio, e as saídas estão em `claude.stdout`, `claude.stderr` e `claude.exit`.
+
+1. **Comparação com Codex:** o `claude.json` é idêntico ao `codex-expanded.json` (`==` completo), incluindo linhas de runtime, contratos, avisos e artefato. O artefato é o ZIP `da11cbb9…`, com 15190 arquivos, e não mudou entre o início e o fim da coleta. O hash do collector é `c93fb17a…` e o do `probe.php` é `27dd3689…`. O `codex.json` antigo, com 12 linhas e o probe `f13db5a3…`, foi substituído e não pode servir de evidência atual.
+
+2. **Execuções e avisos:** o original 7.4.33, o original 8.3.6 e o candidato 8.3.6 terminaram com exit 0, stderr vazio e as mesmas 16 linhas funcionais. O original 8.3 tem exatamente seis `E_DEPRECATED` (8192) de `Zend_Config::` nas linhas 248, 258, 269, 278, 292 e 304. O original 7.4 e o candidato 8.3 não têm nenhum aviso. O handler registra os avisos e o collector confere a lista; não há supressão geral.
+
+3. **Identidade e contratos do patch:** confirmei os hashes do patch (`602bb21b…`), do arquivo antes (`065597c6…`) e do candidato (`ccdbe8ed…`). As alterações do patch conferem com o `diff` fonte→candidato na VM (`5073553d…`). Os contratos refletidos são `int`/`mixed`/`mixed`/`void`/`void`/`bool`. O `next(): void` usa só `return;` sem valor, e `key(): mixed` devolve `null` no fim, o que está correto.
+
+4. **Escopo PHP 8.3:** o candidato só roda em 8.3, e o `run.sh` bloqueia o candidato no 7.4 com exit 64. Esse bloqueio não foi executado como teste negativo, e o 7.4 original continua como baseline funcional.
+
+5. **Contagens e iteração:** as contagens batem após mutação (3) e após `unset` dentro do `foreach` (2, e ainda visita a, b, c pelo `_skipNextIteration`). Clone e serialize no meio da iteração preservam a peculiaridade histórica: a cópia reporta a chave `a` com `valid=true`, embora o original tenha avançado. Isso é igual nas três variantes, mas o `_index` interno não é verificado, e o `walkConfig` faz `rewind` e esconde o desalinhamento.
+
+6. **Limites nas subclasses:** `KSchedulerConfig` e `KSchedularTaskConfig` foram carregadas, mas via `newInstanceWithoutConstructor`, então o carregamento de INI e a orquestração do construtor não foram testados. `Worker_Status_from_Ini`, em `alpha/scripts/utils/getWorkersStatus.php`, estende `Zend_Config_Ini` e não foi carregada pelo probe. Pelo grep, nenhuma subclasse sobrescreve os seis métodos, então não deve haver conflito de assinatura, mas isso não foi verificado em execução.
+
+Isto é um teste de harness sintético e isolado. Não é aceitação completa da aplicação, nem cobre API, batch real ou CI. Não editei código-fonte nem fiz commits.

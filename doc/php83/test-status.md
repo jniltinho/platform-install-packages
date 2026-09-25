@@ -224,3 +224,11 @@ fall from 35 groups/931 events to 33 groups/847 events, with only the two
 reflection locations removed. Focused CLI candidate rows preserve baseline
 outputs. See [exp6 evidence](exp6-reflection-integration.md). Aggregate acceptance
 remains 0/24, detailed tasks 3/27; this bounded integration closes no full case.
+
+## Held Zend_Config native return declarations
+
+Six explicit return contracts pass 16 actual-class rows against original7.4 and
+original8.3; candidate8.3 has no captured warnings. The held patch intentionally
+uses native `mixed` and is not a candidate7.4 support claim. Full integration is
+pending; see [configuration return evidence](config-return-contracts.md).
+No full acceptance task is closed.

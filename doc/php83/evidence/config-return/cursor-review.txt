@@ -1,0 +1,11 @@
+Reviso o patch held e as subclasses no source Rigel, e rodo os unittests locais sem editar nada.**Veredito:** o held `Zend-Config-return-types` alinha as seis assinaturas nativas (`count(): int`, `current()`/`key(): mixed`, `next()`/`rewind(): void`, `valid(): bool`); `before_sha256`/`after_sha256`/`patch_sha256` conferem no source Rigel, e o metadata (`minimum_runtime` 8.0 por `mixed`) justifica ZIP PHP 8.3-only sem pretender suporte em candidate 7.4 (original 7.4 só como baseline de comparação).
+
+**Subclasses:** só `Zend_Config_Ini` e `Zend_Config_Xml` estendem; nenhum sobrescreve Iterator/Countable neste tree, então risco LSP local é baixo — override externo sem tipos ainda quebraria em 8.3 se existisse fora do source.
+
+**Invariantes:** o patch não mexe em `_count` (ctor/`__set`/`__unset`), `_skipNextIteration` nem em `valid()` (`_index < _count`); mutação durante `foreach` e `merge()` via `__set` ficam semanticamente iguais.
+
+**Clone/serialize:** `__clone` reconstrói `_data` sem zerar `_index`; não há `__sleep`/`__serialize` — riscos pré-existentes de ponteiro/`_index` desalinhados, não introduzidos pelos return types, mas ainda sem prova comportamental.
+
+**Harness:** `python3 -m unittest discover -s tools/php83 -p 'test_*.py'` → **122 OK** (inventário/ZIP/lab), não exercita `Zend_Config`.
+
+**Testes decisivos (ainda faltam):** Reflection das seis signatures em 8.3 sem deprecation; `foreach` + `unset` mid-iter; `count` pós-`__set`/`__unset`/`merge`; clone e serialize/unserialize mid-iter; smoke Ini/Xml; controle negativo de parse em 7.4 por `mixed`. **Sem aceitação completa** — held permanece até validação focada no runtime 8.3.

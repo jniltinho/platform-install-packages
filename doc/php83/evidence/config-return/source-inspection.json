@@ -1,0 +1,60 @@
+{
+  "scope": "Exact original source files, graph candidates plus literal extends scan; not proof of external/dynamic subclass absence",
+  "files": [
+    {
+      "path": "vendor/ZendFramework/library/Zend/Config.php",
+      "sha256": "065597c625046207683d14682bffcdbfd0aed862ad456a3dbefcf9b538e97a2f",
+      "selected_method_declarations": [
+        {
+          "line": 248,
+          "source": "    public function count()"
+        },
+        {
+          "line": 258,
+          "source": "    public function current()"
+        },
+        {
+          "line": 269,
+          "source": "    public function key()"
+        },
+        {
+          "line": 278,
+          "source": "    public function next()"
+        },
+        {
+          "line": 292,
+          "source": "    public function rewind()"
+        },
+        {
+          "line": 304,
+          "source": "    public function valid()"
+        }
+      ]
+    },
+    {
+      "path": "vendor/ZendFramework/library/Zend/Config/Ini.php",
+      "sha256": "e1f8362e93d3285f07752ecbe1e61c015c121ed1ff2199c4a79a6c0db556a7c6",
+      "selected_method_declarations": []
+    },
+    {
+      "path": "vendor/ZendFramework/library/Zend/Config/Xml.php",
+      "sha256": "114d11435c6ebf181e2b1788f5370590b889707d27d2a49f1b26eb634595a88f",
+      "selected_method_declarations": []
+    },
+    {
+      "path": "batch/scheduler/KSchedulerConfig.class.php",
+      "sha256": "59f23092461c4bd9c1b0d3289600e2f207300303f1462e3c48abcb55ce956b3f",
+      "selected_method_declarations": []
+    },
+    {
+      "path": "batch/scheduler/KSchedularTaskConfig.class.php",
+      "sha256": "d57fac3b2802ec6febf9c3e4b7ad7fbcb4c69b159d395f3ced8dee87993260c5",
+      "selected_method_declarations": []
+    },
+    {
+      "path": "alpha/scripts/utils/getWorkersStatus.php",
+      "sha256": "434f9fe027171e00b86809ab2b35bae0250917704283216ae37c8355f9f0c2e4",
+      "selected_method_declarations": []
+    }
+  ]
+}

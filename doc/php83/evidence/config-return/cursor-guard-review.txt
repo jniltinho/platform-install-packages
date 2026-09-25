@@ -1,0 +1,5 @@
+Vou executar só o guard SSH pedido, gravar stdout/stderr/exit e depois comparar os dois JSON de evidência.**Guard:** `ssh … run.sh candidate` saiu **64**; `cursor-guard.stdout` e `.stderr` estão vazios (0 bytes), `.exit` = `64` — consistente com falha de runtime não suportado **antes** de montar/PHP.
+
+**JSON:** igualdade completa entre `codex-expanded.json` e `claude.json` (`EQUAL=True`; mesmos schema/patch/harness/collector/records/checks).
+
+**Lacunas:** `codex.json` inicial permanece distinto (probe sha `f13db5a…` vs `27dd368…` do expanded/claude; 3 records, harness antigo) e não foi sobrescrito — alinhado à retenção com o probe inicial de 12 casos. Ambos os JSON iguais marcam `candidate_runtime: 8.3 only` e `application_acceptance: False`; sem reivindicação de compatibilidade PHP 7.4 nem aceite da app inteira. Sem outros comandos na VM, edições de fonte ou commits.

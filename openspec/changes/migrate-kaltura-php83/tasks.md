@@ -173,3 +173,9 @@ parameter-reflection repair. Actual SQL/HTTP/trusted-TLS and focused CLI parity
 remain equal to baseline; exactly 84 reflection events disappear, leaving 33
 groups/847 events. Independent reruns and byte identities are recorded in
 `doc/php83/exp6-reflection-integration.md`. Full acceptance remains open.
+
+T1-01 partial return-contract repair: held Zend_Config patch adds six explicit
+native return declarations for the PHP8.3-only target. Sixteen actual-class rows
+match original7.4/original8.3/candidate8.3; six observed return warnings disappear
+without suppression. Combined ZIP/API and broader configuration/scheduler/cache
+coverage remain open. See `doc/php83/config-return-contracts.md`.
