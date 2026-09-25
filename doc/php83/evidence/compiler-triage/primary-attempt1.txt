@@ -1,0 +1,1 @@
+Initial classifier run exited 1 at vendor/symfony/vendor/phing/system/io/BufferedReader.php: source regex omitted object-property offset syntax ($this->buffer{...}). No report was written, source was not changed. The classifier pattern was corrected and a dedicated negative/positive test added.

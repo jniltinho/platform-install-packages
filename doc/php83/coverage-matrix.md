@@ -17,12 +17,12 @@ artifact identified for that gate, not proof that no related file exists anywher
 
 | Original task | Detailed execution cases (excluding mapping case T0-03) | Existing bounded evidence | What remains to satisfy the original task |
 |---|---|---|---|
-| 1.1 Inventory | T0-02, T0-04 | `source-graph.md`, `feasibility-status.md`, `patch-inventory.md`, `evidence/source-audit/source-to-package-map.json` | Complete dependency/license/revision attribution; active versus historical overlays and generated/web/CLI/cron/install/plugin entrypoints. |
+| 1.1 Inventory | T0-02, T0-04 | `source-graph.md`, `feasibility-status.md`, `patch-inventory.md`, `inventory-ledger.md`, `package-identities.md`, `evidence/source-audit/source-to-package-map.json` | Complete dependency/license/revision attribution; active versus historical overlays and generated/web/CLI/cron/install/plugin entrypoints. |
 | 1.2 Baseline | T0-05, T5-01 | `feasibility-status.md`, `evidence/noble-baseline/` | Full frozen fixture workload, repeated timings, browser/TLS/media/job coverage and comparable baseline reports beyond `.74` HTTP smoke. |
-| 1.3 Static/syntax | T0-04, T1-04 | `feasibility-status.md`, `runtime-triage.md`, `evidence/source-audit/` | Classify every finding and manual analyzer blind spot; map remaining findings to active entrypoints. Static counts are not confirmed incident counts. |
+| 1.3 Static/syntax | T0-04, T1-04 | `feasibility-status.md`, `runtime-triage.md`, `candidate-syntax.md`, `compiler-triage.md`, `evidence/source-audit/` | Classify every finding and manual analyzer blind spot; map remaining findings to active entrypoints. Static counts are not confirmed incident counts. |
 | 1.4 Providers | T4-01 | `evidence/noble-runtime/`, `evidence/providers/README.md` and probe outputs | Complete signed suite-compatible package resolution and loaded mandatory modules/ABIs in clean environments for all targets, not just probes. |
 | 1.5 Feasibility approval | T0-06 | `feasibility-status.md` is partial; final approved report NONE | Consolidated bounded repairs/blockers/provider results and explicit go/no-go before production package/CI integration. |
-| 1.6 Experimental repairs | T0-01 (harness support), T0-02, T1-01 | `experimental-zip.md`, `patch-inventory.md`, held repair documents | Full selected repair coverage and combined candidate validation; exp2 has only three JSON repairs despite focused held experiments. |
+| 1.6 Experimental repairs | T0-01 (harness support), T0-02, T1-01 | `experimental-zip.md`, `patch-inventory.md`, `exp9-pdo-integration.md`, held repair documents | Full selected repair coverage and combined candidate validation; exp9 integrates sixteen targets with bounded API/CLI/SQL evidence, but is not an accepted complete application. Original exp2 remains unchanged. |
 | 1.7 Optional upgrades | T0-06 | Final per-component decision report NONE | Pinned versions, license/support/benefit/regression/revert analysis or explicit reviewed deferral. No component upgrade inferred from compatibility fixes. |
 | 2.1 Core/API | T1-01, T1-02, T1-03 | `registry-investigation.md`, `symfony-bootstrap.md`, `api-mysql.md`, `doc-comment-property.md`, `doc-comment-consumer.md`, `patch-inventory.md` | Resolve known semantic/diagnostic gaps and select an integrated reviewed series. Focused parity and isolated strict application already exist, not full acceptance. |
 | 2.2 Worker/CLI/libs/clients | T1-01, T1-02, T1-04, T3-02 | `runtime-triage.md`, `mysql-type-experiment.md`, `propel-init-hydration.md`, held patch documents | Full active worker/CLI/cron/install/plugin/generated-client execution; per-change attribution and regression/failure coverage. |
@@ -33,7 +33,7 @@ artifact identified for that gate, not proof that no related file exists anywher
 | 3.1 Noble acceptance | T4-03 | `.74` baseline smoke; `.83` runtime and bounded probes only | Complete candidate clean install, reprovision, reboot, preserved data/configuration and full sanity. |
 | 3.2 Ubuntu 26.04 acceptance | T4-04 | Provider probes only | Full isolated 8.3 application install/provision/reboot and runtime suite with verified suite-compatible provider. |
 | 3.3 Rocky acceptance | T2-03, T4-05 | Provider probes only | Full isolated FPM application acceptance, request bodies, jobs/modules and restarts; dependency simulation is insufficient. |
-| 3.4 API/UI/search | T1-02, T1-03, T2-01, T2-02, T2-03 | `api-bootstrap.md`, `api-mysql.md`, `api-session.md`, `api-auth-dispatch.md`, `api-http.md`, `api-web.md`, `analytics-partner-probe.md` | Real full-service auth/contracts/cache/search/browser regression across distros; remaining KS/crypto/XML/locale negatives and diagnostic triage. Existing synthetic Apache HTTP/trusted HTTPS evidence is retained, not dismissed. |
+| 3.4 API/UI/search | T1-02, T1-03, T2-01, T2-02, T2-03 | `api-bootstrap.md`, `api-mysql.md`, `api-session.md`, `api-auth-dispatch.md`, `api-http.md`, `api-web.md`, `analytics-partner-probe.md`, `exp9-pdo-integration.md` | Real full-service auth/contracts/cache/search/browser regression across distros; remaining KS/crypto/XML/locale negatives and diagnostic triage. Existing synthetic Apache HTTP/trusted HTTPS evidence is retained, not dismissed. |
 | 3.5 Media | T2-02, T3-01, T3-02 | `.74` HTTP smoke; complete candidate evidence NONE | Frozen short/1080p60 fixtures, HTTP/trusted HTTPS READY/flavors/thumbnails/HLS/206/stream properties, Go console E2E, corrupt inputs/job retry. |
 | 3.6 Performance | T5-01 | Protocol in design Decision 7; full measurement report NONE | Comparable repeated baseline/candidate workload, median/p95/conversion/queue/dispersion and 20% review threshold; comprehensive diagnostics, separate optional upgrades. |
 | 4.1 Upgrade | T1-03, T6-01 | Rehearsal NONE; narrow legacy parser cache transfer documented | Full synthetic 7.4→8.3 state preservation and accepted runtime, without schema/engine changes. |
@@ -56,3 +56,19 @@ artifact identified for that gate, not proof that no related file exists anywher
   evidence when their respective release gates are executed.
 - Complete task mapping is not complete implementation. New findings must extend
   case rows and evidence accounting rather than disappear from the denominator.
+
+## Latest bounded inventory/compiler refinement
+
+The original T0-03 mapping audit is retained; the evidence column now includes
+subsequent exp9 and inventory work rather than implying exp2 is the latest
+experiment. All 792 missing packaged file identities are resolved through exact
+payload bytes, while component/license/entrypoint attribution remains open.
+
+The latest whole-ZIP compiler matrix retains 54 rejected files. Exact-source
+historical 7.4 comparisons classify 47 as new 8.3 language incompatibilities and
+seven as retained baseline rejections (six generator skeletons plus one reserved
+Object import). Six positive generation-consumer chains establish template
+purpose, not valid generated output or complete workflow execution. No compiler
+row is removed or waived, and the 4,711 historical static report rows are not
+automatically adjudicated from these 54 compiler classifications. See
+[compiler triage](compiler-triage.md) for identities and limitations.

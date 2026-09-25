@@ -322,3 +322,18 @@ collection completes but `candidate_all_files_compile` remains false. See
 [paired syntax](candidate-syntax.md). Static finding attribution, remaining
 compiler failures and full runtime coverage remain open; acceptance stays
 0/24 original and 3/27 detailed cases.
+
+## Source-supported compiler classification
+
+All 54 exp9 compiler-rejected files now have exact ZIP/local/published-payload
+and historical runtime identity joins plus diagnostic/source classification.
+The result is 47 new PHP 8.3 language incompatibilities (43 curly offsets,
+three autoload declarations, one ternary) and seven retained baseline rejections
+(six unexpanded templates, one reserved Object alias). Six positive template
+consumer chains do not prove valid generated output. No rejection is waived.
+Claude independently rebuilds identical classification reports; Cursor verifies
+13 template/consumer source identities; OpenCode executes the bounded fallback
+after Grok times out. Final 19-test status guards reject timeout/signal/noninteger
+values instead of misclassifying them as compiler failures. See
+[compiler triage](compiler-triage.md). No application patch is promoted and no
+aggregate acceptance checkbox closes.

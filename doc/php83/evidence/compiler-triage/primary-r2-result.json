@@ -1,0 +1,42 @@
+{
+  "phase": "Strict compiler exit status validation after completed independent CLI reviews",
+  "executor": "Codex delegated compiler-triage task",
+  "prior_phase_preserved": true,
+  "tests": {
+    "prior": 17,
+    "current": 19,
+    "exit": 0
+  },
+  "allowed_statuses": {
+    "paired_original_and_candidate": "type(exit) is int and exit in (0,255)",
+    "historical_php74_exact_join": "type(exit) is int and exit in (0,255)",
+    "historical_php83_exact_join": "type(exit) is int and exit ==255"
+  },
+  "negative_types_statuses": [
+    124,
+    -9,
+    1,
+    true,
+    false,
+    0.0,
+    255.0,
+    "255",
+    null
+  ],
+  "changed_report_top_level_fields": [
+    "builder_sha256"
+  ],
+  "classification_rows_unchanged": true,
+  "repeat_byte_identical": true,
+  "identities": {
+    "tools/php83/compiler-triage/build.py": "3451ba4f6720efc85571623167bf06fd3778b699c02c4e13a701be4c5f14639e",
+    "tools/php83/compiler-triage/test_compiler_triage.py": "9d487225330f292a41a300bda41982d477650dfd3330030dc9f726013ebb47c1",
+    "doc/php83/evidence/compiler-triage/primary-reviewed-build.py": "ca578c4f04783d364eb0e0c6c539432d7517f6434b9697a0cf8487db92d4f530",
+    "doc/php83/evidence/compiler-triage/primary-reviewed-tests.py": "425c0df4e651286a4b2df118e57f043efc96bcc5a4fcaaefec931921a4ddfadf",
+    "doc/php83/evidence/compiler-triage/primary-r2.json": "045a0aa4de641f9fa11a24abfbe39c07b3d74a83647f19a8979aa8654f414a69",
+    "doc/php83/evidence/compiler-triage/primary-r2-repeat.json": "045a0aa4de641f9fa11a24abfbe39c07b3d74a83647f19a8979aa8654f414a69"
+  },
+  "independent_followup": "Coordinator-owned, pending for hardened version",
+  "no_new_php_or_vm_execution": true,
+  "t0_04_complete": false
+}

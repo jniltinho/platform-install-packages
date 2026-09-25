@@ -1,0 +1,27 @@
+{
+  "independent_reports": [
+    "primary-r2.json",
+    "primary-r2-repeat.json",
+    "claude-r2.json"
+  ],
+  "all_bytes_identical": true,
+  "sha256": "045a0aa4de641f9fa11a24abfbe39c07b3d74a83647f19a8979aa8654f414a69",
+  "cohort_rows_unchanged_by_status_hardening": true,
+  "rejected_rows": 54,
+  "new_php83_rejections": 47,
+  "retained_baseline_rejections": 7,
+  "template_paths": [
+    "vendor/symfony-data/generator/sfPropelAdmin/default/skeleton/actions/actions.class.php",
+    "vendor/symfony-data/generator/sfPropelCrud/default/skeleton/actions/actions.class.php",
+    "vendor/symfony-data/skeleton/batch/default.php",
+    "vendor/symfony-data/skeleton/batch/rotate_log.php",
+    "vendor/symfony-data/skeleton/controller/controller.php",
+    "vendor/symfony-data/skeleton/module/module/actions/actions.class.php"
+  ],
+  "classification_not_runtime_reachability": true,
+  "template_consumer_report_sha256": "b91979ee36394421919f1ae8f5418b69be2a4a5dd745bb46a8e01e187f55cb50",
+  "template_generation_executed": false,
+  "removed_or_waived": 0,
+  "application_acceptance": false,
+  "verifier_sha256": "1b8730a9623c043ccdcc5ebaeea46290689c2231105c449b1040df77a3029504"
+}

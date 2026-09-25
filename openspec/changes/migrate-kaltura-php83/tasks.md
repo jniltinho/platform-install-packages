@@ -237,3 +237,12 @@ repeated: original58 versus exp9 54 rejected files, zero incomplete rows, no new
 rejections. Collection success is not compiler/application acceptance. Historical
 files-scanned versus files-with-messages label is corrected in derived evidence,
 not overwritten. See `doc/php83/candidate-syntax.md`; aggregate5.4 remains open.
+
+T0-04 bounded compiler classification: all 54 exp9 rejections are joined by exact
+source identity to the published payload and historical 7.4/8.3 compiler results.
+47 are new 8.3 language failures and seven retained baseline rejections, including
+six source-confirmed templates with positive generation consumers. Generated
+output and runtime reachability remain untested; no row is waived. Independent
+identical rebuilds and final 19-test status guards are recorded in
+`doc/php83/compiler-triage.md`. The broader 4,711 static rows and component/license/
+entrypoint review keep 5.4 open; no source repair or package integration occurs.

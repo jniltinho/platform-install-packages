@@ -1,0 +1,1212 @@
+{
+  "schema": 1,
+  "observed_at": "2026-09-25 19:59:16 UTC",
+  "scope": "Read-only positive consumer evidence for six compiler-rejected Symfony generation skeletons; no PHP generation/runtime execution",
+  "graph_status": {
+    "project": "kaltura-rigel-18.20.0-full",
+    "status": "ready",
+    "root_path": "/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/graph-view",
+    "nodes": 231336,
+    "edges": 800641
+  },
+  "queries": [
+    {
+      "tool": "trace_path",
+      "arguments": {
+        "project": "kaltura-rigel-18.20.0-full",
+        "function_name": "kaltura-rigel-18.20.0-full.vendor.symfony.generator.sfGenerator.class.sfGenerator",
+        "direction": "outbound",
+        "depth": 1,
+        "limit": 30
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "function: kaltura-rigel-18.20.0-full.vendor.symfony.generator.sfGenerator.class.sfGenerator\ndirection: outbound\ncallees_total: 0\ncallees: 0  (rows: name hop; qn = group prefix + \".\" + name)\n"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "tool": "trace_path",
+      "arguments": {
+        "project": "kaltura-rigel-18.20.0-full",
+        "function_name": "kaltura-rigel-18.20.0-full.vendor.symfony.addon.propel.generator.sfPropelAdminGenerator.class.sfPropelAdminGenerator",
+        "direction": "outbound",
+        "depth": 1,
+        "limit": 30
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "function: kaltura-rigel-18.20.0-full.vendor.symfony.addon.propel.generator.sfPropelAdminGenerator.class.sfPropelAdminGenerator\ndirection: outbound\ncallees_total: 0\ncallees: 0  (rows: name hop; qn = group prefix + \".\" + name)\n"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "tool": "get_code_snippet",
+      "arguments": {
+        "project": "kaltura-rigel-18.20.0-full",
+        "qualified_name": "kaltura-rigel-18.20.0-full.vendor.symfony.generator.sfGenerator.class.sfGenerator"
+      },
+      "result": {
+        "name": "sfGenerator",
+        "qualified_name": "kaltura-rigel-18.20.0-full.vendor.symfony.generator.sfGenerator.class.sfGenerator",
+        "label": "Class",
+        "file_path": "/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/graph-view/vendor/symfony/generator/sfGenerator.class.php",
+        "start_line": 19,
+        "end_line": 234,
+        "source": "abstract class sfGenerator\n{\n  protected\n    $generatorClass      = '',\n    $generatorManager    = null,\n    $generatedModuleName = '',\n    $theme               = 'default',\n    $moduleName          = '';\n\n  /**\n   * Initializes the current sfGenerator instance.\n   *\n   * @param sfGeneratorManager A sfGeneratorManager instance\n   */\n  public function initialize($generatorManager)\n  {\n    $this->generatorManager = $generatorManager;\n  }\n\n  /**\n   * Generates classes and templates.\n   *\n   * @param array An array of parameters\n   *\n   * @return string The cache for the configuration file\n   */\n  abstract public function generate($params = array());\n\n  /**\n   * Generates PHP files for a given module name.\n   *\n   * @param string The name of module name to generate\n   * @param array  A list of template files to generate\n   * @param array  A list of configuration files to generate\n   */\n  protected function generatePhpFiles($generatedModuleName, $templateFiles = array(), $configFiles = array())\n  {\n    // eval actions file\n    $retval = $this->evalTemplate('actions/actions.class.php');\n\n    // save actions class\n    $this->getGeneratorManager()->getCache()->set('actions.class.php', $generatedModuleName.DIRECTORY_SEPARATOR.'actions', $retval);\n\n    // generate template files\n    foreach ($templateFiles as $template)\n    {\n      // eval template file\n      $retval = $this->evalTemplate('templates/'.$template);\n\n      // save template file\n      $this->getGeneratorManager()->getCache()->set($template, $generatedModuleName.DIRECTORY_SEPARATOR.'templates', $retval);\n    }\n\n    // generate config files\n    foreach ($configFiles as $config)\n    {\n      // eval config file\n      $retval = $this->evalTemplate('config/'.$config);\n\n      // save config file\n      $this->getGeneratorManager()->getCache()->set($config, $generatedModuleName.DIRECTORY_SEPARATOR.'config', $retval);\n    }\n  }\n\n  /**\n   * Evaluates a template file.\n   *\n   * @param string The template file path\n   *\n   * @return string The evaluated template\n   */\n  protected function evalTemplate($templateFile)\n  {\n    $templateFile = sfLoader::getGeneratorTemplate($this->getGeneratorClass(), $this->getTheme(), $templateFile);\n\n    // eval template file\n    ob_start();\n    require($templateFile);\n    $content = ob_get_clean();\n\n    // replace [?php and ?]\n    $content = $this->replacePhpMarks($content);\n\n    $retval = \"<?php\\n\".\n              \"// auto-generated by \".$this->getGeneratorClass().\"\\n\".\n              \"// date: %s\\n?>\\n%s\";\n    $retval = sprintf($retval, date('Y/m/d H:i:s'), $content);\n\n    return $retval;\n  }\n\n  /**\n   * Replaces PHP marks by <?php ?>.\n   *\n   * @param string The PHP code\n   *\n   * @return string The converted PHP code\n   */\n  protected function replacePhpMarks($text)\n  {\n    // replace [?php and ?]\n    return str_replace(array('[?php', '[?=', '?]'), array('<?php', '<?php echo', '?>'), $text);\n  }\n\n  /**\n   * Gets the generator class.\n   *\n   * @return string The generator class\n   */\n  public function getGeneratorClass()\n  {\n    return $this->generatorClass;\n  }\n\n  /**\n   * Sets the generator class.\n   *\n   * @param string The generator class\n   */\n  public function setGeneratorClass($generator_class)\n  {\n    $this->generatorClass = $generator_class;\n  }\n\n  /**\n   * Gets the sfGeneratorManager instance.\n   *\n   * @return string The sfGeneratorManager instance\n   */\n  protected function getGeneratorManager()\n  {\n    return $this->generatorManager;\n  }\n\n  /**\n   * Gets the module name of the generated module.\n   *\n   * @return string The module name\n   */\n  public function getGeneratedModuleName()\n  {\n    return $this->generatedModuleName;\n  }\n\n  /**\n   * Sets the module name of the generated module.\n   *\n   * @param string The module name\n   */\n  public function setGeneratedModuleName($module_name)\n  {\n    $this->generatedModuleName = $module_name;\n  }\n\n  /**\n   * Gets the module name.\n   *\n   * @return string The module name\n   */\n  public function getModuleName()\n  {\n    return $this->moduleName;\n  }\n\n  /**\n   * Sets the module name.\n   *\n   * @param string The module name\n   */\n  public function setModuleName($module_name)\n  {\n    $this->moduleName = $module_name;\n  }\n\n  /**\n   * Gets the theme name.\n   *\n   * @return string The theme name\n   */\n  public function getTheme()\n  {\n    return $this->theme;\n  }\n\n  /**\n   * Sets the theme name.\n   *\n   * @param string The theme name\n   */\n  public function setTheme($theme)\n  {\n    $this->theme = $theme;\n  }\n\n  /**\n   * Calls methods defined via the sfMixer class.\n   *\n   * @param string The method name\n   * @param array  The method arguments\n   *\n   * @return mixed The returned value of the called method\n   *\n   * @see sfMixer\n   */\n  public function __call($method, $arguments)\n  {\n    if (!$callable = sfMixer::getCallable('sfGenerator:'.$method))\n    {\n      throw new sfException(sprintf('Call to undefined method sfGenerator::%s', $method));\n    }\n\n    array_unshift($arguments, $this);\n\n    return call_user_func_array($callable, $arguments);\n  }\n}\n",
+        "callers": 0,
+        "callees": 0
+      }
+    },
+    {
+      "tool": "get_code_snippet",
+      "arguments": {
+        "project": "kaltura-rigel-18.20.0-full",
+        "qualified_name": "kaltura-rigel-18.20.0-full.vendor.symfony.addon.propel.generator.sfPropelAdminGenerator.class.sfPropelAdminGenerator"
+      },
+      "result": {
+        "name": "sfPropelAdminGenerator",
+        "qualified_name": "kaltura-rigel-18.20.0-full.vendor.symfony.addon.propel.generator.sfPropelAdminGenerator.class.sfPropelAdminGenerator",
+        "label": "Class",
+        "file_path": "/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/graph-view/vendor/symfony/addon/propel/generator/sfPropelAdminGenerator.class.php",
+        "start_line": 22,
+        "end_line": 72,
+        "source": "class sfPropelAdminGenerator extends sfPropelCrudGenerator\n{\n  /**\n   * Initializes the current sfGenerator instance.\n   *\n   * @param sfGeneratorManager A sfGeneratorManager instance\n   */\n  public function initialize($generatorManager)\n  {\n    parent::initialize($generatorManager);\n\n    $this->setGeneratorClass('sfPropelAdmin');\n  }\n\n  public function getAllColumns()\n  {\n    $phpNames = array();\n    foreach ($this->getTableMap()->getColumns() as $column)\n    {\n      $phpNames[] = new sfAdminColumn($column->getPhpName(), $column);\n    }\n\n    return $phpNames;\n  }\n\n  public function getAdminColumnForField($field, $flag = null)\n  {\n    $phpName = sfInflector::camelize($field);\n\n    return new sfAdminColumn($phpName, $this->getColumnForPhpName($phpName), $flag);\n  }\n\n  // returns a column phpName or null if none was found\n  public function getColumnForPhpName($phpName)\n  {\n    // search the matching column for this column name\n\n    foreach ($this->getTableMap()->getColumns() as $column)\n    {\n      if ($column->getPhpName() == $phpName)\n      {\n        $found = true;\n\n        return $column;\n      }\n    }\n\n    // not a \"real\" column, so we will simulate one\n    return null;\n  }\n}",
+        "callers": 0,
+        "callees": 0
+      }
+    },
+    {
+      "tool": "search_graph",
+      "arguments": {
+        "project": "kaltura-rigel-18.20.0-full",
+        "name_pattern": ".*(run_init_module|run_init_controller|run_init_batch|init_batch|run_propel_init_admin|run_propel_init_crud|pake_replace_tokens).*",
+        "limit": 40
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "total: 6\nresults: 6  (rows: name label lines in out; qn = group prefix + \".\" + name)\nkaltura-rigel-18.20.0-full.vendor.symfony-data.tasks.sfPakeGenerator (vendor/symfony-data/tasks/sfPakeGenerator.php):\n  run_init_batch Function 168-190 0 4\n  run_init_controller Function 257-284 0 10\n  run_init_module Function 111-166 0 13\nkaltura-rigel-18.20.0-full.vendor.symfony-data.tasks.sfPakePropelAdminGenerator (vendor/symfony-data/tasks/sfPakePropelAdminGenerator.php):\n  run_propel_init_admin Function 14-66 0 17\nkaltura-rigel-18.20.0-full.vendor.symfony-data.tasks.sfPakePropelCrudGenerator (vendor/symfony-data/tasks/sfPakePropelCrudGenerator.php):\n  run_propel_init_crud Function 17-66 0 13\nkaltura-rigel-18.20.0-full.vendor.symfony.vendor.pake.pakeFunction (vendor/symfony/vendor/pake/pakeFunction.php):\n  pake_replace_tokens Function 214-232 10 10\nhas_more: false\n"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "tool": "search_graph",
+      "arguments": {
+        "project": "kaltura-rigel-18.20.0-full",
+        "name_pattern": "(_batch_default|_batch_rotate_log|getGeneratorSkeletonDirs)",
+        "limit": 10
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "total: 3\nresults: 3  (rows: name label lines in out; qn = group prefix + \".\" + name)\nkaltura-rigel-18.20.0-full.vendor.symfony-data.tasks.sfPakeGenerator (vendor/symfony-data/tasks/sfPakeGenerator.php):\n  _batch_default Function 192-222 0 10\n  _batch_rotate_log Function 224-255 0 10\nkaltura-rigel-18.20.0-full.vendor.symfony.config.sfLoader.class.sfLoader (vendor/symfony/config/sfLoader.class.php):\n  getGeneratorSkeletonDirs Method 190-203 1 2\nhas_more: false\n"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "tool": "search_graph",
+      "arguments": {
+        "project": "kaltura-rigel-18.20.0-full",
+        "name_pattern": "getGeneratorSkeletonDirs",
+        "file_pattern": "*sfLoader*",
+        "limit": 10
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "total: 1\nresults: 1  (rows: name label lines in out; qn = group prefix + \".\" + name)\nkaltura-rigel-18.20.0-full.vendor.symfony.config.sfLoader.class.sfLoader (vendor/symfony/config/sfLoader.class.php):\n  getGeneratorSkeletonDirs Method 190-203 1 2\nhas_more: false\n"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "tool": "trace_path",
+      "arguments": {
+        "project": "kaltura-rigel-18.20.0-full",
+        "function_name": "kaltura-rigel-18.20.0-full.vendor.symfony-data.tasks.sfPakePropelAdminGenerator.run_propel_init_admin",
+        "direction": "outbound",
+        "depth": 1,
+        "limit": 30,
+        "include_evidence": true
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "function: kaltura-rigel-18.20.0-full.vendor.symfony-data.tasks.sfPakePropelAdminGenerator.run_propel_init_admin\ndirection: outbound\ncallees_total: 8\ncallees: 8  (rows: name hop strategy confidence; qn = group prefix + \".\" + name)\nkaltura-rigel-18.20.0-full.vendor.symfony.config.sfLoader.class.sfLoader:\n  getGeneratorSkeletonDirs 1 heuristic 0.75\nkaltura-rigel-18.20.0-full.vendor.symfony.vendor.creole.drivers.pgsql.PgSQLResultSetIterator.PgSQLResultSetIterator:\n  count 1 heuristic 0.03\nkaltura-rigel-18.20.0-full.vendor.symfony.vendor.pake.pakeFinder.class:\n  discard 1 heuristic 0.55\n  ignore_version_control 1 heuristic 0.55\nkaltura-rigel-18.20.0-full.vendor.symfony.vendor.pake.pakeFunction:\n  pake_mirror 1 heuristic 0.75\n  pake_replace_tokens 1 heuristic 0.75\nkaltura-rigel-18.20.0-full.vendor.symfony.vendor.pake.pakeTask.class.pakeTask:\n  get_property 1 heuristic 0.75\nkaltura-rigel-18.20.0-full.vendor.symfony.vendor.propel-generator.build:\n  isset 1 heuristic 0.75\n"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "tool": "get_code_snippet",
+      "arguments": {
+        "project": "kaltura-rigel-18.20.0-full",
+        "qualified_name": "kaltura-rigel-18.20.0-full.vendor.symfony-data.tasks.sfPakeGenerator.run_init_module"
+      },
+      "result": {
+        "name": "run_init_module",
+        "qualified_name": "kaltura-rigel-18.20.0-full.vendor.symfony-data.tasks.sfPakeGenerator.run_init_module",
+        "label": "Function",
+        "file_path": "/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/graph-view/vendor/symfony-data/tasks/sfPakeGenerator.php",
+        "start_line": 111,
+        "end_line": 166,
+        "source": "function run_init_module($task, $args)\n{\n  if (count($args) < 2)\n  {\n    throw new Exception('You must provide your module name.');\n  }\n\n  $app    = $args[0];\n  $module = $args[1];\n  $sf_root_dir = sfConfig::get('sf_root_dir');\n  $module_dir  = $sf_root_dir.'/'.sfConfig::get('sf_apps_dir_name').'/'.$app.'/'.sfConfig::get('sf_app_module_dir_name').'/'.$module;\n\n  if (is_dir($module_dir))\n  {\n    throw new Exception(sprintf('The directory \"%s\" already exists.', $module_dir));\n  }\n\n  try\n  {\n    $author_name = $task->get_property('author', 'symfony');\n  }\n  catch (pakeException $e)\n  {\n    $author_name = 'Your name here';\n  }\n\n  $constants = array(\n    'PROJECT_NAME' => $task->get_property('name', 'symfony'),\n    'APP_NAME'     => $app,\n    'MODULE_NAME'  => $module,\n    'AUTHOR_NAME'  => $author_name,\n  );\n\n  if (is_readable(sfConfig::get('sf_data_dir').'/skeleton/module'))\n  {\n    $sf_skeleton_dir = sfConfig::get('sf_data_dir').'/skeleton/module';\n  }\n  else\n  {\n    $sf_skeleton_dir = sfConfig::get('sf_symfony_data_dir').'/skeleton/module';\n  }\n\n  // create basic application structure\n  $finder = pakeFinder::type('any')->ignore_version_control()->discard('.sf');\n  pake_mirror($finder, $sf_skeleton_dir.'/module', $module_dir);\n\n  // create basic test\n  pake_copy($sf_skeleton_dir.'/test/actionsTest.php', $sf_root_dir.'/test/functional/'.$app.'/'.$module.'ActionsTest.php');\n\n  // customize test file\n  pake_replace_tokens($module.'ActionsTest.php', $sf_root_dir.'/test/functional/'.$app, '##', '##', $constants);\n\n  // customize php and yml files\n  $finder = pakeFinder::type('file')->name('*.php', '*.yml');\n  pake_replace_tokens($finder, $module_dir, '##', '##', $constants);\n}\n",
+        "callers": 0,
+        "callees": 7
+      }
+    },
+    {
+      "tool": "get_code_snippet",
+      "arguments": {
+        "project": "kaltura-rigel-18.20.0-full",
+        "qualified_name": "kaltura-rigel-18.20.0-full.vendor.symfony-data.tasks.sfPakeGenerator._batch_default"
+      },
+      "result": {
+        "name": "_batch_default",
+        "qualified_name": "kaltura-rigel-18.20.0-full.vendor.symfony-data.tasks.sfPakeGenerator._batch_default",
+        "label": "Function",
+        "file_path": "/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/graph-view/vendor/symfony-data/tasks/sfPakeGenerator.php",
+        "start_line": 192,
+        "end_line": 222,
+        "source": "function _batch_default($task, $args)\n{\n  if (count($args) < 2)\n  {\n    throw new Exception('You must provide the destination script name');\n  }\n  if (count($args) < 3)\n  {\n    throw new Exception('You must provide the application name');\n  }\n\n  $batch = $args[1];\n  $app   = $args[2];\n\n  // handling two optional arguments (environment and debug)\n  $env   = isset($args[3]) ? $args[3] : 'dev';\n  $debug = isset($args[4]) ? $args[4] : true;\n\n  $constants = array(\n    'PROJECT_NAME' => $task->get_property('name', 'symfony'),\n    'APP_NAME'     => $app,\n    'BATCH_NAME'   => $batch,\n    'ENV_NAME'     => $env,\n    'DEBUG'        => (boolean) $debug,\n  );\n\n  $sf_bin_dir = sfConfig::get('sf_bin_dir');\n\n  pake_copy(sfConfig::get('sf_symfony_data_dir').'/skeleton/batch/default.php', $sf_bin_dir.'/'.$batch.'.php');\n  pake_replace_tokens($batch.'.php', $sf_bin_dir, '##', '##', $constants);\n}\n",
+        "callers": 0,
+        "callees": 5
+      }
+    },
+    {
+      "tool": "get_code_snippet",
+      "arguments": {
+        "project": "kaltura-rigel-18.20.0-full",
+        "qualified_name": "kaltura-rigel-18.20.0-full.vendor.symfony-data.tasks.sfPakeGenerator._batch_rotate_log"
+      },
+      "result": {
+        "name": "_batch_rotate_log",
+        "qualified_name": "kaltura-rigel-18.20.0-full.vendor.symfony-data.tasks.sfPakeGenerator._batch_rotate_log",
+        "label": "Function",
+        "file_path": "/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/graph-view/vendor/symfony-data/tasks/sfPakeGenerator.php",
+        "start_line": 224,
+        "end_line": 255,
+        "source": "function _batch_rotate_log($task, $args)\n{\n  if (count($args) < 2)\n  {\n    throw new Exception('You must provide the application');\n  }\n  if (count($args) < 3)\n  {\n    throw new Exception('You must provide the environment');\n  }\n\n  $app = $args[1];\n  $env = $args[2];\n  $batch = 'rotate_log_'.$app.'_'.$env;\n\n  // handling two optional arguments (environment and debug)\n  $env   = isset($args[3]) ? $args[3] : 'dev';\n  $debug = isset($args[4]) ? $args[4] : true;\n\n  $constants = array(\n    'PROJECT_NAME' => $task->get_property('name', 'symfony'),\n    'APP_NAME'     => $app,\n    'BATCH_NAME'   => $batch,\n    'ENV_NAME'     => $env,\n    'DEBUG'        => (boolean) $debug,\n  );\n\n  $sf_bin_dir = sfConfig::get('sf_bin_dir');\n\n  pake_copy(sfConfig::get('sf_symfony_data_dir').'/skeleton/batch/rotate_log.php', $sf_bin_dir.'/'.$batch.'.php');\n  pake_replace_tokens($batch.'.php', $sf_bin_dir, '##', '##', $constants);\n}\n",
+        "callers": 0,
+        "callees": 5
+      }
+    },
+    {
+      "tool": "get_code_snippet",
+      "arguments": {
+        "project": "kaltura-rigel-18.20.0-full",
+        "qualified_name": "kaltura-rigel-18.20.0-full.vendor.symfony-data.tasks.sfPakeGenerator.run_init_controller"
+      },
+      "result": {
+        "name": "run_init_controller",
+        "qualified_name": "kaltura-rigel-18.20.0-full.vendor.symfony-data.tasks.sfPakeGenerator.run_init_controller",
+        "label": "Function",
+        "file_path": "/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/graph-view/vendor/symfony-data/tasks/sfPakeGenerator.php",
+        "start_line": 257,
+        "end_line": 284,
+        "source": "function run_init_controller($task, $args)\n{\n  // handling two required arguments (application and batch name)\n  if (count($args) < 2)\n  {\n    throw new Exception('You must provide the environment name');\n  }\n\n  $app = $args[0];\n  $env = $args[1];\n\n  // handling two optional arguments (environment and debug)\n  $controller   = isset($args[2]) ? $args[2] : $app.'_'.$env;\n  $debug        = isset($args[3]) ? $args[3] : true;\n\n  $constants = array(\n    'PROJECT_NAME'    => $task->get_property('name', 'symfony'),\n    'APP_NAME'        => $app,\n    'CONTROLLER_NAME' => $controller,\n    'ENV_NAME'        => $env,\n    'DEBUG'           => (boolean) $debug,\n  );\n\n  $sf_web_dir = sfConfig::get('sf_web_dir');\n\n  pake_copy(sfConfig::get('sf_symfony_data_dir').'/skeleton/controller/controller.php', $sf_web_dir.'/'.$controller.'.php');\n  pake_replace_tokens($controller.'.php', $sf_web_dir, '##', '##', $constants);\n}\n",
+        "callers": 0,
+        "callees": 5
+      }
+    },
+    {
+      "tool": "get_code_snippet",
+      "arguments": {
+        "project": "kaltura-rigel-18.20.0-full",
+        "qualified_name": "kaltura-rigel-18.20.0-full.vendor.symfony-data.tasks.sfPakePropelAdminGenerator.run_propel_init_admin"
+      },
+      "result": {
+        "name": "run_propel_init_admin",
+        "qualified_name": "kaltura-rigel-18.20.0-full.vendor.symfony-data.tasks.sfPakePropelAdminGenerator.run_propel_init_admin",
+        "label": "Function",
+        "file_path": "/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/graph-view/vendor/symfony-data/tasks/sfPakePropelAdminGenerator.php",
+        "start_line": 14,
+        "end_line": 66,
+        "source": "function run_propel_init_admin($task, $args)\n{\n  if (count($args) < 2)\n  {\n    throw new Exception('You must provide your module name.');\n  }\n\n  if (count($args) < 3)\n  {\n    throw new Exception('You must provide your model class name.');\n  }\n\n  $app         = $args[0];\n  $module      = $args[1];\n  $model_class = $args[2];\n  $theme       = isset($args[3]) ? $args[3] : 'default';\n\n  try\n  {\n    $author_name = $task->get_property('author', 'symfony');\n  }\n  catch (pakeException $e)\n  {\n    $author_name = 'Your name here';\n  }\n\n  $constants = array(\n    'PROJECT_NAME' => $task->get_property('name', 'symfony'),\n    'APP_NAME'     => $app,\n    'MODULE_NAME'  => $module,\n    'MODEL_CLASS'  => $model_class,\n    'AUTHOR_NAME'  => $author_name,\n    'THEME'        => $theme, \n  );\n\n  $moduleDir = sfConfig::get('sf_root_dir').'/'.sfConfig::get('sf_apps_dir_name').'/'.$app.'/'.sfConfig::get('sf_app_module_dir_name').'/'.$module;\n\n  // create module structure\n  $finder = pakeFinder::type('any')->ignore_version_control()->discard('.sf');\n  $dirs = sfLoader::getGeneratorSkeletonDirs('sfPropelAdmin', $theme);\n  foreach ($dirs as $dir)\n  {\n    if (is_dir($dir))\n    {\n      pake_mirror($finder, $dir, $moduleDir);\n      break;\n    }\n  }\n\n  // customize php and yml files\n  $finder = pakeFinder::type('file')->name('*.php', '*.yml');\n  pake_replace_tokens($finder, $moduleDir, '##', '##', $constants);\n}\n",
+        "callers": 0,
+        "callees": 8
+      }
+    },
+    {
+      "tool": "get_code_snippet",
+      "arguments": {
+        "project": "kaltura-rigel-18.20.0-full",
+        "qualified_name": "kaltura-rigel-18.20.0-full.vendor.symfony-data.tasks.sfPakePropelCrudGenerator.run_propel_init_crud"
+      },
+      "result": {
+        "name": "run_propel_init_crud",
+        "qualified_name": "kaltura-rigel-18.20.0-full.vendor.symfony-data.tasks.sfPakePropelCrudGenerator.run_propel_init_crud",
+        "label": "Function",
+        "file_path": "/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/graph-view/vendor/symfony-data/tasks/sfPakePropelCrudGenerator.php",
+        "start_line": 17,
+        "end_line": 66,
+        "source": "function run_propel_init_crud($task, $args)\n{\n  if (count($args) < 2)\n  {\n    throw new Exception('You must provide your module name.');\n  }\n\n  if (count($args) < 3)\n  {\n    throw new Exception('You must provide your model class name.');\n  }\n\n  $app         = $args[0];\n  $module      = $args[1];\n  $model_class = $args[2];\n\n  try\n  {\n    $author_name = $task->get_property('author', 'symfony');\n  }\n  catch (pakeException $e)\n  {\n    $author_name = 'Your name here';\n  }\n\n  $constants = array(\n    'PROJECT_NAME' => $task->get_property('name', 'symfony'),\n    'APP_NAME'     => $app,\n    'MODULE_NAME'  => $module,\n    'MODEL_CLASS'  => $model_class,\n    'AUTHOR_NAME'  => $author_name,\n  );\n\n  $sf_root_dir = sfConfig::get('sf_root_dir');\n  $moduleDir   = $sf_root_dir.'/'.sfConfig::get('sf_apps_dir_name').'/'.$app.'/'.sfConfig::get('sf_app_module_dir_name').'/'.$module;\n\n  // create basic application structure\n  $finder = pakeFinder::type('any')->ignore_version_control()->discard('.sf');\n  pake_mirror($finder, sfConfig::get('sf_symfony_data_dir').'/generator/sfPropelCrud/default/skeleton', $moduleDir);\n\n  // create basic test\n  pake_copy(sfConfig::get('sf_symfony_data_dir').'/skeleton/module/test/actionsTest.php', $sf_root_dir.'/test/functional/'.$app.'/'.$module.'ActionsTest.php');\n\n  // customize test file\n  pake_replace_tokens($module.'ActionsTest.php', $sf_root_dir.'/test/functional/'.$app, '##', '##', $constants);\n\n  // customize php and yml files\n  $finder = pakeFinder::type('file')->name('*.php', '*.yml');\n  pake_replace_tokens($finder, $moduleDir, '##', '##', $constants);\n}\n",
+        "callers": 0,
+        "callees": 7
+      }
+    },
+    {
+      "tool": "get_code_snippet",
+      "arguments": {
+        "project": "kaltura-rigel-18.20.0-full",
+        "qualified_name": "kaltura-rigel-18.20.0-full.vendor.symfony.vendor.pake.pakeFunction.pake_replace_tokens"
+      },
+      "result": {
+        "name": "pake_replace_tokens",
+        "qualified_name": "kaltura-rigel-18.20.0-full.vendor.symfony.vendor.pake.pakeFunction.pake_replace_tokens",
+        "label": "Function",
+        "file_path": "/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/graph-view/vendor/symfony/vendor/pake/pakeFunction.php",
+        "start_line": 214,
+        "end_line": 232,
+        "source": "function pake_replace_tokens($arg, $target_dir, $begin_token, $end_token, $tokens)\n{\n  $files = pakeApp::get_files_from_argument($arg, $target_dir, true);\n\n  foreach ($files as $file)\n  {\n    $replaced = false;\n    $content = file_get_contents($target_dir.DIRECTORY_SEPARATOR.$file);\n    foreach ($tokens as $key => $value)\n    {\n      $content = str_replace($begin_token.$key.$end_token, $value, $content, $count);\n      if ($count) $replaced = true;\n    }\n\n    pake_echo_action('tokens', $target_dir.DIRECTORY_SEPARATOR.$file);\n\n    file_put_contents($target_dir.DIRECTORY_SEPARATOR.$file, $content);\n  }\n}\n",
+        "callers": 10,
+        "callees": 4
+      }
+    },
+    {
+      "tool": "get_code_snippet",
+      "arguments": {
+        "project": "kaltura-rigel-18.20.0-full",
+        "qualified_name": "kaltura-rigel-18.20.0-full.vendor.symfony.config.sfLoader.class.sfLoader.getGeneratorSkeletonDirs"
+      },
+      "result": {
+        "name": "getGeneratorSkeletonDirs",
+        "qualified_name": "kaltura-rigel-18.20.0-full.vendor.symfony.config.sfLoader.class.sfLoader.getGeneratorSkeletonDirs",
+        "label": "Method",
+        "file_path": "/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/graph-view/vendor/symfony/config/sfLoader.class.php",
+        "start_line": 190,
+        "end_line": 203,
+        "source": "  static public function getGeneratorSkeletonDirs($class, $theme)\n  {\n    $dirs = array();\n\n    if ($pluginDirs = glob(sfConfig::get('sf_plugins_dir').'/*/data/generator/'.$class.'/'.$theme.'/skeleton'))\n    {\n      $dirs = array_merge($dirs, $pluginDirs);                                                                // plugin\n    }\n\n    $dirs[] = sfConfig::get('sf_data_dir').'/generator/'.$class.'/'.$theme.'/skeleton';                       // project\n    $dirs[] = sfConfig::get('sf_symfony_data_dir').'/generator/'.$class.'/default/skeleton';                  // default theme\n\n    return $dirs;\n  }\n",
+        "callers": 1,
+        "callees": 0
+      }
+    },
+    {
+      "tool": "check_index_coverage",
+      "arguments": {
+        "project": "kaltura-rigel-18.20.0-full",
+        "paths": [
+          "vendor/symfony-data/generator/sfPropelAdmin/default/skeleton/actions/actions.class.php",
+          "vendor/symfony-data/generator/sfPropelCrud/default/skeleton/actions/actions.class.php",
+          "vendor/symfony-data/skeleton/batch/default.php",
+          "vendor/symfony-data/skeleton/batch/rotate_log.php",
+          "vendor/symfony-data/skeleton/controller/controller.php",
+          "vendor/symfony-data/skeleton/module/module/actions/actions.class.php",
+          "vendor/symfony-data/tasks/sfPakeGenerator.php",
+          "vendor/symfony-data/tasks/sfPakePropelAdminGenerator.php",
+          "vendor/symfony-data/tasks/sfPakePropelCrudGenerator.php",
+          "vendor/symfony/vendor/pake/pakeFunction.php",
+          "vendor/symfony/config/sfLoader.class.php",
+          "vendor/symfony/generator/sfGenerator.class.php",
+          "vendor/symfony/addon/propel/generator/sfPropelAdminGenerator.class.php"
+        ]
+      },
+      "result": {
+        "project": "kaltura-rigel-18.20.0-full",
+        "signal": "best_effort",
+        "indexed_at": "2026-09-25T12:19:00Z",
+        "metadata": {
+          "generation": "2026-09-25T12:19:00Z",
+          "index_mode": "full",
+          "recorded_at": "2026-09-25T12:19:04Z",
+          "recording_status": "complete",
+          "ignored_files_stored": 519,
+          "ignored_files_total": 519,
+          "hash_records_complete": true,
+          "coverage_version": 3,
+          "generation_matches": true
+        },
+        "paths": [
+          {
+            "requested_path": "vendor/symfony-data/generator/sfPropelAdmin/default/skeleton/actions/actions.class.php",
+            "path": "vendor/symfony-data/generator/sfPropelAdmin/default/skeleton/actions/actions.class.php",
+            "status": "partial",
+            "freshness": "metadata_match",
+            "recommended_action": "read_ranges_and_verify_scope",
+            "coverage": [
+              {
+                "path": "vendor/symfony-data/generator/sfPropelAdmin/default/skeleton/actions/actions.class.php",
+                "kind": "parse_partial",
+                "detail": "11-11",
+                "match": "exact",
+                "ranges": [
+                  {
+                    "start": 11,
+                    "end": 11
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "requested_path": "vendor/symfony-data/generator/sfPropelCrud/default/skeleton/actions/actions.class.php",
+            "path": "vendor/symfony-data/generator/sfPropelCrud/default/skeleton/actions/actions.class.php",
+            "status": "partial",
+            "freshness": "metadata_match",
+            "recommended_action": "read_ranges_and_verify_scope",
+            "coverage": [
+              {
+                "path": "vendor/symfony-data/generator/sfPropelCrud/default/skeleton/actions/actions.class.php",
+                "kind": "parse_partial",
+                "detail": "11-11",
+                "match": "exact",
+                "ranges": [
+                  {
+                    "start": 11,
+                    "end": 11
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "requested_path": "vendor/symfony-data/skeleton/batch/default.php",
+            "path": "vendor/symfony-data/skeleton/batch/default.php",
+            "status": "partial",
+            "freshness": "metadata_match",
+            "recommended_action": "read_ranges_and_verify_scope",
+            "coverage": [
+              {
+                "path": "vendor/symfony-data/skeleton/batch/default.php",
+                "kind": "parse_partial",
+                "detail": "18-18",
+                "match": "exact",
+                "ranges": [
+                  {
+                    "start": 18,
+                    "end": 18
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "requested_path": "vendor/symfony-data/skeleton/batch/rotate_log.php",
+            "path": "vendor/symfony-data/skeleton/batch/rotate_log.php",
+            "status": "partial",
+            "freshness": "metadata_match",
+            "recommended_action": "read_ranges_and_verify_scope",
+            "coverage": [
+              {
+                "path": "vendor/symfony-data/skeleton/batch/rotate_log.php",
+                "kind": "parse_partial",
+                "detail": "18-18",
+                "match": "exact",
+                "ranges": [
+                  {
+                    "start": 18,
+                    "end": 18
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "requested_path": "vendor/symfony-data/skeleton/controller/controller.php",
+            "path": "vendor/symfony-data/skeleton/controller/controller.php",
+            "status": "partial",
+            "freshness": "metadata_match",
+            "recommended_action": "read_ranges_and_verify_scope",
+            "coverage": [
+              {
+                "path": "vendor/symfony-data/skeleton/controller/controller.php",
+                "kind": "parse_partial",
+                "detail": "8-8",
+                "match": "exact",
+                "ranges": [
+                  {
+                    "start": 8,
+                    "end": 8
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "requested_path": "vendor/symfony-data/skeleton/module/module/actions/actions.class.php",
+            "path": "vendor/symfony-data/skeleton/module/module/actions/actions.class.php",
+            "status": "partial",
+            "freshness": "metadata_match",
+            "recommended_action": "read_ranges_and_verify_scope",
+            "coverage": [
+              {
+                "path": "vendor/symfony-data/skeleton/module/module/actions/actions.class.php",
+                "kind": "parse_partial",
+                "detail": "11-11",
+                "match": "exact",
+                "ranges": [
+                  {
+                    "start": 11,
+                    "end": 11
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "requested_path": "vendor/symfony-data/tasks/sfPakeGenerator.php",
+            "path": "vendor/symfony-data/tasks/sfPakeGenerator.php",
+            "status": "no_recorded_issue",
+            "freshness": "metadata_match",
+            "recommended_action": "use_graph_with_best_effort_caveat",
+            "coverage": []
+          },
+          {
+            "requested_path": "vendor/symfony-data/tasks/sfPakePropelAdminGenerator.php",
+            "path": "vendor/symfony-data/tasks/sfPakePropelAdminGenerator.php",
+            "status": "no_recorded_issue",
+            "freshness": "metadata_match",
+            "recommended_action": "use_graph_with_best_effort_caveat",
+            "coverage": []
+          },
+          {
+            "requested_path": "vendor/symfony-data/tasks/sfPakePropelCrudGenerator.php",
+            "path": "vendor/symfony-data/tasks/sfPakePropelCrudGenerator.php",
+            "status": "no_recorded_issue",
+            "freshness": "metadata_match",
+            "recommended_action": "use_graph_with_best_effort_caveat",
+            "coverage": []
+          },
+          {
+            "requested_path": "vendor/symfony/vendor/pake/pakeFunction.php",
+            "path": "vendor/symfony/vendor/pake/pakeFunction.php",
+            "status": "no_recorded_issue",
+            "freshness": "metadata_match",
+            "recommended_action": "use_graph_with_best_effort_caveat",
+            "coverage": []
+          },
+          {
+            "requested_path": "vendor/symfony/config/sfLoader.class.php",
+            "path": "vendor/symfony/config/sfLoader.class.php",
+            "status": "no_recorded_issue",
+            "freshness": "metadata_match",
+            "recommended_action": "use_graph_with_best_effort_caveat",
+            "coverage": []
+          },
+          {
+            "requested_path": "vendor/symfony/generator/sfGenerator.class.php",
+            "path": "vendor/symfony/generator/sfGenerator.class.php",
+            "status": "no_recorded_issue",
+            "freshness": "metadata_match",
+            "recommended_action": "use_graph_with_best_effort_caveat",
+            "coverage": []
+          },
+          {
+            "requested_path": "vendor/symfony/addon/propel/generator/sfPropelAdminGenerator.class.php",
+            "path": "vendor/symfony/addon/propel/generator/sfPropelAdminGenerator.class.php",
+            "status": "no_recorded_issue",
+            "freshness": "metadata_match",
+            "recommended_action": "use_graph_with_best_effort_caveat",
+            "coverage": []
+          }
+        ],
+        "scopes": [],
+        "caveat": "Best-effort signal only. No recorded issue does not prove graph or source completeness; read flagged source and qualify claims when metadata is changed or unavailable."
+      }
+    }
+  ],
+  "limits": [
+    "Graph traces are heuristic and class-level traces returned no callees; direct ZIP-verified function source supports the positive consumer claims.",
+    "No negative claim about alternative execution paths or reachability is made.",
+    "Generated outputs, CLI argument validation, DEBUG=false substitution, project/plugin overrides and complete generator workflows remain untested.",
+    "The six raw-template compiler rejections remain recorded, not waived; this classification does not prove generated PHP acceptance."
+  ],
+  "application_acceptance": false,
+  "archives": {
+    "original_sha256": "58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28",
+    "candidate_sha256": "cb61e4cd11009bbf9e6e362dfafa5ef2f4af22da817c75fedbd7741a08e44cbc"
+  },
+  "source_files": [
+    {
+      "path": "vendor/symfony-data/generator/sfPropelAdmin/default/skeleton/actions/actions.class.php",
+      "sha256": "81b2e299d72ece711fab3a82dba6c5399c5747091a4b6a9de60b1cc5b31e798a",
+      "bytes": 286,
+      "original_candidate_source_graph_bytes_equal": true,
+      "line_count": 13,
+      "direct_source_fallback": [
+        {
+          "line": 1,
+          "text": "<?php"
+        },
+        {
+          "line": 2,
+          "text": ""
+        },
+        {
+          "line": 3,
+          "text": "/**"
+        },
+        {
+          "line": 4,
+          "text": " * ##MODULE_NAME## actions."
+        },
+        {
+          "line": 5,
+          "text": " *"
+        },
+        {
+          "line": 6,
+          "text": " * @package    ##PROJECT_NAME##"
+        },
+        {
+          "line": 7,
+          "text": " * @subpackage ##MODULE_NAME##"
+        },
+        {
+          "line": 8,
+          "text": " * @author     ##AUTHOR_NAME##"
+        },
+        {
+          "line": 9,
+          "text": " * @version    SVN: $Id: actions.class.php 2288 2006-10-02 15:22:13Z fabien $"
+        },
+        {
+          "line": 10,
+          "text": " */"
+        },
+        {
+          "line": 11,
+          "text": "class ##MODULE_NAME##Actions extends auto##MODULE_NAME##Actions"
+        },
+        {
+          "line": 12,
+          "text": "{"
+        },
+        {
+          "line": 13,
+          "text": "}"
+        }
+      ]
+    },
+    {
+      "path": "vendor/symfony-data/generator/sfPropelCrud/default/skeleton/actions/actions.class.php",
+      "sha256": "81b2e299d72ece711fab3a82dba6c5399c5747091a4b6a9de60b1cc5b31e798a",
+      "bytes": 286,
+      "original_candidate_source_graph_bytes_equal": true,
+      "line_count": 13,
+      "direct_source_fallback": [
+        {
+          "line": 1,
+          "text": "<?php"
+        },
+        {
+          "line": 2,
+          "text": ""
+        },
+        {
+          "line": 3,
+          "text": "/**"
+        },
+        {
+          "line": 4,
+          "text": " * ##MODULE_NAME## actions."
+        },
+        {
+          "line": 5,
+          "text": " *"
+        },
+        {
+          "line": 6,
+          "text": " * @package    ##PROJECT_NAME##"
+        },
+        {
+          "line": 7,
+          "text": " * @subpackage ##MODULE_NAME##"
+        },
+        {
+          "line": 8,
+          "text": " * @author     ##AUTHOR_NAME##"
+        },
+        {
+          "line": 9,
+          "text": " * @version    SVN: $Id: actions.class.php 2288 2006-10-02 15:22:13Z fabien $"
+        },
+        {
+          "line": 10,
+          "text": " */"
+        },
+        {
+          "line": 11,
+          "text": "class ##MODULE_NAME##Actions extends auto##MODULE_NAME##Actions"
+        },
+        {
+          "line": 12,
+          "text": "{"
+        },
+        {
+          "line": 13,
+          "text": "}"
+        }
+      ]
+    },
+    {
+      "path": "vendor/symfony-data/skeleton/batch/default.php",
+      "sha256": "a82525ec83207e9193da1bb002310eb03fcba6dd30ab20b0ac9973bb97299479",
+      "bytes": 655,
+      "original_candidate_source_graph_bytes_equal": true,
+      "line_count": 24,
+      "direct_source_fallback": [
+        {
+          "line": 1,
+          "text": "<?php"
+        },
+        {
+          "line": 2,
+          "text": ""
+        },
+        {
+          "line": 3,
+          "text": "/**"
+        },
+        {
+          "line": 4,
+          "text": " * ##BATCH_NAME## batch script"
+        },
+        {
+          "line": 5,
+          "text": " *"
+        },
+        {
+          "line": 6,
+          "text": " * Here goes a brief description of the purpose of the batch script"
+        },
+        {
+          "line": 7,
+          "text": " *"
+        },
+        {
+          "line": 8,
+          "text": " * @package    ##PROJECT_NAME##"
+        },
+        {
+          "line": 9,
+          "text": " * @subpackage batch"
+        },
+        {
+          "line": 10,
+          "text": " * @version    $Id$"
+        },
+        {
+          "line": 11,
+          "text": " */"
+        },
+        {
+          "line": 12,
+          "text": ""
+        },
+        {
+          "line": 13,
+          "text": "define('SF_ROOT_DIR',    realpath(dirname(__file__).'/..'));"
+        },
+        {
+          "line": 14,
+          "text": "define('SF_APP',         '##APP_NAME##');"
+        },
+        {
+          "line": 15,
+          "text": "define('SF_ENVIRONMENT', '##ENV_NAME##');"
+        },
+        {
+          "line": 16,
+          "text": "define('SF_DEBUG',       ##DEBUG##);"
+        },
+        {
+          "line": 17,
+          "text": ""
+        },
+        {
+          "line": 18,
+          "text": "require_once(SF_ROOT_DIR.DIRECTORY_SEPARATOR.'apps'.DIRECTORY_SEPARATOR.SF_APP.DIRECTORY_SEPARATOR.'config'.DIRECTORY_SEPARATOR.'config.php');"
+        },
+        {
+          "line": 19,
+          "text": ""
+        },
+        {
+          "line": 20,
+          "text": "// initialize database manager"
+        },
+        {
+          "line": 21,
+          "text": "//$databaseManager = new sfDatabaseManager();"
+        },
+        {
+          "line": 22,
+          "text": "//$databaseManager->initialize();"
+        },
+        {
+          "line": 23,
+          "text": ""
+        },
+        {
+          "line": 24,
+          "text": "// batch process here"
+        }
+      ]
+    },
+    {
+      "path": "vendor/symfony-data/skeleton/batch/rotate_log.php",
+      "sha256": "d8d4b03a7f63d8df562772783c78466b16bf1e87467d54ebd08dea03047f7cb6",
+      "bytes": 808,
+      "original_candidate_source_graph_bytes_equal": true,
+      "line_count": 23,
+      "direct_source_fallback": [
+        {
+          "line": 1,
+          "text": "<?php"
+        },
+        {
+          "line": 2,
+          "text": ""
+        },
+        {
+          "line": 3,
+          "text": "/**"
+        },
+        {
+          "line": 4,
+          "text": " * Log rotation batch script"
+        },
+        {
+          "line": 5,
+          "text": " *"
+        },
+        {
+          "line": 6,
+          "text": " * This script is used to manage log rotation, and should be called automatically by a cron task daily"
+        },
+        {
+          "line": 7,
+          "text": " *"
+        },
+        {
+          "line": 8,
+          "text": " * @package    ##PROJECT_NAME##"
+        },
+        {
+          "line": 9,
+          "text": " * @subpackage batch"
+        },
+        {
+          "line": 10,
+          "text": " * @version    $Id: rotate_log.php 3148 2007-01-04 19:34:28Z fabien $"
+        },
+        {
+          "line": 11,
+          "text": " */"
+        },
+        {
+          "line": 12,
+          "text": ""
+        },
+        {
+          "line": 13,
+          "text": "define('SF_ROOT_DIR',    realpath(dirname(__file__).'/..'));"
+        },
+        {
+          "line": 14,
+          "text": "define('SF_APP',         '##APP_NAME##');"
+        },
+        {
+          "line": 15,
+          "text": "define('SF_ENVIRONMENT', '##ENV_NAME##');"
+        },
+        {
+          "line": 16,
+          "text": "define('SF_DEBUG',       ##DEBUG##);"
+        },
+        {
+          "line": 17,
+          "text": ""
+        },
+        {
+          "line": 18,
+          "text": "require_once(SF_ROOT_DIR.DIRECTORY_SEPARATOR.'apps'.DIRECTORY_SEPARATOR.SF_APP.DIRECTORY_SEPARATOR.'config'.DIRECTORY_SEPARATOR.'config.php');"
+        },
+        {
+          "line": 19,
+          "text": ""
+        },
+        {
+          "line": 20,
+          "text": "if (sfConfig::get('sf_logging_enabled') && sfConfig::get('sf_logging_rotate'))"
+        },
+        {
+          "line": 21,
+          "text": "{"
+        },
+        {
+          "line": 22,
+          "text": "  sfLogManager::rotate(SF_APP, SF_ENVIRONMENT, sfConfig::get('sf_logging_period'), sfConfig::get('sf_logging_history'));"
+        },
+        {
+          "line": 23,
+          "text": "}"
+        }
+      ]
+    },
+    {
+      "path": "vendor/symfony-data/skeleton/controller/controller.php",
+      "sha256": "dc64d95afab4440fd7274516c03467a473a0b595c42132d9a34f7ebf1a635fed",
+      "bytes": 389,
+      "original_candidate_source_graph_bytes_equal": true,
+      "line_count": 10,
+      "direct_source_fallback": [
+        {
+          "line": 1,
+          "text": "<?php"
+        },
+        {
+          "line": 2,
+          "text": ""
+        },
+        {
+          "line": 3,
+          "text": "define('SF_ROOT_DIR',    realpath(dirname(__file__).'/..'));"
+        },
+        {
+          "line": 4,
+          "text": "define('SF_APP',         '##APP_NAME##');"
+        },
+        {
+          "line": 5,
+          "text": "define('SF_ENVIRONMENT', '##ENV_NAME##');"
+        },
+        {
+          "line": 6,
+          "text": "define('SF_DEBUG',       ##DEBUG##);"
+        },
+        {
+          "line": 7,
+          "text": ""
+        },
+        {
+          "line": 8,
+          "text": "require_once(SF_ROOT_DIR.DIRECTORY_SEPARATOR.'apps'.DIRECTORY_SEPARATOR.SF_APP.DIRECTORY_SEPARATOR.'config'.DIRECTORY_SEPARATOR.'config.php');"
+        },
+        {
+          "line": 9,
+          "text": ""
+        },
+        {
+          "line": 10,
+          "text": "sfContext::getInstance()->getController()->dispatch();"
+        }
+      ]
+    },
+    {
+      "path": "vendor/symfony-data/skeleton/module/module/actions/actions.class.php",
+      "sha256": "2275a76643e292bbd645d2f6b94a4e32055eaf6e851f6dffae2169a128d4b95c",
+      "bytes": 395,
+      "original_candidate_source_graph_bytes_equal": true,
+      "line_count": 21,
+      "direct_source_fallback": [
+        {
+          "line": 1,
+          "text": "<?php"
+        },
+        {
+          "line": 2,
+          "text": ""
+        },
+        {
+          "line": 3,
+          "text": "/**"
+        },
+        {
+          "line": 4,
+          "text": " * ##MODULE_NAME## actions."
+        },
+        {
+          "line": 5,
+          "text": " *"
+        },
+        {
+          "line": 6,
+          "text": " * @package    ##PROJECT_NAME##"
+        },
+        {
+          "line": 7,
+          "text": " * @subpackage ##MODULE_NAME##"
+        },
+        {
+          "line": 8,
+          "text": " * @author     ##AUTHOR_NAME##"
+        },
+        {
+          "line": 9,
+          "text": " * @version    SVN: $Id: actions.class.php 2692 2006-11-15 21:03:55Z fabien $"
+        },
+        {
+          "line": 10,
+          "text": " */"
+        },
+        {
+          "line": 11,
+          "text": "class ##MODULE_NAME##Actions extends sfActions"
+        },
+        {
+          "line": 12,
+          "text": "{"
+        },
+        {
+          "line": 13,
+          "text": "  /**"
+        },
+        {
+          "line": 14,
+          "text": "   * Executes index action"
+        },
+        {
+          "line": 15,
+          "text": "   *"
+        },
+        {
+          "line": 16,
+          "text": "   */"
+        },
+        {
+          "line": 17,
+          "text": "  public function executeIndex()"
+        },
+        {
+          "line": 18,
+          "text": "  {"
+        },
+        {
+          "line": 19,
+          "text": "    $this->forward('default', 'module');"
+        },
+        {
+          "line": 20,
+          "text": "  }"
+        },
+        {
+          "line": 21,
+          "text": "}"
+        }
+      ]
+    },
+    {
+      "path": "vendor/symfony-data/tasks/sfPakeGenerator.php",
+      "sha256": "67682683048afeaef9ed55bd95a5920792b2c6ab3b4ec11c804985ead4b347eb",
+      "bytes": 8860,
+      "original_candidate_source_graph_bytes_equal": true,
+      "line_count": 284
+    },
+    {
+      "path": "vendor/symfony-data/tasks/sfPakePropelAdminGenerator.php",
+      "sha256": "3075daa287f8498823633a1fdf3f96db328848a8f80c4e02e4726c5ce3865f2c",
+      "bytes": 1766,
+      "original_candidate_source_graph_bytes_equal": true,
+      "line_count": 66
+    },
+    {
+      "path": "vendor/symfony-data/tasks/sfPakePropelCrudGenerator.php",
+      "sha256": "268f26c959581da241d56e2dcaba7c95ed111b54072472fab3b6fe77c67f5815",
+      "bytes": 4287,
+      "original_candidate_source_graph_bytes_equal": true,
+      "line_count": 134
+    },
+    {
+      "path": "vendor/symfony/vendor/pake/pakeFunction.php",
+      "sha256": "bc97788a21544864e55836ad7194ace356ac0cfac4fc3025faa822e6d3cef305",
+      "bytes": 9934,
+      "original_candidate_source_graph_bytes_equal": true,
+      "line_count": 429
+    },
+    {
+      "path": "vendor/symfony/config/sfLoader.class.php",
+      "sha256": "9763c9a7cac325e6578b69985a2acd4705832179379f7d7a8901effa5eaab2ee",
+      "bytes": 11296,
+      "original_candidate_source_graph_bytes_equal": true,
+      "line_count": 375
+    },
+    {
+      "path": "vendor/symfony/generator/sfGenerator.class.php",
+      "sha256": "5476978c8b386eefde031b87b6424e28a5f96e355624a40ee3f9801a1ae675b4",
+      "bytes": 5602,
+      "original_candidate_source_graph_bytes_equal": true,
+      "line_count": 234
+    },
+    {
+      "path": "vendor/symfony/addon/propel/generator/sfPropelAdminGenerator.class.php",
+      "sha256": "f77c303c6c2f37e2dbc31742322733687bbd875f7cbacb35cedbb0fcf54abed0",
+      "bytes": 1766,
+      "original_candidate_source_graph_bytes_equal": true,
+      "line_count": 72
+    }
+  ],
+  "template_consumers": [
+    {
+      "template": "vendor/symfony-data/generator/sfPropelAdmin/default/skeleton/actions/actions.class.php",
+      "classification": "tokenized-generation-input-with-positive-consumer-evidence",
+      "consumer_symbol": "run_propel_init_admin",
+      "consumer_path": "vendor/symfony-data/tasks/sfPakePropelAdminGenerator.php",
+      "consumer_line_ranges": [
+        [
+          40,
+          47
+        ],
+        [
+          50,
+          65
+        ]
+      ],
+      "description": "MODULE_NAME constants; resolve sfPropelAdmin theme skeleton dirs, mirror first existing directory, replace ## tokens in copied PHP/YAML. sfLoader lines190-203 includes bundled generator/sfPropelAdmin/default/skeleton fallback after plugin/project directories.",
+      "token_replacement": {
+        "path": "vendor/symfony/vendor/pake/pakeFunction.php",
+        "lines": [
+          214,
+          232
+        ],
+        "mechanism": "Reads copied file, str_replace(begin_token + key + end_token, value, content), writes substituted file."
+      },
+      "workflow_executed": false,
+      "generated_output_compiles": null
+    },
+    {
+      "template": "vendor/symfony-data/generator/sfPropelCrud/default/skeleton/actions/actions.class.php",
+      "classification": "tokenized-generation-input-with-positive-consumer-evidence",
+      "consumer_symbol": "run_propel_init_crud",
+      "consumer_path": "vendor/symfony-data/tasks/sfPakePropelCrudGenerator.php",
+      "consumer_line_ranges": [
+        [
+          41,
+          49
+        ],
+        [
+          53,
+          65
+        ]
+      ],
+      "description": "MODULE_NAME constants; mirror bundled generator/sfPropelCrud/default/skeleton, replace ## tokens in copied PHP/YAML.",
+      "token_replacement": {
+        "path": "vendor/symfony/vendor/pake/pakeFunction.php",
+        "lines": [
+          214,
+          232
+        ],
+        "mechanism": "Reads copied file, str_replace(begin_token + key + end_token, value, content), writes substituted file."
+      },
+      "workflow_executed": false,
+      "generated_output_compiles": null
+    },
+    {
+      "template": "vendor/symfony-data/skeleton/batch/default.php",
+      "classification": "tokenized-generation-input-with-positive-consumer-evidence",
+      "consumer_symbol": "_batch_default",
+      "consumer_path": "vendor/symfony-data/tasks/sfPakeGenerator.php",
+      "consumer_line_ranges": [
+        [
+          201,
+          221
+        ]
+      ],
+      "description": "Copies exact default.php skeleton to selected batch destination; replaces APP_NAME/ENV_NAME/DEBUG/BATCH_NAME/PROJECT_NAME tokens.",
+      "token_replacement": {
+        "path": "vendor/symfony/vendor/pake/pakeFunction.php",
+        "lines": [
+          214,
+          232
+        ],
+        "mechanism": "Reads copied file, str_replace(begin_token + key + end_token, value, content), writes substituted file."
+      },
+      "workflow_executed": false,
+      "generated_output_compiles": null
+    },
+    {
+      "template": "vendor/symfony-data/skeleton/batch/rotate_log.php",
+      "classification": "tokenized-generation-input-with-positive-consumer-evidence",
+      "consumer_symbol": "_batch_rotate_log",
+      "consumer_path": "vendor/symfony-data/tasks/sfPakeGenerator.php",
+      "consumer_line_ranges": [
+        [
+          235,
+          254
+        ]
+      ],
+      "description": "Copies exact rotate_log.php skeleton to named batch destination; replaces APP_NAME/ENV_NAME/DEBUG/BATCH_NAME/PROJECT_NAME tokens.",
+      "token_replacement": {
+        "path": "vendor/symfony/vendor/pake/pakeFunction.php",
+        "lines": [
+          214,
+          232
+        ],
+        "mechanism": "Reads copied file, str_replace(begin_token + key + end_token, value, content), writes substituted file."
+      },
+      "workflow_executed": false,
+      "generated_output_compiles": null
+    },
+    {
+      "template": "vendor/symfony-data/skeleton/controller/controller.php",
+      "classification": "tokenized-generation-input-with-positive-consumer-evidence",
+      "consumer_symbol": "run_init_controller",
+      "consumer_path": "vendor/symfony-data/tasks/sfPakeGenerator.php",
+      "consumer_line_ranges": [
+        [
+          265,
+          283
+        ]
+      ],
+      "description": "Copies exact controller/controller.php skeleton then replaces APP_NAME/ENV_NAME/DEBUG/CONTROLLER_NAME/PROJECT_NAME tokens.",
+      "token_replacement": {
+        "path": "vendor/symfony/vendor/pake/pakeFunction.php",
+        "lines": [
+          214,
+          232
+        ],
+        "mechanism": "Reads copied file, str_replace(begin_token + key + end_token, value, content), writes substituted file."
+      },
+      "workflow_executed": false,
+      "generated_output_compiles": null
+    },
+    {
+      "template": "vendor/symfony-data/skeleton/module/module/actions/actions.class.php",
+      "classification": "tokenized-generation-input-with-positive-consumer-evidence",
+      "consumer_symbol": "run_init_module",
+      "consumer_path": "vendor/symfony-data/tasks/sfPakeGenerator.php",
+      "consumer_line_ranges": [
+        [
+          137,
+          165
+        ]
+      ],
+      "description": "MODULE_NAME constants; project skeleton override or bundled skeleton/module fallback, mirror module directory, replace ## tokens in copied PHP/YAML.",
+      "token_replacement": {
+        "path": "vendor/symfony/vendor/pake/pakeFunction.php",
+        "lines": [
+          214,
+          232
+        ],
+        "mechanism": "Reads copied file, str_replace(begin_token + key + end_token, value, content), writes substituted file."
+      },
+      "workflow_executed": false,
+      "generated_output_compiles": null
+    }
+  ],
+  "distinction": {
+    "sfGenerator_evalTemplate": "sfGenerator.class.php evalTemplate/replacePhpMarks evaluates generator templates then replaces [?php marks. This is a distinct generation mechanism and is not used here as proof for ## skeleton token replacement.",
+    "debug_false_risk": "Task constants cast DEBUG to boolean before generic str_replace; a false replacement can yield an empty token, so generated syntax must be tested rather than inferred valid. No fixture or application run performed.",
+    "compiler_accounting": "All six remain actual raw-file compiler rejections; positive intended generation consumers justify a separate ledger category, not removal from totals or proof of unreachability."
+  }
+}

@@ -1,0 +1,2021 @@
+{
+  "project": "kaltura-rigel-18.20.0-full",
+  "signal": "best_effort",
+  "indexed_at": "2026-09-25T12:19:00Z",
+  "metadata": {
+    "generation": "2026-09-25T12:19:00Z",
+    "index_mode": "full",
+    "recorded_at": "2026-09-25T12:19:04Z",
+    "recording_status": "complete",
+    "ignored_files_stored": 519,
+    "ignored_files_total": 519,
+    "hash_records_complete": true,
+    "coverage_version": 3,
+    "generation_matches": true
+  },
+  "paths": [
+    {
+      "requested_path": "alpha/apps/kaltura/lib/baseObjectUtils.class.php",
+      "path": "alpha/apps/kaltura/lib/baseObjectUtils.class.php",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "alpha/apps/kaltura/lib/myCaptchaImage.class.php",
+      "path": "alpha/apps/kaltura/lib/myCaptchaImage.class.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "alpha/apps/kaltura/lib/myCaptchaImage.class.php",
+          "kind": "parse_partial",
+          "detail": "74-74,74-74,110-110",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 74,
+              "end": 74
+            },
+            {
+              "start": 74,
+              "end": 74
+            },
+            {
+              "start": 110,
+              "end": 110
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "alpha/apps/kaltura/lib/s3/S3.php",
+      "path": "alpha/apps/kaltura/lib/s3/S3.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "alpha/apps/kaltura/lib/s3/S3.php",
+          "kind": "parse_partial",
+          "detail": "1368-1368,1368-1368,1369-1369,1375-1375",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 1368,
+              "end": 1368
+            },
+            {
+              "start": 1368,
+              "end": 1368
+            },
+            {
+              "start": 1369,
+              "end": 1369
+            },
+            {
+              "start": 1375,
+              "end": 1375
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "alpha/apps/kaltura/lib/storage/urlTokenizers/kAkamaiSecureHDUrlTokenizer.php",
+      "path": "alpha/apps/kaltura/lib/storage/urlTokenizers/kAkamaiSecureHDUrlTokenizer.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "alpha/apps/kaltura/lib/storage/urlTokenizers/kAkamaiSecureHDUrlTokenizer.php",
+          "kind": "parse_partial",
+          "detail": "198-198,199-199",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 198,
+              "end": 198
+            },
+            {
+              "start": 199,
+              "end": 199
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "infra/general/S3.php",
+      "path": "infra/general/S3.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "infra/general/S3.php",
+          "kind": "parse_partial",
+          "detail": "1917-1917,1917-1917,1918-1918,1929-1929",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 1917,
+              "end": 1917
+            },
+            {
+              "start": 1917,
+              "end": 1917
+            },
+            {
+              "start": 1918,
+              "end": 1918
+            },
+            {
+              "start": 1929,
+              "end": 1929
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/IP2Location/IP2Location.inc.php",
+      "path": "vendor/IP2Location/IP2Location.inc.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/IP2Location/IP2Location.inc.php",
+          "kind": "parse_partial",
+          "detail": "83-83,83-83,83-84,87-87,87-87,87-87",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 83,
+              "end": 83
+            },
+            {
+              "start": 83,
+              "end": 83
+            },
+            {
+              "start": 83,
+              "end": 84
+            },
+            {
+              "start": 87,
+              "end": 87
+            },
+            {
+              "start": 87,
+              "end": 87
+            },
+            {
+              "start": 87,
+              "end": 87
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/PHPMailer/extras/htmlfilter.php",
+      "path": "vendor/PHPMailer/extras/htmlfilter.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/PHPMailer/extras/htmlfilter.php",
+          "kind": "parse_partial",
+          "detail": "1-862",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 1,
+              "end": 862
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/ZendFramework/library/Zend/View/Helper/Navigation/Sitemap.php",
+      "path": "vendor/ZendFramework/library/Zend/View/Helper/Navigation/Sitemap.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/ZendFramework/library/Zend/View/Helper/Navigation/Sitemap.php",
+          "kind": "parse_partial",
+          "detail": "286-286,289-289,289-289,292-292,295-295",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 286,
+              "end": 286
+            },
+            {
+              "start": 289,
+              "end": 289
+            },
+            {
+              "start": 289,
+              "end": 289
+            },
+            {
+              "start": 292,
+              "end": 292
+            },
+            {
+              "start": 295,
+              "end": 295
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/aws/Doctrine/Common/Cache/RiakCache.php",
+      "path": "vendor/aws/Doctrine/Common/Cache/RiakCache.php",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "vendor/google-api-php-client-1.1.2/src/Google/Utils.php",
+      "path": "vendor/google-api-php-client-1.1.2/src/Google/Utils.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/google-api-php-client-1.1.2/src/Google/Utils.php",
+          "kind": "parse_partial",
+          "detail": "65-67,69-69,71-71,76-76,81-81,86-86,91-91,99-99,101-101,133-133",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 65,
+              "end": 67
+            },
+            {
+              "start": 69,
+              "end": 69
+            },
+            {
+              "start": 71,
+              "end": 71
+            },
+            {
+              "start": 76,
+              "end": 76
+            },
+            {
+              "start": 81,
+              "end": 81
+            },
+            {
+              "start": 86,
+              "end": 86
+            },
+            {
+              "start": 91,
+              "end": 91
+            },
+            {
+              "start": 99,
+              "end": 99
+            },
+            {
+              "start": 101,
+              "end": 101
+            },
+            {
+              "start": 133,
+              "end": 133
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/google-api-php-client/src/service/Google_Utils.php",
+      "path": "vendor/google-api-php-client/src/service/Google_Utils.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/google-api-php-client/src/service/Google_Utils.php",
+          "kind": "parse_partial",
+          "detail": "58-60,62-62,65-65,71-71,77-77,83-83,89-89,97-97,99-99,117-117",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 58,
+              "end": 60
+            },
+            {
+              "start": 62,
+              "end": 62
+            },
+            {
+              "start": 65,
+              "end": 65
+            },
+            {
+              "start": 71,
+              "end": 71
+            },
+            {
+              "start": 77,
+              "end": 77
+            },
+            {
+              "start": 83,
+              "end": 83
+            },
+            {
+              "start": 89,
+              "end": 89
+            },
+            {
+              "start": 97,
+              "end": 97
+            },
+            {
+              "start": 99,
+              "end": 99
+            },
+            {
+              "start": 117,
+              "end": 117
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/htmlpurifier/library/HTMLPurifier.autoload.php",
+      "path": "vendor/htmlpurifier/library/HTMLPurifier.autoload.php",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "vendor/htmlpurifier/library/HTMLPurifier/ChildDef/Custom.php",
+      "path": "vendor/htmlpurifier/library/HTMLPurifier/ChildDef/Custom.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/htmlpurifier/library/HTMLPurifier/ChildDef/Custom.php",
+          "kind": "parse_partial",
+          "detail": "48-48,48-48,48-48",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 48,
+              "end": 48
+            },
+            {
+              "start": 48,
+              "end": 48
+            },
+            {
+              "start": 48,
+              "end": 48
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/htmlpurifier/library/HTMLPurifier/Encoder.php",
+      "path": "vendor/htmlpurifier/library/HTMLPurifier/Encoder.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/htmlpurifier/library/HTMLPurifier/Encoder.php",
+          "kind": "parse_partial",
+          "detail": "157-157,158-158",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 157,
+              "end": 157
+            },
+            {
+              "start": 158,
+              "end": 158
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/htmlpurifier/library/HTMLPurifier/TagTransform/Font.php",
+      "path": "vendor/htmlpurifier/library/HTMLPurifier/TagTransform/Font.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/htmlpurifier/library/HTMLPurifier/TagTransform/Font.php",
+          "kind": "parse_partial",
+          "detail": "78-78,78-78,78-78,78-78,78-78,86-86,114-114",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 78,
+              "end": 78
+            },
+            {
+              "start": 78,
+              "end": 78
+            },
+            {
+              "start": 78,
+              "end": 78
+            },
+            {
+              "start": 78,
+              "end": 78
+            },
+            {
+              "start": 78,
+              "end": 78
+            },
+            {
+              "start": 86,
+              "end": 86
+            },
+            {
+              "start": 114,
+              "end": 114
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/propel/engine/GeneratorConfig.php",
+      "path": "vendor/propel/engine/GeneratorConfig.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/propel/engine/GeneratorConfig.php",
+          "kind": "parse_partial",
+          "detail": "122-122,122-122,122-127,128-128,142-142,154-154,173-173,192-192,205-205,218-218,229-229",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 122,
+              "end": 122
+            },
+            {
+              "start": 122,
+              "end": 122
+            },
+            {
+              "start": 122,
+              "end": 127
+            },
+            {
+              "start": 128,
+              "end": 128
+            },
+            {
+              "start": 142,
+              "end": 142
+            },
+            {
+              "start": 154,
+              "end": 154
+            },
+            {
+              "start": 173,
+              "end": 173
+            },
+            {
+              "start": 192,
+              "end": 192
+            },
+            {
+              "start": 205,
+              "end": 205
+            },
+            {
+              "start": 218,
+              "end": 218
+            },
+            {
+              "start": 229,
+              "end": 229
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/propel/engine/database/transform/XmlToAppData.php",
+      "path": "vendor/propel/engine/database/transform/XmlToAppData.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/propel/engine/database/transform/XmlToAppData.php",
+          "kind": "parse_partial",
+          "detail": "184-184,184-184,184-184",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 184,
+              "end": 184
+            },
+            {
+              "start": 184,
+              "end": 184
+            },
+            {
+              "start": 184,
+              "end": 184
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/propel/validator/MatchValidator.php",
+      "path": "vendor/propel/validator/MatchValidator.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/propel/validator/MatchValidator.php",
+          "kind": "parse_partial",
+          "detail": "62-62,62-62,62-62,62-62,62-62,75-75,79-79",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 62,
+              "end": 62
+            },
+            {
+              "start": 62,
+              "end": 62
+            },
+            {
+              "start": 62,
+              "end": 62
+            },
+            {
+              "start": 62,
+              "end": 62
+            },
+            {
+              "start": 62,
+              "end": 62
+            },
+            {
+              "start": 75,
+              "end": 75
+            },
+            {
+              "start": 79,
+              "end": 79
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/propel/validator/NotMatchValidator.php",
+      "path": "vendor/propel/validator/NotMatchValidator.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/propel/validator/NotMatchValidator.php",
+          "kind": "parse_partial",
+          "detail": "60-60,60-60,60-60,60-60,60-60,73-73,77-77",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 60,
+              "end": 60
+            },
+            {
+              "start": 60,
+              "end": 60
+            },
+            {
+              "start": 60,
+              "end": 60
+            },
+            {
+              "start": 60,
+              "end": 60
+            },
+            {
+              "start": 60,
+              "end": 60
+            },
+            {
+              "start": 73,
+              "end": 73
+            },
+            {
+              "start": 77,
+              "end": 77
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/symfony-data/bin/symfony.php",
+      "path": "vendor/symfony-data/bin/symfony.php",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "vendor/symfony-data/generator/sfPropelAdmin/default/skeleton/actions/actions.class.php",
+      "path": "vendor/symfony-data/generator/sfPropelAdmin/default/skeleton/actions/actions.class.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/symfony-data/generator/sfPropelAdmin/default/skeleton/actions/actions.class.php",
+          "kind": "parse_partial",
+          "detail": "11-11",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 11,
+              "end": 11
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/symfony-data/generator/sfPropelCrud/default/skeleton/actions/actions.class.php",
+      "path": "vendor/symfony-data/generator/sfPropelCrud/default/skeleton/actions/actions.class.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/symfony-data/generator/sfPropelCrud/default/skeleton/actions/actions.class.php",
+          "kind": "parse_partial",
+          "detail": "11-11",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 11,
+              "end": 11
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/symfony-data/skeleton/batch/default.php",
+      "path": "vendor/symfony-data/skeleton/batch/default.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/symfony-data/skeleton/batch/default.php",
+          "kind": "parse_partial",
+          "detail": "18-18",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 18,
+              "end": 18
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/symfony-data/skeleton/batch/rotate_log.php",
+      "path": "vendor/symfony-data/skeleton/batch/rotate_log.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/symfony-data/skeleton/batch/rotate_log.php",
+          "kind": "parse_partial",
+          "detail": "18-18",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 18,
+              "end": 18
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/symfony-data/skeleton/controller/controller.php",
+      "path": "vendor/symfony-data/skeleton/controller/controller.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/symfony-data/skeleton/controller/controller.php",
+          "kind": "parse_partial",
+          "detail": "8-8",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 8,
+              "end": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/symfony-data/skeleton/module/module/actions/actions.class.php",
+      "path": "vendor/symfony-data/skeleton/module/module/actions/actions.class.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/symfony-data/skeleton/module/module/actions/actions.class.php",
+          "kind": "parse_partial",
+          "detail": "11-11",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 11,
+              "end": 11
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/symfony/controller/sfRouting.class.php",
+      "path": "vendor/symfony/controller/sfRouting.class.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/symfony/controller/sfRouting.class.php",
+          "kind": "parse_partial",
+          "detail": "302-302,302-302,302-303",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 302,
+              "end": 302
+            },
+            {
+              "start": 302,
+              "end": 302
+            },
+            {
+              "start": 302,
+              "end": 303
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/symfony/helper/UrlHelper.php",
+      "path": "vendor/symfony/helper/UrlHelper.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/symfony/helper/UrlHelper.php",
+          "kind": "parse_partial",
+          "detail": "418-418,418-418",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 418,
+              "end": 418
+            },
+            {
+              "start": 418,
+              "end": 418
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/symfony/i18n/sfDateFormat.class.php",
+      "path": "vendor/symfony/i18n/sfDateFormat.class.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/symfony/i18n/sfDateFormat.class.php",
+          "kind": "parse_partial",
+          "detail": "1-799",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 1,
+              "end": 799
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/symfony/i18n/sfNumberFormat.class.php",
+      "path": "vendor/symfony/i18n/sfNumberFormat.class.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/symfony/i18n/sfNumberFormat.class.php",
+          "kind": "parse_partial",
+          "detail": "195-195,195-195,225-225,239-239,291-291,316-316",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 195,
+              "end": 195
+            },
+            {
+              "start": 195,
+              "end": 195
+            },
+            {
+              "start": 225,
+              "end": 225
+            },
+            {
+              "start": 239,
+              "end": 239
+            },
+            {
+              "start": 291,
+              "end": 291
+            },
+            {
+              "start": 316,
+              "end": 316
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/symfony/i18n/sfNumberFormatInfo.class.php",
+      "path": "vendor/symfony/i18n/sfNumberFormatInfo.class.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/symfony/i18n/sfNumberFormatInfo.class.php",
+          "kind": "parse_partial",
+          "detail": "312-312,312-312,312-312,312-312,312-313,331-331,331-332,335-335,335-335,335-336,359-359,681-681",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 312,
+              "end": 312
+            },
+            {
+              "start": 312,
+              "end": 312
+            },
+            {
+              "start": 312,
+              "end": 312
+            },
+            {
+              "start": 312,
+              "end": 312
+            },
+            {
+              "start": 312,
+              "end": 313
+            },
+            {
+              "start": 331,
+              "end": 331
+            },
+            {
+              "start": 331,
+              "end": 332
+            },
+            {
+              "start": 335,
+              "end": 335
+            },
+            {
+              "start": 335,
+              "end": 335
+            },
+            {
+              "start": 335,
+              "end": 336
+            },
+            {
+              "start": 359,
+              "end": 359
+            },
+            {
+              "start": 681,
+              "end": 681
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/symfony/util/Spyc.class.php",
+      "path": "vendor/symfony/util/Spyc.class.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/symfony/util/Spyc.class.php",
+          "kind": "parse_partial",
+          "detail": "160-160,160-160,160-161",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 160,
+              "end": 160
+            },
+            {
+              "start": 160,
+              "end": 160
+            },
+            {
+              "start": 160,
+              "end": 161
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/symfony/util/sfCore.class.php",
+      "path": "vendor/symfony/util/sfCore.class.php",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "vendor/symfony/util/sfFinder.class.php",
+      "path": "vendor/symfony/util/sfFinder.class.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/symfony/util/sfFinder.class.php",
+          "kind": "parse_partial",
+          "detail": "1-724",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 1,
+              "end": 724
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/symfony/vendor/creole/drivers/pgsql/PgSQLResultSet.php",
+      "path": "vendor/symfony/vendor/creole/drivers/pgsql/PgSQLResultSet.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/symfony/vendor/creole/drivers/pgsql/PgSQLResultSet.php",
+          "kind": "parse_partial",
+          "detail": "140-140,140-140",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 140,
+              "end": 140
+            },
+            {
+              "start": 140,
+              "end": 140
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/symfony/vendor/creole/util/sql/SQLStatementExtractor.php",
+      "path": "vendor/symfony/vendor/creole/util/sql/SQLStatementExtractor.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/symfony/vendor/creole/util/sql/SQLStatementExtractor.php",
+          "kind": "parse_partial",
+          "detail": "146-146,146-146",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 146,
+              "end": 146
+            },
+            {
+              "start": 146,
+              "end": 146
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/symfony/vendor/pake/pakeFinder.class.php",
+      "path": "vendor/symfony/vendor/pake/pakeFinder.class.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/symfony/vendor/pake/pakeFinder.class.php",
+          "kind": "parse_partial",
+          "detail": "1-539",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 1,
+              "end": 539
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/symfony/vendor/pake/pakeGetopt.class.php",
+      "path": "vendor/symfony/vendor/pake/pakeGetopt.class.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/symfony/vendor/pake/pakeGetopt.class.php",
+          "kind": "parse_partial",
+          "detail": "1-275",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 1,
+              "end": 275
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/symfony/vendor/pake/pakeYaml.class.php",
+      "path": "vendor/symfony/vendor/pake/pakeYaml.class.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/symfony/vendor/pake/pakeYaml.class.php",
+          "kind": "parse_partial",
+          "detail": "196-196,196-196,196-196",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 196,
+              "end": 196
+            },
+            {
+              "start": 196,
+              "end": 196
+            },
+            {
+              "start": 196,
+              "end": 196
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/symfony/vendor/phing/Phing.php",
+      "path": "vendor/symfony/vendor/phing/Phing.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/symfony/vendor/phing/Phing.php",
+          "kind": "parse_partial",
+          "detail": "919-919,919-919,919-919",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 919,
+              "end": 919
+            },
+            {
+              "start": 919,
+              "end": 919
+            },
+            {
+              "start": 919,
+              "end": 919
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/symfony/vendor/phing/lib/Capsule.php",
+      "path": "vendor/symfony/vendor/phing/lib/Capsule.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/symfony/vendor/phing/lib/Capsule.php",
+          "kind": "parse_partial",
+          "detail": "186-186,186-186,188-188,188-188,188-188",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 186,
+              "end": 186
+            },
+            {
+              "start": 186,
+              "end": 186
+            },
+            {
+              "start": 188,
+              "end": 188
+            },
+            {
+              "start": 188,
+              "end": 188
+            },
+            {
+              "start": 188,
+              "end": 188
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/symfony/vendor/phing/system/io/BufferedReader.php",
+      "path": "vendor/symfony/vendor/phing/system/io/BufferedReader.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/symfony/vendor/phing/system/io/BufferedReader.php",
+          "kind": "parse_partial",
+          "detail": "145-145,145-145",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 145,
+              "end": 145
+            },
+            {
+              "start": 145,
+              "end": 145
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/symfony/vendor/phing/system/io/UnixFileSystem.php",
+      "path": "vendor/symfony/vendor/phing/system/io/UnixFileSystem.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/symfony/vendor/phing/system/io/UnixFileSystem.php",
+          "kind": "parse_partial",
+          "detail": "78-78,78-78,78-79,79-79,79-79,81-81,91-91,91-91,112-112,112-112,125-125,125-125,143-143,157-157,157-157,157-158,158-158,197-197,266-266",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 78,
+              "end": 78
+            },
+            {
+              "start": 78,
+              "end": 78
+            },
+            {
+              "start": 78,
+              "end": 79
+            },
+            {
+              "start": 79,
+              "end": 79
+            },
+            {
+              "start": 79,
+              "end": 79
+            },
+            {
+              "start": 81,
+              "end": 81
+            },
+            {
+              "start": 91,
+              "end": 91
+            },
+            {
+              "start": 91,
+              "end": 91
+            },
+            {
+              "start": 112,
+              "end": 112
+            },
+            {
+              "start": 112,
+              "end": 112
+            },
+            {
+              "start": 125,
+              "end": 125
+            },
+            {
+              "start": 125,
+              "end": 125
+            },
+            {
+              "start": 143,
+              "end": 143
+            },
+            {
+              "start": 157,
+              "end": 157
+            },
+            {
+              "start": 157,
+              "end": 157
+            },
+            {
+              "start": 157,
+              "end": 158
+            },
+            {
+              "start": 158,
+              "end": 158
+            },
+            {
+              "start": 197,
+              "end": 197
+            },
+            {
+              "start": 266,
+              "end": 266
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/symfony/vendor/phing/system/io/Win32FileSystem.php",
+      "path": "vendor/symfony/vendor/phing/system/io/Win32FileSystem.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/symfony/vendor/phing/system/io/Win32FileSystem.php",
+          "kind": "parse_partial",
+          "detail": "51-51,84-86,87-88,88-129,131-132,134-143,143-146,148-149,151-154,156-159,159-159,167-179,180-182,191-191,191-196,196-196,196-197,197-197,197-198,198-199,199-201,201-202,202-202,203-203,208-208,213-213,222-222,222-222,223-223,233-233,233-233,256-256,257-257,257-257,257-257,268-268,268-268,268-268,280-280,302-302,302-302,307-307,307-307,319-319,319-319,351-351,378-378,378-378,412-412",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 51,
+              "end": 51
+            },
+            {
+              "start": 84,
+              "end": 86
+            },
+            {
+              "start": 87,
+              "end": 88
+            },
+            {
+              "start": 88,
+              "end": 129
+            },
+            {
+              "start": 131,
+              "end": 132
+            },
+            {
+              "start": 134,
+              "end": 143
+            },
+            {
+              "start": 143,
+              "end": 146
+            },
+            {
+              "start": 148,
+              "end": 149
+            },
+            {
+              "start": 151,
+              "end": 154
+            },
+            {
+              "start": 156,
+              "end": 159
+            },
+            {
+              "start": 159,
+              "end": 159
+            },
+            {
+              "start": 167,
+              "end": 179
+            },
+            {
+              "start": 180,
+              "end": 182
+            },
+            {
+              "start": 191,
+              "end": 191
+            },
+            {
+              "start": 191,
+              "end": 196
+            },
+            {
+              "start": 196,
+              "end": 196
+            },
+            {
+              "start": 196,
+              "end": 197
+            },
+            {
+              "start": 197,
+              "end": 197
+            },
+            {
+              "start": 197,
+              "end": 198
+            },
+            {
+              "start": 198,
+              "end": 199
+            },
+            {
+              "start": 199,
+              "end": 201
+            },
+            {
+              "start": 201,
+              "end": 202
+            },
+            {
+              "start": 202,
+              "end": 202
+            },
+            {
+              "start": 203,
+              "end": 203
+            },
+            {
+              "start": 208,
+              "end": 208
+            },
+            {
+              "start": 213,
+              "end": 213
+            },
+            {
+              "start": 222,
+              "end": 222
+            },
+            {
+              "start": 222,
+              "end": 222
+            },
+            {
+              "start": 223,
+              "end": 223
+            },
+            {
+              "start": 233,
+              "end": 233
+            },
+            {
+              "start": 233,
+              "end": 233
+            },
+            {
+              "start": 256,
+              "end": 256
+            },
+            {
+              "start": 257,
+              "end": 257
+            },
+            {
+              "start": 257,
+              "end": 257
+            },
+            {
+              "start": 257,
+              "end": 257
+            },
+            {
+              "start": 268,
+              "end": 268
+            },
+            {
+              "start": 268,
+              "end": 268
+            },
+            {
+              "start": 268,
+              "end": 268
+            },
+            {
+              "start": 280,
+              "end": 280
+            },
+            {
+              "start": 302,
+              "end": 302
+            },
+            {
+              "start": 302,
+              "end": 302
+            },
+            {
+              "start": 307,
+              "end": 307
+            },
+            {
+              "start": 307,
+              "end": 307
+            },
+            {
+              "start": 319,
+              "end": 319
+            },
+            {
+              "start": 319,
+              "end": 319
+            },
+            {
+              "start": 351,
+              "end": 351
+            },
+            {
+              "start": 378,
+              "end": 378
+            },
+            {
+              "start": 378,
+              "end": 378
+            },
+            {
+              "start": 412,
+              "end": 412
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/symfony/vendor/phing/system/util/Properties.php",
+      "path": "vendor/symfony/vendor/phing/system/util/Properties.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/symfony/vendor/phing/system/util/Properties.php",
+          "kind": "parse_partial",
+          "detail": "84-84,84-84,84-84,84-84,87-87,103-103,118-118,135-135,269-269",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 84,
+              "end": 84
+            },
+            {
+              "start": 84,
+              "end": 84
+            },
+            {
+              "start": 84,
+              "end": 84
+            },
+            {
+              "start": 84,
+              "end": 84
+            },
+            {
+              "start": 87,
+              "end": 87
+            },
+            {
+              "start": 103,
+              "end": 103
+            },
+            {
+              "start": 118,
+              "end": 118
+            },
+            {
+              "start": 135,
+              "end": 135
+            },
+            {
+              "start": 269,
+              "end": 269
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/symfony/vendor/phing/tasks/system/CvsPassTask.php",
+      "path": "vendor/symfony/vendor/phing/tasks/system/CvsPassTask.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/symfony/vendor/phing/tasks/system/CvsPassTask.php",
+          "kind": "parse_partial",
+          "detail": "1-174",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 1,
+              "end": 174
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/symfony/vendor/phing/tasks/system/PropertyTask.php",
+      "path": "vendor/symfony/vendor/phing/tasks/system/PropertyTask.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/symfony/vendor/phing/tasks/system/PropertyTask.php",
+          "kind": "parse_partial",
+          "detail": "415-415,415-415,415-415",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 415,
+              "end": 415
+            },
+            {
+              "start": 415,
+              "end": 415
+            },
+            {
+              "start": 415,
+              "end": 415
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/symfony/vendor/phing/types/Path.php",
+      "path": "vendor/symfony/vendor/phing/types/Path.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/symfony/vendor/phing/types/Path.php",
+          "kind": "parse_partial",
+          "detail": "66-455",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 66,
+              "end": 455
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/symfony/vendor/phing/util/FileUtils.php",
+      "path": "vendor/symfony/vendor/phing/util/FileUtils.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/symfony/vendor/phing/util/FileUtils.php",
+          "kind": "parse_partial",
+          "detail": "134-134,134-134,134-134,134-135,138-138,138-138,138-138,138-138,138-139,185-185,185-185,185-185,185-185,194-194,194-194,194-194,194-194,224-224,224-224,224-224",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 134,
+              "end": 134
+            },
+            {
+              "start": 134,
+              "end": 134
+            },
+            {
+              "start": 134,
+              "end": 134
+            },
+            {
+              "start": 134,
+              "end": 135
+            },
+            {
+              "start": 138,
+              "end": 138
+            },
+            {
+              "start": 138,
+              "end": 138
+            },
+            {
+              "start": 138,
+              "end": 138
+            },
+            {
+              "start": 138,
+              "end": 138
+            },
+            {
+              "start": 138,
+              "end": 139
+            },
+            {
+              "start": 185,
+              "end": 185
+            },
+            {
+              "start": 185,
+              "end": 185
+            },
+            {
+              "start": 185,
+              "end": 185
+            },
+            {
+              "start": 185,
+              "end": 185
+            },
+            {
+              "start": 194,
+              "end": 194
+            },
+            {
+              "start": 194,
+              "end": 194
+            },
+            {
+              "start": 194,
+              "end": 194
+            },
+            {
+              "start": 194,
+              "end": 194
+            },
+            {
+              "start": 224,
+              "end": 224
+            },
+            {
+              "start": 224,
+              "end": 224
+            },
+            {
+              "start": 224,
+              "end": 224
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/symfony/vendor/phing/util/PathTokenizer.php",
+      "path": "vendor/symfony/vendor/phing/util/PathTokenizer.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/symfony/vendor/phing/util/PathTokenizer.php",
+          "kind": "parse_partial",
+          "detail": "182-182,182-182,186-186,212-212,218-218,242-242",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 182,
+              "end": 182
+            },
+            {
+              "start": 182,
+              "end": 182
+            },
+            {
+              "start": 186,
+              "end": 186
+            },
+            {
+              "start": 212,
+              "end": 212
+            },
+            {
+              "start": 218,
+              "end": 218
+            },
+            {
+              "start": 242,
+              "end": 242
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/symfony/vendor/phing/util/StringHelper.php",
+      "path": "vendor/symfony/vendor/phing/util/StringHelper.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/symfony/vendor/phing/util/StringHelper.php",
+          "kind": "parse_partial",
+          "detail": "63-63,63-63,180-180,180-180",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 63,
+              "end": 63
+            },
+            {
+              "start": 63,
+              "end": 63
+            },
+            {
+              "start": 180,
+              "end": 180
+            },
+            {
+              "start": 180,
+              "end": 180
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/symfony/vendor/propel-generator/classes/propel/engine/builder/DataModelBuilder.php",
+      "path": "vendor/symfony/vendor/propel-generator/classes/propel/engine/builder/DataModelBuilder.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/symfony/vendor/propel-generator/classes/propel/engine/builder/DataModelBuilder.php",
+          "kind": "parse_partial",
+          "detail": "94-94,94-94,94-94,94-95,95-95,106-106,123-123,142-142,148-148,154-154,163-163,172-172,181-181,190-190,199-199,214-214",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 94,
+              "end": 94
+            },
+            {
+              "start": 94,
+              "end": 94
+            },
+            {
+              "start": 94,
+              "end": 94
+            },
+            {
+              "start": 94,
+              "end": 95
+            },
+            {
+              "start": 95,
+              "end": 95
+            },
+            {
+              "start": 106,
+              "end": 106
+            },
+            {
+              "start": 123,
+              "end": 123
+            },
+            {
+              "start": 142,
+              "end": 142
+            },
+            {
+              "start": 148,
+              "end": 148
+            },
+            {
+              "start": 154,
+              "end": 154
+            },
+            {
+              "start": 163,
+              "end": 163
+            },
+            {
+              "start": 172,
+              "end": 172
+            },
+            {
+              "start": 181,
+              "end": 181
+            },
+            {
+              "start": 190,
+              "end": 190
+            },
+            {
+              "start": 199,
+              "end": 199
+            },
+            {
+              "start": 214,
+              "end": 214
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/symfony/vendor/propel-generator/classes/propel/engine/database/transform/XmlToAppData.php",
+      "path": "vendor/symfony/vendor/propel-generator/classes/propel/engine/database/transform/XmlToAppData.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/symfony/vendor/propel-generator/classes/propel/engine/database/transform/XmlToAppData.php",
+          "kind": "parse_partial",
+          "detail": "183-183,183-183,183-183",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 183,
+              "end": 183
+            },
+            {
+              "start": 183,
+              "end": 183
+            },
+            {
+              "start": 183,
+              "end": 183
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "requested_path": "vendor/symfony/vendor/propel-generator/classes/propel/phing/AbstractPropelDataModelTask.php",
+      "path": "vendor/symfony/vendor/propel-generator/classes/propel/phing/AbstractPropelDataModelTask.php",
+      "status": "partial",
+      "freshness": "metadata_match",
+      "recommended_action": "read_ranges_and_verify_scope",
+      "coverage": [
+        {
+          "path": "vendor/symfony/vendor/propel-generator/classes/propel/phing/AbstractPropelDataModelTask.php",
+          "kind": "parse_partial",
+          "detail": "372-372,372-372,372-372,372-373,373-373,387-387,482-482,523-523,561-561,585-585,602-602,616-616,635-635",
+          "match": "exact",
+          "ranges": [
+            {
+              "start": 372,
+              "end": 372
+            },
+            {
+              "start": 372,
+              "end": 372
+            },
+            {
+              "start": 372,
+              "end": 372
+            },
+            {
+              "start": 372,
+              "end": 373
+            },
+            {
+              "start": 373,
+              "end": 373
+            },
+            {
+              "start": 387,
+              "end": 387
+            },
+            {
+              "start": 482,
+              "end": 482
+            },
+            {
+              "start": 523,
+              "end": 523
+            },
+            {
+              "start": 561,
+              "end": 561
+            },
+            {
+              "start": 585,
+              "end": 585
+            },
+            {
+              "start": 602,
+              "end": 602
+            },
+            {
+              "start": 616,
+              "end": 616
+            },
+            {
+              "start": 635,
+              "end": 635
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "scopes": [],
+  "caveat": "Best-effort signal only. No recorded issue does not prove graph or source completeness; read flagged source and qualify claims when metadata is changed or unavailable."
+}

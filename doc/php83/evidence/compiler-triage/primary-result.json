@@ -1,0 +1,42 @@
+{
+  "executor": "Codex delegated compiler-triage task",
+  "independent_cli_review": "Coordinator-owned; not asserted by primary record",
+  "local_tests": {
+    "count": 17,
+    "exit": 0
+  },
+  "repeat_byte_identical": true,
+  "identities": {
+    "tools/php83/compiler-triage/build.py": "ca578c4f04783d364eb0e0c6c539432d7517f6434b9697a0cf8487db92d4f530",
+    "tools/php83/compiler-triage/test_compiler_triage.py": "425c0df4e651286a4b2df118e57f043efc96bcc5a4fcaaefec931921a4ddfadf",
+    "doc/php83/evidence/compiler-triage/primary.json": "98585986b62722844bc69dc9d1d1ba774ae5bb94a2f3725f74f3c4247edd4450",
+    "doc/php83/evidence/compiler-triage/primary-repeat.json": "98585986b62722844bc69dc9d1d1ba774ae5bb94a2f3725f74f3c4247edd4450"
+  },
+  "summary": {
+    "rejected_denominator": 54,
+    "categories": {
+      "removed_autoload_declaration": 3,
+      "removed_curly_brace_offset": 43,
+      "reserved_object_import_alias": 1,
+      "unexpanded_generator_skeleton_placeholder": 6,
+      "unparenthesized_nested_ternary": 1
+    },
+    "baseline_classifications": {
+      "baseline_rejection_retained": 7,
+      "new_php83_rejection": 47
+    },
+    "baseline_join_status": {
+      "exact_source_identity_match": 54
+    },
+    "graph_coverage_statuses": {
+      "no_recorded_issue": 5,
+      "partial": 49
+    },
+    "matching_held_patches": 5,
+    "selected_in_exp9": 0,
+    "removed_or_waived_rejections": 0
+  },
+  "rejections_waived": 0,
+  "no_vm_network_or_php_execution": true,
+  "t0_04_complete": false
+}

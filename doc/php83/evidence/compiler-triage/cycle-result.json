@@ -1,0 +1,32 @@
+{
+  "scope": "Exact54-file compilerclassification plus positive templateconsumer provenance, not repair or acceptance",
+  "prior_turn": "progress: committed package identity and wholecompiler evidence7ba02183",
+  "classification": {
+    "new_php83": 47,
+    "retained_baseline": 7,
+    "unexpanded_templates": 6,
+    "waived": 0
+  },
+  "executors": {
+    "claude": "Both independent real classificationrebuilds;17 then19localtests; finalr2byteequal",
+    "cursor": "11scannerlocaltests and13sourcefile ZIPidentity checks/templateconsumerreview",
+    "grok": "timeout120seconds exit124; no completed contribution",
+    "opencode": "Authorized freefallback17initiallocaltests plus54row exactreportjoin and review"
+  },
+  "final_builder_sha256": "3451ba4f6720efc85571623167bf06fd3778b699c02c4e13a701be4c5f14639e",
+  "final_tests_sha256": "9d487225330f292a41a300bda41982d477650dfd3330030dc9f726013ebb47c1",
+  "phase_changes": [
+    "Classifier literalpattern objectproperty recognition; initialfailedattemptretained",
+    "Strict compilerstatus enums/types; historicaltimeout/signal/noninteger rejected; allactual54rowsunchanged"
+  ],
+  "local_final_tests": 19,
+  "template_generation_executed": false,
+  "application_sources_changed": false,
+  "runtime_reachability": "unresolved",
+  "static_report_rows_remaining_separate": 4711,
+  "original_acceptance_complete": 0,
+  "original_acceptance_total": 24,
+  "detailed_complete": 3,
+  "detailed_total": 27,
+  "application_acceptance": false
+}
