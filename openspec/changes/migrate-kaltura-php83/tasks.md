@@ -136,3 +136,9 @@ HTTP/trusted-HTTPS session/auth matrix matches original 7.4; expected original
 41 candidate-8.3 diagnostic groups / 1,767 events remain unresolved; this is
 not full AIO/FPM/session-persistence/media acceptance. See `doc/php83/exp3-api.md`.
 No checkbox is closed by the bounded matrix.
+
+T1-01 partial follow-up: held `Criteria-null-alias.patch` explicitly handles the
+missing-alias null before strlen. Eight real-class contracts agree on PHP 7.4
+and 8.3; three focused null deprecations disappear, other diagnostics remain.
+DB adapter is a fixture; real SQL/API integration remains pending. See
+`doc/php83/criteria-null-alias.md`; no acceptance checkbox is closed.

@@ -1,6 +1,6 @@
 # Patch and baseline identity audit (T0-02)
 
-Date: 2026-09-25. This audit covers the current repository inventory, not runtime
+Date: 2026-09-25. This historical audit covers the 19-patch repository snapshot, not runtime
 compatibility, provider support or promotion of a complete PHP 8.3 candidate.
 
 ## Inputs and results
@@ -97,3 +97,13 @@ for a reproducible **lab experiment**, following Cursor CLI review. Their origin
 held files/metadata and exp2 manifest remain unchanged. This is not production
 promotion or a claim that broad runtime acceptance must precede experimentation.
 Other alternatives remain explicitly excluded, with reasons in the exp3 record.
+
+## Subsequent Criteria experiment
+
+The held Criteria null-alias experiment adds a twentieth patch (3 active in the
+unchanged exp2 manifest, 17 held). The new strict identity/application audit is
+[`criteria-null/patch-inventory.json`](evidence/criteria-null/patch-inventory.json).
+The historical 19-row disposition ledger above remains unchanged; later exp3
+selection is recorded separately in `exp3-candidate.md`. Criteria is not selected
+into exp3 and has only focused runtime approval, not SQL/application acceptance.
+See [Criteria experiment](criteria-null-alias.md).

@@ -16,6 +16,14 @@ and [execution contract](../../openspec/changes/migrate-kaltura-php83/design.md)
 - No new VM/application test, release, package integration or `.20` mutation in
   this batch. No release ETA or application completion percentage is inferred.
 
+## Latest progress: Criteria null-alias repair (held)
+
+A new one-line explicit-null repair preserves eight alias contracts on real
+Criteria/Criterion classes under PHP 7.4/8.3. Four source/runtime rows agree;
+three original-8.3 null-to-strlen diagnostics disappear while other warnings
+remain recorded. This is a fixture-boundary probe, not integrated SQL acceptance.
+[Patch, exact scope and next integration check](criteria-null-alias.md).
+
 ## Latest progress: exp3 SQL / Apache / trusted TLS
 
 The actual ZIP now passes the bounded synthetic SQL/session HTTP + trusted HTTPS

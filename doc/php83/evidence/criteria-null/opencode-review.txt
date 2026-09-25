@@ -1,0 +1,26 @@
+Read-only check — running your tests and reviewing the null-alias patch without touching anything.
+
+Tests pass and the patch looks narrow — now pulling its metadata and evidence to confirm the contract.
+
+AGENTS.md read. Read-only, no edits, no SSH executed. Other agents active — no competing writes done.
+
+## Execution (local only)
+- Command: `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83 -p 'test_*.py'`
+- Result: `Ran 122 tests in 0.073s — OK`, exit `0`
+- Executor: OpenCode (Muse Spark 1.3 Free). No Claude/Grok/Cursor CLI attribution claimed in this turn; independent reviewer rotation not performed here.
+
+## Artifacts reviewed
+- `patches/php83/held/Criteria-null-alias.patch`: 1-line change in `vendor/propel/util/Criteria.php:1375`:
+  `if (! strlen($realtable))` → `if ($realtable === null || ! strlen($realtable))`
+- `patches/php83/held/Criteria-null-alias.json`: `status: held; focused null-alias experiment, integration pending`, with `before_sha256 / after_sha256 / patch_sha256`.
+- `tools/php83/criteria-probe/probe.php`: uses real `Criteria/Criterion` classes, fixture-only `DBAdapter`; captures all diagnostics via `set_error_handler`; 8 cases including `zero-string ('0'→'0')`, `false→'a'`, `zero-int (0→0)`, `unqualified→null`.
+- `tools/php83/criteria-probe/collect.py`: read-only rerun guard (`Evidence already exists`), hash-match on `original.php/candidate.php/probe.php/run.sh`, 4-way matrix (74/83 × original/candidate), asserts 8 rows each equal to baseline, asserts `null_diagnostic_counts==[0,0,3,0]`, report `scope: real Criteria/Criterion, fixture-only DB adapter, no SQL acceptance`, `focused_pass:True, application_acceptance:False`. Requires SSH — NOT executed per task constraint.
+- `tools/php83/criteria-probe/run.sh`: hostname-gated (`kaltura-php74-baseline`/`kaltura-php83-lab`), sandboxed `systemd-run` as `nobody`, `PrivateNetwork`, `ProtectSystem=strict`, `MemoryMax=128M`, `RuntimeMaxSec=30`.
+- `evidence criteria-null/codex.json`: NOT FOUND at `evidence/criteria-null/codex.json`; `tools/php83/criteria-probe/` contains only `collect.py/probe.php/run.sh`. Not searched further per no-scan constraint.
+
+## Contract findings (bounded, static review only)
+1. Zero-string preserved: `'0' === null` is false, `strlen('0')==1`, so condition false → retains `'0'`. Same for int `0`. Fallback for `null/''/false` matches PHP 7.4 `strlen(null)=>0` path without calling `strlen(null)`.
+2. No diagnostic suppression: patch adds no `@`/handler change; `probe.php` retains all diagnostics; `collect.py` explicitly counts only `strlen()+null` diagnostics and expects other diagnostics retained.
+3. No SQL acceptance claim: harness scope explicitly says fixture-only DB, no SQL acceptance, `application_acceptance:False`.
+
+Limitation: live PHP 7.4/8.3 lab rerun and SQL/integration acceptance untested in this turn (SSH prohibited).

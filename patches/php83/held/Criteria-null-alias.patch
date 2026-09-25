@@ -1,0 +1,11 @@
+--- a/vendor/propel/util/Criteria.php
++++ b/vendor/propel/util/Criteria.php
+@@ -1372,7 +1372,7 @@
+ 
+ 		//init $this->realtable
+ 		$realtable = $criteria->getTableForAlias($this->table);
+-		if (! strlen ( $realtable ) ) {
++		if ($realtable === null || ! strlen ( $realtable ) ) {
+ 			$realtable = $this->table;
+ 		}
+ 		$this->realtable = $realtable;

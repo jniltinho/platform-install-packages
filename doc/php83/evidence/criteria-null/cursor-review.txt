@@ -1,0 +1,25 @@
+Vou ler o AGENTS.md e os artefatos pedidos, e rodar o unittest em paralelo — só leitura local.## Resultado
+
+**Unittest:** `Ran 122 tests in 0.069s` — **OK**, **exit 0**  
+**Comando:** `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83 -p 'test_*.py'`  
+**Executor/revisor:** Cursor Agent (este turno) · **SSH/lab:** não executado (pedido local read-only)
+
+---
+
+### Patch / metadata
+- Diff: `if ($realtable === null || ! strlen ( $realtable ) )` em `Criteria.php` (~L1375).
+- Status metadata: `held; focused null-alias experiment, integration pending`.
+- Hashes `before`/`after`/`patch` batem com `codex.json` e com o harness.
+
+### Contrato PHP 7.4 (incl. zero-string)
+- Short-circuit só em `=== null`; `'0'` não é null → `strlen('0')===1` → alias permanece `'0'`.
+- Evidência: nas 4 combinações 74/83 × original/candidate, as 8 rows são idênticas, incluindo `zero-string→"0"`, `empty→"a"`, `false→"a"`, `zero-int→0`.
+
+### Diagnósticos / SQL
+- `null_diagnostic_counts: [0,0,3,0]` — só o original em 8.3 emite 3× `strlen(): ... null`; o candidate zera isso.
+- Em 8.3 candidate restam 6 deprecações de return type (iterator) — não há silenciamento geral.
+- Escopo explícito: `"no SQL acceptance"`; `application_acceptance: false`; `focused_pass: true`.
+
+### Limitações
+- Review de evidência + harness; `collect.py`/`run.sh` não reexecutados (exigem SSH nas VMs).
+- Patch still **held**; harness focado ≠ aceitação de aplicação.

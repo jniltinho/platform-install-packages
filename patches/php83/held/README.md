@@ -34,3 +34,8 @@ failing fixture. No claim is made that these low-level legacy semantics are idea
 The original `array_key_exists($index, $this)` still fails on PHP 8.3; excluding
 this patch therefore leaves a known compatibility blocker. No application-wide
 acceptance is asserted for the JSON-only ZIP.
+
+`Criteria-null-alias.patch` is a one-line explicit-null guard in Criterion::init.
+Eight focused alias contracts pass on PHP 7.4/8.3; the actual SQL/API integration
+is still pending. It is not part of exp2 or exp3. See
+`../../../doc/php83/criteria-null-alias.md` for identities and limitations.

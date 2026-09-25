@@ -1,0 +1,7 @@
+{
+  "status": "held; focused null-alias experiment, integration pending",
+  "path": "vendor/propel/util/Criteria.php",
+  "before_sha256": "0626bb5b976ae7eedccaf5060675cd7c7ca56b22fc2c9d6c1a51ce485a303543",
+  "after_sha256": "9b36246d143a11ab1ffd8b31966cf86d4a7563e78cca216f344727ba3d232d19",
+  "patch_sha256": "2da8bfbfdfd4af592c4e3ca5f0e1725fd458a249a4d31103f9343f7da5fc4293"
+}

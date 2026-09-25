@@ -1,0 +1,49 @@
+Execução concluída. Não editei nem reverti nenhum arquivo. Criei somente o arquivo de evidência que me foi atribuído.
+
+## Execução
+
+| Item | Resultado |
+|---|---|
+| Caso | Criteria null-alias, probe focado somente leitura |
+| Executor | Claude CLI (Opus 5.5) |
+| Comando | `python3 tools/php83/criteria-probe/collect.py doc/php83/evidence/criteria-null/claude.json` |
+| Exit | **0**, com a mensagem `PASS: eight alias contracts on both runtimes, three null deprecations removed; other diagnostics retained` |
+| Evidência | `doc/php83/evidence/criteria-null/claude.json`, sha256 `8d971071…328415d` |
+| Ambientes | `baseline74` (PHP 7.4.33) e `php83` (PHP 8.3.6), fixtures pré-preparados em `/home/vagrant/php-criteria-null-probe` |
+| Isolamento | `systemd-run` como nobody, sem rede, sem sockets, `ProtectSystem=strict`, `/opt/kaltura` inacessível, bind somente leitura. Não houve DB nem escrita na aplicação |
+| Hashes do harness | original `0626bb5b…`, candidate `9b36246d…`, probe.php `b3b5b9fa…`, run.sh `d6e55408…`. Todos conferem com os valores esperados |
+
+- Nos 4 runs (7.4 e 8.3, original e candidate), exit 0 e stderr vazio.
+- As 8 linhas de contrato são idênticas nos 4 runs.
+- A contagem de deprecações de `strlen(null)` foi `[0,0,3,0]`: as 3 aparecem só no original em 8.3, na linha 1375, e o patch elimina as 3.
+- Os 6 avisos `ReturnTypeWillChange` do `getIterator` e do `CriterionIterator` continuam no candidate. Isso é esperado, porque estão fora do escopo deste patch.
+- **Comparação com `codex.json`:** harness, metadados do patch e o `result` de todos os 4 runs são idênticos.
+
+## Unit tests
+
+`PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83 -p 'test_*.py'` rodou 122 testes, todos OK. Nenhum deles cobre `criteria-probe`.
+
+## Revisão
+
+**Patch (`Criteria-null-alias.patch`): correto e mínimo.**
+- Conferi a fonte original: sha256 `0626bb5b…` bate com `before_sha256`.
+- Apliquei o patch numa cópia temporária e o resultado bate com `after_sha256` (`9b36246d…`).
+- `getTableForAlias` usa `isset`. Por isso devolve null implícito em três situações: alias ausente, alias com valor null e coluna sem qualificação.
+- `strlen(null)` retorna 0 tanto em 7.4 quanto em 8.3. Logo, o short-circuit `=== null` cai no mesmo ramo e a semântica não muda.
+- Com `false`, `''`, `'0'` e `0` o comportamento continua igual. Inclusive a peculiaridade que já existia antes: o alias inteiro `0` resulta em `realtable=0`, e o patch preserva isso.
+- Os outros chamadores (`BasePeer.php:126,800,827,858,865,966`) já tratam o retorno com `!== null` ou por truthiness. `Criterion::init` é o único lugar com `strlen`.
+
+**Probe e fixture:** usam as classes reais `Criteria` e `Criterion`. Só `Propel` e `DBAdapter` são stubs. Os 8 casos cobrem os 3 caminhos que produzem null e os valores falsy que não são null.
+
+**Coletor, lacunas não bloqueantes:**
+1. As verificações, incluindo a de hash, são feitas com `assert`. Com `python3 -O` elas desaparecem. O certo seria usar `if …: raise`.
+2. Em caso de falha, o coletor não grava JSON nem stderr de SSH, então um resultado FAIL não fica registrado como evidência.
+3. O relatório não registra hostname, timestamp nem o arquivo de configuração SSH usado.
+4. Não existe `test_*.py` para o coletor.
+
+## Limites que continuam em aberto
+
+- **Grafo:** não rodei `check_index_coverage`. Nesta sessão não havia índice codebase-memory correspondente a este diretório. As minhas conclusões vêm da leitura direta da fonte, não do grafo. A afirmação de "sem lacuna" no grafo Tier 2 é sua e eu não a verifiquei novamente.
+- **Escopo do probe:** DB adapter de fixture. Não foi feita aceitação de SQL, de API nem de fluxo real do Propel.
+- **Review independente:** a revisão acima é minha e não é execução. A rotação para os revisores Grok (ou o fallback) e Cursor ainda precisa ser coordenada pelo Codex.
+- **Aprovação:** o patch continua *held*. Não há aprovação da aplicação completa, nem integração, release ou cutover.

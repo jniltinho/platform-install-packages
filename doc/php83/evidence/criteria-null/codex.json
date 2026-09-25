@@ -1,0 +1,363 @@
+{
+  "schema": 1,
+  "scope": "real Criteria/Criterion, fixture-only DB adapter, no SQL acceptance",
+  "harness": {
+    "original.php": "0626bb5b976ae7eedccaf5060675cd7c7ca56b22fc2c9d6c1a51ce485a303543",
+    "candidate.php": "9b36246d143a11ab1ffd8b31966cf86d4a7563e78cca216f344727ba3d232d19",
+    "probe.php": "b3b5b9fac14b867aabf9d854b597ad3d4d024d8d259ea7bd35bb21f8bafe4cdd",
+    "run.sh": "d6e5540839a05a1a9fc433531d439778263b2f29e9cdf3befca6d7c7dbb5739f"
+  },
+  "patch": {
+    "status": "held; focused null-alias experiment, integration pending",
+    "path": "vendor/propel/util/Criteria.php",
+    "before_sha256": "0626bb5b976ae7eedccaf5060675cd7c7ca56b22fc2c9d6c1a51ce485a303543",
+    "after_sha256": "9b36246d143a11ab1ffd8b31966cf86d4a7563e78cca216f344727ba3d232d19",
+    "patch_sha256": "2da8bfbfdfd4af592c4e3ca5f0e1725fd458a249a4d31103f9343f7da5fc4293"
+  },
+  "rows": [
+    {
+      "runtime": "74",
+      "tree": "original",
+      "command": "bash /home/vagrant/php-criteria-null-probe/run.sh original",
+      "exit": 0,
+      "stderr": "",
+      "result": {
+        "php": "7.4.33",
+        "rows": [
+          [
+            "missing",
+            "a",
+            "id",
+            123
+          ],
+          [
+            "null",
+            "a",
+            "id",
+            123
+          ],
+          [
+            "empty",
+            "a",
+            "id",
+            123
+          ],
+          [
+            "table",
+            "partner",
+            "id",
+            123
+          ],
+          [
+            "zero-string",
+            "0",
+            "id",
+            123
+          ],
+          [
+            "unqualified",
+            null,
+            "id",
+            123
+          ],
+          [
+            "false",
+            "a",
+            "id",
+            123
+          ],
+          [
+            "zero-int",
+            0,
+            "id",
+            123
+          ]
+        ],
+        "diagnostics": []
+      }
+    },
+    {
+      "runtime": "74",
+      "tree": "candidate",
+      "command": "bash /home/vagrant/php-criteria-null-probe/run.sh candidate",
+      "exit": 0,
+      "stderr": "",
+      "result": {
+        "php": "7.4.33",
+        "rows": [
+          [
+            "missing",
+            "a",
+            "id",
+            123
+          ],
+          [
+            "null",
+            "a",
+            "id",
+            123
+          ],
+          [
+            "empty",
+            "a",
+            "id",
+            123
+          ],
+          [
+            "table",
+            "partner",
+            "id",
+            123
+          ],
+          [
+            "zero-string",
+            "0",
+            "id",
+            123
+          ],
+          [
+            "unqualified",
+            null,
+            "id",
+            123
+          ],
+          [
+            "false",
+            "a",
+            "id",
+            123
+          ],
+          [
+            "zero-int",
+            0,
+            "id",
+            123
+          ]
+        ],
+        "diagnostics": []
+      }
+    },
+    {
+      "runtime": "83",
+      "tree": "original",
+      "command": "bash /home/vagrant/php-criteria-null-probe/run.sh original",
+      "exit": 0,
+      "stderr": "",
+      "result": {
+        "php": "8.3.6",
+        "rows": [
+          [
+            "missing",
+            "a",
+            "id",
+            123
+          ],
+          [
+            "null",
+            "a",
+            "id",
+            123
+          ],
+          [
+            "empty",
+            "a",
+            "id",
+            123
+          ],
+          [
+            "table",
+            "partner",
+            "id",
+            123
+          ],
+          [
+            "zero-string",
+            "0",
+            "id",
+            123
+          ],
+          [
+            "unqualified",
+            null,
+            "id",
+            123
+          ],
+          [
+            "false",
+            "a",
+            "id",
+            123
+          ],
+          [
+            "zero-int",
+            0,
+            "id",
+            123
+          ]
+        ],
+        "diagnostics": [
+          [
+            8192,
+            "Return type of Criteria::getIterator() should either be compatible with IteratorAggregate::getIterator(): Traversable, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+            "original.php",
+            193
+          ],
+          [
+            8192,
+            "Return type of CriterionIterator::current() should either be compatible with Iterator::current(): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+            "original.php",
+            1271
+          ],
+          [
+            8192,
+            "Return type of CriterionIterator::next() should either be compatible with Iterator::next(): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+            "original.php",
+            1275
+          ],
+          [
+            8192,
+            "Return type of CriterionIterator::key() should either be compatible with Iterator::key(): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+            "original.php",
+            1267
+          ],
+          [
+            8192,
+            "Return type of CriterionIterator::valid() should either be compatible with Iterator::valid(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+            "original.php",
+            1263
+          ],
+          [
+            8192,
+            "Return type of CriterionIterator::rewind() should either be compatible with Iterator::rewind(): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+            "original.php",
+            1259
+          ],
+          [
+            8192,
+            "strlen(): Passing null to parameter #1 ($string) of type string is deprecated",
+            "original.php",
+            1375
+          ],
+          [
+            8192,
+            "strlen(): Passing null to parameter #1 ($string) of type string is deprecated",
+            "original.php",
+            1375
+          ],
+          [
+            8192,
+            "strlen(): Passing null to parameter #1 ($string) of type string is deprecated",
+            "original.php",
+            1375
+          ]
+        ]
+      }
+    },
+    {
+      "runtime": "83",
+      "tree": "candidate",
+      "command": "bash /home/vagrant/php-criteria-null-probe/run.sh candidate",
+      "exit": 0,
+      "stderr": "",
+      "result": {
+        "php": "8.3.6",
+        "rows": [
+          [
+            "missing",
+            "a",
+            "id",
+            123
+          ],
+          [
+            "null",
+            "a",
+            "id",
+            123
+          ],
+          [
+            "empty",
+            "a",
+            "id",
+            123
+          ],
+          [
+            "table",
+            "partner",
+            "id",
+            123
+          ],
+          [
+            "zero-string",
+            "0",
+            "id",
+            123
+          ],
+          [
+            "unqualified",
+            null,
+            "id",
+            123
+          ],
+          [
+            "false",
+            "a",
+            "id",
+            123
+          ],
+          [
+            "zero-int",
+            0,
+            "id",
+            123
+          ]
+        ],
+        "diagnostics": [
+          [
+            8192,
+            "Return type of Criteria::getIterator() should either be compatible with IteratorAggregate::getIterator(): Traversable, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+            "candidate.php",
+            193
+          ],
+          [
+            8192,
+            "Return type of CriterionIterator::current() should either be compatible with Iterator::current(): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+            "candidate.php",
+            1271
+          ],
+          [
+            8192,
+            "Return type of CriterionIterator::next() should either be compatible with Iterator::next(): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+            "candidate.php",
+            1275
+          ],
+          [
+            8192,
+            "Return type of CriterionIterator::key() should either be compatible with Iterator::key(): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+            "candidate.php",
+            1267
+          ],
+          [
+            8192,
+            "Return type of CriterionIterator::valid() should either be compatible with Iterator::valid(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+            "candidate.php",
+            1263
+          ],
+          [
+            8192,
+            "Return type of CriterionIterator::rewind() should either be compatible with Iterator::rewind(): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+            "candidate.php",
+            1259
+          ]
+        ]
+      }
+    }
+  ],
+  "null_diagnostic_counts": [
+    0,
+    0,
+    3,
+    0
+  ],
+  "focused_pass": true,
+  "application_acceptance": false
+}
