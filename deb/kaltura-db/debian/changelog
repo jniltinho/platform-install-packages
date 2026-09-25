@@ -1,3 +1,9 @@
+kaltura-db (18.20.0-1) noble; urgency=medium
+
+  * Ubuntu 24.04 (noble), Kaltura CE Rigel-18.20.0 All-In-One.
+
+ -- Nilton OS <jniltinho@gmail.com>  Thu, 24 Sep 2026 12:00:00 +0000
+
 kaltura-db (15.10.0-1) orion; urgency=medium
 
   * In light of changes made here: https://github.com/kaltura/platform-install-packages/commit/739a5463a8e7398bc38788d24e7d9caf483cb93b

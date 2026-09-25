@@ -87,6 +87,7 @@ config.status: $(tree)
         --with-file-aio \
         --with-ipv6 \
         --with-debug \
+        --with-cc-opt=-Wno-error \
 	--add-module=./nginx-vod-module-$(KALTURA_NGINX_VOD_VERSION) \
 	--add-module=./nginx-secure-token-module-$(KALTURA_NGINX_SECURE_TOKEN_VERSION) \
 	--add-module=./nginx-akamai-token-validate-module-$(KALTURA_NGINX_AKAMAI_TOKEN_VALIDATE_VERSION) \
@@ -109,7 +110,6 @@ clean:
 	dh_testroot
 	rm -f build-stamp config.log
 	rm -rf opt/ kaltura-nginx-$(NGINX_VERSION)/
-	dh_quilt_unpatch
 	dh_clean 
 
 install: build
@@ -146,7 +146,7 @@ binary-arch: build install
 	dh_strip
 	dh_compress
 	dh_installdeb
-	#LD_LIBRARY_PATH=$(BASE_PREFIX)/lib dh_shlibdeps
+	dh_shlibdeps
 	dh_gencontrol -u-v$(DEB_VERSION) 
 	dh_md5sums
 	dh_builddeb

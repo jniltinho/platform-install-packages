@@ -26,6 +26,7 @@ if [ ! -x "`which wget 2>/dev/null`" ];then
 	exit 2
 fi
 wget $KALTURA_CORE_URI -O$RPM_SOURCES_DIR/$KALTURA_SERVER_VERSION.zip
+echo "$KALTURA_CORE_SHA256  $RPM_SOURCES_DIR/$KALTURA_SERVER_VERSION.zip" | sha256sum -c -
 echo "Packaged into $RPM_SOURCES_DIR/$KALTURA_SERVER_VERSION.zip"
 `dirname $0`/package_kaltura_clients-generator.sh
 if [ -x "`which rpmbuild 2>/dev/null`" ];then

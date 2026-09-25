@@ -1,3 +1,9 @@
+kaltura-elasticsearch (7.17-1) noble; urgency=medium
+
+  * Ubuntu 24.04 (noble), Kaltura CE Rigel-18.20.0 All-In-One.
+
+ -- Nilton OS <jniltinho@gmail.com>  Thu, 24 Sep 2026 12:00:00 +0000
+
 kaltura-elasticsearch (1.0.0-1) naos; urgency=medium
 
   * First release.

@@ -46,20 +46,26 @@ for SOURCE in HTML5LIB3 PLAYKIT_IMA PLAYKIT_YOUBORA PLAYKIT_GOOGLE_ANALYTICS PLA
 	fi
 	# that's OTT and we don't want it
 done 
+# plugin privado: só entra quando há token
+if [ -n "$GITHUB_TOKEN" ];then
 for i in path-kaltura-player.js path-kaltura-player.js.map;do
 	$BASE_CHECKOUT_DIR/build/gh_download_asset.sh $GITHUB_TOKEN kaltura/kaltura-interactive-player $i v$PLAYKIT_INTERACTIVE_VERSION $SOURCE_PACKAGING_DIR/html5lib3_tmp/$HTML5LIB3_VERSION
 done
+fi
 
 curl -L $PLAYKIT_UI_URI > playkit-ui_$PLAYKIT_UI_VERSION.tar.gz
 tar zxf playkit-ui_$PLAYKIT_UI_VERSION.tar.gz
 cp -r playkit-js-ui-$PLAYKIT_UI_VERSION/translations $SOURCE_PACKAGING_DIR/html5lib3_tmp/$HTML5LIB3_VERSION
 
 # Fetch Brand3d from Bitbucket:
+# plugin de terceiro no Bitbucket: só entra com credenciais
+if [ -n "$BITBUCKET_TOKEN" ];then
 BRAND3D_ARCHIVE=$SOURCE_PACKAGING_DIR/playkit_brand3d_${PLAYKIT_BRAND3D_VERSION}.tar.bz2
 curl -L $PLAYKIT_BRAND3D_URI --output $BRAND3D_ARCHIVE
 tar jxf $BRAND3D_ARCHIVE -C $SOURCE_PACKAGING_DIR/ 
 cp $SOURCE_PACKAGING_DIR/brand3d-brand3d-overlay-c3a7824dcfdf/dist/brand3d-overlay.js $SOURCE_PACKAGING_DIR/html5lib3_tmp/$HTML5LIB3_VERSION/plugin-marketplace-brand3d-overlay.js
 cp $SOURCE_PACKAGING_DIR/brand3d-brand3d-overlay-c3a7824dcfdf/dist/brand3d-overlay.js.map $SOURCE_PACKAGING_DIR/html5lib3_tmp/$HTML5LIB3_VERSION/plugin-marketplace-brand3d-overlay.js.map
+fi
 
 # remove OTT player
 rm $SOURCE_PACKAGING_DIR/html5lib3_tmp/$HTML5LIB3_VERSION/kaltura-tv-player*

@@ -1,29 +1,13 @@
 Source: kaltura-sphinx
 Section: misc
-Priority: extra
-Maintainer: Jess Portnoy <jess.portnoy@kaltura.com>
-Build-Depends: 
- debhelper (>= 7.0.50),
- autotools-dev,
- libmysqlclient-dev|libperconaserverclient18-dev,
- libtool,
- libexpat-dev,
+Priority: optional
+Maintainer: Nilton OS <jniltinho@gmail.com>
+Build-Depends: debhelper (>= 10)
+Standards-Version: 4.6.2
 
 Package: kaltura-sphinx
-Section: misc
-Architecture: any
-Pre-Depends:
- dpkg (>= 1.15.7.2~)
-Depends: 
- libmysqlclient18|libperconaserverclient18,
- kaltura-base, libodbc1
- ${misc:Depends},
- ${shlibs:Depends}
-Description: Sphinx full-text search server - for Kaltura
- Sphinx is a full-text search server that adds many advanced features
- on top of plain old text searching. Data can be fetched directly from
- a database, or streamed in XML format. MySQL, PostgreSQL, SQL Server,
- Oracle, and other databases are supported. Client programs can query
- Sphinx either using native SphinxAPI library, or using regular MySQL
- client programs and libraries via SQL-like SphinxQL interface.
- .
+Architecture: all
+Depends: ${misc:Depends}, sphinxsearch, kaltura-base
+Description: Kaltura - Sphinx searchd (sphinxsearch da distro)
+ Pacote-ponte para Ubuntu 24.04: expõe o binário da distro nos caminhos
+ de /opt/kaltura esperados pelo Kaltura CE.

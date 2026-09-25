@@ -24,7 +24,7 @@ if [ "$1" = "configure" ]; then
 	ES_PORT=9200
 	set -e
 	# should no longer be needed
-	#sed -i 's@^\(\s*"type" : \)"boolean"\s*@\1"keyword"@g' $APP_DIR/configurations/elastic/mapping/*.json
+	#sed -i 's@^\(\s*"type" : \)"boolean"\s*@\1"keyword"@g' $APP_DIR/configurations/elastic/mapping/elasticsearch-7/*.json
 	mv /etc/elasticsearch/elasticsearch.yml /etc/elasticsearch/elasticsearch.yml.orig
 	sed -e "s#@BASE_DIR@#$BASE_DIR#g" -e "s#@LOG_DIR@#$LOG_DIR#g" -e "s#@HOSTNAME@#`hostname`#g" $APP_DIR/configurations/elastic/elasticsearch.template.yml > /etc/elasticsearch/elasticsearch.yml
 	# ES simply doesn't work with openjdk-9-jre-headless, we'll use openjdk-8-jre-headless
@@ -32,10 +32,13 @@ if [ "$1" = "configure" ]; then
 	#ln -s /usr/lib/jvm/java-8-openjdk-amd64/bin/java /etc/alternatives/java
 
 	chown -R elasticsearch $LOG_DIR/elasticsearch $BASE_DIR/var/lib/elasticsearch
-	invoke-rc.d elasticsearch restart
+	# ponytail: heap fixo de 1 GB para AIO; ajuste em /etc/elasticsearch/jvm.options.d/kaltura.options
+	[ -f /etc/elasticsearch/jvm.options.d/kaltura.options ] || printf -- '-Xms1g\n-Xmx1g\n' > /etc/elasticsearch/jvm.options.d/kaltura.options
 	if [ ! -d /usr/share/elasticsearch/plugins/analysis-icu ];then
-		/usr/share/elasticsearch/bin/elasticsearch-plugin  install analysis-icu
+		/usr/share/elasticsearch/bin/elasticsearch-plugin install --batch analysis-icu
 	fi
+	systemctl enable elasticsearch
+	invoke-rc.d elasticsearch restart
 	mkdir -p $APP_DIR/configurations/elastic/populate
 	chown kaltura $APP_DIR/configurations/elastic/populate
 	set +e
@@ -52,22 +55,22 @@ if [ "$1" = "configure" ]; then
 	set -e
 	if ! curl -f -I -H "Content-Type: application/json" "http://$ES_HOST:$ES_PORT/kaltura_entry";then
 		set -e
-		curl -f -XPUT -H "Content-Type: application/json" "http://$ES_HOST:$ES_PORT/kaltura_entry" -d @$APP_DIR/configurations/elastic/mapping/entry_mapping.json
+		curl -f -XPUT -H "Content-Type: application/json" "http://$ES_HOST:$ES_PORT/kaltura_entry" -d @$APP_DIR/configurations/elastic/mapping/elasticsearch-7/entry_mapping.json
 	fi
 	set +e
 	if ! curl -f -I -H "Content-Type: application/json" "http://$ES_HOST:$ES_PORT/kaltura_category";then
 		set -e
-		curl -f -XPUT -H "Content-Type: application/json" "http://$ES_HOST:$ES_PORT/kaltura_category" -d @$APP_DIR/configurations/elastic/mapping/category_mapping.json
+		curl -f -XPUT -H "Content-Type: application/json" "http://$ES_HOST:$ES_PORT/kaltura_category" -d @$APP_DIR/configurations/elastic/mapping/elasticsearch-7/category_mapping.json
 	fi
 	set +e
 	if ! curl -f -I -H "Content-Type: application/json" "http://$ES_HOST:$ES_PORT/kaltura_kuser";then
 		set -e 
-		curl -f -XPUT -H "Content-Type: application/json" "http://$ES_HOST:$ES_PORT/kaltura_kuser" -d @$APP_DIR/configurations/elastic/mapping/kuser_mapping.json
+		curl -f -XPUT -H "Content-Type: application/json" "http://$ES_HOST:$ES_PORT/kaltura_kuser" -d @$APP_DIR/configurations/elastic/mapping/elasticsearch-7/kuser_mapping.json
 	fi
 	set +e
 	if ! curl -f -I -H "Content-Type: application/json" "http://$ES_HOST:$ES_PORT/kaltura_search_history";then
 		set -e
-		curl -f -XPUT -H "Content-Type: application/json" "http://$ES_HOST:$ES_PORT/kaltura_search_history" -d @$APP_DIR/configurations/elastic/mapping/search_history_mapping.json
+		curl -f -XPUT -H "Content-Type: application/json" "http://$ES_HOST:$ES_PORT/kaltura_search_history" -d @$APP_DIR/configurations/elastic/mapping/elasticsearch-7/search_history_mapping.json
 	fi
 	set +e
 	if ! curl -f -I -H "Content-Type: application/json" "http://$ES_HOST:$ES_PORT/_aliases?pretty";then
@@ -77,22 +80,22 @@ if [ "$1" = "configure" ]; then
 	set +e
 	if ! curl -f -I http://$ES_HOST:$ES_PORT/beacon_entry_index_$TIME_STAMP;then
 		set -e
-		curl -f -XPUT http://$ES_HOST:$ES_PORT/beacon_entry_index_$TIME_STAMP --data-binary @$APP_DIR/plugins/beacon/config/mapping/beacon_entry_index.json -H 'Content-Type: application/json'
+		curl -f -XPUT http://$ES_HOST:$ES_PORT/beacon_entry_index_$TIME_STAMP --data-binary @$APP_DIR/plugins/beacon/config/mapping/elasticsearch-7/beacon_entry_index.json -H 'Content-Type: application/json'
 	fi
 	set +e
 	if ! curl -f -I http://$ES_HOST:$ES_PORT/beacon_entry_server_node_index_$TIME_STAMP;then
 		set -e
-		curl -f -XPUT http://$ES_HOST:$ES_PORT/beacon_entry_server_node_index_$TIME_STAMP --data-binary @$APP_DIR/plugins/beacon/config/mapping/beacon_entry_server_node_index.json -H 'Content-Type: application/json'
+		curl -f -XPUT http://$ES_HOST:$ES_PORT/beacon_entry_server_node_index_$TIME_STAMP --data-binary @$APP_DIR/plugins/beacon/config/mapping/elasticsearch-7/beacon_entry_server_node_index.json -H 'Content-Type: application/json'
 	fi
 	set +e
 	if ! curl -f -I http://$ES_HOST:$ES_PORT/beacon_scheduled_resource_index_$TIME_STAMP;then
 		set -e
-		curl -f -XPUT http://$ES_HOST:$ES_PORT/beacon_scheduled_resource_index_$TIME_STAMP --data-binary @$APP_DIR/plugins/beacon/config/mapping/beacon_scheduled_resource_index.json -H 'Content-Type: application/json'
+		curl -f -XPUT http://$ES_HOST:$ES_PORT/beacon_scheduled_resource_index_$TIME_STAMP --data-binary @$APP_DIR/plugins/beacon/config/mapping/elasticsearch-7/beacon_scheduled_resource_index.json -H 'Content-Type: application/json'
 	fi
 	set +e
 	if ! curl -f -I http://$ES_HOST:$ES_PORT/beacon_server_node_index_$TIME_STAMP ;then
 		set -e
-		curl -f -XPUT http://$ES_HOST:$ES_PORT/beacon_server_node_index_$TIME_STAMP --data-binary @$APP_DIR/plugins/beacon/config/mapping/beacon_server_node_index.json -H 'Content-Type: application/json'
+		curl -f -XPUT http://$ES_HOST:$ES_PORT/beacon_server_node_index_$TIME_STAMP --data-binary @$APP_DIR/plugins/beacon/config/mapping/elasticsearch-7/beacon_server_node_index.json -H 'Content-Type: application/json'
 	fi
 
 

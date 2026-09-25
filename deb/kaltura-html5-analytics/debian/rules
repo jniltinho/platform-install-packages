@@ -16,6 +16,8 @@ clean:
 	rm -rf debian/tmp
 
 $(archive):
+	cd $(SOURCE_PACKAGING_DIR) && wget -q https://github.com/kaltura/analytics-front-end/releases/download/$(HTML5_APP_ANALYTICS_VERSION)/kmcAnalytics_$(HTML5_APP_ANALYTICS_VERSION).zip -O kmcAnalytics.zip \
+		&& rm -rf $(HTML5_APP_ANALYTICS_VERSION) $(tree) && unzip -q kmcAnalytics.zip && mv $(HTML5_APP_ANALYTICS_VERSION) $(tree) && tar zcf $(archive) $(tree) && rm -rf $(tree) kmcAnalytics.zip
 
 $(tree): $(archive)
 	tar zxf $(archive)

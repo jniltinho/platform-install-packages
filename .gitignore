@@ -1,1 +1,3 @@
 build/packager.rc
+deb/noble/repo/
+.vagrant/

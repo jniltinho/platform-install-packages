@@ -1,3 +1,9 @@
+kaltura-nginx (1.23.0-1) noble; urgency=medium
+
+  * Ubuntu 24.04 (noble), Kaltura CE Rigel-18.20.0 All-In-One.
+
+ -- Nilton OS <jniltinho@gmail.com>  Thu, 24 Sep 2026 12:00:00 +0000
+
 kaltura-nginx (1.19.1-1) propus; urgency=medium
 
   * New mainline ver - 1.19.1

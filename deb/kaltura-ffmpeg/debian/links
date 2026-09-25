@@ -1,0 +1,2 @@
+usr/bin/ffmpeg opt/kaltura/bin/ffmpeg
+usr/bin/ffprobe opt/kaltura/bin/ffprobe
