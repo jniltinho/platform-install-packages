@@ -1,0 +1,11 @@
+........................................................................................................................................
+----------------------------------------------------------------------
+Ran 136 tests in 0.073s
+
+OK
+{"functional_checks_passed": false, "comparisons": [{"runtime": "83", "tree": "exp7", "matches_baseline": false}, {"runtime": "83", "tree": "exp8", "matches_baseline": false}], "cleanup": {"unit": "php83-exp8-api-4f3ad1a89c424cb68bb62d8916e12548", "is_active_output": "inactive", "stopped": true}}
+{"functional_checks_passed": false, "comparisons": [{"runtime": "83", "tree": "exp7", "matches_baseline": true}, {"runtime": "83", "tree": "exp8", "matches_baseline": false}], "cleanup": {"unit": "php83-exp8-api-139581e11dc24e44a176da44aca28ba4", "is_active_output": "inactive", "stopped": true}}
+{"functional_checks_passed": false, "comparisons": [{"runtime": "83", "tree": "exp7", "matches_baseline": true}, {"runtime": "83", "tree": "exp8", "matches_baseline": true}], "cleanup": {"unit": "php83-exp8-api-a99f5981f71e46a8af6095e9f231d487", "is_active_output": "active", "stopped": false}}
+{"functional_checks_passed": true, "comparisons": [{"runtime": "83", "tree": "exp7", "matches_baseline": true}, {"runtime": "83", "tree": "exp8", "matches_baseline": true}], "cleanup": {"unit": "php83-exp8-api-21f88bbf04814e91a9c32beb7e237105", "is_active_output": "inactive", "stopped": true}}
+{"functional_checks_passed": false, "comparisons": [{"runtime": "83", "tree": "exp7", "matches_baseline": true}, {"runtime": "83", "tree": "exp8", "matches_baseline": false}], "cleanup": {"unit": "php83-exp8-api-d043efd04494485099ea28a27200f719", "is_active_output": "inactive", "stopped": true}}
+{"functional_checks_passed": false, "comparisons": [{"runtime": "83", "tree": "exp7", "matches_baseline": true}, {"runtime": "83", "tree": "exp8", "matches_baseline": true}], "cleanup": {"unit": "php83-exp8-api-fe74a53e11ba477b836307d988e10c14", "is_active_output": "inactive", "stopped": true}}

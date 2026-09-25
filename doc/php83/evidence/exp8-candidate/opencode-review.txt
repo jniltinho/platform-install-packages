@@ -1,0 +1,12 @@
+Grok timed out — running fallback checks and evidence review.
+Tests green — now reviewing the evidence files.
+Grok executor/reviewer timed out (exit 124) on 120s bound, so fallback OpenCode Zen Muse Spark 1.3 Free (`opencode/muse-spark-1.3-contributor-free`) acted as both executor and reviewer locally.
+Command `python3 -m unittest discover -s tools/php83 -p "test_*.py"` ran 136 tests, exit 0 OK in 0.079s with no VM/SSH/DB (fault-injection mocks per `tools/php83/test_exp8_api_collector.py`).
+Reviewed `codex.json`/`claude.json` (same exp8 ZIP `67acaa1a…`, 15191 files, previous `a0934bbd…`, collector `5f115401…`, harness `api/run-apache.sh 0e02b3ad…` etc.) plus `comparison.json`, `parity.json`, `previous-delta.json`.
+Matrix is explicit 4 cases: (74,original) returncode 0 stdout `787d33cd…`, (83,original) returncode 1 `signature_failure:true` Fatal `KalturaPDO.php:188`, (83,exp7) and (83,exp8) returncode 0 identical whitelisted stdout; 74/exp7 and 74/exp8 correctly unsupported as PHP8.3-only mixed types.
+Independent Codex/Claude rows all `independent_equal:true`: 74/original 1 group/6 events (`dateUtils:100`), 83/original 15/15, 83/exp7 27/703, 83/exp8 21/571.
+Exp8 vs exp7 delta is exactly cumulative `Criteria.php` replacement preserving null-alias guard: only `server-Rigel-18.20.0/vendor/propel/util/Criteria.php` changed (prior `9b36246d…` → candidate `e8333167…`), six return declarations, 14 manifest targets, all other bytes identical, `cumulative_patch_replaces_old_entry:true`.
+Comparison confirms removal of six ApplicationDiagnostic groups in `Criteria.php:1259,1263,1267,1271,1275,193` ×22 each (132 events), `new_or_changed_groups:[]`.
+Runtime `parity.json`: 48 logical rows, 44 zero exits, 4 expected original83 fatals, 12/12 candidate and previous exit0, all 20 exp7/exp8 `typed_output_equal:true`, independent rows equal except duration with fixture hashes verified.
+Remaining gaps: 21 diagnostic groups/571 events persist on 83/exp8 (e.g. `criteriaFilter.class.php:51×132`, `KalturaStatement:20/31`, `KalturaEntryService:1836`, `KalturaAPIException:40`, RefreshableRole/AWS decorator, plus Deprecated KalturaPDO/kConf/FrontController/PropelConfiguration/PropelPDO) — diagnostics, not exceptions, but unremediated deprecation noise remains.
+All reports state `application_acceptance:false`; harness tests do not prove AIO/FPM/full-app acceptance, untested scope remains, no edits/commits/releases made.

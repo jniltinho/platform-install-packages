@@ -12,7 +12,9 @@ is the immutable original Criteria file; its previous-candidate hash matches the
 old null-alias patch's after hash. A future ZIP manifest must **replace** the old
 Criteria-null-alias entry with this cumulative entry, never apply both to the
 same target. Keeping both historical patches in `held/` is intentional, not a
-selection of both. No combined ZIP or active manifest changes in this cycle.
+selection of both. This page records held-source validation; the subsequent
+[exp8 integration](exp8-criteria-integration.md) builds and tests the separate
+cumulative ZIP. The active exp2 manifest remains unchanged.
 
 The candidate targets PHP 8.3 only. Native mixed is not a universal return type on
 7.4 (it parses as a class name). The fixture uses the prior null-alias Criteria
@@ -105,8 +107,8 @@ with the same harness prove repeatability, not independent implementation of its
 oracle. Distinct CLI reviews and explicit absolute assertions supplement that.
 
 The strict patch inventory passes all 28 entries (3 active, 25 held). No broad
-acceptance task closes. Remaining work includes separately built ZIP integration,
-actual SQL/API/HTTP/TLS regression, Sphinx/worker/cache paths, production-equivalent
+acceptance task closes. The later exp8 cycle supplies bounded ZIP and actual
+SQL/API/HTTP/TLS regression. Remaining work includes Sphinx/worker/cache paths, production-equivalent
 extensions and full distro/media/performance/recovery acceptance. Existing SSH
 aliases do not pin host keys; runtime binaries are not rehashed here. The read-only
 source verification does not validate filesystem permissions. Release/package/CI

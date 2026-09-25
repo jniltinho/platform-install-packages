@@ -1,0 +1,16 @@
+{
+  "previous": "exp7",
+  "candidate": "exp8",
+  "changed_application_files": [
+    "server-Rigel-18.20.0/vendor/propel/util/Criteria.php"
+  ],
+  "all_other_application_bytes_identical": true,
+  "only_six_return_declarations_changed": true,
+  "prior_criteria_sha256": "9b36246d143a11ab1ffd8b31966cf86d4a7563e78cca216f344727ba3d232d19",
+  "candidate_criteria_sha256": "e8333167c6b501c92a8ee681a3b8c63372e8bf20e81c140a242c37c75b49a89a",
+  "prior_null_alias_guard_retained": true,
+  "manifest_unique_targets": 14,
+  "cumulative_patch_replaces_old_entry": true,
+  "verifier_sha256": "bce2618e9f1eefbc1944c7e0972eeadbe970a9f96a6d2847bd164e41d1772ff2",
+  "application_acceptance": false
+}

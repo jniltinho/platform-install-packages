@@ -175,12 +175,12 @@ groups/847 events. Independent reruns and byte identities are recorded in
 `doc/php83/exp6-reflection-integration.md`. Full acceptance remains open.
 
 T1-01 partial return-contract repair: held Zend_Config patch adds six explicit
-native return declarations for the PHP8.3-only target. Sixteen actual-class rows
+native return declarations for the PHP 8.3-only target. Sixteen actual-class rows
 match original7.4/original8.3/candidate8.3; six observed return warnings disappear
 without suppression. Combined ZIP/API and broader configuration/scheduler/cache
 coverage remain open. See `doc/php83/config-return-contracts.md`.
 
-T1-01/T1-02 partial integration: separate PHP8.3-only exp7 ZIP integrates the
+T1-01/T1-02 partial integration: separate PHP 8.3-only exp7 ZIP integrates the
 Zend_Config native return declarations. Five API rows and 60 CLI rows retain
 original7.4 functional comparisons plus exp6 counterfactuals. Exactly 144 events
 are removed; 27 groups/703 events remain. Four local fault-injection/matrix tests
@@ -192,3 +192,10 @@ fix and adds six native return declarations for 8.3. Sixteen state/alias rows an
 two invalid iterator controls match; the first fixture-filename equality failure
 is retained and corrected through a canonical read-only mount, not suppression.
 See `doc/php83/criteria-return-contracts.md`; combined ZIP/SQL/API remains pending.
+
+T1-01/T1-02 partial integration: exp8 replaces the Criteria alias entry with its
+cumulative native-return patch (same 14 unique source targets). Exact exp7-to-exp8
+application delta is only six declarations; alias guard retained. Four API and
+48 CLI rows preserve the original74 reference. Exactly 132 events disappear;
+21 groups/571 remain. Local suite now 136 with ten new collector tests.
+See `doc/php83/exp8-criteria-integration.md`; no full acceptance checkbox closes.

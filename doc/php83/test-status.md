@@ -233,7 +233,7 @@ uses native `mixed` and is not a candidate7.4 support claim. Full integration is
 pending; see [configuration return evidence](config-return-contracts.md).
 No full acceptance task is closed.
 
-## exp7 PHP8.3-only configuration return integration
+## exp7 PHP 8.3-only configuration return integration
 
 Reproducible fourteen-patch ZIP; actual API/SQL/HTTP/trusted-TLS parity retained
 and six Zend_Config diagnostic locations removed (144 events). Remaining bounded
@@ -249,3 +249,12 @@ independent reruns after correcting a fixture filename mismatch. Cumulative patc
 preserves the null-alias repair and must replace its old manifest entry, not be
 stacked. See [Criteria evidence](criteria-return-contracts.md). No API diagnostic
 reduction or full-case completion is claimed before artifact integration.
+
+## exp8 cumulative Criteria artifact integration
+
+Reproducible fourteen-patch ZIP preserves the alias guard and changes only six
+Criteria declarations relative to exp7. Actual API/SQL/HTTP/trusted-TLS parity
+retained; diagnostics reduce by 132 events to 21 groups/571. Forty-eight CLI rows
+retain original74 reference and exp7 comparison; all 12 exp8 rows exit 0. Local
+suite 136 tests includes ten new collector cases. See
+[exp8 evidence](exp8-criteria-integration.md); acceptance remains 0/24 and 3/27.

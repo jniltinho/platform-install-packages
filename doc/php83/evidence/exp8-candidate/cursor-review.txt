@@ -1,0 +1,9 @@
+Vou executar a verificação e, em paralelo, revisar o manifesto e a política de runtime de `exp8-api`/`exp8-regression`.Confirmando a substituição de `Criteria-null-alias` e contando os patches.**Exit 0** — `verify-experimental-zip.py` passou; builds idênticos; sem aceitação de aplicação.
+
+Identidades: `zip`/`repeat` `67acaa1ad78332273901fceac9d75824b8f21437eb93607cb20a78db9cd77adc`; `upstream` `58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28`; `manifest` `2741e9ad0631c3f557ae23ec932c9bc009a6f96aeed3cec460529bed95538df0`; `verifier` `211a0c187a53e4444fd0b5bfd0be972544ff66f21e7ce2d78c1c6aa2206ee6bc`; `builder` `055443730325459ff2f4e5ad093542e3aa544f6d82af8b21174027f5cdbf523e`; saída `/tmp/php83-exp8/cursor-verification.json`.
+
+Manifesto `revision=exp8`, 14 patches, `target_php=8.3`: `Criteria-native-returns` (`after` `e8333167…`) substitui `Criteria-null-alias` (ausente); 14 arquivos mudados + metadados `.php83-experimental/`.
+
+Política de runtime (revisão de código apenas): `exp8-api` usa `original@74` como baseline e compara `original`/`exp7`/`exp8` em 83 (4 linhas); `exp8-regression` roda 12 linhas original74 e 36 em 83; ambos marcam `exp7`/`exp8` como unsupported em 74 e `application_acceptance=False`.
+
+Lacunas: sem execução em VM nesta rodada; zip-verify ≠ evidência API/CLI; portões de diagnóstico/cache/framework/media/distro/performance/recuperação abertos; `held/` ainda guarda o patch antigo (candidato correto, risco de empilhar); status do manifesto ainda diz “experimental exp7…”.

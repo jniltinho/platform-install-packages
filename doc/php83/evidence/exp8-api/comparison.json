@@ -1,0 +1,72 @@
+{
+  "independent_rows": [
+    {
+      "runtime": "74",
+      "tree": "original",
+      "independent_equal": true,
+      "diagnostic_groups": 1,
+      "diagnostic_events": 6
+    },
+    {
+      "runtime": "83",
+      "tree": "original",
+      "independent_equal": true,
+      "diagnostic_groups": 15,
+      "diagnostic_events": 15
+    },
+    {
+      "runtime": "83",
+      "tree": "exp7",
+      "independent_equal": true,
+      "diagnostic_groups": 27,
+      "diagnostic_events": 703
+    },
+    {
+      "runtime": "83",
+      "tree": "exp8",
+      "independent_equal": true,
+      "diagnostic_groups": 21,
+      "diagnostic_events": 571
+    }
+  ],
+  "removed": [
+    {
+      "severity": "ApplicationDiagnostic",
+      "path": "/audit/app/vendor/propel/util/Criteria.php",
+      "line": 1259,
+      "count": 22
+    },
+    {
+      "severity": "ApplicationDiagnostic",
+      "path": "/audit/app/vendor/propel/util/Criteria.php",
+      "line": 1263,
+      "count": 22
+    },
+    {
+      "severity": "ApplicationDiagnostic",
+      "path": "/audit/app/vendor/propel/util/Criteria.php",
+      "line": 1267,
+      "count": 22
+    },
+    {
+      "severity": "ApplicationDiagnostic",
+      "path": "/audit/app/vendor/propel/util/Criteria.php",
+      "line": 1271,
+      "count": 22
+    },
+    {
+      "severity": "ApplicationDiagnostic",
+      "path": "/audit/app/vendor/propel/util/Criteria.php",
+      "line": 1275,
+      "count": 22
+    },
+    {
+      "severity": "ApplicationDiagnostic",
+      "path": "/audit/app/vendor/propel/util/Criteria.php",
+      "line": 193,
+      "count": 22
+    }
+  ],
+  "new_or_changed_groups": [],
+  "application_acceptance": false
+}
