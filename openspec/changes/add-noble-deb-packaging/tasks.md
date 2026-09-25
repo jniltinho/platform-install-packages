@@ -26,7 +26,7 @@
 
 ## 5. Review and documentation
 
-- [ ] 5.1 Review the proposal and the implementation with the `codex` CLI and apply the relevant fixes.
+- [x] 5.1 Review the proposal and the implementation with the `codex` CLI and apply the relevant fixes.
 - [x] 5.2 Write `doc/install-kaltura-noble.md` (build, install, limitations). Verify with `openspec validate add-noble-deb-packaging --strict`.
 - [x] 5.3 Update `README.md` and the related docs (package list, supported distros, links) for the noble packages.
 - [x] 5.4 Publish the built `.deb` files and `Packages.gz` as release assets. Verify that `apt-get update` works with `deb [trusted=yes] https://github.com/jniltinho/platform-install-packages/releases/download/<tag> ./`.

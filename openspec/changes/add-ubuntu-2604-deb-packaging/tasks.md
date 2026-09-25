@@ -4,7 +4,7 @@
 - [x] 1.2 nginx: vod 1.33, `ffmpeg-compat.h`, `-std=gnu17`, vod archive as a prerequisite. Verify that `kaltura-nginx` builds on 26.04.
 - [x] 1.3 `deb/ubuntu-26.04/{Vagrantfile,build.sh,install-aio.sh,sanity.sh}`. Verify that `vagrant up build2604` builds 17 packages.
 - [x] 1.4 Verify that `vagrant up aio2604` passes sanity with 0 failures.
-- [ ] 1.5 Rebuild noble with vod 1.33 and re-run the noble sanity before the merge.
+- [x] 1.5 Rebuild noble with vod 1.33 and re-run the noble sanity before the merge.
 
 ## 2. CI and docs
 
