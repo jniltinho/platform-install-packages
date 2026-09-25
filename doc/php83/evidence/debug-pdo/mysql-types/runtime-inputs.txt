@@ -1,0 +1,27 @@
+5ed671ea6fe1cfb9f6e7dde2b259ec5821d7e0eae95c31d103d5468f2e617c59  /usr/bin/php7.4
+bac6a906f801ea605aaa03c488add6e2c0819f076cc49b73f1bdd5b1e62d2d81  /usr/lib/php/20190902/pdo.so
+2d8ee14ab8f7f17514f4225b9f4713630fe9e81c88045ca86b31bc55381194b2  /usr/lib/php/20190902/mysqlnd.so
+747fe90dae378b8baca472342654342368b1a934b2ff1e5fd18d2feab3ed9dd8  /usr/lib/php/20190902/pdo_mysql.so
+80efe3d6f144e717b9fcef7750f81736cbd55c1e91041d24be58e70c18199343  /usr/lib/php/20190902/json.so
+d1a2e94f8925980d5b8a14ea99dbfc238456c59f645a661c32096a7d1e2158e7  /home/vagrant/php-mysql-probe/runtime83/mysqlnd.so
+0e97b1b5a3b3ee1d7508a7628dd0f55481c64b385a169649332fd43d5ad4e46d  /home/vagrant/php-mysql-probe/runtime83/pdo_mysql.so
+76f70811680b2c14c84a46db50798a1a9183e36f13764a6a76ec4e822b27e1cc  /home/vagrant/php-mysql-probe/runtime83/pdo.so
+1c564e6bafa56d03359c3774be6f4c77d0edecabd2075e18556940a56747c8d7  /home/vagrant/php-mysql-probe/runtime83/php8.3
+483793dfe2d2fd8f7cb2b4c620f9f32c6b24ea99f24cdd2508c348340be5d3e1  /home/vagrant/php-patch-tests/candidate/vendor/propel/util/DebugPDO.php
+/usr/sbin/mariadbd  Ver 10.11.14-MariaDB-0ubuntu0.24.04.1 for debian-linux-gnu on x86_64 (Ubuntu 24.04)
+	linux-vdso.so.1 (0x00007ffff2ab4000)
+	libm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007335053b0000)
+	libxml2.so.2 => /lib/x86_64-linux-gnu/libxml2.so.2 (0x0000733504c1e000)
+	libssl.so.3 => /lib/x86_64-linux-gnu/libssl.so.3 (0x0000733504b74000)
+	libcrypto.so.3 => /lib/x86_64-linux-gnu/libcrypto.so.3 (0x0000733504600000)
+	libpcre2-8.so.0 => /lib/x86_64-linux-gnu/libpcre2-8.so.0 (0x0000733504566000)
+	libz.so.1 => /lib/x86_64-linux-gnu/libz.so.1 (0x0000733504b58000)
+	libsodium.so.23 => /lib/x86_64-linux-gnu/libsodium.so.23 (0x000073350450f000)
+	libargon2.so.1 => /lib/x86_64-linux-gnu/libargon2.so.1 (0x00007335053a5000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x0000733504200000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007335054a6000)
+	libicuuc.so.74 => /lib/x86_64-linux-gnu/libicuuc.so.74 (0x0000733503e00000)
+	liblzma.so.5 => /lib/x86_64-linux-gnu/liblzma.so.5 (0x0000733504b26000)
+	libicudata.so.74 => /lib/x86_64-linux-gnu/libicudata.so.74 (0x0000733502000000)
+	libstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x0000733501c00000)
+	libgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00007335044e1000)

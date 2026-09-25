@@ -284,3 +284,10 @@ Native-PDO controls now cover 12 cases on 7.4 and 20 on 8.3, including object
 identity and constructor order. All 33 offline tests and eight JSON comparisons
 pass. The default numeric-type blocker remains; MySQL/application behavior is
 not inferred from SQLite. See `evidence/debug-pdo/v2-extended/`.
+
+The [isolated MySQL-driver experiment](mysql-type-experiment.md) now compares
+both PHP binaries against one disposable MariaDB instance. Native prepares
+match the synthetic 7.4 rows; emulated prepares with stringify disabled change
+integer/float result types on 8.3. DebugPDO matches native PDO within each tested
+configuration. No global attribute was changed; application connection settings
+and JSON contracts remain unverified. The server was stopped after collection.

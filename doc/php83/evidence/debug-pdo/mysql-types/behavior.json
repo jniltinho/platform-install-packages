@@ -1,0 +1,135 @@
+{
+  "experiment": "Both PHP binaries on isolated baseline VM, same disposable socket-only MariaDB; no application DB connection",
+  "harness_hashes": {
+    "mysql-types.php": "08a29e942b7a2b0e82fb16c4b89cccb588682e06575fae3261116c12fbce486e",
+    "run-mysql-types.sh": "52704342884284ff0cd785d7a7bf8c4ee9906215649dbf98ee771f4f2cc3041b"
+  },
+  "comparisons": [
+    {
+      "runtime": "74",
+      "tree": "original",
+      "emulate": false,
+      "stringify": false,
+      "matches_native": true,
+      "matches_74_original": true
+    },
+    {
+      "runtime": "74",
+      "tree": "original",
+      "emulate": false,
+      "stringify": true,
+      "matches_native": true,
+      "matches_74_original": true
+    },
+    {
+      "runtime": "74",
+      "tree": "original",
+      "emulate": true,
+      "stringify": false,
+      "matches_native": true,
+      "matches_74_original": true
+    },
+    {
+      "runtime": "74",
+      "tree": "original",
+      "emulate": true,
+      "stringify": true,
+      "matches_native": true,
+      "matches_74_original": true
+    },
+    {
+      "runtime": "74",
+      "tree": "candidate",
+      "emulate": false,
+      "stringify": false,
+      "matches_native": true,
+      "matches_74_original": true
+    },
+    {
+      "runtime": "74",
+      "tree": "candidate",
+      "emulate": false,
+      "stringify": true,
+      "matches_native": true,
+      "matches_74_original": true
+    },
+    {
+      "runtime": "74",
+      "tree": "candidate",
+      "emulate": true,
+      "stringify": false,
+      "matches_native": true,
+      "matches_74_original": true
+    },
+    {
+      "runtime": "74",
+      "tree": "candidate",
+      "emulate": true,
+      "stringify": true,
+      "matches_native": true,
+      "matches_74_original": true
+    },
+    {
+      "runtime": "83",
+      "tree": "candidate",
+      "emulate": false,
+      "stringify": false,
+      "matches_native": true,
+      "matches_74_original": true
+    },
+    {
+      "runtime": "83",
+      "tree": "candidate",
+      "emulate": false,
+      "stringify": true,
+      "matches_native": true,
+      "matches_74_original": true
+    },
+    {
+      "runtime": "83",
+      "tree": "candidate",
+      "emulate": true,
+      "stringify": false,
+      "matches_native": true,
+      "matches_74_original": false
+    },
+    {
+      "runtime": "83",
+      "tree": "candidate",
+      "emulate": true,
+      "stringify": true,
+      "matches_native": true,
+      "matches_74_original": true
+    }
+  ],
+  "records": [
+    {
+      "runtime": "74",
+      "tree": "original",
+      "returncode": 0,
+      "stdout": "{\"php\":\"7.4.33\",\"pdo_mysql\":\"7.4.33\",\"server\":\"5.5.5-10.11.14-MariaDB-0ubuntu0.24.04.1\",\"client\":\"mysqlnd 7.4.33\",\"results\":[{\"emulate\":false,\"stringify\":false,\"rows\":{\"PDO\":{\"direct\":[{\"whole_number\":42,\"decimal_number\":\"1.25\",\"floating_number\":1.25,\"text_value\":\"alpha\",\"null_value\":null}],\"prepared\":[{\"whole_number\":42,\"decimal_number\":\"1.25\",\"floating_number\":1.25,\"text_value\":\"alpha\",\"null_value\":null}]},\"DebugPDO\":{\"direct\":[{\"whole_number\":42,\"decimal_number\":\"1.25\",\"floating_number\":1.25,\"text_value\":\"alpha\",\"null_value\":null}],\"prepared\":[{\"whole_number\":42,\"decimal_number\":\"1.25\",\"floating_number\":1.25,\"text_value\":\"alpha\",\"null_value\":null}]}},\"matches_native\":true},{\"emulate\":false,\"stringify\":true,\"rows\":{\"PDO\":{\"direct\":[{\"whole_number\":\"42\",\"decimal_number\":\"1.25\",\"floating_number\":\"1.25\",\"text_value\":\"alpha\",\"null_value\":null}],\"prepared\":[{\"whole_number\":\"42\",\"decimal_number\":\"1.25\",\"floating_number\":\"1.25\",\"text_value\":\"alpha\",\"null_value\":null}]},\"DebugPDO\":{\"direct\":[{\"whole_number\":\"42\",\"decimal_number\":\"1.25\",\"floating_number\":\"1.25\",\"text_value\":\"alpha\",\"null_value\":null}],\"prepared\":[{\"whole_number\":\"42\",\"decimal_number\":\"1.25\",\"floating_number\":\"1.25\",\"text_value\":\"alpha\",\"null_value\":null}]}},\"matches_native\":true},{\"emulate\":true,\"stringify\":false,\"rows\":{\"PDO\":{\"direct\":[{\"whole_number\":\"42\",\"decimal_number\":\"1.25\",\"floating_number\":\"1.25\",\"text_value\":\"alpha\",\"null_value\":null}],\"prepared\":[{\"whole_number\":\"42\",\"decimal_number\":\"1.25\",\"floating_number\":\"1.25\",\"text_value\":\"alpha\",\"null_value\":null}]},\"DebugPDO\":{\"direct\":[{\"whole_number\":\"42\",\"decimal_number\":\"1.25\",\"floating_number\":\"1.25\",\"text_value\":\"alpha\",\"null_value\":null}],\"prepared\":[{\"whole_number\":\"42\",\"decimal_number\":\"1.25\",\"floating_number\":\"1.25\",\"text_value\":\"alpha\",\"null_value\":null}]}},\"matches_native\":true},{\"emulate\":true,\"stringify\":true,\"rows\":{\"PDO\":{\"direct\":[{\"whole_number\":\"42\",\"decimal_number\":\"1.25\",\"floating_number\":\"1.25\",\"text_value\":\"alpha\",\"null_value\":null}],\"prepared\":[{\"whole_number\":\"42\",\"decimal_number\":\"1.25\",\"floating_number\":\"1.25\",\"text_value\":\"alpha\",\"null_value\":null}]},\"DebugPDO\":{\"direct\":[{\"whole_number\":\"42\",\"decimal_number\":\"1.25\",\"floating_number\":\"1.25\",\"text_value\":\"alpha\",\"null_value\":null}],\"prepared\":[{\"whole_number\":\"42\",\"decimal_number\":\"1.25\",\"floating_number\":\"1.25\",\"text_value\":\"alpha\",\"null_value\":null}]}},\"matches_native\":true}]}\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "74",
+      "tree": "candidate",
+      "returncode": 0,
+      "stdout": "{\"php\":\"7.4.33\",\"pdo_mysql\":\"7.4.33\",\"server\":\"5.5.5-10.11.14-MariaDB-0ubuntu0.24.04.1\",\"client\":\"mysqlnd 7.4.33\",\"results\":[{\"emulate\":false,\"stringify\":false,\"rows\":{\"PDO\":{\"direct\":[{\"whole_number\":42,\"decimal_number\":\"1.25\",\"floating_number\":1.25,\"text_value\":\"alpha\",\"null_value\":null}],\"prepared\":[{\"whole_number\":42,\"decimal_number\":\"1.25\",\"floating_number\":1.25,\"text_value\":\"alpha\",\"null_value\":null}]},\"DebugPDO\":{\"direct\":[{\"whole_number\":42,\"decimal_number\":\"1.25\",\"floating_number\":1.25,\"text_value\":\"alpha\",\"null_value\":null}],\"prepared\":[{\"whole_number\":42,\"decimal_number\":\"1.25\",\"floating_number\":1.25,\"text_value\":\"alpha\",\"null_value\":null}]}},\"matches_native\":true},{\"emulate\":false,\"stringify\":true,\"rows\":{\"PDO\":{\"direct\":[{\"whole_number\":\"42\",\"decimal_number\":\"1.25\",\"floating_number\":\"1.25\",\"text_value\":\"alpha\",\"null_value\":null}],\"prepared\":[{\"whole_number\":\"42\",\"decimal_number\":\"1.25\",\"floating_number\":\"1.25\",\"text_value\":\"alpha\",\"null_value\":null}]},\"DebugPDO\":{\"direct\":[{\"whole_number\":\"42\",\"decimal_number\":\"1.25\",\"floating_number\":\"1.25\",\"text_value\":\"alpha\",\"null_value\":null}],\"prepared\":[{\"whole_number\":\"42\",\"decimal_number\":\"1.25\",\"floating_number\":\"1.25\",\"text_value\":\"alpha\",\"null_value\":null}]}},\"matches_native\":true},{\"emulate\":true,\"stringify\":false,\"rows\":{\"PDO\":{\"direct\":[{\"whole_number\":\"42\",\"decimal_number\":\"1.25\",\"floating_number\":\"1.25\",\"text_value\":\"alpha\",\"null_value\":null}],\"prepared\":[{\"whole_number\":\"42\",\"decimal_number\":\"1.25\",\"floating_number\":\"1.25\",\"text_value\":\"alpha\",\"null_value\":null}]},\"DebugPDO\":{\"direct\":[{\"whole_number\":\"42\",\"decimal_number\":\"1.25\",\"floating_number\":\"1.25\",\"text_value\":\"alpha\",\"null_value\":null}],\"prepared\":[{\"whole_number\":\"42\",\"decimal_number\":\"1.25\",\"floating_number\":\"1.25\",\"text_value\":\"alpha\",\"null_value\":null}]}},\"matches_native\":true},{\"emulate\":true,\"stringify\":true,\"rows\":{\"PDO\":{\"direct\":[{\"whole_number\":\"42\",\"decimal_number\":\"1.25\",\"floating_number\":\"1.25\",\"text_value\":\"alpha\",\"null_value\":null}],\"prepared\":[{\"whole_number\":\"42\",\"decimal_number\":\"1.25\",\"floating_number\":\"1.25\",\"text_value\":\"alpha\",\"null_value\":null}]},\"DebugPDO\":{\"direct\":[{\"whole_number\":\"42\",\"decimal_number\":\"1.25\",\"floating_number\":\"1.25\",\"text_value\":\"alpha\",\"null_value\":null}],\"prepared\":[{\"whole_number\":\"42\",\"decimal_number\":\"1.25\",\"floating_number\":\"1.25\",\"text_value\":\"alpha\",\"null_value\":null}]}},\"matches_native\":true}]}\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "83",
+      "tree": "original",
+      "returncode": 255,
+      "stdout": "",
+      "stderr": "Deprecated: Return type of PropelConfiguration::offsetExists($offset) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/PropelConfiguration.php on line 60\nDeprecated: Return type of PropelConfiguration::offsetGet($offset) should either be compatible with ArrayAccess::offsetGet(mixed $offset): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/PropelConfiguration.php on line 76\nDeprecated: Return type of PropelConfiguration::offsetSet($offset, $value) should either be compatible with ArrayAccess::offsetSet(mixed $offset, mixed $value): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/PropelConfiguration.php on line 68\nDeprecated: Return type of PropelConfiguration::offsetUnset($offset) should either be compatible with ArrayAccess::offsetUnset(mixed $offset): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/PropelConfiguration.php on line 84\nDeprecated: Return type of PropelPDO::beginTransaction() should either be compatible with PDO::beginTransaction(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/PropelPDO.php on line 123\nDeprecated: Return type of PropelPDO::commit() should either be compatible with PDO::commit(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/PropelPDO.php on line 139\nDeprecated: Return type of PropelPDO::getAttribute($attribute) should either be compatible with PDO::getAttribute(int $attribute): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/PropelPDO.php on line 225\nDeprecated: Return type of PropelPDO::prepare($sql, $driver_options = []) should either be compatible with PDO::prepare(string $query, array $options = []): PDOStatement|false, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/PropelPDO.php on line 244\nDeprecated: Return type of PropelPDO::rollBack() should either be compatible with PDO::rollBack(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/PropelPDO.php on line 161\nDeprecated: Return type of PropelPDO::setAttribute($attribute, $value) should either be compatible with PDO::setAttribute(int $attribute, mixed $value): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/PropelPDO.php on line 206\nDeprecated: Return type of DebugPDOStatement::bindValue($pos, $value, $type = PDO::PARAM_STR) should either be compatible with PDOStatement::bindValue(string|int $param, mixed $value, int $type = PDO::PARAM_STR): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/DebugPDOStatement.php on line 119\nDeprecated: Return type of DebugPDOStatement::execute($input_parameters = null) should either be compatible with PDOStatement::execute(?array $params = null): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/DebugPDOStatement.php on line 97\nDeprecated: Return type of DebugPDO::exec($sql) should either be compatible with PDO::exec(string $statement): int|false, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/DebugPDO.php on line 309\nFatal error: Declaration of DebugPDO::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs): PDOStatement|false in /audit/app/vendor/propel/util/DebugPDO.php on line 330\n"
+    },
+    {
+      "runtime": "83",
+      "tree": "candidate",
+      "returncode": 0,
+      "stdout": "{\"php\":\"8.3.6\",\"pdo_mysql\":\"8.3.6\",\"server\":\"10.11.14-MariaDB-0ubuntu0.24.04.1\",\"client\":\"mysqlnd 8.3.6\",\"results\":[{\"emulate\":false,\"stringify\":false,\"rows\":{\"PDO\":{\"direct\":[{\"whole_number\":42,\"decimal_number\":\"1.25\",\"floating_number\":1.25,\"text_value\":\"alpha\",\"null_value\":null}],\"prepared\":[{\"whole_number\":42,\"decimal_number\":\"1.25\",\"floating_number\":1.25,\"text_value\":\"alpha\",\"null_value\":null}]},\"DebugPDO\":{\"direct\":[{\"whole_number\":42,\"decimal_number\":\"1.25\",\"floating_number\":1.25,\"text_value\":\"alpha\",\"null_value\":null}],\"prepared\":[{\"whole_number\":42,\"decimal_number\":\"1.25\",\"floating_number\":1.25,\"text_value\":\"alpha\",\"null_value\":null}]}},\"matches_native\":true},{\"emulate\":false,\"stringify\":true,\"rows\":{\"PDO\":{\"direct\":[{\"whole_number\":\"42\",\"decimal_number\":\"1.25\",\"floating_number\":\"1.25\",\"text_value\":\"alpha\",\"null_value\":null}],\"prepared\":[{\"whole_number\":\"42\",\"decimal_number\":\"1.25\",\"floating_number\":\"1.25\",\"text_value\":\"alpha\",\"null_value\":null}]},\"DebugPDO\":{\"direct\":[{\"whole_number\":\"42\",\"decimal_number\":\"1.25\",\"floating_number\":\"1.25\",\"text_value\":\"alpha\",\"null_value\":null}],\"prepared\":[{\"whole_number\":\"42\",\"decimal_number\":\"1.25\",\"floating_number\":\"1.25\",\"text_value\":\"alpha\",\"null_value\":null}]}},\"matches_native\":true},{\"emulate\":true,\"stringify\":false,\"rows\":{\"PDO\":{\"direct\":[{\"whole_number\":42,\"decimal_number\":\"1.25\",\"floating_number\":1.25,\"text_value\":\"alpha\",\"null_value\":null}],\"prepared\":[{\"whole_number\":42,\"decimal_number\":\"1.25\",\"floating_number\":1.25,\"text_value\":\"alpha\",\"null_value\":null}]},\"DebugPDO\":{\"direct\":[{\"whole_number\":42,\"decimal_number\":\"1.25\",\"floating_number\":1.25,\"text_value\":\"alpha\",\"null_value\":null}],\"prepared\":[{\"whole_number\":42,\"decimal_number\":\"1.25\",\"floating_number\":1.25,\"text_value\":\"alpha\",\"null_value\":null}]}},\"matches_native\":true},{\"emulate\":true,\"stringify\":true,\"rows\":{\"PDO\":{\"direct\":[{\"whole_number\":\"42\",\"decimal_number\":\"1.25\",\"floating_number\":\"1.25\",\"text_value\":\"alpha\",\"null_value\":null}],\"prepared\":[{\"whole_number\":\"42\",\"decimal_number\":\"1.25\",\"floating_number\":\"1.25\",\"text_value\":\"alpha\",\"null_value\":null}]},\"DebugPDO\":{\"direct\":[{\"whole_number\":\"42\",\"decimal_number\":\"1.25\",\"floating_number\":\"1.25\",\"text_value\":\"alpha\",\"null_value\":null}],\"prepared\":[{\"whole_number\":\"42\",\"decimal_number\":\"1.25\",\"floating_number\":\"1.25\",\"text_value\":\"alpha\",\"null_value\":null}]}},\"matches_native\":true}]}\n",
+      "stderr": "Deprecated: Return type of PropelConfiguration::offsetExists($offset) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/PropelConfiguration.php on line 60\nDeprecated: Return type of PropelConfiguration::offsetGet($offset) should either be compatible with ArrayAccess::offsetGet(mixed $offset): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/PropelConfiguration.php on line 76\nDeprecated: Return type of PropelConfiguration::offsetSet($offset, $value) should either be compatible with ArrayAccess::offsetSet(mixed $offset, mixed $value): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/PropelConfiguration.php on line 68\nDeprecated: Return type of PropelConfiguration::offsetUnset($offset) should either be compatible with ArrayAccess::offsetUnset(mixed $offset): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/PropelConfiguration.php on line 84\nDeprecated: Return type of PropelPDO::beginTransaction() should either be compatible with PDO::beginTransaction(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/PropelPDO.php on line 123\nDeprecated: Return type of PropelPDO::commit() should either be compatible with PDO::commit(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/PropelPDO.php on line 139\nDeprecated: Return type of PropelPDO::getAttribute($attribute) should either be compatible with PDO::getAttribute(int $attribute): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/PropelPDO.php on line 225\nDeprecated: Return type of PropelPDO::prepare($sql, $driver_options = []) should either be compatible with PDO::prepare(string $query, array $options = []): PDOStatement|false, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/PropelPDO.php on line 244\nDeprecated: Return type of PropelPDO::rollBack() should either be compatible with PDO::rollBack(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/PropelPDO.php on line 161\nDeprecated: Return type of PropelPDO::setAttribute($attribute, $value) should either be compatible with PDO::setAttribute(int $attribute, mixed $value): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/PropelPDO.php on line 206\nDeprecated: Return type of DebugPDOStatement::bindValue($pos, $value, $type = PDO::PARAM_STR) should either be compatible with PDOStatement::bindValue(string|int $param, mixed $value, int $type = PDO::PARAM_STR): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/DebugPDOStatement.php on line 119\nDeprecated: Return type of DebugPDOStatement::execute($input_parameters = null) should either be compatible with PDOStatement::execute(?array $params = null): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/DebugPDOStatement.php on line 97\nDeprecated: Return type of DebugPDO::exec($sql) should either be compatible with PDO::exec(string $statement): int|false, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/DebugPDO.php on line 309\nDeprecated: Return type of DebugPDO::query($query = null, $fetchMode = null, ...$fetchModeArgs) should either be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs): PDOStatement|false, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/DebugPDO.php on line 330\n"
+    }
+  ]
+}

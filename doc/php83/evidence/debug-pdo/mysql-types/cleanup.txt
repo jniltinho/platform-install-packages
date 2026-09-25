@@ -1,0 +1,2 @@
+inactive
+6178d39fd2c11c2bd2dcc220c4234f72dfb11364c11d381e7f7bfaf55089e021  /home/vagrant/php-patch-tests/candidate/vendor/propel/util/DebugPDO.php
