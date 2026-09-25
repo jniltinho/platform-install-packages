@@ -125,7 +125,7 @@ configured console through a named agent-browser session, using an MP4 file
 supplied by the operator. Never point it at production: it creates and deletes
 test media. Screenshots belong in `../doc/prints/kaltura-console-go/`.
 
-See [OpenSpec](../openspec/changes/add-kaltura-console-go/tasks.md) for exact
+See [OpenSpec](../openspec/changes/archive/2026-09-25-add-kaltura-console-go/tasks.md) for exact
 completion/validation status; unmarked tasks are not claimed complete.
 
 ## Release
