@@ -5,6 +5,10 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Fixed
+- Classify release prerelease status from the version suffix, not the hyphen in
+  the `kaltura-console/` tag prefix.
+
 ## [0.1.0] — 2026-09-25
 
 First release of the standalone Go console with an embedded web interface.
