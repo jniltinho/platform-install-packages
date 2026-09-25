@@ -74,7 +74,7 @@ Implementation-session checks reported on 2026-09-25:
 - Isolated MariaDB last-administrator concurrency test repeated five times successfully.
 - Complete scripted browser E2E exited successfully, including account management, mobile layout, localization and zero-border-radius checks.
 
-These are bounded observations, not a distribution compatibility matrix. GitHub-hosted execution/publication and Ubuntu 26.04/RPM install/upgrade/removal acceptance still require their own recorded results. The build job passed locally under `act` v0.2.89 (Ubuntu 24.04 container), including lint, tests/race, packaging and local artifact upload. This is distinct from GitHub-hosted execution/publication, which remains unverified. Consult the current session/release report for later results. No credentials are included here.
+See the [integration validation report](validation.md) for the subsequent rc3 Ubuntu 26.04 installation, Noble retest, GitHub run and outstanding Rocky/upgrade/removal gates. These are bounded observations, not a blanket distribution compatibility claim. No credentials are included here.
 
 ## Diagrams and documentation maintenance
 
