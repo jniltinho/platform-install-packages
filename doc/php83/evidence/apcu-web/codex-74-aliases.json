@@ -1,0 +1,227 @@
+{
+  "schema": 1,
+  "ok": true,
+  "scope": "synthetic-kApcConf-serial-web-only",
+  "runtime": "74",
+  "mode": "aliases",
+  "responses": [
+    {
+      "ok": false,
+      "error": "nonce"
+    },
+    {
+      "ok": false,
+      "error": "phase"
+    },
+    {
+      "schema": 1,
+      "ok": true,
+      "php": "7.4.33",
+      "sapi": "apache2handler",
+      "apcu_enabled": true,
+      "apcu_version": "5.1.28",
+      "source_hashes": {
+        "kApcConf.php": "b866a78b84862006c5f4fa3a2b4fdeb7b30f5627dedb25d177465c728c7882a0",
+        "kBaseConfCache.php": "44c267219c51d2745c78c46ae2793903d542a19f6d8a9982da64580ba8a47f88",
+        "kMapCacheInterface.php": "4e6053e9d2266317aab80db1c968333c364acb9a9084e111756ab3928300ff80",
+        "kKeyCacheInterface.php": "a1ee7ae48df49a7c29345f65af05242c4d694863fd762aa6c4ba1a685c832dcc"
+      },
+      "ini": "/tmp/tmp.FqmDJ7Ypr8/php.ini",
+      "scanned_ini": false,
+      "pid": 89989,
+      "nonce": "ede0e36ead7cc5480bdd90e66c7a6f7b",
+      "phase": "store",
+      "mode": "aliases",
+      "result": {
+        "storeKey": true,
+        "store": true
+      }
+    },
+    {
+      "schema": 1,
+      "ok": true,
+      "php": "7.4.33",
+      "sapi": "apache2handler",
+      "apcu_enabled": true,
+      "apcu_version": "5.1.28",
+      "source_hashes": {
+        "kApcConf.php": "b866a78b84862006c5f4fa3a2b4fdeb7b30f5627dedb25d177465c728c7882a0",
+        "kBaseConfCache.php": "44c267219c51d2745c78c46ae2793903d542a19f6d8a9982da64580ba8a47f88",
+        "kMapCacheInterface.php": "4e6053e9d2266317aab80db1c968333c364acb9a9084e111756ab3928300ff80",
+        "kKeyCacheInterface.php": "a1ee7ae48df49a7c29345f65af05242c4d694863fd762aa6c4ba1a685c832dcc"
+      },
+      "ini": "/tmp/tmp.FqmDJ7Ypr8/php.ini",
+      "scanned_ini": false,
+      "pid": 89989,
+      "nonce": "ede0e36ead7cc5480bdd90e66c7a6f7b",
+      "phase": "read",
+      "mode": "aliases",
+      "result": {
+        "loadKey": "version-1-ede0e36ead7cc5480bdd90e66c7a6f7b",
+        "load": {
+          "nonce": "ede0e36ead7cc5480bdd90e66c7a6f7b",
+          "revision": 1,
+          "nested": {
+            "enabled": true,
+            "number": 17
+          }
+        }
+      }
+    },
+    {
+      "schema": 1,
+      "ok": true,
+      "php": "7.4.33",
+      "sapi": "apache2handler",
+      "apcu_enabled": true,
+      "apcu_version": "5.1.28",
+      "source_hashes": {
+        "kApcConf.php": "b866a78b84862006c5f4fa3a2b4fdeb7b30f5627dedb25d177465c728c7882a0",
+        "kBaseConfCache.php": "44c267219c51d2745c78c46ae2793903d542a19f6d8a9982da64580ba8a47f88",
+        "kMapCacheInterface.php": "4e6053e9d2266317aab80db1c968333c364acb9a9084e111756ab3928300ff80",
+        "kKeyCacheInterface.php": "a1ee7ae48df49a7c29345f65af05242c4d694863fd762aa6c4ba1a685c832dcc"
+      },
+      "ini": "/tmp/tmp.FqmDJ7Ypr8/php.ini",
+      "scanned_ini": false,
+      "pid": 89989,
+      "nonce": "ede0e36ead7cc5480bdd90e66c7a6f7b",
+      "phase": "mismatch",
+      "mode": "aliases",
+      "result": {
+        "load": null
+      }
+    },
+    {
+      "schema": 1,
+      "ok": true,
+      "php": "7.4.33",
+      "sapi": "apache2handler",
+      "apcu_enabled": true,
+      "apcu_version": "5.1.28",
+      "source_hashes": {
+        "kApcConf.php": "b866a78b84862006c5f4fa3a2b4fdeb7b30f5627dedb25d177465c728c7882a0",
+        "kBaseConfCache.php": "44c267219c51d2745c78c46ae2793903d542a19f6d8a9982da64580ba8a47f88",
+        "kMapCacheInterface.php": "4e6053e9d2266317aab80db1c968333c364acb9a9084e111756ab3928300ff80",
+        "kKeyCacheInterface.php": "a1ee7ae48df49a7c29345f65af05242c4d694863fd762aa6c4ba1a685c832dcc"
+      },
+      "ini": "/tmp/tmp.FqmDJ7Ypr8/php.ini",
+      "scanned_ini": false,
+      "pid": 89989,
+      "nonce": "ede0e36ead7cc5480bdd90e66c7a6f7b",
+      "phase": "read-after-mismatch",
+      "mode": "aliases",
+      "result": {
+        "loadKey": "version-1-ede0e36ead7cc5480bdd90e66c7a6f7b",
+        "load": {
+          "nonce": "ede0e36ead7cc5480bdd90e66c7a6f7b",
+          "revision": 1,
+          "nested": {
+            "enabled": true,
+            "number": 17
+          }
+        }
+      }
+    },
+    {
+      "schema": 1,
+      "ok": true,
+      "php": "7.4.33",
+      "sapi": "apache2handler",
+      "apcu_enabled": true,
+      "apcu_version": "5.1.28",
+      "source_hashes": {
+        "kApcConf.php": "b866a78b84862006c5f4fa3a2b4fdeb7b30f5627dedb25d177465c728c7882a0",
+        "kBaseConfCache.php": "44c267219c51d2745c78c46ae2793903d542a19f6d8a9982da64580ba8a47f88",
+        "kMapCacheInterface.php": "4e6053e9d2266317aab80db1c968333c364acb9a9084e111756ab3928300ff80",
+        "kKeyCacheInterface.php": "a1ee7ae48df49a7c29345f65af05242c4d694863fd762aa6c4ba1a685c832dcc"
+      },
+      "ini": "/tmp/tmp.FqmDJ7Ypr8/php.ini",
+      "scanned_ini": false,
+      "pid": 89989,
+      "nonce": "ede0e36ead7cc5480bdd90e66c7a6f7b",
+      "phase": "delete",
+      "mode": "aliases",
+      "result": {
+        "delete": true
+      }
+    },
+    {
+      "schema": 1,
+      "ok": true,
+      "php": "7.4.33",
+      "sapi": "apache2handler",
+      "apcu_enabled": true,
+      "apcu_version": "5.1.28",
+      "source_hashes": {
+        "kApcConf.php": "b866a78b84862006c5f4fa3a2b4fdeb7b30f5627dedb25d177465c728c7882a0",
+        "kBaseConfCache.php": "44c267219c51d2745c78c46ae2793903d542a19f6d8a9982da64580ba8a47f88",
+        "kMapCacheInterface.php": "4e6053e9d2266317aab80db1c968333c364acb9a9084e111756ab3928300ff80",
+        "kKeyCacheInterface.php": "a1ee7ae48df49a7c29345f65af05242c4d694863fd762aa6c4ba1a685c832dcc"
+      },
+      "ini": "/tmp/tmp.FqmDJ7Ypr8/php.ini",
+      "scanned_ini": false,
+      "pid": 89989,
+      "nonce": "ede0e36ead7cc5480bdd90e66c7a6f7b",
+      "phase": "miss",
+      "mode": "aliases",
+      "result": {
+        "load": null
+      }
+    },
+    {
+      "schema": 1,
+      "ok": true,
+      "php": "7.4.33",
+      "sapi": "apache2handler",
+      "apcu_enabled": true,
+      "apcu_version": "5.1.28",
+      "source_hashes": {
+        "kApcConf.php": "b866a78b84862006c5f4fa3a2b4fdeb7b30f5627dedb25d177465c728c7882a0",
+        "kBaseConfCache.php": "44c267219c51d2745c78c46ae2793903d542a19f6d8a9982da64580ba8a47f88",
+        "kMapCacheInterface.php": "4e6053e9d2266317aab80db1c968333c364acb9a9084e111756ab3928300ff80",
+        "kKeyCacheInterface.php": "a1ee7ae48df49a7c29345f65af05242c4d694863fd762aa6c4ba1a685c832dcc"
+      },
+      "ini": "/tmp/tmp.FqmDJ7Ypr8/php.ini",
+      "scanned_ini": false,
+      "pid": 89989,
+      "nonce": "ede0e36ead7cc5480bdd90e66c7a6f7b",
+      "phase": "replace",
+      "mode": "aliases",
+      "result": {
+        "storeKey": true,
+        "store": true
+      }
+    },
+    {
+      "schema": 1,
+      "ok": true,
+      "php": "7.4.33",
+      "sapi": "apache2handler",
+      "apcu_enabled": true,
+      "apcu_version": "5.1.28",
+      "source_hashes": {
+        "kApcConf.php": "b866a78b84862006c5f4fa3a2b4fdeb7b30f5627dedb25d177465c728c7882a0",
+        "kBaseConfCache.php": "44c267219c51d2745c78c46ae2793903d542a19f6d8a9982da64580ba8a47f88",
+        "kMapCacheInterface.php": "4e6053e9d2266317aab80db1c968333c364acb9a9084e111756ab3928300ff80",
+        "kKeyCacheInterface.php": "a1ee7ae48df49a7c29345f65af05242c4d694863fd762aa6c4ba1a685c832dcc"
+      },
+      "ini": "/tmp/tmp.FqmDJ7Ypr8/php.ini",
+      "scanned_ini": false,
+      "pid": 89989,
+      "nonce": "ede0e36ead7cc5480bdd90e66c7a6f7b",
+      "phase": "read-new",
+      "mode": "aliases",
+      "result": {
+        "loadKey": "version-2-ede0e36ead7cc5480bdd90e66c7a6f7b",
+        "load": {
+          "nonce": "ede0e36ead7cc5480bdd90e66c7a6f7b",
+          "revision": 2,
+          "nested": {
+            "enabled": true,
+            "number": 17
+          }
+        }
+      }
+    }
+  ]
+}

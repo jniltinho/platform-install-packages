@@ -1,0 +1,31 @@
+Switching to fallback reviewer — running your PHP 8.3 checks and review now.
+Lab tests passed — now reviewing the APCu artifacts for scope and safety.
+Fallback execution + independent review — `platform-install-packages-php83` worktree only. No edits, no SSH/VM/network.
+
+**Coordination:**
+- Grok attempt: terminated at 120s, exit 124, without final JSON — recorded as `BLOCKED/NOT_EXECUTED`, not a pass.
+- Fallback executor/reviewer: OpenCode Zen `opencode/muse-spark-1.3-contributor-free` (operator-authorized Grok fallback, **not Grok**).
+- Read: `AGENTS.md` migration coordination rules.
+
+**Executed command:**
+- `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83 -p 'test_*.py'`
+- Cwd: `/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83`
+- Result: `Ran 119 tests in 0.071s / OK`, exit `0`.
+- Includes `test_apcu_web_client.ClientTests` (10 tests). Those use `doc/php83/evidence/apcu-web/codex-83-aliases.json` as **mocked golden record** — mocks only, not live Apache/APCu acceptance. File header states this explicitly.
+
+**Independently reviewed (read-only):**
+- `tools/php83/apcu-web/{run-lab.sh,apache-inner.sh,endpoint.php,client.py,README.md}`
+- `tools/php83/test_apcu_web_client.py`
+- `doc/php83/evidence/apcu-web/codex-*.json` (4 files: 74/83 x original/aliases)
+
+**Verification — scope holds:**
+- Minimal explicit INI, not production: `apache-inner.sh` writes temp `php.ini` with only `error_reporting/display_errors/log_errors/allow_url_*/apc.enabled=1/apc.use_request_time=0/extension=apcu.so` (+`json.so` on 74); `PHP_INI_SCAN_DIR` empty; evidence shows `ini=/tmp/tmp.*/php.ini`, `scanned_ini=False`. Minimal Apache conf: single prefork worker, `Listen 127.0.0.1:18383`, `/probe` only.
+- Root 4 rows: all `ok:true`, `scope:synthetic-kApcConf-serial-web-only`, 10 responses each (2 negative controls + 8 phases). `original` on both 74 (7.4.33/APCu 5.1.28) and 83 (8.3.6/APCu 5.1.22): `storeKey=null/store=false`, null reads, `delete=null`. `aliases` on both: `store/storeKey=true`, exact payload persistence, stable PID per file (66368/66317/89989/89937), `mismatch->null` preserving map, `delete->true` then `miss->null`, `replace` then `read-new` rev 2.
+- Test-only 3 aliases: `endpoint.php` `aliases` branch defines only `apc_fetch/apc_store/apc_delete` -> APCu, guarded by `function_exists('apc_fetch')` refusal + mode check. No counters, no other shims.
+- No out-of-scope claims: no counter repair (`apc_inc/dec/cas` absent; README says CLI counter failures not waived), no global shim (aliases function-scoped to request), no full bootstrap (only `require kApcConf.php` + stub `kEnvironment::get('cache_root_path')` to temp dir, 4 source hashes pinned, reload marker refused), no pool restart (only temp Apache killed in trap; `run-lab.sh` uses `PrivateNetwork/ProtectSystem=strict/InaccessiblePaths` for `/opt/kaltura/mysql`), no TLS (HTTP loopback only, proxy/redirect disabled, fail-closed status/schema/type checks, duplicate-JSON rejection, 64KB cap).
+
+**Critical findings / limits:**
+1. Live lab not re-executed here (prohibited SSH/network) — HTTP persistence claim rests on Codex-provided JSONs, not this run. Invariants verified structurally only.
+2. Single-worker serial persistence only — not cross-worker/host/restart, TTL, concurrency, reload-marker, DB/media/perf. README correctly limits this.
+3. `test_apcu_web_client.py` passing does not prove application acceptance; release/integration/production decisions still gated per `AGENTS.md`.
+

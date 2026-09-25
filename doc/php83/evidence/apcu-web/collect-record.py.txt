@@ -1,0 +1,37 @@
+import json,hashlib,subprocess,datetime
+from pathlib import Path
+base=Path('doc/php83/evidence/apcu-web'); tmp=Path('/tmp/php83-apcu-web')
+sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
+for name in ['claude','cursor']:
+ x=json.loads((tmp/(name+'.json')).read_text());(base/(name+'-cli.txt')).write_text(x.get('result',x.get('text','NO RESULT'))+'\n')
+for name in ['claude','cursor','grok','opencode']:
+ for suffix in ['exit','err']:
+  (base/(name+'-cli.'+suffix)).write_bytes((tmp/(name+'.'+suffix)).read_bytes())
+ (base/(name+'-prompt.txt')).write_bytes((tmp/(name+'-prompt.txt')).read_bytes())
+texts=[]
+for line in (tmp/'opencode.jsonl').read_text().splitlines():
+ x=json.loads(line)
+ if x.get('type')=='text':texts.append(x['part']['text'])
+(base/'opencode-cli.txt').write_text('\n'.join(texts)+'\n')
+rows=[]
+for v,independent in [('74','claude'),('83','cursor')]:
+ for mode in ['original','aliases']:
+  compared=[]; timings={}
+  for executor in ['codex',independent]:
+   stem=f'{executor}-{v}-{mode}'; r=json.loads((base/(stem+'.json')).read_text())
+   assert int((base/(stem+'.exit')).read_text())==0 and r['ok'] is True
+   assert (base/(stem+'.stderr')).read_text()=='Syntax OK\n'
+   assert len(r['responses'])==10 and r['runtime']==v and r['mode']==mode
+   phases=r['responses'][2:]
+   assert [x['phase'] for x in phases]==['store','read','mismatch','read-after-mismatch','delete','miss','replace','read-new']
+   assert len({x['pid'] for x in phases})==1 and len({x['nonce'] for x in phases})==1
+   for x in phases:
+    assert x['sapi']=='apache2handler' and x['apcu_enabled'] is True and x['scanned_ini'] is False
+   first=phases[0]; normalized=json.loads(json.dumps(r).replace(first['nonce'],'<PUBLIC_RUN_NONCE>').replace(first['ini'],'<TEMP_PHP_INI>'))
+   for x in normalized['responses'][2:]:x['pid']='<WORKER_PID>'
+   compared.append(normalized)
+   timings[executor]=int((base/(stem+'.duration-ns')).read_text())
+  assert compared[0]==compared[1],(v,mode,'independent mismatch')
+  rows.append({'runtime':v,'mode':mode,'state':'PASS','exit':0,'requests':10,'primary':'Codex','independent_executor_reviewer':independent,'command':f'tools/php83/apcu-web/run-lab.sh {v} {mode}','duration_ns':timings,'independent_match':True})
+result={'schema':1,'recorded_at_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'input_commit':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),'scope':'minimal-INI single-worker Apache original kApcConf synthetic cache only','state':'PARTIAL','application_acceptance':False,'case_ids':['T1-03','T4-01'],'logical_rows':4,'rows':rows,'harness':{str(p):sha(p) for p in sorted(Path('tools/php83/apcu-web').iterdir()) if p.is_file()},'unit_test':{'path':'tools/php83/test_apcu_web_client.py','sha256':sha('tools/php83/test_apcu_web_client.py'),'new_tests':10,'suite_count':119,'executor':['Codex','OpenCode'],'scope':'mocked-client support only'},'normalization':['public nonce occurrences','temporary INI path','worker PID, only after per-run stability asserted'],'cli_outcomes':{'claude':'independent baseline execution and review','cursor':'independent candidate runtime execution and review','grok':'timeout exit124, no final JSON; not credited','opencode':'exact authorized Muse Spark Free fallback,119localtests and independent review'},'remaining':['fullbootstrap','reflectioncache','serializedlegacyobjects','restart','multiworker','TTL','concurrency','fullSAPIconfig','TLS','counterrepair','releasegates'],'evidence':{str(p.relative_to(base)):sha(p) for p in sorted(base.rglob('*')) if p.is_file() and p.name!='result.json'}}
+(base/'result.json').write_text(json.dumps(result,indent=2)+'\n');print('4 rows PASS; independent response comparisons match')

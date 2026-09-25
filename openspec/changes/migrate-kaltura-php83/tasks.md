@@ -110,3 +110,9 @@ T1-03 / 5.9 and T4-01 / 5.16 have additional bounded APC/APCu evidence
 both 7.4 and 8.3; a fixture-only direct alias experiment fails missing-counter
 semantics on both. Claude/Cursor independently reproduced the results. No
 application adapter was selected and no checkbox is closed by these probes.
+
+Additional T1-03/5.9 evidence: original `kApcConf` exercised across real Apache
+requests under an explicit minimal INI on PHP 7.4/8.3; disabled-cache controls
+and test-only fetch/store/delete alias persistence/version/delete/replacement
+rows passed with independent Claude/Cursor reruns. This is not full bootstrap,
+reflection, concurrency/restart or an approved adapter. See `doc/php83/apcu-web.md`.

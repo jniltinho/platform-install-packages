@@ -16,6 +16,18 @@ and [execution contract](../../openspec/changes/migrate-kaltura-php83/design.md)
 - No new VM/application test, release, package integration or `.20` mutation in
   this batch. No release ETA or application completion percentage is inferred.
 
+## Latest progress: configuration cache over Apache
+
+Four original-source HTTP rows passed (7.4/8.3 × original/test-only aliases),
+independently rerun by Claude and Cursor. The alias fixture demonstrates real
+same-worker persistence across requests, version mismatch, deletion and replacement.
+The original controls remain disabled under the explicit minimal test INI.
+This does not approve production cache activation or resolve counter failures.
+
+[Apache cache evidence and boundaries](apcu-web.md). Ten additional mocked client
+tests pass; full local suite is **119 tests**. Case/parent counts remain unchanged.
+The next integrated experiment is a six-patch exp3 ZIP; no release claim.
+
 ## Latest progress: APC/APCu application cache
 
 Original wrapper controls reproduce `init=false` on both 7.4 and 8.3 CLI: an

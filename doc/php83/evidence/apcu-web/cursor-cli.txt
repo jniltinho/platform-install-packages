@@ -1,0 +1,37 @@
+Vou ler o AGENTS.md e revisar os arquivos do harness APCu-web; em seguida executo só as duas linhas congeladas no lab autorizado, gravando saídas em `cursor-*`.Harness revisado. Garantindo o diretório de evidência e executando as duas linhas congeladas sem alterar parâmetros.Original finalizou com exit 0. Executando aliases em seguida e inspecionando as evidências.## Execução (Cursor, PHP 8.3 lab)
+
+| Caso | Comando | Exit | Duração | Evidência |
+|------|---------|------|---------|-----------|
+| `83 original` | `tools/php83/apcu-web/run-lab.sh 83 original` | **0** | 410705178 ns | `doc/php83/evidence/apcu-web/cursor-83-original.*` |
+| `83 aliases` | `tools/php83/apcu-web/run-lab.sh 83 aliases` | **0** | 467193495 ns | `doc/php83/evidence/apcu-web/cursor-83-aliases.*` |
+
+**stderr:** só `Syntax OK\n` (apache `-t`) em ambos. Sem retries.
+
+**Verificação das 10 respostas (cada run):**
+1. nonce inválido → `{ok:false,error:nonce}`
+2. phase inválida → `{ok:false,error:phase}`
+3–10. fases `store` → `read-new` com schema completo
+
+**`original`:** `storeKey=null`, `store=false`, reads/delete `null` — APCu ativo, sem aliases legado. Identidade estável: PHP `8.3.6`, SAPI `apache2handler`, APCu `5.1.22`, PID `66444`, INI `/tmp/tmp.KgqzcEGJKF/php.ini`, `scanned_ini=false`, nonce `e3665a81…`.
+
+**`aliases`:** 8 fases seriais com persistência real no mesmo worker (PID `66503`): store/read OK → mismatch miss sem destruir mapa → read-after-mismatch OK → delete → miss → replace → read-new (`revision:2`). INI `/tmp/tmp.1uvkQXNZfM/php.ini`, nonce `eac6158a…`.
+
+**Source hashes (exatos, ambos os runs):**  
+`kApcConf` `b866a78b…`, `kBaseConfCache` `44c26721…`, `kMapCacheInterface` `4e6053e9…`, `kKeyCacheInterface` `a1ee7ae4…` — batem com `client.py`.
+
+**Harness SHA-256:**  
+`run-lab.sh` `a393b314…`, `apache-inner.sh` `920c8a20…`, `endpoint.php` `ef32e5c9…`, `client.py` `6c238780…`, `README.md` `8920cce8…`.
+
+Não é aceitação de app completa. Aliases só `fetch`/`store`/`delete` TESTONLY; falha prévia de counter alias permanece **unresolved**.
+
+---
+
+## Review independente (só leitura do harness)
+
+**Escopo / isolamento:** `run-lab.sh` exige SSH loopback (`127.0.0.1`), porta `2200`, user `vagrant`, sem ProxyJump/forwards; hostname `kaltura-php83-lab`; `systemd-run` com `PrivateNetwork`, `PrivateTmp`, `ProtectSystem=strict`, app empacotado RO em `/audit/app`, fixtures em `/audit/tests`, paths Kaltura/MySQL inacessíveis. Sem edits de serviço/config/produção.
+
+**Comportamento esperado:** `original` sem `apc_*` → store false / loads null; `aliases` instala só três wrappers TESTONLY; rejeita `apc_fetch` pré-existente; cliente exige tipos exatos (sem normalizar false/null), hashes congelados, mesmo PID entre requests (persistência no worker, não cross-host/restart).
+
+**Limitações (reais):** host keys do lab SSH **não pinadas**; não cobre counters/adapter CLI, reload-marker, multi-worker, TTL, TLS, bootstrap Kaltura completo; passar aqui **não** autoriza integrar aliases, mudar RPM ou release.
+
+**Achados de review:** nenhum defeito que invalide a evidência deste ciclo; design fail-closed coerente com o README. Execução Cursor **confirma** as duas linhas 83 (independentemente das quatro primárias Codex).

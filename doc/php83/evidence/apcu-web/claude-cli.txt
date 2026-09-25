@@ -1,0 +1,42 @@
+As duas execuções no lab PHP 7.4 terminaram com exit 0, e reverifiquei os 10 responses de cada JSON com um script meu, sem depender do `client.py`. Na revisão não encontrei nenhum defeito que bloqueie o uso do harness; há apenas as ressalvas listadas no fim.
+
+## Execução (case 74, lab isolado `baseline74` → `kaltura-php74-baseline`, 127.0.0.1:2201)
+
+- **Executor:** Claude CLI. **Revisor independente:** ainda não atribuído, quem coordena o ciclo precisa definir.
+- **Identidades:** commit base `0968016b` (harness ainda não commitado). SHA-256 dos arquivos do harness: `run-lab.sh a393b314…`, `apache-inner.sh 920c8a20…`, `endpoint.php ef32e5c9…`, `client.py 6c238780…`, `README.md 8920cce8…`. Conferi os hashes de novo depois da execução e nenhum mudou.
+- **Comandos:** os dois exatamente como você passou, uma vez cada, sem retry e sem alterar parâmetros. Não rodei nenhum outro comando na VM.
+
+| Case | exit | duração | stderr | PHP / APCu | PID (único nos 8 pedidos) | nonce |
+|---|---|---|---|---|---|---|
+| 74 original | 0 | 0,51 s | `Syntax OK` | 7.4.33 / 5.1.28 | 90108 | `c29993e6…` |
+| 74 aliases | 0 | 0,32 s | `Syntax OK` | 7.4.33 / 5.1.28 | 90159 | `0ab15578…` |
+
+O que a minha verificação confirmou nos dois JSON:
+- **Pedidos rejeitados:** o nonce errado recebeu 403 `{"ok":false,"error":"nonce"}` e a action desconhecida recebeu 400 `{"error":"phase"}`, os dois antes de qualquer acesso ao cache.
+- **Origem e runtime:** os hashes dos 4 fontes batem exatamente com os fixados e também com a minha cópia local do Rigel 18.20.0. Em todas as respostas: `apache2handler`, APCu ativo, `scanned_ini === false`, e o INI é o temporário de cada run. PHP, APCu, INI e PID foram os mesmos em todas as fases.
+- **original:** `storeKey` null, `store` false, e `load`, `loadKey` e `delete` null nas 8 fases. Reproduz o que se espera quando `apc_fetch` não existe.
+- **aliases:** as 8 fases seriais deram o resultado esperado. store e storeKey retornaram true; `read` devolveu a versão e o map exatos, com o nonce. O mismatch deu null e o `read-after-mismatch` ainda carregou o map válido. O delete retornou true e o `miss` seguinte deu null. Depois do replace, `read-new` devolveu a revisão 2. Isso mostra que o APCu persistiu entre pedidos HTTP separados no mesmo worker.
+
+Os JSON do Claude e os do Codex concordam em todos esses pontos.
+
+## Revisão (independente, estática)
+
+- **Correto:**
+  - O nonce e a phase são validados antes do `require` de `kApcConf`.
+  - Comparei os resultados esperados em `client.py:81-90` com o código real de `kApcConf.php`/`kBaseConfCache.php`: `storeKey` cai em `return null` quando não há apc, e `store` em `return false`. Os valores batem.
+  - O `$map` é passado por valor, então o `newMap` do replace recebe a própria `CONF_CACHE_KEY`.
+  - `exact()` distingue bool de int.
+  - Com um único worker prefork (`MaxRequestWorkers 1`) e o PID invariante, fica comprovado que todos os pedidos foram atendidos pelo mesmo worker.
+- **Ressalvas (nenhuma é defeito):**
+  1. No modo original, as fases de persistência não testam persistência, porque tudo retorna null. Esse é o comportamento esperado para esse modo.
+  2. A chave de versão (`CONF_CACHE_VERSION_KEY`) é global e não isolada por nonce. Não afeta nada aqui porque cada run sobe um Apache novo, mas o fixture não serve para vários runs no mesmo processo.
+  3. O `SOURCE_HASHES` fica só no cliente e a comparação é feita depois da resposta. Ainda assim o fixture falha fechado.
+  4. A limitação de SSH está confirmada: `/tmp/kaltura-php74-ssh.conf` usa `StrictHostKeyChecking no` e `UserKnownHostsFile /dev/null`, então a chave do host não é fixada.
+
+## Limites e pendências
+
+- Os aliases `apc_fetch`, `apc_store` e `apc_delete` existem **só para o teste**. A falha anterior dos contadores no adapter CLI continua **sem resolução**, e este run não a corrige nem a dispensa.
+- Isto não é aceitação da aplicação completa. Ficam de fora: vários workers, restart, TTL, o marcador de reload, bootstrap real, TLS, banco de dados e desempenho.
+- Não executei os cases 83 (as evidências 83 que existem são do Codex e do Cursor).
+- Durante a sessão apareceram arquivos de outros agentes: `cursor-83-*` e `tools/php83/test_apcu_web_client.py`. Não mexi neles.
+- Criei apenas os arquivos `doc/php83/evidence/apcu-web/claude-74-*` e não fiz commit.
