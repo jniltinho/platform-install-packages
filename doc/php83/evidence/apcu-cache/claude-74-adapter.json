@@ -1,0 +1,546 @@
+{
+    "schema": 1,
+    "scope": "original-wrapper-with-optional-fixture-only-aliases",
+    "ok": false,
+    "application_acceptance": false,
+    "adapter_is_production_solution": false,
+    "runtime": {
+        "php": "7.4.33",
+        "sapi": "cli",
+        "apcu_version": "5.1.28",
+        "ini": "/etc/php/7.4/cli/php.ini",
+        "apc.enable_cli": "1",
+        "apc.use_request_time": "0",
+        "surface_before": {
+            "apc_fetch": false,
+            "apcu_fetch": true,
+            "apc_store": false,
+            "apcu_store": true,
+            "apc_add": false,
+            "apcu_add": true,
+            "apc_delete": false,
+            "apcu_delete": true,
+            "apc_inc": false,
+            "apcu_inc": true,
+            "apc_dec": false,
+            "apcu_dec": true
+        },
+        "apcu_enabled": true
+    },
+    "counter_contract": "missing counters must not create, derived from serialized base behavior; not a measured legacy native APC contract",
+    "assertions": [
+        {
+            "name": "original_apcu_only_init_false",
+            "ok": true,
+            "actual": false,
+            "expected": false
+        },
+        {
+            "name": "native.init",
+            "ok": true,
+            "actual": true,
+            "expected": true
+        },
+        {
+            "name": "native.set",
+            "ok": true,
+            "actual": true,
+            "expected": true
+        },
+        {
+            "name": "native.get",
+            "ok": true,
+            "actual": {
+                "nested": {
+                    "text": "Kaltura",
+                    "zero": 0
+                },
+                "bool": false
+            },
+            "expected": {
+                "nested": {
+                    "text": "Kaltura",
+                    "zero": 0
+                },
+                "bool": false
+            }
+        },
+        {
+            "name": "native.object_set",
+            "ok": true,
+            "actual": true,
+            "expected": true
+        },
+        {
+            "name": "native.object_class",
+            "ok": true,
+            "actual": "stdClass",
+            "expected": "stdClass"
+        },
+        {
+            "name": "native.object_properties",
+            "ok": true,
+            "actual": {
+                "label": "synthetic-cache-object",
+                "nested": {
+                    "items": [
+                        0,
+                        false,
+                        "Kaltura"
+                    ],
+                    "empty": []
+                }
+            },
+            "expected": {
+                "label": "synthetic-cache-object",
+                "nested": {
+                    "items": [
+                        0,
+                        false,
+                        "Kaltura"
+                    ],
+                    "empty": []
+                }
+            }
+        },
+        {
+            "name": "native.object_delete",
+            "ok": true,
+            "actual": true,
+            "expected": true
+        },
+        {
+            "name": "native.object_deleted_missing",
+            "ok": true,
+            "actual": false,
+            "expected": false
+        },
+        {
+            "name": "native.add_no_overwrite",
+            "ok": true,
+            "actual": false,
+            "expected": false
+        },
+        {
+            "name": "native.unchanged",
+            "ok": true,
+            "actual": {
+                "nested": {
+                    "text": "Kaltura",
+                    "zero": 0
+                },
+                "bool": false
+            },
+            "expected": {
+                "nested": {
+                    "text": "Kaltura",
+                    "zero": 0
+                },
+                "bool": false
+            }
+        },
+        {
+            "name": "native.store_false",
+            "ok": true,
+            "actual": true,
+            "expected": true
+        },
+        {
+            "name": "native.get_false",
+            "ok": true,
+            "actual": false,
+            "expected": false
+        },
+        {
+            "name": "native.get_miss_also_false",
+            "ok": true,
+            "actual": false,
+            "expected": false
+        },
+        {
+            "name": "native.fetch_false_success_byref",
+            "ok": true,
+            "actual": true,
+            "expected": true
+        },
+        {
+            "name": "native.raw_false_encoding",
+            "ok": true,
+            "actual": false,
+            "expected": false
+        },
+        {
+            "name": "native.raw_miss",
+            "ok": true,
+            "actual": false,
+            "expected": false
+        },
+        {
+            "name": "native.fetch_miss_success_byref",
+            "ok": true,
+            "actual": false,
+            "expected": false
+        },
+        {
+            "name": "native.multiget_false_retained_miss_omitted",
+            "ok": true,
+            "actual": {
+                "php83-wrapper-fixture-fcd35a4ad8f72dec2eef16e082592e77-native-value": {
+                    "nested": {
+                        "text": "Kaltura",
+                        "zero": 0
+                    },
+                    "bool": false
+                },
+                "php83-wrapper-fixture-fcd35a4ad8f72dec2eef16e082592e77-native-false": false
+            },
+            "expected": {
+                "php83-wrapper-fixture-fcd35a4ad8f72dec2eef16e082592e77-native-value": {
+                    "nested": {
+                        "text": "Kaltura",
+                        "zero": 0
+                    },
+                    "bool": false
+                },
+                "php83-wrapper-fixture-fcd35a4ad8f72dec2eef16e082592e77-native-false": false
+            }
+        },
+        {
+            "name": "native.add_new",
+            "ok": true,
+            "actual": true,
+            "expected": true
+        },
+        {
+            "name": "native.increment",
+            "ok": true,
+            "actual": 13,
+            "expected": 13
+        },
+        {
+            "name": "native.decrement",
+            "ok": true,
+            "actual": 9,
+            "expected": 9
+        },
+        {
+            "name": "native.increment_missing",
+            "ok": false,
+            "actual": 1,
+            "expected": false
+        },
+        {
+            "name": "native.decrement_missing",
+            "ok": false,
+            "actual": -1,
+            "expected": false
+        },
+        {
+            "name": "native.increment_did_not_create",
+            "ok": false,
+            "actual": true,
+            "expected": false
+        },
+        {
+            "name": "native.decrement_did_not_create",
+            "ok": false,
+            "actual": true,
+            "expected": false
+        },
+        {
+            "name": "native.ttl_set",
+            "ok": true,
+            "actual": true,
+            "expected": true
+        },
+        {
+            "name": "native.ttl_immediate",
+            "ok": true,
+            "actual": "expires",
+            "expected": "expires"
+        },
+        {
+            "name": "native.ttl_expired",
+            "ok": true,
+            "actual": false,
+            "expected": false
+        },
+        {
+            "name": "native.delete",
+            "ok": true,
+            "actual": true,
+            "expected": true
+        },
+        {
+            "name": "native.deleted_missing",
+            "ok": true,
+            "actual": false,
+            "expected": false
+        },
+        {
+            "name": "native.delete_missing",
+            "ok": true,
+            "actual": false,
+            "expected": false
+        },
+        {
+            "name": "serialized.init",
+            "ok": true,
+            "actual": true,
+            "expected": true
+        },
+        {
+            "name": "serialized.set",
+            "ok": true,
+            "actual": true,
+            "expected": true
+        },
+        {
+            "name": "serialized.get",
+            "ok": true,
+            "actual": {
+                "nested": {
+                    "text": "Kaltura",
+                    "zero": 0
+                },
+                "bool": false
+            },
+            "expected": {
+                "nested": {
+                    "text": "Kaltura",
+                    "zero": 0
+                },
+                "bool": false
+            }
+        },
+        {
+            "name": "serialized.object_set",
+            "ok": true,
+            "actual": true,
+            "expected": true
+        },
+        {
+            "name": "serialized.object_class",
+            "ok": true,
+            "actual": "stdClass",
+            "expected": "stdClass"
+        },
+        {
+            "name": "serialized.object_properties",
+            "ok": true,
+            "actual": {
+                "label": "synthetic-cache-object",
+                "nested": {
+                    "items": [
+                        0,
+                        false,
+                        "Kaltura"
+                    ],
+                    "empty": []
+                }
+            },
+            "expected": {
+                "label": "synthetic-cache-object",
+                "nested": {
+                    "items": [
+                        0,
+                        false,
+                        "Kaltura"
+                    ],
+                    "empty": []
+                }
+            }
+        },
+        {
+            "name": "serialized.object_delete",
+            "ok": true,
+            "actual": true,
+            "expected": true
+        },
+        {
+            "name": "serialized.object_deleted_missing",
+            "ok": true,
+            "actual": false,
+            "expected": false
+        },
+        {
+            "name": "serialized.add_no_overwrite",
+            "ok": true,
+            "actual": false,
+            "expected": false
+        },
+        {
+            "name": "serialized.unchanged",
+            "ok": true,
+            "actual": {
+                "nested": {
+                    "text": "Kaltura",
+                    "zero": 0
+                },
+                "bool": false
+            },
+            "expected": {
+                "nested": {
+                    "text": "Kaltura",
+                    "zero": 0
+                },
+                "bool": false
+            }
+        },
+        {
+            "name": "serialized.store_false",
+            "ok": true,
+            "actual": true,
+            "expected": true
+        },
+        {
+            "name": "serialized.get_false",
+            "ok": true,
+            "actual": false,
+            "expected": false
+        },
+        {
+            "name": "serialized.get_miss_also_false",
+            "ok": true,
+            "actual": false,
+            "expected": false
+        },
+        {
+            "name": "serialized.fetch_false_success_byref",
+            "ok": true,
+            "actual": true,
+            "expected": true
+        },
+        {
+            "name": "serialized.raw_false_encoding",
+            "ok": true,
+            "actual": "b:0;",
+            "expected": "b:0;"
+        },
+        {
+            "name": "serialized.raw_miss",
+            "ok": true,
+            "actual": false,
+            "expected": false
+        },
+        {
+            "name": "serialized.fetch_miss_success_byref",
+            "ok": true,
+            "actual": false,
+            "expected": false
+        },
+        {
+            "name": "serialized.multiget_false_retained_miss_omitted",
+            "ok": true,
+            "actual": {
+                "php83-wrapper-fixture-fcd35a4ad8f72dec2eef16e082592e77-serialized-value": {
+                    "nested": {
+                        "text": "Kaltura",
+                        "zero": 0
+                    },
+                    "bool": false
+                },
+                "php83-wrapper-fixture-fcd35a4ad8f72dec2eef16e082592e77-serialized-false": false
+            },
+            "expected": {
+                "php83-wrapper-fixture-fcd35a4ad8f72dec2eef16e082592e77-serialized-value": {
+                    "nested": {
+                        "text": "Kaltura",
+                        "zero": 0
+                    },
+                    "bool": false
+                },
+                "php83-wrapper-fixture-fcd35a4ad8f72dec2eef16e082592e77-serialized-false": false
+            }
+        },
+        {
+            "name": "serialized.add_new",
+            "ok": true,
+            "actual": true,
+            "expected": true
+        },
+        {
+            "name": "serialized.increment",
+            "ok": true,
+            "actual": 13,
+            "expected": 13
+        },
+        {
+            "name": "serialized.decrement",
+            "ok": true,
+            "actual": 9,
+            "expected": 9
+        },
+        {
+            "name": "serialized.increment_missing",
+            "ok": true,
+            "actual": false,
+            "expected": false
+        },
+        {
+            "name": "serialized.decrement_missing",
+            "ok": true,
+            "actual": false,
+            "expected": false
+        },
+        {
+            "name": "serialized.increment_did_not_create",
+            "ok": true,
+            "actual": false,
+            "expected": false
+        },
+        {
+            "name": "serialized.decrement_did_not_create",
+            "ok": true,
+            "actual": false,
+            "expected": false
+        },
+        {
+            "name": "serialized.ttl_set",
+            "ok": true,
+            "actual": true,
+            "expected": true
+        },
+        {
+            "name": "serialized.ttl_immediate",
+            "ok": true,
+            "actual": "expires",
+            "expected": "expires"
+        },
+        {
+            "name": "serialized.ttl_expired",
+            "ok": true,
+            "actual": false,
+            "expected": false
+        },
+        {
+            "name": "serialized.delete",
+            "ok": true,
+            "actual": true,
+            "expected": true
+        },
+        {
+            "name": "serialized.deleted_missing",
+            "ok": true,
+            "actual": false,
+            "expected": false
+        },
+        {
+            "name": "serialized.delete_missing",
+            "ok": true,
+            "actual": false,
+            "expected": false
+        }
+    ],
+    "diagnostics": [],
+    "source": {
+        "kInfraBaseCacheWrapper.php": "64d569eccaeee87791145b36c1232fde334518c4e8ee147e8a1905b5d51d285c",
+        "kApcCacheWrapper.php": "f6e7df97e236ed6d2ac1f7d05bed17cba697a9d25d5ca485176076b8d845484f"
+    },
+    "mode": "fixture-alias-experiment",
+    "accepted_php_families": [
+        "7.4",
+        "8.3"
+    ],
+    "key_prefix": "php83-wrapper-fixture-fcd35a4ad8f72dec2eef16e082592e77-"
+}

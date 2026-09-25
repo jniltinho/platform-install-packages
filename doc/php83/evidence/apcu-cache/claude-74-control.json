@@ -1,0 +1,49 @@
+{
+    "schema": 1,
+    "scope": "original-wrapper-with-optional-fixture-only-aliases",
+    "ok": true,
+    "application_acceptance": false,
+    "adapter_is_production_solution": false,
+    "runtime": {
+        "php": "7.4.33",
+        "sapi": "cli",
+        "apcu_version": "5.1.28",
+        "ini": "/etc/php/7.4/cli/php.ini",
+        "apc.enable_cli": "1",
+        "apc.use_request_time": "0",
+        "surface_before": {
+            "apc_fetch": false,
+            "apcu_fetch": true,
+            "apc_store": false,
+            "apcu_store": true,
+            "apc_add": false,
+            "apcu_add": true,
+            "apc_delete": false,
+            "apcu_delete": true,
+            "apc_inc": false,
+            "apcu_inc": true,
+            "apc_dec": false,
+            "apcu_dec": true
+        },
+        "apcu_enabled": true
+    },
+    "counter_contract": "missing counters must not create, derived from serialized base behavior; not a measured legacy native APC contract",
+    "assertions": [
+        {
+            "name": "original_apcu_only_init_false",
+            "ok": true,
+            "actual": false,
+            "expected": false
+        }
+    ],
+    "diagnostics": [],
+    "source": {
+        "kInfraBaseCacheWrapper.php": "64d569eccaeee87791145b36c1232fde334518c4e8ee147e8a1905b5d51d285c",
+        "kApcCacheWrapper.php": "f6e7df97e236ed6d2ac1f7d05bed17cba697a9d25d5ca485176076b8d845484f"
+    },
+    "mode": "original-control",
+    "accepted_php_families": [
+        "7.4",
+        "8.3"
+    ]
+}

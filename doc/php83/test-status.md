@@ -16,6 +16,20 @@ and [execution contract](../../openspec/changes/migrate-kaltura-php83/design.md)
 - No new VM/application test, release, package integration or `.20` mutation in
   this batch. No release ETA or application completion percentage is inferred.
 
+## Latest progress: APC/APCu application cache
+
+Original wrapper controls reproduce `init=false` on both 7.4 and 8.3 CLI: an
+existing baseline gap, not a newly proven migration regression. A fixture-only
+direct alias experiment fails four native missing-counter assertions on both
+runtimes (59/63 pass); Claude and Cursor independently reproduced the results.
+The failures remain visible; no adapter or source patch was promoted. Upstream
+APCu-BC source supports the missing-counter guard, but concurrency and actual
+web/application cache acceptance remain untested. Grok hit its turn limit;
+OpenCode reviewed and ran the 109-test local suite successfully.
+
+[Cache investigation, evidence and next actions](apcu-cache.md). These are partial
+T1-03/T4-01 findings; detailed and original completion counts are unchanged.
+
 ## Latest progress: real provider SAPIs (partial T4-01)
 
 CLI and real HTTP GET/POST/invalid-POST probes passed for Noble native 8.3.6,

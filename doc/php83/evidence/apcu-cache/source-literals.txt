@@ -1,0 +1,135 @@
+./configurations/base.ini:170:apc_cache_ttl = 86400
+./infra/plugins/KalturaPluginManager.php:91:		if (function_exists('apc_fetch') && !$constructorArgs)
+./infra/plugins/KalturaPluginManager.php:94:			$pluginClassName = apc_fetch($cacheKey);
+./infra/plugins/KalturaPluginManager.php:106:					apc_store($cacheKey, get_class($pluginInstance));
+./infra/plugins/KalturaPluginManager.php:212:		if (function_exists('apc_fetch'))
+./infra/plugins/KalturaPluginManager.php:215:			$cls = apc_fetch($cacheKey);
+./infra/plugins/KalturaPluginManager.php:230:					apc_store($cacheKey, $cls);
+./infra/plugins/KalturaPluginManager.php:397:		if (function_exists('apc_fetch') && self::$useCache)
+./infra/plugins/KalturaPluginManager.php:400:			$plugins = apc_fetch($cacheKey);
+./infra/plugins/KalturaPluginManager.php:442:		if (function_exists('apc_store') && self::$useCache)
+./infra/plugins/KalturaPluginManager.php:443:			apc_store($cacheKey, $plugins);
+./infra/cache/kApcCacheWrapper.php:16:		if (!function_exists('apc_fetch'))
+./infra/cache/kApcCacheWrapper.php:26:		return apc_fetch($key);
+./infra/cache/kApcCacheWrapper.php:34:		return apc_store($key, $var, $expiry);
+./infra/cache/kApcCacheWrapper.php:42:		return apc_add($key, $var, $expiry);
+./infra/cache/kApcCacheWrapper.php:50:		return apc_fetch($keys);
+./infra/cache/kApcCacheWrapper.php:59:		return apc_delete($key);
+./infra/cache/kApcCacheWrapper.php:67:		return apc_inc($key, $delta);
+./infra/cache/kApcCacheWrapper.php:75:		return apc_dec($key, $delta);
+./infra/general/kLockBase.php:94:		if (!function_exists('apc_add'))
+./infra/storage/kFile.class.php:510:		if (function_exists('apc_store'))
+./infra/storage/kFile.class.php:513:			apc_store("redirect-".$protocol.$_SERVER["REQUEST_URI"], $url, 60);
+./infra/general/kHtmlPurifier.class.php:92:		if ( function_exists('apc_fetch') && function_exists('apc_store') )
+./infra/general/kHtmlPurifier.class.php:95:			self::$purifier = apc_fetch($cacheKey);
+./infra/general/kHtmlPurifier.class.php:127:				apc_store( $cacheKey, self::$purifier );
+./infra/general/kHtmlPurifier.class.php:150:		if ( function_exists('apc_fetch') && function_exists('apc_store') )
+./infra/general/kHtmlPurifier.class.php:153:			self::$allowedTokenPatterns = apc_fetch($cacheKey);
+./infra/general/kHtmlPurifier.class.php:163:				apc_store( $cacheKey, self::$allowedTokenPatterns );
+./infra/KAutoloader.php:53:			if (function_exists('apc_fetch'))
+./infra/KAutoloader.php:55:				$classPath = apc_fetch(self::$_classMapCacheKey . $class);
+./infra/KAutoloader.php:78:			apc_store(self::$_classMapCacheKey . $class, $classPath);
+./infra/KAutoloader.php:331:		if (!function_exists('apc_store'))
+./infra/KAutoloader.php:336:			apc_store(self::$_classMapCacheKey . $key, $value);
+./vendor/ZendFramework/library/Zend/Cache/Backend/Apc.php:75:        $tmp = apc_fetch($id);
+./vendor/ZendFramework/library/Zend/Cache/Backend/Apc.php:90:        $tmp = apc_fetch($id);
+./vendor/ZendFramework/library/Zend/Cache/Backend/Apc.php:112:        $result = apc_store($id, array($data, time(), $lifetime), $lifetime);
+./vendor/ZendFramework/library/Zend/Cache/Backend/Apc.php:127:        return apc_delete($id);
+./vendor/ZendFramework/library/Zend/Cache/Backend/Apc.php:149:                return apc_clear_cache('user');
+./vendor/ZendFramework/library/Zend/Cache/Backend/Apc.php:186:        $mem = apc_sma_info(true);
+./vendor/ZendFramework/library/Zend/Cache/Backend/Apc.php:260:        $array = apc_cache_info('user', false);
+./vendor/ZendFramework/library/Zend/Cache/Backend/Apc.php:281:        $tmp = apc_fetch($id);
+./vendor/ZendFramework/library/Zend/Cache/Backend/Apc.php:309:        $tmp = apc_fetch($id);
+./vendor/ZendFramework/library/Zend/Cache/Backend/Apc.php:323:            apc_store($id, array($data, time(), $newLifetime), $newLifetime);
+./admin_console/views/scripts/index/apc.phtml:185:	apc_clear_cache($cache_mode);
+./admin_console/views/scripts/index/apc.phtml:189:	apc_delete($MYREQUEST['DU']);
+./admin_console/views/scripts/index/apc.phtml:192:if(!function_exists('apc_cache_info') || !($cache=@apc_cache_info($cache_mode))) {
+./admin_console/views/scripts/index/apc.phtml:197:$cache_user = apc_cache_info('user', 1);  
+./admin_console/views/scripts/index/apc.phtml:198:$mem=apc_sma_info();
+./admin_console/views/scripts/index/apc.phtml:990:					$output = var_export(apc_fetch($entry[$fieldkey]),true);
+./vendor/avro/composer/ClassLoader.php:369:        $this->apcuPrefix = function_exists('apcu_fetch') && filter_var(ini_get('apc.enabled'), FILTER_VALIDATE_BOOLEAN) ? $apcuPrefix : null;
+./vendor/avro/composer/ClassLoader.php:453:            $file = apcu_fetch($this->apcuPrefix.$class, $hit);
+./vendor/avro/composer/ClassLoader.php:467:            apcu_add($this->apcuPrefix.$class, $file);
+./vendor/symfony/cache/sfProcessCache.class.php:38:      elseif (function_exists('apc_store'))
+./vendor/symfony/cache/sfProcessCache.class.php:90:        return apc_store(self::getPrefix().$key, $value, $lifeTime);
+./vendor/symfony/cache/sfProcessCache.class.php:112:        $value = apc_fetch(self::getPrefix().$key);
+./vendor/symfony/cache/sfProcessCache.class.php:135:        return false === apc_fetch(self::getPrefix().$key) ? false : true;
+./vendor/symfony/cache/sfProcessCache.class.php:155:        return apc_clear_cache('user');
+./api_v3/web/getFeed.php:79:if (function_exists('apc_fetch'))
+./api_v3/web/getFeed.php:81:	if (apc_fetch($feedProcessingKey))
+./api_v3/lib/syndication/KalturaSyndicationFeedRenderer.php:832:		if ($this->feedProcessingKey && function_exists('apc_delete'))
+./api_v3/lib/syndication/KalturaSyndicationFeedRenderer.php:833:			apc_delete($this->feedProcessingKey);
+./api_v3/lib/syndication/KalturaSyndicationFeedRenderer.php:844:		if ($this->feedProcessingKey && function_exists('apc_store') && $currentTime > $this->nextProcessingSetTime)
+./api_v3/lib/syndication/KalturaSyndicationFeedRenderer.php:846:			apc_store($this->feedProcessingKey, true, 60);
+./api_v3/lib/reflection/KalturaServicesMap.php:188:        if (function_exists('apc_fetch'))
+./api_v3/lib/reflection/KalturaServicesMap.php:191:            $serviceItemFromCache = apc_fetch($serviceId, $apcFetchSuccess);
+./api_v3/lib/reflection/KalturaServicesMap.php:218:		if(function_exists('apc_store'))
+./api_v3/lib/reflection/KalturaServicesMap.php:221:			$success = apc_store($serviceId, array("serviceActionItem" => $serviceMap[$serviceId], KalturaServicesMap::SERVICES_MAP_MODIFICATION_TIME => $servicesMapLastModTime));
+./api_v3/lib/reflection/KalturaActionReflector.php:75:		if(function_exists('apc_fetch'))
+./api_v3/lib/reflection/KalturaActionReflector.php:77:			$actionFromCache = apc_fetch("{$this->_serviceId}_{$this->_actionId}", $fetchFromAPCSuccess);
+./api_v3/lib/reflection/KalturaActionReflector.php:273:		if (!function_exists('apc_store'))
+./api_v3/lib/reflection/KalturaActionReflector.php:285:		$success = apc_store("{$this->_serviceId}_{$this->_actionId}", $cacheValue);
+./vendor/ZendFramework/library/Zend/File/Transfer/Adapter/Http.php:37:    protected static $_callbackApc            = 'apc_fetch';
+./vendor/ZendFramework/library/Zend/File/Transfer/Adapter/Http.php:300:        if (!function_exists('apc_fetch') and !function_exists('uploadprogress_get_info')) {
+./vendor/google-api-php-client-1.1.2/src/Google/Cache/Apc.php:39:    if (! function_exists('apc_add') ) {
+./vendor/google-api-php-client-1.1.2/src/Google/Cache/Apc.php:54:    $ret = apc_fetch($key);
+./vendor/google-api-php-client-1.1.2/src/Google/Cache/Apc.php:85:    $rc = apc_store($key, $var);
+./vendor/google-api-php-client-1.1.2/src/Google/Cache/Apc.php:111:    apc_delete($key);
+./alpha/config/cache/kApcConf.php:14:		$this->apcFunctionsExist = function_exists('apc_fetch');
+./alpha/config/cache/kApcConf.php:30:			return apc_delete(self::CONF_MAP_PREFIX.$mapName);
+./alpha/config/cache/kApcConf.php:37:			$mapStr = apc_fetch(self::CONF_MAP_PREFIX.$mapName);
+./alpha/config/cache/kApcConf.php:54:			return apc_store(self::CONF_MAP_PREFIX.$mapName, $mapStr, $ttl);
+./alpha/config/cache/kApcConf.php:62:			return apc_fetch(kBaseConfCache::CONF_CACHE_VERSION_KEY);
+./alpha/config/cache/kApcConf.php:71:			$existingKey = apc_fetch(kBaseConfCache::CONF_CACHE_VERSION_KEY);
+./alpha/config/cache/kApcConf.php:74:				return apc_store(kBaseConfCache::CONF_CACHE_VERSION_KEY, $key, $ttl);
+./alpha/web/index.php:49:	if (function_exists('apc_fetch'))
+./alpha/web/index.php:51:		$url = apc_fetch("redirect-".$protocol.$uri);
+./alpha/web/index.php:61:		$errorHeaders = apc_fetch("exterror-$protocol://$host$uri");
+./alpha/web/index.php:238:	else if (strpos($uri, "/serveFlavor/") !== false && function_exists('apc_fetch') && $_SERVER["REQUEST_METHOD"] == "GET")
+./alpha/web/index.php:248:		$renderer = apc_fetch($cacheKey);
+./vendor/google-api-php-client/src/cache/Google_ApcCache.php:29:    if (! function_exists('apc_add')) {
+./vendor/google-api-php-client/src/cache/Google_ApcCache.php:35:    if ((@apc_fetch($key . '.lock')) === false) {
+./vendor/google-api-php-client/src/cache/Google_ApcCache.php:44:    @apc_add($key . '.lock', '', 5);
+./vendor/google-api-php-client/src/cache/Google_ApcCache.php:49:    @apc_delete($key . '.lock');
+./vendor/google-api-php-client/src/cache/Google_ApcCache.php:72:    if (($ret = @apc_fetch($key)) === false) {
+./vendor/google-api-php-client/src/cache/Google_ApcCache.php:86:    if (@apc_store($key, array('time' => time(), 'data' => serialize($value))) == false) {
+./vendor/google-api-php-client/src/cache/Google_ApcCache.php:96:    @apc_delete($key);
+./vendor/aws/Doctrine/Common/Cache/ApcCache.php:40:        return apc_fetch($id);
+./vendor/aws/Doctrine/Common/Cache/ApcCache.php:48:        return apc_exists($id);
+./vendor/aws/Doctrine/Common/Cache/ApcCache.php:56:        return (bool) apc_store($id, $data, (int) $lifeTime);
+./vendor/aws/Doctrine/Common/Cache/ApcCache.php:64:        return apc_delete($id);
+./vendor/aws/Doctrine/Common/Cache/ApcCache.php:72:        return apc_clear_cache() && apc_clear_cache('user');
+./vendor/aws/Doctrine/Common/Cache/ApcCache.php:80:        return apc_fetch($keys);
+./vendor/aws/Doctrine/Common/Cache/ApcCache.php:88:        $info = apc_cache_info('', true);
+./vendor/aws/Doctrine/Common/Cache/ApcCache.php:89:        $sma  = apc_sma_info();
+./alpha/apps/kaltura/modules/extwidget/actions/serveFlavorAction.class.php:35:		if (!function_exists('apc_store') || 
+./alpha/apps/kaltura/modules/extwidget/actions/serveFlavorAction.class.php:45:		apc_store($cacheKey, $renderer, 86400);
+./alpha/apps/kaltura/lib/cache/kApiCache.php:787:			if (function_exists('apc_add') && apc_add('apiCacheLock-'.$this->_cacheKey, true, 1))
+./alpha/apps/kaltura/lib/cache/kLoggerCache.php:20:		if (function_exists('apc_fetch'))
+./alpha/apps/kaltura/lib/cache/kLoggerCache.php:23:			$logger = apc_fetch($cacheKey);
+./alpha/apps/kaltura/lib/cache/kLoggerCache.php:43:			if (function_exists('apc_store'))
+./alpha/apps/kaltura/lib/cache/kLoggerCache.php:44:				apc_store($cacheKey, array(KalturaLog::getLogger(), kConf::getCachedVersionId()));
+./alpha/apps/kaltura/lib/kPermissionManager.php:143:				kConf::get('apc_cache_ttl')))
+./alpha/apps/kaltura/lib/kPermissionManager.php:149:				kConf::get('apc_cache_ttl')); // try to store in cache
+./alpha/apps/kaltura/lib/model/objectfilters/KalturaCriteria.php:150:		if (function_exists('apc_fetch'))
+./alpha/apps/kaltura/lib/model/objectfilters/KalturaCriteria.php:153:			$pluginClassName = apc_fetch($cacheKey);
+./alpha/apps/kaltura/lib/model/objectfilters/KalturaCriteria.php:164:					apc_store($cacheKey, get_class($pluginInstance));
+./alpha/lib/model/UserRolePeer.php:68:		if (kConf::get('enable_cache') && function_exists('apc_fetch') && function_exists('apc_store'))
+./alpha/lib/model/UserRolePeer.php:70:			$id = apc_fetch($cacheKey); // try to fetch from cache
+./alpha/lib/model/UserRolePeer.php:87:			if (kConf::get('enable_cache') && function_exists('apc_fetch') && function_exists('apc_store'))
+./alpha/lib/model/UserRolePeer.php:89:				$success = apc_store($cacheKey, $id, kConf::get('apc_cache_ttl'));
+./alpha/apps/kaltura/lib/KExternalErrors.class.php:173:			if (function_exists('apc_store')) {
+./alpha/apps/kaltura/lib/KExternalErrors.class.php:181:				apc_store("exterror-$protocol://$host$uri", $headers, self::CACHE_EXPIRY);
+./alpha/scripts/clear_cache.php:21:if (function_exists('apc_clear_cache'))
+./alpha/scripts/clear_cache.php:24:	if (!apc_clear_cache())
+./alpha/scripts/clear_cache.php:30:	if (!apc_clear_cache('user'))
+./alpha/apps/kaltura/lib/db/DbManager.php:100:		if (function_exists('apc_fetch'))
+./alpha/apps/kaltura/lib/db/DbManager.php:102:			$dbConfigs = apc_fetch(self::EXTRA_DB_CONFIG_KEY);
+./alpha/apps/kaltura/lib/db/DbManager.php:117:		if (function_exists('apc_store'))
+./alpha/apps/kaltura/lib/db/DbManager.php:119:			apc_store(self::EXTRA_DB_CONFIG_KEY, $dbConfigs);
+./alpha/apps/kaltura/lib/db/DbManager.php:406:				if (function_exists('apc_fetch'))
+./alpha/apps/kaltura/lib/db/DbManager.php:410:						apc_store($badConnCacheKey, false);
+./alpha/apps/kaltura/lib/db/DbManager.php:411:					else if (apc_fetch($badConnCacheKey)) // if connection failed to connect in the past mark it
+./alpha/apps/kaltura/lib/db/DbManager.php:428:				if (function_exists('apc_store'))
+./alpha/apps/kaltura/lib/db/DbManager.php:430:					apc_store($badConnCacheKey, true, $cacheExpiry);
+./alpha/apps/kaltura/lib/mySystemUtils.php:66:		if(function_exists('apc_fetch') && apc_fetch(self::APIV3_FAIL_PING))

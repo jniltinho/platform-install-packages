@@ -1,0 +1,50 @@
+Executei as duas rodadas no `.74`, uma de cada vez. Os dois resultados bateram exatamente com o esperado: o **control** saiu com exit `0` e 1/1 asserção OK, e o **adapter** saiu com exit `1`, 59/63 asserções OK e as 4 falhas previstas nos contadores nativos. Não alterei nenhum arquivo para forçar a aprovação e não rodei comandos em nenhuma outra VM.
+
+## Resultados
+
+| Caso | Exit | Asserções | Falhas | stderr | diagnostics |
+|---|---|---|---|---|---|
+| `claude-74-control` | 0 | 1 | 0 | vazio | `[]` |
+| `claude-74-adapter` | 1 | 63 | 4 | vazio | `[]` |
+
+- **Executor:** Claude CLI (Opus 5.5).
+- **Ambiente:** VM `.74` (`baseline74`), PHP 7.4.33 via CLI, APCu 5.1.28, `apc.enable_cli=1`, `apc.use_request_time=0`. Antes do teste não existia nenhuma função `apc_*` e todas as `apcu_*` estavam presentes.
+- **Identidades:**
+  - Worktree em HEAD `82425811`, com os probes ainda não versionados.
+  - `wrapper.php` sha256 `296977…8379`.
+  - `run-lab.sh` sha256 `f6d392…78cd`.
+  - Código-fonte: `kInfraBaseCacheWrapper.php` `64d569…285c` e `kApcCacheWrapper.php` `f6e7df…484f`. São idênticos aos de `codex-74-*`.
+- **As 4 falhas do adapter** (todas no modo `native`; o modo `serialized` passou inteiro):
+  - `native.increment_missing`: veio `1`, esperado `false`.
+  - `native.decrement_missing`: veio `-1`, esperado `false`.
+  - `native.increment_did_not_create`: veio `true`, esperado `false`.
+  - `native.decrement_did_not_create`: veio `true`, esperado `false`.
+
+  Ou seja, o APCu cria o contador quando ele não existe. São as mesmas 4 falhas, com o mesmo total de 63 asserções, que aparecem em `codex-74-adapter.json`.
+
+## Minha revisão dos três arquivos
+
+- **`run-lab.sh`:** o isolamento está coerente com o que foi pedido.
+  - Ele confere o destino SSH antes de conectar (`127.0.0.1`, porta 2201, usuário `vagrant`, sem proxy nem redirecionamento de portas) e confere o hostname dentro da VM.
+  - O processo roda como `nobody`, sem acesso à rede (`PrivateNetwork`) e sem poder abrir sockets (`socket`/`socketpair` retornam EPERM).
+  - O código-fonte é montado somente para leitura, com `/opt/kaltura` e `/root` inacessíveis, limite de 256M de memória e 30s de execução.
+  - O diretório temporário é apagado por um `trap` ao sair.
+  - Ressalva: a configuração SSH usa `StrictHostKeyChecking no` com `UserKnownHostsFile /dev/null`. Isso é aceitável só porque o destino é loopback e o hostname é verificado dentro da VM.
+- **`wrapper.php`:**
+  - Qualquer aviso do PHP vira falha, mesmo os silenciados com `@`.
+  - Na limpeza, só apaga as chaves com o prefixo aleatório do próprio teste. Isso inclui os contadores que o APCu criou por engano, porque essas chaves já estavam registradas antes das chamadas.
+  - O cache nunca é esvaziado por inteiro, e `application_acceptance` e `adapter_is_production_solution` ficam fixos em `false`.
+  - Os aliases `apc_*` só existem dentro deste teste.
+  - Limitações:
+    - Os testes de TTL dependem do relógio real (um `sleep(3)`), então podem falhar de vez em quando se a VM atrasar.
+    - A duração da execução não é registrada.
+    - No modo control, `use_request_time` não é validado, o que não afeta esse caso.
+- **`README.md`:** está consistente com o código. Deixa explícito que a regra "contador inexistente não deve ser criado" veio do comportamento serializado da classe base e **não foi medida contra o APC nativo antigo**. Também deixa claro que a falha aparece igualmente no 7.4 e no 8.3, então não é uma regressão do PHP 8.3.
+
+## Limites
+
+- Esta revisão é do mesmo agente que executou os testes. Pelas regras do `AGENTS.md`, isso **não é validação independente**: outro CLI precisa revisar esta evidência.
+- O resultado não aceita a aplicação completa nem aprova um conserto do cache. Também não demonstra paridade com o APC antigo, persistência entre requisições, concorrência, uso sob FPM/Apache, nem os outros pontos do código que chamam APC diretamente.
+- O conflito sobre os contadores continua em aberto: é preciso comparar com o comportamento histórico do APC e com quem realmente chama esses métodos antes de escolher um conserto.
+
+Os arquivos que gerei são só os seis `claude-74-*` em `doc/php83/evidence/apcu-cache/`. Não fiz commit.

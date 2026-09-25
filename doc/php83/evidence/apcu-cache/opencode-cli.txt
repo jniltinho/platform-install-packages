@@ -1,0 +1,38 @@
+Fallback check in this repo only — running the read-only suite and reviewing fixtures.
+AGENTS.md read. Now executing the suite and fixture review.
+Suite passed (109 tests). Now reviewing the wrapper, lab script, and evidence files.
+Public concise result — independent critical review (fallback, not Grok):
+
+**Scope/authorization:**
+- cwd only: `/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83`
+- Read `AGENTS.md`. No writes/deploy/VM/SSH. `run-lab.sh` reviewed only, not executed.
+- Case: APCu-cache wrapper fixture contract review.
+- Executor/reviewer: OpenCode fallback with Zen Muse Spark 1.3 Free (`opencode/muse-spark-1.3-contributor-free`), filling Grok executor/reviewer role after Grok max-turn failure. Not reported as Grok.
+- Grok outcome: `BLOCKED/NOT_EXECUTED` — max-turn failure per task brief, no Grok evidence to reuse.
+
+**Local suite executed:**
+- Command: `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83 -p 'test_*.py'`
+- Result: `Ran 109 tests in 0.062s / OK`, exit 0.
+- Harness only: local Python checks. Not application acceptance. No patch/source hash re-verified locally.
+
+**Fixture reviewed:**
+- `tools/php83/apcu-probes/wrapper.php`: synthetic fixture only, header `never load this alias adapter into application`. Explicit `counter_contract: missing counters must not create, derived from serialized base behavior; not a measured legacy native APC contract`. Marks `application_acceptance:false`, `adapter_is_production_solution:false`. Cleans only random `key_prefix` via `apcu_delete`, never clears shared cache. Requires PHP 7.4/8.3 CLI, real APCu enabled, `apc.use_request_time=0` in adapter mode.
+- `tools/php83/apcu-probes/run-lab.sh`: isolated-lab only — SSH `127.0.0.1` + user `vagrant` + no forwarding/proxy check, `hostname` gate, `systemd-run` sandbox (`PrivateNetwork,ProtectSystem=strict,MemoryMax=256M,RuntimeMaxSec=30`), read-only bind of packaged app + fixture dir. Only `wrapper.php` crosses SSH.
+- `doc/php83/evidence/apcu-cache/codex-*.json` (4 files):
+  - `codex-74-control.json`: `ok:true`, 1 assertion `original_apcu_only_init_false`.
+  - `codex-83-control.json`: `ok:true`, same 1 assertion.
+  - `codex-74-adapter.json`: `ok:false`, serialized branch 1:1 pass, native branch 4 fails.
+  - `codex-83-adapter.json`: `ok:false`, identical 4 fails.
+  - Failing assertions (both PHP versions): `native.increment_missing: actual 1 expected false`, `native.decrement_missing: actual -1 expected false`, `native.increment_did_not_create: actual true expected false`, `native.decrement_did_not_create: actual true expected false`.
+  - Source hashes identical across all 4: `kInfraBaseCacheWrapper.php 64d569…`, `kApcCacheWrapper.php f6e7df9…`.
+
+**Critical review / limitations:**
+- Failure is real and must stay red. Native `apcu_inc/dec` on missing key creates `1/-1` — conflicts with fixture no-creation expectation.
+- No-creation contract is derived from serialized-base behavior only, not a proven historical native APC contract. Cannot generalize to native path.
+- Fixture coverage is narrow: set/get/add/delete/inc/dec, `false` vs miss via `success` byref, `multiGet`, TTL 1s+3s sleep, single-process, random keys. No concurrency, no eviction pressure, no full-app path, no production data, no legacy APC measurement.
+- Local 109-test `OK` does not overturn lab `ok:false`.
+
+**Verdict:**
+- Safe narrow adapter **NOT accepted**. No full-app evidence, no historical native contract proof. Do not turn failure green.
+- Untested scope: full application, production cache behaviour, concurrency, migration release/ cutover gates — all still open.
+

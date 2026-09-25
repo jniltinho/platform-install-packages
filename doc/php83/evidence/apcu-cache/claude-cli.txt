@@ -1,0 +1,22 @@
+**Caso:** comportamento de `kApcCacheWrapper::init()` no baseline 7.4 (somente leitura, CLI).
+**Executor/revisor:** Claude CLI. Não fiz edições, restarts nem mudanças de pacote.
+
+## Resultado do comando exato
+- **Exit:** `0`
+- **Saída:**
+  ```
+  {"php":"7.4.33","apcu":"5.1.28","apcu_enabled":true,"apc_fetch":false,"init":false}
+  ```
+
+## Evidência complementar (grep e sha256, também somente leitura)
+- `kApcCacheWrapper.php` com sha256 `f6e7df97…484f`. A linha 16 contém a guarda `if (!function_exists('apc_fetch'))`.
+- No baseline, o APCu 5.1.28 está carregado e ativo, mas não existe o alias `apc_fetch`. Por isso `init()` retorna `false`.
+
+## Orientação
+1. **Comportamento já existente, não regressão nova (só no CLI):** no PHP 7.4 empacotado, pelo CLI com `apc.enable_cli=1`, o wrapper já desativa o cache APC. O PHP 8.3 com APCu também não tem os aliases `apc_*`. Então o mesmo `init() === false` no 8.3 é o mesmo comportamento, não uma regressão da migração, nesse ponto do CLI.
+2. **O que isto não prova:**
+   - Não dá para inferir a superfície web ou de request (mod_php/FPM) a partir do CLI. Nesses contextos pode haver outro módulo carregado (por exemplo `apcu_bc` ou uma extensão `apc` antiga), outro `auto_prepend_file` ou um bootstrap que defina `apc_fetch`. Isso precisa de uma sonda separada via Apache/FPM no baseline antes de classificar o caso web.
+   - Também não prova que o cache "desativado" seja inofensivo em desempenho ou funcionalidade. A resposta à pergunta "o cache APC já estava inoperante no 7.4?" só vale para o CLI.
+3. **Sem aceitação de shim:** este resultado não justifica adicionar aliases `apc_*` nem `apcu_bc`. Se alguém propuser trocar o wrapper para `apcu_*`, isso muda o comportamento em relação ao baseline (o cache passaria a ser ativado). Deve ser tratado como mudança de comportamento, com decisão e testes próprios, não como correção de regressão.
+
+**Ainda não testado:** Apache e FPM no baseline 7.4, o mesmo probe no 8.3 e o uso real pela aplicação. Isto não vale como aceitação do Kaltura.

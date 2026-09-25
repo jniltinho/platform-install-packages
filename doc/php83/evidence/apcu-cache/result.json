@@ -1,0 +1,168 @@
+{
+  "schema": 1,
+  "recorded_at_utc": "2026-09-25T16:49:43.333646+00:00",
+  "input_commit": "8242581152da1121158d30a3703d0ba9aceb74bb",
+  "scope": "CLI original-wrapper controls and rejected fixture-only alias experiment",
+  "state": "PARTIAL",
+  "application_acceptance": false,
+  "selected_patch": null,
+  "case_ids": [
+    "T1-03",
+    "T4-01"
+  ],
+  "logical_rows": {
+    "PASS": 2,
+    "FAIL": 2
+  },
+  "rows": [
+    {
+      "runtime": "74",
+      "mode": "control",
+      "state": "PASS",
+      "command": "tools/php83/apcu-probes/run-lab.sh 74 control",
+      "primary": "Codex",
+      "independent_executor_reviewer": "claude",
+      "exit": 0,
+      "assertions": 1,
+      "failed_assertions": [],
+      "independent_reports_match": true
+    },
+    {
+      "runtime": "74",
+      "mode": "adapter",
+      "state": "FAIL",
+      "command": "tools/php83/apcu-probes/run-lab.sh 74 adapter",
+      "primary": "Codex",
+      "independent_executor_reviewer": "claude",
+      "exit": 1,
+      "assertions": 63,
+      "failed_assertions": [
+        "native.increment_missing",
+        "native.decrement_missing",
+        "native.increment_did_not_create",
+        "native.decrement_did_not_create"
+      ],
+      "independent_reports_match": true
+    },
+    {
+      "runtime": "83",
+      "mode": "control",
+      "state": "PASS",
+      "command": "tools/php83/apcu-probes/run-lab.sh 83 control",
+      "primary": "Codex",
+      "independent_executor_reviewer": "cursor",
+      "exit": 0,
+      "assertions": 1,
+      "failed_assertions": [],
+      "independent_reports_match": true
+    },
+    {
+      "runtime": "83",
+      "mode": "adapter",
+      "state": "FAIL",
+      "command": "tools/php83/apcu-probes/run-lab.sh 83 adapter",
+      "primary": "Codex",
+      "independent_executor_reviewer": "cursor",
+      "exit": 1,
+      "assertions": 63,
+      "failed_assertions": [
+        "native.increment_missing",
+        "native.decrement_missing",
+        "native.increment_did_not_create",
+        "native.decrement_did_not_create"
+      ],
+      "independent_reports_match": true
+    }
+  ],
+  "source": {
+    "kInfraBaseCacheWrapper.php": "64d569eccaeee87791145b36c1232fde334518c4e8ee147e8a1905b5d51d285c",
+    "kApcCacheWrapper.php": "f6e7df97e236ed6d2ac1f7d05bed17cba697a9d25d5ca485176076b8d845484f"
+  },
+  "harness": {
+    "tools/php83/apcu-probes/wrapper.php": "296977247b187e514da765f1779d17f53e36db2b0701c9ead35b08b51a648379",
+    "tools/php83/apcu-probes/README.md": "4cb0da5cd3608f858755cb1cd3d9dab3db3ea9dd09dfd65ba7a6d583a2efaf57",
+    "tools/php83/apcu-probes/run-lab.sh": "f6d392b2fbde030afed550f3048da50c2fd62e58dc4f922d01addef8355d78cd"
+  },
+  "normalization": [
+    "random key_prefix and occurrences in assertion dictionary keys only; comparison within identical PHP/runtime row"
+  ],
+  "cli_outcomes": {
+    "claude": "execution and review complete",
+    "cursor": "execution and review complete",
+    "grok": "exit1 max turns, no complete test result; not credited",
+    "opencode": "authorized exact Muse Spark Free fallback, review plus109 local Python tests exit0"
+  },
+  "upstream_counter_reference": "https://github.com/krakjoe/apcu-bc/blob/144a3347e1ca6849529bd577f4889cdb028e16f3/php_apc.c#L113-L155",
+  "limitations": [
+    "CLI only; web pool/cache persistence/concurrency not exercised",
+    "Baseline native APC extension not loaded or executed",
+    "Fixture options apc.enable_cli=1 and apc.use_request_time=0 are not production configuration",
+    "No per-case elapsed duration recorded; no performance conclusion",
+    "No full case checkbox complete",
+    "Existing loopback lab SSH host keys not pinned"
+  ],
+  "evidence": {
+    "attempts/codex-74-adapter.exit": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "attempts/codex-74-adapter.json": "801b64685845b7ea454b81d09a91faee2ba4926ed474143c3d1e2c9058adeea7",
+    "attempts/codex-74-adapter.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "attempts/codex-74-control.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "attempts/codex-74-control.json": "5108011f20e0fe45d45044dc6d8da89035611fcc975710db1efa204760a0b692",
+    "attempts/codex-74-control.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "attempts/codex-83-adapter.exit": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "attempts/codex-83-adapter.json": "63dd4e061fbe2e93d46bb721e516d0e8f0c2aed0da6e4130a1bd2fb82bcc8a6d",
+    "attempts/codex-83-adapter.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "attempts/codex-83-control.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "attempts/codex-83-control.json": "35ea9f8fe86039b934c522bcba047c9d43a4883702367b3ee632317edc105c90",
+    "attempts/codex-83-control.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline-cli-surface.txt": "6059bb1677ba0cf441467439342236cec5e0edebdaf741998a940b5b93769dd1",
+    "claude-74-adapter.exit": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "claude-74-adapter.json": "6764ae3c25c6fba032de8c4f0a85140bdd17f1896bbeb111670e7061ecaca546",
+    "claude-74-adapter.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "claude-74-control.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "claude-74-control.json": "82c4cf5b26e293643ffa0a96213fbf2fa2da7fba3b74af11ea5a63733ca9a8ce",
+    "claude-74-control.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "claude-cli.err": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "claude-cli.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "claude-cli.txt": "79e84b706f69a28a9d052f257d7378bda5a467d2b886aba10efae9a0adb423b1",
+    "claude-prompt.txt": "ccf4a444f4beb749faad081fe6190aeab17d2684c1afcc28a764deb07be4fd3a",
+    "claude-rerun-cli.err": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "claude-rerun-cli.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "claude-rerun-cli.txt": "7462549e550c3d2c912b3c7698953b2d06affd2908f5f5480262af2ce09ce468",
+    "claude-rerun-prompt.txt": "bcae439574815c6e95d23932024e4d2f59d10db462bfdaac3523142adc7d41ca",
+    "cleanup.txt": "094faf6a1fd1b44586f846adc51ae9bad840c41ec1999c78ade19712c75480a0",
+    "codex-74-adapter.exit": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "codex-74-adapter.json": "5d5b33c803ba2195b3c5a68dedecc98553bc4e77b9720a515203391d98e4595a",
+    "codex-74-adapter.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "codex-74-control.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "codex-74-control.json": "82c4cf5b26e293643ffa0a96213fbf2fa2da7fba3b74af11ea5a63733ca9a8ce",
+    "codex-74-control.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "codex-83-adapter.exit": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "codex-83-adapter.json": "9cb676abbceb50cad709bc2553a1e0a8aba1cc113f46cb31333c59e28cd6e3a4",
+    "codex-83-adapter.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "codex-83-control.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "codex-83-control.json": "444e13b551c0bf70ff2bbc321fb76df8c93c72821182cfac318199d46b370121",
+    "codex-83-control.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "codex-local-tests.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "codex-local-tests.txt": "53a9682a6f18301c2da3b223aef212c3cd2f06836c6bd81b0ae320f989bcc5ad",
+    "collect-record.py.txt": "11add80fcf0795f12e84b80227d9e79a67db3b98288deb726b372ceec978eb54",
+    "cursor-83-adapter.exit": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "cursor-83-adapter.json": "e3c58c35b65e05f5a268443c2c086d315ac1af430fff13749b671befcfde7f88",
+    "cursor-83-adapter.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cursor-83-control.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "cursor-83-control.json": "444e13b551c0bf70ff2bbc321fb76df8c93c72821182cfac318199d46b370121",
+    "cursor-83-control.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cursor-cli.err": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cursor-cli.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "cursor-cli.txt": "244aa7f83929cae5741d4907c0a56bb14f8c3645810156b3a0fdbbe07b5a6baf",
+    "cursor-prompt.txt": "6c250d0eaaab6d61e800674425cf2d85c018be8d7cc4d0501f04cf8319ebb622",
+    "grok-cli.err": "b3e62995cdc9d267dd575413b26c5eb3c56eb3f54d816fc4ace8f7b91c7d1b1f",
+    "grok-cli.exit": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "grok-cli.txt": "0443b5ecda6d90ee349f6eb31aa5b527afdfd662a8fb03b5642f05e5dac130ef",
+    "grok-prompt.txt": "83aa00472bbc41ccdd1685e08fa156dbf1a57f7dd5060ffd8aa0bbcb01bd4055",
+    "opencode-cli.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "opencode-cli.txt": "7997ff7b0d61d0ce9593006f7f7bb7662c97e4d5d4132fb80bc04b7d0ffcc9fb",
+    "opencode-prompt.txt": "0abd0334d79c5c91f21a8b35e6dacbf4964cc7a0e81bc671528cf0327ce05f2c",
+    "source-literals.txt": "c0d2baa8a375ad681cce6979fe1c0c2300b60e743c7d0be032dd5ed5e4a69ba6",
+    "source-surface.json": "c7de9b2094ec8f4279ff5f95f923c48995b29650c63cb6b9716ed1caf6b60965"
+  }
+}

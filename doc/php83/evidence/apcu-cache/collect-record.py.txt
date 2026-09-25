@@ -1,0 +1,40 @@
+import json,hashlib,subprocess,datetime
+from pathlib import Path
+base=Path('doc/php83/evidence/apcu-cache'); tmp=Path('/tmp/php83-apcu-cycle')
+sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
+for name in ['claude','claude-rerun','cursor','grok']:
+ x=json.loads((tmp/(name+'.json')).read_text()); (base/(name+'-cli.txt')).write_text(x.get('result',x.get('text','NO PUBLIC RESULT'))+'\n')
+ for suffix in ['exit','err']:
+  (base/(name+'-cli.'+suffix)).write_bytes((tmp/(name+'.'+suffix)).read_bytes())
+texts=[]
+for line in (tmp/'opencode.jsonl').read_text().splitlines():
+ x=json.loads(line)
+ if x.get('type')=='text':texts.append(x['part']['text'])
+(base/'opencode-cli.txt').write_text('\n'.join(texts)+'\n')
+(base/'opencode-cli.exit').write_bytes((tmp/'opencode.exit').read_bytes())
+for name in ['claude-prompt','claude-rerun-prompt','grok-prompt','cursor-prompt','opencode-prompt']:
+ (base/(name+'.txt')).write_bytes((tmp/(name+'.txt')).read_bytes())
+expected_fails=['native.increment_missing','native.decrement_missing','native.increment_did_not_create','native.decrement_did_not_create']
+rows=[]
+raw=Path('/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/server-Rigel-18.20.0')
+source={n:sha(raw/'infra/cache'/n) for n in ['kInfraBaseCacheWrapper.php','kApcCacheWrapper.php']}
+for v,independent in [('74','claude'),('83','cursor')]:
+ for mode in ['control','adapter']:
+  reports=[]
+  for executor in ['codex',independent]:
+   name=f'{executor}-{v}-{mode}'; r=json.loads((base/(name+'.json')).read_text()); code=int((base/(name+'.exit')).read_text())
+   assert r['source']==source
+   assert r['diagnostics']==[] and (base/(name+'.stderr')).read_bytes()==b''
+   assert len(r['assertions'])==(1 if mode=='control' else 63)
+   assert len({a['name'] for a in r['assertions']})==len(r['assertions'])
+   assert [a['name'] for a in r['assertions'] if not a['ok']]==([] if mode=='control' else expected_fails)
+   assert code==(0 if mode=='control' else 1) and r['ok']==(mode=='control')
+   prefix=r.get('key_prefix')
+   normalized=json.dumps(r,sort_keys=True)
+   if prefix:normalized=normalized.replace(prefix,'<RUN_KEY_PREFIX>')
+   reports.append(normalized)
+  assert reports[0]==reports[1],(v,mode,'independent drift')
+  rows.append({'runtime':v,'mode':mode,'state':'PASS' if mode=='control' else 'FAIL','command':f'tools/php83/apcu-probes/run-lab.sh {v} {mode}','primary':'Codex','independent_executor_reviewer':independent,'exit':0 if mode=='control' else 1,'assertions':1 if mode=='control' else 63,'failed_assertions':[] if mode=='control' else expected_fails,'independent_reports_match':True})
+result={'schema':1,'recorded_at_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'input_commit':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),'scope':'CLI original-wrapper controls and rejected fixture-only alias experiment','state':'PARTIAL','application_acceptance':False,'selected_patch':None,'case_ids':['T1-03','T4-01'],'logical_rows':{'PASS':2,'FAIL':2},'rows':rows,'source':source,'harness':{str(p):sha(p) for p in Path('tools/php83/apcu-probes').iterdir() if p.is_file()},'normalization':['random key_prefix and occurrences in assertion dictionary keys only; comparison within identical PHP/runtime row'],'cli_outcomes':{'claude':'execution and review complete','cursor':'execution and review complete','grok':'exit1 max turns, no complete test result; not credited','opencode':'authorized exact Muse Spark Free fallback, review plus109 local Python tests exit0'},'upstream_counter_reference':'https://github.com/krakjoe/apcu-bc/blob/144a3347e1ca6849529bd577f4889cdb028e16f3/php_apc.c#L113-L155','limitations':['CLI only; web pool/cache persistence/concurrency not exercised','Baseline native APC extension not loaded or executed','Fixture options apc.enable_cli=1 and apc.use_request_time=0 are not production configuration','No per-case elapsed duration recorded; no performance conclusion','No full case checkbox complete','Existing loopback lab SSH host keys not pinned'],'evidence':{str(p.relative_to(base)):sha(p) for p in sorted(base.rglob('*')) if p.is_file() and p.name!='result.json'}}
+(base/'result.json').write_text(json.dumps(result,indent=2)+'\n')
+print(json.dumps({'logical_rows':result['logical_rows'],'independent_match':True,'source_hashes_match':True}))

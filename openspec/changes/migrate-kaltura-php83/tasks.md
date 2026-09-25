@@ -104,3 +104,9 @@ T4-01 / 5.16 now has partial real CLI/Apache/FPM provider evidence on all three
 targets and independent reruns (`doc/php83/provider-runtime.md`). It remains
 unchecked: legacy APC dependency/use and full extension/ABI/provider policy
 reconciliation are still open. No package/CI or VM changes were made.
+
+T1-03 / 5.9 and T4-01 / 5.16 have additional bounded APC/APCu evidence
+(`doc/php83/apcu-cache.md`): original CLI cache initialization is disabled on
+both 7.4 and 8.3; a fixture-only direct alias experiment fails missing-counter
+semantics on both. Claude/Cursor independently reproduced the results. No
+application adapter was selected and no checkbox is closed by these probes.

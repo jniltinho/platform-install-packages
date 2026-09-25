@@ -1,0 +1,25 @@
+Vou ler o AGENTS.md e os probes APCu, depois executar exatamente os dois comandos isolados no lab.Probes revisados. Garantindo o diretório de evidência e executando o control, depois o adapter — só no lab `.83` sintético.Control saiu 0. Executando o adapter agora.Analisando as asserções JSON dos dois resultados.## Execução Cursor (lab `.83` sintético)
+
+Executor: Cursor Agent. Ambiente: `run-lab.sh 83` → VM `kaltura-php83-lab`, PHP `8.3.6` / APCu `5.1.22`, `nobody` + rede privada + sockets negados, source RO, temp próprio, APCu por processo. Sem mudanças de appsource/produção. Saídas: só `cursor-*`.
+
+### Control — exit **0**
+- `ok=true`, **1/1** assert: `original_apcu_only_init_false` (`false===false`)
+- stderr vazio; `application_acceptance=false`
+
+### Adapter — exit **1**
+- `ok=false`, **63** asserts: **59 pass / 4 fail**
+- Falhas (só `native.*`, contadores ausentes — APCu cria):
+
+| assert | actual | expected |
+|--------|--------|----------|
+| `native.increment_missing` | `1` | `false` |
+| `native.decrement_missing` | `-1` | `false` |
+| `native.increment_did_not_create` | `true` | `false` |
+| `native.decrement_did_not_create` | `true` | `false` |
+
+Expectativa do contrato: control **0/1**, adapter **1/63** com 4 falhas de counter nativo — **confirmado**. Expectativas/arquivos do fixture **não** foram alterados.
+
+### Limites (explícitos)
+Harness sintético apenas — **não** é aceitação da app. O contrato de missing-counter é proposto (base serializada), **não** prova de comportamento APC nativo legado. `adapter_is_production_solution=false`.
+
+Evidência: `doc/php83/evidence/apcu-cache/cursor-83-{control,adapter}.{json,stderr,exit}`

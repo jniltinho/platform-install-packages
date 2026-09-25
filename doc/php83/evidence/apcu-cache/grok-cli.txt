@@ -1,0 +1,1 @@
+I'll review the migration as a read-only pass: read `AGENTS.md`, run the PHP 8.3 unit tests, and compare the fixture against the Rigel cache wrappers.The worktree is the PHP 8.3 proposal branch. Next I’ll read the Rigel cache wrappers and any existing APCu fixture, then run the unit tests.
