@@ -184,7 +184,7 @@ Run database commands as the service account when using package state. `config i
 
 1. Schedule a maintenance window and stop intake; an active upload may exceed the 30-second shutdown window.
 2. Stop the service. Back up `/etc/kaltura-console/config.toml` and console state with ownership/modes preserved to restricted storage. With SQLite, copying the whole stopped state directory also captures any WAL sidecars; do not copy only the live `.db` file. Use a database-aware backup for MariaDB.
-3. Install the new verified package. Configuration is `noreplace`; migrations run during installation. Inspect package-manager `.rpmnew`/equivalent config artifacts before adopting new defaults.
+3. Install the new verified package. Configuration is `noreplace`; migrations run during installation. For an unattended Debian upgrade that retains the operator config, use `dpkg --force-confold -i <package.deb>`; review the new example separately. Inspect package-manager `.rpmnew`/equivalent config artifacts before adopting new defaults.
 4. Start the service; check liveness, authenticated diagnostics, login, list, upload and Range playback.
 5. To roll back a schema-incompatible upgrade, stop the service, restore the matched pre-upgrade database/config and binary/package. There is no exposed CLI migration-down command. Avoid parallel migrations from multiple hosts.
 
@@ -205,7 +205,7 @@ Ordinary removal retains state. **Explicit Debian purge deletes `/var/lib/kaltur
 | Thumbnail/stream 502 | Kaltura delivery health and redirect host:port allowlist; do not broaden it blindly |
 | Upload 413/429/507 | Console and proxy limits, active upload slots, free staging space |
 | Upload 422 | Extension, ISO-BMFF header, single file part, name/description lengths |
-| Upload 502 | API/upload endpoint, chunked-body support, timeout and Kaltura logs; inspect orphan entry cleanup |
+| Upload 502 | API/upload endpoint, timeout and Kaltura logs; use a console build with multipart Content-Length for PHP-FPM; inspect orphan entry cleanup |
 | Video never becomes READY | Kaltura conversion workers/flavors; console does not run transcoding |
 | New database unexpectedly empty | Wrong `--config`/DSN or working directory; do not create replacement admins until scope is verified |
 

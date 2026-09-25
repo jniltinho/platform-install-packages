@@ -86,7 +86,7 @@ CLI database operations and `serve` apply pending gormigrate migrations before u
 ## References and verification scope
 
 - [Validated Kaltura 18.20 API notes](../../doc/kaltura-api-noble.md).
-- [OpenSpec proposal, design and tasks](../../openspec/changes/add-kaltura-console-go/).
+- [OpenSpec proposal, design and tasks](../../openspec/changes/archive/2026-09-25-add-kaltura-console-go/).
 - [Console README](../README.md) and [release history](../CHANGELOG.md).
 - Owner's local reference projects: `go-ispconfig` for operational Go patterns; `painel-golang/frontend/src/skins/criarenet` and its `docs/prints` for visual reference. These are separate repositories, not runtime dependencies.
 

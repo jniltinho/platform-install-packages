@@ -101,7 +101,7 @@ done
 
 After regeneration, use each HTML viewer’s Export → SVG action to refresh its matching standalone `.svg`. This uses Archify’s dual-theme export, including semantic CSS, local font fallbacks and `prefers-color-scheme` handling. Do not extract raw inline SVG without its required styles.
 
-The renderer is a development aid; generated diagrams are usable without it. When routes, config keys, source layout or packaging change, update the related guide and diagram JSON together. [OpenSpec artifacts](../../openspec/changes/add-kaltura-console-go/) document the proposal; [Kaltura API notes](../../doc/kaltura-api-noble.md) document the validated upstream contract. Do not copy secrets, local session state or `.env` files into examples.
+The renderer is a development aid; generated diagrams are usable without it. When routes, config keys, source layout or packaging change, update the related guide and diagram JSON together. [OpenSpec artifacts](../../openspec/changes/archive/2026-09-25-add-kaltura-console-go/) document the proposal; [Kaltura API notes](../../doc/kaltura-api-noble.md) document the validated upstream contract. Do not copy secrets, local session state or `.env` files into examples.
 
 ### Page transitions
 

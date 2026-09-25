@@ -5,7 +5,12 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [0.1.0] — 2026-09-25
+
+First release of the standalone Go console with an embedded web interface.
+
 ### Fixed
+- Preserve HTTPS in progressive media redirects when the delivery host uses TLS.
 - Stream uploads with an exact multipart Content-Length for PHP-FPM on Rocky 9.
 - Namespace prefixed session cookies so old root cookies cannot reactivate a login after logout.
 
