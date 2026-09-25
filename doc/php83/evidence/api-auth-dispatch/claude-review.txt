@@ -1,0 +1,47 @@
+Advisory review before final strengthening; no tool/repository access.
+
+Revisão feita só a partir do texto enviado, sem ferramentas, como pedido. Por isso não gerei o arquivo de plano.
+
+## Falsos positivos (em ordem de risco)
+
+**1. Baseline vazio "casa" com candidato vazio (crítico se `comparisons` não barrar isso).**
+Se o original 7.4 também lançar `RuntimeException`, a saída padrão fica vazia nos dois lados. Aí `matches_baseline` pode dar verdadeiro com zero cobertura.
+- Correção mínima no coletor: exigir `returncode == 0` em original74, candidate74 e candidate83.
+- Exigir também que `json.loads(stdout)` tenha exatamente 12 entradas (2 positivas + 5×2 negativas/recuperação).
+
+**2. `ungranted` pode provar "ação inexistente" em vez de "papel sem permissão".**
+`system.getVersion` provavelmente não tem nenhum `permission_item`. Nesse caso `SERVICE_FORBIDDEN` sairia com qualquer KS, até um KS com permissão total.
+- Correção: inserir o item `system/getVersion` numa permissão que exista mas não esteja em nenhum papel. O teste passa a exercitar a negação por papel.
+
+**3. Os papéis USER e ADMIN são indistinguíveis.**
+Os dois papéis recebem a mesma `SYNTHETIC_SESSION_READ`. Um bug que resolva o KS ADMIN para `BASE_USER_SESSION_ROLE` (ou o inverso) passa sem ser detectado. A checagem de `sessionType` só lê o conteúdo do KS, não a resolução de papel.
+- Correção mínima: conceder `system.ping` apenas a `PARTNER_ADMIN_ROLE` (a ação não depende de nada).
+- Assertar que o KS USER leva `SERVICE_FORBIDDEN` e o KS ADMIN recebe `true`.
+- Isso combina com o item 2: a mesma linha de permissão resolve os dois.
+
+**4. `expired` e `malformed` retornam o mesmo `(kCoreException, INVALID_KS)`.**
+O caso `expired` passa se o token for rejeitado por qualquer motivo, por exemplo assinatura ruim com expiry negativo. Não prova que a checagem de expiração funciona.
+- Correção: gerar o token expirado e validar antes o motivo via `ks::fromSecureString(...)->isExpired()`, ou pelo retorno `ks::EXPIRED` da validação.
+- Alternativa: assertar um fragmento estável da mensagem ou dos args da exceção.
+
+**5. `missing` e `cross-partner` produzem a mesma assinatura.**
+Os dois terminam em `(KalturaAPIException, SERVICE_FORBIDDEN)`. Se o `cross-partner` estiver descartando o KS e caindo em anônimo, o resultado é idêntico ao `missing`.
+- Correção: comparar `getArgs()` e a mensagem, não só a classe e o código.
+- No `missing`, passar `partnerId => 83001` para isolar "sem KS" de "sem parceiro".
+
+**6. Deprecações e avisos do 8.3 não bloqueiam o teste.**
+`diagnostics` é registrado, mas o critério de aprovação usa só a saída padrão e o `fatal`. Um aviso novo em candidate83 no caminho de autenticação (por exemplo `null` passado a função de string) passa em silêncio.
+- Correção: falhar se candidate83 tiver algum `(severity, path, line)` ausente em candidate74.
+
+## Limitações (declarar no relatório, não é preciso corrigir)
+
+- **Proveniência:** `harness_hashes` faz o hash das cópias locais, mas a execução usa `/home/vagrant/php-patch-tests/` no remoto. Correção barata: rodar `sha256sum` no mesmo comando ssh e comparar.
+- **Ordem fixa num único processo:** os caches estáticos de permissão ficam compartilhados. A recuperação cobre o caso "falha pegajosa", e o caso "sucesso pegajoso" é coberto porque as negativas esperam rejeição. Mesmo assim, o resultado depende da ordem.
+- **`$token` implícito:** é o token ADMIN só porque é o último do laço, e `ungranted`/`cross-partner` testam apenas ADMIN. Renomear para `$adminToken` deixa isso explícito.
+- **`catch (Exception)` não pega `Error`:** um `TypeError` do 8.3 vira fatal, o que resulta em saída vazia e cai no item 1. Com o item 1 corrigido, isso vira falha correta.
+- **Sem vazamento de KS na saída padrão:** está correto. O `stderr_sha256` faz hash de conteúdo com KS; isso não é reversível na prática, mas vale deixar documentado.
+- **Escopo:** o `scope` já declara que não é HTTP/SAPI. Não fica coberto o fluxo de exceções do `KalturaFrontController`, nem serialização, nem `$_REQUEST` e cabeçalhos.
+
+## Mínimo recomendado
+
+Itens 1, 2+3 (uma permissão só para admin em `system.ping`, mais um item órfão para `getVersion`) e 4. Os itens 5 e 6 são baratos e fecham a ambiguidade restante.

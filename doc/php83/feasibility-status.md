@@ -381,3 +381,11 @@ SessionService/KS validation on PHP 7.4 and 8.3, including negative authenticati
 checks. A held dateUtils ternary repair preserves original 7.4 formatting and
 unblocks this path. HTTP/authenticated dispatcher and diagnostic triage remain
 open; no full task, artifact promotion or release gate is complete.
+
+## Authenticated dispatcher follow-up
+
+[Real authenticated dispatcher checks](api-auth-dispatch.md) now pass against
+synthetic SQL in both runtimes, including exact denial codes and successful
+context recovery after each negative case. No additional application repair
+was required; the harness now loads runtime-matching iconv. HTTP/SAPI and
+release gates remain open.
