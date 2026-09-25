@@ -3,7 +3,12 @@
 # from the 8.3 lab, never installed or selected as the system interpreter.
 set -euo pipefail
 [[ "$(hostname)" == kaltura-php74-baseline ]] || exit 64
-[[ $# == 3 ]] || exit 64
+[[ $# == 3 || $# == 4 ]] || exit 64
+case "${4:-types}" in
+ types) fixture=mysql-types.php ;;
+ init) fixture=mysql-init.php ;;
+ *) exit 64 ;;
+esac
 case "$1" in
  74) runtime=/usr/bin/php7.4; modules=/usr/lib/php/20190902 ;;
  83) runtime=/audit/runtime83/php8.3; modules=/audit/runtime83 ;;
@@ -25,4 +30,4 @@ exec sudo systemd-run --quiet --wait --pipe --collect \
  -p 'InaccessiblePaths=-/opt/kaltura /root -/run/mysqld -/var/lib/mysql' \
  -p "BindReadOnlyPaths=$tree:/audit/app $scripts:/audit/tests /home/vagrant/php-mysql-probe/runtime83:/audit/runtime83 $3:/audit/db" \
  /usr/bin/env "$runtime" "${ini[@]}" -d log_errors=0 -d allow_url_fopen=0 -d allow_url_include=0 \
- -d date.timezone=UTC /audit/tests/mysql-types.php
+ -d date.timezone=UTC "/audit/tests/$fixture"

@@ -1,0 +1,136 @@
+{
+  "records": [
+    {
+      "runtime": "74",
+      "tree": "original",
+      "returncode": 0,
+      "stdout": "{\"php\":\"7.4.33\",\"results\":[{\"case\":\"unspecified\",\"class\":\"DebugPDO\",\"emulate\":true,\"stringify\":null,\"stringify_readback\":[\"unsupported\",\"IM001\"],\"error_mode\":2,\"row\":{\"n\":\"42\",\"f\":\"1.25\",\"nullable\":null,\"charset\":\"utf8mb4\"},\"hydrated\":{\"id\":\"1_synthetic\",\"views\":42,\"partner_id\":42,\"name\":null}},{\"case\":\"constructor-native\",\"class\":\"DebugPDO\",\"emulate\":false,\"stringify\":null,\"stringify_readback\":[\"unsupported\",\"IM001\"],\"error_mode\":2,\"row\":{\"n\":42,\"f\":1.25,\"nullable\":null,\"charset\":\"utf8mb4\"},\"hydrated\":{\"id\":\"1_synthetic\",\"views\":42,\"partner_id\":42,\"name\":null}},{\"case\":\"attribute-native\",\"class\":\"DebugPDO\",\"emulate\":false,\"stringify\":null,\"stringify_readback\":[\"unsupported\",\"IM001\"],\"error_mode\":2,\"row\":{\"n\":42,\"f\":1.25,\"nullable\":null,\"charset\":\"utf8mb4\"},\"hydrated\":{\"id\":\"1_synthetic\",\"views\":42,\"partner_id\":42,\"name\":null}},{\"case\":\"attribute-stringify\",\"class\":\"DebugPDO\",\"emulate\":true,\"stringify\":null,\"stringify_readback\":[\"unsupported\",\"IM001\"],\"error_mode\":2,\"row\":{\"n\":\"42\",\"f\":\"1.25\",\"nullable\":null,\"charset\":\"utf8mb4\"},\"hydrated\":{\"id\":\"1_synthetic\",\"views\":42,\"partner_id\":42,\"name\":null}}]}\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "74",
+      "tree": "candidate",
+      "returncode": 0,
+      "stdout": "{\"php\":\"7.4.33\",\"results\":[{\"case\":\"unspecified\",\"class\":\"DebugPDO\",\"emulate\":true,\"stringify\":null,\"stringify_readback\":[\"unsupported\",\"IM001\"],\"error_mode\":2,\"row\":{\"n\":\"42\",\"f\":\"1.25\",\"nullable\":null,\"charset\":\"utf8mb4\"},\"hydrated\":{\"id\":\"1_synthetic\",\"views\":42,\"partner_id\":42,\"name\":null}},{\"case\":\"constructor-native\",\"class\":\"DebugPDO\",\"emulate\":false,\"stringify\":null,\"stringify_readback\":[\"unsupported\",\"IM001\"],\"error_mode\":2,\"row\":{\"n\":42,\"f\":1.25,\"nullable\":null,\"charset\":\"utf8mb4\"},\"hydrated\":{\"id\":\"1_synthetic\",\"views\":42,\"partner_id\":42,\"name\":null}},{\"case\":\"attribute-native\",\"class\":\"DebugPDO\",\"emulate\":false,\"stringify\":null,\"stringify_readback\":[\"unsupported\",\"IM001\"],\"error_mode\":2,\"row\":{\"n\":42,\"f\":1.25,\"nullable\":null,\"charset\":\"utf8mb4\"},\"hydrated\":{\"id\":\"1_synthetic\",\"views\":42,\"partner_id\":42,\"name\":null}},{\"case\":\"attribute-stringify\",\"class\":\"DebugPDO\",\"emulate\":true,\"stringify\":null,\"stringify_readback\":[\"unsupported\",\"IM001\"],\"error_mode\":2,\"row\":{\"n\":\"42\",\"f\":\"1.25\",\"nullable\":null,\"charset\":\"utf8mb4\"},\"hydrated\":{\"id\":\"1_synthetic\",\"views\":42,\"partner_id\":42,\"name\":null}}]}\n",
+      "stderr": ""
+    },
+    {
+      "runtime": "83",
+      "tree": "original",
+      "returncode": 255,
+      "stdout": "",
+      "stderr": "Deprecated: Return type of PropelConfiguration::offsetExists($offset) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/PropelConfiguration.php on line 60\nDeprecated: Return type of PropelConfiguration::offsetGet($offset) should either be compatible with ArrayAccess::offsetGet(mixed $offset): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/PropelConfiguration.php on line 76\nDeprecated: Return type of PropelConfiguration::offsetSet($offset, $value) should either be compatible with ArrayAccess::offsetSet(mixed $offset, mixed $value): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/PropelConfiguration.php on line 68\nDeprecated: Return type of PropelConfiguration::offsetUnset($offset) should either be compatible with ArrayAccess::offsetUnset(mixed $offset): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/PropelConfiguration.php on line 84\nDeprecated: Return type of PropelPDO::beginTransaction() should either be compatible with PDO::beginTransaction(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/PropelPDO.php on line 123\nDeprecated: Return type of PropelPDO::commit() should either be compatible with PDO::commit(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/PropelPDO.php on line 139\nDeprecated: Return type of PropelPDO::getAttribute($attribute) should either be compatible with PDO::getAttribute(int $attribute): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/PropelPDO.php on line 225\nDeprecated: Return type of PropelPDO::prepare($sql, $driver_options = []) should either be compatible with PDO::prepare(string $query, array $options = []): PDOStatement|false, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/PropelPDO.php on line 244\nDeprecated: Return type of PropelPDO::rollBack() should either be compatible with PDO::rollBack(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/PropelPDO.php on line 161\nDeprecated: Return type of PropelPDO::setAttribute($attribute, $value) should either be compatible with PDO::setAttribute(int $attribute, mixed $value): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/PropelPDO.php on line 206\nDeprecated: Return type of DebugPDOStatement::bindValue($pos, $value, $type = PDO::PARAM_STR) should either be compatible with PDOStatement::bindValue(string|int $param, mixed $value, int $type = PDO::PARAM_STR): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/DebugPDOStatement.php on line 119\nDeprecated: Return type of DebugPDOStatement::execute($input_parameters = null) should either be compatible with PDOStatement::execute(?array $params = null): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/DebugPDOStatement.php on line 97\nDeprecated: Return type of DebugPDO::exec($sql) should either be compatible with PDO::exec(string $statement): int|false, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/DebugPDO.php on line 309\nFatal error: Declaration of DebugPDO::query() must be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs): PDOStatement|false in /audit/app/vendor/propel/util/DebugPDO.php on line 330\n"
+    },
+    {
+      "runtime": "83",
+      "tree": "candidate",
+      "returncode": 0,
+      "stdout": "{\"php\":\"8.3.6\",\"results\":[{\"case\":\"unspecified\",\"class\":\"DebugPDO\",\"emulate\":true,\"stringify\":false,\"stringify_readback\":null,\"error_mode\":2,\"row\":{\"n\":42,\"f\":1.25,\"nullable\":null,\"charset\":\"utf8mb4\"},\"hydrated\":{\"id\":\"1_synthetic\",\"views\":42,\"partner_id\":42,\"name\":null}},{\"case\":\"constructor-native\",\"class\":\"DebugPDO\",\"emulate\":false,\"stringify\":false,\"stringify_readback\":null,\"error_mode\":2,\"row\":{\"n\":42,\"f\":1.25,\"nullable\":null,\"charset\":\"utf8mb4\"},\"hydrated\":{\"id\":\"1_synthetic\",\"views\":42,\"partner_id\":42,\"name\":null}},{\"case\":\"attribute-native\",\"class\":\"DebugPDO\",\"emulate\":false,\"stringify\":false,\"stringify_readback\":null,\"error_mode\":2,\"row\":{\"n\":42,\"f\":1.25,\"nullable\":null,\"charset\":\"utf8mb4\"},\"hydrated\":{\"id\":\"1_synthetic\",\"views\":42,\"partner_id\":42,\"name\":null}},{\"case\":\"attribute-stringify\",\"class\":\"DebugPDO\",\"emulate\":true,\"stringify\":true,\"stringify_readback\":null,\"error_mode\":2,\"row\":{\"n\":\"42\",\"f\":\"1.25\",\"nullable\":null,\"charset\":\"utf8mb4\"},\"hydrated\":{\"id\":\"1_synthetic\",\"views\":42,\"partner_id\":42,\"name\":null}}]}\n",
+      "stderr": "Deprecated: Return type of PropelConfiguration::offsetExists($offset) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/PropelConfiguration.php on line 60\nDeprecated: Return type of PropelConfiguration::offsetGet($offset) should either be compatible with ArrayAccess::offsetGet(mixed $offset): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/PropelConfiguration.php on line 76\nDeprecated: Return type of PropelConfiguration::offsetSet($offset, $value) should either be compatible with ArrayAccess::offsetSet(mixed $offset, mixed $value): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/PropelConfiguration.php on line 68\nDeprecated: Return type of PropelConfiguration::offsetUnset($offset) should either be compatible with ArrayAccess::offsetUnset(mixed $offset): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/PropelConfiguration.php on line 84\nDeprecated: Return type of PropelPDO::beginTransaction() should either be compatible with PDO::beginTransaction(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/PropelPDO.php on line 123\nDeprecated: Return type of PropelPDO::commit() should either be compatible with PDO::commit(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/PropelPDO.php on line 139\nDeprecated: Return type of PropelPDO::getAttribute($attribute) should either be compatible with PDO::getAttribute(int $attribute): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/PropelPDO.php on line 225\nDeprecated: Return type of PropelPDO::prepare($sql, $driver_options = []) should either be compatible with PDO::prepare(string $query, array $options = []): PDOStatement|false, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/PropelPDO.php on line 244\nDeprecated: Return type of PropelPDO::rollBack() should either be compatible with PDO::rollBack(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/PropelPDO.php on line 161\nDeprecated: Return type of PropelPDO::setAttribute($attribute, $value) should either be compatible with PDO::setAttribute(int $attribute, mixed $value): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/PropelPDO.php on line 206\nDeprecated: Return type of DebugPDOStatement::bindValue($pos, $value, $type = PDO::PARAM_STR) should either be compatible with PDOStatement::bindValue(string|int $param, mixed $value, int $type = PDO::PARAM_STR): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/DebugPDOStatement.php on line 119\nDeprecated: Return type of DebugPDOStatement::execute($input_parameters = null) should either be compatible with PDOStatement::execute(?array $params = null): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/DebugPDOStatement.php on line 97\nDeprecated: Return type of DebugPDO::exec($sql) should either be compatible with PDO::exec(string $statement): int|false, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/DebugPDO.php on line 309\nDeprecated: Return type of DebugPDO::query(...$args) should either be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs): PDOStatement|false, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/DebugPDO.php on line 330\n"
+    }
+  ],
+  "harness_hashes": {
+    "mysql-init.php": "c064440accec7ad901301877ad2587e39d9c2d85dfcdeb5f4db9acb0c16d3655",
+    "run-mysql-types.sh": "9ab71340cf7fe09991e364d8ffc7788a6eeabacdb113f67e41af76a3e0f9e0fa"
+  },
+  "source_patch": "held/DebugPDO-query-v3.json",
+  "runtime_provenance": "../mysql-types/runtime-inputs.txt (v2 source hash superseded by v3)",
+  "comparisons": [
+    {
+      "runtime": "74",
+      "tree": "original",
+      "case": "unspecified",
+      "raw_matches_74": true,
+      "hydrated_matches_74": true,
+      "emulate_and_error_mode_match_74": true
+    },
+    {
+      "runtime": "74",
+      "tree": "original",
+      "case": "constructor-native",
+      "raw_matches_74": true,
+      "hydrated_matches_74": true,
+      "emulate_and_error_mode_match_74": true
+    },
+    {
+      "runtime": "74",
+      "tree": "original",
+      "case": "attribute-native",
+      "raw_matches_74": true,
+      "hydrated_matches_74": true,
+      "emulate_and_error_mode_match_74": true
+    },
+    {
+      "runtime": "74",
+      "tree": "original",
+      "case": "attribute-stringify",
+      "raw_matches_74": true,
+      "hydrated_matches_74": true,
+      "emulate_and_error_mode_match_74": true
+    },
+    {
+      "runtime": "74",
+      "tree": "candidate",
+      "case": "unspecified",
+      "raw_matches_74": true,
+      "hydrated_matches_74": true,
+      "emulate_and_error_mode_match_74": true
+    },
+    {
+      "runtime": "74",
+      "tree": "candidate",
+      "case": "constructor-native",
+      "raw_matches_74": true,
+      "hydrated_matches_74": true,
+      "emulate_and_error_mode_match_74": true
+    },
+    {
+      "runtime": "74",
+      "tree": "candidate",
+      "case": "attribute-native",
+      "raw_matches_74": true,
+      "hydrated_matches_74": true,
+      "emulate_and_error_mode_match_74": true
+    },
+    {
+      "runtime": "74",
+      "tree": "candidate",
+      "case": "attribute-stringify",
+      "raw_matches_74": true,
+      "hydrated_matches_74": true,
+      "emulate_and_error_mode_match_74": true
+    },
+    {
+      "runtime": "83",
+      "tree": "candidate",
+      "case": "unspecified",
+      "raw_matches_74": false,
+      "hydrated_matches_74": true,
+      "emulate_and_error_mode_match_74": true
+    },
+    {
+      "runtime": "83",
+      "tree": "candidate",
+      "case": "constructor-native",
+      "raw_matches_74": true,
+      "hydrated_matches_74": true,
+      "emulate_and_error_mode_match_74": true
+    },
+    {
+      "runtime": "83",
+      "tree": "candidate",
+      "case": "attribute-native",
+      "raw_matches_74": true,
+      "hydrated_matches_74": true,
+      "emulate_and_error_mode_match_74": true
+    },
+    {
+      "runtime": "83",
+      "tree": "candidate",
+      "case": "attribute-stringify",
+      "raw_matches_74": true,
+      "hydrated_matches_74": true,
+      "emulate_and_error_mode_match_74": true
+    }
+  ]
+}

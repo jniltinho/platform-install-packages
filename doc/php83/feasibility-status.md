@@ -298,3 +298,11 @@ named-SQL logging, 33 offline tests and eight JSON comparisons pass. Repeated
 MariaDB tests preserve the same known numeric-type difference; no waiver or
 global connection setting was added. V3 is not in the active ZIP. See the
 DebugPDO experiment document and `evidence/debug-pdo/v3/`.
+
+The [Propel initialization/hydration probe](propel-init-hydration.md) exercises
+the actual connection factory, MySQL adapter and generated Baseentry hydration
+with synthetic parameters. Unspecified connection options reproduce the raw
+numeric-type difference. Constructor/post-construction native options and
+stringify options are honored; selected hydrated integer fields match in all
+four cases. This is not effective live-configuration or full API validation.
+PDO7.4's unsupported stringify-attribute readback is explicitly recorded.
