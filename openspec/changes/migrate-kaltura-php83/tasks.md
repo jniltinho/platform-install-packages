@@ -167,3 +167,9 @@ T1-01/T1-03 partial: held ActionReflector parameter-class resolver matches nativ
 and same-runtime serialized hashes. Uppercase SELF failure was corrected with
 the control retained; class-plus-scalar unions handled as native. ZIP/API/shared
 cache integration remains pending. See `doc/php83/reflection-parameter-repair.md`.
+
+T1-01/T1-02 partial integration: separate thirteen-patch exp6 ZIP adds the tested
+parameter-reflection repair. Actual SQL/HTTP/trusted-TLS and focused CLI parity
+remain equal to baseline; exactly 84 reflection events disappear, leaving 33
+groups/847 events. Independent reruns and byte identities are recorded in
+`doc/php83/exp6-reflection-integration.md`. Full acceptance remains open.

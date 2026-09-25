@@ -1,0 +1,26 @@
+1. Executei os três comandos um após o outro, com uso exclusivo dos fixtures. Nenhum usou `-O`, e o único arquivo gravado foi a evidência pedida.
+2. `collect.py` terminou com exit 0 e stderr vazio. O relatório tem `functional_checks_passed=true`, e exp5 e exp6 coincidem com o original do 7.4 tanto no 7.4 quanto no 8.3. A unidade de banco `php83-exp6-api-60e1…` ficou `inactive`, ou seja, foi limpa.
+3. `batch.py` retornou exit 0 no baseline74 e exit 0 no php83, com stderr vazio nos dois. Os dois hosts confirmaram o ZIP `da11cbb9cc58…` com os 15190 arquivos extraídos.
+4. Conferi todas as 48 linhas de runtime, 24 por runtime. Todas são byte a byte idênticas às do Codex em exit, stdout e stderr, e os hashes do harness também batem.
+5. Os controles de fatal no original83 funcionaram como esperado:
+   - **Runtime:** `legacy-json` e `zend-json` saíram com exit 255 e "curly brace offset" em `Services_JSON.class.php` e `Zend/Json/Encoder.php`, nos perfis standard e minimal.
+   - **API:** o original83 retornou rc=1, com o fatal de assinatura em `KalturaPDO.php:188`.
+6. No exp6 nenhuma linha teve fatal. O stdout é igual ao original do 7.4, com duas exceções:
+   - no `doc-comment-export`, mudam só `producer_php` e `source_sha256`, que corresponde ao `after_sha256` do patch de DocComment; o payload é idêntico;
+   - no `environment`, muda só a lista de módulos, diferença esperada entre versões do PHP.
+7. Deprecations que ainda aparecem no exp6 com 8.3:
+   - uma propriedade dinâmica em `Services_JSON::$use` e 13 em `Zend_Json_Decoder::$_tokenValue`;
+   - no consumer: `libxml_disable_entity_loader`, os tipos de retorno de `Zend_Config` (Iterator/Countable), o parâmetro opcional antes de obrigatório em `KalturaEntryService.php:1836`, `Serializable` em Aws/RefreshableRole, e três avisos "Missing host or port", que também saem no 7.4.
+8. Diagnósticos da API de exp5 para exp6:
+   - **8.3:** caíram de 931 ocorrências em 35 locais para 847 em 33. Saíram apenas `KalturaActionReflector.php:129` (74 ocorrências) e `:153` (10). Nada foi adicionado nem alterado.
+   - **7.4:** delta zero.
+9. Todos os 12 registros da API tiveram stdout dentro da lista permitida. Procurei por KS no JSON gravado e não encontrei nenhum token, e o stderr bruto ficou só como hash.
+10. Revisão do trabalho do Codex:
+    - o relatório de API chega aos mesmos rc, contagens e controles que obtive;
+    - o manifest lista 13 patches, e todos os sha256 conferem com os arquivos em `patches/php83/`;
+    - o hash do manifest (`be8493a5…`) é o mesmo registrado em `verification.json`, que declara dois builds idênticos e nenhuma entrada perdida.
+11. Limitações:
+    - esta é uma rodada só do Claude; Grok/OpenCode e Cursor não participaram, então a exigência de revisão rotativa do AGENTS.md ainda está em aberto;
+    - não reexecutei os 122 testes locais do Codex;
+    - o escopo cobre Apache mod_php, SQL sintético e CLI focado, sem AIO/FPM, cache, mídia, distro, desempenho ou recuperação.
+12. Estes resultados não são aceitação completa da aplicação e não autorizam pacote, release nem `.20`. Os novos arquivos `claude*` ficaram sem commit, como pedido.

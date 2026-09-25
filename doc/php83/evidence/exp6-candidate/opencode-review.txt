@@ -1,0 +1,23 @@
+Fallback checks in progress — running local tests and reviewing evidence.
+Tests passed — now reviewing the validation evidence.
+Evidence reviewed — now checking exp6 safety scope.
+Safety review nearly done — final comparison of exp6 against exp5.
+Grok executor timed out (exit 124) and is recorded as NOT_EXECUTED; this is OpenCode/Zen Muse Spark 1.3 Free fallback execution only, with no VM calls, writes, commits, or publish.
+
+Local command `python3 -m unittest discover -s tools/php83 -p "test_*.py"` in `/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83` ran 122 tests in 0.070s with OK and exit 0.
+
+Independently reviewed codex.json and claude.json: identical artifact `da11...` (15190 files) vs previous `ef4d...` (15189), same pinned harness/helpers, owned synthetic DB units cleaned (inactive/stopped), and whitelisted stdout sha `787d...` across original/exp5/exp6 on PHP 7.4.
+
+comparison.json shows all six independent rows equal true, with PHP74 original retaining 1 group/6 events (dateUtils) versus zero for exp5/exp6, and PHP83 exp6 at 33 groups/847 events versus exp5 35/931 and original 15/15.
+
+Only delta is removal of two KalturaActionReflector diagnostic groups (line 129 count 74, line 153 count 10) with no new_or_changed_groups, consistent with native-compatible parameter reflection repair.
+
+parity.json covers 48 logical rows (44 zero exits, 4 expected original-83 fatals, 24 candidate exit0), all 20 typed comparisons equal true, and both independents report all_24_rows_equal_except_duration true with fixture hashes verified.
+
+manifest.json revision exp6 is explicitly thirteen-patch experimental (exp5 plus KalturaActionReflector-parameter-class) with status “no full acceptance”.
+
+exp6-api safety relative to exp5 is preserved: collect.py diff only retargets ROOT/unit/tree names and scope string, retaining refuse-overwrite, exclusive owned synthetic DB, expected-stdout whitelist, signature-failure control, and cleanup-stop gate; verify-source.py pins zip sha with traversal/symlink checks.
+
+Remaining gaps: both evidence files set application_acceptance false; scope is synthetic SQL plus Apache HTTP/trusted HTTPS on actual exp6 ZIP web/index.php only, not AIO/FPM, integrated API/CLI, cache/framework/media/distro/performance/recovery, or production package/CI/release/.20.
+
+These narrow parity signals do not constitute full acceptance and release remains gated.

@@ -1,0 +1,62 @@
+{
+  "independent_rows": [
+    {
+      "runtime": "74",
+      "tree": "original",
+      "independent_equal": true,
+      "diagnostic_groups": 1,
+      "diagnostic_events": 6
+    },
+    {
+      "runtime": "74",
+      "tree": "exp5",
+      "independent_equal": true,
+      "diagnostic_groups": 0,
+      "diagnostic_events": 0
+    },
+    {
+      "runtime": "74",
+      "tree": "exp6",
+      "independent_equal": true,
+      "diagnostic_groups": 0,
+      "diagnostic_events": 0
+    },
+    {
+      "runtime": "83",
+      "tree": "original",
+      "independent_equal": true,
+      "diagnostic_groups": 15,
+      "diagnostic_events": 15
+    },
+    {
+      "runtime": "83",
+      "tree": "exp5",
+      "independent_equal": true,
+      "diagnostic_groups": 35,
+      "diagnostic_events": 931
+    },
+    {
+      "runtime": "83",
+      "tree": "exp6",
+      "independent_equal": true,
+      "diagnostic_groups": 33,
+      "diagnostic_events": 847
+    }
+  ],
+  "removed": [
+    {
+      "severity": "ApplicationDiagnostic",
+      "path": "/audit/app/api_v3/lib/reflection/KalturaActionReflector.php",
+      "line": 129,
+      "count": 74
+    },
+    {
+      "severity": "ApplicationDiagnostic",
+      "path": "/audit/app/api_v3/lib/reflection/KalturaActionReflector.php",
+      "line": 153,
+      "count": 10
+    }
+  ],
+  "new_or_changed_groups": [],
+  "application_acceptance": false
+}

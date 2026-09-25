@@ -1,0 +1,14 @@
+Ask mode impede escrever o JSON de saída; vou revisar manifest/patch/harness (exp6 vs exp5) e inspecionar o verificador e os artefatos em modo somente leitura. Em seguida indico o que falta para a execução.Ask mode bloqueia gravar o JSON pedido; vou validar só em leitura (hashes/identidades) e comparar exp6 com exp5.Hashes batem com `verification.json`; vou rodar a lógica do verificador só em stdout (Ask mode) e comparar patch/harness com exp5.Verificação do ZIP deu **exit 0**; o path pedido `/tmp/php83-exp6/cursor-verification.json` **não foi gravado** (Ask mode) — identidades batem com `doc/php83/evidence/exp6-candidate/verification.json`.
+
+1. Comando efetivo: `python3 tools/php83/verify-experimental-zip.py` com original `/tmp/kaltura-php83-audit/Rigel-18.20.0.zip`, candidate/repeat nos ZIPs `…-artifacts/exp6/` e `exp6-repeat/`, manifest `doc/php83/evidence/exp6-candidate/manifest.json` (saída via `/dev/stdout` por Ask mode); **exit 0**.
+2. Identidades: upstream `58d534d09b3b75c9…`, ZIP/repeat `da11cbb9cc58e4e6…` (`cmp` idêntico), manifest `be8493a533d56104…`, builder `055443730325459f…`, verifier `211a0c187a53e444…`; `cursor-verification.json` ausente.
+3. Executor desta checagem: Cursor Agent (somente leitura + verify local); sem SSH/VM nem edição de fonte.
+4. Manifest exp6 = revisão `exp6`, 13 patches (“exp5 plus native-compatible parameter reflection; no full acceptance”); único delta vs exp5 é `KalturaActionReflector-parameter-class.patch` (`fb62c56fcf79b6de…`).
+5. Os 12 patches compartilhados com exp5 têm `before`/`after`/`patch` SHA idênticos ao ZIP exp5 `ef4d3e67c077014b…`.
+6. O patch de reflection troca dois `ReflectionParameter::getClass()` por `getParameterClass()` (named/union com um class component; `self`/`parent` case-insensitive); zero `->getClass(` restam no arquivo do ZIP.
+7. Limite concreto do patch: uniões com duas classes, intersections e DNF retornam `null` de propósito — não há suporte geral a union types na API.
+8. Harness exp6 é retarget de exp5 (paths `php-exp6-regression`, SHA `da11…`); `collect.py`/`run-apache.sh` ainda **exigem** tree pré-staged em `/home/vagrant/php-exp5-regression` (acoplamento operacional).
+9. Defeito/cobertura do harness CLI: `exp6-regression/batch.py` compara só `original`/`exp6` (exp5 some do matriz CLI); a matriz API ainda cobre `original`/`exp5`/`exp6`.
+10. Defeito documental: `doc/php83/reflection-parameter-repair.md` ainda diz que o patch está **held / not yet integrated**, contradizendo o ZIP exp6.
+11. Evidência pré-existente (não reexecutada aqui): API Codex/Claude `functional_checks_passed=true` e `application_acceptance=false`; runtime 8.3 só difere do original nos casos JSON esperados; redução dos ~84 `getClass` históricos da API exp5 **não** é medida por esta verificação de ZIP.
+12. Gates abertos permanecem (cache/framework/media/distro/perf/recovery, AIO/FPM, package/CI/`.20`); este resultado **não** é aceitação da aplicação.

@@ -215,3 +215,12 @@ upgrade/recovery rehearsal. Small passing probes do not close these gaps.
    unused code.
 3. Execute **T0-05**: finish comparable baseline fixture/run evidence and the
    frozen workload. VM ownership and existing isolation/approval gates apply.
+
+## exp6 reflection integration (partial)
+
+Separate reproducible thirteen-patch ZIP integrates the parameter reflection
+repair. Actual API/SQL/HTTP/trusted-HTTPS contracts are preserved; diagnostics
+fall from 35 groups/931 events to 33 groups/847 events, with only the two
+reflection locations removed. Focused CLI candidate rows preserve baseline
+outputs. See [exp6 evidence](exp6-reflection-integration.md). Aggregate acceptance
+remains 0/24, detailed tasks 3/27; this bounded integration closes no full case.

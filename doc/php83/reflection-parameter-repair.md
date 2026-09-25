@@ -4,8 +4,11 @@ Candidate patch: `patches/php83/held/KalturaActionReflector-parameter-class.patc
 It replaces two deprecated `ReflectionParameter::getClass()` calls with one
 scoped resolver using type reflection, then reuses that result. No error-policy,
 property, parameter default, authorization or serialized-format change is selected.
-The original exp5 ZIP remains unchanged; the patch is **held**, not yet integrated
-into another ZIP or the SQL/HTTP/TLS matrix.
+The original exp5 ZIP remains unchanged. This page records the held-patch
+validation before integration. The subsequent separate
+[exp6 experiment](exp6-reflection-integration.md) integrates it and records actual
+SQL/HTTP/TLS and CLI execution; its storage under `held/` does not imply release
+approval or promotion into the active exp2 manifest.
 
 ## Native observations changed the implementation
 
@@ -97,7 +100,7 @@ reports and held patch. Local suite remains 122 tests; it does not contain new
 mocked tests for this collector. CLI outcomes and gaps are explicit in
 [`result.json`](evidence/reflection-repair/result.json).
 
-The next required check is integration into a separately versioned candidate and
-real API SQL/HTTP/trusted-TLS regression, plus actual service reflection/cache
-coverage. In-object cache reuse here is not APC/APCu persistence or cross-process
-invalidation. No claim is made that the historical 84 API events are already gone.
+The subsequent exp6 cycle measures removal of the 84 historical API reflection
+events in its bounded SQL/HTTP/trusted-TLS matrix. Actual shared service
+reflection/cache coverage remains required. In-object cache reuse here is not
+APC/APCu persistence or cross-process invalidation.
