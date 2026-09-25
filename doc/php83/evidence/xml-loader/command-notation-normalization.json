@@ -1,0 +1,36 @@
+{
+  "reason": "Initial git diff --cached --check flagged trailing whitespace in six CLI-generated command notation files. Trimmed only trailing whitespace; actual commands remain in sanitized native tool-call stream. Source/harness/runtime reports unchanged.",
+  "initial_diff_check_passed": false,
+  "changes": [
+    {
+      "path": "doc/php83/evidence/xml-loader/claude-native-runtime74-after.cmd",
+      "original_sha256": "3a93de0c0f45ff31707736117d06c18bb2accb2dd3c4932adaab9ed3ecc97b8a",
+      "normalized_sha256": "0fe5a2b4d32d4470e48b0d821c78258903fc7b80d703bc73165e792086399989"
+    },
+    {
+      "path": "doc/php83/evidence/xml-loader/claude-native-74.cmd",
+      "original_sha256": "96ece3f06e57c577d84e1fc1833ce7e36a850992d44b84a79e4e9fbac34b3c3f",
+      "normalized_sha256": "70aac745eecfa3bc6d6764f863425ce8727b4c29941c14afb31bd62ecad515d9"
+    },
+    {
+      "path": "doc/php83/evidence/xml-loader/claude-native-runtime83-after.cmd",
+      "original_sha256": "d640637487e212510b7f73f448e3c7bf1b1ed31f71253ef016ddaf8836d67733",
+      "normalized_sha256": "bf9210f5b0f5babf3595f3c11a684f0d51f2b0b27c3abbd60fe54321fd327365"
+    },
+    {
+      "path": "doc/php83/evidence/xml-loader/claude-native-runtime83-before.cmd",
+      "original_sha256": "70b9625416fee6a70b07324ce360a136d582b50c49dac1a19d76e53a78478aee",
+      "normalized_sha256": "10c2984fc12c6c44be047d50de874f5997ed86f05c61dbe84ac98c57baff907c"
+    },
+    {
+      "path": "doc/php83/evidence/xml-loader/claude-native-83.cmd",
+      "original_sha256": "be0f132158a7aa77c325db893d4b8c59388cabae09d46a51317ba4d1437bdf8f",
+      "normalized_sha256": "08615845bb6416211cca6f02552ba5e69c0184af91987c084190ea10492ac0be"
+    },
+    {
+      "path": "doc/php83/evidence/xml-loader/claude-native-runtime74-before.cmd",
+      "original_sha256": "700d6352b4719f138f9865ad59059dcb7bf7e689ce44a993070029d6fde72cd8",
+      "normalized_sha256": "8fd98e00cbd943539c29eeff77252481349d3f7c31042273407a6a850911e20d"
+    }
+  ]
+}
