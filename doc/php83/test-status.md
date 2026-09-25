@@ -7,16 +7,52 @@ and [execution contract](../../openspec/changes/migrate-kaltura-php83/design.md)
 ## Counts and boundaries
 
 - Original acceptance obligations: **0 of 24 complete**.
-- Detailed cases: **3 of 27 complete**, **1 partial (T4-01)**, **23 not yet executed under
-  the new case contract**. Older evidence is retained; NOT_RUN here does not mean
-  no historical investigation exists.
+- Detailed cases: **3 of 27 complete; 24 remain open**. Several open cases now
+  contain actual partial lab evidence; they must not be called wholly NOT_RUN or
+  fully accepted. Consult each case's scoped evidence in the detailed task list.
 - T0-01: **68 distinct local Python tests passed**, independently executed by
   Claude and Grok, with a Codex cross-check. Do not sum repeated runs into 204
   distinct tests. These include mocks and do not establish PHP runtime acceptance.
-- No new VM/application test, release, package integration or `.20` mutation in
-  this batch. No release ETA or application completion percentage is inferred.
+- The initial T0 batch below was local-only. Subsequent bounded application tests
+  ran in the isolated labs; no production/package/release acceptance follows.
+  No release ETA or application completion percentage is inferred.
 
-## Latest progress: held reflection compatibility repair
+## Current checkpoint: exp11 real-artifact regression
+
+Two identical exp11 ZIP builds select 63 source repairs. Codex and actual Claude
+independently compile all 11,784 PHP-family files per artifact: exp10 rejects11,
+exp11 rejects7; 66 accepted files still have diagnostics. The seven remaining
+rejections are not waived. [Build](exp11-candidate.md), [compiler evidence](exp11-syntax.md).
+
+The actual extracted artifact passes the bounded synthetic SQL/Apache HTTP and
+trusted-HTTPS contract against original74; the original83 PDO failure remains
+an expected control. API diagnostics remain **18 groups / 503 events**. Across
+the two labs,48 CLI rows comprise44 successful processes and4 expected original
+JSON compiler failures;20 typed candidate/baseline comparisons agree.68 class
+cases and17 additional repair processes also meet their exact contracts, including
+one expected duplicate-include fatal. Actual Claude repetitions reconcile; Cursor
+executes18 local guards and independent report comparison. Its outer CLI timeout
+after writing its checks/review is retained. [Runtime evidence](exp11-integration.md).
+
+## Current limits and negative findings
+
+- Riak alias-only repair is rejected: actual74/83 source execution still fails
+  at the resolved reserved parameter type; Cursor repeats the83 failure.
+  [Failed experiment](riak-alias.md). This does not change exp11 or remove Riak.
+- [Dependency attribution](dependency-attribution-followup.md) adds12 scoped
+  version declarations and14 partial license-evidence rows, not20 resolved bundles.
+- Full application/UI/media/worker acceptance, all-distro installation, extension
+  policy, cold/warm cache compatibility, performance and upgrade/recovery remain
+  open. Broad tasks are not closed by these bounded corpora.
+- Feasibility approval precedes production package/CI integration; release and
+  `.20` cutover have separate gates. No accepted PHP8.3 release exists from this work.
+
+## Historical evidence below
+
+The following snapshots preserve the state and counts at their recorded phase;
+they are not the current artifact, current test totals, or fresh authorization.
+
+## Historical checkpoint: held reflection compatibility repair
 
 Native controls caught two pitfalls: class-plus-scalar unions retain a class
 component, and SELF/PARENT matching is case-insensitive. The corrected resolver
@@ -24,7 +60,7 @@ matches 15/22 native cases and 17/24 real API-metadata cases on PHP 7.4/8.3,
 preserving same-runtime serialized parameter hashes. [Evidence and limits](reflection-parameter-repair.md).
 Not yet selected into a new ZIP or real SQL/HTTP/TLS matrix; no 84-event API reduction claimed.
 
-## Latest progress: exp5 null-only batch
+## Historical checkpoint: exp5 null-only batch
 
 Five one-line null-only repairs were integrated in a reproducible twelve-patch
 ZIP. Actual API/SQL/HTTP/trusted-HTTPS comparison removes exactly five groups /
@@ -32,14 +68,14 @@ ZIP. Actual API/SQL/HTTP/trusted-HTTPS comparison removes exactly five groups /
 41 actual-class edge cases and ten real SQL dependency cases pass before/after
 on both runtimes. [Evidence and limits](exp5-null-batch.md). No full acceptance.
 
-## Latest progress: remaining exp4 diagnostic triage
+## Historical checkpoint: remaining exp4 diagnostic triage
 
 All 40 observed groups / 1,073 events now have source-pinned candidate-cause
 accounting across seven categories. A read-only native reflection probe records
 22 contracts on PHP 7.4/8.3. This is bounded triage, not a complete static audit
 or acceptance of any warning. [Repair batches and required tests](exp4-diagnostic-triage.md).
 
-## Latest progress: exp4 actual ZIP integration
+## Historical checkpoint: exp4 actual ZIP integration
 
 A separately built seven-patch ZIP now runs the synthetic SQL/HTTP/trusted-HTTPS
 matrix alongside exp3. All candidate outputs match original 7.4; the 694 Criteria
@@ -47,7 +83,7 @@ null-alias events disappear while the other 40 groups / 1,073 events remain
 unchanged. Two builds are identical. [Artifact and integration evidence](exp4-candidate.md).
 This is not full application, distro, performance or release acceptance.
 
-## Latest progress: Criteria null-alias repair (held)
+## Historical checkpoint: Criteria null-alias repair (held)
 
 A new one-line explicit-null repair preserves eight alias contracts on real
 Criteria/Criterion classes under PHP 7.4/8.3. Four source/runtime rows agree;
@@ -55,7 +91,7 @@ three original-8.3 null-to-strlen diagnostics disappear while other warnings
 remain recorded. This is a fixture-boundary probe, not integrated SQL acceptance.
 [Patch, exact scope and next integration check](criteria-null-alias.md).
 
-## Latest progress: exp3 SQL / Apache / trusted TLS
+## Historical checkpoint: exp3 SQL / Apache / trusted TLS
 
 The actual ZIP now passes the bounded synthetic SQL/session HTTP + trusted HTTPS
 matrix on PHP 7.4 and 8.3; original 8.3 fails at the expected PDO declaration.
@@ -63,7 +99,7 @@ Claude independently executes the same matrix. Candidate 8.3 still has 41
 sanitized diagnostic groups / 1,767 events, so no full-case acceptance follows.
 [Results, isolation and remaining scope](exp3-api.md). Local suite: 122 tests.
 
-## Latest progress: actual exp3 runtime regression
+## Historical checkpoint: actual exp3 runtime regression
 
 The built ZIP now ran in both isolated labs: 48 rows, 44 zero exits and four
 expected original-8.3 JSON syntax controls. All 24 candidate rows exit zero;
@@ -71,7 +107,7 @@ expected original-8.3 JSON syntax controls. All 24 candidate rows exit zero;
 Cursor independently reran the corrected harness. PHP deprecations remain open,
 so no full acceptance checkbox is closed. [Evidence and diagnostic gaps](exp3-runtime.md).
 
-## Latest progress: integrated experimental source artifact
+## Historical checkpoint: integrated experimental source artifact
 
 The separate six-patch **exp3** ZIP was built twice with identical hashes and
 verified exact delta (six source changes, eight metadata additions). It preserves
@@ -83,7 +119,7 @@ The built ZIP has completed the first focused CLI matrix above. Bounded SQL/HTTP
 regression is now recorded above; full application regression remains pending; no original or detailed
 acceptance checkbox is closed.
 
-## Latest progress: configuration cache over Apache
+## Historical checkpoint: configuration cache over Apache
 
 Four original-source HTTP rows passed (7.4/8.3 × original/test-only aliases),
 independently rerun by Claude and Cursor. The alias fixture demonstrates real
@@ -95,7 +131,7 @@ This does not approve production cache activation or resolve counter failures.
 tests pass; full local suite is **119 tests**. Case/parent counts remain unchanged.
 The next integrated experiment is a six-patch exp3 ZIP; no release claim.
 
-## Latest progress: APC/APCu application cache
+## Historical checkpoint: APC/APCu application cache
 
 Original wrapper controls reproduce `init=false` on both 7.4 and 8.3 CLI: an
 existing baseline gap, not a newly proven migration regression. A fixture-only
@@ -109,7 +145,7 @@ OpenCode reviewed and ran the 109-test local suite successfully.
 [Cache investigation, evidence and next actions](apcu-cache.md). These are partial
 T1-03/T4-01 findings; detailed and original completion counts are unchanged.
 
-## Latest progress: real provider SAPIs (partial T4-01)
+## Historical checkpoint: real provider SAPIs (partial T4-01)
 
 CLI and real HTTP GET/POST/invalid-POST probes passed for Noble native 8.3.6,
 Resolute Sury 8.3.35 and Rocky Remi 8.3.35. Claude independently reran Noble/Remi;

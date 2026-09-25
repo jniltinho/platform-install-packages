@@ -1,7 +1,22 @@
-# PHP 8.3 feasibility — initial preparation
+# PHP 8.3 feasibility — status and historical preparation
 
 Date: 2026-09-25. Branch: `proposal/migrate-kaltura-php83`.
 This is partial evidence, **not a compatibility or migration approval**.
+
+## Current evidence boundary
+
+The current experimental checkpoint is exp11, not the initial runtime-only lab
+state described below. [Test status](test-status.md) links the reproducible ZIP,
+whole-source compiler and independently repeated bounded API/CLI evidence.
+Seven compiler rejections and18 API diagnostic groups remain; complete
+application/distro/performance/recovery acceptance and production integration
+approval are still open. [Dependency attribution](dependency-attribution-followup.md)
+is partial, and the [Riak alias-only experiment](riak-alias.md) was rejected.
+No go/no-go or release approval is implied by a successful bounded experiment.
+
+The sections below are chronological historical observations. Statements such as
+"no application installed" or "no task complete" refer to their original phase,
+not to the later lab executions and three completed detailed support cases.
 
 ## Operator request and isolation
 
