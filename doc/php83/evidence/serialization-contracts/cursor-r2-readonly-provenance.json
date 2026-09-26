@@ -1,0 +1,7 @@
+{
+  "raw_sha256": "55e8d7e09afd5eddb5be7bcd9bca47fcc5250baf32d8f037cd732a58b9d8edc8",
+  "public_sha256": "6c4355e6435ea2976dd29ad1037762944a26fcff5dd3ac250e884c3f1cea631e",
+  "cli_exit": 0,
+  "scope": "Source-only, no independent tests or native execution",
+  "policy": "Public terminal result fields only; no hook history or hidden reasoning."
+}

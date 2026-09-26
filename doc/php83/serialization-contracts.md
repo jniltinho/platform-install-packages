@@ -144,3 +144,81 @@ stage. Runtime snapshot command remains the unchanged public helper
 `doc/php83/evidence/exp10-runtime/snapshot-php83.py` to new evidence outputs.
 An independent review of this execution wrapper and 19 local tests must finish
 before any VM use. No denied `/tmp` object is an input to this work.
+
+## R2 consolidated follow-up — PREPARED_ONLY, authorization blocked
+
+R1 source/harness/reports remain unchanged at checkpoint 0e46d5e2. R2 adds a
+write-time guard in three bridges: false/non-string legacy payload throws the
+same native83 Exception class/message before any O envelope is returned. All six
+concrete classes in this bounded family return string or false; external custom
+subclasses returning null are not accepted (native Serializable permits null).
+This is not a generic Serializable migration helper.
+
+A separate fourth patch only swaps two arguments in Doctrine FileCache's implode.
+Three native83 trees isolate this dependency: original, FileCache fix only, and
+FileCache fix + guarded AWS bridges. Patch hashes/families are separately recorded
+in patches/php83/held/serialization-contracts/manifest.json. No framework
+replacement, legacy method/property/cache path or backend changes.
+
+One consolidated native batch is prepared: **38 original74 + 96 native83**
+observations, in that order. Original74 emits six real C payloads, tests legacy
+and O cross-import, and exercises unmodified real FilesystemCache. Native83 adds
+original74 C readers plus three isolated cache variants. Cache cases: hit,
+expired, corrupt wire, refresh-hit, refresh-miss, invalidUTF save-time failure,
+recorded C and recorded O input. Real Doctrine FilesystemCache and Guzzle
+DoctrineCacheAdapter are used; expiry refresh uses real CacheableCredentials and
+seeded local credentials, never role/metadata network calls or fake backends.
+
+Each cache process gets systemd PrivateTmp and a fixed synthetic cache folder;
+variants never share a writable cache. Raw cache file bytes are base64/hash
+(sentinels only); metadata namespace writes are distinguished from target-object
+writes. InvalidUTF must leave target absent. Cross-import cache files are seeded
+from recorded native83 payloads and labelled accordingly, not fabricated74 output.
+Native83 also consumes real original74 wires from the preceding report. Old83
+implode failure remains an explicit control, not whole-cache acceptance.
+
+New guarded runner supports only native83/baseline74 hosts; on74 it refuses all
+but original and explicitly loads pinned JSON with -n. Full stage and both
+runtime-library sets are checked before/after. Private /tmp is the only extra
+PHP-readable writable fixture path. No app config, API/SQL or real credentials.
+STS/profile external refresh, mixed-version cache isolation/rollback and installed
+application remain open gates even if bounded contracts pass.
+
+
+### R2 checkpoint status and read-only review
+
+- Fifteen authorial offline tests pass. No R2 native execution or independent
+  test execution occurred. The 38/96 counts are planned, not passed cases.
+- Actual OpenCode read source but its test shell operation redirected output to
+  `/tmp/opencode-r2-tests.*` and was denied. CLI exit0 is not a review/test pass.
+  That operation was not retried or routed through another executor.
+- Separate work reported denied reads of the two `/tmp/kaltura-php*-ssh.conf`
+  files. No dependent VM operation will be attempted until explicitly authorized.
+  These are specific denials, not evidence that every `/tmp` path was denied.
+- Actual Cursor source-only review completed exit0 with no shell/tests/VM calls.
+  Its public findings remain retained, not interpreted as runtime approval.
+
+Read-only findings to adjudicate before acceptance: the copied native failure
+message mentions NULL although the bounded bridge rejects null from unsupported
+custom subclasses; the guard in the unextended NullCredentials class is redundant
+(but external overrides are not exhaustively inventoried); cache original83 fails
+at namespace/implode before UTF-8 serialization, intentionally isolated by the
+**cachefix-only** control and not attributed as an UTF-8 failure. The happy-path
+C/O import reference is explicitly R1 native83, while original74 produces its own
+pending C records. No file/cache/exception contract is accepted just from source.
+The PHP7.4 reader outcome is still unexecuted, despite the known PHP8.3 rollback
+failure. Absolute existing-source paths are preparation dependencies, not portable
+installation commands.
+
+Next action requires explicit authorization for the denied operations, then
+independent guard execution and the original74/native83 primary+repeat matrix
+on fresh immutable stages. Cache namespace/rollback design, external subclass
+null policy and all installed-application gates remain unresolved. R2 tools,
+held patches, manifest and local preparation are frozen at this checkpoint;
+there is no artifact selection, package build or deployment.
+
+An additional authorial offline rerun during checkpoint preparation is retained
+separately as `r2-final-author-tests.*` and `r2-final-shell.*`. It is **not** a
+substitute for, authorization of, or independent validation of the denied
+OpenCode operation. No further tests or runtime operations were attempted after
+the coordinator's final freeze instruction.

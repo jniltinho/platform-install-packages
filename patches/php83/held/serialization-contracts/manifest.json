@@ -1,0 +1,47 @@
+{
+  "status": "HELD_R2_UNTESTED",
+  "selected": false,
+  "changes": [
+    {
+      "path": "vendor/aws/Aws/Common/Credentials/Credentials.php",
+      "operation": "modify",
+      "family": "aws-credential-magic-bridge",
+      "before_sha256": "033b5c890519270b14536db4b93ca260d071554b2afc8a6d2b96d0397ca4da90",
+      "after_sha256": "7913bbb5ddd1d57a2935014c4e259ac03e063c97fa90ee4b4ac177e2b52fb5d2",
+      "patch": "patches/php83/held/serialization-contracts/Credentials.patch",
+      "patch_sha256": "f2b27b8552951a920b894c2544e2990130f5ae4bea64546171cd4663f3b320a0"
+    },
+    {
+      "path": "vendor/aws/Aws/Common/Credentials/NullCredentials.php",
+      "operation": "modify",
+      "family": "aws-credential-magic-bridge",
+      "before_sha256": "d44d7e14527c4c0aad730d03973969890e3741655667999d586596a485107c53",
+      "after_sha256": "294481b0f57b9d1c8a446479babf9899d722d65e7c6553c25b19c6b98b06f741",
+      "patch": "patches/php83/held/serialization-contracts/NullCredentials.patch",
+      "patch_sha256": "349fc9bb5e8d29765b904e8c7ef853e5fddc8a5a024da4baff0c1370048920be"
+    },
+    {
+      "path": "vendor/aws/Aws/Common/Credentials/AbstractCredentialsDecorator.php",
+      "operation": "modify",
+      "family": "aws-credential-magic-bridge",
+      "before_sha256": "e7e265a862684685f90d7911bfc0367ceacf23710108b4e3846322cbba896375",
+      "after_sha256": "1a9fd1dbead188bacc82fd3b1348b5023042fb31b61c8735d0f90a2e98195b4d",
+      "patch": "patches/php83/held/serialization-contracts/AbstractCredentialsDecorator.patch",
+      "patch_sha256": "923f125095643e09f63dba1a9c9eba2520f00b06ca3465672458bd6a1e7a966c"
+    },
+    {
+      "path": "vendor/aws/Doctrine/Common/Cache/FileCache.php",
+      "operation": "modify",
+      "family": "filecache-implode-order",
+      "before_sha256": "4df80a6c6d7e00689202bedd4cc9eaa152174f5026da99de6ae09be4eb91012a",
+      "after_sha256": "766142ffc63cfe53bb7009c68ca6efc20017d026337b28c6f22d1aff93e3a306",
+      "patch": "patches/php83/held/serialization-contracts/FileCache.patch",
+      "patch_sha256": "c3978a6707cad4c8e9a08c2cc24e0b4f626fef544e15ac17bf98efb48b79c2da"
+    }
+  ],
+  "limitations": [
+    "O incompatible with unchanged C-only readers",
+    "external subclasses returning null not accepted",
+    "mixed-version cache rollout unresolved"
+  ]
+}

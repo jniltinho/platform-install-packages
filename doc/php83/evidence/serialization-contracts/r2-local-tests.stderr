@@ -1,0 +1,20 @@
+test_argument_order (__main__.Guards.test_argument_order) ... ok
+test_bool_rejected (__main__.Guards.test_bool_rejected) ... ok
+test_dual_runtime (__main__.Guards.test_dual_runtime) ... ok
+test_duplicate (__main__.Guards.test_duplicate) ... ok
+test_float_rejected (__main__.Guards.test_float_rejected) ... ok
+test_four_changes (__main__.Guards.test_four_changes) ... ok
+test_guard_before_envelope (__main__.Guards.test_guard_before_envelope) ... ok
+test_missing (__main__.Guards.test_missing) ... ok
+test_one_cachefix (__main__.Guards.test_one_cachefix) ... ok
+test_original_only74 (__main__.Guards.test_original_only74) ... ok
+test_private_cache (__main__.Guards.test_private_cache) ... ok
+test_stage_hashes (__main__.Guards.test_stage_hashes) ... ok
+test_three_bridge_targets (__main__.Guards.test_three_bridge_targets) ... ok
+test_wire_format (__main__.Guards.test_wire_format) ... ok
+test_wire_hash (__main__.Guards.test_wire_hash) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.005s
+
+OK

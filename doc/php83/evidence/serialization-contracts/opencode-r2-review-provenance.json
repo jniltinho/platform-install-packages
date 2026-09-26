@@ -1,0 +1,10 @@
+{
+  "raw_sha256": "941dacca5098f6bffa6aa7d6fd3164323288966c9aca6851daf31d677c0c645c",
+  "public_sha256": "a86990e379b0d50999a9894b784b255c52894b2af3e888160e674ffc7f7c6c26",
+  "cli_exit": 0,
+  "status": "BLOCKED_TEST_EXECUTION_NO_COMPLETED_REVIEW",
+  "denied_operation": "OpenCode bash test_r2 redirected stdout/stderr/exit to /tmp/opencode-r2-tests.*",
+  "tests_executed_by_independent_cli": false,
+  "retry": false,
+  "policy": "Current tool inputs/status/errors and source output hashes only; no reasoning, unrelated root listing or hook history."
+}
