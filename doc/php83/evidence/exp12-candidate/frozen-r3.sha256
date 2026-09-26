@@ -1,0 +1,7 @@
+83d5b91183923fbc134149b0e266ef9a07fdcbc0d60439857e5082307018d623  tools/php83/exp12-candidate/prepare.py
+e782de843a4f56a5e929c77291e6d152fcb93ae8d525e83b9f6859b7995494e4  tools/php83/exp12-candidate/test_prepare.py
+dfe44db55a34c7ed439d95d82c7565020496f9a32df64f52bbc70e392eaa19a6  doc/php83/evidence/exp12-candidate/draft-manifest-r3.json
+9cb9e1c03d14ed377e94b35b92fc71ae614f87b0f9006739f2128cb7a45fb409  doc/php83/evidence/exp12-candidate/preflight-r3.json
+6c02aacff6f518825a9ed999174ca96ad4d625d94c890f158874d3b8e8f1f9df  doc/php83/evidence/exp12-candidate/Criteria-dynamic-hierarchy.patch
+70c4663a89e99a9cda7f1e2dcf92f5a0e7529390a983848b0a1e56816f8e28c2  doc/php83/evidence/exp12-candidate/local-tests-r3.log
+9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa  doc/php83/evidence/exp12-candidate/local-tests-r3.exit

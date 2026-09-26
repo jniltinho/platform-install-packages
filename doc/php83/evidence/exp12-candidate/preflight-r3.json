@@ -1,0 +1,467 @@
+{
+  "status": "DRAFT_PENDING_CRITERIA_COMPOSITION_NOT_SELECTED",
+  "targets": 65,
+  "criteria_exact_prior_plus_attribute": true,
+  "strict_replays": [
+    {
+      "path": "alpha/apps/kaltura/lib/Services_JSON.class.php",
+      "patch": "0002-Services_JSON.class.patch",
+      "exit": 0,
+      "after_sha256": "f8611508758756f0a2264cc1a7aa022d8a8af8d80a0abdeba49a9a30e23d1358",
+      "diagnostics": "patching file alpha/apps/kaltura/lib/Services_JSON.class.php\n"
+    },
+    {
+      "path": "vendor/ZendFramework/library/Zend/Json/Encoder.php",
+      "patch": "0003-Encoder.patch",
+      "exit": 0,
+      "after_sha256": "e74ee2fae9c48c2d99859ee0821f17293d2586e73a2ff9844ec530b2d6a5bf64",
+      "diagnostics": "patching file vendor/ZendFramework/library/Zend/Json/Encoder.php\n"
+    },
+    {
+      "path": "vendor/ZendFramework/library/Zend/Json/Decoder.php",
+      "patch": "0004-Decoder.patch",
+      "exit": 0,
+      "after_sha256": "1d3ef5a95568db6dfe2db823766965a4b887f4689b2a182835b9390695360673",
+      "diagnostics": "patching file vendor/ZendFramework/library/Zend/Json/Decoder.php\n"
+    },
+    {
+      "path": "alpha/apps/kaltura/lib/db/KalturaPDO.php",
+      "patch": "KalturaPDO-query.patch",
+      "exit": 0,
+      "after_sha256": "aeb012822d0af7c5fe0e6ea4221f789fc8c886f0c53dbb729a51bc9463a30f0e",
+      "diagnostics": "patching file alpha/apps/kaltura/lib/db/KalturaPDO.php\n"
+    },
+    {
+      "path": "alpha/apps/kaltura/lib/dateUtils.class.php",
+      "patch": "dateUtils-ternary.patch",
+      "exit": 0,
+      "after_sha256": "490aef40d4e5a8c0312f481dc0dcf85577d753963e6dbe35648bc03bb13eadc1",
+      "diagnostics": "patching file alpha/apps/kaltura/lib/dateUtils.class.php\n"
+    },
+    {
+      "path": "api_v3/lib/reflection/KalturaDocCommentParser.php",
+      "patch": "doc-comment-property.patch",
+      "exit": 0,
+      "after_sha256": "7b843ea1900763216df77bba2b6b091582c41e716a2989754cadc22e77f29f5e",
+      "diagnostics": "patching file api_v3/lib/reflection/KalturaDocCommentParser.php\n"
+    },
+    {
+      "path": "vendor/propel/util/Criteria.php",
+      "patch": "Criteria-dynamic-hierarchy.patch",
+      "exit": 0,
+      "after_sha256": "f8f726443dbc3af363f6c08db2d6baa92591b37bb14abd104ac6a5951b5f6d8d",
+      "diagnostics": "patching file vendor/propel/util/Criteria.php\n"
+    },
+    {
+      "path": "alpha/apps/kaltura/lib/myCustomData.class.php",
+      "patch": "myCustomData-null-argument.patch",
+      "exit": 0,
+      "after_sha256": "03712d6f301ad2567b3a842fcef84f89c07018f661a85eb43d203d8289c143d5",
+      "diagnostics": "patching file alpha/apps/kaltura/lib/myCustomData.class.php\n"
+    },
+    {
+      "path": "alpha/lib/model/Partner.php",
+      "patch": "Partner-null-permission-name.patch",
+      "exit": 0,
+      "after_sha256": "9fd78239a94da6268a92f72b335acffffde05a49152798cd611a0153b876e714",
+      "diagnostics": "patching file alpha/lib/model/Partner.php\n"
+    },
+    {
+      "path": "alpha/lib/model/PermissionPeer.php",
+      "patch": "PermissionPeer-null-dependency.patch",
+      "exit": 0,
+      "after_sha256": "cc7569a58686cbe4c56fa1e6f72663b3bf71147d741427eb4176d8d891255f59",
+      "diagnostics": "patching file alpha/lib/model/PermissionPeer.php\n"
+    },
+    {
+      "path": "infra/log/KalturaLog.php",
+      "patch": "KalturaLog-null-analytics.patch",
+      "exit": 0,
+      "after_sha256": "dd2a01851114e821a88f266dd060e55a80d7cd795001369c9c14e7d2a794381f",
+      "diagnostics": "patching file infra/log/KalturaLog.php\n"
+    },
+    {
+      "path": "api_v3/lib/KalturaFrontController.php",
+      "patch": "KalturaFrontController-null-user.patch",
+      "exit": 0,
+      "after_sha256": "189607dca3b5ef33270d8e4dfe081daf6a76f39d5fd49066ee0b83f24c62d71a",
+      "diagnostics": "patching file api_v3/lib/KalturaFrontController.php\n"
+    },
+    {
+      "path": "api_v3/lib/reflection/KalturaActionReflector.php",
+      "patch": "KalturaActionReflector-parameter-class.patch",
+      "exit": 0,
+      "after_sha256": "b6b9ea91b1e1902bdf718bdfd5d3573ffd826662d1f25c35d7eb2a7004f15d7d",
+      "diagnostics": "patching file api_v3/lib/reflection/KalturaActionReflector.php\n"
+    },
+    {
+      "path": "vendor/ZendFramework/library/Zend/Config.php",
+      "patch": "Zend-Config-return-types.patch",
+      "exit": 0,
+      "after_sha256": "ccdbe8edbc8498fd52a3ac9456fe1085edbd09e77d4f332f7c279b94825e805b",
+      "diagnostics": "patching file vendor/ZendFramework/library/Zend/Config.php\n"
+    },
+    {
+      "path": "vendor/propel/util/PropelPDO.php",
+      "patch": "PropelPDO-bool-setAttribute.patch",
+      "exit": 0,
+      "after_sha256": "9017430cfa12adc2de1a187f2d034ecba04ab32677cdbdc419ba2a1e1fc5f0d3",
+      "diagnostics": "patching file vendor/propel/util/PropelPDO.php\n"
+    },
+    {
+      "path": "alpha/apps/kaltura/lib/db/KalturaStatement.php",
+      "patch": "KalturaStatement-bool-results.patch",
+      "exit": 0,
+      "after_sha256": "e1c21b05e6c43ae98d9483b1ab1825068bed72234b32ea6c40e9886ed6a2c7d3",
+      "diagnostics": "patching file alpha/apps/kaltura/lib/db/KalturaStatement.php\n"
+    },
+    {
+      "path": "alpha/apps/kaltura/lib/myCaptchaImage.class.php",
+      "patch": "0001-myCaptchaImage.class.php.patch",
+      "exit": 0,
+      "after_sha256": "a13dacebf63e5240cf437c54d0d8bd04897b621a5625a9e06b784b7541b4d973",
+      "diagnostics": "patching file alpha/apps/kaltura/lib/myCaptchaImage.class.php\n"
+    },
+    {
+      "path": "alpha/apps/kaltura/lib/s3/S3.php",
+      "patch": "0002-S3.php.patch",
+      "exit": 0,
+      "after_sha256": "2bc562aaaca70d998c26d2c4ee0c238b4ed32236bfc079a6a4061f8e1a43bf1a",
+      "diagnostics": "patching file alpha/apps/kaltura/lib/s3/S3.php\n"
+    },
+    {
+      "path": "alpha/apps/kaltura/lib/storage/urlTokenizers/kAkamaiSecureHDUrlTokenizer.php",
+      "patch": "0003-kAkamaiSecureHDUrlTokenizer.php.patch",
+      "exit": 0,
+      "after_sha256": "f2343a155810f2f1a11790eb10d496eb3510790fcdb05f784f2c02efd4e27f41",
+      "diagnostics": "patching file alpha/apps/kaltura/lib/storage/urlTokenizers/kAkamaiSecureHDUrlTokenizer.php\n"
+    },
+    {
+      "path": "infra/general/S3.php",
+      "patch": "0004-S3.php.patch",
+      "exit": 0,
+      "after_sha256": "223b95984a9db2d91f93d1d3e6aaafd69159ed0b3ea221c0c84810ca18618929",
+      "diagnostics": "patching file infra/general/S3.php\n"
+    },
+    {
+      "path": "vendor/IP2Location/IP2Location.inc.php",
+      "patch": "0005-IP2Location.inc.php.patch",
+      "exit": 0,
+      "after_sha256": "d7c0b4db2284abc4e46ba9ad2d0aed5cf18fd20df8615edf6524610aced64d00",
+      "diagnostics": "patching file vendor/IP2Location/IP2Location.inc.php\n"
+    },
+    {
+      "path": "vendor/PHPMailer/extras/htmlfilter.php",
+      "patch": "0006-htmlfilter.php.patch",
+      "exit": 0,
+      "after_sha256": "ca6dcde0ce637642af97df27e3e4abcd882f0b7bc8d083136b5240bdf7903e7a",
+      "diagnostics": "patching file vendor/PHPMailer/extras/htmlfilter.php\n"
+    },
+    {
+      "path": "vendor/ZendFramework/library/Zend/View/Helper/Navigation/Sitemap.php",
+      "patch": "0007-Sitemap.php.patch",
+      "exit": 0,
+      "after_sha256": "0f1f798d01bf50f8772f4f477ccfe41a356cf91368869fda63bf7fb758535317",
+      "diagnostics": "patching file vendor/ZendFramework/library/Zend/View/Helper/Navigation/Sitemap.php\n"
+    },
+    {
+      "path": "vendor/google-api-php-client-1.1.2/src/Google/Utils.php",
+      "patch": "0008-Utils.php.patch",
+      "exit": 0,
+      "after_sha256": "702aef5136606a005e331bb74181a480e7b3226f41f51127acd70e926f765dec",
+      "diagnostics": "patching file vendor/google-api-php-client-1.1.2/src/Google/Utils.php\n"
+    },
+    {
+      "path": "vendor/google-api-php-client/src/service/Google_Utils.php",
+      "patch": "0009-Google_Utils.php.patch",
+      "exit": 0,
+      "after_sha256": "27a4c379d02366d618bf84490d0ba2d0bbd1944fe9ea0547f1dd862c7382adb0",
+      "diagnostics": "patching file vendor/google-api-php-client/src/service/Google_Utils.php\n"
+    },
+    {
+      "path": "vendor/htmlpurifier/library/HTMLPurifier/ChildDef/Custom.php",
+      "patch": "0010-Custom.php.patch",
+      "exit": 0,
+      "after_sha256": "259d05d70ba1a7e20afee5ab30968d478b42bd0475c21c9ea0a9e44265f582e4",
+      "diagnostics": "patching file vendor/htmlpurifier/library/HTMLPurifier/ChildDef/Custom.php\n"
+    },
+    {
+      "path": "vendor/htmlpurifier/library/HTMLPurifier/Encoder.php",
+      "patch": "0011-Encoder.php.patch",
+      "exit": 0,
+      "after_sha256": "657cb46cabdce5c915043ac6e8546467186f44a98c2f5f60b0e5079259ea5d7b",
+      "diagnostics": "patching file vendor/htmlpurifier/library/HTMLPurifier/Encoder.php\n"
+    },
+    {
+      "path": "vendor/htmlpurifier/library/HTMLPurifier/TagTransform/Font.php",
+      "patch": "0012-Font.php.patch",
+      "exit": 0,
+      "after_sha256": "d3534502c2d64bfc6cb8473ccaac00f330a8ce14d549fd9910d4723a327cb64a",
+      "diagnostics": "patching file vendor/htmlpurifier/library/HTMLPurifier/TagTransform/Font.php\n"
+    },
+    {
+      "path": "vendor/propel/engine/GeneratorConfig.php",
+      "patch": "0013-GeneratorConfig.php.patch",
+      "exit": 0,
+      "after_sha256": "c6da06c81d7c24bd99d31e56a4df96f83fc1cff63a306e72cbe494b7670e9059",
+      "diagnostics": "patching file vendor/propel/engine/GeneratorConfig.php\n"
+    },
+    {
+      "path": "vendor/propel/engine/database/transform/XmlToAppData.php",
+      "patch": "0014-XmlToAppData.php.patch",
+      "exit": 0,
+      "after_sha256": "238e3a7b8afa62e34604277c7d4becc49d5654818d933d15d561ca2af5db6c87",
+      "diagnostics": "patching file vendor/propel/engine/database/transform/XmlToAppData.php\n"
+    },
+    {
+      "path": "vendor/propel/validator/MatchValidator.php",
+      "patch": "0015-MatchValidator.php.patch",
+      "exit": 0,
+      "after_sha256": "e91e78eba7f42d4262710b440e17f9bed84a02426527776de6987c62df1858a0",
+      "diagnostics": "patching file vendor/propel/validator/MatchValidator.php\n"
+    },
+    {
+      "path": "vendor/propel/validator/NotMatchValidator.php",
+      "patch": "0016-NotMatchValidator.php.patch",
+      "exit": 0,
+      "after_sha256": "0b7bf422c61da3b15389d5685829584247b6fca64fbaabbeb19155052bf2085c",
+      "diagnostics": "patching file vendor/propel/validator/NotMatchValidator.php\n"
+    },
+    {
+      "path": "vendor/symfony/controller/sfRouting.class.php",
+      "patch": "0017-sfRouting.class.php.patch",
+      "exit": 0,
+      "after_sha256": "26190ee57d75efe0ccdc6d55621639fc5ccb33b5657f2b741599cf2cbcfcf226",
+      "diagnostics": "patching file vendor/symfony/controller/sfRouting.class.php\n"
+    },
+    {
+      "path": "vendor/symfony/helper/UrlHelper.php",
+      "patch": "0018-UrlHelper.php.patch",
+      "exit": 0,
+      "after_sha256": "68bf9a9ea831f1caaf83d17e393a50e6a403046bce4e483be13a197a6d846ebe",
+      "diagnostics": "patching file vendor/symfony/helper/UrlHelper.php\n"
+    },
+    {
+      "path": "vendor/symfony/i18n/sfDateFormat.class.php",
+      "patch": "0019-sfDateFormat.class.php.patch",
+      "exit": 0,
+      "after_sha256": "0f65583956ce9e075bb37ea0f4bfa97e516c395a3c21be0f24d415692a082d3e",
+      "diagnostics": "patching file vendor/symfony/i18n/sfDateFormat.class.php\n"
+    },
+    {
+      "path": "vendor/symfony/i18n/sfNumberFormat.class.php",
+      "patch": "0020-sfNumberFormat.class.php.patch",
+      "exit": 0,
+      "after_sha256": "8ba67a4753f5846501740c63582875b66fc743455eac34ce8529a81aa26578f9",
+      "diagnostics": "patching file vendor/symfony/i18n/sfNumberFormat.class.php\n"
+    },
+    {
+      "path": "vendor/symfony/i18n/sfNumberFormatInfo.class.php",
+      "patch": "0021-sfNumberFormatInfo.class.php.patch",
+      "exit": 0,
+      "after_sha256": "9eac158d6b2d05b79dedae0b906cf3dca810b094f990f135b0a4f9b5d62db27a",
+      "diagnostics": "patching file vendor/symfony/i18n/sfNumberFormatInfo.class.php\n"
+    },
+    {
+      "path": "vendor/symfony/util/Spyc.class.php",
+      "patch": "0022-Spyc.class.php.patch",
+      "exit": 0,
+      "after_sha256": "d0fced9f083a1961d7a391710f727b60645f0b3e0b76bd53cdc81b62365f5ce3",
+      "diagnostics": "patching file vendor/symfony/util/Spyc.class.php\n"
+    },
+    {
+      "path": "vendor/symfony/util/sfFinder.class.php",
+      "patch": "0023-sfFinder.class.php.patch",
+      "exit": 0,
+      "after_sha256": "8ba0951504ec25d3a4c4fdb384e76a62d4fbec0f334026b6cdc1aab9a21af933",
+      "diagnostics": "patching file vendor/symfony/util/sfFinder.class.php\n"
+    },
+    {
+      "path": "vendor/symfony/vendor/creole/drivers/pgsql/PgSQLResultSet.php",
+      "patch": "0024-PgSQLResultSet.php.patch",
+      "exit": 0,
+      "after_sha256": "5ef6c7852273355797604f05b91ec1a8d6ced2e4af2d49a37fdf93866c38fc5a",
+      "diagnostics": "patching file vendor/symfony/vendor/creole/drivers/pgsql/PgSQLResultSet.php\n"
+    },
+    {
+      "path": "vendor/symfony/vendor/creole/util/sql/SQLStatementExtractor.php",
+      "patch": "0025-SQLStatementExtractor.php.patch",
+      "exit": 0,
+      "after_sha256": "9e7c4e1e0211c172df232f9d4f94ff22944444a74aa20aaabdc6f5fe6d849a8c",
+      "diagnostics": "patching file vendor/symfony/vendor/creole/util/sql/SQLStatementExtractor.php\n"
+    },
+    {
+      "path": "vendor/symfony/vendor/pake/pakeFinder.class.php",
+      "patch": "0026-pakeFinder.class.php.patch",
+      "exit": 0,
+      "after_sha256": "f29bb5e68e7d20d3b6807b0d115222e3146ed9e59257aef735c2720fa147505b",
+      "diagnostics": "patching file vendor/symfony/vendor/pake/pakeFinder.class.php\n"
+    },
+    {
+      "path": "vendor/symfony/vendor/pake/pakeGetopt.class.php",
+      "patch": "0027-pakeGetopt.class.php.patch",
+      "exit": 0,
+      "after_sha256": "19d140a6eaa1cd45b3ad45dcff478d43715e285bdf0e5cbecd5a116cb3fbf8ca",
+      "diagnostics": "patching file vendor/symfony/vendor/pake/pakeGetopt.class.php\n"
+    },
+    {
+      "path": "vendor/symfony/vendor/pake/pakeYaml.class.php",
+      "patch": "0028-pakeYaml.class.php.patch",
+      "exit": 0,
+      "after_sha256": "362f5e60d975e89b3f21194726803a586f565bd795a2c9a3ee5dfbcc963e1b00",
+      "diagnostics": "patching file vendor/symfony/vendor/pake/pakeYaml.class.php\n"
+    },
+    {
+      "path": "vendor/symfony/vendor/phing/Phing.php",
+      "patch": "0029-Phing.php.patch",
+      "exit": 0,
+      "after_sha256": "12eacae906f4d1a1eb286cd6e4b7abd425dff2db241668431389e1d99bd2dd19",
+      "diagnostics": "patching file vendor/symfony/vendor/phing/Phing.php\n"
+    },
+    {
+      "path": "vendor/symfony/vendor/phing/lib/Capsule.php",
+      "patch": "0030-Capsule.php.patch",
+      "exit": 0,
+      "after_sha256": "8b3cc412f7aad016ddcb326ee88aaffae0ce3242693a1d111a394e2ac400383d",
+      "diagnostics": "patching file vendor/symfony/vendor/phing/lib/Capsule.php\n"
+    },
+    {
+      "path": "vendor/symfony/vendor/phing/system/io/BufferedReader.php",
+      "patch": "0031-BufferedReader.php.patch",
+      "exit": 0,
+      "after_sha256": "9381f82e07b410eae3fc9c11bbf2fba3d502fee91d9f8529e37721a359f01290",
+      "diagnostics": "patching file vendor/symfony/vendor/phing/system/io/BufferedReader.php\n"
+    },
+    {
+      "path": "vendor/symfony/vendor/phing/system/io/UnixFileSystem.php",
+      "patch": "0032-UnixFileSystem.php.patch",
+      "exit": 0,
+      "after_sha256": "4f8491e496a0824afa42f3f900e137d1a9272eadfda40523f363ab8e4035fe30",
+      "diagnostics": "patching file vendor/symfony/vendor/phing/system/io/UnixFileSystem.php\n"
+    },
+    {
+      "path": "vendor/symfony/vendor/phing/system/io/Win32FileSystem.php",
+      "patch": "0033-Win32FileSystem.php.patch",
+      "exit": 0,
+      "after_sha256": "2faab654d8562bef738011070f24b4fd00ab61aa51a22f69b055af138eed2a99",
+      "diagnostics": "patching file vendor/symfony/vendor/phing/system/io/Win32FileSystem.php\n"
+    },
+    {
+      "path": "vendor/symfony/vendor/phing/system/util/Properties.php",
+      "patch": "0034-Properties.php.patch",
+      "exit": 0,
+      "after_sha256": "714f7ffc26cb8973210af0849f07799bb4582ba181ddf13d375e2b440c1c4e6d",
+      "diagnostics": "patching file vendor/symfony/vendor/phing/system/util/Properties.php\n"
+    },
+    {
+      "path": "vendor/symfony/vendor/phing/tasks/system/CvsPassTask.php",
+      "patch": "0035-CvsPassTask.php.patch",
+      "exit": 0,
+      "after_sha256": "e599463f6840a7fb754f18a34e971ef283f688abe7fae28f0534129558721d7c",
+      "diagnostics": "patching file vendor/symfony/vendor/phing/tasks/system/CvsPassTask.php\n"
+    },
+    {
+      "path": "vendor/symfony/vendor/phing/tasks/system/PropertyTask.php",
+      "patch": "0036-PropertyTask.php.patch",
+      "exit": 0,
+      "after_sha256": "2b50acf5092da69b6f82e920ae158b4cbfd3164e6c934327026fc5f4eb708dc0",
+      "diagnostics": "patching file vendor/symfony/vendor/phing/tasks/system/PropertyTask.php\n"
+    },
+    {
+      "path": "vendor/symfony/vendor/phing/types/Path.php",
+      "patch": "0037-Path.php.patch",
+      "exit": 0,
+      "after_sha256": "b481b02f3618accffbae4a85a9d4b706a09bc1cdbcfb3724675b9657b4a8f8f8",
+      "diagnostics": "patching file vendor/symfony/vendor/phing/types/Path.php\n"
+    },
+    {
+      "path": "vendor/symfony/vendor/phing/util/FileUtils.php",
+      "patch": "0038-FileUtils.php.patch",
+      "exit": 0,
+      "after_sha256": "642626dc9711dd2ba394936c1fa566e3ceba3b380fd9cf4c8d0eea64820c4cf8",
+      "diagnostics": "patching file vendor/symfony/vendor/phing/util/FileUtils.php\n"
+    },
+    {
+      "path": "vendor/symfony/vendor/phing/util/PathTokenizer.php",
+      "patch": "0039-PathTokenizer.php.patch",
+      "exit": 0,
+      "after_sha256": "cdb6868915df709985283fc1f98d9726a21bb95c5847d8d2de4d1ee3685d50f3",
+      "diagnostics": "patching file vendor/symfony/vendor/phing/util/PathTokenizer.php\n"
+    },
+    {
+      "path": "vendor/symfony/vendor/phing/util/StringHelper.php",
+      "patch": "0040-StringHelper.php.patch",
+      "exit": 0,
+      "after_sha256": "a598140b5daabf4a81c7fe351d34877032dcb3d005ea0d3a86992efe3b390cab",
+      "diagnostics": "patching file vendor/symfony/vendor/phing/util/StringHelper.php\n"
+    },
+    {
+      "path": "vendor/symfony/vendor/propel-generator/classes/propel/engine/builder/DataModelBuilder.php",
+      "patch": "0041-DataModelBuilder.php.patch",
+      "exit": 0,
+      "after_sha256": "4be92fde934721dd9a013006d048d852b38c56d08ee1b1bdf0654fd5dd7ff9e4",
+      "diagnostics": "patching file vendor/symfony/vendor/propel-generator/classes/propel/engine/builder/DataModelBuilder.php\n"
+    },
+    {
+      "path": "vendor/symfony/vendor/propel-generator/classes/propel/engine/database/transform/XmlToAppData.php",
+      "patch": "0042-XmlToAppData.php.patch",
+      "exit": 0,
+      "after_sha256": "2508ff261f8146c6b6bff27b291967f99cc38d78902772f5da0f5fa7a6d1f6d7",
+      "diagnostics": "patching file vendor/symfony/vendor/propel-generator/classes/propel/engine/database/transform/XmlToAppData.php\n"
+    },
+    {
+      "path": "vendor/symfony/vendor/propel-generator/classes/propel/phing/AbstractPropelDataModelTask.php",
+      "patch": "0043-AbstractPropelDataModelTask.php.patch",
+      "exit": 0,
+      "after_sha256": "788a06debcdffd58fec037c36199d0a220d4b8668e44d3ea10777f8fc603037b",
+      "diagnostics": "patching file vendor/symfony/vendor/propel-generator/classes/propel/phing/AbstractPropelDataModelTask.php\n"
+    },
+    {
+      "path": "alpha/apps/kaltura/lib/baseObjectUtils.class.php",
+      "patch": "base-object-ternary.patch",
+      "exit": 0,
+      "after_sha256": "cd74355a19c1366f26a8dd31be503e439fd5d39fa2152de947e7f264e7dff218",
+      "diagnostics": "patching file alpha/apps/kaltura/lib/baseObjectUtils.class.php\n"
+    },
+    {
+      "path": "vendor/htmlpurifier/library/HTMLPurifier.autoload.php",
+      "patch": "HTMLPurifier-autoload.patch",
+      "exit": 0,
+      "after_sha256": "3ae42813026c862d3a778d44fa027a3845f7c3e637bf352b7c46d4b41bc04414",
+      "diagnostics": "patching file vendor/htmlpurifier/library/HTMLPurifier.autoload.php\n"
+    },
+    {
+      "path": "vendor/symfony-data/bin/symfony.php",
+      "patch": "symfony-cli-autoload.patch",
+      "exit": 0,
+      "after_sha256": "9c3c561f44e20dee9b51ecfa580884bc895dcc2c71381692a4e2f20f6e0b44b8",
+      "diagnostics": "patching file vendor/symfony-data/bin/symfony.php\n"
+    },
+    {
+      "path": "vendor/symfony/util/sfCore.class.php",
+      "patch": "sfCore.class.php.patch",
+      "exit": 0,
+      "after_sha256": "19a644c1c1ad033c4e5ddf438fe5165ace3b9886427af2861c5763ad39bbd60d",
+      "diagnostics": "patching file vendor/symfony/util/sfCore.class.php\n"
+    },
+    {
+      "path": "vendor/symfony/vendor/pake/pakeApp.class.php",
+      "patch": "pake-relative-path.patch",
+      "exit": 0,
+      "after_sha256": "d5bdc4612a5c9ae76fe8f594eaefeff1059175f0a36d756a1010612830bf39b8",
+      "diagnostics": "patching file vendor/symfony/vendor/pake/pakeApp.class.php\n"
+    },
+    {
+      "path": "vendor/symfony-data/tasks/sfPakeGenerator.php",
+      "patch": "generator-debug.patch",
+      "exit": 0,
+      "after_sha256": "6958f51ba82e9f4922eb8a7437dc1301ffd81032dd168f9c70516dee21f9e6d9",
+      "diagnostics": "patching file vendor/symfony-data/tasks/sfPakeGenerator.php\n"
+    }
+  ],
+  "selection_approved": false,
+  "zip_built": false,
+  "runtime_executed": false,
+  "preparer_sha256": "83d5b91183923fbc134149b0e266ef9a07fdcbc0d60439857e5082307018d623",
+  "replay_helper_sha256": "d384328e48975c2131643c009e9ced55c251d1f9b387a0884cd158fd06b0bf15"
+}

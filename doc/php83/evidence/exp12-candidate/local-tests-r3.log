@@ -1,0 +1,24 @@
+test_actual_collision_guard (test_prepare.ProposalTests.test_actual_collision_guard) ... ok
+test_application_acceptance (test_prepare.ProposalTests.test_application_acceptance) ... ok
+test_cache_acceptance (test_prepare.ProposalTests.test_cache_acceptance) ... ok
+test_criteria_prior_drift (test_prepare.ProposalTests.test_criteria_prior_drift) ... ok
+test_criteria_promoted (test_prepare.ProposalTests.test_criteria_promoted) ... ok
+test_debug_wrong_prerequisite (test_prepare.ProposalTests.test_debug_wrong_prerequisite) ... ok
+test_exact65 (test_prepare.ProposalTests.test_exact65) ... ok
+test_exp11_policy (test_prepare.ProposalTests.test_exp11_policy) ... ok
+test_held_status (test_prepare.ProposalTests.test_held_status) ... ok
+test_new_target_collision (test_prepare.ProposalTests.test_new_target_collision) ... ok
+test_old_prepared_not_selected (test_prepare.ProposalTests.test_old_prepared_not_selected) ... ok
+test_prior62_exact (test_prepare.ProposalTests.test_prior62_exact) ... ok
+test_prior_omission (test_prepare.ProposalTests.test_prior_omission) ... ok
+test_prior_preservation_flag (test_prepare.ProposalTests.test_prior_preservation_flag) ... ok
+test_real_strict65 (test_prepare.ProposalTests.test_real_strict65) ... ok
+test_supersedes (test_prepare.ProposalTests.test_supersedes) ... ok
+test_upstream_policy (test_prepare.ProposalTests.test_upstream_policy) ... ok
+test_wrong_prior_revision (test_prepare.ProposalTests.test_wrong_prior_revision) ... ok
+test_wrong_prior_root (test_prepare.ProposalTests.test_wrong_prior_root) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.160s
+
+OK

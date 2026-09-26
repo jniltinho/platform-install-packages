@@ -1,0 +1,4 @@
+3cc98a47b49c1994696aa81b65b655b3d438a92f9f7930ee50f9c11206b1090f  tools/php83/exp12-candidate/prepare.py
+48c0cfb86af8bfc74ea3ef19beada42375090807491cfc25824bb6efabf04f76  tools/php83/exp12-candidate/test_prepare.py
+dfe44db55a34c7ed439d95d82c7565020496f9a32df64f52bbc70e392eaa19a6  doc/php83/evidence/exp12-candidate/draft-manifest-r2.json
+6c02aacff6f518825a9ed999174ca96ad4d625d94c890f158874d3b8e8f1f9df  doc/php83/evidence/exp12-candidate/Criteria-dynamic-hierarchy.patch
