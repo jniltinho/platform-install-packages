@@ -1,0 +1,58 @@
+test_ledger_functions_exact_r3 (test_adaptation.Adaptation.test_ledger_functions_exact_r3) ... ok
+test_no_exp12_seams (test_adaptation.Adaptation.test_no_exp12_seams) ... ok
+test_parent_frozen (test_adaptation.Adaptation.test_parent_frozen) ... ok
+test_pending_collector_before_ssh (test_adaptation.Adaptation.test_pending_collector_before_ssh) ... ok
+test_pending_native_snapshot_before_ssh (test_adaptation.Adaptation.test_pending_native_snapshot_before_ssh) ... ok
+test_pending_original_before_ssh (test_adaptation.Adaptation.test_pending_original_before_ssh) ... ok
+test_prior_verifier_and_pin (test_adaptation.Adaptation.test_prior_verifier_and_pin) ... ok
+test_stage_pin_check_before_ssh (test_adaptation.Adaptation.test_stage_pin_check_before_ssh) ... ok
+test_verified_default_pin (test_adaptation.Adaptation.test_verified_default_pin) ... ok
+test_baseline_failure_is_not_parity_success (test_collector.Exp13AcceptanceTests.test_baseline_failure_is_not_parity_success) ... ok
+test_candidate_failure_is_not_parity_success (test_collector.Exp13AcceptanceTests.test_candidate_failure_is_not_parity_success) ... ok
+test_cleanup_failure_prevents_success (test_collector.Exp13AcceptanceTests.test_cleanup_failure_prevents_success) ... ok
+test_cleanup_timeout_retains_records_and_postsource (test_collector.Exp13AcceptanceTests.test_cleanup_timeout_retains_records_and_postsource) ... ok
+test_complete_matrix_success (test_collector.Exp13AcceptanceTests.test_complete_matrix_success) ... ok
+test_partial_records_and_both_post_checks_survive_failure (test_collector.Exp13AcceptanceTests.test_partial_records_and_both_post_checks_survive_failure) ... ok
+test_unexpected_stdout_is_rejected_and_not_persisted (test_collector.Exp13AcceptanceTests.test_unexpected_stdout_is_rejected_and_not_persisted) ... ok
+test_unrelated_original_failure_is_not_signature_control (test_collector.Exp13AcceptanceTests.test_unrelated_original_failure_is_not_signature_control) ... ok
+test_wrong_prior_pin_rejected (test_collector.Exp13AcceptanceTests.test_wrong_prior_pin_rejected) ... ok
+test_malformed_startup_stops_known_unit (test_collector.Exp13CleanupTests.test_malformed_startup_stops_known_unit) ... ok
+test_startup_timeout_stops_known_unit (test_collector.Exp13CleanupTests.test_startup_timeout_stops_known_unit) ... ok
+test_untrusted_identity_cannot_choose_cleanup_target (test_collector.Exp13CleanupTests.test_untrusted_identity_cannot_choose_cleanup_target) ... ok
+test_target_runtime_and_baseline_are_explicit (test_collector.Exp13MatrixTests.test_target_runtime_and_baseline_are_explicit) ... ok
+test_artifact (test_identities.IdentityTests.test_artifact) ... ok
+test_bool_exit (test_identities.IdentityTests.test_bool_exit) ... ok
+test_canonical_duplicate (test_identities.IdentityTests.test_canonical_duplicate) ... ok
+test_collector (test_identities.IdentityTests.test_collector) ... ok
+test_command (test_identities.IdentityTests.test_command) ... ok
+test_distinct_paths (test_identities.IdentityTests.test_distinct_paths) ... ok
+test_duplicate_paths (test_identities.IdentityTests.test_duplicate_paths) ... ok
+test_equal (test_identities.IdentityTests.test_equal) ... ok
+test_identity (test_identities.IdentityTests.test_identity) ... ok
+test_native_identity (test_identities.IdentityTests.test_native_identity) ... ok
+test_actual_historical_fixture (test_ledger.Ledger.test_actual_historical_fixture) ... ok
+test_missing_phase (test_ledger.Ledger.test_missing_phase) ... ok
+test_null_productive_output (test_ledger.Ledger.test_null_productive_output) ... ok
+test_orchestrator_drift (test_ledger.Ledger.test_orchestrator_drift) ... ok
+test_path_escape (test_ledger.Ledger.test_path_escape) ... ok
+test_drift (test_original_sources.OriginalSources.test_drift) ... ok
+test_extra (test_original_sources.OriginalSources.test_extra) ... ok
+test_missing (test_original_sources.OriginalSources.test_missing) ... ok
+test_real_pinned_archive (test_original_sources.OriginalSources.test_real_pinned_archive) ... ok
+test_extra_data (test_pin.ArtifactPin.test_extra_data) ... ok
+test_missing (test_pin.ArtifactPin.test_missing) ... ok
+test_pending (test_pin.ArtifactPin.test_pending) ... ok
+test_valid (test_pin.ArtifactPin.test_valid) ... ok
+test_wrong_length (test_pin.ArtifactPin.test_wrong_length) ... ok
+
+----------------------------------------------------------------------
+Ran 46 tests in 0.123s
+
+OK
+{"functional_checks_passed": false, "comparisons": [{"runtime": "83", "tree": "exp13", "matches_baseline": false}, {"runtime": "83", "tree": "exp14", "matches_baseline": false}], "cleanup": {"unit": "php83-exp14-api-d18912b9c3544a26a79194ac3f234326", "is_active_output": "inactive", "stopped": true}}
+{"functional_checks_passed": false, "comparisons": [{"runtime": "83", "tree": "exp13", "matches_baseline": true}, {"runtime": "83", "tree": "exp14", "matches_baseline": false}], "cleanup": {"unit": "php83-exp14-api-e428195590824be1ad5db584c7ca3f2d", "is_active_output": "inactive", "stopped": true}}
+{"functional_checks_passed": false, "comparisons": [{"runtime": "83", "tree": "exp13", "matches_baseline": true}, {"runtime": "83", "tree": "exp14", "matches_baseline": true}], "cleanup": {"unit": "php83-exp14-api-6e9a24deeddc47419bb45d82338293b0", "is_active_output": "active", "stopped": false}}
+{"functional_checks_passed": false, "comparisons": [{"runtime": "83", "tree": "exp13", "matches_baseline": true}, {"runtime": "83", "tree": "exp14", "matches_baseline": true}], "cleanup": {"unit": "php83-exp14-api-65d5e548a1e24080923ac176fc55abef", "stopped": false, "error_type": "TimeoutExpired"}}
+{"functional_checks_passed": true, "comparisons": [{"runtime": "83", "tree": "exp13", "matches_baseline": true}, {"runtime": "83", "tree": "exp14", "matches_baseline": true}], "cleanup": {"unit": "php83-exp14-api-b2698dcaaaf84756bc18fec7f45309f9", "is_active_output": "inactive", "stopped": true}}
+{"functional_checks_passed": false, "comparisons": [{"runtime": "83", "tree": "exp13", "matches_baseline": true}, {"runtime": "83", "tree": "exp14", "matches_baseline": false}], "cleanup": {"unit": "php83-exp14-api-3f9d30918ce346adb2497d1dab2ff972", "is_active_output": "inactive", "stopped": true}}
+{"functional_checks_passed": false, "comparisons": [{"runtime": "83", "tree": "exp13", "matches_baseline": true}, {"runtime": "83", "tree": "exp14", "matches_baseline": true}], "cleanup": {"unit": "php83-exp14-api-bd9e4d970f3a43a8874eafb3c1477c68", "is_active_output": "inactive", "stopped": true}}

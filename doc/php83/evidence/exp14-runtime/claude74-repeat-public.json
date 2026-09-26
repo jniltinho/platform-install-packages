@@ -1,0 +1,13 @@
+{
+  "exit": 1,
+  "stdout_sha256": "585dff603cdb98bb9d69c449f9d5a37a744ded5d054fd201a3680ed1f011dfa9",
+  "stderr": "",
+  "review": {
+    "session_id": "6a16c2a9-0e28-4569-810b-9386682d22cd",
+    "is_error": true,
+    "subtype": "success",
+    "result": "You've hit your session limit \u00b7 resets 9:20pm (America/Sao_Paulo)",
+    "type": "result",
+    "duration_ms": 423
+  }
+}

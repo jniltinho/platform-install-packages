@@ -1,0 +1,18 @@
+{
+  "tools/php83/exp13-api/runtime83-identity.py": "ec8f5473fc599259b343ebc3713b55b24753959de559c10a5cbe1254909bb429",
+  "tools/php83/exp13-api/test_original_sources.py": "c9bee6f6227446449f138a1d18da1dedc52c69a3bfea65f9770fee5e865ab0fc",
+  "tools/php83/exp13-api/test_collector.py": "f1e1fc77e0df418c71006849bdee24e90163e4df50cfb42e49615d488f1074ed",
+  "tools/php83/exp13-api/test_identities.py": "ed4bbeb5b5c445d18434cd354d371200bb6bc7b60b1bd2f0cb00a20006a507bf",
+  "tools/php83/exp13-api/test_pin.py": "89127882a957a9de8d3929e34f5471d7f2d31a69f8e3bad0528eef4a1887eff3",
+  "tools/php83/exp13-api/verify-source.py": "cf50577709e77e1f522f94dd793219d177c53cdd383446b3a3bf9ce2c08366cd",
+  "tools/php83/exp13-api/runtime-identity.py": "f2985a7d3f054c3a743535009e0ad2937545d05e1c0d9e7c936a24acf13da463",
+  "tools/php83/exp13-api/start-db.sh": "c589b7114f85780cf744b1ac2bf20047ca23c16e5b18ef64d4873cd78bd8ffa6",
+  "tools/php83/exp13-api/compare-identities.py": "077946d5e18e60ce0a4c8f747cbbf618b43234365c96caa70415c42b06cc52b4",
+  "tools/php83/exp13-api/collect.py": "ec0a85b3d1f34545db37a5927ed66d92b23bd6f02e60d42d03f1fa5f73fbbefc",
+  "tools/php83/exp13-api/artifact.py": "f6d3acc94295be5c88d9afafa0e7acd7f7c9375658195cc277a8f588bbcc5b6c",
+  "tools/php83/exp13-api/original-source-identity.py": "85f231348ac2ed1b10adeeba6a6ca9acb2753d3efe360f8a18a2b1740e89324b",
+  "tools/php83/exp13-api/stage.sh": "71ae73087070af8e64382fb17ea1c562c872f0ffadff792f567673f48172913b",
+  "tools/php83/exp13-api/run-apache.sh": "4dfeadd268f1d180915f3990ba133aea590d3bca197c9050ac82caea008ad6f5",
+  "tools/php83/exp13-regression/batch.py": "6fd0f166205a78d2e904bc82ccf6c18a47958a48758112b842b484d794aedfdd",
+  "tools/php83/exp13-regression/run-one.sh": "1a5f4aa01973b62821ab1be7816ee77100584bca1f749286c96ca91000d4ba2b"
+}

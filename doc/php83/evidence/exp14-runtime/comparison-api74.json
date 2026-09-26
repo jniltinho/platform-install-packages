@@ -1,0 +1,45 @@
+{
+  "status": "BOUNDED_API4_ONLY_MATCH_CLI83_PENDING",
+  "api": {
+    "logical_rows": 4,
+    "independent_rows": [
+      {
+        "runtime": "74",
+        "tree": "original",
+        "independent_equal": true,
+        "diagnostic_groups": 1,
+        "diagnostic_events": 6
+      },
+      {
+        "runtime": "83",
+        "tree": "original",
+        "independent_equal": true,
+        "diagnostic_groups": 15,
+        "diagnostic_events": 15
+      },
+      {
+        "runtime": "83",
+        "tree": "exp13",
+        "independent_equal": true,
+        "diagnostic_groups": 1,
+        "diagnostic_events": 1
+      },
+      {
+        "runtime": "83",
+        "tree": "exp14",
+        "independent_equal": true,
+        "diagnostic_groups": 0,
+        "diagnostic_events": 0
+      }
+    ],
+    "prior_groups": 1,
+    "prior_events": 1,
+    "candidate_groups": 0,
+    "candidate_events": 0,
+    "remaining_diagnostics": [],
+    "distinct_owned_database_tokens": true,
+    "diagnostic_contract": "Observed category/path/line/count, not exported secret-bearing native message text; raw stderr hashes retained but channel is uncompared; differences are NOT proved to be only nonce/temp paths. No raw API byte-equality or privacy acceptance claim."
+  },
+  "application_acceptance": false,
+  "independent_executor": "OpenCode Muse free CLI; historical claude output filenames"
+}

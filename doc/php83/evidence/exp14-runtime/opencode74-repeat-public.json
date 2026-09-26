@@ -1,0 +1,9 @@
+{
+  "exit": 0,
+  "stdout_sha256": "6fa332f60d8279df8fe37a339b13910406cb5feda2670b570c857ff8b164283f",
+  "stderr": "",
+  "public_text": [
+    "Executing the authorized exp14 wrapper now \u2014 single foreground run only.",
+    "Executed as actual OpenCode independent native executor (baseline74 fallback for Claude quota):\n\nCommand: `python3 doc/php83/evidence/exp14-runtime/claude74-orchestrator.py`\nWorkdir: `/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83`\nTimeout: 120s\n\nResult: completed with no output and no tool error (real exit 0 implied, no permission denial, no bypass attempted).\n\nNo edits, no broad review, no private config reads, no /tmp/external access, no .83/.20 writes, no real USER/app deploy performed. No result JSON read (no output to resolve).\n"
+  ]
+}

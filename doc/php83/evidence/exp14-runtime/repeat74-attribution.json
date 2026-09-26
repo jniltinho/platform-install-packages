@@ -1,0 +1,7 @@
+{
+  "actual_executor": "OpenCode Muse free CLI",
+  "historical_output_prefix": "claude",
+  "reason": "Claude quota exit1 before any VM execution",
+  "orchestrator_sha256": "6a4ec30bb05adc06ff615deec3fefed2f5aee241a20559fba8537cbab77b11fc",
+  "harness_tools_unchanged": true
+}

@@ -1,0 +1,9 @@
+{
+  "exit": 0,
+  "stdout_sha256": "8dfa2ab97358703e0c899ac779b627298b8600959d0731de210b22ae1ca44b80",
+  "stderr": "",
+  "public_text": [
+    "Authorized single CLI36 repeat \u2014 running the frozen wrapper in foreground.",
+    "Executed authorized command in foreground:\n\n`python3 doc/php83/evidence/exp14-runtime/claude83-orchestrator.py`\nworkdir: `/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83`, timeout 120s.\n\nReal status: terminal, no tool error, no output returned. No permission denial encountered, so no STOP triggered.\n\nScope respected: only repo wrapper run, no reads of exp13/exp14 SHA256SUMS, no compiler retry/scans, no edits, no .74/.20 writes, no app/realUSER."
+  ]
+}

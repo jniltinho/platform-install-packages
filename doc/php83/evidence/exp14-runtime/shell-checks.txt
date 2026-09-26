@@ -1,0 +1,4 @@
+PASS tools/php83/exp14-api/run-apache.sh
+PASS tools/php83/exp14-api/stage.sh
+PASS tools/php83/exp14-api/start-db.sh
+PASS tools/php83/exp14-regression/run-one.sh

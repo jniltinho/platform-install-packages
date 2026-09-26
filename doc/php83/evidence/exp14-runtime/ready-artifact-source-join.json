@@ -1,0 +1,19 @@
+{
+  "artifacts": {
+    "exp13": {
+      "sha256": "6d0bc4947207e6c5457b7843948d263aa8d5f251480e58cbf9086c0add79a944",
+      "files": 15253
+    },
+    "exp14": {
+      "sha256": "459feaf9caf2abe55963dce0cac51b8b593e4ff1b46d2eaf9cb7d5c3f13f62a1",
+      "files": 15254
+    }
+  },
+  "source_delta": [
+    "server-Rigel-18.20.0/api_v3/lib/KalturaEntryService.php"
+  ],
+  "source_scope": "Exact pinned original ZIP member set + selected XML helper addition; builder metadata verified by full independent artifact verifier",
+  "xml_aws_status": "NOT_RERUN_SOURCE_JOIN_ONLY",
+  "unchanged_source_files": 15175,
+  "application_acceptance": false
+}

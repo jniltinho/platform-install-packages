@@ -1,0 +1,1 @@
+Initial source-prefix-only comparison failed: builder metadata also resides under server-Rigel-18.20.0. No VM executed. Corrected scope uses exact pinned original ZIP member inventory plus the one selected XML source addition, not an arbitrary path exclusion. Full artifact verification remains separate.

@@ -1,0 +1,8 @@
+{
+  "status": "VERIFIED_PIN_SELECTED_FOR_BOUNDED_LAB_TESTS",
+  "current_zip_sha256": "459feaf9caf2abe55963dce0cac51b8b593e4ff1b46d2eaf9cb7d5c3f13f62a1",
+  "zip_bytes": 91210691,
+  "previous_zip_sha256": "6d0bc4947207e6c5457b7843948d263aa8d5f251480e58cbf9086c0add79a944",
+  "pending_phase_preserved": true,
+  "application_acceptance": false
+}
