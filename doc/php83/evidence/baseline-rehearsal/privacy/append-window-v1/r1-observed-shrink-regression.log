@@ -1,0 +1,14 @@
+test_observed_growth_then_shrink_above_cutoff (mutanttests.Tests.test_observed_growth_then_shrink_above_cutoff) ... FAIL
+
+======================================================================
+FAIL: test_observed_growth_then_shrink_above_cutoff (mutanttests.Tests.test_observed_growth_then_shrink_above_cutoff)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/baseline-rehearsal/privacy/append-window-v1/test_scan.py", line 120, in test_observed_growth_then_shrink_above_cutoff
+    with self.assertRaisesRegex(a.Incomplete,'TRUNCATED'):self.scan()
+AssertionError: Incomplete not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (failures=1)

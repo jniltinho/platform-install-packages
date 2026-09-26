@@ -1,0 +1,40 @@
+{
+  "status": "PASS_BOUNDED_LOCAL_R2_REVIEW",
+  "reviewer": "independent Codex agent /root/exp9_harness",
+  "provenance": "Reviewer terminal message; not a new native execution or second external CLI review",
+  "recorded_at_utc": "2026-09-26T23:30:22.709680+00:00",
+  "local_tests": {
+    "count": 23,
+    "exit": 0
+  },
+  "independent_counterexamples": [
+    {
+      "case": "observed growth to24 then shrink to2 after fstat",
+      "r1": "false COMPLETE, zero counts",
+      "r2": "TRUNCATED"
+    },
+    {
+      "case": "2MiB dense matches,32patterns,seconds0.05",
+      "r1_elapsed_seconds": 6.496,
+      "r2_elapsed_seconds": 0.05,
+      "r2": "DEADLINE",
+      "timing_scope": "local synthetic reviewer observation, not benchmark"
+    }
+  ],
+  "reviewed_file_sha256": {
+    "tools/php83/baseline-rehearsal/privacy/append-window-v1/scan.py": "43189edbe0cfb9f4a0654b7b8425f8f4a876bf270a309f96309142a0ec5b34fc",
+    "tools/php83/baseline-rehearsal/privacy/append-window-v1/test_scan.py": "9b4bef8be9e12e83fee230859709cbb020ea828a6e77b365dee6a06dbdee30d0",
+    "doc/php83/baseline-privacy-append-window.md": "1900926b1f9eecf2e95757bb5f2cb0367a54e44fc5b40e1ca19f0f0b81e8c8c5"
+  },
+  "freeze_unchanged": true,
+  "remaining_local_blocker_found": false,
+  "native_execution": false,
+  "privacy_acceptance": false,
+  "limits": [
+    "future writes",
+    "journal",
+    "effective configuration",
+    "orchestrator USER gate",
+    "malicious rewrite/regrow outside observed metadata"
+  ]
+}

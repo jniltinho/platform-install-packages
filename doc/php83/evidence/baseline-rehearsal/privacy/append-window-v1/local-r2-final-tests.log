@@ -1,0 +1,28 @@
+test_append_during_quiet (test_scan.Tests.test_append_during_quiet) ... ok
+test_byte_limit (test_scan.Tests.test_byte_limit) ... ok
+test_deadline (test_scan.Tests.test_deadline) ... ok
+test_dense_matches_check_deadline_inside_loop (test_scan.Tests.test_dense_matches_check_deadline_inside_loop) ... ok
+test_empty_patterns_inventory_and_closure (test_scan.Tests.test_empty_patterns_inventory_and_closure) ... ok
+test_empty_window (test_scan.Tests.test_empty_window) ... ok
+test_fifo_nonblocking (test_scan.Tests.test_fifo_nonblocking) ... ok
+test_growth_after_cutoff_is_drained_not_hidden (test_scan.Tests.test_growth_after_cutoff_is_drained_not_hidden) ... ok
+test_hardlink (test_scan.Tests.test_hardlink) ... ok
+test_historical_excluded_new_overlap_counted (test_scan.Tests.test_historical_excluded_new_overlap_counted) ... ok
+test_invalid_limits (test_scan.Tests.test_invalid_limits) ... ok
+test_missing_file (test_scan.Tests.test_missing_file) ... ok
+test_new_sink (test_scan.Tests.test_new_sink) ... ok
+test_no_secret_in_errors (test_scan.Tests.test_no_secret_in_errors) ... ok
+test_observed_growth_then_shrink_above_cutoff (test_scan.Tests.test_observed_growth_then_shrink_above_cutoff) ... ok
+test_overlap_across_drain_round (test_scan.Tests.test_overlap_across_drain_round) ... ok
+test_path_swap_same_size (test_scan.Tests.test_path_swap_same_size) ... ok
+test_reusable_snapshot (test_scan.Tests.test_reusable_snapshot) ... ok
+test_rotation (test_scan.Tests.test_rotation) ... ok
+test_same_size_rewrite (test_scan.Tests.test_same_size_rewrite) ... ok
+test_swap_while_reading_detected (test_scan.Tests.test_swap_while_reading_detected) ... ok
+test_symlink (test_scan.Tests.test_symlink) ... ok
+test_truncate (test_scan.Tests.test_truncate) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.005s
+
+OK

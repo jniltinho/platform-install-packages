@@ -21,9 +21,11 @@ and [execution contract](../../openspec/changes/migrate-kaltura-php83/design.md)
 
 The operator subsequently confirmed both previously requested items explicitly
 ("Autorizar 1,2"): read-only checksum verification and the narrow logging/privacy
-correction. The privacy repair is being prepared and independently reviewed in
-`privacy/trace-policy-v1`; this is authorization, not a passed native or installed
-application result. Published artifacts and production remain unchanged.
+correction. The source-stage privacy repair in `privacy/trace-policy-v1` now has primary
+and actual OpenCode independent native results (`5e45a074`): four PHP processes
+and 52 lints per run, with identical raw channels and typed reports. All 23 local
+guard tests pass. This is not an installed-application result. Published
+artifacts and production remain unchanged.
 
 A new OpenCode checksum-verification attempt under that authorization again
 received a permission rejection before staging/native execution (`bb710cf5`).
@@ -63,16 +65,18 @@ Claude hit its session limit. OpenCode then received an explicit permission
 rejection while verifying local tool/contract metadata and reading the exp13/14
 SHA256SUMS files, before staging or any native compiler execution. The exact
 command/error is retained, and the affected operation was stopped. Explicit
-operator confirmation is pending; no alternate executor retries that denied
-operation. Separately authorized API/CLI execution does not close this gate.
+operator confirmation was subsequently received; a second rejection and the
+separate narrow technical permission request are described above. No alternate
+executor retries that denied operation. Separately authorized API/CLI execution does not close this gate.
 
 The [real logging-pipeline observation](evidence/baseline-rehearsal/privacy/pipeline/README.md)
 was independently repeated by actual Claude (`8f6d39a0`). Throwable reaches the
 writer/formatter in the applicable cases, but intrinsic messages, extras.message
 and pre-rendered strings remain separate exposure paths. Expected synthetic leaks
-and six ZendConfig diagnostics remain visible. No logging fix or valid USER
-baseline authentication/upload is authorized by this observation; the separately
-presented logging-policy decision remains pending. Full application, provider,
+and six ZendConfig diagnostics remain visible. That observation alone did not authorize a logging fix or valid USER rehearsal.
+The subsequent operator approval and source-stage repair supersede the historical
+pending policy decision, but installed-route checks are still required before
+valid USER authentication/upload. Full application, provider,
 performance, recovery and release gates are unchanged.
 
 The final API/CLI checkpoint and the two outstanding operator decisions were
@@ -80,6 +84,27 @@ sent by verified-TLS SMTP on 2026-09-26 at18:40:18 America/Sao_Paulo. SMTP
 accepted the message; inbox delivery is not confirmed. Both lab slots are
 released and no fixture process is pending at this checkpoint. The task board
 remains3/51: these bounded improvements do not close full acceptance obligations.
+
+## Approved privacy correction — source proof, installed acceptance pending
+
+[Trace-policy evidence](evidence/baseline-rehearsal/privacy/trace-policy-v1/README.md)
+preserves an initially failed host validator and its narrowly reviewed correction;
+no failed result was overwritten. The patch masks exception argument values while
+retaining structural information and Throwable identity. Intrinsic-message,
+pre-rendered-string and extras.message controls still leak by design: this is not
+a universal sanitizer. The repeat has an additional 55-file/library/INI identity
+snapshot, not a retroactive claim about the primary interval.
+
+The `.74` installed configuration/cache audit and append-window scanner are in
+progress. Independent review caught a scanner bug that could miss an observed
+truncate-after-growth event; the correction must pass review before any USER
+rehearsal. No installed overlay or new valid USER/upload acceptance is claimed.
+Any subsequent overlay must be labelled a modified lab baseline, not unchanged
+published packages; benchmark acceptance remains separate.
+
+A status email about the independently repeated privacy probe was accepted over
+verified-TLS SMTP at 20:20:25 America/Sao_Paulo on 2026-09-26. Inbox delivery was
+not confirmed. The detailed task count remains **3/51**.
 
 ## Prior candidate: exp13 — compiler and bounded runtime repeated
 

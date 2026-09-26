@@ -25,8 +25,11 @@ stopped before valid USER authentication/upload because exception traces expose
 synthetic-secret prefixes. The subsequent repeated real logging-pipeline probe
 confirms both the possible Throwable interception point and unresolved intrinsic/
 string exposure paths; no installed fix was applied. The operator has now explicitly approved the
-narrow logging-policy correction; source preparation and independent review are
-in progress, without an installed-application privacy acceptance. Old readers reject the candidate cache wire format, and cache
+narrow logging-policy correction. Its source-stage primary and actual OpenCode
+repeat each completed four PHP processes and 52 lints with matching channels and
+reports (`5e45a074`); 23 local guards pass. Installed configuration/cache auditing
+and a fail-closed append-window scanner remain in progress, without an
+installed-application privacy acceptance. Old readers reject the candidate cache wire format, and cache
 recovery/rollback is not accepted. The rank repair preserves PHP8.3 signature
 behavior but changes PHP7.4 reflection metadata; positive rank persistence remains
 untested. No go/no-go, package integration or release approval follows.

@@ -1,0 +1,9 @@
+{
+  "status": "PREPARED_LOCAL_ONLY",
+  "files": {
+    "tools/php83/baseline-rehearsal/privacy/append-window-v1/scan.py": "1f89841324ce01a65ee4fc40acf4c289ada92bd3ed05ac4f89158354334611c5",
+    "tools/php83/baseline-rehearsal/privacy/append-window-v1/test_scan.py": "a8b9d9da7025733092fa8411e482ae269caae62999182e9fc430b0970c461056",
+    "doc/php83/baseline-privacy-append-window.md": "12f17dd8314fd560b88b2da4bedb3431c2b61f7315f04039dbdbc100c0ca8a56"
+  },
+  "native_execution": false
+}
