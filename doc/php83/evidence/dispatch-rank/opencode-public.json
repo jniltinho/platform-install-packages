@@ -1,0 +1,28 @@
+{
+  "cli_exit": 0,
+  "private_sha256": "e6321432c73cde636f3c94b9a94fa056102e1feed2a09dede4af2833316708ef",
+  "events": [
+    {
+      "type": "text",
+      "text": "Repository-only review underway \u2014 running the six dispatch-rank unit tests and auditing the probe docs."
+    },
+    {
+      "type": "text",
+      "text": "Initial probe files mapped \u2014 now verifying the remaining evidence before executing tests."
+    },
+    {
+      "type": "tool",
+      "status": "completed",
+      "input": {
+        "command": "python3 -m unittest discover -s tools/php83/dispatch-rank -p 'test_*.py' -v",
+        "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+      },
+      "output": "test_alternatives (test_prepare.PreparationTests.test_alternatives) ... ok\ntest_duplicate_class (test_prepare.PreparationTests.test_duplicate_class) ... ok\ntest_existing_output (test_prepare.PreparationTests.test_existing_output) ... ok\ntest_external_stage_rejected (test_prepare.PreparationTests.test_external_stage_rejected) ... ok\ntest_missing_class (test_prepare.PreparationTests.test_missing_class) ... ok\ntest_missing_typo (test_prepare.PreparationTests.test_missing_typo) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.000s\n\nOK\n",
+      "error": null
+    },
+    {
+      "type": "text",
+      "text": "Executed (repo-only, read-only):\n\n- `python3 -m unittest discover -s tools/php83/dispatch-rank -p 'test_*.py' -v` \u2014 6 tests, OK (test_alternatives, test_missing_class, test_duplicate_class, test_missing_typo, test_existing_output, test_external_stage_rejected).\n- Read-only: `tools/php83/dispatch-rank/prepare.py,test_prepare.py,dispatcher-probe.php,rank-metadata-probe.php`, `doc/php83/dispatch-rank.md`, `doc/php83/evidence/dispatch-rank/{coverage.json,constructor-dependency-coverage.json,literal-candidates.json,local-tests-r2.txt,preparation-r2.json,preparation-r2/manifest.json}`.\n- NOT done: no `/tmp`/SSH/VM/archives/credentials access, no PHP execution, no edits/git/network.\n\nDefects / false-coverage risks:\n\n1. `prepare.py`: verifies only `PATHS[0]` SHA vs selected-manifest; other 10 extracted deps unverified. No happy-path test (no ZIP/manifest/success write test); 6 tests cover only `variants()` string guards + output-exists/external-stage rejects. Missing-archive/wrong-SHA/selected-mismatch branches untested. `variants()` keeps `private $disptacher` + adds `public $dispatcher=null` / `#[AllowDynamicProperties]` but tests assert only In/NotIn, not typo-retained, single-occurrence, exact placement.\n2. `dispatcher-probe.php`: requires only 3 deps (`KalturaDispatcher,requestUtils,kCurrentContext`); `infraRequestUtils/kString` in preparation-r2 not explicitly required \u2014 relies on implicit include. Sets `infraRequestUtils::$requestParams` via reflection with no readback that real `getRequestParams()` returns controlled array; `requestUtils` vs `infraRequestUtils` cache-branch mismatch would silently diverge. Allowlist `/audit/probe/*.php` needs staging edit for repo-local run. Unrelated-dispatcher warning control invalid if that class allows dynamic props / magic accessors \u2014 not checked. Singleton identity check has no per-variant process isolation inside probe itself.\n3. `rank-metadata-probe.php`: metadata/missing-binding only \u2014 loads only `KalturaBaseService/KalturaEntryService`, no `BaseEntry/Media/Mixing`, no `entryPeer/kvote/kuser`, no 3-caller persistence, no rank 0/neg/1/5/6, no string/numeric, no full named/reordered/duplicate/unknown, no vote-count/cache/doc-generator checks. Records error class but does not enforce `ArgumentCountError` vs dependency `Error` (doc requires latter = failed prerequisite).\n4. False claims to reject: `coverage.json` `no_recorded_issue/metadata_match` + `231336nodes/800641edges` + `literal-candidates.json` are best-effort candidate inventory, not complete caller proof; dynamic/`call_user_func`/named-dispatch not excluded. 6/6 python OK \u2260 dispatcher storage parity or rank functional proof. `preparation-r2.json/manifest.json`: `COMPARISON_ONLY_NO_PATCH_SELECTED`, `rank_repair_created:false` \u2014 no patch/selection; public vs attribute have explicitly different fresh-state/serialization/reflection contracts, constructed behavior does not erase fresh-state deltas. Full three-caller/persistence corpus still required before any repair.\n"
+    }
+  ]
+}

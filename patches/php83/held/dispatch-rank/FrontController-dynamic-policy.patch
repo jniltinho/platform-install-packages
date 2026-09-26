@@ -1,0 +1,10 @@
+--- a/api_v3/lib/KalturaFrontController.php
++++ b/api_v3/lib/KalturaFrontController.php
+@@ -3,6 +3,7 @@
+  * @package api
+  * @subpackage v3
+  */
++#[\AllowDynamicProperties]
+ class KalturaFrontController
+ {
+ 	private static $instance;

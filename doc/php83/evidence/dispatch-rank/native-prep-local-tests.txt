@@ -1,0 +1,17 @@
+test_dependency_drift (test_prepare.ArchiveGuards.test_dependency_drift) ... ok
+test_missing_archive (test_prepare.ArchiveGuards.test_missing_archive) ... ok
+test_selected_manifest_drift (test_prepare.ArchiveGuards.test_selected_manifest_drift) ... ok
+test_selected_target_mismatch (test_prepare.ArchiveGuards.test_selected_target_mismatch) ... ok
+test_success_all_files_and_variant_exact (test_prepare.ArchiveGuards.test_success_all_files_and_variant_exact) ... ok
+test_wrong_archive_hash (test_prepare.ArchiveGuards.test_wrong_archive_hash) ... ok
+test_alternatives (test_prepare.PreparationTests.test_alternatives) ... ok
+test_duplicate_class (test_prepare.PreparationTests.test_duplicate_class) ... ok
+test_existing_output (test_prepare.PreparationTests.test_existing_output) ... ok
+test_external_stage_rejected (test_prepare.PreparationTests.test_external_stage_rejected) ... ok
+test_missing_class (test_prepare.PreparationTests.test_missing_class) ... ok
+test_missing_typo (test_prepare.PreparationTests.test_missing_typo) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.004s
+
+OK

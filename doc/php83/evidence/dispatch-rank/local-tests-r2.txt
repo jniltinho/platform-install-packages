@@ -1,0 +1,11 @@
+test_alternatives (test_prepare.PreparationTests.test_alternatives) ... ok
+test_duplicate_class (test_prepare.PreparationTests.test_duplicate_class) ... ok
+test_existing_output (test_prepare.PreparationTests.test_existing_output) ... ok
+test_external_stage_rejected (test_prepare.PreparationTests.test_external_stage_rejected) ... ok
+test_missing_class (test_prepare.PreparationTests.test_missing_class) ... ok
+test_missing_typo (test_prepare.PreparationTests.test_missing_typo) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.000s
+
+OK

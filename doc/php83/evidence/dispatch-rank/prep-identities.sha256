@@ -1,0 +1,6 @@
+df28c5f51fff833f131363ca9341fa6d66fc7d329351f15350813c936a222bf5  tools/php83/dispatch-rank/prepare.py
+de8950245081e1b86382903c2c0a062aacd22c86e5197eace5d1988650988e03  tools/php83/dispatch-rank/test_prepare.py
+4554e31e2f440ff2c29aff18225a341332a93c65335ce6e388673726afba4c09  tools/php83/dispatch-rank/dispatcher-probe.php
+a887ea1e818fc1b4f878fd39514d1702f8316508c4bce86de4aac19a4f916372  tools/php83/dispatch-rank/rank-metadata-probe.php
+1d962fe1f29ebe023512c861fb722d9326a010a562ac75d5cc4fcda50a050c09  patches/php83/held/dispatch-rank/FrontController-dynamic-policy.patch
+cf86152fb75c506920f9def24efe72c8750a56097d1d3fdf02977cff5611bace  patches/php83/held/dispatch-rank/manifest.json

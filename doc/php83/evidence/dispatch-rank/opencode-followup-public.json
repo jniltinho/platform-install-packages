@@ -1,0 +1,32 @@
+{
+  "cli_exit": 0,
+  "private_sha256": "edfb7ffadc6a590724fa350e0664c8b600fd8d06936dbba4511bfb189f414ae5",
+  "events": [
+    {
+      "type": "text",
+      "text": "Repository-only guard review \u2014 running the 12-test suite and diffing the latest probes against reviewed copies."
+    },
+    {
+      "type": "tool",
+      "status": "completed",
+      "input": {
+        "command": "python3 -m unittest discover -s tools/php83/dispatch-rank -p 'test_*.py' -v",
+        "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+      },
+      "output": "test_dependency_drift (test_prepare.ArchiveGuards.test_dependency_drift) ... ok\ntest_missing_archive (test_prepare.ArchiveGuards.test_missing_archive) ... ok\ntest_selected_manifest_drift (test_prepare.ArchiveGuards.test_selected_manifest_drift) ... ok\ntest_selected_target_mismatch (test_prepare.ArchiveGuards.test_selected_target_mismatch) ... ok\ntest_success_all_files_and_variant_exact (test_prepare.ArchiveGuards.test_success_all_files_and_variant_exact) ... ok\ntest_wrong_archive_hash (test_prepare.ArchiveGuards.test_wrong_archive_hash) ... ok\ntest_alternatives (test_prepare.PreparationTests.test_alternatives) ... ok\ntest_duplicate_class (test_prepare.PreparationTests.test_duplicate_class) ... ok\ntest_existing_output (test_prepare.PreparationTests.test_existing_output) ... ok\ntest_external_stage_rejected (test_prepare.PreparationTests.test_external_stage_rejected) ... ok\ntest_missing_class (test_prepare.PreparationTests.test_missing_class) ... ok\ntest_missing_typo (test_prepare.PreparationTests.test_missing_typo) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 0.004s\n\nOK\n",
+      "error": null
+    },
+    {
+      "type": "text",
+      "text": "All 12 tests passed \u2014 now reviewing the guard changes and probe deltas."
+    },
+    {
+      "type": "text",
+      "text": "Static comparison complete \u2014 final verification of the unrelated-class control before reporting."
+    },
+    {
+      "type": "text",
+      "text": "Executed (repository-only, read-only except test run):\n\n- `python3 -m unittest discover -s tools/php83/dispatch-rank -p 'test_*.py' -v` \u2014 12 tests, OK. Matches `doc/php83/evidence/dispatch-rank/local-tests-r3.txt`.\n- No `/tmp`, VM, SSH, archive ZIP, PHP, git, or writes accessed. No variant selected. No rank patch.\n\nDeltas vs `evidence/dispatch-rank/reviewed-*.php/.py` (r2):\n\n- `tools/php83/dispatch-rank/prepare.py`: adds `source-pins.json` load + `SOURCE_PINS` all-11 equality check and `SELECTED_SHA` hash check on `doc/php83/evidence/exp12-candidate/selected-manifest.json` before selected-target check. `test_prepare.py` adds 6 synthetic `ArchiveGuards`: success-all-14-files + variant-exact, wrong-archive-hash, dependency-drift, selected-manifest-drift, missing-archive (`FileNotFoundError`), selected-target-mismatch. All pass with mocked `ROOT/PIN/SELECTED_SHA/SOURCE_PINS`.\n- `tools/php83/dispatch-rank/dispatcher-probe.php`: adds real-cache readback `if(requestUtils::getRequestParams()!==[...]) throw` and unrelated real-class guard: rejects if `KalturaDispatcher` has `__set` or `AllowDynamicProperties`, requires exactly 1 `E_DEPRECATED` for `KalturaDispatcher::$unrelatedDiagnosticControl`. Repo-local `preparation-r3/source` confirms `requestUtils extends infraRequestUtils` with `require_once` transitive load (no missing-require block) and `KalturaDispatcher` has no `__set`/attribute, so control-invalid throw will not trigger.\n- `tools/php83/dispatch-rank/rank-metadata-probe.php`: adds `$failed` flag + `exit(2)` on `unexpected-return` or non-`ArgumentCountError`, reports `missing_binding_contract_ok=!$failed`.\n- `preparation-r3.json` == `preparation-r3/manifest.json`: `COMPARISON_ONLY_NO_PATCH_SELECTED`, `rank_repair_created:false`, 14 files, variants original/public/attribute only.\n\nBlocking local guard defects (static review, runtime corpus still pending, probes not executed):\n\n1. `rank-metadata-probe.php` happy-path conflation: real signature `anonymousRankEntry($entryId,$entryType=null,$rank)` (verified repo-local) means named case `['entryId'=>'safe-id','rank'=>3]` binds correctly and enters DB body, throwing non-`ArgumentCountError` or returning \u2014 both set `$failed=true` \u2192 guaranteed `exit(2)` on PHP >=8.0. Probe cannot ever report `missing_binding_contract_ok=true`; unusable as pass/fail gate without separating binding vs body-DB outcome.\n2. `dispatcher-probe.php` warning exact-count `!==1` assumes PHP >=8.2 dynamic-property `E_DEPRECATED`. On <8.2 or silenced `E_DEPRECATED` it throws `Unrelated warning missing`, blocking portable future isolated execution.\n3. `prepare.py` untested scope: missing `selected-manifest.json` raises bare `FileNotFoundError`, not `ValueError`-guarded; no synthetic test covers it (only drift/mismatch covered).\n\nStatus: preparation guards locally verified (12/12). Runtime/full functional corpus pending."
+    }
+  ]
+}

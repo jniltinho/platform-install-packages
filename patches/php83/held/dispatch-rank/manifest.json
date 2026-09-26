@@ -1,0 +1,10 @@
+{
+  "status": "HELD_COMPARISON_PROTOTYPE_NOT_RUNTIME_VALIDATED",
+  "path": "api_v3/lib/KalturaFrontController.php",
+  "base_revision": "exp12",
+  "before_sha256": "189607dca3b5ef33270d8e4dfe081daf6a76f39d5fd49066ee0b83f24c62d71a",
+  "after_sha256": "98eee32e47092d371ef31a90c2fea6c2575d2505a4c4cefdc625dd60c44fd12a",
+  "patch_sha256": "1d962fe1f29ebe023512c861fb722d9326a010a562ac75d5cc4fcda50a050c09",
+  "scope": "Explicit entire-class plus descendants dynamic-property allowance, not dispatcher-only. No rank repair. Public-property alternative is comparison only.",
+  "application_acceptance": false
+}

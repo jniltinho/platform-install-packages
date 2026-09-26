@@ -1,0 +1,102 @@
+[
+  {
+    "project": "kaltura-rigel-18.20.0-full",
+    "signal": "best_effort",
+    "indexed_at": "2026-09-25T12:19:00Z",
+    "metadata": {
+      "generation": "2026-09-25T12:19:00Z",
+      "index_mode": "full",
+      "recorded_at": "2026-09-25T12:19:04Z",
+      "recording_status": "complete",
+      "ignored_files_stored": 519,
+      "ignored_files_total": 519,
+      "hash_records_complete": true,
+      "coverage_version": 3,
+      "generation_matches": true
+    },
+    "paths": [
+      {
+        "requested_path": "api_v3/lib/KalturaDispatcher.php",
+        "path": "api_v3/lib/KalturaDispatcher.php",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": "alpha/apps/kaltura/lib/requestUtils.class.php",
+        "path": "alpha/apps/kaltura/lib/requestUtils.class.php",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": "alpha/apps/kaltura/lib/kCurrentContext.class.php",
+        "path": "alpha/apps/kaltura/lib/kCurrentContext.class.php",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      }
+    ],
+    "scopes": [],
+    "caveat": "Best-effort signal only. No recorded issue does not prove graph or source completeness; read flagged source and qualify claims when metadata is changed or unavailable."
+  },
+  {
+    "project": "kaltura-rigel-18.20.0-full",
+    "signal": "best_effort",
+    "indexed_at": "2026-09-25T12:19:00Z",
+    "metadata": {
+      "generation": "2026-09-25T12:19:00Z",
+      "index_mode": "full",
+      "recorded_at": "2026-09-25T12:19:04Z",
+      "recording_status": "complete",
+      "ignored_files_stored": 519,
+      "ignored_files_total": 519,
+      "hash_records_complete": true,
+      "coverage_version": 3,
+      "generation_matches": true
+    },
+    "paths": [
+      {
+        "requested_path": "alpha/apps/kaltura/lib/request/infraRequestUtils.class.php",
+        "path": "alpha/apps/kaltura/lib/request/infraRequestUtils.class.php",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      }
+    ],
+    "scopes": [],
+    "caveat": "Best-effort signal only. No recorded issue does not prove graph or source completeness; read flagged source and qualify claims when metadata is changed or unavailable."
+  },
+  {
+    "project": "kaltura-rigel-18.20.0-full",
+    "signal": "best_effort",
+    "indexed_at": "2026-09-25T12:19:00Z",
+    "metadata": {
+      "generation": "2026-09-25T12:19:00Z",
+      "index_mode": "full",
+      "recorded_at": "2026-09-25T12:19:04Z",
+      "recording_status": "complete",
+      "ignored_files_stored": 519,
+      "ignored_files_total": 519,
+      "hash_records_complete": true,
+      "coverage_version": 3,
+      "generation_matches": true
+    },
+    "paths": [
+      {
+        "requested_path": "infra/general/kString.class.php",
+        "path": "infra/general/kString.class.php",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      }
+    ],
+    "scopes": [],
+    "caveat": "Best-effort signal only. No recorded issue does not prove graph or source completeness; read flagged source and qualify claims when metadata is changed or unavailable."
+  }
+]

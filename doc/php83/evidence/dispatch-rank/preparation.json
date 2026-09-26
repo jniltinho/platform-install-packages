@@ -1,0 +1,42 @@
+{
+  "status": "COMPARISON_ONLY_NO_PATCH_SELECTED",
+  "zip_sha256": "de5e61a1b54f472e605ef2e87669302a3915616fd85378e0f05706fcb06a7e8b",
+  "files": {
+    "original.php": "189607dca3b5ef33270d8e4dfe081daf6a76f39d5fd49066ee0b83f24c62d71a",
+    "public-comparison.php": "d7e96642a3832cf67000ce7565df5e7da88b1e42322a95cba64958a2075fbfe1",
+    "attribute-comparison.php": "98eee32e47092d371ef31a90c2fea6c2575d2505a4c4cefdc625dd60c44fd12a",
+    "source/api_v3/lib/KalturaFrontController.php": "189607dca3b5ef33270d8e4dfe081daf6a76f39d5fd49066ee0b83f24c62d71a",
+    "source/api_v3/lib/KalturaEntryService.php": "9495b584f73df1f4a11812efa964f57f42562159a405693b71e1731d53fe4dd5",
+    "source/api_v3/lib/KalturaBaseService.php": "48c4e41bfbb1072d5231e8ae8e300cb3e8bb8eb6e26a653d7925c00442a2999f",
+    "source/api_v3/services/BaseEntryService.php": "069e3902be3d97f2e8139e445a9e1cfdceefc5d9db9a6882865ff3b17a44b27a",
+    "source/api_v3/services/MediaService.php": "7ffb9ca7642341eaf65a4387e82c7b63dfdf5e528b5b03da6ea24a56f384f708",
+    "source/api_v3/services/MixingService.php": "9cc6d1f90ccf2938c23fb3d3906bf21d257102ea0ddc6a388a124280fe04e8fb"
+  },
+  "rank_repair_created": false,
+  "variants": [
+    "original",
+    "public-comparison",
+    "attribute-comparison"
+  ],
+  "rank_call_shapes": {
+    "BaseEntryService": [
+      "entryId",
+      null,
+      "rank"
+    ],
+    "MediaService": [
+      "entryId",
+      "KalturaEntryType::MEDIA_CLIP",
+      "rank"
+    ],
+    "MixingService": [
+      "entryId",
+      "KalturaEntryType::MIX",
+      "rank"
+    ]
+  },
+  "limitations": [
+    "Three positive graph callers, not dynamic caller completeness.",
+    "No PHP/VM execution. Public and attribute are alternatives with explicit different object contracts."
+  ]
+}

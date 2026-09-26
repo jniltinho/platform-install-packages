@@ -1,0 +1,51 @@
+{
+  "status": "FOUR_PRIMARY_OBSERVATIONS_NOT_SELECTION",
+  "native_report_sha256": "640141338ef1d4e1fe2cbc38e6de28cba53c13c24cae62d0b4b37bdb7acfbcab",
+  "source_runtime_unchanged": true,
+  "processes": 4,
+  "all_exit_zero": true,
+  "dispatcher_states": 8,
+  "attribute_serialized_state_equal": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "public_serialized_state_equal": [
+    false,
+    false,
+    false,
+    true,
+    false,
+    false,
+    false,
+    false
+  ],
+  "dispatcher_diagnostic_counts": [
+    7,
+    3,
+    1
+  ],
+  "unrelated_class_control_retained": true,
+  "rank_required_parameters": 3,
+  "rank_default_value_available": [
+    false,
+    false,
+    false
+  ],
+  "rank_missing_argument_cases": 5,
+  "rank_errors": [
+    "ArgumentCountError",
+    "ArgumentCountError",
+    "ArgumentCountError",
+    "ArgumentCountError",
+    "ArgumentCountError"
+  ],
+  "rank_successful_body_exercised": false,
+  "independent_runtime_repeat": false,
+  "php74_comparison": false
+}

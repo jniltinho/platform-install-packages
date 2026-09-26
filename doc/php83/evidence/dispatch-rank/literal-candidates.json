@@ -1,0 +1,779 @@
+{
+  "scope": ".php/.phtml ZIP members; literal matches only, not exhaustive dynamic callers",
+  "matches": [
+    {
+      "path": "api_v3/lib/KalturaEntryService.php",
+      "line": 1836,
+      "text": "\tprotected function anonymousRankEntry($entryId, $entryType = null, $rank)",
+      "sha256": "9495b584f73df1f4a11812efa964f57f42562159a405693b71e1731d53fe4dd5"
+    },
+    {
+      "path": "api_v3/lib/KalturaFrontController.php",
+      "line": 23,
+      "text": "\t\t$this->dispatcher = KalturaDispatcher::getInstance();",
+      "sha256": "189607dca3b5ef33270d8e4dfe081daf6a76f39d5fd49066ee0b83f24c62d71a"
+    },
+    {
+      "path": "api_v3/lib/KalturaFrontController.php",
+      "line": 116,
+      "text": "\t\t\t\t$result = $this->dispatcher->dispatch($this->service, $this->action, $this->params);",
+      "sha256": "189607dca3b5ef33270d8e4dfe081daf6a76f39d5fd49066ee0b83f24c62d71a"
+    },
+    {
+      "path": "api_v3/lib/KalturaFrontController.php",
+      "line": 323,
+      "text": "\t\t\t\t\t$currentResult = $this->dispatcher->dispatch($currentService, $currentAction, $currentParams);",
+      "sha256": "189607dca3b5ef33270d8e4dfe081daf6a76f39d5fd49066ee0b83f24c62d71a"
+    },
+    {
+      "path": "api_v3/services/BaseEntryService.php",
+      "line": 762,
+      "text": "\t\treturn parent::anonymousRankEntry($entryId, null, $rank);",
+      "sha256": "069e3902be3d97f2e8139e445a9e1cfdceefc5d9db9a6882865ff3b17a44b27a"
+    },
+    {
+      "path": "api_v3/services/MediaService.php",
+      "line": 1128,
+      "text": "\t\treturn parent::anonymousRankEntry($entryId, KalturaEntryType::MEDIA_CLIP, $rank);",
+      "sha256": "7ffb9ca7642341eaf65a4387e82c7b63dfdf5e528b5b03da6ea24a56f384f708"
+    },
+    {
+      "path": "api_v3/services/MixingService.php",
+      "line": 371,
+      "text": "\t\treturn parent::anonymousRankEntry($entryId, KalturaEntryType::MIX, $rank);",
+      "sha256": "9cc6d1f90ccf2938c23fb3d3906bf21d257102ea0ddc6a388a124280fe04e8fb"
+    },
+    {
+      "path": "vendor/ZendFramework/library/Zend/View/Helper/Action.php",
+      "line": 82,
+      "text": "        $this->dispatcher    = clone $front->getDispatcher();",
+      "sha256": "927638631db921d0a5740d1639133b7d2410bd660fd72fb0e9c42b082fad2a93"
+    },
+    {
+      "path": "vendor/ZendFramework/library/Zend/View/Helper/Action.php",
+      "line": 131,
+      "text": "        $this->dispatcher->dispatch($this->request, $this->response);",
+      "sha256": "927638631db921d0a5740d1639133b7d2410bd660fd72fb0e9c42b082fad2a93"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Debug/TraceableEventDispatcher.php",
+      "line": 44,
+      "text": "        $this->dispatcher = $dispatcher;",
+      "sha256": "3c4cc695e0a0e8cf3cae54fc177da9113dfc94834b055e407d8f16000d854b14"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Debug/TraceableEventDispatcher.php",
+      "line": 55,
+      "text": "        $this->dispatcher->addListener($eventName, $listener, $priority);",
+      "sha256": "3c4cc695e0a0e8cf3cae54fc177da9113dfc94834b055e407d8f16000d854b14"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Debug/TraceableEventDispatcher.php",
+      "line": 63,
+      "text": "        $this->dispatcher->addSubscriber($subscriber);",
+      "sha256": "3c4cc695e0a0e8cf3cae54fc177da9113dfc94834b055e407d8f16000d854b14"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Debug/TraceableEventDispatcher.php",
+      "line": 71,
+      "text": "        return $this->dispatcher->removeListener($eventName, $listener);",
+      "sha256": "3c4cc695e0a0e8cf3cae54fc177da9113dfc94834b055e407d8f16000d854b14"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Debug/TraceableEventDispatcher.php",
+      "line": 79,
+      "text": "        return $this->dispatcher->removeSubscriber($subscriber);",
+      "sha256": "3c4cc695e0a0e8cf3cae54fc177da9113dfc94834b055e407d8f16000d854b14"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Debug/TraceableEventDispatcher.php",
+      "line": 87,
+      "text": "        return $this->dispatcher->getListeners($eventName);",
+      "sha256": "3c4cc695e0a0e8cf3cae54fc177da9113dfc94834b055e407d8f16000d854b14"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Debug/TraceableEventDispatcher.php",
+      "line": 95,
+      "text": "        return $this->dispatcher->hasListeners($eventName);",
+      "sha256": "3c4cc695e0a0e8cf3cae54fc177da9113dfc94834b055e407d8f16000d854b14"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Debug/TraceableEventDispatcher.php",
+      "line": 112,
+      "text": "        $this->dispatcher->dispatch($eventName, $event);",
+      "sha256": "3c4cc695e0a0e8cf3cae54fc177da9113dfc94834b055e407d8f16000d854b14"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Debug/TraceableEventDispatcher.php",
+      "line": 190,
+      "text": "        return call_user_func_array(array($this->dispatcher, $method), $arguments);",
+      "sha256": "3c4cc695e0a0e8cf3cae54fc177da9113dfc94834b055e407d8f16000d854b14"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Debug/TraceableEventDispatcher.php",
+      "line": 215,
+      "text": "        foreach ($this->dispatcher->getListeners($eventName) as $listener) {",
+      "sha256": "3c4cc695e0a0e8cf3cae54fc177da9113dfc94834b055e407d8f16000d854b14"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Debug/TraceableEventDispatcher.php",
+      "line": 216,
+      "text": "            $this->dispatcher->removeListener($eventName, $listener);",
+      "sha256": "3c4cc695e0a0e8cf3cae54fc177da9113dfc94834b055e407d8f16000d854b14"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Debug/TraceableEventDispatcher.php",
+      "line": 219,
+      "text": "            $this->dispatcher->addListener($eventName, new WrappedListener($listener, $name, $this->stopwatch, $this));",
+      "sha256": "3c4cc695e0a0e8cf3cae54fc177da9113dfc94834b055e407d8f16000d854b14"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Debug/TraceableEventDispatcher.php",
+      "line": 226,
+      "text": "        foreach ($this->dispatcher->getListeners($eventName) as $listener) {",
+      "sha256": "3c4cc695e0a0e8cf3cae54fc177da9113dfc94834b055e407d8f16000d854b14"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Debug/TraceableEventDispatcher.php",
+      "line": 231,
+      "text": "            $this->dispatcher->removeListener($eventName, $listener);",
+      "sha256": "3c4cc695e0a0e8cf3cae54fc177da9113dfc94834b055e407d8f16000d854b14"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Debug/TraceableEventDispatcher.php",
+      "line": 232,
+      "text": "            $this->dispatcher->addListener($eventName, $listener->getWrappedListener());",
+      "sha256": "3c4cc695e0a0e8cf3cae54fc177da9113dfc94834b055e407d8f16000d854b14"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Debug/WrappedListener.php",
+      "line": 35,
+      "text": "        $this->dispatcher = $dispatcher;",
+      "sha256": "2c3ec76ad034b34a395eb1aa44c79a884719a5deb0ee3bd9dbac3902eb96aa8d"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Debug/WrappedListener.php",
+      "line": 61,
+      "text": "        call_user_func($this->listener, $event, $eventName, $this->dispatcher ?: $dispatcher);",
+      "sha256": "2c3ec76ad034b34a395eb1aa44c79a884719a5deb0ee3bd9dbac3902eb96aa8d"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Event.php",
+      "line": 86,
+      "text": "        $this->dispatcher = $dispatcher;",
+      "sha256": "b3fe21e880b8cc54db4053c36f39c67a4c5ab5776f301ed677f14a8054668108"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Event.php",
+      "line": 100,
+      "text": "        return $this->dispatcher;",
+      "sha256": "b3fe21e880b8cc54db4053c36f39c67a4c5ab5776f301ed677f14a8054668108"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/ImmutableEventDispatcher.php",
+      "line": 35,
+      "text": "        $this->dispatcher = $dispatcher;",
+      "sha256": "58da3aadf73f4ba87fe2866568a5f6c69f3ff78f9d25153b63847da344cf6acb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/ImmutableEventDispatcher.php",
+      "line": 43,
+      "text": "        return $this->dispatcher->dispatch($eventName, $event);",
+      "sha256": "58da3aadf73f4ba87fe2866568a5f6c69f3ff78f9d25153b63847da344cf6acb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/ImmutableEventDispatcher.php",
+      "line": 83,
+      "text": "        return $this->dispatcher->getListeners($eventName);",
+      "sha256": "58da3aadf73f4ba87fe2866568a5f6c69f3ff78f9d25153b63847da344cf6acb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/ImmutableEventDispatcher.php",
+      "line": 91,
+      "text": "        return $this->dispatcher->hasListeners($eventName);",
+      "sha256": "58da3aadf73f4ba87fe2866568a5f6c69f3ff78f9d25153b63847da344cf6acb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 34,
+      "text": "        $this->dispatcher = $this->createEventDispatcher();",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 40,
+      "text": "        $this->dispatcher = null;",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 48,
+      "text": "        $this->assertEquals(array(), $this->dispatcher->getListeners());",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 49,
+      "text": "        $this->assertFalse($this->dispatcher->hasListeners(self::preFoo));",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 50,
+      "text": "        $this->assertFalse($this->dispatcher->hasListeners(self::postFoo));",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 55,
+      "text": "        $this->dispatcher->addListener('pre.foo', array($this->listener, 'preFoo'));",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 56,
+      "text": "        $this->dispatcher->addListener('post.foo', array($this->listener, 'postFoo'));",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 57,
+      "text": "        $this->assertTrue($this->dispatcher->hasListeners(self::preFoo));",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 58,
+      "text": "        $this->assertTrue($this->dispatcher->hasListeners(self::postFoo));",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 59,
+      "text": "        $this->assertCount(1, $this->dispatcher->getListeners(self::preFoo));",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 60,
+      "text": "        $this->assertCount(1, $this->dispatcher->getListeners(self::postFoo));",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 61,
+      "text": "        $this->assertCount(2, $this->dispatcher->getListeners());",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 73,
+      "text": "        $this->dispatcher->addListener('pre.foo', array($listener1, 'preFoo'), -10);",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 74,
+      "text": "        $this->dispatcher->addListener('pre.foo', array($listener2, 'preFoo'), 10);",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 75,
+      "text": "        $this->dispatcher->addListener('pre.foo', array($listener3, 'preFoo'));",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 83,
+      "text": "        $this->assertSame($expected, $this->dispatcher->getListeners('pre.foo'));",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 95,
+      "text": "        $this->dispatcher->addListener('pre.foo', $listener1, -10);",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 96,
+      "text": "        $this->dispatcher->addListener('pre.foo', $listener2);",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 97,
+      "text": "        $this->dispatcher->addListener('pre.foo', $listener3, 10);",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 98,
+      "text": "        $this->dispatcher->addListener('post.foo', $listener4, -10);",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 99,
+      "text": "        $this->dispatcher->addListener('post.foo', $listener5);",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 100,
+      "text": "        $this->dispatcher->addListener('post.foo', $listener6, 10);",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 107,
+      "text": "        $this->assertSame($expected, $this->dispatcher->getListeners());",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 112,
+      "text": "        $this->dispatcher->addListener('pre.foo', array($this->listener, 'preFoo'));",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 113,
+      "text": "        $this->dispatcher->addListener('post.foo', array($this->listener, 'postFoo'));",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 114,
+      "text": "        $this->dispatcher->dispatch(self::preFoo);",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 117,
+      "text": "        $this->assertInstanceOf('Symfony\\Component\\EventDispatcher\\Event', $this->dispatcher->dispatch('noevent'));",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 118,
+      "text": "        $this->assertInstanceOf('Symfony\\Component\\EventDispatcher\\Event', $this->dispatcher->dispatch(self::preFoo));",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 120,
+      "text": "        $return = $this->dispatcher->dispatch(self::preFoo, $event);",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 131,
+      "text": "        $this->dispatcher->addListener('pre.foo', $listener);",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 132,
+      "text": "        $this->dispatcher->addListener('post.foo', $listener);",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 133,
+      "text": "        $this->dispatcher->dispatch(self::preFoo);",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 144,
+      "text": "        $this->dispatcher->addListener('post.foo', array($this->listener, 'postFoo'), 10);",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 145,
+      "text": "        $this->dispatcher->addListener('post.foo', array($otherListener, 'preFoo'));",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 146,
+      "text": "        $this->dispatcher->dispatch(self::postFoo);",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 163,
+      "text": "        $this->dispatcher->addListener('pre.foo', $listener1, -10);",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 164,
+      "text": "        $this->dispatcher->addListener('pre.foo', $listener2);",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 165,
+      "text": "        $this->dispatcher->addListener('pre.foo', $listener3, 10);",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 166,
+      "text": "        $this->dispatcher->dispatch(self::preFoo);",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 172,
+      "text": "        $this->dispatcher->addListener('pre.bar', $this->listener);",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 173,
+      "text": "        $this->assertTrue($this->dispatcher->hasListeners(self::preBar));",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 174,
+      "text": "        $this->dispatcher->removeListener('pre.bar', $this->listener);",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 175,
+      "text": "        $this->assertFalse($this->dispatcher->hasListeners(self::preBar));",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 176,
+      "text": "        $this->dispatcher->removeListener('notExists', $this->listener);",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 182,
+      "text": "        $this->dispatcher->addSubscriber($eventSubscriber);",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 183,
+      "text": "        $this->assertTrue($this->dispatcher->hasListeners(self::preFoo));",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 184,
+      "text": "        $this->assertTrue($this->dispatcher->hasListeners(self::postFoo));",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 190,
+      "text": "        $this->dispatcher->addSubscriber($eventSubscriber);",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 193,
+      "text": "        $this->dispatcher->addSubscriber($eventSubscriber);",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 195,
+      "text": "        $listeners = $this->dispatcher->getListeners('pre.foo');",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 196,
+      "text": "        $this->assertTrue($this->dispatcher->hasListeners(self::preFoo));",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 204,
+      "text": "        $this->dispatcher->addSubscriber($eventSubscriber);",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 206,
+      "text": "        $listeners = $this->dispatcher->getListeners('pre.foo');",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 207,
+      "text": "        $this->assertTrue($this->dispatcher->hasListeners(self::preFoo));",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 215,
+      "text": "        $this->dispatcher->addSubscriber($eventSubscriber);",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 216,
+      "text": "        $this->assertTrue($this->dispatcher->hasListeners(self::preFoo));",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 217,
+      "text": "        $this->assertTrue($this->dispatcher->hasListeners(self::postFoo));",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 218,
+      "text": "        $this->dispatcher->removeSubscriber($eventSubscriber);",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 219,
+      "text": "        $this->assertFalse($this->dispatcher->hasListeners(self::preFoo));",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 220,
+      "text": "        $this->assertFalse($this->dispatcher->hasListeners(self::postFoo));",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 226,
+      "text": "        $this->dispatcher->addSubscriber($eventSubscriber);",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 227,
+      "text": "        $this->assertTrue($this->dispatcher->hasListeners(self::preFoo));",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 228,
+      "text": "        $this->dispatcher->removeSubscriber($eventSubscriber);",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 229,
+      "text": "        $this->assertFalse($this->dispatcher->hasListeners(self::preFoo));",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 235,
+      "text": "        $this->dispatcher->addSubscriber($eventSubscriber);",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 236,
+      "text": "        $this->assertTrue($this->dispatcher->hasListeners(self::preFoo));",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 237,
+      "text": "        $this->assertCount(2, $this->dispatcher->getListeners(self::preFoo));",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 238,
+      "text": "        $this->dispatcher->removeSubscriber($eventSubscriber);",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 239,
+      "text": "        $this->assertFalse($this->dispatcher->hasListeners(self::preFoo));",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 245,
+      "text": "        $this->dispatcher->addListener('test', function ($event) use (&$dispatcher) {",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 248,
+      "text": "        $this->dispatcher->dispatch('test');",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 249,
+      "text": "        $this->assertSame($this->dispatcher, $dispatcher);",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 255,
+      "text": "        $this->dispatcher->addListener('test', array($listener, 'foo'));",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 257,
+      "text": "        $this->assertNull($listener->dispatcher);",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 258,
+      "text": "        $this->dispatcher->dispatch('test');",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 260,
+      "text": "        $this->assertSame($this->dispatcher, $listener->dispatcher);",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 282,
+      "text": "        $this->dispatcher->addListener('foo', $listener);",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 283,
+      "text": "        $this->dispatcher->removeListener('foo', $listener);",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 284,
+      "text": "        $this->assertFalse($this->dispatcher->hasListeners());",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 290,
+      "text": "        $this->dispatcher->addListener('foo', $listener);",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 291,
+      "text": "        $this->dispatcher->removeListener('foo', $listener);",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 292,
+      "text": "        $this->assertSame(array(), $this->dispatcher->getListeners());",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 297,
+      "text": "        $this->assertFalse($this->dispatcher->hasListeners('foo'));",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 298,
+      "text": "        $this->assertFalse($this->dispatcher->hasListeners());",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/AbstractEventDispatcherTest.php",
+      "line": 337,
+      "text": "        $this->dispatcher = $dispatcher;",
+      "sha256": "07b2f2b299181e86b9e39dbce1b49b9c50128ed65f718254eea5d3f3ca6e91eb"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/EventTest.php",
+      "line": 39,
+      "text": "        $this->dispatcher = new EventDispatcher();",
+      "sha256": "05b05513a732a16b6c6d7d157db1111d2f4e59147e9e2ab85ee8ca089ff28612"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/EventTest.php",
+      "line": 49,
+      "text": "        $this->dispatcher = null;",
+      "sha256": "05b05513a732a16b6c6d7d157db1111d2f4e59147e9e2ab85ee8ca089ff28612"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/EventTest.php",
+      "line": 66,
+      "text": "        $this->event->setDispatcher($this->dispatcher);",
+      "sha256": "05b05513a732a16b6c6d7d157db1111d2f4e59147e9e2ab85ee8ca089ff28612"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/EventTest.php",
+      "line": 67,
+      "text": "        $this->assertSame($this->dispatcher, $this->event->getDispatcher());",
+      "sha256": "05b05513a732a16b6c6d7d157db1111d2f4e59147e9e2ab85ee8ca089ff28612"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/ImmutableEventDispatcherTest.php",
+      "line": 35,
+      "text": "        $this->dispatcher = new ImmutableEventDispatcher($this->innerDispatcher);",
+      "sha256": "8a0ff9317427343a8fad37fc7ff50410abe505c766e1d05d8ded3c738d5563e2"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/ImmutableEventDispatcherTest.php",
+      "line": 47,
+      "text": "        $this->assertSame('result', $this->dispatcher->dispatch('event', $event));",
+      "sha256": "8a0ff9317427343a8fad37fc7ff50410abe505c766e1d05d8ded3c738d5563e2"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/ImmutableEventDispatcherTest.php",
+      "line": 57,
+      "text": "        $this->assertSame('result', $this->dispatcher->getListeners('event'));",
+      "sha256": "8a0ff9317427343a8fad37fc7ff50410abe505c766e1d05d8ded3c738d5563e2"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/ImmutableEventDispatcherTest.php",
+      "line": 67,
+      "text": "        $this->assertSame('result', $this->dispatcher->hasListeners('event'));",
+      "sha256": "8a0ff9317427343a8fad37fc7ff50410abe505c766e1d05d8ded3c738d5563e2"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/ImmutableEventDispatcherTest.php",
+      "line": 75,
+      "text": "        $this->dispatcher->addListener('event', function () { return 'foo'; });",
+      "sha256": "8a0ff9317427343a8fad37fc7ff50410abe505c766e1d05d8ded3c738d5563e2"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/ImmutableEventDispatcherTest.php",
+      "line": 85,
+      "text": "        $this->dispatcher->addSubscriber($subscriber);",
+      "sha256": "8a0ff9317427343a8fad37fc7ff50410abe505c766e1d05d8ded3c738d5563e2"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/ImmutableEventDispatcherTest.php",
+      "line": 93,
+      "text": "        $this->dispatcher->removeListener('event', function () { return 'foo'; });",
+      "sha256": "8a0ff9317427343a8fad37fc7ff50410abe505c766e1d05d8ded3c738d5563e2"
+    },
+    {
+      "path": "vendor/aws/Symfony/Component/EventDispatcher/Tests/ImmutableEventDispatcherTest.php",
+      "line": 103,
+      "text": "        $this->dispatcher->removeSubscriber($subscriber);",
+      "sha256": "8a0ff9317427343a8fad37fc7ff50410abe505c766e1d05d8ded3c738d5563e2"
+    }
+  ]
+}
