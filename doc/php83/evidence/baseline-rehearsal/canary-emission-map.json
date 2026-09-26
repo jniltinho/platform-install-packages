@@ -1,0 +1,24 @@
+{
+  "exit": 0,
+  "observation": {
+    "sink": "/opt/kaltura/log/kaltura_api_v3.log",
+    "matches": [
+      {
+        "offset": 3509058319,
+        "priority": "DEBUG",
+        "known_emitter_names": [
+          "KalturaFrontController"
+        ]
+      },
+      {
+        "offset": 3509058576,
+        "priority": "DEBUG",
+        "known_emitter_names": [
+          "KalturaDispatcher"
+        ]
+      }
+    ],
+    "raw_content_exported": false
+  },
+  "collector_sha256": "f598e41828fd6b6694e1932ab651dd07de1f629e24b86e2b372ad02813d23378"
+}

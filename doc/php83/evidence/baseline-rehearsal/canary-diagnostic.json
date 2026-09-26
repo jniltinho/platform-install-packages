@@ -1,0 +1,17 @@
+{
+  "exit": 0,
+  "observation": {
+    "matched_sinks": [
+      {
+        "path": "/opt/kaltura/log/kaltura_api_v3.log",
+        "nearest_priority": "DEBUG",
+        "known_method_names_only": [
+          "KalturaFrontController"
+        ]
+      }
+    ],
+    "scanned_bytes": 4009631564,
+    "raw_content_exported": false
+  },
+  "collector_sha256": "d2d8bcbdd4067e8db7bb78e4dd48f90e13bf016a328b29e1633e8e42613e6dd0"
+}

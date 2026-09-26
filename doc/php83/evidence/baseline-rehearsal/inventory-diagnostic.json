@@ -1,0 +1,9 @@
+{
+  "exit": 1,
+  "diagnostic_program_sha256": "905b47e3a8e519c5080d98c5ad8174ae05117b9120eaff9ae0d6b019f9a2b943",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "result": {
+    "status": "INVENTORY_DIAGNOSTIC_ONLY",
+    "reason": "Unexpected package inventory"
+  }
+}

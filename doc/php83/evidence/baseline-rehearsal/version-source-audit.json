@@ -1,0 +1,13 @@
+{
+  "project": "kaltura-rigel-18.20.0-full",
+  "generation": "2026-09-25T12:19:00Z",
+  "coverage": "exact paths no_recorded_issue/metadata_match best effort",
+  "source_root": "/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/server-Rigel-18.20.0",
+  "sha256": {
+    "api_v3/services/MediaService.php": "7ffb9ca7642341eaf65a4387e82c7b63dfdf5e528b5b03da6ea24a56f384f708",
+    "api_v3/lib/KalturaEntryService.php": "9495b584f73df1f4a11812efa964f57f42562159a405693b71e1731d53fe4dd5",
+    "alpha/lib/model/entry.php": "b677a171f5cc51f6a692eab774938b1a582e21e177ec40ff36aaf4277886dfb5"
+  },
+  "claim": "No positive-only guard in getEntry/setDesiredVersion; getDataContent treats0/-1 as current. Native media.get zero binding not observed.",
+  "native_observation": false
+}

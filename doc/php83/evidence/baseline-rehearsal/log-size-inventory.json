@@ -1,0 +1,1051 @@
+{
+  "exit": 0,
+  "rows": [
+    {
+      "path": "/opt/kaltura/log/insertDefaults.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/deploy_v2.log",
+      "size": 671,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/generate.php.log",
+      "size": 5806,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/kaltura_elastic_populate.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/kaltura_apache_errors.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/kaltura_deploy.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/kaltura_api_v3_analytics.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/populate.pid",
+      "size": 5,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/insertPermissions.log",
+      "size": 107441166,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/kaltura_batch.log",
+      "size": 32282435,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/kaltura_scripts.log",
+      "size": 1741,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/kaltura_populate.log",
+      "size": 922,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/kaltura_api_v3.log",
+      "size": 3494276989,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/kaltura_prod.log",
+      "size": 49297,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/kaltura_admin.log",
+      "size": 1604,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/kaltura_api_v3_tests.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/installPlugins.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/kaltura_apache_access.log",
+      "size": 15219287,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/insertContent.log",
+      "size": 1052366,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/populate_elastic.pid",
+      "size": 5,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/nginx/kaltura_nginx_errors.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/nginx/access.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/nginx/kaltura_nginx_access.log",
+      "size": 557,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/nginx/error.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/elasticsearch/kaltura.log",
+      "size": 1347,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/elasticsearch/kaltura-2026-09-25-1.log.gz",
+      "size": 5040,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/elasticsearch/kaltura_index_search_slowlog.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/elasticsearch/kaltura_deprecation.log",
+      "size": 1301,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/elasticsearch/kaltura_index_search_slowlog.json",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/elasticsearch/kaltura_index_indexing_slowlog.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/elasticsearch/kaltura_deprecation.json",
+      "size": 2036,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/elasticsearch/kaltura_index_indexing_slowlog.json",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/elasticsearch/kaltura_server.json",
+      "size": 3084,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/elasticsearch/kaltura-2026-09-25-1.json.gz",
+      "size": 5318,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/elasticsearch/kaltura_audit.json",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/sphinx/kaltura_sphinx_query.log",
+      "size": 1292996,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/sphinx/kaltura_sphinx_searchd.log",
+      "size": 1200,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/provisiondelete-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/delete-0-2026-09-25.log",
+      "size": 1118,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/transformmetadata-0-2026-09-25.log",
+      "size": 2229,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/dropfolderwatcherlocalbase-0-2026-09-25.log",
+      "size": 3533573,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/validatelivemediaservers-0-2026-09-26.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/parsecaptionasset-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/movecategoryentries-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/livetovod-0-2026-09-25.log",
+      "size": 1113,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/directorycleanuplocal-0-2026-09-25.log",
+      "size": 20523,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/distributeupdate-0-2026-09-25.log",
+      "size": 2238,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/tagindex-0-2026-09-25.err.log",
+      "size": 207,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/import-0-2026-09-25.log",
+      "size": 1113,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/dispatcheventnotification-0-2026-09-25.log",
+      "size": 2237,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/dbcleanup-0-2026-09-26.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/movecategoryentries-1-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/convertprofilecloser-0-2026-09-25.log",
+      "size": 2229,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/convertthumbassetsgenerator-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/bulkupload-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/directorycleanupbatchlogs-0-2026-09-26.log",
+      "size": 30978,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/convertcloser-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/dispatcheventnotification-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/transformmetadata-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/postconvert-0-2026-09-25.err.log",
+      "size": 40489,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/convertlivesegment-0-2026-09-25.log",
+      "size": 2234,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/distributesubmitcloser-0-2026-09-25.log",
+      "size": 2230,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/distributedeletecloser-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/synchronizedistribution-0-2026-09-26.log",
+      "size": 425061,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/distributeupdate-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/copy-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/dropfolderwatcher-0-2026-09-25.log",
+      "size": 11130238,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/distributesubmit-0-2026-09-25.log",
+      "size": 2233,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/dropfolderwatcher-0-2026-09-26.log",
+      "size": 15929954,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/convertthumbassetsgenerator-0-2026-09-25.log",
+      "size": 1121,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/postconvert-0-2026-09-25.log",
+      "size": 1559572,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/dropfolderwatcherlocalbase-0-2026-09-26.log",
+      "size": 5060655,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/storageexport-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/distributeupdatecloser-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/concat-0-2026-09-25.log",
+      "size": 2226,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/index-0-2026-09-25.log",
+      "size": 85339,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/jobsuspender-0-2026-09-26.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/dropfolderwatcher-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/distributeenable-0-2026-09-25.log",
+      "size": 2237,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/dropfoldercontentprocessor-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/index-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/distributedelete-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/dbcleanup-0-2026-09-26.log",
+      "size": 2562196,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/bulkdownloadcloser-0-2026-09-25.log",
+      "size": 2228,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/capturethumb-0-2026-09-25.log",
+      "size": 281704,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/integrate-0-2026-09-25.log",
+      "size": 1121,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/convert-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/distributeenable-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/directorycleanupshared-0-2026-09-26.log",
+      "size": 31582,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/notifier-0-2026-09-25.log",
+      "size": 2238,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/dropfoldercontentprocessor-0-2026-09-25.log",
+      "size": 2227,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/distributeupdatecloser-0-2026-09-25.log",
+      "size": 2237,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/distributefetchreportcloser-0-2026-09-25.log",
+      "size": 2226,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/integrate-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/mailer-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/directorycleanupshared-0-2026-09-26.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/copycuepoints-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/distributefetchreport-0-2026-09-25.log",
+      "size": 2223,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/copypartner-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/directorycleanupbatchlogs-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/bulkuploadcloser-0-2026-09-25.log",
+      "size": 2228,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/storageexportcloser-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/jobsuspender-0-2026-09-26.log",
+      "size": 2547603,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/distributefetchreportcloser-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/bulkupload-0-2026-09-25.log",
+      "size": 2229,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/kscheduledtaskdryrunner-0-2026-09-25.log",
+      "size": 2230,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/synchronizedistribution-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/partnerloadcleanup-0-2026-09-25.log",
+      "size": 1800565,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/distributedisable-0-2026-09-25.log",
+      "size": 2230,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/directorycleanupshared-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/directorycleanuplocal-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/copycaptions-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/bulkdownloadcloser-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/directorycleanuplocal-0-2026-09-26.log",
+      "size": 33587,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/kscheduledtaskrunner-0-2026-09-26.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/partnerloadcleanup-0-2026-09-26.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/kscheduledtaskdryrunner-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/index-3-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/delete-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/directorycleanuplocal-0-2026-09-26.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/movecategoryentries-0-2026-09-25.log",
+      "size": 1111,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/storageexport-1-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/capturethumb-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/mailer-0-2026-09-25.log",
+      "size": 58459,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/storagedelete-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/distributesubmitcloser-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/convertcloser-0-2026-09-25.log",
+      "size": 6415,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/validatelivemediaservers-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/partnerloadcleanup-0-2026-09-26.log",
+      "size": 2577533,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/livetovod-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/synccategoryprivacycontext-0-2026-09-25.log",
+      "size": 2233,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/provisionprovide-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/kschedulehelper-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/index-1-2026-09-25.log",
+      "size": 62614,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/parsecaptionasset-0-2026-09-25.log",
+      "size": 2231,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/import-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/provisionprovide-0-2026-09-25.log",
+      "size": 2229,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/movecategoryentries-1-2026-09-25.log",
+      "size": 1120,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/directorycleanupbatchlogs-0-2026-09-25.log",
+      "size": 20682,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/jobsuspender-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/copycaptions-0-2026-09-25.log",
+      "size": 1119,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/copy-1-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/convertprofilecloser-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/jobsuspender-0-2026-09-25.log",
+      "size": 1780252,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/dbcleanup-0-2026-09-25.log",
+      "size": 1790345,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/concat-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/clearcuepoints-0-2026-09-25.log",
+      "size": 3227589,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/index-3-2026-09-25.log",
+      "size": 61409,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/storagedelete-0-2026-09-25.log",
+      "size": 2230,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/validatelivemediaservers-0-2026-09-25.log",
+      "size": 4216797,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/deletefile-0-2026-09-25.log",
+      "size": 2231,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/synchronizedistribution-0-2026-09-26.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/kscheduledtaskrunner-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/deletefile-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/dropfolderwatcherlocalbase-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/dbcleanup-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/copypartner-0-2026-09-25.log",
+      "size": 194999,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/distributedelete-0-2026-09-25.log",
+      "size": 2230,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/delete-1-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/import-1-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/integratecloser-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/distributedisable-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/kschedulehelper-0-2026-09-26.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/notifier-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/kschedulehelper-0-2026-09-26.log",
+      "size": 153127099,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/index-1-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/copycuepoints-0-2026-09-25.log",
+      "size": 1119,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/copy-0-2026-09-25.log",
+      "size": 1112,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/storageexport-0-2026-09-25.log",
+      "size": 1103,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/copy-1-2026-09-25.log",
+      "size": 1120,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/distributefetchreport-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/convertlivesegment-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/directorycleanupshared-0-2026-09-25.log",
+      "size": 20569,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/clearcuepoints-0-2026-09-26.log",
+      "size": 4616712,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/tagindex-0-2026-09-25.log",
+      "size": 5468,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/distributedeletecloser-0-2026-09-25.log",
+      "size": 2229,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/directorycleanupbatchlogs-0-2026-09-26.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/validatelivemediaservers-0-2026-09-26.log",
+      "size": 6015250,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/kscheduledtaskrunner-0-2026-09-25.log",
+      "size": 5869,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/provisiondelete-0-2026-09-25.log",
+      "size": 2213,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/index-2-2026-09-25.log",
+      "size": 81594,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/storageexport-1-2026-09-25.log",
+      "size": 1120,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/integratecloser-0-2026-09-25.log",
+      "size": 1121,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/extractmedia-0-2026-09-25.err.log",
+      "size": 27134,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/kscheduledtaskrunner-0-2026-09-26.log",
+      "size": 8834,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/convert-0-2026-09-25.log",
+      "size": 1299284,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/dropfolderwatcherlocalbase-0-2026-09-26.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/provisionprovidecloser-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/index-2-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/delete-1-2026-09-25.log",
+      "size": 1120,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/synchronizedistribution-0-2026-09-25.log",
+      "size": 293825,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/dropfolderwatcher-0-2026-09-26.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/extractmedia-0-2026-09-25.log",
+      "size": 617371,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/synccategoryprivacycontext-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/distributesubmit-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/clearcuepoints-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/storageexportcloser-0-2026-09-25.log",
+      "size": 2206,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/kschedulehelper-0-2026-09-25.log",
+      "size": 107059407,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/clearcuepoints-0-2026-09-26.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/provisionprovidecloser-0-2026-09-25.log",
+      "size": 2230,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/partnerloadcleanup-0-2026-09-25.err.log",
+      "size": 567,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/import-1-2026-09-25.log",
+      "size": 1121,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/batch/bulkuploadcloser-0-2026-09-25.err.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/sphinx/data/binlog.meta",
+      "size": 11,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/sphinx/data/binlog.001",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/opt/kaltura/log/sphinx/data/binlog.lock",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/var/log/apache2/other_vhosts_access.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/var/log/apache2/access.log",
+      "size": 0,
+      "symlink": false
+    },
+    {
+      "path": "/var/log/apache2/error.log",
+      "size": 4347,
+      "symlink": false
+    }
+  ],
+  "raw_stdout_sha256": "d5fa8d893cb79a3a94c7dc1555c20753d39fdadcd5fc5932943e19da43a44d9c"
+}

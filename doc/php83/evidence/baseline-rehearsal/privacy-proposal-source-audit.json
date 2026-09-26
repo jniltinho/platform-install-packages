@@ -1,0 +1,25 @@
+{
+  "status": "PROPOSAL_NOT_APPLIED",
+  "graph_project": "kaltura-rigel-18.20.0-full",
+  "generation": "2026-09-25T12:19:00Z",
+  "coverage": "exact paths no_recorded_issue metadata_match; best effort not completeness",
+  "source_root": "/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/server-Rigel-18.20.0",
+  "sources": {
+    "api_v3/lib/KalturaFrontController.php": "5f2eeffe526d4a0ee245b6f10f4e9600e0f7c8bcb4a52eef41e3a66bbd9ab7a1",
+    "api_v3/lib/KalturaDispatcher.php": "be20609b269f08cf1317a79046f5b43cddc8be4cd14dd01fbc0d928fdd24fce2",
+    "api_v3/lib/KalturaRequestDeserializer.php": "0273e331f1dc7c8dcb783e6193f969a7ff0953b3554cd32f6953b2149154a038",
+    "infra/log/KalturaLog.php": "9b7a7c3dd37616ffd2ac9720ece862641c43bb687a2db4e8fc9cbcb259ff5449",
+    "api_v3/services/SessionService.php": "4724b9be42d4eb2121f7b85aeb0c85db3d9c2e4e7e579adb9818a0ae14ad1e26",
+    "alpha/apps/kaltura/lib/kCurrentContext.class.php": "7f5c53f693e0c4a403bb5b513740d32e36f809cde1b26eb11e60f592badadb7f",
+    "alpha/apps/kaltura/lib/webservices/kSessionUtils.class.php": "1e6d4cef0d6c50d252137745055f605e3208ee8b294c9d612cae2861bf2eddf4"
+  },
+  "native_confirmed_emitters": [
+    "KalturaFrontController DEBUG",
+    "KalturaDispatcher DEBUG"
+  ],
+  "source_analytics_ks_risk": true,
+  "exception_trace_privacy": "PENDING_NATIVE_CONTROLS",
+  "global_absence_claim": false,
+  "same_policy_required_baseline_candidate": true,
+  "changes_applied": false
+}

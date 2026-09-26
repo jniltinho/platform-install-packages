@@ -1,0 +1,8 @@
+{
+  "graph_project": "kaltura-rigel-18.20.0-full",
+  "generation": "2026-09-25T12:19:00Z",
+  "coverage": "no_recorded_issue metadata_match; best effort",
+  "source": "/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/server-Rigel-18.20.0/alpha/lib/model/FileSync.php",
+  "sha256": "7e4f9808edcf1b70e227460fd5bf560146ef01fd1c25ad971bc2bc3ed2bc4180",
+  "claim": "lines251-254 getFullPath concatenates getFileRoot()+getFilePath(); line13 native file type1. Candidate restricts actual local regular-source record; does not claim generic shared-storage-profile resolution."
+}

@@ -1,0 +1,988 @@
+{
+  "exit": 1,
+  "stdout_sha256": "7f6af6fdd93ddb2bcc6a4af8fc1588fd14dc49c91be8eca9eae091a177fac3ab",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stage": "/home/vagrant/baseline-untimed-r2",
+  "manifest": {
+    "tools/php83/baseline-protocol/guarded_http.py": "4cc44f15645ced42e1e156586a79a2795d38f929c6f812eb695e427ee7e47b59",
+    "tools/php83/baseline-protocol/deadline_transport.py": "330c7aedaa57c439af579b9fa9f262c1062bbd66014d3e4c0adbe9b8a6c1dbe2",
+    "tools/php83/baseline-api/transport.py": "5a5896f22aeef0a8baf0ba3869b2cbfebcd655b94ab5671dc13580d1035edf20",
+    "tools/php83/baseline-api/protocol.py": "4587eab6222c2cacc381b6ef100dc557f1afb814250dcc5ba92b3b2ee7eeca34",
+    "tools/php83/baseline-rehearsal/untimed_driver.py": "b461835902bde19d3ec3ca555a88dac640176aa7318315d9cb4bee3d29df14b5",
+    "tools/php83/baseline-rehearsal/guest_inventory.py": "5ddb8bbbb1b6fdc4e77c93bd7833c31b046196dc44c42f6874de279aed70b0a6",
+    "short360.mp4": "612d179c75f8f2374b7ac59c2dd7edba65e38eb357b870e8ad8c2e83d63b5473"
+  },
+  "before": {
+    "baseline_acceptance": false,
+    "cli_default_module_names": [
+      "apcu",
+      "calendar",
+      "Core",
+      "ctype",
+      "curl",
+      "date",
+      "dom",
+      "exif",
+      "FFI",
+      "fileinfo",
+      "filter",
+      "ftp",
+      "gd",
+      "gettext",
+      "gmp",
+      "hash",
+      "iconv",
+      "intl",
+      "json",
+      "ldap",
+      "libxml",
+      "mbstring",
+      "memcache",
+      "mysqli",
+      "mysqlnd",
+      "openssl",
+      "pcntl",
+      "pcre",
+      "PDO",
+      "pdo_mysql",
+      "Phar",
+      "posix",
+      "readline",
+      "Reflection",
+      "session",
+      "shmop",
+      "SimpleXML",
+      "sockets",
+      "sodium",
+      "SPL",
+      "ssh2",
+      "standard",
+      "sysvmsg",
+      "sysvsem",
+      "sysvshm",
+      "tokenizer",
+      "xml",
+      "xmlreader",
+      "xmlwriter",
+      "xsl",
+      "Zend OPcache",
+      "zip",
+      "zlib",
+      "Zend OPcache"
+    ],
+    "cli_version": "7.4.33",
+    "cpus": 4,
+    "credential_read": false,
+    "critical_source_root_resolved": "/opt/kaltura/app",
+    "critical_source_subset_sha256": {
+      "alpha/lib/model/entry.php": "b677a171f5cc51f6a692eab774938b1a582e21e177ec40ff36aaf4277886dfb5",
+      "api_v3/lib/KalturaEntryService.php": "9495b584f73df1f4a11812efa964f57f42562159a405693b71e1731d53fe4dd5",
+      "api_v3/lib/KalturaJsonSerializer.php": "c9f7ffd11840395bb0bdd9f8dd43ccbac137c4f33fba619a8e90c7590f3596cc",
+      "api_v3/lib/KalturaSerializer.php": "8cee6b9af7b33a6a66cbd354297290dcc4cc386202c49670482dfd7488538bd0",
+      "api_v3/services/MediaService.php": "7ffb9ca7642341eaf65a4387e82c7b63dfdf5e528b5b03da6ea24a56f384f708"
+    },
+    "hostname": "kaltura-php74-baseline",
+    "http_requests": 0,
+    "missing_inventory_files": [],
+    "noninstalled_dpkg_matches": [
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-calendar"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-ctype"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-dom"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-exif"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-ffi"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-fileinfo"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-ftp"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-gettext"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-iconv"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-mysqli"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-mysqlnd"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-pdo"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-pdo-mysql"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-phar"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-posix"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-shmop"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-simplexml"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-sockets"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-sysvmsg"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-sysvsem"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-sysvshm"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-tokenizer"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-xmlreader"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-xmlwriter"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-xsl"
+      }
+    ],
+    "package_versions": [
+      [
+        "kaltura-base",
+        "18.20.0-1",
+        "all"
+      ],
+      [
+        "kaltura-batch",
+        "18.20.0-1",
+        "all"
+      ],
+      [
+        "kaltura-db",
+        "18.20.0-1",
+        "all"
+      ],
+      [
+        "kaltura-elasticsearch",
+        "7.17-1",
+        "all"
+      ],
+      [
+        "kaltura-ffmpeg",
+        "6.1-1",
+        "all"
+      ],
+      [
+        "kaltura-ffmpeg-aux",
+        "6.1-1",
+        "all"
+      ],
+      [
+        "kaltura-front",
+        "18.20.0-1",
+        "all"
+      ],
+      [
+        "kaltura-html5-analytics",
+        "0.3-1",
+        "all"
+      ],
+      [
+        "kaltura-html5-studio",
+        "2.2.3-1",
+        "all"
+      ],
+      [
+        "kaltura-html5-studio3",
+        "3.18.0-1",
+        "all"
+      ],
+      [
+        "kaltura-html5lib",
+        "2.98-1",
+        "all"
+      ],
+      [
+        "kaltura-html5lib3",
+        "3.8.1-1",
+        "all"
+      ],
+      [
+        "kaltura-kmcng",
+        "5.17.0-1",
+        "all"
+      ],
+      [
+        "kaltura-nginx",
+        "1.23.0-1",
+        "amd64"
+      ],
+      [
+        "kaltura-postinst",
+        "1.0.34-1",
+        "all"
+      ],
+      [
+        "kaltura-server",
+        "18.20.0-1",
+        "all"
+      ],
+      [
+        "kaltura-sphinx",
+        "2.2.11-1",
+        "all"
+      ],
+      [
+        "php7.4-apcu",
+        "5.1.28-2+ubuntu24.04.1+deb.sury.org+1",
+        "amd64"
+      ],
+      [
+        "php7.4-cli",
+        "1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1",
+        "amd64"
+      ],
+      [
+        "php7.4-common",
+        "1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1",
+        "amd64"
+      ],
+      [
+        "php7.4-curl",
+        "1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1",
+        "amd64"
+      ],
+      [
+        "php7.4-gd",
+        "1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1",
+        "amd64"
+      ],
+      [
+        "php7.4-gmp",
+        "1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1",
+        "amd64"
+      ],
+      [
+        "php7.4-intl",
+        "1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1",
+        "amd64"
+      ],
+      [
+        "php7.4-json",
+        "1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1",
+        "amd64"
+      ],
+      [
+        "php7.4-ldap",
+        "1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1",
+        "amd64"
+      ],
+      [
+        "php7.4-mbstring",
+        "1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1",
+        "amd64"
+      ],
+      [
+        "php7.4-memcache",
+        "1:4.0.5.2-1+ubuntu24.04.1+deb.sury.org+1",
+        "amd64"
+      ],
+      [
+        "php7.4-mysql",
+        "1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1",
+        "amd64"
+      ],
+      [
+        "php7.4-opcache",
+        "1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1",
+        "amd64"
+      ],
+      [
+        "php7.4-readline",
+        "1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1",
+        "amd64"
+      ],
+      [
+        "php7.4-ssh2",
+        "1.4.1-5+ubuntu24.04.1+deb.sury.org+1",
+        "amd64"
+      ],
+      [
+        "php7.4-xml",
+        "1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1",
+        "amd64"
+      ],
+      [
+        "php7.4-zip",
+        "1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1",
+        "amd64"
+      ]
+    ],
+    "private_config_read": false,
+    "public_file_sha256": {
+      "/etc/apache2/mods-enabled/php7.4.conf": "b26c261df92c1f0608d959e1f583bf3e195d58d290cb4238be4ab549f5e74ad9",
+      "/etc/apache2/mods-enabled/php7.4.load": "a6a85244aef9930fedaf42e76a3950579b6f1c994148856d0a4727b222af63b3",
+      "/opt/kaltura-baseline/install-aio.sh": "3888f90a295f03421ea54c5055aad978cefb7121428941880ee0e787b38f30a5",
+      "/opt/kaltura-baseline/repo.tar.gz": "91629580441f6a896ebf9e51f0256532221715bee57a3e5a64c66ff0c4e3127b",
+      "/usr/bin/php7.4": "5ed671ea6fe1cfb9f6e7dde2b259ec5821d7e0eae95c31d103d5468f2e617c59",
+      "/usr/lib/apache2/modules/libphp7.4.so": "e2eed71fa86014b0fe0e10270ebec1fa79c89cbabc20a795caa26fc8a091499b"
+    },
+    "source_manifest_complete": false,
+    "sql_executed": false,
+    "status": "READ_ONLY_PUBLIC_INVENTORY_NOT_ATTESTATION",
+    "target_ip": "192.168.56.74",
+    "web_runtime_proven": false
+  },
+  "after": {
+    "baseline_acceptance": false,
+    "cli_default_module_names": [
+      "apcu",
+      "calendar",
+      "Core",
+      "ctype",
+      "curl",
+      "date",
+      "dom",
+      "exif",
+      "FFI",
+      "fileinfo",
+      "filter",
+      "ftp",
+      "gd",
+      "gettext",
+      "gmp",
+      "hash",
+      "iconv",
+      "intl",
+      "json",
+      "ldap",
+      "libxml",
+      "mbstring",
+      "memcache",
+      "mysqli",
+      "mysqlnd",
+      "openssl",
+      "pcntl",
+      "pcre",
+      "PDO",
+      "pdo_mysql",
+      "Phar",
+      "posix",
+      "readline",
+      "Reflection",
+      "session",
+      "shmop",
+      "SimpleXML",
+      "sockets",
+      "sodium",
+      "SPL",
+      "ssh2",
+      "standard",
+      "sysvmsg",
+      "sysvsem",
+      "sysvshm",
+      "tokenizer",
+      "xml",
+      "xmlreader",
+      "xmlwriter",
+      "xsl",
+      "Zend OPcache",
+      "zip",
+      "zlib",
+      "Zend OPcache"
+    ],
+    "cli_version": "7.4.33",
+    "cpus": 4,
+    "credential_read": false,
+    "critical_source_root_resolved": "/opt/kaltura/app",
+    "critical_source_subset_sha256": {
+      "alpha/lib/model/entry.php": "b677a171f5cc51f6a692eab774938b1a582e21e177ec40ff36aaf4277886dfb5",
+      "api_v3/lib/KalturaEntryService.php": "9495b584f73df1f4a11812efa964f57f42562159a405693b71e1731d53fe4dd5",
+      "api_v3/lib/KalturaJsonSerializer.php": "c9f7ffd11840395bb0bdd9f8dd43ccbac137c4f33fba619a8e90c7590f3596cc",
+      "api_v3/lib/KalturaSerializer.php": "8cee6b9af7b33a6a66cbd354297290dcc4cc386202c49670482dfd7488538bd0",
+      "api_v3/services/MediaService.php": "7ffb9ca7642341eaf65a4387e82c7b63dfdf5e528b5b03da6ea24a56f384f708"
+    },
+    "hostname": "kaltura-php74-baseline",
+    "http_requests": 0,
+    "missing_inventory_files": [],
+    "noninstalled_dpkg_matches": [
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-calendar"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-ctype"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-dom"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-exif"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-ffi"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-fileinfo"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-ftp"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-gettext"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-iconv"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-mysqli"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-mysqlnd"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-pdo"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-pdo-mysql"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-phar"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-posix"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-shmop"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-simplexml"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-sockets"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-sysvmsg"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-sysvsem"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-sysvshm"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-tokenizer"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-xmlreader"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-xmlwriter"
+      },
+      {
+        "dpkg_status": "un ",
+        "package": "php7.4-xsl"
+      }
+    ],
+    "package_versions": [
+      [
+        "kaltura-base",
+        "18.20.0-1",
+        "all"
+      ],
+      [
+        "kaltura-batch",
+        "18.20.0-1",
+        "all"
+      ],
+      [
+        "kaltura-db",
+        "18.20.0-1",
+        "all"
+      ],
+      [
+        "kaltura-elasticsearch",
+        "7.17-1",
+        "all"
+      ],
+      [
+        "kaltura-ffmpeg",
+        "6.1-1",
+        "all"
+      ],
+      [
+        "kaltura-ffmpeg-aux",
+        "6.1-1",
+        "all"
+      ],
+      [
+        "kaltura-front",
+        "18.20.0-1",
+        "all"
+      ],
+      [
+        "kaltura-html5-analytics",
+        "0.3-1",
+        "all"
+      ],
+      [
+        "kaltura-html5-studio",
+        "2.2.3-1",
+        "all"
+      ],
+      [
+        "kaltura-html5-studio3",
+        "3.18.0-1",
+        "all"
+      ],
+      [
+        "kaltura-html5lib",
+        "2.98-1",
+        "all"
+      ],
+      [
+        "kaltura-html5lib3",
+        "3.8.1-1",
+        "all"
+      ],
+      [
+        "kaltura-kmcng",
+        "5.17.0-1",
+        "all"
+      ],
+      [
+        "kaltura-nginx",
+        "1.23.0-1",
+        "amd64"
+      ],
+      [
+        "kaltura-postinst",
+        "1.0.34-1",
+        "all"
+      ],
+      [
+        "kaltura-server",
+        "18.20.0-1",
+        "all"
+      ],
+      [
+        "kaltura-sphinx",
+        "2.2.11-1",
+        "all"
+      ],
+      [
+        "php7.4-apcu",
+        "5.1.28-2+ubuntu24.04.1+deb.sury.org+1",
+        "amd64"
+      ],
+      [
+        "php7.4-cli",
+        "1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1",
+        "amd64"
+      ],
+      [
+        "php7.4-common",
+        "1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1",
+        "amd64"
+      ],
+      [
+        "php7.4-curl",
+        "1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1",
+        "amd64"
+      ],
+      [
+        "php7.4-gd",
+        "1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1",
+        "amd64"
+      ],
+      [
+        "php7.4-gmp",
+        "1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1",
+        "amd64"
+      ],
+      [
+        "php7.4-intl",
+        "1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1",
+        "amd64"
+      ],
+      [
+        "php7.4-json",
+        "1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1",
+        "amd64"
+      ],
+      [
+        "php7.4-ldap",
+        "1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1",
+        "amd64"
+      ],
+      [
+        "php7.4-mbstring",
+        "1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1",
+        "amd64"
+      ],
+      [
+        "php7.4-memcache",
+        "1:4.0.5.2-1+ubuntu24.04.1+deb.sury.org+1",
+        "amd64"
+      ],
+      [
+        "php7.4-mysql",
+        "1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1",
+        "amd64"
+      ],
+      [
+        "php7.4-opcache",
+        "1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1",
+        "amd64"
+      ],
+      [
+        "php7.4-readline",
+        "1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1",
+        "amd64"
+      ],
+      [
+        "php7.4-ssh2",
+        "1.4.1-5+ubuntu24.04.1+deb.sury.org+1",
+        "amd64"
+      ],
+      [
+        "php7.4-xml",
+        "1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1",
+        "amd64"
+      ],
+      [
+        "php7.4-zip",
+        "1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1",
+        "amd64"
+      ]
+    ],
+    "private_config_read": false,
+    "public_file_sha256": {
+      "/etc/apache2/mods-enabled/php7.4.conf": "b26c261df92c1f0608d959e1f583bf3e195d58d290cb4238be4ab549f5e74ad9",
+      "/etc/apache2/mods-enabled/php7.4.load": "a6a85244aef9930fedaf42e76a3950579b6f1c994148856d0a4727b222af63b3",
+      "/opt/kaltura-baseline/install-aio.sh": "3888f90a295f03421ea54c5055aad978cefb7121428941880ee0e787b38f30a5",
+      "/opt/kaltura-baseline/repo.tar.gz": "91629580441f6a896ebf9e51f0256532221715bee57a3e5a64c66ff0c4e3127b",
+      "/usr/bin/php7.4": "5ed671ea6fe1cfb9f6e7dde2b259ec5821d7e0eae95c31d103d5468f2e617c59",
+      "/usr/lib/apache2/modules/libphp7.4.so": "e2eed71fa86014b0fe0e10270ebec1fa79c89cbabc20a795caa26fc8a091499b"
+    },
+    "source_manifest_complete": false,
+    "sql_executed": false,
+    "status": "READ_ONLY_PUBLIC_INVENTORY_NOT_ATTESTATION",
+    "target_ip": "192.168.56.74",
+    "web_runtime_proven": false
+  },
+  "phase_receipts": [
+    {
+      "baseline_acceptance": false,
+      "benchmark_executed": false,
+      "nonce": "45046f67e77aede4da730d911e6167e0",
+      "owned_entry_id": null,
+      "phase": "provider",
+      "provider": {
+        "ini_file": "/etc/php/7.4/apache2/php.ini",
+        "modules": [
+          "Core",
+          "date",
+          "libxml",
+          "openssl",
+          "pcre",
+          "zlib",
+          "filter",
+          "hash",
+          "Reflection",
+          "SPL",
+          "session",
+          "standard",
+          "sodium",
+          "apache2handler",
+          "mysqlnd",
+          "PDO",
+          "xml",
+          "apcu",
+          "calendar",
+          "ctype",
+          "curl",
+          "dom",
+          "mbstring",
+          "FFI",
+          "fileinfo",
+          "ftp",
+          "gd",
+          "gettext",
+          "gmp",
+          "iconv",
+          "intl",
+          "json",
+          "ldap",
+          "exif",
+          "memcache",
+          "mysqli",
+          "pdo_mysql",
+          "Phar",
+          "posix",
+          "readline",
+          "shmop",
+          "SimpleXML",
+          "sockets",
+          "ssh2",
+          "sysvmsg",
+          "sysvsem",
+          "sysvshm",
+          "tokenizer",
+          "xmlreader",
+          "xmlwriter",
+          "xsl",
+          "zip",
+          "Zend OPcache"
+        ],
+        "nonce": "45046f67e77aede4da730d911e6167e0",
+        "sapi": "apache2handler",
+        "version": "7.4.33"
+      },
+      "provider_probe_removed": true,
+      "source_sha256": "612d179c75f8f2374b7ac59c2dd7edba65e38eb357b870e8ad8c2e83d63b5473",
+      "status": "INCOMPLETE"
+    },
+    {
+      "baseline_acceptance": false,
+      "benchmark_executed": false,
+      "logging_preflight": {
+        "file_count": 55,
+        "remote_forwarding_detected": false,
+        "scope": "installed rsyslog/apache/nginx/Kaltura logger config plus local sinks and journal; not complete host security attestation",
+        "status": "LOCAL_CONFIG_AND_SINKS_REVIEWED"
+      },
+      "nonce": "45046f67e77aede4da730d911e6167e0",
+      "owned_entry_id": null,
+      "phase": "logging-preflight",
+      "provider": {
+        "ini_file": "/etc/php/7.4/apache2/php.ini",
+        "modules": [
+          "Core",
+          "date",
+          "libxml",
+          "openssl",
+          "pcre",
+          "zlib",
+          "filter",
+          "hash",
+          "Reflection",
+          "SPL",
+          "session",
+          "standard",
+          "sodium",
+          "apache2handler",
+          "mysqlnd",
+          "PDO",
+          "xml",
+          "apcu",
+          "calendar",
+          "ctype",
+          "curl",
+          "dom",
+          "mbstring",
+          "FFI",
+          "fileinfo",
+          "ftp",
+          "gd",
+          "gettext",
+          "gmp",
+          "iconv",
+          "intl",
+          "json",
+          "ldap",
+          "exif",
+          "memcache",
+          "mysqli",
+          "pdo_mysql",
+          "Phar",
+          "posix",
+          "readline",
+          "shmop",
+          "SimpleXML",
+          "sockets",
+          "ssh2",
+          "sysvmsg",
+          "sysvsem",
+          "sysvshm",
+          "tokenizer",
+          "xmlreader",
+          "xmlwriter",
+          "xsl",
+          "zip",
+          "Zend OPcache"
+        ],
+        "nonce": "45046f67e77aede4da730d911e6167e0",
+        "sapi": "apache2handler",
+        "version": "7.4.33"
+      },
+      "provider_probe_removed": true,
+      "source_sha256": "612d179c75f8f2374b7ac59c2dd7edba65e38eb357b870e8ad8c2e83d63b5473",
+      "status": "INCOMPLETE"
+    },
+    {
+      "baseline_acceptance": false,
+      "benchmark_executed": false,
+      "failure_code": "INVALID_CANARY_LOGGED",
+      "invalid_canary_privacy": {
+        "append_after_snapshot_bytes_not_covered": 0,
+        "counts_are_matching_chunks_not_occurrences": true,
+        "hits": [
+          1
+        ],
+        "inventory_sha256": "f1640136929132951ae4634f11fcd4d88cd2d25d6230006aa7032c08767bf669",
+        "journal_since_start_scanned": true,
+        "limits": {
+          "per_file_bytes": 8589934592,
+          "seconds": 90,
+          "total_bytes": 12884901888
+        },
+        "reviewed_files": 210,
+        "rotation_or_truncation_detected": false,
+        "scanned_bytes": 4005834245,
+        "snapshot_cutoff_utc": "2026-09-26 17:46:31.421049 UTC"
+      },
+      "logging_preflight": {
+        "file_count": 55,
+        "remote_forwarding_detected": false,
+        "scope": "installed rsyslog/apache/nginx/Kaltura logger config plus local sinks and journal; not complete host security attestation",
+        "status": "LOCAL_CONFIG_AND_SINKS_REVIEWED"
+      },
+      "nonce": "45046f67e77aede4da730d911e6167e0",
+      "owned_entry_id": null,
+      "partner_id": 102,
+      "partner_origin": "existing_published_smoke_synthetic",
+      "phase": "invalid-canary-privacy",
+      "provider": {
+        "ini_file": "/etc/php/7.4/apache2/php.ini",
+        "modules": [
+          "Core",
+          "date",
+          "libxml",
+          "openssl",
+          "pcre",
+          "zlib",
+          "filter",
+          "hash",
+          "Reflection",
+          "SPL",
+          "session",
+          "standard",
+          "sodium",
+          "apache2handler",
+          "mysqlnd",
+          "PDO",
+          "xml",
+          "apcu",
+          "calendar",
+          "ctype",
+          "curl",
+          "dom",
+          "mbstring",
+          "FFI",
+          "fileinfo",
+          "ftp",
+          "gd",
+          "gettext",
+          "gmp",
+          "iconv",
+          "intl",
+          "json",
+          "ldap",
+          "exif",
+          "memcache",
+          "mysqli",
+          "pdo_mysql",
+          "Phar",
+          "posix",
+          "readline",
+          "shmop",
+          "SimpleXML",
+          "sockets",
+          "ssh2",
+          "sysvmsg",
+          "sysvsem",
+          "sysvshm",
+          "tokenizer",
+          "xmlreader",
+          "xmlwriter",
+          "xsl",
+          "zip",
+          "Zend OPcache"
+        ],
+        "nonce": "45046f67e77aede4da730d911e6167e0",
+        "sapi": "apache2handler",
+        "version": "7.4.33"
+      },
+      "provider_probe_removed": true,
+      "source_sha256": "612d179c75f8f2374b7ac59c2dd7edba65e38eb357b870e8ad8c2e83d63b5473",
+      "status": "UNTIMED_REHEARSAL_FAILED",
+      "user_id": "baseline-45046f67e77aede4da730d911e6167e0"
+    }
+  ],
+  "baseline_acceptance": false,
+  "scope": "first untimed short-source API/media observation only"
+}

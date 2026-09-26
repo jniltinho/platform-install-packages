@@ -1,0 +1,30 @@
+{
+  "scope": "five critical files only; NOT full installed source attestation",
+  "files": {
+    "alpha/lib/model/entry.php": {
+      "installed_sha256": "b677a171f5cc51f6a692eab774938b1a582e21e177ec40ff36aaf4277886dfb5",
+      "upstream_sha256": "b677a171f5cc51f6a692eab774938b1a582e21e177ec40ff36aaf4277886dfb5",
+      "matches_upstream": true
+    },
+    "api_v3/lib/KalturaEntryService.php": {
+      "installed_sha256": "9495b584f73df1f4a11812efa964f57f42562159a405693b71e1731d53fe4dd5",
+      "upstream_sha256": "9495b584f73df1f4a11812efa964f57f42562159a405693b71e1731d53fe4dd5",
+      "matches_upstream": true
+    },
+    "api_v3/lib/KalturaJsonSerializer.php": {
+      "installed_sha256": "c9f7ffd11840395bb0bdd9f8dd43ccbac137c4f33fba619a8e90c7590f3596cc",
+      "upstream_sha256": "c9f7ffd11840395bb0bdd9f8dd43ccbac137c4f33fba619a8e90c7590f3596cc",
+      "matches_upstream": true
+    },
+    "api_v3/lib/KalturaSerializer.php": {
+      "installed_sha256": "8cee6b9af7b33a6a66cbd354297290dcc4cc386202c49670482dfd7488538bd0",
+      "upstream_sha256": "8cee6b9af7b33a6a66cbd354297290dcc4cc386202c49670482dfd7488538bd0",
+      "matches_upstream": true
+    },
+    "api_v3/services/MediaService.php": {
+      "installed_sha256": "7ffb9ca7642341eaf65a4387e82c7b63dfdf5e528b5b03da6ea24a56f384f708",
+      "upstream_sha256": "7ffb9ca7642341eaf65a4387e82c7b63dfdf5e528b5b03da6ea24a56f384f708",
+      "matches_upstream": true
+    }
+  }
+}

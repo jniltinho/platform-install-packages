@@ -1,0 +1,32 @@
+test_admin_session_rejected (test_guards.GuardTests.test_admin_session_rejected) ... ok
+test_cli_only_not_web_attestation (test_guards.GuardTests.test_cli_only_not_web_attestation) ... ok
+test_config_postrun_drift (test_guards.GuardTests.test_config_postrun_drift) ... ok
+test_consistent_synthetic_receipt_not_native_proof (test_guards.GuardTests.test_consistent_synthetic_receipt_not_native_proof) ... ok
+test_dns_target_rejected (test_guards.GuardTests.test_dns_target_rejected) ... ok
+test_duplicate_version_rejected (test_guards.GuardTests.test_duplicate_version_rejected) ... ok
+test_each_source_byte_join_required (test_guards.GuardTests.test_each_source_byte_join_required) ... ok
+test_every_network_guard_required (test_guards.GuardTests.test_every_network_guard_required) ... ok
+test_latest_minus_one_cannot_be_frozen (test_guards.GuardTests.test_latest_minus_one_cannot_be_frozen) ... ok
+test_loghits_and_false_zero_rejected (test_guards.GuardTests.test_loghits_and_false_zero_rejected) ... ok
+test_missing_ready_rejected (test_guards.GuardTests.test_missing_ready_rejected) ... ok
+test_nonselected_version_may_be_rejected_but_not_waived (test_guards.GuardTests.test_nonselected_version_may_be_rejected_but_not_waived) ... ok
+test_other_partner_or_namespace_rejected (test_guards.GuardTests.test_other_partner_or_namespace_rejected) ... ok
+test_publishedpin_drift (test_guards.GuardTests.test_publishedpin_drift) ... ok
+test_querysecret_path_rejected (test_guards.GuardTests.test_querysecret_path_rejected) ... ok
+test_runtime83_rejected (test_guards.GuardTests.test_runtime83_rejected) ... ok
+test_target20_rejected_even_matching_observation (test_guards.GuardTests.test_target20_rejected_even_matching_observation) ... ok
+test_unbound_selected_version_rejected (test_guards.GuardTests.test_unbound_selected_version_rejected) ... ok
+test_unknown_secret_field_rejected_without_echo (test_guards.GuardTests.test_unknown_secret_field_rejected_without_echo) ... ok
+test_zero_explicitly_supported_with_binding_requires_protocol_revision (test_guards.GuardTests.test_zero_explicitly_supported_with_binding_requires_protocol_revision) ... ok
+test_installed_empty_version_rejected (test_inventory.InventoryTests.test_installed_empty_version_rejected) ... ok
+test_partial_inventory_never_web_attestation (test_inventory.InventoryTests.test_partial_inventory_never_web_attestation) ... ok
+test_uninstalled_wildcard_matches_are_retained_not_runtime_packages (test_inventory.InventoryTests.test_uninstalled_wildcard_matches_are_retained_not_runtime_packages) ... ok
+test_unknown_package_record_rejected (test_inventory.InventoryTests.test_unknown_package_record_rejected) ... ok
+test_wrong_host_before_commands (test_inventory.InventoryTests.test_wrong_host_before_commands) ... ok
+test_wrong_ip_before_php (test_inventory.InventoryTests.test_wrong_ip_before_php) ... ok
+test_wrong_runtime_stops (test_inventory.InventoryTests.test_wrong_runtime_stops) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 0.002s
+
+OK
