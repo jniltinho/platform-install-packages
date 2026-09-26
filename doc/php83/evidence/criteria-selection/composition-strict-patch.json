@@ -1,0 +1,8 @@
+{
+  "exit": 0,
+  "stdout": "patching file vendor/propel/util/Criteria.php\n",
+  "stderr": "",
+  "exact_candidate": true,
+  "after_sha256": "f8f726443dbc3af363f6c08db2d6baa92591b37bb14abd104ac6a5951b5f6d8d",
+  "native_execution": false
+}

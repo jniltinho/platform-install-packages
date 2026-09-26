@@ -1,0 +1,17 @@
+{
+  "status": "PREPARED_CUMULATIVE_EXPERIMENT_NOT_SELECTED",
+  "path": "vendor/propel/util/Criteria.php",
+  "upstream_sha256": "58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28",
+  "exp11_sha256": "f2474f5b951bfd2d121291025c8dd4554697fb5bb4024e132987643dab6144a7",
+  "before_sha256": "0626bb5b976ae7eedccaf5060675cd7c7ca56b22fc2c9d6c1a51ce485a303543",
+  "prior_sha256": "e8333167c6b501c92a8ee681a3b8c63372e8bf20e81c140a242c37c75b49a89a",
+  "after_sha256": "f8f726443dbc3af363f6c08db2d6baa92591b37bb14abd104ac6a5951b5f6d8d",
+  "patch_sha256": "6c02aacff6f518825a9ed999174ca96ad4d625d94c890f158874d3b8e8f1f9df",
+  "supersedes": "Criteria-native-returns.patch",
+  "preserved_prior_bytes_after_removing_attribute": true,
+  "scope": "Explicit Criteria hierarchy dynamic-property compatibility, including descendants and future dynamic writes; not marker-only.",
+  "cross_engine_layout_parity": "FAIL retained from original baseline",
+  "cache_acceptance": false,
+  "application_acceptance": false,
+  "next_zip_selected": false
+}

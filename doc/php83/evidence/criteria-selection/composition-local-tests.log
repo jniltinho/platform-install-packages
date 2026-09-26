@@ -1,0 +1,13 @@
+test_archive_and_member_pins (test_prepare.PreparationTests.test_archive_and_member_pins) ... ok
+test_duplicate_anchor (test_prepare.PreparationTests.test_duplicate_anchor) ... ok
+test_exact_attribute_delta (test_prepare.PreparationTests.test_exact_attribute_delta) ... ok
+test_existing_attribute (test_prepare.PreparationTests.test_existing_attribute) ... ok
+test_existing_output_refused_before_reads (test_prepare.PreparationTests.test_existing_output_refused_before_reads) ... ok
+test_shifted_anchor (test_prepare.PreparationTests.test_shifted_anchor) ... ok
+test_source_drift (test_prepare.PreparationTests.test_source_drift) ... ok
+test_symlink_rejected (test_prepare.PreparationTests.test_symlink_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.001s
+
+OK

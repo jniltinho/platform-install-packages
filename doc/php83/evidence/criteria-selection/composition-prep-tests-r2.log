@@ -1,0 +1,22 @@
+test_duplicate_zip_member (test_prepare.AdditionalGuardTests.test_duplicate_zip_member) ... ok
+test_success_manifest_and_strict_replay (test_prepare.AdditionalGuardTests.test_success_manifest_and_strict_replay) ... ok
+test_archive_and_member_pins (test_prepare.PreparationTests.test_archive_and_member_pins) ... ok
+test_duplicate_anchor (test_prepare.PreparationTests.test_duplicate_anchor) ... ok
+test_exact_attribute_delta (test_prepare.PreparationTests.test_exact_attribute_delta) ... ok
+test_existing_attribute (test_prepare.PreparationTests.test_existing_attribute) ... ok
+test_existing_output_refused_before_reads (test_prepare.PreparationTests.test_existing_output_refused_before_reads) ... ok
+test_shifted_anchor (test_prepare.PreparationTests.test_shifted_anchor) ... ok
+test_source_drift (test_prepare.PreparationTests.test_source_drift) ... ok
+test_symlink_rejected (test_prepare.PreparationTests.test_symlink_rejected) ... ok
+test_duplicate_modes (test_validate.ValidationTests.test_duplicate_modes) ... ok
+test_line_normalization (test_validate.ValidationTests.test_line_normalization) ... ok
+test_missing_modes (test_validate.ValidationTests.test_missing_modes) ... ok
+test_native_exact (test_validate.ValidationTests.test_native_exact) ... ok
+test_ordered_modes (test_validate.ValidationTests.test_ordered_modes) ... ok
+test_target_severity (test_validate.ValidationTests.test_target_severity) ... ok
+test_unrelated_not_target (test_validate.ValidationTests.test_unrelated_not_target) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.003s
+
+OK

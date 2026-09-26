@@ -1,0 +1,1 @@
+PASS: four native83 records match primary exactly, including stdout/stderr/body, sources and runtime. Strict cross-engine FAIL retained.

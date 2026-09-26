@@ -1,0 +1,10 @@
+{
+  "tools/php83/criteria-composition/collect.py": "0d78f0bd62bff9bc70cb5009918bbdcbec33e212d49bc56041063301a59fedf8",
+  "tools/php83/criteria-composition/fixture.py": "c3547bd77d26617962128b3a5f0b1eac024d13848d79f61e9d8cafd77c461df9",
+  "tools/php83/criteria-composition/prepare.py": "cceab42c11edf0bc9e25db98fdfec467bd18ffb35737bba481e02ceb09f0e374",
+  "tools/php83/criteria-composition/run.sh": "8a05f1800ffc96a7e500261b69db0325db242493ac812c91b3d857faecdcfd0e",
+  "tools/php83/criteria-composition/test_prepare.py": "4b70ce9bc951a1caa9c8b9f9ddd40fae2f2ceffc14e08236e9c83677f0f3dce2",
+  "tools/php83/criteria-composition/test_validate.py": "eccd41cfb9d51a58e9d7def78f21c29acc39d8311f70f90529743897b9500eb3",
+  "tools/php83/criteria-composition/validate.py": "8959b3d6c0a7eafd8dc5ffa972e8e1b76a065a18fb4670f4a2a51d3970f981ac",
+  "tools/php83/criteria-composition/verify.py": "2bbea7fdd238671a902470fb8c3064d7366cedf416145c11fce67bb80a1a3d85"
+}
