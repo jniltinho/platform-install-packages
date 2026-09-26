@@ -17,7 +17,53 @@ and [execution contract](../../openspec/changes/migrate-kaltura-php83/design.md)
   ran in the isolated labs; no production/package/release acceptance follows.
   No release ETA or application completion percentage is inferred.
 
-## Current built candidate: exp13 — bounded artifact regressions repeated
+## Current built candidate: exp14 — API/CLI repeated; compiler blocked
+
+[exp14](exp14-candidate.md), committed in `0c152ce1`, was built by Codex and
+independently rebuilt by actual Claude with identical ZIP bytes:
+`459feaf9caf2abe55963dce0cac51b8b593e4ff1b46d2eaf9cb7d5c3f13f62a1`
+(91,210,691 bytes). It preserves all75 exp13 results and adds one rank-signature
+repair:76 targets total, one seven-byte source delta,11,785 PHP-family files.
+The original and prior archives remain unchanged. The source-stage
+[signature proof](rank-signature-repair.md) preserves effective omission behavior
+and PHP8.3 metadata, but records a PHP7.4 reflection-default difference explicitly;
+positive rank-body execution and persistence remain unverified.
+
+[Actual-artifact API/CLI evidence](evidence/exp14-runtime/README.md) has Codex
+primary and actual OpenCode independent repetitions (`bd39e7bf`). Claude's session-limit
+failure is preserved as NOT_EXECUTED, not credited with this runtime repeat.
+Four API modes retain the bounded logical contract: exp13 has one sanitized
+diagnostic group/event, exp14 has **zero sanitized groups/events**. This is not
+an unrestricted raw-log or full-application claim. Raw API stderr remains
+**UNCOMPARED**. CLI48 has44 successful processes and four original fatal controls,
+with exact repeated stdout/stderr. Source/runtime checks and owned DB cleanup
+are retained. XML/AWS on exp14 are **NOT_RERUN_SOURCE_JOIN_ONLY**; their unchanged
+source identities do not become fresh runtime passes.
+
+[Whole-artifact compiler](exp14-syntax.md) remains **NOT_EXECUTED** (`356db251`).
+Claude hit its session limit. OpenCode then received an explicit permission
+rejection while verifying local tool/contract metadata and reading the exp13/14
+SHA256SUMS files, before staging or any native compiler execution. The exact
+command/error is retained, and the affected operation was stopped. Explicit
+operator confirmation is pending; no alternate executor retries that denied
+operation. Separately authorized API/CLI execution does not close this gate.
+
+The [real logging-pipeline observation](evidence/baseline-rehearsal/privacy/pipeline/README.md)
+was independently repeated by actual Claude (`8f6d39a0`). Throwable reaches the
+writer/formatter in the applicable cases, but intrinsic messages, extras.message
+and pre-rendered strings remain separate exposure paths. Expected synthetic leaks
+and six ZendConfig diagnostics remain visible. No logging fix or valid USER
+baseline authentication/upload is authorized by this observation; the separately
+presented logging-policy decision remains pending. Full application, provider,
+performance, recovery and release gates are unchanged.
+
+The final API/CLI checkpoint and the two outstanding operator decisions were
+sent by verified-TLS SMTP on 2026-09-26 at18:40:18 America/Sao_Paulo. SMTP
+accepted the message; inbox delivery is not confirmed. Both lab slots are
+released and no fixture process is pending at this checkpoint. The task board
+remains3/51: these bounded improvements do not close full acceptance obligations.
+
+## Prior candidate: exp13 — compiler and bounded runtime repeated
 
 [exp13](exp13-candidate.md) was built by Codex and independently rebuilt by actual
 Claude (`4c5e058f`), producing identical91,210,445-byte ZIPs with SHA256
@@ -61,7 +107,7 @@ Codex review, reproduces the original bypass rejection and reconciles unchanged
 native reports. No native replay or changed acceptance scope follows. Full AIO, privacy, distro/provider,
 performance and recovery gates remain open.
 
-## Last runtime-validated bounded artifact and baseline preparation: exp12
+## Historical checkpoint and baseline preparation: exp12
 
 [exp12](exp12-candidate.md) was built twice with identical SHA256
 `de5e61a1b54f472e605ef2e87669302a3915616fd85378e0f05706fcb06a7e8b`.
