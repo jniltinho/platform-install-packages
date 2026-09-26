@@ -1,0 +1,20 @@
+{
+  "full_staged_diff_check": "THREE_FORMATTING_WARNINGS_RETAINED",
+  "warnings": [
+    {
+      "path": "doc/php83/evidence/exp12-syntax/cursor-local-review.md",
+      "lines": [
+        78,
+        79
+      ],
+      "reason": "Markdown hard-line-break trailing spaces in original public review retained."
+    },
+    {
+      "path": "tools/php83/exp12-syntax/test_scan.py",
+      "line": 154,
+      "reason": "Extra blank EOF retained because source tool identity was frozen before both native scans; no semantic defect."
+    }
+  ],
+  "claims_clean_whole_diff": false,
+  "changes_to_frozen_runtime_inputs": false
+}
