@@ -1,0 +1,5 @@
+{
+  "raw_sha256": "4a5c5352ad81ac162b9cd1ed31232f53d68cf302e16351bf8f3c3428d481b04e",
+  "public_sha256": "cb2791bccc7cb3a7c480b373d24349cfb4d75e916e5072b65fe6e60490b1b3e7",
+  "policy": "Public terminal result fields only. No hook history or hidden reasoning retained."
+}

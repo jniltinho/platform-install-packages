@@ -1,0 +1,6 @@
+=== python3 test_prepare.py -v ===
+exit:0
+=== python3 test_collect.py -v ===
+exit:0
+=== bash -n run.sh ===
+exit:0

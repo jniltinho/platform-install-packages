@@ -1,0 +1,12 @@
+{
+  "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "raw_bytes": 0,
+  "cli_exit": 124,
+  "actual_completed_commands": [
+    "test_prepare.py:0",
+    "test_collect.py:0",
+    "bash_-n_run.sh:0"
+  ],
+  "review_status": "NO_FINAL_REVIEW_BEFORE_TIMEOUT",
+  "policy": "Empty raw terminal stream; completed command evidence retained separately."
+}

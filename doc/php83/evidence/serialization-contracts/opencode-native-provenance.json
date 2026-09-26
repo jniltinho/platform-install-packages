@@ -1,0 +1,5 @@
+{
+  "raw_sha256": "01d1ed265c9bc8427c531195e2e3a8c795716b8bf9b08b3c342968acb6defc20",
+  "public_sha256": "e57f35ebafb97d575f9cce16f43fa73d552017641140dc877c00fdbb1cd38320",
+  "policy": "Current completed tool calls/results and public text only; omit reasoning/step history."
+}

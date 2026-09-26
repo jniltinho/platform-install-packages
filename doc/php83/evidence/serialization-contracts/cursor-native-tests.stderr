@@ -1,0 +1,29 @@
+test_ambiguous_signature (__main__.Guards.test_ambiguous_signature) ... ok
+test_bridge_retains_legacy (__main__.Guards.test_bridge_retains_legacy) ... ok
+test_exact_three_targets (__main__.Guards.test_exact_three_targets) ... ok
+test_missing_signature (__main__.Guards.test_missing_signature) ... ok
+test_no_duplicate_bridge (__main__.Guards.test_no_duplicate_bridge) ... ok
+test_no_warning_suppression (__main__.Guards.test_no_warning_suppression) ... ok
+test_real_pinned_targets (__main__.Guards.test_real_pinned_targets) ... ok
+test_strict_envelope (__main__.Guards.test_strict_envelope) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.226s
+
+OK
+test_bool_exit (__main__.Guards.test_bool_exit) ... ok
+test_empty_loaded (__main__.Guards.test_empty_loaded) ... ok
+test_failed_exit (__main__.Guards.test_failed_exit) ... ok
+test_float_exit (__main__.Guards.test_float_exit) ... ok
+test_missing_diagnostics (__main__.Guards.test_missing_diagnostics) ... ok
+test_missing_target (__main__.Guards.test_missing_target) ... ok
+test_valid (__main__.Guards.test_valid) ... ok
+test_wrong_loaded (__main__.Guards.test_wrong_loaded) ... ok
+test_wrong_operation (__main__.Guards.test_wrong_operation) ... ok
+test_wrong_probe (__main__.Guards.test_wrong_probe) ... ok
+test_wrong_runtime (__main__.Guards.test_wrong_runtime) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.000s
+
+OK

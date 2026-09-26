@@ -1,0 +1,13 @@
+test_ambiguous_signature (__main__.Guards.test_ambiguous_signature) ... ok
+test_bridge_retains_legacy (__main__.Guards.test_bridge_retains_legacy) ... ok
+test_exact_three_targets (__main__.Guards.test_exact_three_targets) ... ok
+test_missing_signature (__main__.Guards.test_missing_signature) ... ok
+test_no_duplicate_bridge (__main__.Guards.test_no_duplicate_bridge) ... ok
+test_no_warning_suppression (__main__.Guards.test_no_warning_suppression) ... ok
+test_real_pinned_targets (__main__.Guards.test_real_pinned_targets) ... ok
+test_strict_envelope (__main__.Guards.test_strict_envelope) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.214s
+
+OK
