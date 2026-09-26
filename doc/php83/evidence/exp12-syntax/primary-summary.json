@@ -1,0 +1,48 @@
+{
+  "primary_sha256": "ea9f5b6fb98677cd67e2b5c60504088b33c98607c737333fa360d4c8faf5bee1",
+  "comparison": {
+    "checks": {
+      "both_scan_all_11784_files": true,
+      "3_selected_targets": true,
+      "all_targets_previously_accepted": true,
+      "all_targets_now_accepted": true,
+      "unchanged_sources_same_outcome_and_diagnostics": true,
+      "remaining_rejected_paths_unchanged": true,
+      "target_diagnostics_unchanged": true,
+      "no_incomplete_subprocesses": true,
+      "observed_exp11_rejections_7": true,
+      "observed_exp12_rejections_7": true
+    },
+    "bounded_regression_pass": true,
+    "unchanged_outcome_differences": [],
+    "target_rejections_after": [],
+    "remaining_rejected_paths": [
+      "vendor/aws/Doctrine/Common/Cache/RiakCache.php",
+      "vendor/symfony-data/generator/sfPropelAdmin/default/skeleton/actions/actions.class.php",
+      "vendor/symfony-data/generator/sfPropelCrud/default/skeleton/actions/actions.class.php",
+      "vendor/symfony-data/skeleton/batch/default.php",
+      "vendor/symfony-data/skeleton/batch/rotate_log.php",
+      "vendor/symfony-data/skeleton/controller/controller.php",
+      "vendor/symfony-data/skeleton/module/module/actions/actions.class.php"
+    ],
+    "scope": "3-target runtime-repair compiler nonregression; seven prior rejections not waived"
+  },
+  "variants": {
+    "exp11": {
+      "files_scanned": 11784,
+      "compiler_rejected": 7,
+      "compiler_accepted": 11777,
+      "incomplete": 0,
+      "diagnostic_files": 73,
+      "accepted_with_diagnostics": 66
+    },
+    "exp12": {
+      "files_scanned": 11784,
+      "compiler_rejected": 7,
+      "compiler_accepted": 11777,
+      "incomplete": 0,
+      "diagnostic_files": 73,
+      "accepted_with_diagnostics": 66
+    }
+  }
+}

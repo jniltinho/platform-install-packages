@@ -1,0 +1,7 @@
+{
+  "cli_exit": 0,
+  "status": "INCOMPLETE_PERMISSION_DENIAL",
+  "final_review_written": false,
+  "native_execution": false,
+  "boundary": "Do not retry the denied artifact-reading call with another tool. New review may be limited to repository-local code and existing evidence."
+}

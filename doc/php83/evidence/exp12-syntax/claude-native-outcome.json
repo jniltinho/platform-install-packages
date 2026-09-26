@@ -1,0 +1,9 @@
+{
+  "cli_exit": 0,
+  "status": "INCOMPLETE_RETURNED_WHILE_WAITING",
+  "raw_sha256": "e3b4d34cc4ebad6a9e7f42ca1fc3a14eb5fe82022c06abc39faa4a70168cbc33",
+  "scan_stdout_bytes": 0,
+  "scan_exit_sidecar_missing": true,
+  "authoritative_followup": "Parent checked local SSH processes and remote scan/php processes and running transient units; none remained. No usable independent result.",
+  "repeat_acceptance": false
+}

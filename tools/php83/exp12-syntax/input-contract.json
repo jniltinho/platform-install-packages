@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "status": "PREPARED_NOT_EXECUTED: paired compile-only exp11/exp12 runtime-repair nonregression",
+  "pins": {
+    "exp11": "f2474f5b951bfd2d121291025c8dd4554697fb5bb4024e132987643dab6144a7",
+    "exp12": "de5e61a1b54f472e605ef2e87669302a3915616fd85378e0f05706fcb06a7e8b"
+  },
+  "targets": [
+    {
+      "path": "vendor/propel/util/Criteria.php",
+      "exp11_sha256": "e8333167c6b501c92a8ee681a3b8c63372e8bf20e81c140a242c37c75b49a89a",
+      "exp12_sha256": "f8f726443dbc3af363f6c08db2d6baa92591b37bb14abd104ac6a5951b5f6d8d"
+    },
+    {
+      "path": "vendor/symfony/vendor/pake/pakeApp.class.php",
+      "exp11_sha256": "72f538165dd3226b46c35ddac7700c0f3a6046e74f4646b74ca5bd541d59b120",
+      "exp12_sha256": "d5bdc4612a5c9ae76fe8f594eaefeff1059175f0a36d756a1010612830bf39b8"
+    },
+    {
+      "path": "vendor/symfony-data/tasks/sfPakeGenerator.php",
+      "exp11_sha256": "67682683048afeaef9ed55bd95a5920792b2c6ab3b4ec11c804985ead4b347eb",
+      "exp12_sha256": "6958f51ba82e9f4922eb8a7437dc1301ffd81032dd168f9c70516dee21f9e6d9"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "type": "result",
+  "subtype": "success",
+  "is_error": false,
+  "duration_ms": 107635,
+  "result": "Revis\u00e3o local restrita ao reposit\u00f3rio: vou inspecionar o escopo `exp12-syntax` + evid\u00eancia candidata, rodar os 40 testes e o `bash -n`, e registrar o resultado sem tocar artefatos externos.Pr\u00f3ximo passo: ler o harness exp12 vs exp11, as evid\u00eancias candidatas e um modelo de review anterior; em paralelo, rodar os testes locais.Os 40 testes passaram. Vou cruzar pins/alvos com a evid\u00eancia candidata e ca\u00e7ar bugs residuais (ex.: mensagem stale no comparator).Confirmando o bug do stdout no comparator e redigindo o review; o \u00edndice do codebase-memory n\u00e3o cobre este repo.**Veredito:** `PASS_LOCAL_HARNESS_READINESS` \u2014 harness local pronto; sem prova de scan nativo/aceita\u00e7\u00e3o.\n\nEscrito em `doc/php83/evidence/exp12-syntax/cursor-local-review.md`. OpenCode (`INCOMPLETE_PERMISSION_DENIAL`) preservado; artefato externo n\u00e3o foi retentado.\n\n| Check | Resultado |\n|---|---|\n| 40 unit tests | EXIT 0, OK |\n| `bash -n run.sh` | EXIT 0 |\n| Adapta\u00e7\u00e3o exp11\u2192exp12 | 3 alvos j\u00e1 aceitos, 11784, rejei\u00e7\u00f5es 7\u21927, diagnostics preservados, sandbox RO/`-n -l` |\n| Pins ZIP vs `delta.json`/`verification.json` | Batem; 3 paths batem |\n\n**Bug:** `compare.py:74` ainda imprime `\"4 repairs compile\"` (stdout stale; n\u00e3o quebra gates).\n\n**N\u00e3o verificado aqui:** bytes dos ZIPs, 6 hashes por-arquivo do contrato (ausentes nos dois JSONs permitidos), scan nativo, paths das 7 rejei\u00e7\u00f5es, aceita\u00e7\u00e3o de aplica\u00e7\u00e3o.",
+  "raw_sha256": "d933498081a87eed09b70669edf763475321f9493572ac6731b2bff67b7a893c"
+}

@@ -1,6 +1,6 @@
 # PHP 8.3 test status
 
-Snapshot: 2026-09-25, migration branch. This is a scoped evidence board, not a
+Snapshot: 2026-09-26, migration branch. This is a scoped evidence board, not a
 release estimate. [Detailed plan](../../openspec/changes/migrate-kaltura-php83/tasks.md)
 and [execution contract](../../openspec/changes/migrate-kaltura-php83/design.md).
 
@@ -17,7 +17,34 @@ and [execution contract](../../openspec/changes/migrate-kaltura-php83/design.md)
   ran in the isolated labs; no production/package/release acceptance follows.
   No release ETA or application completion percentage is inferred.
 
-## Current checkpoint: exp11 real-artifact regression
+## New artifact and baseline preparation: exp12
+
+[exp12](exp12-candidate.md) was built twice with identical SHA256
+`de5e61a1b54f472e605ef2e87669302a3915616fd85378e0f05706fcb06a7e8b`.
+It has65 source targets:62 exp11 entries preserved, one cumulative Criteria
+replacement and two generator helper additions. Exactly three application files
+differ from exp11. Source-stage Criteria/generator behavior was independently
+repeated; these results do **not** transfer automatically to the new ZIP.
+[Paired whole-artifact compilation](exp12-syntax.md) now has primary and actual
+Claude repetition:7→7 residual rejects, no outcome/diagnostic drift and no
+incomplete files. API/CLI artifact regression remains a separate pending gate.
+The last completed full bounded artifact-runtime checkpoint remains exp11 below.
+
+[Criteria](criteria-marker.md) preserves same-runtime state in its bounded corpus,
+but three pre-existing74/83 subclass serialization-order differences remain a
+strict layout FAIL; no cache/backend/invalidation acceptance is claimed.
+[XML policies](xml-loader.md) reject a no-op security-call removal: enabled/default
+read local canaries, while legacy block and denying callback do not in the corpus.
+Actual kConf/Soap lifecycle exploration is separate and not an approved repair.
+
+[Source media](baseline-media.md) now includes independently validated10s360p25
+and60s1080p60 H.264/AAC fixtures; no application upload/delivery claim follows.
+[Deadline transport](baseline-transport.md) has19 independently executed local
+tests including real synthetic TLS and cleanup; API POST/workload integration
+and timing boundaries remain pending. No broad task checkbox closes from these
+supporting results, and there is still no final release or production cutover.
+
+## Last completed artifact-runtime checkpoint: exp11 real-artifact regression
 
 Two identical exp11 ZIP builds select 63 source repairs. Codex and actual Claude
 independently compile all 11,784 PHP-family files per artifact: exp10 rejects11,

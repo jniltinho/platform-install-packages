@@ -1,0 +1,8 @@
+{
+  "README.md": "64b19f5498ecd9ccf59c50e23a57344a796db1a3ed3d0b5d190a64de412c1507",
+  "input-contract.json": "f1fb66181fd74120e102eb8c227d8b89fb0592dfa5070e4771bc350b455d32b4",
+  "run.sh": "bcbeb6f3b11e10bace34d9971f16b1e18981a9906a78f342411c0380b271e1d3",
+  "scan.py": "fd98fdb419679017363cdb4fe6fc2f0db0dfcbbe5ee84d3055f79e4260e48f3e",
+  "stage.py": "b9b9d5ce9f56183560576d90c6b4a6a2fd1da1988f724dd7ff6c0cc95c37bd5f",
+  "test_scan.py": "f9b4dd59ef8c83ab680fd78a21c1b4cafb9c55c72aeb3811b728f94f22d6e3da"
+}

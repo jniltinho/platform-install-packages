@@ -1,0 +1,265 @@
+{
+  "raw_sha256": "301762260b1ec6f8eca90b4db78a0ebf58af4ef3e23fcdc1fa702ba3d4f30c1c",
+  "excludes_hidden_reasoning_and_hook_history": true,
+  "events": [
+    {
+      "type": "assistant",
+      "content": [
+        {
+          "type": "tool_use",
+          "id": "toolu_01CjdQJsCYvDYAJUUK5HTYai",
+          "name": "Bash",
+          "input": {
+            "command": "ls doc/php83/evidence/exp12-syntax/ tools/php83/exp12-syntax/ && ls doc/php83/evidence/exp12-syntax/claude-r2-* 2>&1; cat tools/php83/exp12-syntax/README* | head -150",
+            "description": "List evidence/tools and read README"
+          },
+          "caller": {
+            "type": "direct"
+          }
+        }
+      ]
+    },
+    {
+      "type": "user",
+      "content": [
+        {
+          "tool_use_id": "toolu_01CjdQJsCYvDYAJUUK5HTYai",
+          "type": "tool_result",
+          "content": "doc/php83/evidence/exp12-syntax/:\nclaude-native-cli.exit\nclaude-native-outcome.json\nclaude-native-prompt.txt\nclaude-native-public.json\nclaude-native-r2-prompt.txt\nclaude-scan.json\nclaude-scan.stderr\ncursor-local-cli.exit\ncursor-local-prompt.txt\ncursor-local-public.json\ncursor-local-review.md\nfrozen-tools.json\nlocal-r2-tests.exit\nlocal-r2-tests.log\nlocal-tests.exit\nlocal-tests.log\nopencode-prep-cli.exit\nopencode-prep-outcome.json\nopencode-prep-prompt.txt\nopencode-prep-public.json\nprimary-summary.json\nprimary.exit\nprimary.json\nprimary.stderr\nstage-tool-pins.json\nstage.exit\nstage.stderr\nstage.stdout\n\ntools/php83/exp12-syntax/:\nREADME.md\n__pycache__\ncompare.py\ninput-contract.json\nrun.sh\nscan.py\nstage.py\ntest_compare.py\ntest_scan.py\nls: cannot access 'doc/php83/evidence/exp12-syntax/claude-r2-*': No such file or directory\n# Exp12 paired compile-only nonregression (NOT_EXECUTED)\n\nVersioned from the completed exp11 harness; old tools/evidence stay unchanged.\nVerified exp11/exp12 ZIP pins and exact three changed source identities are frozen.\nEach scan selects all11784 PHP-like files, invokes native PHP8.3 -n -l only,\nwith E_ALL, short tags, read-only binds, private network and no application body.\nThree changed targets already compiled in exp11: this is runtime-repair compiler\nnonregression, NOT a claim of three newly accepted files. Require both variants'\nseven existing rejections unchanged, every unchanged-source outcome/diagnostic\nidentical and all three changed targets accepted without diagnostic changes.\nNative execution and independent repeat remain pending ownership and review.\nNo SOAP extension is needed: -n parser-only PHP, never an include or bootstrap.",
+          "is_error": false
+        }
+      ]
+    },
+    {
+      "type": "assistant",
+      "content": [
+        {
+          "type": "tool_use",
+          "id": "toolu_013MJxoaNtTmAgSGvF437uHA",
+          "name": "Bash",
+          "input": {
+            "command": "cat tools/php83/exp12-syntax/input-contract.json doc/php83/evidence/exp12-syntax/frozen-tools.json doc/php83/evidence/exp12-syntax/primary-summary.json | head -120; cat tools/php83/exp12-syntax/run.sh; sed -n 1,200p tools/php83/exp12-syntax/compare.py",
+            "description": "Read contract, frozen pins, summary, scripts"
+          },
+          "caller": {
+            "type": "direct"
+          }
+        }
+      ]
+    },
+    {
+      "type": "user",
+      "content": [
+        {
+          "tool_use_id": "toolu_013MJxoaNtTmAgSGvF437uHA",
+          "type": "tool_result",
+          "content": "{\n  \"schema\": 1,\n  \"status\": \"PREPARED_NOT_EXECUTED: paired compile-only exp11/exp12 runtime-repair nonregression\",\n  \"pins\": {\n    \"exp11\": \"f2474f5b951bfd2d121291025c8dd4554697fb5bb4024e132987643dab6144a7\",\n    \"exp12\": \"de5e61a1b54f472e605ef2e87669302a3915616fd85378e0f05706fcb06a7e8b\"\n  },\n  \"targets\": [\n    {\n      \"path\": \"vendor/propel/util/Criteria.php\",\n      \"exp11_sha256\": \"e8333167c6b501c92a8ee681a3b8c63372e8bf20e81c140a242c37c75b49a89a\",\n      \"exp12_sha256\": \"f8f726443dbc3af363f6c08db2d6baa92591b37bb14abd104ac6a5951b5f6d8d\"\n    },\n    {\n      \"path\": \"vendor/symfony/vendor/pake/pakeApp.class.php\",\n      \"exp11_sha256\": \"72f538165dd3226b46c35ddac7700c0f3a6046e74f4646b74ca5bd541d59b120\",\n      \"exp12_sha256\": \"d5bdc4612a5c9ae76fe8f594eaefeff1059175f0a36d756a1010612830bf39b8\"\n    },\n    {\n      \"path\": \"vendor/symfony-data/tasks/sfPakeGenerator.php\",\n      \"exp11_sha256\": \"67682683048afeaef9ed55bd95a5920792b2c6ab3b4ec11c804985ead4b347eb\",\n      \"exp12_sha256\": \"6958f51ba82e9f4922eb8a7437dc1301ffd81032dd168f9c70516dee21f9e6d9\"\n    }\n  ]\n}\n{\n  \"README.md\": \"64b19f5498ecd9ccf59c50e23a57344a796db1a3ed3d0b5d190a64de412c1507\",\n  \"input-contract.json\": \"f1fb66181fd74120e102eb8c227d8b89fb0592dfa5070e4771bc350b455d32b4\",\n  \"run.sh\": \"bcbeb6f3b11e10bace34d9971f16b1e18981a9906a78f342411c0380b271e1d3\",\n  \"scan.py\": \"fd98fdb419679017363cdb4fe6fc2f0db0dfcbbe5ee84d3055f79e4260e48f3e\",\n  \"stage.py\": \"b9b9d5ce9f56183560576d90c6b4a6a2fd1da1988f724dd7ff6c0cc95c37bd5f\",\n  \"test_scan.py\": \"f9b4dd59ef8c83ab680fd78a21c1b4cafb9c55c72aeb3811b728f94f22d6e3da\"\n}\n{\n  \"primary_sha256\": \"ea9f5b6fb98677cd67e2b5c60504088b33c98607c737333fa360d4c8faf5bee1\",\n  \"comparison\": {\n    \"checks\": {\n      \"both_scan_all_11784_files\": true,\n      \"3_selected_targets\": true,\n      \"all_targets_previously_accepted\": true,\n      \"all_targets_now_accepted\": true,\n      \"unchanged_sources_same_outcome_and_diagnostics\": true,\n      \"remaining_rejected_paths_unchanged\": true,\n      \"target_diagnostics_unchanged\": true,\n      \"no_incomplete_subprocesses\": true,\n      \"observed_exp11_rejections_7\": true,\n      \"observed_exp12_rejections_7\": true\n    },\n    \"bounded_regression_pass\": true,\n    \"unchanged_outcome_differences\": [],\n    \"target_rejections_after\": [],\n    \"remaining_rejected_paths\": [\n      \"vendor/aws/Doctrine/Common/Cache/RiakCache.php\",\n      \"vendor/symfony-data/generator/sfPropelAdmin/default/skeleton/actions/actions.class.php\",\n      \"vendor/symfony-data/generator/sfPropelCrud/default/skeleton/actions/actions.class.php\",\n      \"vendor/symfony-data/skeleton/batch/default.php\",\n      \"vendor/symfony-data/skeleton/batch/rotate_log.php\",\n      \"vendor/symfony-data/skeleton/controller/controller.php\",\n      \"vendor/symfony-data/skeleton/module/module/actions/actions.class.php\"\n    ],\n    \"scope\": \"3-target runtime-repair compiler nonregression; seven prior rejections not waived\"\n  },\n  \"variants\": {\n    \"exp11\": {\n      \"files_scanned\": 11784,\n      \"compiler_rejected\": 7,\n      \"compiler_accepted\": 11777,\n      \"incomplete\": 0,\n      \"diagnostic_files\": 73,\n      \"accepted_with_diagnostics\": 66\n    },\n    \"exp12\": {\n      \"files_scanned\": 11784,\n      \"compiler_rejected\": 7,\n      \"compiler_accepted\": 11777,\n      \"incomplete\": 0,\n      \"diagnostic_files\": 73,\n      \"accepted_with_diagnostics\": 66\n    }\n  }\n}\n#!/usr/bin/env bash\n# Compile only: no application includes or entrypoints. Only isolated php83lab.\nset -euo pipefail\n[[ $# == 0 && $(hostname) == kaltura-php83-lab && $(id -u) == 1000 ]] || exit 64\nstage=/home/vagrant/php-candidate-syntax-exp12\n[[ -d $stage && ! -L $stage ]] || exit 64\nexec sudo systemd-run --quiet --wait --pipe --collect \\\n -p User=vagrant -p Group=vagrant -p PrivateNetwork=yes \\\n -p 'SystemCallFilter=~socket socketpair' -p SystemCallErrorNumber=EPERM -p RestrictAddressFamilies=AF_UNIX \\\n -p ProtectSystem=strict -p ProtectHome=yes -p PrivateTmp=yes -p PrivateDevices=yes \\\n -p NoNewPrivileges=yes -p MemoryMax=1G -p RuntimeMaxSec=2400 \\\n -p 'InaccessiblePaths=-/opt/kaltura /root -/run/mysqld -/var/lib/mysql' \\\n -p \"BindReadOnlyPaths=$stage/tools:/audit/tools $stage/exp11.zip:/audit/exp11.zip $stage/exp12.zip:/audit/exp12.zip $stage/exp11/server-Rigel-18.20.0:/audit/exp11 $stage/exp12/server-Rigel-18.20.0:/audit/exp12\" \\\n /usr/bin/env -i PATH=/usr/bin:/bin LC_ALL=C TZ=UTC /usr/bin/python3 -B /audit/tools/scan.py\n#!/usr/bin/env python3\n\"\"\"Compare independently executed paired scans; ignore only per-record durations.\"\"\"\nimport argparse\nimport copy\nimport hashlib\nimport json\nfrom pathlib import Path\nfrom scan import compare_reports, load_contract, require, summarize, strict_equal\n\nFROZEN_FILES = {'README.md', 'input-contract.json', 'run.sh', 'scan.py', 'stage.py', 'test_scan.py'}\n\n\ndef normalized(report):\n    result = copy.deepcopy(report)\n    for variant in result['variants'].values():\n        for row in variant['records']:\n            duration = row.pop('duration_ns')\n            require(type(duration) is int and duration >= 0, 'Invalid duration evidence')\n    return result\n\n\ndef compare(primary, independent, contract, harness):\n    a, b = normalized(primary), normalized(independent)\n    require(strict_equal(a, b), 'Reports differ beyond per-record duration_ns')\n    require(type(a['schema']) is int and a['schema'] == 1 and a['collection_complete'] is True, 'Incomplete collection')\n    require(a['input_contract'] == contract, 'Input contract drift')\n    require(a['harness'] == harness and set(harness) == FROZEN_FILES, 'Frozen harness drift')\n    require(set(a['variants']) == {'exp11', 'exp12'}, 'Unexpected variants')\n    for name, variant in a['variants'].items():\n        require(strict_equal(variant['summary'], summarize(variant['records'])), 'Summary mismatch')\n        require(variant['zip_sha256'] == contract['pins'][name], 'Variant ZIP mismatch')\n    comparison = compare_reports(primary['variants'], contract)\n    require(comparison == a['comparison'] and comparison['bounded_regression_pass'] is True,\n            'Bounded compiler regression did not pass')\n    require(a['candidate_all_files_compile'] is False and a['application_acceptance'] is False,\n            'Remaining rejections or application scope wrongly accepted')\n    old = {row['path']: row for row in a['variants']['exp11']['records']}\n    newly_diagnostic = [row for row in a['variants']['exp12']['records']\n                       if row['exit'] == 0 and row['diagnostics'] and old[row['path']]['exit'] == 255]\n    return {'schema': 1, 'reports_equal_except_record_duration_ns': True,\n            'independent_logical_rows': sum(len(v['records']) for v in a['variants'].values()),\n            'collection_complete': True, 'comparison': comparison,\n            'variants': {name: v['summary'] for name, v in a['variants'].items()},\n            'newly_accepted_with_diagnostics': newly_diagnostic,\n            'candidate_all_files_compile': False, 'application_acceptance': False,\n            'scope': 'independent repetition of bounded compiler nonregression; no whole-candidate acceptance'}\n\n\ndef main():\n    parser = argparse.ArgumentParser(description=__doc__)\n    parser.add_argument('primary', type=Path)\n    parser.add_argument('independent', type=Path)\n    parser.add_argument('output', type=Path)\n    args = parser.parse_args()\n    require(not args.output.exists(), 'Refusing existing comparison output')\n    inputs = {}\n    reports = []\n    for path in (args.primary, args.independent):\n        for suffix in ('.exit', '.stderr'):\n            sidecar = path.with_suffix(suffix)\n            data = sidecar.read_bytes()\n            require(data.strip() == (b'0' if suffix == '.exit' else b''), 'Nonzero exit or runner stderr')\n            inputs[str(sidecar)] = hashlib.sha256(data).hexdigest()\n        data = path.read_bytes()\n        inputs[str(path)] = hashlib.sha256(data).hexdigest()\n        reports.append(json.loads(data))\n    here = Path(__file__).resolve().parent\n    harness = {name: hashlib.sha256((here / name).read_bytes()).hexdigest() for name in FROZEN_FILES}\n    result = compare(*reports, load_contract(), harness)\n    result['inputs_sha256'] = inputs\n    result['comparator_sha256'] = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()\n    with args.output.open('x') as output:\n        output.write(json.dumps(result, indent=2) + '\\n')\n    print('23568 independent logical rows equal; 3 changed targets remain accepted; 7 rejections remain')\n\n\nif __name__ == '__main__':\n    main()",
+          "is_error": false
+        }
+      ]
+    },
+    {
+      "type": "assistant",
+      "content": [
+        {
+          "type": "tool_use",
+          "id": "toolu_01CwxCaSKJgHrFgVusMwBjeQ",
+          "name": "Bash",
+          "input": {
+            "command": "head -5 doc/php83/evidence/exp12-syntax/local-r2-tests.log; tail -4 doc/php83/evidence/exp12-syntax/local-r2-tests.log; cd tools/php83/exp12-syntax && sha256sum README.md input-contract.json run.sh scan.py stage.py test_scan.py",
+            "description": "Check prior test log and local harness hashes"
+          },
+          "caller": {
+            "type": "direct"
+          }
+        }
+      ]
+    },
+    {
+      "type": "user",
+      "content": [
+        {
+          "tool_use_id": "toolu_01CwxCaSKJgHrFgVusMwBjeQ",
+          "type": "tool_result",
+          "content": "test_diagnostics_not_ignored (test_compare.ComparisonTests.test_diagnostics_not_ignored) ... ok\ntest_frozen_files_exclude_new_host_comparator (test_compare.ComparisonTests.test_frozen_files_exclude_new_host_comparator) ... ok\ntest_ignores_only_per_record_duration (test_compare.ComparisonTests.test_ignores_only_per_record_duration) ... ok\ntest_invalid_duration_rejected (test_compare.ComparisonTests.test_invalid_duration_rejected) ... ok\ntest_missing_duration_rejected (test_compare.ComparisonTests.test_missing_duration_rejected) ... ok\n----------------------------------------------------------------------\nRan 40 tests in 2.611s\n\nOK\n64b19f5498ecd9ccf59c50e23a57344a796db1a3ed3d0b5d190a64de412c1507  README.md\nf1fb66181fd74120e102eb8c227d8b89fb0592dfa5070e4771bc350b455d32b4  input-contract.json\nbcbeb6f3b11e10bace34d9971f16b1e18981a9906a78f342411c0380b271e1d3  run.sh\nfd98fdb419679017363cdb4fe6fc2f0db0dfcbbe5ee84d3055f79e4260e48f3e  scan.py\nb9b9d5ce9f56183560576d90c6b4a6a2fd1da1988f724dd7ff6c0cc95c37bd5f  stage.py\nf9b4dd59ef8c83ab680fd78a21c1b4cafb9c55c72aeb3811b728f94f22d6e3da  test_scan.py",
+          "is_error": false
+        }
+      ]
+    },
+    {
+      "type": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "Os 6 pins locais coincidem com `frozen-tools.json`. Agora executo o scan via SSH de forma s\u00edncrona."
+        }
+      ]
+    },
+    {
+      "type": "assistant",
+      "content": [
+        {
+          "type": "tool_use",
+          "id": "toolu_01HaaMRQKq4VzeF5UrxZ9LNx",
+          "name": "Bash",
+          "input": {
+            "command": "cd /home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83 && E=doc/php83/evidence/exp12-syntax; set -o noclobber; date -u +%FT%TZ; ssh -T -F /tmp/kaltura-php83-ssh.conf php83 'bash /home/vagrant/php-candidate-syntax-exp12/tools/run.sh' >$E/claude-r2-scan.json 2>$E/claude-r2-scan.stderr; rc=$?; echo $rc >$E/claude-r2-scan.exit; date -u +%FT%TZ; echo exit=$rc; wc -c $E/claude-r2-scan.json $E/claude-r2-scan.stderr; sha256sum $E/claude-r2-scan.json",
+            "description": "Run native scanner on lab VM via SSH",
+            "timeout": 300000
+          },
+          "caller": {
+            "type": "direct"
+          }
+        }
+      ]
+    },
+    {
+      "type": "user",
+      "content": [
+        {
+          "tool_use_id": "toolu_01HaaMRQKq4VzeF5UrxZ9LNx",
+          "type": "tool_result",
+          "content": "2026-09-26T16:44:22Z\n2026-09-26T16:44:52Z\nexit=0\n17916900 doc/php83/evidence/exp12-syntax/claude-r2-scan.json\n       0 doc/php83/evidence/exp12-syntax/claude-r2-scan.stderr\n17916900 total\n8bf0b1d191671bfd264e658b43ecc9df0d3d90769b33eec5ccac23d2895ec846  doc/php83/evidence/exp12-syntax/claude-r2-scan.json",
+          "is_error": false
+        }
+      ]
+    },
+    {
+      "type": "assistant",
+      "content": [
+        {
+          "type": "tool_use",
+          "id": "toolu_01XoGBg7TCCmQtALqXE78skz",
+          "name": "Bash",
+          "input": {
+            "command": "E=doc/php83/evidence/exp12-syntax; set -o noclobber; ls $E/claude-r2-compare.* 2>/dev/null && exit 9; PYTHONDONTWRITEBYTECODE=1 python3 tools/php83/exp12-syntax/compare.py $E/primary.json $E/claude-r2-scan.json $E/claude-r2-compare.json >$E/claude-r2-compare.stdout 2>$E/claude-r2-compare.stderr; rc=$?; echo $rc >$E/claude-r2-compare.exit; echo exit=$rc; cat $E/claude-r2-compare.stdout $E/claude-r2-compare.stderr; ls -la $E/claude-r2-compare.json && python3 -c \"\nimport json;d=json.load(open('$E/claude-r2-compare.json'))\nprint(d['independent_logical_rows'],d['collection_complete'],d['candidate_all_files_compile'],d['application_acceptance'],len(d['newly_accepted_with_diagnostics']))\nc=d['comparison'];print(c['bounded_regression_pass'],c['checks'],len(c['remaining_rejected_paths']),c['target_rejections_after'],c['unchanged_outcome_differences'])\nprint(d['variants']);print(d['comparator_sha256'])\"; sha256sum $E/claude-r2-compare.json $E/primary.json",
+            "description": "Run repository comparator and summarize"
+          },
+          "caller": {
+            "type": "direct"
+          }
+        }
+      ]
+    },
+    {
+      "type": "user",
+      "content": [
+        {
+          "tool_use_id": "toolu_01XoGBg7TCCmQtALqXE78skz",
+          "type": "tool_result",
+          "content": "exit=0\n23568 independent logical rows equal; 3 changed targets remain accepted; 7 rejections remain\n-rw-rw-r-- 1 nilton nilton 2895 Sep 26 13:44 doc/php83/evidence/exp12-syntax/claude-r2-compare.json\n23568 True False False 0\nTrue {'both_scan_all_11784_files': True, '3_selected_targets': True, 'all_targets_previously_accepted': True, 'all_targets_now_accepted': True, 'unchanged_sources_same_outcome_and_diagnostics': True, 'remaining_rejected_paths_unchanged': True, 'target_diagnostics_unchanged': True, 'no_incomplete_subprocesses': True, 'observed_exp11_rejections_7': True, 'observed_exp12_rejections_7': True} 7 [] []\n{'exp11': {'files_scanned': 11784, 'compiler_rejected': 7, 'compiler_accepted': 11777, 'incomplete': 0, 'diagnostic_files': 73, 'accepted_with_diagnostics': 66}, 'exp12': {'files_scanned': 11784, 'compiler_rejected': 7, 'compiler_accepted': 11777, 'incomplete': 0, 'diagnostic_files': 73, 'accepted_with_diagnostics': 66}}\n7519ec906412aa30a4afdc7e140c99b16209bbbf111259180e9ac5db9b38006a\n739abe5198fc74e0f80f1492c9fec942d86889afa14487c33ae778113cd3dd13  doc/php83/evidence/exp12-syntax/claude-r2-compare.json\nea9f5b6fb98677cd67e2b5c60504088b33c98607c737333fa360d4c8faf5bee1  doc/php83/evidence/exp12-syntax/primary.json",
+          "is_error": false
+        }
+      ]
+    },
+    {
+      "type": "assistant",
+      "content": [
+        {
+          "type": "tool_use",
+          "id": "toolu_012oGNVwoyq5zpYwqjvErFJx",
+          "name": "Bash",
+          "input": {
+            "command": "E=doc/php83/evidence/exp12-syntax; set -o noclobber; PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/exp12-syntax -p 'test_*.py' -v >$E/claude-r2-tests.log 2>&1; rc=$?; echo $rc >$E/claude-r2-tests.exit; echo exit=$rc; tail -3 $E/claude-r2-tests.log; python3 -c \"\nimport json;d=json.load(open('$E/claude-r2-scan.json'))\nprint([k for k in d]);\nfor n,v in d['variants'].items(): print(n,{k:x for k,x in v.items() if k!='records'})\nprint({k:d[k] for k in d if k not in ('variants','comparison','input_contract')})\"",
+            "description": "Run 40 local tests and inspect scan metadata"
+          },
+          "caller": {
+            "type": "direct"
+          }
+        }
+      ]
+    },
+    {
+      "type": "user",
+      "content": [
+        {
+          "tool_use_id": "toolu_012oGNVwoyq5zpYwqjvErFJx",
+          "type": "tool_result",
+          "content": "<persisted-output>\nOutput too large (1.4MB). Full output saved to: /home/nilton/.claude/projects/-home-nilton-Projetos-nilton-NOVOS-platform-install-packages-php83/f2ab9fb5-7959-4969-99b9-e3ca4174b02f/tool-results/b3r3j6chb.txt\n\nPreview (first 2KB):\nexit=0\nRan 40 tests in 2.700s\n\nOK\n['schema', 'scope', 'runtime', 'harness', 'flags', 'workers', 'variants', 'delta', 'collection_complete', 'input_contract', 'comparison', 'candidate_all_files_compile', 'application_acceptance']\nexp11 {'zip_sha256': 'f2474f5b951bfd2d121291025c8dd4554697fb5bb4024e132987643dab6144a7', 'verified_source_files': 15240, 'selected_extensions': ['.inc', '.php', '.php5', '.phtml'], 'excluded_files': [{'path': '.github/ISSUE_TEMPLATE.md', 'sha256': '8f9dffa6b2f52183ccf0fc99cd1b32f51e48a6e1d2322a8389bf7223563426ed', 'suffix': '.md', 'reason': 'not-selected-PHP-like-extension'}, {'path': '.gitignore', 'sha256': '1877bd584136740053b2a75b588464a62e7183d33e30e0d887b5e12d8c792818', 'suffix': '', 'reason': 'not-selected-PHP-like-extension'}, {'path': '.php83-experimental/0001-myCaptchaImage.class.php.patch', 'sha256': '0cb1b968a2656ea45a671006c7d05d525c0c8b4f27c529eca6b5061a2d60b655', 'suffix': '.patch', 'reason': 'not-selected-PHP-like-extension'}, {'path': '.php83-experimental/0002-S3.php.patch', 'sha256': '2b9e87e8e750b042031027af68c22f972e5744c8a0ebe8cdaf10afb3c0742a39', 'suffix': '.patch', 'reason': 'not-selected-PHP-like-extension'}, {'path': '.php83-experimental/0002-Services_JSON.class.patch', 'sha256': '126eaa808a590c753f2a06d91de5e5b78da7a45ac02f50f172c84e825cf13df0', 'suffix': '.patch', 'reason': 'not-selected-PHP-like-extension'}, {'path': '.php83-experimental/0003-Encoder.patch', 'sha256': 'd39935bc38dbe62d54d02e065a801810acc5635e24cc28de7515556092b2f490', 'suffix': '.patch', 'reason': 'not-selected-PHP-like-extension'}, {'path': '.php83-experimental/0003-kAkamaiSecureHDUrlTokenizer.php.patch', 'sha256': 'a204975a634353c319b12f0590c8744b7b6a3993eff74e955d3b9fe7dac1a2fc', 'suffix': '.patch', 'reason': 'not-selected-PHP-like-extension'}, {'path': '.php83-experimental/0004-Decoder.patch', 'sha256': 'bbd82723f3232be8d0d50827e0d4c4ffb8b37ffe16afb11b1151b9e4c2beac93', 'suffix': '.patch', 'reason': 'not-selected-PHP-like-extension'}, {'path': \n...\n</persisted-output>",
+          "is_error": false
+        }
+      ]
+    },
+    {
+      "type": "assistant",
+      "content": [
+        {
+          "type": "tool_use",
+          "id": "toolu_01BUAacdMntvZchPhuqSTHAH",
+          "name": "Bash",
+          "input": {
+            "command": "python3 -c \"\nimport json;d=json.load(open('doc/php83/evidence/exp12-syntax/claude-r2-scan.json'))\nprint(json.dumps({k:d[k] for k in ('schema','scope','runtime','flags','workers','collection_complete','candidate_all_files_compile','application_acceptance')})[:1500])\nfor n,v in d['variants'].items(): print(n,v['zip_sha256'],v['verified_source_files'],len(v['excluded_files']),v['summary'])\"",
+            "description": "Print compact scan runtime metadata"
+          },
+          "caller": {
+            "type": "direct"
+          }
+        }
+      ]
+    },
+    {
+      "type": "user",
+      "content": [
+        {
+          "tool_use_id": "toolu_01BUAacdMntvZchPhuqSTHAH",
+          "type": "tool_result",
+          "content": "{\"schema\": 1, \"scope\": \"paired PHP8.3 -n syntax only, no application runtime acceptance\", \"runtime\": {\"command\": \"/usr/bin/php8.3\", \"resolved_path\": \"/usr/bin/php8.3\", \"sha256\": \"1c564e6bafa56d03359c3774be6f4c77d0edecabd2075e18556940a56747c8d7\", \"version\": \"PHP 8.3.6 (cli) (built: Sep  2 2026 12:56:02) (NTS)\\nCopyright (c) The PHP Group\\nZend Engine v4.3.6, Copyright (c) Zend Technologies\\n\", \"modules\": \"[PHP Modules]\\nCore\\ndate\\nfilter\\nhash\\njson\\nlibxml\\nopenssl\\npcntl\\npcre\\nrandom\\nReflection\\nsession\\nsodium\\nSPL\\nstandard\\nzlib\\n\\n[Zend Modules]\\n\\n\", \"ini\": \"Configuration File (php.ini) Path: /etc/php/8.3/cli\\nLoaded Configuration File:         (none)\\nScan for additional .ini files in: (none)\\nAdditional .ini files parsed:      (none)\\n\", \"linked_library_sha256\": {\"/lib/x86_64-linux-gnu/libargon2.so.1\": \"3c593c01d1c3497b1276537a1002c90ce3beb729a3520087608838cf8bbd847d\", \"/lib/x86_64-linux-gnu/libc.so.6\": \"511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0\", \"/lib/x86_64-linux-gnu/libcrypto.so.3\": \"c19c2cf8d7cf91c4f273b1d3bbc56a9d19c91a739bfe57ad630756ee8ede7b77\", \"/lib/x86_64-linux-gnu/libgcc_s.so.1\": \"02f3f192bf5f79b811f1e34a650fea443d407408703448906585232383957f60\", \"/lib/x86_64-linux-gnu/libicudata.so.74\": \"ddbb3718b8bd9cbd780e5ab08b4503c30a6c4fa0706ebe5d074ed6b596c1714e\", \"/lib/x86_64-linux-gnu/libicuuc.so.74\": \"7560aadde38e5f4237a47a1ddd5891f9b36768a77a60faae30beee003ac01901\", \"/lib/x86_64-linux-gnu/liblzma.so.5\": \"a9793942a8a5f6f4d0f523ef9e0a5be4\nexp11 f2474f5b951bfd2d121291025c8dd4554697fb5bb4024e132987643dab6144a7 15240 3456 {'files_scanned': 11784, 'compiler_rejected': 7, 'compiler_accepted': 11777, 'incomplete': 0, 'diagnostic_files': 73, 'accepted_with_diagnostics': 66}\nexp12 de5e61a1b54f472e605ef2e87669302a3915616fd85378e0f05706fcb06a7e8b 15242 3458 {'files_scanned': 11784, 'compiler_rejected': 7, 'compiler_accepted': 11777, 'incomplete': 0, 'diagnostic_files': 73, 'accepted_with_diagnostics': 66}",
+          "is_error": false
+        }
+      ]
+    },
+    {
+      "type": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "Agora gravo o relat\u00f3rio p\u00fablico."
+        }
+      ]
+    },
+    {
+      "type": "assistant",
+      "content": [
+        {
+          "type": "tool_use",
+          "id": "toolu_015aWQVX3eNDMLAmouZaY6Sz",
+          "name": "Bash",
+          "input": {
+            "command": "E=doc/php83/evidence/exp12-syntax; set -o noclobber; cat >$E/claude-r2-review.md <<'EOF'\n# Exp12 paired compile-only scan \u2014 Claude r2 independent repeat\n\n- Case: exp12 paired compile-only nonregression (exp11 vs exp12), independent repeat r2.\n- Executor: Claude Code CLI (claude-opus-5-5). Primary scan: pre-existing `primary.json`.\n- Environment: exclusively granted native83 lab (`kaltura-php83-lab`) only; no baseline74, no `.20`.\n- Prior attempts preserved untouched (`claude-scan.*`, `claude-native-*`); new r2 paths only, written with noclobber.\n\n## Commands and exits\n\n| Step | Command | Exit | Output |\n|---|---|---|---|\n| Harness pins | `sha256sum` of the 6 frozen files vs `frozen-tools.json` | 0 | 6/6 match |\n| Native scan (2026-09-26T16:44:22Z \u2192 16:44:52Z UTC, synchronous) | `ssh -T -F /tmp/kaltura-php83-ssh.conf php83 'bash /home/vagrant/php-candidate-syntax-exp12/tools/run.sh'` | 0 | `claude-r2-scan.json` (17916900 B, sha256 `8bf0b1d191671bfd264e658b43ecc9df0d3d90769b33eec5ccac23d2895ec846`), `.stderr` empty, `.exit`=0 |\n| Comparator | `python3 tools/php83/exp12-syntax/compare.py doc/php83/evidence/exp12-syntax/primary.json doc/php83/evidence/exp12-syntax/claude-r2-scan.json doc/php83/evidence/exp12-syntax/claude-r2-compare.json` | 0 | `claude-r2-compare.json` (sha256 `739abe5198fc74e0f80f1492c9fec942d86889afa14487c33ae778113cd3dd13`), `.stdout`, `.stderr` empty, `.exit`=0 |\n| Local tests | `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/exp12-syntax -p 'test_*.py' -v` | 0 | `claude-r2-tests.log`: Ran 40 tests, OK |\n\nPrimary sha256 `ea9f5b6fb98677cd67e2b5c60504088b33c98607c737333fa360d4c8faf5bee1`; comparator sha256 `7519ec906412aa30a4afdc7e140c99b16209bbbf111259180e9ac5db9b38006a`.\n\n## Result summary (from comparator output, not a dump of the 18 MB report)\n\n- Reports equal except per-record `duration_ns`; 23568 logical rows (11784 per variant); `collection_complete`=true.\n- ZIP pins verified in-scanner: exp11 `f2474f5b\u202644a7`, exp12 `de5e61a1\u20267e8b`; runtime `/usr/bin/php8.3` PHP 8.3.6 NTS, `-n` (no php.ini).\n- Both variants: 11784 scanned, 7 rejected, 11777 accepted, 0 incomplete, 73 diagnostic files, 66 accepted with diagnostics.\n- 7 \u2192 7 rejections unchanged (same paths as `primary-summary.json`); 3 changed targets still accepted, target diagnostics unchanged.\n- Unchanged-source outcome/diagnostic differences: none. Newly accepted with diagnostics: none.\n- All 10 comparator checks true; `bounded_regression_pass`=true.\n\n## Limitations\n\n- Compile-only (`php -n -l`) nonregression for 3 runtime-repair targets; no includes, bootstrap, SQL, packages or application body executed.\n- `candidate_all_files_compile`=false (7 rejections not waived); `application_acceptance`=false.\n- Same lab VM and staged artifacts as the primary scan; repeat is independent in executor/time, not in host or staging.\n- This is execution evidence by one executor; it is not an independent review of itself.\nEOF\nls $E/claude-r2-*",
+            "description": "Write public r2 review report"
+          },
+          "caller": {
+            "type": "direct"
+          }
+        }
+      ]
+    },
+    {
+      "type": "user",
+      "content": [
+        {
+          "tool_use_id": "toolu_015aWQVX3eNDMLAmouZaY6Sz",
+          "type": "tool_result",
+          "content": "doc/php83/evidence/exp12-syntax/claude-r2-compare.exit\ndoc/php83/evidence/exp12-syntax/claude-r2-compare.json\ndoc/php83/evidence/exp12-syntax/claude-r2-compare.stderr\ndoc/php83/evidence/exp12-syntax/claude-r2-compare.stdout\ndoc/php83/evidence/exp12-syntax/claude-r2-review.md\ndoc/php83/evidence/exp12-syntax/claude-r2-scan.exit\ndoc/php83/evidence/exp12-syntax/claude-r2-scan.json\ndoc/php83/evidence/exp12-syntax/claude-r2-scan.stderr\ndoc/php83/evidence/exp12-syntax/claude-r2-tests.exit\ndoc/php83/evidence/exp12-syntax/claude-r2-tests.log",
+          "is_error": false
+        }
+      ]
+    },
+    {
+      "type": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "A repeti\u00e7\u00e3o independente r2 do scan de compila\u00e7\u00e3o pareado passou. O scan terminou antes de eu responder e as sa\u00eddas est\u00e3o gravadas, ent\u00e3o n\u00e3o h\u00e1 nada pendente.\n\n| Etapa | Exit | Resultado |\n|---|---|---|\n| Pins das 6 ferramentas congeladas (`sha256sum` comparado com `frozen-tools.json`) | 0 | 6 de 6 conferem |\n| Scan via SSH, s\u00edncrono, de 16:44:22Z a 16:44:52Z UTC | **0** | `claude-r2-scan.json` com 17.916.900 bytes (sha256 `8bf0b1d1\u2026ec846`); `.stderr` vazio; `.exit` = 0 |\n| `compare.py` com `primary.json` e `claude-r2-scan.json` | **0** | `claude-r2-compare.json` (sha256 `739abe51\u2026006a`); stdout: \"23568 independent logical rows equal; 3 changed targets remain accepted; 7 rejections remain\"; stderr vazio |\n| Testes locais (`unittest discover`, `test_*.py`) | **0** | 40 testes, OK |\n\n**Resultados do comparador:**\n- Os dois relat\u00f3rios s\u00e3o iguais, exceto pelo tempo de cada registro (`duration_ns`). S\u00e3o 23.568 linhas no total e a coleta est\u00e1 completa.\n- Cada variante (exp11 e exp12) teve 11.784 arquivos verificados:\n  - 7 rejeitados, os mesmos 7 de antes e com os mesmos caminhos;\n  - 11.777 aceitos;\n  - 0 incompletos;\n  - 73 arquivos com diagn\u00f3sticos, sendo 66 aceitos com diagn\u00f3sticos.\n- Os 3 arquivos alterados continuam aceitos, com os diagn\u00f3sticos inalterados.\n- Nenhum arquivo n\u00e3o alterado mudou de resultado ou de diagn\u00f3stico, e nenhum passou a ser aceito com diagn\u00f3stico.\n- As 10 verifica\u00e7\u00f5es do comparador deram verdadeiro e `bounded_regression_pass` = true.\n- O pr\u00f3prio scanner confirmou os pins dos dois ZIPs e o runtime: `/usr/bin/php8.3`, PHP 8.3.6 NTS, rodando com `-n` (sem php.ini).\n\n**Arquivos novos**, todos criados sem sobrescrever nada: `claude-r2-scan.{json,stderr,exit}`, `claude-r2-compare.{json,stdout,stderr,exit}`, `claude-r2-tests.{log,exit}` e o relat\u00f3rio p\u00fablico `claude-r2-review.md`, com comandos, exits, contagens e limita\u00e7\u00f5es. As tentativas anteriores n\u00e3o foram tocadas.\n\n**Limita\u00e7\u00f5es:**\n- Isto s\u00f3 mostra que as 3 corre\u00e7\u00f5es n\u00e3o causaram nenhuma regress\u00e3o de compila\u00e7\u00e3o com `php -n -l`. N\u00e3o houve includes, bootstrap, SQL nem pacotes.\n- `candidate_all_files_compile` = false, porque as 7 rejei\u00e7\u00f5es continuam, e `application_acceptance` = false.\n- A repeti\u00e7\u00e3o usou a mesma VM e os mesmos artefatos j\u00e1 preparados do scan prim\u00e1rio. Ela \u00e9 independente no executor e no momento da execu\u00e7\u00e3o, n\u00e3o no host.\n- Isto \u00e9 evid\u00eancia de execu\u00e7\u00e3o, n\u00e3o uma revis\u00e3o independente.\n\n**Desvio:** um comando de inspe\u00e7\u00e3o imprimiu por engano a lista `excluded_files` (cerca de 1,4 MB) na sa\u00edda local da ferramenta. Nada foi gravado no reposit\u00f3rio a partir disso."
+        }
+      ]
+    },
+    {
+      "type": "result",
+      "subtype": "success",
+      "is_error": false,
+      "result": "A repeti\u00e7\u00e3o independente r2 do scan de compila\u00e7\u00e3o pareado passou. O scan terminou antes de eu responder e as sa\u00eddas est\u00e3o gravadas, ent\u00e3o n\u00e3o h\u00e1 nada pendente.\n\n| Etapa | Exit | Resultado |\n|---|---|---|\n| Pins das 6 ferramentas congeladas (`sha256sum` comparado com `frozen-tools.json`) | 0 | 6 de 6 conferem |\n| Scan via SSH, s\u00edncrono, de 16:44:22Z a 16:44:52Z UTC | **0** | `claude-r2-scan.json` com 17.916.900 bytes (sha256 `8bf0b1d1\u2026ec846`); `.stderr` vazio; `.exit` = 0 |\n| `compare.py` com `primary.json` e `claude-r2-scan.json` | **0** | `claude-r2-compare.json` (sha256 `739abe51\u2026006a`); stdout: \"23568 independent logical rows equal; 3 changed targets remain accepted; 7 rejections remain\"; stderr vazio |\n| Testes locais (`unittest discover`, `test_*.py`) | **0** | 40 testes, OK |\n\n**Resultados do comparador:**\n- Os dois relat\u00f3rios s\u00e3o iguais, exceto pelo tempo de cada registro (`duration_ns`). S\u00e3o 23.568 linhas no total e a coleta est\u00e1 completa.\n- Cada variante (exp11 e exp12) teve 11.784 arquivos verificados:\n  - 7 rejeitados, os mesmos 7 de antes e com os mesmos caminhos;\n  - 11.777 aceitos;\n  - 0 incompletos;\n  - 73 arquivos com diagn\u00f3sticos, sendo 66 aceitos com diagn\u00f3sticos.\n- Os 3 arquivos alterados continuam aceitos, com os diagn\u00f3sticos inalterados.\n- Nenhum arquivo n\u00e3o alterado mudou de resultado ou de diagn\u00f3stico, e nenhum passou a ser aceito com diagn\u00f3stico.\n- As 10 verifica\u00e7\u00f5es do comparador deram verdadeiro e `bounded_regression_pass` = true.\n- O pr\u00f3prio scanner confirmou os pins dos dois ZIPs e o runtime: `/usr/bin/php8.3`, PHP 8.3.6 NTS, rodando com `-n` (sem php.ini).\n\n**Arquivos novos**, todos criados sem sobrescrever nada: `claude-r2-scan.{json,stderr,exit}`, `claude-r2-compare.{json,stdout,stderr,exit}`, `claude-r2-tests.{log,exit}` e o relat\u00f3rio p\u00fablico `claude-r2-review.md`, com comandos, exits, contagens e limita\u00e7\u00f5es. As tentativas anteriores n\u00e3o foram tocadas.\n\n**Limita\u00e7\u00f5es:**\n- Isto s\u00f3 mostra que as 3 corre\u00e7\u00f5es n\u00e3o causaram nenhuma regress\u00e3o de compila\u00e7\u00e3o com `php -n -l`. N\u00e3o houve includes, bootstrap, SQL nem pacotes.\n- `candidate_all_files_compile` = false, porque as 7 rejei\u00e7\u00f5es continuam, e `application_acceptance` = false.\n- A repeti\u00e7\u00e3o usou a mesma VM e os mesmos artefatos j\u00e1 preparados do scan prim\u00e1rio. Ela \u00e9 independente no executor e no momento da execu\u00e7\u00e3o, n\u00e3o no host.\n- Isto \u00e9 evid\u00eancia de execu\u00e7\u00e3o, n\u00e3o uma revis\u00e3o independente.\n\n**Desvio:** um comando de inspe\u00e7\u00e3o imprimiu por engano a lista `excluded_files` (cerca de 1,4 MB) na sa\u00edda local da ferramenta. Nada foi gravado no reposit\u00f3rio a partir disso.",
+      "permission_denials": []
+    }
+  ]
+}
