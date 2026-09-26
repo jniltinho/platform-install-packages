@@ -1,0 +1,20 @@
+{
+  "guest_sha256": "329904c43ed98881a5322a35c03c1e7e8b0ed7b28071238b3722af6143af59b2",
+  "result": {
+    "files": {
+      "/etc/init.d/kaltura-batch": {
+        "matches_reviewed_repository": true,
+        "sha256": "a8eb09c22f10f222142d253123ec2ef807c3070a45500b6f6705334735b2ca86"
+      },
+      "/etc/init.d/kaltura-elastic-populate": {
+        "matches_reviewed_repository": true,
+        "sha256": "1dd32a9ce4124b1b02e7522ad4ef8d3ae9e681b675fafd23f3698e383cf8b10f"
+      }
+    },
+    "monit_processes": [],
+    "monit_summary_exit": 1,
+    "raw_monit_text_exported": false,
+    "service_changes": 0,
+    "status": "READONLY_CONTROL_SOURCE_JOIN"
+  }
+}

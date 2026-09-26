@@ -1,0 +1,73 @@
+{
+  "exit": 0,
+  "elapsed": 51.9,
+  "stdout_sha256": "c110ab70767ed0f3812f8d7041e3c3e6d8562e33b23284b7c64ccd77ef444eab",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "public": [
+    {
+      "type": "text",
+      "timestamp": 1790466334339,
+      "sessionID": "ses_f1fe3f9c5ffeEHe0nSk0dt0h2a",
+      "part": {
+        "id": "prt_0e01c1e80001KPbs7WlUdi9n7S",
+        "messageID": "msg_0e01c0a3d001k54F3RHRYNTMM6",
+        "sessionID": "ses_f1fe3f9c5ffeEHe0nSk0dt0h2a",
+        "type": "text",
+        "text": "Read-only privacy-overlay review \u2014 checking pins, rollback, and PID boundaries.",
+        "time": {
+          "start": 1790466334336,
+          "end": 1790466334338
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "rs_01a0e01c1d0d770f8426000dd8c3d12b",
+            "phase": "commentary"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "timestamp": 1790466337630,
+      "sessionID": "ses_f1fe3f9c5ffeEHe0nSk0dt0h2a",
+      "part": {
+        "id": "prt_0e01c2b5b0010P0obl8rol174k",
+        "messageID": "msg_0e01c232600122TcOPRKfByNHY",
+        "sessionID": "ses_f1fe3f9c5ffeEHe0nSk0dt0h2a",
+        "type": "text",
+        "text": "Core overlay files reviewed \u2014 now running the harness and tracing adjacent audit sources.",
+        "time": {
+          "start": 1790466337627,
+          "end": 1790466337629
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "rs_01a0e01c2a2a7558af15646010f83730",
+            "phase": "commentary"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "timestamp": 1790466378920,
+      "sessionID": "ses_f1fe3f9c5ffeEHe0nSk0dt0h2a",
+      "part": {
+        "id": "prt_0e01c9707001nivTraAHZV2L7t",
+        "messageID": "msg_0e01c3ffe001t6qDOr59QNAe4D",
+        "sessionID": "ses_f1fe3f9c5ffeEHe0nSk0dt0h2a",
+        "type": "text",
+        "text": "# Read-only independent review: application-overlay-v1\n\nCase: `tools/php83/baseline-rehearsal/privacy/application-overlay-v1` \u2014 four-file lab privacy overlay.\nExecutor: OpenCode (`opencode/muse-spark-1.3-contributor-free`), read-only.\nReviewer: same executor, independent of author; not Codex-coordinated live CLI matrix.\nSource: repo worktree `platform-install-packages-php83`; harness `test_overlay.py`; guest `guest.py`; stage builder `prepare.py`; `README.md`; adjacent `application-audit-v1/{run.py,guest.py,logger.php,cache.php}` as readonly logger/cache source.\nEnvironment: local Linux, non-root, not `kaltura-php74-baseline`. No VM/SSH, no file edits, no `/tmp` reads, no denied operations.\n\n## Actual test executed\n\nCommand:\n`python3 -m unittest discover -s tools/php83/baseline-rehearsal/privacy/application-overlay-v1 -p test_*.py -v`\n\nExit 0. 9/9 OK:\n`test_real_source_preparation, test_double_output, test_support_disjoint, test_exact_replacement_metadata, test_refuse_existing_temporary, test_source_drift, test_source_symlink, test_quiescence_failclosed, test_no_real_auth_or_log_suppression` \u2014 all `ok`, `Ran 9 tests in 0.209s / OK`.\n\nSanitized evidence: harness asserts exact 4-target `before==TARGETS`, 4 `after`, 15 disjoint `support_sources`, per-file SHA join, fresh-output refusal, atomic replace preserves `uid/gid/mode` and refuses pre-existing temp, `SOURCE_DRIFT`/`SOURCE_TYPE` fail-closed, `wait_none(limit=0)` fail-closed, no `session.start/curl/truncate(/logger.ini').write/systemctl disable` strings in `guest.py`.\n\n## Static checks \u2014 meets spec on paper\n\n* Root-only transaction: `geteuid==0`, hostname `kaltura-php74-baseline`, IPv4 `192.168.56.74` present and `.20/.21/.30/.83` absent, stage root-owned `go-w`, `manifest.json` pin, stage immutable, `php7.4` SHA `5ed671ea\u2026`, init-script pins for `kaltura-batch`/`kaltura-elastic-populate`, 15 support-source + module pins (incl. `json.so`, `memcache.so`).\n* Exact 4 targets: `infra/log/KalturaLog.php`, `infra/log/KalturaSerializableStream.php`, `api_v3/lib/KalturaFrontController.php`, `api_v3/lib/KalturaDispatcher.php`; `manifest before` tuple equality + `after` set equality; candidate `php -n -l` lint.\n* PID boundaries: `old=app_processes()` pre-stop requires apache present + exact script set `{KGenericBatchMgr.class.php, populateElasticFromLog.php}`; PIDfiles `/opt/kaltura/var/run/batch.pid` + `/opt/kaltura/log/populate_elastic.pid` bound to `old` PIDs+scripts; `wait_none()` requires zero app processes; post-start requires all `old` PIDs gone or `starttime` changed + same exact inventory.\n* `system.ini` public-path restriction: parses only `BASE_DIR/APP_DIR/LOG_DIR/PHP_BIN/OS_KALTURA_USER`, single-token `shlex`, no `$`/`` ` ``/`;`/newline, requires `/opt/kaltura`, app dir, `/opt/kaltura/log`, `PHP_BIN` in `{php,php7.4}` with exact SHA, user regex; byte-equality recheck after stop.\n* Metadata: `replace_file` via `O_EXCL|O_NOFOLLOW` 0600 temp + `fsync` + `fchown/fchmod` from `original` + `os.replace` + temp cleanup; post-install `uid/gid/mode` equality check.\n* Private hashes never exported: `audits()` pops `private_configuration_snapshot` before returning; comparisons `private_stopped==private_before`, `private_after==private_before` kept out of public `report`; service stdout/stderr go to root-only `BACKUP/command-*.{stdout,stderr}` 0600, only `argv/exit/byte-counts` public.\n* Named maintenance + Monit: stop only `monit.service`, conditional `kaltura-batch`/`kaltura-elastic-populate`, `apache2.service`; start reverses in `apache\u2192elastic\u2192batch\u2192monit` order; both success and rollback paths call `start()`; no log-level/sink/config rewrite.\n\n## Concrete blockers / rollback holes\n\n1. **Installation `NOT_EXECUTED` (blocking).** No deployment wrapper/SSH provided; local host is not lab identity. Live PID/PIDfile/`system.ini`/Monit-restore/private-hash behaviour is statically verified only, not attested on `192.168.56.74`.\n2. **Crash/power-loss gap (acknowledged, still blocking for auto-recovery).** `README` + code make no crash-atomic 4-file claim; forced interruption requires manual recovery from protected backup. No issue for ordered-exception path, but not a fully atomic transaction.\n3. **Minor rollback verification asymmetry (non-blocking but real).** Install path verifies `uid/gid/mode` (`SOURCE_METADATA`); rollback path verifies only `source_state(m['before'])` digests, not metadata equality. Wrong-mode restore would still pass `restored`.\n4. **Backup ancestor check incomplete (minor).** Checks `BACKUP.parent` + `/var/lib` for symlink/root/`go-w`, not full ancestor chain (e.g. `/var`).\n5. **No `fsync` on `metadata.json`/`result.json` (minor).** File bytes are `fsync`ed; metadata/result writes are not.\n6. **No live acceptance.** Per `README`/code label, success is `OVERLAY_INSTALLED_NO_AUTH_ACCEPTANCE` only; `FAILED_RECOVERY_REQUIRED_NO_AUTH` correctly blocks nonce/USER tests. Native synthetic trace policy repetition does not constitute app-privacy acceptance \u2014 no such claim made here.\n\n## Verdict\n\nHarness: **PASS (9/9, exit 0).** Static review: **conforms** to root-only 4-source pinning, exact PID/PIDfile/`system.ini`/metadata/private-hash/service-restore design, with ordered `stop\u2192verify\u2192replace\u2192verify\u2192start` and reverse-order restore on exception. **Installation: `NOT_EXECUTED`. Privacy/auth acceptance: NOT GRANTED.** Next gates per `README` (fresh web/provider/logger attestation, append-window, nonce leak scan, scoped synthetic USER flow) remain untested here.\n",
+        "time": {
+          "start": 1790466365191,
+          "end": 1790466378913
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "msg_01a0e01c962270ed8d54bb5985a76586"
+          }
+        }
+      }
+    }
+  ]
+}

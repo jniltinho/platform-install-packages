@@ -1,0 +1,280 @@
+{
+  "guest_sha256": "4d05ec0d735825f6c1a8dd875d482ec4b01acce5d76f8294991366ea2f04b43b",
+  "reused_preflight_sha256": "c581a243318d7dba8cb5f6e871ea0d0d9c3739b718fa2d049dfb50ad29a59ba7",
+  "result": {
+    "config_file_count": 55,
+    "config_stable_private_comparison": true,
+    "config_values_or_hashes_exported": false,
+    "forwarder_or_bodylog_rejected_by_existing_preflight": true,
+    "http_requests": 0,
+    "processes": [
+      {
+        "application_scripts": [
+          "/opt/kaltura/app/batch/KGenericBatchMgr.class.php"
+        ],
+        "comm": "php",
+        "executable": "/usr/bin/php7.4",
+        "php_apache_modules": {},
+        "php_builtin_server": false,
+        "pid": 49006,
+        "ppid": 1,
+        "service_units": []
+      },
+      {
+        "application_scripts": [],
+        "comm": "nginx",
+        "executable": "/opt/kaltura/nginx/sbin/nginx",
+        "php_apache_modules": {},
+        "php_builtin_server": false,
+        "pid": 49285,
+        "ppid": 1,
+        "service_units": [
+          "kaltura-nginx.service"
+        ]
+      },
+      {
+        "application_scripts": [],
+        "comm": "nginx",
+        "executable": "/opt/kaltura/nginx/sbin/nginx",
+        "php_apache_modules": {},
+        "php_builtin_server": false,
+        "pid": 49286,
+        "ppid": 49285,
+        "service_units": [
+          "kaltura-nginx.service"
+        ]
+      },
+      {
+        "application_scripts": [],
+        "comm": "nginx",
+        "executable": "/opt/kaltura/nginx/sbin/nginx",
+        "php_apache_modules": {},
+        "php_builtin_server": false,
+        "pid": 49287,
+        "ppid": 49285,
+        "service_units": [
+          "kaltura-nginx.service"
+        ]
+      },
+      {
+        "application_scripts": [],
+        "comm": "nginx",
+        "executable": "/opt/kaltura/nginx/sbin/nginx",
+        "php_apache_modules": {},
+        "php_builtin_server": false,
+        "pid": 49288,
+        "ppid": 49285,
+        "service_units": [
+          "kaltura-nginx.service"
+        ]
+      },
+      {
+        "application_scripts": [],
+        "comm": "nginx",
+        "executable": "/opt/kaltura/nginx/sbin/nginx",
+        "php_apache_modules": {},
+        "php_builtin_server": false,
+        "pid": 49289,
+        "ppid": 49285,
+        "service_units": [
+          "kaltura-nginx.service"
+        ]
+      },
+      {
+        "application_scripts": [],
+        "comm": "nginx",
+        "executable": "/opt/kaltura/nginx/sbin/nginx",
+        "php_apache_modules": {},
+        "php_builtin_server": false,
+        "pid": 49291,
+        "ppid": 49285,
+        "service_units": [
+          "kaltura-nginx.service"
+        ]
+      },
+      {
+        "application_scripts": [],
+        "comm": "apache2",
+        "executable": "/usr/sbin/apache2",
+        "php_apache_modules": {
+          "/usr/lib/apache2/modules/libphp7.4.so": "e2eed71fa86014b0fe0e10270ebec1fa79c89cbabc20a795caa26fc8a091499b"
+        },
+        "php_builtin_server": false,
+        "pid": 50507,
+        "ppid": 1,
+        "service_units": [
+          "apache2.service"
+        ]
+      },
+      {
+        "application_scripts": [
+          "/opt/kaltura/app/plugins/search/providers/elastic_search/scripts/populateElasticFromLog.php"
+        ],
+        "comm": "php",
+        "executable": "/usr/bin/php7.4",
+        "php_apache_modules": {},
+        "php_builtin_server": false,
+        "pid": 50568,
+        "ppid": 1,
+        "service_units": []
+      },
+      {
+        "application_scripts": [],
+        "comm": "apache2",
+        "executable": "/usr/sbin/apache2",
+        "php_apache_modules": {
+          "/usr/lib/apache2/modules/libphp7.4.so": "e2eed71fa86014b0fe0e10270ebec1fa79c89cbabc20a795caa26fc8a091499b"
+        },
+        "php_builtin_server": false,
+        "pid": 53196,
+        "ppid": 50507,
+        "service_units": [
+          "apache2.service"
+        ]
+      },
+      {
+        "application_scripts": [],
+        "comm": "apache2",
+        "executable": "/usr/sbin/apache2",
+        "php_apache_modules": {
+          "/usr/lib/apache2/modules/libphp7.4.so": "e2eed71fa86014b0fe0e10270ebec1fa79c89cbabc20a795caa26fc8a091499b"
+        },
+        "php_builtin_server": false,
+        "pid": 53197,
+        "ppid": 50507,
+        "service_units": [
+          "apache2.service"
+        ]
+      },
+      {
+        "application_scripts": [],
+        "comm": "apache2",
+        "executable": "/usr/sbin/apache2",
+        "php_apache_modules": {
+          "/usr/lib/apache2/modules/libphp7.4.so": "e2eed71fa86014b0fe0e10270ebec1fa79c89cbabc20a795caa26fc8a091499b"
+        },
+        "php_builtin_server": false,
+        "pid": 53198,
+        "ppid": 50507,
+        "service_units": [
+          "apache2.service"
+        ]
+      },
+      {
+        "application_scripts": [],
+        "comm": "apache2",
+        "executable": "/usr/sbin/apache2",
+        "php_apache_modules": {
+          "/usr/lib/apache2/modules/libphp7.4.so": "e2eed71fa86014b0fe0e10270ebec1fa79c89cbabc20a795caa26fc8a091499b"
+        },
+        "php_builtin_server": false,
+        "pid": 53199,
+        "ppid": 50507,
+        "service_units": [
+          "apache2.service"
+        ]
+      },
+      {
+        "application_scripts": [],
+        "comm": "apache2",
+        "executable": "/usr/sbin/apache2",
+        "php_apache_modules": {
+          "/usr/lib/apache2/modules/libphp7.4.so": "e2eed71fa86014b0fe0e10270ebec1fa79c89cbabc20a795caa26fc8a091499b"
+        },
+        "php_builtin_server": false,
+        "pid": 53200,
+        "ppid": 50507,
+        "service_units": [
+          "apache2.service"
+        ]
+      },
+      {
+        "application_scripts": [],
+        "comm": "apache2",
+        "executable": "/usr/sbin/apache2",
+        "php_apache_modules": {
+          "/usr/lib/apache2/modules/libphp7.4.so": "e2eed71fa86014b0fe0e10270ebec1fa79c89cbabc20a795caa26fc8a091499b"
+        },
+        "php_builtin_server": false,
+        "pid": 53229,
+        "ppid": 50507,
+        "service_units": [
+          "apache2.service"
+        ]
+      },
+      {
+        "application_scripts": [],
+        "comm": "apache2",
+        "executable": "/usr/sbin/apache2",
+        "php_apache_modules": {
+          "/usr/lib/apache2/modules/libphp7.4.so": "e2eed71fa86014b0fe0e10270ebec1fa79c89cbabc20a795caa26fc8a091499b"
+        },
+        "php_builtin_server": false,
+        "pid": 60531,
+        "ppid": 50507,
+        "service_units": [
+          "apache2.service"
+        ]
+      },
+      {
+        "application_scripts": [],
+        "comm": "apache2",
+        "executable": "/usr/sbin/apache2",
+        "php_apache_modules": {
+          "/usr/lib/apache2/modules/libphp7.4.so": "e2eed71fa86014b0fe0e10270ebec1fa79c89cbabc20a795caa26fc8a091499b"
+        },
+        "php_builtin_server": false,
+        "pid": 60610,
+        "ppid": 50507,
+        "service_units": [
+          "apache2.service"
+        ]
+      },
+      {
+        "application_scripts": [],
+        "comm": "apache2",
+        "executable": "/usr/sbin/apache2",
+        "php_apache_modules": {
+          "/usr/lib/apache2/modules/libphp7.4.so": "e2eed71fa86014b0fe0e10270ebec1fa79c89cbabc20a795caa26fc8a091499b"
+        },
+        "php_builtin_server": false,
+        "pid": 60868,
+        "ppid": 50507,
+        "service_units": [
+          "apache2.service"
+        ]
+      }
+    ],
+    "running_units": [
+      "apache-htcacheclean.service",
+      "apache2.service",
+      "cron.service",
+      "dbus.service",
+      "elasticsearch.service",
+      "fwupd.service",
+      "getty@tty1.service",
+      "kaltura-nginx.service",
+      "mariadb.service",
+      "memcached.service",
+      "ModemManager.service",
+      "monit.service",
+      "multipathd.service",
+      "polkit.service",
+      "postfix@-.service",
+      "rsyslog.service",
+      "ssh.service",
+      "systemd-journald.service",
+      "systemd-logind.service",
+      "systemd-networkd.service",
+      "systemd-resolved.service",
+      "systemd-udevd.service",
+      "udisks2.service",
+      "upower.service",
+      "user@1000.service",
+      "user@7373.service",
+      "vboxadd-service.service"
+    ],
+    "service_changes": 0,
+    "status": "READONLY_PROVIDER_AND_LOGGING_PREFLIGHT"
+  }
+}

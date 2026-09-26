@@ -1,0 +1,82 @@
+{
+  "guest_sha256": "22258e02d8004151467728a03fb09321a2305b593a4f3dfe4a58cc3caafc2988",
+  "result": {
+    "arbitrary_command_values_exported": false,
+    "controls": [
+      {
+        "commands": [
+          {
+            "action": "start",
+            "command": [
+              "/etc/init.d/apache2",
+              "start"
+            ],
+            "safe_control_command": true
+          },
+          {
+            "action": "stop",
+            "command": [
+              "/etc/init.d/apache2",
+              "stop"
+            ],
+            "safe_control_command": true
+          }
+        ],
+        "config_path": "/etc/monit/conf-available/apache2",
+        "control_name": "apache",
+        "source_signals": {
+          "KGenericBatchMgr": false,
+          "apache2": true,
+          "httpd": false,
+          "populateElasticFromLog": false
+        }
+      },
+      {
+        "commands": [
+          {
+            "action": "start",
+            "command": null,
+            "safe_control_command": false
+          },
+          {
+            "action": "stop",
+            "command": null,
+            "safe_control_command": false
+          }
+        ],
+        "config_path": "/etc/monit/conf.d/batch.rc",
+        "control_name": "batch",
+        "source_signals": {
+          "KGenericBatchMgr": true,
+          "apache2": false,
+          "httpd": false,
+          "populateElasticFromLog": false
+        }
+      },
+      {
+        "commands": [
+          {
+            "action": "start",
+            "command": null,
+            "safe_control_command": false
+          },
+          {
+            "action": "stop",
+            "command": null,
+            "safe_control_command": false
+          }
+        ],
+        "config_path": "/etc/monit/conf.d/apache2.rc",
+        "control_name": "apache",
+        "source_signals": {
+          "KGenericBatchMgr": false,
+          "apache2": true,
+          "httpd": false,
+          "populateElasticFromLog": false
+        }
+      }
+    ],
+    "services_changed": 0,
+    "status": "READONLY_MONIT_CONTROL_IDENTITIES"
+  }
+}

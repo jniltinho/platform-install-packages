@@ -1,0 +1,11 @@
+test_four_targets_present (test_audit.Tests.test_four_targets_present) ... ok
+test_guest_guards (test_audit.Tests.test_guest_guards) ... ok
+test_guest_no_writes (test_audit.Tests.test_guest_no_writes) ... ok
+test_no_factory_bootstrap_or_cache_execution (test_audit.Tests.test_no_factory_bootstrap_or_cache_execution) ... ok
+test_no_raw_config_export (test_audit.Tests.test_no_raw_config_export) ... ok
+test_pinned_payload_local_only (test_audit.Tests.test_pinned_payload_local_only) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.106s
+
+OK

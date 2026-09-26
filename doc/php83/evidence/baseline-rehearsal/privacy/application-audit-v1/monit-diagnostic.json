@@ -1,0 +1,14 @@
+{
+  "guest_sha256": "623d05d0d471fb40b2cb8f41b5f47c7037c231af02a86debacd79d6c0e724739",
+  "result": {
+    "exit": 1,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "3f275ccad11b41e207df8519ae8e80f62f004063cbca402bde31343b2b0706f2",
+    "connection_refused": false,
+    "http_disabled": true,
+    "permission_denied": false,
+    "auth_failure": false,
+    "cannot_connect": false,
+    "raw_text_exported": false
+  }
+}

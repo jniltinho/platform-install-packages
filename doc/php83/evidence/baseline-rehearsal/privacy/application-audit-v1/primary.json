@@ -1,0 +1,300 @@
+{
+  "guest_sha256": "fd714b1acee2e44d4f656593ed6aa747999d3d70597b5d8935793fe87b7c7f31",
+  "source_archive_sha256": "58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28",
+  "result": {
+    "all_sources_match_original": true,
+    "application_changed": false,
+    "disk_logger": {
+      "cache_config_keys_only": {
+        "kLocalMemCacheConf": {
+          "keys": [
+            "port",
+            "host"
+          ],
+          "nonempty": true
+        },
+        "kRemoteMemCacheConf": {
+          "keys": [
+            "port",
+            "host",
+            "write_address_list"
+          ],
+          "nonempty": true
+        }
+      },
+      "cache_read_or_write": false,
+      "configuration_values_exported": false,
+      "extras_keys": [
+        "timestamp",
+        "uniqueId",
+        "sessionIndex",
+        "logMethod",
+        "logIp",
+        "logDuration"
+      ],
+      "known_disk_components": true,
+      "source_paths": [
+        "/opt/kaltura/app/configurations/logger.ini"
+      ],
+      "status": "DISK_LOGGER_RESOLUTION_ONLY_NOT_LIVE_CACHE_ATTESTATION",
+      "unsafe_message_extra": false,
+      "writer_count": 3,
+      "writers": [
+        {
+          "core_factory_mapping": "KalturaSerializableStream",
+          "filters": [
+            {
+              "class": "KalturaLogFilterType",
+              "operator_known": true,
+              "priority": null
+            }
+          ],
+          "formatters": [
+            {
+              "has_message": true,
+              "known_simple": true,
+              "placeholders": [
+                "timestamp",
+                "logDuration",
+                "logIp",
+                "uniqueId",
+                "sessionIndex",
+                "context",
+                "logMethod",
+                "priorityName",
+                "message"
+              ],
+              "template_exported": false
+            }
+          ],
+          "known_stream_writer": true,
+          "local_sink": "/opt/kaltura/log/kaltura_api_v3.log",
+          "reviewed_components": true,
+          "sink_kind": "local-file"
+        },
+        {
+          "core_factory_mapping": "KalturaSerializableStream",
+          "filters": [
+            {
+              "class": "Zend_Log_Filter_Priority",
+              "operator_known": true,
+              "priority": 4
+            },
+            {
+              "class": "KalturaLogFilterType",
+              "operator_known": true,
+              "priority": null
+            }
+          ],
+          "formatters": [
+            {
+              "has_message": true,
+              "known_simple": true,
+              "placeholders": [
+                "timestamp",
+                "logIp",
+                "uniqueId",
+                "message"
+              ],
+              "template_exported": false
+            }
+          ],
+          "known_stream_writer": true,
+          "local_sink": "/opt/kaltura/log/kaltura_api_v3_analytics.log",
+          "reviewed_components": true,
+          "sink_kind": "local-file"
+        },
+        {
+          "core_factory_mapping": "KalturaSerializableStream",
+          "filters": [
+            {
+              "class": "Zend_Log_Filter_Priority",
+              "operator_known": true,
+              "priority": 4
+            },
+            {
+              "class": "KalturaLogFilterType",
+              "operator_known": true,
+              "priority": null
+            }
+          ],
+          "formatters": [
+            {
+              "has_message": true,
+              "known_simple": true,
+              "placeholders": [
+                "timestamp",
+                "logIp",
+                "uniqueId",
+                "context",
+                "logMethod",
+                "priorityName",
+                "message"
+              ],
+              "template_exported": false
+            }
+          ],
+          "known_stream_writer": true,
+          "local_sink": "/opt/kaltura/log/kaltura_api_v3_tests.log",
+          "reviewed_components": true,
+          "sink_kind": "local-file"
+        }
+      ]
+    },
+    "files": {
+      "alpha/apps/kaltura/lib/cache/kLoggerCache.php": {
+        "expected_sha256": "8300f56aacf491425f33935b8de749a553f36d3b21637bea5ddfd0a34da1c208",
+        "gid": 0,
+        "matches": true,
+        "mode": "0o664",
+        "regular_single_link": true,
+        "sha256": "8300f56aacf491425f33935b8de749a553f36d3b21637bea5ddfd0a34da1c208",
+        "uid": 0
+      },
+      "alpha/config/cache/kBaseConfCache.php": {
+        "expected_sha256": "44c267219c51d2745c78c46ae2793903d542a19f6d8a9982da64580ba8a47f88",
+        "gid": 0,
+        "matches": true,
+        "mode": "0o664",
+        "regular_single_link": true,
+        "sha256": "44c267219c51d2745c78c46ae2793903d542a19f6d8a9982da64580ba8a47f88",
+        "uid": 0
+      },
+      "alpha/config/cache/kFileSystemConf.php": {
+        "expected_sha256": "b4555d97ad06a9d70487c47ddd8f0544e1513fdfc6ffc9ff657e37b6f859651a",
+        "gid": 0,
+        "matches": true,
+        "mode": "0o664",
+        "regular_single_link": true,
+        "sha256": "b4555d97ad06a9d70487c47ddd8f0544e1513fdfc6ffc9ff657e37b6f859651a",
+        "uid": 0
+      },
+      "alpha/config/cache/kMapCacheInterface.php": {
+        "expected_sha256": "4e6053e9d2266317aab80db1c968333c364acb9a9084e111756ab3928300ff80",
+        "gid": 0,
+        "matches": true,
+        "mode": "0o664",
+        "regular_single_link": true,
+        "sha256": "4e6053e9d2266317aab80db1c968333c364acb9a9084e111756ab3928300ff80",
+        "uid": 0
+      },
+      "alpha/config/kConfCacheManager.php": {
+        "expected_sha256": "19d4ffb4866339cae93eb8949fd06275978799804454e81d68dd7692fe050333",
+        "gid": 0,
+        "matches": true,
+        "mode": "0o664",
+        "regular_single_link": true,
+        "sha256": "19d4ffb4866339cae93eb8949fd06275978799804454e81d68dd7692fe050333",
+        "uid": 0
+      },
+      "api_v3/bootstrap.php": {
+        "expected_sha256": "2ecf8731957174857319d5df8a1a72ba1d8c7cdcad8b1ff03f6d29b6daed4754",
+        "gid": 0,
+        "matches": true,
+        "mode": "0o664",
+        "regular_single_link": true,
+        "sha256": "2ecf8731957174857319d5df8a1a72ba1d8c7cdcad8b1ff03f6d29b6daed4754",
+        "uid": 0
+      },
+      "api_v3/lib/KalturaDispatcher.php": {
+        "expected_sha256": "be20609b269f08cf1317a79046f5b43cddc8be4cd14dd01fbc0d928fdd24fce2",
+        "gid": 0,
+        "matches": true,
+        "mode": "0o664",
+        "regular_single_link": true,
+        "sha256": "be20609b269f08cf1317a79046f5b43cddc8be4cd14dd01fbc0d928fdd24fce2",
+        "uid": 0
+      },
+      "api_v3/lib/KalturaFrontController.php": {
+        "expected_sha256": "5f2eeffe526d4a0ee245b6f10f4e9600e0f7c8bcb4a52eef41e3a66bbd9ab7a1",
+        "gid": 0,
+        "matches": true,
+        "mode": "0o664",
+        "regular_single_link": true,
+        "sha256": "5f2eeffe526d4a0ee245b6f10f4e9600e0f7c8bcb4a52eef41e3a66bbd9ab7a1",
+        "uid": 0
+      },
+      "infra/kEnvironment.php": {
+        "expected_sha256": "708f2497ade7d59522943d17d0bd788e2b18aec45504c59e3f8ecf5dd303e15d",
+        "gid": 0,
+        "matches": true,
+        "mode": "0o664",
+        "regular_single_link": true,
+        "sha256": "708f2497ade7d59522943d17d0bd788e2b18aec45504c59e3f8ecf5dd303e15d",
+        "uid": 0
+      },
+      "infra/log/KalturaLog.php": {
+        "expected_sha256": "9b7a7c3dd37616ffd2ac9720ece862641c43bb687a2db4e8fc9cbcb259ff5449",
+        "gid": 0,
+        "matches": true,
+        "mode": "0o664",
+        "regular_single_link": true,
+        "sha256": "9b7a7c3dd37616ffd2ac9720ece862641c43bb687a2db4e8fc9cbcb259ff5449",
+        "uid": 0
+      },
+      "infra/log/KalturaLogFactory.php": {
+        "expected_sha256": "75359966d2777870b2b8ff2151f5697e2a0fe69e62ef0e9131cab30645223a7b",
+        "gid": 0,
+        "matches": true,
+        "mode": "0o664",
+        "regular_single_link": true,
+        "sha256": "75359966d2777870b2b8ff2151f5697e2a0fe69e62ef0e9131cab30645223a7b",
+        "uid": 0
+      },
+      "infra/log/KalturaSerializableStream.php": {
+        "expected_sha256": "e3d45f152ae749c2555b72bb9215c1a6532ee774be8c4548ecff8440ab658fce",
+        "gid": 0,
+        "matches": true,
+        "mode": "0o664",
+        "regular_single_link": true,
+        "sha256": "e3d45f152ae749c2555b72bb9215c1a6532ee774be8c4548ecff8440ab658fce",
+        "uid": 0
+      },
+      "vendor/ZendFramework/library/Zend/Config.php": {
+        "expected_sha256": "065597c625046207683d14682bffcdbfd0aed862ad456a3dbefcf9b538e97a2f",
+        "gid": 0,
+        "matches": true,
+        "mode": "0o664",
+        "regular_single_link": true,
+        "sha256": "065597c625046207683d14682bffcdbfd0aed862ad456a3dbefcf9b538e97a2f",
+        "uid": 0
+      },
+      "vendor/ZendFramework/library/Zend/Config/Exception.php": {
+        "expected_sha256": "98e275864aa331e2e80b1e3f4e51486b6448cc0d91befb8a52c870eb14365282",
+        "gid": 0,
+        "matches": true,
+        "mode": "0o664",
+        "regular_single_link": true,
+        "sha256": "98e275864aa331e2e80b1e3f4e51486b6448cc0d91befb8a52c870eb14365282",
+        "uid": 0
+      },
+      "vendor/ZendFramework/library/Zend/Config/Ini.php": {
+        "expected_sha256": "e1f8362e93d3285f07752ecbe1e61c015c121ed1ff2199c4a79a6c0db556a7c6",
+        "gid": 0,
+        "matches": true,
+        "mode": "0o664",
+        "regular_single_link": true,
+        "sha256": "e1f8362e93d3285f07752ecbe1e61c015c121ed1ff2199c4a79a6c0db556a7c6",
+        "uid": 0
+      },
+      "vendor/ZendFramework/library/Zend/Exception.php": {
+        "expected_sha256": "691ae30a13c915f308cccd3f5c61f3d53dafbcd744d9ef31037ba9a92ad0ab26",
+        "gid": 0,
+        "matches": true,
+        "mode": "0o664",
+        "regular_single_link": true,
+        "sha256": "691ae30a13c915f308cccd3f5c61f3d53dafbcd744d9ef31037ba9a92ad0ab26",
+        "uid": 0
+      }
+    },
+    "full_effective_config_attested": false,
+    "http_requests": 0,
+    "logger_audit_exit": 0,
+    "logger_cache_config_values_loaded_guest_only": true,
+    "logger_stderr_bytes": 0,
+    "private_user_credential_file_read": false,
+    "runtime_unchanged_after": true,
+    "sources_unchanged_after": true,
+    "status": "INSTALLED_READ_ONLY_SOURCE_JOIN"
+  }
+}

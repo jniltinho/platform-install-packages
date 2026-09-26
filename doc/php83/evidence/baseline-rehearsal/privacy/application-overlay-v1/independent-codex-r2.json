@@ -1,0 +1,24 @@
+{
+  "reviewer": "/root/exp9_harness",
+  "source": "independent agent terminal report",
+  "status": "NO_NEW_BLOCKER_FOR_BOUNDED_RECIPE",
+  "local_tests": {
+    "count": 14,
+    "exit": 0
+  },
+  "freeze": "prep-r2-freeze.json",
+  "freeze_hashes_verified": 4,
+  "resolved": [
+    "post-start four-source bytes and metadata plus system.ini check",
+    "same checks after rollback",
+    "public error allowlist; details remain private"
+  ],
+  "limits": [
+    "transaction tests use synthetic callbacks, not actual service restart",
+    "no live Monit/APC or authentication acceptance",
+    "NOT_APPLIED",
+    "power-loss recovery remains manual"
+  ],
+  "vm_actions": false,
+  "source_edits": false
+}
