@@ -1,0 +1,99 @@
+{
+  "case": "exp14 selection review + independent repeat ZIP build + verify",
+  "executor": "Claude CLI (claude-opus-5-5)",
+  "reviewer": "Claude CLI (independent of primary build author)",
+  "environment": "local workstation, no VM/SSH/PHP/SQL/network",
+  "pre_build_review": {
+    "verdict": "NO_CONCRETE_BLOCKER",
+    "proposal_sha256_working": "097e0441420b179962feaabb2c1518ac9aa53f93eebb6758468e1680cc1ede9b",
+    "proposal_sha256_at_324d14db": "097e0441420b179962feaabb2c1518ac9aa53f93eebb6758468e1680cc1ede9b",
+    "rows": 76,
+    "rows_identical_to_proposal": true,
+    "first75_identical_to_exp13_patches": true,
+    "row76": "api_v3/lib/KalturaEntryService.php replace",
+    "patch_files": 76,
+    "patch_file_sha_mismatches": 0,
+    "manifest_key_delta_vs_proposal": [
+      "status->EXPERIMENTAL_SELECTED_LAB_ONLY_NOT_FOR_PRODUCTION",
+      "selection_approved false->true",
+      "pending first item removed",
+      "selection_authorization added"
+    ],
+    "flags": {
+      "application_acceptance": false,
+      "rank_body_persistence_tested": false,
+      "metadata74_intentional_delta": true,
+      "auth.production/package_ci/release/artifact_runtime_acceptance": false
+    },
+    "observations": [
+      "selected manifest keeps zip_built=false (pre-build selection record; not a defect)",
+      "verify.py delta check relies on exactly one differing path; independently recounted"
+    ]
+  },
+  "steps": {
+    "step1": {
+      "command": "python3 -m unittest discover -s tools/php83/exp14-candidate -p 'test_*.py' -v",
+      "exit": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "bb33c57eeb11fdc2735de1492af8dfac8f3aa2335a82dd567addf8484a1b3a15",
+      "result": "12 tests OK (7 prepare, 3 select, 2 verify)"
+    },
+    "step2": {
+      "command": "python3 tools/php83/zip-builder-v2/build.py /tmp/kaltura-php83-audit/Rigel-18.20.0.zip ../platform-install-packages-php83-artifacts/exp14-repeat --patch-dir doc/php83/evidence/exp14-candidate/selected-r1",
+      "exit": 0,
+      "stdout_sha256": "4dfd38186ea5cbdd515a7ba07066a8124801e54d51faeb3b9229fd931b5defcc",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "result": "fresh dir exp14-repeat created; wrote ZIP, SHA256SUMS, build-report.json"
+    },
+    "step3": {
+      "command": "python3 tools/php83/exp14-candidate/verify.py --original /tmp/kaltura-php83-audit/Rigel-18.20.0.zip --exp13 ../platform-install-packages-php83-artifacts/exp13/Rigel-18.20.0-php83-experimental.exp13.zip --primary ../platform-install-packages-php83-artifacts/exp14/Rigel-18.20.0-php83-experimental.exp14.zip --repeat ../platform-install-packages-php83-artifacts/exp14-repeat/Rigel-18.20.0-php83-experimental.exp14.zip",
+      "exit": 0,
+      "stdout_sha256": "1cd7cf512152d5f4a41a75aaebe1afda8a4848721b365ec76f12e66955298ac7",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "result": "VERIFIED_REPRODUCIBLE_EXP14_NOT_RUNTIME_ACCEPTED"
+    }
+  },
+  "hashes": {
+    "selected_manifest": "a7c789ae665c7147c2b6101baa282454e3a6e487c20e4827f254a7f103942e7f",
+    "select.py": "2e4a998a09a53f70c4d862fbe9da3c95319d71eee118816395c05d10983bdd19",
+    "verify.py": "24a08e146f7ff88f8538dbaea5088c3197ea7643232db8b2dd395642deb03ddf",
+    "prepare.py": "b62fcebbcf4b0d410600aafd271ed8a97a89e18733d2dd3d698679aa7f49c094",
+    "builder": "3fc3e7f1524c044ef91f390cd6e4836bfeb6b9442ab45fefa6c07d6fcaba1707",
+    "original_zip": "58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28",
+    "exp13_zip": "6d0bc4947207e6c5457b7843948d263aa8d5f251480e58cbf9086c0add79a944",
+    "exp14_primary_zip": "459feaf9caf2abe55963dce0cac51b8b593e4ff1b46d2eaf9cb7d5c3f13f62a1",
+    "exp14_repeat_zip": "459feaf9caf2abe55963dce0cac51b8b593e4ff1b46d2eaf9cb7d5c3f13f62a1",
+    "repeat_SHA256SUMS": "b3415552d353fd1e9cbf066881da617c60c5b8ca5635ff6d64f3bbdcdf844874",
+    "repeat_build_report": "94157ec74ffa85b451722d6d1febe1cda44c14443904fb85d791dddc9df158c0"
+  },
+  "independent_recount": {
+    "zip_cmp_identical": true,
+    "SHA256SUMS_and_build_report_identical": true,
+    "source_added": 0,
+    "source_removed": 0,
+    "delta_paths": [
+      "api_v3/lib/KalturaEntryService.php"
+    ],
+    "deleted_bytes": 7,
+    "line_count_equal": true,
+    "diff_line": 1836,
+    "php_family": {
+      "exp13": 11785,
+      "exp14": 11785
+    },
+    "metadata_members": 78,
+    "inputs_unchanged_after_run": true
+  },
+  "limits": [
+    "No PHP lint/compile, runtime, API, regression, rank body/persistence or application test executed",
+    "metadata74 default-availability delta is intentional and untested beyond prior native signature proof",
+    "ZIP byte identity proves build reproducibility only"
+  ],
+  "acceptance": {
+    "runtime": false,
+    "application": false,
+    "release": false,
+    "production": false,
+    "package_ci": false
+  }
+}

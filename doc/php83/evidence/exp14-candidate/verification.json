@@ -1,0 +1,29 @@
+{
+  "status": "VERIFIED_REPRODUCIBLE_EXP14_NOT_RUNTIME_ACCEPTED",
+  "zip_sha256": "459feaf9caf2abe55963dce0cac51b8b593e4ff1b46d2eaf9cb7d5c3f13f62a1",
+  "repeat_sha256": "459feaf9caf2abe55963dce0cac51b8b593e4ff1b46d2eaf9cb7d5c3f13f62a1",
+  "bytes": 91210691,
+  "targets": 76,
+  "preserved_exp13_targets": 75,
+  "delta_paths": [
+    "api_v3/lib/KalturaEntryService.php"
+  ],
+  "source_additions": 0,
+  "source_removals": 0,
+  "deleted_bytes": 7,
+  "rank_body_bytes_unchanged": true,
+  "php_family_counts": {
+    "exp13": 11785,
+    "exp14": 11785
+  },
+  "original_sha256": "58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28",
+  "exp13_sha256": "6d0bc4947207e6c5457b7843948d263aa8d5f251480e58cbf9086c0add79a944",
+  "selected_manifest_sha256": "a7c789ae665c7147c2b6101baa282454e3a6e487c20e4827f254a7f103942e7f",
+  "metadata_files": 78,
+  "verifier_sha256": "24a08e146f7ff88f8538dbaea5088c3197ea7643232db8b2dd395642deb03ddf",
+  "builder_sha256": "3fc3e7f1524c044ef91f390cd6e4836bfeb6b9442ab45fefa6c07d6fcaba1707",
+  "metadata74_delta_intentional": true,
+  "positive_rank_body_persistence_tested": false,
+  "application_acceptance": false,
+  "release_approved": false
+}

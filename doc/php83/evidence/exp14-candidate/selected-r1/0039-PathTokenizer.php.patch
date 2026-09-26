@@ -1,0 +1,11 @@
+--- a/vendor/symfony/vendor/phing/util/PathTokenizer.php
++++ b/vendor/symfony/vendor/phing/util/PathTokenizer.php
+@@ -179,7 +179,7 @@
+ 
+ 
+ 
+-        if (strlen($token) === 1 && Character::isLetter($token{0})
++        if (strlen($token) === 1 && Character::isLetter($token[0])
+ 
+                                 && $this->dosStyleFilesystem
+ 

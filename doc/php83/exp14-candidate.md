@@ -1,6 +1,34 @@
-# exp14 rank-signature composition — proposed only
+# exp14 experimental source artifact — reproducible, runtime pending
 
-No selection or ZIP build is authorized/performed in this phase. The proposal
+## Current selected-r1 artifact
+
+After proposal checkpoint324d14db and explicit coordinator authorization, the new
+selected-r1 phase binds proposal and rank proof0aed2a32 without changing patch rows.
+Selection manifest SHA256:
+`a7c789ae665c7147c2b6101baa282454e3a6e487c20e4827f254a7f103942e7f`.
+
+Codex primary build and actual Claude CLI independent repeat each exited0 using
+unchanged builder-v2. Claude also reviewed selection/verifier, ran12 local guards,
+and independently recounted sources/patches/delta. ZIPs, build reports and checksum
+files match exactly. Final local artifact in sibling artifacts/exp14:
+`Rigel-18.20.0-php83-experimental.exp14.zip`,91,210,691 bytes, SHA256:
+`459feaf9caf2abe55963dce0cac51b8b593e4ff1b46d2eaf9cb7d5c3f13f62a1`.
+
+[Verification](evidence/exp14-candidate/verification.json) and
+[actual Claude review/execution](evidence/exp14-candidate/claude-build-review.json)
+confirm76 targets,75 preserved exp13 repairs, a single seven-byte rank declaration
+delta, no source additions/removals, and11785 PHP-family files. Original and exp13
+ZIPs are unchanged. Complete source inventory and embedded patch/manifest hashes
+are checked; expected counts were recounted, not merely copied from the proposal.
+
+No artifact PHP, compiler/API regression or positive rank body/persistence was
+executed in this build task. Prior signature evidence and intentional74 metadata
+delta retain their limits. Root coordinates subsequent runtime validation. No
+package/CI/production/release/rollback approval; reproducible does not mean deployable.
+
+## Historical proposed-r1 phase
+
+No selection or ZIP build was authorized/performed in this proposal phase. The proposal
 preserves all75 exp13 entries exactly and references existing patches without
 copying them. One new existing source target yields76 cumulative targets:
 api_v3/lib/KalturaEntryService.php. Delta from exp13 is one modification, zero
@@ -56,3 +84,7 @@ not independently assert a fresh-stage regex/distinctness (current pinned report
 have valid distinct paths); dedicated command-mutation tests are absent;11785 is
 an expected count requiring a later built-artifact recount. These are not evidence
 of a failed current native case or authorization to build.
+
+Historical patch whitespace is preserved in selected-r1; checkpoint-format output
+retains context indentation/CRLF warnings rather than suppressing them or changing
+pinned patch bytes. No globally clean diff-check claim is made.

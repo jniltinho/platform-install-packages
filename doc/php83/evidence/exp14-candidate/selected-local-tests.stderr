@@ -1,0 +1,17 @@
+test_body_mutation (test_prepare.Proposal.test_body_mutation) ... ok
+test_exact_seven_bytes (test_prepare.Proposal.test_exact_seven_bytes) ... ok
+test_existing_output (test_prepare.Proposal.test_existing_output) ... ok
+test_no_change (test_prepare.Proposal.test_no_change) ... ok
+test_pinned_native_proof (test_prepare.Proposal.test_pinned_native_proof) ... ok
+test_proof_drift (test_prepare.Proposal.test_proof_drift) ... ok
+test_proposal_preserves75_not_selected (test_prepare.Proposal.test_proposal_preserves75_not_selected) ... ok
+test_drift (test_select.Selection.test_drift) ... ok
+test_existing (test_select.Selection.test_existing) ... ok
+test_selected_rows_exact (test_select.Selection.test_selected_rows_exact) ... ok
+test_bad_zip_identity (test_verify.Verify.test_bad_zip_identity) ... ok
+test_duplicate_member (test_verify.Verify.test_duplicate_member) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.017s
+
+OK

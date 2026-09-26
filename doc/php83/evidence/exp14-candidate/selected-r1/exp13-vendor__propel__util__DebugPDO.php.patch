@@ -1,0 +1,32 @@
+--- a/vendor/propel/util/DebugPDO.php
++++ b/vendor/propel/util/DebugPDO.php
+@@ -289,7 +289,7 @@
+ 	 * @param      array One or more key=>value pairs to set attribute values for the PDOStatement object that this method returns.
+ 	 * @return     PDOStatement
+ 	 */
+-	public function prepare($sql, $driver_options = array())
++	public function prepare($sql, $driver_options = array()): PDOStatement|false
+ 	{
+ 		$debug	= $this->getDebugSnapshot();
+ 		$return	= parent::prepare($sql, $driver_options);
+@@ -327,17 +327,12 @@
+ 	 * @see        http://php.net/manual/en/pdo.query.php for a description of the possible parameters.
+ 	 * @return     PDOStatement
+ 	 */
+-	public function query()
++	public function query(...$args)
+ 	{
+ 		$debug	= $this->getDebugSnapshot();
+-		$args	= func_get_args();
+-		if (version_compare(PHP_VERSION, '5.3', '<')) {
+-			$return	= call_user_func_array(array($this, 'parent::query'), $args);
+-		} else {
+-			$return	= call_user_func_array('parent::query', $args);
+-		}
++		$return = parent::query(...$args);
+ 		
+-		$sql = $args[0];
++		$sql = array_key_exists('query', $args) ? $args['query'] : $args[0];
+ 		$this->log($sql, null, __METHOD__, $debug);
+ 		$this->setLastExecutedQuery($sql);
+ 		$this->incrementQueryCount();

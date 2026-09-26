@@ -1,0 +1,12 @@
+--- a/alpha/config/kConf.php
++++ b/alpha/config/kConf.php
+@@ -4,7 +4,8 @@
+  * @subpackage config
+  */
+ setlocale(LC_ALL, 'en_US.UTF-8');
+-libxml_disable_entity_loader(true);
++require_once __DIR__ . '/../../infra/general/kXmlEntityLoaderPolicy.php';
++kXmlEntityLoaderPolicy::installDefaultDeny();
+ 
+ // to make sure stream calls to localhost machine
+ stream_wrapper_unregister ('http');

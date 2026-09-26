@@ -1,0 +1,11 @@
+--- a/alpha/lib/model/PermissionPeer.php
++++ b/alpha/lib/model/PermissionPeer.php
+@@ -326,7 +326,7 @@
+ 			}
+ 			foreach ($permissions as $key => $permission)
+ 			{
+-				$dependsOn = trim($permission->getDependsOnPermissionNames());
++				$dependsOn = trim($permission->getDependsOnPermissionNames() ?? '');
+ 				$dependsOn = explode(',', $dependsOn);
+ 				if ($dependsOn)
+ 				{

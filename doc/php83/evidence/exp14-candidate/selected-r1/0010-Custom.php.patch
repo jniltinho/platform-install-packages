@@ -1,0 +1,11 @@
+--- a/vendor/htmlpurifier/library/HTMLPurifier/ChildDef/Custom.php
++++ b/vendor/htmlpurifier/library/HTMLPurifier/ChildDef/Custom.php
+@@ -45,7 +45,7 @@
+     protected function _compileRegex()
+     {
+         $raw = str_replace(' ', '', $this->dtd_regex);
+-        if ($raw{0} != '(') {
++        if ($raw[0] != '(') {
+             $raw = "($raw)";
+         }
+         $el = '[#a-zA-Z0-9_.-]+';
