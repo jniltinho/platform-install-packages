@@ -1,0 +1,67 @@
+{
+ "case": "serialization-contracts R3 preparation: local independent review and tests",
+ "executor": "Claude CLI (claude-opus-5-5)",
+ "reviewer": "Claude CLI (independent of patch author)",
+ "scope": "local only; no SSH/VM/PHP execution, no source/tool edits, no secrets",
+ "identities": {
+  "stage_manifest_sha256": "ef7e091640924817e63711679b1cb83a77909752784475506533f01ff726e752",
+  "collector_closure_sha256": "300cd29d473dabbb1db495401929a5bf59d4a9506adfeff8b5045f49c9644ed0",
+  "collect-r2.py": "389ea73b6ed2c60180ff09abe4e291aa4363a6d5bca0e85ace7f51c09ab0ef8d",
+  "report_contract.py": "edb330863f82d866559cdf296848c5dd98b3e79ceb59e79b9a369dbbacf7b7bb",
+  "prepare-r3.py": "ef47ff9b5c536bf1133f66750834d39a78cb45c22e3684087b82e02a84bf2f47",
+  "phase": "serialization-native83-wire-cache-r3"
+ },
+ "steps": [
+  {
+   "step": 1,
+   "command": "python3 tools/php83/serialization-contracts/test_report_contract.py -v",
+   "exit": 0,
+   "result": "34 tests OK"
+  },
+  {
+   "step": 2,
+   "command": "python3 tools/php83/serialization-contracts/test_observation_retention.py -v",
+   "exit": 0,
+   "result": "8 tests OK"
+  },
+  {
+   "step": 3,
+   "command": "bash -n tools/php83/serialization-contracts/stage-r3/run.sh",
+   "exit": 0,
+   "result": "syntax OK"
+  },
+  {
+   "step": 4,
+   "command": "python3 doc/php83/evidence/serialization-contracts/claude-r3-prep-step4.py",
+   "exit": 1,
+   "result": "HARNESS FAILURE (reviewer's script lacked module path: ModuleNotFoundError report_contract); not a product result; retained"
+  },
+  {
+   "step": 5,
+   "command": "PYTHONPATH=tools/php83/serialization-contracts python3 doc/php83/evidence/serialization-contracts/claude-r3-prep-step4.py",
+   "exit": 0,
+   "result": "read-only consistency: all checks true"
+  }
+ ],
+ "findings_verified": [
+  "Manifest collector_closure equals current collect-r2.py+report_contract.py closure; pin sha equals evidence manifest bytes; stage-r3/identities.json byte-identical to evidence.",
+  "Stage inventory exact, no symlinks, all 70 file hashes match. Only run.sh differs from R2 manifest; its diff is exactly 2 lines (remote base path and phase r2->r3).",
+  "4 product changes, runtime_files, source_archives and reference wires identical to R2; patch files hash-match and are git-clean; original/candidate hashes equal before/after.",
+  "Collector: every native attempt is recorded before validation (records append precedes validate); raw stdout/stderr kept as base64 plus replacement-decoded text; invalid UTF-8 flagged and routed to errors; timeout keeps partial channels with exit null; OSError launch failure recorded with exit null; malformed JSON / non-object body / non-string runtime / non-object result -> ValueError -> INCOMPLETE_OR_EXECUTION_FAILED. No warning suppression: probe runs with error_reporting=32767, display_errors=stderr, stderr retained.",
+  "Collector closure drift at end is now recorded as an error in the report instead of aborting without output.",
+  "Matrix: 74 = 18+12+8 = 38; 83 = 36+36+24 = 96. Mode 83 requires a prior74 report produced under the same R3 closure and manifest pin (check_prior74), enforcing original74 before native83."
+ ],
+ "limitations": [
+  "observe_process raises 'Runner must capture bytes' outside run()'s try; unreachable with subprocess.run(capture_output=True) but would abort without a report if hit.",
+  "Invalid UTF-8 on stderr (not only stdout) marks a case failed; fail-closed, could make PHP-warning-bearing cases INCOMPLETE rather than observed.",
+  "Local 60s timeout kills only ssh; remote bound relies on systemd RuntimeMaxSec=30 and run.sh EXIT trap (not exercised here).",
+  "collect-r2.py is now hardwired to R3 evidence; R2 reproduction depends on git history. Docstring still says R2.",
+  "Tests use synthetic runners; main() loop and run.sh sandbox were not executed."
+ ],
+ "verdict": "LOCAL_PASS_READY_FOR_GRANTED_ISOLATED_NATIVE_EXECUTION",
+ "not_established": "No native PHP 7.4/8.3 execution, no remote stage verification, no wire/cache semantic or application acceptance. 38 original74 then 96 native83 cases remain PENDING_RUNTIME.",
+ "blockers": [
+  "Runtime R3 execution (stage-r3.py upload, collect-r2.py 74 then 83) not performed in this local-only turn",
+  "Independent review by Cursor Agent and OpenCode CLIs not performed here"
+ ]
+}

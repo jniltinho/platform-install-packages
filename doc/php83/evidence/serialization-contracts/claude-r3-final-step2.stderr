@@ -1,0 +1,14 @@
+test_invalid_utf8_bytes_retained (__main__.Retention.test_invalid_utf8_bytes_retained) ... ok
+test_invalid_wire_never_inserted (__main__.Retention.test_invalid_wire_never_inserted) ... ok
+test_launch_failure_retained (__main__.Retention.test_launch_failure_retained) ... ok
+test_malformed_json_retained (__main__.Retention.test_malformed_json_retained) ... ok
+test_malformed_runtime_shape (__main__.Retention.test_malformed_runtime_shape) ... ok
+test_nonzero_exit_retained (__main__.Retention.test_nonzero_exit_retained) ... ok
+test_scalar_json_retained (__main__.Retention.test_scalar_json_retained) ... ok
+test_timeout_partial_channels_retained (__main__.Retention.test_timeout_partial_channels_retained) ... ok
+test_wrong_wire_shape (__main__.Retention.test_wrong_wire_shape) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.000s
+
+OK

@@ -1,0 +1,134 @@
+{
+  "schema": 1,
+  "case": "R3 independent isolated baseline74 repeat (collection only)",
+  "executor": "Claude CLI (claude-opus-5-5), exclusive owner of baseline74 alias; native83/.20 not accessed",
+  "reviewer": "Claude CLI (same executor; author review, not independent validation \u2014 coordinator/rotated reviewer required)",
+  "environment": "baseline74 via existing /tmp/kaltura-php74-ssh.conf wrapper (not read/printed); immutable remote stage per r3-stage-pin.json; synthetic serialization/cache only",
+  "harness": {
+    "runtime-identity.py": "f2985a7d3f054c3a743535009e0ad2937545d05e1c0d9e7c936a24acf13da463",
+    "collect-r2.py": "d697f38348f6409b987f97a5b027107fab57a7afdc809983dabc2202970309f8",
+    "collector_closure_sha256": "c74dfd4356f4d4b5f2070cec07ee2cb25d9ac7c0ed150c16456adffc84d3967e",
+    "collector_closure_after_equal": true,
+    "stage_manifest_sha256": "5f628293182feed0066274ed89dff3d362cd6ad781d2ba4b9198df9aef6df7d5",
+    "execution_phase": "serialization-native83-wire-cache-r3"
+  },
+  "steps": {
+    "1": {
+      "cmd": "7aa3adf5c90a5ecadf7768348f5a1db41559834a412880a49673b7bbecc640ad",
+      "stdout": "9645ea96a7871c03eac874d4a63d9760008ea3575821c7e3bc222b3260645b1b",
+      "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exit": 0
+    },
+    "2": {
+      "cmd": "47f0e1911782aa81f3f4cf2f875b5ff5fbfb33b7366a017072bc26cedf1a48ad",
+      "stdout": "f94ca65eda184e714d7c7c805c7af53aeb0a70d92c6a6ddc5c032f9c84c6f6a5",
+      "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exit": 0
+    },
+    "3": {
+      "cmd": "0273a8f3f776016aa0bb34a160bf3a239b7252a20147c889afda2dde186b8c29",
+      "stdout": "c9eb3500b52aa0be6bb34ee7182f5e01ce7e0d0f413251a120241eac44c524e5",
+      "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exit": 0
+    }
+  },
+  "executed_sequentially": true,
+  "total_elapsed_seconds_approx": 15,
+  "outputs": {
+    "r3-claude74-before.json": "e2e61b4fc6cf6ca08f8d97cf3de8fbd7969fc0fb4576f55676e966b020cc701f",
+    "r3-claude74.json": "981e8808e34ae3a4bafc30cc570f8473e5126e5aafe021e21661efc6ecc83ed3",
+    "r3-claude74-after.json": "e2e61b4fc6cf6ca08f8d97cf3de8fbd7969fc0fb4576f55676e966b020cc701f"
+  },
+  "comparison_full_report": {
+    "primary_sha256": "981e8808e34ae3a4bafc30cc570f8473e5126e5aafe021e21661efc6ecc83ed3",
+    "repeat_sha256": "981e8808e34ae3a4bafc30cc570f8473e5126e5aafe021e21661efc6ecc83ed3",
+    "byte_identical": true,
+    "top_level_differences": [],
+    "status_primary": "OBSERVED_NOT_ACCEPTED",
+    "status_repeat": "OBSERVED_NOT_ACCEPTED",
+    "errors_repeat": []
+  },
+  "comparison_records": {
+    "count_primary": 38,
+    "count_repeat": 38,
+    "expected": 38,
+    "case_order_equal": true,
+    "records_with_differences": [],
+    "exits_repeat": {
+      "0": 38
+    },
+    "stderr_nonempty_repeat": 19,
+    "diagnostics_nonempty_repeat": 19,
+    "diagnostics_nonempty_primary": 19,
+    "timeouts_or_launch_errors": 0,
+    "invalid_utf8_output": 0
+  },
+  "runtime_snapshots": {
+    "r3-primary74-before.json": {
+      "file_sha256": "e2e61b4fc6cf6ca08f8d97cf3de8fbd7969fc0fb4576f55676e966b020cc701f",
+      "identity_sha256": "163c1182e2dfdc8545794fb505aab6df51e231f9b89c231b05c54b291684602d",
+      "collector_sha256": "f2985a7d3f054c3a743535009e0ad2937545d05e1c0d9e7c936a24acf13da463",
+      "remote_program_sha256": "5920d1d160f3641c7b480003f398cbe1ae81a6053a4e3a724d3b2147ba8908a0",
+      "exit": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "files": 55,
+      "runtime_modes": [
+        "php74-minimal",
+        "php74-standard",
+        "php83-minimal"
+      ]
+    },
+    "r3-primary74-after.json": {
+      "file_sha256": "e2e61b4fc6cf6ca08f8d97cf3de8fbd7969fc0fb4576f55676e966b020cc701f",
+      "identity_sha256": "163c1182e2dfdc8545794fb505aab6df51e231f9b89c231b05c54b291684602d",
+      "collector_sha256": "f2985a7d3f054c3a743535009e0ad2937545d05e1c0d9e7c936a24acf13da463",
+      "remote_program_sha256": "5920d1d160f3641c7b480003f398cbe1ae81a6053a4e3a724d3b2147ba8908a0",
+      "exit": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "files": 55,
+      "runtime_modes": [
+        "php74-minimal",
+        "php74-standard",
+        "php83-minimal"
+      ]
+    },
+    "r3-claude74-before.json": {
+      "file_sha256": "e2e61b4fc6cf6ca08f8d97cf3de8fbd7969fc0fb4576f55676e966b020cc701f",
+      "identity_sha256": "163c1182e2dfdc8545794fb505aab6df51e231f9b89c231b05c54b291684602d",
+      "collector_sha256": "f2985a7d3f054c3a743535009e0ad2937545d05e1c0d9e7c936a24acf13da463",
+      "remote_program_sha256": "5920d1d160f3641c7b480003f398cbe1ae81a6053a4e3a724d3b2147ba8908a0",
+      "exit": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "files": 55,
+      "runtime_modes": [
+        "php74-minimal",
+        "php74-standard",
+        "php83-minimal"
+      ]
+    },
+    "r3-claude74-after.json": {
+      "file_sha256": "e2e61b4fc6cf6ca08f8d97cf3de8fbd7969fc0fb4576f55676e966b020cc701f",
+      "identity_sha256": "163c1182e2dfdc8545794fb505aab6df51e231f9b89c231b05c54b291684602d",
+      "collector_sha256": "f2985a7d3f054c3a743535009e0ad2937545d05e1c0d9e7c936a24acf13da463",
+      "remote_program_sha256": "5920d1d160f3641c7b480003f398cbe1ae81a6053a4e3a724d3b2147ba8908a0",
+      "exit": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "files": 55,
+      "runtime_modes": [
+        "php74-minimal",
+        "php74-standard",
+        "php83-minimal"
+      ]
+    }
+  },
+  "runtime_snapshots_identity_all_equal": true,
+  "artifact_pin_all_equal": true,
+  "discrepancies": [],
+  "limitations": [
+    "Status OBSERVED_NOT_ACCEPTED is collection status only; no semantic, contract or application acceptance.",
+    "Report carries no nonce/timestamp, so byte identity with primary cannot by itself prove freshness; freshness rests on the actually executed SSH steps (captured cmd/stdout/stderr/exit, ~14s collector run).",
+    "19/38 records have non-empty stderr/diagnostics in both runs; retained raw, not interpreted here.",
+    "Reviewer equals executor; independent rotated review still required.",
+    "No performance claim; no native83, .20, package, CI or release scope."
+  ]
+}

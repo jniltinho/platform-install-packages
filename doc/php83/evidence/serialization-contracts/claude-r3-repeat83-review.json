@@ -1,0 +1,71 @@
+{
+ "case": "serialization-native83-wire-cache-r3 independent repeat",
+ "executor": "Claude CLI (claude-opus-5-5), php83 alias only",
+ "reviewer": "Claude CLI (same session; author-review, not independent review of this repeat)",
+ "coordinator": "Codex",
+ "environment": "kaltura-php83-lab via pre-authorized wrapper; immutable stage /home/vagrant/php-serialization-wire-cache-r3; no stage/package/system/config/API/SQL changes; baseline74/.20 not accessed",
+ "steps": {
+  "1": {
+   "cmd": "python3 doc/php83/evidence/exp10-runtime/snapshot-php83.py doc/php83/evidence/serialization-contracts/r3-claude83-before.json",
+   "exit": 0,
+   "stdout_sha256": "1c3ce1ded149763b42db5044aefe120888c6e0b428c06835c2cc47bb15c4ee23",
+   "stderr_bytes": 0
+  },
+  "2": {
+   "cmd": "python3 tools/php83/serialization-contracts/collect-r2.py 83 doc/php83/evidence/serialization-contracts/r3-claude83.json doc/php83/evidence/serialization-contracts/r3-primary74.json",
+   "exit": 0,
+   "stdout_sha256": "e350a08157152fd4c9e6d0241696ec0314996ef54e4c4b1f0ac4aeabd20b41d7",
+   "stderr_bytes": 0
+  },
+  "3": {
+   "cmd": "python3 doc/php83/evidence/exp10-runtime/snapshot-php83.py doc/php83/evidence/serialization-contracts/r3-claude83-after.json",
+   "exit": 0,
+   "stdout_sha256": "1c3ce1ded149763b42db5044aefe120888c6e0b428c06835c2cc47bb15c4ee23",
+   "stderr_bytes": 0
+  }
+ },
+ "collector_sha256": "d697f38348f6409b987f97a5b027107fab57a7afdc809983dabc2202970309f8",
+ "collector_closure_sha256": "c74dfd4356f4d4b5f2070cec07ee2cb25d9ac7c0ed150c16456adffc84d3967e",
+ "collector_closure_after_equal": true,
+ "stage_manifest_sha256": "5f628293182feed0066274ed89dff3d362cd6ad781d2ba4b9198df9aef6df7d5",
+ "input_report74": {
+  "sha256": "981e8808e34ae3a4bafc30cc570f8473e5126e5aafe021e21661efc6ecc83ed3",
+  "bytes": 277644,
+  "collector_closure_sha256": "c74dfd4356f4d4b5f2070cec07ee2cb25d9ac7c0ed150c16456adffc84d3967e"
+ },
+ "input_report74_raw_sha256_actual": "981e8808e34ae3a4bafc30cc570f8473e5126e5aafe021e21661efc6ecc83ed3",
+ "report_status": "OBSERVED_NOT_ACCEPTED",
+ "application_acceptance": false,
+ "comparison": {
+  "full_report_byte_identical_to_r3_primary83": true,
+  "report_sha256": "13afae9a8351eaa10950889710b63427838f2cc5b6faf5080dc81228ee54fcf8",
+  "records": 96,
+  "records_equal": true,
+  "errors": [],
+  "process_exit_inventory": {
+   "0": 96
+  },
+  "primary_exit_inventory_equal": true,
+  "runtime_identity_snapshots_sha256": {
+   "r3-primary83-before.json": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491",
+   "r3-primary83-after.json": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491",
+   "r3-claude83-before.json": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491",
+   "r3-claude83-after.json": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491"
+  },
+  "all_4_snapshots_identical": true
+ },
+ "observations": {
+  "wire_invalid_utf8": "original and candidate: 5/6 kinds (plain, decorator, role, profile, cacheable) throw Exception '<Class>::serialize() must return a string or NULL' at serialize time (direct=false); null kind serializes N; (original C-format, candidate O-format) and restores. Failure is immediate at write time, not a delayed read-time failure; old-R1 delayed-failure comparison taken from coordinator framing, not re-derived here.",
+  "cache_invalid_utf8": "cachefix and candidate: 1 cache write-time Exception at phase=save, target_exists=false.",
+  "filecache_original83_negative_control": "all 8 original cache cases fail with TypeError implode() Argument #2 must be ?array, string given at phase=namespace, target_exists=false.",
+  "cachefix_candidate": "hit and refresh-hit restore Credentials; expired and malformed fetch=false; refresh-miss returns EXPIRED_* state; read-C restores for both; read-O: cachefix fetch=false, candidate restores.",
+  "native_warnings_preserved": "raw stdout/stderr base64 retained unmodified in report (e.g. original Serializable Deprecated notices; candidate malformed 'Trying to access array offset on null' and unserialize() offset warnings)."
+ },
+ "verdict": "OBSERVED_NOT_ACCEPTED (deliberate); repeat reproduces primary83 exactly; not whole-application PASS",
+ "limitations": [
+  "reviewer is not independent of executor",
+  "synthetic serialization/cache only",
+  "no benchmark claims",
+  "R1 behavior not re-executed"
+ ]
+}

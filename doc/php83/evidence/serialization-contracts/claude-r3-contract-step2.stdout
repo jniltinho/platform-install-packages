@@ -1,0 +1,39 @@
+{
+  "status": "BOUNDED_FUNCTIONAL_CHECKS_MATCH_WITH_KNOWN_WIRE_BREAK",
+  "application_acceptance": false,
+  "artifact_selected": false,
+  "rollback_compatible": false,
+  "primary_counts": {
+    "74": 38,
+    "83": 96
+  },
+  "actual_claude_repeats_byte_identical": true,
+  "report_sha256": {
+    "74": "981e8808e34ae3a4bafc30cc570f8473e5126e5aafe021e21661efc6ecc83ed3",
+    "83": "13afae9a8351eaa10950889710b63427838f2cc5b6faf5080dc81228ee54fcf8"
+  },
+  "reconciler_sha256": "4af03337e9b005e5dd5306e2d4c593cad78a9b96e39c4e2d928f23e0edadfb48",
+  "checks": [
+    "typed wire behavior and C/O readers: plain",
+    "typed wire behavior and C/O readers: null",
+    "typed wire behavior and C/O readers: decorator",
+    "typed wire behavior and C/O readers: role",
+    "typed wire behavior and C/O readers: profile",
+    "typed wire behavior and C/O readers: cacheable",
+    "real filesystem cache: hit",
+    "real filesystem cache: expired",
+    "real filesystem cache: malformed",
+    "real filesystem cache: refresh-hit",
+    "real filesystem cache: refresh-miss",
+    "real filesystem cache: invalid-utf8",
+    "real filesystem cache: read-C",
+    "real filesystem cache: read-O"
+  ],
+  "limitations": [
+    "C-to-O wire change is incompatible with original74/original83 readers; cache namespace/snapshot/rollback policy is not selected or tested.",
+    "Wire hashes prove internal consistency, not authenticity. Native execution provenance is in retained CLI calls.",
+    "Synthetic credentials only; no real backend, role refresh, application configuration, or whole-application acceptance.",
+    "Native diagnostics are retained/repeated; PHP74/83 warning severity parity is not claimed.",
+    "External Serializable subclasses returning NULL are outside the six-class corpus."
+  ]
+}

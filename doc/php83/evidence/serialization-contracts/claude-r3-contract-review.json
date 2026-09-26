@@ -1,0 +1,35 @@
+{
+  "schema": 1,
+  "case": "R3 offline contract reconciliation review (local only)",
+  "executor": "Claude CLI (claude-opus-5-5); local Python only, no VM/SSH/network/staging/product change",
+  "reviewer": "Claude CLI; independent of reconcile-r3.py/test_reconcile_r3.py authorship",
+  "sources": {
+    "reconcile-r3.py": "4af03337e9b005e5dd5306e2d4c593cad78a9b96e39c4e2d928f23e0edadfb48",
+    "test_reconcile_r3.py": "8619f9dd296144a8763a3e970bbcfd6a71cdb6950db7b5bb32943d1cf181fe02",
+    "r3-primary74.json": "981e8808e34ae3a4bafc30cc570f8473e5126e5aafe021e21661efc6ecc83ed3",
+    "r3-primary83.json": "13afae9a8351eaa10950889710b63427838f2cc5b6faf5080dc81228ee54fcf8"
+  },
+  "steps": {
+    "1": {"cmd": "python3 tools/php83/serialization-contracts/test_reconcile_r3.py", "exit": 0, "result": "Ran 8 tests OK (stderr)", "evidence": "claude-r3-contract-step1.{cmd,exit,stdout,stderr}"},
+    "2": {"cmd": "python3 tools/php83/serialization-contracts/reconcile-r3.py", "exit": 0, "result": "stdout byte-identical to r3-contract.json; 14 checks; stderr empty", "evidence": "claude-r3-contract-step2.{cmd,exit,stdout,stderr}"}
+  },
+  "verdict": "CONFIRMED_BOUNDED_CONTRACT_WITH_KNOWN_WIRE_BREAK; not application acceptance, not artifact selection",
+  "findings": {
+    "typed_equality": "Canonical sorted JSON comparison distinguishes false/0/null types. original74==original83 per kind/op; candidate83==original74 excluding only 'wire'; cachefix==original74 for all 8 cache ops.",
+    "exact_controls": "Exact ordered inventories (38 on 7.4, 96 on 8.3: 44 original/44 candidate/8 cachefix) enforced; raw base64 channels re-verified; collector closure before/after and stage-manifest pin checked; original83 cache control pinned to the exact reversed-implode TypeError at phase 'namespace'.",
+    "invalid_utf8_timing": "For five non-null kinds candidate throws '<class>::serialize() must return a string or NULL' with no wire emitted; real cache invalid-utf8 fails at phase 'save' with target_exists false.",
+    "c_vs_o": "Every wire-bearing legacy result must be format C and candidate O. Candidate reads original74 C and original83-r2/candidate83-r2 payloads with roundtrip-equal restored values; candidate cache read-O yields the same fetch as original74 read-C.",
+    "old_reader_incompatibility": "original74 and original83 readers of candidate-written payloads must restore exactly boolean false; this is asserted, not hidden, and the contract reports rollback_compatible=false."
+  },
+  "author_mutation_tests_vs_native_evidence": "The 8 tests mutate retained JSON (bool exit, dropped record, typed getter, delayed UTF-8 wire, save phase, lost malformed warning, old reader accepting O) and prove only that the comparator rejects them. They are not PHP execution. Native evidence is the retained primary/Claude-repeat reports and their CLI records; this review did not re-execute PHP.",
+  "limitations": [
+    "Old-reader rejection is asserted only as restored=false; accompanying native warnings are not compared.",
+    "Old-reader O rejection in the real FileCache path is observed only on 7.4; original83 cache stops earlier at the implode TypeError.",
+    "Hashes and repeat byte-equality show internal consistency only; authenticity relies on retained CLI records.",
+    "Synthetic credentials, six-class corpus; no real backend, STS/profile refresh, external Serializable subclasses or warning-severity parity."
+  ],
+  "blockers": [
+    "No selected/tested cache namespace, snapshot/restore or rollback policy preventing original74/83 readers from receiving O data (release gate, not a comparator defect)."
+  ],
+  "comparator_defects": []
+}

@@ -1,0 +1,6 @@
+doc/php83/evidence/serialization-contracts/claude-r3-repeat74-step1.cmd:1: trailing whitespace.
++python3 tools/php83/exp12-api/runtime-identity.py doc/php83/evidence/serialization-contracts/r3-claude74-before.json 
+doc/php83/evidence/serialization-contracts/claude-r3-repeat74-step2.cmd:1: trailing whitespace.
++python3 tools/php83/serialization-contracts/collect-r2.py 74 doc/php83/evidence/serialization-contracts/r3-claude74.json 
+doc/php83/evidence/serialization-contracts/claude-r3-repeat74-step3.cmd:1: trailing whitespace.
++python3 tools/php83/exp12-api/runtime-identity.py doc/php83/evidence/serialization-contracts/r3-claude74-after.json 

@@ -1,0 +1,25 @@
+{
+  "reviewer": "claude-cli",
+  "scope": "local collector delta + stage/evidence identity; no VM/SSH/PHP/runtime",
+  "verdict": "PASS",
+  "delta": {
+    "reviewed_snapshot_collect_r2_sha256": "389ea73b6ed2c60180ff09abe4e291aa4363a6d5bca0e85ace7f51c09ab0ef8d",
+    "current_collect_r2_sha256": "d697f38348f6409b987f97a5b027107fab57a7afdc809983dabc2202970309f8",
+    "change": "remember_wire validates via wiredata before insert; roundtrip path uses it; no other collector lines changed",
+    "identity_diff_vs_reviewed": ["collector_closure/files/collect-r2.py", "collector_closure/sha256"]
+  },
+  "current_pin": {
+    "manifest_sha256": "5f628293182feed0066274ed89dff3d362cd6ad781d2ba4b9198df9aef6df7d5",
+    "collector_closure_sha256": "c74dfd4356f4d4b5f2070cec07ee2cb25d9ac7c0ed150c16456adffc84d3967e",
+    "report_contract_sha256": "edb330863f82d866559cdf296848c5dd98b3e79ceb59e79b9a369dbbacf7b7bb",
+    "stage_identities_equals_evidence": true,
+    "reference_wires_unchanged": true,
+    "remote_stage": "/home/vagrant/php-serialization-wire-cache-r3"
+  },
+  "tests": [
+    {"step": 1, "file": "test_report_contract.py", "tests": 34, "exit": 0},
+    {"step": 2, "file": "test_observation_retention.py", "tests": 9, "exit": 0}
+  ],
+  "approval": "bounded native 38+96 observations only",
+  "not_approved": ["semantic equivalence", "application acceptance", "release"]
+}

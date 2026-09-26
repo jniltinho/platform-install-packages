@@ -23,9 +23,6 @@ def wiredata(w):
  raw=base64.b64decode(w['base64'],validate=True)
  if hashlib.sha256(raw).hexdigest()!=w['sha256'] or raw[:1].decode()!=w['format']:raise ValueError('wire mismatch')
  return w['base64']
-def remember_wire(wires,key,wire):
- wiredata(wire)
- wires[key]=wire
 def collector_identity():
  root=Path(__file__).resolve().parent
  module=Path(report_contract.__file__).resolve()
@@ -89,7 +86,7 @@ if __name__=='__main__':
    for op in OPS:
     b=run(variant,kind,op)
     if b and op=='roundtrip':
-     try:remember_wire(wires,variant+'/'+kind,b['result']['wire'])
+     try:wires[variant+'/'+kind]=b['result']['wire'];wiredata(wires[variant+'/'+kind])
      except (ValueError,KeyError) as e:errors.append({'error':'missing/invalid wire','variant':variant,'kind':kind})
  for reader in variants:
   for writer in ['original','candidate']:

@@ -1,0 +1,62 @@
+{
+  "candidate/cacheable": {
+    "base64": "Tzo0MzoiQXdzXENvbW1vblxDcmVkZW50aWFsc1xDYWNoZWFibGVDcmVkZW50aWFscyI6MTp7czo3OiJwYXlsb2FkIjtzOjk0OiJ7ImtleSI6IlNZTlRIRVRJQ19LRVkiLCJzZWNyZXQiOiJTWU5USEVUSUNfU0VDUkVUIiwidG9rZW4iOiJTWU5USEVUSUNfVE9LRU4iLCJ0b2tlbi50dGQiOm51bGx9Ijt9",
+    "format": "O",
+    "sha256": "68b4b98317d07a3b3e45822620e5e2afbbcabc13f046564958706433380b22cf"
+  },
+  "candidate/decorator": {
+    "base64": "Tzo1MToiQXdzXENvbW1vblxDcmVkZW50aWFsc1xBYnN0cmFjdENyZWRlbnRpYWxzRGVjb3JhdG9yIjoxOntzOjc6InBheWxvYWQiO3M6OTQ6Insia2V5IjoiU1lOVEhFVElDX0tFWSIsInNlY3JldCI6IlNZTlRIRVRJQ19TRUNSRVQiLCJ0b2tlbiI6IlNZTlRIRVRJQ19UT0tFTiIsInRva2VuLnR0ZCI6bnVsbH0iO30=",
+    "format": "O",
+    "sha256": "a88c4f67098bd57723e5046fada391f4ff380bcc2a74b8401ac1981de976dc09"
+  },
+  "candidate/null": {
+    "base64": "TzozODoiQXdzXENvbW1vblxDcmVkZW50aWFsc1xOdWxsQ3JlZGVudGlhbHMiOjE6e3M6NzoicGF5bG9hZCI7czoyOiJOOyI7fQ==",
+    "format": "O",
+    "sha256": "f0c01760d0d537f4c576b077cb3a7a2909da3585780d94fd3f9d595627a7d24a"
+  },
+  "candidate/plain": {
+    "base64": "TzozNDoiQXdzXENvbW1vblxDcmVkZW50aWFsc1xDcmVkZW50aWFscyI6MTp7czo3OiJwYXlsb2FkIjtzOjk0OiJ7ImtleSI6IlNZTlRIRVRJQ19LRVkiLCJzZWNyZXQiOiJTWU5USEVUSUNfU0VDUkVUIiwidG9rZW4iOiJTWU5USEVUSUNfVE9LRU4iLCJ0b2tlbi50dGQiOm51bGx9Ijt9",
+    "format": "O",
+    "sha256": "dc79b349f42a006e5585d0a4ecf0a679505c611e339073b758e938222e9dd5e9"
+  },
+  "candidate/profile": {
+    "base64": "Tzo2MDoiQXdzXENvbW1vblxDcmVkZW50aWFsc1xSZWZyZXNoYWJsZUluc3RhbmNlUHJvZmlsZUNyZWRlbnRpYWxzIjoxOntzOjc6InBheWxvYWQiO3M6OTQ6Insia2V5IjoiU1lOVEhFVElDX0tFWSIsInNlY3JldCI6IlNZTlRIRVRJQ19TRUNSRVQiLCJ0b2tlbiI6IlNZTlRIRVRJQ19UT0tFTiIsInRva2VuLnR0ZCI6bnVsbH0iO30=",
+    "format": "O",
+    "sha256": "27764b0efa5421a3bdc96c363ac77862fa21adf2357dcc979f8c9f3d18d1bfe3"
+  },
+  "candidate/role": {
+    "base64": "TzoxNToiUmVmcmVzaGFibGVSb2xlIjoxOntzOjc6InBheWxvYWQiO3M6OTQ6Insia2V5IjoiU1lOVEhFVElDX0tFWSIsInNlY3JldCI6IlNZTlRIRVRJQ19TRUNSRVQiLCJ0b2tlbiI6IlNZTlRIRVRJQ19UT0tFTiIsInRva2VuLnR0ZCI6bnVsbH0iO30=",
+    "format": "O",
+    "sha256": "9dd32f30ad78797f3561ee045f1429b336345dae4f95a600313ba6ea6c17ad2c"
+  },
+  "original/cacheable": {
+    "base64": "Qzo0MzoiQXdzXENvbW1vblxDcmVkZW50aWFsc1xDYWNoZWFibGVDcmVkZW50aWFscyI6OTQ6e3sia2V5IjoiU1lOVEhFVElDX0tFWSIsInNlY3JldCI6IlNZTlRIRVRJQ19TRUNSRVQiLCJ0b2tlbiI6IlNZTlRIRVRJQ19UT0tFTiIsInRva2VuLnR0ZCI6bnVsbH19",
+    "format": "C",
+    "sha256": "f96671a03507f0e5257a0e6cdea4bcaf05669ab40c2e22c7eb2a32db4ebd8df3"
+  },
+  "original/decorator": {
+    "base64": "Qzo1MToiQXdzXENvbW1vblxDcmVkZW50aWFsc1xBYnN0cmFjdENyZWRlbnRpYWxzRGVjb3JhdG9yIjo5NDp7eyJrZXkiOiJTWU5USEVUSUNfS0VZIiwic2VjcmV0IjoiU1lOVEhFVElDX1NFQ1JFVCIsInRva2VuIjoiU1lOVEhFVElDX1RPS0VOIiwidG9rZW4udHRkIjpudWxsfX0=",
+    "format": "C",
+    "sha256": "0a54f3324d1d028bbf4c78d8a6aa76704975ceb9761c16f5cdbaef42bf3455f4"
+  },
+  "original/null": {
+    "base64": "QzozODoiQXdzXENvbW1vblxDcmVkZW50aWFsc1xOdWxsQ3JlZGVudGlhbHMiOjI6e047fQ==",
+    "format": "C",
+    "sha256": "aa3256bbb3c76822122cfa70414966aa1a8e165e8a0c7dd2bbeaefa28309463a"
+  },
+  "original/plain": {
+    "base64": "QzozNDoiQXdzXENvbW1vblxDcmVkZW50aWFsc1xDcmVkZW50aWFscyI6OTQ6e3sia2V5IjoiU1lOVEhFVElDX0tFWSIsInNlY3JldCI6IlNZTlRIRVRJQ19TRUNSRVQiLCJ0b2tlbiI6IlNZTlRIRVRJQ19UT0tFTiIsInRva2VuLnR0ZCI6bnVsbH19",
+    "format": "C",
+    "sha256": "0a84f39a8018d07566f69d6608f9cab13017390370a3c5b6454dceb2493882c9"
+  },
+  "original/profile": {
+    "base64": "Qzo2MDoiQXdzXENvbW1vblxDcmVkZW50aWFsc1xSZWZyZXNoYWJsZUluc3RhbmNlUHJvZmlsZUNyZWRlbnRpYWxzIjo5NDp7eyJrZXkiOiJTWU5USEVUSUNfS0VZIiwic2VjcmV0IjoiU1lOVEhFVElDX1NFQ1JFVCIsInRva2VuIjoiU1lOVEhFVElDX1RPS0VOIiwidG9rZW4udHRkIjpudWxsfX0=",
+    "format": "C",
+    "sha256": "465b7622f9a4f2da892c18bd91fbd9d8c22fd5b8cff5691a09c0ab99b619a4ca"
+  },
+  "original/role": {
+    "base64": "QzoxNToiUmVmcmVzaGFibGVSb2xlIjo5NDp7eyJrZXkiOiJTWU5USEVUSUNfS0VZIiwic2VjcmV0IjoiU1lOVEhFVElDX1NFQ1JFVCIsInRva2VuIjoiU1lOVEhFVElDX1RPS0VOIiwidG9rZW4udHRkIjpudWxsfX0=",
+    "format": "C",
+    "sha256": "5ec7bc3462dbbd9ed1d4114e297882bdf554940f15672826ffc8037bff22972c"
+  }
+}

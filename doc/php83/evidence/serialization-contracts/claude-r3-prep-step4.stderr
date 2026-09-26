@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/serialization-contracts/claude-r3-prep-step4.py", line 6, in <module>
+    s=importlib.util.spec_from_file_location('c',T/'collect-r2.py');c=importlib.util.module_from_spec(s);s.loader.exec_module(c)
+                                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/serialization-contracts/collect-r2.py", line 5, in <module>
+    import report_contract
+ModuleNotFoundError: No module named 'report_contract'

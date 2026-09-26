@@ -1,6 +1,66 @@
-# AWS credential serialization: rejected R1 candidate, repair in preparation
+# AWS credential serialization: bounded R3 runtime result
 
-## Current result — 60 native83 observations independently repeated
+## Current R3 result — 134 observations, actual Claude repeat
+
+After explicit user reauthorization, a **fresh immutable R3 stage** ran 38 original
+PHP 7.4 processes and 96 PHP 8.3 processes. Codex primaries and actual Claude CLI
+repeats each completed with exit 0; entire reports are byte-identical. The CLI
+command/result records prove actual execution; byte equality alone would not.
+Four runtime snapshots per lab are identical (55 objects on 7.4; 39 on 8.3).
+Labs were released immediately after repeats. No application, ZIP or release was
+promoted. Reports retain `OBSERVED_NOT_ACCEPTED` deliberately.
+
+[Offline reconciliation](evidence/serialization-contracts/r3-contract.json)
+checks exact ordered inventories, typed results, collector/source pins and raw
+channels. Eight author mutation tests exercise this comparator, not PHP itself.
+Actual Claude final local review completed exit 0, reran all eight guard tests
+and reconciliation (both exit 0, contract output identical), and found no
+comparator defect. [Its public review](evidence/serialization-contracts/claude-r3-contract-review.json)
+keeps cache/rollback policy as a release gate. The original R1 failure
+and previously blocked/read-only phases remain historical evidence.
+
+- All six credential classes retain typed getters/properties and legacy payload
+  behavior across original74/original83/candidate83, **except the explicit C→O
+  native wire change**. Candidate reads actual74 C and both83 C/O payloads.
+- Original74 **and** original83 reject O payloads. This is confirmed rollback
+  incompatibility, not a new surprise hidden by a passing comparator. Before
+  selection, choose/test a private versioned cache namespace or snapshot/restore
+  policy; old readers must never receive newly written O data. No such policy is
+  selected or rehearsed by this fixture.
+- The R2 product guard fixes R1 invalid-UTF8 timing: five non-null kinds throw the
+  same Exception before producing a wire. NullCredentials retains its N payload.
+  Real cache invalid-UTF8 writes fail during `save`, with no target object file.
+- All eight unmodified83 real FileCache cases retain the explicit reversed-implode
+  TypeError at `namespace`. A separately identified one-line FileCache patch
+  enables cache tests; cachefix-only matches original74 typed results. Candidate
+  adds O-reading support while preserving hit/expiry/corrupt/refresh behavior.
+- Malformed native warnings are retained. Candidate deprecation absence is only
+  for this corpus, not a framework-wide diagnostic or security acceptance claim.
+
+Product bytes are the four held R2 patches, unchanged in R3. The held manifest's
+`HELD_R2_UNTESTED` records its original preparation phase, not a rewritten runtime
+verdict. Closure/pin changes belong to observation retention and provenance only.
+Checkpoint whitespace validation reports only three trailing spaces in actual
+Claude74 `.cmd` evidence; those executed-command records are preserved unchanged.
+This is not a globally clean format-check claim.
+Final stage SHA256: `5f628293182feed0066274ed89dff3d362cd6ad781d2ba4b9198df9aef6df7d5`;
+collector closure: `c74dfd4356f4d4b5f2070cec07ee2cb25d9ac7c0ed150c16456adffc84d3967e`.
+The83 report records the exact74 input bytes/hash consumed. Wire hash checks prove
+internal consistency, not authenticity. Malformed native output, timeout and
+launch errors retain raw channels before validation rather than losing attempts.
+
+Scope remains synthetic sentinel credentials and private real filesystem cache:
+no real credentials/network/backend, role refresh, application config, production
+or whole-application acceptance. Wire fixtures bypass profile/cacheable constructors;
+real cache fixtures instantiate CacheableCredentials/backend separately. Existing
+loss of role/config/cache properties is a preserved baseline limitation. External
+Serializable subclasses returning NULL are outside these six classes. Mixed-version
+cache operations, recovery and deployment remain gates, not implicit approval.
+The reviewer notes old O-reader warnings are retained but not separately matched
+by the semantic comparator. Unmodified83 cache stops at implode; **cachefix-only83**
+also exercises and rejects O in the real cache path, alongside original74.
+
+## Historical R1 result — 60 native83 observations independently repeated
 
 The first candidate is **REJECTED**, not accepted: invalid UTF-8 changes failure
 from write-time native Exception to a stored O payload and read-time

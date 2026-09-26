@@ -1,0 +1,33 @@
+{
+ "collector_closure_matches_current": true,
+ "pin_matches_evidence_manifest": true,
+ "stage_manifest_bytes_equal_evidence": true,
+ "stage_inventory_exact": true,
+ "no_symlinks": true,
+ "stage_hashes_match": true,
+ "files_differing_from_r2_manifest": [
+  "run.sh"
+ ],
+ "changes_equal_r2": true,
+ "runtime_files_equal_r2": true,
+ "source_archives_equal_r2": true,
+ "patch_hashes_match": true,
+ "patches_git_clean": true,
+ "candidate_after_hashes": true,
+ "reference_wires_equal_r2": true,
+ "preparer_sha_matches_current": true,
+ "runsh_changed_lines": [
+  [
+   "base=/home/vagrant/php-serialization-wire-cache-r2",
+   "base=/home/vagrant/php-serialization-wire-cache-r3"
+  ],
+  [
+   "if x['phase']!='serialization-native83-wire-cache-r2' or x['application_selected'] is not False:raise SystemExit('Wrong phase')",
+   "if x['phase']!='serialization-native83-wire-cache-r3' or x['application_selected'] is not False:raise SystemExit('Wrong phase')"
+  ]
+ ],
+ "phase": "serialization-native83-wire-cache-r3",
+ "application_selected": false,
+ "manifest_sha256": "ef7e091640924817e63711679b1cb83a77909752784475506533f01ff726e752",
+ "collector_closure_sha256": "300cd29d473dabbb1db495401929a5bf59d4a9506adfeff8b5045f49c9644ed0"
+}

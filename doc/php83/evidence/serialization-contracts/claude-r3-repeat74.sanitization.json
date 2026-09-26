@@ -1,0 +1,14 @@
+{
+  "raw_sha256": "f82defe4f8270fcd0781fb0587f36fba528ae013a9d5a62781d9270fc566c509",
+  "sanitized_sha256": "97fcd5f861df96a181bd3b374a990d1b24a6d711cd5fcb9a30389fe9f1b09f8b",
+  "raw_event_counts": {
+    "system": 20,
+    "assistant": 15,
+    "rate_limit_event": 4,
+    "user": 5,
+    "result": 1
+  },
+  "retained_events": 11,
+  "retained_tool_ids": 5,
+  "policy": "Only current tool_use and matching tool_result blocks plus public final result; omit thinking, system/init, hook responses, historical context and unrelated narration. Raw outside repository; hash provenance is not approval."
+}

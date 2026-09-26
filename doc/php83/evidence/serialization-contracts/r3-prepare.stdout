@@ -1,0 +1,1 @@
+{"phase": "serialization-native83-wire-cache-r3", "files": 70, "collector_closure": {"schema": 1, "files": {"collect-r2.py": "389ea73b6ed2c60180ff09abe4e291aa4363a6d5bca0e85ace7f51c09ab0ef8d", "report_contract.py": "edb330863f82d866559cdf296848c5dd98b3e79ceb59e79b9a369dbbacf7b7bb"}, "sha256": "300cd29d473dabbb1db495401929a5bf59d4a9506adfeff8b5045f49c9644ed0"}}
