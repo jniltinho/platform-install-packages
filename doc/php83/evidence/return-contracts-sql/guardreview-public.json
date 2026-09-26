@@ -1,0 +1,37 @@
+{
+  "cli_exit": 0,
+  "events": [
+    {
+      "type": "text",
+      "text": "Checking the small guard delta \u2014 running its tests and diffing the pinned source."
+    },
+    {
+      "type": "bash",
+      "status": "completed",
+      "input": {
+        "command": "python3 -m unittest discover -s tools/php83/return-contracts-sql -p \"test_*.py\" 2>&1",
+        "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+      },
+      "output": "......................................\n----------------------------------------------------------------------\nRan 38 tests in 0.019s\n\nOK\n",
+      "error": null
+    },
+    {
+      "type": "text",
+      "text": "Tests are green \u2014 now pulling the diff."
+    },
+    {
+      "type": "bash",
+      "status": "completed",
+      "input": {
+        "command": "diff -u doc/php83/evidence/return-contracts-sql/reviewed-compare-r1.py tools/php83/return-contracts-sql/compare.py; echo EXIT:$?",
+        "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+      },
+      "output": "--- doc/php83/evidence/return-contracts-sql/reviewed-compare-r1.py\t2026-09-26 17:28:59.150152285 -0300\n+++ tools/php83/return-contracts-sql/compare.py\t2026-09-26 17:28:59.159152382 -0300\n@@ -1,6 +1,6 @@\n #!/usr/bin/env python3\n \"\"\"Explicit 91-row SQL contract, separate from observation-only collector.\"\"\"\n-import argparse,json,pathlib\n+import argparse,hashlib,json,pathlib\n CLASSES=['PDO','PropelPDO','KalturaPDO','DebugPDO']\n def canonical(x):return json.dumps(x,sort_keys=True,separators=(',',':'))\n def same(a,b):return canonical(a)==canonical(b)\n@@ -23,6 +23,10 @@\n  rows.extend([['KalturaStatement','dry-write','KalturaStatement',YES,['array',[]]],['KalturaStatement','dry-select',YES,['integer',19]]]);return rows\n \n def validate(report,diagnostics):\n+ authority=pathlib.Path(__file__).resolve().parents[3]/'doc/php83/evidence/return-contracts-sql/preparation-r1/manifest.json'\n+ raw=authority.read_bytes()\n+ if hashlib.sha256(raw).hexdigest()!='4fe6843d9a64097b67aa76c9569d682f64001727ed6e381559ffcbaaf918dc07':raise ValueError('Frozen manifest authority drift')\n+ if report.get('stage_pin')!=hashlib.sha256(raw).hexdigest() or not same(report.get('identities'),json.loads(raw)):raise ValueError('Unapproved report source authority')\n  if report.get('status')!='OBSERVED_NOT_ACCEPTED' or report.get('application_acceptance') is not False:raise ValueError('Not complete observation')\n  if [r.get('cohort') for r in report['records']]!=['prerequisite','candidate']:raise ValueError('Cohort matrix')\n  for key in ['source','runtime']:\nEXIT:1\n",
+      "error": null
+    },
+    {
+      "type": "text",
+      "text": "38 tests, OK (`Ran 38 tests in 0.019s / OK`) \u2014 matches expected 38 (36 preserved + 2 new).\n\nDiff `reviewed-compare-r1.py` vs `compare.py` is guard-only:\n- `+import hashlib`\n- frozen `manifest.json` authority pinned to `4fe6843d...dc07`, raises on drift\n- rejects `stage_pin != sha256(manifest)` or `identities != manifest` \u2014 blocks self-authorized `source`+`loadedHash` drift\n\nNo blocker in this small delta. No broad re-review done."
+    }
+  ]
+}

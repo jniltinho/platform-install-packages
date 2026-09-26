@@ -1,0 +1,120 @@
+{
+  "prerequisite": [
+    [
+      8192,
+      "Return type of PropelConfiguration::offsetExists($offset) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+      "/audit/app/vendor/propel/util/PropelConfiguration.php",
+      60
+    ],
+    [
+      8192,
+      "Return type of PropelConfiguration::offsetGet($offset) should either be compatible with ArrayAccess::offsetGet(mixed $offset): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+      "/audit/app/vendor/propel/util/PropelConfiguration.php",
+      76
+    ],
+    [
+      8192,
+      "Return type of PropelConfiguration::offsetSet($offset, $value) should either be compatible with ArrayAccess::offsetSet(mixed $offset, mixed $value): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+      "/audit/app/vendor/propel/util/PropelConfiguration.php",
+      68
+    ],
+    [
+      8192,
+      "Return type of PropelConfiguration::offsetUnset($offset) should either be compatible with ArrayAccess::offsetUnset(mixed $offset): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+      "/audit/app/vendor/propel/util/PropelConfiguration.php",
+      84
+    ],
+    [
+      8192,
+      "Return type of PropelPDO::beginTransaction() should either be compatible with PDO::beginTransaction(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+      "/audit/app/vendor/propel/util/PropelPDO.php",
+      123
+    ],
+    [
+      8192,
+      "Return type of PropelPDO::commit() should either be compatible with PDO::commit(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+      "/audit/app/vendor/propel/util/PropelPDO.php",
+      139
+    ],
+    [
+      8192,
+      "Return type of PropelPDO::getAttribute($attribute) should either be compatible with PDO::getAttribute(int $attribute): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+      "/audit/app/vendor/propel/util/PropelPDO.php",
+      225
+    ],
+    [
+      8192,
+      "Return type of PropelPDO::prepare($sql, $driver_options = []) should either be compatible with PDO::prepare(string $query, array $options = []): PDOStatement|false, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+      "/audit/app/vendor/propel/util/PropelPDO.php",
+      244
+    ],
+    [
+      8192,
+      "Return type of PropelPDO::rollBack() should either be compatible with PDO::rollBack(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+      "/audit/app/vendor/propel/util/PropelPDO.php",
+      161
+    ],
+    [
+      8192,
+      "Return type of DebugPDOStatement::bindValue($pos, $value, $type = PDO::PARAM_STR) should either be compatible with PDOStatement::bindValue(string|int $param, mixed $value, int $type = PDO::PARAM_STR): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+      "/audit/app/vendor/propel/util/DebugPDOStatement.php",
+      119
+    ],
+    [
+      8192,
+      "Return type of DebugPDOStatement::execute($input_parameters = null) should either be compatible with PDOStatement::execute(?array $params = null): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+      "/audit/app/vendor/propel/util/DebugPDOStatement.php",
+      97
+    ],
+    [
+      8192,
+      "Return type of DebugPDO::exec($sql) should either be compatible with PDO::exec(string $statement): int|false, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+      "/audit/app/vendor/propel/util/DebugPDO.php",
+      309
+    ],
+    [
+      8192,
+      "Return type of DebugPDO::query(...$args) should either be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs): PDOStatement|false, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+      "/audit/app/vendor/propel/util/DebugPDO.php",
+      330
+    ],
+    [
+      8192,
+      "Return type of KalturaPDO::exec($sql) should either be compatible with PDO::exec(string $statement): int|false, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+      "/audit/app/alpha/apps/kaltura/lib/db/KalturaPDO.php",
+      127
+    ],
+    [
+      8192,
+      "Return type of KalturaPDO::query(...$args) should either be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs): PDOStatement|false, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+      "/audit/app/alpha/apps/kaltura/lib/db/KalturaPDO.php",
+      188
+    ]
+  ],
+  "candidate": [
+    [
+      8192,
+      "Return type of DebugPDOStatement::bindValue($pos, $value, $type = PDO::PARAM_STR) should either be compatible with PDOStatement::bindValue(string|int $param, mixed $value, int $type = PDO::PARAM_STR): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+      "/audit/app/vendor/propel/util/DebugPDOStatement.php",
+      119
+    ],
+    [
+      8192,
+      "Return type of DebugPDOStatement::execute($input_parameters = null) should either be compatible with PDOStatement::execute(?array $params = null): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+      "/audit/app/vendor/propel/util/DebugPDOStatement.php",
+      97
+    ],
+    [
+      8192,
+      "Return type of DebugPDO::exec($sql) should either be compatible with PDO::exec(string $statement): int|false, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+      "/audit/app/vendor/propel/util/DebugPDO.php",
+      309
+    ],
+    [
+      8192,
+      "Return type of DebugPDO::query(...$args) should either be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs): PDOStatement|false, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+      "/audit/app/vendor/propel/util/DebugPDO.php",
+      330
+    ]
+  ]
+}

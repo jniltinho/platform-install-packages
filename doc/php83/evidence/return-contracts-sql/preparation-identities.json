@@ -1,0 +1,16 @@
+{
+  "status": "PLAN_ONLY_NO_RUNTIME",
+  "zip_sha256": "de5e61a1b54f472e605ef2e87669302a3915616fd85378e0f05706fcb06a7e8b",
+  "selected_statement": {
+    "path": "alpha/apps/kaltura/lib/db/KalturaStatement.php",
+    "sha256": "e1c21b05e6c43ae98d9483b1ab1825068bed72234b32ea6c40e9886ed6a2c7d3"
+  },
+  "reused_patterns_only": {
+    "tools/php83/pdo-return-audit/probe.php": "e65acd41078ff4b468aaad2a5a526522bf8e0474ce9124792d6a8223b65bc2fe",
+    "tools/php83/pdo-return-audit/run.sh": "3d0974b3927cc62e3fa9a77ef45462f4f9354e1f22912004f6e62734813f22f1",
+    "tools/php83/pdo-return-audit/collect.py": "f7ff12cf20c1eb9d9cb3e6c1a958e01336ea2aa8943a73f9b5ebacc8894b196d",
+    "tools/php83/exp12-api/start-db.sh": "a59fbb43e88cf05100c411650d9a195ff7e9966dabef1bf6e585a4dcc40e558d",
+    "tools/php83/return-contracts/compose.py": "b6edbc4a7c05f28f4171ed10ca25e8e3f5efb94f3a25778c51392999e1bf3197"
+  },
+  "old_harness_not_authorization": true
+}

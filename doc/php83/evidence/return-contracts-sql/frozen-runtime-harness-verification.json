@@ -1,0 +1,5 @@
+{
+  "original_reviewed_files": 8,
+  "all_runtime_harness_unchanged": true,
+  "note": "New comparator and comparator tests do not modify prepared runtime inputs"
+}

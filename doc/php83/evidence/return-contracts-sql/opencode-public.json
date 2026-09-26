@@ -1,0 +1,47 @@
+{
+  "cli_exit": 0,
+  "events": [
+    {
+      "type": "text",
+      "text": "Local safety review \u2014 reading contracts and running unit checks only."
+    },
+    {
+      "type": "text",
+      "text": "Files reviewed \u2014 now running the local unit guards and shell syntax checks."
+    },
+    {
+      "type": "bash",
+      "status": "completed",
+      "input": {
+        "command": "python3 -m unittest discover -s tools/php83/return-contracts-sql -p \"test_*.py\" -v 2>&1",
+        "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+      },
+      "output": "test_atomic (test_guards.Guards.test_atomic) ... ok\ntest_datadir_before_ddl (test_guards.Guards.test_datadir_before_ddl) ... ok\ntest_diagnostic_channel (test_guards.Guards.test_diagnostic_channel) ... ok\ntest_empty_files (test_guards.Guards.test_empty_files) ... ok\ntest_exact_unit_cleanup (test_guards.Guards.test_exact_unit_cleanup) ... ok\ntest_extra_file (test_guards.Guards.test_extra_file) ... ok\ntest_file_drift (test_guards.Guards.test_file_drift) ... ok\ntest_manifest_drift (test_guards.Guards.test_manifest_drift) ... ok\ntest_missing_file (test_guards.Guards.test_missing_file) ... ok\ntest_native_control_full_classes (test_guards.Guards.test_native_control_full_classes) ... ok\ntest_nested_manifest_not_ignored (test_guards.Guards.test_nested_manifest_not_ignored) ... ok\ntest_no_scalar_coercion (test_guards.Guards.test_no_scalar_coercion) ... ok\ntest_only_four_seams (test_guards.Guards.test_only_four_seams) ... ok\ntest_prepare_badzip (test_guards.Guards.test_prepare_badzip) ... ok\ntest_prepare_existing (test_guards.Guards.test_prepare_existing) ... ok\ntest_self_rehashed_manifest_refused (test_guards.Guards.test_self_rehashed_manifest_refused) ... ok\ntest_symlink (test_guards.Guards.test_symlink) ... ok\ntest_verify (test_guards.Guards.test_verify) ... ok\n\n----------------------------------------------------------------------\nRan 18 tests in 0.003s\n\nOK\n",
+      "error": null
+    },
+    {
+      "type": "bash",
+      "status": "completed",
+      "input": {
+        "command": "bash -n tools/php83/return-contracts-sql/run.sh; echo \"run.sh:$?\"",
+        "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+      },
+      "output": "run.sh:0\n",
+      "error": null
+    },
+    {
+      "type": "bash",
+      "status": "completed",
+      "input": {
+        "command": "bash -n tools/php83/return-contracts-sql/start-db.sh; echo \"start-db.sh:$?\"",
+        "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+      },
+      "output": "start-db.sh:0\n",
+      "error": null
+    },
+    {
+      "type": "text",
+      "text": "Real tests (local only, no VM/SSH/DB/edits):\n\n* `python3 -m unittest discover -s tools/php83/return-contracts-sql -p \"test_*.py\" -v`: 18/18 OK (verify, drift, extra/missing, symlink, nested-manifest, empty, badzip/existing, self-rehash-refused, atomic, diagnostic-channel, no-coercion, 4-seams, datadir-before-DDL, 4-class-native, exact-unit-cleanup).\n* `bash -n tools/php83/return-contracts-sql/run.sh`: 0 pass.\n* `bash -n tools/php83/return-contracts-sql/start-db.sh`: 0 pass.\n* No `run.sh`/`start-db.sh`/`observe.py`/`probe.php` executed; no SSH/DB touched.\n\nBlocking findings before live SQL:\n\n1. `freshUUID + @@datadir before DDL`: PASS in code \u2014 `observe.py:26,47` fresh `uuid4().hex` stage + per-cohort token/datadir/unit; `probe.php:11-15` regex-guards `PHP83_PROBE_DATADIR` then `SELECT @@datadir === expected` before `CREATE DATABASE/TABLE`; `start-db.sh` owns `mkdir -m 700 /tmp/kaltura-return-sql.$token` + `--skip-networking` socket-only. Must still prove live: startup JSON `!=db` aborts (`observe.py:51`).\n2. `exact-unit finally cleanup`: PASS in code \u2014 `finally: remote('sudo -n systemctl stop '+db['unit'])` + `is-active` must be `inactive/failed/unknown` else raise; no `pkill` (test asserts). Gap: cleanup stops unit only, never `rm -rf $d`; `start-db.sh:14` explicitly retains `$d` on failure \u2014 stale datadir/socket leak across retries, disk-exhaustion risk on baseline.\n3. `pinned full source v3-only/v3+family`: NOT PROVEN locally \u2014 `prepare.py:5-7` pins `ZIP_SHA de5e\u2026` + `COMPOSITION_SHA 1dc5\u2026`, rebuilds via `return-contracts/compose.py`, checks `variants==expected`, strips `identities.json`, adds only 4 `EXTRA` + 5-file `HARNESS`, `verify.py` enforces exact file-map/no-symlink; `observe.validate` rebuilds to temp and requires `ids==expected`. Local tests mock this path (`badzip/existing/self-rehash` only). Live blocker: real ZIP + composition authority + `exp12/prerequisite/candidate` full 8-file set (`probe.php:6` needs `PropelConfiguration/PropelPDO/DebugPDO/KalturaPDO` beyond the 4 `EXTRA`) must validate before any `run.sh`.\n4. `real PDO 4-class, logging/cache/monitor-only seams`: PASS in code \u2014 `probe.php:18` `['PDO','PropelPDO','KalturaPDO','DebugPDO']` \u00d7 `SILENT/EXCEPTION` + nested-commit/rollback + cache + no-active + `KalturaStatement` dry-run; `get_class($s)` native control kept; `seams.php` exactly `KalturaLog/KalturaMonitorClient/kQueryCache/kApiCache` counting only, no SQL/DSN/timing capture.\n5. `no scalar casts / native warnings preserved`: PASS in code \u2014 no `(int)/(bool)/(string)/intval/boolval`; `set_error_handler \u2026 return false` + `diagnostics` in output JSON; `typed()/outcome()` keeps `[gettype,val]` / `[class,typed(code)]`.\n6. Harness exit-code trap: `observe.py:76` always `raise SystemExit(2)` even on `OBSERVED_NOT_ACCEPTED`, `application_acceptance:false` throughout \u2014 automation must expect exit 2, and this is observation-only, never acceptance.\n"
+    }
+  ]
+}

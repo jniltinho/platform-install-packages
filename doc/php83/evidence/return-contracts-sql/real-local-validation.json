@@ -1,0 +1,12 @@
+{
+  "status": "EXACT_REBUILD_AND_SOURCE_VALIDATION",
+  "stage_pin": "4fe6843d9a64097b67aa76c9569d682f64001727ed6e381559ffcbaaf918dc07",
+  "files": 38,
+  "cohorts": [
+    "prerequisite",
+    "candidate"
+  ],
+  "all_reviewed_harness_unchanged": true,
+  "source_zip": "de5e61a1b54f472e605ef2e87669302a3915616fd85378e0f05706fcb06a7e8b",
+  "application_acceptance": false
+}

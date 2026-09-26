@@ -1,0 +1,11 @@
+{
+  "status": "BOUNDED_SQL_CONTRACT_AND_INDEPENDENT_REPEAT",
+  "cases_per_cohort": 91,
+  "cohorts_per_run": 2,
+  "native_repeat_records_exact": true,
+  "diagnostics": [
+    15,
+    4
+  ],
+  "application_acceptance": false
+}

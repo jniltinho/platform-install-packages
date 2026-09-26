@@ -1,0 +1,41 @@
+{
+  "cli_exit": 0,
+  "events": [
+    {
+      "type": "text",
+      "text": "Bounded local check only \u2014 running your two commands and reviewing the oracle/negatives."
+    },
+    {
+      "type": "bash",
+      "status": "completed",
+      "input": {
+        "command": "python3 -m unittest discover -s tools/php83/return-contracts-sql -p \"test_*.py\" 2>&1",
+        "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+      },
+      "output": "....................................\n----------------------------------------------------------------------\nRan 36 tests in 0.018s\n\nOK\n",
+      "error": null
+    },
+    {
+      "type": "text",
+      "text": "Unit discovery passed (36 tests). Now the comparison and oracle review."
+    },
+    {
+      "type": "bash",
+      "status": "completed",
+      "input": {
+        "command": "python3 tools/php83/return-contracts-sql/compare.py doc/php83/evidence/return-contracts-sql/primary-r1.json doc/php83/evidence/return-contracts-sql/independent-r1.json --diagnostics doc/php83/evidence/return-contracts-sql/diagnostic-contract-r1.json 2>&1",
+        "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+      },
+      "output": "{\n  \"status\": \"BOUNDED_SQL_CONTRACT_AND_INDEPENDENT_REPEAT\",\n  \"cases_per_cohort\": 91,\n  \"cohorts_per_run\": 2,\n  \"native_repeat_records_exact\": true,\n  \"diagnostics\": [\n    15,\n    4\n  ],\n  \"application_acceptance\": false\n}\n",
+      "error": null
+    },
+    {
+      "type": "text",
+      "text": "Both commands executed \u2014 now reading the oracle and negative tests for the final verdict."
+    },
+    {
+      "type": "text",
+      "text": "Local bounded review \u2014 no edits, no VM/SSH/SQL, no unrelated exploration:\n\n**1. `python3 -m unittest discover -s tools/php83/return-contracts-sql -p \"test_*.py\"`:**\n`Ran 36 tests \u2014 OK`\n\n**2. `compare.py primary-r1.json independent-r1.json --diagnostics diagnostic-contract-r1.json`:**\n```json\n{\n  \"status\": \"BOUNDED_SQL_CONTRACT_AND_INDEPENDENT_REPEAT\",\n  \"cases_per_cohort\": 91,\n  \"cohorts_per_run\": 2,\n  \"native_repeat_records_exact\": true,\n  \"diagnostics\": [15, 4],\n  \"application_acceptance\": false\n}\n```\n\n**3. `compare.py` explicit-91 oracle (`tools/php83/return-contracts-sql/compare.py:9-23`):**\nHard-coded typed rows, not observation-only: 4 classes \u00d7 2 modes \u00d7 9 rows + nested-commit/rollback/cache/no-active + 2 `KalturaStatement` rows = 91. `len(expected_rows())==91` asserted.\n\n**4. `test_compare.py` negatives (`test_compare.py:10-26`):**\nAll present and covered by the 36-test pass:\n- blind equal-wrong rejected: `test_both_cohorts_same_wrong_value` sets both cohorts to `9` \u2192 `ValueError: Typed functional oracle mismatch`.\n- typedness: `test_exit_bool/exit_float`, `test_typed_float/typed_bool` (`type(...) is int` rejects `False`/`0.0`).\n- matrix: cohort order must be `['prerequisite','candidate']`; duplicate/missing rejected.\n- native stderr: `expected_stderr` rebuilt as `Deprecated: ...` per `diagnostics[cohort]` (`compare.py:36-37`), exact match; `test_extra_stderr`/`test_dropped_diagnostic` rejected.\n- cleanup: `stopped is True`, `stop_exit is int 0` (rejects `False`), `state=='inactive'`, `state_exit in (3,4)`; `test_stop_false`/`test_active_unit` rejected.\n- source/runtime/loaded binding: `source_before==source_after`, `runtime_before==runtime_after`, loaded hashes bound to manifest, 8-file inventory pinned; drift rejected.\n\n**Verdict: BOUNDED PASS, no concrete blocker for this contract.**\n- Primary Codex + independent Claude repeat: both validate, `body` + `exit/stdout/stderr` + `runtime_before` + `identities` exact across runs, 2 cohorts each, units stopped.\n- Diagnostics contract sampled primary (`[15,4]`), retained warnings not waived (`body/stdout` retained match + exact `stderr`).\n- Explicitly **not** full-API/MSSQL acceptance: `status=OBSERVED_NOT_ACCEPTED/BOUNDED_SQL_CONTRACT_AND_INDEPENDENT_REPEAT`, `application_acceptance=false`.\n\nStopped here per bounded scope.\n"
+    }
+  ]
+}

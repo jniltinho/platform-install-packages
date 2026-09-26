@@ -1,0 +1,10 @@
+{
+  "tools/php83/return-contracts-sql/test_guards.py": "49fb2c5696f1d86a18c08947a40775375d9e38482c0ef60a6aa1bcb6ccdf40e2",
+  "tools/php83/return-contracts-sql/verify.py": "41de9249f7b510d2b35b1581a31bab64834ab3344ddc54f7b3989b97d557ca84",
+  "tools/php83/return-contracts-sql/probe.php": "85d4e2e2d50b19b05e49f6eef96029712761e28d3819a3075055e4473db056a0",
+  "tools/php83/return-contracts-sql/observe.py": "497331e7a3c8271a8219aedee50a817b38025ecab952fe9dfee9adca230eb5f8",
+  "tools/php83/return-contracts-sql/run.sh": "e4f1415dee38fd50b476d45f12e2698b344afb2b18d1a01d912103237fe2890a",
+  "tools/php83/return-contracts-sql/start-db.sh": "76db53cb2552a04b438fdbfde56651d8b3318569c0ace718b4e75eb7e43847dd",
+  "tools/php83/return-contracts-sql/prepare.py": "ded437342045da739ac44a2a51badcfaec195bba14d0ba167e920229008310cb",
+  "tools/php83/return-contracts-sql/seams.php": "cbd6edc0dbcd9c42cd6e5aa9d4bd1dc888cf7b2d7f8a0c1ca1aa6e5220724cf3"
+}
