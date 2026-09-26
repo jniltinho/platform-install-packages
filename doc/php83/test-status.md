@@ -58,11 +58,35 @@ approved production release.
 and60s1080p60 H.264/AAC fixtures; no application upload/delivery claim follows.
 [Deadline transport](baseline-transport.md) has19 independently executed local
 tests including real synthetic TLS and cleanup. [API protocol](baseline-api.md)
-has 36 independently executed local tests; real baseline rehearsal and measured
-rounds remain pending. [Provider decision draft](provider-decision-draft.md)
+has 36 independently executed local tests. The subsequent untimed baseline
+rehearsal reached the actual PHP7.4 Apache provider and wrong-secret rejection,
+but stopped before valid authentication or upload: its synthetic invalid secret
+was found in two DEBUG log emissions. No real USER secret was sent by that run.
+The earlier log-size guard failure is preserved; no logs were erased or diagnostic
+levels lowered. A narrowly scoped privacy repair and an explicitly revised lab
+baseline policy need review before retry. Measured rounds remain pending.
+[Provider decision draft](provider-decision-draft.md)
 reconciles historical provider probes with SOAP/APC gaps, without selecting a
 production provider. No broad task checkbox closes from these
 supporting results, and there is still no final release or production cutover.
+
+## Subsequent held investigations — not integrated into exp12
+
+- Dispatcher/rank checkpoint `30c397af`: four native83 primary processes with
+  unchanged runtime/source identities. The targeted dynamic-property attribute
+  preserves serialization in eight states; a public declaration changes seven.
+  The attribute also exempts descendants/future dynamic names, an explicit policy
+  cost, while an unrelated-class diagnostic remains. Original rank reflection
+  requires all three arguments and five omission controls fail before the body.
+  No rank repair, positive persistence test or independent native repetition is
+  claimed at this checkpoint. [Evidence](dispatch-rank.md).
+- AWS credential serialization: 60 native83 observations independently repeated
+  by actual OpenCode, with identical results and runtime snapshots. The first
+  bridge is **rejected**: invalid UTF-8 can be written and fails only on reading,
+  unlike the original write-time failure. Original readers also reject the new O
+  format. A corrected candidate, original74 comparison, actual cache boundary
+  and recovery policy remain pending. No accepted warning reduction or new ZIP
+  follows from this rejected experiment. [Evidence](serialization-contracts.md).
 
 ## Historical artifact-runtime checkpoint: exp11 real-artifact regression
 
