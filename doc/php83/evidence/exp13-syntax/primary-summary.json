@@ -1,0 +1,139 @@
+{
+  "status": "COMPLETE_BOUNDED",
+  "summaries": {
+    "exp12": {
+      "files_scanned": 11784,
+      "compiler_rejected": 7,
+      "compiler_accepted": 11777,
+      "incomplete": 0,
+      "diagnostic_files": 73,
+      "accepted_with_diagnostics": 66
+    },
+    "exp13": {
+      "files_scanned": 11785,
+      "compiler_rejected": 7,
+      "compiler_accepted": 11778,
+      "incomplete": 0,
+      "diagnostic_files": 72,
+      "accepted_with_diagnostics": 65
+    }
+  },
+  "comparison": {
+    "bounded_compiler_nonregression": true,
+    "added_paths": [
+      "infra/general/kXmlEntityLoaderPolicy.php"
+    ],
+    "changed_paths": [
+      "alpha/apps/kaltura/lib/db/KalturaPDO.php",
+      "alpha/config/kConf.php",
+      "api_v3/lib/KalturaFrontController.php",
+      "api_v3/lib/exceptions/KalturaAPIException.php",
+      "infra/general/kSoapClient.php",
+      "vendor/aws/Aws/Common/Credentials/AbstractCredentialsDecorator.php",
+      "vendor/aws/Aws/Common/Credentials/Credentials.php",
+      "vendor/aws/Aws/Common/Credentials/NullCredentials.php",
+      "vendor/aws/Doctrine/Common/Cache/FileCache.php",
+      "vendor/propel/util/DebugPDO.php",
+      "vendor/propel/util/PropelConfiguration.php",
+      "vendor/propel/util/PropelPDO.php"
+    ],
+    "remaining_rejected_paths": [
+      "vendor/aws/Doctrine/Common/Cache/RiakCache.php",
+      "vendor/symfony-data/generator/sfPropelAdmin/default/skeleton/actions/actions.class.php",
+      "vendor/symfony-data/generator/sfPropelCrud/default/skeleton/actions/actions.class.php",
+      "vendor/symfony-data/skeleton/batch/default.php",
+      "vendor/symfony-data/skeleton/batch/rotate_log.php",
+      "vendor/symfony-data/skeleton/controller/controller.php",
+      "vendor/symfony-data/skeleton/module/module/actions/actions.class.php"
+    ],
+    "diagnostic_delta": [
+      {
+        "path": "alpha/apps/kaltura/lib/db/KalturaPDO.php",
+        "kind": "changed",
+        "before_diagnostics": "",
+        "after_diagnostics": ""
+      },
+      {
+        "path": "alpha/config/kConf.php",
+        "kind": "changed",
+        "before_diagnostics": "",
+        "after_diagnostics": ""
+      },
+      {
+        "path": "api_v3/lib/KalturaFrontController.php",
+        "kind": "changed",
+        "before_diagnostics": "",
+        "after_diagnostics": ""
+      },
+      {
+        "path": "api_v3/lib/exceptions/KalturaAPIException.php",
+        "kind": "changed",
+        "before_diagnostics": "Deprecated: Return type of KalturaAPIException::__wakeup() should either be compatible with Exception::__wakeup(): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in api_v3/lib/exceptions/KalturaAPIException.php on line 40",
+        "after_diagnostics": ""
+      },
+      {
+        "path": "infra/general/kSoapClient.php",
+        "kind": "changed",
+        "before_diagnostics": "",
+        "after_diagnostics": ""
+      },
+      {
+        "path": "infra/general/kXmlEntityLoaderPolicy.php",
+        "kind": "added",
+        "before_diagnostics": null,
+        "after_diagnostics": ""
+      },
+      {
+        "path": "vendor/aws/Aws/Common/Credentials/AbstractCredentialsDecorator.php",
+        "kind": "changed",
+        "before_diagnostics": "",
+        "after_diagnostics": ""
+      },
+      {
+        "path": "vendor/aws/Aws/Common/Credentials/Credentials.php",
+        "kind": "changed",
+        "before_diagnostics": "",
+        "after_diagnostics": ""
+      },
+      {
+        "path": "vendor/aws/Aws/Common/Credentials/NullCredentials.php",
+        "kind": "changed",
+        "before_diagnostics": "",
+        "after_diagnostics": ""
+      },
+      {
+        "path": "vendor/aws/Doctrine/Common/Cache/FileCache.php",
+        "kind": "changed",
+        "before_diagnostics": "",
+        "after_diagnostics": ""
+      },
+      {
+        "path": "vendor/propel/util/DebugPDO.php",
+        "kind": "changed",
+        "before_diagnostics": "",
+        "after_diagnostics": ""
+      },
+      {
+        "path": "vendor/propel/util/PropelConfiguration.php",
+        "kind": "changed",
+        "before_diagnostics": "",
+        "after_diagnostics": ""
+      },
+      {
+        "path": "vendor/propel/util/PropelPDO.php",
+        "kind": "changed",
+        "before_diagnostics": "",
+        "after_diagnostics": ""
+      }
+    ],
+    "candidate_all_files_compile": false,
+    "application_acceptance": false
+  },
+  "runtime_equal": true,
+  "harness_equal": true,
+  "source_equal": {
+    "exp12": true,
+    "exp13": true
+  },
+  "primary_sha256": "adf32e3cfd7be42f87e0258e28629566a4317966bdefc20b663f730d332ff1cc"
+}

@@ -1,0 +1,47 @@
+{
+  "cli_exit": 0,
+  "events": [
+    {
+      "type": "text",
+      "text": "Local-only compiler check \u2014 running your exp13 syntax tests verbatim, no VM."
+    },
+    {
+      "type": "bash",
+      "status": "completed",
+      "input": {
+        "command": "ls -R tools/php83/exp13-syntax 2>&1 | head -n 100; echo \"---\"; sha256sum tools/php83/exp13-syntax/frozen-core.py 2>&1; echo \"---\"; cat tools/php83/exp13-syntax/input-contract.json 2>&1 | head -n 200",
+        "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+      },
+      "output": "tools/php83/exp13-syntax:\n__pycache__\ncompare.py\nfrozen-core.py\ninput-contract.json\nrun.sh\nscan.py\nstage.py\ntest_scan.py\n\ntools/php83/exp13-syntax/__pycache__:\nfrozen-core.cpython-312.pyc\nscan.cpython-312.pyc\ntest_scan.cpython-312.pyc\n---\nfd98fdb419679017363cdb4fe6fc2f0db0dfcbbe5ee84d3055f79e4260e48f3e  tools/php83/exp13-syntax/frozen-core.py\n---\n{\n  \"schema\": 1,\n  \"pins\": {\n    \"exp12\": \"de5e61a1b54f472e605ef2e87669302a3915616fd85378e0f05706fcb06a7e8b\",\n    \"exp13\": \"6d0bc4947207e6c5457b7843948d263aa8d5f251480e58cbf9086c0add79a944\"\n  },\n  \"counts\": {\n    \"exp12\": 11784,\n    \"exp13\": 11785\n  },\n  \"composition_sha256\": \"d2658b6debc4f132232bc538a3db5103eaf5a435a430d10686e7c477f5b30765\",\n  \"targets\": [\n    {\n      \"path\": \"alpha/config/kConf.php\",\n      \"exp12_sha256\": \"d02983c560f6813c3546f2294a324d7a955f669e5b867d56d9a878c397cfa015\",\n      \"exp13_sha256\": \"e83d565b1c88c15812e180efff0f84d978bb46e04391985bfe9f0b481f56f5df\"\n    },\n    {\n      \"path\": \"infra/general/kSoapClient.php\",\n      \"exp12_sha256\": \"6fe1abef06f3f365fc1862de0e25ffeaef9da156e731fd7cc17b386623561b7e\",\n      \"exp13_sha256\": \"0091ab9704783d547f80b3035c26b1aa6f88bd973032df4722fcf3c4ce20d4ce\"\n    },\n    {\n      \"path\": \"infra/general/kXmlEntityLoaderPolicy.php\",\n      \"exp12_sha256\": null,\n      \"exp13_sha256\": \"00bbe2929d9fffe2f1c86581845f8a11e8089d1b24734018297d2a0cc2104889\"\n    },\n    {\n      \"path\": \"vendor/aws/Aws/Common/Credentials/Credentials.php\",\n      \"exp12_sha256\": \"033b5c890519270b14536db4b93ca260d071554b2afc8a6d2b96d0397ca4da90\",\n      \"exp13_sha256\": \"7913bbb5ddd1d57a2935014c4e259ac03e063c97fa90ee4b4ac177e2b52fb5d2\"\n    },\n    {\n      \"path\": \"vendor/aws/Aws/Common/Credentials/NullCredentials.php\",\n      \"exp12_sha256\": \"d44d7e14527c4c0aad730d03973969890e3741655667999d586596a485107c53\",\n      \"exp13_sha256\": \"294481b0f57b9d1c8a446479babf9899d722d65e7c6553c25b19c6b98b06f741\"\n    },\n    {\n      \"path\": \"vendor/aws/Aws/Common/Credentials/AbstractCredentialsDecorator.php\",\n      \"exp12_sha256\": \"e7e265a862684685f90d7911bfc0367ceacf23710108b4e3846322cbba896375\",\n      \"exp13_sha256\": \"1a9fd1dbead188bacc82fd3b1348b5023042fb31b61c8735d0f90a2e98195b4d\"\n    },\n    {\n      \"path\": \"vendor/aws/Doctrine/Common/Cache/FileCache.php\",\n      \"exp12_sha256\": \"4df80a6c6d7e00689202bedd4cc9eaa152174f5026da99de6ae09be4eb91012a\",\n      \"exp13_sha256\": \"766142ffc63cfe53bb7009c68ca6efc20017d026337b28c6f22d1aff93e3a306\"\n    },\n    {\n      \"path\": \"api_v3/lib/KalturaFrontController.php\",\n      \"exp12_sha256\": \"189607dca3b5ef33270d8e4dfe081daf6a76f39d5fd49066ee0b83f24c62d71a\",\n      \"exp13_sha256\": \"98eee32e47092d371ef31a90c2fea6c2575d2505a4c4cefdc625dd60c44fd12a\"\n    },\n    {\n      \"path\": \"alpha/apps/kaltura/lib/db/KalturaPDO.php\",\n      \"exp12_sha256\": \"aeb012822d0af7c5fe0e6ea4221f789fc8c886f0c53dbb729a51bc9463a30f0e\",\n      \"exp13_sha256\": \"2c4e638080c9dfaefaab566125b5138bb8fe188e015753ed33321884a474bd51\"\n    },\n    {\n      \"path\": \"vendor/propel/util/PropelPDO.php\",\n      \"exp12_sha256\": \"9017430cfa12adc2de1a187f2d034ecba04ab32677cdbdc419ba2a1e1fc5f0d3\",\n      \"exp13_sha256\": \"b9b6043c290e346e90a36d543fbac7a6366fbe3def5668a9d3711d40593278e1\"\n    },\n    {\n      \"path\": \"vendor/propel/util/PropelConfiguration.php\",\n      \"exp12_sha256\": \"955aa16a6da6e24d80ab2f87deb79c64f9182c45a7066b9ea12c93d135812980\",\n      \"exp13_sha256\": \"2cb726b768ac9329dc20e1c1295e20cae2dd2877e61785e3d429b4c186827ab6\"\n    },\n    {\n      \"path\": \"api_v3/lib/exceptions/KalturaAPIException.php\",\n      \"exp12_sha256\": \"7f8352e8fb01c6913f85ae35b4b7acb36466c5d9a0f6b9d5f6581ea84655abcb\",\n      \"exp13_sha256\": \"3c342574b392197e24fe285dc238239fac1bccb33bb808569e09b038ed9eec6e\"\n    },\n    {\n      \"path\": \"vendor/propel/util/DebugPDO.php\",\n      \"exp12_sha256\": \"6178d39fd2c11c2bd2dcc220c4234f72dfb11364c11d381e7f7bfaf55089e021\",\n      \"exp13_sha256\": \"8f800a0146345f05a71950e3785e442d4aee351184309246cb28159a2afe2ea0\"\n    }\n  ],\n  \"historical_rejections\": [\n    \"vendor/aws/Doctrine/Common/Cache/RiakCache.php\",\n    \"vendor/symfony-data/generator/sfPropelAdmin/default/skeleton/actions/actions.class.php\",\n    \"vendor/symfony-data/generator/sfPropelCrud/default/skeleton/actions/actions.class.php\",\n    \"vendor/symfony-data/skeleton/batch/default.php\",\n    \"vendor/symfony-data/skeleton/batch/rotate_log.php\",\n    \"vendor/symfony-data/skeleton/controller/controller.php\",\n    \"vendor/symfony-data/skeleton/module/module/actions/actions.class.php\"\n  ]\n}\n",
+      "error": null
+    },
+    {
+      "type": "bash",
+      "status": "completed",
+      "input": {
+        "command": "python3 -m unittest discover -s tools/php83/exp13-syntax -p 'test_*.py' 2>&1; echo \"EXIT:$?\"",
+        "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+      },
+      "output": "......................\n----------------------------------------------------------------------\nRan 22 tests in 2.830s\n\nOK\nEXIT:0\n",
+      "error": null
+    },
+    {
+      "type": "bash",
+      "status": "completed",
+      "input": {
+        "command": "bash -n tools/php83/exp13-syntax/run.sh 2>&1; echo \"EXIT:$?\"",
+        "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+      },
+      "output": "EXIT:0\n",
+      "error": null
+    },
+    {
+      "type": "text",
+      "text": "Tests passed \u2014 now reviewing the thin adapters."
+    },
+    {
+      "type": "text",
+      "text": "LOCAL-ONLY compiler review \u2014 no VM/SSH/edits.\n\nActual tests executed in `/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83`:\n\n* `python3 -m unittest discover -s tools/php83/exp13-syntax -p 'test_*.py'` \u2192 `Ran 22 tests, OK`, exit 0.\n* `bash -n tools/php83/exp13-syntax/run.sh` \u2192 exit 0.\n* `sha256sum frozen-core.py` \u2192 `fd98fdb4\u202648f3e` matches `CORE_PIN` in `scan.py`; old-core broad review correctly skipped.\n\nThin-adapter review (`scan.py/compare.py/stage.py/run.sh/input-contract.json`):\n\n* Contract: pins `exp12 de5e61a1\u2026` / `exp13 6d0bc494\u2026`, counts `11784\u219211785`, 13 targets = 12 modified + 1 added (`infra/general/kXmlEntityLoaderPolicy.php` null `exp12_sha`), 7 historical rejects \u2014 all match claim.\n* `scan.py`: reuses only frozen helpers (`require/sha/strict_equal/SUFFIXES/FLAGS/PHP` + `archive_inventory/summarize`), pin-gated. Strict `type(x) is int` (rejects `bool`), `exit in (0,255)` (rejects `124`/timeout = incomplete, tested), raw `stdout/stderr` retained + `diagnostics` derivation re-validated, pre/post `sha`, full-count anti-truncation, exact added/changed/un\u00adchanged-drift checks, 7-reject equality, runtime (`uid 1000`, read-only `/audit` binds, `ldd`, `PHP 8.3`, `-n` no-INI) + harness + source pre/post with `IDENTITY_FAILURE_OR_INCOMPLETE` downgrade. Flags `PHP -n -l`, no include/SQL/network.\n* `compare.py`: sidecars `.exit==0`/`.stderr==''`, contract/harness/runtime/source/summary/comparison recompute, `normalize()` pops only `duration_ns` \u2014 duration-only tolerance correct.\n* `stage.py`: ZIP pin check pre-extract, unsafe-path/duplicate/symlink refusal, refuses existing target, `hostname kaltura-php83-lab + euid 1000` gate, never executes PHP.\n* `run.sh`: `hostname+uid` gate, `set -euo pipefail`, `systemd-run PrivateNetwork=yes`, `socket` syscall deny, `ProtectSystem=strict`, read-only binds, `env -i LC_ALL=C TZ=UTC python3 -B`.\n\nBlockers: none. No missing/duplicate/truncated/false-pass vectors found; unit tests explicitly cover truncation, duplicate, `124`, bool/float exit, raw-stderr drift, unapproved/added hash, missing raw, wrong command, changed rejection.\n\nVerdict: LOCAL REVIEW PASS (compiler-only). NOT application acceptance; paired `/audit` VM run + independent `compare.py` still required.\n"
+    }
+  ]
+}
