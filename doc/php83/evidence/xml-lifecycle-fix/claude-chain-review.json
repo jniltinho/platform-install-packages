@@ -1,0 +1,267 @@
+{
+  "case": "callback-throw (baseline, candidate) only",
+  "executor": "Claude CLI (claude-opus-5-5), foreground",
+  "reviewer": "Claude (instrumentation delta pre-review; same executor \u2014 not independent of this execution)",
+  "verdict": "CHAIN_CAPTURED_NOT_PRODUCT_ACCEPTANCE",
+  "acceptance": false,
+  "product_changed": false,
+  "pre_execution_review": {
+    "blocker": null,
+    "behavior_delta": "behavior-chain.php vs behavior.php: only normalizeException chain (depth<32 + chain_truncated), $resolverExceptions capture of the actual RuntimeException object before throw, and resolver_exceptions output key",
+    "stage_delta": "diff -rq frozen vs chain prep: only behavior.php, run-native.sh (base dir + phase string), identities.json (phase + 2 hashes); 21 manifest files, no drift, no unmanifested files; frozen prep has no drift",
+    "bash_n_run_native": 0,
+    "notes": [
+      "collect-chain requires exactly one resolver exception per variant (conservative)",
+      "collect-chain uses assert for out-exists refusal (disabled only under python -O; not used)",
+      "remote dir /home/vagrant/php-xml-lifecycle-fix-chain-r1 remains, read-only (0444/0555)"
+    ]
+  },
+  "identities": {
+    "stage_manifest_sha256": "5feb006310c2a7da6e790570f71b069738c127bd3374c52aebbf1ee81eed8017",
+    "frozen_manifest_sha256": "c06f54b7dff9035ea1680d96416ab29d7b4669a5dbe26e417bedccf27d742a08",
+    "collector_sha256": "f3f70bdeec6d5c2446e281b4745a73db45f4b417288948bb2df408dd21173099",
+    "stage_chain_py": "25580aef93771ee0b456a4127f92ba58bbda7875d439a8ff103ec7724d3174cd",
+    "prepare_chain_py": "3f5ce5b0303b00f66e88bc1be24de02f1ad1ff04d40aa9dd98ba0013db3b354d",
+    "behavior_chain_php": "2096059a3a2141a468fd11a381da0f927578824e9da35857e8e5b457e73c6745",
+    "snapshot_php83_py": "ec8f5473fc599259b343ebc3713b55b24753959de559c10a5cbe1254909bb429"
+  },
+  "environment": {
+    "host": "kaltura-php83-lab (uid 1000) via /tmp/kaltura-php83-ssh.conf",
+    "php": "8.3.6 (80306)",
+    "libxml": "2.9.14",
+    "error_reporting": 32767,
+    "sandbox": "systemd-run PrivateNetwork, socket syscalls denied, ProtectSystem=strict, open_basedir=/audit/probe"
+  },
+  "commands": [
+    {
+      "n": 1,
+      "cmd": "PYTHONDONTWRITEBYTECODE=1 python3 tools/php83/xml-lifecycle-fix/stage-chain.py doc/php83/evidence/xml-lifecycle-fix/claude-chain-stage",
+      "exit": 0,
+      "stdout": "{\"stage_exit\": 0, \"manifest_sha256\": \"5feb006310c2a7da6e790570f71b069738c127bd3374c52aebbf1ee81eed8017\"}",
+      "stderr_bytes": 0
+    },
+    {
+      "n": 2,
+      "cmd": "python3 doc/php83/evidence/exp10-runtime/snapshot-php83.py doc/php83/evidence/xml-lifecycle-fix/claude-chain-before.json",
+      "exit": 0,
+      "stdout": "{\"files\": 39, \"modes\": 2}",
+      "stderr_bytes": 0
+    },
+    {
+      "n": 3,
+      "cmd": "PYTHONDONTWRITEBYTECODE=1 python3 tools/php83/xml-lifecycle-fix/collect-chain.py /tmp/php-xml-lifecycle-fix-chain-prep-r1 doc/php83/evidence/xml-lifecycle-fix/claude-chain-matrix.json",
+      "exit": 0,
+      "stdout": "{\"records\": 2, \"failed\": false}",
+      "stderr_bytes": 0
+    },
+    {
+      "n": 4,
+      "cmd": "python3 doc/php83/evidence/exp10-runtime/snapshot-php83.py doc/php83/evidence/xml-lifecycle-fix/claude-chain-after.json",
+      "exit": 0,
+      "stdout": "{\"files\": 39, \"modes\": 2}",
+      "stderr_bytes": 0
+    }
+  ],
+  "stage_remote": {
+    "exit": 0,
+    "stdout_bytes": 0,
+    "stderr_bytes": 0
+  },
+  "wall_clock_s": "~2 for all 4 commands",
+  "runtime_snapshots": {
+    "before_sha256": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491",
+    "after_sha256": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491",
+    "before_eq_after": true,
+    "eq_primary_runtime_before_and_after": true
+  },
+  "results": {
+    "baseline": {
+      "native_exit": 0,
+      "thrown_by_resolver": [
+        {
+          "phase": "operation:construct",
+          "exception": {
+            "class": "RuntimeException",
+            "message": "SYNTHETIC_LOADER_FAILURE",
+            "chain": [
+              {
+                "class": "RuntimeException",
+                "message": "SYNTHETIC_LOADER_FAILURE"
+              }
+            ],
+            "chain_truncated": false
+          }
+        }
+      ],
+      "resulting_exception": {
+        "class": "SoapFault",
+        "message": "SOAP-ERROR: Parsing WSDL: Couldn't load from 'file:///audit/probe/fixtures/good.wsdl'",
+        "chain": [
+          {
+            "class": "SoapFault",
+            "message": "SOAP-ERROR: Parsing WSDL: Couldn't load from 'file:///audit/probe/fixtures/good.wsdl'"
+          }
+        ],
+        "chain_truncated": false
+      },
+      "resulting_previous_is_null": true,
+      "runtime_exception_retained_as_previous": false,
+      "result": null,
+      "lifecycle_events": {
+        "before-kConf": {
+          "wrappers": {
+            "http": true,
+            "https": true
+          },
+          "marker_seen": true,
+          "callback_same": true
+        },
+        "after-kConf": {
+          "wrappers": {
+            "http": false,
+            "https": false
+          },
+          "marker_seen": true,
+          "callback_same": true
+        },
+        "after-operation": {
+          "wrappers": {
+            "http": true,
+            "https": true
+          },
+          "marker_seen": true,
+          "callback_same": true
+        }
+      },
+      "resolver_event_phases": [
+        "observer:before-kConf",
+        "observer:after-kConf",
+        "operation:construct",
+        "observer:after-operation"
+      ],
+      "diagnostics": [
+        {
+          "phase": "load-kConf",
+          "severity": 8192,
+          "message": "Function libxml_disable_entity_loader() is deprecated",
+          "file": "baseline/alpha/config/kConf.php",
+          "line": 7
+        },
+        {
+          "phase": "load-kConf",
+          "severity": 8192,
+          "message": "Return type of kSoapClient::__call($function_name, $arguments) should either be compatible with SoapClient::__call(string $name, array $args): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+          "file": "baseline/infra/general/kSoapClient.php",
+          "line": 11
+        },
+        {
+          "phase": "load-kConf",
+          "severity": 8192,
+          "message": "Return type of kSoapClient::__soapCall($function_name, $arguments, $options = null, $input_headers = null, &$output_headers = null) should either be compatible with SoapClient::__soapCall(string $name, array $args, ?array $options = null, $inputHeaders = null, &$outputHeaders = null): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+          "file": "baseline/infra/general/kSoapClient.php",
+          "line": 18
+        },
+        {
+          "phase": "operation:construct",
+          "severity": 8192,
+          "message": "Function libxml_disable_entity_loader() is deprecated",
+          "file": "baseline/infra/general/kSoapClient.php",
+          "line": 29
+        }
+      ]
+    },
+    "candidate": {
+      "native_exit": 0,
+      "thrown_by_resolver": [
+        {
+          "phase": "operation:construct",
+          "exception": {
+            "class": "RuntimeException",
+            "message": "SYNTHETIC_LOADER_FAILURE",
+            "chain": [
+              {
+                "class": "RuntimeException",
+                "message": "SYNTHETIC_LOADER_FAILURE"
+              }
+            ],
+            "chain_truncated": false
+          }
+        }
+      ],
+      "resulting_exception": {
+        "class": "SoapFault",
+        "message": "SOAP-ERROR: Parsing WSDL: Couldn't load from 'file:///audit/probe/fixtures/good.wsdl'",
+        "chain": [
+          {
+            "class": "SoapFault",
+            "message": "SOAP-ERROR: Parsing WSDL: Couldn't load from 'file:///audit/probe/fixtures/good.wsdl'"
+          }
+        ],
+        "chain_truncated": false
+      },
+      "resulting_previous_is_null": true,
+      "runtime_exception_retained_as_previous": false,
+      "result": null,
+      "lifecycle_events": {
+        "before-kConf": {
+          "wrappers": {
+            "http": true,
+            "https": true
+          },
+          "marker_seen": true,
+          "callback_same": true
+        },
+        "after-kConf": {
+          "wrappers": {
+            "http": false,
+            "https": false
+          },
+          "marker_seen": false,
+          "callback_same": false
+        },
+        "after-operation": {
+          "wrappers": {
+            "http": false,
+            "https": false
+          },
+          "marker_seen": false,
+          "callback_same": false
+        }
+      },
+      "resolver_event_phases": [
+        "observer:before-kConf",
+        "operation:construct"
+      ],
+      "diagnostics": [
+        {
+          "phase": "observer:after-kConf",
+          "severity": 2,
+          "message": "DOMDocument::loadXML(): Failed to load external entity because the resolver function returned null",
+          "file": "behavior.php",
+          "line": 28
+        },
+        {
+          "phase": "observer:after-operation",
+          "severity": 2,
+          "message": "DOMDocument::loadXML(): Failed to load external entity because the resolver function returned null",
+          "file": "behavior.php",
+          "line": 28
+        }
+      ]
+    }
+  },
+  "findings": [
+    "Both variants: resolver threw RuntimeException(\"SYNTHETIC_LOADER_FAILURE\") in phase operation:construct (captured object, chain len 1).",
+    "Both variants: resulting exception is SoapFault \"SOAP-ERROR: Parsing WSDL: Couldn't load from 'file:///audit/probe/fixtures/good.wsdl'\" with getPrevious()===null; the RuntimeException is NOT retained as previous (ext/soap replaces it).",
+    "Inside the operation both variants invoke the caller resolver with http/https wrappers present.",
+    "Outside the block: baseline restores http/https and the caller loader after the operation (after-operation: http/https true, callback_same true, marker_seen true). Candidate leaves http/https unregistered and a non-caller loader installed after kConf and after the operation (callback_same false, marker_seen false, 2 E_WARNING \"resolver function returned null\" in observer phases).",
+    "Baseline emits 4 E_DEPRECATED (libxml_disable_entity_loader x2, kSoapClient return types x2); candidate emits none of those."
+  ],
+  "limitations": [
+    "Only callback-throw executed; no other native cases.",
+    "Existing 38-report 2 FAIL untouched and not re-evaluated.",
+    "Synthetic harness, not full application bootstrap, no real transport; not product acceptance.",
+    "Pre-review and execution by same Claude executor; independent review by another CLI still required.",
+    "Whether candidate outside-block state is intended is not judged here."
+  ]
+}

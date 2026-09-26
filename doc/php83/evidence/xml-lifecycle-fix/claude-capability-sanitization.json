@@ -1,0 +1,5 @@
+{
+  "raw_sha256": "ec387971dd4342408a383caab8693b588719c86033480af1d9560ea6d8b47776",
+  "sanitized_sha256": "e60e1b8aafdf1b6c4fa66b279a9cc26f28f1bf1fb25b93192e2c0983ab1e5fb8",
+  "policy": "public final result fields only; local read-only review not execution evidence"
+}

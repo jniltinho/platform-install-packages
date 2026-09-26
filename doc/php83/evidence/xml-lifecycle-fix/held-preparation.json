@@ -1,0 +1,33 @@
+{
+  "status": "HELD_LOCAL_UNTESTED_PROTOTYPE",
+  "target": "PHP8.3 synchronous only",
+  "base_archive_sha256": "f2474f5b951bfd2d121291025c8dd4554697fb5bb4024e132987643dab6144a7",
+  "selected_in_artifact": false,
+  "requires_new_file_builder_support": true,
+  "changes": [
+    {
+      "path": "alpha/config/kConf.php",
+      "operation": "modify",
+      "before_sha256": "d02983c560f6813c3546f2294a324d7a955f669e5b867d56d9a878c397cfa015",
+      "after_sha256": "e83d565b1c88c15812e180efff0f84d978bb46e04391985bfe9f0b481f56f5df",
+      "patch": "patches/php83/held/xml-lifecycle/kConf.php.patch",
+      "patch_sha256": "bebd5328f4523e68822ef29ae1e12aeba8ac2decf8bad3f718519b35bfa3d618"
+    },
+    {
+      "path": "infra/general/kSoapClient.php",
+      "operation": "modify",
+      "before_sha256": "6fe1abef06f3f365fc1862de0e25ffeaef9da156e731fd7cc17b386623561b7e",
+      "after_sha256": "ebc4b8671231c293eb0bb0099f584933dc87ad8f20e6c505ad0ab5c3bc1d645b",
+      "patch": "patches/php83/held/xml-lifecycle/kSoapClient.php.patch",
+      "patch_sha256": "718e071def2b020025548e12b870641212e97e34d91077438e52746107baddbc"
+    },
+    {
+      "path": "infra/general/kXmlEntityLoaderPolicy.php",
+      "operation": "add",
+      "before_sha256": null,
+      "after_sha256": "00bbe2929d9fffe2f1c86581845f8a11e8089d1b24734018297d2a0cc2104889",
+      "patch": "patches/php83/held/xml-lifecycle/kXmlEntityLoaderPolicy.php.patch",
+      "patch_sha256": "8fa61c38b5e996b5f025efbb60890fe1a01e3beadd054e4aa11cc436552eaf7c"
+    }
+  ]
+}

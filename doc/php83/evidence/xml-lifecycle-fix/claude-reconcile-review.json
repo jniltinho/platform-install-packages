@@ -1,0 +1,13 @@
+{"schema":1,"executor":"Claude CLI (claude-opus-5-5)","reviewer_independent_of_author":true,"scope":"local offline reconciliation only; no VM/SSH/PHP/network/source/product/ZIP changes",
+"commands":[{"cmd":"timeout 60 python3 tools/php83/xml-lifecycle-fix/test_reconcile.py -v","exit":0,"result":"Ran 23 tests OK","evidence":"claude-reconcile-tests.{stdout,stderr,exit}"},
+{"cmd":"timeout 60 python3 tools/php83/xml-lifecycle-fix/reconcile.py doc/php83/evidence/xml-lifecycle-fix/claude-reconcile-result.json","exit":0,"evidence":"claude-reconcile-run.{stdout,stderr,exit}, claude-reconcile-result.json"},
+{"cmd":"cmp reconciliation-r2.json claude-reconcile-result.json","result":"BYTE_IDENTICAL"},
+{"cmd":"sha256sum inputs before/after","result":"UNCHANGED","evidence":"claude-reconcile-inputs-{before,after}.sha256"}],
+"verified":{"status":"PASS_BOUNDED_HELD_CONTRACT_R2","causal_correction":"only callback-throw expected class RuntimeException->SoapFault; grounded in 2 instrumented processes (baseline+candidate): resolver_exceptions records thrown RuntimeException SYNTHETIC_LOADER_FAILURE; exception chain = single SoapFault, not truncated (previous null); loaded/runtime/events/resolver_events/functions/result identical to original callback-throw records",
+"original_reports":"primary status FAIL_RETAINED_OBSERVATIONS with exactly 2 callback-throw failures required and retained; not rewritten",
+"candidate_diagnostics":"25 processes (13 behavior + 12 helper) exact complete list + exact raw stderr from policy/fixture-derived expected(); handler-only total 2 (construct-missing, callback-deny SoapClient::__construct); no native warning filtered",
+"baseline_diagnostics":"13 records compared to unchanged repeated ledger (diagnostics/runtime/probe_sha256/stderr); not used as candidate expectations; baseline carries 4 handler-only entries as recorded",
+"file_checks":"manifest bytes pin, primary reference pin, claude-native/claude-chain exits 0, all six runtime snapshots byte-identical (sha256 83b656a2...9491)"},
+"blockers":[],
+"non_blocking_gaps":["mutation tests hit causal record[0] (baseline) and candidate construct-good only; candidate causal record and baseline stderr mutations are guarded by code but not unit-tested","main() file-level guards (snapshots, CLI exits, manifest/reference pins) are not unit-tested","manifest read from ephemeral /tmp/php-xml-lifecycle-fix-prep-r1/identities.json; replay depends on it surviving"],
+"not_claimed":["application acceptance","artifact selection","real transport coverage","future helper/new-file builder support (still pending)"]}

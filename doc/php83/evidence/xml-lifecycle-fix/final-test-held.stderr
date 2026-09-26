@@ -1,0 +1,12 @@
+test_explicit_helper_require_and_startup_security (__main__.HeldTests.test_explicit_helper_require_and_startup_security) ... ok
+test_finally_every_soap_entry (__main__.HeldTests.test_finally_every_soap_entry) ... ok
+test_native_warnings_not_suppressed (__main__.HeldTests.test_native_warnings_not_suppressed) ... ok
+test_no_application_selection (__main__.HeldTests.test_no_application_selection) ... ok
+test_no_broad_null_override (__main__.HeldTests.test_no_broad_null_override) ... ok
+test_opaque_scope_state (__main__.HeldTests.test_opaque_scope_state) ... ok
+test_patch_applies_exactly (__main__.HeldTests.test_patch_applies_exactly) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.003s
+
+OK

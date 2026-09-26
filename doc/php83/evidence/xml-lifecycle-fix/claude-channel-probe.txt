@@ -1,0 +1,10 @@
+cases [(('74', 'bootstrap'), 2), (('74', 'construct-good'), 2), (('74', 'construct-malformed'), 2)] 44
+handler-only per row Counter({('74', 'construct-missing', 1): 2, ('74', 'nested-construct', 2): 2, ('83', 'construct-missing', 1): 2, ('83', 'nested-construct', 2): 2})
+dup stderr-present diag: ACCEPTED
+truncated msg substring: ACCEPTED
+stderr-present line changed: ACCEPTED
+drop stderr-present diag: ACCEPTED
+stderr list type: ACCEPTED
+unknown stderr warning: ACCEPTED
+83 row validated as 74: rejected:runtime family
+cm stderr empty: rejected:unexpected handler-only diagnostic

@@ -1,0 +1,9 @@
+{"executor":"claude-cli","scope":"local-only","tests":{"command":"python3 tools/php83/xml-lifecycle-fix/test_observation.py -v","exit":0,"passed":9,"total":9},"records_replayed":44,
+"handler_only_exception_exact":true,"functional_contracts_on_44":true,"source_fix_approval":false,
+"findings":[
+{"sev":"HIGH","id":"drop-stderr-present-diag","result":"ACCEPTED"},
+{"sev":"HIGH","id":"unknown-stderr-warning","result":"ACCEPTED"},
+{"sev":"MED","id":"dup-stderr-present-diag","result":"ACCEPTED"},
+{"sev":"MED","id":"substring-truncated-message-and-line-unchecked","result":"ACCEPTED"},
+{"sev":"LOW","id":"stderr-type-list","result":"ACCEPTED"}],
+"not_verified":"old strict contract parity on stderr-side gaps","verdict":"CHANGES_REQUESTED"}

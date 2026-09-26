@@ -1,0 +1,29 @@
+{
+  "files": {
+    "baseline/alpha/config/cache/kCacheConfFactory.php": "73031853cf26128ab5460caecaa76d980fd9ace15219cc91e0b60cd02b561b7e",
+    "baseline/alpha/config/kConf.php": "d02983c560f6813c3546f2294a324d7a955f669e5b867d56d9a878c397cfa015",
+    "baseline/alpha/config/kConfCacheManager.php": "19d4ffb4866339cae93eb8949fd06275978799804454e81d68dd7692fe050333",
+    "baseline/infra/general/kSoapClient.php": "6fe1abef06f3f365fc1862de0e25ffeaef9da156e731fd7cc17b386623561b7e",
+    "baseline/infra/kEnvironment.php": "708f2497ade7d59522943d17d0bd788e2b18aec45504c59e3f8ecf5dd303e15d",
+    "behavior.php": "4e64fbe37ccd50cc61890b87e7fc0eb374a9080fd85909f9bcef8cc5a09659ef",
+    "candidate/alpha/config/cache/kCacheConfFactory.php": "73031853cf26128ab5460caecaa76d980fd9ace15219cc91e0b60cd02b561b7e",
+    "candidate/alpha/config/kConf.php": "e83d565b1c88c15812e180efff0f84d978bb46e04391985bfe9f0b481f56f5df",
+    "candidate/alpha/config/kConfCacheManager.php": "19d4ffb4866339cae93eb8949fd06275978799804454e81d68dd7692fe050333",
+    "candidate/infra/general/kSoapClient.php": "0091ab9704783d547f80b3035c26b1aa6f88bd973032df4722fcf3c4ce20d4ce",
+    "candidate/infra/general/kXmlEntityLoaderPolicy.php": "00bbe2929d9fffe2f1c86581845f8a11e8089d1b24734018297d2a0cc2104889",
+    "candidate/infra/kEnvironment.php": "708f2497ade7d59522943d17d0bd788e2b18aec45504c59e3f8ecf5dd303e15d",
+    "fixtures/good.wsdl": "4854fadb9573188149d5e51ee753e45896efb76ec0125e7f45e820247d614b81",
+    "fixtures/inner.wsdl": "4854fadb9573188149d5e51ee753e45896efb76ec0125e7f45e820247d614b81",
+    "fixtures/malformed.wsdl": "0f911d0fc9ae91c7b4cb5435f32b3434ea5bc42d6990dd8fece422a671f32139",
+    "fixtures/marker.txt": "73746a4db1608cd99acf3e45d9537331390a66a98af798331b91fbf5bfec8cf8",
+    "fixtures/response.xml": "ac7b009654e093f0ced0ab771f387481ebd23d239e4faa4e9bff6f8a893771e8",
+    "fixtures/types.xsd": "76c1dc1a3d0370ff8d653c07024ac8cca5f816a9f96a18731f020388572de288",
+    "provider.json": "0c0442e4775cb97a30ff59500555c5eff1fa55d6e530ee489c8bac199d0907d2",
+    "run-native.sh": "f3f9be2b17239d8d987cacf30ca33065afa5a9b4b894daedb4b51f363765dad5",
+    "scope-probe.php": "c6698b780bb934a23c4122235c4cbc08ff0f7ef676f82e77f4ccec260cdb7b6f"
+  },
+  "base_archive_sha256": "f2474f5b951bfd2d121291025c8dd4554697fb5bb4024e132987643dab6144a7",
+  "held_manifest_sha256": "bfdb4ce09f56aacb186e9d73b83c3c14d1f831dcb3eb131dbccd233dd655299e",
+  "phase": "xml-lifecycle-held-A-r1",
+  "application_patch_selected": false
+}

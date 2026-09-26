@@ -1,0 +1,3720 @@
+{
+  "scope": "Owned files only; historical reports included as data; no global clean claim",
+  "findings": [
+    {
+      "path": "tools/php83/xml-lifecycle-fix/collect-native.py",
+      "sha256": "7837a803a61806690e61ba1c1ce8bf48dcf8db83934842a5734c82c746e62e20",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "tools/php83/xml-lifecycle-fix/collect-native.py"
+      ],
+      "exit": 3,
+      "stdout": "tools/php83/xml-lifecycle-fix/collect-native.py:66: trailing whitespace.\n+   \n",
+      "stderr": "",
+      "classification": "format_finding"
+    },
+    {
+      "path": "patches/php83/held/xml-lifecycle/kConf.php.patch",
+      "sha256": "bebd5328f4523e68822ef29ae1e12aeba8ac2decf8bad3f718519b35bfa3d618",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "patches/php83/held/xml-lifecycle/kConf.php.patch"
+      ],
+      "exit": 3,
+      "stdout": "patches/php83/held/xml-lifecycle/kConf.php.patch:10: trailing whitespace.\n+ \n",
+      "stderr": "",
+      "classification": "format_finding"
+    },
+    {
+      "path": "patches/php83/held/xml-lifecycle/kSoapClient.php.patch",
+      "sha256": "481f0673ebdb9dc7a332f8180637be65488642cbaceeb324b8a7dc2695d0f334",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "patches/php83/held/xml-lifecycle/kSoapClient.php.patch"
+      ],
+      "exit": 3,
+      "stdout": "patches/php83/held/xml-lifecycle/kSoapClient.php.patch:4: trailing whitespace.\n+ <?php\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:5: trailing whitespace.\n++require_once __DIR__ . '/kXmlEntityLoaderPolicy.php';\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:6: trailing whitespace.\n+ class kSoapClient extends SoapClient \npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:7: trailing whitespace.\n+ {\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:8: trailing whitespace.\n+ \npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:9: trailing whitespace.\n+-\tpublic function __construct($wsdl,$options=array())\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:10: trailing whitespace.\n+-\t{\t\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:11: trailing whitespace.\n+-\t\t$this->beforeCall();\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:12: trailing whitespace.\n+-\t\tparent::__construct($wsdl, $options);\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:13: trailing whitespace.\n+-\t\t$this->afterCall();\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:14: trailing whitespace.\n+-\t}\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:15: trailing whitespace.\n+-\tpublic function __call ($function_name , $arguments)\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:16: trailing whitespace.\n++\tpublic function __construct($wsdl, $options = array())\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:17: trailing whitespace, space before tab in indent.\n+ \t{\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:18: trailing whitespace.\n+-\t\t$this->beforeCall();\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:19: trailing whitespace.\n+-\t\t$ret = parent::__call($function_name, $arguments);\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:20: trailing whitespace.\n+-\t\t$this->afterCall();\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:21: trailing whitespace.\n+-\t\treturn $ret;\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:22: trailing whitespace.\n+-\t}\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:23: trailing whitespace.\n+-\tpublic function __soapCall ($function_name, $arguments, $options = NULL, $input_headers = NULL, &$output_headers = NULL)\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:24: trailing whitespace.\n+-\t{\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:25: trailing whitespace.\n+-\t\t$this->beforeCall();\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:26: trailing whitespace.\n+-\t\t$ret = parent::__soapCall($function_name, $arguments);\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:27: trailing whitespace.\n+-\t\t$this->afterCall();\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:28: trailing whitespace.\n+-\t\treturn $ret;\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:29: trailing whitespace.\n+-\t}\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:30: trailing whitespace.\n+-\tprivate function beforeCall()\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:31: trailing whitespace.\n+-\t{\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:32: trailing whitespace.\n+-\t\tstream_wrapper_restore('http');\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:33: trailing whitespace.\n+-\t\tstream_wrapper_restore('https');\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:34: trailing whitespace.\n+-\t\tlibxml_disable_entity_loader(false);\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:35: trailing whitespace.\n+-\t}\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:36: trailing whitespace.\n+-\tprivate function afterCall()\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:37: trailing whitespace.\n+-\t{\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:38: trailing whitespace.\n+-\t\tlibxml_disable_entity_loader(true);\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:39: trailing whitespace.\n+-\t\tstream_wrapper_unregister('https');\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:40: trailing whitespace.\n+-\t\tstream_wrapper_unregister('http');\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:41: trailing whitespace.\n++\t\t$scope = kXmlEntityLoaderPolicy::beginSoapScope();\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:42: trailing whitespace.\n++\t\t$error = null;\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:43: trailing whitespace.\n++\t\ttry {\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:44: trailing whitespace.\n++\t\t\tparent::__construct($wsdl, $options);\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:45: trailing whitespace.\n++\t\t} catch (Throwable $failure) {\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:46: trailing whitespace.\n++\t\t\t$error = $failure;\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:47: trailing whitespace.\n++\t\t\tthrow $failure;\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:48: trailing whitespace.\n++\t\t} finally {\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:49: trailing whitespace.\n++\t\t\tkXmlEntityLoaderPolicy::endSoapScope($scope, $error);\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:50: trailing whitespace.\n++\t\t}\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:51: trailing whitespace, space before tab in indent.\n+ \t}\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:52: trailing whitespace.\n+ \npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:53: trailing whitespace.\n++\tpublic function __call($function_name, $arguments): mixed\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:54: trailing whitespace.\n++\t{\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:55: trailing whitespace.\n++\t\t$scope = kXmlEntityLoaderPolicy::beginSoapScope();\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:56: trailing whitespace.\n++\t\t$error = null;\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:57: trailing whitespace.\n++\t\ttry {\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:58: trailing whitespace.\n++\t\t\treturn parent::__call($function_name, $arguments);\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:59: trailing whitespace.\n++\t\t} catch (Throwable $failure) {\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:60: trailing whitespace.\n++\t\t\t$error = $failure;\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:61: trailing whitespace.\n++\t\t\tthrow $failure;\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:62: trailing whitespace.\n++\t\t} finally {\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:63: trailing whitespace.\n++\t\t\tkXmlEntityLoaderPolicy::endSoapScope($scope, $error);\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:64: trailing whitespace.\n++\t\t}\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:65: trailing whitespace.\n++\t}\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:66: trailing whitespace.\n++\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:67: trailing whitespace.\n++\tpublic function __soapCall($function_name, $arguments, $options = NULL, $input_headers = NULL, &$output_headers = NULL): mixed\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:68: trailing whitespace.\n++\t{\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:69: trailing whitespace.\n++\t\t$scope = kXmlEntityLoaderPolicy::beginSoapScope();\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:70: trailing whitespace.\n++\t\t$error = null;\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:71: trailing whitespace.\n++\t\ttry {\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:72: trailing whitespace.\n++\t\t\t// Preserve existing argument forwarding; headers/options are a separate repair.\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:73: trailing whitespace.\n++\t\t\treturn parent::__soapCall($function_name, $arguments);\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:74: trailing whitespace.\n++\t\t} catch (Throwable $failure) {\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:75: trailing whitespace.\n++\t\t\t$error = $failure;\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:76: trailing whitespace.\n++\t\t\tthrow $failure;\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:77: trailing whitespace.\n++\t\t} finally {\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:78: trailing whitespace.\n++\t\t\tkXmlEntityLoaderPolicy::endSoapScope($scope, $error);\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:79: trailing whitespace.\n++\t\t}\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:80: trailing whitespace.\n++\t}\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:81: trailing whitespace.\n+ }\n",
+      "stderr": "",
+      "classification": "format_finding"
+    }
+  ],
+  "checked": 229,
+  "records": [
+    {
+      "path": "tools/php83/xml-lifecycle-fix/.gitignore",
+      "sha256": "116fd287550d276e3e9ef9476434bc1cd16cc9083e4b3cfbb139e54d3fb6bca7",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "tools/php83/xml-lifecycle-fix/.gitignore"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "tools/php83/xml-lifecycle-fix/baseline-channels.json",
+      "sha256": "c999005fb096cd24e37ff72974f3c44d852a0b42ded9b4682ba9b4a37ecaa87d",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "tools/php83/xml-lifecycle-fix/baseline-channels.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "tools/php83/xml-lifecycle-fix/baseline-diagnostic-records.json",
+      "sha256": "6da5f8c4a42e25d4ff1955a9498b505bba75c407f16d6200eba63ac214629fd4",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "tools/php83/xml-lifecycle-fix/baseline-diagnostic-records.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "tools/php83/xml-lifecycle-fix/behavior-chain.php",
+      "sha256": "2096059a3a2141a468fd11a381da0f927578824e9da35857e8e5b457e73c6745",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "tools/php83/xml-lifecycle-fix/behavior-chain.php"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "tools/php83/xml-lifecycle-fix/behavior.php",
+      "sha256": "4e64fbe37ccd50cc61890b87e7fc0eb374a9080fd85909f9bcef8cc5a09659ef",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "tools/php83/xml-lifecycle-fix/behavior.php"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "tools/php83/xml-lifecycle-fix/build-held.py",
+      "sha256": "c3763399d95820cd1b11e138a857199c947d01301b5e543d41d3034d01dca8bc",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "tools/php83/xml-lifecycle-fix/build-held.py"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "tools/php83/xml-lifecycle-fix/candidate/kXmlEntityLoaderPolicy.php",
+      "sha256": "00bbe2929d9fffe2f1c86581845f8a11e8089d1b24734018297d2a0cc2104889",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "tools/php83/xml-lifecycle-fix/candidate/kXmlEntityLoaderPolicy.php"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "tools/php83/xml-lifecycle-fix/capabilities.php",
+      "sha256": "c64a8fb8d58b61e9ddd31a0b5d661439ddaf9f5b627ced193bb81b0d2bb2262d",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "tools/php83/xml-lifecycle-fix/capabilities.php"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "tools/php83/xml-lifecycle-fix/collect-chain.py",
+      "sha256": "f3f70bdeec6d5c2446e281b4745a73db45f4b417288948bb2df408dd21173099",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "tools/php83/xml-lifecycle-fix/collect-chain.py"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "tools/php83/xml-lifecycle-fix/collect-native.py",
+      "sha256": "7837a803a61806690e61ba1c1ce8bf48dcf8db83934842a5734c82c746e62e20",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "tools/php83/xml-lifecycle-fix/collect-native.py"
+      ],
+      "exit": 3,
+      "stdout": "tools/php83/xml-lifecycle-fix/collect-native.py:66: trailing whitespace.\n+   \n",
+      "stderr": "",
+      "classification": "format_finding"
+    },
+    {
+      "path": "tools/php83/xml-lifecycle-fix/contract-r2.py",
+      "sha256": "34e856dbce3848363b4b6a68c42d0d8477c2aa6d773312ecf8a5e42aa69e59ee",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "tools/php83/xml-lifecycle-fix/contract-r2.py"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "tools/php83/xml-lifecycle-fix/diagnostic-contract.py",
+      "sha256": "cce19af080b347c07eb41ce1e3c47bf4d79fd3c193b3cee89d6ec06091822de7",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "tools/php83/xml-lifecycle-fix/diagnostic-contract.py"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "tools/php83/xml-lifecycle-fix/observation_contract.py",
+      "sha256": "cb7ea4ab3251cd0ea9416e1d6ec7760fc7892c8bf68c28010c16552f86144fc7",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "tools/php83/xml-lifecycle-fix/observation_contract.py"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "tools/php83/xml-lifecycle-fix/prepare-chain.py",
+      "sha256": "3f5ce5b0303b00f66e88bc1be24de02f1ad1ff04d40aa9dd98ba0013db3b354d",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "tools/php83/xml-lifecycle-fix/prepare-chain.py"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "tools/php83/xml-lifecycle-fix/prepare-native.py",
+      "sha256": "ebf5a7fc10f2379aa21094adcfbdb562f70a431afac971bc4b972c6d7e0bda2c",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "tools/php83/xml-lifecycle-fix/prepare-native.py"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "tools/php83/xml-lifecycle-fix/reconcile.py",
+      "sha256": "a9120962634a8ad2131b4d11ac2c19d04e78e228c53f202ccc2050f7ec3f0381",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "tools/php83/xml-lifecycle-fix/reconcile.py"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "tools/php83/xml-lifecycle-fix/run-native.sh",
+      "sha256": "f3f9be2b17239d8d987cacf30ca33065afa5a9b4b894daedb4b51f363765dad5",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "tools/php83/xml-lifecycle-fix/run-native.sh"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "tools/php83/xml-lifecycle-fix/scope-probe.php",
+      "sha256": "c6698b780bb934a23c4122235c4cbc08ff0f7ef676f82e77f4ccec260cdb7b6f",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "tools/php83/xml-lifecycle-fix/scope-probe.php"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "tools/php83/xml-lifecycle-fix/stage-chain.py",
+      "sha256": "25580aef93771ee0b456a4127f92ba58bbda7875d439a8ff103ec7724d3174cd",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "tools/php83/xml-lifecycle-fix/stage-chain.py"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "tools/php83/xml-lifecycle-fix/test_held.py",
+      "sha256": "49ed5d8293b6015eeb16492083e8b4baee83a74c2cfa07112a319a75549097a8",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "tools/php83/xml-lifecycle-fix/test_held.py"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "tools/php83/xml-lifecycle-fix/test_native.py",
+      "sha256": "da23d10453505e014851702d08943b4729c018c88cfbc7686755a00471586849",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "tools/php83/xml-lifecycle-fix/test_native.py"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "tools/php83/xml-lifecycle-fix/test_observation.py",
+      "sha256": "2c96d41d3c400f8f1cde8c3d372991612b8d1451a808f6a8b3d091d544457255",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "tools/php83/xml-lifecycle-fix/test_observation.py"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "tools/php83/xml-lifecycle-fix/test_reconcile.py",
+      "sha256": "c71c4fe402522c7994304c4109c60b1dfd5810d8194efeb60ace6372dc7b43fb",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "tools/php83/xml-lifecycle-fix/test_reconcile.py"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "patches/php83/held/xml-lifecycle/kConf.php.patch",
+      "sha256": "bebd5328f4523e68822ef29ae1e12aeba8ac2decf8bad3f718519b35bfa3d618",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "patches/php83/held/xml-lifecycle/kConf.php.patch"
+      ],
+      "exit": 3,
+      "stdout": "patches/php83/held/xml-lifecycle/kConf.php.patch:10: trailing whitespace.\n+ \n",
+      "stderr": "",
+      "classification": "format_finding"
+    },
+    {
+      "path": "patches/php83/held/xml-lifecycle/kSoapClient.php.patch",
+      "sha256": "481f0673ebdb9dc7a332f8180637be65488642cbaceeb324b8a7dc2695d0f334",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "patches/php83/held/xml-lifecycle/kSoapClient.php.patch"
+      ],
+      "exit": 3,
+      "stdout": "patches/php83/held/xml-lifecycle/kSoapClient.php.patch:4: trailing whitespace.\n+ <?php\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:5: trailing whitespace.\n++require_once __DIR__ . '/kXmlEntityLoaderPolicy.php';\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:6: trailing whitespace.\n+ class kSoapClient extends SoapClient \npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:7: trailing whitespace.\n+ {\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:8: trailing whitespace.\n+ \npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:9: trailing whitespace.\n+-\tpublic function __construct($wsdl,$options=array())\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:10: trailing whitespace.\n+-\t{\t\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:11: trailing whitespace.\n+-\t\t$this->beforeCall();\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:12: trailing whitespace.\n+-\t\tparent::__construct($wsdl, $options);\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:13: trailing whitespace.\n+-\t\t$this->afterCall();\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:14: trailing whitespace.\n+-\t}\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:15: trailing whitespace.\n+-\tpublic function __call ($function_name , $arguments)\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:16: trailing whitespace.\n++\tpublic function __construct($wsdl, $options = array())\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:17: trailing whitespace, space before tab in indent.\n+ \t{\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:18: trailing whitespace.\n+-\t\t$this->beforeCall();\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:19: trailing whitespace.\n+-\t\t$ret = parent::__call($function_name, $arguments);\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:20: trailing whitespace.\n+-\t\t$this->afterCall();\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:21: trailing whitespace.\n+-\t\treturn $ret;\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:22: trailing whitespace.\n+-\t}\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:23: trailing whitespace.\n+-\tpublic function __soapCall ($function_name, $arguments, $options = NULL, $input_headers = NULL, &$output_headers = NULL)\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:24: trailing whitespace.\n+-\t{\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:25: trailing whitespace.\n+-\t\t$this->beforeCall();\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:26: trailing whitespace.\n+-\t\t$ret = parent::__soapCall($function_name, $arguments);\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:27: trailing whitespace.\n+-\t\t$this->afterCall();\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:28: trailing whitespace.\n+-\t\treturn $ret;\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:29: trailing whitespace.\n+-\t}\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:30: trailing whitespace.\n+-\tprivate function beforeCall()\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:31: trailing whitespace.\n+-\t{\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:32: trailing whitespace.\n+-\t\tstream_wrapper_restore('http');\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:33: trailing whitespace.\n+-\t\tstream_wrapper_restore('https');\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:34: trailing whitespace.\n+-\t\tlibxml_disable_entity_loader(false);\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:35: trailing whitespace.\n+-\t}\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:36: trailing whitespace.\n+-\tprivate function afterCall()\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:37: trailing whitespace.\n+-\t{\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:38: trailing whitespace.\n+-\t\tlibxml_disable_entity_loader(true);\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:39: trailing whitespace.\n+-\t\tstream_wrapper_unregister('https');\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:40: trailing whitespace.\n+-\t\tstream_wrapper_unregister('http');\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:41: trailing whitespace.\n++\t\t$scope = kXmlEntityLoaderPolicy::beginSoapScope();\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:42: trailing whitespace.\n++\t\t$error = null;\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:43: trailing whitespace.\n++\t\ttry {\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:44: trailing whitespace.\n++\t\t\tparent::__construct($wsdl, $options);\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:45: trailing whitespace.\n++\t\t} catch (Throwable $failure) {\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:46: trailing whitespace.\n++\t\t\t$error = $failure;\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:47: trailing whitespace.\n++\t\t\tthrow $failure;\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:48: trailing whitespace.\n++\t\t} finally {\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:49: trailing whitespace.\n++\t\t\tkXmlEntityLoaderPolicy::endSoapScope($scope, $error);\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:50: trailing whitespace.\n++\t\t}\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:51: trailing whitespace, space before tab in indent.\n+ \t}\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:52: trailing whitespace.\n+ \npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:53: trailing whitespace.\n++\tpublic function __call($function_name, $arguments): mixed\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:54: trailing whitespace.\n++\t{\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:55: trailing whitespace.\n++\t\t$scope = kXmlEntityLoaderPolicy::beginSoapScope();\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:56: trailing whitespace.\n++\t\t$error = null;\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:57: trailing whitespace.\n++\t\ttry {\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:58: trailing whitespace.\n++\t\t\treturn parent::__call($function_name, $arguments);\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:59: trailing whitespace.\n++\t\t} catch (Throwable $failure) {\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:60: trailing whitespace.\n++\t\t\t$error = $failure;\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:61: trailing whitespace.\n++\t\t\tthrow $failure;\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:62: trailing whitespace.\n++\t\t} finally {\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:63: trailing whitespace.\n++\t\t\tkXmlEntityLoaderPolicy::endSoapScope($scope, $error);\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:64: trailing whitespace.\n++\t\t}\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:65: trailing whitespace.\n++\t}\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:66: trailing whitespace.\n++\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:67: trailing whitespace.\n++\tpublic function __soapCall($function_name, $arguments, $options = NULL, $input_headers = NULL, &$output_headers = NULL): mixed\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:68: trailing whitespace.\n++\t{\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:69: trailing whitespace.\n++\t\t$scope = kXmlEntityLoaderPolicy::beginSoapScope();\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:70: trailing whitespace.\n++\t\t$error = null;\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:71: trailing whitespace.\n++\t\ttry {\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:72: trailing whitespace.\n++\t\t\t// Preserve existing argument forwarding; headers/options are a separate repair.\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:73: trailing whitespace.\n++\t\t\treturn parent::__soapCall($function_name, $arguments);\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:74: trailing whitespace.\n++\t\t} catch (Throwable $failure) {\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:75: trailing whitespace.\n++\t\t\t$error = $failure;\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:76: trailing whitespace.\n++\t\t\tthrow $failure;\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:77: trailing whitespace.\n++\t\t} finally {\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:78: trailing whitespace.\n++\t\t\tkXmlEntityLoaderPolicy::endSoapScope($scope, $error);\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:79: trailing whitespace.\n++\t\t}\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:80: trailing whitespace.\n++\t}\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:81: trailing whitespace.\n+ }\n",
+      "stderr": "",
+      "classification": "format_finding"
+    },
+    {
+      "path": "patches/php83/held/xml-lifecycle/kXmlEntityLoaderPolicy.php.patch",
+      "sha256": "8fa61c38b5e996b5f025efbb60890fe1a01e3beadd054e4aa11cc436552eaf7c",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "patches/php83/held/xml-lifecycle/kXmlEntityLoaderPolicy.php.patch"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "patches/php83/held/xml-lifecycle/manifest.json",
+      "sha256": "bfdb4ce09f56aacb186e9d73b83c3c14d1f831dcb3eb131dbccd233dd655299e",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "patches/php83/held/xml-lifecycle/manifest.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/attempts/channel-r1/observation_contract.py",
+      "sha256": "b2cef36272ca3c71b265bc09f27da91d4e20675656554c9fc7b04094a2b7cf29",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/attempts/channel-r1/observation_contract.py"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/attempts/channel-r1/test_observation.py",
+      "sha256": "c4589d1bf87d2d237d6511fdef9b30104b917f4cd8414222bcde7a99f66e09e2",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/attempts/channel-r1/test_observation.py"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/attempts/format-check-r1.json",
+      "sha256": "41134d706e1ba344c115160efa4b88e7c8c8088be6a5cfc0e82e5e7ffd61b770",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/attempts/format-check-r1.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/capability-native83.command.json",
+      "sha256": "5edb77e4e44592e891cc53f0154901a2da8b0027f05e3a5c42160cf28d340566",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/capability-native83.command.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/capability-native83.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/capability-native83.exit"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/capability-native83.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/capability-native83.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/capability-native83.stdout",
+      "sha256": "fed2476573a610eeb003cbd2aebbc551c88b87726c28b04f337353fde3dcb82d",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/capability-native83.stdout"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/capability-runtime-after.command.json",
+      "sha256": "621dd60e669d80bd1f9bdc3351ace4b253cf0ccc62267469e2d086f19c769d53",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/capability-runtime-after.command.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/capability-runtime-after.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/capability-runtime-after.exit"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/capability-runtime-after.json",
+      "sha256": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/capability-runtime-after.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/capability-runtime-after.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/capability-runtime-after.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/capability-runtime-after.stdout",
+      "sha256": "1c3ce1ded149763b42db5044aefe120888c6e0b428c06835c2cc47bb15c4ee23",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/capability-runtime-after.stdout"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/capability-runtime-before.command.json",
+      "sha256": "e5d5707ba1aa37b7b03f850d099ada82f9e22409b0c376a3f84c74c5d87b5fd5",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/capability-runtime-before.command.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/capability-runtime-before.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/capability-runtime-before.exit"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/capability-runtime-before.json",
+      "sha256": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/capability-runtime-before.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/capability-runtime-before.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/capability-runtime-before.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/capability-runtime-before.stdout",
+      "sha256": "1c3ce1ded149763b42db5044aefe120888c6e0b428c06835c2cc47bb15c4ee23",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/capability-runtime-before.stdout"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/capability-stage.command.json",
+      "sha256": "b9e8d19aa38524a69cc3f32e59d989d39915a7cd4b641a9bd2ec12347d761092",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/capability-stage.command.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/capability-stage.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/capability-stage.exit"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/capability-stage.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/capability-stage.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/capability-stage.stdout",
+      "sha256": "4db6723b51e28bb468f26f947ce687a1c5a285bf7cfb5fcc6613d47e69efacdd",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/capability-stage.stdout"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/capability-validation.json",
+      "sha256": "bb5fbf6c392d2fb5745b2c86c0f7ca043eac93ecc52700faa03876d46bafab9d",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/capability-validation.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/chain-preparation.json",
+      "sha256": "5eb3aa150e3bfd90a4a9cd999f3df1a623aa59ffc463f037427fb9ce284d02f7",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/chain-preparation.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-capability-prompt.txt",
+      "sha256": "9ab7e9f5cfcb45b6e0f63efb97a310413a206194a2fc0ad548f2dd3f2c1089d4",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-capability-prompt.txt"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-capability-review.json",
+      "sha256": "e60e1b8aafdf1b6c4fa66b279a9cc26f28f1bf1fb25b93192e2c0983ab1e5fb8",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-capability-review.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-capability-sanitization.json",
+      "sha256": "3d09e586a71fc12d63294787a823d4ff7e3427d2ec346e4d9d779344132c8469",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-capability-sanitization.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-capability.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-capability.exit"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-capability.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-capability.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-chain-after.cmd.txt",
+      "sha256": "15dd1e8e51b27b023554f0abb4c0503ef0e0eff4070922aca3e002b7d58ff422",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-chain-after.cmd.txt"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-chain-after.json",
+      "sha256": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-chain-after.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-chain-after.run.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-chain-after.run.exit"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-chain-after.run.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-chain-after.run.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-chain-after.run.stdout",
+      "sha256": "1c3ce1ded149763b42db5044aefe120888c6e0b428c06835c2cc47bb15c4ee23",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-chain-after.run.stdout"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-chain-before.cmd.txt",
+      "sha256": "b692f060521b3a751510f359df3c19380b8b0e8caf7e43e001465e8ecc40c4ff",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-chain-before.cmd.txt"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-chain-before.json",
+      "sha256": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-chain-before.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-chain-before.run.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-chain-before.run.exit"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-chain-before.run.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-chain-before.run.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-chain-before.run.stdout",
+      "sha256": "1c3ce1ded149763b42db5044aefe120888c6e0b428c06835c2cc47bb15c4ee23",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-chain-before.run.stdout"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-chain-matrix.cmd.txt",
+      "sha256": "3901a2efffa1fa500e4e7a9add60920d19b01e02ee26144c04cde3c36cc3167b",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-chain-matrix.cmd.txt"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-chain-matrix.json",
+      "sha256": "e7552e538028871862cddaaec70b23ec08a3e8ca6b4d39a090385e02a08d905f",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-chain-matrix.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-chain-matrix.run.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-chain-matrix.run.exit"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-chain-matrix.run.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-chain-matrix.run.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-chain-matrix.run.stdout",
+      "sha256": "9dc31e871b4c583d1f353f05c0d75b691b2badbae742fee05889a6578a28e2e7",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-chain-matrix.run.stdout"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-chain-prompt.txt",
+      "sha256": "893a0358a6984c37acb8e37ac1bf0369db41c19d676f8ee2009555bfc5cc8b35",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-chain-prompt.txt"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-chain-review.json",
+      "sha256": "c6f5091341140255314589aa3658ef610777693961df91ec52bbc76e34124c27",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-chain-review.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-chain-review.md",
+      "sha256": "10e51c838eefbf90a37bf51826ed1a5ee8ff0236157c63241bbfec3433c2dc51",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-chain-review.md"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-chain-sanitization.json",
+      "sha256": "ccaaaafcddbd54438933448874b6a3ab56e73abfe75d5ecae78e74fd040499aa",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-chain-sanitization.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-chain-stage.cmd.txt",
+      "sha256": "9c9e75a6e507e9f8691f0b9447e84d14edc5d04a7db41c92738b24ae4ae05581",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-chain-stage.cmd.txt"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-chain-stage.command.json",
+      "sha256": "0128a26f2148fa5e14c60713de0945468c8bb4f61b3b4516d0e3c6b5bc435996",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-chain-stage.command.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-chain-stage.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-chain-stage.exit"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-chain-stage.run.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-chain-stage.run.exit"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-chain-stage.run.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-chain-stage.run.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-chain-stage.run.stdout",
+      "sha256": "09c307700626a7ff8eca168b42aeacdc8afdd605d18fb35f4bc21f0ac1652b97",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-chain-stage.run.stdout"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-chain-stage.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-chain-stage.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-chain-stage.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-chain-stage.stdout"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-chain-stream.jsonl",
+      "sha256": "bf63207586539e7cad456a4aeb9aae6226a8c64c07b1640b9a0c7b5dd2ce24a4",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-chain-stream.jsonl"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-chain.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-chain.exit"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-chain.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-chain.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-channel-probe.txt",
+      "sha256": "1426e5cea2a55fb6e2d7ef3c0a0d04d55990aec89bca253acc97d03b89cc9f4b",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-channel-probe.txt"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-channel-prompt.txt",
+      "sha256": "24f8968c34c289b689a439efceb148b84118b82d50d2d5fac40f8c73a308c335",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-channel-prompt.txt"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-channel-r2-prompt.txt",
+      "sha256": "40385b2a63ce6d1448c8188caab5b1ee2e6c4eb79c3b8137ed59713c4eb47558",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-channel-r2-prompt.txt"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-channel-r2-review.json",
+      "sha256": "7724e55a7bdaa38073448797733f6cf0ae090c0837352f3f987c23e2cab9a9b3",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-channel-r2-review.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-channel-r2-review.md",
+      "sha256": "116d23b5f6d811d0e9575caf4568391bbef76969c050d4d3dd57805bdc936845",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-channel-r2-review.md"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-channel-r2-sanitization.json",
+      "sha256": "ed0f8ba4514fa9ff3e96596228d51fb30aa3ef065dfb49c1a624a7165107eba9",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-channel-r2-sanitization.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-channel-r2-stream.jsonl",
+      "sha256": "d07b0f81f3a6161afd413ae0b93f149be12c170b420a9114988c415179d743fa",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-channel-r2-stream.jsonl"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-channel-r2-tests.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-channel-r2-tests.exit"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-channel-r2-tests.stderr",
+      "sha256": "2d5023d56b4e3e1be41828713002257960c2ecfff0cb615e54ae71e66c1d1382",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-channel-r2-tests.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-channel-r2-tests.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-channel-r2-tests.stdout"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-channel-r2.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-channel-r2.exit"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-channel-r2.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-channel-r2.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-channel-review.json",
+      "sha256": "bad3c28c08d1e9fee035d814476acc9427a14615508d3318c1eb096f79587ea5",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-channel-review.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-channel-review.md",
+      "sha256": "c0a89a2810d51e608b9c8828c1048f5f7ef3716d300cc63f65139a8250ceea75",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-channel-review.md"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-channel-sanitization.json",
+      "sha256": "ff3bc87baa1300fc0f617c10566853be7d415599bb6ae8193c01dfefbebc6d9c",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-channel-sanitization.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-channel-stream.jsonl",
+      "sha256": "692552f2d86cec0c189268a97883bf6132ce18f513c62efde614d0d4f5c39d8b",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-channel-stream.jsonl"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-channel-tests.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-channel-tests.exit"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-channel-tests.stderr",
+      "sha256": "4b28d1a06a75c4356364b8900b4c93131e7db365f7eb525ac0a6037861101ff2",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-channel-tests.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-channel-tests.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-channel-tests.stdout"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-channel.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-channel.exit"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-channel.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-channel.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-held-obs-tests.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-held-obs-tests.exit"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-held-obs-tests.stderr",
+      "sha256": "92c1755fec24c8b504cba3fd7bf2ce3f5adaa05701c6c16ad407781dcf1b4f26",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-held-obs-tests.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-held-obs-tests.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-held-obs-tests.stdout"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-held-prompt.txt",
+      "sha256": "856223def00e5b9474cfbd274b4624a593b4019f4ef79ec74966b33dae7e375d",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-held-prompt.txt"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-held-review.json",
+      "sha256": "b510f3ebeaf7024ce7c5de0e3e3e13a6394c387beaffb0b314197a4f276ad4a0",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-held-review.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-held-review.md",
+      "sha256": "e23a3cd67d9512ca2c93d38dd5cef0a525e0995d484f9504a0b4f23e66d5f3a9",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-held-review.md"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-held-sanitization.json",
+      "sha256": "760c7105a07400632bdaacbb198c886ef78d348479e01d2b0dd4f9b5bfafa5fc",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-held-sanitization.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-held-stream.jsonl",
+      "sha256": "44a7757b1383a7224a9310601a0c1a4dff4535515822819314b8a780ae62253b",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-held-stream.jsonl"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-held-tests.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-held-tests.exit"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-held-tests.stderr",
+      "sha256": "5ca025d02a496def8e23e8e8e7ab22d84c5d16cfe410781c34dca03dbb17ccd0",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-held-tests.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-held-tests.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-held-tests.stdout"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-held.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-held.exit"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-held.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-held.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-native-after.json",
+      "sha256": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-native-after.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-native-before.json",
+      "sha256": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-native-before.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-native-matrix.json",
+      "sha256": "46f65f9b355702571b5cccbcd35f4e33ff964eb2c6ab8e57f04f0390e6c8ffed",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-native-matrix.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-native-prep-bashn.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-native-prep-bashn.exit"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-native-prep-bashn.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-native-prep-bashn.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-native-prep-bashn.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-native-prep-bashn.stdout"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-native-prep-prompt.txt",
+      "sha256": "45d13a8bbaf66f5514fe74f9786a2314ed1bac09a08b4b6469c739c104799094",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-native-prep-prompt.txt"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-native-prep-review.json",
+      "sha256": "4ffb5d6d6c3ddf0e441edec975e2297b9c0b39bc7d2c006eb16c98f7c6ebfdfc",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-native-prep-review.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-native-prep-review.md",
+      "sha256": "4b55f8c274fae1eb6dc07a73036aca411a50af45639c0c20c7ffc55f2e8f0c9a",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-native-prep-review.md"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-native-prep-sanitization.json",
+      "sha256": "d02ae3a17158911e89504aea1fbf8f55e0237591188e3df00a27b6ff2e2541ae",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-native-prep-sanitization.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-native-prep-stream.jsonl",
+      "sha256": "def97878b4d84471e83647c4d886632ad865b0abf28379af327c8df22ef3aa94",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-native-prep-stream.jsonl"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-native-prep-test.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-native-prep-test.exit"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-native-prep-test.stderr",
+      "sha256": "97bd2563d6341baa7753a935e07bd030f18debdec6e0b8b5be23ee309f22c154",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-native-prep-test.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-native-prep-test.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-native-prep-test.stdout"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-native-prep.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-native-prep.exit"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-native-prep.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-native-prep.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-native-prompt.txt",
+      "sha256": "9f92f5447ea8669dce93a63c037557ef40f0abcc3975ffdb569f3ff73a311390",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-native-prompt.txt"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-native-review.json",
+      "sha256": "817708a4fd596ed6de0292bbc1ad1fe6cdde29ed9b15d55eca9e29f3dd64ac9e",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-native-review.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-native-review.md",
+      "sha256": "d02e5948a953d11c020e0fa73e49aba01cacb8991c5edfa9f3a612b3afccd98b",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-native-review.md"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-native-sanitization.json",
+      "sha256": "e378b2f53b79d7df0e53ef85c3f1f3d61b9be460a0e74eddafdb3b669fc188aa",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-native-sanitization.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-native-step1.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-native-step1.exit"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-native-step1.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-native-step1.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-native-step1.stdout",
+      "sha256": "1c3ce1ded149763b42db5044aefe120888c6e0b428c06835c2cc47bb15c4ee23",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-native-step1.stdout"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-native-step2.exit",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-native-step2.exit"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-native-step2.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-native-step2.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-native-step2.stdout",
+      "sha256": "f8c5b0b7169bb71f8c81d558e9121ff084bf0e3c8c2e9382cfea736be7cf778a",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-native-step2.stdout"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-native-step3.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-native-step3.exit"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-native-step3.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-native-step3.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-native-step3.stdout",
+      "sha256": "1c3ce1ded149763b42db5044aefe120888c6e0b428c06835c2cc47bb15c4ee23",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-native-step3.stdout"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-native-stream.jsonl",
+      "sha256": "2c5a95db8ee9aa48bba0daa92afcc4ed05fb47fe97a312c8881bcea67e9a0019",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-native-stream.jsonl"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-native.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-native.exit"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-native.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-native.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-reconcile-inputs-after.sha256",
+      "sha256": "b7572508392116f2f445dee61f5ef65178058a8dcce4675bad1a80b4a44fd48d",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-reconcile-inputs-after.sha256"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-reconcile-inputs-before.sha256",
+      "sha256": "b7572508392116f2f445dee61f5ef65178058a8dcce4675bad1a80b4a44fd48d",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-reconcile-inputs-before.sha256"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-reconcile-prompt.txt",
+      "sha256": "de0bdd2bd8ee93790aada4de5542b3067e197dd5144a614d16e4b7e90f970515",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-reconcile-prompt.txt"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-reconcile-result.json",
+      "sha256": "2e294d06db73c70123aebc8e763bbb1f18c35c6226c9e63ddf37b8fbe00c82bc",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-reconcile-result.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-reconcile-review.json",
+      "sha256": "43c26a59f8f695dc811ef624bed744ced35cf5575ed94fe5a8ba8967161e48ad",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-reconcile-review.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-reconcile-review.md",
+      "sha256": "d45f5298d5735dfc451f08040428adb05253b90a1797bf0bdaf7a686bf4bda86",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-reconcile-review.md"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-reconcile-run.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-reconcile-run.exit"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-reconcile-run.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-reconcile-run.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-reconcile-run.stdout",
+      "sha256": "9f3e0480d6490453d3eed2cc27995604fed31a58e0ff3f5baf170ccc7435c5cb",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-reconcile-run.stdout"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-reconcile-sanitization.json",
+      "sha256": "0d92e9e2136d2cfff9977fde8eaaa121d1786bf29e2a1c3f75b9fdb3cfa10bce",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-reconcile-sanitization.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-reconcile-stream.jsonl",
+      "sha256": "b15d7d3d8292e6f43af826e238acd8d45f0a0af954870066237df08550f1ee1a",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-reconcile-stream.jsonl"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-reconcile-tests.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-reconcile-tests.exit"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-reconcile-tests.stderr",
+      "sha256": "1377e8d222a0c4f1bcccb45117de731ab5e291d101212e4534b69d63371e3cf8",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-reconcile-tests.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-reconcile-tests.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-reconcile-tests.stdout"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-reconcile.exit",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-reconcile.exit"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/claude-reconcile.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/claude-reconcile.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/coverage.json",
+      "sha256": "4d580e63c08c7aea76e48680820d08d886099e131abd7e9a9f324c5b2d842354",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/coverage.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/final-security-check.json",
+      "sha256": "18587e2eb114a3db334235cc3b7ecbb67c95359d45f5f1553b2c1edc2a596c3e",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/final-security-check.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/final-shell.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/final-shell.exit"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/final-shell.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/final-shell.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/final-shell.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/final-shell.stdout"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/final-test-held.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/final-test-held.exit"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/final-test-held.stderr",
+      "sha256": "710b6ba127a0e1e68301f56b64a817ed78001b20d61e4722e52aee00fe7d6a1a",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/final-test-held.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/final-test-held.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/final-test-held.stdout"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/final-test-native.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/final-test-native.exit"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/final-test-native.stderr",
+      "sha256": "631700dbf787a1fb825c1548c761abfe9d8b22c58e917fe36d76343069c8c8ed",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/final-test-native.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/final-test-native.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/final-test-native.stdout"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/final-test-observation.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/final-test-observation.exit"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/final-test-observation.stderr",
+      "sha256": "66c14402d4c2fd9f7ee792e86902dd253a253d3a9cb14e2970c9389373f6e6de",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/final-test-observation.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/final-test-observation.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/final-test-observation.stdout"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/final-test-reconcile.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/final-test-reconcile.exit"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/final-test-reconcile.stderr",
+      "sha256": "0515443fd08ae31fcc844fb92850c742fd3e34db040da34e69c40266a79bb383",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/final-test-reconcile.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/final-test-reconcile.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/final-test-reconcile.stdout"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/format-check.json",
+      "sha256": "b1a53fa1c7c065cfda0b39280d49b7ac62bf4dfa1f2413b657e1d2fe2c161ce2",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/format-check.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/held-preparation-r2.json",
+      "sha256": "bfdb4ce09f56aacb186e9d73b83c3c14d1f831dcb3eb131dbccd233dd655299e",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/held-preparation-r2.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/held-preparation.json",
+      "sha256": "fc0ea40eaea4c24774e7fe86990e5eca4ed4f6aed930000bdb30dbc2eed23314",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/held-preparation.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/local-channel-tests-r2.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/local-channel-tests-r2.exit"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/local-channel-tests-r2.stderr",
+      "sha256": "474dae795f951822d9efb3cb10d4f6cb5ba05f2e84b3534f42c92c4745add0d8",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/local-channel-tests-r2.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/local-channel-tests-r2.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/local-channel-tests-r2.stdout"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/local-channel-tests.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/local-channel-tests.exit"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/local-channel-tests.stderr",
+      "sha256": "5684d13977a1f6829bcd5f644c72b35ab6f8d42951d571a5f230c4cc35a359f3",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/local-channel-tests.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/local-channel-tests.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/local-channel-tests.stdout"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/local-held-tests.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/local-held-tests.exit"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/local-held-tests.stderr",
+      "sha256": "21c7e48d0b1ec908feef784bbce1fa55f2c9a7acf76382fa7578754a78bd1ed8",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/local-held-tests.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/local-held-tests.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/local-held-tests.stdout"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/local-native-tests.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/local-native-tests.exit"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/local-native-tests.stderr",
+      "sha256": "a4c3352ba626bfd7c056ab4b7d7f35b98bd9ac851dad48df2cebe4c81fcab442",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/local-native-tests.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/local-native-tests.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/local-native-tests.stdout"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/local-reconcile-tests.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/local-reconcile-tests.exit"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/local-reconcile-tests.stderr",
+      "sha256": "188ecfe9092ba1d01e3ffa117497ed2e75b5d1973bbc78b231add488ddea5ed7",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/local-reconcile-tests.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/local-reconcile-tests.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/local-reconcile-tests.stdout"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/native-comparison.json",
+      "sha256": "c8af7d6707ddc3bc25179ddf99e25cb204ad356161a5ffac54da0cb535281fbc",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/native-comparison.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/native-preparation.json",
+      "sha256": "9eef82af48381af9e76a7f09586f9bf877fcbebaa52b76aee40505c9d2018adb",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/native-preparation.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/preparation-identities.json",
+      "sha256": "c06f54b7dff9035ea1680d96416ab29d7b4669a5dbe26e417bedccf27d742a08",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/preparation-identities.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/primary-frozen-tools.json",
+      "sha256": "810927e361b3dbb37bfe1ae5bcc73eb6c126d38af4e56822e5af50612c77e55c",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/primary-frozen-tools.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/primary-runtime-after.command.json",
+      "sha256": "c9b8b61f3d6d22b6995285a8fdbd81ad56825931476f2446613da0d306e2892a",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/primary-runtime-after.command.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/primary-runtime-after.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/primary-runtime-after.exit"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/primary-runtime-after.json",
+      "sha256": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/primary-runtime-after.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/primary-runtime-after.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/primary-runtime-after.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/primary-runtime-after.stdout",
+      "sha256": "1c3ce1ded149763b42db5044aefe120888c6e0b428c06835c2cc47bb15c4ee23",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/primary-runtime-after.stdout"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/primary-runtime-before.command.json",
+      "sha256": "d8420751190b8f26d9bffa5595040965c4ce8a2c6885039535d9aed374619c88",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/primary-runtime-before.command.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/primary-runtime-before.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/primary-runtime-before.exit"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/primary-runtime-before.json",
+      "sha256": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/primary-runtime-before.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/primary-runtime-before.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/primary-runtime-before.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/primary-runtime-before.stdout",
+      "sha256": "1c3ce1ded149763b42db5044aefe120888c6e0b428c06835c2cc47bb15c4ee23",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/primary-runtime-before.stdout"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/primary-stage.command.json",
+      "sha256": "45a23ee9808e14e64725ceeb3f7d1bebf825cfd6a5fc620289376076f54f7235",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/primary-stage.command.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/primary-stage.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/primary-stage.exit"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/primary-stage.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/primary-stage.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/primary-stage.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/primary-stage.stdout"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/primary.command.json",
+      "sha256": "316a8e5ac5e64ebf778495e3f291494576c503207e2655cf0fe87bceed743826",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/primary.command.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/primary.exit",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/primary.exit"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/primary.json",
+      "sha256": "46f65f9b355702571b5cccbcd35f4e33ff964eb2c6ab8e57f04f0390e6c8ffed",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/primary.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/primary.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/primary.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/primary.stdout",
+      "sha256": "f8c5b0b7169bb71f8c81d558e9121ff084bf0e3c8c2e9382cfea736be7cf778a",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/primary.stdout"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/reconciliation-r2.json",
+      "sha256": "2e294d06db73c70123aebc8e763bbb1f18c35c6226c9e63ddf37b8fbe00c82bc",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/reconciliation-r2.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/source-api-pins.json",
+      "sha256": "f8a7680fa0b33ae562c32d306af367d2e730ce2dd80933a25704f2ea94c8852f",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/source-api-pins.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/evidence/xml-lifecycle-fix/trace.json",
+      "sha256": "8596c037a1d79c21ec7c6a0cc78445729b00de06df16d450175ad1cd8c53538d",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/evidence/xml-lifecycle-fix/trace.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    },
+    {
+      "path": "doc/php83/xml-lifecycle-fix.md",
+      "sha256": "683de9fea9dd08890244c7d21e760434fc6afc75cd387f9d9aaa280be9430df5",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "doc/php83/xml-lifecycle-fix.md"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "",
+      "classification": "no_format_finding"
+    }
+  ]
+}

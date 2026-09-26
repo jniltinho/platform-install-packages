@@ -1,0 +1,17 @@
+test_bool_severity (test_native.Tests.test_bool_severity) ... ok
+test_error_not_hidden (test_native.Tests.test_error_not_hidden) ... ok
+test_false_response (test_native.Tests.test_false_response) ... ok
+test_float_runtime (test_native.Tests.test_float_runtime) ... ok
+test_inventory38 (test_native.Tests.test_inventory38) ... ok
+test_leaked_http (test_native.Tests.test_leaked_http) ... ok
+test_leaked_marker (test_native.Tests.test_leaked_marker) ... ok
+test_missing_real_class (test_native.Tests.test_missing_real_class) ... ok
+test_scope_flag (test_native.Tests.test_scope_flag) ... ok
+test_synthetic_candidate_shape_not_runtime_proof (test_native.Tests.test_synthetic_candidate_shape_not_runtime_proof) ... ok
+test_unknown_process (test_native.Tests.test_unknown_process) ... ok
+test_wrong_probe (test_native.Tests.test_wrong_probe) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.009s
+
+OK

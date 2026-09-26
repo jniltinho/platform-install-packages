@@ -1,0 +1,6 @@
+{
+  "scope": "owned text files excluding generated tree and pycache",
+  "files": 227,
+  "heuristic_secret_findings": [],
+  "limitation": "Bounded pattern scan, not a proof that all sensitive strings are absent."
+}

@@ -1,0 +1,58 @@
+{
+  "scope": "new owned files, excluding reproducible generated candidate-tree",
+  "rest_files_checked": 203,
+  "patch_files_checked": 3,
+  "rationale": "Original kSoapClient uses CRLF and historical whitespace. Held GNU patch bytes preserve exact tested before/after identities. No gitattributes suppression or product normalization. This is not a globally clean diff claim.",
+  "correction": "Prior report misclassified ordinary no-index diff exit 1 with empty output as whitespace warnings. Exact prior report retained in attempts/format-check-r1.json.",
+  "actual_findings": [
+    {
+      "path": "patches/php83/held/xml-lifecycle/kConf.php.patch",
+      "scope": "patch-data",
+      "sha256": "bebd5328f4523e68822ef29ae1e12aeba8ac2decf8bad3f718519b35bfa3d618",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "patches/php83/held/xml-lifecycle/kConf.php.patch"
+      ],
+      "exit": 3,
+      "stdout": "patches/php83/held/xml-lifecycle/kConf.php.patch:10: trailing whitespace.\n+ \n",
+      "stderr": ""
+    },
+    {
+      "path": "patches/php83/held/xml-lifecycle/kSoapClient.php.patch",
+      "scope": "patch-data",
+      "sha256": "481f0673ebdb9dc7a332f8180637be65488642cbaceeb324b8a7dc2695d0f334",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "patches/php83/held/xml-lifecycle/kSoapClient.php.patch"
+      ],
+      "exit": 3,
+      "stdout": "patches/php83/held/xml-lifecycle/kSoapClient.php.patch:4: trailing whitespace.\n+ <?php\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:5: trailing whitespace.\n++require_once __DIR__ . '/kXmlEntityLoaderPolicy.php';\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:6: trailing whitespace.\n+ class kSoapClient extends SoapClient \r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:7: trailing whitespace.\n+ {\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:8: trailing whitespace.\n+ \r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:9: trailing whitespace.\n+-\tpublic function __construct($wsdl,$options=array())\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:10: trailing whitespace.\n+-\t{\t\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:11: trailing whitespace.\n+-\t\t$this->beforeCall();\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:12: trailing whitespace.\n+-\t\tparent::__construct($wsdl, $options);\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:13: trailing whitespace.\n+-\t\t$this->afterCall();\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:14: trailing whitespace.\n+-\t}\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:15: trailing whitespace.\n+-\tpublic function __call ($function_name , $arguments)\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:16: trailing whitespace.\n++\tpublic function __construct($wsdl, $options = array())\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:17: trailing whitespace, space before tab in indent.\n+ \t{\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:18: trailing whitespace.\n+-\t\t$this->beforeCall();\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:19: trailing whitespace.\n+-\t\t$ret = parent::__call($function_name, $arguments);\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:20: trailing whitespace.\n+-\t\t$this->afterCall();\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:21: trailing whitespace.\n+-\t\treturn $ret;\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:22: trailing whitespace.\n+-\t}\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:23: trailing whitespace.\n+-\tpublic function __soapCall ($function_name, $arguments, $options = NULL, $input_headers = NULL, &$output_headers = NULL)\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:24: trailing whitespace.\n+-\t{\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:25: trailing whitespace.\n+-\t\t$this->beforeCall();\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:26: trailing whitespace.\n+-\t\t$ret = parent::__soapCall($function_name, $arguments);\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:27: trailing whitespace.\n+-\t\t$this->afterCall();\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:28: trailing whitespace.\n+-\t\treturn $ret;\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:29: trailing whitespace.\n+-\t}\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:30: trailing whitespace.\n+-\tprivate function beforeCall()\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:31: trailing whitespace.\n+-\t{\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:32: trailing whitespace.\n+-\t\tstream_wrapper_restore('http');\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:33: trailing whitespace.\n+-\t\tstream_wrapper_restore('https');\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:34: trailing whitespace.\n+-\t\tlibxml_disable_entity_loader(false);\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:35: trailing whitespace.\n+-\t}\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:36: trailing whitespace.\n+-\tprivate function afterCall()\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:37: trailing whitespace.\n+-\t{\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:38: trailing whitespace.\n+-\t\tlibxml_disable_entity_loader(true);\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:39: trailing whitespace.\n+-\t\tstream_wrapper_unregister('https');\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:40: trailing whitespace.\n+-\t\tstream_wrapper_unregister('http');\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:41: trailing whitespace.\n++\t\t$scope = kXmlEntityLoaderPolicy::beginSoapScope();\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:42: trailing whitespace.\n++\t\t$error = null;\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:43: trailing whitespace.\n++\t\ttry {\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:44: trailing whitespace.\n++\t\t\tparent::__construct($wsdl, $options);\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:45: trailing whitespace.\n++\t\t} catch (Throwable $failure) {\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:46: trailing whitespace.\n++\t\t\t$error = $failure;\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:47: trailing whitespace.\n++\t\t\tthrow $failure;\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:48: trailing whitespace.\n++\t\t} finally {\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:49: trailing whitespace.\n++\t\t\tkXmlEntityLoaderPolicy::endSoapScope($scope, $error);\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:50: trailing whitespace.\n++\t\t}\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:51: trailing whitespace, space before tab in indent.\n+ \t}\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:52: trailing whitespace.\n+ \r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:53: trailing whitespace.\n++\tpublic function __call($function_name, $arguments): mixed\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:54: trailing whitespace.\n++\t{\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:55: trailing whitespace.\n++\t\t$scope = kXmlEntityLoaderPolicy::beginSoapScope();\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:56: trailing whitespace.\n++\t\t$error = null;\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:57: trailing whitespace.\n++\t\ttry {\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:58: trailing whitespace.\n++\t\t\treturn parent::__call($function_name, $arguments);\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:59: trailing whitespace.\n++\t\t} catch (Throwable $failure) {\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:60: trailing whitespace.\n++\t\t\t$error = $failure;\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:61: trailing whitespace.\n++\t\t\tthrow $failure;\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:62: trailing whitespace.\n++\t\t} finally {\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:63: trailing whitespace.\n++\t\t\tkXmlEntityLoaderPolicy::endSoapScope($scope, $error);\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:64: trailing whitespace.\n++\t\t}\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:65: trailing whitespace.\n++\t}\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:66: trailing whitespace.\n++\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:67: trailing whitespace.\n++\tpublic function __soapCall($function_name, $arguments, $options = NULL, $input_headers = NULL, &$output_headers = NULL): mixed\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:68: trailing whitespace.\n++\t{\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:69: trailing whitespace.\n++\t\t$scope = kXmlEntityLoaderPolicy::beginSoapScope();\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:70: trailing whitespace.\n++\t\t$error = null;\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:71: trailing whitespace.\n++\t\ttry {\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:72: trailing whitespace.\n++\t\t\t// Preserve existing argument forwarding; headers/options are a separate repair.\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:73: trailing whitespace.\n++\t\t\treturn parent::__soapCall($function_name, $arguments);\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:74: trailing whitespace.\n++\t\t} catch (Throwable $failure) {\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:75: trailing whitespace.\n++\t\t\t$error = $failure;\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:76: trailing whitespace.\n++\t\t\tthrow $failure;\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:77: trailing whitespace.\n++\t\t} finally {\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:78: trailing whitespace.\n++\t\t\tkXmlEntityLoaderPolicy::endSoapScope($scope, $error);\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:79: trailing whitespace.\n++\t\t}\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:80: trailing whitespace.\n++\t}\r\npatches/php83/held/xml-lifecycle/kSoapClient.php.patch:81: trailing whitespace.\n+ }\r\n",
+      "stderr": ""
+    },
+    {
+      "path": "tools/php83/xml-lifecycle-fix/collect-native.py",
+      "scope": "rest",
+      "sha256": "7837a803a61806690e61ba1c1ce8bf48dcf8db83934842a5734c82c746e62e20",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "tools/php83/xml-lifecycle-fix/collect-native.py"
+      ],
+      "exit": 3,
+      "stdout": "tools/php83/xml-lifecycle-fix/collect-native.py:66: trailing whitespace.\n+   \n",
+      "stderr": ""
+    }
+  ],
+  "ordinary_diff_count": 203
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "tool": "mcp__codebase_memory_mcp__trace_path",
+    "args": {
+      "project": "kaltura-rigel-18.20.0-full",
+      "function_name": "kaltura-rigel-18.20.0-full.infra.general.kSoapClient.kSoapClient",
+      "direction": "both",
+      "depth": 1
+    },
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "function: kaltura-rigel-18.20.0-full.infra.general.kSoapClient.kSoapClient\ndirection: both\ncallees_total: 0\ncallees: 0  (rows: name hop; qn = group prefix + \".\" + name)\ncallers_total: 0\ncallers: 0  (rows: name hop; qn = group prefix + \".\" + name)\n"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "tool": "mcp__codebase_memory_mcp__get_code_snippet",
+    "args": {
+      "project": "kaltura-rigel-18.20.0-full",
+      "qualified_name": "kaltura-rigel-18.20.0-full.infra.general.kSoapClient.kSoapClient"
+    },
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"name\":\"kSoapClient\",\"qualified_name\":\"kaltura-rigel-18.20.0-full.infra.general.kSoapClient.kSoapClient\",\"label\":\"Class\",\"file_path\":\"/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/graph-view/infra/general/kSoapClient.php\",\"start_line\":2,\"end_line\":38,\"source\":\"class kSoapClient extends SoapClient \\r\\n{\\r\\n\\r\\n\\tpublic function __construct($wsdl,$options=array())\\r\\n\\t{\\t\\r\\n\\t\\t$this->beforeCall();\\r\\n\\t\\tparent::__construct($wsdl, $options);\\r\\n\\t\\t$this->afterCall();\\r\\n\\t}\\r\\n\\tpublic function __call ($function_name , $arguments)\\r\\n\\t{\\r\\n\\t\\t$this->beforeCall();\\r\\n\\t\\t$ret = parent::__call($function_name, $arguments);\\r\\n\\t\\t$this->afterCall();\\r\\n\\t\\treturn $ret;\\r\\n\\t}\\r\\n\\tpublic function __soapCall ($function_name, $arguments, $options = NULL, $input_headers = NULL, &$output_headers = NULL)\\r\\n\\t{\\r\\n\\t\\t$this->beforeCall();\\r\\n\\t\\t$ret = parent::__soapCall($function_name, $arguments);\\r\\n\\t\\t$this->afterCall();\\r\\n\\t\\treturn $ret;\\r\\n\\t}\\r\\n\\tprivate function beforeCall()\\r\\n\\t{\\r\\n\\t\\tstream_wrapper_restore('http');\\r\\n\\t\\tstream_wrapper_restore('https');\\r\\n\\t\\tlibxml_disable_entity_loader(false);\\r\\n\\t}\\r\\n\\tprivate function afterCall()\\r\\n\\t{\\r\\n\\t\\tlibxml_disable_entity_loader(true);\\r\\n\\t\\tstream_wrapper_unregister('https');\\r\\n\\t\\tstream_wrapper_unregister('http');\\r\\n\\t}\\r\\n\\r\\n}\\r\\n\",\"callers\":0,\"callees\":0}"
+        }
+      ],
+      "structuredContent": {
+        "name": "kSoapClient",
+        "qualified_name": "kaltura-rigel-18.20.0-full.infra.general.kSoapClient.kSoapClient",
+        "label": "Class",
+        "file_path": "/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/graph-view/infra/general/kSoapClient.php",
+        "start_line": 2,
+        "end_line": 38,
+        "source": "class kSoapClient extends SoapClient \r\n{\r\n\r\n\tpublic function __construct($wsdl,$options=array())\r\n\t{\t\r\n\t\t$this->beforeCall();\r\n\t\tparent::__construct($wsdl, $options);\r\n\t\t$this->afterCall();\r\n\t}\r\n\tpublic function __call ($function_name , $arguments)\r\n\t{\r\n\t\t$this->beforeCall();\r\n\t\t$ret = parent::__call($function_name, $arguments);\r\n\t\t$this->afterCall();\r\n\t\treturn $ret;\r\n\t}\r\n\tpublic function __soapCall ($function_name, $arguments, $options = NULL, $input_headers = NULL, &$output_headers = NULL)\r\n\t{\r\n\t\t$this->beforeCall();\r\n\t\t$ret = parent::__soapCall($function_name, $arguments);\r\n\t\t$this->afterCall();\r\n\t\treturn $ret;\r\n\t}\r\n\tprivate function beforeCall()\r\n\t{\r\n\t\tstream_wrapper_restore('http');\r\n\t\tstream_wrapper_restore('https');\r\n\t\tlibxml_disable_entity_loader(false);\r\n\t}\r\n\tprivate function afterCall()\r\n\t{\r\n\t\tlibxml_disable_entity_loader(true);\r\n\t\tstream_wrapper_unregister('https');\r\n\t\tstream_wrapper_unregister('http');\r\n\t}\r\n\r\n}\r\n",
+        "callers": 0,
+        "callees": 0
+      },
+      "isError": false
+    }
+  }
+]

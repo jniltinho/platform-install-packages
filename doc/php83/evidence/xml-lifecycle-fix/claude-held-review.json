@@ -1,0 +1,45 @@
+{
+ "executor": "claude-cli",
+ "reviewer": "claude-cli",
+ "scope": "local-held-prototype-static-review",
+ "php_executed": false,
+ "tests": [
+  {
+   "case": "test_held.py",
+   "count": 7,
+   "exit": 0
+  },
+  {
+   "case": "test_observation.py",
+   "count": 15,
+   "exit": 0
+  }
+ ],
+ "manifest": {
+  "modify": 2,
+  "add": 1,
+  "selected_in_artifact": false,
+  "base": "exp11-pin"
+ },
+ "capability_native83": {
+  "callable_identities_true": 5,
+  "original_restored_identity": true
+ },
+ "blockers": [],
+ "findings": [
+  {
+   "severity": "minor",
+   "id": "partial-setup-misleading-diagnostic"
+  },
+  {
+   "severity": "info",
+   "id": "cleanup-cause-message-only"
+  },
+  {
+   "severity": "info",
+   "id": "non-soap-parsers-in-scope"
+  }
+ ],
+ "verdict": "NO_BLOCKERS_STATIC_REVIEW_ONLY",
+ "native_claim": false
+}

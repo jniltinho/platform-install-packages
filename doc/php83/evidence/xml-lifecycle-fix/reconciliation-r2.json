@@ -1,0 +1,481 @@
+{
+  "status": "PASS_BOUNDED_HELD_CONTRACT_R2",
+  "cases": [
+    {
+      "kind": "behavior",
+      "variant": "baseline",
+      "case": "bootstrap",
+      "status": "PASS_BOUNDED_CONTRACT_R2",
+      "diagnostic_channels": {
+        "handler_count": 5,
+        "handler_only_count": 0,
+        "native_stderr_exact": true,
+        "basis": "unchanged baseline recorded twice"
+      }
+    },
+    {
+      "kind": "behavior",
+      "variant": "baseline",
+      "case": "construct-good",
+      "status": "PASS_BOUNDED_CONTRACT_R2",
+      "diagnostic_channels": {
+        "handler_count": 8,
+        "handler_only_count": 0,
+        "native_stderr_exact": true,
+        "basis": "unchanged baseline recorded twice"
+      }
+    },
+    {
+      "kind": "behavior",
+      "variant": "baseline",
+      "case": "construct-malformed",
+      "status": "PASS_BOUNDED_CONTRACT_R2",
+      "diagnostic_channels": {
+        "handler_count": 5,
+        "handler_only_count": 0,
+        "native_stderr_exact": true,
+        "basis": "unchanged baseline recorded twice"
+      }
+    },
+    {
+      "kind": "behavior",
+      "variant": "baseline",
+      "case": "construct-missing",
+      "status": "PASS_BOUNDED_CONTRACT_R2",
+      "diagnostic_channels": {
+        "handler_count": 6,
+        "handler_only_count": 1,
+        "native_stderr_exact": true,
+        "basis": "unchanged baseline recorded twice"
+      }
+    },
+    {
+      "kind": "behavior",
+      "variant": "baseline",
+      "case": "explicit-ok",
+      "status": "PASS_BOUNDED_CONTRACT_R2",
+      "diagnostic_channels": {
+        "handler_count": 10,
+        "handler_only_count": 0,
+        "native_stderr_exact": true,
+        "basis": "unchanged baseline recorded twice"
+      }
+    },
+    {
+      "kind": "behavior",
+      "variant": "baseline",
+      "case": "magic-ok",
+      "status": "PASS_BOUNDED_CONTRACT_R2",
+      "diagnostic_channels": {
+        "handler_count": 10,
+        "handler_only_count": 0,
+        "native_stderr_exact": true,
+        "basis": "unchanged baseline recorded twice"
+      }
+    },
+    {
+      "kind": "behavior",
+      "variant": "baseline",
+      "case": "explicit-fault",
+      "status": "PASS_BOUNDED_CONTRACT_R2",
+      "diagnostic_channels": {
+        "handler_count": 8,
+        "handler_only_count": 0,
+        "native_stderr_exact": true,
+        "basis": "unchanged baseline recorded twice"
+      }
+    },
+    {
+      "kind": "behavior",
+      "variant": "baseline",
+      "case": "callback-existing",
+      "status": "PASS_BOUNDED_CONTRACT_R2",
+      "diagnostic_channels": {
+        "handler_count": 5,
+        "handler_only_count": 0,
+        "native_stderr_exact": true,
+        "basis": "unchanged baseline recorded twice"
+      }
+    },
+    {
+      "kind": "behavior",
+      "variant": "baseline",
+      "case": "nested-construct",
+      "status": "PASS_BOUNDED_CONTRACT_R2",
+      "diagnostic_channels": {
+        "handler_count": 11,
+        "handler_only_count": 2,
+        "native_stderr_exact": true,
+        "basis": "unchanged baseline recorded twice"
+      }
+    },
+    {
+      "kind": "behavior",
+      "variant": "baseline",
+      "case": "nested-call-ok",
+      "status": "PASS_BOUNDED_CONTRACT_R2",
+      "diagnostic_channels": {
+        "handler_count": 19,
+        "handler_only_count": 0,
+        "native_stderr_exact": true,
+        "basis": "unchanged baseline recorded twice"
+      }
+    },
+    {
+      "kind": "behavior",
+      "variant": "baseline",
+      "case": "nested-call-fault",
+      "status": "PASS_BOUNDED_CONTRACT_R2",
+      "diagnostic_channels": {
+        "handler_count": 15,
+        "handler_only_count": 0,
+        "native_stderr_exact": true,
+        "basis": "unchanged baseline recorded twice"
+      }
+    },
+    {
+      "kind": "behavior",
+      "variant": "baseline",
+      "case": "callback-deny",
+      "status": "PASS_BOUNDED_CONTRACT_R2",
+      "diagnostic_channels": {
+        "handler_count": 8,
+        "handler_only_count": 1,
+        "native_stderr_exact": true,
+        "basis": "unchanged baseline recorded twice"
+      }
+    },
+    {
+      "kind": "behavior",
+      "variant": "baseline",
+      "case": "callback-throw",
+      "status": "PASS_BOUNDED_CONTRACT_R2",
+      "diagnostic_channels": {
+        "handler_count": 4,
+        "handler_only_count": 0,
+        "native_stderr_exact": true,
+        "basis": "unchanged baseline recorded twice"
+      }
+    },
+    {
+      "kind": "behavior",
+      "variant": "candidate",
+      "case": "bootstrap",
+      "status": "PASS_BOUNDED_CONTRACT_R2",
+      "diagnostic_channels": {
+        "handler_count": 2,
+        "handler_only_count": 0,
+        "native_stderr_exact": true,
+        "basis": "policy/fixture-derived complete expectations; raw evidence unchanged"
+      }
+    },
+    {
+      "kind": "behavior",
+      "variant": "candidate",
+      "case": "construct-good",
+      "status": "PASS_BOUNDED_CONTRACT_R2",
+      "diagnostic_channels": {
+        "handler_count": 3,
+        "handler_only_count": 0,
+        "native_stderr_exact": true,
+        "basis": "policy/fixture-derived complete expectations; raw evidence unchanged"
+      }
+    },
+    {
+      "kind": "behavior",
+      "variant": "candidate",
+      "case": "construct-malformed",
+      "status": "PASS_BOUNDED_CONTRACT_R2",
+      "diagnostic_channels": {
+        "handler_count": 2,
+        "handler_only_count": 0,
+        "native_stderr_exact": true,
+        "basis": "policy/fixture-derived complete expectations; raw evidence unchanged"
+      }
+    },
+    {
+      "kind": "behavior",
+      "variant": "candidate",
+      "case": "construct-missing",
+      "status": "PASS_BOUNDED_CONTRACT_R2",
+      "diagnostic_channels": {
+        "handler_count": 3,
+        "handler_only_count": 1,
+        "native_stderr_exact": true,
+        "basis": "policy/fixture-derived complete expectations; raw evidence unchanged"
+      }
+    },
+    {
+      "kind": "behavior",
+      "variant": "candidate",
+      "case": "explicit-ok",
+      "status": "PASS_BOUNDED_CONTRACT_R2",
+      "diagnostic_channels": {
+        "handler_count": 3,
+        "handler_only_count": 0,
+        "native_stderr_exact": true,
+        "basis": "policy/fixture-derived complete expectations; raw evidence unchanged"
+      }
+    },
+    {
+      "kind": "behavior",
+      "variant": "candidate",
+      "case": "magic-ok",
+      "status": "PASS_BOUNDED_CONTRACT_R2",
+      "diagnostic_channels": {
+        "handler_count": 3,
+        "handler_only_count": 0,
+        "native_stderr_exact": true,
+        "basis": "policy/fixture-derived complete expectations; raw evidence unchanged"
+      }
+    },
+    {
+      "kind": "behavior",
+      "variant": "candidate",
+      "case": "explicit-fault",
+      "status": "PASS_BOUNDED_CONTRACT_R2",
+      "diagnostic_channels": {
+        "handler_count": 3,
+        "handler_only_count": 0,
+        "native_stderr_exact": true,
+        "basis": "policy/fixture-derived complete expectations; raw evidence unchanged"
+      }
+    },
+    {
+      "kind": "behavior",
+      "variant": "candidate",
+      "case": "callback-existing",
+      "status": "PASS_BOUNDED_CONTRACT_R2",
+      "diagnostic_channels": {
+        "handler_count": 3,
+        "handler_only_count": 0,
+        "native_stderr_exact": true,
+        "basis": "policy/fixture-derived complete expectations; raw evidence unchanged"
+      }
+    },
+    {
+      "kind": "behavior",
+      "variant": "candidate",
+      "case": "nested-construct",
+      "status": "PASS_BOUNDED_CONTRACT_R2",
+      "diagnostic_channels": {
+        "handler_count": 3,
+        "handler_only_count": 0,
+        "native_stderr_exact": true,
+        "basis": "policy/fixture-derived complete expectations; raw evidence unchanged"
+      }
+    },
+    {
+      "kind": "behavior",
+      "variant": "candidate",
+      "case": "nested-call-ok",
+      "status": "PASS_BOUNDED_CONTRACT_R2",
+      "diagnostic_channels": {
+        "handler_count": 3,
+        "handler_only_count": 0,
+        "native_stderr_exact": true,
+        "basis": "policy/fixture-derived complete expectations; raw evidence unchanged"
+      }
+    },
+    {
+      "kind": "behavior",
+      "variant": "candidate",
+      "case": "nested-call-fault",
+      "status": "PASS_BOUNDED_CONTRACT_R2",
+      "diagnostic_channels": {
+        "handler_count": 3,
+        "handler_only_count": 0,
+        "native_stderr_exact": true,
+        "basis": "policy/fixture-derived complete expectations; raw evidence unchanged"
+      }
+    },
+    {
+      "kind": "behavior",
+      "variant": "candidate",
+      "case": "callback-deny",
+      "status": "PASS_BOUNDED_CONTRACT_R2",
+      "diagnostic_channels": {
+        "handler_count": 4,
+        "handler_only_count": 1,
+        "native_stderr_exact": true,
+        "basis": "policy/fixture-derived complete expectations; raw evidence unchanged"
+      }
+    },
+    {
+      "kind": "behavior",
+      "variant": "candidate",
+      "case": "callback-throw",
+      "status": "PASS_BOUNDED_CONTRACT_R2",
+      "diagnostic_channels": {
+        "handler_count": 2,
+        "handler_only_count": 0,
+        "native_stderr_exact": true,
+        "basis": "policy/fixture-derived complete expectations; raw evidence unchanged"
+      }
+    },
+    {
+      "kind": "scope",
+      "variant": "candidate",
+      "case": "default",
+      "status": "PASS_BOUNDED_CONTRACT_R2",
+      "diagnostic_channels": {
+        "handler_count": 2,
+        "handler_only_count": 0,
+        "native_stderr_exact": true,
+        "basis": "policy/fixture-derived complete expectations; raw evidence unchanged"
+      }
+    },
+    {
+      "kind": "scope",
+      "variant": "candidate",
+      "case": "custom-allow",
+      "status": "PASS_BOUNDED_CONTRACT_R2",
+      "diagnostic_channels": {
+        "handler_count": 2,
+        "handler_only_count": 0,
+        "native_stderr_exact": true,
+        "basis": "policy/fixture-derived complete expectations; raw evidence unchanged"
+      }
+    },
+    {
+      "kind": "scope",
+      "variant": "candidate",
+      "case": "custom-deny",
+      "status": "PASS_BOUNDED_CONTRACT_R2",
+      "diagnostic_channels": {
+        "handler_count": 3,
+        "handler_only_count": 0,
+        "native_stderr_exact": true,
+        "basis": "policy/fixture-derived complete expectations; raw evidence unchanged"
+      }
+    },
+    {
+      "kind": "scope",
+      "variant": "candidate",
+      "case": "custom-throw",
+      "status": "PASS_BOUNDED_CONTRACT_R2",
+      "diagnostic_channels": {
+        "handler_count": 2,
+        "handler_only_count": 0,
+        "native_stderr_exact": true,
+        "basis": "policy/fixture-derived complete expectations; raw evidence unchanged"
+      }
+    },
+    {
+      "kind": "scope",
+      "variant": "candidate",
+      "case": "nested",
+      "status": "PASS_BOUNDED_CONTRACT_R2",
+      "diagnostic_channels": {
+        "handler_count": 2,
+        "handler_only_count": 0,
+        "native_stderr_exact": true,
+        "basis": "policy/fixture-derived complete expectations; raw evidence unchanged"
+      }
+    },
+    {
+      "kind": "scope",
+      "variant": "candidate",
+      "case": "custom-wrapper",
+      "status": "PASS_BOUNDED_CONTRACT_R2",
+      "diagnostic_channels": {
+        "handler_count": 3,
+        "handler_only_count": 0,
+        "native_stderr_exact": true,
+        "basis": "policy/fixture-derived complete expectations; raw evidence unchanged"
+      }
+    },
+    {
+      "kind": "scope",
+      "variant": "candidate",
+      "case": "foreign-mutation",
+      "status": "PASS_BOUNDED_CONTRACT_R2",
+      "diagnostic_channels": {
+        "handler_count": 2,
+        "handler_only_count": 0,
+        "native_stderr_exact": true,
+        "basis": "policy/fixture-derived complete expectations; raw evidence unchanged"
+      }
+    },
+    {
+      "kind": "scope",
+      "variant": "candidate",
+      "case": "non-lifo",
+      "status": "PASS_BOUNDED_CONTRACT_R2",
+      "diagnostic_channels": {
+        "handler_count": 2,
+        "handler_only_count": 0,
+        "native_stderr_exact": true,
+        "basis": "policy/fixture-derived complete expectations; raw evidence unchanged"
+      }
+    },
+    {
+      "kind": "scope",
+      "variant": "candidate",
+      "case": "invalid-token",
+      "status": "PASS_BOUNDED_CONTRACT_R2",
+      "diagnostic_channels": {
+        "handler_count": 2,
+        "handler_only_count": 0,
+        "native_stderr_exact": true,
+        "basis": "policy/fixture-derived complete expectations; raw evidence unchanged"
+      }
+    },
+    {
+      "kind": "scope",
+      "variant": "candidate",
+      "case": "primary-exception-chain",
+      "status": "PASS_BOUNDED_CONTRACT_R2",
+      "diagnostic_channels": {
+        "handler_count": 2,
+        "handler_only_count": 0,
+        "native_stderr_exact": true,
+        "basis": "policy/fixture-derived complete expectations; raw evidence unchanged"
+      }
+    },
+    {
+      "kind": "scope",
+      "variant": "candidate",
+      "case": "idempotent-init",
+      "status": "PASS_BOUNDED_CONTRACT_R2",
+      "diagnostic_channels": {
+        "handler_count": 2,
+        "handler_only_count": 0,
+        "native_stderr_exact": true,
+        "basis": "policy/fixture-derived complete expectations; raw evidence unchanged"
+      }
+    },
+    {
+      "kind": "scope",
+      "variant": "candidate",
+      "case": "standalone",
+      "status": "PASS_BOUNDED_CONTRACT_R2",
+      "diagnostic_channels": {
+        "handler_count": 0,
+        "handler_only_count": 0,
+        "native_stderr_exact": true,
+        "basis": "policy/fixture-derived complete expectations; raw evidence unchanged"
+      }
+    }
+  ],
+  "native_primary_processes": 38,
+  "native_repeat_processes": 38,
+  "native_causal_followup_processes": 2,
+  "original_reports_rewritten": false,
+  "original_strict_failures_retained": 2,
+  "causal_finding": "native ext/soap yields SoapFault with previous=null for thrown synthetic RuntimeException, identically baseline/candidate",
+  "application_acceptance": false,
+  "artifact_selected": false,
+  "runtime_snapshot_sha256": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491",
+  "input_sha256": {
+    "primary.json": "46f65f9b355702571b5cccbcd35f4e33ff964eb2c6ab8e57f04f0390e6c8ffed",
+    "claude-native-matrix.json": "46f65f9b355702571b5cccbcd35f4e33ff964eb2c6ab8e57f04f0390e6c8ffed",
+    "claude-chain-matrix.json": "e7552e538028871862cddaaec70b23ec08a3e8ca6b4d39a090385e02a08d905f"
+  },
+  "contract_sha256": {
+    "contract-r2.py": "34e856dbce3848363b4b6a68c42d0d8477c2aa6d773312ecf8a5e42aa69e59ee",
+    "diagnostic-contract.py": "cce19af080b347c07eb41ce1e3c47bf4d79fd3c193b3cee89d6ec06091822de7",
+    "baseline-diagnostic-records.json": "6da5f8c4a42e25d4ff1955a9498b505bba75c407f16d6200eba63ac214629fd4",
+    "reconcile.py": "a9120962634a8ad2131b4d11ac2c19d04e78e228c53f202ccc2050f7ec3f0381"
+  }
+}

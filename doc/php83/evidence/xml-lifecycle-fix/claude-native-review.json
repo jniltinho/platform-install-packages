@@ -1,0 +1,158 @@
+{
+  "case": "xml-lifecycle-held-A-r1 native83 independent repeat (38 processes)",
+  "executor": "Claude CLI (claude-opus-5-5)",
+  "reviewer": "Claude CLI (same session; self-review of own execution, NOT independent review)",
+  "window_utc": [
+    "2026-09-26T17:07:46Z",
+    "2026-09-26T17:07:58Z"
+  ],
+  "environment": {
+    "host": "php83 VM via ssh -F /tmp/kaltura-php83-ssh.conf",
+    "remote_stage": "/home/vagrant/php-xml-lifecycle-fix-r1",
+    "php": "8.3.6",
+    "libxml": "2.9.14",
+    "error_reporting": 32767
+  },
+  "identities": {
+    "manifest_sha256_pin": "c06f54b7dff9035ea1680d96416ab29d7b4669a5dbe26e417bedccf27d742a08",
+    "manifest_pin_matches_requested": true,
+    "local_stage_tree_sha256_before_and_after": "f926d12c06a8082b1c91def0d5058b1f44b52931ff71895312871d317100a107",
+    "local_stage_files": 22,
+    "collector_sha256": "7837a803a61806690e61ba1c1ce8bf48dcf8db83934842a5734c82c746e62e20",
+    "snapshot_tool_sha256": "ec8f5473fc599259b343ebc3713b55b24753959de559c10a5cbe1254909bb429",
+    "scope_helper_sha256": "00bbe2929d9fffe2f1c86581845f8a11e8089d1b24734018297d2a0cc2104889"
+  },
+  "commands": [
+    {
+      "step": 1,
+      "command": "python3 doc/php83/evidence/exp10-runtime/snapshot-php83.py doc/php83/evidence/xml-lifecycle-fix/claude-native-before.json",
+      "exit": 0,
+      "stdout": "{\"files\": 39, \"modes\": 2}",
+      "stderr": ""
+    },
+    {
+      "step": 2,
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 tools/php83/xml-lifecycle-fix/collect-native.py /tmp/php-xml-lifecycle-fix-prep-r1 doc/php83/evidence/xml-lifecycle-fix/claude-native-matrix.json",
+      "exit": 1,
+      "stdout": "{\"status\": \"FAIL_RETAINED_OBSERVATIONS\", \"processes\": 38, \"failures\": [[\"behavior\", \"baseline\", \"callback-throw\"], [\"behavior\", \"candidate\", \"callback-throw\"]]}",
+      "stderr": ""
+    },
+    {
+      "step": 3,
+      "command": "python3 doc/php83/evidence/exp10-runtime/snapshot-php83.py doc/php83/evidence/xml-lifecycle-fix/claude-native-after.json",
+      "exit": 0,
+      "stdout": "{\"files\": 39, \"modes\": 2}",
+      "stderr": ""
+    }
+  ],
+  "raw_capture_files": [
+    "claude-native-step{1,2,3}.{stdout,stderr,exit}"
+  ],
+  "counts": {
+    "native_processes": 38,
+    "native_process_nonzero_exit": 0,
+    "functional_checks_pass_bounded": 36,
+    "retained_fail": 2,
+    "records_with_handler_only_diagnostics": 5,
+    "behavior_records": 26,
+    "scope_records": 12
+  },
+  "comparison_to_primary": {
+    "matrix_sha256_claude": "46f65f9b355702571b5cccbcd35f4e33ff964eb2c6ab8e57f04f0390e6c8ffed",
+    "matrix_sha256_primary": "46f65f9b355702571b5cccbcd35f4e33ff964eb2c6ab8e57f04f0390e6c8ffed",
+    "byte_identical": true,
+    "records_equal": "38/38",
+    "runtime_snapshot_sha256": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491",
+    "primary_before==primary_after==claude_before==claude_after": true
+  },
+  "status": "FAIL_RETAINED_OBSERVATIONS",
+  "diagnostic_inventory": "PENDING_INDEPENDENT_ADJUDICATION_NOT_WAIVED",
+  "acceptance": false,
+  "application_patch_selected": false,
+  "retained_fail": [
+    {
+      "record": [
+        "behavior",
+        "baseline",
+        "callback-throw"
+      ],
+      "validation_error": "ValueError: expected actual SOAP outcome",
+      "expected_by_harness": "RuntimeException",
+      "observed": {
+        "class": "SoapFault",
+        "message": "SOAP-ERROR: Parsing WSDL: Couldn't load from 'file:///audit/probe/fixtures/good.wsdl'"
+      }
+    },
+    {
+      "record": [
+        "behavior",
+        "candidate",
+        "callback-throw"
+      ],
+      "validation_error": "ValueError: expected actual SOAP outcome",
+      "expected_by_harness": "RuntimeException",
+      "observed": {
+        "class": "SoapFault",
+        "message": "SOAP-ERROR: Parsing WSDL: Couldn't load from 'file:///audit/probe/fixtures/good.wsdl'"
+      }
+    }
+  ],
+  "causal_finding": {
+    "verdict": "CONFIRMED_AS_OBSERVED",
+    "basis": [
+      "behavior.php:45 throws RuntimeException('SYNTHETIC_LOADER_FAILURE') for non-observer phases",
+      "resolver_events in both variants record phase operation:construct for file:///audit/probe/fixtures/good.wsdl (event is appended before the throw), so the throwing callback was reached",
+      "top-level exception observed is native SoapFault 'Parsing WSDL: Couldn't load', not RuntimeException; harness assumption (collect-native.py:28) is what mismatches"
+    ],
+    "not_established": "Whether the RuntimeException is attached as getPrevious() of the SoapFault in the behavior path: NOT RECORDED (behavior.php:36 normalizeException captures class+message only)."
+  },
+  "exception_chain_scope_evidence": {
+    "record": [
+      "scope",
+      "candidate",
+      "primary-exception-chain"
+    ],
+    "error_class": "RuntimeException",
+    "error_message": "XML scope cleanup failed; LogicException: Foreign XML loader mutation inside a SOAP scope",
+    "previous_class": "SoapFault",
+    "previous_message": "SYNTHETIC_PRIMARY_SOAPFAULT",
+    "limitation": "Helper-only synthetic primary SoapFault; does not show the chain for the behavior callback-throw path."
+  },
+  "restoration_observations": {
+    "after-operation (http, marker_seen, callback_same)": {
+      "baseline callback-throw": [
+        1,
+        1,
+        1
+      ],
+      "candidate callback-throw": [
+        0,
+        0,
+        0
+      ]
+    },
+    "note": "Candidate callback-throw after-operation state equals every other candidate case's after-operation state (policy loader installed, http/https wrappers off). Baseline re-enables http/https after-operation in all SoapFault cases (construct-malformed, construct-missing, explicit-fault, callback-deny, callback-throw) but not in success cases. Recorded as observation only; semantic adjudication (intended vs defect) not performed here."
+  },
+  "execution_proof": [
+    "new files created by refuse-overwrite tools (collector require(not output.exists()))",
+    "38 ssh subprocesses within a 12 s wall window",
+    "runtime snapshots taken immediately before/after"
+  ],
+  "limitations": [
+    "Byte-identical output to primary means the probes emit no per-run nonce/timestamp/pid; execution is evidenced by process/exit capture and new files, not by distinguishable content",
+    "Remote stage immutability verified only indirectly (manifest identities checked by collector + runtime snapshot unchanged); no remote tree hash taken",
+    "Self-review by the executor; independent review by another CLI still required",
+    "Harness bounded: no full application bootstrap, no real transport; passing 36 checks is not application acceptance",
+    "Diagnostic inventory remains PENDING; 5 records contain handler-only diagnostics not adjudicated",
+    "Old strict 2-FAIL and earlier 8-FAIL evidence untouched and preserved"
+  ],
+  "not_done": [
+    "baseline74",
+    "network download",
+    "install",
+    "SQL",
+    "source patch",
+    "stage changes",
+    "expected-contract/product edits"
+  ]
+}

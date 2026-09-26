@@ -1,0 +1,45 @@
+{
+  "status": "EXACT_INDEPENDENT_REPEAT_WITH_RETAINED_FAILURES",
+  "primary_repeat_bytes_equal": true,
+  "sha256": "46f65f9b355702571b5cccbcd35f4e33ff964eb2c6ab8e57f04f0390e6c8ffed",
+  "runtime_four_snapshots_equal": true,
+  "runtime_sha256": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491",
+  "actual_cli_exit": 0,
+  "actual_steps": [
+    0,
+    1,
+    0
+  ],
+  "per_executor_processes": 38,
+  "per_executor_native_exit0": 38,
+  "per_executor_functional_pass": 36,
+  "per_executor_retained_failures": [
+    [
+      "behavior",
+      "baseline",
+      "callback-throw"
+    ],
+    [
+      "behavior",
+      "candidate",
+      "callback-throw"
+    ]
+  ],
+  "diagnostic_adjudication": "PENDING_NOT_ACCEPTANCE",
+  "observed_diagnostics": {
+    "baseline": {
+      "processes": 13,
+      "handler_diagnostics": 114,
+      "deprecations": 77,
+      "handler_only": 4
+    },
+    "candidate": {
+      "processes": 13,
+      "handler_diagnostics": 37,
+      "deprecations": 0,
+      "handler_only": 2
+    }
+  },
+  "application_patch_selected": false,
+  "execution_proof": "actual sanitized CLI tool calls and individual command results, not byte equality alone"
+}

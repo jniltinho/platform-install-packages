@@ -1,0 +1,20 @@
+test_all44_actual_retained_records_new_contract (test_observation.Tests.test_all44_actual_retained_records_new_contract) ... ok
+test_changed_channel_rejected (test_observation.Tests.test_changed_channel_rejected) ... ok
+test_changed_phase_rejected (test_observation.Tests.test_changed_phase_rejected) ... ok
+test_changed_source_line_rejected (test_observation.Tests.test_changed_source_line_rejected) ... ok
+test_changed_stderr_present_line_rejected (test_observation.Tests.test_changed_stderr_present_line_rejected) ... ok
+test_different_message_rejected (test_observation.Tests.test_different_message_rejected) ... ok
+test_drop_handler_only_rejected (test_observation.Tests.test_drop_handler_only_rejected) ... ok
+test_drop_native_stderr_rejected (test_observation.Tests.test_drop_native_stderr_rejected) ... ok
+test_drop_stderr_present_handler_rejected (test_observation.Tests.test_drop_stderr_present_handler_rejected) ... ok
+test_duplicate_stderr_present_handler_rejected (test_observation.Tests.test_duplicate_stderr_present_handler_rejected) ... ok
+test_extra_handler_only_rejected (test_observation.Tests.test_extra_handler_only_rejected) ... ok
+test_severity_bool_rejected (test_observation.Tests.test_severity_bool_rejected) ... ok
+test_stderr_list_rejected (test_observation.Tests.test_stderr_list_rejected) ... ok
+test_truncated_stderr_present_handler_rejected (test_observation.Tests.test_truncated_stderr_present_handler_rejected) ... ok
+test_unknown_stderr_rejected (test_observation.Tests.test_unknown_stderr_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.011s
+
+OK

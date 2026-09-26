@@ -1,0 +1,11 @@
+{"executor":"claude-cli","reviewer":"claude-cli (Opus 5.5)","scope":"local only; no VM/SSH/PHP/network/credentials/source edits",
+"tests":{"command":"python3 tools/php83/xml-lifecycle-fix/test_observation.py -v","exit":0,"ran":15,"ok":15,"evidence":"claude-channel-r2-tests.{stdout,stderr,exit}"},
+"baseline":{"cases":44,"matrix":"{74,83}x{original,exp11}x11","fields":["handler","native_stderr","runtime","probe_sha256"],"primary_mismatches":0,"candidate_golden":false,
+"references":{"74":{"sha256":"755dc2a8f5139f2efe8e5728f83a37cd6c610c47d43246bf825c1211918a08ae","primary_repeat_byte_identical":true},"83":{"sha256":"3e5382b28f41db5fa1b433d4230556610cdc2d6f6d58da33a02864ef26174b03","primary_repeat_byte_identical":true}}},
+"r1_findings":{"1_drop_stderr_present":"closed","2_unknown_stderr":"closed","3_duplicate":"closed","4_truncated_or_line":"closed","5_stderr_non_string":"closed"},
+"old_fail_semantics_unchanged":true,
+"correction_verdict":"PASS_LOCAL_HARNESS",
+"residual_low":["per-diagnostic in-stderr checks redundant after exact equality","reference sha256 not rechecked at runtime","golden only valid for unmodified baseline; candidate needs separate expectations"],
+"design_recommendation":"A",
+"blocking_questions":["nested LIFO incl. recognizing own delegated state and non-LIFO fail-closed","per-scope wrapper ownership; never remove preexisting custom wrappers","callable identity for Closure/named/array/invokable via native 8.3 getter","idempotent init and kConf/kSoapClient load ordering","third-party callback mutation inside scope"],
+"limits":["traditional synchronous PHP only; no fiber/global isolation claim","new helper file needs future artifact-builder/inventory change; exp12 unchanged","no patch; no runtime or application acceptance"]}

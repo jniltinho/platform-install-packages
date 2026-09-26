@@ -1,0 +1,28 @@
+test_actual38plus2_replay (__main__.Tests.test_actual38plus2_replay) ... ok
+test_baseline_diagnostic_drop (__main__.Tests.test_baseline_diagnostic_drop) ... ok
+test_bool_diagnostic_severity (__main__.Tests.test_bool_diagnostic_severity) ... ok
+test_boolean_exit (__main__.Tests.test_boolean_exit) ... ok
+test_causal_chain_invented (__main__.Tests.test_causal_chain_invented) ... ok
+test_causal_float_exit (__main__.Tests.test_causal_float_exit) ... ok
+test_causal_origin_missing (__main__.Tests.test_causal_origin_missing) ... ok
+test_causal_truncated (__main__.Tests.test_causal_truncated) ... ok
+test_causal_wrong_source (__main__.Tests.test_causal_wrong_source) ... ok
+test_changed_helper_hash_manifest (__main__.Tests.test_changed_helper_hash_manifest) ... ok
+test_drop_candidate_diagnostic (__main__.Tests.test_drop_candidate_diagnostic) ... ok
+test_drop_native_stderr (__main__.Tests.test_drop_native_stderr) ... ok
+test_duplicate_candidate_diagnostic (__main__.Tests.test_duplicate_candidate_diagnostic) ... ok
+test_duplicate_case (__main__.Tests.test_duplicate_case) ... ok
+test_float_exit (__main__.Tests.test_float_exit) ... ok
+test_independent_mismatch (__main__.Tests.test_independent_mismatch) ... ok
+test_missing_record (__main__.Tests.test_missing_record) ... ok
+test_original_failure_erased (__main__.Tests.test_original_failure_erased) ... ok
+test_product_source_drift (__main__.Tests.test_product_source_drift) ... ok
+test_scope_marker_leak (__main__.Tests.test_scope_marker_leak) ... ok
+test_stderr_list (__main__.Tests.test_stderr_list) ... ok
+test_unknown_native_warning (__main__.Tests.test_unknown_native_warning) ... ok
+test_wrong_diagnostic_line (__main__.Tests.test_wrong_diagnostic_line) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.129s
+
+OK

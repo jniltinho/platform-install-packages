@@ -1,0 +1,512 @@
+{
+  "status": "CHAIN_CAPTURED_NOT_PRODUCT_ACCEPTANCE",
+  "manifest_sha256": "5feb006310c2a7da6e790570f71b069738c127bd3374c52aebbf1ee81eed8017",
+  "collector_sha256": "f3f70bdeec6d5c2446e281b4745a73db45f4b417288948bb2df408dd21173099",
+  "records": [
+    {
+      "variant": "baseline",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php83-ssh.conf",
+        "php83",
+        "bash /home/vagrant/php-xml-lifecycle-fix-chain-r1/run-native.sh behavior baseline callback-throw 5feb006310c2a7da6e790570f71b069738c127bd3374c52aebbf1ee81eed8017"
+      ],
+      "exit": 0,
+      "stdout": "{\"schema\":1,\"runtime\":{\"php\":\"8.3.6\",\"php_id\":80306,\"libxml\":\"2.9.14\",\"modules\":[\"Core\",\"date\",\"libxml\",\"openssl\",\"pcre\",\"zlib\",\"filter\",\"hash\",\"json\",\"pcntl\",\"random\",\"Reflection\",\"SPL\",\"session\",\"standard\",\"sodium\",\"xml\",\"dom\",\"soap\"],\"error_reporting\":32767},\"variant\":\"baseline\",\"case\":\"callback-throw\",\"classes\":{\"config\":\"kEnvironment\",\"soap\":\"SoapClient\",\"transport\":\"kSoapClient\"},\"environment_keys\":[\"cache_root_path\",\"general_cache_dir\",\"response_cache_dir\",\"syndication_core_xsd_path\"],\"events\":[{\"phase\":\"before-kConf\",\"wrappers\":{\"http\":true,\"https\":true,\"all\":[\"compress.zlib\",\"data\",\"file\",\"ftp\",\"ftps\",\"glob\",\"http\",\"https\",\"php\"]},\"marker_seen\":true,\"parse_return\":true,\"value\":\"SYNTHETIC_LIFECYCLE_MARKER\",\"callback_identity_available\":true,\"callback_same\":true},{\"phase\":\"after-kConf\",\"wrappers\":{\"http\":false,\"https\":false,\"all\":[\"compress.zlib\",\"data\",\"file\",\"ftp\",\"ftps\",\"glob\",\"php\"]},\"marker_seen\":true,\"parse_return\":true,\"value\":\"SYNTHETIC_LIFECYCLE_MARKER\",\"callback_identity_available\":true,\"callback_same\":true},{\"phase\":\"after-operation\",\"wrappers\":{\"http\":true,\"https\":true,\"all\":[\"compress.zlib\",\"data\",\"file\",\"ftp\",\"ftps\",\"glob\",\"http\",\"https\",\"php\"]},\"marker_seen\":true,\"parse_return\":true,\"value\":\"SYNTHETIC_LIFECYCLE_MARKER\",\"callback_identity_available\":true,\"callback_same\":true}],\"result\":null,\"exception\":{\"class\":\"SoapFault\",\"message\":\"SOAP-ERROR: Parsing WSDL: Couldn't load from 'file:///audit/probe/fixtures/good.wsdl'\",\"chain\":[{\"class\":\"SoapFault\",\"message\":\"SOAP-ERROR: Parsing WSDL: Couldn't load from 'file:///audit/probe/fixtures/good.wsdl'\"}],\"chain_truncated\":false},\"functions\":[],\"diagnostics\":[{\"phase\":\"load-kConf\",\"severity\":8192,\"message\":\"Function libxml_disable_entity_loader() is deprecated\",\"file\":\"baseline/alpha/config/kConf.php\",\"line\":7},{\"phase\":\"load-kConf\",\"severity\":8192,\"message\":\"Return type of kSoapClient::__call($function_name, $arguments) should either be compatible with SoapClient::__call(string $name, array $args): mixed, or the #[\\\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice\",\"file\":\"baseline/infra/general/kSoapClient.php\",\"line\":11},{\"phase\":\"load-kConf\",\"severity\":8192,\"message\":\"Return type of kSoapClient::__soapCall($function_name, $arguments, $options = null, $input_headers = null, &$output_headers = null) should either be compatible with SoapClient::__soapCall(string $name, array $args, ?array $options = null, $inputHeaders = null, &$outputHeaders = null): mixed, or the #[\\\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice\",\"file\":\"baseline/infra/general/kSoapClient.php\",\"line\":18},{\"phase\":\"operation:construct\",\"severity\":8192,\"message\":\"Function libxml_disable_entity_loader() is deprecated\",\"file\":\"baseline/infra/general/kSoapClient.php\",\"line\":29}],\"resolver_events\":[{\"phase\":\"observer:before-kConf\",\"public\":null,\"system\":\"file:///audit/probe/fixtures/marker.txt\",\"wrappers\":{\"http\":true,\"https\":true,\"all\":[\"compress.zlib\",\"data\",\"file\",\"ftp\",\"ftps\",\"glob\",\"http\",\"https\",\"php\"]}},{\"phase\":\"observer:after-kConf\",\"public\":null,\"system\":\"file:///audit/probe/fixtures/marker.txt\",\"wrappers\":{\"http\":false,\"https\":false,\"all\":[\"compress.zlib\",\"data\",\"file\",\"ftp\",\"ftps\",\"glob\",\"php\"]}},{\"phase\":\"operation:construct\",\"public\":null,\"system\":\"file:///audit/probe/fixtures/good.wsdl\",\"wrappers\":{\"http\":true,\"https\":true,\"all\":[\"compress.zlib\",\"data\",\"file\",\"ftp\",\"ftps\",\"glob\",\"http\",\"https\",\"php\"]}},{\"phase\":\"observer:after-operation\",\"public\":null,\"system\":\"file:///audit/probe/fixtures/marker.txt\",\"wrappers\":{\"http\":true,\"https\":true,\"all\":[\"compress.zlib\",\"data\",\"file\",\"ftp\",\"ftps\",\"glob\",\"http\",\"https\",\"php\"]}}],\"resolver_exceptions\":[{\"phase\":\"operation:construct\",\"exception\":{\"class\":\"RuntimeException\",\"message\":\"SYNTHETIC_LOADER_FAILURE\",\"chain\":[{\"class\":\"RuntimeException\",\"message\":\"SYNTHETIC_LOADER_FAILURE\"}],\"chain_truncated\":false}}],\"transport_events\":[],\"nested_results\":[],\"loaded\":{\"alpha/config/cache/kCacheConfFactory.php\":\"73031853cf26128ab5460caecaa76d980fd9ace15219cc91e0b60cd02b561b7e\",\"alpha/config/kConf.php\":\"d02983c560f6813c3546f2294a324d7a955f669e5b867d56d9a878c397cfa015\",\"alpha/config/kConfCacheManager.php\":\"19d4ffb4866339cae93eb8949fd06275978799804454e81d68dd7692fe050333\",\"infra/general/kSoapClient.php\":\"6fe1abef06f3f365fc1862de0e25ffeaef9da156e731fd7cc17b386623561b7e\",\"infra/kEnvironment.php\":\"708f2497ade7d59522943d17d0bd788e2b18aec45504c59e3f8ecf5dd303e15d\"},\"probe_sha256\":\"2096059a3a2141a468fd11a381da0f927578824e9da35857e8e5b457e73c6745\",\"real_transport_coverage\":false,\"full_application_bootstrap\":false,\"application_patch_selected\":false}\n",
+      "stderr": "Deprecated: Function libxml_disable_entity_loader() is deprecated in /audit/probe/baseline/alpha/config/kConf.php on line 7\nDeprecated: Return type of kSoapClient::__call($function_name, $arguments) should either be compatible with SoapClient::__call(string $name, array $args): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/probe/baseline/infra/general/kSoapClient.php on line 11\nDeprecated: Return type of kSoapClient::__soapCall($function_name, $arguments, $options = null, $input_headers = null, &$output_headers = null) should either be compatible with SoapClient::__soapCall(string $name, array $args, ?array $options = null, $inputHeaders = null, &$outputHeaders = null): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/probe/baseline/infra/general/kSoapClient.php on line 18\nDeprecated: Function libxml_disable_entity_loader() is deprecated in /audit/probe/baseline/infra/general/kSoapClient.php on line 29\n",
+      "body": {
+        "schema": 1,
+        "runtime": {
+          "php": "8.3.6",
+          "php_id": 80306,
+          "libxml": "2.9.14",
+          "modules": [
+            "Core",
+            "date",
+            "libxml",
+            "openssl",
+            "pcre",
+            "zlib",
+            "filter",
+            "hash",
+            "json",
+            "pcntl",
+            "random",
+            "Reflection",
+            "SPL",
+            "session",
+            "standard",
+            "sodium",
+            "xml",
+            "dom",
+            "soap"
+          ],
+          "error_reporting": 32767
+        },
+        "variant": "baseline",
+        "case": "callback-throw",
+        "classes": {
+          "config": "kEnvironment",
+          "soap": "SoapClient",
+          "transport": "kSoapClient"
+        },
+        "environment_keys": [
+          "cache_root_path",
+          "general_cache_dir",
+          "response_cache_dir",
+          "syndication_core_xsd_path"
+        ],
+        "events": [
+          {
+            "phase": "before-kConf",
+            "wrappers": {
+              "http": true,
+              "https": true,
+              "all": [
+                "compress.zlib",
+                "data",
+                "file",
+                "ftp",
+                "ftps",
+                "glob",
+                "http",
+                "https",
+                "php"
+              ]
+            },
+            "marker_seen": true,
+            "parse_return": true,
+            "value": "SYNTHETIC_LIFECYCLE_MARKER",
+            "callback_identity_available": true,
+            "callback_same": true
+          },
+          {
+            "phase": "after-kConf",
+            "wrappers": {
+              "http": false,
+              "https": false,
+              "all": [
+                "compress.zlib",
+                "data",
+                "file",
+                "ftp",
+                "ftps",
+                "glob",
+                "php"
+              ]
+            },
+            "marker_seen": true,
+            "parse_return": true,
+            "value": "SYNTHETIC_LIFECYCLE_MARKER",
+            "callback_identity_available": true,
+            "callback_same": true
+          },
+          {
+            "phase": "after-operation",
+            "wrappers": {
+              "http": true,
+              "https": true,
+              "all": [
+                "compress.zlib",
+                "data",
+                "file",
+                "ftp",
+                "ftps",
+                "glob",
+                "http",
+                "https",
+                "php"
+              ]
+            },
+            "marker_seen": true,
+            "parse_return": true,
+            "value": "SYNTHETIC_LIFECYCLE_MARKER",
+            "callback_identity_available": true,
+            "callback_same": true
+          }
+        ],
+        "result": null,
+        "exception": {
+          "class": "SoapFault",
+          "message": "SOAP-ERROR: Parsing WSDL: Couldn't load from 'file:///audit/probe/fixtures/good.wsdl'",
+          "chain": [
+            {
+              "class": "SoapFault",
+              "message": "SOAP-ERROR: Parsing WSDL: Couldn't load from 'file:///audit/probe/fixtures/good.wsdl'"
+            }
+          ],
+          "chain_truncated": false
+        },
+        "functions": [],
+        "diagnostics": [
+          {
+            "phase": "load-kConf",
+            "severity": 8192,
+            "message": "Function libxml_disable_entity_loader() is deprecated",
+            "file": "baseline/alpha/config/kConf.php",
+            "line": 7
+          },
+          {
+            "phase": "load-kConf",
+            "severity": 8192,
+            "message": "Return type of kSoapClient::__call($function_name, $arguments) should either be compatible with SoapClient::__call(string $name, array $args): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+            "file": "baseline/infra/general/kSoapClient.php",
+            "line": 11
+          },
+          {
+            "phase": "load-kConf",
+            "severity": 8192,
+            "message": "Return type of kSoapClient::__soapCall($function_name, $arguments, $options = null, $input_headers = null, &$output_headers = null) should either be compatible with SoapClient::__soapCall(string $name, array $args, ?array $options = null, $inputHeaders = null, &$outputHeaders = null): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+            "file": "baseline/infra/general/kSoapClient.php",
+            "line": 18
+          },
+          {
+            "phase": "operation:construct",
+            "severity": 8192,
+            "message": "Function libxml_disable_entity_loader() is deprecated",
+            "file": "baseline/infra/general/kSoapClient.php",
+            "line": 29
+          }
+        ],
+        "resolver_events": [
+          {
+            "phase": "observer:before-kConf",
+            "public": null,
+            "system": "file:///audit/probe/fixtures/marker.txt",
+            "wrappers": {
+              "http": true,
+              "https": true,
+              "all": [
+                "compress.zlib",
+                "data",
+                "file",
+                "ftp",
+                "ftps",
+                "glob",
+                "http",
+                "https",
+                "php"
+              ]
+            }
+          },
+          {
+            "phase": "observer:after-kConf",
+            "public": null,
+            "system": "file:///audit/probe/fixtures/marker.txt",
+            "wrappers": {
+              "http": false,
+              "https": false,
+              "all": [
+                "compress.zlib",
+                "data",
+                "file",
+                "ftp",
+                "ftps",
+                "glob",
+                "php"
+              ]
+            }
+          },
+          {
+            "phase": "operation:construct",
+            "public": null,
+            "system": "file:///audit/probe/fixtures/good.wsdl",
+            "wrappers": {
+              "http": true,
+              "https": true,
+              "all": [
+                "compress.zlib",
+                "data",
+                "file",
+                "ftp",
+                "ftps",
+                "glob",
+                "http",
+                "https",
+                "php"
+              ]
+            }
+          },
+          {
+            "phase": "observer:after-operation",
+            "public": null,
+            "system": "file:///audit/probe/fixtures/marker.txt",
+            "wrappers": {
+              "http": true,
+              "https": true,
+              "all": [
+                "compress.zlib",
+                "data",
+                "file",
+                "ftp",
+                "ftps",
+                "glob",
+                "http",
+                "https",
+                "php"
+              ]
+            }
+          }
+        ],
+        "resolver_exceptions": [
+          {
+            "phase": "operation:construct",
+            "exception": {
+              "class": "RuntimeException",
+              "message": "SYNTHETIC_LOADER_FAILURE",
+              "chain": [
+                {
+                  "class": "RuntimeException",
+                  "message": "SYNTHETIC_LOADER_FAILURE"
+                }
+              ],
+              "chain_truncated": false
+            }
+          }
+        ],
+        "transport_events": [],
+        "nested_results": [],
+        "loaded": {
+          "alpha/config/cache/kCacheConfFactory.php": "73031853cf26128ab5460caecaa76d980fd9ace15219cc91e0b60cd02b561b7e",
+          "alpha/config/kConf.php": "d02983c560f6813c3546f2294a324d7a955f669e5b867d56d9a878c397cfa015",
+          "alpha/config/kConfCacheManager.php": "19d4ffb4866339cae93eb8949fd06275978799804454e81d68dd7692fe050333",
+          "infra/general/kSoapClient.php": "6fe1abef06f3f365fc1862de0e25ffeaef9da156e731fd7cc17b386623561b7e",
+          "infra/kEnvironment.php": "708f2497ade7d59522943d17d0bd788e2b18aec45504c59e3f8ecf5dd303e15d"
+        },
+        "probe_sha256": "2096059a3a2141a468fd11a381da0f927578824e9da35857e8e5b457e73c6745",
+        "real_transport_coverage": false,
+        "full_application_bootstrap": false,
+        "application_patch_selected": false
+      }
+    },
+    {
+      "variant": "candidate",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php83-ssh.conf",
+        "php83",
+        "bash /home/vagrant/php-xml-lifecycle-fix-chain-r1/run-native.sh behavior candidate callback-throw 5feb006310c2a7da6e790570f71b069738c127bd3374c52aebbf1ee81eed8017"
+      ],
+      "exit": 0,
+      "stdout": "{\"schema\":1,\"runtime\":{\"php\":\"8.3.6\",\"php_id\":80306,\"libxml\":\"2.9.14\",\"modules\":[\"Core\",\"date\",\"libxml\",\"openssl\",\"pcre\",\"zlib\",\"filter\",\"hash\",\"json\",\"pcntl\",\"random\",\"Reflection\",\"SPL\",\"session\",\"standard\",\"sodium\",\"xml\",\"dom\",\"soap\"],\"error_reporting\":32767},\"variant\":\"candidate\",\"case\":\"callback-throw\",\"classes\":{\"config\":\"kEnvironment\",\"soap\":\"SoapClient\",\"transport\":\"kSoapClient\"},\"environment_keys\":[\"cache_root_path\",\"general_cache_dir\",\"response_cache_dir\",\"syndication_core_xsd_path\"],\"events\":[{\"phase\":\"before-kConf\",\"wrappers\":{\"http\":true,\"https\":true,\"all\":[\"compress.zlib\",\"data\",\"file\",\"ftp\",\"ftps\",\"glob\",\"http\",\"https\",\"php\"]},\"marker_seen\":true,\"parse_return\":true,\"value\":\"SYNTHETIC_LIFECYCLE_MARKER\",\"callback_identity_available\":true,\"callback_same\":true},{\"phase\":\"after-kConf\",\"wrappers\":{\"http\":false,\"https\":false,\"all\":[\"compress.zlib\",\"data\",\"file\",\"ftp\",\"ftps\",\"glob\",\"php\"]},\"marker_seen\":false,\"parse_return\":true,\"value\":\"\",\"callback_identity_available\":true,\"callback_same\":false},{\"phase\":\"after-operation\",\"wrappers\":{\"http\":false,\"https\":false,\"all\":[\"compress.zlib\",\"data\",\"file\",\"ftp\",\"ftps\",\"glob\",\"php\"]},\"marker_seen\":false,\"parse_return\":true,\"value\":\"\",\"callback_identity_available\":true,\"callback_same\":false}],\"result\":null,\"exception\":{\"class\":\"SoapFault\",\"message\":\"SOAP-ERROR: Parsing WSDL: Couldn't load from 'file:///audit/probe/fixtures/good.wsdl'\",\"chain\":[{\"class\":\"SoapFault\",\"message\":\"SOAP-ERROR: Parsing WSDL: Couldn't load from 'file:///audit/probe/fixtures/good.wsdl'\"}],\"chain_truncated\":false},\"functions\":[],\"diagnostics\":[{\"phase\":\"observer:after-kConf\",\"severity\":2,\"message\":\"DOMDocument::loadXML(): Failed to load external entity because the resolver function returned null\",\"file\":\"behavior.php\",\"line\":28},{\"phase\":\"observer:after-operation\",\"severity\":2,\"message\":\"DOMDocument::loadXML(): Failed to load external entity because the resolver function returned null\",\"file\":\"behavior.php\",\"line\":28}],\"resolver_events\":[{\"phase\":\"observer:before-kConf\",\"public\":null,\"system\":\"file:///audit/probe/fixtures/marker.txt\",\"wrappers\":{\"http\":true,\"https\":true,\"all\":[\"compress.zlib\",\"data\",\"file\",\"ftp\",\"ftps\",\"glob\",\"http\",\"https\",\"php\"]}},{\"phase\":\"operation:construct\",\"public\":null,\"system\":\"file:///audit/probe/fixtures/good.wsdl\",\"wrappers\":{\"http\":true,\"https\":true,\"all\":[\"compress.zlib\",\"data\",\"file\",\"ftp\",\"ftps\",\"glob\",\"http\",\"https\",\"php\"]}}],\"resolver_exceptions\":[{\"phase\":\"operation:construct\",\"exception\":{\"class\":\"RuntimeException\",\"message\":\"SYNTHETIC_LOADER_FAILURE\",\"chain\":[{\"class\":\"RuntimeException\",\"message\":\"SYNTHETIC_LOADER_FAILURE\"}],\"chain_truncated\":false}}],\"transport_events\":[],\"nested_results\":[],\"loaded\":{\"alpha/config/cache/kCacheConfFactory.php\":\"73031853cf26128ab5460caecaa76d980fd9ace15219cc91e0b60cd02b561b7e\",\"alpha/config/kConf.php\":\"e83d565b1c88c15812e180efff0f84d978bb46e04391985bfe9f0b481f56f5df\",\"alpha/config/kConfCacheManager.php\":\"19d4ffb4866339cae93eb8949fd06275978799804454e81d68dd7692fe050333\",\"infra/general/kSoapClient.php\":\"0091ab9704783d547f80b3035c26b1aa6f88bd973032df4722fcf3c4ce20d4ce\",\"infra/general/kXmlEntityLoaderPolicy.php\":\"00bbe2929d9fffe2f1c86581845f8a11e8089d1b24734018297d2a0cc2104889\",\"infra/kEnvironment.php\":\"708f2497ade7d59522943d17d0bd788e2b18aec45504c59e3f8ecf5dd303e15d\"},\"probe_sha256\":\"2096059a3a2141a468fd11a381da0f927578824e9da35857e8e5b457e73c6745\",\"real_transport_coverage\":false,\"full_application_bootstrap\":false,\"application_patch_selected\":false}\n",
+      "stderr": "Warning: DOMDocument::loadXML(): Failed to load external entity because the resolver function returned null in /audit/probe/behavior.php on line 28\nWarning: DOMDocument::loadXML(): Failed to load external entity because the resolver function returned null in /audit/probe/behavior.php on line 28\n",
+      "body": {
+        "schema": 1,
+        "runtime": {
+          "php": "8.3.6",
+          "php_id": 80306,
+          "libxml": "2.9.14",
+          "modules": [
+            "Core",
+            "date",
+            "libxml",
+            "openssl",
+            "pcre",
+            "zlib",
+            "filter",
+            "hash",
+            "json",
+            "pcntl",
+            "random",
+            "Reflection",
+            "SPL",
+            "session",
+            "standard",
+            "sodium",
+            "xml",
+            "dom",
+            "soap"
+          ],
+          "error_reporting": 32767
+        },
+        "variant": "candidate",
+        "case": "callback-throw",
+        "classes": {
+          "config": "kEnvironment",
+          "soap": "SoapClient",
+          "transport": "kSoapClient"
+        },
+        "environment_keys": [
+          "cache_root_path",
+          "general_cache_dir",
+          "response_cache_dir",
+          "syndication_core_xsd_path"
+        ],
+        "events": [
+          {
+            "phase": "before-kConf",
+            "wrappers": {
+              "http": true,
+              "https": true,
+              "all": [
+                "compress.zlib",
+                "data",
+                "file",
+                "ftp",
+                "ftps",
+                "glob",
+                "http",
+                "https",
+                "php"
+              ]
+            },
+            "marker_seen": true,
+            "parse_return": true,
+            "value": "SYNTHETIC_LIFECYCLE_MARKER",
+            "callback_identity_available": true,
+            "callback_same": true
+          },
+          {
+            "phase": "after-kConf",
+            "wrappers": {
+              "http": false,
+              "https": false,
+              "all": [
+                "compress.zlib",
+                "data",
+                "file",
+                "ftp",
+                "ftps",
+                "glob",
+                "php"
+              ]
+            },
+            "marker_seen": false,
+            "parse_return": true,
+            "value": "",
+            "callback_identity_available": true,
+            "callback_same": false
+          },
+          {
+            "phase": "after-operation",
+            "wrappers": {
+              "http": false,
+              "https": false,
+              "all": [
+                "compress.zlib",
+                "data",
+                "file",
+                "ftp",
+                "ftps",
+                "glob",
+                "php"
+              ]
+            },
+            "marker_seen": false,
+            "parse_return": true,
+            "value": "",
+            "callback_identity_available": true,
+            "callback_same": false
+          }
+        ],
+        "result": null,
+        "exception": {
+          "class": "SoapFault",
+          "message": "SOAP-ERROR: Parsing WSDL: Couldn't load from 'file:///audit/probe/fixtures/good.wsdl'",
+          "chain": [
+            {
+              "class": "SoapFault",
+              "message": "SOAP-ERROR: Parsing WSDL: Couldn't load from 'file:///audit/probe/fixtures/good.wsdl'"
+            }
+          ],
+          "chain_truncated": false
+        },
+        "functions": [],
+        "diagnostics": [
+          {
+            "phase": "observer:after-kConf",
+            "severity": 2,
+            "message": "DOMDocument::loadXML(): Failed to load external entity because the resolver function returned null",
+            "file": "behavior.php",
+            "line": 28
+          },
+          {
+            "phase": "observer:after-operation",
+            "severity": 2,
+            "message": "DOMDocument::loadXML(): Failed to load external entity because the resolver function returned null",
+            "file": "behavior.php",
+            "line": 28
+          }
+        ],
+        "resolver_events": [
+          {
+            "phase": "observer:before-kConf",
+            "public": null,
+            "system": "file:///audit/probe/fixtures/marker.txt",
+            "wrappers": {
+              "http": true,
+              "https": true,
+              "all": [
+                "compress.zlib",
+                "data",
+                "file",
+                "ftp",
+                "ftps",
+                "glob",
+                "http",
+                "https",
+                "php"
+              ]
+            }
+          },
+          {
+            "phase": "operation:construct",
+            "public": null,
+            "system": "file:///audit/probe/fixtures/good.wsdl",
+            "wrappers": {
+              "http": true,
+              "https": true,
+              "all": [
+                "compress.zlib",
+                "data",
+                "file",
+                "ftp",
+                "ftps",
+                "glob",
+                "http",
+                "https",
+                "php"
+              ]
+            }
+          }
+        ],
+        "resolver_exceptions": [
+          {
+            "phase": "operation:construct",
+            "exception": {
+              "class": "RuntimeException",
+              "message": "SYNTHETIC_LOADER_FAILURE",
+              "chain": [
+                {
+                  "class": "RuntimeException",
+                  "message": "SYNTHETIC_LOADER_FAILURE"
+                }
+              ],
+              "chain_truncated": false
+            }
+          }
+        ],
+        "transport_events": [],
+        "nested_results": [],
+        "loaded": {
+          "alpha/config/cache/kCacheConfFactory.php": "73031853cf26128ab5460caecaa76d980fd9ace15219cc91e0b60cd02b561b7e",
+          "alpha/config/kConf.php": "e83d565b1c88c15812e180efff0f84d978bb46e04391985bfe9f0b481f56f5df",
+          "alpha/config/kConfCacheManager.php": "19d4ffb4866339cae93eb8949fd06275978799804454e81d68dd7692fe050333",
+          "infra/general/kSoapClient.php": "0091ab9704783d547f80b3035c26b1aa6f88bd973032df4722fcf3c4ce20d4ce",
+          "infra/general/kXmlEntityLoaderPolicy.php": "00bbe2929d9fffe2f1c86581845f8a11e8089d1b24734018297d2a0cc2104889",
+          "infra/kEnvironment.php": "708f2497ade7d59522943d17d0bd788e2b18aec45504c59e3f8ecf5dd303e15d"
+        },
+        "probe_sha256": "2096059a3a2141a468fd11a381da0f927578824e9da35857e8e5b457e73c6745",
+        "real_transport_coverage": false,
+        "full_application_bootstrap": false,
+        "application_patch_selected": false
+      }
+    }
+  ],
+  "product_changed": false,
+  "acceptance": false
+}

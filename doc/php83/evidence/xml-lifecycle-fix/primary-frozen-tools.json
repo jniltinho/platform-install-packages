@@ -1,0 +1,18 @@
+{
+  "tools/php83/xml-lifecycle-fix/baseline-channels.json": "c999005fb096cd24e37ff72974f3c44d852a0b42ded9b4682ba9b4a37ecaa87d",
+  "tools/php83/xml-lifecycle-fix/test_held.py": "49ed5d8293b6015eeb16492083e8b4baee83a74c2cfa07112a319a75549097a8",
+  "tools/php83/xml-lifecycle-fix/behavior.php": "4e64fbe37ccd50cc61890b87e7fc0eb374a9080fd85909f9bcef8cc5a09659ef",
+  "tools/php83/xml-lifecycle-fix/capabilities.php": "c64a8fb8d58b61e9ddd31a0b5d661439ddaf9f5b627ced193bb81b0d2bb2262d",
+  "tools/php83/xml-lifecycle-fix/run-native.sh": "f3f9be2b17239d8d987cacf30ca33065afa5a9b4b894daedb4b51f363765dad5",
+  "tools/php83/xml-lifecycle-fix/prepare-native.py": "ebf5a7fc10f2379aa21094adcfbdb562f70a431afac971bc4b972c6d7e0bda2c",
+  "tools/php83/xml-lifecycle-fix/collect-native.py": "7837a803a61806690e61ba1c1ce8bf48dcf8db83934842a5734c82c746e62e20",
+  "tools/php83/xml-lifecycle-fix/build-held.py": "c3763399d95820cd1b11e138a857199c947d01301b5e543d41d3034d01dca8bc",
+  "tools/php83/xml-lifecycle-fix/test_observation.py": "2c96d41d3c400f8f1cde8c3d372991612b8d1451a808f6a8b3d091d544457255",
+  "tools/php83/xml-lifecycle-fix/observation_contract.py": "cb7ea4ab3251cd0ea9416e1d6ec7760fc7892c8bf68c28010c16552f86144fc7",
+  "tools/php83/xml-lifecycle-fix/scope-probe.php": "c6698b780bb934a23c4122235c4cbc08ff0f7ef676f82e77f4ccec260cdb7b6f",
+  "tools/php83/xml-lifecycle-fix/test_native.py": "da23d10453505e014851702d08943b4729c018c88cfbc7686755a00471586849",
+  "tools/php83/xml-lifecycle-fix/candidate/kXmlEntityLoaderPolicy.php": "00bbe2929d9fffe2f1c86581845f8a11e8089d1b24734018297d2a0cc2104889",
+  "tools/php83/xml-lifecycle-fix/candidate-tree/infra/general/kXmlEntityLoaderPolicy.php": "00bbe2929d9fffe2f1c86581845f8a11e8089d1b24734018297d2a0cc2104889",
+  "tools/php83/xml-lifecycle-fix/candidate-tree/infra/general/kSoapClient.php": "0091ab9704783d547f80b3035c26b1aa6f88bd973032df4722fcf3c4ce20d4ce",
+  "tools/php83/xml-lifecycle-fix/candidate-tree/alpha/config/kConf.php": "e83d565b1c88c15812e180efff0f84d978bb46e04391985bfe9f0b481f56f5df"
+}

@@ -1,0 +1,12 @@
+test_explicit_helper_require_and_startup_security (tools.php83.xml-lifecycle-fix.test_held.HeldTests.test_explicit_helper_require_and_startup_security) ... ok
+test_finally_every_soap_entry (tools.php83.xml-lifecycle-fix.test_held.HeldTests.test_finally_every_soap_entry) ... ok
+test_native_warnings_not_suppressed (tools.php83.xml-lifecycle-fix.test_held.HeldTests.test_native_warnings_not_suppressed) ... ok
+test_no_application_selection (tools.php83.xml-lifecycle-fix.test_held.HeldTests.test_no_application_selection) ... ok
+test_no_broad_null_override (tools.php83.xml-lifecycle-fix.test_held.HeldTests.test_no_broad_null_override) ... ok
+test_opaque_scope_state (tools.php83.xml-lifecycle-fix.test_held.HeldTests.test_opaque_scope_state) ... ok
+test_patch_applies_exactly (tools.php83.xml-lifecycle-fix.test_held.HeldTests.test_patch_applies_exactly) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.007s
+
+OK

@@ -1,0 +1,9 @@
+{
+  "status": "PASS_NATIVE_IDENTITY_PREREQUISITE_ONLY",
+  "php": "8.3.6",
+  "cases": 5,
+  "source_sha256": "c64a8fb8d58b61e9ddd31a0b5d661439ddaf9f5b627ced193bb81b0d2bb2262d",
+  "runtime_before_after_equal": true,
+  "runtime_report_sha256": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491",
+  "application_or_parser_behavior": false
+}

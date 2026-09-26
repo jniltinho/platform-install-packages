@@ -1,0 +1,13 @@
+{
+  "raw_sha256": "2bf57f5fd33ea9cc97746d85849427124dd3d4a77bf1c1f71ae50f132395d82d",
+  "sanitized_sha256": "b15d7d3d8292e6f43af826e238acd8d45f0a0af954870066237df08550f1ee1a",
+  "raw_types": {
+    "system": 13,
+    "assistant": 10,
+    "rate_limit_event": 3,
+    "user": 5,
+    "result": 1
+  },
+  "retained_events": 11,
+  "policy": "Retain current tool calls/results and public final only; remove reasoning, hook history, init, unrelated narration. Raw hash-only provenance."
+}
