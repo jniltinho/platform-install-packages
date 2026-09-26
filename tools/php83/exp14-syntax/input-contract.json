@@ -1,0 +1,39 @@
+{
+  "schema": 1,
+  "pins": {
+    "exp13": "6d0bc4947207e6c5457b7843948d263aa8d5f251480e58cbf9086c0add79a944",
+    "exp14": "459feaf9caf2abe55963dce0cac51b8b593e4ff1b46d2eaf9cb7d5c3f13f62a1"
+  },
+  "counts": {
+    "exp13": 11785,
+    "exp14": 11785
+  },
+  "targets": [
+    {
+      "path": "api_v3/lib/KalturaEntryService.php",
+      "exp13_sha256": "9495b584f73df1f4a11812efa964f57f42562159a405693b71e1731d53fe4dd5",
+      "exp14_sha256": "b48fd2bb6d94157490294d8acb3fd8918c63d7a35c1ae024529658a4f40c895a"
+    }
+  ],
+  "historical_rejections": [
+    "vendor/aws/Doctrine/Common/Cache/RiakCache.php",
+    "vendor/symfony-data/generator/sfPropelAdmin/default/skeleton/actions/actions.class.php",
+    "vendor/symfony-data/generator/sfPropelCrud/default/skeleton/actions/actions.class.php",
+    "vendor/symfony-data/skeleton/batch/default.php",
+    "vendor/symfony-data/skeleton/batch/rotate_log.php",
+    "vendor/symfony-data/skeleton/controller/controller.php",
+    "vendor/symfony-data/skeleton/module/module/actions/actions.class.php"
+  ],
+  "metadata_delta_allowlist": [
+    {
+      "path": ".php83-experimental/manifest.json",
+      "exp13_sha256": "fb79e763092e10daf93b4ea9ee082233f889b431a7f5dbf39e10db5b7a4f636f",
+      "exp14_sha256": "9dbb2d68bb82289951c987e21056adb131ba7c1ee268ed01e017a067bd3b102e"
+    },
+    {
+      "path": ".php83-experimental/rank-signature.patch",
+      "exp13_sha256": null,
+      "exp14_sha256": "41144c89d6254ba8a9b2396c43b1e89b15ecdce55cabaedcb82c7fce0d825d4b"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "tools/php83/exp14-syntax/input-contract.json": "a978804917c888d61fb2ac0fe037102aeb99cb1c39866cb25879242f8530f065",
+  "tools/php83/exp14-syntax/frozen-core.py": "fd98fdb419679017363cdb4fe6fc2f0db0dfcbbe5ee84d3055f79e4260e48f3e",
+  "tools/php83/exp14-syntax/preflight.py": "d1b505874ac2047d6cfb1a9079ebb10e1219cf39f9735b9001827eef6ce02b3b",
+  "tools/php83/exp14-syntax/scan.py": "7f39eab2de3ace454eee49546691d2dabac686ec5176a5d62eb04df6d2f37542",
+  "tools/php83/exp14-syntax/frozen-exp13-scan.py": "81e5d9a0b181fbfa3f6583f011f88a8b7153660c93df55fc9e0beff9fc56cf0e",
+  "tools/php83/exp14-syntax/test_compare.py": "b9ce8b1d88b19ce3a6a196bf790fcef6b1f5776754b5602f31367a88ee8018a4",
+  "tools/php83/exp14-syntax/stage.py": "6438e43d543dc9ccf14403b6f12e7304fb0d7b7c38c4df3685ec5a4452e18505",
+  "tools/php83/exp14-syntax/run.sh": "0b2a668b1c42fafa45442ca38a03f08d33dd9e75faa04888fa9e2877d322f289",
+  "tools/php83/exp14-syntax/test_scan.py": "4788b60748b57235962c0f6190b14c3193157ec90799f032e1cd8c50e74d7fc7",
+  "tools/php83/exp14-syntax/compare.py": "27d5ad4e773e8762717ad13f28696c8594bd859ecf8cbeecd349cde33db1d797",
+  "doc/php83/evidence/exp14-syntax/stage-primary.sh": "212e79e65350e332c99d19ed10d3b0b4eaf85c96a605a70eab9ce33d286e7c5a",
+  "doc/php83/evidence/exp14-syntax/execute-native.py": "4d3f7632d4890f985b310d22dabe94999d35dd8ecf5cb5bbc318f4848d8d7f60"
+}

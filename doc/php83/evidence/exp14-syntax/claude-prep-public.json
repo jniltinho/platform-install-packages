@@ -1,0 +1,9 @@
+{
+  "type": "result",
+  "subtype": "success",
+  "is_error": true,
+  "result": "You've hit your session limit \u00b7 resets 9:20pm (America/Sao_Paulo)",
+  "executor": "actual Claude CLI",
+  "exit": 1,
+  "raw_sha256": "ea4088761663e28c91065ed9148414804e3f2fd7113c2f96f9ca58152ab823ca"
+}
