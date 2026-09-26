@@ -1,0 +1,151 @@
+{
+  "raw_sha256": "4643fe2f6114c0f181519d9dce8c57d768c5b3f032e0a620ef7f8c126d3ae0db",
+  "events": [
+    {
+      "type": "tool_use",
+      "id": "toolu_018sfC9Ttt3yw6WdAYiK3qJb",
+      "name": "Bash",
+      "input": {
+        "command": "ls -la tools/php83/entrypoint-inventory/ doc/php83/evidence/entrypoint-inventory/ && wc -l tools/php83/entrypoint-inventory/*.py doc/php83/entrypoint-inventory.md",
+        "description": "List inventory tool and evidence files"
+      },
+      "caller": {
+        "type": "direct"
+      }
+    },
+    {
+      "tool_use_id": "toolu_018sfC9Ttt3yw6WdAYiK3qJb",
+      "type": "tool_result",
+      "content": "doc/php83/evidence/entrypoint-inventory/:\ntotal 76\ndrwxrwxr-x  3 nilton nilton  4096 Sep 26 14:05 .\ndrwxrwxr-x 90 nilton nilton  4096 Sep 26 14:03 ..\n-rw-rw-r--  1 nilton nilton   362 Sep 26 14:00 attempt1.json\ndrwxrwxr-x  3 nilton nilton  4096 Sep 26 14:05 attempts\n-rw-rw-r--  1 nilton nilton     4 Sep 26 14:03 local-author.exit\n-rw-rw-r--  1 nilton nilton     2 Sep 26 14:05 local-r2-tests.exit\n-rw-rw-r--  1 nilton nilton  1689 Sep 26 14:05 local-r2-tests.stderr\n-rw-rw-r--  1 nilton nilton     0 Sep 26 14:05 local-r2-tests.stdout\n-rw-rw-r--  1 nilton nilton     2 Sep 26 14:04 local-tests.exit\n-rw-rw-r--  1 nilton nilton  4692 Sep 26 14:04 local-tests.stderr\n-rw-rw-r--  1 nilton nilton     0 Sep 26 14:04 local-tests.stdout\n-rw-rw-r--  1 nilton nilton 31844 Sep 26 14:00 opencode-author-public.json\n-rw-rw-r--  1 nilton nilton     2 Sep 26 13:59 opencode-author.exit\n\ntools/php83/entrypoint-inventory/:\ntotal 56\ndrwxrwxr-x  4 nilton nilton  4096 Sep 26 14:05 .\ndrwxrwxr-x 62 nilton nilton  4096 Sep 26 14:03 ..\n-rw-rw-r--  1 nilton nilton    37 Sep 26 14:05 .gitignore\ndrwxrwxr-x  4 nilton nilton  4096 Sep 26 14:04 .tmp-test-scope\ndrwxrwxr-x  2 nilton nilton  4096 Sep 26 14:05 __pycache__\n-rw-rw-r--  1 nilton nilton 20113 Sep 26 14:05 build.py\n-rw-rw-r--  1 nilton nilton 13519 Sep 26 14:05 test_entrypoint_inventory.py\n  460 tools/php83/entrypoint-inventory/build.py\n  273 tools/php83/entrypoint-inventory/test_entrypoint_inventory.py\n   78 doc/php83/entrypoint-inventory.md\n  811 total",
+      "is_error": false
+    },
+    {
+      "type": "tool_use",
+      "id": "toolu_011LR5s451svmRPNEcu3eChB",
+      "name": "Bash",
+      "input": {
+        "command": "cat -n tools/php83/entrypoint-inventory/build.py",
+        "description": "Read build.py"
+      },
+      "caller": {
+        "type": "direct"
+      }
+    },
+    {
+      "tool_use_id": "toolu_011LR5s451svmRPNEcu3eChB",
+      "type": "tool_result",
+      "content": {
+        "characters": 23332,
+        "sha256_utf8": "998d5723caea673bbc26fcebfd55b5c9c4365d2d407c0a281c5d84b4edd62310",
+        "head": "     1\t#!/usr/bin/env python3\n     2\t\"\"\"Offline deterministic entrypoint-candidate inventory (synthetic-only verified).\n     3\t\n     4\tReads user-provided published bundle + original ZIP paths given on the command\n     5\tline, but this session does NOT execute it on real inputs. No package install,\n     6\tno maintainer-script execution, no member-path extraction, no network, no VM.\n     7\tDEB bytes are only streamed through ``dpkg-deb --ctrl-tarfile/--fsys-tarfile``\n     8\tinto repo-owned scratch files and parsed as tar names/bytes in memory; archive\n     9\tlinks are recorded, never followed.\n    10\t\n    11\tSafe-parsing patterns (normalize, hash helpers, checksum manifest, duplicate\n    12\tand traversal rejection) intentionally mirror tools/php83/package-identities/\n    13\tbuild.py. Scope is candidate inventory only: no active-runtime, reachability,\n    14\tor exhaustive-entrypoint claims. Not a hostile-archive resource sandbox.\n    15\t\"\"\"\n    16\timport argparse\n    17\timport hashlib\n    18\timport json\n    19\timport re\n    20\timport shutil\n    21\timport subprocess\n    22\timport tarfile\n    23\timport tempfile\n    24\timport zipfile\n    25\tfrom pathlib import Path, PurePosixPath\n    26\t\n    27\tBUNDLE_SHA = '91629580441f6a896ebf9e51f0256532221715bee57a3e5a64c66ff0c4e3127b'\n    28\tSOURCE_SHA = '58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28'\n    29\tSOURCE_ROOT = 'server-Rigel-18.20.0/'\n    30\tPHP_EXTENSIONS = {'.php', '.phtml', '.inc', '.php5'}\n    31\tMAINTAINER_SCRIPTS = {'preinst', 'postinst', 'prerm', 'postrm', 'config'}\n    32\tSCAN_SIZE_LIMIT = 2 * 1024 * 1024\n    33\tLINE_EXCERPT_LIMIT = 300\n    34\t\n    35\tINTERPRETER_RE = re.compile(\n    36\t    r'(?P<interp>(?:/usr/(?:local/)?bin/php[0-9.]*)|\\bphp[0-9.]*(?:-cgi|-cli|-fpm)?\\b)'\n    37\t    r'[ \\t]+(?P<target>\"[^\"\\n]{1,300}\"|\\'[^\\'\\n]{1,300}\\'|[^\\s;|&`\"\\']{1,300})'\n    38\t)\n    39\tDYNAMIC_CHARS_RE = re.compile(r'[\\$\\*\\?`\\[\\]\\{\\}~]|[$][({]')\n    40\tSHEBANG_PHP_RE = re.compile(r'^#!.*php', re.IGNORECASE)",
+        "tail": "ility_claim': True,\n   439\t            't0_04_complete': False}\n   440\t\n   441\t\n   442\tdef main():\n   443\t    parser = argparse.ArgumentParser()\n   444\t    parser.add_argument('--repo', type=Path, default=Path(__file__).resolve().parents[3])\n   445\t    parser.add_argument('--bundle', type=Path, required=True)\n   446\t    parser.add_argument('--original', type=Path, required=True)\n   447\t    parser.add_argument('--output', type=Path, required=True)\n   448\t    parser.add_argument('--work-dir', type=Path, default=None)\n   449\t    args = parser.parse_args()\n   450\t    if args.output.exists():\n   451\t        raise ValueError('Refusing existing output')\n   452\t    result = build(args.repo, args.bundle, args.original, args.work_dir)\n   453\t    with args.output.open('x') as output:\n   454\t        json.dump(result, output, indent=2)\n   455\t        output.write('\\n')\n   456\t    print(json.dumps(result['summary'], sort_keys=True))\n   457\t\n   458\t\n   459\tif __name__ == '__main__':\n   460\t    main()"
+      },
+      "is_error": false
+    },
+    {
+      "type": "tool_use",
+      "id": "toolu_01PaAQ7jWXEnyXrTUaxwmBY6",
+      "name": "Bash",
+      "input": {
+        "command": "cat -n tools/php83/entrypoint-inventory/test_entrypoint_inventory.py doc/php83/entrypoint-inventory.md tools/php83/entrypoint-inventory/.gitignore",
+        "description": "Read tests, doc, gitignore"
+      },
+      "caller": {
+        "type": "direct"
+      }
+    },
+    {
+      "tool_use_id": "toolu_01PaAQ7jWXEnyXrTUaxwmBY6",
+      "type": "tool_result",
+      "content": {
+        "characters": 20084,
+        "sha256_utf8": "bc6405a000376e6739062b299eb0d055793073cf68ae58581e8df2c15e399919",
+        "head": "     1\t\"\"\"Synthetic entrypoint-inventory controls. No real archives, no /tmp, no network/VM.\"\"\"\n     2\timport hashlib\n     3\timport importlib.util\n     4\timport io\n     5\timport json\n     6\timport subprocess\n     7\timport tarfile\n     8\timport unittest\n     9\timport zipfile\n    10\tfrom contextlib import ExitStack\n    11\tfrom pathlib import Path\n    12\tfrom unittest.mock import patch\n    13\t\n    14\tHERE = Path(__file__).resolve().parent\n    15\tspec = importlib.util.spec_from_file_location('entrypoint_builder', HERE / 'build.py')\n    16\tb = importlib.util.module_from_spec(spec)\n    17\tspec.loader.exec_module(b)\n    18\tOWNER = {'package_file': 'a.deb', 'package_sha256': 'a' * 64}\n    19\t\n    20\tSCOPE = HERE / '.tmp-test-scope'\n    21\t\n    22\t\n    23\tdef tar_bytes(entries):\n    24\t    output = io.BytesIO()\n    25\t    with tarfile.open(fileobj=output, mode='w') as tar:\n    26\t        for row in entries:\n    27\t            item = tarfile.TarInfo(row['name'])\n    28\t            item.size = len(row.get('data', b''))\n    29\t            item.mode = row.get('mode', 0o644)\n    30\t            item.mtime = 0\n    31\t            kind = row.get('kind', 'file')\n    32\t            if kind == 'dir':\n    33\t                item.type = tarfile.DIRTYPE\n    34\t                item.size = 0\n    35\t                tar.addfile(item)\n    36\t            elif kind == 'symlink':\n    37\t                item.type = tarfile.SYMTYPE\n    38\t                item.linkname = row['linkname']\n    39\t                item.size = 0\n    40\t                tar.addfile(item)\n    41\t            elif kind == 'hardlink':\n    42\t                item.type = tarfile.LNKTYPE\n    43\t                item.linkname = row['linkname']\n    44\t                item.size = 0\n    45\t                tar.addfile(item)\n    46\t            else:\n    47\t                item.type = tarfile.REGTYPE\n    48\t                tar.addfile(item, io.BytesIO(row.get('data', b'')))\n    49\t    output.seek(0)\n    50\t    return output\n    51\t\n    52\t",
+        "tail": "3/entrypoint-inventory/.tmp-test-scope`).\n   336\tNo real archive or DEB is read or executed. Cases cover path traversal,\n   337\tintra-package duplicates, symlink/hardlink recording, maintainer-script line\n   338\tevidence, literal versus dynamic interpreter targets, denominator/exclusion\n   339\taccounting, oversize handling, repo-owned scratch enforcement, synthetic\n   340\tend-to-end orchestration, and inner-hash fail-closed behavior.\n   341\t\n   342\t```sh\n   343\tmkdir -p tools/php83/entrypoint-inventory/.tmp-run-scope\n   344\tTMPDIR=\"$PWD/tools/php83/entrypoint-inventory/.tmp-run-scope\" \\\n   345\t  python3 -m unittest discover -s tools/php83/entrypoint-inventory -p 'test_*.py'\n   346\t```\n   347\t\n   348\tLocal synthetic evidence is retained under\n   349\t`doc/php83/evidence/entrypoint-inventory/local-*`. Real-input execution,\n   350\tcomparison against `package-identities/primary.json` owners, and independent\n   351\treview remain open.\n   352\t.tmp-test-scope/\n   353\t.work/\n   354\t__pycache__/"
+      },
+      "is_error": false
+    },
+    {
+      "type": "text",
+      "text": "Agora executo o comando de teste exigido."
+    },
+    {
+      "type": "tool_use",
+      "id": "toolu_01Ak39Y4YymkA3x7RPxbRMtT",
+      "name": "Bash",
+      "input": {
+        "command": "mkdir -p tools/php83/entrypoint-inventory/.tmp-test-scope && TMPDIR=\"$PWD/tools/php83/entrypoint-inventory/.tmp-test-scope\" timeout 120 python3 -m unittest discover -s tools/php83/entrypoint-inventory -p 'test_*.py' -v; echo EXIT=$?; sha256sum tools/php83/entrypoint-inventory/build.py tools/php83/entrypoint-inventory/test_entrypoint_inventory.py doc/php83/entrypoint-inventory.md; python3 --version",
+        "description": "Run synthetic unit tests and hash reviewed files",
+        "timeout": 150000
+      },
+      "caller": {
+        "type": "direct"
+      }
+    },
+    {
+      "tool_use_id": "toolu_01Ak39Y4YymkA3x7RPxbRMtT",
+      "type": "tool_result",
+      "content": "test_inner_hash_mismatch_fail_closed (test_entrypoint_inventory.BuildOrchestrationTests.test_inner_hash_mismatch_fail_closed) ... ok\ntest_synthetic_build_denominators_and_evidence (test_entrypoint_inventory.BuildOrchestrationTests.test_synthetic_build_denominators_and_evidence) ... ok\ntest_denominator_and_exclusion_counts (test_entrypoint_inventory.EntrypointUnitTests.test_denominator_and_exclusion_counts) ... ok\ntest_duplicate_rejected (test_entrypoint_inventory.EntrypointUnitTests.test_duplicate_rejected) ... ok\ntest_executable_shebang_extensionless_and_generated_client (test_entrypoint_inventory.EntrypointUnitTests.test_executable_shebang_extensionless_and_generated_client) ... ok\ntest_links_recorded_never_followed (test_entrypoint_inventory.EntrypointUnitTests.test_links_recorded_never_followed) ... ok\ntest_literal_and_dynamic_interpreter_targets (test_entrypoint_inventory.EntrypointUnitTests.test_literal_and_dynamic_interpreter_targets) ... ok\ntest_maintainer_scripts_scanned_with_owner_line (test_entrypoint_inventory.EntrypointUnitTests.test_maintainer_scripts_scanned_with_owner_line) ... ok\ntest_oversize_unscanned_counted (test_entrypoint_inventory.EntrypointUnitTests.test_oversize_unscanned_counted) ... ok\ntest_path_guards (test_entrypoint_inventory.EntrypointUnitTests.test_path_guards) ... ok\ntest_scratch_must_stay_inside_repo (test_entrypoint_inventory.EntrypointUnitTests.test_scratch_must_stay_inside_repo) ... ok\ntest_traversal_rejected_in_control_and_data (test_entrypoint_inventory.EntrypointUnitTests.test_traversal_rejected_in_control_and_data) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 0.006s\n\nOK\nEXIT=0\n85a4103d8c75f333dc211cbace20027f6451878106a9c8e33b3efe6ca5e62bf7  tools/php83/entrypoint-inventory/build.py\n375a7786ab683156c75996b90e8435833826992cac1f4a6062dcdedd3cc4938a  tools/php83/entrypoint-inventory/test_entrypoint_inventory.py\nbb1f5cd3b028db22737a77f942b10fa1ffa9baf7ec77525d240e481beb24b75e  doc/php83/entrypoint-inventory.md\nPython 3.12.3",
+      "is_error": false
+    },
+    {
+      "type": "text",
+      "text": "Os 12 testes passam. Agora rodo sondas sint\u00e9ticas em mem\u00f3ria (sem arquivos, sem archives reais) para confirmar suspeitas."
+    },
+    {
+      "type": "tool_use",
+      "id": "toolu_01TcjvBy3tAKamw2nXqirrxW",
+      "name": "Bash",
+      "input": {
+        "command": "TMPDIR=\"$PWD/tools/php83/entrypoint-inventory/.tmp-test-scope\" PYTHONDONTWRITEBYTECODE=1 timeout 60 python3 - <<'EOF'\nimport sys, importlib.util\nsys.path.insert(0, 'tools/php83/entrypoint-inventory')\nspec = importlib.util.spec_from_file_location('b', 'tools/php83/entrypoint-inventory/build.py'); b = importlib.util.module_from_spec(spec); spec.loader.exec_module(b)\nfrom test_entrypoint_inventory import tar_bytes\nO = {'package_file': 'a.deb', 'package_sha256': 'a'*64}\ndef data(entries):\n    ex = {}\n    r, c, inv, _ = b.parse_data_stream(tar_bytes(entries), O, ex)\n    return c, inv, ex\ndef ctrl(body):\n    return b.parse_control_stream(tar_bytes([{'name': 'postinst', 'data': body}]), O)[2]\nprint('P1 exec .sh in data calling php:', data([{'name':'opt/kaltura/bin/run.sh','mode':0o755,'data':b'#!/bin/bash\\nphp /opt/kaltura/app/x.php\\n'}])[1])\nprint('P2 non-exec .sh:', data([{'name':'opt/kaltura/bin/lib.sh','data':b'php /opt/kaltura/app/x.php\\n'}]))\nprint('P3 kaltura cron template outside etc/:', data([{'name':'opt/kaltura/app/configurations/cron/api','data':b'* * * * * root php /opt/kaltura/app/x.php\\n'}]))\nprint('P4 $PHP_BIN interpreter in postinst:', ctrl(b'$PHP_BIN /opt/kaltura/app/x.php\\n${PHP} /opt/y.php\\n'))\nprint('P5 options:', [(i['target'], i['target_class']) for i in ctrl(b'php -d memory_limit=-1 /opt/a.php\\nphp -f /opt/b.php\\n')])\nprint('P6 relative literal:', [(i['target'], i['target_class']) for i in ctrl(b'cd /opt/x && php install.php\\n')])\nprint('P7 ELF exec extensionless:', [c['candidate_class'] for c in data([{'name':'usr/bin/elf','mode':0o755,'data':b'\\x7fELF\\x00\\x00'}])[0]])\nprint('P8 false positive apt:', [(i['interpreter'], i['target']) for i in ctrl(b'apt-get install -y php8.3 php8.3-cli\\n')])\nc, inv, ex = data([{'name':'opt/a.php','data':b'<?php'},{'name':'opt/l','kind':'symlink','linkname':'a.php'},{'name':'opt/b.txt','data':b'x'},{'name':'opt','kind':'dir'}])\nprint('P9 reconciliation candidates', len(c), 'excluded', ex)\nEOF\necho EXIT=$?",
+        "description": "Run in-memory synthetic probes against builder"
+      },
+      "caller": {
+        "type": "direct"
+      }
+    },
+    {
+      "tool_use_id": "toolu_01TcjvBy3tAKamw2nXqirrxW",
+      "type": "tool_result",
+      "content": "P1 exec .sh in data calling php: []\nP2 non-exec .sh: ([], [], {'.sh': 1})\nP3 kaltura cron template outside etc/: ([], [], {'(extensionless)': 1})\nP4 $PHP_BIN interpreter in postinst: []\nP5 options: [('-d', 'unresolved_dynamic'), ('-f', 'unresolved_dynamic')]\nP6 relative literal: [('install.php', 'literal_php')]\nP7 ELF exec extensionless: ['executable+extensionless_php_candidate']\nP8 false positive apt: [('php8.3', 'php8.3-cli')]\nP9 reconciliation candidates 2 excluded {'.txt': 1}\nEXIT=0",
+      "is_error": false
+    },
+    {
+      "type": "text",
+      "text": "Sondas confirmam lacunas concretas. Escrevo a revis\u00e3o."
+    },
+    {
+      "type": "tool_use",
+      "id": "toolu_011SzipGP7kvXrk5T6PF5URC",
+      "name": "Bash",
+      "input": {
+        "command": {
+          "characters": 5906,
+          "sha256_utf8": "e6146de7e4feea9360fc864d059b424b0e3edc909f65b55958701a5839842bb2",
+          "head": "test ! -e doc/php83/evidence/entrypoint-inventory/claude-review.md && cat > doc/php83/evidence/entrypoint-inventory/claude-review.md <<'EOF'\n# Independent review \u2014 entrypoint-candidate inventory (Claude)\n\n- Executor/reviewer: actual Claude CLI (Claude Opus 5.5), independent of the\n  OpenCode author and the local author/repair.\n- Scope: `tools/php83/entrypoint-inventory/*.py`, `doc/php83/entrypoint-inventory.md`.\n  Repo-local, synthetic-only. No real archive/DEB/ZIP read, no `/tmp` use, no\n  retry of the preserved OpenCode `/tmp` extraction denial or the local author\n  `timeout 124`, no index/VM/network, no source edits.\n- Reviewed identities (sha256):\n  - `build.py` `85a4103d8c75f333dc211cbace20027f6451878106a9c8e33b3efe6ca5e62bf7`\n  - `test_entrypoint_inventory.py` `375a7786ab683156c75996b90e8435833826992cac1f4a6062dcdedd3cc4938a`\n  - `entrypoint-inventory.md` `bb1f5cd3b028db22737a77f942b10fa1ffa9baf7ec77525d240e481beb24b75e`\n- Environment: Linux 6.8.0-142, Python 3.12.3, branch `proposal/migrate-kaltura-php83`.\n\n## Executed\n\n1. `TMPDIR=\"$PWD/tools/php83/entrypoint-inventory/.tmp-test-scope\" python3 -m unittest discover -s tools/php83/entrypoint-inventory -p 'test_*.py' -v`\n   \u2192 exit 0, **12/12 OK** (0.006 s).\n2. In-memory synthetic probes (`parse_control_stream`/`parse_data_stream` on\n   `tar_bytes(...)` BytesIO, no files written) \u2192 exit 0:\n\n| Probe | Input | Result |\n|---|---|---|\n| P1 | data `opt/kaltura/bin/run.sh` mode 0755 containing `php /opt/kaltura/app/x.php` | candidate `executable`, **0 invocations** |\n| P2 | data non-exec `opt/kaltura/bin/lib.sh` with php call | **excluded `.sh`**, not read |\n| P3 | data `opt/kaltura/app/configurations/cron/api` (non-exec, cron line with php) | **excluded `(extensionless)`**, 0 invocations |\n| P4 | postinst `$PHP_BIN /opt/...x.php` / `${PHP} /opt/y.php` | **0 invocations** (no unresolved row) |\n| P5 | postinst `php -d memory_limit=-1 /opt/a.php`, `php -f /opt/b.php` | recorded, target `-d`/`-f`, `unresolved_dynamic` (no",
+          "tail": "alse positives; acceptable for a candidate list if doc says regex over-matches.\n- N5 No reconciliation invariant: add\n  `data_regular == regular candidates + regular excluded + oversize` and report\n  `data_other`; non-php links (P9) should be counted explicitly.\n- N6 Doc test command uses `.tmp-run-scope` (not in `.gitignore`); tests\n  always write to `.tmp-test-scope` regardless of `TMPDIR`.\n- N7 `inputs` hashes ledger/source-map/primary.json but never reads them;\n  owner comparison with `primary.json` is not performed (doc already says open).\n\n## Verdict\n\n**NOT APPROVED as prepared** \u2014 B1\u2013B3 open. Code-level safety (paths, links,\nhashes, scratch, output) is sound for trusted pinned inputs; 12/12 synthetic\ntests pass. This review is not execution evidence; no real-input run occurred,\nand passing synthetic tests does not establish T0 entrypoint completeness.\nEOF\ngit status --short tools/php83/entrypoint-inventory doc/php83/evidence/entrypoint-inventory doc/php83/entrypoint-inventory.md"
+        },
+        "description": "Write review document and check status"
+      },
+      "caller": {
+        "type": "direct"
+      }
+    },
+    {
+      "tool_use_id": "toolu_011SzipGP7kvXrk5T6PF5URC",
+      "type": "tool_result",
+      "content": "?? doc/php83/entrypoint-inventory.md\n?? doc/php83/evidence/entrypoint-inventory/\n?? tools/php83/entrypoint-inventory/",
+      "is_error": false
+    },
+    {
+      "type": "text",
+      "text": "O resultado da revis\u00e3o \u00e9 **N\u00c3O APROVADO como preparado**: h\u00e1 3 bloqueios. A parte de seguran\u00e7a do c\u00f3digo est\u00e1 correta e os 12 testes sint\u00e9ticos passam. A revis\u00e3o est\u00e1 salva em `doc/php83/evidence/entrypoint-inventory/claude-review.md`.\n\n**Execu\u00e7\u00f5es (todas j\u00e1 terminaram)**\n- Rodei o comando de teste pedido, com `TMPDIR` apontando para `.tmp-test-scope`: sa\u00edda 0, **12/12 OK**.\n- Rodei 9 sondas sint\u00e9ticas s\u00f3 em mem\u00f3ria, sem gravar arquivos: sa\u00edda 0.\n- N\u00e3o li nenhum arquivo real, n\u00e3o usei `/tmp`, n\u00e3o repeti a opera\u00e7\u00e3o negada ao OpenCode nem o timeout 124 do autor local, e n\u00e3o usei \u00edndice, VM ou rede.\n\n**O que est\u00e1 correto**\n- **Caminhos:** caminhos absolutos, com `\\`, com NUL ou com `..` s\u00e3o rejeitados; a raiz `./` vira `''`; duplicatas s\u00e3o detectadas depois da normaliza\u00e7\u00e3o.\n- **Links:** s\u00f3 registram `linkname` e nunca s\u00e3o seguidos.\n- **Hashes:** bundle e ZIP t\u00eam hash fixo, e o `SHA256SUMS` precisa bater exatamente com o conjunto de `.deb`.\n- **\u00c1rea de rascunho:** fica dentro do reposit\u00f3rio.\n- **Sa\u00edda:** usa `open('x')`, que se recusa a sobrescrever.\n- **Contagem do ZIP:** s\u00f3 leitura.\n- **Declara\u00e7\u00f5es:** `t0_04_complete: False`, e n\u00e3o h\u00e1 nenhuma afirma\u00e7\u00e3o de execu\u00e7\u00e3o ativa ou de grafo completo.\n\n**Bloqueios**\n- **B1:** a busca por chamadas de PHP s\u00f3 l\u00ea os scripts de mantenedor e as configs de `etc/` e do systemd. Nas sondas:\n  - um `.sh` execut\u00e1vel que chama `php` gerou 0 chamadas;\n  - um `.sh` n\u00e3o execut\u00e1vel foi s\u00f3 contado como exclu\u00eddo, sem leitura;\n  - templates de cron em `opt/kaltura/app/configurations/` tamb\u00e9m foram exclu\u00eddos sem leitura.\n\n  Esses scripts somem da contagem sem aviso.\n- **B2:** chamadas feitas por vari\u00e1vel, como `$PHP_BIN x.php` ou `${PHP} \u2026`, n\u00e3o geram nenhuma linha, nem mesmo como `unresolved_dynamic`.\n- **B3:** o documento exagera o escopo. Diz que inventaria \"literal PHP invocations\" e que reporta \"full denominators \u2026 upstream PHP count\". Precisa dizer que o ZIP upstream \u00e9 **s\u00f3 uma contagem de arquivos PHP**, sem reconcilia\u00e7\u00e3o com os candidatos dos pacotes, e que o T0 continua incompleto.\n\n**Achados n\u00e3o bloqueantes**\n- Op\u00e7\u00f5es como `-d` e `-f` ficam no lugar do alvo. A chamada n\u00e3o se perde, mas o alvo real fica de fora.\n- Um alvo relativo ao diret\u00f3rio atual (`php install.php`) \u00e9 classificado como `literal_php`.\n- Qualquer bin\u00e1rio execut\u00e1vel sem extens\u00e3o, at\u00e9 um ELF, \u00e9 marcado como `extensionless_php_candidate`.\n- `apt-get install php8.3 php8.3-cli` \u00e9 lido como uma chamada de PHP (falso positivo).\n- N\u00e3o h\u00e1 verifica\u00e7\u00e3o de que as contagens fecham, e links que n\u00e3o s\u00e3o PHP n\u00e3o s\u00e3o contados \u00e0 parte.\n- O comando de teste do documento usa `.tmp-run-scope`, que n\u00e3o est\u00e1 no `.gitignore`.\n- O arquivo `primary.json` tem o hash registrado, mas nunca \u00e9 comparado com os donos dos pacotes.\n\nA revis\u00e3o n\u00e3o prova nada sobre execu\u00e7\u00e3o real, porque nenhuma rodada com os arquivos reais aconteceu."
+    },
+    {
+      "type": "result",
+      "subtype": "success",
+      "is_error": false,
+      "result": "O resultado da revis\u00e3o \u00e9 **N\u00c3O APROVADO como preparado**: h\u00e1 3 bloqueios. A parte de seguran\u00e7a do c\u00f3digo est\u00e1 correta e os 12 testes sint\u00e9ticos passam. A revis\u00e3o est\u00e1 salva em `doc/php83/evidence/entrypoint-inventory/claude-review.md`.\n\n**Execu\u00e7\u00f5es (todas j\u00e1 terminaram)**\n- Rodei o comando de teste pedido, com `TMPDIR` apontando para `.tmp-test-scope`: sa\u00edda 0, **12/12 OK**.\n- Rodei 9 sondas sint\u00e9ticas s\u00f3 em mem\u00f3ria, sem gravar arquivos: sa\u00edda 0.\n- N\u00e3o li nenhum arquivo real, n\u00e3o usei `/tmp`, n\u00e3o repeti a opera\u00e7\u00e3o negada ao OpenCode nem o timeout 124 do autor local, e n\u00e3o usei \u00edndice, VM ou rede.\n\n**O que est\u00e1 correto**\n- **Caminhos:** caminhos absolutos, com `\\`, com NUL ou com `..` s\u00e3o rejeitados; a raiz `./` vira `''`; duplicatas s\u00e3o detectadas depois da normaliza\u00e7\u00e3o.\n- **Links:** s\u00f3 registram `linkname` e nunca s\u00e3o seguidos.\n- **Hashes:** bundle e ZIP t\u00eam hash fixo, e o `SHA256SUMS` precisa bater exatamente com o conjunto de `.deb`.\n- **\u00c1rea de rascunho:** fica dentro do reposit\u00f3rio.\n- **Sa\u00edda:** usa `open('x')`, que se recusa a sobrescrever.\n- **Contagem do ZIP:** s\u00f3 leitura.\n- **Declara\u00e7\u00f5es:** `t0_04_complete: False`, e n\u00e3o h\u00e1 nenhuma afirma\u00e7\u00e3o de execu\u00e7\u00e3o ativa ou de grafo completo.\n\n**Bloqueios**\n- **B1:** a busca por chamadas de PHP s\u00f3 l\u00ea os scripts de mantenedor e as configs de `etc/` e do systemd. Nas sondas:\n  - um `.sh` execut\u00e1vel que chama `php` gerou 0 chamadas;\n  - um `.sh` n\u00e3o execut\u00e1vel foi s\u00f3 contado como exclu\u00eddo, sem leitura;\n  - templates de cron em `opt/kaltura/app/configurations/` tamb\u00e9m foram exclu\u00eddos sem leitura.\n\n  Esses scripts somem da contagem sem aviso.\n- **B2:** chamadas feitas por vari\u00e1vel, como `$PHP_BIN x.php` ou `${PHP} \u2026`, n\u00e3o geram nenhuma linha, nem mesmo como `unresolved_dynamic`.\n- **B3:** o documento exagera o escopo. Diz que inventaria \"literal PHP invocations\" e que reporta \"full denominators \u2026 upstream PHP count\". Precisa dizer que o ZIP upstream \u00e9 **s\u00f3 uma contagem de arquivos PHP**, sem reconcilia\u00e7\u00e3o com os candidatos dos pacotes, e que o T0 continua incompleto.\n\n**Achados n\u00e3o bloqueantes**\n- Op\u00e7\u00f5es como `-d` e `-f` ficam no lugar do alvo. A chamada n\u00e3o se perde, mas o alvo real fica de fora.\n- Um alvo relativo ao diret\u00f3rio atual (`php install.php`) \u00e9 classificado como `literal_php`.\n- Qualquer bin\u00e1rio execut\u00e1vel sem extens\u00e3o, at\u00e9 um ELF, \u00e9 marcado como `extensionless_php_candidate`.\n- `apt-get install php8.3 php8.3-cli` \u00e9 lido como uma chamada de PHP (falso positivo).\n- N\u00e3o h\u00e1 verifica\u00e7\u00e3o de que as contagens fecham, e links que n\u00e3o s\u00e3o PHP n\u00e3o s\u00e3o contados \u00e0 parte.\n- O comando de teste do documento usa `.tmp-run-scope`, que n\u00e3o est\u00e1 no `.gitignore`.\n- O arquivo `primary.json` tem o hash registrado, mas nunca \u00e9 comparado com os donos dos pacotes.\n\nA revis\u00e3o n\u00e3o prova nada sobre execu\u00e7\u00e3o real, porque nenhuma rodada com os arquivos reais aconteceu."
+    }
+  ]
+}

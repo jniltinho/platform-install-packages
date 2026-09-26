@@ -1,0 +1,10 @@
+{
+  "attempt1": "CLI0 with external-directory denial, NOT_EXECUTED real inventory",
+  "attempt2": "Repository-only author timed out124 before tests; not a pass",
+  "local_r1": "12tests failed1/error2, preserved",
+  "local_r2": "12tests PASS but independentreview rejected B1-B3",
+  "local_r3": "16tests failed1 false regex PHP-open-tag matches, preserved",
+  "local_r4": "16tests PASS but independentreview rejected nested variable launch B4",
+  "local_r5": "17tests PASS; actualClaude independent17tests+trackedlaunchprobes PASS prepared-only",
+  "scope": "Synthetic prepared discovery only; actual archive operation remains denied, no bypass"
+}

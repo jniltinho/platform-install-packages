@@ -1,0 +1,271 @@
+{
+  "raw_sha256": "7f2da7b2638d6637f70a485e9ea5f0e0abc377599fbf490b465284707a3502ae",
+  "events": [
+    {
+      "type": "tool_use",
+      "id": "toolu_01ByWHex9dsqKkpQFdjMCdHB",
+      "name": "Bash",
+      "input": {
+        "command": "ls -la tools/php83/entrypoint-inventory/ doc/php83/evidence/entrypoint-inventory/ && wc -l tools/php83/entrypoint-inventory/*.py doc/php83/entrypoint-inventory.md doc/php83/evidence/entrypoint-inventory/*.md",
+        "description": "List inventory tool and evidence files"
+      },
+      "caller": {
+        "type": "direct"
+      }
+    },
+    {
+      "tool_use_id": "toolu_01ByWHex9dsqKkpQFdjMCdHB",
+      "type": "tool_result",
+      "content": "doc/php83/evidence/entrypoint-inventory/:\ntotal 104\ndrwxrwxr-x  3 nilton nilton  4096 Sep 26 14:09 .\ndrwxrwxr-x 91 nilton nilton  4096 Sep 26 14:08 ..\n-rw-rw-r--  1 nilton nilton   362 Sep 26 14:00 attempt1.json\ndrwxrwxr-x  4 nilton nilton  4096 Sep 26 14:08 attempts\n-rw-rw-r--  1 nilton nilton     2 Sep 26 14:07 claude-review.exit\n-rw-rw-r--  1 nilton nilton  5672 Sep 26 14:07 claude-review.md\n-rw-rw-r--  1 nilton nilton     4 Sep 26 14:03 local-author.exit\n-rw-rw-r--  1 nilton nilton     2 Sep 26 14:05 local-r2-tests.exit\n-rw-rw-r--  1 nilton nilton  1689 Sep 26 14:05 local-r2-tests.stderr\n-rw-rw-r--  1 nilton nilton     0 Sep 26 14:05 local-r2-tests.stdout\n-rw-rw-r--  1 nilton nilton     2 Sep 26 14:08 local-r3-tests.exit\n-rw-rw-r--  1 nilton nilton  2897 Sep 26 14:08 local-r3-tests.stderr\n-rw-rw-r--  1 nilton nilton     0 Sep 26 14:08 local-r3-tests.stdout\n-rw-rw-r--  1 nilton nilton     2 Sep 26 14:09 local-r4-tests.exit\n-rw-rw-r--  1 nilton nilton  2263 Sep 26 14:09 local-r4-tests.stderr\n-rw-rw-r--  1 nilton nilton     0 Sep 26 14:09 local-r4-tests.stdout\n-rw-rw-r--  1 nilton nilton     2 Sep 26 14:04 local-tests.exit\n-rw-rw-r--  1 nilton nilton  4692 Sep 26 14:04 local-tests.stderr\n-rw-rw-r--  1 nilton nilton     0 Sep 26 14:04 local-tests.stdout\n-rw-rw-r--  1 nilton nilton 31844 Sep 26 14:00 opencode-author-public.json\n-rw-rw-r--  1 nilton nilton     2 Sep 26 13:59 opencode-author.exit\n\ntools/php83/entrypoint-inventory/:\ntotal 60\ndrwxrwxr-x  4 nilton nilton  4096 Sep 26 14:05 .\ndrwxrwxr-x 62 nilton nilton  4096 Sep 26 14:03 ..\n-rw-rw-r--  1 nilton nilton    37 Sep 26 14:05 .gitignore\ndrwxrwxr-x  4 nilton nilton  4096 Sep 26 14:04 .tmp-test-scope\ndrwxrwxr-x  2 nilton nilton  4096 Sep 26 14:09 __pycache__\n-rw-rw-r--  1 nilton nilton 22651 Sep 26 14:09 build.py\n-rw-rw-r--  1 nilton nilton 15217 Sep 26 14:08 test_entrypoint_inventory.py\n  496 tools/php83/entrypoint-inventory/build.py\n  302 tools/php83/entrypoint-inventory/test_entrypoint_inventory.py\n   64 doc/php83/entrypoint-inventory.md\n   88 doc/php83/evidence/entrypoint-inventory/claude-review.md\n  950 total",
+      "is_error": false
+    },
+    {
+      "type": "tool_use",
+      "id": "toolu_01BsYYYXwzgtoEumdpGfrrgp",
+      "name": "Bash",
+      "input": {
+        "command": "cat doc/php83/evidence/entrypoint-inventory/claude-review.md doc/php83/entrypoint-inventory.md tools/php83/entrypoint-inventory/.gitignore",
+        "description": "Read old review, doc, gitignore"
+      },
+      "caller": {
+        "type": "direct"
+      }
+    },
+    {
+      "tool_use_id": "toolu_01BsYYYXwzgtoEumdpGfrrgp",
+      "type": "tool_result",
+      "content": {
+        "characters": 9546,
+        "sha256_utf8": "dffb8599651069b8c40d18065811648a5dfe2a8103949094f2c204e42453d465",
+        "head": "# Independent review \u2014 entrypoint-candidate inventory (Claude)\n\n- Executor/reviewer: actual Claude CLI (Claude Opus 5.5), independent of the\n  OpenCode author and the local author/repair.\n- Scope: `tools/php83/entrypoint-inventory/*.py`, `doc/php83/entrypoint-inventory.md`.\n  Repo-local, synthetic-only. No real archive/DEB/ZIP read, no `/tmp` use, no\n  retry of the preserved OpenCode `/tmp` extraction denial or the local author\n  `timeout 124`, no index/VM/network, no source edits.\n- Reviewed identities (sha256):\n  - `build.py` `85a4103d8c75f333dc211cbace20027f6451878106a9c8e33b3efe6ca5e62bf7`\n  - `test_entrypoint_inventory.py` `375a7786ab683156c75996b90e8435833826992cac1f4a6062dcdedd3cc4938a`\n  - `entrypoint-inventory.md` `bb1f5cd3b028db22737a77f942b10fa1ffa9baf7ec77525d240e481beb24b75e`\n- Environment: Linux 6.8.0-142, Python 3.12.3, branch `proposal/migrate-kaltura-php83`.\n\n## Executed\n\n1. `TMPDIR=\"$PWD/tools/php83/entrypoint-inventory/.tmp-test-scope\" python3 -m unittest discover -s tools/php83/entrypoint-inventory -p 'test_*.py' -v`\n   \u2192 exit 0, **12/12 OK** (0.006 s).\n2. In-memory synthetic probes (`parse_control_stream`/`parse_data_stream` on\n   `tar_bytes(...)` BytesIO, no files written) \u2192 exit 0:\n\n| Probe | Input | Result |\n|---|---|---|\n| P1 | data `opt/kaltura/bin/run.sh` mode 0755 containing `php /opt/kaltura/app/x.php` | candidate `executable`, **0 invocations** |\n| P2 | data non-exec `opt/kaltura/bin/lib.sh` with php call | **excluded `.sh`**, not read |\n| P3 | data `opt/kaltura/app/configurations/cron/api` (non-exec, cron line with php) | **excluded `(extensionless)`**, 0 invocations |\n| P4 | postinst `$PHP_BIN /opt/...x.php` / `${PHP} /opt/y.php` | **0 invocations** (no unresolved row) |\n| P5 | postinst `php -d memory_limit=-1 /opt/a.php`, `php -f /opt/b.php` | recorded, target `-d`/`-f`, `unresolved_dynamic` (not lost, but real target discarded) |\n| P6 | postinst `cd /opt/x && php install.php` | `literal_php` for cwd-relative `install.php` |\n| P7 | e",
+        "tail": "tated the source scope. The rejected review is retained.\n\nThe next revision scans shell/configuration/extensionless candidates, records\nvariable interpreters as unresolved, distinguishes relative/option targets,\nretains invocation source hashes and control metadata, and avoids labeling every\nextensionless executable as PHP. Four added tests cover those findings. The\nexpanded16-test synthetic suite passes locally; independent re-review is pending.\nNo test outcome closes real-input execution, owner/source reconciliation,\noriginal-tree entrypoint discovery, active-path classification or T0-04.\n\n```sh\nmkdir -p tools/php83/entrypoint-inventory/.tmp-test-scope\nTMPDIR=\"$PWD/tools/php83/entrypoint-inventory/.tmp-test-scope\" \\\n  python3 -m unittest discover -s tools/php83/entrypoint-inventory -p 'test_*.py'\n```\n\nEvidence: [local attempts and reviews](evidence/entrypoint-inventory/).\nNo application, VM, performance, packaging or release acceptance is claimed.\n.tmp-test-scope/\n.work/\n__pycache__/"
+      },
+      "is_error": false
+    },
+    {
+      "type": "tool_use",
+      "id": "toolu_01BthQGkH4LpgnECKWP9TVnM",
+      "name": "Bash",
+      "input": {
+        "command": "cat -n tools/php83/entrypoint-inventory/build.py",
+        "description": "Read build.py"
+      },
+      "caller": {
+        "type": "direct"
+      }
+    },
+    {
+      "tool_use_id": "toolu_01BthQGkH4LpgnECKWP9TVnM",
+      "type": "tool_result",
+      "content": {
+        "characters": 26122,
+        "sha256_utf8": "63bc7891d8817ced8c56d241cc180ad7a5d43d2c93c032fc71a7cbc874ff6a05",
+        "head": "     1\t#!/usr/bin/env python3\n     2\t\"\"\"Offline deterministic entrypoint-candidate inventory (synthetic-only verified).\n     3\t\n     4\tReads user-provided published bundle + original ZIP paths given on the command\n     5\tline, but this session does NOT execute it on real inputs. No package install,\n     6\tno maintainer-script execution, no member-path extraction, no network, no VM.\n     7\tDEB bytes are only streamed through ``dpkg-deb --ctrl-tarfile/--fsys-tarfile``\n     8\tinto repo-owned scratch files and parsed as tar names/bytes in memory; archive\n     9\tlinks are recorded, never followed.\n    10\t\n    11\tSafe-parsing patterns (normalize, hash helpers, checksum manifest, duplicate\n    12\tand traversal rejection) intentionally mirror tools/php83/package-identities/\n    13\tbuild.py. Scope is candidate inventory only: no active-runtime, reachability,\n    14\tor exhaustive-entrypoint claims. Not a hostile-archive resource sandbox.\n    15\t\"\"\"\n    16\timport argparse\n    17\timport hashlib\n    18\timport json\n    19\timport re\n    20\timport shutil\n    21\timport subprocess\n    22\timport tarfile\n    23\timport tempfile\n    24\timport zipfile\n    25\tfrom pathlib import Path, PurePosixPath\n    26\t\n    27\tBUNDLE_SHA = '91629580441f6a896ebf9e51f0256532221715bee57a3e5a64c66ff0c4e3127b'\n    28\tSOURCE_SHA = '58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28'\n    29\tSOURCE_ROOT = 'server-Rigel-18.20.0/'\n    30\tPHP_EXTENSIONS = {'.php', '.phtml', '.inc', '.php5'}\n    31\tMAINTAINER_SCRIPTS = {'preinst', 'postinst', 'prerm', 'postrm', 'config'}\n    32\tSCAN_SIZE_LIMIT = 2 * 1024 * 1024\n    33\tLINE_EXCERPT_LIMIT = 300\n    34\t\n    35\tINTERPRETER_RE = re.compile(\n    36\t    r'(?<![A-Za-z0-9_?$<>])(?P<interp>(?:/usr/(?:local/)?bin/php[0-9.]*)|\\bphp[0-9.]*(?:-cgi|-cli|-fpm)?\\b)'\n    37\t    r'[ \\t]+(?P<target>\"[^\"\\n]{1,300}\"|\\'[^\\'\\n]{1,300}\\'|[^\\s;|&`\"\\']{1,300})'\n    38\t)\n    39\tDYNAMIC_CHARS_RE = re.compile(r'[\\$\\*\\?`\\[\\]\\{\\}~]|[$][({]')\n    40\tVARIABLE_INTERPRETER_RE = re.compi",
+        "tail": "ility_claim': True,\n   475\t            't0_04_complete': False}\n   476\t\n   477\t\n   478\tdef main():\n   479\t    parser = argparse.ArgumentParser()\n   480\t    parser.add_argument('--repo', type=Path, default=Path(__file__).resolve().parents[3])\n   481\t    parser.add_argument('--bundle', type=Path, required=True)\n   482\t    parser.add_argument('--original', type=Path, required=True)\n   483\t    parser.add_argument('--output', type=Path, required=True)\n   484\t    parser.add_argument('--work-dir', type=Path, default=None)\n   485\t    args = parser.parse_args()\n   486\t    if args.output.exists():\n   487\t        raise ValueError('Refusing existing output')\n   488\t    result = build(args.repo, args.bundle, args.original, args.work_dir)\n   489\t    with args.output.open('x') as output:\n   490\t        json.dump(result, output, indent=2)\n   491\t        output.write('\\n')\n   492\t    print(json.dumps(result['summary'], sort_keys=True))\n   493\t\n   494\t\n   495\tif __name__ == '__main__':\n   496\t    main()"
+      },
+      "is_error": false
+    },
+    {
+      "type": "tool_use",
+      "id": "toolu_01JBJ6o71GaQWYNujQ69gBpd",
+      "name": "Bash",
+      "input": {
+        "command": "cat -n tools/php83/entrypoint-inventory/test_entrypoint_inventory.py",
+        "description": "Read test file"
+      },
+      "caller": {
+        "type": "direct"
+      }
+    },
+    {
+      "tool_use_id": "toolu_01JBJ6o71GaQWYNujQ69gBpd",
+      "type": "tool_result",
+      "content": {
+        "characters": 17330,
+        "sha256_utf8": "a121287cdb7425c9c624fc3facf1fe810297f4a7214088ade9781aebc0c510f6",
+        "head": "     1\t\"\"\"Synthetic entrypoint-inventory controls. No real archives, no /tmp, no network/VM.\"\"\"\n     2\timport hashlib\n     3\timport importlib.util\n     4\timport io\n     5\timport json\n     6\timport subprocess\n     7\timport tarfile\n     8\timport unittest\n     9\timport zipfile\n    10\tfrom contextlib import ExitStack\n    11\tfrom pathlib import Path\n    12\tfrom unittest.mock import patch\n    13\t\n    14\tHERE = Path(__file__).resolve().parent\n    15\tspec = importlib.util.spec_from_file_location('entrypoint_builder', HERE / 'build.py')\n    16\tb = importlib.util.module_from_spec(spec)\n    17\tspec.loader.exec_module(b)\n    18\tOWNER = {'package_file': 'a.deb', 'package_sha256': 'a' * 64}\n    19\t\n    20\tSCOPE = HERE / '.tmp-test-scope'\n    21\t\n    22\t\n    23\tdef tar_bytes(entries):\n    24\t    output = io.BytesIO()\n    25\t    with tarfile.open(fileobj=output, mode='w') as tar:\n    26\t        for row in entries:\n    27\t            item = tarfile.TarInfo(row['name'])\n    28\t            item.size = len(row.get('data', b''))\n    29\t            item.mode = row.get('mode', 0o644)\n    30\t            item.mtime = 0\n    31\t            kind = row.get('kind', 'file')\n    32\t            if kind == 'dir':\n    33\t                item.type = tarfile.DIRTYPE\n    34\t                item.size = 0\n    35\t                tar.addfile(item)\n    36\t            elif kind == 'symlink':\n    37\t                item.type = tarfile.SYMTYPE\n    38\t                item.linkname = row['linkname']\n    39\t                item.size = 0\n    40\t                tar.addfile(item)\n    41\t            elif kind == 'hardlink':\n    42\t                item.type = tarfile.LNKTYPE\n    43\t                item.linkname = row['linkname']\n    44\t                item.size = 0\n    45\t                tar.addfile(item)\n    46\t            else:\n    47\t                item.type = tarfile.REGTYPE\n    48\t                tar.addfile(item, io.BytesIO(row.get('data', b'')))\n    49\t    output.seek(0)\n    50\t    return output\n    51\t\n    52\t",
+        "tail": "           if member.name == './SHA256SUMS':\n   288\t                    data = ('0' * 64 + '  a.deb\\n').encode()\n   289\t                    member.size = len(data)\n   290\t                dst.addfile(member, io.BytesIO(data) if data is not None else None)\n   291\t        with ExitStack() as stack:\n   292\t            stack.enter_context(patch.object(b, 'BUNDLE_SHA', b.hash_file(bad)))\n   293\t            stack.enter_context(patch.object(b, 'SOURCE_SHA', b.hash_file(self.original)))\n   294\t            stack.enter_context(patch.object(b.shutil, 'which', return_value=str(self.binary)))\n   295\t            stack.enter_context(patch.object(\n   296\t                b.subprocess, 'check_output', return_value='synthetic dpkg-deb version\\n'))\n   297\t            with self.assertRaisesRegex(ValueError, 'Inner package hash mismatch'):\n   298\t                b.build(self.repo, bad, self.original, work_dir=self.repo / 'scratch2')\n   299\t\n   300\t\n   301\tif __name__ == '__main__':\n   302\t    unittest.main()"
+      },
+      "is_error": false
+    },
+    {
+      "type": "tool_use",
+      "id": "toolu_01S2ohbhfSYr1K12QNd9eFxg",
+      "name": "Bash",
+      "input": {
+        "command": "sha256sum tools/php83/entrypoint-inventory/build.py tools/php83/entrypoint-inventory/test_entrypoint_inventory.py doc/php83/entrypoint-inventory.md doc/php83/evidence/entrypoint-inventory/claude-review.md && cat doc/php83/evidence/entrypoint-inventory/local-r4-tests.stderr doc/php83/evidence/entrypoint-inventory/local-r4-tests.exit && ls -R doc/php83/evidence/entrypoint-inventory/attempts | head -30; git log --oneline -1; python3 --version",
+        "description": "Hash reviewed files and view author r4 test evidence"
+      },
+      "caller": {
+        "type": "direct"
+      }
+    },
+    {
+      "tool_use_id": "toolu_01S2ohbhfSYr1K12QNd9eFxg",
+      "type": "tool_result",
+      "content": "7cb89a2cffa493b8a5650be3ceb69131ba98cce4e1729a2c38e99d7562f5b4a7  tools/php83/entrypoint-inventory/build.py\na70b82b02854cb9b28d818505f263ed85cb688a1fe94e118afd8c8921ed6d651  tools/php83/entrypoint-inventory/test_entrypoint_inventory.py\n6ae78553258266ee9c346f001918a3cb8da4e8607ffc9ca4b6acf1f6ef4e3c57  doc/php83/entrypoint-inventory.md\n5bc7871f7232320fe075a7a56a3f6e5934f7cf651966cd3f29a852465af1200c  doc/php83/evidence/entrypoint-inventory/claude-review.md\ntest_inner_hash_mismatch_fail_closed (test_entrypoint_inventory.BuildOrchestrationTests.test_inner_hash_mismatch_fail_closed) ... ok\ntest_synthetic_build_denominators_and_evidence (test_entrypoint_inventory.BuildOrchestrationTests.test_synthetic_build_denominators_and_evidence) ... ok\ntest_control_script_exact_hash_retained (test_entrypoint_inventory.EntrypointUnitTests.test_control_script_exact_hash_retained) ... ok\ntest_denominator_and_exclusion_counts (test_entrypoint_inventory.EntrypointUnitTests.test_denominator_and_exclusion_counts) ... ok\ntest_duplicate_rejected (test_entrypoint_inventory.EntrypointUnitTests.test_duplicate_rejected) ... ok\ntest_executable_binary_not_labeled_php (test_entrypoint_inventory.EntrypointUnitTests.test_executable_binary_not_labeled_php) ... ok\ntest_executable_shebang_extensionless_and_generated_client (test_entrypoint_inventory.EntrypointUnitTests.test_executable_shebang_extensionless_and_generated_client) ... ok\ntest_links_recorded_never_followed (test_entrypoint_inventory.EntrypointUnitTests.test_links_recorded_never_followed) ... ok\ntest_literal_and_dynamic_interpreter_targets (test_entrypoint_inventory.EntrypointUnitTests.test_literal_and_dynamic_interpreter_targets) ... ok\ntest_maintainer_scripts_scanned_with_owner_line (test_entrypoint_inventory.EntrypointUnitTests.test_maintainer_scripts_scanned_with_owner_line) ... ok\ntest_oversize_unscanned_counted (test_entrypoint_inventory.EntrypointUnitTests.test_oversize_unscanned_counted) ... ok\ntest_path_guards (test_entrypoint_inventory.EntrypointUnitTests.test_path_guards) ... ok\ntest_scratch_must_stay_inside_repo (test_entrypoint_inventory.EntrypointUnitTests.test_scratch_must_stay_inside_repo) ... ok\ntest_shell_and_application_template_invocations (test_entrypoint_inventory.EntrypointUnitTests.test_shell_and_application_template_invocations) ... ok\ntest_traversal_rejected_in_control_and_data (test_entrypoint_inventory.EntrypointUnitTests.test_traversal_rejected_in_control_and_data) ... ok\ntest_variable_interpreters_and_nonliteral_targets (test_entrypoint_inventory.EntrypointUnitTests.test_variable_interpreters_and_nonliteral_targets) ... ok\n\n----------------------------------------------------------------------\nRan 16 tests in 0.006s\n\nOK\n0\ndoc/php83/evidence/entrypoint-inventory/attempts:\nclaude-r1\nlocal-r1\n\ndoc/php83/evidence/entrypoint-inventory/attempts/claude-r1:\nbuild.py\nentrypoint-inventory.md\ntest_entrypoint_inventory.py\n\ndoc/php83/evidence/entrypoint-inventory/attempts/local-r1:\nbuild.py\nlocal-tests.exit\nlocal-tests.stderr\nlocal-tests.stdout\ntest_entrypoint_inventory.py\n898183a9 docs(php83): advance exp12 checkpoint and reconcile provider coverage\nPython 3.12.3",
+      "is_error": false
+    },
+    {
+      "type": "text",
+      "text": "Agora executo a su\u00edte exigida (foreground) e capturo a sa\u00edda."
+    },
+    {
+      "type": "tool_use",
+      "id": "toolu_017n3RGQNfPi2NrvrHLKgnBb",
+      "name": "Bash",
+      "input": {
+        "command": "TMPDIR=\"$PWD/tools/php83/entrypoint-inventory/.tmp-test-scope\" python3 -m unittest discover -s tools/php83/entrypoint-inventory -p 'test_*.py' -v 2>&1 | tail -5; echo \"exit=${PIPESTATUS[0]}\"",
+        "description": "Run the synthetic entrypoint-inventory test suite"
+      },
+      "caller": {
+        "type": "direct"
+      }
+    },
+    {
+      "tool_use_id": "toolu_017n3RGQNfPi2NrvrHLKgnBb",
+      "type": "tool_result",
+      "content": "----------------------------------------------------------------------\nRan 16 tests in 0.006s\n\nOK\nexit=0",
+      "is_error": false
+    },
+    {
+      "type": "text",
+      "text": "Su\u00edte 16/16 OK. Agora reproduzo as sondas P1\u2013P9 rejeitadas, mais sondas novas, s\u00f3 em mem\u00f3ria."
+    },
+    {
+      "type": "tool_use",
+      "id": "toolu_01VrsudHWuVKmGJxWUYGFWmN",
+      "name": "Bash",
+      "input": {
+        "command": "TMPDIR=\"$PWD/tools/php83/entrypoint-inventory/.tmp-test-scope\" PYTHONDONTWRITEBYTECODE=1 python3 - <<'EOF'\nimport sys; sys.path.insert(0,'tools/php83/entrypoint-inventory')\nimport test_entrypoint_inventory as t\nb=t.b; O=t.OWNER; tb=t.tar_bytes\ndef D(entries):\n    ex={}; r,c,i,_=b.parse_data_stream(tb(entries),O,ex); return r,c,i,ex\ndef C(body):\n    return b.parse_control_stream(tb([{'name':'postinst','data':body}]),O)[2]\nfmt=lambda inv:[(x['interpreter'],x['target'],x['target_class']) for x in inv]\nr,c,i,ex=D([{'name':'opt/kaltura/bin/run.sh','mode':0o755,'data':b'php /opt/kaltura/app/x.php\\n'}]); print('P1',[x['candidate_class'] for x in c],fmt(i))\nr,c,i,ex=D([{'name':'opt/kaltura/bin/lib.sh','data':b'php /opt/kaltura/app/x.php\\n'}]); print('P2',[x['candidate_class'] for x in c],fmt(i),ex)\nr,c,i,ex=D([{'name':'opt/kaltura/app/configurations/cron/api','data':b'* * * * * kaltura php /opt/kaltura/app/x.php\\n'}]); print('P3',[x['candidate_class'] for x in c],fmt(i),ex)\nprint('P4',fmt(C(b'$PHP_BIN /opt/x.php\\n${PHP} /opt/y.php\\n')))\nprint('P5',fmt(C(b'php -d memory_limit=-1 /opt/a.php\\nphp -f /opt/b.php\\n')))\nprint('P6',fmt(C(b'cd /opt/x && php install.php\\n')))\nr,c,i,ex=D([{'name':'usr/bin/blob','mode':0o755,'data':b'\\x7fELF\\x00\\x00'}]); print('P7',[x['candidate_class'] for x in c])\nprint('P8',fmt(C(b'apt-get install -y php8.3 php8.3-cli\\n')))\nr,c,i,ex=D([{'name':'opt/a.php','data':b'<?php'},{'name':'opt/l','kind':'symlink','linkname':'opt/b.txt'},{'name':'opt/b.txt','data':b'x'},{'name':'opt/d','kind':'dir'}])\nprint('P9',[(x['path'],x['type'],x.get('scan_disposition')) for x in r],[x['path'] for x in c],ex)\n# new probes\nprint('N-a quoted var',fmt(C(b'\"$PHP_BIN\" /opt/x.php\\n\"${PHP}\" /opt/y.php\\n')))\nprint('N-b default expansion',fmt(C(b'${PHP_BIN:-php} /opt/x.php\\n$(which php) /opt/y.php\\n')))\nprint('N-c exec/sudo/env',fmt(C(b'sudo -u kaltura php /opt/a.php\\n/usr/bin/env php /opt/b.php\\nexec php /opt/c.php\\n')))\nr,c,i,ex=D([{'name':'opt/kaltura/bin/tool.template','data':b'#!/bin/bash\\nphp /opt/x.php\\n'},{'name':'etc/monit/conf.d/k.rc','data':b'start program = \"/usr/bin/php /opt/y.php\"\\n'}]); print('N-d nonexec odd-suffix',fmt(i),ex,[x.get('scan_disposition') for x in r])\nEOF\necho exit=$?",
+        "description": "Reproduce rejected probes and new probes in memory"
+      },
+      "caller": {
+        "type": "direct"
+      }
+    },
+    {
+      "tool_use_id": "toolu_01VrsudHWuVKmGJxWUYGFWmN",
+      "type": "tool_result",
+      "content": "P1 ['executable+shell_script_candidate'] [('php', '/opt/kaltura/app/x.php', 'literal_php')]\nP2 ['shell_script_candidate'] [('php', '/opt/kaltura/app/x.php', 'literal_php')] {}\nP3 ['config:application_config_candidate'] [('php', '/opt/kaltura/app/x.php', 'literal_php')] {}\nP4 [('$PHP_BIN', '/opt/x.php', 'unresolved_dynamic'), ('${PHP}', '/opt/y.php', 'unresolved_dynamic')]\nP5 [('php', '-d', 'unresolved_option'), ('php', '-f', 'unresolved_option')]\nP6 [('php', 'install.php', 'relative_unresolved')]\nP7 ['executable']\nP8 [('php8.3', 'php8.3-cli', 'unresolved_dynamic')]\nP9 [('opt/a.php', 'regular', 'candidate_scanned'), ('opt/l', 'symlink', None), ('opt/b.txt', 'regular', 'excluded'), ('opt/d', 'dir', None)] ['opt/a.php'] {'.txt': 1}\nN-a quoted var []\nN-b default expansion []\nN-c exec/sudo/env [('php', '/opt/a.php', 'literal_php'), ('php', '/opt/b.php', 'literal_php'), ('php', '/opt/c.php', 'literal_php')]\nN-d nonexec odd-suffix [] {'.template': 1, '.rc': 1} ['excluded', 'excluded']\nexit=0",
+      "is_error": false
+    },
+    {
+      "type": "tool_use",
+      "id": "toolu_01MEqLniKorGvougYdA2dj3U",
+      "name": "Bash",
+      "input": {
+        "command": "git grep -nE '\"\\$\\{?[A-Za-z_]*PHP[A-Za-z_]*\\}?\"[ \\t]+|\\$\\{[A-Za-z_]*PHP[A-Za-z_]*:-[^}]*\\}[ \\t]+|\\$\\(which php' -- ':!doc' ':!tools' ':!patches' | head -20; echo; git grep -cE '\"\\$\\{?[A-Za-z_]*PHP[A-Za-z_]*\\}?\"[ \\t]+|\\$\\{[A-Za-z_]*PHP[A-Za-z_]*:-[^}]*\\}[ \\t]+' -- ':!doc' ':!tools' ':!patches' | head; echo; git grep -nE '\\$PHP[A-Za-z_]*[ \\t]|\\$\\{PHP' -- ':!doc' ':!tools' ':!patches' | head -8",
+        "description": "Search tracked repo scripts for quoted/defaulted PHP variable idioms"
+      },
+      "caller": {
+        "type": "direct"
+      }
+    },
+    {
+      "tool_use_id": "toolu_01MEqLniKorGvougYdA2dj3U",
+      "type": "tool_result",
+      "content": "RPM/scripts/postinst/kaltura-batch-config.sh:30:if [ \"$PHP_MINOR_VER\" -gt 3 ];then\nRPM/scripts/postinst/kaltura-front-config.sh:58:if [ \"$PHP_MINOR_VER\" -gt 3 ];then\ndeb/kaltura-php/debian/patches/0044-temporary-path-fixes-for-multiarch.patch:56:   if test \"$PHP_XPM_DIR\" != \"no\"; then\ndeb/kaltura-php/debian/patches/0044-temporary-path-fixes-for-multiarch.patch:77:@@ -95,7 +95,7 @@ if test \"$PHP_LDAP\" != \"no\"; then\ndeb/kaltura-php/debian/patches/0044-temporary-path-fixes-for-multiarch.patch:90:@@ -38,7 +38,7 @@ if test \"$PHP_MSSQL\" != \"no\"; then\ndeb/kaltura-php/debian/patches/0044-temporary-path-fixes-for-multiarch.patch:144:@@ -46,7 +46,7 @@ if test \"$PHP_PDO_DBLIB\" != \"no\"; then\n\nRPM/scripts/postinst/kaltura-batch-config.sh:1\nRPM/scripts/postinst/kaltura-front-config.sh:1\ndeb/kaltura-php/debian/patches/0044-temporary-path-fixes-for-multiarch.patch:4\n\nRPM/SOURCES/kaltura-batch:92:    su $OS_KALTURA_USER -c \"nohup $PHP_BIN $BATCHEXE $PHP_BIN $CONFIG_FILE >> $LOG_DIR/kaltura_batch.log 2>&1 &\"\nRPM/SOURCES/kaltura-elastic-populate:65:                su $OS_KALTURA_USER -c \"$PHP_BIN $ES_PLUGIN_SCRIPT 2>> $LOG_DIR/kaltura_elastic_populate.log 1>/dev/null &\"\nRPM/SOURCES/kaltura-populate:92:\techo \"$PHP_BIN $SCRIPTEXE >> $LOG_DIR/kaltura_populate.log 2>&1 &\"\nRPM/SOURCES/kaltura-populate:94:\tsu $OS_KALTURA_USER -c \"$PHP_BIN $SCRIPTEXE >> $LOG_DIR/kaltura_populate.log 2>&1 &\"\nbuild/package_php_source.sh:30:wget $PHP_URI -O $RPM_SOURCES_DIR/php-$PHP_VERSION.tar.bz2\ndeb/kaltura-batch/debian/kaltura-batch.init:85:    su $OS_KALTURA_USER -c \"nohup $PHP_BIN $BATCHEXE $PHP_BIN $CONFIG_FILE >> $LOG_DIR/kaltura_batch.log 2>&1 &\"\ndeb/kaltura-elasticsearch/debian/kaltura-elastic-populate.init:65:                su $OS_KALTURA_USER -c \"$PHP_BIN $ES_PLUGIN_SCRIPT 2>> $LOG_DIR/kaltura_elastic_populate.log 1>/dev/null &\"\ndeb/kaltura-php/debian/debhelper/php7-maintscript-helper:69:\tif [ -n \"${PHP5_MAINTSCRIPT_DEBUG:-}\" ] ; then",
+      "is_error": false
+    },
+    {
+      "type": "tool_use",
+      "id": "toolu_01MqLKX6iyTwrBJfRGCT8AsU",
+      "name": "Bash",
+      "input": {
+        "command": "TMPDIR=\"$PWD/tools/php83/entrypoint-inventory/.tmp-test-scope\" PYTHONDONTWRITEBYTECODE=1 python3 - <<'EOF'\nimport sys, subprocess; sys.path.insert(0,'tools/php83/entrypoint-inventory')\nimport test_entrypoint_inventory as t\nb=t.b\nfor spec in ['deb/kaltura-batch/debian/kaltura-batch.init:85','deb/kaltura-elasticsearch/debian/kaltura-elastic-populate.init:65','RPM/SOURCES/kaltura-populate:94','RPM/SOURCES/kaltura-populate:92']:\n    f,n=spec.rsplit(':',1); line=open(f).read().splitlines()[int(n)-1]\n    rows=b.scan_php_invocations(line,f,t.OWNER)\n    print(spec,'->',[(r['interpreter'],r['target'][:40],r['target_class']) for r in rows])\n# whole packaged init script, as it would appear at etc/init.d/kaltura-batch\ndata=open('deb/kaltura-batch/debian/kaltura-batch.init','rb').read()\nr,c,i,_=b.parse_data_stream(t.tar_bytes([{'name':'etc/init.d/kaltura-batch','mode':0o755,'data':data}]),t.OWNER,{})\nprint('etc/init.d/kaltura-batch',[x['candidate_class'] for x in c],[(x['line'],x['interpreter'],x['target'][:30]) for x in i])\nEOF\necho exit=$?; ls deb/kaltura-batch/debian/ | head -20",
+        "description": "Probe scanner against real tracked init-script lines in memory"
+      },
+      "caller": {
+        "type": "direct"
+      }
+    },
+    {
+      "tool_use_id": "toolu_01MqLKX6iyTwrBJfRGCT8AsU",
+      "type": "tool_result",
+      "content": "deb/kaltura-batch/debian/kaltura-batch.init:85 -> []\ndeb/kaltura-elasticsearch/debian/kaltura-elastic-populate.init:65 -> []\nRPM/SOURCES/kaltura-populate:94 -> []\nRPM/SOURCES/kaltura-populate:92 -> [('$PHP_BIN', '$SCRIPTEXE >> $LOG_DIR/kaltura_populate.', 'unresolved_dynamic')]\netc/init.d/kaltura-batch ['config:init+executable'] [(48, 'php', '[K]GenericBatchMgr.class.php/')]\nexit=0\nchangelog\ncompat\ncontrol\nkaltura-batch.init\npostinst\nrules",
+      "is_error": false
+    },
+    {
+      "type": "text",
+      "text": "Confirmado: a linha que de fato inicia o daemon batch (`kaltura-batch.init:85`) gera **zero** linhas de invoca\u00e7\u00e3o. Vejo rapidamente o que casou na linha 48."
+    },
+    {
+      "type": "tool_use",
+      "id": "toolu_018gSE4qiYV8Gyv3TUYJ2e3z",
+      "name": "Bash",
+      "input": {
+        "command": "sed -n '48p;85p' deb/kaltura-batch/debian/kaltura-batch.init; grep -n 'kaltura-batch.init\\|init' deb/kaltura-batch/debian/rules | head -5",
+        "description": "Show matched and missed batch init lines"
+      },
+      "caller": {
+        "type": "direct"
+      }
+    },
+    {
+      "tool_use_id": "toolu_018gSE4qiYV8Gyv3TUYJ2e3z",
+      "type": "tool_result",
+      "content": "    KP=`ps axf | awk '!/\\\\_ / {b=0} /php [K]GenericBatchMgr.class.php/ {b=1} b{print $1}'|xargs`\n    su $OS_KALTURA_USER -c \"nohup $PHP_BIN $BATCHEXE $PHP_BIN $CONFIG_FILE >> $LOG_DIR/kaltura_batch.log 2>&1 &\"\n15:\tdh_installinit -r",
+      "is_error": false
+    },
+    {
+      "type": "text",
+      "text": "Evid\u00eancia suficiente. Gravo a revis\u00e3o r2 em arquivo novo (sem sobrescrever)."
+    },
+    {
+      "type": "tool_use",
+      "id": "toolu_01Bf8mjm7H3uTmHB9m9zGeUK",
+      "name": "Bash",
+      "input": {
+        "command": {
+          "characters": 7481,
+          "sha256_utf8": "b0275012549760efa935affb2562bf3d12efa5281786972ccbc4cbfc2c69cf6b",
+          "head": "set -o noclobber && cat > doc/php83/evidence/entrypoint-inventory/claude-r2-review.md <<'EOF'\n# Independent r2 review \u2014 entrypoint-candidate inventory (Claude)\n\n- Executor/reviewer: actual Claude CLI (Claude Opus 5.5), independent of the\n  OpenCode author and the local author/repair. Supersedes nothing; the rejected\n  r1 review (`claude-review.md`) is retained unchanged.\n- Scope judged: **PREPARED candidate discovery only** (`tools/php83/entrypoint-inventory/*.py`,\n  `doc/php83/entrypoint-inventory.md`). Not real-input execution, not full\n  inventory/T0-04 approval.\n- Boundaries kept: repository-only; no real archive/DEB/ZIP read, no `/tmp`\n  access, no retry (any tool/path) of the preserved OpenCode `/tmp` denial or\n  the local-author exit124; no VM/network/index/source edits. The external-input\n  denial is preserved; no broader gate is waived.\n- Reviewed identities (sha256):\n  - `build.py` `7cb89a2cffa493b8a5650be3ceb69131ba98cce4e1729a2c38e99d7562f5b4a7`\n  - `test_entrypoint_inventory.py` `a70b82b02854cb9b28d818505f263ed85cb688a1fe94e118afd8c8921ed6d651`\n  - `entrypoint-inventory.md` `6ae78553258266ee9c346f001918a3cb8da4e8607ffc9ca4b6acf1f6ef4e3c57`\n  - r1 review `claude-review.md` `5bc7871f7232320fe075a7a56a3f6e5934f7cf651966cd3f29a852465af1200c` (unchanged)\n- Environment: Linux 6.8.0-142, Python 3.12.3, branch\n  `proposal/migrate-kaltura-php83` @ `898183a9` (worktree changes untracked).\n\n## Executed\n\n1. `TMPDIR=\"$PWD/tools/php83/entrypoint-inventory/.tmp-test-scope\" python3 -m unittest discover -s tools/php83/entrypoint-inventory -p 'test_*.py' -v`\n   \u2192 exit 0, **16/16 OK** (0.006 s). Matches author `local-r4-tests.*`.\n2. In-memory probes (stdin Python, `TMPDIR` = repo `.tmp-test-scope`,\n   `PYTHONDONTWRITEBYTECODE=1`; tar streams built with the test module's\n   `tar_bytes` in `BytesIO`; no files written) \u2192 exit 0.\n3. Same, feeding **tracked repository script lines** (not archives) to\n   `scan_php_invocations`/`parse_data_stream` \u2192 exit 0.\n\n### r1 probes reprod",
+          "tail": "rns produces false rows; covered by\n  the doc's overmatch caveat.\n- N13 Doc formatting: missing spaces in \"The2MiB\", \"had12\", \"with3\", \"ran12\",\n  \"expanded16-test\", \"exit124\".\n- N7 (from r1) still open by design: ledger/source-map/primary hashes are\n  recorded, not joined; doc states this.\n\n## Verdict\n\n**NOT APPROVED as prepared** \u2014 B4 open. B1, B3 and N1\u2013N3/N5/N6 are verified\nfixed; B2 is fixed only for lines whose first `$VAR` is the interpreter.\nPath/link/hash/scratch/output safety remains sound for trusted pinned inputs;\n16/16 synthetic tests pass. After B4 plus a regression test, the prepared\ncandidate-discovery scope is approvable; that would still not approve real-input\nexecution, owner/source reconciliation, original-tree entrypoint discovery,\nactive-path classification or T0-04. This review is not execution evidence.\nEOF\necho exit=$?; printf '1\\n' > doc/php83/evidence/entrypoint-inventory/claude-r2-review.exit; sha256sum doc/php83/evidence/entrypoint-inventory/claude-review.md"
+        },
+        "description": "Write new r2 review file without overwriting"
+      },
+      "caller": {
+        "type": "direct"
+      }
+    },
+    {
+      "tool_use_id": "toolu_01Bf8mjm7H3uTmHB9m9zGeUK",
+      "type": "tool_result",
+      "content": "exit=0\n5bc7871f7232320fe075a7a56a3f6e5934f7cf651966cd3f29a852465af1200c  doc/php83/evidence/entrypoint-inventory/claude-review.md",
+      "is_error": false
+    },
+    {
+      "type": "text",
+      "text": "Removo o arquivo `.exit` que criei por engano: registrar o c\u00f3digo de sa\u00edda do CLI cabe ao coordenador, n\u00e3o a mim."
+    },
+    {
+      "type": "tool_use",
+      "id": "toolu_01D5q9AQ1QsQuePt8E7jXbe2",
+      "name": "Bash",
+      "input": {
+        "command": "rm doc/php83/evidence/entrypoint-inventory/claude-r2-review.exit && sha256sum doc/php83/evidence/entrypoint-inventory/claude-r2-review.md && git status --short doc/php83/evidence/entrypoint-inventory tools/php83/entrypoint-inventory",
+        "description": "Remove stray exit file and confirm state"
+      },
+      "caller": {
+        "type": "direct"
+      }
+    },
+    {
+      "tool_use_id": "toolu_01D5q9AQ1QsQuePt8E7jXbe2",
+      "type": "tool_result",
+      "content": "4921d9a559ab4c39d1f8d3fd2054a50cb75ac7c34af639fce67bb695ba22b931  doc/php83/evidence/entrypoint-inventory/claude-r2-review.md\n?? doc/php83/evidence/entrypoint-inventory/\n?? tools/php83/entrypoint-inventory/",
+      "is_error": false
+    },
+    {
+      "type": "text",
+      "text": "**Veredito: N\u00c3O APROVADO como preparado.** Resta um bloqueador concreto, o B4. Gravei a revis\u00e3o em `doc/php83/evidence/entrypoint-inventory/claude-r2-review.md` (sha256 `4921d9a5\u2026b931`). A revis\u00e3o antiga `claude-review.md` n\u00e3o foi alterada (hash `5bc7871f\u2026200c` conferido).\n\n**O que executei**\n- A su\u00edte de testes exigida retornou exit 0, com **16/16 OK**. Bate com a evid\u00eancia `local-r4-tests` do autor.\n- Rodei novamente as sondas P1\u2013P9 da r1, em mem\u00f3ria, sem gravar arquivos. P1\u2013P7 e P9 est\u00e3o corrigidas. A P8 (nomes de pacote como `php8.3-cli`) continua gerando falso positivo, mas o doc j\u00e1 avisa que o regex captura demais.\n- Tamb\u00e9m confirmei no c\u00f3digo as outras corre\u00e7\u00f5es: hashes de controle e de arquivo mantidos, `source_sha256` presente, doc tratando o ZIP s\u00f3 como contagem e dizendo que a liga\u00e7\u00e3o com os donos (owners) n\u00e3o \u00e9 feita, e o comando de teste usando `.tmp-test-scope`.\n\n**Bloqueador B4: a corre\u00e7\u00e3o do B2 n\u00e3o cobre o jeito como o pr\u00f3prio reposit\u00f3rio inicia os daemons**\n- Passei linhas reais dos init scripts versionados no reposit\u00f3rio pelo scanner. N\u00e3o li nenhum arquivo compactado.\n- `kaltura-batch.init:85` (`su $OS_KALTURA_USER -c \"nohup $PHP_BIN $BATCHEXE \u2026\"`), `kaltura-elastic-populate.init:65` e `kaltura-populate:94` geram **0 linhas de invoca\u00e7\u00e3o**.\n- **Causa:** o regex de interpretador em vari\u00e1vel (`VARIABLE_INTERPRETER_RE`) consome o resto da linha no primeiro `$VAR` que encontra, que aqui \u00e9 `$OS_KALTURA_USER`. Esse match \u00e9 descartado pelo filtro em `build.py:159`, e o `$PHP_BIN` que vem depois nunca \u00e9 testado.\n- No script inteiro, instalado como `etc/init.d/kaltura-batch`, a \u00fanica linha capturada \u00e9 a 48, que \u00e9 um padr\u00e3o de awk (falso positivo). A linha 85, que de fato inicia o PHP, fica de fora.\n- **Corre\u00e7\u00e3o m\u00ednima:** casar cada `$VAR` com lookahead, sem consumir o alvo, e adicionar um teste com a linha 85 como regress\u00e3o.\n\n**Achados n\u00e3o bloqueantes (N8\u2013N13)**\n- Interpretadores entre aspas (`\"$PHP\"`) e com valor padr\u00e3o (`${PHP:-php}`) n\u00e3o s\u00e3o detectados. N\u00e3o encontrei esse uso no reposit\u00f3rio.\n- Arquivos `.template` e `.rc` sem permiss\u00e3o de execu\u00e7\u00e3o s\u00e3o exclu\u00eddos sem leitura; s\u00f3 aparecem na contagem por sufixo.\n- A checagem de reconcilia\u00e7\u00e3o em `build.py:307` \u00e9 tautol\u00f3gica e nunca dispara.\n- O campo `config_taxonomy` n\u00e3o lista `application_config_candidate`.\n- No doc faltam espa\u00e7os em v\u00e1rios lugares, como \"The2MiB\" e \"had12\".\n\nDepois do B4 e do teste de regress\u00e3o, o escopo de descoberta de candidatos preparado pode ser aprovado. Isso ainda n\u00e3o aprova execu\u00e7\u00e3o com os insumos reais, a liga\u00e7\u00e3o entre donos e fontes, nem o T0-04. A nega\u00e7\u00e3o de acesso externo continua em vigor, e esta revis\u00e3o n\u00e3o serve como evid\u00eancia de execu\u00e7\u00e3o."
+    },
+    {
+      "type": "result",
+      "subtype": "success",
+      "is_error": false,
+      "result": "**Veredito: N\u00c3O APROVADO como preparado.** Resta um bloqueador concreto, o B4. Gravei a revis\u00e3o em `doc/php83/evidence/entrypoint-inventory/claude-r2-review.md` (sha256 `4921d9a5\u2026b931`). A revis\u00e3o antiga `claude-review.md` n\u00e3o foi alterada (hash `5bc7871f\u2026200c` conferido).\n\n**O que executei**\n- A su\u00edte de testes exigida retornou exit 0, com **16/16 OK**. Bate com a evid\u00eancia `local-r4-tests` do autor.\n- Rodei novamente as sondas P1\u2013P9 da r1, em mem\u00f3ria, sem gravar arquivos. P1\u2013P7 e P9 est\u00e3o corrigidas. A P8 (nomes de pacote como `php8.3-cli`) continua gerando falso positivo, mas o doc j\u00e1 avisa que o regex captura demais.\n- Tamb\u00e9m confirmei no c\u00f3digo as outras corre\u00e7\u00f5es: hashes de controle e de arquivo mantidos, `source_sha256` presente, doc tratando o ZIP s\u00f3 como contagem e dizendo que a liga\u00e7\u00e3o com os donos (owners) n\u00e3o \u00e9 feita, e o comando de teste usando `.tmp-test-scope`.\n\n**Bloqueador B4: a corre\u00e7\u00e3o do B2 n\u00e3o cobre o jeito como o pr\u00f3prio reposit\u00f3rio inicia os daemons**\n- Passei linhas reais dos init scripts versionados no reposit\u00f3rio pelo scanner. N\u00e3o li nenhum arquivo compactado.\n- `kaltura-batch.init:85` (`su $OS_KALTURA_USER -c \"nohup $PHP_BIN $BATCHEXE \u2026\"`), `kaltura-elastic-populate.init:65` e `kaltura-populate:94` geram **0 linhas de invoca\u00e7\u00e3o**.\n- **Causa:** o regex de interpretador em vari\u00e1vel (`VARIABLE_INTERPRETER_RE`) consome o resto da linha no primeiro `$VAR` que encontra, que aqui \u00e9 `$OS_KALTURA_USER`. Esse match \u00e9 descartado pelo filtro em `build.py:159`, e o `$PHP_BIN` que vem depois nunca \u00e9 testado.\n- No script inteiro, instalado como `etc/init.d/kaltura-batch`, a \u00fanica linha capturada \u00e9 a 48, que \u00e9 um padr\u00e3o de awk (falso positivo). A linha 85, que de fato inicia o PHP, fica de fora.\n- **Corre\u00e7\u00e3o m\u00ednima:** casar cada `$VAR` com lookahead, sem consumir o alvo, e adicionar um teste com a linha 85 como regress\u00e3o.\n\n**Achados n\u00e3o bloqueantes (N8\u2013N13)**\n- Interpretadores entre aspas (`\"$PHP\"`) e com valor padr\u00e3o (`${PHP:-php}`) n\u00e3o s\u00e3o detectados. N\u00e3o encontrei esse uso no reposit\u00f3rio.\n- Arquivos `.template` e `.rc` sem permiss\u00e3o de execu\u00e7\u00e3o s\u00e3o exclu\u00eddos sem leitura; s\u00f3 aparecem na contagem por sufixo.\n- A checagem de reconcilia\u00e7\u00e3o em `build.py:307` \u00e9 tautol\u00f3gica e nunca dispara.\n- O campo `config_taxonomy` n\u00e3o lista `application_config_candidate`.\n- No doc faltam espa\u00e7os em v\u00e1rios lugares, como \"The2MiB\" e \"had12\".\n\nDepois do B4 e do teste de regress\u00e3o, o escopo de descoberta de candidatos preparado pode ser aprovado. Isso ainda n\u00e3o aprova execu\u00e7\u00e3o com os insumos reais, a liga\u00e7\u00e3o entre donos e fontes, nem o T0-04. A nega\u00e7\u00e3o de acesso externo continua em vigor, e esta revis\u00e3o n\u00e3o serve como evid\u00eancia de execu\u00e7\u00e3o."
+    }
+  ]
+}

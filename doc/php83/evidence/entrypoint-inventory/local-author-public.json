@@ -1,0 +1,1223 @@
+{
+  "raw_sha256": "01ddeb24656c15918b7e804effda3f51c0b22c0a12aca8431666298016112835",
+  "events": [
+    {
+      "type": "text",
+      "text": "Building a synthetic-only entrypoint inventory \u2014 no real archives touched."
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "state": {
+        "status": "completed",
+        "input": {
+          "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/AGENTS.md"
+        },
+        "output": "<path>/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/AGENTS.md</path>\n<type>file</type>\n<content>\n1: # Project agent instructions\n2: \n3: <!-- codebase-memory-mcp:start -->\n4: # Codebase Memory\n5: \n6: For structural code discovery, prefer the `codebase-memory` skill and the\n7: `codebase-memory-mcp` graph tools. Confirm index freshness before broad analysis;\n8: use `check_index_coverage` for every file that supports a graph-based conclusion.\n9: <!-- codebase-memory-mcp:end -->\n10: \n11: ## PHP 8.3 migration test coordination\n12: \n13: For every migration validation cycle, prioritize the actual Claude CLI, Cursor\n14: Agent CLI (`agent`) and OpenCode CLI for test execution and independent review.\n15: Assign explicit, non-overlapping cases and rotate reviewers; an author's review\n16: alone is not independent validation. Codex coordinates the results. Use the\n17: actual CLIs, not another agent merely named after them.\n18: \n19: The operator requested that Grok be deprioritized because it is malfunctioning;\n20: do not require another Grok attempt in each cycle. Preserve previous Grok failures\n21: separately, and use it only when there is a concrete reason to retry. Prefer\n22: OpenCode with Zen's Muse Spark 1.3 Free, resolving the exact installed model ID\n23: (currently `opencode/muse-spark-1.3-contributor-free`). The operator also explicitly\n24: authorized OpenCode MiniMax 3; resolve an installed MiniMax-M3 provider/model ID\n25: before use and verify actual availability. Do not buy plans, add credentials or\n26: silently substitute another paid model. Bound every external CLI attempt, confirm\n27: it is terminal before reassigning its work, and record each actual executor's\n28: result separately. Tool/quota/authentication failures never count as passes.\n29: \n30: For noninteractive Claude runs, supply the prompt via stdin after all options;\n31: do not put a positional prompt after variadic `--allowedTools`, which can consume\n32: it as another tool argument. For shell syntax checks, invoke `bash -n` separately\n33: for each script; extra filenames are arguments, not additional parsed scripts.\n34: \n35: Run independent reviews and isolated tests in parallel. Never run competing\n36: writers, destructive fixtures or benchmark workloads against the same VM,\n37: database or worktree; use separate disposable clones or serialize with an\n38: exclusive owner. Every executor must stay within existing approved lab scope.\n39: \n40: Record CLI availability/authentication/quota/permission failures as BLOCKED or\n41: NOT_EXECUTED, not successful tests. Do not bypass safeguards to satisfy this\n42: rule. A review is not execution evidence. If a CLI is unavailable, report the\n43: gap explicitly and continue only independently authorized safe work.\n44: \n45: Each result must identify the case, executor and reviewer, source/patch/harness\n46: identities, environment, command, exit status, sanitized evidence and any\n47: remaining limitation. Report executed cases, failures, untested scope and\n48: release gates separately; passing harness tests does not prove full application\n49: acceptance. Do not invent a completion percentage or release date.\n50: \n51: These coordination rules do not authorize production changes, `.20` writes,\n52: package/CI integration, publishing, or bypassing the migration proposal's\n53: feasibility, release and cutover approvals.\n\n(End of file - total 53 lines)\n</content>",
+        "metadata": {
+          "preview": "# Project agent instructions\n\n<!-- codebase-memory-mcp:start -->\n# Codebase Memory\n\nFor structural code discovery, prefer the `codebase-memory` skill and the\n`codebase-memory-mcp` graph tools. Confirm index freshness before broad analysis;\nuse `check_index_coverage` for every file that supports a graph-based conclusion.\n<!-- codebase-memory-mcp:end -->\n\n## PHP 8.3 migration test coordination\n\nFor every migration validation cycle, prioritize the actual Claude CLI, Cursor\nAgent CLI (`agent`) and OpenCode CLI for test execution and independent review.\nAssign explicit, non-overlapping cases and rotate reviewers; an author's review\nalone is not independent validation. Codex coordinates the results. Use the\nactual CLIs, not another agent merely named after them.\n\nThe operator requested that Grok be deprioritized because it is malfunctioning;\ndo not require another Grok attempt in each cycle. Preserve previous Grok failures",
+          "truncated": false,
+          "loaded": [],
+          "display": {
+            "type": "file",
+            "path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/AGENTS.md",
+            "text": "# Project agent instructions\n\n<!-- codebase-memory-mcp:start -->\n# Codebase Memory\n\nFor structural code discovery, prefer the `codebase-memory` skill and the\n`codebase-memory-mcp` graph tools. Confirm index freshness before broad analysis;\nuse `check_index_coverage` for every file that supports a graph-based conclusion.\n<!-- codebase-memory-mcp:end -->\n\n## PHP 8.3 migration test coordination\n\nFor every migration validation cycle, prioritize the actual Claude CLI, Cursor\nAgent CLI (`agent`) and OpenCode CLI for test execution and independent review.\nAssign explicit, non-overlapping cases and rotate reviewers; an author's review\nalone is not independent validation. Codex coordinates the results. Use the\nactual CLIs, not another agent merely named after them.\n\nThe operator requested that Grok be deprioritized because it is malfunctioning;\ndo not require another Grok attempt in each cycle. Preserve previous Grok failures\nseparately, and use it only when there is a concrete reason to retry. Prefer\nOpenCode with Zen's Muse Spark 1.3 Free, resolving the exact installed model ID\n(currently `opencode/muse-spark-1.3-contributor-free`). The operator also explicitly\nauthorized OpenCode MiniMax 3; resolve an installed MiniMax-M3 provider/model ID\nbefore use and verify actual availability. Do not buy plans, add credentials or\nsilently substitute another paid model. Bound every external CLI attempt, confirm\nit is terminal before reassigning its work, and record each actual executor's\nresult separately. Tool/quota/authentication failures never count as passes.\n\nFor noninteractive Claude runs, supply the prompt via stdin after all options;\ndo not put a positional prompt after variadic `--allowedTools`, which can consume\nit as another tool argument. For shell syntax checks, invoke `bash -n` separately\nfor each script; extra filenames are arguments, not additional parsed scripts.\n\nRun independent reviews and isolated tests in parallel. Never run competing\nwriters, destructive fixtures or benchmark workloads against the same VM,\ndatabase or worktree; use separate disposable clones or serialize with an\nexclusive owner. Every executor must stay within existing approved lab scope.\n\nRecord CLI availability/authentication/quota/permission failures as BLOCKED or\nNOT_EXECUTED, not successful tests. Do not bypass safeguards to satisfy this\nrule. A review is not execution evidence. If a CLI is unavailable, report the\ngap explicitly and continue only independently authorized safe work.\n\nEach result must identify the case, executor and reviewer, source/patch/harness\nidentities, environment, command, exit status, sanitized evidence and any\nremaining limitation. Report executed cases, failures, untested scope and\nrelease gates separately; passing harness tests does not prove full application\nacceptance. Do not invent a completion percentage or release date.\n\nThese coordination rules do not authorize production changes, `.20` writes,\npackage/CI integration, publishing, or bypassing the migration proposal's\nfeasibility, release and cutover approvals.",
+            "lineStart": 1,
+            "lineEnd": 53,
+            "totalLines": 53,
+            "truncated": false
+          }
+        },
+        "title": "AGENTS.md",
+        "time": {
+          "start": 1790442063276,
+          "end": 1790442063287
+        }
+      }
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "state": {
+        "status": "completed",
+        "input": {
+          "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+        },
+        "output": "<path>/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83</path>\n<type>directory</type>\n<entries>\n.agents/\n.claude/\n.git\n.github/\n.gitignore\nAGENTS.md\nbuild/\nchef-repo/\nCODE_OF_CONDUCT.md\ncommon/\nCONTRIBUTING.md\ndeb/\ndoc/\ndocker/\nDockerfile\nkaltura-console/\nLICENSE\nopenspec/\npatches/\nprompts/\nREADME.md\nrpm/\nRPM/\nsanity_tests/\ntools/\nvagrant/\n\n(26 entries)\n</entries>",
+        "metadata": {
+          "preview": ".agents/\n.claude/\n.git\n.github/\n.gitignore\nAGENTS.md\nbuild/\nchef-repo/\nCODE_OF_CONDUCT.md\ncommon/\nCONTRIBUTING.md\ndeb/\ndoc/\ndocker/\nDockerfile\nkaltura-console/\nLICENSE\nopenspec/\npatches/\nprompts/",
+          "truncated": false,
+          "loaded": [],
+          "display": {
+            "type": "directory",
+            "path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83",
+            "entries": [
+              ".agents/",
+              ".claude/",
+              ".git",
+              ".github/",
+              ".gitignore",
+              "AGENTS.md",
+              "build/",
+              "chef-repo/",
+              "CODE_OF_CONDUCT.md",
+              "common/",
+              "CONTRIBUTING.md",
+              "deb/",
+              "doc/",
+              "docker/",
+              "Dockerfile",
+              "kaltura-console/",
+              "LICENSE",
+              "openspec/",
+              "patches/",
+              "prompts/",
+              "README.md",
+              "rpm/",
+              "RPM/",
+              "sanity_tests/",
+              "tools/",
+              "vagrant/"
+            ],
+            "offset": 1,
+            "totalEntries": 26,
+            "truncated": false
+          }
+        },
+        "title": "",
+        "time": {
+          "start": 1790442065464,
+          "end": 1790442065471
+        }
+      }
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "state": {
+        "status": "completed",
+        "input": {
+          "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83"
+        },
+        "output": "<path>/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83</path>\n<type>directory</type>\n<entries>\n__pycache__/\n.gitignore\nanalyzer/\napcu-probes/\napcu-web/\naudit-patch-inventory.py\nautoload83-composition/\nautoload83/\nbase-object-ternary/\nbaseline-api/\nbaseline-protocol/\nbaseline-rehearsal/\nbuild-experimental-zip.py\ncandidate-syntax/\ncollect-provider-evidence.py\ncompare_doc_comment.py\ncompare-runtime-probes.py\ncompiler-triage/\nconfig-return/\ncriteria-composition/\ncriteria-marker/\ncriteria-probe/\ncriteria-return/\ncurly-offsets/\ndiagnostic-triage/\nexp10-api/\nexp10-candidate/\nexp10-regression/\nexp10-syntax/\nexp11-api/\nexp11-candidate/\nexp11-regression/\nexp11-syntax/\nexp12-api/\nexp12-candidate/\nexp12-regression/\nexp12-syntax/\nexp3-api/\nexp3-regression/\nexp4-api/\nexp4-regression/\nexp5-api/\nexp5-regression/\nexp6-api/\nexp6-regression/\nexp7-api/\nexp7-regression/\nexp8-api/\nexp8-regression/\nexp9-api/\nexp9-regression/\ninclude-trace.php\ninventory-ledger/\ninventory-source-graph.py\nlab_target.py\nlint-tree.py\nnull-probe/\npackage-identities/\npatch-tests/\npdo-bool/\npdo-bootstrap/\npdo-return-audit/\nprovider-probes/\nREADME.md\nreflection-probe/\nriak-alias/\nrun-runtime-probes.py\nrun-sandboxed-probes.sh\nruntime-probes.php\ntemplate-generation/\ntest_apcu_web_client.py\ntest_api_auth_dispatch_collector.py\ntest_api_dispatch_collector.py\ntest_api_http.py\ntest_api_mysql_collector.py\ntest_api_session_collector.py\ntest_compare_probes.py\ntest_doc_comment_cache_fixture.py\ntest_doc_comment_comparison.py\ntest_exp3_api_collector.py\ntest_exp7_api_collector.py\ntest_exp8_api_collector.py\ntest_exp9_api_collector.py\ntest_experimental_zip.py\ntest_lab_target.py\ntest_mysql_init_collector.py\ntest_patch_inventory.py\ntest_pdo_edge_collector.py\ntest_provider_evidence.py\ntest_runtime_probes.py\nverify-experimental-zip.py\nxml-lifecycle-fix/\nxml-lifecycle/\nxml-loader/\n\n(94 entries)\n</entries>",
+        "metadata": {
+          "preview": "__pycache__/\n.gitignore\nanalyzer/\napcu-probes/\napcu-web/\naudit-patch-inventory.py\nautoload83-composition/\nautoload83/\nbase-object-ternary/\nbaseline-api/\nbaseline-protocol/\nbaseline-rehearsal/\nbuild-experimental-zip.py\ncandidate-syntax/\ncollect-provider-evidence.py\ncompare_doc_comment.py\ncompare-runtime-probes.py\ncompiler-triage/\nconfig-return/\ncriteria-composition/",
+          "truncated": false,
+          "loaded": [],
+          "display": {
+            "type": "directory",
+            "path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83",
+            "entries": [
+              "__pycache__/",
+              ".gitignore",
+              "analyzer/",
+              "apcu-probes/",
+              "apcu-web/",
+              "audit-patch-inventory.py",
+              "autoload83-composition/",
+              "autoload83/",
+              "base-object-ternary/",
+              "baseline-api/",
+              "baseline-protocol/",
+              "baseline-rehearsal/",
+              "build-experimental-zip.py",
+              "candidate-syntax/",
+              "collect-provider-evidence.py",
+              "compare_doc_comment.py",
+              "compare-runtime-probes.py",
+              "compiler-triage/",
+              "config-return/",
+              "criteria-composition/",
+              "criteria-marker/",
+              "criteria-probe/",
+              "criteria-return/",
+              "curly-offsets/",
+              "diagnostic-triage/",
+              "exp10-api/",
+              "exp10-candidate/",
+              "exp10-regression/",
+              "exp10-syntax/",
+              "exp11-api/",
+              "exp11-candidate/",
+              "exp11-regression/",
+              "exp11-syntax/",
+              "exp12-api/",
+              "exp12-candidate/",
+              "exp12-regression/",
+              "exp12-syntax/",
+              "exp3-api/",
+              "exp3-regression/",
+              "exp4-api/",
+              "exp4-regression/",
+              "exp5-api/",
+              "exp5-regression/",
+              "exp6-api/",
+              "exp6-regression/",
+              "exp7-api/",
+              "exp7-regression/",
+              "exp8-api/",
+              "exp8-regression/",
+              "exp9-api/",
+              "exp9-regression/",
+              "include-trace.php",
+              "inventory-ledger/",
+              "inventory-source-graph.py",
+              "lab_target.py",
+              "lint-tree.py",
+              "null-probe/",
+              "package-identities/",
+              "patch-tests/",
+              "pdo-bool/",
+              "pdo-bootstrap/",
+              "pdo-return-audit/",
+              "provider-probes/",
+              "README.md",
+              "reflection-probe/",
+              "riak-alias/",
+              "run-runtime-probes.py",
+              "run-sandboxed-probes.sh",
+              "runtime-probes.php",
+              "template-generation/",
+              "test_apcu_web_client.py",
+              "test_api_auth_dispatch_collector.py",
+              "test_api_dispatch_collector.py",
+              "test_api_http.py",
+              "test_api_mysql_collector.py",
+              "test_api_session_collector.py",
+              "test_compare_probes.py",
+              "test_doc_comment_cache_fixture.py",
+              "test_doc_comment_comparison.py",
+              "test_exp3_api_collector.py",
+              "test_exp7_api_collector.py",
+              "test_exp8_api_collector.py",
+              "test_exp9_api_collector.py",
+              "test_experimental_zip.py",
+              "test_lab_target.py",
+              "test_mysql_init_collector.py",
+              "test_patch_inventory.py",
+              "test_pdo_edge_collector.py",
+              "test_provider_evidence.py",
+              "test_runtime_probes.py",
+              "verify-experimental-zip.py",
+              "xml-lifecycle-fix/",
+              "xml-lifecycle/",
+              "xml-loader/"
+            ],
+            "offset": 1,
+            "totalEntries": 94,
+            "truncated": false
+          }
+        },
+        "title": "tools/php83",
+        "time": {
+          "start": 1790442067704,
+          "end": 1790442067708
+        }
+      }
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "state": {
+        "status": "completed",
+        "input": {
+          "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83"
+        },
+        "output": "<path>/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83</path>\n<type>directory</type>\n<entries>\nanalytics-partner-probe.md\napcu-cache.md\napcu-web.md\napi-auth-dispatch.md\napi-bootstrap.md\napi-http.md\napi-mysql.md\napi-session.md\napi-web.md\nautoload83.md\nbase-object-ternary.md\nbaseline-api.md\nbaseline-media.md\nbaseline-protocol-plan.md\nbaseline-transport.md\ncandidate-syntax.md\ncompiler-triage.md\nconfig-return-contracts.md\ncoverage-matrix.md\ncriteria-marker.md\ncriteria-null-alias.md\ncriteria-return-contracts.md\ncurly-offsets.md\ndebug-pdo-experiment.md\ndependency-attribution-followup.md\ndoc-comment-consumer.md\ndoc-comment-property.md\nevidence/\nexp10-candidate.md\nexp10-integration.md\nexp11-candidate.md\nexp11-integration.md\nexp11-syntax.md\nexp12-candidate.md\nexp12-syntax.md\nexp3-api.md\nexp3-candidate.md\nexp3-runtime.md\nexp4-candidate.md\nexp4-diagnostic-triage.md\nexp5-null-batch.md\nexp6-reflection-integration.md\nexp7-config-integration.md\nexp8-criteria-integration.md\nexp9-pdo-integration.md\nexperimental-zip.md\nfeasibility-status.md\ninventory-ledger.md\nmysql-type-experiment.md\npackage-identities.md\npatch-inventory.md\npdo-boolean-repair.md\npdo-return-audit.md\npropel-init-hydration.md\nprovider-runtime.md\nreflection-parameter-repair.md\nregistry-investigation.md\nremaining-baseline-syntax-plan.md\nriak-alias.md\nriak-provider.md\nruntime-next-fix-plan.md\nruntime-triage.md\nsource-graph.md\nsymfony-bootstrap.md\ntemplate-generation.md\ntest-status.md\nxml-lifecycle-fix.md\nxml-lifecycle.md\nxml-loader.md\n\n(69 entries)\n</entries>",
+        "metadata": {
+          "preview": "analytics-partner-probe.md\napcu-cache.md\napcu-web.md\napi-auth-dispatch.md\napi-bootstrap.md\napi-http.md\napi-mysql.md\napi-session.md\napi-web.md\nautoload83.md\nbase-object-ternary.md\nbaseline-api.md\nbaseline-media.md\nbaseline-protocol-plan.md\nbaseline-transport.md\ncandidate-syntax.md\ncompiler-triage.md\nconfig-return-contracts.md\ncoverage-matrix.md\ncriteria-marker.md",
+          "truncated": false,
+          "loaded": [],
+          "display": {
+            "type": "directory",
+            "path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83",
+            "entries": [
+              "analytics-partner-probe.md",
+              "apcu-cache.md",
+              "apcu-web.md",
+              "api-auth-dispatch.md",
+              "api-bootstrap.md",
+              "api-http.md",
+              "api-mysql.md",
+              "api-session.md",
+              "api-web.md",
+              "autoload83.md",
+              "base-object-ternary.md",
+              "baseline-api.md",
+              "baseline-media.md",
+              "baseline-protocol-plan.md",
+              "baseline-transport.md",
+              "candidate-syntax.md",
+              "compiler-triage.md",
+              "config-return-contracts.md",
+              "coverage-matrix.md",
+              "criteria-marker.md",
+              "criteria-null-alias.md",
+              "criteria-return-contracts.md",
+              "curly-offsets.md",
+              "debug-pdo-experiment.md",
+              "dependency-attribution-followup.md",
+              "doc-comment-consumer.md",
+              "doc-comment-property.md",
+              "evidence/",
+              "exp10-candidate.md",
+              "exp10-integration.md",
+              "exp11-candidate.md",
+              "exp11-integration.md",
+              "exp11-syntax.md",
+              "exp12-candidate.md",
+              "exp12-syntax.md",
+              "exp3-api.md",
+              "exp3-candidate.md",
+              "exp3-runtime.md",
+              "exp4-candidate.md",
+              "exp4-diagnostic-triage.md",
+              "exp5-null-batch.md",
+              "exp6-reflection-integration.md",
+              "exp7-config-integration.md",
+              "exp8-criteria-integration.md",
+              "exp9-pdo-integration.md",
+              "experimental-zip.md",
+              "feasibility-status.md",
+              "inventory-ledger.md",
+              "mysql-type-experiment.md",
+              "package-identities.md",
+              "patch-inventory.md",
+              "pdo-boolean-repair.md",
+              "pdo-return-audit.md",
+              "propel-init-hydration.md",
+              "provider-runtime.md",
+              "reflection-parameter-repair.md",
+              "registry-investigation.md",
+              "remaining-baseline-syntax-plan.md",
+              "riak-alias.md",
+              "riak-provider.md",
+              "runtime-next-fix-plan.md",
+              "runtime-triage.md",
+              "source-graph.md",
+              "symfony-bootstrap.md",
+              "template-generation.md",
+              "test-status.md",
+              "xml-lifecycle-fix.md",
+              "xml-lifecycle.md",
+              "xml-loader.md"
+            ],
+            "offset": 1,
+            "totalEntries": 69,
+            "truncated": false
+          }
+        },
+        "title": "doc/php83",
+        "time": {
+          "start": 1790442067706,
+          "end": 1790442067710
+        }
+      }
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "state": {
+        "status": "completed",
+        "input": {
+          "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/package-identities"
+        },
+        "output": "<path>/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/package-identities</path>\n<type>directory</type>\n<entries>\n__pycache__/\nbuild.py\ntest_package_identities.py\n\n(3 entries)\n</entries>",
+        "metadata": {
+          "preview": "__pycache__/\nbuild.py\ntest_package_identities.py",
+          "truncated": false,
+          "loaded": [],
+          "display": {
+            "type": "directory",
+            "path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/package-identities",
+            "entries": [
+              "__pycache__/",
+              "build.py",
+              "test_package_identities.py"
+            ],
+            "offset": 1,
+            "totalEntries": 3,
+            "truncated": false
+          }
+        },
+        "title": "tools/php83/package-identities",
+        "time": {
+          "start": 1790442069571,
+          "end": 1790442069576
+        }
+      }
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "state": {
+        "status": "completed",
+        "input": {
+          "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence"
+        },
+        "output": "<path>/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence</path>\n<type>directory</type>\n<entries>\nanalytics-partner/\napcu-cache/\napcu-web/\napi-auth-dispatch/\napi-bootstrap/\napi-http/\napi-mysql/\napi-session/\napi-web/\nautoload83/\nbase-object-ternary/\nbaseline-api/\nbaseline-protocol/\nbaseline-rehearsal/\nbaseline-transport/\nbatch1-local/\nbatch2-inventory/\ncandidate-syntax/\ncompiler-triage/\nconfig-return/\ncriteria-marker/\ncriteria-null/\ncriteria-return/\ncriteria-selection/\ncurly-offsets/\ndebug-pdo/\ndependency-attribution-followup/\ndoc-comment-consumer/\ndoc-comment/\nentrypoint-inventory/\nexp10-candidate/\nexp10-runtime/\nexp10-syntax/\nexp11-candidate/\nexp11-runtime/\nexp11-syntax/\nexp12-candidate/\nexp12-runtime/\nexp12-syntax/\nexp3-api/\nexp3-candidate/\nexp3-runtime/\nexp4-api/\nexp4-candidate/\nexp4-runtime/\nexp4-triage/\nexp5-api/\nexp5-runtime/\nexp6-api/\nexp6-candidate/\nexp6-runtime/\nexp7-api/\nexp7-candidate/\nexp7-runtime/\nexp8-api/\nexp8-candidate/\nexp8-runtime/\nexp9-api/\nexp9-candidate/\nexp9-runtime/\nexperimental-zip/\nfeasibility-gap-audit/\ninventory-ledger/\nnoble-baseline/\nnoble-runtime/\nnull-batch/\nnull-probe/\npackage-identities/\npdo-bool/\npdo-bootstrap/\npdo-return-audit/\nprovider-runtime/\nproviders/\nreflection-repair/\nregistry-investigation/\nremaining-baseline-syntax-plan/\nriak-alias/\nriak-provider/\nruntime-probes/\nsource-audit/\nsource-graph/\nsymfony-bootstrap/\nsymfony-compile-order/\ntemplate-generation/\nxml-lifecycle-fix/\nxml-lifecycle/\nxml-loader/\n\n(87 entries)\n</entries>",
+        "metadata": {
+          "preview": "analytics-partner/\napcu-cache/\napcu-web/\napi-auth-dispatch/\napi-bootstrap/\napi-http/\napi-mysql/\napi-session/\napi-web/\nautoload83/\nbase-object-ternary/\nbaseline-api/\nbaseline-protocol/\nbaseline-rehearsal/\nbaseline-transport/\nbatch1-local/\nbatch2-inventory/\ncandidate-syntax/\ncompiler-triage/\nconfig-return/",
+          "truncated": false,
+          "loaded": [],
+          "display": {
+            "type": "directory",
+            "path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence",
+            "entries": [
+              "analytics-partner/",
+              "apcu-cache/",
+              "apcu-web/",
+              "api-auth-dispatch/",
+              "api-bootstrap/",
+              "api-http/",
+              "api-mysql/",
+              "api-session/",
+              "api-web/",
+              "autoload83/",
+              "base-object-ternary/",
+              "baseline-api/",
+              "baseline-protocol/",
+              "baseline-rehearsal/",
+              "baseline-transport/",
+              "batch1-local/",
+              "batch2-inventory/",
+              "candidate-syntax/",
+              "compiler-triage/",
+              "config-return/",
+              "criteria-marker/",
+              "criteria-null/",
+              "criteria-return/",
+              "criteria-selection/",
+              "curly-offsets/",
+              "debug-pdo/",
+              "dependency-attribution-followup/",
+              "doc-comment-consumer/",
+              "doc-comment/",
+              "entrypoint-inventory/",
+              "exp10-candidate/",
+              "exp10-runtime/",
+              "exp10-syntax/",
+              "exp11-candidate/",
+              "exp11-runtime/",
+              "exp11-syntax/",
+              "exp12-candidate/",
+              "exp12-runtime/",
+              "exp12-syntax/",
+              "exp3-api/",
+              "exp3-candidate/",
+              "exp3-runtime/",
+              "exp4-api/",
+              "exp4-candidate/",
+              "exp4-runtime/",
+              "exp4-triage/",
+              "exp5-api/",
+              "exp5-runtime/",
+              "exp6-api/",
+              "exp6-candidate/",
+              "exp6-runtime/",
+              "exp7-api/",
+              "exp7-candidate/",
+              "exp7-runtime/",
+              "exp8-api/",
+              "exp8-candidate/",
+              "exp8-runtime/",
+              "exp9-api/",
+              "exp9-candidate/",
+              "exp9-runtime/",
+              "experimental-zip/",
+              "feasibility-gap-audit/",
+              "inventory-ledger/",
+              "noble-baseline/",
+              "noble-runtime/",
+              "null-batch/",
+              "null-probe/",
+              "package-identities/",
+              "pdo-bool/",
+              "pdo-bootstrap/",
+              "pdo-return-audit/",
+              "provider-runtime/",
+              "providers/",
+              "reflection-repair/",
+              "registry-investigation/",
+              "remaining-baseline-syntax-plan/",
+              "riak-alias/",
+              "riak-provider/",
+              "runtime-probes/",
+              "source-audit/",
+              "source-graph/",
+              "symfony-bootstrap/",
+              "symfony-compile-order/",
+              "template-generation/",
+              "xml-lifecycle-fix/",
+              "xml-lifecycle/",
+              "xml-loader/"
+            ],
+            "offset": 1,
+            "totalEntries": 87,
+            "truncated": false
+          }
+        },
+        "title": "doc/php83/evidence",
+        "time": {
+          "start": 1790442069574,
+          "end": 1790442069577
+        }
+      }
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "state": {
+        "status": "completed",
+        "input": {
+          "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/entrypoint-inventory"
+        },
+        "output": "<path>/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/entrypoint-inventory</path>\n<type>directory</type>\n<entries>\nattempt1.json\nopencode-author-public.json\nopencode-author.exit\n\n(3 entries)\n</entries>",
+        "metadata": {
+          "preview": "attempt1.json\nopencode-author-public.json\nopencode-author.exit",
+          "truncated": false,
+          "loaded": [],
+          "display": {
+            "type": "directory",
+            "path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/entrypoint-inventory",
+            "entries": [
+              "attempt1.json",
+              "opencode-author-public.json",
+              "opencode-author.exit"
+            ],
+            "offset": 1,
+            "totalEntries": 3,
+            "truncated": false
+          }
+        },
+        "title": "doc/php83/evidence/entrypoint-inventory",
+        "time": {
+          "start": 1790442071531,
+          "end": 1790442071535
+        }
+      }
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "state": {
+        "status": "completed",
+        "input": {
+          "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/package-identities"
+        },
+        "output": "<path>/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/package-identities</path>\n<type>directory</type>\n<entries>\nagents/\nclaude.exit\nclaude.json\nclaude.stderr\nclaude.stdout\ncompare.py\ncomparison.json\ncoordinator-tests.exit\ncoordinator-tests.stderr\ncoordinator-tests.stdout\ncycle-result.json\nprimary-initial-tests.py\nprimary-initial.json\nprimary-orchestration-result.json\nprimary-orchestration-tests.exit\nprimary-orchestration-tests.stderr\nprimary-orchestration-tests.stdout\nprimary-repeat.json\nprimary-result.json\nprimary-tests.exit\nprimary-tests.stderr\nprimary-tests.stdout\nprimary.json\n\n(23 entries)\n</entries>",
+        "metadata": {
+          "preview": "agents/\nclaude.exit\nclaude.json\nclaude.stderr\nclaude.stdout\ncompare.py\ncomparison.json\ncoordinator-tests.exit\ncoordinator-tests.stderr\ncoordinator-tests.stdout\ncycle-result.json\nprimary-initial-tests.py\nprimary-initial.json\nprimary-orchestration-result.json\nprimary-orchestration-tests.exit\nprimary-orchestration-tests.stderr\nprimary-orchestration-tests.stdout\nprimary-repeat.json\nprimary-result.json\nprimary-tests.exit",
+          "truncated": false,
+          "loaded": [],
+          "display": {
+            "type": "directory",
+            "path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/package-identities",
+            "entries": [
+              "agents/",
+              "claude.exit",
+              "claude.json",
+              "claude.stderr",
+              "claude.stdout",
+              "compare.py",
+              "comparison.json",
+              "coordinator-tests.exit",
+              "coordinator-tests.stderr",
+              "coordinator-tests.stdout",
+              "cycle-result.json",
+              "primary-initial-tests.py",
+              "primary-initial.json",
+              "primary-orchestration-result.json",
+              "primary-orchestration-tests.exit",
+              "primary-orchestration-tests.stderr",
+              "primary-orchestration-tests.stdout",
+              "primary-repeat.json",
+              "primary-result.json",
+              "primary-tests.exit",
+              "primary-tests.stderr",
+              "primary-tests.stdout",
+              "primary.json"
+            ],
+            "offset": 1,
+            "totalEntries": 23,
+            "truncated": false
+          }
+        },
+        "title": "doc/php83/evidence/package-identities",
+        "time": {
+          "start": 1790442071533,
+          "end": 1790442071537
+        }
+      }
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "state": {
+        "status": "completed",
+        "input": {
+          "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/package-identities/build.py"
+        },
+        "output": {
+          "characters": 14197,
+          "sha256_utf8": "0b5daadf980183e289600f56e86b43f1e898e0f5c3e6628007c6e3e8f7ae96f7",
+          "head": "<path>/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/package-identities/build.py</path>\n<type>file</type>\n<content>\n1: #!/usr/bin/env python3\n2: \"\"\"Read-only published DEB PHP payload identity inventory; never install or extract paths.\"\"\"\n3: import argparse\n4: from collections import Counter\n5: import hashlib\n6: import json\n7: from pathlib import Path, PurePosixPath\n8: import re\n9: import shutil\n10: import subprocess\n11: import tarfile\n12: import tempfile\n13: import zipfile\n14: \n15: BUNDLE_SHA = '91629580441f6a896ebf9e51f0256532221715bee57a3e5a64c66ff0c4e3127b'\n16: SOURCE_SHA = '58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28'\n17: SOURCE_ROOT = 'server-Rigel-18.20.0/'\n18: EXTENSIONS = {'.php', '.phtml', '.inc', '.php5'}\n19: \n20: \n21: def hash_stream(stream):\n22:     h = hashlib.sha256()\n23:     for chunk in iter(lambda: stream.read(1024 * 1024), b''):\n24:         h.update(chunk)\n25:     return h.hexdigest()\n26: \n27: \n28: def hash_file(path):\n29:     with path.open('rb') as stream:\n30:         return hash_stream(stream)\n31: \n32: \n33: def normalize(name):\n34:     if not name or name.startswith('/') or '\\\\' in name or '\\x00' in name:\n35:         raise ValueError('Unsafe member path')\n36:     if '..' in PurePosixPath(name).parts:\n37:         raise ValueError('Traversal member path')\n38:     result = str(PurePosixPath(name))\n39:     return '' if result == '.' else result\n40: \n41: \n42: def php_path(name):\n43:     return PurePosixPath(name).suffix.lower() in EXTENSIONS\n44: \n45: \n46: def checksum_manifest(text):\n47:     result = {}\n48:     for line in text.splitlines():\n49:         if not line.strip():\n50:             continue\n51:         match = re.fullmatch(r'([0-9a-f]{64}) [ *](.+)', line)\n52:         if not match:\n53:             raise ValueError('Invalid checksum line')\n54:         sha, name = match.groups()\n55:         name = normalize(name)\n56:         if not name.endswith('.deb') or '/' in name or name in result:\n57: ",
+          "tail": "remaining_ledger_packaged_hashes_missing': 0, 'semantic_findings_resolved': 0},\n258:         'no_package_hooks_installation_or_vm': True, 't0_04_complete': False}\n259: \n260: \n261: def main():\n262:     parser = argparse.ArgumentParser()\n263:     parser.add_argument('--repo', type=Path, default=Path(__file__).resolve().parents[3])\n264:     parser.add_argument('--bundle', type=Path, required=True)\n265:     parser.add_argument('--original', type=Path, required=True)\n266:     parser.add_argument('--output', type=Path, required=True)\n267:     args = parser.parse_args()\n268:     if args.output.exists():\n269:         raise ValueError('Refusing existing output')\n270:     result = build(args.repo, args.bundle, args.original)\n271:     with args.output.open('x') as output:\n272:         json.dump(result, output, indent=2); output.write('\\n')\n273:     print(json.dumps(result['summary'], sort_keys=True))\n274: \n275: if __name__ == '__main__':\n276:     main()\n\n(End of file - total 276 lines)\n</content>"
+        },
+        "metadata": {
+          "preview": "#!/usr/bin/env python3\n\"\"\"Read-only published DEB PHP payload identity inventory; never install or extract paths.\"\"\"\nimport argparse\nfrom collections import Counter\nimport hashlib\nimport json\nfrom pathlib import Path, PurePosixPath\nimport re\nimport shutil\nimport subprocess\nimport tarfile\nimport tempfile\nimport zipfile\n\nBUNDLE_SHA = '91629580441f6a896ebf9e51f0256532221715bee57a3e5a64c66ff0c4e3127b'\nSOURCE_SHA = '58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28'\nSOURCE_ROOT = 'server-Rigel-18.20.0/'\nEXTENSIONS = {'.php', '.phtml', '.inc', '.php5'}\n\n",
+          "truncated": false,
+          "loaded": [],
+          "display": {
+            "type": "file",
+            "path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/package-identities/build.py",
+            "text": {
+              "characters": 12733,
+              "sha256_utf8": "d0ed1601a1c6ba0c211be4752561f55f2bfab13b47e411435612171716cd4b46",
+              "head": "#!/usr/bin/env python3\n\"\"\"Read-only published DEB PHP payload identity inventory; never install or extract paths.\"\"\"\nimport argparse\nfrom collections import Counter\nimport hashlib\nimport json\nfrom pathlib import Path, PurePosixPath\nimport re\nimport shutil\nimport subprocess\nimport tarfile\nimport tempfile\nimport zipfile\n\nBUNDLE_SHA = '91629580441f6a896ebf9e51f0256532221715bee57a3e5a64c66ff0c4e3127b'\nSOURCE_SHA = '58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28'\nSOURCE_ROOT = 'server-Rigel-18.20.0/'\nEXTENSIONS = {'.php', '.phtml', '.inc', '.php5'}\n\n\ndef hash_stream(stream):\n    h = hashlib.sha256()\n    for chunk in iter(lambda: stream.read(1024 * 1024), b''):\n        h.update(chunk)\n    return h.hexdigest()\n\n\ndef hash_file(path):\n    with path.open('rb') as stream:\n        return hash_stream(stream)\n\n\ndef normalize(name):\n    if not name or name.startswith('/') or '\\\\' in name or '\\x00' in name:\n        raise ValueError('Unsafe member path')\n    if '..' in PurePosixPath(name).parts:\n        raise ValueError('Traversal member path')\n    result = str(PurePosixPath(name))\n    return '' if result == '.' else result\n\n\ndef php_path(name):\n    return PurePosixPath(name).suffix.lower() in EXTENSIONS\n\n\ndef checksum_manifest(text):\n    result = {}\n    for line in text.splitlines():\n        if not line.strip():\n            continue\n        match = re.fullmatch(r'([0-9a-f]{64}) [ *](.+)', line)\n        if not match:\n            raise ValueError('Invalid checksum line')\n        sha, name = match.groups()\n        name = normalize(name)\n        if not name.endswith('.deb') or '/' in name or name in result:\n            raise ValueError('Invalid or duplicate checksum package')\n        result[name] = sha\n    if not result:\n        raise ValueError('Empty package manifest')\n    return result\n\n\ndef payload_inventory(stream, owner, excluded=None):\n    \"\"\"Paths are read as names only. PHP symlinks/hardlinks are rejected, not followed.\"\"\"\n    records = []\n    seen = set()\n  ",
+              "tail": "en(upstream),\n            'missing_ledger_hashes_resolved': resolved, 'known_ledger_hashes_preserved': len(joins) - resolved,\n            'remaining_ledger_packaged_hashes_missing': 0, 'semantic_findings_resolved': 0},\n        'no_package_hooks_installation_or_vm': True, 't0_04_complete': False}\n\n\ndef main():\n    parser = argparse.ArgumentParser()\n    parser.add_argument('--repo', type=Path, default=Path(__file__).resolve().parents[3])\n    parser.add_argument('--bundle', type=Path, required=True)\n    parser.add_argument('--original', type=Path, required=True)\n    parser.add_argument('--output', type=Path, required=True)\n    args = parser.parse_args()\n    if args.output.exists():\n        raise ValueError('Refusing existing output')\n    result = build(args.repo, args.bundle, args.original)\n    with args.output.open('x') as output:\n        json.dump(result, output, indent=2); output.write('\\n')\n    print(json.dumps(result['summary'], sort_keys=True))\n\nif __name__ == '__main__':\n    main()"
+            },
+            "lineStart": 1,
+            "lineEnd": 276,
+            "totalLines": 276,
+            "truncated": false
+          }
+        },
+        "title": "tools/php83/package-identities/build.py",
+        "time": {
+          "start": 1790442071529,
+          "end": 1790442071544
+        }
+      }
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "state": {
+        "status": "completed",
+        "input": {
+          "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/package-identities/test_package_identities.py"
+        },
+        "output": {
+          "characters": 13717,
+          "sha256_utf8": "6e2cec2a6e99ae20066e903cec3f23b91bbd9a5ef1dbfcdb24e0e1dbf6c38cb8",
+          "head": "<path>/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/package-identities/test_package_identities.py</path>\n<type>file</type>\n<content>\n1: \"\"\"Synthetic archive/identity negative controls. No dpkg scripts, network or VMs.\"\"\"\n2: import importlib.util\n3: import io\n4: import hashlib\n5: import json\n6: import subprocess\n7: import tempfile\n8: import zipfile\n9: from contextlib import ExitStack\n10: from unittest.mock import patch\n11: from pathlib import Path\n12: import tarfile\n13: import unittest\n14: \n15: HERE = Path(__file__).resolve().parent\n16: spec = importlib.util.spec_from_file_location('package_builder', HERE / 'build.py')\n17: b = importlib.util.module_from_spec(spec)\n18: spec.loader.exec_module(b)\n19: OWNER = {'package_file': 'a.deb', 'package_sha256': 'a' * 64}\n20: \n21: \n22: def archive(entries):\n23:     output = io.BytesIO()\n24:     with tarfile.open(fileobj=output, mode='w') as tar:\n25:         for path, kind, value in entries:\n26:             item = tarfile.TarInfo(path)\n27:             item.type = kind\n28:             if kind == tarfile.REGTYPE:\n29:                 item.size = len(value)\n30:                 tar.addfile(item, io.BytesIO(value))\n31:             else:\n32:                 item.linkname = value\n33:                 tar.addfile(item)\n34:     output.seek(0)\n35:     return output\n36: \n37: \n38: def regular(path='opt/kaltura/app/a.php', value=b'bytes'):\n39:     return b.payload_inventory(archive([(path, tarfile.REGTYPE, value)]), OWNER)[0]\n40: \n41: \n42: class PackageIdentityTests(unittest.TestCase):\n43:     def test_php_family_and_case(self):\n44:         for path in ['x.php','x.PHP','x.phtml','x.inc','x.php5']:\n45:             self.assertTrue(b.php_path(path))\n46:         for path in ['x.sh','x.php4','php-script']:\n47:             self.assertFalse(b.php_path(path))\n48: \n49:     def test_path_guards(self):\n50:         for path in ['/etc/a.php', './a/../b.php', '../b.php', 'a\\\\b.php', '']:\n51:             with self.subTest(path=",
+          "tail": "eError, 'Inner package hash mismatch'):\n228:             self.execute()\n229: \n230:     def test_original_zip_hash_mismatch(self):\n231:         with self.assertRaisesRegex(ValueError, 'Original archive hash mismatch'):\n232:             self.execute(source_sha='0' * 64)\n233: \n234:     def test_nonregular_deb_rejected(self):\n235:         self.write_bundle(kind=tarfile.SYMTYPE)\n236:         with self.assertRaisesRegex(ValueError, 'Non-regular DEB member'):\n237:             self.execute()\n238: \n239:     def test_checksum_deb_set_mismatch(self):\n240:         self.write_bundle(checksum_name='different.deb')\n241:         with self.assertRaisesRegex(ValueError, 'Checksum/package set mismatch'):\n242:             self.execute()\n243: \n244:     def test_dpkg_failure(self):\n245:         with self.assertRaisesRegex(ValueError, 'dpkg-deb payload read failed'):\n246:             self.execute(dpkg_exit=2)\n247: \n248: \n249: if __name__=='__main__':unittest.main()\n\n(End of file - total 249 lines)\n</content>"
+        },
+        "metadata": {
+          "preview": "\"\"\"Synthetic archive/identity negative controls. No dpkg scripts, network or VMs.\"\"\"\nimport importlib.util\nimport io\nimport hashlib\nimport json\nimport subprocess\nimport tempfile\nimport zipfile\nfrom contextlib import ExitStack\nfrom unittest.mock import patch\nfrom pathlib import Path\nimport tarfile\nimport unittest\n\nHERE = Path(__file__).resolve().parent\nspec = importlib.util.spec_from_file_location('package_builder', HERE / 'build.py')\nb = importlib.util.module_from_spec(spec)\nspec.loader.exec_module(b)\nOWNER = {'package_file': 'a.deb', 'package_sha256': 'a' * 64}\n",
+          "truncated": false,
+          "loaded": [],
+          "display": {
+            "type": "file",
+            "path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/package-identities/test_package_identities.py",
+            "text": {
+              "characters": 12370,
+              "sha256_utf8": "6a98db5719597036a4c5694fc330b5b41a844c47af19b055e911400ed5531c7c",
+              "head": "\"\"\"Synthetic archive/identity negative controls. No dpkg scripts, network or VMs.\"\"\"\nimport importlib.util\nimport io\nimport hashlib\nimport json\nimport subprocess\nimport tempfile\nimport zipfile\nfrom contextlib import ExitStack\nfrom unittest.mock import patch\nfrom pathlib import Path\nimport tarfile\nimport unittest\n\nHERE = Path(__file__).resolve().parent\nspec = importlib.util.spec_from_file_location('package_builder', HERE / 'build.py')\nb = importlib.util.module_from_spec(spec)\nspec.loader.exec_module(b)\nOWNER = {'package_file': 'a.deb', 'package_sha256': 'a' * 64}\n\n\ndef archive(entries):\n    output = io.BytesIO()\n    with tarfile.open(fileobj=output, mode='w') as tar:\n        for path, kind, value in entries:\n            item = tarfile.TarInfo(path)\n            item.type = kind\n            if kind == tarfile.REGTYPE:\n                item.size = len(value)\n                tar.addfile(item, io.BytesIO(value))\n            else:\n                item.linkname = value\n                tar.addfile(item)\n    output.seek(0)\n    return output\n\n\ndef regular(path='opt/kaltura/app/a.php', value=b'bytes'):\n    return b.payload_inventory(archive([(path, tarfile.REGTYPE, value)]), OWNER)[0]\n\n\nclass PackageIdentityTests(unittest.TestCase):\n    def test_php_family_and_case(self):\n        for path in ['x.php','x.PHP','x.phtml','x.inc','x.php5']:\n            self.assertTrue(b.php_path(path))\n        for path in ['x.sh','x.php4','php-script']:\n            self.assertFalse(b.php_path(path))\n\n    def test_path_guards(self):\n        for path in ['/etc/a.php', './a/../b.php', '../b.php', 'a\\\\b.php', '']:\n            with self.subTest(path=path), self.assertRaises(ValueError):\n                b.normalize(path)\n        self.assertEqual(b.normalize('./opt/kaltura/app/a.php'), 'opt/kaltura/app/a.php')\n\n    def test_inner_manifest_normalization(self):\n        self.assertEqual(b.checksum_manifest('a' * 64 + '  ./a.deb\\n'), {'a.deb': 'a' * 64})\n        self.assertEqual(b.checksum_manifest('b' * 64 + ",
+              "tail": "te(bundle_sha='0' * 64)\n\n    def test_inner_checksum_mismatch(self):\n        self.write_bundle(checksum='0' * 64)\n        with self.assertRaisesRegex(ValueError, 'Inner package hash mismatch'):\n            self.execute()\n\n    def test_original_zip_hash_mismatch(self):\n        with self.assertRaisesRegex(ValueError, 'Original archive hash mismatch'):\n            self.execute(source_sha='0' * 64)\n\n    def test_nonregular_deb_rejected(self):\n        self.write_bundle(kind=tarfile.SYMTYPE)\n        with self.assertRaisesRegex(ValueError, 'Non-regular DEB member'):\n            self.execute()\n\n    def test_checksum_deb_set_mismatch(self):\n        self.write_bundle(checksum_name='different.deb')\n        with self.assertRaisesRegex(ValueError, 'Checksum/package set mismatch'):\n            self.execute()\n\n    def test_dpkg_failure(self):\n        with self.assertRaisesRegex(ValueError, 'dpkg-deb payload read failed'):\n            self.execute(dpkg_exit=2)\n\n\nif __name__=='__main__':unittest.main()"
+            },
+            "lineStart": 1,
+            "lineEnd": 249,
+            "totalLines": 249,
+            "truncated": false
+          }
+        },
+        "title": "tools/php83/package-identities/test_package_identities.py",
+        "time": {
+          "start": 1790442073791,
+          "end": 1790442073795
+        }
+      }
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "state": {
+        "status": "completed",
+        "input": {
+          "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/entrypoint-inventory/attempt1.json"
+        },
+        "output": "<path>/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/entrypoint-inventory/attempt1.json</path>\n<type>file</type>\n<content>\n1: {\n2:   \"status\": \"NOT_EXECUTED_INVENTORY_PERMISSION_DENIAL\",\n3:   \"cli_exit\": 0,\n4:   \"denied_operation\": \"external directory copy/extraction and dpkg-deb control inspection under /tmp\",\n5:   \"artifacts_created\": false,\n6:   \"response\": \"Do not retry denied operation through another tool or path. Continue only synthetic local authoring; real input run remains unexecuted.\"\n7: }\n\n(End of file - total 7 lines)\n</content>",
+        "metadata": {
+          "preview": "{\n  \"status\": \"NOT_EXECUTED_INVENTORY_PERMISSION_DENIAL\",\n  \"cli_exit\": 0,\n  \"denied_operation\": \"external directory copy/extraction and dpkg-deb control inspection under /tmp\",\n  \"artifacts_created\": false,\n  \"response\": \"Do not retry denied operation through another tool or path. Continue only synthetic local authoring; real input run remains unexecuted.\"\n}",
+          "truncated": false,
+          "loaded": [],
+          "display": {
+            "type": "file",
+            "path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/entrypoint-inventory/attempt1.json",
+            "text": "{\n  \"status\": \"NOT_EXECUTED_INVENTORY_PERMISSION_DENIAL\",\n  \"cli_exit\": 0,\n  \"denied_operation\": \"external directory copy/extraction and dpkg-deb control inspection under /tmp\",\n  \"artifacts_created\": false,\n  \"response\": \"Do not retry denied operation through another tool or path. Continue only synthetic local authoring; real input run remains unexecuted.\"\n}",
+            "lineStart": 1,
+            "lineEnd": 7,
+            "totalLines": 7,
+            "truncated": false
+          }
+        },
+        "title": "doc/php83/evidence/entrypoint-inventory/attempt1.json",
+        "time": {
+          "start": 1790442073790,
+          "end": 1790442073802
+        }
+      }
+    },
+    {
+      "type": "tool_use",
+      "tool": "bash",
+      "state": {
+        "status": "completed",
+        "input": {
+          "command": "ls -R tools/php83/entrypoint-inventory 2>&1; echo ---; ls doc/php83/entrypoint-inventory.md 2>&1; echo ---; ls evidence/entrypoint-inventory/ 2>&1 || ls doc/php83/evidence/entrypoint-inventory/ 2>&1; echo ---; wc -c doc/php83/evidence/package-identities/primary.json; head -c 4000 doc/php83/evidence/package-identities/primary.json",
+          "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+        },
+        "output": "ls: cannot access 'tools/php83/entrypoint-inventory': No such file or directory\n---\nls: cannot access 'doc/php83/entrypoint-inventory.md': No such file or directory\n---\nls: cannot access 'evidence/entrypoint-inventory/': No such file or directory\nattempt1.json\nopencode-author-public.json\nopencode-author.exit\n---\n8776601 doc/php83/evidence/package-identities/primary.json\n{\n  \"schema\": 1,\n  \"scope\": \"Published package/source byte identities only; no semantic or runtime acceptance\",\n  \"bundle_sha256\": \"91629580441f6a896ebf9e51f0256532221715bee57a3e5a64c66ff0c4e3127b\",\n  \"original_archive_sha256\": \"58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28\",\n  \"inputs\": {\n    \"inventory-ledger/ledger.json\": \"33977fe50b11cf851bee4ccd7a5d1e33bcfdb9653c07f413b108b8ed69edddea\",\n    \"source-audit/source-to-package-map.json\": \"b27cc55136ab21213ce2ade4175688793fa644194390909838018e6671b15f3e\",\n    \"builder\": \"a425673559290d0dcb343500fcfdd1bdde7b43c91c6f342da9725b708cebf110\"\n  },\n  \"tool\": {\n    \"binary_sha256\": \"fc9dde782ca8309b65ab92e61d13318bf463cd1aa71daa8967b87b81b48b63d2\",\n    \"version\": \"Debian 'dpkg-deb' package archive backend version 1.22.6 (amd64).\",\n    \"invocation\": \"dpkg-deb --fsys-tarfile PRIVATE_CHECKSUM_VERIFIED_COPY.deb\"\n  },\n  \"php_extensions\": [\n    \".inc\",\n    \".php\",\n    \".php5\",\n    \".phtml\"\n  ],\n  \"suffix_scope_limit\": \"All non-directory suffixes outside the selected set are counted per package but not content-inspected or classified as executable. Extensionless PHP, shebang scripts and PHP embedded in other extensions remain uninventoried semantically.\",\n  \"link_policy\": \"PHP symlink/hardlink/non-regular entries rejected. No links or member paths extracted or followed. Non-PHP links are outside the hashed PHP inventory.\",\n  \"packages\": [\n    {\n      \"package_file\": \"kaltura-base_18.20.0-1_all.deb\",\n      \"package_sha256\": \"985aefac3b349b5b5ab5e28a72ba7727343692f4e697f94342b50ea3e74c4cfe\",\n      \"php_payload_occurrences\": 11896,\n      \"excluded_nondirectory_suffix_counts\": {\n        \"(extensionless)\": 140,\n        \".3gp\": 1,\n        \".a\": 1,\n        \".as\": 27,\n        \".avro\": 1,\n        \".bat\": 5,\n        \".bpmn\": 4,\n        \".cfg\": 3,\n        \".conf\": 6,\n        \".config\": 1,\n        \".cs\": 966,\n        \".csproj\": 9,\n        \".css\": 64,\n        \".ct\": 24,\n        \".dat\": 248,\n        \".ddoc\": 1,\n        \".dist\": 3,\n        \".dtd\": 1,\n        \".en\": 1,\n        \".eot\": 2,\n        \".erl\": 2,\n        \".fla\": 1,\n        \".flv\": 28,\n        \".gemspec\": 1,\n        \".gif\": 32,\n        \".go\": 15,\n        \".gradle\": 12,\n        \".h\": 44,\n        \".header\": 2,\n        \".htc\": 1,\n        \".htm\": 59,\n        \".html\": 69,\n        \".ico\": 2,\n        \".iml\": 1,\n        \".in\": 1,\n        \".ini\": 371,\n        \".jar\": 8,\n        \".java\": 219,\n        \".jpg\": 55,\n        \".js\": 627,\n        \".json\": 72,\n        \".jsp\": 4,\n        \".launch\": 6,\n        \".less\": 13,\n        \".log\": 1,\n        \".m\": 41,\n        \".map\": 38,\n        \".md\": 54,\n        \".mf\": 1,\n        \".mod\": 1,\n        \".mov\": 1,\n        \".mp4\": 7,\n        \".old\": 1,\n        \".otf\": 1,\n        \".patch\": 1,\n        \".pbxproj\": 5,\n        \".pch\": 3,\n        \".pdf\": 6,\n        \".pem\": 4,\n        \".php-2008-06-06\": 1,\n        \".php_07_06_2007\": 2,\n        \".plist\": 10,\n        \".png\": 338,\n        \".properties\": 37,\n        \".properties-sample\": 1,\n        \".props\": 2,\n        \".ps1\": 1,\n        \".py\": 27,\n        \".rb\": 15,\n        \".rc\": 11,\n        \".scss\": 13,\n        \".ser\": 4,\n        \".sh\": 25,\n        \".sln\": 3,\n        \".so\": 1,\n        \".source\": 1,\n        \".sql\": 391,\n        \".src\": 1,\n        \".srt\": 2,\n        \".storyboard\": 2,\n        \".strings\": 1,\n        \".sum\": 1,\n        \".svg\": 2,\n        \".swf\": 16,\n        \".swift\": 35,\n        \".template\": 34,\n        \".tpl\": 88,\n        \".ts\": 156,\n        \".ttf\": 116,\n        \".txt\": 185,\n        \".uad\": 3,\n        \".wmv\": 1,\n        \".woff\": 2,\n        \".woff2\": 1,\n        \".xcscheme\": 2,\n        \".xcworkspacedata\": 7,\n        \".xib\": 23,\n        \".xml\": 1174,\n        \".xml-local\": 1,\n        \".xsd\": 14,\n        \".xsl\": 7,\n        \".xslt\": 3,\n        \".yml\": 55,\n        \".z\": 1\n      },\n      \"dpkg_deb_exit\": 0,\n      \"stderr_sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\"\n    },\n    {\n      \"package_file\": \"kaltura-batch_18.20.0-1_all.deb\",\n  ",
+        "metadata": {
+          "output": "ls: cannot access 'tools/php83/entrypoint-inventory': No such file or directory\n---\nls: cannot access 'doc/php83/entrypoint-inventory.md': No such file or directory\n---\nls: cannot access 'evidence/entrypoint-inventory/': No such file or directory\nattempt1.json\nopencode-author-public.json\nopencode-author.exit\n---\n8776601 doc/php83/evidence/package-identities/primary.json\n{\n  \"schema\": 1,\n  \"scope\": \"Published package/source byte identities only; no semantic or runtime acceptance\",\n  \"bundle_sha256\": \"91629580441f6a896ebf9e51f0256532221715bee57a3e5a64c66ff0c4e3127b\",\n  \"original_archive_sha256\": \"58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28\",\n  \"inputs\": {\n    \"inventory-ledger/ledger.json\": \"33977fe50b11cf851bee4ccd7a5d1e33bcfdb9653c07f413b108b8ed69edddea\",\n    \"source-audit/source-to-package-map.json\": \"b27cc55136ab21213ce2ade4175688793fa644194390909838018e6671b15f3e\",\n    \"builder\": \"a425673559290d0dcb343500fcfdd1bdde7b43c91c6f342da9725b708cebf110\"\n  },\n  \"tool\": {\n    \"binary_sha256\": \"fc9dde782ca8309b65ab92e61d13318bf463cd1aa71daa8967b87b81b48b63d2\",\n    \"version\": \"Debian 'dpkg-deb' package archive backend version 1.22.6 (amd64).\",\n    \"invocation\": \"dpkg-deb --fsys-tarfile PRIVATE_CHECKSUM_VERIFIED_COPY.deb\"\n  },\n  \"php_extensions\": [\n    \".inc\",\n    \".php\",\n    \".php5\",\n    \".phtml\"\n  ],\n  \"suffix_scope_limit\": \"All non-directory suffixes outside the selected set are counted per package but not content-inspected or classified as executable. Extensionless PHP, shebang scripts and PHP embedded in other extensions remain uninventoried semantically.\",\n  \"link_policy\": \"PHP symlink/hardlink/non-regular entries rejected. No links or member paths extracted or followed. Non-PHP links are outside the hashed PHP inventory.\",\n  \"packages\": [\n    {\n      \"package_file\": \"kaltura-base_18.20.0-1_all.deb\",\n      \"package_sha256\": \"985aefac3b349b5b5ab5e28a72ba7727343692f4e697f94342b50ea3e74c4cfe\",\n      \"php_payload_occurrences\": 11896,\n      \"excluded_nondirectory_suffix_counts\": {\n        \"(extensionless)\": 140,\n        \".3gp\": 1,\n        \".a\": 1,\n        \".as\": 27,\n        \".avro\": 1,\n        \".bat\": 5,\n        \".bpmn\": 4,\n        \".cfg\": 3,\n        \".conf\": 6,\n        \".config\": 1,\n        \".cs\": 966,\n        \".csproj\": 9,\n        \".css\": 64,\n        \".ct\": 24,\n        \".dat\": 248,\n        \".ddoc\": 1,\n        \".dist\": 3,\n        \".dtd\": 1,\n        \".en\": 1,\n        \".eot\": 2,\n        \".erl\": 2,\n        \".fla\": 1,\n        \".flv\": 28,\n        \".gemspec\": 1,\n        \".gif\": 32,\n        \".go\": 15,\n        \".gradle\": 12,\n        \".h\": 44,\n        \".header\": 2,\n        \".htc\": 1,\n        \".htm\": 59,\n        \".html\": 69,\n        \".ico\": 2,\n        \".iml\": 1,\n        \".in\": 1,\n        \".ini\": 371,\n        \".jar\": 8,\n        \".java\": 219,\n        \".jpg\": 55,\n        \".js\": 627,\n        \".json\": 72,\n        \".jsp\": 4,\n        \".launch\": 6,\n        \".less\": 13,\n        \".log\": 1,\n        \".m\": 41,\n        \".map\": 38,\n        \".md\": 54,\n        \".mf\": 1,\n        \".mod\": 1,\n        \".mov\": 1,\n        \".mp4\": 7,\n        \".old\": 1,\n        \".otf\": 1,\n        \".patch\": 1,\n        \".pbxproj\": 5,\n        \".pch\": 3,\n        \".pdf\": 6,\n        \".pem\": 4,\n        \".php-2008-06-06\": 1,\n        \".php_07_06_2007\": 2,\n        \".plist\": 10,\n        \".png\": 338,\n        \".properties\": 37,\n        \".properties-sample\": 1,\n        \".props\": 2,\n        \".ps1\": 1,\n        \".py\": 27,\n        \".rb\": 15,\n        \".rc\": 11,\n        \".scss\": 13,\n        \".ser\": 4,\n        \".sh\": 25,\n        \".sln\": 3,\n        \".so\": 1,\n        \".source\": 1,\n        \".sql\": 391,\n        \".src\": 1,\n        \".srt\": 2,\n        \".storyboard\": 2,\n        \".strings\": 1,\n        \".sum\": 1,\n        \".svg\": 2,\n        \".swf\": 16,\n        \".swift\": 35,\n        \".template\": 34,\n        \".tpl\": 88,\n        \".ts\": 156,\n        \".ttf\": 116,\n        \".txt\": 185,\n        \".uad\": 3,\n        \".wmv\": 1,\n        \".woff\": 2,\n        \".woff2\": 1,\n        \".xcscheme\": 2,\n        \".xcworkspacedata\": 7,\n        \".xib\": 23,\n        \".xml\": 1174,\n        \".xml-local\": 1,\n        \".xsd\": 14,\n        \".xsl\": 7,\n        \".xslt\": 3,\n        \".yml\": 55,\n        \".z\": 1\n      },\n      \"dpkg_deb_exit\": 0,\n      \"stderr_sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\"\n    },\n    {\n      \"package_file\": \"kaltura-batch_18.20.0-1_all.deb\",\n  ",
+          "exit": 0,
+          "truncated": false
+        },
+        "title": "ls -R tools/php83/entrypoint-inventory 2>&1; echo ---; ls doc/php83/entrypoint-inventory.md 2>&1; echo ---; ls evidence/entrypoint-inventory/ 2>&1 || ls doc/php83/evidence/entrypoint-inventory/ 2>&1; echo ---; wc -c doc/php83/evidence/package-identities/primary.json; head -c 4000 doc/php83/evidence/package-identities/primary.json",
+        "time": {
+          "start": 1790442076190,
+          "end": 1790442076230
+        }
+      }
+    },
+    {
+      "type": "tool_use",
+      "tool": "bash",
+      "state": {
+        "status": "completed",
+        "input": {
+          "command": "python3 -c \"import json; d=json.load(open('doc/php83/evidence/package-identities/primary.json')); print(list(d.keys())); print('summary:', json.dumps(d.get('summary'), sort_keys=True)); print('packages:', len(d.get('packages',[]))); f=d.get('files',{}); k=list(f)[:3]; print('sample file keys:', k); print(json.dumps({kk:f[kk] for kk in k}, indent=2)[:2000])\"",
+          "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+        },
+        "output": "['schema', 'scope', 'bundle_sha256', 'original_archive_sha256', 'inputs', 'tool', 'php_extensions', 'suffix_scope_limit', 'link_policy', 'packages', 'files', 'ledger_joins', 'source_differential', 'summary', 'no_package_hooks_installation_or_vm', 't0_04_complete']\nsummary: {\"duplicate_php_paths\": 0, \"known_ledger_hashes_preserved\": 149, \"missing_ledger_hashes_resolved\": 792, \"packages\": 17, \"php_nonregular_entries\": 0, \"php_payload_occurrences\": 13454, \"remaining_ledger_packaged_hashes_missing\": 0, \"semantic_findings_resolved\": 0, \"unique_php_paths\": 13454, \"upstream_php_files\": 11784}\npackages: 17\nsample file keys: ['opt/kaltura/app/admin_console/configs/lang/en.php', 'opt/kaltura/app/admin_console/configs/lang/he.php', 'opt/kaltura/app/admin_console/configs/lang/sv.php']\n{\n  \"opt/kaltura/app/admin_console/configs/lang/en.php\": {\n    \"path\": \"opt/kaltura/app/admin_console/configs/lang/en.php\",\n    \"sha256\": \"e611b40ef6f89d07e6ede1e7796e5f296b5a36f6e763ef288d1a013a580a313b\",\n    \"type\": \"regular\",\n    \"size\": 99102,\n    \"mode\": 436,\n    \"uid\": 0,\n    \"gid\": 0,\n    \"owners\": [\n      {\n        \"package_file\": \"kaltura-base_18.20.0-1_all.deb\",\n        \"package_sha256\": \"985aefac3b349b5b5ab5e28a72ba7727343692f4e697f94342b50ea3e74c4cfe\"\n      }\n    ]\n  },\n  \"opt/kaltura/app/admin_console/configs/lang/he.php\": {\n    \"path\": \"opt/kaltura/app/admin_console/configs/lang/he.php\",\n    \"sha256\": \"112b2e20dff52e0876dadc947eca32abfbf9fd5731e94e700eecd5c730b80ddd\",\n    \"type\": \"regular\",\n    \"size\": 73,\n    \"mode\": 436,\n    \"uid\": 0,\n    \"gid\": 0,\n    \"owners\": [\n      {\n        \"package_file\": \"kaltura-base_18.20.0-1_all.deb\",\n        \"package_sha256\": \"985aefac3b349b5b5ab5e28a72ba7727343692f4e697f94342b50ea3e74c4cfe\"\n      }\n    ]\n  },\n  \"opt/kaltura/app/admin_console/configs/lang/sv.php\": {\n    \"path\": \"opt/kaltura/app/admin_console/configs/lang/sv.php\",\n    \"sha256\": \"112b2e20dff52e0876dadc947eca32abfbf9fd5731e94e700eecd5c730b80ddd\",\n    \"type\": \"regular\",\n    \"size\": 73,\n    \"mode\": 436,\n    \"uid\": 0,\n    \"gid\": 0,\n    \"owners\": [\n      {\n        \"package_file\": \"kaltura-base_18.20.0-1_all.deb\",\n        \"package_sha256\": \"985aefac3b349b5b5ab5e28a72ba7727343692f4e697f94342b50ea3e74c4cfe\"\n      }\n    ]\n  }\n}\n",
+        "metadata": {
+          "output": "['schema', 'scope', 'bundle_sha256', 'original_archive_sha256', 'inputs', 'tool', 'php_extensions', 'suffix_scope_limit', 'link_policy', 'packages', 'files', 'ledger_joins', 'source_differential', 'summary', 'no_package_hooks_installation_or_vm', 't0_04_complete']\nsummary: {\"duplicate_php_paths\": 0, \"known_ledger_hashes_preserved\": 149, \"missing_ledger_hashes_resolved\": 792, \"packages\": 17, \"php_nonregular_entries\": 0, \"php_payload_occurrences\": 13454, \"remaining_ledger_packaged_hashes_missing\": 0, \"semantic_findings_resolved\": 0, \"unique_php_paths\": 13454, \"upstream_php_files\": 11784}\npackages: 17\nsample file keys: ['opt/kaltura/app/admin_console/configs/lang/en.php', 'opt/kaltura/app/admin_console/configs/lang/he.php', 'opt/kaltura/app/admin_console/configs/lang/sv.php']\n{\n  \"opt/kaltura/app/admin_console/configs/lang/en.php\": {\n    \"path\": \"opt/kaltura/app/admin_console/configs/lang/en.php\",\n    \"sha256\": \"e611b40ef6f89d07e6ede1e7796e5f296b5a36f6e763ef288d1a013a580a313b\",\n    \"type\": \"regular\",\n    \"size\": 99102,\n    \"mode\": 436,\n    \"uid\": 0,\n    \"gid\": 0,\n    \"owners\": [\n      {\n        \"package_file\": \"kaltura-base_18.20.0-1_all.deb\",\n        \"package_sha256\": \"985aefac3b349b5b5ab5e28a72ba7727343692f4e697f94342b50ea3e74c4cfe\"\n      }\n    ]\n  },\n  \"opt/kaltura/app/admin_console/configs/lang/he.php\": {\n    \"path\": \"opt/kaltura/app/admin_console/configs/lang/he.php\",\n    \"sha256\": \"112b2e20dff52e0876dadc947eca32abfbf9fd5731e94e700eecd5c730b80ddd\",\n    \"type\": \"regular\",\n    \"size\": 73,\n    \"mode\": 436,\n    \"uid\": 0,\n    \"gid\": 0,\n    \"owners\": [\n      {\n        \"package_file\": \"kaltura-base_18.20.0-1_all.deb\",\n        \"package_sha256\": \"985aefac3b349b5b5ab5e28a72ba7727343692f4e697f94342b50ea3e74c4cfe\"\n      }\n    ]\n  },\n  \"opt/kaltura/app/admin_console/configs/lang/sv.php\": {\n    \"path\": \"opt/kaltura/app/admin_console/configs/lang/sv.php\",\n    \"sha256\": \"112b2e20dff52e0876dadc947eca32abfbf9fd5731e94e700eecd5c730b80ddd\",\n    \"type\": \"regular\",\n    \"size\": 73,\n    \"mode\": 436,\n    \"uid\": 0,\n    \"gid\": 0,\n    \"owners\": [\n      {\n        \"package_file\": \"kaltura-base_18.20.0-1_all.deb\",\n        \"package_sha256\": \"985aefac3b349b5b5ab5e28a72ba7727343692f4e697f94342b50ea3e74c4cfe\"\n      }\n    ]\n  }\n}\n",
+          "exit": 0,
+          "truncated": false
+        },
+        "title": "python3 -c \"import json; d=json.load(open('doc/php83/evidence/package-identities/primary.json')); print(list(d.keys())); print('summary:', json.dumps(d.get('summary'), sort_keys=True)); print('packages:', len(d.get('packages',[]))); f=d.get('files',{}); k=list(f)[:3]; print('sample file keys:', k); print(json.dumps({kk:f[kk] for kk in k}, indent=2)[:2000])\"",
+        "time": {
+          "start": 1790442079784,
+          "end": 1790442079830
+        }
+      }
+    },
+    {
+      "type": "text",
+      "text": "I've mapped the identity inventory patterns \u2014 now designing the entrypoint module."
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "state": {
+        "status": "completed",
+        "input": {
+          "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/package-identities.md"
+        },
+        "output": {
+          "characters": 9793,
+          "sha256_utf8": "7ec05047519eeff70fbf21a2690e83038324dac935ddba34a5e0580b881edcb9",
+          "head": "<path>/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/package-identities.md</path>\n<type>file</type>\n<content>\n1: # Published package payload identities\n2: \n3: This offline identity audit resolves the inventory ledger's **792 missing\n4: packaged-file hashes** without inferring bytes from upstream paths. It preserves\n5: all **149 already-known packaged hashes**, leaving zero missing packaged-file\n6: identities within that ledger's 941 packaged records. This is not dependency\n7: attribution, semantic classification, runtime acceptance or T0-04 completion.\n8: \n9: ## Pinned inputs and result\n10: \n11: - Published Noble bundle: SHA-256\n12:   `91629580441f6a896ebf9e51f0256532221715bee57a3e5a64c66ff0c4e3127b`.\n13: - Original Rigel ZIP: SHA-256\n14:   `58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28`.\n15: - [Prior inventory ledger](evidence/inventory-ledger/ledger.json) remains unchanged;\n16:   joins reference its original file keys and preserve semantic classifications.\n17: - [Historical source/package map](evidence/source-audit/source-to-package-map.json)\n18:   also remains unchanged. Its counts, exact changed-file identities and complete\n19:   extra-path grouping reconcile against the package payloads.\n20: \n21: The [primary report](evidence/package-identities/primary.json) verifies the outer\n22: bundle and its inner `SHA256SUMS`: exact coverage and hashes of **17 DEBs**.\n23: Every selected PHP-family file records its exact payload hash, type, size,\n24: mode, UID/GID and owner package filename/hash. Package filename plus content\n25: hash identifies the exact owner artifact; it is not a separate assertion about\n26: control-file package/version fields or publisher signatures.\n27: \n28: Results:\n29: \n30: | Identity dimension | Result |\n31: |---|---:|\n32: | Unique selected package payload paths | 13,454 |\n33: | Selected payload occurrences across DEBs | 13,454 |\n34: | Duplicate selected paths across packages | 0 |\n35: | Selected syml",
+          "tail": "dle members are not interpreted as package payloads,\n146: non-PHP links are not followed, and the zero nonregular-PHP count in a successful\n147: report reflects rejection of such entries rather than their acceptance.\n148: \n149: The final Grok attempt timed out at 120 seconds (exit 124); it supplies no\n150: completed final-builder review. The authorized OpenCode Zen fallback used\n151: `opencode/muse-spark-1.3-contributor-free`, independently ran the expanded 25\n152: package tests and 11 syntax tests (both exit 0), and reviewed the actual builder,\n153: scanner and comparison reports. Its final claim that actual builder/VM evidence\n154: is missing because Grok timed out is incorrect: Claude's real rebuild and real\n155: lab compiler repeat are recorded separately. Only Grok's own final contribution\n156: is missing. Preserve that distinction rather than turning a CLI timeout into a\n157: false pass or discarding another executor's genuine evidence.\n\n(End of file - total 157 lines)\n</content>"
+        },
+        "metadata": {
+          "preview": "# Published package payload identities\n\nThis offline identity audit resolves the inventory ledger's **792 missing\npackaged-file hashes** without inferring bytes from upstream paths. It preserves\nall **149 already-known packaged hashes**, leaving zero missing packaged-file\nidentities within that ledger's 941 packaged records. This is not dependency\nattribution, semantic classification, runtime acceptance or T0-04 completion.\n\n## Pinned inputs and result\n\n- Published Noble bundle: SHA-256\n  `91629580441f6a896ebf9e51f0256532221715bee57a3e5a64c66ff0c4e3127b`.\n- Original Rigel ZIP: SHA-256\n  `58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28`.\n- [Prior inventory ledger](evidence/inventory-ledger/ledger.json) remains unchanged;\n  joins reference its original file keys and preserve semantic classifications.\n- [Historical source/package map](evidence/source-audit/source-to-package-map.json)\n  also remains unchanged. Its counts, exact changed-file identities and complete\n  extra-path grouping reconcile against the package payloads.\n",
+          "truncated": false,
+          "loaded": [],
+          "display": {
+            "type": "file",
+            "path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/package-identities.md",
+            "text": {
+              "characters": 8932,
+              "sha256_utf8": "f3d82e778434f04537c8b686d47456efd47d26c078ea6aece9edc70c65b4891b",
+              "head": "# Published package payload identities\n\nThis offline identity audit resolves the inventory ledger's **792 missing\npackaged-file hashes** without inferring bytes from upstream paths. It preserves\nall **149 already-known packaged hashes**, leaving zero missing packaged-file\nidentities within that ledger's 941 packaged records. This is not dependency\nattribution, semantic classification, runtime acceptance or T0-04 completion.\n\n## Pinned inputs and result\n\n- Published Noble bundle: SHA-256\n  `91629580441f6a896ebf9e51f0256532221715bee57a3e5a64c66ff0c4e3127b`.\n- Original Rigel ZIP: SHA-256\n  `58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28`.\n- [Prior inventory ledger](evidence/inventory-ledger/ledger.json) remains unchanged;\n  joins reference its original file keys and preserve semantic classifications.\n- [Historical source/package map](evidence/source-audit/source-to-package-map.json)\n  also remains unchanged. Its counts, exact changed-file identities and complete\n  extra-path grouping reconcile against the package payloads.\n\nThe [primary report](evidence/package-identities/primary.json) verifies the outer\nbundle and its inner `SHA256SUMS`: exact coverage and hashes of **17 DEBs**.\nEvery selected PHP-family file records its exact payload hash, type, size,\nmode, UID/GID and owner package filename/hash. Package filename plus content\nhash identifies the exact owner artifact; it is not a separate assertion about\ncontrol-file package/version fields or publisher signatures.\n\nResults:\n\n| Identity dimension | Result |\n|---|---:|\n| Unique selected package payload paths | 13,454 |\n| Selected payload occurrences across DEBs | 13,454 |\n| Duplicate selected paths across packages | 0 |\n| Selected symlink/hardlink/nonregular entries | 0 |\n| Original selected source files | 11,784 |\n| Byte-identical upstream/package files | 11,782 |\n| Changed upstream/package files | 2 |\n| Missing upstream paths | 0 |\n| Extra packaged selected files | 1,670 |\n| Missing ledger hashes re",
+              "tail": "s a review of the final implementation. A separate final follow-up is tracked\nindependently. Non-DEB bundle members are not interpreted as package payloads,\nnon-PHP links are not followed, and the zero nonregular-PHP count in a successful\nreport reflects rejection of such entries rather than their acceptance.\n\nThe final Grok attempt timed out at 120 seconds (exit 124); it supplies no\ncompleted final-builder review. The authorized OpenCode Zen fallback used\n`opencode/muse-spark-1.3-contributor-free`, independently ran the expanded 25\npackage tests and 11 syntax tests (both exit 0), and reviewed the actual builder,\nscanner and comparison reports. Its final claim that actual builder/VM evidence\nis missing because Grok timed out is incorrect: Claude's real rebuild and real\nlab compiler repeat are recorded separately. Only Grok's own final contribution\nis missing. Preserve that distinction rather than turning a CLI timeout into a\nfalse pass or discarding another executor's genuine evidence."
+            },
+            "lineStart": 1,
+            "lineEnd": 157,
+            "totalLines": 157,
+            "truncated": false
+          }
+        },
+        "title": "doc/php83/package-identities.md",
+        "time": {
+          "start": 1790442083081,
+          "end": 1790442083088
+        }
+      }
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "state": {
+        "status": "completed",
+        "input": {
+          "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/README.md"
+        },
+        "output": {
+          "characters": 7590,
+          "sha256_utf8": "2caa1b0703040e8915edb47032c973f53941cbf990c71a901fd73b8bc80c7850",
+          "head": "<path>/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/README.md</path>\n<type>file</type>\n<content>\n1: # Phase-1 PHP audit tools\n2: \n3: These tools collect evidence, not application fixes. Use only an isolated lab.\n4: No package postinst hooks or Kaltura application entrypoints are executed by the\n5: syntax collector. It records every PHP-like file hash, return code and diagnostic.\n6: \n7: ```sh\n8: # Guest has Python 3 and PHP 8.3; root is an already verified/extracted archive\n9: # or a root assembled with dpkg-deb -x (NOT dpkg -i).\n10: python3 lint-tree.py /path/to/tree /path/to/lint.json --php php8.3 --workers 4\n11: ```\n12: \n13: `short_open_tag=1` and `error_reporting=E_ALL` are explicit. Symlinks are excluded.\n14: The collector exits successfully when collection finishes even if files fail\n15: lint: inspect `failed_count`. A passing file does not prove runtime compatibility.\n16: \n17: ## Pinned static analyzer\n18: \n19: Run as an unprivileged user in the isolated lab, never in the Kaltura application:\n20: \n21: ```sh\n22: cd analyzer\n23: composer install --no-interaction --no-plugins --no-scripts\n24: vendor/bin/phpcs --config-set installed_paths ../../phpcompatibility/php-compatibility,../../phpcsstandards/phpcsutils\n25: vendor/bin/phpcs -i\n26: vendor/bin/phpcs /path/to/tree --standard=PHPCompatibility \\\n27:   --runtime-set testVersion 7.4-8.3 --extensions=php,phtml,inc,php5 \\\n28:   --parallel=4 --report=json --report-file=/path/to/findings.json\n29: ```\n30: \n31: `composer.lock` pins all dependency references; scripts/plugins are disabled and\n32: standards are registered explicitly. Initial toolchain: PHPCompatibility\n33: 10.0.0-alpha2 (`e0f0e5a3dc819a4a0f8d679a0f2453d941976e18`) and PHPCS 4.0.4.\n34: Composer is a lab-only tool; no Composer update is run in application packaging.\n35: \n36: The analyzer is prerelease software with incomplete coverage. Findings are\n37: candidates requiring manual triage, including legacy code that may already",
+          "tail": "rts are preserved;\n114: expanded evidence resides in `runtime-probes/sandbox-v2`.\n115: \n116: Recreate the exit comparison (this is classification, not an acceptance gate):\n117: \n118: ```sh\n119: python3 tools/php83/compare-runtime-probes.py \\\n120:   doc/php83/evidence/runtime-probes/sandbox-v2/php74.json \\\n121:   doc/php83/evidence/runtime-probes/sandbox-v2/php83.json\n122: ```\n123: \n124: Different runner/probe/wrapper identities, flags or probe sets are rejected.\n125: Successful probes must also match their expected fixed output. Runner exit zero\n126: means collection completed, not acceptance; inspect `summary` and every record.\n127: Module/INI file lists are recorded without dumping potentially sensitive INI\n128: values. Duplicate PHP log output is disabled, not error reporting. The public\n129: payload include path excludes ambient system PHP libraries. Timeouts are\n130: incomplete evidence, never automatically classified as PHP regressions.\n\n(End of file - total 130 lines)\n</content>"
+        },
+        "metadata": {
+          "preview": "# Phase-1 PHP audit tools\n\nThese tools collect evidence, not application fixes. Use only an isolated lab.\nNo package postinst hooks or Kaltura application entrypoints are executed by the\nsyntax collector. It records every PHP-like file hash, return code and diagnostic.\n\n```sh\n# Guest has Python 3 and PHP 8.3; root is an already verified/extracted archive\n# or a root assembled with dpkg-deb -x (NOT dpkg -i).\npython3 lint-tree.py /path/to/tree /path/to/lint.json --php php8.3 --workers 4\n```\n\n`short_open_tag=1` and `error_reporting=E_ALL` are explicit. Symlinks are excluded.\nThe collector exits successfully when collection finishes even if files fail\nlint: inspect `failed_count`. A passing file does not prove runtime compatibility.\n\n## Pinned static analyzer\n\nRun as an unprivileged user in the isolated lab, never in the Kaltura application:\n",
+          "truncated": false,
+          "loaded": [],
+          "display": {
+            "type": "file",
+            "path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/README.md",
+            "text": {
+              "characters": 6874,
+              "sha256_utf8": "0bea293c9b060c2092791bef6383f8ab912675bac29a3e052fc571b0ebcb278f",
+              "head": "# Phase-1 PHP audit tools\n\nThese tools collect evidence, not application fixes. Use only an isolated lab.\nNo package postinst hooks or Kaltura application entrypoints are executed by the\nsyntax collector. It records every PHP-like file hash, return code and diagnostic.\n\n```sh\n# Guest has Python 3 and PHP 8.3; root is an already verified/extracted archive\n# or a root assembled with dpkg-deb -x (NOT dpkg -i).\npython3 lint-tree.py /path/to/tree /path/to/lint.json --php php8.3 --workers 4\n```\n\n`short_open_tag=1` and `error_reporting=E_ALL` are explicit. Symlinks are excluded.\nThe collector exits successfully when collection finishes even if files fail\nlint: inspect `failed_count`. A passing file does not prove runtime compatibility.\n\n## Pinned static analyzer\n\nRun as an unprivileged user in the isolated lab, never in the Kaltura application:\n\n```sh\ncd analyzer\ncomposer install --no-interaction --no-plugins --no-scripts\nvendor/bin/phpcs --config-set installed_paths ../../phpcompatibility/php-compatibility,../../phpcsstandards/phpcsutils\nvendor/bin/phpcs -i\nvendor/bin/phpcs /path/to/tree --standard=PHPCompatibility \\\n  --runtime-set testVersion 7.4-8.3 --extensions=php,phtml,inc,php5 \\\n  --parallel=4 --report=json --report-file=/path/to/findings.json\n```\n\n`composer.lock` pins all dependency references; scripts/plugins are disabled and\nstandards are registered explicitly. Initial toolchain: PHPCompatibility\n10.0.0-alpha2 (`e0f0e5a3dc819a4a0f8d679a0f2453d941976e18`) and PHPCS 4.0.4.\nComposer is a lab-only tool; no Composer update is run in application packaging.\n\nThe analyzer is prerelease software with incomplete coverage. Findings are\ncandidates requiring manual triage, including legacy code that may already be\nincompatible with 7.4. `testVersion=7.4-8.3` reports incompatibility anywhere in\nthat range, not only regressions introduced after the baseline. PHPCS status 3\ncan mean findings, not analyzer failure; always verify the JSON/totals.\n\nReferences: [tagged dependency c",
+              "tail": "ilure can omit the failing file from that list; do not interpret it as\ncomplete attempted-file coverage. Original five-probe reports are preserved;\nexpanded evidence resides in `runtime-probes/sandbox-v2`.\n\nRecreate the exit comparison (this is classification, not an acceptance gate):\n\n```sh\npython3 tools/php83/compare-runtime-probes.py \\\n  doc/php83/evidence/runtime-probes/sandbox-v2/php74.json \\\n  doc/php83/evidence/runtime-probes/sandbox-v2/php83.json\n```\n\nDifferent runner/probe/wrapper identities, flags or probe sets are rejected.\nSuccessful probes must also match their expected fixed output. Runner exit zero\nmeans collection completed, not acceptance; inspect `summary` and every record.\nModule/INI file lists are recorded without dumping potentially sensitive INI\nvalues. Duplicate PHP log output is disabled, not error reporting. The public\npayload include path excludes ambient system PHP libraries. Timeouts are\nincomplete evidence, never automatically classified as PHP regressions."
+            },
+            "lineStart": 1,
+            "lineEnd": 130,
+            "totalLines": 130,
+            "truncated": false
+          }
+        },
+        "title": "tools/php83/README.md",
+        "time": {
+          "start": 1790442083083,
+          "end": 1790442083089
+        }
+      }
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "state": {
+        "status": "completed",
+        "input": {
+          "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/entrypoint-inventory/opencode-author-public.json"
+        },
+        "output": {
+          "characters": 33141,
+          "sha256_utf8": "6e76715abf1d871e7dae84e83a7bfd333892f43f5318a83264da208ba695b8d8",
+          "head": "<path>/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/entrypoint-inventory/opencode-author-public.json</path>\n<type>file</type>\n<content>\n1: [\n2:   {\n3:     \"type\": \"text\",\n4:     \"text\": \"Building your offline entrypoint inventory \\u2014 staying in-scope and checking the frozen sources first.\"\n5:   },\n6:   {\n7:     \"type\": \"tool_use\",\n8:     \"tool\": \"read\",\n9:     \"input\": {\n10:       \"filePath\": \"/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/AGENTS.md\"\n11:     },\n12:     \"status\": \"completed\",\n13:     \"error\": null,\n14:     \"output\": {\n15:       \"sha256\": \"efecfc6b10982c696fad268861beae6c5ad4711eec9a3a35407b7b90355aba23\",\n16:       \"head\": \"<path>/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/AGENTS.md</path>\\n<type>file</type>\\n<content>\\n1: # Project agent instructions\\n2: \\n3: <!-- codebase-memory-mcp:start -->\\n4: # Codebase Memory\\n5: \\n6: For structural code discovery, prefer the `codebase-memory` skill and the\\n7: `codebase-memory-mcp` graph tools. Confirm index freshness before broad analysis;\\n8: use `check_index_coverage` for every file that supports a graph-based conclusion.\\n9: <!-- codebase-memory-mcp:end -->\\n10: \\n11: ## PHP 8.3 migration test coordination\\n12: \\n13: For every migration validation cycle, prioritize the actual Claude CLI, Cursor\\n14: Agent CLI (`agent`) and OpenCode CLI for test execution and independent review.\\n15: Assign explicit, non-overlapping cases and rotate reviewers; an author's review\\n16: alone is not independent validation. Codex coordinates the results. Use the\\n17: actual CLIs, not another agent merely named after them.\\n18: \\n19: The operator requested that Grok be deprioritiz\",\n17:       \"tail\": \"ng approved lab scope.\\n39: \\n40: Record CLI availability/authentication/quota/permission failures as BLOCKED or\\n41: NOT_EXECUTED, not successful tests. Do not bypass safeguards to satisfy this\\n42: rule. A review is not execution evidence. If a ",
+          "tail": "ile, io\\nwith tarfile.open('/tmp/ep-inv-probe/b.tar.gz','r:gz') as t:\\n    for m in t.getmembers():\\n        if m.name.endswith('kaltura-base_18.20.0-1_all.deb'):\\n            f=t.extractfile(m)\\n            open('/tmp/ep-inv-probe/base.deb','wb').write(f.read())\\n            print('wrote', m.size)\\n            break\\n\\\"\\ndpkg-deb --ctrl-tarfile /tmp/ep-inv-probe/base.deb > /tmp/ep-inv-probe/base.ctrl.tar 2>/tmp/ep-inv-probe/ctrl.err; echo ctrl-exit:$?\\npython3 -c \\\"\\nimport tarfile\\nwith tarfile.open('/tmp/ep-inv-probe/base.ctrl.tar','r:') as t:\\n    for m in t.getmembers():\\n        print(repr(m.name), m.type, m.size, oct(m.mode), m.issym(), m.islnk(), repr(getattr(m,'linkname',''))[:80])\\n\\\"\",\n227:       \"workdir\": \"/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83\"\n228:     },\n229:     \"status\": \"error\",\n230:     \"error\": \"The user rejected permission to use this specific tool call.\",\n231:     \"output\": \"\"\n232:   }\n233: ]\n\n(End of file - total 233 lines)\n</content>"
+        },
+        "metadata": {
+          "preview": "[\n  {\n    \"type\": \"text\",\n    \"text\": \"Building your offline entrypoint inventory \\u2014 staying in-scope and checking the frozen sources first.\"\n  },\n  {\n    \"type\": \"tool_use\",\n    \"tool\": \"read\",\n    \"input\": {\n      \"filePath\": \"/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/AGENTS.md\"\n    },\n    \"status\": \"completed\",\n    \"error\": null,\n    \"output\": {\n      \"sha256\": \"efecfc6b10982c696fad268861beae6c5ad4711eec9a3a35407b7b90355aba23\",\n      \"head\": \"<path>/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/AGENTS.md</path>\\n<type>file</type>\\n<content>\\n1: # Project agent instructions\\n2: \\n3: <!-- codebase-memory-mcp:start -->\\n4: # Codebase Memory\\n5: \\n6: For structural code discovery, prefer the `codebase-memory` skill and the\\n7: `codebase-memory-mcp` graph tools. Confirm index freshness before broad analysis;\\n8: use `check_index_coverage` for every file that supports a graph-based conclusion.\\n9: <!-- codebase-memory-mcp:end -->\\n10: \\n11: ## PHP 8.3 migration test coordination\\n12: \\n13: For every migration validation cycle, prioritize the actual Claude CLI, Cursor\\n14: Agent CLI (`agent`) and OpenCode CLI for test execution and independent review.\\n15: Assign explicit, non-overlapping cases and rotate reviewers; an author's review\\n16: alone is not independent validation. Codex coordinates the results. Use the\\n17: actual CLIs, not another agent merely named after them.\\n18: \\n19: The operator requested that Grok be deprioritiz\",\n      \"tail\": \"ng approved lab scope.\\n39: \\n40: Record CLI availability/authentication/quota/permission failures as BLOCKED or\\n41: NOT_EXECUTED, not successful tests. Do not bypass safeguards to satisfy this\\n42: rule. A review is not execution evidence. If a CLI is unavailable, report the\\n43: gap explicitly and continue only independently authorized safe work.\\n44: \\n45: Each result must identify the case, executor and reviewer, source/patch/harness\\n46: identities, environment, command, exit status, sanitized evidence and any\\n47: remaining limitation. Report executed cases, failures, untested scope and\\n48: release gates separately; passing harness tests does not prove full application\\n49: acceptance. Do not invent a completion percentage or release date.\\n50: \\n51: These coordination rules do not authorize production changes, `.20` writes,\\n52: package/CI integration, publishing, or bypassing the migration proposal's\\n53: feasibility, release and cutover approvals.\\n\\n(End of file - total 53 lines)\\n</content>\"\n    }\n  },\n  {",
+          "truncated": false,
+          "loaded": [],
+          "display": {
+            "type": "file",
+            "path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/entrypoint-inventory/opencode-author-public.json",
+            "text": {
+              "characters": 31864,
+              "sha256_utf8": "f26d20b5f92460270e4b774ef018518c3f2780bc32c573278bfc05b36d9b1af6",
+              "head": "[\n  {\n    \"type\": \"text\",\n    \"text\": \"Building your offline entrypoint inventory \\u2014 staying in-scope and checking the frozen sources first.\"\n  },\n  {\n    \"type\": \"tool_use\",\n    \"tool\": \"read\",\n    \"input\": {\n      \"filePath\": \"/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/AGENTS.md\"\n    },\n    \"status\": \"completed\",\n    \"error\": null,\n    \"output\": {\n      \"sha256\": \"efecfc6b10982c696fad268861beae6c5ad4711eec9a3a35407b7b90355aba23\",\n      \"head\": \"<path>/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/AGENTS.md</path>\\n<type>file</type>\\n<content>\\n1: # Project agent instructions\\n2: \\n3: <!-- codebase-memory-mcp:start -->\\n4: # Codebase Memory\\n5: \\n6: For structural code discovery, prefer the `codebase-memory` skill and the\\n7: `codebase-memory-mcp` graph tools. Confirm index freshness before broad analysis;\\n8: use `check_index_coverage` for every file that supports a graph-based conclusion.\\n9: <!-- codebase-memory-mcp:end -->\\n10: \\n11: ## PHP 8.3 migration test coordination\\n12: \\n13: For every migration validation cycle, prioritize the actual Claude CLI, Cursor\\n14: Agent CLI (`agent`) and OpenCode CLI for test execution and independent review.\\n15: Assign explicit, non-overlapping cases and rotate reviewers; an author's review\\n16: alone is not independent validation. Codex coordinates the results. Use the\\n17: actual CLIs, not another agent merely named after them.\\n18: \\n19: The operator requested that Grok be deprioritiz\",\n      \"tail\": \"ng approved lab scope.\\n39: \\n40: Record CLI availability/authentication/quota/permission failures as BLOCKED or\\n41: NOT_EXECUTED, not successful tests. Do not bypass safeguards to satisfy this\\n42: rule. A review is not execution evidence. If a CLI is unavailable, report the\\n43: gap explicitly and continue only independently authorized safe work.\\n44: \\n45: Each result must identify the case, executor and reviewer, source/patch/harness\\n46: identities, environment, command, ",
+              "tail": "server-noble-repo.tar.gz /tmp/ep-inv-probe/b.tar.gz\\npython3 -c \\\"\\nimport tarfile, io\\nwith tarfile.open('/tmp/ep-inv-probe/b.tar.gz','r:gz') as t:\\n    for m in t.getmembers():\\n        if m.name.endswith('kaltura-base_18.20.0-1_all.deb'):\\n            f=t.extractfile(m)\\n            open('/tmp/ep-inv-probe/base.deb','wb').write(f.read())\\n            print('wrote', m.size)\\n            break\\n\\\"\\ndpkg-deb --ctrl-tarfile /tmp/ep-inv-probe/base.deb > /tmp/ep-inv-probe/base.ctrl.tar 2>/tmp/ep-inv-probe/ctrl.err; echo ctrl-exit:$?\\npython3 -c \\\"\\nimport tarfile\\nwith tarfile.open('/tmp/ep-inv-probe/base.ctrl.tar','r:') as t:\\n    for m in t.getmembers():\\n        print(repr(m.name), m.type, m.size, oct(m.mode), m.issym(), m.islnk(), repr(getattr(m,'linkname',''))[:80])\\n\\\"\",\n      \"workdir\": \"/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83\"\n    },\n    \"status\": \"error\",\n    \"error\": \"The user rejected permission to use this specific tool call.\",\n    \"output\": \"\"\n  }\n]"
+            },
+            "lineStart": 1,
+            "lineEnd": 233,
+            "totalLines": 233,
+            "truncated": false
+          }
+        },
+        "title": "doc/php83/evidence/entrypoint-inventory/opencode-author-public.json",
+        "time": {
+          "start": 1790442083078,
+          "end": 1790442083098
+        }
+      }
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "state": {
+        "status": "completed",
+        "input": {
+          "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/.gitignore"
+        },
+        "output": "<path>/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/.gitignore</path>\n<type>file</type>\n<content>\n1: build/packager.rc\n2: deb/noble/repo/\n3: .vagrant/\n4: deb/ubuntu-26.04/repo/\n5: rpm/el9/repo/\n6: \n7: # Local Python interpreter caches are not source or execution evidence.\n8: __pycache__/\n9: *.py[cod]\n\n(End of file - total 9 lines)\n</content>",
+        "metadata": {
+          "preview": "build/packager.rc\ndeb/noble/repo/\n.vagrant/\ndeb/ubuntu-26.04/repo/\nrpm/el9/repo/\n\n# Local Python interpreter caches are not source or execution evidence.\n__pycache__/\n*.py[cod]",
+          "truncated": false,
+          "loaded": [],
+          "display": {
+            "type": "file",
+            "path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/.gitignore",
+            "text": "build/packager.rc\ndeb/noble/repo/\n.vagrant/\ndeb/ubuntu-26.04/repo/\nrpm/el9/repo/\n\n# Local Python interpreter caches are not source or execution evidence.\n__pycache__/\n*.py[cod]",
+            "lineStart": 1,
+            "lineEnd": 9,
+            "totalLines": 9,
+            "truncated": false
+          }
+        },
+        "title": ".gitignore",
+        "time": {
+          "start": 1790442113242,
+          "end": 1790442113246
+        }
+      }
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "state": {
+        "status": "completed",
+        "input": {
+          "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/.gitignore"
+        },
+        "output": "<path>/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/.gitignore</path>\n<type>file</type>\n<content>\n1: __pycache__/\n\n(End of file - total 1 lines)\n</content>",
+        "metadata": {
+          "preview": "__pycache__/",
+          "truncated": false,
+          "loaded": [],
+          "display": {
+            "type": "file",
+            "path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/.gitignore",
+            "text": "__pycache__/",
+            "lineStart": 1,
+            "lineEnd": 1,
+            "totalLines": 1,
+            "truncated": false
+          }
+        },
+        "title": "tools/php83/.gitignore",
+        "time": {
+          "start": 1790442113240,
+          "end": 1790442113248
+        }
+      }
+    },
+    {
+      "type": "tool_use",
+      "tool": "todowrite",
+      "state": {
+        "status": "completed",
+        "input": {
+          "todos": [
+            {
+              "content": "Implement tools/php83/entrypoint-inventory/build.py (synthetic-only, repo-owned scratch)",
+              "priority": "high",
+              "status": "in_progress"
+            },
+            {
+              "content": "Write synthetic mocked tests (traversal/duplicate/link, control, literal/dynamic, denominator)",
+              "priority": "high",
+              "status": "pending"
+            },
+            {
+              "content": "Write doc/php83/entrypoint-inventory.md (PREPARED NOT_EXECUTED_REAL_INPUTS)",
+              "priority": "high",
+              "status": "pending"
+            },
+            {
+              "content": "Run unittest with TMPDIR=repo-owned scope, save local-* evidence only",
+              "priority": "high",
+              "status": "pending"
+            }
+          ]
+        },
+        "output": "[\n  {\n    \"content\": \"Implement tools/php83/entrypoint-inventory/build.py (synthetic-only, repo-owned scratch)\",\n    \"status\": \"in_progress\",\n    \"priority\": \"high\"\n  },\n  {\n    \"content\": \"Write synthetic mocked tests (traversal/duplicate/link, control, literal/dynamic, denominator)\",\n    \"status\": \"pending\",\n    \"priority\": \"high\"\n  },\n  {\n    \"content\": \"Write doc/php83/entrypoint-inventory.md (PREPARED NOT_EXECUTED_REAL_INPUTS)\",\n    \"status\": \"pending\",\n    \"priority\": \"high\"\n  },\n  {\n    \"content\": \"Run unittest with TMPDIR=repo-owned scope, save local-* evidence only\",\n    \"status\": \"pending\",\n    \"priority\": \"high\"\n  }\n]",
+        "metadata": {
+          "todos": [
+            {
+              "content": "Implement tools/php83/entrypoint-inventory/build.py (synthetic-only, repo-owned scratch)",
+              "status": "in_progress",
+              "priority": "high"
+            },
+            {
+              "content": "Write synthetic mocked tests (traversal/duplicate/link, control, literal/dynamic, denominator)",
+              "status": "pending",
+              "priority": "high"
+            },
+            {
+              "content": "Write doc/php83/entrypoint-inventory.md (PREPARED NOT_EXECUTED_REAL_INPUTS)",
+              "status": "pending",
+              "priority": "high"
+            },
+            {
+              "content": "Run unittest with TMPDIR=repo-owned scope, save local-* evidence only",
+              "status": "pending",
+              "priority": "high"
+            }
+          ],
+          "truncated": false
+        },
+        "title": "4 todos",
+        "time": {
+          "start": 1790442159485,
+          "end": 1790442159487
+        }
+      }
+    },
+    {
+      "type": "tool_use",
+      "tool": "write",
+      "state": {
+        "status": "completed",
+        "input": {
+          "content": {
+            "characters": 20067,
+            "sha256_utf8": "e848e1c3760586457602c8e069d04ad2d6f1e502305633b55d080ea190f75da3",
+            "head": "#!/usr/bin/env python3\n\"\"\"Offline deterministic entrypoint-candidate inventory (synthetic-only verified).\n\nReads user-provided published bundle + original ZIP paths given on the command\nline, but this session does NOT execute it on real inputs. No package install,\nno maintainer-script execution, no member-path extraction, no network, no VM.\nDEB bytes are only streamed through ``dpkg-deb --ctrl-tarfile/--fsys-tarfile``\ninto repo-owned scratch files and parsed as tar names/bytes in memory; archive\nlinks are recorded, never followed.\n\nSafe-parsing patterns (normalize, hash helpers, checksum manifest, duplicate\nand traversal rejection) intentionally mirror tools/php83/package-identities/\nbuild.py. Scope is candidate inventory only: no active-runtime, reachability,\nor exhaustive-entrypoint claims. Not a hostile-archive resource sandbox.\n\"\"\"\nimport argparse\nimport hashlib\nimport json\nimport re\nimport shutil\nimport subprocess\nimport tarfile\nimport tempfile\nimport zipfile\nfrom pathlib import Path, PurePosixPath\n\nBUNDLE_SHA = '91629580441f6a896ebf9e51f0256532221715bee57a3e5a64c66ff0c4e3127b'\nSOURCE_SHA = '58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28'\nSOURCE_ROOT = 'server-Rigel-18.20.0/'\nPHP_EXTENSIONS = {'.php', '.phtml', '.inc', '.php5'}\nMAINTAINER_SCRIPTS = {'preinst', 'postinst', 'prerm', 'postrm', 'config'}\nSCAN_SIZE_LIMIT = 2 * 1024 * 1024\nLINE_EXCERPT_LIMIT = 300\n\nINTERPRETER_RE = re.compile(\n    r'(?P<interp>(?:/usr/(?:local/)?bin/php[0-9.]*)|\\bphp[0-9.]*(?:-cgi|-cli|-fpm)?\\b)'\n    r'[ \\t]+(?P<target>\"[^\"\\n]{1,300}\"|\\'[^\\'\\n]{1,300}\\'|[^\\s;|&`\"\\']{1,300})'\n)\nDYNAMIC_CHARS_RE = re.compile(r'[\\$\\*\\?`\\[\\]\\{\\}~]|[$][({]')\nSHEBANG_PHP_RE = re.compile(r'^#!.*php', re.IGNORECASE)\n\n\ndef hash_stream(stream):\n    h = hashlib.sha256()\n    for chunk in iter(lambda: stream.read(1024 * 1024), b''):\n        h.update(chunk)\n    return h.hexdigest()\n\n\ndef hash_file(path):\n    with Path(path).open('rb') as stream:\n        return hash_stream(stream)\n\n\ndef normalize(",
+            "tail": "hp,\n                        'semantic_findings_resolved': 0},\n            'no_package_hooks_installation_or_vm': True,\n            'no_runtime_or_reachability_claim': True,\n            't0_04_complete': False}\n\n\ndef main():\n    parser = argparse.ArgumentParser()\n    parser.add_argument('--repo', type=Path, default=Path(__file__).resolve().parents[3])\n    parser.add_argument('--bundle', type=Path, required=True)\n    parser.add_argument('--original', type=Path, required=True)\n    parser.add_argument('--output', type=Path, required=True)\n    parser.add_argument('--work-dir', type=Path, default=None)\n    args = parser.parse_args()\n    if args.output.exists():\n        raise ValueError('Refusing existing output')\n    result = build(args.repo, args.bundle, args.original, args.work_dir)\n    with args.output.open('x') as output:\n        json.dump(result, output, indent=2)\n        output.write('\\n')\n    print(json.dumps(result['summary'], sort_keys=True))\n\n\nif __name__ == '__main__':\n    main()\n"
+          },
+          "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/entrypoint-inventory/build.py"
+        },
+        "output": "Wrote file successfully.",
+        "metadata": {
+          "diagnostics": {},
+          "filepath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/entrypoint-inventory/build.py",
+          "exists": false,
+          "truncated": false
+        },
+        "title": "tools/php83/entrypoint-inventory/build.py",
+        "time": {
+          "start": 1790442188890,
+          "end": 1790442188896
+        }
+      }
+    },
+    {
+      "type": "tool_use",
+      "tool": "todowrite",
+      "state": {
+        "status": "completed",
+        "input": {
+          "todos": [
+            {
+              "content": "Implement tools/php83/entrypoint-inventory/build.py (synthetic-only, repo-owned scratch)",
+              "priority": "high",
+              "status": "completed"
+            },
+            {
+              "content": "Write synthetic mocked tests (traversal/duplicate/link, control, literal/dynamic, denominator)",
+              "priority": "high",
+              "status": "in_progress"
+            },
+            {
+              "content": "Write doc/php83/entrypoint-inventory.md (PREPARED NOT_EXECUTED_REAL_INPUTS)",
+              "priority": "high",
+              "status": "pending"
+            },
+            {
+              "content": "Run unittest with TMPDIR=repo-owned scope, save local-* evidence only",
+              "priority": "high",
+              "status": "pending"
+            }
+          ]
+        },
+        "output": "[\n  {\n    \"content\": \"Implement tools/php83/entrypoint-inventory/build.py (synthetic-only, repo-owned scratch)\",\n    \"status\": \"completed\",\n    \"priority\": \"high\"\n  },\n  {\n    \"content\": \"Write synthetic mocked tests (traversal/duplicate/link, control, literal/dynamic, denominator)\",\n    \"status\": \"in_progress\",\n    \"priority\": \"high\"\n  },\n  {\n    \"content\": \"Write doc/php83/entrypoint-inventory.md (PREPARED NOT_EXECUTED_REAL_INPUTS)\",\n    \"status\": \"pending\",\n    \"priority\": \"high\"\n  },\n  {\n    \"content\": \"Run unittest with TMPDIR=repo-owned scope, save local-* evidence only\",\n    \"status\": \"pending\",\n    \"priority\": \"high\"\n  }\n]",
+        "metadata": {
+          "todos": [
+            {
+              "content": "Implement tools/php83/entrypoint-inventory/build.py (synthetic-only, repo-owned scratch)",
+              "status": "completed",
+              "priority": "high"
+            },
+            {
+              "content": "Write synthetic mocked tests (traversal/duplicate/link, control, literal/dynamic, denominator)",
+              "status": "in_progress",
+              "priority": "high"
+            },
+            {
+              "content": "Write doc/php83/entrypoint-inventory.md (PREPARED NOT_EXECUTED_REAL_INPUTS)",
+              "status": "pending",
+              "priority": "high"
+            },
+            {
+              "content": "Run unittest with TMPDIR=repo-owned scope, save local-* evidence only",
+              "status": "pending",
+              "priority": "high"
+            }
+          ],
+          "truncated": false
+        },
+        "title": "3 todos",
+        "time": {
+          "start": 1790442190968,
+          "end": 1790442190969
+        }
+      }
+    },
+    {
+      "type": "tool_use",
+      "tool": "write",
+      "state": {
+        "status": "completed",
+        "input": {
+          "content": {
+            "characters": 13340,
+            "sha256_utf8": "0c7158f3dde29aaaa787f218117a6ba90017d18d39a93ab9b9ae4b391bbfb977",
+            "head": "\"\"\"Synthetic entrypoint-inventory controls. No real archives, no /tmp, no network/VM.\"\"\"\nimport hashlib\nimport importlib.util\nimport io\nimport json\nimport subprocess\nimport tarfile\nimport unittest\nimport zipfile\nfrom contextlib import ExitStack\nfrom pathlib import Path\nfrom unittest.mock import patch\n\nHERE = Path(__file__).resolve().parent\nspec = importlib.util.spec_from_file_location('entrypoint_builder', HERE / 'build.py')\nb = importlib.util.module_from_spec(spec)\nspec.loader.exec_module(b)\nOWNER = {'package_file': 'a.deb', 'package_sha256': 'a' * 64}\n\nSCOPE = HERE / '.tmp-test-scope'\n\n\ndef tar_bytes(entries):\n    output = io.BytesIO()\n    with tarfile.open(fileobj=output, mode='w') as tar:\n        for row in entries:\n            item = tarfile.TarInfo(row['name'])\n            item.size = len(row.get('data', b''))\n            item.mode = row.get('mode', 0o644)\n            item.mtime = 0\n            kind = row.get('kind', 'file')\n            if kind == 'dir':\n                item.type = tarfile.DIRTYPE\n                item.size = 0\n                tar.addfile(item)\n            elif kind == 'symlink':\n                item.type = tarfile.SYMTYPE\n                item.linkname = row['linkname']\n                item.size = 0\n                tar.addfile(item)\n            elif kind == 'hardlink':\n                item.type = tarfile.LNKTYPE\n                item.linkname = row['linkname']\n                item.size = 0\n                tar.addfile(item)\n            else:\n                item.type = tarfile.REGTYPE\n                tar.addfile(item, io.BytesIO(row.get('data', b'')))\n    output.seek(0)\n    return output\n\n\ndef stream(data):\n    data.seek(0)\n    return data\n\n\nclass EntrypointUnitTests(unittest.TestCase):\n    def test_path_guards(self):\n        for bad in ['/etc/a.php', '../x.php', 'a\\\\b.php', '', './']:\n            if bad == './':\n                self.assertEqual(b.normalize(bad), '')\n                continue\n            with self.subTest(path=bad), self.assertRai",
+            "tail": " tarfile.open(self.bundle, 'r:gz') as src, tarfile.open(bad, 'w:gz') as dst:\n            for member in src.getmembers():\n                stream_in = src.extractfile(member)\n                data = stream_in.read() if stream_in else None\n                if member.name == './SHA256SUMS':\n                    data = ('0' * 64 + '  a.deb\\n').encode()\n                    member.size = len(data)\n                dst.addfile(member, io.BytesIO(data) if data is not None else None)\n        with ExitStack() as stack:\n            stack.enter_context(patch.object(b, 'BUNDLE_SHA', b.hash_file(bad)))\n            stack.enter_context(patch.object(b, 'SOURCE_SHA', b.hash_file(self.original)))\n            stack.enter_context(patch.object(b.shutil, 'which', return_value=str(self.binary)))\n            with self.assertRaisesRegex(ValueError, 'Inner package hash mismatch'):\n                b.build(self.repo, bad, self.original, work_dir=self.scope / 'scratch2')\n\n\nif __name__ == '__main__':\n    unittest.main()\n"
+          },
+          "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/entrypoint-inventory/test_entrypoint_inventory.py"
+        },
+        "output": "Wrote file successfully.",
+        "metadata": {
+          "diagnostics": {},
+          "filepath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/entrypoint-inventory/test_entrypoint_inventory.py",
+          "exists": false,
+          "truncated": false
+        },
+        "title": "tools/php83/entrypoint-inventory/test_entrypoint_inventory.py",
+        "time": {
+          "start": 1790442211261,
+          "end": 1790442211265
+        }
+      }
+    },
+    {
+      "type": "text",
+      "text": "Core implementation finished \u2014 now documenting the prepared state."
+    },
+    {
+      "type": "tool_use",
+      "tool": "todowrite",
+      "state": {
+        "status": "completed",
+        "input": {
+          "todos": [
+            {
+              "content": "Implement tools/php83/entrypoint-inventory/build.py (synthetic-only, repo-owned scratch)",
+              "priority": "high",
+              "status": "completed"
+            },
+            {
+              "content": "Write synthetic mocked tests (traversal/duplicate/link, control, literal/dynamic, denominator)",
+              "priority": "high",
+              "status": "completed"
+            },
+            {
+              "content": "Write doc/php83/entrypoint-inventory.md (PREPARED NOT_EXECUTED_REAL_INPUTS)",
+              "priority": "high",
+              "status": "in_progress"
+            },
+            {
+              "content": "Run unittest with TMPDIR=repo-owned scope, save local-* evidence only",
+              "priority": "high",
+              "status": "pending"
+            }
+          ]
+        },
+        "output": "[\n  {\n    \"content\": \"Implement tools/php83/entrypoint-inventory/build.py (synthetic-only, repo-owned scratch)\",\n    \"status\": \"completed\",\n    \"priority\": \"high\"\n  },\n  {\n    \"content\": \"Write synthetic mocked tests (traversal/duplicate/link, control, literal/dynamic, denominator)\",\n    \"status\": \"completed\",\n    \"priority\": \"high\"\n  },\n  {\n    \"content\": \"Write doc/php83/entrypoint-inventory.md (PREPARED NOT_EXECUTED_REAL_INPUTS)\",\n    \"status\": \"in_progress\",\n    \"priority\": \"high\"\n  },\n  {\n    \"content\": \"Run unittest with TMPDIR=repo-owned scope, save local-* evidence only\",\n    \"status\": \"pending\",\n    \"priority\": \"high\"\n  }\n]",
+        "metadata": {
+          "todos": [
+            {
+              "content": "Implement tools/php83/entrypoint-inventory/build.py (synthetic-only, repo-owned scratch)",
+              "status": "completed",
+              "priority": "high"
+            },
+            {
+              "content": "Write synthetic mocked tests (traversal/duplicate/link, control, literal/dynamic, denominator)",
+              "status": "completed",
+              "priority": "high"
+            },
+            {
+              "content": "Write doc/php83/entrypoint-inventory.md (PREPARED NOT_EXECUTED_REAL_INPUTS)",
+              "status": "in_progress",
+              "priority": "high"
+            },
+            {
+              "content": "Run unittest with TMPDIR=repo-owned scope, save local-* evidence only",
+              "status": "pending",
+              "priority": "high"
+            }
+          ],
+          "truncated": false
+        },
+        "title": "2 todos",
+        "time": {
+          "start": 1790442213212,
+          "end": 1790442213214
+        }
+      }
+    },
+    {
+      "type": "tool_use",
+      "tool": "write",
+      "state": {
+        "status": "completed",
+        "input": {
+          "content": "# Entrypoint-candidate inventory\n\nStatus: **PREPARED, NOT_EXECUTED_REAL_INPUTS**. Independent review pending.\n\nThis is a synthetic-only implementation. The builder accepts user-provided\npublished-bundle and original-ZIP paths, but it was **not executed on real\ninputs** in this session. The prior permission denial for archive\ncopy/control extraction under `/tmp`\n(`evidence/entrypoint-inventory/attempt1.json`) is retained and not a pass.\nThat denied operation was not retried through another tool or path.\n\n## What the builder does\n\n`tools/php83/entrypoint-inventory/build.py` performs an offline deterministic\ncandidate inventory:\n\n- Verifies the outer bundle hash against the existing exact pin\n  `91629580441f6a896ebf9e51f0256532221715bee57a3e5a64c66ff0c4e3127b`\n  and the original ZIP hash against\n  `58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28`.\n- Verifies the inner `SHA256SUMS` manifest: exact coverage of all `.deb`\n  members, exact per-package hashes, regular-file DEB members only.\n- Reads regular DEB control and data metadata only through\n  `dpkg-deb --ctrl-tarfile` and `dpkg-deb --fsys-tarfile`. It records the\n  `dpkg-deb` binary hash/version and both invocations. No package is\n  installed, no maintainer script is executed, no member path is extracted,\n  and no link is followed. All private DEB/tar scratch files live in a\n  repository-owned directory and are removed afterwards.\n- Inventories exact control members, maintainer scripts\n  (`preinst`, `postinst`, `prerm`, `postrm`, `config`), cron/systemd/init/web\n  configuration paths, literal PHP invocations, executable/shebang/\n  extensionless-PHP candidates, PHP symlink/hardlink candidates, and\n  generated-client path candidates.\n- Records path, content hash (where inspected), owner package filename/hash,\n  and line evidence for PHP invocations. Dynamic interpreter targets\n  (`$var`, `${...}`, `$(...)`, backticks, globs) are classified\n  `unresolved_dynamic`, never resolved from the host.\n- Reports full denominators (control/data member totals, regular/directory/\n  link counts, upstream PHP count) and exclusion counts (per-suffix skips,\n  oversize-skipped, nonregular kinds). Oversize regular files above 2 MiB are\n  counted but not content-inspected.\n\nSafe-parsing patterns (path normalization, traversal/absolute-path rejection,\nduplicate detection, checksum-manifest validation, hash helpers) mirror\n`tools/php83/package-identities/build.py`.\n\n## Explicit non-claims\n\n- No active-runtime behavior, reachability, exploitability, or\n  exhaustive-entrypoint claim. Candidates are static inventory rows, not proof\n  that a path is reachable, served, scheduled, or compatible with PHP 8.3.\n- No semantic finding is resolved. No ledger, package, configuration, or\n  deployment change is approved.\n- This is a trusted-local-input auditor, not a hostile-archive resource\n  sandbox: no CPU/memory/output quotas beyond fixed subprocess timeouts, no\n  signature verification beyond the pinned hashes, and no decompression-bomb\n  defense beyond the documented scan-size limit.\n\n## Synthetic verification only\n\nTests use synthetic tar/ZIP bytes and a mocked `dpkg-deb` subprocess inside a\nrepository-owned scope (`tools/php83/entrypoint-inventory/.tmp-test-scope`).\nNo real archive or DEB is read or executed. Cases cover path traversal,\nintra-package duplicates, symlink/hardlink recording, maintainer-script line\nevidence, literal versus dynamic interpreter targets, denominator/exclusion\naccounting, oversize handling, repo-owned scratch enforcement, synthetic\nend-to-end orchestration, and inner-hash fail-closed behavior.\n\n```sh\nmkdir -p tools/php83/entrypoint-inventory/.tmp-run-scope\nTMPDIR=\"$PWD/tools/php83/entrypoint-inventory/.tmp-run-scope\" \\\n  python3 -m unittest discover -s tools/php83/entrypoint-inventory -p 'test_*.py'\n```\n\nLocal synthetic evidence is retained under\n`doc/php83/evidence/entrypoint-inventory/local-*`. Real-input execution,\ncomparison against `package-identities/primary.json` owners, and independent\nreview remain open.\n",
+          "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/entrypoint-inventory.md"
+        },
+        "output": "Wrote file successfully.",
+        "metadata": {
+          "diagnostics": {},
+          "filepath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/entrypoint-inventory.md",
+          "exists": false,
+          "truncated": false
+        },
+        "title": "doc/php83/entrypoint-inventory.md",
+        "time": {
+          "start": 1790442224727,
+          "end": 1790442224730
+        }
+      }
+    },
+    {
+      "type": "tool_use",
+      "tool": "todowrite",
+      "state": {
+        "status": "completed",
+        "input": {
+          "todos": [
+            {
+              "content": "Implement tools/php83/entrypoint-inventory/build.py (synthetic-only, repo-owned scratch)",
+              "priority": "high",
+              "status": "completed"
+            },
+            {
+              "content": "Write synthetic mocked tests (traversal/duplicate/link, control, literal/dynamic, denominator)",
+              "priority": "high",
+              "status": "completed"
+            },
+            {
+              "content": "Write doc/php83/entrypoint-inventory.md (PREPARED NOT_EXECUTED_REAL_INPUTS)",
+              "priority": "high",
+              "status": "completed"
+            },
+            {
+              "content": "Run unittest with TMPDIR=repo-owned scope, save local-* evidence only",
+              "priority": "high",
+              "status": "in_progress"
+            }
+          ]
+        },
+        "output": "[\n  {\n    \"content\": \"Implement tools/php83/entrypoint-inventory/build.py (synthetic-only, repo-owned scratch)\",\n    \"status\": \"completed\",\n    \"priority\": \"high\"\n  },\n  {\n    \"content\": \"Write synthetic mocked tests (traversal/duplicate/link, control, literal/dynamic, denominator)\",\n    \"status\": \"completed\",\n    \"priority\": \"high\"\n  },\n  {\n    \"content\": \"Write doc/php83/entrypoint-inventory.md (PREPARED NOT_EXECUTED_REAL_INPUTS)\",\n    \"status\": \"completed\",\n    \"priority\": \"high\"\n  },\n  {\n    \"content\": \"Run unittest with TMPDIR=repo-owned scope, save local-* evidence only\",\n    \"status\": \"in_progress\",\n    \"priority\": \"high\"\n  }\n]",
+        "metadata": {
+          "todos": [
+            {
+              "content": "Implement tools/php83/entrypoint-inventory/build.py (synthetic-only, repo-owned scratch)",
+              "status": "completed",
+              "priority": "high"
+            },
+            {
+              "content": "Write synthetic mocked tests (traversal/duplicate/link, control, literal/dynamic, denominator)",
+              "status": "completed",
+              "priority": "high"
+            },
+            {
+              "content": "Write doc/php83/entrypoint-inventory.md (PREPARED NOT_EXECUTED_REAL_INPUTS)",
+              "status": "completed",
+              "priority": "high"
+            },
+            {
+              "content": "Run unittest with TMPDIR=repo-owned scope, save local-* evidence only",
+              "status": "in_progress",
+              "priority": "high"
+            }
+          ],
+          "truncated": false
+        },
+        "title": "1 todos",
+        "time": {
+          "start": 1790442232851,
+          "end": 1790442232853
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "status": "PREPARED_REVIEWED_NOT_EXECUTED_REAL_INPUTS",
+  "local_tests": 17,
+  "independent_tests": 17,
+  "independent_executor": "actualClaudeCLI",
+  "independent_cli_exit": 0,
+  "inputs": {
+    "tools/php83/entrypoint-inventory/build.py": {
+      "sha256": "d2ed28e1df69479a2f795861c1713966cab0d4ba2f32511afcc15dd3702b3202",
+      "bytes": 22760
+    },
+    "tools/php83/entrypoint-inventory/test_entrypoint_inventory.py": {
+      "sha256": "2e220d949e50986024e95beb6096ace8fd51b2691c26a2c0553516ee8578b80a",
+      "bytes": 15960
+    },
+    "doc/php83/entrypoint-inventory.md": {
+      "sha256": "495dbdea3e25391da2be5a85452867a7de36ae72c436cb2aa09bfcf9a0c8fb1c",
+      "bytes": 4600
+    }
+  },
+  "external_input_permission_denial_retained": true,
+  "user_confirmation_requested_before_retry": true,
+  "tasks_closed": 0
+}

@@ -1,0 +1,7 @@
+{
+  "status": "NOT_EXECUTED_INVENTORY_PERMISSION_DENIAL",
+  "cli_exit": 0,
+  "denied_operation": "external directory copy/extraction and dpkg-deb control inspection under /tmp",
+  "artifacts_created": false,
+  "response": "Do not retry denied operation through another tool or path. Continue only synthetic local authoring; real input run remains unexecuted."
+}

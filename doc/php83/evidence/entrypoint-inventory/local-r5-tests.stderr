@@ -1,0 +1,22 @@
+test_inner_hash_mismatch_fail_closed (test_entrypoint_inventory.BuildOrchestrationTests.test_inner_hash_mismatch_fail_closed) ... ok
+test_synthetic_build_denominators_and_evidence (test_entrypoint_inventory.BuildOrchestrationTests.test_synthetic_build_denominators_and_evidence) ... ok
+test_control_script_exact_hash_retained (test_entrypoint_inventory.EntrypointUnitTests.test_control_script_exact_hash_retained) ... ok
+test_denominator_and_exclusion_counts (test_entrypoint_inventory.EntrypointUnitTests.test_denominator_and_exclusion_counts) ... ok
+test_duplicate_rejected (test_entrypoint_inventory.EntrypointUnitTests.test_duplicate_rejected) ... ok
+test_executable_binary_not_labeled_php (test_entrypoint_inventory.EntrypointUnitTests.test_executable_binary_not_labeled_php) ... ok
+test_executable_shebang_extensionless_and_generated_client (test_entrypoint_inventory.EntrypointUnitTests.test_executable_shebang_extensionless_and_generated_client) ... ok
+test_links_recorded_never_followed (test_entrypoint_inventory.EntrypointUnitTests.test_links_recorded_never_followed) ... ok
+test_literal_and_dynamic_interpreter_targets (test_entrypoint_inventory.EntrypointUnitTests.test_literal_and_dynamic_interpreter_targets) ... ok
+test_maintainer_scripts_scanned_with_owner_line (test_entrypoint_inventory.EntrypointUnitTests.test_maintainer_scripts_scanned_with_owner_line) ... ok
+test_nested_shell_variable_interpreter_not_consumed_by_prior_var (test_entrypoint_inventory.EntrypointUnitTests.test_nested_shell_variable_interpreter_not_consumed_by_prior_var) ... ok
+test_oversize_unscanned_counted (test_entrypoint_inventory.EntrypointUnitTests.test_oversize_unscanned_counted) ... ok
+test_path_guards (test_entrypoint_inventory.EntrypointUnitTests.test_path_guards) ... ok
+test_scratch_must_stay_inside_repo (test_entrypoint_inventory.EntrypointUnitTests.test_scratch_must_stay_inside_repo) ... ok
+test_shell_and_application_template_invocations (test_entrypoint_inventory.EntrypointUnitTests.test_shell_and_application_template_invocations) ... ok
+test_traversal_rejected_in_control_and_data (test_entrypoint_inventory.EntrypointUnitTests.test_traversal_rejected_in_control_and_data) ... ok
+test_variable_interpreters_and_nonliteral_targets (test_entrypoint_inventory.EntrypointUnitTests.test_variable_interpreters_and_nonliteral_targets) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.006s
+
+OK
