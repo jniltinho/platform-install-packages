@@ -1,0 +1,32 @@
+{
+  "status": "PASS_BOUNDED_REPOSITORY_LITERAL_REPEAT",
+  "report_sha256": "8110b9d69bd4c23c654b3c64bb3ccb5252d895bbee31d71ac9118e1f1b36c197",
+  "repeat_byte_equal": true,
+  "reviewer_exit": 0,
+  "selected_real_launch_syntax_anchors": [
+    {
+      "path": "deb/kaltura-batch/debian/kaltura-batch.init",
+      "line": 85,
+      "literal_candidate_rows": 2,
+      "classification": "unresolved_dynamic",
+      "sha256": "a8eb09c22f10f222142d253123ec2ef807c3070a45500b6f6705334735b2ca86"
+    },
+    {
+      "path": "deb/kaltura-elasticsearch/debian/kaltura-elastic-populate.init",
+      "line": 65,
+      "literal_candidate_rows": 1,
+      "classification": "unresolved_dynamic",
+      "sha256": "1dd32a9ce4124b1b02e7522ad4ef8d3ae9e681b675fafd23f3698e383cf8b10f"
+    },
+    {
+      "path": "RPM/SOURCES/kaltura-populate",
+      "line": 94,
+      "literal_candidate_rows": 1,
+      "classification": "unresolved_dynamic",
+      "sha256": "c21b82c7e71da55ad17927a7ad322a54e91f0eacae4e3cea31b769bfb14e2959"
+    }
+  ],
+  "review_note": "Reviewer keyword examples also included grep/echo false positives; those are not execution proof. Exact nested-launch syntax anchors above separately checked, still not deployed reachability.",
+  "initial_report": "primary.json uses build-initial.py; final primary-r2.json uses build.py",
+  "tasks_closed": 0
+}

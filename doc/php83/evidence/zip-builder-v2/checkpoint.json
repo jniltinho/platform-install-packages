@@ -1,0 +1,30 @@
+{
+  "status": "PASS_SYNTHETIC_ADD_SUPPORT",
+  "primary_tests": 24,
+  "independent_tests": 24,
+  "reviewer": "actual Cursor Agent CLI",
+  "cli_exit": 0,
+  "inputs": {
+    "tools/php83/zip-builder-v2/build.py": {
+      "sha256": "3fc3e7f1524c044ef91f390cd6e4836bfeb6b9442ab45fefa6c07d6fcaba1707",
+      "bytes": 8927
+    },
+    "tools/php83/zip-builder-v2/test_builder.py": {
+      "sha256": "4ffd489ce300efbca0fa40738a09e5d3c15a947284073f4d53f883d84d34344e",
+      "bytes": 4742
+    },
+    "tools/php83/build-experimental-zip.py": {
+      "sha256": "055443730325459ff2f4e5ad093542e3aa544f6d82af8b21174027f5cdbf523e",
+      "bytes": 6838
+    },
+    "tools/php83/test_experimental_zip.py": {
+      "sha256": "ed605fc266e29c2ee564e5e568a0a634cfe2b3974b28fd4215c7ae400e74b573",
+      "bytes": 7034
+    }
+  },
+  "real_rigel_zip_built": false,
+  "old_builder_unchanged": true,
+  "tasks_closed": 0,
+  "raw_review_sha256": "943a7e7ea225fc870f4f4d9fbef0b1456f7c57c72169f2ecce55cf4bd0babc99",
+  "limits": "Trusted pinned inputs, not hostile archive resource limits; original/archive denial not retried"
+}

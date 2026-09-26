@@ -1,0 +1,7 @@
+{
+  "type": "result",
+  "subtype": "success",
+  "is_error": false,
+  "result": "Vou fazer a revis\u00e3o independente no escopo pedido: ler AGENTS.md e os artefatos do zip-builder-v2, comparar com o builder legado sem edit\u00e1-lo, rodar o unittest local e gravar a evid\u00eancia.Pr\u00f3ximo: contexto em mem\u00f3ria, builder legado por leitura direta e execu\u00e7\u00e3o dos 24 testes no scratch local.Testes passaram. Agora confiro hashes, que o legado n\u00e3o foi alterado e reviso os caminhos novos antes de gravar a evid\u00eancia.Cobertura do grafo no sibling confirma `freshness: missing` \u2014 leitura direta do legado. Gravando a evid\u00eancia da revis\u00e3o Cursor.**Veredito: PASS (24/24, exit 0).** Builder v2 ok em fixtures sint\u00e9ticos; legado intacto; sem claim de aplica\u00e7\u00e3o.\n\nExecu\u00e7\u00e3o: `TMPDIR=$PWD/tools/php83/zip-builder-v2/.scratch PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/zip-builder-v2 -p 'test_*.py' -v` \u2192 exit `0`, ~0,027s.\n\nConferidos: `add` + `before_sha256: null`, colis\u00f5es file/dir/impl\u00edcita/pai, reserved, headers `/dev/null`, `after_sha256` p\u00f3s-s\u00e9rie, `0644`/STAMP/determinismo, legado sem diff no git. Soft: falta teste nomeado para `add` com before string n\u00e3o-null (o gate j\u00e1 rejeita).\n\nEvid\u00eancia: `doc/php83/evidence/zip-builder-v2/cursor-review.md` (comandos, exits, hashes). Sem reindex, sem Rigel/rede/`/tmp`.",
+  "session_id": "585fcccf-1412-471c-84f6-83814279410d"
+}

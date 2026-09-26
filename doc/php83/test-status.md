@@ -47,7 +47,12 @@ but three pre-existing74/83 subclass serialization-order differences remain a
 strict layout FAIL; no cache/backend/invalidation acceptance is claimed.
 [XML policies](xml-loader.md) reject a no-op security-call removal: enabled/default
 read local canaries, while legacy block and denying callback do not in the corpus.
-Actual kConf/Soap lifecycle exploration is separate and not an approved repair.
+The [held XML lifecycle repair](xml-lifecycle-fix.md) now has independently
+repeated 38-process observations, a two-process causal follow-up and a reviewed
+bounded contract; old expectation failures remain visible. The separately
+versioned [ZIP builder v2](zip-builder-v2.md) supports the new helper with 24
+independently executed synthetic tests. Neither is integrated into exp12 or an
+approved production release.
 
 [Source media](baseline-media.md) now includes independently validated10s360p25
 and60s1080p60 H.264/AAC fixtures; no application upload/delivery claim follows.
@@ -441,3 +446,17 @@ groups/503events remain unchanged. The actual ZIP passes68 selected-method cases
 across three additional class files. No aggregate task closes: original0/24,
 detailed3/27; remaining language failures, full runtime/distro/performance/recovery
 and release gates stay open.
+
+## Additional inventory progress
+
+[Prepared entrypoint collector](entrypoint-inventory.md): 17 synthetic tests and
+actual Claude independent review after fixing real daemon-launch matching gaps.
+Real archive input execution remains unperformed after an external-directory
+permission denial, with operator confirmation requested before any retry.
+[Packaging repository literal inventory](packaging-launchers.md) separately
+scans 1,045 text members out of 1,085 tracked paths, with all exclusions visible.
+Its 909 regex candidate rows (many changelog/comment false positives) repeat
+byte-identically under actual OpenCode; they are not 909 active entrypoints.
+[Diagnostic families](exp12-diagnostic-families.md) organizes the remaining
+17 groups / 371 events; unimplemented families and inheritance constraints stay
+open. No original task or detailed acceptance checkbox closes from this work.

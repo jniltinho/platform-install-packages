@@ -1,0 +1,29 @@
+test_add_after_hash_enforced (test_builder.BuilderV2Tests.test_add_after_hash_enforced) ... ok
+test_add_existing_directory_rejected (test_builder.BuilderV2Tests.test_add_existing_directory_rejected) ... ok
+test_add_existing_source_rejected (test_builder.BuilderV2Tests.test_add_existing_source_rejected) ... ok
+test_add_header_enforced (test_builder.BuilderV2Tests.test_add_header_enforced) ... ok
+test_add_implicit_directory_rejected (test_builder.BuilderV2Tests.test_add_implicit_directory_rejected) ... ok
+test_add_requires_explicit_null (test_builder.BuilderV2Tests.test_add_requires_explicit_null) ... ok
+test_add_reserved_target_rejected (test_builder.BuilderV2Tests.test_add_reserved_target_rejected) ... ok
+test_add_under_file_rejected (test_builder.BuilderV2Tests.test_add_under_file_rejected) ... ok
+test_added_source_twice_reproducible (test_builder.BuilderV2Tests.test_added_source_twice_reproducible) ... ok
+test_archive_traversal_rejected_even_with_matching_hash (test_builder.BuilderV2Tests.test_archive_traversal_rejected_even_with_matching_hash) ... ok
+test_existing_output_preserved (test_builder.BuilderV2Tests.test_existing_output_preserved) ... ok
+test_later_patch_cannot_mutate_earlier_verified_output (test_builder.BuilderV2Tests.test_later_patch_cannot_mutate_earlier_verified_output) ... ok
+test_offset_rejected (test_builder.BuilderV2Tests.test_offset_rejected) ... ok
+test_output_hash_mismatch_rejected (test_builder.BuilderV2Tests.test_output_hash_mismatch_rejected) ... ok
+test_patch_cannot_collide_with_metadata (test_builder.BuilderV2Tests.test_patch_cannot_collide_with_metadata) ... ok
+test_patch_drift_rejected (test_builder.BuilderV2Tests.test_patch_drift_rejected) ... ok
+test_preserves_comments_and_executable_bit (test_builder.BuilderV2Tests.test_preserves_comments_and_executable_bit) ... ok
+test_rejects_reserved_source_metadata (test_builder.BuilderV2Tests.test_rejects_reserved_source_metadata) ... ok
+test_rejects_symlink (test_builder.BuilderV2Tests.test_rejects_symlink) ... ok
+test_replace_cannot_use_null (test_builder.BuilderV2Tests.test_replace_cannot_use_null) ... ok
+test_reproducible_and_original_unchanged (test_builder.BuilderV2Tests.test_reproducible_and_original_unchanged) ... ok
+test_source_drift_rejected (test_builder.BuilderV2Tests.test_source_drift_rejected) ... ok
+test_unknown_operation_rejected (test_builder.BuilderV2Tests.test_unknown_operation_rejected) ... ok
+test_unsafe_paths (test_builder.BuilderV2Tests.test_unsafe_paths) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.023s
+
+OK
