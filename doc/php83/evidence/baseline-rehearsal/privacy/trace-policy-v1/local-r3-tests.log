@@ -1,0 +1,27 @@
+test_archive_pin_closed (test_prepare.Tests.test_archive_pin_closed) ... ok
+test_double_application (test_prepare.Tests.test_double_application) ... ok
+test_existing_output_rejected (test_prepare.Tests.test_existing_output_rejected) ... ok
+test_four_core_targets (test_prepare.Tests.test_four_core_targets) ... ok
+test_guard_only_three_changes (test_prepare.Tests.test_guard_only_three_changes) ... ok
+test_known_copies_unchanged (test_prepare.Tests.test_known_copies_unchanged) ... ok
+test_missing_anchor (test_prepare.Tests.test_missing_anchor) ... ok
+test_no_generic_replacement_or_mutation (test_prepare.Tests.test_no_generic_replacement_or_mutation) ... ok
+test_replay_all (test_prepare.Tests.test_replay_all) ... ok
+test_unknown (test_prepare.Tests.test_unknown) ... ok
+test_writer_existing_methods_unchanged (test_prepare.Tests.test_writer_existing_methods_unchanged) ... ok
+test_original_and_candidate_policy_preserve_sources (test_runner.Tests.test_original_and_candidate_policy_preserve_sources) ... ok
+test_real_pinned_payload_without_ssh (test_runner.Tests.test_real_pinned_payload_without_ssh) ... ok
+test_repository_root (test_runner.Tests.test_repository_root) ... ok
+test_runner_no_production_or_network_fixture (test_runner.Tests.test_runner_no_production_or_network_fixture) ... ok
+test_exact_types (test_validate.Tests.test_exact_types) ... ok
+test_mutants (test_validate.Tests.test_mutants) ... ok
+test_negative_not_waived (test_validate.Tests.test_negative_not_waived) ... ok
+test_no_missing_cases (test_validate.Tests.test_no_missing_cases) ... ok
+test_positive (test_validate.Tests.test_positive) ... ok
+test_reject_filter (test_validate.Tests.test_reject_filter) ... ok
+test_source_drift (test_validate.Tests.test_source_drift) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.397s
+
+OK

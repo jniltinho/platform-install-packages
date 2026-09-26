@@ -1,6 +1,30 @@
-# Baseline API logging privacy: proposed policy only
+# Baseline API logging privacy: versioned lab policy
 
-## Current result: synthetic helpers pass; privacy remains blocked
+## Current phase: authorized trace-display policy repeated in synthetic lab
+
+The user explicitly authorized checksums and the narrow trace-argument display
+policy. `privacy/trace-policy-v1` now prepares four core targets against the
+original and exp14 pinned archives. This does not alter published artifacts or
+installed applications. Actual OpenCode Muse reviewed the initial trace source
+and executed 17 local tests; Claude's attempt hit quota and is not a pass.
+Follow-up adds exact safe trace-projection checks and typed validators:23
+local tests pass. Four native processes and52 lints completed and were repeated
+independently by actual OpenCode Muse, with exact stdout/stderr/typed reports.
+The first host-validator failure on legacy Error wrapping remains preserved;
+reviewed classification excludes no policy cases. Original74 and exp14/copied83
+were each tested without/with the overlay. No installed application changed.
+Separate broad55-file/runtime/library/INI identities match across the repeat;
+no retroactive broad identity claim is made for the primary.
+
+Only values of trace arguments are replaced; intrinsic messages and previous
+exceptions remain diagnostic evidence. Intrinsic/pre-rendered/extra.message leak
+controls are retained explicitly. Effective logger configuration and the real
+synthetic lab flow must close their exercised leak paths before nonce USER/auth.
+Future application of this approved overlay creates a **modified lab baseline**,
+not an untouched published installation; both sides need the same audited policy.
+No benchmark or whole application/privacy acceptance is granted by these tests.
+
+## Historical result before authorization: helpers pass, trace privacy blocked
 
 The reviewed r5 log-copy preparation has now run in isolated native PHP7.4.33
 and PHP8.3.6 stages: **two probes and six lints per runtime**, all exit0 with

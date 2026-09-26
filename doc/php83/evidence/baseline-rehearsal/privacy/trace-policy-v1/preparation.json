@@ -1,0 +1,97 @@
+{
+  "status": "PREPARED_NOT_DEPLOYED",
+  "original_sha256": "58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28",
+  "exp14_sha256": "459feaf9caf2abe55963dce0cac51b8b593e4ff1b46d2eaf9cb7d5c3f13f62a1",
+  "targets": [
+    {
+      "version": "original",
+      "path": "infra/log/KalturaLog.php",
+      "before_sha256": "9b7a7c3dd37616ffd2ac9720ece862641c43bb687a2db4e8fc9cbcb259ff5449",
+      "after_sha256": "e73b07433ea3f68dc2d309b35e33b63ce1ffb2599e7f7e8699f2b1d314740778",
+      "patch": "original/infra__log__KalturaLog.php.patch",
+      "patch_sha256": "3677ea3872b11c14bd9cd43333a4a081cc40997e5f823bcaba8e8afd8d9ca588",
+      "cumulative_patch": "original/infra__log__KalturaLog.php.cumulative.patch",
+      "cumulative_sha256": "3677ea3872b11c14bd9cd43333a4a081cc40997e5f823bcaba8e8afd8d9ca588"
+    },
+    {
+      "version": "original",
+      "path": "api_v3/lib/KalturaFrontController.php",
+      "before_sha256": "5f2eeffe526d4a0ee245b6f10f4e9600e0f7c8bcb4a52eef41e3a66bbd9ab7a1",
+      "after_sha256": "79570bd2be507f0045281a903aa13bd2de4037c2e12df3370075c4445184a4ca",
+      "patch": "original/api_v3__lib__KalturaFrontController.php.patch",
+      "patch_sha256": "3e32346ea0a7a7679f4d3d0d6f5f8a2757a6ea3c4d2925f1a40fe116d3d98009",
+      "cumulative_patch": "original/api_v3__lib__KalturaFrontController.php.cumulative.patch",
+      "cumulative_sha256": "3e32346ea0a7a7679f4d3d0d6f5f8a2757a6ea3c4d2925f1a40fe116d3d98009"
+    },
+    {
+      "version": "original",
+      "path": "api_v3/lib/KalturaDispatcher.php",
+      "before_sha256": "be20609b269f08cf1317a79046f5b43cddc8be4cd14dd01fbc0d928fdd24fce2",
+      "after_sha256": "9ce4b17a9fb1bef95fbbbbc6f08cb396a6cc944b055bac8413d740ce5d73c7b9",
+      "patch": "original/api_v3__lib__KalturaDispatcher.php.patch",
+      "patch_sha256": "52e00282bab8fe3f956aeed7c1a51a3d35adfc6a8373003233c1fd1c4460de92",
+      "cumulative_patch": "original/api_v3__lib__KalturaDispatcher.php.cumulative.patch",
+      "cumulative_sha256": "52e00282bab8fe3f956aeed7c1a51a3d35adfc6a8373003233c1fd1c4460de92"
+    },
+    {
+      "version": "original",
+      "path": "infra/log/KalturaSerializableStream.php",
+      "before_sha256": "e3d45f152ae749c2555b72bb9215c1a6532ee774be8c4548ecff8440ab658fce",
+      "after_sha256": "8411013a6f2ac78b6d092594d088ba9a5fbe71ada9de00692a369388c40dc04c",
+      "patch": "original/infra__log__KalturaSerializableStream.php.patch",
+      "patch_sha256": "c3e13b09bd7b6b0640083a9defa6d3fbb3e2cbbe91264a381b02732b3d67f083",
+      "cumulative_patch": "original/infra__log__KalturaSerializableStream.php.cumulative.patch",
+      "cumulative_sha256": "c3e13b09bd7b6b0640083a9defa6d3fbb3e2cbbe91264a381b02732b3d67f083"
+    },
+    {
+      "version": "exp14",
+      "path": "infra/log/KalturaLog.php",
+      "before_sha256": "dd2a01851114e821a88f266dd060e55a80d7cd795001369c9c14e7d2a794381f",
+      "after_sha256": "79241509d5b26df634a620e9e10af8f9e81144be3acdfbd363298fa090131b79",
+      "patch": "exp14/infra__log__KalturaLog.php.patch",
+      "patch_sha256": "3677ea3872b11c14bd9cd43333a4a081cc40997e5f823bcaba8e8afd8d9ca588",
+      "cumulative_patch": "exp14/infra__log__KalturaLog.php.cumulative.patch",
+      "cumulative_sha256": "3ceb77e5d47959e4ca90db269466d77d0bc47d878252e1ae13864defdb18b288"
+    },
+    {
+      "version": "exp14",
+      "path": "api_v3/lib/KalturaFrontController.php",
+      "before_sha256": "98eee32e47092d371ef31a90c2fea6c2575d2505a4c4cefdc625dd60c44fd12a",
+      "after_sha256": "02d35523b968e6b9579831906e1e7b7c48ff7dcbf6cfaf69938e48023762ec08",
+      "patch": "exp14/api_v3__lib__KalturaFrontController.php.patch",
+      "patch_sha256": "94c9b1cf1a4a0ad29dadd7b6dda19a42d3ea76a6c62893685bb58bae0af8f611",
+      "cumulative_patch": "exp14/api_v3__lib__KalturaFrontController.php.cumulative.patch",
+      "cumulative_sha256": "c15bb86492745da8dab5a25844203ef89b7dc13f565d06d2d09a2ad27c143fc0"
+    },
+    {
+      "version": "exp14",
+      "path": "api_v3/lib/KalturaDispatcher.php",
+      "before_sha256": "be20609b269f08cf1317a79046f5b43cddc8be4cd14dd01fbc0d928fdd24fce2",
+      "after_sha256": "9ce4b17a9fb1bef95fbbbbc6f08cb396a6cc944b055bac8413d740ce5d73c7b9",
+      "patch": "exp14/api_v3__lib__KalturaDispatcher.php.patch",
+      "patch_sha256": "52e00282bab8fe3f956aeed7c1a51a3d35adfc6a8373003233c1fd1c4460de92",
+      "cumulative_patch": "exp14/api_v3__lib__KalturaDispatcher.php.cumulative.patch",
+      "cumulative_sha256": "52e00282bab8fe3f956aeed7c1a51a3d35adfc6a8373003233c1fd1c4460de92"
+    },
+    {
+      "version": "exp14",
+      "path": "infra/log/KalturaSerializableStream.php",
+      "before_sha256": "e3d45f152ae749c2555b72bb9215c1a6532ee774be8c4548ecff8440ab658fce",
+      "after_sha256": "8411013a6f2ac78b6d092594d088ba9a5fbe71ada9de00692a369388c40dc04c",
+      "patch": "exp14/infra__log__KalturaSerializableStream.php.patch",
+      "patch_sha256": "c3e13b09bd7b6b0640083a9defa6d3fbb3e2cbbe91264a381b02732b3d67f083",
+      "cumulative_patch": "exp14/infra__log__KalturaSerializableStream.php.cumulative.patch",
+      "cumulative_sha256": "c3e13b09bd7b6b0640083a9defa6d3fbb3e2cbbe91264a381b02732b3d67f083"
+    }
+  ],
+  "helpers": {
+    "trace-policy-v1/prepare.py": "eaf4aa1adc9db40d53342ddb8f83dd498a8d5904007878ebadc2f92510805ec4",
+    "trace-policy-v1/writer-methods.php.inc": "b5d30ef9e801fe21bbd345338ad7cdda64795977466be8774e6d31713e59846e",
+    "prepare.py": "033821a65f338f14263057b3eb1a799c3acdb22bb951e39cfc3956ad6547ffc8",
+    "log-copy-methods.php.inc": "93e27b1263830a58d661b6ff82260851f68ffd53f25ba1643ca533955df026d9"
+  },
+  "policy": "display copies only; structural Throwable arguments; retain intrinsic messages",
+  "requires_effective_configuration_audit": true,
+  "privacy_acceptance": false,
+  "native_executed": false
+}

@@ -1,0 +1,5 @@
+{
+  "exit": 4,
+  "stdout": "inactive\n",
+  "stderr": "Failed to stop privacy-trace-policy-v1-repeat.service: Unit privacy-trace-policy-v1-repeat.service not loaded.\n"
+}

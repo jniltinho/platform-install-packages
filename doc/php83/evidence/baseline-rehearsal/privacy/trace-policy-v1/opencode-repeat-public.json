@@ -1,0 +1,51 @@
+{
+  "exit": 0,
+  "elapsed": 15.39,
+  "stdout_sha256": "4dc1e6d9efad81e842edd387f633fddb47ccd25278b11e04c9b8d3fed4867be3",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "public": [
+    {
+      "type": "text",
+      "timestamp": 1790464694310,
+      "sessionID": "ses_f1ffd0713ffetSV6fflvZ2prlG",
+      "part": {
+        "id": "prt_0e0031820001Y2Ken34LY4ATFx",
+        "messageID": "msg_0e002fcda001WatAM7oAQ4GLJa",
+        "sessionID": "ses_f1ffd0713ffetSV6fflvZ2prlG",
+        "type": "text",
+        "text": "Authorized repeat only \u2014 running the staged wrapper untouched.",
+        "time": {
+          "start": 1790464694304,
+          "end": 1790464694307
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "rs_01a0e003164b700bb05662f854ac5d53",
+            "phase": "commentary"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "timestamp": 1790464700660,
+      "sessionID": "ses_f1ffd0713ffetSV6fflvZ2prlG",
+      "part": {
+        "id": "prt_0e0032deb0019PjNr46BiMCJQZ",
+        "messageID": "msg_0e0031cdb001KGygypPOxZeFq4",
+        "sessionID": "ses_f1ffd0713ffetSV6fflvZ2prlG",
+        "type": "text",
+        "text": "Actual independent execution completed, no edits made.\n\nCommand: `python3 doc/php83/evidence/baseline-rehearsal/privacy/trace-policy-v1/independent-repeat.py`\nExit: 0 (tool success, no error/denied)\n\nOutput:\n`Frozen synthetic 4-process repeat exactly matches primary stdout/stderr and typed report; no whole privacy acceptance.`\n\nScoped comparison:\n- Primary repeat equivalence: exact match for stdout/stderr + typed report in isolated lab74 synthetic matrix.\n- No whole privacy PASS claimed: intrinsic/prerendered/extras controls intentionally still leak synthetic markers.\n- No restage, no secret read, no config change, no other VM commands, no source edits.",
+        "time": {
+          "start": 1790464699883,
+          "end": 1790464700658
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "msg_01a0e0032d0c73f7bd0a7b6965fb7bbe"
+          }
+        }
+      }
+    }
+  ]
+}

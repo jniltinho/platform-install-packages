@@ -1,0 +1,41 @@
+{
+  "scope": "fixed11-source inventory from reviewed runner, never report-derived subset",
+  "records": [
+    {
+      "variant": "original74",
+      "loaded_count": 11,
+      "validation": {
+        "status": "BOUNDED_TRACE_DISPLAY_CONTRACT",
+        "negative_controls": "KNOWN_LEAKS_PRESERVED",
+        "privacy_acceptance": false
+      }
+    },
+    {
+      "variant": "policy74",
+      "loaded_count": 11,
+      "validation": {
+        "status": "BOUNDED_TRACE_DISPLAY_CONTRACT",
+        "negative_controls": "KNOWN_LEAKS_PRESERVED",
+        "privacy_acceptance": false
+      }
+    },
+    {
+      "variant": "original83",
+      "loaded_count": 11,
+      "validation": {
+        "status": "BOUNDED_TRACE_DISPLAY_CONTRACT",
+        "negative_controls": "KNOWN_LEAKS_PRESERVED",
+        "privacy_acceptance": false
+      }
+    },
+    {
+      "variant": "policy83",
+      "loaded_count": 11,
+      "validation": {
+        "status": "BOUNDED_TRACE_DISPLAY_CONTRACT",
+        "negative_controls": "KNOWN_LEAKS_PRESERVED",
+        "privacy_acceptance": false
+      }
+    }
+  ]
+}

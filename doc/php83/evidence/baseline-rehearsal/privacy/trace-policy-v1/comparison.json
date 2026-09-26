@@ -1,0 +1,41 @@
+{
+  "status": "BOUNDED_SYNTHETIC_DISPLAY_POLICY_REPEATED",
+  "primary_native_processes": 4,
+  "primary_native_lints": 52,
+  "repeat_native_processes": 4,
+  "repeat_native_lints": 52,
+  "native_repeat_executor": "Actual OpenCode Muse free CLI",
+  "typed_reports_exact": true,
+  "native_stdout_stderr_exact": true,
+  "broad_repeat_runtime_identity_exact": true,
+  "runtime_file_count": 55,
+  "primary_broad_library_interval_attested": false,
+  "initial_r3_validator_failure_retained": true,
+  "validation": [
+    {
+      "status": "BOUNDED_TRACE_DISPLAY_CONTRACT",
+      "negative_controls": "KNOWN_LEAKS_PRESERVED",
+      "privacy_acceptance": false
+    },
+    {
+      "status": "BOUNDED_TRACE_DISPLAY_CONTRACT",
+      "negative_controls": "KNOWN_LEAKS_PRESERVED",
+      "privacy_acceptance": false
+    },
+    {
+      "status": "BOUNDED_TRACE_DISPLAY_CONTRACT",
+      "negative_controls": "KNOWN_LEAKS_PRESERVED",
+      "privacy_acceptance": false
+    },
+    {
+      "status": "BOUNDED_TRACE_DISPLAY_CONTRACT",
+      "negative_controls": "KNOWN_LEAKS_PRESERVED",
+      "privacy_acceptance": false
+    }
+  ],
+  "installed_application_changed": false,
+  "privacy_acceptance": false,
+  "negative_controls": "INTRINSIC_PRERENDERED_EXTRAS_KNOWN_LEAKS",
+  "primary_sha256": "2baba256954be7adfc67667cefe04b17add5e46e97a8b6e3505823f363fc669f",
+  "repeat_sha256": "2baba256954be7adfc67667cefe04b17add5e46e97a8b6e3505823f363fc669f"
+}

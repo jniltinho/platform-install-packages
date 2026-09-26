@@ -1,0 +1,15 @@
+{
+  "prior_pipeline_runtime": "PHP8.3.6 original source",
+  "prior_six_diagnostics_retained": "../pipeline/primary.json",
+  "current74": "original ZendConfig, PHP7.4.33",
+  "current83": "exp14 ZendConfig compatibility source, copied PHP8.3.6",
+  "original_sha256": "065597c625046207683d14682bffcdbfd0aed862ad456a3dbefcf9b538e97a2f",
+  "exp14_sha256": "ccdbe8edbc8498fd52a3ac9456fe1085edbd09e77d4f332f7c279b94825e805b",
+  "diff": "--- original/Zend/Config.php\n+++ exp14/Zend/Config.php\n@@ -245,7 +245,7 @@\n      *\n      * @return int\n      */\n-    public function count()\n+    public function count(): int\n     {\n         return $this->_count;\n     }\n@@ -255,7 +255,7 @@\n      *\n      * @return mixed\n      */\n-    public function current()\n+    public function current(): mixed\n     {\n         $this->_skipNextIteration = false;\n         return current($this->_data);\n@@ -266,7 +266,7 @@\n      *\n      * @return mixed\n      */\n-    public function key()\n+    public function key(): mixed\n     {\n         return key($this->_data);\n     }\n@@ -275,7 +275,7 @@\n      * Defined by Iterator interface\n      *\n      */\n-    public function next()\n+    public function next(): void\n     {\n         if ($this->_skipNextIteration) {\n             $this->_skipNextIteration = false;\n@@ -289,7 +289,7 @@\n      * Defined by Iterator interface\n      *\n      */\n-    public function rewind()\n+    public function rewind(): void\n     {\n         $this->_skipNextIteration = false;\n         reset($this->_data);\n@@ -301,7 +301,7 @@\n      *\n      * @return boolean\n      */\n-    public function valid()\n+    public function valid(): bool\n     {\n         return $this->_index < $this->_count;\n     }\n",
+  "policy_changes_config": false,
+  "handler_returns_false": true,
+  "error_reporting": "E_ALL/-1",
+  "display_errors": "stderr",
+  "log_errors": "0 for isolated synthetic process, diagnostics retained in stderr",
+  "claim": "0 observed in current scoped matrix; not suppressing six previous observations"
+}

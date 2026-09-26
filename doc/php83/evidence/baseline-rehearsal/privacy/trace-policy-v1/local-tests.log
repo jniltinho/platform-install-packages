@@ -1,0 +1,16 @@
+test_archive_pin_closed (test_prepare.Tests.test_archive_pin_closed) ... ok
+test_double_application (test_prepare.Tests.test_double_application) ... ok
+test_existing_output_rejected (test_prepare.Tests.test_existing_output_rejected) ... ok
+test_four_core_targets (test_prepare.Tests.test_four_core_targets) ... ok
+test_guard_only_three_changes (test_prepare.Tests.test_guard_only_three_changes) ... ok
+test_known_copies_unchanged (test_prepare.Tests.test_known_copies_unchanged) ... ok
+test_missing_anchor (test_prepare.Tests.test_missing_anchor) ... ok
+test_no_generic_replacement_or_mutation (test_prepare.Tests.test_no_generic_replacement_or_mutation) ... ok
+test_replay_all (test_prepare.Tests.test_replay_all) ... ok
+test_unknown (test_prepare.Tests.test_unknown) ... ok
+test_writer_existing_methods_unchanged (test_prepare.Tests.test_writer_existing_methods_unchanged) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.004s
+
+OK

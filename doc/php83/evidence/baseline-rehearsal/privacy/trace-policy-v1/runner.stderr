@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/baseline-rehearsal/privacy/trace-policy-v1/run.py", line 54, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/baseline-rehearsal/privacy/trace-policy-v1/run.py", line 47, in main
+    results.append(validate.validate(json.loads(row['stdout']),row['variant'].startswith('policy'),expected))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/baseline-rehearsal/privacy/trace-policy-v1/validate.py", line 15, in validate
+    if row[flag] is not True:raise ValueError(flag)
+                             ^^^^^^^^^^^^^^^^^^^^^^
+ValueError: observed_same_bytes

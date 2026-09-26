@@ -1,0 +1,46 @@
+{
+  "status": "LEGACY_ERROR_INSTRUMENTATION_INEQUALITY_CLASSIFIED_NOT_BYTE_PARITY",
+  "source": {
+    "path": "infra/log/KalturaLog.php",
+    "sha256": "9b7a7c3dd37616ffd2ac9720ece862641c43bb687a2db4e8fc9cbcb259ff5449",
+    "wrapping_lines": [
+      {
+        "line": 70,
+        "text": "$message = new Exception($message);"
+      },
+      {
+        "line": 79,
+        "text": "$message = new Exception($message);"
+      },
+      {
+        "line": 88,
+        "text": "$message = new Exception($message);"
+      }
+    ]
+  },
+  "probe": {
+    "sha256": "3df0c14da3cff412fd56fccc98204116af4b2fac2b2bc163cd4d08f0876368cf",
+    "invocation_lines": [
+      {
+        "line": 102,
+        "text": "$plain=capture($message,'PREFIX [%context%] %priorityName% %message%',$extra,false,$level,$name==='writer-roundtrip');"
+      },
+      {
+        "line": 103,
+        "text": "$observed=capture($message,'PREFIX [%context%] %priorityName% %message%',$extra,true,$level,$name==='writer-roundtrip');"
+      }
+    ]
+  },
+  "observed": "Original Error cases: writer_same_message=false, formatter_type=object, observed_same_bytes=false; policy all three true/string/true. Both source and runtime unchanged.",
+  "inference": "Pinned original explicitly constructs a new Exception for Error at each logger invocation. Observed/plain invocation sites differ. Raw sink bytes were hashed, not exported, so this is source-bound attribution not proof of every differing byte.",
+  "excluded_only": [
+    "original74/error-err",
+    "original74/error-alert",
+    "original74/error-crit",
+    "original83/error-err",
+    "original83/error-alert",
+    "original83/error-crit"
+  ],
+  "policy_exclusions": [],
+  "initial_failure_preserved": true
+}

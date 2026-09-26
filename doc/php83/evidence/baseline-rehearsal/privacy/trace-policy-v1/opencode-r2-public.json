@@ -1,0 +1,73 @@
+{
+  "exit": 0,
+  "elapsed": 31.56,
+  "stdout_sha256": "4dfb09c6d9d0cc63ff193829cc8f906a91c6854ae8a4196cde168eda80b86127",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "public": [
+    {
+      "type": "text",
+      "timestamp": 1790464108208,
+      "sessionID": "ses_f2005f361ffeQgcMEyMyfQU7dQ",
+      "part": {
+        "id": "prt_0dffa26aa001WPqAdZXo5rZmkY",
+        "messageID": "msg_0dffa1095001vp1bDDVYWhj3wv",
+        "sessionID": "ses_f2005f361ffeQgcMEyMyfQU7dQ",
+        "type": "text",
+        "text": "Read-only privacy review \u2014 running the trace-policy checks without edits.",
+        "time": {
+          "start": 1790464108202,
+          "end": 1790464108207
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "rs_01a0dffa24fe7761bfc2aef27360787d",
+            "phase": "commentary"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "timestamp": 1790464113677,
+      "sessionID": "ses_f2005f361ffeQgcMEyMyfQU7dQ",
+      "part": {
+        "id": "prt_0dffa3c09001E7psTsMLDXB8pY",
+        "messageID": "msg_0dffa2fe8001JN6sHA64vcGHKg",
+        "sessionID": "ses_f2005f361ffeQgcMEyMyfQU7dQ",
+        "type": "text",
+        "text": "Files reviewed \u2014 now executing the unit test suite.",
+        "time": {
+          "start": 1790464113673,
+          "end": 1790464113675
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "rs_01a0dffa3a9e7191be1f41d26c0c2d86",
+            "phase": "commentary"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "timestamp": 1790464131934,
+      "sessionID": "ses_f2005f361ffeQgcMEyMyfQU7dQ",
+      "part": {
+        "id": "prt_0dffa6a93001z1ZvZUxlIlMbcG",
+        "messageID": "msg_0dffa3ef3001M6w01c02qEMiBT",
+        "sessionID": "ses_f2005f361ffeQgcMEyMyfQU7dQ",
+        "type": "text",
+        "text": "Independent read-only privacy review \u2014 `trace-policy-v1`:\n\nScope obeyed: read-only. Read 7 files in `tools/php83/baseline-rehearsal/privacy/trace-policy-v1/` (`README.md`, `prepare.py`, `writer-methods.php.inc`, `probe.php`, `validate.py`, `test_prepare.py`, `test_validate.py`). No edits, no `/tmp` reads, no VM/SSH/auth, no compiler ops.\n\nExecuted:\n`python3 -m unittest discover -s tools/php83/baseline-rehearsal/privacy/trace-policy-v1 -p test_*.py -v`\nResult: 17 tests ran, OK \u2014 11x `test_prepare.Tests` + 6x `test_validate.Tests`. All `ok`.\n\nSource verdict (bounded, static-only):\n\n1. Throwable/previous preservation + event/filter/priority:\n- `writer-methods.php.inc:9-35`: `throwableForLog(Throwable)` builds display string via `getClass/getMessage/getCode/getFile/getLine/getTrace/getPrevious`, `do...while !==null`, `array_reverse(chain)` = oldest-first. No `setMessage/setTrace/serialize/clone`.\n- `writer-methods.php.inc:2-7`: `_write($event)` copies array by value, replaces only `$event['message']` if `instanceof Throwable`, then `parent::_write`. No new properties, `__sleep/__wakeup` untouched per README.\n- `probe.php:19-28,50-56,62-66`: observer filter + wrapping formatter capture pre-`_write` event; `validate.py:11,13,21` enforces `exception_state_unchanged`, `observed_same_bytes`, `structural_preserved`, `context_preserved`, `writer_same_message`, `formatter_type==string`, priority `{alert:1, crit:2, else:3}`, rejected-ERR control `empty_sink/observer_not_called/formatter_not_called`. Contract present.\n\n2. Three Error-before-stringify guards:\n- `prepare.py:16-18`: anchors on exactly 3x `if(!$message instanceof Exception)` in `old.TARGETS[0]`, replaces with `Throwable`. Guarded by `test_guard_only_three_changes` + `test_double_application`/`test_missing_anchor`. Composes exp14, does not replace other targets (`test_known_copies_unchanged`).\n\n3. No argument value cast:\n- `writer-methods.php.inc:26`: `'[REDACTED:'.gettype($argument).']'` only. Prohibited `preg_replace/getTraceAsString/__toString/setTrace/setMessage/serialize(/clone` asserted absent in `test_no_generic_replacement_or_mutation`. `probe.php:68,85,121` adds `ExplosiveDisplay::__toString` throwing `MUST_NOT_STRINGIFY` + 6-type `mixedArguments` exact-match check. Static guard passes.\n\n4. Original leak + negative controls:\n- `validate.py:2,22`: 11 exact cases. `policy=False` requires `prefix_marker` leak (original leak control). `policy=True` requires positives have no `full/prefix_marker` + `redaction_marker`; negatives `intrinsic/prerendered/extras-control` must still leak `prefix_marker` (+ `full_marker` except prerendered). `README.md:19-25` + `validate.py:1,24` explicitly `privacy_acceptance:False`, `KNOWN_LEAKS_PRESERVED` \u2014 not a privacy PASS.\n\n5. Writer serialization probe (source only, not executed):\n- `probe.php:46-49,88`: `writer-roundtrip` does `unserialize(serialize(writer))` + subsequent write. `validate.py` enforces same inventory/contract for it. No PHP runtime evidence in this run.\n\nDefects found in reviewed files: none blocking the stated bounded display-copy contract. No concrete code defect to file from static review.\n\nNative/acceptance gaps (not ready):\n- PHP `probe.php` NOT_EXECUTED here; native `paired74/copied83`, serialization round-trip behavior, argument-type rendering, effective logger config + exercised-emitter audit, and whole-privacy acceptance remain open per `README.md:32-34,42-51`.\n- 17 passing tests are static/source/replay/contract-mutant guards only, not PHP execution or deployment approval.",
+        "time": {
+          "start": 1790464125587,
+          "end": 1790464131932
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "msg_01a0dffa69997333bf0b70ecf76e12a9"
+          }
+        }
+      }
+    }
+  ]
+}

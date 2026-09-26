@@ -1,0 +1,12 @@
+{
+  "type": "result",
+  "subtype": "success",
+  "is_error": true,
+  "result": "You've hit your session limit \u00b7 resets 9:20pm (America/Sao_Paulo)",
+  "duration_ms": 577,
+  "num_turns": 1,
+  "permission_denials": [],
+  "exit": 1,
+  "elapsed_seconds": 2.55,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}
