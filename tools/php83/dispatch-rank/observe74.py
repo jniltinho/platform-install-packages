@@ -2,10 +2,11 @@
 """Four actual native83 observations, not a selector or SQL/API acceptance gate."""
 import argparse,hashlib,io,json,os,pathlib,subprocess,tarfile,tempfile
 import prepare
+import observe as native
 ROOT=prepare.ROOT;HERE=pathlib.Path(__file__).resolve().parent
-STAGE='/home/vagrant/php-dispatch-rank-observation-v1'
+STAGE='/home/vagrant/php-dispatcher74-observation-v1'
 SOURCE=ROOT/'doc/php83/evidence/dispatch-rank/preparation-r3'
-SSH=['ssh','-T','-F','/tmp/kaltura-php83-ssh.conf','php83']
+SSH=['ssh','-T','-F','/tmp/kaltura-php74-ssh.conf','baseline74']
 def remote(cmd,data=None):return subprocess.run(SSH+[cmd],input=data,capture_output=True,timeout=120)
 def checked(cmd,data=None):
  p=remote(cmd,data)
@@ -18,14 +19,10 @@ def atomic(path,value):
   os.replace(n,path)
  finally:pathlib.Path(n).unlink(missing_ok=True)
 def files():
- original=(SOURCE/'original.php').read_bytes()
- if prepare.sha(original)!=prepare.SOURCE_PINS[prepare.PATHS[0]]:raise ValueError('Wrong target')
- data={name+'.php':b for name,b in prepare.variants(original).items()}
- for p,pin in prepare.SOURCE_PINS.items():
-  b=(SOURCE/'source'/p).read_bytes()
-  if prepare.sha(b)!=pin:raise ValueError('Dependency drift')
-  data['source/'+p]=b
- for name in ['dispatcher-probe.php','rank-metadata-probe.php','run.sh']:data[name]=(HERE/name).read_bytes()
+ data=native.files()
+ del data['rank-metadata-probe.php'];del data['dispatcher-probe.php']
+ data['dispatcher74-probe.php']=(HERE/'dispatcher74-probe.php').read_bytes()
+ data['run.sh']=(HERE/'run74.sh').read_bytes()
  return data
 
 def observe(out,reuse=False):
@@ -33,7 +30,7 @@ def observe(out,reuse=False):
  sums=''.join(h+'  '+p+'\n' for p,h in sorted(identities.items())).encode();pin=prepare.sha(sums);data['SHA256SUMS']=sums
  out.open('x').close();result={'status':'INITIALIZING','records':[],'files':identities,'checksum_manifest_sha256':pin,'collector_sha256':prepare.sha(pathlib.Path(__file__).read_bytes()),'application_acceptance':False}
  def snapshot(label):
-  p=out.with_name(out.stem+'-'+label+'.json');cmd=['python3',str(ROOT/'tools/php83/exp12-api/runtime83-identity.py'),str(p)]
+  p=out.with_name(out.stem+'-'+label+'.json');cmd=['python3',str(ROOT/'tools/php83/exp12-api/runtime-identity.py'),str(p)]
   r=subprocess.run(cmd,capture_output=True,text=True,timeout=150)
   result.setdefault('snapshot_commands',[]).append({'command':cmd,'exit':r.returncode,'stdout':r.stdout,'stderr':r.stderr})
   if r.returncode:raise RuntimeError('Runtime identity collection failed')
@@ -52,16 +49,16 @@ def observe(out,reuse=False):
  try:
   result['runtime_before']=snapshot('runtime-before');atomic(out,result)
   if reuse:
-   checked('test "$(hostname)" = kaltura-php83-lab && test -d '+STAGE);staged=True
+   checked('test "$(hostname)" = kaltura-php74-baseline && test -d '+STAGE);staged=True
   else:
-   checked('test "$(hostname)" = kaltura-php83-lab && mkdir '+STAGE)
+   checked('test "$(hostname)" = kaltura-php74-baseline && mkdir '+STAGE)
    buf=io.BytesIO()
    with tarfile.open(fileobj=buf,mode='w') as tar:
     for p,b in data.items():
      member=tarfile.TarInfo(p);member.size=len(b);member.mode=0o444;tar.addfile(member,io.BytesIO(b))
    checked('tar --no-same-owner -xf - -C '+STAGE,buf.getvalue());checked('sudo -n chown -R root:root '+STAGE+' && sudo -n chmod -R a-w '+STAGE);staged=True
   result['source_before']=source_identity();atomic(out,result)
-  for mode in ['original','public-comparison','attribute-comparison','rank']:
+  for mode in ['original','public-comparison','attribute-comparison']:
    cmd='bash '+STAGE+'/run.sh '+mode+' '+pin;result['pending']=mode;atomic(out,result);r=remote(cmd)
    stdout=r.stdout.decode();stderr=r.stderr.decode()
    try:body=json.loads(stdout)

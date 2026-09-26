@@ -1,0 +1,12 @@
+{
+  "tools/php83/dispatch-rank/dispatcher74-probe.php": "73b4d196afd8084e89f035923783abfef64d849d71f681163ab2c98d029e7dd2",
+  "tools/php83/dispatch-rank/dispatcher-probe.php": "cd68292e6c9e44e050384e33d6f5a89358d799a7566a77784f26345dc0c94e6f",
+  "tools/php83/dispatch-rank/rank-metadata-probe.php": "dea08f18d919924cb6574833de1a20c548271355d312b25de4342578994f1f53",
+  "tools/php83/dispatch-rank/source-pins.json": "5c74342b10fbe9c9d3153caac34873fe80967e49118a4cc3379a0d66078cb74d",
+  "tools/php83/dispatch-rank/run74.sh": "20473c46312002cc22e39c3566ead8fa5dbacaf95a03df4fd723d6edf222dffb",
+  "tools/php83/dispatch-rank/observe.py": "f2a75d10c5f1fd6886cdb27613b2a58aea81e097995807ef90743426fb8fa511",
+  "tools/php83/dispatch-rank/run.sh": "e2811df95eb5a00ce4e88e2af712d378626d005f47173902d11eda6806951db8",
+  "tools/php83/dispatch-rank/prepare.py": "d6b2b44ac70a85d83d57a0f7bcd6ed614170c0a6e45a0a46e4a28141b821d113",
+  "tools/php83/dispatch-rank/observe74.py": "cd4a45d6e7e9ac56439a1075946b4654dae6f508f2298a06cda10870e8b9d938",
+  "tools/php83/dispatch-rank/test_prepare.py": "11fe6c93fd85cf364ba4cc68fae64a84e700058673deedf83163a09e6210b3d7"
+}

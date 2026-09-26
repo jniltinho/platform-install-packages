@@ -1,0 +1,103 @@
+{
+  "cli_exit": 0,
+  "events": [
+    {
+      "type": "text",
+      "text": "Isolated review of the dispatch-rank probes \u2014 verifying stage bytes and contracts without touching app code."
+    },
+    {
+      "type": "text",
+      "text": "I've mapped the probe logic and fixture differences \u2014 now checking the test harness and execution preconditions."
+    },
+    {
+      "type": "bash",
+      "status": "completed",
+      "input": {
+        "command": "ls -l doc/php83/evidence/dispatch-rank/ 2>&1; echo ---; ls -l /tmp/kaltura-php83-ssh.conf /tmp/kaltura-php74-ssh.conf 2>&1; echo ---; hostname; echo ---; ls tools/php83/exp12-api/runtime* 2>&1; echo ---; cat tools/php83/dispatch-rank/source-pins.json",
+        "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+      },
+      "output": "total 468\n-rw-rw-r-- 1 nilton nilton   1452 Sep 26 14:53 claude-repeat-prompt.txt\n-rw-rw-r-- 1 nilton nilton    160 Sep 26 14:53 claude-repeat-public.json\n-rw-rw-r-- 1 nilton nilton      2 Sep 26 14:53 claude-repeat.exit\n-rw-rw-r-- 1 nilton nilton   3694 Sep 26 14:38 constructor-dependency-coverage.json\n-rw-rw-r-- 1 nilton nilton   2379 Sep 26 14:33 coverage.json\n-rw-rw-r-- 1 nilton nilton  38302 Sep 26 14:33 literal-candidates.json\n-rw-rw-r-- 1 nilton nilton    584 Sep 26 14:36 local-tests-r2.txt\n-rw-rw-r-- 1 nilton nilton   1135 Sep 26 14:42 local-tests-r3.txt\n-rw-rw-r-- 1 nilton nilton    584 Sep 26 14:35 local-tests.txt\n-rw-rw-r-- 1 nilton nilton   1135 Sep 26 14:46 native-prep-local-tests.txt\n-rw-rw-r-- 1 nilton nilton  41465 Sep 26 14:46 native-primary-runtime-after.json\n-rw-rw-r-- 1 nilton nilton  41465 Sep 26 14:46 native-primary-runtime-before.json\n-rw-rw-r-- 1 nilton nilton   1020 Sep 26 14:49 native-primary-summary.json\n-rw-rw-r-- 1 nilton nilton      2 Sep 26 14:46 native-primary.exit\n-rw------- 1 nilton nilton 214581 Sep 26 14:46 native-primary.json\n-rw-rw-r-- 1 nilton nilton      0 Sep 26 14:46 native-primary.stderr\n-rw-rw-r-- 1 nilton nilton     50 Sep 26 14:46 native-primary.stdout\n-rw-rw-r-- 1 nilton nilton    818 Sep 26 14:42 opencode-followup-prompt.txt\n-rw-rw-r-- 1 nilton nilton   5013 Sep 26 14:44 opencode-followup-public.json\n-rw-rw-r-- 1 nilton nilton    956 Sep 26 14:38 opencode-prompt.txt\n-rw-rw-r-- 1 nilton nilton   4453 Sep 26 14:40 opencode-public.json\n-rw-rw-r-- 1 nilton nilton    689 Sep 26 14:39 prep-identities.sha256\n-rw-rw-r-- 1 nilton nilton    798 Sep 26 14:42 prep-r3-identities.sha256\ndrwxrwxr-x 3 nilton nilton   4096 Sep 26 14:35 preparation-r1\ndrwxrwxr-x 3 nilton nilton   4096 Sep 26 14:36 preparation-r2\n-rw-rw-r-- 1 nilton nilton   2383 Sep 26 14:36 preparation-r2.json\ndrwxrwxr-x 3 nilton nilton   4096 Sep 26 14:41 preparation-r3\n-rw-rw-r-- 1 nilton nilton   2383 Sep 26 14:41 preparation-r3.json\n-rw-rw-r-- 1 nilton nilton   1754 Sep 26 14:35 preparation.json\n-rw-rw-r-- 1 nilton nilton   1145 Sep 26 14:53 repeat-input-identities.json\n-rw-rw-r-- 1 nilton nilton   2779 Sep 26 14:41 reviewed-dispatcher-probe-r2.php\n-rw-rw-r-- 1 nilton nilton   4628 Sep 26 14:52 reviewed-observe-primary.py\n-rw-rw-r-- 1 nilton nilton   3210 Sep 26 14:41 reviewed-prepare-r2.py\n-rw-rw-r-- 1 nilton nilton   1379 Sep 26 14:41 reviewed-rank-probe-r2.php\n---\n-rw------- 1 nilton nilton 405 Sep 25 08:37 /tmp/kaltura-php74-ssh.conf\n-rw------- 1 nilton nilton 390 Sep 25 08:25 /tmp/kaltura-php83-ssh.conf\n---\nlinux-desktop\n---\ntools/php83/exp12-api/runtime-identity.py\ntools/php83/exp12-api/runtime83-identity.py\n---\n{\n  \"api_v3/lib/KalturaFrontController.php\": \"189607dca3b5ef33270d8e4dfe081daf6a76f39d5fd49066ee0b83f24c62d71a\",\n  \"api_v3/lib/KalturaEntryService.php\": \"9495b584f73df1f4a11812efa964f57f42562159a405693b71e1731d53fe4dd5\",\n  \"api_v3/lib/KalturaBaseService.php\": \"48c4e41bfbb1072d5231e8ae8e300cb3e8bb8eb6e26a653d7925c00442a2999f\",\n  \"api_v3/services/BaseEntryService.php\": \"069e3902be3d97f2e8139e445a9e1cfdceefc5d9db9a6882865ff3b17a44b27a\",\n  \"api_v3/services/MediaService.php\": \"7ffb9ca7642341eaf65a4387e82c7b63dfdf5e528b5b03da6ea24a56f384f708\",\n  \"api_v3/services/MixingService.php\": \"9cc6d1f90ccf2938c23fb3d3906bf21d257102ea0ddc6a388a124280fe04e8fb\",\n  \"api_v3/lib/KalturaDispatcher.php\": \"be20609b269f08cf1317a79046f5b43cddc8be4cd14dd01fbc0d928fdd24fce2\",\n  \"alpha/apps/kaltura/lib/requestUtils.class.php\": \"67334985d39eca569fc43c69d26acc37d89abcdf2ac5aedb18dbc09604c45643\",\n  \"alpha/apps/kaltura/lib/request/infraRequestUtils.class.php\": \"41d93de7af5c7346978c14e8346f695aa751dc49061ba03367b98daf99f4fddc\",\n  \"alpha/apps/kaltura/lib/kCurrentContext.class.php\": \"7f5c53f693e0c4a403bb5b513740d32e36f809cde1b26eb11e60f592badadb7f\",\n  \"infra/general/kString.class.php\": \"df428ba6ae157a814f63b9b9359054bfa931376947d2a3419511355b9dd7f383\"\n}\n",
+      "error": null
+    },
+    {
+      "type": "bash",
+      "status": "completed",
+      "input": {
+        "command": "python3 -m unittest tools.php83.dispatch-rank.test_prepare -v 2>&1; echo \"EXIT:$?\"",
+        "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+      },
+      "output": "test_prepare (unittest.loader._FailedTest.test_prepare) ... ERROR\n\n======================================================================\nERROR: test_prepare (unittest.loader._FailedTest.test_prepare)\n----------------------------------------------------------------------\nImportError: Failed to import test module: test_prepare\nTraceback (most recent call last):\n  File \"/usr/lib/python3.12/unittest/loader.py\", line 137, in loadTestsFromName\n    module = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/dispatch-rank/test_prepare.py\", line 2, in <module>\n    import prepare\nModuleNotFoundError: No module named 'prepare'\n\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nFAILED (errors=1)\nEXIT:1\n",
+      "error": null
+    },
+    {
+      "type": "bash",
+      "status": "completed",
+      "input": {
+        "command": "python3 -m unittest test_prepare -v 2>&1; echo \"EXIT:$?\"",
+        "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/dispatch-rank"
+      },
+      "output": "test_dependency_drift (test_prepare.ArchiveGuards.test_dependency_drift) ... ok\ntest_missing_archive (test_prepare.ArchiveGuards.test_missing_archive) ... ok\ntest_selected_manifest_drift (test_prepare.ArchiveGuards.test_selected_manifest_drift) ... ok\ntest_selected_target_mismatch (test_prepare.ArchiveGuards.test_selected_target_mismatch) ... ok\ntest_success_all_files_and_variant_exact (test_prepare.ArchiveGuards.test_success_all_files_and_variant_exact) ... ok\ntest_wrong_archive_hash (test_prepare.ArchiveGuards.test_wrong_archive_hash) ... ok\ntest_alternatives (test_prepare.PreparationTests.test_alternatives) ... ok\ntest_duplicate_class (test_prepare.PreparationTests.test_duplicate_class) ... ok\ntest_existing_output (test_prepare.PreparationTests.test_existing_output) ... ok\ntest_external_stage_rejected (test_prepare.PreparationTests.test_external_stage_rejected) ... ok\ntest_missing_class (test_prepare.PreparationTests.test_missing_class) ... ok\ntest_missing_typo (test_prepare.PreparationTests.test_missing_typo) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 0.004s\n\nOK\nEXIT:0\n",
+      "error": null
+    },
+    {
+      "type": "bash",
+      "status": "completed",
+      "input": {
+        "command": "bash -n tools/php83/dispatch-rank/run.sh; echo \"run.sh EXIT:$?\"",
+        "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+      },
+      "output": "run.sh EXIT:0\n",
+      "error": null
+    },
+    {
+      "type": "bash",
+      "status": "completed",
+      "input": {
+        "command": "bash -n tools/php83/dispatch-rank/run74.sh; echo \"run74.sh EXIT:$?\"",
+        "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+      },
+      "output": "run74.sh EXIT:0\n",
+      "error": null
+    },
+    {
+      "type": "text",
+      "text": "Local checks pass \u2014 12 tests green and both shell scripts syntactically clean. Now verifying the cross-version safety details."
+    },
+    {
+      "type": "bash",
+      "status": "completed",
+      "input": {
+        "command": "diff -u tools/php83/dispatch-rank/dispatcher-probe.php tools/php83/dispatch-rank/dispatcher74-probe.php; echo \"DIFF-DISPATCHER EXIT:$?\"; echo ===; diff -u tools/php83/dispatch-rank/run.sh tools/php83/dispatch-rank/run74.sh; echo \"DIFF-RUN EXIT:$?\"",
+        "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+      },
+      "output": "--- tools/php83/dispatch-rank/dispatcher-probe.php\t2026-09-26 14:46:10.302420613 -0300\n+++ tools/php83/dispatch-rank/dispatcher74-probe.php\t2026-09-26 14:52:49.303975604 -0300\n@@ -1,5 +1,5 @@\n <?php\n-if(PHP_VERSION_ID < 80300 || PHP_VERSION_ID >= 80400)exit(64);\n+if(PHP_VERSION_ID < 70400 || PHP_VERSION_ID >= 70500)exit(64);\n // Future isolated execution: actual full class, constructor bypass explicitly scoped.\n error_reporting(E_ALL);\n $path=$argv[1]??'';\n@@ -11,7 +11,7 @@\n  $class=new ReflectionClass($object);$properties=[];\n  foreach((new ReflectionObject($object))->getProperties() as $p)$properties[]=[$p->getName(),$p->isPublic(),$p->isDefault()];\n  return ['array'=>(array)$object,'public'=>get_object_vars($object),'exists'=>property_exists($object,'dispatcher'),\n- 'properties'=>$properties,'serialized'=>serialize($object),'class_attributes'=>array_map(function($a){return $a->getName();},$class->getAttributes())];\n+ 'properties'=>$properties,'serialized'=>serialize($object),'class_attributes'=>array_map(function($a){return $a->getName();},(method_exists($class,'getAttributes')?$class->getAttributes():[]))];\n }\n $r=new ReflectionClass('KalturaFrontController');$o=$r->newInstanceWithoutConstructor();$rows=[['fresh',state($o)]];\n $o->dispatcher=(object)['marker'=>'safe-fixture'];$rows[]=['public-write',state($o)];\n@@ -29,9 +29,9 @@\n $child=(new ReflectionClass('DispatchRankFixtureChild'))->newInstanceWithoutConstructor();\n $child->descendantFixtureProperty=1;$rows[]=['descendant-property-policy',state($child)];\n $controlClass=new ReflectionClass('KalturaDispatcher');\n-if($controlClass->hasMethod('__set') || $controlClass->getAttributes('AllowDynamicProperties'))throw new RuntimeException('Invalid unrelated-class control');\n+if($controlClass->hasMethod('__set') || (method_exists($controlClass,'getAttributes')?$controlClass->getAttributes('AllowDynamicProperties'):[]))throw new RuntimeException('Invalid unrelated-class control');\n $unrelated=KalturaDispatcher::getInstance();$unrelated->unrelatedDiagnosticControl=1;\n $controlWarnings=array_filter($diagnostics,function($d){return $d[0]===E_DEPRECATED && strpos($d[1],'KalturaDispatcher::$unrelatedDiagnosticControl')!==false;});\n-if(count($controlWarnings)!==1)throw new RuntimeException('Unrelated warning missing or duplicated');\n+if(count($controlWarnings)!==0)throw new RuntimeException('Unrelated warning missing or duplicated');\n $rows[]=['unrelated-class-warning-control',get_class($unrelated)];\n echo json_encode(['constructor_executed'=>true,'request_parser_exercised'=>false,'source_sha256'=>hash_file('sha256',$path),'rows'=>$rows,'diagnostics'=>$diagnostics],JSON_THROW_ON_ERROR).\"\\n\";\nDIFF-DISPATCHER EXIT:1\n===\n--- tools/php83/dispatch-rank/run.sh\t2026-09-26 14:46:10.304420621 -0300\n+++ tools/php83/dispatch-rank/run74.sh\t2026-09-26 14:52:49.303975604 -0300\n@@ -1,15 +1,15 @@\n #!/usr/bin/env bash\n set -euo pipefail\n-[[ $# == 2 && $2 =~ ^[0-9a-f]{64}$ && $(hostname) == kaltura-php83-lab ]] || exit 64\n-case \"$1\" in original|public-comparison|attribute-comparison|rank) ;; *) exit 64;; esac\n-base=/home/vagrant/php-dispatch-rank-observation-v1\n+[[ $# == 2 && $2 =~ ^[0-9a-f]{64}$ && $(hostname) == kaltura-php74-baseline ]] || exit 64\n+case \"$1\" in original|public-comparison|attribute-comparison) ;; *) exit 64;; esac\n+base=/home/vagrant/php-dispatcher74-observation-v1\n cd \"$base\"\n pin=$2\n verify() { echo \"$pin  SHA256SUMS\" | sha256sum --check --strict >/dev/null; sha256sum --check --strict SHA256SUMS >/dev/null; [[ -z $(find . -type l -print -quit) ]]; }\n verify\n finish() { status=$?; trap - EXIT; verify || exit 70; exit \"$status\"; }\n trap finish EXIT\n-probe=dispatcher-probe.php;args=(\"/audit/probe/$1.php\")\n+probe=dispatcher74-probe.php;args=(\"/audit/probe/$1.php\")\n if [[ $1 == rank ]]; then probe=rank-metadata-probe.php;args=();fi\n sudo -n systemd-run --quiet --wait --pipe --collect \\\n  -p User=nobody -p Group=nogroup -p PrivateNetwork=yes \\\n@@ -17,5 +17,5 @@\n  -p PrivateDevices=yes -p ProtectSystem=strict -p ProtectHome=yes -p PrivateTmp=yes \\\n  -p NoNewPrivileges=yes -p 'InaccessiblePaths=-/opt/kaltura /root' \\\n  -p \"BindReadOnlyPaths=$base:/audit/probe\" -p MemoryMax=128M -p RuntimeMaxSec=30 \\\n- /usr/bin/php8.3 -n -d display_errors=stderr -d log_errors=0 \\\n+ /usr/bin/php7.4 -n -d extension=json -d display_errors=stderr -d log_errors=0 \\\n  -d allow_url_fopen=0 -d allow_url_include=0 /audit/probe/\"$probe\" \"${args[@]}\"\nDIFF-RUN EXIT:1\n",
+      "error": null
+    },
+    {
+      "type": "bash",
+      "status": "completed",
+      "input": {
+        "command": "diff -u tools/php83/dispatch-rank/observe.py tools/php83/dispatch-rank/observe74.py; echo \"DIFF-OBSERVE EXIT:$?\"",
+        "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+      },
+      "output": "--- tools/php83/dispatch-rank/observe.py\t2026-09-26 14:52:49.303975604 -0300\n+++ tools/php83/dispatch-rank/observe74.py\t2026-09-26 14:52:49.303975604 -0300\n@@ -2,10 +2,11 @@\n \"\"\"Four actual native83 observations, not a selector or SQL/API acceptance gate.\"\"\"\n import argparse,hashlib,io,json,os,pathlib,subprocess,tarfile,tempfile\n import prepare\n+import observe as native\n ROOT=prepare.ROOT;HERE=pathlib.Path(__file__).resolve().parent\n-STAGE='/home/vagrant/php-dispatch-rank-observation-v1'\n+STAGE='/home/vagrant/php-dispatcher74-observation-v1'\n SOURCE=ROOT/'doc/php83/evidence/dispatch-rank/preparation-r3'\n-SSH=['ssh','-T','-F','/tmp/kaltura-php83-ssh.conf','php83']\n+SSH=['ssh','-T','-F','/tmp/kaltura-php74-ssh.conf','baseline74']\n def remote(cmd,data=None):return subprocess.run(SSH+[cmd],input=data,capture_output=True,timeout=120)\n def checked(cmd,data=None):\n  p=remote(cmd,data)\n@@ -18,14 +19,10 @@\n   os.replace(n,path)\n  finally:pathlib.Path(n).unlink(missing_ok=True)\n def files():\n- original=(SOURCE/'original.php').read_bytes()\n- if prepare.sha(original)!=prepare.SOURCE_PINS[prepare.PATHS[0]]:raise ValueError('Wrong target')\n- data={name+'.php':b for name,b in prepare.variants(original).items()}\n- for p,pin in prepare.SOURCE_PINS.items():\n-  b=(SOURCE/'source'/p).read_bytes()\n-  if prepare.sha(b)!=pin:raise ValueError('Dependency drift')\n-  data['source/'+p]=b\n- for name in ['dispatcher-probe.php','rank-metadata-probe.php','run.sh']:data[name]=(HERE/name).read_bytes()\n+ data=native.files()\n+ del data['rank-metadata-probe.php'];del data['dispatcher-probe.php']\n+ data['dispatcher74-probe.php']=(HERE/'dispatcher74-probe.php').read_bytes()\n+ data['run.sh']=(HERE/'run74.sh').read_bytes()\n  return data\n \n def observe(out,reuse=False):\n@@ -33,7 +30,7 @@\n  sums=''.join(h+'  '+p+'\\n' for p,h in sorted(identities.items())).encode();pin=prepare.sha(sums);data['SHA256SUMS']=sums\n  out.open('x').close();result={'status':'INITIALIZING','records':[],'files':identities,'checksum_manifest_sha256':pin,'collector_sha256':prepare.sha(pathlib.Path(__file__).read_bytes()),'application_acceptance':False}\n  def snapshot(label):\n-  p=out.with_name(out.stem+'-'+label+'.json');cmd=['python3',str(ROOT/'tools/php83/exp12-api/runtime83-identity.py'),str(p)]\n+  p=out.with_name(out.stem+'-'+label+'.json');cmd=['python3',str(ROOT/'tools/php83/exp12-api/runtime-identity.py'),str(p)]\n   r=subprocess.run(cmd,capture_output=True,text=True,timeout=150)\n   result.setdefault('snapshot_commands',[]).append({'command':cmd,'exit':r.returncode,'stdout':r.stdout,'stderr':r.stderr})\n   if r.returncode:raise RuntimeError('Runtime identity collection failed')\n@@ -52,16 +49,16 @@\n  try:\n   result['runtime_before']=snapshot('runtime-before');atomic(out,result)\n   if reuse:\n-   checked('test \"$(hostname)\" = kaltura-php83-lab && test -d '+STAGE);staged=True\n+   checked('test \"$(hostname)\" = kaltura-php74-baseline && test -d '+STAGE);staged=True\n   else:\n-   checked('test \"$(hostname)\" = kaltura-php83-lab && mkdir '+STAGE)\n+   checked('test \"$(hostname)\" = kaltura-php74-baseline && mkdir '+STAGE)\n    buf=io.BytesIO()\n    with tarfile.open(fileobj=buf,mode='w') as tar:\n     for p,b in data.items():\n      member=tarfile.TarInfo(p);member.size=len(b);member.mode=0o444;tar.addfile(member,io.BytesIO(b))\n    checked('tar --no-same-owner -xf - -C '+STAGE,buf.getvalue());checked('sudo -n chown -R root:root '+STAGE+' && sudo -n chmod -R a-w '+STAGE);staged=True\n   result['source_before']=source_identity();atomic(out,result)\n-  for mode in ['original','public-comparison','attribute-comparison','rank']:\n+  for mode in ['original','public-comparison','attribute-comparison']:\n    cmd='bash '+STAGE+'/run.sh '+mode+' '+pin;result['pending']=mode;atomic(out,result);r=remote(cmd)\n    stdout=r.stdout.decode();stderr=r.stderr.decode()\n    try:body=json.loads(stdout)\nDIFF-OBSERVE EXIT:1\n",
+      "error": null
+    },
+    {
+      "type": "bash",
+      "status": "error",
+      "input": {
+        "command": "cat /tmp/kaltura-php83-ssh.conf; echo ===; cat /tmp/kaltura-php74-ssh.conf",
+        "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+      },
+      "output": null,
+      "error": "The user rejected permission to use this specific tool call."
+    }
+  ],
+  "status": "NOT_EXECUTED_RUNTIME_PERMISSION_DENIED",
+  "actual_local_tests": 12,
+  "actual_shell_syntax_checks": 2,
+  "runtime_processes": 0,
+  "denied_action": "cat /tmp/kaltura-php83-ssh.conf; echo ===; cat /tmp/kaltura-php74-ssh.conf",
+  "no_retry_or_bypass": true
+}

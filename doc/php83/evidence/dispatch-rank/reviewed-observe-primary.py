@@ -28,7 +28,7 @@ def files():
  for name in ['dispatcher-probe.php','rank-metadata-probe.php','run.sh']:data[name]=(HERE/name).read_bytes()
  return data
 
-def observe(out,reuse=False):
+def observe(out):
  data=files();identities={p:prepare.sha(b) for p,b in data.items()}
  sums=''.join(h+'  '+p+'\n' for p,h in sorted(identities.items())).encode();pin=prepare.sha(sums);data['SHA256SUMS']=sums
  out.open('x').close();result={'status':'INITIALIZING','records':[],'files':identities,'checksum_manifest_sha256':pin,'collector_sha256':prepare.sha(pathlib.Path(__file__).read_bytes()),'application_acceptance':False}
@@ -51,15 +51,12 @@ def observe(out,reuse=False):
  staged=False
  try:
   result['runtime_before']=snapshot('runtime-before');atomic(out,result)
-  if reuse:
-   checked('test "$(hostname)" = kaltura-php83-lab && test -d '+STAGE);staged=True
-  else:
-   checked('test "$(hostname)" = kaltura-php83-lab && mkdir '+STAGE)
-   buf=io.BytesIO()
-   with tarfile.open(fileobj=buf,mode='w') as tar:
-    for p,b in data.items():
-     member=tarfile.TarInfo(p);member.size=len(b);member.mode=0o444;tar.addfile(member,io.BytesIO(b))
-   checked('tar --no-same-owner -xf - -C '+STAGE,buf.getvalue());checked('sudo -n chown -R root:root '+STAGE+' && sudo -n chmod -R a-w '+STAGE);staged=True
+  checked('test "$(hostname)" = kaltura-php83-lab && mkdir '+STAGE)
+  buf=io.BytesIO()
+  with tarfile.open(fileobj=buf,mode='w') as tar:
+   for p,b in data.items():
+    member=tarfile.TarInfo(p);member.size=len(b);member.mode=0o444;tar.addfile(member,io.BytesIO(b))
+  checked('tar --no-same-owner -xf - -C '+STAGE,buf.getvalue());checked('sudo -n chown -R root:root '+STAGE+' && sudo -n chmod -R a-w '+STAGE);staged=True
   result['source_before']=source_identity();atomic(out,result)
   for mode in ['original','public-comparison','attribute-comparison','rank']:
    cmd='bash '+STAGE+'/run.sh '+mode+' '+pin;result['pending']=mode;atomic(out,result);r=remote(cmd)
@@ -79,4 +76,4 @@ def observe(out,reuse=False):
   atomic(out,result)
  return result
 if __name__=='__main__':
- p=argparse.ArgumentParser();p.add_argument('output',type=pathlib.Path);p.add_argument('--reuse-reviewed-stage',action='store_true');a=p.parse_args();r=observe(a.output,a.reuse_reviewed_stage);print(json.dumps({'status':r['status'],'records':len(r['records'])}));raise SystemExit(2)
+ p=argparse.ArgumentParser();p.add_argument('output',type=pathlib.Path);a=p.parse_args();r=observe(a.output);print(json.dumps({'status':r['status'],'records':len(r['records'])}));raise SystemExit(2)

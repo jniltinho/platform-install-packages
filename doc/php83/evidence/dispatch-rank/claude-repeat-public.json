@@ -1,0 +1,6 @@
+{
+  "status": "NOT_EXECUTED_QUOTA",
+  "cli_exit": 1,
+  "result": "You've hit your session limit \u00b7 resets 4:20pm (America/Sao_Paulo)",
+  "is_error": true
+}

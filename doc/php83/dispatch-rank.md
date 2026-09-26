@@ -174,3 +174,34 @@ No independent runtime repeat or PHP74 state comparison has run at this checkpoi
 The class-scoped prototype stays held; no source ZIP selection follows. A brief
 PHP74 helper-only comparison and independent native repeat are separately queued;
 whole exp12 is never claimed PHP74-compatible.
+
+## Repeat preparation / blocked execution (2026-09-26)
+
+The separately versioned PHP74 helper changes only runtime guard, reflection API
+availability and the expected absence of dynamic-property deprecations. It uses
+the same full source variants and cached real constructor; it does not claim
+whole-exp12 PHP74 compatibility. The native observer now has an explicit
+`--reuse-reviewed-stage` option which verifies all exact stage bytes before any
+probe; original primary collector bytes remain in
+[reviewed-observe-primary.py](evidence/dispatch-rank/reviewed-observe-primary.py).
+
+Actual Claude returned session quota and executed no tests or runtime probes.
+Actual OpenCode free executed12 local tests and two separate shell syntax checks;
+an initial incorrect unittest module invocation failed and the correct test
+working directory then passed. Its later explicit request
+`cat /tmp/kaltura-php83-ssh.conf; echo ===; cat /tmp/kaltura-php74-ssh.conf`
+was denied by the tool permission boundary. CLI exit0 is **NOT_EXECUTED** for the
+runtime repeat and PHP74 comparison. No configs were read, no VM probes ran, and
+no alternative tool/path/agent was used to bypass that denial. Both labs were
+released. See [public execution evidence](evidence/dispatch-rank/opencode-repeat-public.json)
+and [quota result](evidence/dispatch-rank/claude-repeat-public.json).
+The operator must resolve this access boundary before the blocked operation can
+continue. The prepared runtime helpers remain unexecuted; independent native
+repeat, PHP74 state parity and successful rank-body tests remain open.
+
+The historical full-source snapshots intentionally preserve upstream whitespace.
+Consequently `git show --check 30c397af` is not clean for those snapshots; they
+must not be normalized because their hashes are evidence. A separate check of
+new harness and authored Markdown is clean. No global whitespace exemption was
+added. Private CLI streams were reduced to public execution/text events; thought
+fields and hook history are not part of the committed report.
