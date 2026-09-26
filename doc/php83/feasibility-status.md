@@ -5,12 +5,21 @@ This is partial evidence, **not a compatibility or migration approval**.
 
 ## Current evidence boundary
 
-The newest twice-built experimental artifact is exp12. Its bounded actual-artifact
-compiler and runtime checks now have primary and independent repetitions.
-[Test status](test-status.md) links the exact ZIP, whole-source compiler and
-API/CLI evidence. Exp12 retains seven compiler rejections and 17 API diagnostic
-groups / 371 events; its Criteria repair removes one 132-event group relative
-to exp11. Do not interpret this bounded workload as complete application acceptance.
+The newest twice-built experimental artifact is exp13, SHA256
+`6d0bc4947207e6c5457b7843948d263aa8d5f251480e58cbf9086c0add79a944`.
+[Test status](test-status.md) links primary and actual Claude independent
+repetitions: whole-artifact compilation (11,785 files; seven retained rejections),
+four API modes/48 CLI rows,40 XML processes and88 credential/cache processes.
+The bounded API workload decreases from exp12's17 groups/371 events to exp13's
+one group/one event. Its raw API stderr remains UNCOMPARED; typed logical results
+and sanitized diagnostic metadata, not unrestricted raw logs, are reconciled.
+
+These fixtures do not establish complete AIO acceptance. The baseline rehearsal
+stopped before valid USER authentication/upload because exception traces expose
+synthetic-secret prefixes. A separate logging-policy decision remains pending.
+Old readers reject the candidate cache wire format; cache recovery/rollback is
+not accepted. The remaining rank-related source investigation is held and not
+part of exp13. No go/no-go, package integration or release approval follows.
 
 Complete application/distro/performance/recovery acceptance and production
 integration approval are still open. [Dependency attribution](dependency-attribution-followup.md)
