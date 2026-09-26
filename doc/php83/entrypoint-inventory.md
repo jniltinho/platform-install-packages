@@ -1,4 +1,41 @@
-# Entrypoint candidate inventory — prepared, no real-input execution
+# Entrypoint candidate inventory — actual authorized archive checkpoint
+
+
+## Current checkpoint: actual inputs, independently repeated
+
+After the operator explicitly released the requested accesses, the previously
+reviewed unchanged builder executed against the pinned public Noble repository
+bundle and original Rigel ZIP. Codex primary and actual Claude CLI repeat both
+exited0; the reports are byte-identical and builder/bundle/ZIP identities remained
+unchanged. No package installation, maintainer hook, extracted-member execution,
+VM or production operation occurred. The earlier denial is preserved below as
+history, not silently relabeled successful.
+
+- 17 packages;73 control members;43,782 payload members.
+- 37,149 regular payload files:18,335 candidate-scanned,18,813 excluded by the
+  visible policy,1 oversize-unscanned. Links6 and directories6,627 are separate.
+- 18,336 candidate records, including the oversize record; **not18,336 active
+  PHP entrypoints**. Executable/non-PHP text can be a candidate.
+- 5,489 invocation regex rows:8 literal PHP targets,5,481 unresolved
+  (5,355 dynamic,69 relative,57 option-led). These are not confirmed defects.
+- Original ZIP contributes11,784 PHP-family files, still only a count.
+
+[Result and storage identities](evidence/entrypoint-inventory/authorized-real-r1/result.json)
+record raw report SHA256
+`42c3e2411c3973e1f5591d4aacd31d1af2a7a05929af935992ab2ebcdae67501`.
+The byte-identical37,082,593-byte reports are stored once as deterministic gzip
+(`inventory.json.gz`,2,674,735bytes); decompression was checked byte-exact. Raw
+local primary/repeat copies are ignored, not omitted from the reproducible inputs.
+[Claude public execution](evidence/entrypoint-inventory/authorized-real-r1/claude-public.json)
+retains tool commands/results and the scoped conclusion. This is independent
+execution of the same builder, not an independent semantic classifier.
+
+**T0-04 remains incomplete:** original-tree entrypoint discovery, source/package
+owner reconciliation, active-path classification and finding triage remain open.
+Command-substitution misses, regex false positives, exclusions and2MiB limit are
+unchanged. No application/runtime/performance/package/release acceptance follows.
+
+## Historical preparation before access confirmation
 
 Status: **PREPARED / NOT_EXECUTED_REAL_INPUTS**. T0-04 remains incomplete.
 The first OpenCode attempt encountered an external-directory permission denial

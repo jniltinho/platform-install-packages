@@ -95,7 +95,7 @@ two provenance fixes. Codex cross-checked34 synthetic tests and six file hashes.
 This is harness integrity only: native R2 remains unexecuted and old stage
 validation remains stale. See [serialization evidence](serialization-contracts.md).
 
-### Current execution restrictions
+### Historical execution restrictions, superseded by explicit access confirmation
 
 The subsequent dispatcher repeat/PHP74 attempt did not execute PHP: Claude hit
 its quota and OpenCode rejected reading the two lab SSH configuration files.
@@ -105,6 +105,16 @@ operation. Both lab reservations were released. Await explicit operator access
 authorization; do not repeat the denied operation through another executor.
 Baseline privacy changes also await the separately presented policy approval.
 No release, package integration, task completion or production change follows.
+
+### Access-confirmed follow-up
+
+The operator subsequently confirmed the requested audit/SSH/temporary/lab
+accesses. New executions are separate phases; prior denials remain recorded and
+any new denial must still stop the affected operation. Production/release gates
+are unchanged. The actual [entrypoint-candidate inventory](entrypoint-inventory.md)
+now covers17 published packages/43,782 payload members with primary and actual
+Claude repeat byte-identical. Original-tree discovery, source-owner reconciliation
+and active-path classification remain open; no broad task checkbox closes.
 
 ## Historical artifact-runtime checkpoint: exp11 real-artifact regression
 
