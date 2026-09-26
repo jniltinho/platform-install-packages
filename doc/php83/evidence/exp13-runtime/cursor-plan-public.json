@@ -1,0 +1,13 @@
+{
+  "exit": 0,
+  "stdout_sha256": "495b7d8e48ce0dac3b9493af5e51708945fb8acce902aa30224d6678e26657af",
+  "stderr": "",
+  "review": {
+    "type": "result",
+    "subtype": "success",
+    "is_error": false,
+    "duration_ms": 82766,
+    "result": "Revis\u00e3o somente leitura do plano exp13 e dos artefatos citados \u2014 sem edi\u00e7\u00f5es, labs ou execu\u00e7\u00e3o.Vou cruzar o plano com os seams de pin/cleanup em `collect.py`, `stage.sh` e `batch.py`.**N\u00e3o READY_PLAN_ONLY** \u2014 tr\u00eas lacunas concretas no plano (revis\u00e3o documental; sem execu\u00e7\u00e3o).\n\n### Defects\n1. **Prior/current pin** \u2014 `collect.py`/`batch.py` amarram `previous_artifact` a `/home/vagrant/php-exp11-regression`. O plano cita o ZIP exp12 `de5e61\u2026` e a matriz `exp12/83`+`exp13/83`, mas **n\u00e3o exige** remapeamento do join prior \u2192 \u00e1rvore/verificador exp12 congelado (`de5e61\u2026`, path tipo `php-exp12-regression`) com current = pin exp13 ainda UNASSIGNED e original = `58d534\u2026`. Risco: copiar o seam e continuar a provar exp11 como \u201cprevious\u201d.\n2. **NOT_RERUN** \u2014 h\u00e1 \u201cjoins \u2260 nova execu\u00e7\u00e3o\u201d e `not-run`, mas **falta status obrigat\u00f3rio** (ex. `NOT_RERUN`) distinto de pass fresco / `not-run` diferido, para fam\u00edlias de fonte inalterada joinadas s\u00f3 por hash.\n3. **Prioridade API4+CLI48** \u2014 a fatia priorizada est\u00e1 certa; o contrato ordenado \u00a73 encadeia `collect-curly`/`collect-additions` no mesmo receita inicial **sem gate expl\u00edcito** \u201cprimeiro feedback = s\u00f3 API4+CLI48\u201d.\n\n### O que j\u00e1 est\u00e1 ok (limites, n\u00e3o aceite)\nPin exp13 UNASSIGNED; n\u00e3o editar exp12 congelado; cleanup/identidades frescas; diagn\u00f3sticos \u2260 forecast 371; C\u2192O incompatibilidade expl\u00edcita; sem exigir 134+38+91 antes do primeiro feedback; sem escopo de release. Pin exp12 no plano bate com `artifact-sha256.txt`.",
+    "session_id": "056c60f6-acc7-45e3-aa62-5b48ea1130f6"
+  }
+}

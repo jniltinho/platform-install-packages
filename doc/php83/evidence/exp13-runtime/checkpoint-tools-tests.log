@@ -1,0 +1,49 @@
+test_cli_inventory (test_adaptation.Adaptation.test_cli_inventory) ... ok
+test_exact_pin (test_adaptation.Adaptation.test_exact_pin) ... ok
+test_parent_frozen (test_adaptation.Adaptation.test_parent_frozen) ... ok
+test_prior_references (test_adaptation.Adaptation.test_prior_references) ... ok
+test_stage_scope (test_adaptation.Adaptation.test_stage_scope) ... ok
+test_baseline_failure_is_not_parity_success (test_collector.Exp12AcceptanceTests.test_baseline_failure_is_not_parity_success) ... ok
+test_candidate_failure_is_not_parity_success (test_collector.Exp12AcceptanceTests.test_candidate_failure_is_not_parity_success) ... ok
+test_cleanup_failure_prevents_success (test_collector.Exp12AcceptanceTests.test_cleanup_failure_prevents_success) ... ok
+test_cleanup_timeout_retains_records_and_postsource (test_collector.Exp12AcceptanceTests.test_cleanup_timeout_retains_records_and_postsource) ... ok
+test_complete_matrix_success (test_collector.Exp12AcceptanceTests.test_complete_matrix_success) ... ok
+test_partial_records_and_both_post_checks_survive_failure (test_collector.Exp12AcceptanceTests.test_partial_records_and_both_post_checks_survive_failure) ... ok
+test_unexpected_stdout_is_rejected_and_not_persisted (test_collector.Exp12AcceptanceTests.test_unexpected_stdout_is_rejected_and_not_persisted) ... ok
+test_unrelated_original_failure_is_not_signature_control (test_collector.Exp12AcceptanceTests.test_unrelated_original_failure_is_not_signature_control) ... ok
+test_wrong_prior_pin_rejected (test_collector.Exp12AcceptanceTests.test_wrong_prior_pin_rejected) ... ok
+test_malformed_startup_stops_known_unit (test_collector.Exp12CleanupTests.test_malformed_startup_stops_known_unit) ... ok
+test_startup_timeout_stops_known_unit (test_collector.Exp12CleanupTests.test_startup_timeout_stops_known_unit) ... ok
+test_untrusted_identity_cannot_choose_cleanup_target (test_collector.Exp12CleanupTests.test_untrusted_identity_cannot_choose_cleanup_target) ... ok
+test_target_runtime_and_baseline_are_explicit (test_collector.Exp12MatrixTests.test_target_runtime_and_baseline_are_explicit) ... ok
+test_artifact (test_identities.IdentityTests.test_artifact) ... ok
+test_bool_exit (test_identities.IdentityTests.test_bool_exit) ... ok
+test_canonical_duplicate (test_identities.IdentityTests.test_canonical_duplicate) ... ok
+test_collector (test_identities.IdentityTests.test_collector) ... ok
+test_command (test_identities.IdentityTests.test_command) ... ok
+test_distinct_paths (test_identities.IdentityTests.test_distinct_paths) ... ok
+test_duplicate_paths (test_identities.IdentityTests.test_duplicate_paths) ... ok
+test_equal (test_identities.IdentityTests.test_equal) ... ok
+test_identity (test_identities.IdentityTests.test_identity) ... ok
+test_native_identity (test_identities.IdentityTests.test_native_identity) ... ok
+test_drift (test_original_sources.OriginalSources.test_drift) ... ok
+test_extra (test_original_sources.OriginalSources.test_extra) ... ok
+test_missing (test_original_sources.OriginalSources.test_missing) ... ok
+test_real_pinned_archive (test_original_sources.OriginalSources.test_real_pinned_archive) ... ok
+test_extra_data (test_pin.ArtifactPin.test_extra_data) ... ok
+test_missing (test_pin.ArtifactPin.test_missing) ... ok
+test_pending (test_pin.ArtifactPin.test_pending) ... ok
+test_valid (test_pin.ArtifactPin.test_valid) ... ok
+test_wrong_length (test_pin.ArtifactPin.test_wrong_length) ... ok
+
+----------------------------------------------------------------------
+Ran 37 tests in 0.114s
+
+OK
+{"functional_checks_passed": false, "comparisons": [{"runtime": "83", "tree": "exp12", "matches_baseline": false}, {"runtime": "83", "tree": "exp13", "matches_baseline": false}], "cleanup": {"unit": "php83-exp13-api-e8470bdf270546b3b35f1d37fa827864", "is_active_output": "inactive", "stopped": true}}
+{"functional_checks_passed": false, "comparisons": [{"runtime": "83", "tree": "exp12", "matches_baseline": true}, {"runtime": "83", "tree": "exp13", "matches_baseline": false}], "cleanup": {"unit": "php83-exp13-api-b0adf101c893433ea5863d7150dbfff2", "is_active_output": "inactive", "stopped": true}}
+{"functional_checks_passed": false, "comparisons": [{"runtime": "83", "tree": "exp12", "matches_baseline": true}, {"runtime": "83", "tree": "exp13", "matches_baseline": true}], "cleanup": {"unit": "php83-exp13-api-82eb75eab5674c8db3a87645713e88be", "is_active_output": "active", "stopped": false}}
+{"functional_checks_passed": false, "comparisons": [{"runtime": "83", "tree": "exp12", "matches_baseline": true}, {"runtime": "83", "tree": "exp13", "matches_baseline": true}], "cleanup": {"unit": "php83-exp13-api-3238649106544a2a97db6ceb318f6673", "stopped": false, "error_type": "TimeoutExpired"}}
+{"functional_checks_passed": true, "comparisons": [{"runtime": "83", "tree": "exp12", "matches_baseline": true}, {"runtime": "83", "tree": "exp13", "matches_baseline": true}], "cleanup": {"unit": "php83-exp13-api-f120e3b1850347b6a24efe5c6e14d4c6", "is_active_output": "inactive", "stopped": true}}
+{"functional_checks_passed": false, "comparisons": [{"runtime": "83", "tree": "exp12", "matches_baseline": true}, {"runtime": "83", "tree": "exp13", "matches_baseline": false}], "cleanup": {"unit": "php83-exp13-api-331cd058b6be41b89817e45ff09a8e94", "is_active_output": "inactive", "stopped": true}}
+{"functional_checks_passed": false, "comparisons": [{"runtime": "83", "tree": "exp12", "matches_baseline": true}, {"runtime": "83", "tree": "exp13", "matches_baseline": true}], "cleanup": {"unit": "php83-exp13-api-c4ce92f4f76f4f4a9ec37d0733485b5e", "is_active_output": "inactive", "stopped": true}}

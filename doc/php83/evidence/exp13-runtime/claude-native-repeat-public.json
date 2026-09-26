@@ -1,0 +1,13 @@
+{
+  "exit": 0,
+  "stdout_sha256": "84b111ee0c5e85430cb8f765bdb7464e4b5638157c113783192001a0803bfdcf",
+  "stderr": "",
+  "review": {
+    "session_id": "7570a7b9-bc23-4392-a159-e7f2784f5908",
+    "is_error": false,
+    "subtype": "success",
+    "result": "Os dois comandos rodaram em sequ\u00eancia, em primeiro plano, e cada um terminou com exit 0. N\u00e3o fiz nenhuma edi\u00e7\u00e3o, review ou mudan\u00e7a de escopo.\n\n| Comando | Exit |\n|---|---|\n| `python3 doc/php83/evidence/exp13-runtime/claude74-orchestrator.py` | **0** |\n| `python3 doc/php83/evidence/exp13-runtime/claude83-orchestrator.py` | **0** |\n\n**O que os `.json` mostram (s\u00f3 status e contagens):**\n- **`claude-api.json`:** `records=4`, `functional_checks_passed=true`, `original83_signature_control=true`, `unsupported_cases=2`, `application_acceptance=false`. Um dos 4 registros saiu com returncode 1 e `signature_failure=true`; os outros tr\u00eas sa\u00edram com 0. As 2 compara\u00e7\u00f5es (83/exp12 e 83/exp13) deram `matches_baseline=true`.\n- **`claude-cli74.json`:** 12 linhas, todas com exit 0; `unsupported_cases=2`; 15253 arquivos extra\u00eddos verificados.\n- **`claude-cli83.json`:** 36 linhas, 32 com exit 0 e **4 com exit 255**; `unsupported_cases=0`; 15253 arquivos verificados.\n- **CLI:** 12 + 36 = 48 linhas, o que confere com o esperado de CLI48.\n- **Pin do ZIP:** `6d0bc494\u2026a944` nos dois hosts.\n- **Snapshots antes/depois:** os pares runtime e original de 74 e de 83 s\u00e3o id\u00eanticos byte a byte. Os coletores remotos sa\u00edram com exit 0 e stderr vazio.\n\n**Limita\u00e7\u00f5es:**\n- Pelo que diz o pr\u00f3prio `claude-api.json` (`original83_signature_control`), o registro com returncode 1 parece ser o controle de assinatura, ou seja, uma falha esperada. N\u00e3o verifiquei isso.\n- Tamb\u00e9m n\u00e3o verifiquei se as 4 linhas com exit 255 no CLI83 s\u00e3o esperadas. Para isso seria preciso comparar com a execu\u00e7\u00e3o prim\u00e1ria (`cli83-primary.json`), e voc\u00ea pediu para n\u00e3o fazer nenhum review novo.\n- Nenhum dos `.json` que li registra a limpeza do DB sint\u00e9tico. O \u00fanico sinal de que ela ocorreu \u00e9 o exit 0 dos orquestradores.\n- `application_acceptance=false` em todos os arquivos, ent\u00e3o isso n\u00e3o \u00e9 aceita\u00e7\u00e3o da aplica\u00e7\u00e3o.",
+    "type": "result",
+    "duration_ms": 59033
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "status": "PASS_BOUNDED_API4_CLI48_ACTUAL_ARTIFACT_REPEAT",
+  "api": {
+    "logical_rows": 4,
+    "independent_rows": [
+      {
+        "runtime": "74",
+        "tree": "original",
+        "independent_equal": true,
+        "diagnostic_groups": 1,
+        "diagnostic_events": 6
+      },
+      {
+        "runtime": "83",
+        "tree": "original",
+        "independent_equal": true,
+        "diagnostic_groups": 15,
+        "diagnostic_events": 15
+      },
+      {
+        "runtime": "83",
+        "tree": "exp12",
+        "independent_equal": true,
+        "diagnostic_groups": 17,
+        "diagnostic_events": 371
+      },
+      {
+        "runtime": "83",
+        "tree": "exp13",
+        "independent_equal": true,
+        "diagnostic_groups": 1,
+        "diagnostic_events": 1
+      }
+    ],
+    "prior_groups": 17,
+    "prior_events": 371,
+    "candidate_groups": 1,
+    "candidate_events": 1,
+    "remaining_diagnostics": [
+      {
+        "severity": "ApplicationDiagnostic",
+        "path": "/audit/app/api_v3/lib/KalturaEntryService.php",
+        "line": 1836,
+        "count": 1
+      }
+    ],
+    "distinct_owned_database_tokens": true,
+    "diagnostic_contract": "Observed category/path/line/count, not exported secret-bearing native message text; stderr hashes retained but excluded from equality because nonce/temp paths vary."
+  },
+  "cli": {
+    "logical_rows": 48,
+    "positive_rows": 44,
+    "expected_original83_json_failures": 4,
+    "typed_baseline_comparisons": [
+      {
+        "source": "exp12",
+        "ini": "standard",
+        "case": "legacy-json",
+        "typed_equal": true
+      },
+      {
+        "source": "exp12",
+        "ini": "standard",
+        "case": "zend-json",
+        "typed_equal": true
+      },
+      {
+        "source": "exp12",
+        "ini": "standard",
+        "case": "doc-comment",
+        "typed_equal": true
+      },
+      {
+        "source": "exp12",
+        "ini": "standard",
+        "case": "doc-comment-export",
+        "typed_equal": true
+      },
+      {
+        "source": "exp12",
+        "ini": "standard",
+        "case": "doc-comment-consumer",
+        "typed_equal": true
+      },
+      {
+        "source": "exp12",
+        "ini": "minimal",
+        "case": "legacy-json",
+        "typed_equal": true
+      },
+      {
+        "source": "exp12",
+        "ini": "minimal",
+        "case": "zend-json",
+        "typed_equal": true
+      },
+      {
+        "source": "exp12",
+        "ini": "minimal",
+        "case": "doc-comment",
+        "typed_equal": true
+      },
+      {
+        "source": "exp12",
+        "ini": "minimal",
+        "case": "doc-comment-export",
+        "typed_equal": true
+      },
+      {
+        "source": "exp12",
+        "ini": "minimal",
+        "case": "doc-comment-consumer",
+        "typed_equal": true
+      },
+      {
+        "source": "exp13",
+        "ini": "standard",
+        "case": "legacy-json",
+        "typed_equal": true
+      },
+      {
+        "source": "exp13",
+        "ini": "standard",
+        "case": "zend-json",
+        "typed_equal": true
+      },
+      {
+        "source": "exp13",
+        "ini": "standard",
+        "case": "doc-comment",
+        "typed_equal": true
+      },
+      {
+        "source": "exp13",
+        "ini": "standard",
+        "case": "doc-comment-export",
+        "typed_equal": true
+      },
+      {
+        "source": "exp13",
+        "ini": "standard",
+        "case": "doc-comment-consumer",
+        "typed_equal": true
+      },
+      {
+        "source": "exp13",
+        "ini": "minimal",
+        "case": "legacy-json",
+        "typed_equal": true
+      },
+      {
+        "source": "exp13",
+        "ini": "minimal",
+        "case": "zend-json",
+        "typed_equal": true
+      },
+      {
+        "source": "exp13",
+        "ini": "minimal",
+        "case": "doc-comment",
+        "typed_equal": true
+      },
+      {
+        "source": "exp13",
+        "ini": "minimal",
+        "case": "doc-comment-export",
+        "typed_equal": true
+      },
+      {
+        "source": "exp13",
+        "ini": "minimal",
+        "case": "doc-comment-consumer",
+        "typed_equal": true
+      }
+    ],
+    "independent_rows_equal_except_duration": true
+  },
+  "snapshots": {
+    "74-runtime": {
+      "four_snapshots_equal": true,
+      "paths": [
+        "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp13-runtime/primary74-runtime-before.json",
+        "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp13-runtime/primary74-runtime-after.json",
+        "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp13-runtime/claude74-runtime-before.json",
+        "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp13-runtime/claude74-runtime-after.json"
+      ]
+    },
+    "74-original": {
+      "four_snapshots_equal": true,
+      "paths": [
+        "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp13-runtime/primary74-original-before.json",
+        "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp13-runtime/primary74-original-after.json",
+        "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp13-runtime/claude74-original-before.json",
+        "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp13-runtime/claude74-original-after.json"
+      ]
+    },
+    "83-runtime": {
+      "four_snapshots_equal": true,
+      "paths": [
+        "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp13-runtime/primary83-runtime-before.json",
+        "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp13-runtime/primary83-runtime-after.json",
+        "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp13-runtime/claude83-runtime-before.json",
+        "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp13-runtime/claude83-runtime-after.json"
+      ]
+    },
+    "83-original": {
+      "four_snapshots_equal": true,
+      "paths": [
+        "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp13-runtime/primary83-original-before.json",
+        "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp13-runtime/primary83-original-after.json",
+        "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp13-runtime/claude83-original-before.json",
+        "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp13-runtime/claude83-original-after.json"
+      ]
+    }
+  },
+  "application_acceptance": false,
+  "full_original_source_attestation": false,
+  "privacy_acceptance": false
+}

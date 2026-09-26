@@ -1,0 +1,10 @@
+{
+  "exit": 124,
+  "stdout_sha256": "87c871b9fbea6944ca8fe7913d10c80361d0734ef46b49a99aecc28c147561bb",
+  "stderr": "",
+  "public_text": [
+    "Repository-only verification \u2014 running exp13 tests and seam diffs without touching runtimes.",
+    "Tests passed \u2014 now comparing the changed seams against exp12.",
+    "Seam diffs mapped \u2014 now verifying mocks, cleanup guards, and PHP74 exclusions."
+  ]
+}

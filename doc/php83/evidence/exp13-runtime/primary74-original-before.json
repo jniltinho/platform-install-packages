@@ -1,0 +1,27 @@
+{
+  "exit": 0,
+  "original_zip_sha256": "58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28",
+  "expected": {
+    "api_v3/web/index.php": "9322c660865838acf3651fc360e01d8cea297bf0e4df850092998bec2b52bdc5",
+    "api_v3/lib/KalturaFrontController.php": "5f2eeffe526d4a0ee245b6f10f4e9600e0f7c8bcb4a52eef41e3a66bbd9ab7a1",
+    "api_v3/lib/KalturaDispatcher.php": "be20609b269f08cf1317a79046f5b43cddc8be4cd14dd01fbc0d928fdd24fce2",
+    "alpha/config/kConf.php": "d02983c560f6813c3546f2294a324d7a955f669e5b867d56d9a878c397cfa015",
+    "alpha/apps/kaltura/lib/db/KalturaPDO.php": "97b756bed876d42da87f6a023b6ecf7af7c2b8454bb382da56ba9c54acae848d",
+    "alpha/apps/kaltura/lib/Services_JSON.class.php": "6b83716ffb5a10a641293508a58443e3117f24613da4be0c7b038e1cc0851aa9",
+    "vendor/ZendFramework/library/Zend/Json.php": "e9139ee5ad331bd639fa8d2b04781775414c92ffc123a3c2cb6bc26c4f06bd45",
+    "api_v3/lib/reflection/KalturaDocCommentParser.php": "5941bf6b13c889997f2d7158594f65c4bdd89ae142379864eddc782f8d53970d"
+  },
+  "observed": {
+    "alpha/apps/kaltura/lib/Services_JSON.class.php": "6b83716ffb5a10a641293508a58443e3117f24613da4be0c7b038e1cc0851aa9",
+    "alpha/apps/kaltura/lib/db/KalturaPDO.php": "97b756bed876d42da87f6a023b6ecf7af7c2b8454bb382da56ba9c54acae848d",
+    "alpha/config/kConf.php": "d02983c560f6813c3546f2294a324d7a955f669e5b867d56d9a878c397cfa015",
+    "api_v3/lib/KalturaDispatcher.php": "be20609b269f08cf1317a79046f5b43cddc8be4cd14dd01fbc0d928fdd24fce2",
+    "api_v3/lib/KalturaFrontController.php": "5f2eeffe526d4a0ee245b6f10f4e9600e0f7c8bcb4a52eef41e3a66bbd9ab7a1",
+    "api_v3/lib/reflection/KalturaDocCommentParser.php": "5941bf6b13c889997f2d7158594f65c4bdd89ae142379864eddc782f8d53970d",
+    "api_v3/web/index.php": "9322c660865838acf3651fc360e01d8cea297bf0e4df850092998bec2b52bdc5",
+    "vendor/ZendFramework/library/Zend/Json.php": "e9139ee5ad331bd639fa8d2b04781775414c92ffc123a3c2cb6bc26c4f06bd45"
+  },
+  "scope": "Eight directly used entry/dispatch/JSON/reflection sources, NOT complete loaded closure or baseline attestation",
+  "collector_sha256": "85f231348ac2ed1b10adeeba6a6ca9acb2753d3efe360f8a18a2b1740e89324b",
+  "application_acceptance": false
+}

@@ -1,0 +1,19 @@
+test_actual_reconcile (test_compare.Comparator.test_actual_reconcile) ... ok
+test_both_cli_same_bad_exit (test_compare.Comparator.test_both_cli_same_bad_exit) ... ok
+test_cleanup (test_compare.Comparator.test_cleanup) ... ok
+test_current_pin (test_compare.Comparator.test_current_pin) ... ok
+test_drop_remaining_diagnostic (test_compare.Comparator.test_drop_remaining_diagnostic) ... ok
+test_duplicate_api_row (test_compare.Comparator.test_duplicate_api_row) ... ok
+test_duplicate_cli (test_compare.Comparator.test_duplicate_cli) ... ok
+test_ledger_path_escape (test_compare.Comparator.test_ledger_path_escape) ... ok
+test_missing_api_row (test_compare.Comparator.test_missing_api_row) ... ok
+test_missing_ledger_phase (test_compare.Comparator.test_missing_ledger_phase) ... ok
+test_native_cli_stderr (test_compare.Comparator.test_native_cli_stderr) ... ok
+test_orchestrator_drift (test_compare.Comparator.test_orchestrator_drift) ... ok
+test_source_after (test_compare.Comparator.test_source_after) ... ok
+test_wrong_prior (test_compare.Comparator.test_wrong_prior) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.038s
+
+OK
