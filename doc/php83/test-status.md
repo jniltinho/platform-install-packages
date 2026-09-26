@@ -17,6 +17,24 @@ and [execution contract](../../openspec/changes/migrate-kaltura-php83/design.md)
   ran in the isolated labs; no production/package/release acceptance follows.
   No release ETA or application completion percentage is inferred.
 
+## Renewed operator authorization — current work in progress
+
+The operator subsequently confirmed both previously requested items explicitly
+("Autorizar 1,2"): read-only checksum verification and the narrow logging/privacy
+correction. The privacy repair is being prepared and independently reviewed in
+`privacy/trace-policy-v1`; this is authorization, not a passed native or installed
+application result. Published artifacts and production remain unchanged.
+
+A new OpenCode checksum-verification attempt under that authorization again
+received a permission rejection before staging/native execution (`bb710cf5`).
+It is retained separately from the historical denial. Read-only diagnosis found
+OpenCode 1.18.32 with no global permission overrides; its
+[documented external-path approval default](https://dev.opencode.ai/docs/permissions/)
+suggests a noninteractive approval boundary. No permission was
+changed and no rejected read was retried by another executor. A separate request
+for a temporary, strictly read-only two-file permission is pending. Compiler is
+still NOT_EXECUTED; the privacy work proceeds independently in the lab.
+
 ## Current built candidate: exp14 — API/CLI repeated; compiler blocked
 
 [exp14](exp14-candidate.md), committed in `0c152ce1`, was built by Codex and

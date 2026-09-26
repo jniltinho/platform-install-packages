@@ -14,9 +14,9 @@ the sanitized API ledger decreases from one group/event to zero. Raw API stderr
 remains UNCOMPARED. XML/AWS source joins are NOT_RERUN, not fresh execution.
 
 Exp14's whole-artifact compiler run is NOT_EXECUTED: Claude hit a session limit,
-and OpenCode received a new permission rejection before native staging. The
-specific read/verification operation awaits operator confirmation; no executor
-bypasses it. The last actual full compiler repetition is exp13, with11,785 files
+and OpenCode received a new permission rejection before native staging. The operator renewed that authorization explicitly, but a fresh OpenCode
+attempt was rejected again. A temporary, strictly scoped read-only CLI permission
+is now awaiting separate confirmation; no executor bypasses the rejected read. The last actual full compiler repetition is exp13, with11,785 files
 and seven retained rejections. Its independent XML/cache runtime reports remain
 bounded historical evidence for that artifact.
 
@@ -24,8 +24,9 @@ These fixtures do not establish complete AIO acceptance. The baseline rehearsal
 stopped before valid USER authentication/upload because exception traces expose
 synthetic-secret prefixes. The subsequent repeated real logging-pipeline probe
 confirms both the possible Throwable interception point and unresolved intrinsic/
-string exposure paths; no fix was applied. A separate logging-policy decision
-remains pending. Old readers reject the candidate cache wire format, and cache
+string exposure paths; no installed fix was applied. The operator has now explicitly approved the
+narrow logging-policy correction; source preparation and independent review are
+in progress, without an installed-application privacy acceptance. Old readers reject the candidate cache wire format, and cache
 recovery/rollback is not accepted. The rank repair preserves PHP8.3 signature
 behavior but changes PHP7.4 reflection metadata; positive rank persistence remains
 untested. No go/no-go, package integration or release approval follows.
