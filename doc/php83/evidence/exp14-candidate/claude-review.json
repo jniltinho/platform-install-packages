@@ -1,0 +1,86 @@
+{
+  "case": "exp14 conditional rank-signature composition proposal, local-only independent review",
+  "executor": "Claude Code CLI (claude-opus-5-5), local worktree only",
+  "reviewer": "Claude Code CLI (not the proposal author)",
+  "environment": "local worktree platform-install-packages-php83, branch proposal/migrate-kaltura-php83 @0aed2a32 + untracked exp14 files; no VM/SSH/PHP/SQL/ZIP build",
+  "verdict": "PROPOSAL_CONSISTENT_NOT_SELECTED",
+  "identities": {
+    "prepare_py": "b62fcebbcf4b0d410600aafd271ed8a97a89e18733d2dd3d698679aa7f49c094",
+    "failed_attempt_prepare_py": "7e1ca8c6e1e28fbac3b7d8ded7c88f1e64cc028a7a8e3bee10b097b2008144c1",
+    "test_prepare_py": "156f8c94a43e872bca28285e83d2a0a6473555911eecd01411149a06e68e6957",
+    "input_pins_json": "8a92703d197c29dd86541d107f6174a5ab8b9dafb9f5af29d396693f67ab1a72",
+    "proof_pins_json": "4aa600598bbcb02e6f98d28deac771ab4037c37a77440fed91b38f48429c4053",
+    "proposed_manifest_json": "097e0441420b179962feaabb2c1518ac9aa53f93eebb6758468e1680cc1ede9b",
+    "proposed_composition_json": "4403aeafaf2752907088916c43b127f9c88eab6b23e830c6c2e8ead0912328ab",
+    "doc_md": "029c6a683eea8e655c8e7ac22cb182519fee729220866b53af5e398f24811cb6"
+  },
+  "commands": [
+    {
+      "cmd": "PYTHONDONTWRITEBYTECODE=1 timeout 120 python3 tools/php83/exp14-candidate/test_prepare.py -v",
+      "exit": 0,
+      "result": "Ran 7 tests OK",
+      "evidence_prefix": "doc/php83/evidence/exp14-candidate/claude-review-step1.{command,exit,stdout,stderr}"
+    },
+    {
+      "cmd": "local read-only python3 checks of pins, manifest, patch hashes, prepared-r1 bytes and rank native evidence (inline, no writes)",
+      "exit": 0
+    }
+  ],
+  "verified": {
+    "input_pins_match": ["exp13", "rank", "patch", "builder", "replay"],
+    "prior_75_rows_byte_identical": true,
+    "total_rows": 76,
+    "unique_paths": 76,
+    "unique_patch_leaves": 76,
+    "new_target": "api_v3/lib/KalturaEntryService.php",
+    "new_target_absent_from_exp13": true,
+    "delta_modified": 1,
+    "delta_added": 0,
+    "reference_patch_hashes_75_match": true,
+    "new_rank_patch_sha256": "41144c89d6254ba8a9b2396c43b1e89b15ecdce55cabaedcb82c7fce0d825d4b",
+    "new_row_before_after_patch_match_rank_manifest": true,
+    "prepared_r1_bytes": "original/candidate sha match row; length delta 7; declaration occurs once; prefix and suffix around ' = null' byte-identical (body preserved)",
+    "upstream_root_and_sha_match_exp13": true,
+    "prior_selected_manifest_sha256_pinned": true,
+    "selection_authorization_inherited": false,
+    "selection_approved": false,
+    "zip_built": false,
+    "application_acceptance": false,
+    "rank_body_persistence_tested": false,
+    "native_proof": "11 proof pins match; claude-repeat.exit=0; primary-r2 and claude-repeat 4 records each, all exit 0, only 'command' differs, and only by stage token (f6a55ba9... vs 89730a44...); 4 runtime snapshots identical; both validations BOUNDED_SIGNATURE_CONTRACT_PASS, processes 4, omission_calls 16, metadata83_unchanged true, PHP7.4 entryType default available/null -> unavailable/ReflectionException recorded as intentional delta, rank_positive_body_tested false",
+    "failure_retention": "preparation.exit=1 (ValueError 'Independent four-row mismatch') and local-tests.exit=1 (errors=2) retained; attempts/exact-command-r1/prepare.py differs from current only in the records comparison (exact-equality replaced by per-field equality minus command plus stage-token substitution); r2 runs exit 0"
+  },
+  "findings": [
+    {
+      "severity": "low",
+      "file": "tools/php83/exp14-candidate/prepare.py",
+      "line": 33,
+      "summary": "Stage substitution does not require the two stages to be distinct, non-empty or of the owned pattern /home/vagrant/php-rank-signature.<32hex>",
+      "scenario": "A repeat reusing the primary stage, or an empty 'stage' field (str.replace('') inserts the token between every char on both sides), would still pass; current evidence is unaffected (stages differ and match the pattern)."
+    },
+    {
+      "severity": "low",
+      "category": "test-coverage",
+      "file": "tools/php83/exp14-candidate/test_prepare.py",
+      "line": 14,
+      "summary": "No negative test proves the corrected comparator rejects a non-stage command difference or a stdout/stderr/exit difference",
+      "scenario": "test_proof_drift patches sha globally and fails at the first pin, so the new per-record/stage-substitution guard (the only correction since the failed attempt) has no mutation test."
+    },
+    {
+      "severity": "low",
+      "file": "tools/php83/exp14-candidate/prepare.py",
+      "line": 60,
+      "summary": "expected_php_family_files=11785 and body_and_all_other_bytes_preserved/metadata83_unchanged are literals in the composition report, not computed by prepare()",
+      "scenario": "Byte preservation is enforced by rank_bytes and metadata by native_proof, but the 11785 inventory is not re-counted here; it must be verified at build time, not taken from this report."
+    }
+  ],
+  "limits": [
+    "Review is not execution evidence for exp14: no ZIP built, no compiler/API/runtime run; zero remaining API diagnostics is a hypothesis.",
+    "Positive rank body and persistence NOT TESTED; release gate remains open.",
+    "Native rank evidence ran on baseline74 host with a mounted runtime83 binary per claude-repeat-review.json, not on the native83 VM; the repeat's review was same-session Claude, with a separate codex-repeat-comparison.json pinned.",
+    "PHP7.4 parity is intentionally not claimed (entryType default reflection delta).",
+    "Did not re-open original/exp13 ZIPs; archive identity relies on preparation-r2 exit 0 and prepared-r1 bytes.",
+    "Builder-v2 compatibility of the exp14 manifest (it omits exp13-only keys such as privacy_included, conditional_families, cumulative_replacements) not exercised; only 'revision' use was spot-checked."
+  ],
+  "authorization": "Proposal only. This review grants no selection, build, package/CI, production, .20 write or release approval; no files edited or promoted besides this review and the claude-review-step1 evidence."
+}

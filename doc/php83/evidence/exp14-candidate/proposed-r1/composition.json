@@ -1,0 +1,52 @@
+{
+  "status": "PROPOSED_ONLY_NOT_SELECTED",
+  "input_pins": {
+    "exp13": {
+      "path": "doc/php83/evidence/exp13-candidate/selected-r1/manifest.json",
+      "sha256": "4414dee2337cd2858e0553ce73cd9809975d69326be56033bf88bd3599ce81ba"
+    },
+    "rank": {
+      "path": "doc/php83/evidence/rank-signature-repair/prepared-r1/manifest.json",
+      "sha256": "03c0f867111c11e2458c5860afdb8d5faf8bb1abc02b52c5fb70e578fd5ca5e2"
+    },
+    "patch": {
+      "path": "doc/php83/evidence/rank-signature-repair/prepared-r1/rank-signature.patch",
+      "sha256": "41144c89d6254ba8a9b2396c43b1e89b15ecdce55cabaedcb82c7fce0d825d4b"
+    },
+    "builder": {
+      "path": "tools/php83/zip-builder-v2/build.py",
+      "sha256": "3fc3e7f1524c044ef91f390cd6e4836bfeb6b9442ab45fefa6c07d6fcaba1707"
+    },
+    "replay": {
+      "path": "tools/php83/exp13-candidate/prepare.py",
+      "sha256": "f5116dba13a8d16dbded59fcb619ff90447cb8715900218eb2190e72eae590b3"
+    }
+  },
+  "native_proof_pins": {
+    "doc/php83/evidence/rank-signature-repair/primary-r2.json": "2c80f81ee5b6d99cb0b06b702e0bb6223fa615d27216c24fa3af83f4902011ab",
+    "doc/php83/evidence/rank-signature-repair/claude-repeat.json": "2c823e24523b0badc03a6dc403e077ac9e608746bb2a02fb8d01d248dedcc3fc",
+    "doc/php83/evidence/rank-signature-repair/primary-r2-validation.json": "617ab136aadc27888960c2fb4623bab1d6a5b0dc01d05dd5d3b84caaf517b33e",
+    "doc/php83/evidence/rank-signature-repair/claude-repeat-validation.json": "aa797cf72416b3041dd38c621f84bcd0a368333188d6490e6de73e4bf5414df9",
+    "doc/php83/evidence/rank-signature-repair/claude-repeat.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "doc/php83/evidence/rank-signature-repair/claude-repeat-review.json": "0f3468f6a04c7f7ee5c386b3ee40f5bad5c2a20c051a8150379b4f7e37877d9c",
+    "doc/php83/evidence/rank-signature-repair/codex-repeat-comparison.json": "c0857864ea565ecea2b37a484ab64736acab961caea38f55946a3e283392721b",
+    "doc/php83/evidence/rank-signature-repair/primary-r2-runtime-before.json": "e2e61b4fc6cf6ca08f8d97cf3de8fbd7969fc0fb4576f55676e966b020cc701f",
+    "doc/php83/evidence/rank-signature-repair/primary-r2-runtime-after.json": "e2e61b4fc6cf6ca08f8d97cf3de8fbd7969fc0fb4576f55676e966b020cc701f",
+    "doc/php83/evidence/rank-signature-repair/claude-repeat-runtime-before.json": "e2e61b4fc6cf6ca08f8d97cf3de8fbd7969fc0fb4576f55676e966b020cc701f",
+    "doc/php83/evidence/rank-signature-repair/claude-repeat-runtime-after.json": "e2e61b4fc6cf6ca08f8d97cf3de8fbd7969fc0fb4576f55676e966b020cc701f"
+  },
+  "target": "api_v3/lib/KalturaEntryService.php",
+  "before_sha256": "9495b584f73df1f4a11812efa964f57f42562159a405693b71e1731d53fe4dd5",
+  "after_sha256": "b48fd2bb6d94157490294d8acb3fd8918c63d7a35c1ae024529658a4f40c895a",
+  "patch_sha256": "41144c89d6254ba8a9b2396c43b1e89b15ecdce55cabaedcb82c7fce0d825d4b",
+  "deleted_bytes": " = null",
+  "deleted_byte_count": 7,
+  "body_and_all_other_bytes_preserved": true,
+  "metadata83_unchanged": true,
+  "metadata74_intentional_delta": true,
+  "preserved_targets": 75,
+  "total_targets": 76,
+  "expected_php_family_files": 11785,
+  "zip_built": false,
+  "runtime_executed_by_proposer": false
+}

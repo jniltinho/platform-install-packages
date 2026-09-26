@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/exp14-candidate/prepare.py", line 68, in <module>
+    a=p.parse_args();print(json.dumps(prepare(a.original.read_bytes(),a.exp13.read_bytes(),a.output),indent=2))
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/exp14-candidate/prepare.py", line 43, in prepare
+    need(not output.exists(),'Refuse existing proposal');docs,pins=inputs();proof=native_proof();prior=docs['exp13'];rank=docs['rank']
+                                                                                  ^^^^^^^^^^^^^^
+  File "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/exp14-candidate/prepare.py", line 30, in native_proof
+    need(json.dumps(primary['records'],sort_keys=True)==json.dumps(repeat['records'],sort_keys=True) and len(primary['records'])==4,'Independent four-row mismatch')
+  File "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/exp14-candidate/prepare.py", line 12, in need
+    if not ok:raise ValueError(msg)
+              ^^^^^^^^^^^^^^^^^^^^^
+ValueError: Independent four-row mismatch

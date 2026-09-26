@@ -1,0 +1,22 @@
+{
+  "exp13": {
+    "path": "doc/php83/evidence/exp13-candidate/selected-r1/manifest.json",
+    "sha256": "4414dee2337cd2858e0553ce73cd9809975d69326be56033bf88bd3599ce81ba"
+  },
+  "rank": {
+    "path": "doc/php83/evidence/rank-signature-repair/prepared-r1/manifest.json",
+    "sha256": "03c0f867111c11e2458c5860afdb8d5faf8bb1abc02b52c5fb70e578fd5ca5e2"
+  },
+  "patch": {
+    "path": "doc/php83/evidence/rank-signature-repair/prepared-r1/rank-signature.patch",
+    "sha256": "41144c89d6254ba8a9b2396c43b1e89b15ecdce55cabaedcb82c7fce0d825d4b"
+  },
+  "builder": {
+    "path": "tools/php83/zip-builder-v2/build.py",
+    "sha256": "3fc3e7f1524c044ef91f390cd6e4836bfeb6b9442ab45fefa6c07d6fcaba1707"
+  },
+  "replay": {
+    "path": "tools/php83/exp13-candidate/prepare.py",
+    "sha256": "f5116dba13a8d16dbded59fcb619ff90447cb8715900218eb2190e72eae590b3"
+  }
+}

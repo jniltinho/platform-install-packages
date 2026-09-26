@@ -1,0 +1,34 @@
+....E.E
+======================================================================
+ERROR: test_pinned_native_proof (__main__.Proposal.test_pinned_native_proof)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/exp14-candidate/test_prepare.py", line 6, in test_pinned_native_proof
+    def test_pinned_native_proof(self):self.assertEqual(len(m.native_proof()),11)
+                                                            ^^^^^^^^^^^^^^^^
+  File "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/exp14-candidate/prepare.py", line 30, in native_proof
+    need(json.dumps(primary['records'],sort_keys=True)==json.dumps(repeat['records'],sort_keys=True) and len(primary['records'])==4,'Independent four-row mismatch')
+  File "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/exp14-candidate/prepare.py", line 12, in need
+    if not ok:raise ValueError(msg)
+              ^^^^^^^^^^^^^^^^^^^^^
+ValueError: Independent four-row mismatch
+
+======================================================================
+ERROR: test_proposal_preserves75_not_selected (__main__.Proposal.test_proposal_preserves75_not_selected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/exp14-candidate/test_prepare.py", line 21, in test_proposal_preserves75_not_selected
+    d=json.loads((m.ROOT/'doc/php83/evidence/exp14-candidate/proposed-r1/manifest.json').read_bytes());prior=m.inputs()[0]['exp13']
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1021, in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1015, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp14-candidate/proposed-r1/manifest.json'
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.002s
+
+FAILED (errors=2)

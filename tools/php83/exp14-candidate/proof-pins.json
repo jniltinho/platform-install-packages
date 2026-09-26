@@ -1,0 +1,13 @@
+{
+  "doc/php83/evidence/rank-signature-repair/primary-r2.json": "2c80f81ee5b6d99cb0b06b702e0bb6223fa615d27216c24fa3af83f4902011ab",
+  "doc/php83/evidence/rank-signature-repair/claude-repeat.json": "2c823e24523b0badc03a6dc403e077ac9e608746bb2a02fb8d01d248dedcc3fc",
+  "doc/php83/evidence/rank-signature-repair/primary-r2-validation.json": "617ab136aadc27888960c2fb4623bab1d6a5b0dc01d05dd5d3b84caaf517b33e",
+  "doc/php83/evidence/rank-signature-repair/claude-repeat-validation.json": "aa797cf72416b3041dd38c621f84bcd0a368333188d6490e6de73e4bf5414df9",
+  "doc/php83/evidence/rank-signature-repair/claude-repeat.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+  "doc/php83/evidence/rank-signature-repair/claude-repeat-review.json": "0f3468f6a04c7f7ee5c386b3ee40f5bad5c2a20c051a8150379b4f7e37877d9c",
+  "doc/php83/evidence/rank-signature-repair/codex-repeat-comparison.json": "c0857864ea565ecea2b37a484ab64736acab961caea38f55946a3e283392721b",
+  "doc/php83/evidence/rank-signature-repair/primary-r2-runtime-before.json": "e2e61b4fc6cf6ca08f8d97cf3de8fbd7969fc0fb4576f55676e966b020cc701f",
+  "doc/php83/evidence/rank-signature-repair/primary-r2-runtime-after.json": "e2e61b4fc6cf6ca08f8d97cf3de8fbd7969fc0fb4576f55676e966b020cc701f",
+  "doc/php83/evidence/rank-signature-repair/claude-repeat-runtime-before.json": "e2e61b4fc6cf6ca08f8d97cf3de8fbd7969fc0fb4576f55676e966b020cc701f",
+  "doc/php83/evidence/rank-signature-repair/claude-repeat-runtime-after.json": "e2e61b4fc6cf6ca08f8d97cf3de8fbd7969fc0fb4576f55676e966b020cc701f"
+}

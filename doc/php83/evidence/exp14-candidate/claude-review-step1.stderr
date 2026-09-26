@@ -1,0 +1,12 @@
+test_body_mutation (__main__.Proposal.test_body_mutation) ... ok
+test_exact_seven_bytes (__main__.Proposal.test_exact_seven_bytes) ... ok
+test_existing_output (__main__.Proposal.test_existing_output) ... ok
+test_no_change (__main__.Proposal.test_no_change) ... ok
+test_pinned_native_proof (__main__.Proposal.test_pinned_native_proof) ... ok
+test_proof_drift (__main__.Proposal.test_proof_drift) ... ok
+test_proposal_preserves75_not_selected (__main__.Proposal.test_proposal_preserves75_not_selected) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.002s
+
+OK
