@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "function: kaltura-rigel-18.20.0-full.api_v3.lib.KalturaEntryService.KalturaEntryService.anonymousRankEntry\ndirection: both\ncallees_total: 8\ncallees: 8  (rows: name hop; qn = group prefix + \".\" + name)\nkaltura-rigel-18.20.0-full.alpha.lib.model.kvote:\n  kvote 1\nkaltura-rigel-18.20.0-full.api_v3.lib.KalturaBaseService.KalturaBaseService:\n  getKuser 1\nkaltura-rigel-18.20.0-full.api_v3.lib.exceptions.KalturaAPIException:\n  KalturaAPIException 1\nkaltura-rigel-18.20.0-full.plugins.content.caption.search.lib.model.om.BaseCaptionAssetItem.BaseCaptionAssetItem:\n  setEntryId 1\nkaltura-rigel-18.20.0-full.plugins.cue_points.base.lib.model.om.BaseCuePoint.BaseCuePoint:\n  setKuserId 1\nkaltura-rigel-18.20.0-full.plugins.rating.lib.model.RatingCount.RatingCount:\n  setRank 1\nkaltura-rigel-18.20.0-full.plugins.vendor.lib.model.om.BaseVendorIntegration.BaseVendorIntegration:\n  save 1\nkaltura-rigel-18.20.0-full.plugins.vendor.lib.model.om.BaseVendorIntegrationPeer.BaseVendorIntegrationPeer:\n  retrieveByPK 1\ncallers_total: 3\ncallers: 3  (rows: name hop; qn = group prefix + \".\" + name)\nkaltura-rigel-18.20.0-full.api_v3.services.BaseEntryService.BaseEntryService:\n  anonymousRankAction 1\nkaltura-rigel-18.20.0-full.api_v3.services.MediaService.MediaService:\n  anonymousRankAction 1\nkaltura-rigel-18.20.0-full.api_v3.services.MixingService.MixingService:\n  anonymousRankAction 1\n"
+    }
+  ],
+  "isError": false
+}

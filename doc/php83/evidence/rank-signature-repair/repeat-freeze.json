@@ -1,0 +1,10 @@
+{
+  "tools/php83/rank-signature-repair/validate.py": "b0413a9979947f1d34ab80bdf470a098d3d1c4e73e4d6d1b2ec01a42ee2e0b2b",
+  "tools/php83/rank-signature-repair/test_observe.py": "3d0dfd360e7a0bffd0529f51a3dba74cef8cadf75481518d2b2604f50ac47241",
+  "tools/php83/rank-signature-repair/probe.php": "04eb9a4705fe255ac5268984d499ec737c1fa0c9875ef77916f399887e80af49",
+  "tools/php83/rank-signature-repair/observe.py": "fbaf871b6d12c5f5fce7a73bac522b7ea53daa454173333799ec085674a1694f",
+  "tools/php83/rank-signature-repair/run.sh": "cdd60ee5e4b84c7cb79f2eeac48a312f6caee9735000f98d21949308366f7d53",
+  "tools/php83/rank-signature-repair/prepare.py": "d7ad0bed26eb9bf18024158867b42ab502d775b62cd34aa1a8fa3fc2c2d3921f",
+  "tools/php83/rank-signature-repair/test_validate.py": "81a1194820a64806240828bae624998ad630770e1e0812a1e6b71af7d3e8d759",
+  "tools/php83/rank-signature-repair/test_prepare.py": "9665792ae0d25dddc10d48a02d58bc57564127479a5950907db60aa90264eb95"
+}

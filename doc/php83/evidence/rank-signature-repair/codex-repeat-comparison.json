@@ -1,0 +1,17 @@
+{
+  "executor": "Codex independent stored-record comparison",
+  "status": "BOUNDED_REPEAT_MATCH",
+  "inputs": {
+    "doc/php83/evidence/rank-signature-repair/primary-r2.json": "2c80f81ee5b6d99cb0b06b702e0bb6223fa615d27216c24fa3af83f4902011ab",
+    "doc/php83/evidence/rank-signature-repair/claude-repeat.json": "2c823e24523b0badc03a6dc403e077ac9e608746bb2a02fb8d01d248dedcc3fc"
+  },
+  "processes_per_executor": 4,
+  "omissions_per_executor": 16,
+  "only_excluded_record_field": "command fresh owned-stage path token, all other command bytes exact",
+  "metadata74_delta_preserved": true,
+  "raw_stdout_stderr_exact": true,
+  "source_runtime_cross_executor_exact": true,
+  "application_acceptance": false,
+  "rank_positive_body_tested": false,
+  "artifact_selected": false
+}

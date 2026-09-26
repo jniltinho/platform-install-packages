@@ -1,0 +1,93 @@
+{
+  "case": "rank-signature-repair independent repeat of primary-r2 (4 processes: 74/83 x original/candidate) on baseline74",
+  "executor": "Claude Code CLI (claude-opus-5-5), direct execution",
+  "reviewer": "Claude Code CLI (same session); not the harness author",
+  "environment": "local worktree platform-install-packages-php83 + baseline74 (host kaltura-php74-baseline) via /tmp/kaltura-php74-ssh.conf; native83 NOT accessed",
+  "identities": {
+    "runtime_identity_py": "f2985a7d3f054c3a743535009e0ad2937545d05e1c0d9e7c936a24acf13da463",
+    "observe_py": "fbaf871b6d12c5f5fce7a73bac522b7ea53daa454173333799ec085674a1694f",
+    "validate_py": "b0413a9979947f1d34ab80bdf470a098d3d1c4e73e4d6d1b2ec01a42ee2e0b2b",
+    "run_sh": "cdd60ee5e4b84c7cb79f2eeac48a312f6caee9735000f98d21949308366f7d53",
+    "probe_php": "04eb9a4705fe255ac5268984d499ec737c1fa0c9875ef77916f399887e80af49",
+    "checksum_manifest_sha256": "bf62ab40b8150e0e8f989c419ca59852836bd4abc256cd1d3d4b294db61c66b7",
+    "all_match_repeat_freeze_json": true
+  },
+  "commands": [
+    {
+      "cmd": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/rank-signature-repair -p 'test_*.py'",
+      "exit": 0,
+      "result": "Ran 25 tests OK"
+    },
+    {
+      "cmd": "bash -n tools/php83/rank-signature-repair/run.sh",
+      "exit": 0
+    },
+    {
+      "cmd": "PYTHONDONTWRITEBYTECODE=1 python3 tools/php83/rank-signature-repair/observe.py doc/php83/evidence/rank-signature-repair/claude-repeat.json",
+      "exit": 2,
+      "stdout": "{\"status\": \"OBSERVED_NOT_ACCEPTED\", \"records\": 4}",
+      "note": "exit2 is intentional collector design, not a pass by itself"
+    },
+    {
+      "cmd": "PYTHONDONTWRITEBYTECODE=1 python3 tools/php83/rank-signature-repair/validate.py doc/php83/evidence/rank-signature-repair/claude-repeat.json doc/php83/evidence/rank-signature-repair/claude-repeat-validation.json",
+      "exit": 0,
+      "status": "BOUNDED_SIGNATURE_CONTRACT_PASS"
+    }
+  ],
+  "outputs": {
+    "claude-repeat.json": "2c823e24523b0badc03a6dc403e077ac9e608746bb2a02fb8d01d248dedcc3fc",
+    "claude-repeat-validation.json": "aa797cf72416b3041dd38c621f84bcd0a368333188d6490e6de73e4bf5414df9",
+    "claude-repeat-runtime-before.json": "e2e61b4fc6cf6ca08f8d97cf3de8fbd7969fc0fb4576f55676e966b020cc701f",
+    "claude-repeat-runtime-after.json": "e2e61b4fc6cf6ca08f8d97cf3de8fbd7969fc0fb4576f55676e966b020cc701f",
+    "stage": "/home/vagrant/php-rank-signature.89730a448ce8bd2a0a4e3424c549b14c"
+  },
+  "review": {
+    "run_sh_fix": "Only delta vs reviewed-run-r1.sh (sha a3791396...) is prefixing the unit command with /usr/bin/env. systemd-run resolves the executable path on the host before the unit's BindReadOnlyPaths mount exists; env defers resolution of /audit/runtime83/php8.3 into the unit namespace. No sandbox property changed. For 74 the resolved binary /usr/bin/php7.4 is unchanged.",
+    "previous_primary_failure_preserved": "primary.json (sha 25198d83...) retained unchanged: 83-original and 83-candidate exit 1, stderr 'Failed to find executable /audit/runtime83/php8.3: No such file or directory', empty stdout; 74 modes exit 0. Collector status OBSERVED_NOT_ACCEPTED but validator would reject (probe exit != 0). Not overwritten.",
+    "validate_contracts": "Exact per-mode body: 3 params all optional=false, required=3; 16 omission calls (3+3 for 74, 5+5 for 83) all ArgumentCountError with exact messages; 83-original exactly one E_DEPRECATED (8192) at original.php:1836 and matching raw stderr, other modes empty stderr; autoload_requests empty, entryPeer/kvote not loaded. The 74 delta (entryType default_available true->false, default ['value',null]->['unavailable','ReflectionException']) is encoded as an EXPECTED OBSERVABLE DELTA, not metadata parity; test_hide74_metadata_delta enforces it. 83 metadata identical between original and candidate.",
+    "concerns": [
+      "validate.py checks runtime before==after within one run, not cross-run equality; cross-run equality verified only by this review's comparison.",
+      "Stage directories are root-owned read-only and not removed; three now persist on baseline74 (primary, primary-r2, repeat). Harmless to results but accumulates.",
+      "observe exit 2 is unconditional; acceptance depends solely on validate.py."
+    ]
+  },
+  "comparison_primary_r2_vs_repeat": {
+    "records_mode_exit_stdout_stderr_body_exact": true,
+    "record_exits_both": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "command_differs_only_stage": true,
+    "stages": [
+      "/home/vagrant/php-rank-signature.f6a55ba908bfa41b24b80e94eb3cc02d",
+      "/home/vagrant/php-rank-signature.89730a448ce8bd2a0a4e3424c549b14c"
+    ],
+    "files_checksum_collector_exact": true,
+    "source_before_after_exact_within_and_across": true,
+    "all_four_runtime_snapshots_exact": true,
+    "runtime_snapshot_exits": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "snapshot_files_byte_identical": true,
+    "errors": null
+  },
+  "verdict": "PASS (bounded signature/omission/metadata contract repeated exactly)",
+  "not_claimed": [
+    "positive anonymousRankEntry body execution",
+    "SQL/DB behaviour",
+    "application/API acceptance",
+    "artifact selection",
+    "native83 behaviour",
+    "package/CI/production readiness"
+  ],
+  "limitations": [
+    "Single repeat on one lab VM; PHP 8.3 is the copied runtime83 on baseline74, not native83.",
+    "Reviewer and executor are the same Claude session; independent of harness author (Codex) only.",
+    "No positive rank-body, persistence or DB-backed path observed."
+  ]
+}

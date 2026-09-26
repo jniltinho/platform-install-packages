@@ -1,0 +1,138 @@
+{
+  "tier": 2,
+  "source_root": "/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/server-Rigel-18.20.0",
+  "file_sha256": {
+    "api_v3/lib/KalturaEntryService.php": "9495b584f73df1f4a11812efa964f57f42562159a405693b71e1731d53fe4dd5",
+    "api_v3/lib/KalturaBaseService.php": "48c4e41bfbb1072d5231e8ae8e300cb3e8bb8eb6e26a653d7925c00442a2999f",
+    "api_v3/services/BaseEntryService.php": "069e3902be3d97f2e8139e445a9e1cfdceefc5d9db9a6882865ff3b17a44b27a",
+    "api_v3/services/MediaService.php": "7ffb9ca7642341eaf65a4387e82c7b63dfdf5e528b5b03da6ea24a56f384f708",
+    "api_v3/services/MixingService.php": "9cc6d1f90ccf2938c23fb3d3906bf21d257102ea0ddc6a388a124280fe04e8fb"
+  },
+  "direct_read_snippets": {
+    "api_v3/lib/KalturaEntryService.php": {
+      "first_line": 1836,
+      "last_line": 1852,
+      "text": "\tprotected function anonymousRankEntry($entryId, $entryType = null, $rank)\n\t{\n\t\t$dbEntry = entryPeer::retrieveByPK($entryId);\n\t\tif (!$dbEntry || ($entryType !== null && $dbEntry->getType() != $entryType))\n\t\t\tthrow new KalturaAPIException(KalturaErrors::ENTRY_ID_NOT_FOUND, $entryId);\n\t\t\t\n\t\tif ($rank <= 0 || $rank > 5)\n\t\t{\n\t\t\tthrow new KalturaAPIException(KalturaErrors::INVALID_RANK_VALUE);\n\t\t}\n\n\t\t$kvote = new kvote();\n\t\t$kvote->setEntryId($entryId);\n\t\t$kvote->setKuserId($this->getKuser()->getId());\n\t\t$kvote->setRank($rank);\n\t\t$kvote->save();\n\t}"
+    },
+    "api_v3/services/BaseEntryService.php": {
+      "first_line": 752,
+      "last_line": 763,
+      "text": "\t/**\n\t * Anonymously rank an entry, no validation is done on duplicate rankings.\n\t *\n\t * @action anonymousRank\n\t * @param string $entryId\n\t * @param int $rank\n\t */\n\tpublic function anonymousRankAction($entryId, $rank)\n\t{\n\t\tKalturaResponseCacher::disableCache();\n\t\treturn parent::anonymousRankEntry($entryId, null, $rank);\n\t}"
+    },
+    "api_v3/services/MediaService.php": {
+      "first_line": 1119,
+      "last_line": 1129,
+      "text": "\t/**\n\t * Anonymously rank a media entry, no validation is done on duplicate rankings\n\t *\n\t * @action anonymousRank\n\t * @param string $entryId\n\t * @param int $rank\n\t */\n\tpublic function anonymousRankAction($entryId, $rank)\n\t{\n\t\treturn parent::anonymousRankEntry($entryId, KalturaEntryType::MEDIA_CLIP, $rank);\n\t}"
+    },
+    "api_v3/services/MixingService.php": {
+      "first_line": 362,
+      "last_line": 372,
+      "text": "\t/**\n\t * Anonymously rank a mix entry, no validation is done on duplicate rankings\n\t *  \n\t * @action anonymousRank\n\t * @param string $entryId\n\t * @param int $rank\n\t */\n\tpublic function anonymousRankAction($entryId, $rank)\n\t{\n\t\treturn parent::anonymousRankEntry($entryId, KalturaEntryType::MIX, $rank);\n\t}"
+    }
+  },
+  "known_graph_limitation": "Outbound generic model methods ambiguous; not dependency authority.",
+  "historical83_rank": {
+    "report_sha256": "640141338ef1d4e1fe2cbc38e6de28cba53c13c24cae62d0b4b37bdb7acfbcab",
+    "path": "doc/php83/evidence/dispatch-rank/native-primary.json",
+    "row": {
+      "parameters": [
+        [
+          "entryId",
+          false,
+          false,
+          true,
+          "",
+          [
+            "unavailable",
+            "ReflectionException"
+          ]
+        ],
+        [
+          "entryType",
+          false,
+          false,
+          true,
+          "",
+          [
+            "unavailable",
+            "ReflectionException"
+          ]
+        ],
+        [
+          "rank",
+          false,
+          false,
+          true,
+          "",
+          [
+            "unavailable",
+            "ReflectionException"
+          ]
+        ]
+      ],
+      "required": 3,
+      "calls": [
+        [
+          [],
+          "ArgumentCountError",
+          "Too few arguments to function KalturaEntryService::anonymousRankEntry(), 0 passed and exactly 3 expected"
+        ],
+        [
+          [
+            "safe-id"
+          ],
+          "ArgumentCountError",
+          "Too few arguments to function KalturaEntryService::anonymousRankEntry(), 1 passed and exactly 3 expected"
+        ],
+        [
+          [
+            "safe-id",
+            null
+          ],
+          "ArgumentCountError",
+          "Too few arguments to function KalturaEntryService::anonymousRankEntry(), 2 passed and exactly 3 expected"
+        ],
+        [
+          {
+            "entryId": "safe-id",
+            "rank": 3
+          },
+          "ArgumentCountError",
+          "KalturaEntryService::anonymousRankEntry(): Argument #2 ($entryType) not passed"
+        ],
+        [
+          {
+            "rank": 3
+          },
+          "ArgumentCountError",
+          "KalturaEntryService::anonymousRankEntry(): Argument #1 ($entryId) not passed"
+        ]
+      ],
+      "diagnostics": [
+        [
+          8192,
+          "Optional parameter $entryType declared before required parameter $rank is implicitly treated as a required parameter",
+          "/audit/probe/source/api_v3/lib/KalturaEntryService.php",
+          1836
+        ]
+      ],
+      "rank_body_success_exercised": false,
+      "rank_patch_created": false,
+      "missing_binding_contract_ok": true
+    },
+    "rank74_executed": false
+  },
+  "api_primary": {
+    "path": "doc/php83/evidence/exp13-runtime/api-primary.json",
+    "sha256": "cebdc34c37e5e98269ee141d2b017be160be07975097b5d5e0ccf818c2a8c516",
+    "diagnostics": [
+      {
+        "severity": "ApplicationDiagnostic",
+        "path": "/audit/app/api_v3/lib/KalturaEntryService.php",
+        "line": 1836,
+        "count": 1
+      }
+    ],
+    "note": "No free-text diagnostic retained; source/historical83 supports attribution, not reconstructed stderr."
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "status": "BOUNDED_SIGNATURE_CONTRACT_PASS",
+  "processes": 4,
+  "omission_calls": 16,
+  "metadata74_delta": {
+    "parameter": "entryType",
+    "default_available": [
+      true,
+      false
+    ],
+    "default": [
+      [
+        "value",
+        null
+      ],
+      [
+        "unavailable",
+        "ReflectionException"
+      ]
+    ]
+  },
+  "metadata83_unchanged": true,
+  "original83_deprecations": 1,
+  "candidate83_deprecations": 0,
+  "rank_positive_body_tested": false,
+  "artifact_selected": false,
+  "application_acceptance": false,
+  "input_sha256": "2c823e24523b0badc03a6dc403e077ac9e608746bb2a02fb8d01d248dedcc3fc",
+  "validator_sha256": "b0413a9979947f1d34ab80bdf470a098d3d1c4e73e4d6d1b2ec01a42ee2e0b2b"
+}

@@ -1,0 +1,11 @@
+--- a/api_v3/lib/KalturaEntryService.php
++++ b/api_v3/lib/KalturaEntryService.php
+@@ -1833,7 +1833,7 @@
+ 		return $response;
+ 	}
+ 	
+-	protected function anonymousRankEntry($entryId, $entryType = null, $rank)
++	protected function anonymousRankEntry($entryId, $entryType, $rank)
+ 	{
+ 		$dbEntry = entryPeer::retrieveByPK($entryId);
+ 		if (!$dbEntry || ($entryType !== null && $dbEntry->getType() != $entryType))

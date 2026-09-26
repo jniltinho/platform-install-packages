@@ -1,0 +1,16 @@
+{
+  "status": "HELD_SOURCE_ONLY_NOT_RUNTIME_VALIDATED",
+  "target": "api_v3/lib/KalturaEntryService.php",
+  "original_zip_sha256": "58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28",
+  "exp13_zip_sha256": "6d0bc4947207e6c5457b7843948d263aa8d5f251480e58cbf9086c0add79a944",
+  "before_sha256": "9495b584f73df1f4a11812efa964f57f42562159a405693b71e1731d53fe4dd5",
+  "after_sha256": "b48fd2bb6d94157490294d8acb3fd8918c63d7a35c1ae024529658a4f40c895a",
+  "patch_sha256": "41144c89d6254ba8a9b2396c43b1e89b15ecdce55cabaedcb82c7fce0d825d4b",
+  "deleted_bytes": " = null",
+  "deleted_byte_count": 7,
+  "source_line": 1836,
+  "body_and_all_other_bytes_unchanged": true,
+  "artifact_selected": false,
+  "rank_body_or_persistence_executed": false,
+  "preparer_sha256": "d7ad0bed26eb9bf18024158867b42ab502d775b62cd34aa1a8fa3fc2c2d3921f"
+}

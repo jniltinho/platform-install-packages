@@ -1,0 +1,17 @@
+{
+  "executor": "Codex direct full-source review",
+  "helper": "tools/php83/exp12-api/runtime-identity.py",
+  "sha256": "f2985a7d3f054c3a743535009e0ad2937545d05e1c0d9e7c936a24acf13da463",
+  "host_guard": "kaltura-php74-baseline",
+  "uid_guard": 1000,
+  "interpreters": [
+    "/usr/bin/php7.4",
+    "/home/vagrant/php-mysql-probe/runtime83/php8.3"
+  ],
+  "module_libraries_and_configuration_hashed": true,
+  "versions_guarded": [
+    "7.4",
+    "8.3"
+  ],
+  "note": "Resolves scope-only NOT_VERIFIED in actual Claude local review; no permission denial. Fresh snapshots still required; earlier exp12 artifact pin in snapshot is historical helper provenance, not rank artifact approval."
+}
