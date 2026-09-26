@@ -1,0 +1,112 @@
+{
+  "exit": 0,
+  "lints": [
+    {
+      "exit": 0,
+      "path": "probe.php",
+      "stderr": "",
+      "stdout": "No syntax errors detected in /home/vagrant/php83-privacy-pipeline-r1/probe.php\n"
+    },
+    {
+      "exit": 0,
+      "path": "source/infra/log/KalturaLog.php",
+      "stderr": "",
+      "stdout": "No syntax errors detected in /home/vagrant/php83-privacy-pipeline-r1/source/infra/log/KalturaLog.php\n"
+    },
+    {
+      "exit": 0,
+      "path": "source/infra/log/KalturaLogFactory.php",
+      "stderr": "",
+      "stdout": "No syntax errors detected in /home/vagrant/php83-privacy-pipeline-r1/source/infra/log/KalturaLogFactory.php\n"
+    },
+    {
+      "exit": 0,
+      "path": "source/infra/log/KalturaSerializableStream.php",
+      "stderr": "",
+      "stdout": "No syntax errors detected in /home/vagrant/php83-privacy-pipeline-r1/source/infra/log/KalturaSerializableStream.php\n"
+    },
+    {
+      "exit": 0,
+      "path": "source/vendor/ZendFramework/library/Zend/Config.php",
+      "stderr": "",
+      "stdout": "No syntax errors detected in /home/vagrant/php83-privacy-pipeline-r1/source/vendor/ZendFramework/library/Zend/Config.php\n"
+    },
+    {
+      "exit": 0,
+      "path": "source/vendor/ZendFramework/library/Zend/Log.php",
+      "stderr": "",
+      "stdout": "No syntax errors detected in /home/vagrant/php83-privacy-pipeline-r1/source/vendor/ZendFramework/library/Zend/Log.php\n"
+    },
+    {
+      "exit": 0,
+      "path": "source/vendor/ZendFramework/library/Zend/Log/Filter/Interface.php",
+      "stderr": "",
+      "stdout": "No syntax errors detected in /home/vagrant/php83-privacy-pipeline-r1/source/vendor/ZendFramework/library/Zend/Log/Filter/Interface.php\n"
+    },
+    {
+      "exit": 0,
+      "path": "source/vendor/ZendFramework/library/Zend/Log/Filter/Priority.php",
+      "stderr": "",
+      "stdout": "No syntax errors detected in /home/vagrant/php83-privacy-pipeline-r1/source/vendor/ZendFramework/library/Zend/Log/Filter/Priority.php\n"
+    },
+    {
+      "exit": 0,
+      "path": "source/vendor/ZendFramework/library/Zend/Log/Formatter/Interface.php",
+      "stderr": "",
+      "stdout": "No syntax errors detected in /home/vagrant/php83-privacy-pipeline-r1/source/vendor/ZendFramework/library/Zend/Log/Formatter/Interface.php\n"
+    },
+    {
+      "exit": 0,
+      "path": "source/vendor/ZendFramework/library/Zend/Log/Formatter/Simple.php",
+      "stderr": "",
+      "stdout": "No syntax errors detected in /home/vagrant/php83-privacy-pipeline-r1/source/vendor/ZendFramework/library/Zend/Log/Formatter/Simple.php\n"
+    },
+    {
+      "exit": 0,
+      "path": "source/vendor/ZendFramework/library/Zend/Log/Writer/Abstract.php",
+      "stderr": "",
+      "stdout": "No syntax errors detected in /home/vagrant/php83-privacy-pipeline-r1/source/vendor/ZendFramework/library/Zend/Log/Writer/Abstract.php\n"
+    },
+    {
+      "exit": 0,
+      "path": "source/vendor/ZendFramework/library/Zend/Log/Writer/Stream.php",
+      "stderr": "",
+      "stdout": "No syntax errors detected in /home/vagrant/php83-privacy-pipeline-r1/source/vendor/ZendFramework/library/Zend/Log/Writer/Stream.php\n"
+    }
+  ],
+  "php_sha256_after": "1c564e6bafa56d03359c3774be6f4c77d0edecabd2075e18556940a56747c8d7",
+  "privacy_acceptance": false,
+  "source_after": {
+    "guest.py": "81c451f622f5dd41a4f6adb9717433cd7f7b927e8eba50347057a27ce48cbb42",
+    "probe.php": "83bf5bd30e6d2b472f5363afef628c27912729a2afe3cc3fbb999adc78aaf652",
+    "source/infra/log/KalturaLog.php": "9b7a7c3dd37616ffd2ac9720ece862641c43bb687a2db4e8fc9cbcb259ff5449",
+    "source/infra/log/KalturaLogFactory.php": "75359966d2777870b2b8ff2151f5697e2a0fe69e62ef0e9131cab30645223a7b",
+    "source/infra/log/KalturaSerializableStream.php": "e3d45f152ae749c2555b72bb9215c1a6532ee774be8c4548ecff8440ab658fce",
+    "source/vendor/ZendFramework/library/Zend/Config.php": "065597c625046207683d14682bffcdbfd0aed862ad456a3dbefcf9b538e97a2f",
+    "source/vendor/ZendFramework/library/Zend/Log.php": "f4f424e933430584c7f66df2b85d9633198d0b7178bd9c657672e75c185b7b17",
+    "source/vendor/ZendFramework/library/Zend/Log/Filter/Interface.php": "1f2c3ea3ca3e394c7f2c7d3346e2c0373287f500d2e211b0bde7a38fa8a2f1d5",
+    "source/vendor/ZendFramework/library/Zend/Log/Filter/Priority.php": "be996673ded9f785245c2fb15ebae15bffd3617ef89cf76011e284a98c5d0286",
+    "source/vendor/ZendFramework/library/Zend/Log/Formatter/Interface.php": "7f26df6c3bd59575f54e949c5eddcc27ef10aefeebd6a20894df0842976077ce",
+    "source/vendor/ZendFramework/library/Zend/Log/Formatter/Simple.php": "23ca5efb61bb3b44a6ae1f10bdb1f8a445cade3b972dd681e3078229d7b695ff",
+    "source/vendor/ZendFramework/library/Zend/Log/Writer/Abstract.php": "8f230091711e7f569bbf141e99024843905745f076870c5b0d3dcbec689aaee4",
+    "source/vendor/ZendFramework/library/Zend/Log/Writer/Stream.php": "93034071701769e604d222e875c26ef2a86a322642489234189b0799520697ac"
+  },
+  "source_before": {
+    "guest.py": "81c451f622f5dd41a4f6adb9717433cd7f7b927e8eba50347057a27ce48cbb42",
+    "probe.php": "83bf5bd30e6d2b472f5363afef628c27912729a2afe3cc3fbb999adc78aaf652",
+    "source/infra/log/KalturaLog.php": "9b7a7c3dd37616ffd2ac9720ece862641c43bb687a2db4e8fc9cbcb259ff5449",
+    "source/infra/log/KalturaLogFactory.php": "75359966d2777870b2b8ff2151f5697e2a0fe69e62ef0e9131cab30645223a7b",
+    "source/infra/log/KalturaSerializableStream.php": "e3d45f152ae749c2555b72bb9215c1a6532ee774be8c4548ecff8440ab658fce",
+    "source/vendor/ZendFramework/library/Zend/Config.php": "065597c625046207683d14682bffcdbfd0aed862ad456a3dbefcf9b538e97a2f",
+    "source/vendor/ZendFramework/library/Zend/Log.php": "f4f424e933430584c7f66df2b85d9633198d0b7178bd9c657672e75c185b7b17",
+    "source/vendor/ZendFramework/library/Zend/Log/Filter/Interface.php": "1f2c3ea3ca3e394c7f2c7d3346e2c0373287f500d2e211b0bde7a38fa8a2f1d5",
+    "source/vendor/ZendFramework/library/Zend/Log/Filter/Priority.php": "be996673ded9f785245c2fb15ebae15bffd3617ef89cf76011e284a98c5d0286",
+    "source/vendor/ZendFramework/library/Zend/Log/Formatter/Interface.php": "7f26df6c3bd59575f54e949c5eddcc27ef10aefeebd6a20894df0842976077ce",
+    "source/vendor/ZendFramework/library/Zend/Log/Formatter/Simple.php": "23ca5efb61bb3b44a6ae1f10bdb1f8a445cade3b972dd681e3078229d7b695ff",
+    "source/vendor/ZendFramework/library/Zend/Log/Writer/Abstract.php": "8f230091711e7f569bbf141e99024843905745f076870c5b0d3dcbec689aaee4",
+    "source/vendor/ZendFramework/library/Zend/Log/Writer/Stream.php": "93034071701769e604d222e875c26ef2a86a322642489234189b0799520697ac"
+  },
+  "status": "SYNTHETIC_OBSERVATION_ONLY",
+  "stderr": "Deprecated: Return type of Zend_Config::count() should either be compatible with Countable::count(): int, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /home/vagrant/php83-privacy-pipeline-r1/source/vendor/ZendFramework/library/Zend/Config.php on line 248\nDeprecated: Return type of Zend_Config::current() should either be compatible with Iterator::current(): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /home/vagrant/php83-privacy-pipeline-r1/source/vendor/ZendFramework/library/Zend/Config.php on line 258\nDeprecated: Return type of Zend_Config::next() should either be compatible with Iterator::next(): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /home/vagrant/php83-privacy-pipeline-r1/source/vendor/ZendFramework/library/Zend/Config.php on line 278\nDeprecated: Return type of Zend_Config::key() should either be compatible with Iterator::key(): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /home/vagrant/php83-privacy-pipeline-r1/source/vendor/ZendFramework/library/Zend/Config.php on line 269\nDeprecated: Return type of Zend_Config::valid() should either be compatible with Iterator::valid(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /home/vagrant/php83-privacy-pipeline-r1/source/vendor/ZendFramework/library/Zend/Config.php on line 304\nDeprecated: Return type of Zend_Config::rewind() should either be compatible with Iterator::rewind(): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /home/vagrant/php83-privacy-pipeline-r1/source/vendor/ZendFramework/library/Zend/Config.php on line 292\n",
+  "stdout": "{\"runtime\":\"8.3.6\",\"sapi\":\"cli\",\"ignore_args_ini\":\"0\",\"records\":[{\"case\":\"plain\",\"writer_class\":\"KalturaSerializableStream\",\"formatter_class\":\"Zend_Log_Formatter_Simple\",\"write_declaring\":\"Zend_Log_Writer_Stream\",\"instrumented_bytes_identical\":true,\"writer_message_type\":\"object\",\"writer_throwable\":true,\"writer_same_message\":true,\"formatter_same_message\":true,\"writer_formatter_same_message\":true,\"exception_state_unchanged\":true,\"priority\":3,\"priority_name\":\"ERR\",\"context_unchanged\":true,\"full_marker_present\":false,\"prefix15_present\":true,\"has_diagnostic\":true,\"has_frame\":true,\"prefix_context_present\":false,\"message_override_exact\":false,\"sink_sha256\":\"f7949d0a6bc7b146825b90411bcae05d5ebf7d170a98350ef1ad38a4828ebad6\"},{\"case\":\"prefix-context\",\"writer_class\":\"KalturaSerializableStream\",\"formatter_class\":\"Zend_Log_Formatter_Simple\",\"write_declaring\":\"Zend_Log_Writer_Stream\",\"instrumented_bytes_identical\":true,\"writer_message_type\":\"object\",\"writer_throwable\":true,\"writer_same_message\":true,\"formatter_same_message\":true,\"writer_formatter_same_message\":true,\"exception_state_unchanged\":true,\"priority\":3,\"priority_name\":\"ERR\",\"context_unchanged\":true,\"full_marker_present\":false,\"prefix15_present\":true,\"has_diagnostic\":true,\"has_frame\":true,\"prefix_context_present\":true,\"message_override_exact\":false,\"sink_sha256\":\"1f0fea773e1f1a734efa06b466d01dfe37bf1f1927b3e3741be563acdc8f5668\"},{\"case\":\"message-extra\",\"writer_class\":\"KalturaSerializableStream\",\"formatter_class\":\"Zend_Log_Formatter_Simple\",\"write_declaring\":\"Zend_Log_Writer_Stream\",\"instrumented_bytes_identical\":true,\"writer_message_type\":\"string\",\"writer_throwable\":false,\"writer_same_message\":false,\"formatter_same_message\":false,\"writer_formatter_same_message\":true,\"exception_state_unchanged\":true,\"priority\":3,\"priority_name\":\"ERR\",\"context_unchanged\":true,\"full_marker_present\":false,\"prefix15_present\":false,\"has_diagnostic\":false,\"has_frame\":false,\"prefix_context_present\":false,\"message_override_exact\":true,\"sink_sha256\":\"d210991997f27ee29c23f663fe4dbcca7f88a23a94e0bd9d9df562e4b70e820e\"},{\"case\":\"previous\",\"writer_class\":\"KalturaSerializableStream\",\"formatter_class\":\"Zend_Log_Formatter_Simple\",\"write_declaring\":\"Zend_Log_Writer_Stream\",\"instrumented_bytes_identical\":true,\"writer_message_type\":\"object\",\"writer_throwable\":true,\"writer_same_message\":true,\"formatter_same_message\":true,\"writer_formatter_same_message\":true,\"exception_state_unchanged\":true,\"priority\":3,\"priority_name\":\"ERR\",\"context_unchanged\":true,\"full_marker_present\":false,\"prefix15_present\":true,\"has_diagnostic\":true,\"has_frame\":true,\"prefix_context_present\":false,\"message_override_exact\":false,\"sink_sha256\":\"8f441caba99b1787c493a0bbfeb1d52ebdd47f1d4006f0a2ddae153768bbe7d5\"},{\"case\":\"intrinsic\",\"writer_class\":\"KalturaSerializableStream\",\"formatter_class\":\"Zend_Log_Formatter_Simple\",\"write_declaring\":\"Zend_Log_Writer_Stream\",\"instrumented_bytes_identical\":true,\"writer_message_type\":\"object\",\"writer_throwable\":true,\"writer_same_message\":true,\"formatter_same_message\":true,\"writer_formatter_same_message\":true,\"exception_state_unchanged\":true,\"priority\":3,\"priority_name\":\"ERR\",\"context_unchanged\":true,\"full_marker_present\":true,\"prefix15_present\":true,\"has_diagnostic\":false,\"has_frame\":false,\"prefix_context_present\":false,\"message_override_exact\":false,\"sink_sha256\":\"1cd08e3d5400a2f7147bfbf8d8bb51e1ebe13e032817b1d80f552b5b932e518b\"},{\"case\":\"pre-rendered\",\"writer_class\":\"KalturaSerializableStream\",\"formatter_class\":\"Zend_Log_Formatter_Simple\",\"write_declaring\":\"Zend_Log_Writer_Stream\",\"instrumented_bytes_identical\":true,\"writer_message_type\":\"string\",\"writer_throwable\":false,\"writer_same_message\":true,\"formatter_same_message\":true,\"writer_formatter_same_message\":true,\"exception_state_unchanged\":true,\"priority\":3,\"priority_name\":\"ERR\",\"context_unchanged\":true,\"full_marker_present\":false,\"prefix15_present\":true,\"has_diagnostic\":true,\"has_frame\":true,\"prefix_context_present\":false,\"message_override_exact\":false,\"sink_sha256\":\"f7949d0a6bc7b146825b90411bcae05d5ebf7d170a98350ef1ad38a4828ebad6\"}],\"diagnostics\":[{\"severity\":8192,\"message_sha256\":\"da31608eecb73332a16ecbf9c9f724ab18d820ee059bcd8aac298c873046ddc4\",\"file\":\"Config.php\",\"line\":248},{\"severity\":8192,\"message_sha256\":\"f5ccbf01b07231bf1685447cd4baad24b4278e62518c5a40b666383dedc6d3b3\",\"file\":\"Config.php\",\"line\":258},{\"severity\":8192,\"message_sha256\":\"11240f5acc719dff6dba213df87f17712374b7d303de85569700364c18632623\",\"file\":\"Config.php\",\"line\":278},{\"severity\":8192,\"message_sha256\":\"c132b2a08d793531303f1a2bbb8a37ca26d61378c88b143ed0f259b71703963c\",\"file\":\"Config.php\",\"line\":269},{\"severity\":8192,\"message_sha256\":\"c03f85902f72ad56b97ca16584feca1b4f3fba2a3de3783b5dec8d4bccabed83\",\"file\":\"Config.php\",\"line\":304},{\"severity\":8192,\"message_sha256\":\"aa90b68e03a29482216c72ea9090af18433f42c6de74d60480379e8d12979ab1\",\"file\":\"Config.php\",\"line\":292}],\"loaded\":{\"infra\\/log\\/KalturaLog.php\":\"9b7a7c3dd37616ffd2ac9720ece862641c43bb687a2db4e8fc9cbcb259ff5449\",\"infra\\/log\\/KalturaLogFactory.php\":\"75359966d2777870b2b8ff2151f5697e2a0fe69e62ef0e9131cab30645223a7b\",\"infra\\/log\\/KalturaSerializableStream.php\":\"e3d45f152ae749c2555b72bb9215c1a6532ee774be8c4548ecff8440ab658fce\",\"vendor\\/ZendFramework\\/library\\/Zend\\/Config.php\":\"065597c625046207683d14682bffcdbfd0aed862ad456a3dbefcf9b538e97a2f\",\"vendor\\/ZendFramework\\/library\\/Zend\\/Log.php\":\"f4f424e933430584c7f66df2b85d9633198d0b7178bd9c657672e75c185b7b17\",\"vendor\\/ZendFramework\\/library\\/Zend\\/Log\\/Filter\\/Interface.php\":\"1f2c3ea3ca3e394c7f2c7d3346e2c0373287f500d2e211b0bde7a38fa8a2f1d5\",\"vendor\\/ZendFramework\\/library\\/Zend\\/Log\\/Filter\\/Priority.php\":\"be996673ded9f785245c2fb15ebae15bffd3617ef89cf76011e284a98c5d0286\",\"vendor\\/ZendFramework\\/library\\/Zend\\/Log\\/Formatter\\/Interface.php\":\"7f26df6c3bd59575f54e949c5eddcc27ef10aefeebd6a20894df0842976077ce\",\"vendor\\/ZendFramework\\/library\\/Zend\\/Log\\/Formatter\\/Simple.php\":\"23ca5efb61bb3b44a6ae1f10bdb1f8a445cade3b972dd681e3078229d7b695ff\",\"vendor\\/ZendFramework\\/library\\/Zend\\/Log\\/Writer\\/Abstract.php\":\"8f230091711e7f569bbf141e99024843905745f076870c5b0d3dcbec689aaee4\",\"vendor\\/ZendFramework\\/library\\/Zend\\/Log\\/Writer\\/Stream.php\":\"93034071701769e604d222e875c26ef2a86a322642489234189b0799520697ac\"},\"product_changes\":0,\"privacy_acceptance\":false,\"application_acceptance\":false}\n"
+}

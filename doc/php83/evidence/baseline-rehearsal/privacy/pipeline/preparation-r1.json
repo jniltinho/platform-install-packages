@@ -1,0 +1,22 @@
+{
+  "status": "UNMODIFIED_SYNTHETIC_PIPELINE_OBSERVATION_ONLY",
+  "archive_sha256": "58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28",
+  "files": {
+    "source/infra/log/KalturaLog.php": "9b7a7c3dd37616ffd2ac9720ece862641c43bb687a2db4e8fc9cbcb259ff5449",
+    "source/infra/log/KalturaLogFactory.php": "75359966d2777870b2b8ff2151f5697e2a0fe69e62ef0e9131cab30645223a7b",
+    "source/infra/log/KalturaSerializableStream.php": "e3d45f152ae749c2555b72bb9215c1a6532ee774be8c4548ecff8440ab658fce",
+    "source/vendor/ZendFramework/library/Zend/Config.php": "065597c625046207683d14682bffcdbfd0aed862ad456a3dbefcf9b538e97a2f",
+    "source/vendor/ZendFramework/library/Zend/Log.php": "f4f424e933430584c7f66df2b85d9633198d0b7178bd9c657672e75c185b7b17",
+    "source/vendor/ZendFramework/library/Zend/Log/Filter/Priority.php": "be996673ded9f785245c2fb15ebae15bffd3617ef89cf76011e284a98c5d0286",
+    "source/vendor/ZendFramework/library/Zend/Log/Filter/Interface.php": "1f2c3ea3ca3e394c7f2c7d3346e2c0373287f500d2e211b0bde7a38fa8a2f1d5",
+    "source/vendor/ZendFramework/library/Zend/Log/Writer/Abstract.php": "8f230091711e7f569bbf141e99024843905745f076870c5b0d3dcbec689aaee4",
+    "source/vendor/ZendFramework/library/Zend/Log/Writer/Stream.php": "93034071701769e604d222e875c26ef2a86a322642489234189b0799520697ac",
+    "source/vendor/ZendFramework/library/Zend/Log/Formatter/Simple.php": "23ca5efb61bb3b44a6ae1f10bdb1f8a445cade3b972dd681e3078229d7b695ff",
+    "source/vendor/ZendFramework/library/Zend/Log/Formatter/Interface.php": "7f26df6c3bd59575f54e949c5eddcc27ef10aefeebd6a20894df0842976077ce",
+    "probe.php": "7985e3fb05f0d2dc8ce8f128052bd05ddfe898f895346e6f3cc34a5c1bb369db"
+  },
+  "source_files": 11,
+  "product_changes": 0,
+  "application_acceptance": false,
+  "privacy_acceptance": false
+}

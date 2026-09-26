@@ -1,0 +1,17 @@
+test_existing_directory (test_prepare.Prepare.test_existing_directory) ... ok
+test_no_product_repair (test_prepare.Prepare.test_no_product_repair) ... ok
+test_real_source_closure (test_prepare.Prepare.test_real_source_closure) ... ok
+test_wrong_archive (test_prepare.Prepare.test_wrong_archive) ... ok
+test_bool_not_int (test_validate.Validation.test_bool_not_int) ... ok
+test_changed_instrumentation (test_validate.Validation.test_changed_instrumentation) ... ok
+test_duplicate_case (test_validate.Validation.test_duplicate_case) ... ok
+test_expected_fixture (test_validate.Validation.test_expected_fixture) ... ok
+test_hidden_leak (test_validate.Validation.test_hidden_leak) ... ok
+test_override_not_detected (test_validate.Validation.test_override_not_detected) ... ok
+test_source_drift (test_validate.Validation.test_source_drift) ... ok
+test_wrong_object (test_validate.Validation.test_wrong_object) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.100s
+
+OK

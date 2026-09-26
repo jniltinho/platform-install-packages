@@ -1,0 +1,9 @@
+{
+  "tools/php83/baseline-rehearsal/privacy/pipeline/validate.py": "1b98ea28b0207f998529144bf46e14ff958c32dab2a41bb175bf423bf0a349d4",
+  "tools/php83/baseline-rehearsal/privacy/pipeline/guest.py": "81c451f622f5dd41a4f6adb9717433cd7f7b927e8eba50347057a27ce48cbb42",
+  "tools/php83/baseline-rehearsal/privacy/pipeline/probe.php": "83bf5bd30e6d2b472f5363afef628c27912729a2afe3cc3fbb999adc78aaf652",
+  "tools/php83/baseline-rehearsal/privacy/pipeline/prepare.py": "26b20837059c2b2ce54bd2207140da3bde4cd888b85ea9e40611ad13dbd6d0c7",
+  "tools/php83/baseline-rehearsal/privacy/pipeline/test_validate.py": "4e2ea6b5e05150fd8abe5c69219267edb8bd1f33390b6a9e29dab1a644ea6a23",
+  "tools/php83/baseline-rehearsal/privacy/pipeline/test_prepare.py": "bc54c18c3fa4a786cf45df129bf107cf1b3394eb8aba98802288599050ebba74",
+  "tools/php83/baseline-rehearsal/privacy/pipeline/run.py": "fb476b38afc852e91f259a0b16b1a6fb769c7dbaacc22734d9c5862b37a7b376"
+}

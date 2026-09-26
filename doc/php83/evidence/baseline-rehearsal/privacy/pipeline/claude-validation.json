@@ -1,0 +1,9 @@
+{
+  "status": "SYNTHETIC_PIPELINE_OBSERVED_EXPECTED_LEAK",
+  "cases": 6,
+  "writer_receives_original_throwable_in_normal_cases": true,
+  "message_extra_can_replace_object": true,
+  "pre_rendered_string_is_not_throwable": true,
+  "privacy_acceptance": false,
+  "application_acceptance": false
+}

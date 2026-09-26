@@ -1,0 +1,20 @@
+{
+  "status": "EXACT_REPEATED_SYNTHETIC_EXPECTED_LEAK",
+  "full_native_reports_equal": true,
+  "all_four_runtime_snapshots_equal": true,
+  "php_processes_per_run": 1,
+  "lints_per_run": 12,
+  "cases_per_process": 6,
+  "native_diagnostic_count": 6,
+  "native_stderr_bytes": 1832,
+  "privacy_acceptance": false,
+  "application_acceptance": false,
+  "files": {
+    "primary.json": "ae08be8ef9294afcb065665d62ea48f54cffe0cd978d0635181552ec94506085",
+    "claude.json": "ae08be8ef9294afcb065665d62ea48f54cffe0cd978d0635181552ec94506085",
+    "primary-before.json": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491",
+    "primary-after.json": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491",
+    "claude-before.json": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491",
+    "claude-after.json": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491"
+  }
+}
