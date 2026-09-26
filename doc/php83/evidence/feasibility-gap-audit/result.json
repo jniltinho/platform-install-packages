@@ -1,0 +1,8 @@
+{
+  "executor": "actual OpenCode CLI / opencode/muse-spark-1.3-contributor-free",
+  "exit": 0,
+  "scope": "repository-local requirement/evidence audit, not runtime execution or independent artifact acceptance",
+  "report_sha256": "d9bcfa6b5e61e14697b4f24b8a3bd15bee8f7aae8ad2642f81721cac1fba3617",
+  "tasks_closed": 0,
+  "coordinator_disposition": "Use three bundles to prioritize existing gaps; no new thresholds. Review is advisory, exact approved requirements remain authoritative. Source bytes pinned with upstream mapping unknown is not verified revision attribution. No legal approval."
+}
