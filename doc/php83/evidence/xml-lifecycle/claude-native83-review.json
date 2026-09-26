@@ -1,0 +1,111 @@
+{
+ "case": "xml-lifecycle native83 private matrix independent repeat",
+ "executor": "Claude CLI (claude-opus-5-5), serial, exclusive native83",
+ "reviewer": "Claude CLI (same session; not independent of this execution, independent of primary author)",
+ "date": "2026-09-26",
+ "wall_seconds_commands": 7,
+ "commands": [
+  {
+   "n": 1,
+   "command": "python3 doc/php83/evidence/exp10-runtime/snapshot-php83.py doc/php83/evidence/xml-lifecycle/claude-native83-before.json",
+   "exit": 0,
+   "stdout": "{\"files\": 39, \"modes\": 2}",
+   "stderr": "",
+   "stdout_file": "doc/php83/evidence/xml-lifecycle/claude-native83-cmd1.stdout",
+   "stderr_file": "doc/php83/evidence/xml-lifecycle/claude-native83-cmd1.stderr",
+   "exit_file": "doc/php83/evidence/xml-lifecycle/claude-native83-cmd1.exit"
+  },
+  {
+   "n": 2,
+   "command": "PYTHONDONTWRITEBYTECODE=1 python3 tools/php83/xml-lifecycle/collect-private.py 83 /tmp/php-xml-lifecycle-private-prep-r2 doc/php83/evidence/xml-lifecycle/claude-native83-matrix.json",
+   "exit": 1,
+   "stdout": "{\"status\": \"FAIL_RETAINED_OBSERVATIONS\", \"processes\": 22, \"failures\": [\"original/construct-missing\", \"original/nested-construct\", \"exp11/construct-missing\", \"exp11/nested-construct\"]}",
+   "stderr": "",
+   "stdout_file": "doc/php83/evidence/xml-lifecycle/claude-native83-cmd2.stdout",
+   "stderr_file": "doc/php83/evidence/xml-lifecycle/claude-native83-cmd2.stderr",
+   "exit_file": "doc/php83/evidence/xml-lifecycle/claude-native83-cmd2.exit"
+  },
+  {
+   "n": 3,
+   "command": "python3 doc/php83/evidence/exp10-runtime/snapshot-php83.py doc/php83/evidence/xml-lifecycle/claude-native83-after.json",
+   "exit": 0,
+   "stdout": "{\"files\": 39, \"modes\": 2}",
+   "stderr": "",
+   "stdout_file": "doc/php83/evidence/xml-lifecycle/claude-native83-cmd3.stdout",
+   "stderr_file": "doc/php83/evidence/xml-lifecycle/claude-native83-cmd3.stderr",
+   "exit_file": "doc/php83/evidence/xml-lifecycle/claude-native83-cmd3.exit"
+  }
+ ],
+ "identities": {
+  "collect-private.py": "e939688c297a3f395e10a8fd349f5ce0d6cfc8566dde0d89628c4bfbb9ec5c87",
+  "probe.php(tools)": "a28c3ba1a9d0d8af69235fd59e8bbc28b30e12aea172fa1cb6f17099534929f8",
+  "probe.php(prep)": "a28c3ba1a9d0d8af69235fd59e8bbc28b30e12aea172fa1cb6f17099534929f8",
+  "run-private.sh": "48b6ec2b157941827acb893cd6e4ba65f84fa224e52ed0461b4b66d9e7967377",
+  "stage_manifest_identities.json": "c360a94309d8f7fc0ab297fec1366c699a929d443be0f78efb945576f910734e",
+  "prep_tree_sha256_before_and_after": "1f05d4b502a43b9428cbaa41e8f4ef4517ba6a90cdc00dd69134d0ae72a5e26c",
+  "private-primary83.json": "3e5382b28f41db5fa1b433d4230556610cdc2d6f6d58da33a02864ef26174b03",
+  "claude-native83-matrix.json": "3e5382b28f41db5fa1b433d4230556610cdc2d6f6d58da33a02864ef26174b03",
+  "before.json": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491",
+  "after.json": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491"
+ },
+ "checks": {
+  "stage_manifest_untouched": "PASS (identities.json sha c360a943... == requested; matrix manifest_sha256 equal; prep tree hash identical before/after)",
+  "runtime_snapshot_before_equals_after": "PASS (byte-identical, 39 files, 2 modes)",
+  "matrix_vs_private-primary83": "PASS byte-identical (sha256 3e5382b2...; recursive diff 0; primary contains no timestamps to exclude)",
+  "collector_exit": "1 as expected: FAIL_RETAINED_OBSERVATIONS, 22 processes all exit 0, 18 validations accepted, 4 validation_error",
+  "runtime_observed": "PHP 8.3.6, libxml 2.9.14, error_reporting 32767 (E_ALL), soap/dom/libxml loaded"
+ },
+ "strict_failures": [
+  {
+   "record": "original/construct-missing",
+   "assertion": "native warning retention",
+   "missing_from_stderr": "SoapClient::__construct(): I/O warning : failed to load external entity \"file:///audit/probe/fixtures/missing.wsdl\" (E_WARNING, phase operation:construct, kSoapClient.php:8)",
+   "captured_by_handler": true
+  },
+  {
+   "record": "exp11/construct-missing",
+   "assertion": "native warning retention",
+   "missing_from_stderr": "SoapClient::__construct(): I/O warning : failed to load external entity \"file:///audit/probe/fixtures/missing.wsdl\" (E_WARNING, phase operation:construct, kSoapClient.php:8)",
+   "captured_by_handler": true
+  },
+  {
+   "record": "original/nested-construct",
+   "assertion": "native warning retention",
+   "missing_from_stderr": "stream_wrapper_restore(): http:// / https:// was never changed, nothing to restore (E_NOTICE x2, phase nested-resolver:construct, kSoapClient.php:27-28)",
+   "present_in_stderr": "stream_wrapper_unregister(): Unable to unregister protocol https:// and http:// (E_WARNING, lines 34-35)",
+   "captured_by_handler": true
+  },
+  {
+   "record": "exp11/nested-construct",
+   "assertion": "native warning retention",
+   "missing_from_stderr": "stream_wrapper_restore(): http:// / https:// was never changed, nothing to restore (E_NOTICE x2, phase nested-resolver:construct, kSoapClient.php:27-28)",
+   "present_in_stderr": "stream_wrapper_unregister(): Unable to unregister protocol https:// and http:// (E_WARNING, lines 34-35)",
+   "captured_by_handler": true
+  }
+ ],
+ "strict_failure_interpretation": "Handler (probe.php:14-18) records then returns false, so native handler should also run; with display_errors=stderr and E_ALL the listed diagnostics were nonetheless absent from native stderr. Both channels reported as observed; no stderr content invented, no waiver applied. Root cause (e.g. ext/soap suppressing display during WSDL load / nested resolver context) NOT determined here. FAIL preserved.",
+ "probe_review": {
+  "handler_returns_false": true,
+  "error_reporting": "E_ALL (-d error_reporting=32767, display_errors=stderr, log_errors=0 in run-private.sh:41; body reports 32767)",
+  "probe_identity_tools_equals_prep": true,
+  "probe_or_collector_modified": false
+ },
+ "separate_findings_not_strict_failures": {
+  "callback_existing": "original+exp11: preexisting external entity loader callback survives kConf; marker still resolved after-kConf (callback_observer_marker_after_kConf=true, callback_policy_relation_unadjudicated=true). Policy relation unadjudicated.",
+  "existing_exception_cleanup_flaw": "observed (true) in construct-malformed and explicit-fault for both variants: on SoapFault the wrapper/entity-loader state is not restored to the kConf-blocked state (after-operation http/https true, marker_seen true).",
+  "nested": "nested-call-ok/nested-call-fault both variants: nested_outcome_not_security_approval=true; nested restore/unregister produce E_NOTICE 'was never changed' diagnostics; nested-construct produces unregister E_WARNINGs (and is a strict failure above).",
+  "variants": "exp11 results match original in all 11 cases (same flags/failures)."
+ },
+ "limitations": [
+  "Synthetic fixtures only; real_transport_coverage=false; application_patch_selected=false",
+  "No baseline74 executed",
+  "Runtime snapshot is binary/module/library bracket, not proof of mapped libraries",
+  "Reviewer is the executor; not a separate independent review",
+  "Harness pass/fail does not imply application acceptance"
+ ],
+ "not_done": [
+  "no source edits",
+  "no network/installation/SQL/apprepair/stagechanges",
+  "no 74 tools read"
+ ]
+}

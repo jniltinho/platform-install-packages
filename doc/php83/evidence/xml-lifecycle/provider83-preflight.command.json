@@ -1,0 +1,1 @@
+["ssh", "-T", "-F", "/tmp/kaltura-php83-ssh.conf", "php83", "set -eu; test \"$(hostname)\" = kaltura-php83-lab; dpkg-query -W -f='${Package}\t${Version}\t${Architecture}\t${Status}\n' 'php8.3*'; /usr/bin/php8.3 -n -d extension=xml -d extension=dom -d extension=soap -m; ls -l /usr/lib/php/20230831/soap.so 2>/dev/null || true"]

@@ -1,0 +1,36 @@
+{
+  "files": {
+    "tools/php83/xml-lifecycle/collect-private-r2.py": "00169cb215077a38dac5d4b89b6ce4560fc3267671ea23e12173931edcb6ed5b",
+    "tools/php83/xml-lifecycle/provider-inspect.py": "3ad3ee1544f843a2b70e2f533aef12105248836aad5d84bd430e42f58b4d22eb",
+    "tools/php83/xml-lifecycle/source-pins.json": "1fa4fa43c44007713a3c6b9361dec378af223f9fd45d342bab5a50be683aea16",
+    "tools/php83/xml-lifecycle/test_private.py": "0587e5cfe6db8b5b40062d0c275b0afa045f841f8762c420901af697dc3a9d42",
+    "tools/php83/xml-lifecycle/probe.php": "a28c3ba1a9d0d8af69235fd59e8bbc28b30e12aea172fa1cb6f17099534929f8",
+    "tools/php83/xml-lifecycle/collect-private.py": "e939688c297a3f395e10a8fd349f5ce0d6cfc8566dde0d89628c4bfbb9ec5c87",
+    "tools/php83/xml-lifecycle/run-private.sh": "48b6ec2b157941827acb893cd6e4ba65f84fa224e52ed0461b4b66d9e7967377",
+    "tools/php83/xml-lifecycle/prepare-private.py": "4df7a6c078d67dbfcaf1045ad27f4550ab4568c6ce9d05a7ef5d9f25c68f8f27",
+    "tools/php83/xml-lifecycle/run.sh": "d22f6ba64a965e84dbd198fca4959db3306bd7d7890e0185cdd3ecef3ffe4a8d",
+    "tools/php83/xml-lifecycle/prepare.py": "7d8fc4160a2e909b6ab0d60a6baab12e57f67c6d40bf36415397337a397a752e",
+    "tools/php83/xml-lifecycle/collect.py": "dd488de0368a4f5f9ce8ad756dedb2957b8e68df08bbb48663b046d723f100fc",
+    "tools/php83/xml-lifecycle/test_prepare.py": "6e0de52f4bccb53f2841d9aa79dc8182f8ff738e2c04058996f60625bf902789",
+    "tools/php83/xml-lifecycle/run-private-r2.sh": "2eca23591a31df3d59ed74d7259e4465a95869c0c5d363efb6e09a12c85daf6d"
+  },
+  "phases": {
+    "initial_missing_soap": {
+      "stage": "/home/vagrant/php-xml-lifecycle-r1",
+      "manifest": "5c066127b4342ec61682e44b7b0509bc768cc50cffbf270a7e10b16dbf0c8bd6",
+      "status": "NOT_EXECUTED_APPLICATION"
+    },
+    "private_r1": {
+      "stage": "/home/vagrant/php-xml-lifecycle-private-r1",
+      "manifest": "c360a94309d8f7fc0ab297fec1366c699a929d443be0f78efb945576f910734e",
+      "baseline74": "NOT_EXECUTED_APPLICATION_provider_schema_guard",
+      "native83": "22_native_exit0_18contracts_4strict_failures"
+    },
+    "private_r2": {
+      "stage": "/home/vagrant/php-xml-lifecycle-private-r2",
+      "manifest": "09db0fb17045f61d205b90a48b81b51af50ab7b3c5381a1767e10b26ec05570b",
+      "baseline74": "22_native_exit0_18contracts_4strict_failures",
+      "native83": "NOT_STAGED_NOT_EXECUTED"
+    }
+  }
+}

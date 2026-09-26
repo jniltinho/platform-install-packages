@@ -1,0 +1,1 @@
+["ssh", "-T", "-F", "/tmp/kaltura-php83-ssh.conf", "php83", "python3 - 83"]

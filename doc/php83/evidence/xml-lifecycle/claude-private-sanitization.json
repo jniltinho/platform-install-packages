@@ -1,0 +1,6 @@
+{
+  "raw_sha256": "5450a6ee8b3362ccdeed58a4b6587f5279de98130aa667b5138ac2937a80b98a",
+  "sanitized_sha256": "f415e812340a4c5f2ce55572195cf5d2f2509c74fbc98c1cbafffa895faf03c9",
+  "policy": "only current tool calls/results and public final; no reasoning/history",
+  "events": 11
+}

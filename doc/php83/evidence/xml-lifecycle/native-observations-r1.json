@@ -1,0 +1,2085 @@
+{
+  "status": "NATIVE_OBSERVATIONS_WITH_RETAINED_STRICT_FAILURES",
+  "application_patch_selected": false,
+  "policy_candidate_selected": false,
+  "runtimes": {
+    "74": {
+      "source_report": "private-r2-primary74.json",
+      "sha256": "755dc2a8f5139f2efe8e5728f83a37cd6c610c47d43246bf825c1211918a08ae",
+      "native_exit_counts": {
+        "0": 22
+      },
+      "strict_pass_rows": 18,
+      "strict_fail_rows": 4,
+      "rows": [
+        {
+          "variant": "original",
+          "case": "bootstrap",
+          "native_exit": 0,
+          "collector_validation": null,
+          "handler_diagnostics": 2,
+          "handler_only_diagnostics": [],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            }
+          ],
+          "exception": null,
+          "result": null,
+          "nested_results": []
+        },
+        {
+          "variant": "original",
+          "case": "construct-good",
+          "native_exit": 0,
+          "collector_validation": null,
+          "handler_diagnostics": 3,
+          "handler_only_diagnostics": [],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-constructor",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            }
+          ],
+          "exception": null,
+          "result": null,
+          "nested_results": []
+        },
+        {
+          "variant": "original",
+          "case": "construct-malformed",
+          "native_exit": 0,
+          "collector_validation": null,
+          "handler_diagnostics": 1,
+          "handler_only_diagnostics": [],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            }
+          ],
+          "exception": {
+            "class": "SoapFault",
+            "message": "SOAP-ERROR: Parsing WSDL: Couldn't load from 'file:///audit/probe/fixtures/malformed.wsdl' : Premature end of data in tag definitions line 1\n"
+          },
+          "result": null,
+          "nested_results": []
+        },
+        {
+          "variant": "original",
+          "case": "construct-missing",
+          "native_exit": 0,
+          "collector_validation": {
+            "class": "ValueError",
+            "message": "native warning retention"
+          },
+          "handler_diagnostics": 2,
+          "handler_only_diagnostics": [
+            {
+              "phase": "operation:construct",
+              "severity": 2,
+              "message": "SoapClient::SoapClient(): I/O warning : failed to load external entity \"file:///audit/probe/fixtures/missing.wsdl\"",
+              "file": "original/infra/general/kSoapClient.php",
+              "line": 8
+            }
+          ],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            }
+          ],
+          "exception": {
+            "class": "SoapFault",
+            "message": "SOAP-ERROR: Parsing WSDL: Couldn't load from 'file:///audit/probe/fixtures/missing.wsdl' : failed to load external entity \"file:///audit/probe/fixtures/missing.wsdl\"\n"
+          },
+          "result": null,
+          "nested_results": []
+        },
+        {
+          "variant": "original",
+          "case": "explicit-ok",
+          "native_exit": 0,
+          "collector_validation": null,
+          "handler_diagnostics": 3,
+          "handler_only_diagnostics": [],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-constructor",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "transport-enter-0",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            }
+          ],
+          "exception": null,
+          "result": {
+            "value": "SYNTHETIC_RESPONSE"
+          },
+          "nested_results": []
+        },
+        {
+          "variant": "original",
+          "case": "magic-ok",
+          "native_exit": 0,
+          "collector_validation": null,
+          "handler_diagnostics": 3,
+          "handler_only_diagnostics": [],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-constructor",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "transport-enter-0",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            }
+          ],
+          "exception": null,
+          "result": {
+            "value": "SYNTHETIC_RESPONSE"
+          },
+          "nested_results": []
+        },
+        {
+          "variant": "original",
+          "case": "explicit-fault",
+          "native_exit": 0,
+          "collector_validation": null,
+          "handler_diagnostics": 2,
+          "handler_only_diagnostics": [],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-constructor",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            }
+          ],
+          "exception": {
+            "class": "SoapFault",
+            "message": "Function (\"notInFixture\") is not a valid method for this service"
+          },
+          "result": null,
+          "nested_results": []
+        },
+        {
+          "variant": "original",
+          "case": "callback-existing",
+          "native_exit": 0,
+          "collector_validation": null,
+          "handler_diagnostics": 0,
+          "handler_only_diagnostics": [],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": true,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-constructor",
+              "marker_seen": true,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": true,
+              "http": false,
+              "https": false
+            }
+          ],
+          "exception": null,
+          "result": null,
+          "nested_results": []
+        },
+        {
+          "variant": "original",
+          "case": "nested-construct",
+          "native_exit": 0,
+          "collector_validation": {
+            "class": "ValueError",
+            "message": "native warning retention"
+          },
+          "handler_diagnostics": 4,
+          "handler_only_diagnostics": [
+            {
+              "phase": "nested-resolver:construct",
+              "severity": 8,
+              "message": "stream_wrapper_restore(): http:// was never changed, nothing to restore",
+              "file": "original/infra/general/kSoapClient.php",
+              "line": 27
+            },
+            {
+              "phase": "nested-resolver:construct",
+              "severity": 8,
+              "message": "stream_wrapper_restore(): https:// was never changed, nothing to restore",
+              "file": "original/infra/general/kSoapClient.php",
+              "line": 28
+            }
+          ],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": true,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-constructor",
+              "marker_seen": true,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": true,
+              "http": false,
+              "https": false
+            }
+          ],
+          "exception": null,
+          "result": null,
+          "nested_results": [
+            {
+              "site": "resolver-inner",
+              "functions": [
+                "PingResponse ping(Ping $parameters)"
+              ],
+              "exception": null,
+              "wrappers_after": {
+                "http": false,
+                "https": false,
+                "all": [
+                  "compress.zlib",
+                  "data",
+                  "file",
+                  "ftp",
+                  "ftps",
+                  "glob",
+                  "php"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "variant": "original",
+          "case": "nested-call-ok",
+          "native_exit": 0,
+          "collector_validation": null,
+          "handler_diagnostics": 8,
+          "handler_only_diagnostics": [],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-constructor",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "transport-enter-0",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "transport-enter-1",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "transport-after-inner",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            }
+          ],
+          "exception": null,
+          "result": {
+            "value": "SYNTHETIC_RESPONSE"
+          },
+          "nested_results": [
+            {
+              "site": "transport-inner",
+              "value": {
+                "value": "SYNTHETIC_RESPONSE"
+              },
+              "exception": null
+            }
+          ]
+        },
+        {
+          "variant": "original",
+          "case": "nested-call-fault",
+          "native_exit": 0,
+          "collector_validation": null,
+          "handler_diagnostics": 5,
+          "handler_only_diagnostics": [],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-constructor",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "transport-enter-0",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "transport-after-inner",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            }
+          ],
+          "exception": null,
+          "result": {
+            "value": "SYNTHETIC_RESPONSE"
+          },
+          "nested_results": [
+            {
+              "site": "transport-inner",
+              "exception": {
+                "class": "SoapFault",
+                "message": "Function (\"notInFixture\") is not a valid method for this service"
+              }
+            }
+          ]
+        },
+        {
+          "variant": "exp11",
+          "case": "bootstrap",
+          "native_exit": 0,
+          "collector_validation": null,
+          "handler_diagnostics": 2,
+          "handler_only_diagnostics": [],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            }
+          ],
+          "exception": null,
+          "result": null,
+          "nested_results": []
+        },
+        {
+          "variant": "exp11",
+          "case": "construct-good",
+          "native_exit": 0,
+          "collector_validation": null,
+          "handler_diagnostics": 3,
+          "handler_only_diagnostics": [],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-constructor",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            }
+          ],
+          "exception": null,
+          "result": null,
+          "nested_results": []
+        },
+        {
+          "variant": "exp11",
+          "case": "construct-malformed",
+          "native_exit": 0,
+          "collector_validation": null,
+          "handler_diagnostics": 1,
+          "handler_only_diagnostics": [],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            }
+          ],
+          "exception": {
+            "class": "SoapFault",
+            "message": "SOAP-ERROR: Parsing WSDL: Couldn't load from 'file:///audit/probe/fixtures/malformed.wsdl' : Premature end of data in tag definitions line 1\n"
+          },
+          "result": null,
+          "nested_results": []
+        },
+        {
+          "variant": "exp11",
+          "case": "construct-missing",
+          "native_exit": 0,
+          "collector_validation": {
+            "class": "ValueError",
+            "message": "native warning retention"
+          },
+          "handler_diagnostics": 2,
+          "handler_only_diagnostics": [
+            {
+              "phase": "operation:construct",
+              "severity": 2,
+              "message": "SoapClient::SoapClient(): I/O warning : failed to load external entity \"file:///audit/probe/fixtures/missing.wsdl\"",
+              "file": "exp11/infra/general/kSoapClient.php",
+              "line": 8
+            }
+          ],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            }
+          ],
+          "exception": {
+            "class": "SoapFault",
+            "message": "SOAP-ERROR: Parsing WSDL: Couldn't load from 'file:///audit/probe/fixtures/missing.wsdl' : failed to load external entity \"file:///audit/probe/fixtures/missing.wsdl\"\n"
+          },
+          "result": null,
+          "nested_results": []
+        },
+        {
+          "variant": "exp11",
+          "case": "explicit-ok",
+          "native_exit": 0,
+          "collector_validation": null,
+          "handler_diagnostics": 3,
+          "handler_only_diagnostics": [],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-constructor",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "transport-enter-0",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            }
+          ],
+          "exception": null,
+          "result": {
+            "value": "SYNTHETIC_RESPONSE"
+          },
+          "nested_results": []
+        },
+        {
+          "variant": "exp11",
+          "case": "magic-ok",
+          "native_exit": 0,
+          "collector_validation": null,
+          "handler_diagnostics": 3,
+          "handler_only_diagnostics": [],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-constructor",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "transport-enter-0",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            }
+          ],
+          "exception": null,
+          "result": {
+            "value": "SYNTHETIC_RESPONSE"
+          },
+          "nested_results": []
+        },
+        {
+          "variant": "exp11",
+          "case": "explicit-fault",
+          "native_exit": 0,
+          "collector_validation": null,
+          "handler_diagnostics": 2,
+          "handler_only_diagnostics": [],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-constructor",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            }
+          ],
+          "exception": {
+            "class": "SoapFault",
+            "message": "Function (\"notInFixture\") is not a valid method for this service"
+          },
+          "result": null,
+          "nested_results": []
+        },
+        {
+          "variant": "exp11",
+          "case": "callback-existing",
+          "native_exit": 0,
+          "collector_validation": null,
+          "handler_diagnostics": 0,
+          "handler_only_diagnostics": [],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": true,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-constructor",
+              "marker_seen": true,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": true,
+              "http": false,
+              "https": false
+            }
+          ],
+          "exception": null,
+          "result": null,
+          "nested_results": []
+        },
+        {
+          "variant": "exp11",
+          "case": "nested-construct",
+          "native_exit": 0,
+          "collector_validation": {
+            "class": "ValueError",
+            "message": "native warning retention"
+          },
+          "handler_diagnostics": 4,
+          "handler_only_diagnostics": [
+            {
+              "phase": "nested-resolver:construct",
+              "severity": 8,
+              "message": "stream_wrapper_restore(): http:// was never changed, nothing to restore",
+              "file": "exp11/infra/general/kSoapClient.php",
+              "line": 27
+            },
+            {
+              "phase": "nested-resolver:construct",
+              "severity": 8,
+              "message": "stream_wrapper_restore(): https:// was never changed, nothing to restore",
+              "file": "exp11/infra/general/kSoapClient.php",
+              "line": 28
+            }
+          ],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": true,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-constructor",
+              "marker_seen": true,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": true,
+              "http": false,
+              "https": false
+            }
+          ],
+          "exception": null,
+          "result": null,
+          "nested_results": [
+            {
+              "site": "resolver-inner",
+              "functions": [
+                "PingResponse ping(Ping $parameters)"
+              ],
+              "exception": null,
+              "wrappers_after": {
+                "http": false,
+                "https": false,
+                "all": [
+                  "compress.zlib",
+                  "data",
+                  "file",
+                  "ftp",
+                  "ftps",
+                  "glob",
+                  "php"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "variant": "exp11",
+          "case": "nested-call-ok",
+          "native_exit": 0,
+          "collector_validation": null,
+          "handler_diagnostics": 8,
+          "handler_only_diagnostics": [],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-constructor",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "transport-enter-0",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "transport-enter-1",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "transport-after-inner",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            }
+          ],
+          "exception": null,
+          "result": {
+            "value": "SYNTHETIC_RESPONSE"
+          },
+          "nested_results": [
+            {
+              "site": "transport-inner",
+              "value": {
+                "value": "SYNTHETIC_RESPONSE"
+              },
+              "exception": null
+            }
+          ]
+        },
+        {
+          "variant": "exp11",
+          "case": "nested-call-fault",
+          "native_exit": 0,
+          "collector_validation": null,
+          "handler_diagnostics": 5,
+          "handler_only_diagnostics": [],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-constructor",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "transport-enter-0",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "transport-after-inner",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            }
+          ],
+          "exception": null,
+          "result": {
+            "value": "SYNTHETIC_RESPONSE"
+          },
+          "nested_results": [
+            {
+              "site": "transport-inner",
+              "exception": {
+                "class": "SoapFault",
+                "message": "Function (\"notInFixture\") is not a valid method for this service"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "83": {
+      "source_report": "private-primary83.json",
+      "sha256": "3e5382b28f41db5fa1b433d4230556610cdc2d6f6d58da33a02864ef26174b03",
+      "native_exit_counts": {
+        "0": 22
+      },
+      "strict_pass_rows": 18,
+      "strict_fail_rows": 4,
+      "rows": [
+        {
+          "variant": "original",
+          "case": "bootstrap",
+          "native_exit": 0,
+          "collector_validation": null,
+          "handler_diagnostics": 5,
+          "handler_only_diagnostics": [],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            }
+          ],
+          "exception": null,
+          "result": null,
+          "nested_results": []
+        },
+        {
+          "variant": "original",
+          "case": "construct-good",
+          "native_exit": 0,
+          "collector_validation": null,
+          "handler_diagnostics": 8,
+          "handler_only_diagnostics": [],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-constructor",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            }
+          ],
+          "exception": null,
+          "result": null,
+          "nested_results": []
+        },
+        {
+          "variant": "original",
+          "case": "construct-malformed",
+          "native_exit": 0,
+          "collector_validation": null,
+          "handler_diagnostics": 5,
+          "handler_only_diagnostics": [],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            }
+          ],
+          "exception": {
+            "class": "SoapFault",
+            "message": "SOAP-ERROR: Parsing WSDL: Couldn't load from 'file:///audit/probe/fixtures/malformed.wsdl' : Premature end of data in tag definitions line 1\n"
+          },
+          "result": null,
+          "nested_results": []
+        },
+        {
+          "variant": "original",
+          "case": "construct-missing",
+          "native_exit": 0,
+          "collector_validation": {
+            "class": "ValueError",
+            "message": "native warning retention"
+          },
+          "handler_diagnostics": 6,
+          "handler_only_diagnostics": [
+            {
+              "phase": "operation:construct",
+              "severity": 2,
+              "message": "SoapClient::__construct(): I/O warning : failed to load external entity \"file:///audit/probe/fixtures/missing.wsdl\"",
+              "file": "original/infra/general/kSoapClient.php",
+              "line": 8
+            }
+          ],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            }
+          ],
+          "exception": {
+            "class": "SoapFault",
+            "message": "SOAP-ERROR: Parsing WSDL: Couldn't load from 'file:///audit/probe/fixtures/missing.wsdl' : failed to load external entity \"file:///audit/probe/fixtures/missing.wsdl\"\n"
+          },
+          "result": null,
+          "nested_results": []
+        },
+        {
+          "variant": "original",
+          "case": "explicit-ok",
+          "native_exit": 0,
+          "collector_validation": null,
+          "handler_diagnostics": 10,
+          "handler_only_diagnostics": [],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-constructor",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "transport-enter-0",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            }
+          ],
+          "exception": null,
+          "result": {
+            "value": "SYNTHETIC_RESPONSE"
+          },
+          "nested_results": []
+        },
+        {
+          "variant": "original",
+          "case": "magic-ok",
+          "native_exit": 0,
+          "collector_validation": null,
+          "handler_diagnostics": 10,
+          "handler_only_diagnostics": [],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-constructor",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "transport-enter-0",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            }
+          ],
+          "exception": null,
+          "result": {
+            "value": "SYNTHETIC_RESPONSE"
+          },
+          "nested_results": []
+        },
+        {
+          "variant": "original",
+          "case": "explicit-fault",
+          "native_exit": 0,
+          "collector_validation": null,
+          "handler_diagnostics": 8,
+          "handler_only_diagnostics": [],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-constructor",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            }
+          ],
+          "exception": {
+            "class": "SoapFault",
+            "message": "Function (\"notInFixture\") is not a valid method for this service"
+          },
+          "result": null,
+          "nested_results": []
+        },
+        {
+          "variant": "original",
+          "case": "callback-existing",
+          "native_exit": 0,
+          "collector_validation": null,
+          "handler_diagnostics": 5,
+          "handler_only_diagnostics": [],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": true,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-constructor",
+              "marker_seen": true,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": true,
+              "http": false,
+              "https": false
+            }
+          ],
+          "exception": null,
+          "result": null,
+          "nested_results": []
+        },
+        {
+          "variant": "original",
+          "case": "nested-construct",
+          "native_exit": 0,
+          "collector_validation": {
+            "class": "ValueError",
+            "message": "native warning retention"
+          },
+          "handler_diagnostics": 11,
+          "handler_only_diagnostics": [
+            {
+              "phase": "nested-resolver:construct",
+              "severity": 8,
+              "message": "stream_wrapper_restore(): http:// was never changed, nothing to restore",
+              "file": "original/infra/general/kSoapClient.php",
+              "line": 27
+            },
+            {
+              "phase": "nested-resolver:construct",
+              "severity": 8,
+              "message": "stream_wrapper_restore(): https:// was never changed, nothing to restore",
+              "file": "original/infra/general/kSoapClient.php",
+              "line": 28
+            }
+          ],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": true,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-constructor",
+              "marker_seen": true,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": true,
+              "http": false,
+              "https": false
+            }
+          ],
+          "exception": null,
+          "result": null,
+          "nested_results": [
+            {
+              "site": "resolver-inner",
+              "functions": [
+                "PingResponse ping(Ping $parameters)"
+              ],
+              "exception": null,
+              "wrappers_after": {
+                "http": false,
+                "https": false,
+                "all": [
+                  "compress.zlib",
+                  "data",
+                  "file",
+                  "ftp",
+                  "ftps",
+                  "glob",
+                  "php"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "variant": "original",
+          "case": "nested-call-ok",
+          "native_exit": 0,
+          "collector_validation": null,
+          "handler_diagnostics": 19,
+          "handler_only_diagnostics": [],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-constructor",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "transport-enter-0",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "transport-enter-1",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "transport-after-inner",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            }
+          ],
+          "exception": null,
+          "result": {
+            "value": "SYNTHETIC_RESPONSE"
+          },
+          "nested_results": [
+            {
+              "site": "transport-inner",
+              "value": {
+                "value": "SYNTHETIC_RESPONSE"
+              },
+              "exception": null
+            }
+          ]
+        },
+        {
+          "variant": "original",
+          "case": "nested-call-fault",
+          "native_exit": 0,
+          "collector_validation": null,
+          "handler_diagnostics": 15,
+          "handler_only_diagnostics": [],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-constructor",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "transport-enter-0",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "transport-after-inner",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            }
+          ],
+          "exception": null,
+          "result": {
+            "value": "SYNTHETIC_RESPONSE"
+          },
+          "nested_results": [
+            {
+              "site": "transport-inner",
+              "exception": {
+                "class": "SoapFault",
+                "message": "Function (\"notInFixture\") is not a valid method for this service"
+              }
+            }
+          ]
+        },
+        {
+          "variant": "exp11",
+          "case": "bootstrap",
+          "native_exit": 0,
+          "collector_validation": null,
+          "handler_diagnostics": 5,
+          "handler_only_diagnostics": [],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            }
+          ],
+          "exception": null,
+          "result": null,
+          "nested_results": []
+        },
+        {
+          "variant": "exp11",
+          "case": "construct-good",
+          "native_exit": 0,
+          "collector_validation": null,
+          "handler_diagnostics": 8,
+          "handler_only_diagnostics": [],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-constructor",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            }
+          ],
+          "exception": null,
+          "result": null,
+          "nested_results": []
+        },
+        {
+          "variant": "exp11",
+          "case": "construct-malformed",
+          "native_exit": 0,
+          "collector_validation": null,
+          "handler_diagnostics": 5,
+          "handler_only_diagnostics": [],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            }
+          ],
+          "exception": {
+            "class": "SoapFault",
+            "message": "SOAP-ERROR: Parsing WSDL: Couldn't load from 'file:///audit/probe/fixtures/malformed.wsdl' : Premature end of data in tag definitions line 1\n"
+          },
+          "result": null,
+          "nested_results": []
+        },
+        {
+          "variant": "exp11",
+          "case": "construct-missing",
+          "native_exit": 0,
+          "collector_validation": {
+            "class": "ValueError",
+            "message": "native warning retention"
+          },
+          "handler_diagnostics": 6,
+          "handler_only_diagnostics": [
+            {
+              "phase": "operation:construct",
+              "severity": 2,
+              "message": "SoapClient::__construct(): I/O warning : failed to load external entity \"file:///audit/probe/fixtures/missing.wsdl\"",
+              "file": "exp11/infra/general/kSoapClient.php",
+              "line": 8
+            }
+          ],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            }
+          ],
+          "exception": {
+            "class": "SoapFault",
+            "message": "SOAP-ERROR: Parsing WSDL: Couldn't load from 'file:///audit/probe/fixtures/missing.wsdl' : failed to load external entity \"file:///audit/probe/fixtures/missing.wsdl\"\n"
+          },
+          "result": null,
+          "nested_results": []
+        },
+        {
+          "variant": "exp11",
+          "case": "explicit-ok",
+          "native_exit": 0,
+          "collector_validation": null,
+          "handler_diagnostics": 10,
+          "handler_only_diagnostics": [],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-constructor",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "transport-enter-0",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            }
+          ],
+          "exception": null,
+          "result": {
+            "value": "SYNTHETIC_RESPONSE"
+          },
+          "nested_results": []
+        },
+        {
+          "variant": "exp11",
+          "case": "magic-ok",
+          "native_exit": 0,
+          "collector_validation": null,
+          "handler_diagnostics": 10,
+          "handler_only_diagnostics": [],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-constructor",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "transport-enter-0",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            }
+          ],
+          "exception": null,
+          "result": {
+            "value": "SYNTHETIC_RESPONSE"
+          },
+          "nested_results": []
+        },
+        {
+          "variant": "exp11",
+          "case": "explicit-fault",
+          "native_exit": 0,
+          "collector_validation": null,
+          "handler_diagnostics": 8,
+          "handler_only_diagnostics": [],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-constructor",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            }
+          ],
+          "exception": {
+            "class": "SoapFault",
+            "message": "Function (\"notInFixture\") is not a valid method for this service"
+          },
+          "result": null,
+          "nested_results": []
+        },
+        {
+          "variant": "exp11",
+          "case": "callback-existing",
+          "native_exit": 0,
+          "collector_validation": null,
+          "handler_diagnostics": 5,
+          "handler_only_diagnostics": [],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": true,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-constructor",
+              "marker_seen": true,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": true,
+              "http": false,
+              "https": false
+            }
+          ],
+          "exception": null,
+          "result": null,
+          "nested_results": []
+        },
+        {
+          "variant": "exp11",
+          "case": "nested-construct",
+          "native_exit": 0,
+          "collector_validation": {
+            "class": "ValueError",
+            "message": "native warning retention"
+          },
+          "handler_diagnostics": 11,
+          "handler_only_diagnostics": [
+            {
+              "phase": "nested-resolver:construct",
+              "severity": 8,
+              "message": "stream_wrapper_restore(): http:// was never changed, nothing to restore",
+              "file": "exp11/infra/general/kSoapClient.php",
+              "line": 27
+            },
+            {
+              "phase": "nested-resolver:construct",
+              "severity": 8,
+              "message": "stream_wrapper_restore(): https:// was never changed, nothing to restore",
+              "file": "exp11/infra/general/kSoapClient.php",
+              "line": 28
+            }
+          ],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": true,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-constructor",
+              "marker_seen": true,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": true,
+              "http": false,
+              "https": false
+            }
+          ],
+          "exception": null,
+          "result": null,
+          "nested_results": [
+            {
+              "site": "resolver-inner",
+              "functions": [
+                "PingResponse ping(Ping $parameters)"
+              ],
+              "exception": null,
+              "wrappers_after": {
+                "http": false,
+                "https": false,
+                "all": [
+                  "compress.zlib",
+                  "data",
+                  "file",
+                  "ftp",
+                  "ftps",
+                  "glob",
+                  "php"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "variant": "exp11",
+          "case": "nested-call-ok",
+          "native_exit": 0,
+          "collector_validation": null,
+          "handler_diagnostics": 19,
+          "handler_only_diagnostics": [],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-constructor",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "transport-enter-0",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "transport-enter-1",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "transport-after-inner",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            }
+          ],
+          "exception": null,
+          "result": {
+            "value": "SYNTHETIC_RESPONSE"
+          },
+          "nested_results": [
+            {
+              "site": "transport-inner",
+              "value": {
+                "value": "SYNTHETIC_RESPONSE"
+              },
+              "exception": null
+            }
+          ]
+        },
+        {
+          "variant": "exp11",
+          "case": "nested-call-fault",
+          "native_exit": 0,
+          "collector_validation": null,
+          "handler_diagnostics": 15,
+          "handler_only_diagnostics": [],
+          "states": [
+            {
+              "phase": "before-kConf",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-kConf",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "after-constructor",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            },
+            {
+              "phase": "transport-enter-0",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "transport-after-inner",
+              "marker_seen": true,
+              "http": true,
+              "https": true
+            },
+            {
+              "phase": "after-operation",
+              "marker_seen": false,
+              "http": false,
+              "https": false
+            }
+          ],
+          "exception": null,
+          "result": {
+            "value": "SYNTHETIC_RESPONSE"
+          },
+          "nested_results": [
+            {
+              "site": "transport-inner",
+              "exception": {
+                "class": "SoapFault",
+                "message": "Function (\"notInFixture\") is not a valid method for this service"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

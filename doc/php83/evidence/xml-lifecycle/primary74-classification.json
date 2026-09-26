@@ -1,0 +1,19 @@
+{
+  "status": "NOT_EXECUTED_APPLICATION_MISSING_SOAP",
+  "retained_collector_status": "FAIL_RETAINED_OBSERVATIONS",
+  "retained_collector_exit": 1,
+  "process_exit_counts": {
+    "65": 22
+  },
+  "application_records": 0,
+  "runtime_before_after_equal": true,
+  "no_system_install": true,
+  "no_application_patch_selected": true,
+  "evidence_sha256": {
+    "primary74.json": "b2b42ad415e9822f5c1ea0464af7b33c25f8cde0bafc3683c733b4e54a876d3a",
+    "runtime74-before.json": "a7c9a22fb6d120993fe188ceb31b68cafb49079aef5100d047d9ad31d21820dd",
+    "runtime74-after.json": "a7c9a22fb6d120993fe188ceb31b68cafb49079aef5100d047d9ad31d21820dd",
+    "provider74-preflight.stdout": "d4debc079f870744fc20acc087b8e1de701f7049593f38558c069dfb9139e609",
+    "provider83-preflight.stdout": "2bb3469577aed41d99d6b75cb26852c2592b46dcda236a5c72aee4067e9eca4c"
+  }
+}

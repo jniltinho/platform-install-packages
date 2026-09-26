@@ -1,0 +1,453 @@
+{
+  "status": "FAIL_RETAINED_OBSERVATIONS",
+  "runtime": "74",
+  "manifest_sha256": "5c066127b4342ec61682e44b7b0509bc768cc50cffbf270a7e10b16dbf0c8bd6",
+  "collector_sha256": "dd488de0368a4f5f9ce8ad756dedb2957b8e68df08bbb48663b046d723f100fc",
+  "records": [
+    {
+      "variant": "original",
+      "case": "bootstrap",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-r1/run.sh original bootstrap 5c066127b4342ec61682e44b7b0509bc768cc50cffbf270a7e10b16dbf0c8bd6"
+      ],
+      "exit": 65,
+      "stdout": "",
+      "stderr": "PHP Warning:  PHP Startup: Unable to load dynamic library 'soap' (tried: /usr/lib/php/20190902/soap (/usr/lib/php/20190902/soap: cannot open shared object file: No such file or directory), /usr/lib/php/20190902/soap.so (/usr/lib/php/20190902/soap.so: cannot open shared object file: No such file or directory)) in Unknown on line 0\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    },
+    {
+      "variant": "original",
+      "case": "construct-good",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-r1/run.sh original construct-good 5c066127b4342ec61682e44b7b0509bc768cc50cffbf270a7e10b16dbf0c8bd6"
+      ],
+      "exit": 65,
+      "stdout": "",
+      "stderr": "PHP Warning:  PHP Startup: Unable to load dynamic library 'soap' (tried: /usr/lib/php/20190902/soap (/usr/lib/php/20190902/soap: cannot open shared object file: No such file or directory), /usr/lib/php/20190902/soap.so (/usr/lib/php/20190902/soap.so: cannot open shared object file: No such file or directory)) in Unknown on line 0\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    },
+    {
+      "variant": "original",
+      "case": "construct-malformed",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-r1/run.sh original construct-malformed 5c066127b4342ec61682e44b7b0509bc768cc50cffbf270a7e10b16dbf0c8bd6"
+      ],
+      "exit": 65,
+      "stdout": "",
+      "stderr": "PHP Warning:  PHP Startup: Unable to load dynamic library 'soap' (tried: /usr/lib/php/20190902/soap (/usr/lib/php/20190902/soap: cannot open shared object file: No such file or directory), /usr/lib/php/20190902/soap.so (/usr/lib/php/20190902/soap.so: cannot open shared object file: No such file or directory)) in Unknown on line 0\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    },
+    {
+      "variant": "original",
+      "case": "construct-missing",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-r1/run.sh original construct-missing 5c066127b4342ec61682e44b7b0509bc768cc50cffbf270a7e10b16dbf0c8bd6"
+      ],
+      "exit": 65,
+      "stdout": "",
+      "stderr": "PHP Warning:  PHP Startup: Unable to load dynamic library 'soap' (tried: /usr/lib/php/20190902/soap (/usr/lib/php/20190902/soap: cannot open shared object file: No such file or directory), /usr/lib/php/20190902/soap.so (/usr/lib/php/20190902/soap.so: cannot open shared object file: No such file or directory)) in Unknown on line 0\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    },
+    {
+      "variant": "original",
+      "case": "explicit-ok",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-r1/run.sh original explicit-ok 5c066127b4342ec61682e44b7b0509bc768cc50cffbf270a7e10b16dbf0c8bd6"
+      ],
+      "exit": 65,
+      "stdout": "",
+      "stderr": "PHP Warning:  PHP Startup: Unable to load dynamic library 'soap' (tried: /usr/lib/php/20190902/soap (/usr/lib/php/20190902/soap: cannot open shared object file: No such file or directory), /usr/lib/php/20190902/soap.so (/usr/lib/php/20190902/soap.so: cannot open shared object file: No such file or directory)) in Unknown on line 0\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    },
+    {
+      "variant": "original",
+      "case": "magic-ok",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-r1/run.sh original magic-ok 5c066127b4342ec61682e44b7b0509bc768cc50cffbf270a7e10b16dbf0c8bd6"
+      ],
+      "exit": 65,
+      "stdout": "",
+      "stderr": "PHP Warning:  PHP Startup: Unable to load dynamic library 'soap' (tried: /usr/lib/php/20190902/soap (/usr/lib/php/20190902/soap: cannot open shared object file: No such file or directory), /usr/lib/php/20190902/soap.so (/usr/lib/php/20190902/soap.so: cannot open shared object file: No such file or directory)) in Unknown on line 0\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    },
+    {
+      "variant": "original",
+      "case": "explicit-fault",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-r1/run.sh original explicit-fault 5c066127b4342ec61682e44b7b0509bc768cc50cffbf270a7e10b16dbf0c8bd6"
+      ],
+      "exit": 65,
+      "stdout": "",
+      "stderr": "PHP Warning:  PHP Startup: Unable to load dynamic library 'soap' (tried: /usr/lib/php/20190902/soap (/usr/lib/php/20190902/soap: cannot open shared object file: No such file or directory), /usr/lib/php/20190902/soap.so (/usr/lib/php/20190902/soap.so: cannot open shared object file: No such file or directory)) in Unknown on line 0\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    },
+    {
+      "variant": "original",
+      "case": "callback-existing",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-r1/run.sh original callback-existing 5c066127b4342ec61682e44b7b0509bc768cc50cffbf270a7e10b16dbf0c8bd6"
+      ],
+      "exit": 65,
+      "stdout": "",
+      "stderr": "PHP Warning:  PHP Startup: Unable to load dynamic library 'soap' (tried: /usr/lib/php/20190902/soap (/usr/lib/php/20190902/soap: cannot open shared object file: No such file or directory), /usr/lib/php/20190902/soap.so (/usr/lib/php/20190902/soap.so: cannot open shared object file: No such file or directory)) in Unknown on line 0\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    },
+    {
+      "variant": "original",
+      "case": "nested-construct",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-r1/run.sh original nested-construct 5c066127b4342ec61682e44b7b0509bc768cc50cffbf270a7e10b16dbf0c8bd6"
+      ],
+      "exit": 65,
+      "stdout": "",
+      "stderr": "PHP Warning:  PHP Startup: Unable to load dynamic library 'soap' (tried: /usr/lib/php/20190902/soap (/usr/lib/php/20190902/soap: cannot open shared object file: No such file or directory), /usr/lib/php/20190902/soap.so (/usr/lib/php/20190902/soap.so: cannot open shared object file: No such file or directory)) in Unknown on line 0\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    },
+    {
+      "variant": "original",
+      "case": "nested-call-ok",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-r1/run.sh original nested-call-ok 5c066127b4342ec61682e44b7b0509bc768cc50cffbf270a7e10b16dbf0c8bd6"
+      ],
+      "exit": 65,
+      "stdout": "",
+      "stderr": "PHP Warning:  PHP Startup: Unable to load dynamic library 'soap' (tried: /usr/lib/php/20190902/soap (/usr/lib/php/20190902/soap: cannot open shared object file: No such file or directory), /usr/lib/php/20190902/soap.so (/usr/lib/php/20190902/soap.so: cannot open shared object file: No such file or directory)) in Unknown on line 0\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    },
+    {
+      "variant": "original",
+      "case": "nested-call-fault",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-r1/run.sh original nested-call-fault 5c066127b4342ec61682e44b7b0509bc768cc50cffbf270a7e10b16dbf0c8bd6"
+      ],
+      "exit": 65,
+      "stdout": "",
+      "stderr": "PHP Warning:  PHP Startup: Unable to load dynamic library 'soap' (tried: /usr/lib/php/20190902/soap (/usr/lib/php/20190902/soap: cannot open shared object file: No such file or directory), /usr/lib/php/20190902/soap.so (/usr/lib/php/20190902/soap.so: cannot open shared object file: No such file or directory)) in Unknown on line 0\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    },
+    {
+      "variant": "exp11",
+      "case": "bootstrap",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-r1/run.sh exp11 bootstrap 5c066127b4342ec61682e44b7b0509bc768cc50cffbf270a7e10b16dbf0c8bd6"
+      ],
+      "exit": 65,
+      "stdout": "",
+      "stderr": "PHP Warning:  PHP Startup: Unable to load dynamic library 'soap' (tried: /usr/lib/php/20190902/soap (/usr/lib/php/20190902/soap: cannot open shared object file: No such file or directory), /usr/lib/php/20190902/soap.so (/usr/lib/php/20190902/soap.so: cannot open shared object file: No such file or directory)) in Unknown on line 0\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    },
+    {
+      "variant": "exp11",
+      "case": "construct-good",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-r1/run.sh exp11 construct-good 5c066127b4342ec61682e44b7b0509bc768cc50cffbf270a7e10b16dbf0c8bd6"
+      ],
+      "exit": 65,
+      "stdout": "",
+      "stderr": "PHP Warning:  PHP Startup: Unable to load dynamic library 'soap' (tried: /usr/lib/php/20190902/soap (/usr/lib/php/20190902/soap: cannot open shared object file: No such file or directory), /usr/lib/php/20190902/soap.so (/usr/lib/php/20190902/soap.so: cannot open shared object file: No such file or directory)) in Unknown on line 0\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    },
+    {
+      "variant": "exp11",
+      "case": "construct-malformed",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-r1/run.sh exp11 construct-malformed 5c066127b4342ec61682e44b7b0509bc768cc50cffbf270a7e10b16dbf0c8bd6"
+      ],
+      "exit": 65,
+      "stdout": "",
+      "stderr": "PHP Warning:  PHP Startup: Unable to load dynamic library 'soap' (tried: /usr/lib/php/20190902/soap (/usr/lib/php/20190902/soap: cannot open shared object file: No such file or directory), /usr/lib/php/20190902/soap.so (/usr/lib/php/20190902/soap.so: cannot open shared object file: No such file or directory)) in Unknown on line 0\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    },
+    {
+      "variant": "exp11",
+      "case": "construct-missing",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-r1/run.sh exp11 construct-missing 5c066127b4342ec61682e44b7b0509bc768cc50cffbf270a7e10b16dbf0c8bd6"
+      ],
+      "exit": 65,
+      "stdout": "",
+      "stderr": "PHP Warning:  PHP Startup: Unable to load dynamic library 'soap' (tried: /usr/lib/php/20190902/soap (/usr/lib/php/20190902/soap: cannot open shared object file: No such file or directory), /usr/lib/php/20190902/soap.so (/usr/lib/php/20190902/soap.so: cannot open shared object file: No such file or directory)) in Unknown on line 0\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    },
+    {
+      "variant": "exp11",
+      "case": "explicit-ok",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-r1/run.sh exp11 explicit-ok 5c066127b4342ec61682e44b7b0509bc768cc50cffbf270a7e10b16dbf0c8bd6"
+      ],
+      "exit": 65,
+      "stdout": "",
+      "stderr": "PHP Warning:  PHP Startup: Unable to load dynamic library 'soap' (tried: /usr/lib/php/20190902/soap (/usr/lib/php/20190902/soap: cannot open shared object file: No such file or directory), /usr/lib/php/20190902/soap.so (/usr/lib/php/20190902/soap.so: cannot open shared object file: No such file or directory)) in Unknown on line 0\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    },
+    {
+      "variant": "exp11",
+      "case": "magic-ok",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-r1/run.sh exp11 magic-ok 5c066127b4342ec61682e44b7b0509bc768cc50cffbf270a7e10b16dbf0c8bd6"
+      ],
+      "exit": 65,
+      "stdout": "",
+      "stderr": "PHP Warning:  PHP Startup: Unable to load dynamic library 'soap' (tried: /usr/lib/php/20190902/soap (/usr/lib/php/20190902/soap: cannot open shared object file: No such file or directory), /usr/lib/php/20190902/soap.so (/usr/lib/php/20190902/soap.so: cannot open shared object file: No such file or directory)) in Unknown on line 0\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    },
+    {
+      "variant": "exp11",
+      "case": "explicit-fault",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-r1/run.sh exp11 explicit-fault 5c066127b4342ec61682e44b7b0509bc768cc50cffbf270a7e10b16dbf0c8bd6"
+      ],
+      "exit": 65,
+      "stdout": "",
+      "stderr": "PHP Warning:  PHP Startup: Unable to load dynamic library 'soap' (tried: /usr/lib/php/20190902/soap (/usr/lib/php/20190902/soap: cannot open shared object file: No such file or directory), /usr/lib/php/20190902/soap.so (/usr/lib/php/20190902/soap.so: cannot open shared object file: No such file or directory)) in Unknown on line 0\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    },
+    {
+      "variant": "exp11",
+      "case": "callback-existing",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-r1/run.sh exp11 callback-existing 5c066127b4342ec61682e44b7b0509bc768cc50cffbf270a7e10b16dbf0c8bd6"
+      ],
+      "exit": 65,
+      "stdout": "",
+      "stderr": "PHP Warning:  PHP Startup: Unable to load dynamic library 'soap' (tried: /usr/lib/php/20190902/soap (/usr/lib/php/20190902/soap: cannot open shared object file: No such file or directory), /usr/lib/php/20190902/soap.so (/usr/lib/php/20190902/soap.so: cannot open shared object file: No such file or directory)) in Unknown on line 0\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    },
+    {
+      "variant": "exp11",
+      "case": "nested-construct",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-r1/run.sh exp11 nested-construct 5c066127b4342ec61682e44b7b0509bc768cc50cffbf270a7e10b16dbf0c8bd6"
+      ],
+      "exit": 65,
+      "stdout": "",
+      "stderr": "PHP Warning:  PHP Startup: Unable to load dynamic library 'soap' (tried: /usr/lib/php/20190902/soap (/usr/lib/php/20190902/soap: cannot open shared object file: No such file or directory), /usr/lib/php/20190902/soap.so (/usr/lib/php/20190902/soap.so: cannot open shared object file: No such file or directory)) in Unknown on line 0\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    },
+    {
+      "variant": "exp11",
+      "case": "nested-call-ok",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-r1/run.sh exp11 nested-call-ok 5c066127b4342ec61682e44b7b0509bc768cc50cffbf270a7e10b16dbf0c8bd6"
+      ],
+      "exit": 65,
+      "stdout": "",
+      "stderr": "PHP Warning:  PHP Startup: Unable to load dynamic library 'soap' (tried: /usr/lib/php/20190902/soap (/usr/lib/php/20190902/soap: cannot open shared object file: No such file or directory), /usr/lib/php/20190902/soap.so (/usr/lib/php/20190902/soap.so: cannot open shared object file: No such file or directory)) in Unknown on line 0\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    },
+    {
+      "variant": "exp11",
+      "case": "nested-call-fault",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-r1/run.sh exp11 nested-call-fault 5c066127b4342ec61682e44b7b0509bc768cc50cffbf270a7e10b16dbf0c8bd6"
+      ],
+      "exit": 65,
+      "stdout": "",
+      "stderr": "PHP Warning:  PHP Startup: Unable to load dynamic library 'soap' (tried: /usr/lib/php/20190902/soap (/usr/lib/php/20190902/soap: cannot open shared object file: No such file or directory), /usr/lib/php/20190902/soap.so (/usr/lib/php/20190902/soap.so: cannot open shared object file: No such file or directory)) in Unknown on line 0\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    }
+  ],
+  "failures": [
+    "original/bootstrap",
+    "original/construct-good",
+    "original/construct-malformed",
+    "original/construct-missing",
+    "original/explicit-ok",
+    "original/magic-ok",
+    "original/explicit-fault",
+    "original/callback-existing",
+    "original/nested-construct",
+    "original/nested-call-ok",
+    "original/nested-call-fault",
+    "exp11/bootstrap",
+    "exp11/construct-good",
+    "exp11/construct-malformed",
+    "exp11/construct-missing",
+    "exp11/explicit-ok",
+    "exp11/magic-ok",
+    "exp11/explicit-fault",
+    "exp11/callback-existing",
+    "exp11/nested-construct",
+    "exp11/nested-call-ok",
+    "exp11/nested-call-fault"
+  ],
+  "application_patch_selected": false,
+  "real_transport_coverage": false,
+  "runtime_snapshots_required": "Coordinator must bracket actual run with binary/modules/linked-library identities."
+}

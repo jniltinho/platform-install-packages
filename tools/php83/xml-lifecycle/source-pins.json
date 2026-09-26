@@ -1,0 +1,26 @@
+{
+  "original": {
+    "archive": "/tmp/kaltura-php83-audit/Rigel-18.20.0.zip",
+    "archive_sha256": "58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28",
+    "root": "server-Rigel-18.20.0/",
+    "files": {
+      "alpha/config/kConf.php": "d02983c560f6813c3546f2294a324d7a955f669e5b867d56d9a878c397cfa015",
+      "infra/general/kSoapClient.php": "6fe1abef06f3f365fc1862de0e25ffeaef9da156e731fd7cc17b386623561b7e",
+      "infra/kEnvironment.php": "708f2497ade7d59522943d17d0bd788e2b18aec45504c59e3f8ecf5dd303e15d",
+      "alpha/config/kConfCacheManager.php": "19d4ffb4866339cae93eb8949fd06275978799804454e81d68dd7692fe050333",
+      "alpha/config/cache/kCacheConfFactory.php": "73031853cf26128ab5460caecaa76d980fd9ace15219cc91e0b60cd02b561b7e"
+    }
+  },
+  "exp11": {
+    "archive": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83-artifacts/exp11/Rigel-18.20.0-php83-experimental.exp11.zip",
+    "archive_sha256": "f2474f5b951bfd2d121291025c8dd4554697fb5bb4024e132987643dab6144a7",
+    "root": "server-Rigel-18.20.0/",
+    "files": {
+      "alpha/config/kConf.php": "d02983c560f6813c3546f2294a324d7a955f669e5b867d56d9a878c397cfa015",
+      "infra/general/kSoapClient.php": "6fe1abef06f3f365fc1862de0e25ffeaef9da156e731fd7cc17b386623561b7e",
+      "infra/kEnvironment.php": "708f2497ade7d59522943d17d0bd788e2b18aec45504c59e3f8ecf5dd303e15d",
+      "alpha/config/kConfCacheManager.php": "19d4ffb4866339cae93eb8949fd06275978799804454e81d68dd7692fe050333",
+      "alpha/config/cache/kCacheConfFactory.php": "73031853cf26128ab5460caecaa76d980fd9ace15219cc91e0b60cd02b561b7e"
+    }
+  }
+}

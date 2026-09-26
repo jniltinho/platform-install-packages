@@ -1,0 +1,68 @@
+php8.3-soap:
+  Installed: (none)
+  Candidate: 8.3.6-0ubuntu0.24.04.11
+  Version table:
+     8.3.6-0ubuntu0.24.04.11 1001
+        500 http://us.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages
+        500 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages
+     8.3.6-0maysync1 1001
+        500 http://us.archive.ubuntu.com/ubuntu noble/universe amd64 Packages
+Package: php8.3-soap
+Source: php8.3
+Priority: optional
+Section: universe/php
+Installed-Size: 364
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Version: 8.3.6-0ubuntu0.24.04.11
+Provides: php-soap
+Depends: php-common (>= 1:81~), ucf, php8.3-common (= 8.3.6-0ubuntu0.24.04.11), libc6 (>= 2.38), libxml2 (>= 2.7.4)
+Filename: pool/universe/p/php8.3/php8.3-soap_8.3.6-0ubuntu0.24.04.11_amd64.deb
+Size: 133500
+MD5sum: 5d55ee9794f55b0daca2c6bbb30e1869
+SHA1: c85447c228a05d1ca3c27ccf22d548394f6adc2c
+SHA256: eeb541e17950d330e01f5d0c47620ad45de92b64517320980691646777e4ad29
+SHA512: c7c657ad0bc0466ebf315dd14a166bca978618905fd3d3a4ea5fbee7a0c50a28228cf3b61e4145a0d3deeb018077f8639581ff64d71897267a20cbb5eec96895
+Homepage: http://www.php.net/
+Description-en: SOAP module for PHP
+ This package provides the SOAP module(s) for PHP.
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Description-md5: 8ca6ca2ae4fbc6127f6522e73f05005a
+Original-Maintainer: Debian PHP Maintainers <team+pkg-php@tracker.debian.org>
+Origin: Ubuntu
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+
+Package: php8.3-soap
+Architecture: amd64
+Version: 8.3.6-0maysync1
+Priority: optional
+Section: universe/php
+Source: php8.3
+Origin: Ubuntu
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian PHP Maintainers <team+pkg-php@tracker.debian.org>
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Installed-Size: 364
+Provides: php-soap
+Depends: php-common (>= 1:81~), ucf, php8.3-common (= 8.3.6-0maysync1), libc6 (>= 2.38), libxml2 (>= 2.7.4)
+Filename: pool/universe/p/php8.3/php8.3-soap_8.3.6-0maysync1_amd64.deb
+Size: 133464
+MD5sum: 5eb7ef30b282fb81bd21286492f2e6b0
+SHA1: 607c0e29b1b979d839d943e0a41a77a63bae03c3
+SHA256: 035ad97e503bbcbf9a32247a9780baaa17dc3ce2625c7b3bd36560db14f541ea
+SHA512: d7e1505b5682d3030d419dd3b885bc6372c8fe1f4a8dbd6a21cc7bee90febb829510af172c953ab27aa9aa362e411a018db97618c03d257c2d0c5170ea8914a2
+Homepage: http://www.php.net/
+Description-en: SOAP module for PHP
+ This package provides the SOAP module(s) for PHP.
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Description-md5: 8ca6ca2ae4fbc6127f6522e73f05005a
+
+libc6 2.39-0ubuntu8.6
+libxml2 2.9.14+dfsg-1.3ubuntu3.5
+'http://us.archive.ubuntu.com/ubuntu/pool/universe/p/php8.3/php8.3-soap_8.3.6-0ubuntu0.24.04.11_amd64.deb' php8.3-soap_8.3.6-0ubuntu0.24.04.11_amd64.deb 133500 SHA512:c7c657ad0bc0466ebf315dd14a166bca978618905fd3d3a4ea5fbee7a0c50a28228cf3b61e4145a0d3deeb018077f8639581ff64d71897267a20cbb5eec96895

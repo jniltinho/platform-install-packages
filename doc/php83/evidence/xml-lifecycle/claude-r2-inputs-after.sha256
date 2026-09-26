@@ -1,0 +1,7 @@
+455b1c08702809cc32e2c57b14d457c1fdee2f55ad41562cce6f58dc4d8cd3ed  doc/php83/evidence/xml-lifecycle/claude-review.json
+9c6093a1d04e5a88f17dddf1eee5cdfb3d1812d7bb29f7eb8ea10b2111321f9c  doc/php83/evidence/xml-lifecycle/claude-review.md
+3855fe2a1fd80fbe07e0edc03ce447b1d79d9176515b5b3cb0676e183e19b9e5  doc/php83/xml-lifecycle.md
+dd488de0368a4f5f9ce8ad756dedb2957b8e68df08bbb48663b046d723f100fc  tools/php83/xml-lifecycle/collect.py
+a28c3ba1a9d0d8af69235fd59e8bbc28b30e12aea172fa1cb6f17099534929f8  tools/php83/xml-lifecycle/probe.php
+d22f6ba64a965e84dbd198fca4959db3306bd7d7890e0185cdd3ecef3ffe4a8d  tools/php83/xml-lifecycle/run.sh
+6e0de52f4bccb53f2841d9aa79dc8182f8ff738e2c04058996f60625bf902789  tools/php83/xml-lifecycle/test_prepare.py

@@ -1,0 +1,7 @@
+{"executor":"claude-cli","reviewer":"claude-cli","scope":"local-only","verdict":"BLOCKED_BEFORE_FIRST_MODULE_LOAD",
+ "commands":[{"cmd":"PYTHONDONTWRITEBYTECODE=1 timeout 60 python3 tools/php83/xml-lifecycle/test_private.py","exit":1,"result":"35 run, 1 error (test_oserror_retained: ValueError explicit private provider phase)"},
+  {"cmd":"bash -n tools/php83/xml-lifecycle/run-private.sh","exit":0}],
+ "blocking":["B1 inherited test_oserror_retained fails against private phase guard","B2 provider83-extraction.json lacks authentication field -> not produced by current provider-inspect.py"],
+ "limits":["74 keyring_sha256 hashes .sources not Signed-By key file","prepare does not re-pin version/package_sha256","TOCTOU writable source module, bracketed not prevented","ldd-resolved pins only; no actual mapped-library proof yet"],
+ "primary74":"NOT_EXECUTED_APPLICATION_MISSING_SOAP (22x exit65) preserved",
+ "runtime_passed":false,"application_patch_selected":false}

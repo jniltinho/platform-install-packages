@@ -1,0 +1,8 @@
+{"executor":"claude-cli","model":"claude-opus-5-5","scope":"local static + synthetic tests; no VM/SSH/network/PHP",
+"commands":[{"id":"tests","exit":0,"summary":"Ran 30 tests OK"},{"id":"bash-n","exit":0,"summary":"empty output"}],
+"corrections":{"F1":"RESOLVED","F2":"RESOLVED","F3":"RESOLVED"},
+"residual":[{"id":"R1","severity":"LOW","summary":"callback_same True hard-required for callback cases on 8.3"},
+{"id":"R2","severity":"LOW","summary":"ext/soap reaching userland loader for WSDL/XSD is static inference"},
+{"id":"R3","severity":"INFO","summary":"nested-construct has no final-state expectation by design"}],
+"blocking_for_bounded_native_observation":false,"candidate_acceptance":false,
+"native_matrix":"NOT_EXECUTED","original_review_preserved":true}

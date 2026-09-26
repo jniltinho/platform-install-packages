@@ -1,0 +1,1 @@
+["ssh", "-T", "-F", "/tmp/kaltura-php83-ssh.conf", "php83", "apt-cache policy php8.3-soap; apt-cache show php8.3-soap; dpkg-query -W -f='${Package} ${Version}\\n' libc6 libxml2; apt-get --print-uris download php8.3-soap=8.3.6-0ubuntu0.24.04.11"]

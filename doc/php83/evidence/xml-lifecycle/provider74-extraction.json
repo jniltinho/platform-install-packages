@@ -1,0 +1,32 @@
+{
+  "status": "FAILED_RETAINED_PROVIDER",
+  "error": "Provider command failed: ['gpgv', '--status-fd', '1', '--keyring', '/home/vagrant/php-xml-soap-provider-r1/key.gpg', '/var/lib/apt/lists/ppa.launchpadcontent.net_ondrej_php_ubuntu_dists_noble_InRelease']",
+  "steps": [
+    {
+      "command": [
+        "gpg",
+        "--batch",
+        "--dearmor",
+        "--output",
+        "key.gpg",
+        "key.asc"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "gpgv",
+        "--status-fd",
+        "1",
+        "--keyring",
+        "/home/vagrant/php-xml-soap-provider-r1/key.gpg",
+        "/var/lib/apt/lists/ppa.launchpadcontent.net_ondrej_php_ubuntu_dists_noble_InRelease"
+      ],
+      "exit": 2,
+      "stdout": "[GNUPG:] NEWSIG\n[GNUPG:] KEY_CONSIDERED B8DC7E53946656EFBCE4C1DD71DAEAAB4AD4CAB6 0\n[GNUPG:] SIG_ID 1lmd2by7fy5JKVwhlQvKa4CauGU 2026-09-25 1790324183\n[GNUPG:] GOODSIG 71DAEAAB4AD4CAB6 Launchpad PPA for Ond\u0159ej Sur\u00fd\n[GNUPG:] VALIDSIG B8DC7E53946656EFBCE4C1DD71DAEAAB4AD4CAB6 2026-09-25 1790324183 0 4 0 1 10 01 B8DC7E53946656EFBCE4C1DD71DAEAAB4AD4CAB6\n[GNUPG:] NEWSIG\n[GNUPG:] ERRSIG 4F4EA0AAE5267A6C 1 10 01 1790324183 9 14AA40EC0831756756D7F66C4F4EA0AAE5267A6C\n[GNUPG:] NO_PUBKEY 4F4EA0AAE5267A6C\n",
+      "stderr": "gpgv: Signature made Fri 25 Sep 2026 08:16:23 AM UTC\ngpgv:                using RSA key B8DC7E53946656EFBCE4C1DD71DAEAAB4AD4CAB6\ngpgv: Good signature from \"Launchpad PPA for Ond\u0159ej Sur\u00fd\"\ngpgv: Signature made Fri 25 Sep 2026 08:16:23 AM UTC\ngpgv:                using RSA key 14AA40EC0831756756D7F66C4F4EA0AAE5267A6C\ngpgv: Can't check signature: No public key\n"
+    }
+  ]
+}

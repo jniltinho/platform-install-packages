@@ -1,0 +1,20 @@
+{
+  "purpose": "Trim display trailing whitespace for git; exact original stdout retained losslessly in JSON. Historical references to original stdout SHA remain valid for decoded original_json.stdout.",
+  "files": {
+    "provider74-metadata.stdout": {
+      "original_json": "provider74-metadata.stdout.original.json",
+      "original_sha256": "e1863de2f9f3d1e2036997924848c2be9ee94352796c45a658cfe67607ca742a",
+      "display_sha256": "af6eb9dfaeb5644c48575cb3e4afc1a60fef82575650ad3591d4a198c849f7a1"
+    },
+    "provider74-preflight.stdout": {
+      "original_json": "provider74-preflight.stdout.original.json",
+      "original_sha256": "d4debc079f870744fc20acc087b8e1de701f7049593f38558c069dfb9139e609",
+      "display_sha256": "f986f663d68d5c804259cba621bf3a89417cac9796ce584b9eea5b093aa8404f"
+    },
+    "provider83-preflight.stdout": {
+      "original_json": "provider83-preflight.stdout.original.json",
+      "original_sha256": "2bb3469577aed41d99d6b75cb26852c2592b46dcda236a5c72aee4067e9eca4c",
+      "display_sha256": "cfb04d93765b0e9452c9c96c64b5aa522d98ec70d97a527f5c60ead244dcadfd"
+    }
+  }
+}

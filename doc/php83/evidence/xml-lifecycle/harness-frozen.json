@@ -1,0 +1,19 @@
+{
+  "files": {
+    "tools/php83/xml-lifecycle/source-pins.json": "1fa4fa43c44007713a3c6b9361dec378af223f9fd45d342bab5a50be683aea16",
+    "tools/php83/xml-lifecycle/probe.php": "a28c3ba1a9d0d8af69235fd59e8bbc28b30e12aea172fa1cb6f17099534929f8",
+    "tools/php83/xml-lifecycle/run.sh": "d22f6ba64a965e84dbd198fca4959db3306bd7d7890e0185cdd3ecef3ffe4a8d",
+    "tools/php83/xml-lifecycle/prepare.py": "7d8fc4160a2e909b6ab0d60a6baab12e57f67c6d40bf36415397337a397a752e",
+    "tools/php83/xml-lifecycle/collect.py": "dd488de0368a4f5f9ce8ad756dedb2957b8e68df08bbb48663b046d723f100fc",
+    "tools/php83/xml-lifecycle/test_prepare.py": "6e0de52f4bccb53f2841d9aa79dc8182f8ff738e2c04058996f60625bf902789"
+  },
+  "prepared_path": "/tmp/php-xml-lifecycle-prep-r2",
+  "manifest_sha256": "5c066127b4342ec61682e44b7b0509bc768cc50cffbf270a7e10b16dbf0c8bd6",
+  "prepared_files": 18,
+  "tests": 30,
+  "local_tests_exit": 0,
+  "initial_cli_exit": 124,
+  "correction_cli_exit": 0,
+  "vm_executed": false,
+  "application_patch_selected": false
+}

@@ -1,0 +1,16 @@
+{
+  "74": {
+    "report": "provider74-extraction-r2.json",
+    "report_sha256": "2965348fec220435c419ac40ecb91449a4570edaf0521a5ab34517952f03cc05",
+    "executed_source": "tools/php83/xml-lifecycle/provider-inspect.py",
+    "executed_source_sha256": "3ad3ee1544f843a2b70e2f533aef12105248836aad5d84bd430e42f58b4d22eb",
+    "note": "83 executed r1 source before 74 isolated-APT revision; lack of newer authentication field retained, not replayed source claim"
+  },
+  "83": {
+    "report": "provider83-extraction.json",
+    "report_sha256": "01f3be06028f52e01269b393ce55830d974e7528b96df20ef62aaf78d23a69b3",
+    "executed_source": "doc/php83/evidence/xml-lifecycle/attempts/provider-r1/provider-inspect.py",
+    "executed_source_sha256": "ce4a33fd7a181099e17d90833903c1bbc3527ea80ddd110bb6eecf6dcd801cdd",
+    "note": "83 executed r1 source before 74 isolated-APT revision; lack of newer authentication field retained, not replayed source claim"
+  }
+}

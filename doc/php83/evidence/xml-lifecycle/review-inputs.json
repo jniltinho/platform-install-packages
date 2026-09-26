@@ -1,0 +1,9 @@
+{
+  "tools/php83/xml-lifecycle/source-pins.json": "1fa4fa43c44007713a3c6b9361dec378af223f9fd45d342bab5a50be683aea16",
+  "tools/php83/xml-lifecycle/probe.php": "54db8ef25dd2c718865b8cf3a9b6ee6c1c7202f9c202819dd6c3e6d4e0a7d041",
+  "tools/php83/xml-lifecycle/run.sh": "d22f6ba64a965e84dbd198fca4959db3306bd7d7890e0185cdd3ecef3ffe4a8d",
+  "tools/php83/xml-lifecycle/prepare.py": "7d8fc4160a2e909b6ab0d60a6baab12e57f67c6d40bf36415397337a397a752e",
+  "tools/php83/xml-lifecycle/collect.py": "1a3ff15cbaade4292bd220a1b461115bfb42ee64a2cd9c7ca11d045a3b74af04",
+  "tools/php83/xml-lifecycle/test_prepare.py": "dd329e6e788f0b881497c16b9a0e8cd5ce558ca4dc2d68d88870a3c95dc9046b",
+  "doc/php83/xml-lifecycle.md": "1a6b9557a6a38ad20c34f46707f590f49e0b651e8c1cec06ba6e439a8efc819e"
+}

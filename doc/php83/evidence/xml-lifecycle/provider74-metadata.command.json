@@ -1,0 +1,1 @@
+["ssh", "-T", "-F", "/tmp/kaltura-php74-ssh.conf", "baseline74", "cat /etc/apt/sources.list.d/*ondrej*; find /var/lib/apt/lists -maxdepth 1 -iname '*ondrej*' -printf '%f\\n'; dpkg-query -W -f='${Package} ${Version}\\n' libc6 libxml2; apt-get --print-uris download php7.4-soap=1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1"]

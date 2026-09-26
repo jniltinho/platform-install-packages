@@ -1,0 +1,1 @@
+PYTHONDONTWRITEBYTECODE=1 python3 tools/php83/xml-lifecycle/collect-private-r2.py 74 /tmp/php-xml-lifecycle-private-prep-r4 doc/php83/evidence/xml-lifecycle/claude-native74-matrix.json

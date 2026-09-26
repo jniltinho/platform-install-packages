@@ -1,0 +1,19 @@
+.......................E...........
+======================================================================
+ERROR: test_oserror_retained (base_tests.Tests.test_oserror_retained)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/xml-lifecycle/test_prepare.py", line 97, in test_oserror_retained
+    with self.assertRaises(SystemExit):collect.main()
+                                       ^^^^^^^^^^^^^^
+  File "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/xml-lifecycle/collect-private.py", line 97, in main
+    require(m.get('phase')=='private-soap-provider-r1','explicit private provider phase')
+  File "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/xml-lifecycle/collect-private.py", line 11, in require
+    if not condition:raise ValueError(message)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: explicit private provider phase
+
+----------------------------------------------------------------------
+Ran 35 tests in 0.534s
+
+FAILED (errors=1)

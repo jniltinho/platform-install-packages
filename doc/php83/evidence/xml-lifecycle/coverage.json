@@ -1,0 +1,94 @@
+{
+  "status": {
+    "project": "kaltura-rigel-18.20.0-full",
+    "status": "ready",
+    "root_path": "/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/graph-view"
+  },
+  "coverage": {
+    "project": "kaltura-rigel-18.20.0-full",
+    "signal": "best_effort",
+    "indexed_at": "2026-09-25T12:19:00Z",
+    "metadata": {
+      "generation": "2026-09-25T12:19:00Z",
+      "index_mode": "full",
+      "recorded_at": "2026-09-25T12:19:04Z",
+      "recording_status": "complete",
+      "ignored_files_stored": 519,
+      "ignored_files_total": 519,
+      "hash_records_complete": true,
+      "coverage_version": 3,
+      "generation_matches": true
+    },
+    "paths": [
+      {
+        "requested_path": "alpha/config/kConf.php",
+        "path": "alpha/config/kConf.php",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": "infra/general/kSoapClient.php",
+        "path": "infra/general/kSoapClient.php",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": "infra/kEnvironment.php",
+        "path": "infra/kEnvironment.php",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": "alpha/config/kConfCacheManager.php",
+        "path": "alpha/config/kConfCacheManager.php",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      },
+      {
+        "requested_path": "alpha/config/cache/kCacheConfFactory.php",
+        "path": "alpha/config/cache/kCacheConfFactory.php",
+        "status": "no_recorded_issue",
+        "freshness": "metadata_match",
+        "recommended_action": "use_graph_with_best_effort_caveat",
+        "coverage": []
+      }
+    ],
+    "scopes": [],
+    "caveat": "Best-effort signal only. No recorded issue does not prove graph or source completeness; read flagged source and qualify claims when metadata is changed or unavailable."
+  },
+  "search": [
+    {
+      "type": "text",
+      "text": "total: 6\nresults: 6  (rows: name label lines in out; qn = group prefix + \".\" + name)\nkaltura-rigel-18.20.0-full.alpha.config.cache.kCacheConfFactory (alpha/config/cache/kCacheConfFactory.php):\n  kCacheConfFactory Class 3-40 14 0\nkaltura-rigel-18.20.0-full.alpha.config.kConf (alpha/config/kConf.php):\n  kConf Class 24-93 795 1\nkaltura-rigel-18.20.0-full.alpha.config.kConfCacheManager (alpha/config/kConfCacheManager.php):\n  kConfCacheManager Class 4-188 5 0\nkaltura-rigel-18.20.0-full.configurations.html5.template (configurations/html5.template.php):\n  kConf Variable 20-20 3 0\nkaltura-rigel-18.20.0-full.infra.general.kSoapClient (infra/general/kSoapClient.php):\n  kSoapClient Class 2-38 2 0\nkaltura-rigel-18.20.0-full.infra.kEnvironment (infra/kEnvironment.php):\n  kEnvironment Class 8-112 16 0\nhas_more: false\n"
+    }
+  ],
+  "factory_snippet": {
+    "name": "kCacheConfFactory",
+    "qualified_name": "kaltura-rigel-18.20.0-full.alpha.config.cache.kCacheConfFactory.kCacheConfFactory",
+    "label": "Class",
+    "file_path": "/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/graph-view/alpha/config/cache/kCacheConfFactory.php",
+    "start_line": 3,
+    "end_line": 40,
+    "source": "class kCacheConfFactory\n{\n\tconst SESSION = 'kSessionConf';\n\tconst APC = 'kApcConf';\n\tconst LOCAL_MEM_CACHE = 'kLocalMemCacheConf';\n\tconst FILE_SYSTEM = 'kFileSystemConf';\n\tconst REMOTE_MEM_CACHE = 'kRemoteMemCacheConf';\n\n\tprotected static $cacheInstanceList;\n\n\tstatic function close()\n\t{\n\t\tself::$cacheInstanceList = array();\n\t}\n\n\tstatic function register($name, $instance)\n\t{\n\t\tself::$cacheInstanceList[$name]=$instance;\n\t}\n\n\tstatic function getInstance($name)\n\t{\n\t\t$cacheConfRequireArray = array(\n\t\t\tself::SESSION => self::SESSION ,\n\t\t\tself::APC => self::APC ,\n\t\t\tself::LOCAL_MEM_CACHE => self::LOCAL_MEM_CACHE ,\n\t\t\tself::FILE_SYSTEM => self::FILE_SYSTEM,\n\t\t\tself::REMOTE_MEM_CACHE => self::REMOTE_MEM_CACHE);\n\n\t\tif(!isset(self::$cacheInstanceList[$name]))\n\t\t{\n\t\t\t$className = $cacheConfRequireArray[$name];\n\t\t\trequire_once (__DIR__.'/'.$className.'.php');\n\t\t\tself::register($name, new $className);\n\t\t}\n\t\treturn self::$cacheInstanceList[$name];\n\t}\n}\n",
+    "callers": 0,
+    "callees": 0
+  },
+  "trace": [
+    {
+      "type": "text",
+      "text": "function: kaltura-rigel-18.20.0-full.alpha.config.kConf.kConf\ndirection: outbound\ncallees_total: 0\ncallees: 0  (rows: name hop; qn = group prefix + \".\" + name)\n"
+    }
+  ],
+  "limitations": [
+    "Class-only trace does not recover the visible require/method dependency calls; direct original ZIP source was read for exact bodies.",
+    "Five exact source paths covered; no full app reachability/inventory claim."
+  ]
+}

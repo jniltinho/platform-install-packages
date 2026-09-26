@@ -1,0 +1,4 @@
+{
+  "prior_sha256": "6e25386991916260ce12e1f638b52a85948e5f8e6653c4b8b079510245b71fe7",
+  "note": "74 executed current isolated-APT inspector; 83 executed preserved r1 gpgv inspector. Prior metadata accidentally uses the explanatory 83-note for both entries; identities/hashes remain unchanged."
+}

@@ -1,0 +1,453 @@
+{
+  "status": "FAIL_RETAINED_OBSERVATIONS",
+  "runtime": "74",
+  "manifest_sha256": "c360a94309d8f7fc0ab297fec1366c699a929d443be0f78efb945576f910734e",
+  "collector_sha256": "e939688c297a3f395e10a8fd349f5ce0d6cfc8566dde0d89628c4bfbb9ec5c87",
+  "records": [
+    {
+      "variant": "original",
+      "case": "bootstrap",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-private-r1/run.sh original bootstrap c360a94309d8f7fc0ab297fec1366c699a929d443be0f78efb945576f910734e"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "Provider/runtime/library drift\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    },
+    {
+      "variant": "original",
+      "case": "construct-good",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-private-r1/run.sh original construct-good c360a94309d8f7fc0ab297fec1366c699a929d443be0f78efb945576f910734e"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "Provider/runtime/library drift\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    },
+    {
+      "variant": "original",
+      "case": "construct-malformed",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-private-r1/run.sh original construct-malformed c360a94309d8f7fc0ab297fec1366c699a929d443be0f78efb945576f910734e"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "Provider/runtime/library drift\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    },
+    {
+      "variant": "original",
+      "case": "construct-missing",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-private-r1/run.sh original construct-missing c360a94309d8f7fc0ab297fec1366c699a929d443be0f78efb945576f910734e"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "Provider/runtime/library drift\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    },
+    {
+      "variant": "original",
+      "case": "explicit-ok",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-private-r1/run.sh original explicit-ok c360a94309d8f7fc0ab297fec1366c699a929d443be0f78efb945576f910734e"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "Provider/runtime/library drift\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    },
+    {
+      "variant": "original",
+      "case": "magic-ok",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-private-r1/run.sh original magic-ok c360a94309d8f7fc0ab297fec1366c699a929d443be0f78efb945576f910734e"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "Provider/runtime/library drift\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    },
+    {
+      "variant": "original",
+      "case": "explicit-fault",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-private-r1/run.sh original explicit-fault c360a94309d8f7fc0ab297fec1366c699a929d443be0f78efb945576f910734e"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "Provider/runtime/library drift\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    },
+    {
+      "variant": "original",
+      "case": "callback-existing",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-private-r1/run.sh original callback-existing c360a94309d8f7fc0ab297fec1366c699a929d443be0f78efb945576f910734e"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "Provider/runtime/library drift\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    },
+    {
+      "variant": "original",
+      "case": "nested-construct",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-private-r1/run.sh original nested-construct c360a94309d8f7fc0ab297fec1366c699a929d443be0f78efb945576f910734e"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "Provider/runtime/library drift\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    },
+    {
+      "variant": "original",
+      "case": "nested-call-ok",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-private-r1/run.sh original nested-call-ok c360a94309d8f7fc0ab297fec1366c699a929d443be0f78efb945576f910734e"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "Provider/runtime/library drift\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    },
+    {
+      "variant": "original",
+      "case": "nested-call-fault",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-private-r1/run.sh original nested-call-fault c360a94309d8f7fc0ab297fec1366c699a929d443be0f78efb945576f910734e"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "Provider/runtime/library drift\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    },
+    {
+      "variant": "exp11",
+      "case": "bootstrap",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-private-r1/run.sh exp11 bootstrap c360a94309d8f7fc0ab297fec1366c699a929d443be0f78efb945576f910734e"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "Provider/runtime/library drift\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    },
+    {
+      "variant": "exp11",
+      "case": "construct-good",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-private-r1/run.sh exp11 construct-good c360a94309d8f7fc0ab297fec1366c699a929d443be0f78efb945576f910734e"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "Provider/runtime/library drift\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    },
+    {
+      "variant": "exp11",
+      "case": "construct-malformed",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-private-r1/run.sh exp11 construct-malformed c360a94309d8f7fc0ab297fec1366c699a929d443be0f78efb945576f910734e"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "Provider/runtime/library drift\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    },
+    {
+      "variant": "exp11",
+      "case": "construct-missing",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-private-r1/run.sh exp11 construct-missing c360a94309d8f7fc0ab297fec1366c699a929d443be0f78efb945576f910734e"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "Provider/runtime/library drift\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    },
+    {
+      "variant": "exp11",
+      "case": "explicit-ok",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-private-r1/run.sh exp11 explicit-ok c360a94309d8f7fc0ab297fec1366c699a929d443be0f78efb945576f910734e"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "Provider/runtime/library drift\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    },
+    {
+      "variant": "exp11",
+      "case": "magic-ok",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-private-r1/run.sh exp11 magic-ok c360a94309d8f7fc0ab297fec1366c699a929d443be0f78efb945576f910734e"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "Provider/runtime/library drift\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    },
+    {
+      "variant": "exp11",
+      "case": "explicit-fault",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-private-r1/run.sh exp11 explicit-fault c360a94309d8f7fc0ab297fec1366c699a929d443be0f78efb945576f910734e"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "Provider/runtime/library drift\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    },
+    {
+      "variant": "exp11",
+      "case": "callback-existing",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-private-r1/run.sh exp11 callback-existing c360a94309d8f7fc0ab297fec1366c699a929d443be0f78efb945576f910734e"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "Provider/runtime/library drift\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    },
+    {
+      "variant": "exp11",
+      "case": "nested-construct",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-private-r1/run.sh exp11 nested-construct c360a94309d8f7fc0ab297fec1366c699a929d443be0f78efb945576f910734e"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "Provider/runtime/library drift\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    },
+    {
+      "variant": "exp11",
+      "case": "nested-call-ok",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-private-r1/run.sh exp11 nested-call-ok c360a94309d8f7fc0ab297fec1366c699a929d443be0f78efb945576f910734e"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "Provider/runtime/library drift\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    },
+    {
+      "variant": "exp11",
+      "case": "nested-call-fault",
+      "command": [
+        "ssh",
+        "-T",
+        "-F",
+        "/tmp/kaltura-php74-ssh.conf",
+        "baseline74",
+        "bash /home/vagrant/php-xml-lifecycle-private-r1/run.sh exp11 nested-call-fault c360a94309d8f7fc0ab297fec1366c699a929d443be0f78efb945576f910734e"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "Provider/runtime/library drift\n",
+      "validation_error": {
+        "class": "ValueError",
+        "message": "native process failure"
+      }
+    }
+  ],
+  "failures": [
+    "original/bootstrap",
+    "original/construct-good",
+    "original/construct-malformed",
+    "original/construct-missing",
+    "original/explicit-ok",
+    "original/magic-ok",
+    "original/explicit-fault",
+    "original/callback-existing",
+    "original/nested-construct",
+    "original/nested-call-ok",
+    "original/nested-call-fault",
+    "exp11/bootstrap",
+    "exp11/construct-good",
+    "exp11/construct-malformed",
+    "exp11/construct-missing",
+    "exp11/explicit-ok",
+    "exp11/magic-ok",
+    "exp11/explicit-fault",
+    "exp11/callback-existing",
+    "exp11/nested-construct",
+    "exp11/nested-call-ok",
+    "exp11/nested-call-fault"
+  ],
+  "application_patch_selected": false,
+  "real_transport_coverage": false,
+  "runtime_snapshots_required": "Coordinator must bracket actual run with binary/modules/linked-library identities."
+}

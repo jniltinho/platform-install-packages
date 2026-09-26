@@ -1,0 +1,26 @@
+test_archive_pin_bad (test_prepare.Tests.test_archive_pin_bad) ... ok
+test_bad_exception (test_prepare.Tests.test_bad_exception) ... ok
+test_bool_marker (test_prepare.Tests.test_bool_marker) ... ok
+test_bool_schema (test_prepare.Tests.test_bool_schema) ... ok
+test_duplicate_events (test_prepare.Tests.test_duplicate_events) ... ok
+test_existing_refused (test_prepare.Tests.test_existing_refused) ... ok
+test_false_application_claim (test_prepare.Tests.test_false_application_claim) ... ok
+test_leaky_kconf (test_prepare.Tests.test_leaky_kconf) ... ok
+test_lost_original_flaw (test_prepare.Tests.test_lost_original_flaw) ... ok
+test_missing_loaded (test_prepare.Tests.test_missing_loaded) ... ok
+test_missing_warning_stderr (test_prepare.Tests.test_missing_warning_stderr) ... ok
+test_module_missing (test_prepare.Tests.test_module_missing) ... ok
+test_no_marker_canary (test_prepare.Tests.test_no_marker_canary) ... ok
+test_oserror_retained (test_prepare.Tests.test_oserror_retained) ... ok
+test_positive_bootstrap (test_prepare.Tests.test_positive_bootstrap) ... ok
+test_positive_old_flaws (test_prepare.Tests.test_positive_old_flaws) ... ok
+test_prepare_exact (test_prepare.Tests.test_prepare_exact) ... ok
+test_source_hash (test_prepare.Tests.test_source_hash) ... ok
+test_source_pin_bad (test_prepare.Tests.test_source_pin_bad) ... ok
+test_static_no_unapproved_transport (test_prepare.Tests.test_static_no_unapproved_transport) ... ok
+test_wrong_runtime (test_prepare.Tests.test_wrong_runtime) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.538s
+
+OK

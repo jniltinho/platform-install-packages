@@ -1,0 +1,108 @@
+{
+  "status": "EXTRACTED_NOT_LOADED",
+  "mode": "74",
+  "suite": "noble",
+  "origin": "https://ppa.launchpadcontent.net/ondrej/php/ubuntu/",
+  "version": "1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1",
+  "package_sha256": "f25c5a8342b852ed5f97154e270f22805f4dc221132b15084c6936f59016511b",
+  "signed_release_sha256": "485289e4b34527ef03af79a98d31ae474d50c5591d1e93313f6455a7d16a40ab",
+  "keyring_sha256": "72bfe073a9a04198a4d81abe82980dbef32eef1375cf382c95cfd181bff64764",
+  "packages_sha256": "c8d696c1834a83ae31d276115a33f41502c4d60a2166a522ed38f3af972cab4e",
+  "module": "/home/vagrant/php-xml-soap-provider-r2/extracted/usr/lib/php/20190902/soap.so",
+  "module_sha256": "1ecd4727fcc6f3b02356595be8cf264f0163863eaca3f6f5691900209aeadf49",
+  "abi_directory": "20190902",
+  "linked_libraries": {
+    "/lib/x86_64-linux-gnu/libc.so.6": "511f825ee075610ac9c0f7f91e2c13de2000d0f7b859f6461137e809a0a009d0",
+    "/lib/x86_64-linux-gnu/libgcc_s.so.1": "d93224d2b0dab4247598be683adca02f5cf00586f99c187579cd7e92058fb7cb",
+    "/lib/x86_64-linux-gnu/libicudata.so.74": "ddbb3718b8bd9cbd780e5ab08b4503c30a6c4fa0706ebe5d074ed6b596c1714e",
+    "/lib/x86_64-linux-gnu/libicuuc.so.74": "7560aadde38e5f4237a47a1ddd5891f9b36768a77a60faae30beee003ac01901",
+    "/lib/x86_64-linux-gnu/liblzma.so.5": "a9793942a8a5f6f4d0f523ef9e0a5be4f0033f2c6c28520cd2b4e706d53c6e17",
+    "/lib/x86_64-linux-gnu/libm.so.6": "f06f2ce1f1833df5f41cf13b6447ff07bea993ad9b27297d3428c2f70ab3f0e7",
+    "/lib/x86_64-linux-gnu/libstdc++.so.6": "1fd75fe70354a416d75aef22bcae68c47bd25d20e2d0568c30b1a9838cf62f11",
+    "/lib/x86_64-linux-gnu/libxml2.so.2": "ddd3af3f491a9686c82fe1232f1250cec368eb2fbcb1d2725c6ce9401a6dbd3b",
+    "/lib/x86_64-linux-gnu/libz.so.1": "9b64150b28505a33d6bc3ecf709c279f6de97a1c184dbda65d06ee4537f6d286",
+    "/lib64/ld-linux-x86-64.so.2": "6222a16be7f2d458d6870efe6e715fc0c8d45766fb79cf7dcc3125538d703e28"
+  },
+  "steps": [
+    {
+      "command": [
+        "apt-config",
+        "dump"
+      ],
+      "exit": 0,
+      "stdout": "APT \"\";\nAPT::Architecture \"amd64\";\nAPT::Build-Essential \"\";\nAPT::Build-Essential:: \"build-essential\";\nAPT::Install-Recommends \"1\";\nAPT::Install-Suggests \"0\";\nAPT::Key \"\";\nAPT::Key::Assert-Pubkey-Algo \">=rsa1024,ed25519,ed448,nistp256,nistp384,nistp512,brainpoolP256r1,brainpoolP320r1,brainpoolP384r1,brainpoolP512r1,secp256k1\";\nAPT::Key::Assert-Pubkey-Algo::Next \">=rsa2048,ed25519,ed448,nistp256,nistp384,nistp512\";\nAPT::Key::Assert-Pubkey-Algo::Future \">=rsa3072,ed25519,ed448\";\nAPT::Sandbox \"\";\nAPT::Sandbox::User \"_apt\";\nAPT::Get \"\";\nAPT::Get::AllowUnauthenticated \"false\";\nAPT::Get::List-Cleanup \"false\";\nAPT::Architectures \"\";\nAPT::Architectures:: \"amd64\";\nAPT::Compressor \"\";\nAPT::Compressor::. \"\";\nAPT::Compressor::.::Name \".\";\nAPT::Compressor::.::Extension \"\";\nAPT::Compressor::.::Binary \"\";\nAPT::Compressor::.::Cost \"0\";\nAPT::Compressor::zstd \"\";\nAPT::Compressor::zstd::Name \"zstd\";\nAPT::Compressor::zstd::Extension \".zst\";\nAPT::Compressor::zstd::Binary \"zstd\";\nAPT::Compressor::zstd::Cost \"60\";\nAPT::Compressor::zstd::CompressArg \"\";\nAPT::Compressor::zstd::CompressArg:: \"-19\";\nAPT::Compressor::zstd::UncompressArg \"\";\nAPT::Compressor::zstd::UncompressArg:: \"-d\";\nAPT::Compressor::lz4 \"\";\nAPT::Compressor::lz4::Name \"lz4\";\nAPT::Compressor::lz4::Extension \".lz4\";\nAPT::Compressor::lz4::Binary \"false\";\nAPT::Compressor::lz4::Cost \"50\";\nAPT::Compressor::gzip \"\";\nAPT::Compressor::gzip::Name \"gzip\";\nAPT::Compressor::gzip::Extension \".gz\";\nAPT::Compressor::gzip::Binary \"gzip\";\nAPT::Compressor::gzip::Cost \"100\";\nAPT::Compressor::gzip::CompressArg \"\";\nAPT::Compressor::gzip::CompressArg:: \"-6n\";\nAPT::Compressor::gzip::UncompressArg \"\";\nAPT::Compressor::gzip::UncompressArg:: \"-d\";\nAPT::Compressor::xz \"\";\nAPT::Compressor::xz::Name \"xz\";\nAPT::Compressor::xz::Extension \".xz\";\nAPT::Compressor::xz::Binary \"xz\";\nAPT::Compressor::xz::Cost \"200\";\nAPT::Compressor::xz::CompressArg \"\";\nAPT::Compressor::xz::CompressArg:: \"-6\";\nAPT::Compressor::xz::UncompressArg \"\";\nAPT::Compressor::xz::UncompressArg:: \"-d\";\nAPT::Compressor::bzip2 \"\";\nAPT::Compressor::bzip2::Name \"bzip2\";\nAPT::Compressor::bzip2::Extension \".bz2\";\nAPT::Compressor::bzip2::Binary \"bzip2\";\nAPT::Compressor::bzip2::Cost \"300\";\nAPT::Compressor::bzip2::CompressArg \"\";\nAPT::Compressor::bzip2::CompressArg:: \"-6\";\nAPT::Compressor::bzip2::UncompressArg \"\";\nAPT::Compressor::bzip2::UncompressArg:: \"-d\";\nAPT::Compressor::lzma \"\";\nAPT::Compressor::lzma::Name \"lzma\";\nAPT::Compressor::lzma::Extension \".lzma\";\nAPT::Compressor::lzma::Binary \"xz\";\nAPT::Compressor::lzma::Cost \"400\";\nAPT::Compressor::lzma::CompressArg \"\";\nAPT::Compressor::lzma::CompressArg:: \"--format=lzma\";\nAPT::Compressor::lzma::CompressArg:: \"-6\";\nAPT::Compressor::lzma::UncompressArg \"\";\nAPT::Compressor::lzma::UncompressArg:: \"--format=lzma\";\nAPT::Compressor::lzma::UncompressArg:: \"-d\";\nDir \"/\";\nDir::State \"var/lib/apt\";\nDir::State::lists \"/home/vagrant/php-xml-soap-provider-r2/lists\";\nDir::State::cdroms \"cdroms.list\";\nDir::State::extended_states \"extended_states\";\nDir::State::status \"/var/lib/dpkg/status\";\nDir::Cache \"/home/vagrant/php-xml-soap-provider-r2/cache\";\nDir::Cache::archives \"archives/\";\nDir::Cache::srcpkgcache \"srcpkgcache.bin\";\nDir::Cache::pkgcache \"pkgcache.bin\";\nDir::Etc \"etc/apt\";\nDir::Etc::sourcelist \"/home/vagrant/php-xml-soap-provider-r2/ondrej.sources\";\nDir::Etc::sourceparts \"-\";\nDir::Etc::main \"-\";\nDir::Etc::netrc \"auth.conf\";\nDir::Etc::netrcparts \"auth.conf.d\";\nDir::Etc::parts \"-\";\nDir::Etc::preferences \"preferences\";\nDir::Etc::preferencesparts \"preferences.d\";\nDir::Etc::trusted \"trusted.gpg\";\nDir::Etc::trustedparts \"trusted.gpg.d\";\nDir::Bin \"\";\nDir::Bin::methods \"/usr/lib/apt/methods\";\nDir::Bin::solvers \"\";\nDir::Bin::solvers:: \"/usr/lib/apt/solvers\";\nDir::Bin::planners \"\";\nDir::Bin::planners:: \"/usr/lib/apt/planners\";\nDir::Bin::dpkg \"/usr/bin/dpkg\";\nDir::Bin::gzip \"/bin/gzip\";\nDir::Bin::bzip2 \"/bin/bzip2\";\nDir::Bin::xz \"/usr/bin/xz\";\nDir::Bin::lz4 \"/usr/bin/lz4\";\nDir::Bin::zstd \"/usr/bin/zstd\";\nDir::Bin::lzma \"/usr/bin/xz\";\nDir::Media \"\";\nDir::Media::MountPath \"/media/apt\";\nDir::Log \"/home/vagrant/php-xml-soap-provider-r2/log\";\nDir::Log::Terminal \"term.log\";\nDir::Log::History \"history.log\";\nDir::Log::Planner \"eipp.log.xz\";\nDir::Ignore-Files-Silently \"\";\nDir::Ignore-Files-Silently:: \"~$\";\nDir::Ignore-Files-Silently:: \"\\.disabled$\";\nDir::Ignore-Files-Silently:: \"\\.bak$\";\nDir::Ignore-Files-Silently:: \"\\.dpkg-[a-z]+$\";\nDir::Ignore-Files-Silently:: \"\\.ucf-[a-z]+$\";\nDir::Ignore-Files-Silently:: \"\\.save$\";\nDir::Ignore-Files-Silently:: \"\\.orig$\";\nDir::Ignore-Files-Silently:: \"\\.distUpgrade$\";\nAcquire \"\";\nAcquire::AllowInsecureRepositories \"false\";\nAcquire::AllowWeakRepositories \"0\";\nAcquire::AllowDowngradeToInsecureRepositories \"false\";\nAcquire::cdrom \"\";\nAcquire::cdrom::mount \"/media/cdrom/\";\nAcquire::IndexTargets \"\";\nAcquire::IndexTargets::deb \"\";\nAcquire::IndexTargets::deb::Packages \"\";\nAcquire::IndexTargets::deb::Packages::MetaKey \"$(COMPONENT)/binary-$(ARCHITECTURE)/Packages\";\nAcquire::IndexTargets::deb::Packages::flatMetaKey \"Packages\";\nAcquire::IndexTargets::deb::Packages::ShortDescription \"Packages\";\nAcquire::IndexTargets::deb::Packages::Description \"$(RELEASE)/$(COMPONENT) $(ARCHITECTURE) Packages\";\nAcquire::IndexTargets::deb::Packages::flatDescription \"$(RELEASE) Packages\";\nAcquire::IndexTargets::deb::Packages::Optional \"0\";\nAcquire::IndexTargets::deb::Translations \"\";\nAcquire::IndexTargets::deb::Translations::MetaKey \"$(COMPONENT)/i18n/Translation-$(LANGUAGE)\";\nAcquire::IndexTargets::deb::Translations::flatMetaKey \"$(LANGUAGE)\";\nAcquire::IndexTargets::deb::Translations::ShortDescription \"Translation-$(LANGUAGE)\";\nAcquire::IndexTargets::deb::Translations::Description \"$(RELEASE)/$(COMPONENT) Translation-$(LANGUAGE)\";\nAcquire::IndexTargets::deb::Translations::flatDescription \"$(RELEASE) Translation-$(LANGUAGE)\";\nAcquire::IndexTargets::deb-src \"\";\nAcquire::IndexTargets::deb-src::Sources \"\";\nAcquire::IndexTargets::deb-src::Sources::MetaKey \"$(COMPONENT)/source/Sources\";\nAcquire::IndexTargets::deb-src::Sources::flatMetaKey \"Sources\";\nAcquire::IndexTargets::deb-src::Sources::ShortDescription \"Sources\";\nAcquire::IndexTargets::deb-src::Sources::Description \"$(RELEASE)/$(COMPONENT) Sources\";\nAcquire::IndexTargets::deb-src::Sources::flatDescription \"$(RELEASE) Sources\";\nAcquire::IndexTargets::deb-src::Sources::Optional \"0\";\nAcquire::Changelogs \"\";\nAcquire::Changelogs::URI \"\";\nAcquire::Changelogs::URI::Origin \"\";\nAcquire::Changelogs::URI::Origin::Debian \"https://metadata.ftp-master.debian.org/changelogs/@CHANGEPATH@_changelog\";\nAcquire::Changelogs::URI::Origin::Ubuntu \"https://changelogs.ubuntu.com/changelogs/pool/@CHANGEPATH@/changelog\";\nAcquire::Changelogs::AlwaysOnline \"\";\nAcquire::Changelogs::AlwaysOnline::Origin \"\";\nAcquire::Changelogs::AlwaysOnline::Origin::Ubuntu \"1\";\nAcquire::Snapshots \"\";\nAcquire::Snapshots::URI \"\";\nAcquire::Snapshots::URI::Origin \"\";\nAcquire::Snapshots::URI::Origin::Debian \"https://snapshot.debian.org/archive/debian/@SNAPSHOTID@/\";\nAcquire::Snapshots::URI::Origin::Ubuntu \"https://snapshot.ubuntu.com/ubuntu/@SNAPSHOTID@/\";\nAcquire::Snapshots::URI::Override \"\";\nAcquire::Snapshots::URI::Override::Label \"\";\nAcquire::Snapshots::URI::Override::Label::Debian-Security \"https://snapshot.debian.org/archive/debian-security/@SNAPSHOTID@/\";\nAcquire::Snapshots::URI::Host \"\";\nAcquire::Snapshots::URI::Host::archive.ubuntu.com \"https://snapshot.ubuntu.com/@PATH@/@SNAPSHOTID@/\";\nAcquire::Snapshots::URI::Host::deb.debian.org \"https://snapshot.debian.org/archive/@PATH@/@SNAPSHOTID@/\";\nAcquire::Snapshots::URI::Host::.archive.ubuntu.com \"https://snapshot.ubuntu.com/@PATH@/@SNAPSHOTID@/\";\nAcquire::Snapshots::URI::Host::security.ubuntu.com \"https://snapshot.ubuntu.com/@PATH@/@SNAPSHOTID@/\";\nAcquire::Snapshots::URI::Host::ppa.launchpadcontent.net \"https://snapshot.ppa.launchpadcontent.net/@PATH@/@SNAPSHOTID@/\";\nAcquire::Snapshots::URI::Host::ppa.launchpad.net \"https://snapshot.ppa.launchpadcontent.net/@PATH@/@SNAPSHOTID@/\";\nAcquire::Languages \"\";\nAcquire::Languages:: \"none\";\nAcquire::CompressionTypes \"\";\nAcquire::CompressionTypes::xz \"xz\";\nAcquire::CompressionTypes::bz2 \"bzip2\";\nAcquire::CompressionTypes::lzma \"lzma\";\nAcquire::CompressionTypes::gz \"gzip\";\nAcquire::CompressionTypes::lz4 \"lz4\";\nAcquire::CompressionTypes::zst \"zstd\";\nDPkg \"\";\nDPkg::Path \"/usr/sbin:/usr/bin:/sbin:/bin\";\nBinary \"apt-config\";\nBinary::apt \"\";\nBinary::apt::APT \"\";\nBinary::apt::APT::Color \"1\";\nBinary::apt::APT::Cache \"\";\nBinary::apt::APT::Cache::Show \"\";\nBinary::apt::APT::Cache::Show::Version \"2\";\nBinary::apt::APT::Cache::AllVersions \"0\";\nBinary::apt::APT::Cache::ShowVirtuals \"1\";\nBinary::apt::APT::Cache::Search \"\";\nBinary::apt::APT::Cache::Search::Version \"2\";\nBinary::apt::APT::Cache::ShowDependencyType \"1\";\nBinary::apt::APT::Cache::ShowVersion \"1\";\nBinary::apt::APT::Get \"\";\nBinary::apt::APT::Get::Upgrade-Allow-New \"1\";\nBinary::apt::APT::Get::Update \"\";\nBinary::apt::APT::Get::Update::InteractiveReleaseInfoChanges \"1\";\nBinary::apt::APT::Cmd \"\";\nBinary::apt::APT::Cmd::Show-Update-Stats \"1\";\nBinary::apt::APT::Cmd::Pattern-Only \"1\";\nBinary::apt::APT::Keep-Downloaded-Packages \"0\";\nBinary::apt::DPkg \"\";\nBinary::apt::DPkg::Progress-Fancy \"1\";\nBinary::apt::DPkg::Lock \"\";\nBinary::apt::DPkg::Lock::Timeout \"120\";\nCommandLine \"\";\nCommandLine::AsString \"apt-config dump\";\n",
+      "stderr": "W: Unable to read /etc/apt/-/ - DirectoryExists (2: No such file or directory)\n"
+    },
+    {
+      "command": [
+        "apt-get",
+        "update",
+        "-o",
+        "APT::Update::Error-Mode=any"
+      ],
+      "exit": 0,
+      "stdout": "Get:1 https://ppa.launchpadcontent.net/ondrej/php/ubuntu noble InRelease [24.3 kB]\nGet:2 https://ppa.launchpadcontent.net/ondrej/php/ubuntu noble/main amd64 Packages [198 kB]\nFetched 223 kB in 3s (88.5 kB/s)\nReading package lists...\n",
+      "stderr": "W: Unable to read /etc/apt/-/ - DirectoryExists (2: No such file or directory)\n"
+    },
+    {
+      "command": [
+        "/usr/lib/apt/apt-helper",
+        "download-file",
+        "https://ppa.launchpadcontent.net/ondrej/php/ubuntu/pool/main/p/php7.4/php7.4-soap_7.4.33-30+ubuntu24.04.1+deb.sury.org+1_amd64.deb",
+        "/home/vagrant/php-xml-soap-provider-r2/soap.deb",
+        "SHA256:f25c5a8342b852ed5f97154e270f22805f4dc221132b15084c6936f59016511b"
+      ],
+      "exit": 0,
+      "stdout": "Get:1 https://ppa.launchpadcontent.net/ondrej/php/ubuntu/pool/main/p/php7.4/php7.4-soap_7.4.33-30+ubuntu24.04.1+deb.sury.org+1_amd64.deb [125 kB]\nFetched 125 kB in 2s (73.2 kB/s)\n",
+      "stderr": "W: Unable to read /etc/apt/-/ - DirectoryExists (2: No such file or directory)\n"
+    },
+    {
+      "command": [
+        "dpkg-deb",
+        "-f",
+        "soap.deb",
+        "Package",
+        "Version",
+        "Architecture",
+        "Depends"
+      ],
+      "exit": 0,
+      "stdout": "Package: php7.4-soap\nVersion: 1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1\nArchitecture: amd64\nDepends: php-common (>= 1:81~), ucf, php7.4-common (= 1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1), libc6 (>= 2.38), libxml2 (>= 2.7.4)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "dpkg-deb",
+        "-x",
+        "soap.deb",
+        "extracted"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "readelf",
+        "-h",
+        "-d",
+        "/home/vagrant/php-xml-soap-provider-r2/extracted/usr/lib/php/20190902/soap.so"
+      ],
+      "exit": 0,
+      "stdout": "ELF Header:\n  Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00 \n  Class:                             ELF64\n  Data:                              2's complement, little endian\n  Version:                           1 (current)\n  OS/ABI:                            UNIX - System V\n  ABI Version:                       0\n  Type:                              DYN (Shared object file)\n  Machine:                           Advanced Micro Devices X86-64\n  Version:                           0x1\n  Entry point address:               0x0\n  Start of program headers:          64 (bytes into file)\n  Start of section headers:          315912 (bytes into file)\n  Flags:                             0x0\n  Size of this header:               64 (bytes)\n  Size of program headers:           56 (bytes)\n  Number of program headers:         11\n  Size of section headers:           64 (bytes)\n  Number of section headers:         28\n  Section header string table index: 27\n\nDynamic section at offset 0x4c560 contains 28 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libxml2.so.2]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000e (SONAME)             Library soname: [soap.so]\n 0x000000000000000c (INIT)               0x8000\n 0x000000000000000d (FINI)               0x41f90\n 0x0000000000000019 (INIT_ARRAY)         0x4b670\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x4b678\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x2f0\n 0x0000000000000005 (STRTAB)             0x1cb0\n 0x0000000000000006 (SYMTAB)             0x318\n 0x000000000000000a (STRSZ)              4757 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x4d760\n 0x0000000000000002 (PLTRELSZ)           5976 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x5fc8\n 0x0000000000000007 (RELA)               0x3208\n 0x0000000000000008 (RELASZ)             11712 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000000000001e (FLAGS)              BIND_NOW\n 0x000000006ffffffb (FLAGS_1)            Flags: NOW\n 0x000000006ffffffe (VERNEED)            0x3168\n 0x000000006fffffff (VERNEEDNUM)         2\n 0x000000006ffffff0 (VERSYM)             0x2f46\n 0x000000006ffffff9 (RELACOUNT)          465\n 0x0000000000000000 (NULL)               0x0\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "ldd",
+        "/home/vagrant/php-xml-soap-provider-r2/extracted/usr/lib/php/20190902/soap.so"
+      ],
+      "exit": 0,
+      "stdout": "\tlinux-vdso.so.1 (0x00007fff979b7000)\n\tlibxml2.so.2 => /lib/x86_64-linux-gnu/libxml2.so.2 (0x0000711f07a49000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x0000711f07800000)\n\tlibicuuc.so.74 => /lib/x86_64-linux-gnu/libicuuc.so.74 (0x0000711f07400000)\n\tlibz.so.1 => /lib/x86_64-linux-gnu/libz.so.1 (0x0000711f07a2d000)\n\tliblzma.so.5 => /lib/x86_64-linux-gnu/liblzma.so.5 (0x0000711f077ce000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x0000711f076e5000)\n\t/lib64/ld-linux-x86-64.so.2 (0x0000711f07c87000)\n\tlibicudata.so.74 => /lib/x86_64-linux-gnu/libicudata.so.74 (0x0000711f05600000)\n\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x0000711f05200000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x0000711f076b7000)\n",
+      "stderr": ""
+    }
+  ],
+  "no_install": true,
+  "no_php_load": true,
+  "authentication": "isolated APT existing Signed-By"
+}

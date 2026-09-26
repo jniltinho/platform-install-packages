@@ -1,0 +1,42 @@
+{
+  "status": "REPEATED_OBSERVATIONS_WITH_8_STRICT_FAILURES_PER_AUTHOR",
+  "application_patch_selected": false,
+  "acceptance": false,
+  "comparisons": {
+    "74": {
+      "matrix_byte_equal": true,
+      "matrix_sha256": "755dc2a8f5139f2efe8e5728f83a37cd6c610c47d43246bf825c1211918a08ae",
+      "native_processes_per_executor": 22,
+      "native_process_exit0": 22,
+      "accepted_contracts": 18,
+      "strict_failures_retained": 4,
+      "collector_exit": 1,
+      "actual_cli_exit": 0,
+      "actual_step_exits": [
+        0,
+        1,
+        0
+      ],
+      "runtime_before_after_primary_repeat_equal": true,
+      "runtime_sha256": "a7c9a22fb6d120993fe188ceb31b68cafb49079aef5100d047d9ad31d21820dd"
+    },
+    "83": {
+      "matrix_byte_equal": true,
+      "matrix_sha256": "3e5382b28f41db5fa1b433d4230556610cdc2d6f6d58da33a02864ef26174b03",
+      "native_processes_per_executor": 22,
+      "native_process_exit0": 22,
+      "accepted_contracts": 18,
+      "strict_failures_retained": 4,
+      "collector_exit": 1,
+      "actual_cli_exit": 0,
+      "actual_step_exits": [
+        0,
+        1,
+        0
+      ],
+      "runtime_before_after_primary_repeat_equal": true,
+      "runtime_sha256": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491"
+    }
+  },
+  "execution_proof": "sanitized actual Claude CLI tool calls/results plus individual command stdout/stderr/exit; byte equality is comparison, not sole execution proof"
+}

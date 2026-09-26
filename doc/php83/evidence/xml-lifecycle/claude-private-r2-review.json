@@ -1,0 +1,35 @@
+{
+  "case": "xml-lifecycle private SOAP provider — correction review r2",
+  "executor_reviewer": "Claude CLI (Opus 5.5), local only; no SSH/VM/PHP/network/module load/source edits",
+  "commands": [
+    {"cmd": "PYTHONDONTWRITEBYTECODE=1 timeout 60 python3 tools/php83/xml-lifecycle/test_private.py", "exit": 0, "result": "Ran 35 tests, OK", "evidence": "claude-private-r2-tests.{stdout,stderr,exit}"},
+    {"cmd": "bash -n tools/php83/xml-lifecycle/run-private.sh", "exit": 0, "evidence": "claude-private-r2-bashn.{stdout,stderr,exit}"}
+  ],
+  "source_sha256": {
+    "tools/php83/xml-lifecycle/test_private.py": "5966fe09b300c577c45d18a3e82e83954dbd0d1b0ca5dfcdf47358b43808db57",
+    "tools/php83/xml-lifecycle/prepare-private.py": "6312e1c5f411e073e96a5ae363c8992d8980467f8f3ce03e87aa440e9c6c6735",
+    "tools/php83/xml-lifecycle/run-private.sh": "48b6ec2b157941827acb893cd6e4ba65f84fa224e52ed0461b4b66d9e7967377",
+    "tools/php83/xml-lifecycle/collect-private.py": "e939688c297a3f395e10a8fd349f5ce0d6cfc8566dde0d89628c4bfbb9ec5c87",
+    "tools/php83/xml-lifecycle/provider-inspect.py": "3ad3ee1544f843a2b70e2f533aef12105248836aad5d84bd430e42f58b4d22eb",
+    "attempts/provider-r1/provider-inspect.py": "ce4a33fd7a181099e17d90833903c1bbc3527ea80ddd110bb6eecf6dcd801cdd"
+  },
+  "B1": {"status": "RESOLVED", "detail": "private_oserror only adds phase=private-soap-provider-r1 and providers.json (hash registered) to the inherited fixture; original assertions unchanged (SystemExit, 22 records, 22 failures). Guard in collect-private.py:97-98 not relaxed."},
+  "B2": {"status": "RESOLVED_AS_PROVENANCE", "detail": "provider-provenance.json hashes match on disk (74 report 2965348f…, 83 report 01f3be06…, sources 3ad3ee15…/ce4a33fd…). 83 report steps match r1 source: gpgv --status-fd with ubuntu-archive-keyring exit 0, apt-helper download, dpkg-deb, readelf, ldd; no authentication field, consistent with r1 source. Source diff r1→current: r2 root for 74, isolated APT config for 74 (existing Signed-By, no trusted=yes, insecure flags false), gpgv skipped only for 74, lists path, authentication field added. 83 path logic otherwise identical. Absence of authentication field in the legitimately older 83 report is not a defect."},
+  "preparation_pins": "prepare-private.py now requires exact version and package_sha256 for both providers (74: 1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1 / f25c5a83…; 83: 8.3.6-0ubuntu0.24.04.11 / eeb541e1…) plus status and ABI; reports match.",
+  "non_blocking": [
+    "provider-provenance.json 74.note copies the 83 note text ('83 executed r1 source…'); should describe 74 as executed by current isolated-APT source with authentication field. Cosmetic wording.",
+    "74 keyring_sha256 is the hash of the .sources file, not an independently pinned key.",
+    "TOCTOU: private module/libraries are bracketed by before/after hashes (detect, not prevent)."
+  ],
+  "limitations_retained": [
+    "module/library identity is bracketed (pre/post hash), not immutable",
+    "linked libraries are ldd-resolved paths only; no actual mapped-library proof (/proc/<pid>/maps) yet",
+    "old primary74 (22 × exit 65) remains NOT_EXECUTED_APPLICATION; no exact 74 SOAP callback evidence yet"
+  ],
+  "decision": {
+    "blocker_for_bounded_unchanged_source_SOAP_experiment": false,
+    "acceptance": "NOT_EVALUATED — this review does not approve acceptance or release",
+    "native_outcomes_implied": false,
+    "runtime_passed_claimed": false
+  }
+}

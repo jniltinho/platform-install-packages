@@ -1,0 +1,102 @@
+{
+  "case": "xml-lifecycle LOCAL preparation review",
+  "executor": "Claude CLI (claude-opus-5-5)",
+  "reviewer_role": "independent reviewer (not author)",
+  "date": "2026-09-26",
+  "scope_limits": "No VM/SSH/network/PHP execution; no tool/doc/source edits; no git mutation. Rebuilding the harness is not independent runtime evidence; no PHP compile, SOAP decode or native result is claimed.",
+  "inputs_before_after": "claude-inputs-before.sha256 == claude-inputs-after.sha256 (sha256sum -c: all OK)",
+  "prep_tree": "claude-prep-tree.sha256 (/tmp/xml-lifecycle-claude-prep)",
+  "commands": [
+    {
+      "id": "tests",
+      "command": "PYTHONDONTWRITEBYTECODE=1 timeout 60 python3 -m unittest discover -s tools/php83/xml-lifecycle -p 'test_*.py' -v",
+      "exit": 0,
+      "stdout_file": "claude-tests.stdout",
+      "stderr_file": "claude-tests.stderr",
+      "summary": "Ran 21 tests, OK. stdout is the collector JSON printed by test_oserror_retained (22 synthetic OSError failures, expected)."
+    },
+    {
+      "id": "bash-n",
+      "command": "timeout 10 bash -n tools/php83/xml-lifecycle/run.sh",
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "id": "prepare",
+      "command": "PYTHONDONTWRITEBYTECODE=1 timeout 60 python3 tools/php83/xml-lifecycle/prepare.py /tmp/xml-lifecycle-claude-prep",
+      "precondition": "/tmp/xml-lifecycle-claude-prep did not exist (ls: No such file or directory)",
+      "exit": 0,
+      "stdout": "{\"manifest_sha256\": \"3250b76a2475215089665dc50de4d464af7c502eb9577bd72a4dae1095a3a55d\", \"files\": 18, \"application_patch_selected\": false}",
+      "stderr": ""
+    },
+    {
+      "id": "identity",
+      "command": "sha256sum inputs+ZIPs (before/after); diff -r original exp11 in stage; python zipfile read of pinned members",
+      "exit": 0,
+      "summary": "inputs unchanged; both ZIP hashes match pins; staged original/ and exp11/ trees byte-identical (diff -r silent); manifest 3250b76a...a55d equals author preparation.json; 19 staged files = 18 payload + identities.json"
+    }
+  ],
+  "static_review": {
+    "source_pins": "Both archive SHA-256 match pins; all five members per archive match pins; original and exp11 pins identical; staged trees byte-identical; no class stubs (probe requires only pinned kConf.php + kSoapClient.php; kConf require_once loads kEnvironment, kConfCacheManager, kCacheConfFactory; kCacheConfFactory's dynamic require is not reached by getEnvMap(), which is pure path construction).",
+    "transport_seam": "Only SyntheticTransportSoap::__doRequest overridden; returns fixed envelope from fixtures/response.xml; no real transport. Constructor, __soapCall/__call, beforeCall/afterCall are real kSoapClient. __doRequest signature (untyped params, ?string return) looks compatible with 7.4 and 8.3 statically.",
+    "wsdl_soap": "WSDL is statically coherent document/literal SOAP 1.1: inline schema imports urn:xml-lifecycle-types from file:///audit/probe/fixtures/types.xsd; Ping/PingResponse elements; soapAction urn:xml-lifecycle:ping matches collector; address urn:xml-lifecycle:transport. Expected decode {value: SYNTHETIC_RESPONSE} is plausible, NOT verified. malformed.wsdl is not well-formed; missing.wsdl is absent from stage (test-enforced).",
+    "baseline_flaw_expectations": "FAIL_CASES expect SoapFault and entities enabled + wrappers restored after operation (afterCall skipped) — consistent with the unchanged source. nested-call-fault correctly in POSITIVE (inner fault caught, outer afterCall closes). nested-construct has no final-state expectation: consistent with 'not security approval'.",
+    "command_guard_native_failure": "run.sh: exact arg/host/UID allow-list, manifest pin before and on EXIT (exit 70 on drift), PrivateNetwork, socket syscall denial, ProtectSystem/Home, PrivateTmp, open_basedir, allow_url_fopen=0, E_ALL to stderr, no @/filter. collect.py: nonzero exit, JSON errors, timeout and OSError are retained per row as failures; refuses existing output; overall status FAIL_RETAINED_OBSERVATIONS on any failure."
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "BLOCKING",
+      "verdict": "PLAUSIBLE (static; native semantics not executed)",
+      "area": "canary observer side effect / callback cases",
+      "summary": "In callback-existing and nested-construct, captureState() resolves file:///audit/probe/fixtures/marker.txt through the installed userland resolver, which allow-lists marker.txt and returns fopen(). The userland external-entity-loader path is not gated by libxml_disable_entity_loader(true) in ext/libxml as far as static reading shows, so the after-kConf canary likely sees the marker; collect.validate() unconditionally requires not ev[1].marker_seen ('real kConf block') and would record a harness artifact as FAIL_RETAINED_OBSERVATIONS. Separately, the canary itself populates resolver_events, so 'pre-existing loader actually reached' is satisfied by the observer, not by SOAP/WSDL loading.",
+      "fix_direction": "Remove marker.txt from the resolver allow-list or make canary entity IDs distinct and recorded separately; tag resolver_events with $phase; require a good.wsdl/types.xsd/inner.wsdl system ID for the SOAP-reach claim; add case-specific (not universal) after-kConf expectations for callback cases, decided before execution."
+    },
+    {
+      "id": "F2",
+      "severity": "MEDIUM",
+      "area": "diagnostic attribution",
+      "summary": "captureState() overwrites global $phase and never restores it; diagnostics emitted during response decoding and afterCall after 'transport-enter-0' (and after 'transport-after-inner') are attributed to the transport phase. Evidence retained but mislabelled.",
+      "fix_direction": "Save/restore $phase in captureState()."
+    },
+    {
+      "id": "F3",
+      "severity": "MEDIUM",
+      "area": "test coverage",
+      "summary": "The 21 tests cover only bootstrap and FAIL_CASES fixtures for original/83. No synthetic fixture exercises POSITIVE result/transport_events, nested-*, callback cases, exp11 or runtime 74; F1 is not detectable by the suite.",
+      "fix_direction": "Add one synthetic fixture per remaining case family, including a callback-case after-kConf row."
+    },
+    {
+      "id": "F4",
+      "severity": "LOW",
+      "area": "expected diagnostics",
+      "summary": "On 8.3, libxml_disable_entity_loader() is deprecated (E_DEPRECATED per call, including kConf top-level and every before/afterCall) and kSoapClient::__call/__soapCall lack tentative return types; nested cases add stream_wrapper_restore notices and duplicate unregister warnings. They are retained (no @/filter) but the collector has no expected-diagnostic set, so a new/unexpected diagnostic class never fails a case.",
+      "fix_direction": "Optionally pin an expected diagnostic set per runtime/case, preserving unexpected ones as failures."
+    },
+    {
+      "id": "F5",
+      "severity": "LOW",
+      "area": "doc accuracy",
+      "summary": "Doc says 'all files are readonly'; prepare.py writes default-mode files. Readonly is only the runtime BindReadOnlyPaths.",
+      "fix_direction": "Reword or chmod in prepare."
+    },
+    {
+      "id": "F6",
+      "severity": "LOW",
+      "area": "run.sh guard",
+      "summary": "verify() checks only manifested files; unmanifested extra files in the stage are not rejected (mitigated: collector requires loaded==exact five pinned files). verify() uses Path.is_relative_to (Python>=3.9) on the VM host; an older python fails closed (exit 70/!=0), not open. ProtectHome=yes with a bind source under /home/vagrant is not runtime-verified here.",
+      "fix_direction": "Optional extra-file rejection; confirm VM python version and bind behaviour in the gated run."
+    },
+    {
+      "id": "F7",
+      "severity": "INFO",
+      "area": "original flaw not observed",
+      "summary": "kSoapClient::__soapCall drops $options/$input_headers/&$output_headers; harness does not observe it. Out of this fixture's scope; not repaired, correctly."
+    }
+  ],
+  "verdict": "Preparation mechanics reproduce locally (21/21 synthetic tests, bash -n exit 0, fresh prepare manifest identical to author's). NOT approved for native execution of callback-existing/nested-construct until F1 is resolved or explicitly accepted with pre-registered expectations. Other nine cases: no blocking finding from static review; native matrix remains NOT_EXECUTED.",
+  "native_result_claim": null,
+  "application_patch_selected": false,
+  "real_transport_coverage": false
+}

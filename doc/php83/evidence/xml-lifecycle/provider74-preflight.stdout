@@ -1,0 +1,110 @@
+php7.4-apcu	5.1.28-2+ubuntu24.04.1+deb.sury.org+1	amd64	install ok installed
+php7.4-calendar			unknown ok not-installed
+php7.4-cli	1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1	amd64	install ok installed
+php7.4-common	1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1	amd64	install ok installed
+php7.4-ctype			unknown ok not-installed
+php7.4-curl	1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1	amd64	install ok installed
+php7.4-dom			unknown ok not-installed
+php7.4-exif			unknown ok not-installed
+php7.4-ffi			unknown ok not-installed
+php7.4-fileinfo			unknown ok not-installed
+php7.4-ftp			unknown ok not-installed
+php7.4-gd	1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1	amd64	install ok installed
+php7.4-gettext			unknown ok not-installed
+php7.4-gmp	1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1	amd64	install ok installed
+php7.4-iconv			unknown ok not-installed
+php7.4-intl	1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1	amd64	install ok installed
+php7.4-json	1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1	amd64	install ok installed
+php7.4-ldap	1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1	amd64	install ok installed
+php7.4-mbstring	1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1	amd64	install ok installed
+php7.4-memcache	1:4.0.5.2-1+ubuntu24.04.1+deb.sury.org+1	amd64	install ok installed
+php7.4-mysql	1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1	amd64	install ok installed
+php7.4-mysqli			unknown ok not-installed
+php7.4-mysqlnd			unknown ok not-installed
+php7.4-opcache	1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1	amd64	install ok installed
+php7.4-pdo			unknown ok not-installed
+php7.4-pdo-mysql			unknown ok not-installed
+php7.4-phar			unknown ok not-installed
+php7.4-posix			unknown ok not-installed
+php7.4-readline	1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1	amd64	install ok installed
+php7.4-shmop			unknown ok not-installed
+php7.4-simplexml			unknown ok not-installed
+php7.4-sockets			unknown ok not-installed
+php7.4-ssh2	1.4.1-5+ubuntu24.04.1+deb.sury.org+1	amd64	install ok installed
+php7.4-sysvmsg			unknown ok not-installed
+php7.4-sysvsem			unknown ok not-installed
+php7.4-sysvshm			unknown ok not-installed
+php7.4-tokenizer			unknown ok not-installed
+php7.4-xml	1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1	amd64	install ok installed
+php7.4-xmlreader			unknown ok not-installed
+php7.4-xmlwriter			unknown ok not-installed
+php7.4-xsl			unknown ok not-installed
+php7.4-zip	1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1	amd64	install ok installed
+php7.4-cli:
+  Installed: 1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1
+  Candidate: 1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1
+  Version table:
+ *** 1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1 500
+        500 https://ppa.launchpadcontent.net/ondrej/php/ubuntu noble/main amd64 Packages
+        100 /var/lib/dpkg/status
+php7.4-common:
+  Installed: 1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1
+  Candidate: 1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1
+  Version table:
+ *** 1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1 500
+        500 https://ppa.launchpadcontent.net/ondrej/php/ubuntu noble/main amd64 Packages
+        100 /var/lib/dpkg/status
+php7.4-soap:
+  Installed: (none)
+  Candidate: 1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1
+  Version table:
+     1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1 500
+        500 https://ppa.launchpadcontent.net/ondrej/php/ubuntu noble/main amd64 Packages
+Package: php7.4-soap
+Source: php7.4
+Priority: optional
+Section: php
+Installed-Size: 340
+Maintainer: Debian PHP Maintainers <team+pkg-php@tracker.debian.org>
+Architecture: amd64
+Version: 1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1
+Provides: php-soap
+Depends: php-common (>= 1:81~), ucf, php7.4-common (= 1:7.4.33-30+ubuntu24.04.1+deb.sury.org+1), libc6 (>= 2.38), libxml2 (>= 2.7.4)
+Filename: pool/main/p/php7.4/php7.4-soap_7.4.33-30+ubuntu24.04.1+deb.sury.org+1_amd64.deb
+Size: 124842
+MD5sum: 2d4e04a2a1f1b3a1bd83adfbf54819b0
+SHA1: 7d71c55963121488dac6c3045c773aeb57bf1594
+SHA256: f25c5a8342b852ed5f97154e270f22805f4dc221132b15084c6936f59016511b
+SHA512: 76ca519f9fbf12a82bd2ef60e287bb87ce935eb431b55309bf096f20db634ac5517b06199d7153ff274736332fee0696e91e53c4b5162cebcd3c1ef282b8370f
+Description-en: SOAP module for PHP
+ This package provides the SOAP module(s) for PHP.
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Description-md5: 8ca6ca2ae4fbc6127f6522e73f05005a
+
+PHP API => 20190902
+PHP Extension => 20190902
+Zend Extension => 320190902
+Zend Extension Build => API320190902,NTS
+PHP Extension Build => API20190902,NTS
+Thread Safety => disabled
+extension_dir => /usr/lib/php/20190902 => /usr/lib/php/20190902
+URIs: http://us.archive.ubuntu.com/ubuntu/
+Suites: noble noble-updates noble-backports
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+URIs: http://security.ubuntu.com/ubuntu/
+Suites: noble-security
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+deb [signed-by=/usr/share/keyrings/elastic.gpg] https://artifacts.elastic.co/packages/7.x/apt stable main
+deb [trusted=yes] file:/opt/kaltura-baseline/repo ./
+URIs: http://archive.ubuntu.com/ubuntu/
+Suites: noble noble-updates noble-backports
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+URIs: http://security.ubuntu.com/ubuntu/
+Suites: noble-security
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+URIs: https://ppa.launchpadcontent.net/ondrej/php/ubuntu/
+Suites: noble
+Signed-By:
