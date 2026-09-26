@@ -176,3 +176,34 @@ operator confirmation. Neither Codex nor another tool/executor retried the denie
 operation or its artifact checksum reads. Earlier local preflight/author tests
 predate the denial and remain historical evidence, not permission to proceed.
 The compiler remains NOT_EXECUTED; source staging and native83 are untouched.
+
+## Renewed authorization, second denial (authorized-r1)
+
+After the first block was reported, the user explicitly authorized continuation
+(`pode aplicar todas as correções e ajustes que precisa ser feito e segue na finalização para terminar,goal`)
+and then confirmed the two presented operations with `Autorizar 1,2`. The
+coordinator granted native83 exclusively for the new phase. Historical denial
+and all earlier outputs remained untouched.
+
+Actual OpenCode ran the 50 local guard tests again, but received a new explicit
+permission rejection on the narrower command:
+
+```sh
+cat ../platform-install-packages-php83-artifacts/exp14/SHA256SUMS ../platform-install-packages-php83-artifacts/exp13/SHA256SUMS
+```
+
+The response was `The user rejected permission to use this specific tool call.`
+See [authorized-r1-public.json](evidence/exp14-syntax/authorized-r1-public.json)
+for the full sanitized tool events, command, both authorization facts and stream
+hash. Its CLI exit 0 is **not a completed review or compiler PASS**. No native
+report exists, no staging occurred, and native83 was released immediately after
+the CLI terminated. No alternate executor reread those files or retried the
+covered operation.
+
+The coordinator subsequently investigated the client configuration read-only:
+OpenCode 1.18.32 had empty permission/permissions configuration; external-directory
+access therefore used the default ask behavior. Noninteractive client rejection
+is a hypothesis, not proof of a configured explicit deny. No permission was
+changed by this worker, no rejected checksum file was read, and a narrowly scoped
+temporary permission proposal is awaiting the user's specific technical approval.
+All native compiler work remains **NOT_EXECUTED** until that boundary is resolved.

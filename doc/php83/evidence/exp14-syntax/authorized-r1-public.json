@@ -1,0 +1,252 @@
+{
+  "executor": "actual OpenCode opencode/muse-spark-1.3-contributor-free",
+  "process_exit": 0,
+  "authorization": "User renewed authorization after reported block and explicitly confirmed Autorizar 1,2",
+  "raw_stream_sha256": "fe1cc812ecd1f0d05dded7b207e6b0c566ea167c76fedc4ee43008e3706d4ddb",
+  "events": [
+    {
+      "type": "text",
+      "text": "Authorized finalization received \u2014 running frozen verification and native stage once, bounded."
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "status": "completed",
+      "input": {
+        "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+      },
+      "error": null,
+      "output_sha256": "edfb3f99d59af20be82848fdd6772908ba322d1d7d60f843c02897a024d659c0",
+      "output_length": 383
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "status": "completed",
+      "input": {
+        "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/exp14-syntax"
+      },
+      "error": null,
+      "output_sha256": "528bc5e78cbfc0b1ea1116e32f2851715c6d39e9e5d19a56e9bdbc513428f668",
+      "output_length": 295
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "status": "completed",
+      "input": {
+        "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp14-syntax"
+      },
+      "error": null,
+      "output_sha256": "400f7cba519cb8e79eb1276a29f8ab8e8f931a29690cd85354528969175516fc",
+      "output_length": 683
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "status": "completed",
+      "input": {
+        "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/exp14-syntax/run.sh"
+      },
+      "error": null,
+      "output_sha256": "5fca3bf87c995080c9d68f105c520753da20e01cb8000b594181814448212ab3",
+      "output_length": 1273
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "status": "completed",
+      "input": {
+        "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp14-syntax/opencode-public.json"
+      },
+      "error": null,
+      "output_sha256": "50fd2ecbd7275369736db5c1e3ba3f0b107aea387f4481a3f91a8ec040496202",
+      "output_length": 13904
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "status": "completed",
+      "input": {
+        "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp14-syntax/stage-primary.sh"
+      },
+      "error": null,
+      "output_sha256": "a7a0b57b25004444d93c0e6e3fb63ca29bae1933b70d3f321112f71368749971",
+      "output_length": 1358
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "status": "completed",
+      "input": {
+        "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/exp14-syntax/input-contract.json"
+      },
+      "error": null,
+      "output_sha256": "27c0ff7a71866789c889583f00809c57746d2532997f1ee0cad8aa8f4a0a0acb",
+      "output_length": 1849
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "status": "completed",
+      "input": {
+        "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp14-syntax/authorized-r1-prompt.txt"
+      },
+      "error": null,
+      "output_sha256": "36e0bdbfcbda28d50dfe8fca095133fdb73da25d7fd13d69184776b5b07b11c3",
+      "output_length": 2494
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "status": "completed",
+      "input": {
+        "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp14-syntax/authorized-r1-model.txt"
+      },
+      "error": null,
+      "output_sha256": "db94e1af25f2e3a93e35f8d4c1612ceff90bbffdcb42963a6e43515a5c5e6652",
+      "output_length": 249
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "status": "completed",
+      "input": {
+        "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp14-syntax/execute-native.py"
+      },
+      "error": null,
+      "output_sha256": "2f140ad016ece8780a52a2a1fa8eb1377554cc01d3c4fd71a8b4e985a28bb559",
+      "output_length": 1703
+    },
+    {
+      "type": "text",
+      "text": "Contract pins verified \u2014 checking guards and pre-flight state."
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "status": "completed",
+      "input": {
+        "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/exp14-syntax/preflight.py"
+      },
+      "error": null,
+      "output_sha256": "f4079a2262afa38bd14a6ecfb35f191817810373dc90f0c100527b446f2ccd27",
+      "output_length": 2081
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "status": "completed",
+      "input": {
+        "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/exp14-syntax/stage.py"
+      },
+      "error": null,
+      "output_sha256": "87f31fe521c03ae25d75e15c73b3144f46fe0fdeed012a6cc833501a3c4e5bd7",
+      "output_length": 1691
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "status": "completed",
+      "input": {
+        "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp14-syntax/prep-freeze.json"
+      },
+      "error": null,
+      "output_sha256": "55bbdc94f2af0772e76b1e895917b2e994fef30ed4e356297b367f96448130a2",
+      "output_length": 1607
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "status": "completed",
+      "input": {
+        "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp14-syntax/final-pin-preflight.json"
+      },
+      "error": null,
+      "output_sha256": "e839e5146825a415199d1c6b1d7a0636e1e441c64486565aa6dcb05b5a995bc1",
+      "output_length": 707
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "status": "completed",
+      "input": {
+        "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/exp14-syntax/scan.py"
+      },
+      "error": null,
+      "output_sha256": "2aa7ab77a1264e8023f1c3162a2f559fbf5e96b97cedf9740e6dba8a93ebebd3",
+      "output_length": 7613
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "status": "completed",
+      "input": {
+        "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/exp14-syntax/compare.py"
+      },
+      "error": null,
+      "output_sha256": "340c7374295c84704d05c2f93566a3460f19e635551e22916be6b94314502a15",
+      "output_length": 3935
+    },
+    {
+      "type": "tool_use",
+      "tool": "bash",
+      "status": "completed",
+      "input": {
+        "command": "bash -n tools/php83/exp14-syntax/run.sh; echo \"run.sh bash-n exit:$?\"",
+        "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+      },
+      "error": null,
+      "output": "run.sh bash-n exit:0\n"
+    },
+    {
+      "type": "tool_use",
+      "tool": "bash",
+      "status": "completed",
+      "input": {
+        "command": "bash -n doc/php83/evidence/exp14-syntax/stage-primary.sh; echo \"stage-primary bash-n exit:$?\"",
+        "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+      },
+      "error": null,
+      "output": "stage-primary bash-n exit:0\n"
+    },
+    {
+      "type": "tool_use",
+      "tool": "bash",
+      "status": "completed",
+      "input": {
+        "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/exp14-syntax -p 'test_*.py'",
+        "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+      },
+      "error": null,
+      "output": "......./usr/lib/python3.12/zipfile/__init__.py:1620: UserWarning: Duplicate name: 'server-Rigel-18.20.0/a.php'\n  return self._open_to_write(zinfo, force_zip64=force_zip64)\n...........................................\n----------------------------------------------------------------------\nRan 50 tests in 7.160s\n\nOK\n"
+    },
+    {
+      "type": "text",
+      "text": "Local guards pass (50/50) \u2014 verifying authorized scope before staging."
+    },
+    {
+      "type": "tool_use",
+      "tool": "bash",
+      "status": "completed",
+      "input": {
+        "command": "ls -la doc/php83/evidence/exp14-syntax/authorized-r1-stage.stdout doc/php83/evidence/exp14-syntax/authorized-r1-stage.stderr doc/php83/evidence/exp14-syntax/authorized-r1-stage.exit doc/php83/evidence/exp14-syntax/opencode-independent.json doc/php83/evidence/exp14-syntax/opencode-independent.stderr doc/php83/evidence/exp14-syntax/opencode-independent.exit 2>&1; echo \"exist-check exit:$?\"",
+        "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+      },
+      "error": null,
+      "output": "ls: cannot access 'doc/php83/evidence/exp14-syntax/authorized-r1-stage.stdout': No such file or directory\nls: cannot access 'doc/php83/evidence/exp14-syntax/authorized-r1-stage.stderr': No such file or directory\nls: cannot access 'doc/php83/evidence/exp14-syntax/authorized-r1-stage.exit': No such file or directory\nls: cannot access 'doc/php83/evidence/exp14-syntax/opencode-independent.json': No such file or directory\nls: cannot access 'doc/php83/evidence/exp14-syntax/opencode-independent.stderr': No such file or directory\nls: cannot access 'doc/php83/evidence/exp14-syntax/opencode-independent.exit': No such file or directory\nexist-check exit:2\n"
+    },
+    {
+      "type": "tool_use",
+      "tool": "bash",
+      "status": "error",
+      "input": {
+        "command": "cat ../platform-install-packages-php83-artifacts/exp14/SHA256SUMS ../platform-install-packages-php83-artifacts/exp13/SHA256SUMS",
+        "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+      },
+      "error": "The user rejected permission to use this specific tool call.",
+      "output": ""
+    }
+  ],
+  "application_acceptance": false
+}
