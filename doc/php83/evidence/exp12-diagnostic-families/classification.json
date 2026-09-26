@@ -1,0 +1,775 @@
+{
+  "api_report": "doc/php83/evidence/exp12-runtime/api-primary.json",
+  "api_report_sha256": "de754c3184c31301848a795d7eaa322e4982b0eab770dbcc550090b9eeabf55d",
+  "events": 371,
+  "exp12_zip_sha256": "de5e61a1b54f472e605ef2e87669302a3915616fd85378e0f05706fcb06a7e8b",
+  "families": {
+    "aws-legacy-serialization": {
+      "contract": "Legacy C-format import/export, role private fields, expiration refresh and decorators; adding magic methods can change wire format and requires explicit compatibility design.",
+      "events": 48,
+      "groups": 2,
+      "status": "new repair design required; no backend acceptance"
+    },
+    "dispatcher-dynamic-property": {
+      "contract": "Preserve public dynamic dispatcher access, singleton dispatch and serialized/reflection shape; adding private dispatcher is not automatically equivalent.",
+      "events": 24,
+      "groups": 1,
+      "status": "new repair required; selected null-user patch is unrelated"
+    },
+    "rank-required-parameter-order": {
+      "contract": "Preserve positional and named arguments, omitted/null entryType, reflection and errors; do not reorder parameters without complete caller evidence.",
+      "events": 1,
+      "groups": 1,
+      "status": "new repair required after caller inventory"
+    },
+    "tentative-return-contracts": {
+      "contract": "Preserve exact typed values, errors, PDO transactions/prepared cache, ArrayAccess quirks and exception serialization; native return declarations only after observed values and override compatibility are proved.",
+      "events": 274,
+      "groups": 12,
+      "status": "new repair required; existing same-file patches are not this repair"
+    },
+    "xml-loader-lifecycle": {
+      "contract": "Security/lifecycle tests, resolver state and external entity rejection; do not merely delete deprecated security call.",
+      "events": 24,
+      "groups": 1,
+      "status": "held repair owned by XML worker; do not duplicate"
+    }
+  },
+  "groups": 17,
+  "limits": [
+    "Raw KS-bearing API stderr was not retained. Source lines support hypotheses, not recovered exact messages.",
+    "No new PHP execution, VM access, patches, package acceptance or caller-completeness claim.",
+    "Same-target held patch inventory is not proof of compatibility. Exact selected metadata is retained separately."
+  ],
+  "native_message_attributions_confirmed": 0,
+  "original_zip_sha256": "58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28",
+  "rows": [
+    {
+      "attribution": "SOURCE_SUPPORTED_INFERENCE_NOT_RETAINED_NATIVE_MESSAGE",
+      "count": 1,
+      "excerpt": [
+        {
+          "line": 1834,
+          "text": "\t}"
+        },
+        {
+          "line": 1835,
+          "text": "\t"
+        },
+        {
+          "line": 1836,
+          "text": "\tprotected function anonymousRankEntry($entryId, $entryType = null, $rank)"
+        },
+        {
+          "line": 1837,
+          "text": "\t{"
+        },
+        {
+          "line": 1838,
+          "text": "\t\t$dbEntry = entryPeer::retrieveByPK($entryId);"
+        },
+        {
+          "line": 1839,
+          "text": "\t\tif (!$dbEntry || ($entryType !== null && $dbEntry->getType() != $entryType))"
+        }
+      ],
+      "family": "rank-required-parameter-order",
+      "line": 1836,
+      "path": "/audit/app/api_v3/lib/KalturaEntryService.php",
+      "severity": "ApplicationDiagnostic",
+      "source_path": "api_v3/lib/KalturaEntryService.php",
+      "source_sha256": "9495b584f73df1f4a11812efa964f57f42562159a405693b71e1731d53fe4dd5"
+    },
+    {
+      "attribution": "SOURCE_SUPPORTED_INFERENCE_NOT_RETAINED_NATIVE_MESSAGE",
+      "count": 10,
+      "excerpt": [
+        {
+          "line": 38,
+          "text": "\t}"
+        },
+        {
+          "line": 39,
+          "text": "\t"
+        },
+        {
+          "line": 40,
+          "text": "\tpublic function __wakeup()"
+        },
+        {
+          "line": 41,
+          "text": "\t{"
+        },
+        {
+          "line": 42,
+          "text": "\t\t//When running on PHP7 the code string does not get un-serialized"
+        },
+        {
+          "line": 43,
+          "text": "\t\t//(This is probably due to the fact that the Exception base class has a code attribute which is of type int)"
+        }
+      ],
+      "family": "tentative-return-contracts",
+      "line": 40,
+      "path": "/audit/app/api_v3/lib/exceptions/KalturaAPIException.php",
+      "severity": "ApplicationDiagnostic",
+      "source_path": "api_v3/lib/exceptions/KalturaAPIException.php",
+      "source_sha256": "7f8352e8fb01c6913f85ae35b4b7acb36466c5d9a0f6b9d5f6581ea84655abcb"
+    },
+    {
+      "attribution": "SOURCE_SUPPORTED_INFERENCE_NOT_RETAINED_NATIVE_MESSAGE",
+      "count": 24,
+      "excerpt": [
+        {
+          "line": 19,
+          "text": "use Guzzle\\Cache\\DoctrineCacheAdapter;"
+        },
+        {
+          "line": 20,
+          "text": ""
+        },
+        {
+          "line": 21,
+          "text": "class RefreshableRole extends AbstractRefreshableCredentials"
+        },
+        {
+          "line": 22,
+          "text": "{"
+        },
+        {
+          "line": 23,
+          "text": "\tconst ROLE_SESSION_NAME_PREFIX = \"kaltura_s3_access_\";"
+        },
+        {
+          "line": 24,
+          "text": "\tconst ASSUME_ROLE_CREDENTIALS_EXPIRY_TIME = 43200;"
+        }
+      ],
+      "family": "aws-legacy-serialization",
+      "line": 21,
+      "path": "/audit/app/infra/storage/RefreshableRole.class.php",
+      "severity": "ApplicationDiagnostic",
+      "source_path": "infra/storage/RefreshableRole.class.php",
+      "source_sha256": "ef633fde54c30ebdf5b4b2fc10835a390a977e7a92dd99d83dcc56e85ed1bd82"
+    },
+    {
+      "attribution": "SOURCE_SUPPORTED_INFERENCE_NOT_RETAINED_NATIVE_MESSAGE",
+      "count": 24,
+      "excerpt": [
+        {
+          "line": 20,
+          "text": " * Abstract credentials decorator"
+        },
+        {
+          "line": 21,
+          "text": " */"
+        },
+        {
+          "line": 22,
+          "text": "class AbstractCredentialsDecorator implements CredentialsInterface"
+        },
+        {
+          "line": 23,
+          "text": "{"
+        },
+        {
+          "line": 24,
+          "text": "    /**"
+        },
+        {
+          "line": 25,
+          "text": "     * @var CredentialsInterface Wrapped credentials object"
+        }
+      ],
+      "family": "aws-legacy-serialization",
+      "line": 22,
+      "path": "/audit/app/vendor/aws/Aws/Common/Credentials/AbstractCredentialsDecorator.php",
+      "severity": "ApplicationDiagnostic",
+      "source_path": "vendor/aws/Aws/Common/Credentials/AbstractCredentialsDecorator.php",
+      "source_sha256": "e7e265a862684685f90d7911bfc0367ceacf23710108b4e3846322cbba896375"
+    },
+    {
+      "attribution": "SOURCE_SUPPORTED_INFERENCE_NOT_RETAINED_NATIVE_MESSAGE",
+      "count": 24,
+      "excerpt": [
+        {
+          "line": 125,
+          "text": "\t * @see PDO::exec()"
+        },
+        {
+          "line": 126,
+          "text": "\t */"
+        },
+        {
+          "line": 127,
+          "text": "\tpublic function exec($sql)"
+        },
+        {
+          "line": 128,
+          "text": "\t{"
+        },
+        {
+          "line": 129,
+          "text": "\t\t$comment = $this->getCommentWrapped();"
+        },
+        {
+          "line": 130,
+          "text": "\t\t$sql = $comment . $sql;"
+        }
+      ],
+      "family": "tentative-return-contracts",
+      "line": 127,
+      "path": "/audit/app/alpha/apps/kaltura/lib/db/KalturaPDO.php",
+      "severity": "Deprecated",
+      "source_path": "alpha/apps/kaltura/lib/db/KalturaPDO.php",
+      "source_sha256": "aeb012822d0af7c5fe0e6ea4221f789fc8c886f0c53dbb729a51bc9463a30f0e"
+    },
+    {
+      "attribution": "SOURCE_SUPPORTED_INFERENCE_NOT_RETAINED_NATIVE_MESSAGE",
+      "count": 24,
+      "excerpt": [
+        {
+          "line": 186,
+          "text": "\t * @see PDO::query()"
+        },
+        {
+          "line": 187,
+          "text": "\t */"
+        },
+        {
+          "line": 188,
+          "text": "\tpublic function query(...$args)"
+        },
+        {
+          "line": 189,
+          "text": "\t{"
+        },
+        {
+          "line": 190,
+          "text": "\t\tkApiCache::disableConditionalCache();"
+        },
+        {
+          "line": 191,
+          "text": "\t"
+        }
+      ],
+      "family": "tentative-return-contracts",
+      "line": 188,
+      "path": "/audit/app/alpha/apps/kaltura/lib/db/KalturaPDO.php",
+      "severity": "Deprecated",
+      "source_path": "alpha/apps/kaltura/lib/db/KalturaPDO.php",
+      "source_sha256": "aeb012822d0af7c5fe0e6ea4221f789fc8c886f0c53dbb729a51bc9463a30f0e"
+    },
+    {
+      "attribution": "SOURCE_SUPPORTED_INFERENCE_NOT_RETAINED_NATIVE_MESSAGE",
+      "count": 24,
+      "excerpt": [
+        {
+          "line": 5,
+          "text": " */"
+        },
+        {
+          "line": 6,
+          "text": "setlocale(LC_ALL, 'en_US.UTF-8');"
+        },
+        {
+          "line": 7,
+          "text": "libxml_disable_entity_loader(true);"
+        },
+        {
+          "line": 8,
+          "text": ""
+        },
+        {
+          "line": 9,
+          "text": "// to make sure stream calls to localhost machine"
+        },
+        {
+          "line": 10,
+          "text": "stream_wrapper_unregister ('http');"
+        }
+      ],
+      "family": "xml-loader-lifecycle",
+      "line": 7,
+      "path": "/audit/app/alpha/config/kConf.php",
+      "severity": "Deprecated",
+      "source_path": "alpha/config/kConf.php",
+      "source_sha256": "d02983c560f6813c3546f2294a324d7a955f669e5b867d56d9a878c397cfa015"
+    },
+    {
+      "attribution": "SOURCE_SUPPORTED_INFERENCE_NOT_RETAINED_NATIVE_MESSAGE",
+      "count": 24,
+      "excerpt": [
+        {
+          "line": 21,
+          "text": "\tprivate function __construct()"
+        },
+        {
+          "line": 22,
+          "text": "\t{"
+        },
+        {
+          "line": 23,
+          "text": "\t\t$this->dispatcher = KalturaDispatcher::getInstance();"
+        },
+        {
+          "line": 24,
+          "text": "\t\t"
+        },
+        {
+          "line": 25,
+          "text": "\t\t$this->params = requestUtils::getRequestParams();"
+        },
+        {
+          "line": 26,
+          "text": "\t\t"
+        }
+      ],
+      "family": "dispatcher-dynamic-property",
+      "line": 23,
+      "path": "/audit/app/api_v3/lib/KalturaFrontController.php",
+      "severity": "Deprecated",
+      "source_path": "api_v3/lib/KalturaFrontController.php",
+      "source_sha256": "189607dca3b5ef33270d8e4dfe081daf6a76f39d5fd49066ee0b83f24c62d71a"
+    },
+    {
+      "attribution": "SOURCE_SUPPORTED_INFERENCE_NOT_RETAINED_NATIVE_MESSAGE",
+      "count": 24,
+      "excerpt": [
+        {
+          "line": 58,
+          "text": "\t * @see        http://www.php.net/ArrayAccess"
+        },
+        {
+          "line": 59,
+          "text": "\t */"
+        },
+        {
+          "line": 60,
+          "text": "\tpublic function offsetExists($offset)"
+        },
+        {
+          "line": 61,
+          "text": "\t{"
+        },
+        {
+          "line": 62,
+          "text": "\t\treturn isset($this->parameter[$offset]) || array_key_exists($offset, $this->parameters);"
+        },
+        {
+          "line": 63,
+          "text": "\t}"
+        }
+      ],
+      "family": "tentative-return-contracts",
+      "line": 60,
+      "path": "/audit/app/vendor/propel/util/PropelConfiguration.php",
+      "severity": "Deprecated",
+      "source_path": "vendor/propel/util/PropelConfiguration.php",
+      "source_sha256": "955aa16a6da6e24d80ab2f87deb79c64f9182c45a7066b9ea12c93d135812980"
+    },
+    {
+      "attribution": "SOURCE_SUPPORTED_INFERENCE_NOT_RETAINED_NATIVE_MESSAGE",
+      "count": 24,
+      "excerpt": [
+        {
+          "line": 66,
+          "text": "\t * @see        http://www.php.net/ArrayAccess"
+        },
+        {
+          "line": 67,
+          "text": "\t */"
+        },
+        {
+          "line": 68,
+          "text": "\tpublic function offsetSet($offset, $value)"
+        },
+        {
+          "line": 69,
+          "text": "\t{"
+        },
+        {
+          "line": 70,
+          "text": "\t\t$this->parameter[$offset] = $value;"
+        },
+        {
+          "line": 71,
+          "text": "\t}"
+        }
+      ],
+      "family": "tentative-return-contracts",
+      "line": 68,
+      "path": "/audit/app/vendor/propel/util/PropelConfiguration.php",
+      "severity": "Deprecated",
+      "source_path": "vendor/propel/util/PropelConfiguration.php",
+      "source_sha256": "955aa16a6da6e24d80ab2f87deb79c64f9182c45a7066b9ea12c93d135812980"
+    },
+    {
+      "attribution": "SOURCE_SUPPORTED_INFERENCE_NOT_RETAINED_NATIVE_MESSAGE",
+      "count": 24,
+      "excerpt": [
+        {
+          "line": 74,
+          "text": "\t * @see        http://www.php.net/ArrayAccess"
+        },
+        {
+          "line": 75,
+          "text": "\t */"
+        },
+        {
+          "line": 76,
+          "text": "\tpublic function offsetGet($offset)"
+        },
+        {
+          "line": 77,
+          "text": "\t{"
+        },
+        {
+          "line": 78,
+          "text": "\t\treturn $this->parameters[$offset];"
+        },
+        {
+          "line": 79,
+          "text": "\t}"
+        }
+      ],
+      "family": "tentative-return-contracts",
+      "line": 76,
+      "path": "/audit/app/vendor/propel/util/PropelConfiguration.php",
+      "severity": "Deprecated",
+      "source_path": "vendor/propel/util/PropelConfiguration.php",
+      "source_sha256": "955aa16a6da6e24d80ab2f87deb79c64f9182c45a7066b9ea12c93d135812980"
+    },
+    {
+      "attribution": "SOURCE_SUPPORTED_INFERENCE_NOT_RETAINED_NATIVE_MESSAGE",
+      "count": 24,
+      "excerpt": [
+        {
+          "line": 82,
+          "text": "\t * @see        http://www.php.net/ArrayAccess"
+        },
+        {
+          "line": 83,
+          "text": "\t */"
+        },
+        {
+          "line": 84,
+          "text": "\tpublic function offsetUnset($offset)"
+        },
+        {
+          "line": 85,
+          "text": "\t{"
+        },
+        {
+          "line": 86,
+          "text": "\t\tunset($this->parameters[$offset]);"
+        },
+        {
+          "line": 87,
+          "text": "\t}"
+        }
+      ],
+      "family": "tentative-return-contracts",
+      "line": 84,
+      "path": "/audit/app/vendor/propel/util/PropelConfiguration.php",
+      "severity": "Deprecated",
+      "source_path": "vendor/propel/util/PropelConfiguration.php",
+      "source_sha256": "955aa16a6da6e24d80ab2f87deb79c64f9182c45a7066b9ea12c93d135812980"
+    },
+    {
+      "attribution": "SOURCE_SUPPORTED_INFERENCE_NOT_RETAINED_NATIVE_MESSAGE",
+      "count": 24,
+      "excerpt": [
+        {
+          "line": 121,
+          "text": "\t * Overrides PDO::beginTransaction() to prevent errors due to already-in-progress transaction."
+        },
+        {
+          "line": 122,
+          "text": "\t */"
+        },
+        {
+          "line": 123,
+          "text": "\tpublic function beginTransaction()"
+        },
+        {
+          "line": 124,
+          "text": "\t{"
+        },
+        {
+          "line": 125,
+          "text": "\t\t$return = true;"
+        },
+        {
+          "line": 126,
+          "text": "\t\t$opcount = $this->getNestedTransactionCount();"
+        }
+      ],
+      "family": "tentative-return-contracts",
+      "line": 123,
+      "path": "/audit/app/vendor/propel/util/PropelPDO.php",
+      "severity": "Deprecated",
+      "source_path": "vendor/propel/util/PropelPDO.php",
+      "source_sha256": "9017430cfa12adc2de1a187f2d034ecba04ab32677cdbdc419ba2a1e1fc5f0d3"
+    },
+    {
+      "attribution": "SOURCE_SUPPORTED_INFERENCE_NOT_RETAINED_NATIVE_MESSAGE",
+      "count": 24,
+      "excerpt": [
+        {
+          "line": 137,
+          "text": "\t * transaction nesting level."
+        },
+        {
+          "line": 138,
+          "text": "\t */"
+        },
+        {
+          "line": 139,
+          "text": "\tpublic function commit()"
+        },
+        {
+          "line": 140,
+          "text": "\t{"
+        },
+        {
+          "line": 141,
+          "text": "\t\t$return = true;"
+        },
+        {
+          "line": 142,
+          "text": "\t\t$opcount = $this->getNestedTransactionCount();"
+        }
+      ],
+      "family": "tentative-return-contracts",
+      "line": 139,
+      "path": "/audit/app/vendor/propel/util/PropelPDO.php",
+      "severity": "Deprecated",
+      "source_path": "vendor/propel/util/PropelPDO.php",
+      "source_sha256": "9017430cfa12adc2de1a187f2d034ecba04ab32677cdbdc419ba2a1e1fc5f0d3"
+    },
+    {
+      "attribution": "SOURCE_SUPPORTED_INFERENCE_NOT_RETAINED_NATIVE_MESSAGE",
+      "count": 24,
+      "excerpt": [
+        {
+          "line": 159,
+          "text": "\t * @return     boolean Whether operation was successful."
+        },
+        {
+          "line": 160,
+          "text": "\t */"
+        },
+        {
+          "line": 161,
+          "text": "\tpublic function rollBack()"
+        },
+        {
+          "line": 162,
+          "text": "\t{"
+        },
+        {
+          "line": 163,
+          "text": "\t\t$return = true;"
+        },
+        {
+          "line": 164,
+          "text": "\t\t$opcount = $this->getNestedTransactionCount();"
+        }
+      ],
+      "family": "tentative-return-contracts",
+      "line": 161,
+      "path": "/audit/app/vendor/propel/util/PropelPDO.php",
+      "severity": "Deprecated",
+      "source_path": "vendor/propel/util/PropelPDO.php",
+      "source_sha256": "9017430cfa12adc2de1a187f2d034ecba04ab32677cdbdc419ba2a1e1fc5f0d3"
+    },
+    {
+      "attribution": "SOURCE_SUPPORTED_INFERENCE_NOT_RETAINED_NATIVE_MESSAGE",
+      "count": 24,
+      "excerpt": [
+        {
+          "line": 223,
+          "text": "\t * @param      int $attribute The attribute to get (e.g. PropelPDO::PROPEL_ATTR_CACHE_PREPARES)."
+        },
+        {
+          "line": 224,
+          "text": "\t */"
+        },
+        {
+          "line": 225,
+          "text": "\tpublic function getAttribute($attribute)"
+        },
+        {
+          "line": 226,
+          "text": "\t{"
+        },
+        {
+          "line": 227,
+          "text": "\t\tswitch($attribute) {"
+        },
+        {
+          "line": 228,
+          "text": "\t\t\tcase self::PROPEL_ATTR_CACHE_PREPARES:"
+        }
+      ],
+      "family": "tentative-return-contracts",
+      "line": 225,
+      "path": "/audit/app/vendor/propel/util/PropelPDO.php",
+      "severity": "Deprecated",
+      "source_path": "vendor/propel/util/PropelPDO.php",
+      "source_sha256": "9017430cfa12adc2de1a187f2d034ecba04ab32677cdbdc419ba2a1e1fc5f0d3"
+    },
+    {
+      "attribution": "SOURCE_SUPPORTED_INFERENCE_NOT_RETAINED_NATIVE_MESSAGE",
+      "count": 24,
+      "excerpt": [
+        {
+          "line": 242,
+          "text": "\t * @return     PDOStatement"
+        },
+        {
+          "line": 243,
+          "text": "\t */"
+        },
+        {
+          "line": 244,
+          "text": "\tpublic function prepare($sql, $driver_options = array())"
+        },
+        {
+          "line": 245,
+          "text": "\t{"
+        },
+        {
+          "line": 246,
+          "text": "\t\tif ($this->cachePreparedStatements) {"
+        },
+        {
+          "line": 247,
+          "text": "\t\t\t$key = $sql;"
+        }
+      ],
+      "family": "tentative-return-contracts",
+      "line": 244,
+      "path": "/audit/app/vendor/propel/util/PropelPDO.php",
+      "severity": "Deprecated",
+      "source_path": "vendor/propel/util/PropelPDO.php",
+      "source_sha256": "9017430cfa12adc2de1a187f2d034ecba04ab32677cdbdc419ba2a1e1fc5f0d3"
+    }
+  ],
+  "source_supported_inferences": 17,
+  "sources": {
+    "alpha/apps/kaltura/lib/db/KalturaPDO.php": {
+      "exp12_sha256": "aeb012822d0af7c5fe0e6ea4221f789fc8c886f0c53dbb729a51bc9463a30f0e",
+      "original_sha256": "97b756bed876d42da87f6a023b6ecf7af7c2b8454bb382da56ba9c54acae848d",
+      "same_target_patch_files": [
+        {
+          "claim": "same target only; no implied applicability or selection",
+          "path": "patches/php83/held/KalturaPDO-query.patch",
+          "sha256": "51403c941fa0197b9f484c5acfa443a8a8435fc69098712df39a6e49471a43fe"
+        }
+      ],
+      "selected_patch": {
+        "after_sha256": "aeb012822d0af7c5fe0e6ea4221f789fc8c886f0c53dbb729a51bc9463a30f0e",
+        "before_sha256": "97b756bed876d42da87f6a023b6ecf7af7c2b8454bb382da56ba9c54acae848d",
+        "patch": "KalturaPDO-query.patch",
+        "path": "alpha/apps/kaltura/lib/db/KalturaPDO.php",
+        "sha256": "51403c941fa0197b9f484c5acfa443a8a8435fc69098712df39a6e49471a43fe",
+        "source_patch": "patches/php83/held/KalturaPDO-query.patch"
+      }
+    },
+    "alpha/config/kConf.php": {
+      "exp12_sha256": "d02983c560f6813c3546f2294a324d7a955f669e5b867d56d9a878c397cfa015",
+      "original_sha256": "d02983c560f6813c3546f2294a324d7a955f669e5b867d56d9a878c397cfa015",
+      "same_target_patch_files": [
+        {
+          "claim": "same target only; no implied applicability or selection",
+          "path": "patches/php83/held/xml-lifecycle/kConf.php.patch",
+          "sha256": "bebd5328f4523e68822ef29ae1e12aeba8ac2decf8bad3f718519b35bfa3d618"
+        }
+      ],
+      "selected_patch": null
+    },
+    "api_v3/lib/KalturaEntryService.php": {
+      "exp12_sha256": "9495b584f73df1f4a11812efa964f57f42562159a405693b71e1731d53fe4dd5",
+      "original_sha256": "9495b584f73df1f4a11812efa964f57f42562159a405693b71e1731d53fe4dd5",
+      "same_target_patch_files": [],
+      "selected_patch": null
+    },
+    "api_v3/lib/KalturaFrontController.php": {
+      "exp12_sha256": "189607dca3b5ef33270d8e4dfe081daf6a76f39d5fd49066ee0b83f24c62d71a",
+      "original_sha256": "5f2eeffe526d4a0ee245b6f10f4e9600e0f7c8bcb4a52eef41e3a66bbd9ab7a1",
+      "same_target_patch_files": [
+        {
+          "claim": "same target only; no implied applicability or selection",
+          "path": "patches/php83/held/KalturaFrontController-null-user.patch",
+          "sha256": "e5a93a5868f21fd56a71a826be884ecd13a0eabf1e2c97e85c42527622297603"
+        }
+      ],
+      "selected_patch": {
+        "after_sha256": "189607dca3b5ef33270d8e4dfe081daf6a76f39d5fd49066ee0b83f24c62d71a",
+        "before_sha256": "5f2eeffe526d4a0ee245b6f10f4e9600e0f7c8bcb4a52eef41e3a66bbd9ab7a1",
+        "patch": "KalturaFrontController-null-user.patch",
+        "path": "api_v3/lib/KalturaFrontController.php",
+        "sha256": "e5a93a5868f21fd56a71a826be884ecd13a0eabf1e2c97e85c42527622297603",
+        "source_patch": "patches/php83/held/KalturaFrontController-null-user.patch"
+      }
+    },
+    "api_v3/lib/exceptions/KalturaAPIException.php": {
+      "exp12_sha256": "7f8352e8fb01c6913f85ae35b4b7acb36466c5d9a0f6b9d5f6581ea84655abcb",
+      "original_sha256": "7f8352e8fb01c6913f85ae35b4b7acb36466c5d9a0f6b9d5f6581ea84655abcb",
+      "same_target_patch_files": [],
+      "selected_patch": null
+    },
+    "infra/storage/RefreshableRole.class.php": {
+      "exp12_sha256": "ef633fde54c30ebdf5b4b2fc10835a390a977e7a92dd99d83dcc56e85ed1bd82",
+      "original_sha256": "ef633fde54c30ebdf5b4b2fc10835a390a977e7a92dd99d83dcc56e85ed1bd82",
+      "same_target_patch_files": [],
+      "selected_patch": null
+    },
+    "vendor/aws/Aws/Common/Credentials/AbstractCredentialsDecorator.php": {
+      "exp12_sha256": "e7e265a862684685f90d7911bfc0367ceacf23710108b4e3846322cbba896375",
+      "original_sha256": "e7e265a862684685f90d7911bfc0367ceacf23710108b4e3846322cbba896375",
+      "same_target_patch_files": [],
+      "selected_patch": null
+    },
+    "vendor/aws/Aws/Common/Credentials/AbstractRefreshableCredentials.php": {
+      "exp12_sha256": "71c0da1da063dbb290da2627dd181ad449f62d43f3ebf01a08831ecf30e6d9d5",
+      "original_sha256": "71c0da1da063dbb290da2627dd181ad449f62d43f3ebf01a08831ecf30e6d9d5",
+      "same_target_patch_files": [],
+      "selected_patch": null
+    },
+    "vendor/aws/Aws/Common/Credentials/CredentialsInterface.php": {
+      "exp12_sha256": "b6faf0a10b901f2541678a4199e1c4246ad71106e869efedcae3d3c3971e4d57",
+      "original_sha256": "b6faf0a10b901f2541678a4199e1c4246ad71106e869efedcae3d3c3971e4d57",
+      "same_target_patch_files": [],
+      "selected_patch": null
+    },
+    "vendor/propel/util/PropelConfiguration.php": {
+      "exp12_sha256": "955aa16a6da6e24d80ab2f87deb79c64f9182c45a7066b9ea12c93d135812980",
+      "original_sha256": "955aa16a6da6e24d80ab2f87deb79c64f9182c45a7066b9ea12c93d135812980",
+      "same_target_patch_files": [],
+      "selected_patch": null
+    },
+    "vendor/propel/util/PropelPDO.php": {
+      "exp12_sha256": "9017430cfa12adc2de1a187f2d034ecba04ab32677cdbdc419ba2a1e1fc5f0d3",
+      "original_sha256": "9e4f602f50bc24432107f34a2f3b4a995518fe28c46be9dc8f642dbb9ca74d22",
+      "same_target_patch_files": [
+        {
+          "claim": "same target only; no implied applicability or selection",
+          "path": "patches/php83/held/PropelPDO-bool-setAttribute.patch",
+          "sha256": "794b4d9d7b65d0b868a009228d56483ec2b086054c970c2f495b651d82aa8145"
+        }
+      ],
+      "selected_patch": {
+        "after_sha256": "9017430cfa12adc2de1a187f2d034ecba04ab32677cdbdc419ba2a1e1fc5f0d3",
+        "before_sha256": "9e4f602f50bc24432107f34a2f3b4a995518fe28c46be9dc8f642dbb9ca74d22",
+        "patch": "PropelPDO-bool-setAttribute.patch",
+        "path": "vendor/propel/util/PropelPDO.php",
+        "sha256": "794b4d9d7b65d0b868a009228d56483ec2b086054c970c2f495b651d82aa8145",
+        "source_patch": "patches/php83/held/PropelPDO-bool-setAttribute.patch"
+      }
+    }
+  },
+  "status": "PLANNING_CLASSIFICATION_NOT_REPAIR_ACCEPTANCE"
+}
