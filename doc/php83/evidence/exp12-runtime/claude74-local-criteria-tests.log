@@ -1,0 +1,24 @@
+test_actual_four_process_report (test_observed_contract.ObservedContractTests.test_actual_four_process_report) ... ok
+test_bool_exit_rejected (test_observed_contract.ObservedContractTests.test_bool_exit_rejected) ... ok
+test_changed_candidate_state (test_observed_contract.ObservedContractTests.test_changed_candidate_state) ... ok
+test_extra_native_stderr (test_observed_contract.ObservedContractTests.test_extra_native_stderr) ... ok
+test_lost_return_type (test_observed_contract.ObservedContractTests.test_lost_return_type) ... ok
+test_missing_case (test_observed_contract.ObservedContractTests.test_missing_case) ... ok
+test_missing_invalid_control (test_observed_contract.ObservedContractTests.test_missing_invalid_control) ... ok
+test_missing_negative_class_control (test_observed_contract.ObservedContractTests.test_missing_negative_class_control) ... ok
+test_source_drift (test_observed_contract.ObservedContractTests.test_source_drift) ... ok
+test_stdout_body_binding (test_observed_contract.ObservedContractTests.test_stdout_body_binding) ... ok
+test_actual_archive_join (test_stage.StageTests.test_actual_archive_join) ... ok
+test_bad_artifact (test_stage.StageTests.test_bad_artifact) ... ok
+test_duplicate_modes (test_validate.ValidationTests.test_duplicate_modes) ... ok
+test_line_normalization (test_validate.ValidationTests.test_line_normalization) ... ok
+test_missing_modes (test_validate.ValidationTests.test_missing_modes) ... ok
+test_native_exact (test_validate.ValidationTests.test_native_exact) ... ok
+test_ordered_modes (test_validate.ValidationTests.test_ordered_modes) ... ok
+test_target_severity (test_validate.ValidationTests.test_target_severity) ... ok
+test_unrelated_not_target (test_validate.ValidationTests.test_unrelated_not_target) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.378s
+
+OK

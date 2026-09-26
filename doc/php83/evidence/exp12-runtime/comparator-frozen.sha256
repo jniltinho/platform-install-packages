@@ -1,0 +1,6 @@
+7dd4a7a02b2bf4fe755c1202ae8d7ae4a5329596c47e4a43da83d7060e85a97f  doc/php83/evidence/exp12-runtime/compare-runtime.py
+3437c921f86fc2c7eefa3071b7d077b8598d24f30bba852ab196326917901d42  doc/php83/evidence/exp12-runtime/test_compare.py
+5c735b0893a95be898b7be732ddcddae485ce05788d563cc6afb00e9d592a1d0  doc/php83/evidence/exp12-runtime/comparison-runtime.json
+cfd100bac2c7329935871aa629d5a18ee625c9dad8c532d570b890e7f1dce8ad  doc/php83/evidence/exp12-runtime/criteria-source-identities.json
+00abeb674f6b63212ca856ea5ebb3cab1da1f6fd2e6e0e356273dea8aa429302  tools/php83/exp12-api/validate-additions.py
+077946d5e18e60ce0a4c8f747cbbf618b43234365c96caa70415c42b06cc52b4  tools/php83/exp12-api/compare-identities.py

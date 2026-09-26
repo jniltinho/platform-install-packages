@@ -1,0 +1,91 @@
+{
+  "entries": [
+    {
+      "phase": "baseline74-before",
+      "sha256_matches": true,
+      "process_exit": 0
+    },
+    {
+      "phase": "api-primary",
+      "sha256_matches": true,
+      "process_exit": 0
+    },
+    {
+      "phase": "cli74-primary",
+      "sha256_matches": true,
+      "process_exit": 0
+    },
+    {
+      "phase": "curly-primary",
+      "sha256_matches": true,
+      "process_exit": 0
+    },
+    {
+      "phase": "additions-primary",
+      "sha256_matches": true,
+      "process_exit": 1
+    },
+    {
+      "phase": "runtime-after",
+      "sha256_matches": true,
+      "process_exit": 0
+    },
+    {
+      "phase": "generator-runtime-before",
+      "sha256_matches": true,
+      "process_exit": 0
+    },
+    {
+      "phase": "generator-stage",
+      "sha256_matches": true,
+      "process_exit": 0
+    },
+    {
+      "phase": "generator-primary",
+      "sha256_matches": true,
+      "process_exit": 2
+    },
+    {
+      "phase": "generator-validation",
+      "sha256_matches": true,
+      "process_exit": 0
+    },
+    {
+      "phase": "generator-runtime-after",
+      "sha256_matches": true,
+      "process_exit": 0
+    },
+    {
+      "phase": "runtime83-before",
+      "sha256_matches": true,
+      "process_exit": 0
+    },
+    {
+      "phase": "stage83",
+      "sha256_matches": true,
+      "process_exit": 0
+    },
+    {
+      "phase": "cli83-primary",
+      "sha256_matches": true,
+      "process_exit": 0
+    },
+    {
+      "phase": "criteria-stage",
+      "sha256_matches": true,
+      "process_exit": 0
+    },
+    {
+      "phase": "criteria-primary",
+      "sha256_matches": true,
+      "process_exit": 0
+    },
+    {
+      "phase": "runtime83-after",
+      "sha256_matches": true,
+      "process_exit": 0
+    }
+  ],
+  "generator_runtime_unchanged": true,
+  "freshness_scope": "Actual collector invocations recorded in order by owner, bound to output hashes; not inferred from identical snapshot bytes"
+}

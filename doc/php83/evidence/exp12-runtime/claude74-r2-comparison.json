@@ -1,0 +1,189 @@
+{
+  "pairs": {
+    "r2-runtime-before-vs-after": {
+      "repeat": "doc/php83/evidence/exp12-runtime/claude-r2-runtime-before.json",
+      "repeat_sha256": "e2e61b4fc6cf6ca08f8d97cf3de8fbd7969fc0fb4576f55676e966b020cc701f",
+      "primary": "doc/php83/evidence/exp12-runtime/claude-r2-runtime-after.json",
+      "primary_sha256": "e2e61b4fc6cf6ca08f8d97cf3de8fbd7969fc0fb4576f55676e966b020cc701f",
+      "bytes_identical": true,
+      "allowances": [],
+      "allowed_difference_paths": [],
+      "unexpected_difference_paths": [],
+      "match": true
+    },
+    "r2-runtime-before-vs-primary-before": {
+      "repeat": "doc/php83/evidence/exp12-runtime/claude-r2-runtime-before.json",
+      "repeat_sha256": "e2e61b4fc6cf6ca08f8d97cf3de8fbd7969fc0fb4576f55676e966b020cc701f",
+      "primary": "doc/php83/evidence/exp12-runtime/runtime-before.json",
+      "primary_sha256": "e2e61b4fc6cf6ca08f8d97cf3de8fbd7969fc0fb4576f55676e966b020cc701f",
+      "bytes_identical": true,
+      "allowances": [],
+      "allowed_difference_paths": [],
+      "unexpected_difference_paths": [],
+      "match": true
+    },
+    "r2-runtime-after-vs-primary-after": {
+      "repeat": "doc/php83/evidence/exp12-runtime/claude-r2-runtime-after.json",
+      "repeat_sha256": "e2e61b4fc6cf6ca08f8d97cf3de8fbd7969fc0fb4576f55676e966b020cc701f",
+      "primary": "doc/php83/evidence/exp12-runtime/runtime-after.json",
+      "primary_sha256": "e2e61b4fc6cf6ca08f8d97cf3de8fbd7969fc0fb4576f55676e966b020cc701f",
+      "bytes_identical": true,
+      "allowances": [],
+      "allowed_difference_paths": [],
+      "unexpected_difference_paths": [],
+      "match": true
+    },
+    "r2-runtime-before-vs-generator-primary-before": {
+      "repeat": "doc/php83/evidence/exp12-runtime/claude-r2-runtime-before.json",
+      "repeat_sha256": "e2e61b4fc6cf6ca08f8d97cf3de8fbd7969fc0fb4576f55676e966b020cc701f",
+      "primary": "doc/php83/evidence/exp12-runtime/generator-runtime-before.json",
+      "primary_sha256": "e2e61b4fc6cf6ca08f8d97cf3de8fbd7969fc0fb4576f55676e966b020cc701f",
+      "bytes_identical": true,
+      "allowances": [],
+      "allowed_difference_paths": [],
+      "unexpected_difference_paths": [],
+      "match": true
+    },
+    "r2-runtime-after-vs-generator-primary-after": {
+      "repeat": "doc/php83/evidence/exp12-runtime/claude-r2-runtime-after.json",
+      "repeat_sha256": "e2e61b4fc6cf6ca08f8d97cf3de8fbd7969fc0fb4576f55676e966b020cc701f",
+      "primary": "doc/php83/evidence/exp12-runtime/generator-runtime-after.json",
+      "primary_sha256": "e2e61b4fc6cf6ca08f8d97cf3de8fbd7969fc0fb4576f55676e966b020cc701f",
+      "bytes_identical": true,
+      "allowances": [],
+      "allowed_difference_paths": [],
+      "unexpected_difference_paths": [],
+      "match": true
+    },
+    "api": {
+      "repeat": "doc/php83/evidence/exp12-runtime/claude-api.json",
+      "repeat_sha256": "db446e49b4779ff2af0d334a9163e47780fd28de11195dcba92afd61a5c0b15d",
+      "primary": "doc/php83/evidence/exp12-runtime/api-primary.json",
+      "primary_sha256": "de754c3184c31301848a795d7eaa322e4982b0eab770dbcc550090b9eeabf55d",
+      "bytes_identical": false,
+      "allowances": [
+        "^/records/\\d+/duration_ns$",
+        "^/records/\\d+/stderr_sha256$",
+        "^/db/(datadir|unit)$",
+        "^/cleanup/unit$"
+      ],
+      "allowed_difference_paths": [
+        "/cleanup/unit",
+        "/db/datadir",
+        "/db/unit",
+        "/records/0/duration_ns",
+        "/records/0/stderr_sha256",
+        "/records/1/duration_ns",
+        "/records/1/stderr_sha256",
+        "/records/2/duration_ns",
+        "/records/2/stderr_sha256",
+        "/records/3/duration_ns",
+        "/records/3/stderr_sha256"
+      ],
+      "unexpected_difference_paths": [],
+      "match": true
+    },
+    "cli74": {
+      "repeat": "doc/php83/evidence/exp12-runtime/claude-cli74.json",
+      "repeat_sha256": "804be7a7dba0b433fa4aa8d3580f1d77bfe28adbed07bae18f75592f97844405",
+      "primary": "doc/php83/evidence/exp12-runtime/cli74-primary.json",
+      "primary_sha256": "d7b2884512b5fdcec7bc51c17a5132fbb4fc6fd872ba2d47fbf868714fa9c1d9",
+      "bytes_identical": false,
+      "allowances": [
+        "^/recorded_at_utc$",
+        "^/rows/\\d+/duration_ns$"
+      ],
+      "allowed_difference_paths": [
+        "/recorded_at_utc",
+        "/rows/0/duration_ns",
+        "/rows/1/duration_ns",
+        "/rows/10/duration_ns",
+        "/rows/11/duration_ns",
+        "/rows/2/duration_ns",
+        "/rows/3/duration_ns",
+        "/rows/4/duration_ns",
+        "/rows/5/duration_ns",
+        "/rows/6/duration_ns",
+        "/rows/7/duration_ns",
+        "/rows/8/duration_ns",
+        "/rows/9/duration_ns"
+      ],
+      "unexpected_difference_paths": [],
+      "match": true
+    },
+    "curly": {
+      "repeat": "doc/php83/evidence/exp12-runtime/claude-curly.json",
+      "repeat_sha256": "2557c77482aa839bf8f830f4ddcdf7ee96b89c47052f39844e9cd44ec86a5552",
+      "primary": "doc/php83/evidence/exp12-runtime/curly-primary.json",
+      "primary_sha256": "2557c77482aa839bf8f830f4ddcdf7ee96b89c47052f39844e9cd44ec86a5552",
+      "bytes_identical": true,
+      "allowances": [],
+      "allowed_difference_paths": [],
+      "unexpected_difference_paths": [],
+      "match": true
+    },
+    "additions": {
+      "repeat": "doc/php83/evidence/exp12-runtime/claude-additions.json",
+      "repeat_sha256": "1d0b754e4f56e8f14f5dba2d2c7b398ce253434d0390054f95b40485b66b5085",
+      "primary": "doc/php83/evidence/exp12-runtime/additions-primary.json",
+      "primary_sha256": "1d0b754e4f56e8f14f5dba2d2c7b398ce253434d0390054f95b40485b66b5085",
+      "bytes_identical": true,
+      "allowances": [],
+      "allowed_difference_paths": [],
+      "unexpected_difference_paths": [],
+      "match": true
+    },
+    "additions-post-source": {
+      "repeat": "doc/php83/evidence/exp12-runtime/claude-additions-post-source.json",
+      "repeat_sha256": "aec089720ede3e9dd7dd3c3dee4bb309dd1753694b6264365b975ee6133b823d",
+      "primary": "doc/php83/evidence/exp12-runtime/additions-post-source.json",
+      "primary_sha256": "aec089720ede3e9dd7dd3c3dee4bb309dd1753694b6264365b975ee6133b823d",
+      "bytes_identical": true,
+      "allowances": [],
+      "allowed_difference_paths": [],
+      "unexpected_difference_paths": [],
+      "match": true
+    },
+    "additions-revalidated": {
+      "repeat": "doc/php83/evidence/exp12-runtime/claude-additions-revalidated.json",
+      "repeat_sha256": "315a63b1b8041c464724bdd0c74b4347904b53536ccd46ea4a46ffe1f5306e04",
+      "primary": "doc/php83/evidence/exp12-runtime/additions-primary-revalidated.json",
+      "primary_sha256": "315a63b1b8041c464724bdd0c74b4347904b53536ccd46ea4a46ffe1f5306e04",
+      "bytes_identical": true,
+      "allowances": [
+        "^/input_sha256$",
+        "^/post_source_sha256$"
+      ],
+      "allowed_difference_paths": [],
+      "unexpected_difference_paths": [],
+      "match": true
+    },
+    "generator": {
+      "repeat": "doc/php83/evidence/exp12-runtime/claude-generator-r2.json",
+      "repeat_sha256": "c6cbdeb944121131ee3ac9880fc7e33d67f709280cef94a5c9af31ab917640da",
+      "primary": "doc/php83/evidence/exp12-runtime/generator-primary.json",
+      "primary_sha256": "c6cbdeb944121131ee3ac9880fc7e33d67f709280cef94a5c9af31ab917640da",
+      "bytes_identical": true,
+      "allowances": [],
+      "allowed_difference_paths": [],
+      "unexpected_difference_paths": [],
+      "match": true
+    },
+    "generator-validation": {
+      "repeat": "doc/php83/evidence/exp12-runtime/claude-generator-r2-validation.json",
+      "repeat_sha256": "b82c502e9fd5825416f2d50bcb97a09a6694a2c46fd2b95c2f17afd22c1427b7",
+      "primary": "doc/php83/evidence/exp12-runtime/generator-validation.json",
+      "primary_sha256": "b82c502e9fd5825416f2d50bcb97a09a6694a2c46fd2b95c2f17afd22c1427b7",
+      "bytes_identical": true,
+      "allowances": [
+        "^/input_sha256$"
+      ],
+      "allowed_difference_paths": [],
+      "unexpected_difference_paths": [],
+      "match": true
+    }
+  },
+  "all_match": true,
+  "application_acceptance": false,
+  "comparator_sha256": "dde8638896027e4b13321a55344ba907a186858766497cbcf7f166bce253b6af"
+}

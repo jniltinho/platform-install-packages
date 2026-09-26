@@ -1,0 +1,36 @@
+test_actual_fixture_pins (test_additions.AdditionCorpus.test_actual_fixture_pins) ... ok
+test_boolean_status (test_additions.AdditionCorpus.test_boolean_status) ... ok
+test_duplicate (test_additions.AdditionCorpus.test_duplicate) ... ok
+test_extra (test_additions.AdditionCorpus.test_extra) ... ok
+test_extra_stdout (test_additions.AdditionCorpus.test_extra_stdout) ... ok
+test_fatal_must_remain_fatal (test_additions.AdditionCorpus.test_fatal_must_remain_fatal) ... ok
+test_float_status (test_additions.AdditionCorpus.test_float_status) ... ok
+test_missing (test_additions.AdditionCorpus.test_missing) ... ok
+test_missing_stderr (test_additions.AdditionCorpus.test_missing_stderr) ... ok
+test_reviewed17_processes (test_additions.AdditionCorpus.test_reviewed17_processes) ... ok
+test_baseline_failure_is_not_parity_success (test_collector.Exp11AcceptanceTests.test_baseline_failure_is_not_parity_success) ... ok
+test_candidate_failure_is_not_parity_success (test_collector.Exp11AcceptanceTests.test_candidate_failure_is_not_parity_success) ... ok
+test_cleanup_failure_prevents_success (test_collector.Exp11AcceptanceTests.test_cleanup_failure_prevents_success) ... ok
+test_complete_matrix_success (test_collector.Exp11AcceptanceTests.test_complete_matrix_success) ... ok
+test_unexpected_stdout_is_rejected_and_not_persisted (test_collector.Exp11AcceptanceTests.test_unexpected_stdout_is_rejected_and_not_persisted) ... ok
+test_unrelated_original_failure_is_not_signature_control (test_collector.Exp11AcceptanceTests.test_unrelated_original_failure_is_not_signature_control) ... ok
+test_malformed_startup_stops_known_unit (test_collector.Exp11CleanupTests.test_malformed_startup_stops_known_unit) ... ok
+test_startup_timeout_stops_known_unit (test_collector.Exp11CleanupTests.test_startup_timeout_stops_known_unit) ... ok
+test_untrusted_identity_cannot_choose_cleanup_target (test_collector.Exp11CleanupTests.test_untrusted_identity_cannot_choose_cleanup_target) ... ok
+test_target_runtime_and_baseline_are_explicit (test_collector.Exp11MatrixTests.test_target_runtime_and_baseline_are_explicit) ... ok
+test_extra_data (test_pin.ArtifactPin.test_extra_data) ... ok
+test_missing (test_pin.ArtifactPin.test_missing) ... ok
+test_pending (test_pin.ArtifactPin.test_pending) ... ok
+test_valid (test_pin.ArtifactPin.test_valid) ... ok
+test_wrong_length (test_pin.ArtifactPin.test_wrong_length) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 0.038s
+
+OK
+{"functional_checks_passed": false, "comparisons": [{"runtime": "83", "tree": "exp11", "matches_baseline": false}, {"runtime": "83", "tree": "exp12", "matches_baseline": false}], "cleanup": {"unit": "php83-exp12-api-dc5de7db95d64ff7a3f1c7a4dd49032c", "is_active_output": "inactive", "stopped": true}}
+{"functional_checks_passed": false, "comparisons": [{"runtime": "83", "tree": "exp11", "matches_baseline": true}, {"runtime": "83", "tree": "exp12", "matches_baseline": false}], "cleanup": {"unit": "php83-exp12-api-1036d92f905c4466a37d148f7f6febb7", "is_active_output": "inactive", "stopped": true}}
+{"functional_checks_passed": false, "comparisons": [{"runtime": "83", "tree": "exp11", "matches_baseline": true}, {"runtime": "83", "tree": "exp12", "matches_baseline": true}], "cleanup": {"unit": "php83-exp12-api-b944f24daeb14bf9991d1b8f159311ec", "is_active_output": "active", "stopped": false}}
+{"functional_checks_passed": true, "comparisons": [{"runtime": "83", "tree": "exp11", "matches_baseline": true}, {"runtime": "83", "tree": "exp12", "matches_baseline": true}], "cleanup": {"unit": "php83-exp12-api-73636685090b49b4831a1e5489c6a1d8", "is_active_output": "inactive", "stopped": true}}
+{"functional_checks_passed": false, "comparisons": [{"runtime": "83", "tree": "exp11", "matches_baseline": true}, {"runtime": "83", "tree": "exp12", "matches_baseline": false}], "cleanup": {"unit": "php83-exp12-api-4456381cf5314bc78606d2c4b9d6f42d", "is_active_output": "inactive", "stopped": true}}
+{"functional_checks_passed": false, "comparisons": [{"runtime": "83", "tree": "exp11", "matches_baseline": true}, {"runtime": "83", "tree": "exp12", "matches_baseline": true}], "cleanup": {"unit": "php83-exp12-api-98a5e25b2a764237b10bf6bae8fb5467", "is_active_output": "inactive", "stopped": true}}

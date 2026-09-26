@@ -1,0 +1,20 @@
+{
+  "identities": {
+    "baseline74": {
+      "unchanged": true,
+      "identity_sha256": "efff6999044662a52729674b933d1d22c054f0cd4bbb74fd86394779f577a7f7"
+    },
+    "native83": {
+      "unchanged": true,
+      "identity_sha256": "4d9e718e9598c02d36796ab780573933b0d3f83c4d45da681920ea7e878077a1"
+    }
+  },
+  "inputs": {
+    "doc/php83/evidence/exp12-runtime/runtime-before.json": "e2e61b4fc6cf6ca08f8d97cf3de8fbd7969fc0fb4576f55676e966b020cc701f",
+    "doc/php83/evidence/exp12-runtime/runtime-after.json": "e2e61b4fc6cf6ca08f8d97cf3de8fbd7969fc0fb4576f55676e966b020cc701f",
+    "doc/php83/evidence/exp12-runtime/runtime83-before.json": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491",
+    "doc/php83/evidence/exp12-runtime/runtime83-after.json": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491"
+  },
+  "freshness_proof": "Distinct paths only; actual collection order/exits require separate execution ledger",
+  "application_acceptance": false
+}

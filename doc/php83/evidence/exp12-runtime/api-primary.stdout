@@ -1,0 +1,1 @@
+{"functional_checks_passed": true, "comparisons": [{"runtime": "83", "tree": "exp11", "matches_baseline": true}, {"runtime": "83", "tree": "exp12", "matches_baseline": true}], "cleanup": {"unit": "php83-exp12-api-07d2ba44edf64b85b02a61127e746a2e", "is_active_output": "inactive", "stopped": true}}

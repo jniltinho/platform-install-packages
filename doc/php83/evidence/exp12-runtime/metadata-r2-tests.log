@@ -1,0 +1,13 @@
+test_actual17_revalidation (test_addition_metadata.MetadataTests.test_actual17_revalidation) ... ok
+test_boolean_exit (test_addition_metadata.MetadataTests.test_boolean_exit) ... ok
+test_consistent_forged_file_count (test_addition_metadata.MetadataTests.test_consistent_forged_file_count) ... ok
+test_duplicate (test_addition_metadata.MetadataTests.test_duplicate) ... ok
+test_functional_byte (test_addition_metadata.MetadataTests.test_functional_byte) ... ok
+test_missing_changed_target (test_addition_metadata.MetadataTests.test_missing_changed_target) ... ok
+test_stderr (test_addition_metadata.MetadataTests.test_stderr) ... ok
+test_unrelated_loaded_hash (test_addition_metadata.MetadataTests.test_unrelated_loaded_hash) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 1.584s
+
+OK

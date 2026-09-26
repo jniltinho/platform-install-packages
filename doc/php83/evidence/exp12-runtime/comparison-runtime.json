@@ -1,0 +1,339 @@
+{
+  "schema": 1,
+  "status": "PASS_BOUNDED_RUNTIME_COMPARISON",
+  "additions": {
+    "summary": {
+      "processes": 17,
+      "positive_processes": 16,
+      "expected_duplicate_include_fatals": 1,
+      "ternary_functional_rows": 147,
+      "all_bytes_equal_reviewed_candidate83": true,
+      "application_acceptance": false
+    },
+    "allowed_loaded_field_changes": [
+      {
+        "family": "autoload",
+        "case": "cli-version",
+        "loaded_key": "source/vendor/symfony/vendor/pake/pakeApp.class.php",
+        "before_sha256": "72f538165dd3226b46c35ddac7700c0f3a6046e74f4646b74ca5bd541d59b120",
+        "after_sha256": "d5bdc4612a5c9ae76fe8f594eaefeff1059175f0a36d756a1010612830bf39b8"
+      },
+      {
+        "family": "autoload",
+        "case": "cli-version-queue",
+        "loaded_key": "source/vendor/symfony/vendor/pake/pakeApp.class.php",
+        "before_sha256": "72f538165dd3226b46c35ddac7700c0f3a6046e74f4646b74ca5bd541d59b120",
+        "after_sha256": "d5bdc4612a5c9ae76fe8f594eaefeff1059175f0a36d756a1010612830bf39b8"
+      },
+      {
+        "family": "autoload",
+        "case": "cli-tasks-configured",
+        "loaded_key": "source/vendor/symfony/vendor/pake/pakeApp.class.php",
+        "before_sha256": "72f538165dd3226b46c35ddac7700c0f3a6046e74f4646b74ca5bd541d59b120",
+        "after_sha256": "d5bdc4612a5c9ae76fe8f594eaefeff1059175f0a36d756a1010612830bf39b8"
+      },
+      {
+        "family": "autoload",
+        "case": "cli-tasks-configured",
+        "loaded_key": "source/vendor/symfony-data/tasks/sfPakeGenerator.php",
+        "before_sha256": "67682683048afeaef9ed55bd95a5920792b2c6ab3b4ec11c804985ead4b347eb",
+        "after_sha256": "6958f51ba82e9f4922eb8a7437dc1301ffd81032dd168f9c70516dee21f9e6d9"
+      },
+      {
+        "family": "composition",
+        "case": "cli-append",
+        "loaded_key": "/audit/source/vendor/symfony/vendor/pake/pakeApp.class.php",
+        "before_sha256": "72f538165dd3226b46c35ddac7700c0f3a6046e74f4646b74ca5bd541d59b120",
+        "after_sha256": "d5bdc4612a5c9ae76fe8f594eaefeff1059175f0a36d756a1010612830bf39b8"
+      },
+      {
+        "family": "composition",
+        "case": "cli-prepend",
+        "loaded_key": "/audit/source/vendor/symfony/vendor/pake/pakeApp.class.php",
+        "before_sha256": "72f538165dd3226b46c35ddac7700c0f3a6046e74f4646b74ca5bd541d59b120",
+        "after_sha256": "d5bdc4612a5c9ae76fe8f594eaefeff1059175f0a36d756a1010612830bf39b8"
+      },
+      {
+        "family": "composition",
+        "case": "cli-throw-front",
+        "loaded_key": "/audit/source/vendor/symfony/vendor/pake/pakeApp.class.php",
+        "before_sha256": "72f538165dd3226b46c35ddac7700c0f3a6046e74f4646b74ca5bd541d59b120",
+        "after_sha256": "d5bdc4612a5c9ae76fe8f594eaefeff1059175f0a36d756a1010612830bf39b8"
+      },
+      {
+        "family": "composition",
+        "case": "cli-throw-tail",
+        "loaded_key": "/audit/source/vendor/symfony/vendor/pake/pakeApp.class.php",
+        "before_sha256": "72f538165dd3226b46c35ddac7700c0f3a6046e74f4646b74ca5bd541d59b120",
+        "after_sha256": "d5bdc4612a5c9ae76fe8f594eaefeff1059175f0a36d756a1010612830bf39b8"
+      },
+      {
+        "family": "composition",
+        "case": "cli-repeat",
+        "loaded_key": "/audit/source/vendor/symfony/vendor/pake/pakeApp.class.php",
+        "before_sha256": "72f538165dd3226b46c35ddac7700c0f3a6046e74f4646b74ca5bd541d59b120",
+        "after_sha256": "d5bdc4612a5c9ae76fe8f594eaefeff1059175f0a36d756a1010612830bf39b8"
+      }
+    ],
+    "all_other_stdout_stderr_exit_bytes_exact": true,
+    "original_collector_status_retained": "FAIL",
+    "application_acceptance": false
+  },
+  "generator": {
+    "rows": 72,
+    "changed_debug_outputs": 12,
+    "unchanged_output_rows": 60,
+    "application_acceptance": false,
+    "native_contract_source": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/template-generation/generation-primary-r4.json",
+    "native_contract_independent_oracle": false
+  },
+  "criteria": {
+    "status": "BOUNDED_NATIVE83_COMPOSITION_PARITY",
+    "filter_cases": 19,
+    "return_rows": 16,
+    "invalid_iterator_controls": 2,
+    "hierarchy_events_before": 24,
+    "hierarchy_events_after": 0,
+    "strict_cross_engine_layout": "FAIL_RETAINED",
+    "cache_acceptance": false,
+    "patch_selected": false,
+    "application_acceptance": false
+  },
+  "api": {
+    "logical_rows": 4,
+    "independent_rows": [
+      {
+        "runtime": "74",
+        "tree": "original",
+        "independent_equal": true,
+        "diagnostic_groups": 1,
+        "diagnostic_events": 6
+      },
+      {
+        "runtime": "83",
+        "tree": "original",
+        "independent_equal": true,
+        "diagnostic_groups": 15,
+        "diagnostic_events": 15
+      },
+      {
+        "runtime": "83",
+        "tree": "exp11",
+        "independent_equal": true,
+        "diagnostic_groups": 18,
+        "diagnostic_events": 503
+      },
+      {
+        "runtime": "83",
+        "tree": "exp12",
+        "independent_equal": true,
+        "diagnostic_groups": 17,
+        "diagnostic_events": 371
+      }
+    ],
+    "removed_exact_group": {
+      "severity": "ApplicationDiagnostic",
+      "path": "/audit/app/alpha/apps/kaltura/lib/criteriaFilter.class.php",
+      "line": 51,
+      "count": 132
+    },
+    "prior_groups": 18,
+    "prior_events": 503,
+    "candidate_groups": 17,
+    "candidate_events": 371,
+    "distinct_owned_database_tokens": true
+  },
+  "cli": {
+    "logical_rows": 48,
+    "positive_rows": 44,
+    "expected_original83_json_failures": 4,
+    "typed_baseline_comparisons": [
+      {
+        "source": "exp11",
+        "ini": "standard",
+        "case": "legacy-json",
+        "typed_equal": true
+      },
+      {
+        "source": "exp11",
+        "ini": "standard",
+        "case": "zend-json",
+        "typed_equal": true
+      },
+      {
+        "source": "exp11",
+        "ini": "standard",
+        "case": "doc-comment",
+        "typed_equal": true
+      },
+      {
+        "source": "exp11",
+        "ini": "standard",
+        "case": "doc-comment-export",
+        "typed_equal": true
+      },
+      {
+        "source": "exp11",
+        "ini": "standard",
+        "case": "doc-comment-consumer",
+        "typed_equal": true
+      },
+      {
+        "source": "exp11",
+        "ini": "minimal",
+        "case": "legacy-json",
+        "typed_equal": true
+      },
+      {
+        "source": "exp11",
+        "ini": "minimal",
+        "case": "zend-json",
+        "typed_equal": true
+      },
+      {
+        "source": "exp11",
+        "ini": "minimal",
+        "case": "doc-comment",
+        "typed_equal": true
+      },
+      {
+        "source": "exp11",
+        "ini": "minimal",
+        "case": "doc-comment-export",
+        "typed_equal": true
+      },
+      {
+        "source": "exp11",
+        "ini": "minimal",
+        "case": "doc-comment-consumer",
+        "typed_equal": true
+      },
+      {
+        "source": "exp12",
+        "ini": "standard",
+        "case": "legacy-json",
+        "typed_equal": true
+      },
+      {
+        "source": "exp12",
+        "ini": "standard",
+        "case": "zend-json",
+        "typed_equal": true
+      },
+      {
+        "source": "exp12",
+        "ini": "standard",
+        "case": "doc-comment",
+        "typed_equal": true
+      },
+      {
+        "source": "exp12",
+        "ini": "standard",
+        "case": "doc-comment-export",
+        "typed_equal": true
+      },
+      {
+        "source": "exp12",
+        "ini": "standard",
+        "case": "doc-comment-consumer",
+        "typed_equal": true
+      },
+      {
+        "source": "exp12",
+        "ini": "minimal",
+        "case": "legacy-json",
+        "typed_equal": true
+      },
+      {
+        "source": "exp12",
+        "ini": "minimal",
+        "case": "zend-json",
+        "typed_equal": true
+      },
+      {
+        "source": "exp12",
+        "ini": "minimal",
+        "case": "doc-comment",
+        "typed_equal": true
+      },
+      {
+        "source": "exp12",
+        "ini": "minimal",
+        "case": "doc-comment-export",
+        "typed_equal": true
+      },
+      {
+        "source": "exp12",
+        "ini": "minimal",
+        "case": "doc-comment-consumer",
+        "typed_equal": true
+      }
+    ],
+    "independent_rows_equal_except_duration": true
+  },
+  "classes": {
+    "classes": 3,
+    "logical_cases": 68,
+    "independent_equal": true,
+    "exact_prior_candidate83_equal": true,
+    "all65_source_runtime_coverage": false
+  },
+  "runtime_identity": {
+    "snapshots": 4,
+    "all_before_after_independent_bytes_equal": true,
+    "host": "kaltura-php74-baseline",
+    "hashed_objects": 55,
+    "runtime_modes": 3,
+    "scope": "baseline74 native74 and copied83 Apache/CLI/modules/libraries/INI; not a fresh php83lab module snapshot"
+  },
+  "native83_runtime_identity": {
+    "snapshots": 4,
+    "all_before_after_independent_bytes_equal": true,
+    "host": "kaltura-php83-lab",
+    "hashed_objects": 39,
+    "runtime_modes": 2,
+    "copied_and_native83_interpreter_hash_equal": true,
+    "scope": "Fresh native php83lab CLI/modules/linked libraries and standard/minimal INI; no application acceptance inferred"
+  },
+  "normalization_policy": {
+    "api": "Exclude only duration_ns and opaque stderr_sha256 from independent row equality; compare exact stdout, signature control, sanitized diagnostics and runtime observations. DB UUIDs differ but each path/unit/cleanup identity is checked and both tokens must be distinct.",
+    "api_stderr_limit": "Raw KS-bearing logs were not retained; differing opaque stderr hashes are not asserted to differ solely by known timestamps/UUIDs. Equality claim is explicitly limited to collected sanitized fields.",
+    "cli": "Exclude per-row duration_ns and report recorded_at_utc only. stdout/stderr remain byte-exact between executors. Typed baseline comparison excludes environment; doc-comment-export compares entries only.",
+    "additions": "Independent observations remain byte-exact. Historical comparator FAIL retained; separate pinned adapter permits only9 exact loaded-source hash fields, every other byte unchanged.",
+    "classes": "No independent normalization; full reports and prior83 result objects must match exactly.",
+    "runtime": "No normalization; each host has four fresh snapshots which must match exactly within that host; native83 and copied83 interpreter hashes must match."
+  },
+  "input_sha256": {
+    "additions-primary.json": "1d0b754e4f56e8f14f5dba2d2c7b398ce253434d0390054f95b40485b66b5085",
+    "claude-additions.json": "1d0b754e4f56e8f14f5dba2d2c7b398ce253434d0390054f95b40485b66b5085",
+    "api-primary.json": "de754c3184c31301848a795d7eaa322e4982b0eab770dbcc550090b9eeabf55d",
+    "claude-api.json": "db446e49b4779ff2af0d334a9163e47780fd28de11195dcba92afd61a5c0b15d",
+    "cli74-primary.json": "d7b2884512b5fdcec7bc51c17a5132fbb4fc6fd872ba2d47fbf868714fa9c1d9",
+    "claude-cli74.json": "804be7a7dba0b433fa4aa8d3580f1d77bfe28adbed07bae18f75592f97844405",
+    "cli83-primary.json": "2c0fc88744e991efde6cec40513f0af9964665871770d3a55df23a0c427db2f8",
+    "claude-native83-cli.json": "fdedccd5dbc8ffbebf78db9ea6b40b291445baae7fef526644479f1f083c04a3",
+    "curly-primary.json": "2557c77482aa839bf8f830f4ddcdf7ee96b89c47052f39844e9cd44ec86a5552",
+    "claude-curly.json": "2557c77482aa839bf8f830f4ddcdf7ee96b89c47052f39844e9cd44ec86a5552",
+    "runtime-before.json": "e2e61b4fc6cf6ca08f8d97cf3de8fbd7969fc0fb4576f55676e966b020cc701f",
+    "runtime-after.json": "e2e61b4fc6cf6ca08f8d97cf3de8fbd7969fc0fb4576f55676e966b020cc701f",
+    "claude-runtime-before.json": "e2e61b4fc6cf6ca08f8d97cf3de8fbd7969fc0fb4576f55676e966b020cc701f",
+    "claude-r2-runtime-after.json": "e2e61b4fc6cf6ca08f8d97cf3de8fbd7969fc0fb4576f55676e966b020cc701f",
+    "runtime83-before.json": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491",
+    "runtime83-after.json": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491",
+    "claude-native83-runtime-before.json": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491",
+    "claude-native83-runtime-after.json": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491",
+    "generator-primary.json": "c6cbdeb944121131ee3ac9880fc7e33d67f709280cef94a5c9af31ab917640da",
+    "claude-generator-r2.json": "c6cbdeb944121131ee3ac9880fc7e33d67f709280cef94a5c9af31ab917640da",
+    "criteria-primary.json": "73e0bf2edc4fd18fa81b56b806786899c2325bb4f4b0ae214cae12581f72c549",
+    "claude-criteria.json": "73e0bf2edc4fd18fa81b56b806786899c2325bb4f4b0ae214cae12581f72c549",
+    "additions-post-source.json": "aec089720ede3e9dd7dd3c3dee4bb309dd1753694b6264365b975ee6133b823d",
+    "claude-additions-post-source.json": "aec089720ede3e9dd7dd3c3dee4bb309dd1753694b6264365b975ee6133b823d"
+  },
+  "reference_sha256": {
+    "exp11-runtime/api-primary.json": "2b1919b41b64edab0e85d03656ec680d541ec65808140557e321255743df935b",
+    "curly-offsets/behavior-primary.json": "0b506f100680f0a5e02fa1af71ed34ffe7cbd16a85c50375010dae63c5b64991",
+    "exp12-candidate/selected-manifest.json": "593ff6e826978c09704cf89f8cdf099452efdcf74a4c058bc88ee57ca16e74d6"
+  },
+  "comparator_sha256": "7dd4a7a02b2bf4fe755c1202ae8d7ae4a5329596c47e4a43da83d7060e85a97f",
+  "application_acceptance": false
+}
