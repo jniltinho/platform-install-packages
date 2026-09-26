@@ -17,7 +17,21 @@ and [execution contract](../../openspec/changes/migrate-kaltura-php83/design.md)
   ran in the isolated labs; no production/package/release acceptance follows.
   No release ETA or application completion percentage is inferred.
 
-## Current bounded artifact checkpoint and baseline preparation: exp12
+## Current built candidate: exp13 — artifact runtime validation pending
+
+[exp13](exp13-candidate.md) was built by Codex and independently rebuilt by actual
+Claude (`4c5e058f`), producing identical91,210,445-byte ZIPs with SHA256
+`6d0bc4947207e6c5457b7843948d263aa8d5f251480e58cbf9086c0add79a944`.
+The original and exp12 archives are unchanged. All75 targets are verified;
+62 prior results remain identical, and the exp12→13 delta is12 modified files
+plus one added XML helper. Privacy patches remain excluded. Compiler and API/CLI
+validation of this actual ZIP are pending; prior source-stage evidence is not
+relabelled as fresh artifact execution. There is no accepted release.
+
+This build milestone was accepted by verified-TLS SMTP on2026-09-26 at17:39:06
+America/Sao_Paulo; inbox delivery is not confirmed.
+
+## Last runtime-validated bounded artifact and baseline preparation: exp12
 
 [exp12](exp12-candidate.md) was built twice with identical SHA256
 `de5e61a1b54f472e605ef2e87669302a3915616fd85378e0f05706fcb06a7e8b`.
@@ -147,8 +161,8 @@ remain untested by that corpus; no new artifact or release approval follows.
   policy confirmation and full-pipeline validation, not just formatter tests.
 - [exp13 proposal](exp13-candidate.md) freezes75 targets, preserving62 prior
   results with three cumulative replacements and ten new targets. The SQL gate
-  is now recorded; selection and two experimental builds are in progress, not
-  completed or promoted. Previous source-stage passes do not establish acceptance
+  is now recorded; selection and two identical experimental builds completed
+  in `4c5e058f`, without production promotion. Previous source-stage passes do not establish acceptance
   of the eventual ZIP. Privacy changes are excluded from this candidate.
 
 Status email for the SQL milestone was accepted by verified-TLS SMTP on
