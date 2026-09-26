@@ -1,0 +1,28 @@
+PASS preparation.json pin 30b70f69 unchanged
+PASS matrix manifest 523c105b tmp==local==preparation==r2-report
+PASS matrix source_joins identical
+PASS matrix reference manifest == historical pin c06f54b7
+PASS /tmp/exp13-xml-reproduction-r2/matrix: 21 files rehash clean, unmanifested=[], symlinks=[]
+PASS tools/php83/exp13-xml/stage/matrix: 21 files rehash clean, unmanifested=[], symlinks=[]
+PASS matrix reference/fixtures/good.wsdl == historical digest
+PASS matrix reference/fixtures/inner.wsdl == historical digest
+PASS matrix reference/fixtures/malformed.wsdl == historical digest
+PASS matrix reference/fixtures/marker.txt == historical digest
+PASS matrix reference/fixtures/response.xml == historical digest
+PASS matrix reference/fixtures/types.xsd == historical digest
+PASS matrix reference/provider.json == historical digest
+PASS chain manifest ce30f873 tmp==local==preparation==r2-report
+PASS chain source_joins identical
+PASS chain reference manifest == historical pin 5feb0063
+PASS /tmp/exp13-xml-reproduction-r2/chain: 21 files rehash clean, unmanifested=[], symlinks=[]
+PASS tools/php83/exp13-xml/stage/chain: 21 files rehash clean, unmanifested=[], symlinks=[]
+PASS chain reference/fixtures/good.wsdl == historical digest
+PASS chain reference/fixtures/inner.wsdl == historical digest
+PASS chain reference/fixtures/malformed.wsdl == historical digest
+PASS chain reference/fixtures/marker.txt == historical digest
+PASS chain reference/fixtures/response.xml == historical digest
+PASS chain reference/fixtures/types.xsd == historical digest
+PASS chain reference/provider.json == historical digest
+reference inventory: ['tools/php83/exp13-xml/reference/chain-manifest.json', 'tools/php83/exp13-xml/reference/fixtures/good.wsdl', 'tools/php83/exp13-xml/reference/fixtures/inner.wsdl', 'tools/php83/exp13-xml/reference/fixtures/malformed.wsdl', 'tools/php83/exp13-xml/reference/fixtures/marker.txt', 'tools/php83/exp13-xml/reference/fixtures/response.xml', 'tools/php83/exp13-xml/reference/fixtures/types.xsd', 'tools/php83/exp13-xml/reference/matrix-manifest.json', 'tools/php83/exp13-xml/reference/provider.json']
+PASS probe/wrapper sources tracked in git: ['tools/php83/xml-lifecycle-fix/behavior-chain.php', 'tools/php83/xml-lifecycle-fix/behavior.php', 'tools/php83/xml-lifecycle-fix/run-native.sh', 'tools/php83/xml-lifecycle-fix/scope-probe.php']
+PASS tracked xml-lifecycle-fix sources unmodified vs HEAD

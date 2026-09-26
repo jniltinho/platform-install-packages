@@ -1,0 +1,6 @@
+{
+  "tools/php83/xml-lifecycle-fix/contract-r2.py": "34e856dbce3848363b4b6a68c42d0d8477c2aa6d773312ecf8a5e42aa69e59ee",
+  "tools/php83/xml-lifecycle-fix/diagnostic-contract.py": "cce19af080b347c07eb41ce1e3c47bf4d79fd3c193b3cee89d6ec06091822de7",
+  "doc/php83/evidence/xml-lifecycle-fix/primary.json": "46f65f9b355702571b5cccbcd35f4e33ff964eb2c6ab8e57f04f0390e6c8ffed",
+  "doc/php83/evidence/xml-lifecycle-fix/claude-chain-matrix.json": "e7552e538028871862cddaaec70b23ec08a3e8ca6b4d39a090385e02a08d905f"
+}

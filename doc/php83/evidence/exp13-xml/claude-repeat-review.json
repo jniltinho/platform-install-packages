@@ -1,0 +1,69 @@
+{
+ "case": "exp13-xml-native40-independent-repeat",
+ "executor": "Claude CLI (claude-opus-5-5)",
+ "reviewer": "Claude CLI (claude-opus-5-5); independent repeat of the Codex primary40 run; same CLI also authored the r1/r2 local reviews, so not a rotated reviewer",
+ "environment": "exclusive native83 lab (php83 ssh host, runtime identity per snapshots) granted by coordinator; Codex primary40 complete, no other VM writer; local workstation worktree for comparison; no baseline74, no .20, no API, no SQL, no networked backend",
+ "stage": "existing pinned immutable remote stages from primary-stage (stage.py 2e7f341d... not re-run); local manifests re-verified per row by collect.py",
+ "runtime_status": "EXECUTED",
+ "result": "MATCHED_40_ARTIFACT_PROCESSES_BYTE_EQUAL_TO_PRIMARY",
+ "new_native_pass_claimed": "bounded: 40 isolated native83 processes (38 matrix + 2 causal chain) reproduced the reviewed corpus via the synthetic WSDL/private SOAP transport seam only",
+ "application_acceptance": false,
+ "pins_reviewed": {
+  "tools/php83/exp13-xml/collect.py": "68d1e858bf7e0541e57acdbf5f27554b388bbbbf82223ba6c0bbfa5d688cc0b7",
+  "tools/php83/exp13-xml/input-pins.json": "47600e9c590fde735cec6027456f4ee1f8747f237a58d7bc7f6cd81d758a0de8",
+  "tools/php83/exp13-xml/stage.py": "2e7f341dc98cda14e24a2bc2fc8baa810c9a49d1f71961b9e6bf00666bc4c08a",
+  "tools/php83/exp13-xml/prepare.py": "62c749e46137752acc9288560bd6c0abda94ee20587d33b129705f17ad3e86e5",
+  "tools/php83/exp13-xml/test_adapter.py": "a43b1b3dac81f112135ed4f61bf2206cf4378f615356926a9900ba349feb488a",
+  "doc/php83/evidence/exp13-xml/preparation.json": "30b70f69246cf542853b79dc3fb3e2f175ce25e5810eb813d70f0d5daa99a5c7",
+  "doc/php83/evidence/exp10-runtime/snapshot-php83.py": "ec8f5473fc599259b343ebc3713b55b24753959de559c10a5cbe1254909bb429",
+  "artifact_exp12_zip": "de5e61a1b54f472e605ef2e87669302a3915616fd85378e0f05706fcb06a7e8b",
+  "artifact_exp13_zip": "6d0bc4947207e6c5457b7843948d263aa8d5f251480e58cbf9086c0add79a944",
+  "note": "collector/tool hashes equal the claude-r2-review pins; the report's collector_closure and preparation_sha256 equal them; tools/fixtures not edited"
+ },
+ "executed_steps": [
+  {
+   "step": 1,
+   "command": "timeout 240 python3 doc/php83/evidence/exp10-runtime/snapshot-php83.py doc/php83/evidence/exp13-xml/claude-before.json",
+   "exit": 0,
+   "stdout_sha256": "1c3ce1ded149763b42db5044aefe120888c6e0b428c06835c2cc47bb15c4ee23",
+   "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "output_sha256": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491",
+   "files": "claude-repeat-step1-snapshot-before.{command,stdout,stderr,exit}, claude-before.json",
+   "result": "{\"files\": 39, \"modes\": 2}"
+  },
+  {
+   "step": 2,
+   "command": "timeout 240 python3 tools/php83/exp13-xml/collect.py doc/php83/evidence/exp13-xml/claude.json",
+   "exit": 0,
+   "stdout_sha256": "28d1e858a4f869cce018724aa2c9e0fc1db1e03f920b5b96d8de881052657ee9",
+   "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "output_sha256": "576ae4e811d038f4b277ea7128049e057613e8c91431860dbd4fc42f3c62a608",
+   "files": "claude-repeat-step2-collect.{command,stdout,stderr,exit}, claude.json",
+   "result": "{\"status\": \"MATCHED_40_ARTIFACT_PROCESSES\", \"processes\": 40, \"failures\": 0}"
+  },
+  {
+   "step": 3,
+   "command": "timeout 240 python3 doc/php83/evidence/exp10-runtime/snapshot-php83.py doc/php83/evidence/exp13-xml/claude-after.json",
+   "exit": 0,
+   "stdout_sha256": "1c3ce1ded149763b42db5044aefe120888c6e0b428c06835c2cc47bb15c4ee23",
+   "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "output_sha256": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491",
+   "files": "claude-repeat-step3-snapshot-after.{command,stdout,stderr,exit}, claude-after.json",
+   "result": "{\"files\": 39, \"modes\": 2}"
+  }
+ ],
+ "local_comparison": {
+  "primary_vs_claude_report": "PASS: primary.json and claude.json are byte-identical (sha256 576ae4e8...; cmp equal), hence all records, channels, bodies, commands, closure and pins equal",
+  "inventory": "PASS: 40 records, 40 unique (phase,kind,variant,case); 38 matrix + 2 chain; identical order and inventory to primary",
+  "exits": "PASS: all 40 rows type int and exit 0; all status MATCHES_REVIEWED_CORPUS; failures []",
+  "runtime_snapshots": "PASS: primary-before, primary-after, claude-before, claude-after all byte-identical (sha256 83b656a2...); snapshot collector ec8f5473..., exit 0",
+  "unexpected_failures": "none observed; nothing to preserve beyond retained channels"
+ },
+ "limits": [
+  "Bounded to 40 isolated native83 CLI processes through the synthetic WSDL and fixture-private SOAP __doRequest seam; no real HTTP, backend, full bootstrap or application scope.",
+  "Byte equality with primary shows deterministic reproduction on the same runtime and stage, not independence of the stage contents or collector logic (same collector, same stage, same VM).",
+  "Remote stage was not re-created; its integrity rests on the run-native manifest hash argument and the primary stage run.",
+  "Executor CLI is the same one that performed r1/r2 local reviews; a rotated CLI review of this evidence remains outstanding.",
+  "No rollback, deployment, release, baseline74, .20, API or SQL claim; application_acceptance remains false."
+ ]
+}

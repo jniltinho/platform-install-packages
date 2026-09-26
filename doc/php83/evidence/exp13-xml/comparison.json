@@ -1,0 +1,31 @@
+{
+  "status": "BOUNDED_EXP13_XML_MATCH_WITH_ACTUAL_INDEPENDENT_REPEAT",
+  "primary_processes": 40,
+  "claude_processes": 40,
+  "records_byte_identical": true,
+  "historical_reviewed_corpus_channels_exact": true,
+  "primary_sha256": "576ae4e811d038f4b277ea7128049e057613e8c91431860dbd4fc42f3c62a608",
+  "runtime_snapshots_sha256": {
+    "primary-before.json": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491",
+    "primary-after.json": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491",
+    "claude-before.json": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491",
+    "claude-after.json": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491"
+  },
+  "artifact_pins": {
+    "exp12": "de5e61a1b54f472e605ef2e87669302a3915616fd85378e0f05706fcb06a7e8b",
+    "exp13": "6d0bc4947207e6c5457b7843948d263aa8d5f251480e58cbf9086c0add79a944"
+  },
+  "manifest_pins": {
+    "matrix": "523c105bdf786ade3534f1a65d7dfbf19d7275b1e81bacea7d1f4854addc3f7e",
+    "chain": "ce30f8734a75bae4027b49585b5771981808dbf4a8554a68eb710aef9d07d90b"
+  },
+  "collector_closure": {
+    "collect.py": "68d1e858bf7e0541e57acdbf5f27554b388bbbbf82223ba6c0bbfa5d688cc0b7",
+    "input-pins.json": "47600e9c590fde735cec6027456f4ee1f8747f237a58d7bc7f6cd81d758a0de8"
+  },
+  "native_transport": false,
+  "full_application_bootstrap": false,
+  "application_acceptance": false,
+  "release_approved": false,
+  "cli_terminal_status": "separately retained in claude-repeat.exit"
+}

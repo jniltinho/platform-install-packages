@@ -1,0 +1,11 @@
+test_exit_bool (__main__.Adapter.test_exit_bool) ... ok
+test_historical40 (__main__.Adapter.test_historical40) ... ok
+test_inventory (__main__.Adapter.test_inventory) ... ok
+test_non_utf8_retains_both (__main__.Adapter.test_non_utf8_retains_both) ... ok
+test_source_drift (__main__.Adapter.test_source_drift) ... ok
+test_stderr_loss (__main__.Adapter.test_stderr_loss) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.008s
+
+OK

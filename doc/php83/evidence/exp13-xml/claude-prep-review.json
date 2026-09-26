@@ -1,0 +1,54 @@
+{
+  "case": "exp13-xml-adapter-preparation-local-review",
+  "executor": "Claude CLI (claude-opus-5-5)",
+  "reviewer": "Claude CLI (claude-opus-5-5); independent of adapter author",
+  "environment": "local workstation worktree, branch proposal/migrate-kaltura-php83; no VM, SSH, PHP, build or module loading",
+  "verdict": "PREPARATION_CONSISTENT_WITH_LIMITS",
+  "runtime_status": "NOT_EXECUTED_PENDING_EXCLUSIVE_VM_GRANT",
+  "new_native_pass_claimed": false,
+  "application_acceptance": false,
+  "reviewed_sha256": {
+    "tools/php83/exp13-xml/prepare.py": "3cbdced1f5a2cba9bb4cb2ccd555c35a46ca8510cdd4c5861d8b9cd6e3e60385",
+    "tools/php83/exp13-xml/collect.py": "03da4363e55f03556d89cd5fb4623d6e76366fc853f2e485259381b14c12a81b",
+    "tools/php83/exp13-xml/stage.py": "2e7f341dc98cda14e24a2bc2fc8baa810c9a49d1f71961b9e6bf00666bc4c08a",
+    "tools/php83/exp13-xml/test_adapter.py": "949645329c792aad1c605844f381055a646febf51090b09397343a10651c181b",
+    "tools/php83/exp13-xml/input-pins.json": "47600e9c590fde735cec6027456f4ee1f8747f237a58d7bc7f6cd81d758a0de8",
+    "doc/php83/exp13-xml.md": "cc5945a91b5a061a2be214ae87fb1141db5282695bf670f21488265361ebc390",
+    "doc/php83/evidence/exp13-xml/preparation.json": "30b70f69246cf542853b79dc3fb3e2f175ce25e5810eb813d70f0d5daa99a5c7",
+    "tools/php83/exp13-xml/stage/matrix/identities.json": "523c105bdf786ade3534f1a65d7dfbf19d7275b1e81bacea7d1f4854addc3f7e",
+    "tools/php83/exp13-xml/stage/matrix/run-native.sh": "00f454748be7337183772296192595e69a786ce588d811054ccfec5cd0d7c8fd",
+    "tools/php83/exp13-xml/stage/chain/identities.json": "ce30f8734a75bae4027b49585b5771981808dbf4a8554a68eb710aef9d07d90b",
+    "tools/php83/exp13-xml/stage/chain/run-native.sh": "8ac405786e96cedaa7883d6689ddb9d1297022370f0a81a9a6ee0dcdad75c0bf"
+  },
+  "artifact_pins": {
+    "exp12": "de5e61a1b54f472e605ef2e87669302a3915616fd85378e0f05706fcb06a7e8b",
+    "exp13": "6d0bc4947207e6c5457b7843948d263aa8d5f251480e58cbf9086c0add79a944"
+  },
+  "executed_steps": [
+    {"step": 1, "command": "timeout 180 python3 tools/php83/exp13-xml/test_adapter.py", "exit": 0, "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", "stderr_sha256": "464e0ee629edf74de09ef21e4232fbcedc26588ff7cc23c470f47fe2da88c255", "result": "Ran 5 tests, OK", "files": "claude-prep-step1-test_adapter.{stdout,stderr,exit}"},
+    {"step": 2, "command": "timeout 60 bash -n tools/php83/exp13-xml/stage/matrix/run-native.sh", "exit": 0, "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", "files": "claude-prep-step2-bashn-matrix.{stdout,stderr,exit}"},
+    {"step": 3, "command": "timeout 60 bash -n tools/php83/exp13-xml/stage/chain/run-native.sh", "exit": 0, "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", "files": "claude-prep-step3-bashn-chain.{stdout,stderr,exit}"}
+  ],
+  "independent_checks": {
+    "exact_zip_to_held_source_joins": "PASS: for both stages, the 11 source_joins (5 baseline from exp12, 6 candidate from exp13 incl. kXmlEntityLoaderPolicy.php 00bbe292...) equal the baseline/candidate entries of the historical manifests (/tmp/php-xml-lifecycle-fix-prep-r1 c06f54b7..., /tmp/php-xml-lifecycle-fix-chain-prep-r1 5feb0063...); historical payloads have no drift. ZIP bytes were not re-read by this reviewer (prepare.py logic reads server-Rigel-18.20.0/<path> and requires equality to the historical digest).",
+    "immutable_manifests": "PASS: local manifest hashes equal preparation.json (523c105b..., ce30f873...); 21/21 files per stage re-hash clean; no unmanifested files; relative to historical manifests only run-native.sh digest and metadata keys phase, artifact_pins, artifact_source_joins, historical_manifest_sha256 changed.",
+    "historical_40_expected_native_channels": "PASS (replay only): expected_rows = 38 primary (13 behavior/baseline, 13 behavior/candidate, 12 scope/candidate, all exit 0) + 2 chain callback-throw; test_historical40 validates all 40 against current manifests; input-pins sha 47600e9c... matches collect.py pin.",
+    "causal_soapfault": "PASS (corpus content): both chain records show operation exception SoapFault with chain [SoapFault] only, while the resolver-thrown RuntimeException is recorded separately, i.e. no previous link; collect compares complete stdout/stderr byte-equal so any change fails.",
+    "wrapper_security_unchanged": "PASS: each stage run-native.sh equals the historical wrapper after substituting only remote dir and phase names (byte-equal); systemd-run sandbox (PrivateNetwork, socket syscall deny, ProtectSystem=strict, ProtectHome, PrivateTmp, InaccessiblePaths, read-only bind, php -n, open_basedir, E_ALL to stderr), pre/post manifest and provider verification preserved."
+  },
+  "blockers": [
+    "Runtime: no native execution until coordinator grants exclusive native83 VM; stage.py/collect.py not run by this reviewer."
+  ],
+  "findings": [
+    {"severity": "medium", "file": "tools/php83/exp13-xml/.gitignore", "summary": "stage/ is git-ignored and prepare.py sources from /tmp historical directories, yet preparation.json, collect.py, stage.py and test_adapter.py require tools/php83/exp13-xml/stage/{matrix,chain}. A fresh clone cannot reproduce or rerun the adapter tests; integrity is hash-pinned but the payload is not durable in the repository."},
+    {"severity": "low", "file": "tools/php83/exp13-xml/collect.py", "line": 40, "summary": "Channels are stored per channel as base64 then strict decode; a non-UTF-8 stdout raises before stderr_base64 is recorded, so raw stderr is lost for that row despite the documented 'raw byte channels retained before validation'. Capture both base64 values before decoding."},
+    {"severity": "low", "file": "tools/php83/exp13-xml/test_adapter.py", "summary": "Tests cover collector validation only; no negative test exercises prepare.py rejection paths (artifact pin mismatch, ZIP member differing from held source, existing output). The source_drift test depends on rows[0] being matrix/behavior/baseline (currently true)."},
+    {"severity": "info", "file": "tools/php83/exp13-xml/collect.py", "summary": "Unused imports importlib.util; collector_closure is recorded but not pinned to a reviewed value, only checked for in-run stability."}
+  ],
+  "limits": [
+    "Local review and replay only; not native execution evidence and no new native pass is claimed.",
+    "exp12/exp13 ZIP bytes were not re-hashed or re-extracted by this reviewer; join verification relies on preparation.json plus historical held-source manifests.",
+    "VM-side provider/module/library hashes, remote staging and sandbox behaviour are unverified until the granted run.",
+    "Transport seam only (synthetic __doRequest); no HTTP/backend/full bootstrap scope; application acceptance remains false."
+  ]
+}

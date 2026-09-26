@@ -1,0 +1,134 @@
+{
+  "artifact_pins": {
+    "exp12": "de5e61a1b54f472e605ef2e87669302a3915616fd85378e0f05706fcb06a7e8b",
+    "exp13": "6d0bc4947207e6c5457b7843948d263aa8d5f251480e58cbf9086c0add79a944"
+  },
+  "artifact_selected_for_experiment": true,
+  "application_acceptance": false,
+  "stages": {
+    "matrix": {
+      "manifest_sha256": "523c105bdf786ade3534f1a65d7dfbf19d7275b1e81bacea7d1f4854addc3f7e",
+      "remote": "/home/vagrant/php-exp13-xml-matrix-r1",
+      "local": "tools/php83/exp13-xml/stage/matrix",
+      "source_joins": [
+        {
+          "stage_path": "baseline/alpha/config/cache/kCacheConfFactory.php",
+          "archive": "exp12",
+          "sha256": "73031853cf26128ab5460caecaa76d980fd9ace15219cc91e0b60cd02b561b7e"
+        },
+        {
+          "stage_path": "baseline/alpha/config/kConf.php",
+          "archive": "exp12",
+          "sha256": "d02983c560f6813c3546f2294a324d7a955f669e5b867d56d9a878c397cfa015"
+        },
+        {
+          "stage_path": "baseline/alpha/config/kConfCacheManager.php",
+          "archive": "exp12",
+          "sha256": "19d4ffb4866339cae93eb8949fd06275978799804454e81d68dd7692fe050333"
+        },
+        {
+          "stage_path": "baseline/infra/general/kSoapClient.php",
+          "archive": "exp12",
+          "sha256": "6fe1abef06f3f365fc1862de0e25ffeaef9da156e731fd7cc17b386623561b7e"
+        },
+        {
+          "stage_path": "baseline/infra/kEnvironment.php",
+          "archive": "exp12",
+          "sha256": "708f2497ade7d59522943d17d0bd788e2b18aec45504c59e3f8ecf5dd303e15d"
+        },
+        {
+          "stage_path": "candidate/alpha/config/cache/kCacheConfFactory.php",
+          "archive": "exp13",
+          "sha256": "73031853cf26128ab5460caecaa76d980fd9ace15219cc91e0b60cd02b561b7e"
+        },
+        {
+          "stage_path": "candidate/alpha/config/kConf.php",
+          "archive": "exp13",
+          "sha256": "e83d565b1c88c15812e180efff0f84d978bb46e04391985bfe9f0b481f56f5df"
+        },
+        {
+          "stage_path": "candidate/alpha/config/kConfCacheManager.php",
+          "archive": "exp13",
+          "sha256": "19d4ffb4866339cae93eb8949fd06275978799804454e81d68dd7692fe050333"
+        },
+        {
+          "stage_path": "candidate/infra/general/kSoapClient.php",
+          "archive": "exp13",
+          "sha256": "0091ab9704783d547f80b3035c26b1aa6f88bd973032df4722fcf3c4ce20d4ce"
+        },
+        {
+          "stage_path": "candidate/infra/general/kXmlEntityLoaderPolicy.php",
+          "archive": "exp13",
+          "sha256": "00bbe2929d9fffe2f1c86581845f8a11e8089d1b24734018297d2a0cc2104889"
+        },
+        {
+          "stage_path": "candidate/infra/kEnvironment.php",
+          "archive": "exp13",
+          "sha256": "708f2497ade7d59522943d17d0bd788e2b18aec45504c59e3f8ecf5dd303e15d"
+        }
+      ]
+    },
+    "chain": {
+      "manifest_sha256": "ce30f8734a75bae4027b49585b5771981808dbf4a8554a68eb710aef9d07d90b",
+      "remote": "/home/vagrant/php-exp13-xml-chain-r1",
+      "local": "tools/php83/exp13-xml/stage/chain",
+      "source_joins": [
+        {
+          "stage_path": "baseline/alpha/config/cache/kCacheConfFactory.php",
+          "archive": "exp12",
+          "sha256": "73031853cf26128ab5460caecaa76d980fd9ace15219cc91e0b60cd02b561b7e"
+        },
+        {
+          "stage_path": "baseline/alpha/config/kConf.php",
+          "archive": "exp12",
+          "sha256": "d02983c560f6813c3546f2294a324d7a955f669e5b867d56d9a878c397cfa015"
+        },
+        {
+          "stage_path": "baseline/alpha/config/kConfCacheManager.php",
+          "archive": "exp12",
+          "sha256": "19d4ffb4866339cae93eb8949fd06275978799804454e81d68dd7692fe050333"
+        },
+        {
+          "stage_path": "baseline/infra/general/kSoapClient.php",
+          "archive": "exp12",
+          "sha256": "6fe1abef06f3f365fc1862de0e25ffeaef9da156e731fd7cc17b386623561b7e"
+        },
+        {
+          "stage_path": "baseline/infra/kEnvironment.php",
+          "archive": "exp12",
+          "sha256": "708f2497ade7d59522943d17d0bd788e2b18aec45504c59e3f8ecf5dd303e15d"
+        },
+        {
+          "stage_path": "candidate/alpha/config/cache/kCacheConfFactory.php",
+          "archive": "exp13",
+          "sha256": "73031853cf26128ab5460caecaa76d980fd9ace15219cc91e0b60cd02b561b7e"
+        },
+        {
+          "stage_path": "candidate/alpha/config/kConf.php",
+          "archive": "exp13",
+          "sha256": "e83d565b1c88c15812e180efff0f84d978bb46e04391985bfe9f0b481f56f5df"
+        },
+        {
+          "stage_path": "candidate/alpha/config/kConfCacheManager.php",
+          "archive": "exp13",
+          "sha256": "19d4ffb4866339cae93eb8949fd06275978799804454e81d68dd7692fe050333"
+        },
+        {
+          "stage_path": "candidate/infra/general/kSoapClient.php",
+          "archive": "exp13",
+          "sha256": "0091ab9704783d547f80b3035c26b1aa6f88bd973032df4722fcf3c4ce20d4ce"
+        },
+        {
+          "stage_path": "candidate/infra/general/kXmlEntityLoaderPolicy.php",
+          "archive": "exp13",
+          "sha256": "00bbe2929d9fffe2f1c86581845f8a11e8089d1b24734018297d2a0cc2104889"
+        },
+        {
+          "stage_path": "candidate/infra/kEnvironment.php",
+          "archive": "exp13",
+          "sha256": "708f2497ade7d59522943d17d0bd788e2b18aec45504c59e3f8ecf5dd303e15d"
+        }
+      ]
+    }
+  }
+}

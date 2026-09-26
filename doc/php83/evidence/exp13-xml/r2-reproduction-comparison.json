@@ -1,0 +1,8 @@
+{
+  "stage_manifest_hashes_identical": {
+    "matrix": true,
+    "chain": true
+  },
+  "runtime_executed": false,
+  "historical_tmp_inputs_no_longer_required": true
+}

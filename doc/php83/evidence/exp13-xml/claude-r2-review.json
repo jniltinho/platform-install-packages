@@ -1,0 +1,97 @@
+{
+ "case": "exp13-xml-adapter-r2-local-review",
+ "executor": "Claude CLI (claude-opus-5-5)",
+ "reviewer": "Claude CLI (claude-opus-5-5); reviewer of r1 and r2, independent of adapter author; not independent of the r1 review",
+ "environment": "local workstation worktree, branch proposal/migrate-kaltura-php83; no VM, SSH, PHP, build or module loading; tools/inputs not edited",
+ "verdict": "R2_RESOLVES_R1_FINDINGS_WITH_LIMITS",
+ "runtime_status": "NOT_EXECUTED_PENDING_EXCLUSIVE_VM_GRANT",
+ "new_native_pass_claimed": false,
+ "application_acceptance": false,
+ "reviewed_sha256": {
+  "tools/php83/exp13-xml/prepare.py": "62c749e46137752acc9288560bd6c0abda94ee20587d33b129705f17ad3e86e5",
+  "tools/php83/exp13-xml/collect.py": "68d1e858bf7e0541e57acdbf5f27554b388bbbbf82223ba6c0bbfa5d688cc0b7",
+  "tools/php83/exp13-xml/test_adapter.py": "a43b1b3dac81f112135ed4f61bf2206cf4378f615356926a9900ba349feb488a",
+  "tools/php83/exp13-xml/stage.py": "2e7f341dc98cda14e24a2bc2fc8baa810c9a49d1f71961b9e6bf00666bc4c08a",
+  "tools/php83/exp13-xml/input-pins.json": "47600e9c590fde735cec6027456f4ee1f8747f237a58d7bc7f6cd81d758a0de8",
+  "tools/php83/exp13-xml/reference/matrix-manifest.json": "c06f54b7dff9035ea1680d96416ab29d7b4669a5dbe26e417bedccf27d742a08",
+  "tools/php83/exp13-xml/reference/chain-manifest.json": "5feb006310c2a7da6e790570f71b069738c127bd3374c52aebbf1ee81eed8017",
+  "tools/php83/exp13-xml/reference/provider.json": "0c0442e4775cb97a30ff59500555c5eff1fa55d6e530ee489c8bac199d0907d2",
+  "doc/php83/evidence/exp13-xml/preparation.json": "30b70f69246cf542853b79dc3fb3e2f175ce25e5810eb813d70f0d5daa99a5c7",
+  "doc/php83/evidence/exp13-xml/r2-reproduction.json": "444e345f26f08ab8ae5f1683af90c717f1056cc9341394239a7b299ada140c03",
+  "doc/php83/evidence/exp13-xml/r2-reproduction-comparison.json": "99e8d3ab2d92f5d8facaa265a2f3bb26ed27e9cbea4331e92d20e7a7116c704b",
+  "doc/php83/evidence/exp13-xml/reviewed-r1/prepare.py": "3cbdced1f5a2cba9bb4cb2ccd555c35a46ca8510cdd4c5861d8b9cd6e3e60385",
+  "doc/php83/evidence/exp13-xml/reviewed-r1/collect.py": "03da4363e55f03556d89cd5fb4623d6e76366fc853f2e485259381b14c12a81b",
+  "doc/php83/evidence/exp13-xml/reviewed-r1/test_adapter.py": "949645329c792aad1c605844f381055a646febf51090b09397343a10651c181b"
+ },
+ "r1_to_r2_identity": "reviewed-r1/{prepare,collect,test_adapter}.py equal the r1-reviewed hashes 3cbdced1/03da4363/949645329c; current differ (62c749e4/68d1e858/a43b1b3d); stage.py and input-pins.json unchanged (2e7f341d/47600e9c)",
+ "executed_steps": [
+  {
+   "step": 1,
+   "command": "timeout 120 python3 tools/php83/exp13-xml/test_adapter.py -v",
+   "exit": 0,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "stderr_sha256": "d95e73238721e5b7864c15057532cd6f37d33650cdfdf29779c7c77879375402",
+   "files": "claude-r2-step1-test_adapter.{stdout,stderr,exit}",
+   "result": "Ran 6 tests, OK (exit_bool, historical40, inventory, non_utf8_retains_both, source_drift, stderr_loss)"
+  },
+  {
+   "step": 2,
+   "command": "timeout 120 python3 /tmp/claude-r2-hashcheck.py (copy retained as claude-r2-step2-hashcheck.py)",
+   "exit": 0,
+   "stdout_sha256": "ee2a25c3fb9d0b0fcd3615eadcf8ffccbbaba8dae4c0b7e6683a4c2ba00d3626",
+   "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "files": "claude-r2-step2-hashcheck.{stdout,stderr,exit}",
+   "result": "28 PASS, 0 FAIL"
+  },
+  {
+   "step": 3,
+   "command": "timeout 120 sha256sum ../platform-install-packages-php83-artifacts/exp12/...exp12.zip ../platform-install-packages-php83-artifacts/exp13/...exp13.zip",
+   "exit": 0,
+   "stdout_sha256": "6bfbdeb5543531d6958a78cd764dcafd2e3d9d453a881077334f8d00da91cd2d",
+   "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "files": "claude-r2-step3-zip-sha256.{stdout,stderr,exit}",
+   "result": "de5e61a1... and 6d0bc494... equal PINS"
+  }
+ ],
+ "independent_checks": {
+  "r2_reproduction_vs_local_stage": "PASS: for matrix and chain, identities.json sha256 of /tmp/exp13-xml-reproduction-r2 == tools/php83/exp13-xml/stage == preparation.json == r2-reproduction.json (523c105b..., ce30f873...); source_joins identical; 21/21 files per stage re-hash clean in both trees; no unmanifested files; no symlinks. preparation.json remains 30b70f69 (the collect.py pin). Differs only in the report local path (/tmp vs repo-relative), as expected.",
+  "reference_inputs": "PASS: reference/ has exactly 9 files: two historical manifests (hash = historical pins c06f54b7, 5feb0063), 6 synthetic fixtures and provider.json (keys module/files/package_sha256/provider_report_sha256), each equal to the historical manifest digest. No Kaltura source is stored in reference/; baseline/candidate payloads come only from the pinned ZIP members.",
+  "probe_wrapper_sources": "PASS: behavior.php, behavior-chain.php, scope-probe.php, run-native.sh read from git-tracked tools/php83/xml-lifecycle-fix, unmodified vs HEAD; prepare.py verifies each against the historical digest before use.",
+  "artifact_zips": "PASS (hash): both ZIPs re-hashed equal to PINS. They live outside the repository in ../platform-install-packages-php83-artifacts (not a git repository), i.e. hash-pinned external inputs, not git-tracked.",
+  "r1_nonutf8_stderr_loss": "RESOLVED: retain_channels stores both base64 channels before any decode; UnicodeDecodeError is a ValueError subclass, so collect.main records exit, both base64 channels and failure for that row. test_non_utf8_retains_both covers the helper (not the main loop).",
+  "r1_tmp_input_dependency": "RESOLVED for prepare.py inputs: historical manifests/fixtures/provider now come from reference/ and tracked sources; /tmp is no longer read (reproduction proves same manifest pins).",
+  "failure_retention_closure": "IMPROVED: collector-closure drift is now appended to failures with FAIL_RETAINED_OBSERVATIONS and the report is still written (previously raised and discarded all 40 records). Native exceptions per row (ValueError incl. decode/JSON, KeyError, TypeError, OSError, TimeoutExpired) are retained per row; timeout channels are retained with errors=replace text plus raw base64."
+ },
+ "findings": [
+  {
+   "severity": "low",
+   "file": "tools/php83/exp13-xml/collect.py",
+   "line": 38,
+   "summary": "Per-row local manifest/payload drift checks run outside the try; a mid-run drift raises an uncaught ValueError, so no report is written and earlier native observations are lost. Fail-closed (no pass possible) but not retention-complete; only relevant if the local stage changes during the run (no competing writer allowed)."
+  },
+  {
+   "severity": "low",
+   "file": "tools/php83/exp13-xml/.gitignore",
+   "summary": "Durability is still conditional: stage/ is ignored (regenerable, acceptable) but tools/php83/exp13-xml/ including reference/ and the evidence are untracked, and the ZIPs are external. A fresh clone reproduces only after these are committed and the pinned ZIPs are supplied."
+  },
+  {
+   "severity": "info",
+   "file": "tools/php83/exp13-xml/prepare.py",
+   "line": 11,
+   "summary": "STAGES still carries the unused /tmp historical paths (oldpath is never read); dead data that suggests a /tmp dependency that no longer exists."
+  },
+  {
+   "severity": "info",
+   "file": "tools/php83/exp13-xml/test_adapter.py",
+   "summary": "Carried from r1: no negative tests for prepare.py rejection paths; source_drift still depends on rows[0] being matrix/behavior/baseline."
+  }
+ ],
+ "readiness": "READY_FOR_APPROVED_NATIVE_40_AFTER_VM_GRANT_ONLY: the local adapter, pins, reproduced stage manifests and guards are consistent for running exactly the approved 40 native processes (38 matrix + 2 chain) via collect.py once the coordinator grants exclusive native83. This is not native evidence, not a new corpus/product gate and not application acceptance.",
+ "limits": [
+  "Local review and hash replay only; no native execution, no new pass claimed.",
+  "stage.py and remote staging, VM provider/module hashes and sandbox behaviour unverified until the granted run.",
+  "ZIP members were not re-extracted by this reviewer; join relies on prepare.py logic plus matching reproduced manifests.",
+  "Reviewer also authored the r1 review; rotate to another CLI for fully independent confirmation.",
+  "Transport seam only; application_acceptance remains false."
+ ]
+}

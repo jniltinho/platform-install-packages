@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:t="urn:xml-lifecycle-types"><soap:Body><t:PingResponse><t:value>SYNTHETIC_RESPONSE</t:value></t:PingResponse></soap:Body></soap:Envelope>
