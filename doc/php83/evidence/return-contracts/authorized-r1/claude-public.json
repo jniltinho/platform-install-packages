@@ -1,0 +1,131 @@
+{
+  "executor": "actual Claude CLI",
+  "exit": 0,
+  "raw_sha256": "61407b66d1050dd18744edbd9597d496663e97efec985e95c4f613a508dbe94f",
+  "events": [
+    {
+      "type": "tool_use",
+      "id": "toolu_01SdHPau7STpsCUB93Yadxir",
+      "name": "Bash",
+      "input": {
+        "command": "python3 -m unittest discover -s tools/php83/return-contracts -p 'test_*.py' -v 2>&1 | tail -30; echo \"EXIT=${PIPESTATUS[0]}\"",
+        "description": "Run return-contracts unit tests"
+      }
+    },
+    {
+      "type": "tool_result",
+      "tool_use_id": "toolu_01SdHPau7STpsCUB93Yadxir",
+      "is_error": false,
+      "bytes": 2117,
+      "sha256": "ae0f439137ba5b6ad8091562cf43ef3a4b03d6b501298393d091c6dfe36e8684",
+      "bounded_text": "\"test_candidate_collision (test_build.Tests.test_candidate_collision) ... ok\\ntest_duplicate_declaration (test_build.Tests.test_duplicate_declaration) ... ok\\ntest_existing_output_rejected (test_build.Tests.test_existing_output_rejected) ... ok\\ntest_hash_drift (test_build.Tests.test_hash_drift) ... ok\\ntest_missing_declaration (test_build.Tests.test_missing_declaration) ... ok\\ntest_no_transaction_native_bool (test_build.Tests.test_no_transaction_native_bool) ... ok\\ntest_three_narrow_attributes (test_build.Tests.test_three_narrow_attributes) ... ok\\ntest_unapproved_target (test_build.Tests.test_unapproved_target) ... ok\\ntest_wrong_zip_refused_before_output (test_build.Tests.test_wrong_zip_refused_before_output) ... ok\\ntest_bad_archive (test_compose.CompositionTests.test_bad_archive) ... ok\\ntest_existing_output (test_compose.CompositionTests.test_existing_output) ... ok\\ntest_failed_patch_rejected (test_compose.CompositionTests.test_failed_patch_rejected) ... ok\\ntest_offset_rejected (test_compose.CompositionTests.test_offset_rejected) ... ok\\ntest_strict_success (test_compose.CompositionTests.test_strict_success) ... ok\\ntest_extra_harness (test_observe.ObservationGuards.test_extra_harness) ... ok\\ntest_rehashed_malicious_variant (test_observe.ObservationGuards.test_rehashed_malicious_variant) ... ok\\ntest_runner_quiet_identity_stdout (test_observe.ObservationGuards.test_runner_quiet_identity_stdout) ... ok\\ntest_source_binding (test_observe.ObservationGuards.test_source_binding) ... ok\\ntest_wrong_harness (test_observe.ObservationGuards.test_wrong_harness) ... ok\\ntest_wrong_prerequisite (test_observe.ObservationGuards.test_wrong_prerequisite) ... ok\\ntest_extra_file (test_verify.VerifyTests.test_extra_file) ... ok\\ntest_manifest_pin (test_verify.VerifyTests.test_manifest_pin) ... ok\\ntest_mutation (test_verify.VerifyTests.test_mutation) ... ok\\ntest_positive (test_verify.VerifyTests.test_positive) ... ok\\ntest_symlink (test_verify.VerifyTests.test_symlink) ... ok\\n\\n----------------------------------------------------------------------\\nRan 26 tests in 0.008s\\n\\nOK\\nEXIT=0\""
+    },
+    {
+      "type": "tool_use",
+      "id": "toolu_01WqRYBRDmm1j2Uiob1v124h",
+      "name": "Bash",
+      "input": {
+        "command": "bash -n tools/php83/return-contracts/run.sh; echo \"EXIT=$?\"; sha256sum -c doc/php83/evidence/return-contracts/authorized-r1/before.sha256; echo \"EXIT=$?\"",
+        "description": "Syntax-check runner and verify before checksums"
+      }
+    },
+    {
+      "type": "tool_result",
+      "tool_use_id": "toolu_01WqRYBRDmm1j2Uiob1v124h",
+      "is_error": false,
+      "bytes": 125,
+      "sha256": "441571ab7cf63f0afa2e9a5256afb92788ecf30400db8db6ffa05f4896e34287",
+      "bounded_text": "\"EXIT=0\\n/tmp/php83-return-contracts-native-prep-r2/identities.json: OK\\ntools/php83/return-contracts/observe.py: OK\\nEXIT=0\""
+    },
+    {
+      "type": "tool_use",
+      "id": "toolu_013eTHMTRx7BZPccRqEzV53q",
+      "name": "Bash",
+      "input": {
+        "command": "ls doc/php83/evidence/return-contracts/authorized-r1/; python3 tools/php83/return-contracts/observe.py --reuse-reviewed-stage --local /tmp/php83-return-contracts-native-prep-r2 --output doc/php83/evidence/return-contracts/authorized-r1/native-repeat.json; echo \"EXIT=$?\"",
+        "description": "Run native83 return-contract observation repeat",
+        "timeout": 600000
+      }
+    },
+    {
+      "type": "tool_result",
+      "tool_use_id": "toolu_013eTHMTRx7BZPccRqEzV53q",
+      "is_error": false,
+      "bytes": 138,
+      "sha256": "7cf2a975ad2bb4290f979e4de23be1b516b79a941f162ecaa570f8a4653e19d9",
+      "bounded_text": "\"before.sha256\\nlocal-tests.exit\\nlocal-tests.stderr\\nlocal-tests.stdout\\n{\\\"status\\\": \\\"OBSERVED_NOT_ACCEPTED\\\", \\\"records\\\": 9}\\nEXIT=2\""
+    },
+    {
+      "type": "tool_use",
+      "id": "toolu_01LbNycDb1tbBSZE7r3krgLi",
+      "name": "Bash",
+      "input": {
+        "command": "cd /home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/return-contracts && python3 - <<'EOF'\nimport json\na=json.load(open('native-primary.json')); b=json.load(open('authorized-r1/native-repeat.json'))\nprint('top keys A',sorted(a)); print('top keys B',sorted(b))\nfor k in sorted(set(a)|set(b)):\n    if a.get(k)!=b.get(k): print('DIFF',k, json.dumps(a.get(k))[:400], '||', json.dumps(b.get(k))[:400])\n    else: print('SAME',k)\nEOF",
+        "description": "Compare top-level keys of primary vs repeat reports"
+      }
+    },
+    {
+      "type": "tool_result",
+      "tool_use_id": "toolu_01LbNycDb1tbBSZE7r3krgLi",
+      "is_error": false,
+      "bytes": 1748,
+      "sha256": "6bc63d30376d40cf7f43cf3c86df480e2255e35e43978778d048fc52d9507a0e",
+      "bounded_text": "\"top keys A ['application_acceptance', 'collector_sha256', 'identities', 'records', 'runtime_after', 'runtime_before', 'snapshot_commands', 'source_after', 'source_before', 'stage', 'stage_manifest_sha256', 'status']\\ntop keys B ['application_acceptance', 'collector_sha256', 'identities', 'records', 'reuse_reviewed_stage', 'runtime_after', 'runtime_before', 'snapshot_commands', 'source_after', 'source_before', 'stage', 'stage_manifest_sha256', 'status']\\nSAME application_acceptance\\nDIFF collector_sha256 \\\"ec0cd86c1b669c0b7d24374fd7e08934ca682aceb0e19f59b0e5aaa023714f25\\\" || \\\"66c3ee6c4452eda3356648314d9016b1a8cb8f447613ee31576d4fbafd140471\\\"\\nSAME identities\\nSAME records\\nDIFF reuse_reviewed_stage null || true\\nSAME runtime_after\\nSAME runtime_before\\nDIFF snapshot_commands [{\\\"command\\\": [\\\"python3\\\", \\\"/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/exp12-api/runtime83-identity.py\\\", \\\"doc/php83/evidence/return-contracts/native-primary-runtime-before.json\\\"], \\\"exit\\\": 0, \\\"stdout\\\": \\\"{\\\\\\\"files\\\\\\\": 39, \\\\\\\"modes\\\\\\\": 2}\\\\n\\\", \\\"stderr\\\": \\\"\\\"}, {\\\"command\\\": [\\\"python3\\\", \\\"/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/exp12-api/r || [{\\\"command\\\": [\\\"python3\\\", \\\"/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/exp12-api/runtime83-identity.py\\\", \\\"doc/php83/evidence/return-contracts/authorized-r1/native-repeat-runtime-before.json\\\"], \\\"exit\\\": 0, \\\"stdout\\\": \\\"{\\\\\\\"files\\\\\\\": 39, \\\\\\\"modes\\\\\\\": 2}\\\\n\\\", \\\"stderr\\\": \\\"\\\"}, {\\\"command\\\": [\\\"python3\\\", \\\"/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php8\\nSAME source_after\\nSAME source_before\\nSAME stage\\nSAME stage_manifest_sha256\\nSAME status\""
+    },
+    {
+      "type": "tool_use",
+      "id": "toolu_01HpMFqX12WY9ZShiZgctgNY",
+      "name": "Bash",
+      "input": {
+        "command": "cd /home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83 && D=doc/php83/evidence/return-contracts; python3 - <<'EOF'\nimport json\nD='doc/php83/evidence/return-contracts/'\na=json.load(open(D+'native-primary.json')); b=json.load(open(D+'authorized-r1/native-repeat.json'))\nfor r in b['records']: print({k:(v if not isinstance(v,(dict,list,str)) or len(json.dumps(v))<80 else '…') for k,v in r.items()})\nprint('errors keys', [k for r in b['records'] for k in r if 'error' in k.lower()])\nfor x,y in zip(a['snapshot_commands'],b['snapshot_commands']):\n    print(x['exit'],y['exit'],x['stdout']==y['stdout'],x['stderr']==y['stderr'],[c for c,d in zip(x['command'],y['command']) if c!=d],[d for c,d in zip(x['command'],y['command']) if c!=d])\nprint(len(a['snapshot_commands']),len(b['snapshot_commands']))\nfor k in ['source_before','source_after','runtime_before','runtime_after','stage','identities']:\n    print(k, json.dumps(b[k])[:300])\nprint(b['source_before']==b['source_after'], b['runtime_before']==b['runtime_after'])\nEOF\nsha256sum tools/php83/return-contracts/observe.py; git log --oneline -3 -- tools/php83/return-contracts/observe.py; git status --short tools/php83/return-contracts/; grep -n collector_sha256 tools/php83/return-contracts/observe.py",
+        "description": "Inspect records, snapshots and collector hash provenance"
+      }
+    },
+    {
+      "type": "tool_result",
+      "tool_use_id": "toolu_01HpMFqX12WY9ZShiZgctgNY",
+      "is_error": false,
+      "bytes": 3462,
+      "sha256": "661137be82affa92f07975a41d46fde91c8f71a2e6068be1093f3a969ceb51da",
+      "bounded_text": "\"{'variant': 'exp12', 'case': 'hierarchy', 'command': '…', 'exit': 255, 'stdout': '', 'stderr': '…', 'body': None}\\n{'variant': 'exp12', 'case': 'configuration', 'command': '…', 'exit': 0, 'stdout': '…', 'stderr': '…', 'body': '…'}\\n{'variant': 'exp12', 'case': 'exception', 'command': '…', 'exit': 0, 'stdout': '…', 'stderr': '…', 'body': '…'}\\n{'variant': 'prerequisite', 'case': 'hierarchy', 'command': '…', 'exit': 0, 'stdout': '…', 'stderr': '…', 'body': '…'}\\n{'variant': 'prerequisite', 'case': 'configuration', 'command': '…', 'exit': 0, 'stdout': '…', 'stderr': '…', 'body': '…'}\\n{'variant': 'prerequisite', 'case': 'exception', 'command': '…', 'exit': 0, 'stdout': '…', 'stderr': '…', 'body': '…'}\\n{'variant': 'candidate', 'case': 'hierarchy', 'command': '…', 'exit': 0, 'stdout': '…', 'stderr': '…', 'body': '…'}\\n{'variant': 'candidate', 'case': 'configuration', 'command': '…', 'exit': 0, 'stdout': '…', 'stderr': '…', 'body': '…'}\\n{'variant': 'candidate', 'case': 'exception', 'command': '…', 'exit': 0, 'stdout': '…', 'stderr': '', 'body': '…'}\\nerrors keys []\\n0 0 True True ['doc/php83/evidence/return-contracts/native-primary-runtime-before.json'] ['doc/php83/evidence/return-contracts/authorized-r1/native-repeat-runtime-before.json']\\n0 0 True True ['doc/php83/evidence/return-contracts/native-primary-runtime-after.json'] ['doc/php83/evidence/return-contracts/authorized-r1/native-repeat-runtime-after.json']\\n2 2\\nsource_before {\\\"stage_verification\\\": \\\"SOURCE_HARNESS_IDENTITIES_OK\\\\n\\\", \\\"full_source\\\": {\\\"zip_sha256\\\": \\\"de5e61a1b54f472e605ef2e87669302a3915616fd85378e0f05706fcb06a7e8b\\\", \\\"verified_extracted_files\\\": 15242}}\\nsource_after {\\\"stage_verification\\\": \\\"SOURCE_HARNESS_IDENTITIES_OK\\\\n\\\", \\\"full_source\\\": {\\\"zip_sha256\\\": \\\"de5e61a1b54f472e605ef2e87669302a3915616fd85378e0f05706fcb06a7e8b\\\", \\\"verified_extracted_files\\\": 15242}}\\nruntime_before {\\\"collector_sha256\\\": \\\"ec8f5473fc599259b343ebc3713b55b24753959de559c10a5cbe1254909bb429\\\", \\\"command\\\": [\\\"ssh\\\", \\\"-T\\\", \\\"-F\\\", \\\"/tmp/kaltura-php83-ssh.conf\\\", \\\"php83\\\", \\\"python3 -\\\"], \\\"identity\\\": {\\\"files\\\": {\\\"/usr/bin/php8.3\\\": \\\"1c564e6bafa56d03359c3774be6f4c77d0edecabd2075e18556940a56747c8d7\\\", \\\"/usr/lib/php/20\\nruntime_after {\\\"collector_sha256\\\": \\\"ec8f5473fc599259b343ebc3713b55b24753959de559c10a5cbe1254909bb429\\\", \\\"command\\\": [\\\"ssh\\\", \\\"-T\\\", \\\"-F\\\", \\\"/tmp/kaltura-php83-ssh.conf\\\", \\\"php83\\\", \\\"python3 -\\\"], \\\"identity\\\": {\\\"files\\\": {\\\"/usr/bin/php8.3\\\": \\\"1c564e6bafa56d03359c3774be6f4c77d0edecabd2075e18556940a56747c8d7\\\", \\\"/usr/lib/php/20\\nstage \\\"/home/vagrant/php-return-contracts-observation-v1\\\"\\nidentities {\\\"status\\\": \\\"PREPARED_THREE_COHORTS_NOT_RUNTIME_VALIDATED\\\", \\\"base_zip_sha256\\\": \\\"de5e61a1b54f472e605ef2e87669302a3915616fd85378e0f05706fcb06a7e8b\\\", \\\"prerequisite_patch_sha256\\\": \\\"f966cf320b74717d134b4dd8710e5deafcbd77f890775cf643868e4cb4ab541e\\\", \\\"prerequisite_debug_after_sha256\\\": \\\"85ffdb6aefb5b538813de\\nTrue True\\n66c3ee6c4452eda3356648314d9016b1a8cb8f447613ee31576d4fbafd140471  tools/php83/return-contracts/observe.py\\nc4f3ea84 test(php83): preserve held return-contract native observations and review limits\\n43: result={'status':'INITIALIZING','records':[],'stage':STAGE,'stage_manifest_sha256':pin,'identities':ids,'collector_sha256':build.sha(pathlib.Path(__file__).read_bytes()),'application_acceptance':False,'reuse_reviewed_stage':reuse}\""
+    },
+    {
+      "type": "tool_use",
+      "id": "toolu_017uAF5ZVykiYmPu6jfcqm6x",
+      "name": "Bash",
+      "input": {
+        "command": "for c in $(git log --format=%h -- tools/php83/return-contracts/observe.py); do echo \"$c $(git show $c:tools/php83/return-contracts/observe.py | sha256sum | cut -c1-16)\"; done; git diff --stat HEAD -- tools/php83/return-contracts/observe.py; grep -rl ec0cd86c1b669c0b doc/php83/evidence/return-contracts | head; python3 -c \"\nimport json;r=json.load(open('doc/php83/evidence/return-contracts/authorized-r1/native-repeat.json'))['records'][0];print(r['stderr'][:300])\"",
+        "description": "Trace collector hash provenance and exp12 hierarchy stderr"
+      }
+    },
+    {
+      "type": "tool_result",
+      "tool_use_id": "toolu_017uAF5ZVykiYmPu6jfcqm6x",
+      "is_error": false,
+      "bytes": 388,
+      "sha256": "501d1c7c4e6f13992d35c83365651b66308c0730b29e3e6704859f98eb55e7b0",
+      "bounded_text": "\"c4f3ea84 66c3ee6c4452eda3\\ndoc/php83/evidence/return-contracts/native-primary.json\\nDeprecated: Return type of PropelPDO::beginTransaction() should either be compatible with PDO::beginTransaction(): bool, or the #[\\\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice in /audit/app/vendor/propel/util/PropelPDO.php on line 123\\nDeprecated: Return type of P\""
+    },
+    {
+      "type": "tool_use",
+      "id": "toolu_01WkVLCwE6ZxeZpNgQEXXvVK",
+      "name": "Bash",
+      "input": {
+        "command": "python3 - <<'EOF'\nimport json,hashlib\nD='doc/php83/evidence/return-contracts/'\nP=D+'native-primary.json'; R=D+'authorized-r1/native-repeat.json'\na=json.load(open(P)); b=json.load(open(R))\nh=lambda p:hashlib.sha256(open(p,'rb').read()).hexdigest()\nsame=[k for k in sorted(set(a)|set(b)) if a.get(k)==b.get(k)]\ndiff=[k for k in sorted(set(a)|set(b)) if a.get(k)!=b.get(k)]\nout={'case':'native83 return-contract repeat (9 observations)','executor':'Claude CLI (claude-opus-5-5)',\n'primary':{'path':P,'sha256':h(P)},'repeat':{'path':R,'sha256':h(R)},\n'repeat_collector_exit':2,'repeat_status':b['status'],'record_count':len(b['records']),\n'php_exits':{f\"{r['variant']}/{r['case']}\":r['exit'] for r in b['records']},\n'identical_fields':same,'differing_fields':diff,\n'difference_explanation':{\n 'collector_sha256':'primary ec0cd86c... is a pre-flag observe.py revision not in git history; repeat 66c3ee6c... is committed c4f3ea84 observe.py (verified by before.sha256) which adds --reuse-reviewed-stage',\n 'reuse_reviewed_stage':'absent in primary; true in repeat (explicit flag)',\n 'snapshot_commands':'only the runtime snapshot output path argument differs; exits 0/0 and stdout/stderr identical'},\n'records_equal_exact':a['records']==b['records'],\n'source_before_equals_after':b['source_before']==b['source_after'],\n'runtime_before_equals_after':b['runtime_before']==b['runtime_after'],\n'normalization_applied':False,\n'not_claimed':['SQL acceptance','API acceptance','constructor acceptance','application acceptance','ZIP selection acceptance']}\njson.dump(out,open(D+'authorized-r1/claude-comparison.json','x'),indent=2); print(json.dumps(out,indent=1))\nEOF",
+        "description": "Write comparison JSON preserving both reports"
+      }
+    },
+    {
+      "type": "tool_result",
+      "tool_use_id": "toolu_01WkVLCwE6ZxeZpNgQEXXvVK",
+      "is_error": false,
+      "bytes": 2041,
+      "sha256": "d92c885ca4a99877543002d5c9973d7885d8bb4f0406a041832cc80c7baab3e0",
+      "bounded_text": "\"{\\n \\\"case\\\": \\\"native83 return-contract repeat (9 observations)\\\",\\n \\\"executor\\\": \\\"Claude CLI (claude-opus-5-5)\\\",\\n \\\"primary\\\": {\\n  \\\"path\\\": \\\"doc/php83/evidence/return-contracts/native-primary.json\\\",\\n  \\\"sha256\\\": \\\"18a589a4acf95426842a19102ed82774166e93382c08ad880d5a9df0fed67e91\\\"\\n },\\n \\\"repeat\\\": {\\n  \\\"path\\\": \\\"doc/php83/evidence/return-contracts/authorized-r1/native-repeat.json\\\",\\n  \\\"sha256\\\": \\\"cea8c297a62690c803b173cc8711713b08064ed20b04ebe25fa22f0f1dd7ec1c\\\"\\n },\\n \\\"repeat_collector_exit\\\": 2,\\n \\\"repeat_status\\\": \\\"OBSERVED_NOT_ACCEPTED\\\",\\n \\\"record_count\\\": 9,\\n \\\"php_exits\\\": {\\n  \\\"exp12/hierarchy\\\": 255,\\n  \\\"exp12/configuration\\\": 0,\\n  \\\"exp12/exception\\\": 0,\\n  \\\"prerequisite/hierarchy\\\": 0,\\n  \\\"prerequisite/configuration\\\": 0,\\n  \\\"prerequisite/exception\\\": 0,\\n  \\\"candidate/hierarchy\\\": 0,\\n  \\\"candidate/configuration\\\": 0,\\n  \\\"candidate/exception\\\": 0\\n },\\n \\\"identical_fields\\\": [\\n  \\\"application_acceptance\\\",\\n  \\\"identities\\\",\\n  \\\"records\\\",\\n  \\\"runtime_after\\\",\\n  \\\"runtime_before\\\",\\n  \\\"source_after\\\",\\n  \\\"source_before\\\",\\n  \\\"stage\\\",\\n  \\\"stage_manifest_sha256\\\",\\n  \\\"status\\\"\\n ],\\n \\\"differing_fields\\\": [\\n  \\\"collector_sha256\\\",\\n  \\\"reuse_reviewed_stage\\\",\\n  \\\"snapshot_commands\\\"\\n ],\\n \\\"difference_explanation\\\": {\\n  \\\"collector_sha256\\\": \\\"primary ec0cd86c... is a pre-flag observe.py revision not in git history; repeat 66c3ee6c... is committed c4f3ea84 observe.py (verified by before.sha256) which adds --reuse-reviewed-stage\\\",\\n  \\\"reuse_reviewed_stage\\\": \\\"absent in primary; true in repeat (explicit flag)\\\",\\n  \\\"snapshot_commands\\\": \\\"only the runtime snapshot output path argument differs; exits 0/0 and stdout/stderr identical\\\"\\n },\\n \\\"records_equal_exact\\\": true,\\n \\\"source_before_equals_after\\\": true,\\n \\\"runtime_before_equals_after\\\": true,\\n \\\"normalization_applied\\\": false,\\n \\\"not_claimed\\\": [\\n  \\\"SQL acceptance\\\",\\n  \\\"API acceptance\\\",\\n  \\\"constructor acceptance\\\",\\n  \\\"application acceptance\\\",\\n  \\\"ZIP selection acceptance\\\"\\n ]\\n}\""
+    }
+  ],
+  "result": {
+    "is_error": false,
+    "result": "The repeat finished and matches the primary report exactly. All nine records, the identities and the source and runtime snapshots are identical. Only the three metadata fields listed below differ. Nothing was normalized, and no operation was denied.\n\n### Commands and exits\n| Command | Exit | Result |\n|---|---|---|\n| `python3 -m unittest discover -s tools/php83/return-contracts -p 'test_*.py' -v` | 0 | 26 tests, all OK |\n| `bash -n tools/php83/return-contracts/run.sh` | 0 | — |\n| `sha256sum -c doc/php83/evidence/return-contracts/authorized-r1/before.sha256` | 0 | `identities.json` OK, `observe.py` OK |\n| `python3 tools/php83/return-contracts/observe.py --reuse-reviewed-stage --local /tmp/php83-return-contracts-native-prep-r2 --output doc/php83/evidence/return-contracts/authorized-r1/native-repeat.json` | 2 (as expected) | `{\"status\": \"OBSERVED_NOT_ACCEPTED\", \"records\": 9}` |\n\n### Records\n- **Count:** 9 records: exp12, prerequisite and candidate, each with hierarchy, configuration and exception.\n- **PHP exits:** only `exp12/hierarchy` exited 255, with empty stdout, Propel `ReturnTypeWillChange` deprecations in stderr and a null body. The other 8 exited 0.\n- **Errors:** no record has an error field.\n- **Exact match:** the records match `native-primary.json` exactly, including command, stdout, stderr and typed bodies.\n\n### Identities and snapshots (repeat compared with primary)\nThese fields are identical in both reports:\n- `identities`, `stage` (`/home/vagrant/php-return-contracts-observation-v1`) and `stage_manifest_sha256`.\n- `source_before` and `source_after`: `SOURCE_HARNESS_IDENTITIES_OK`, full source ZIP `de5e61a1…7e8b`, 15242 extracted files verified. Before equals after.\n- `runtime_before` and `runtime_after`: runtime collector `ec8f5473…b429`, `/usr/bin/php8.3` `1c564e6b…c8d7`. Before equals after. Both runtime snapshot commands exited 0 and printed `{\"files\": 39, \"modes\": 2}`.\n- `status` and `application_acceptance=false`.\n\n### Differences (metadata only)\n- **`collector_sha256`:** the primary shows `ec0cd86c…`, an earlier `observe.py` that isn't in git history. The repeat shows `66c3ee6c…`, which is the `observe.py` committed in `c4f3ea84` and pinned by `before.sha256`. That later version is the one that adds `--reuse-reviewed-stage`.\n- **`reuse_reviewed_stage`:** absent in the primary, `true` in the repeat because of the explicit flag.\n- **`snapshot_commands`:** only the output path of the runtime snapshot differs (`native-primary-runtime-*.json` vs `authorized-r1/native-repeat-runtime-*.json`).\n\n### Files written\n- `authorized-r1/native-repeat.json`\n- `authorized-r1/native-repeat-runtime-before.json` and `authorized-r1/native-repeat-runtime-after.json`, written by the collector itself\n- `authorized-r1/claude-comparison.json`, created with exclusive create so nothing was overwritten. Primary sha256 `18a589a4…7e91`, repeat sha256 `cea8c297…c1c`.\n\n`native-primary.json` was left untouched.\n\n### Limits\n- This is observation only. It does not accept SQL, API, constructors, the application or the ZIP selection.\n- The runtime was reached through a local SSH config file, `/tmp/kaltura-php83-ssh.conf`; its contents were not printed.\n- The executor and the reviewer here are the same agent (Claude, `claude-opus-5-5`), so the comparison is not an independent review.\n- The earlier collector `ec0cd86c…` can't be traced to a git revision.\n- No further VM work was done."
+  }
+}

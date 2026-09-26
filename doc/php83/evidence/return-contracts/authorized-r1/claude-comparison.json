@@ -1,0 +1,59 @@
+{
+  "case": "native83 return-contract repeat (9 observations)",
+  "executor": "Claude CLI (claude-opus-5-5)",
+  "primary": {
+    "path": "doc/php83/evidence/return-contracts/native-primary.json",
+    "sha256": "18a589a4acf95426842a19102ed82774166e93382c08ad880d5a9df0fed67e91"
+  },
+  "repeat": {
+    "path": "doc/php83/evidence/return-contracts/authorized-r1/native-repeat.json",
+    "sha256": "cea8c297a62690c803b173cc8711713b08064ed20b04ebe25fa22f0f1dd7ec1c"
+  },
+  "repeat_collector_exit": 2,
+  "repeat_status": "OBSERVED_NOT_ACCEPTED",
+  "record_count": 9,
+  "php_exits": {
+    "exp12/hierarchy": 255,
+    "exp12/configuration": 0,
+    "exp12/exception": 0,
+    "prerequisite/hierarchy": 0,
+    "prerequisite/configuration": 0,
+    "prerequisite/exception": 0,
+    "candidate/hierarchy": 0,
+    "candidate/configuration": 0,
+    "candidate/exception": 0
+  },
+  "identical_fields": [
+    "application_acceptance",
+    "identities",
+    "records",
+    "runtime_after",
+    "runtime_before",
+    "source_after",
+    "source_before",
+    "stage",
+    "stage_manifest_sha256",
+    "status"
+  ],
+  "differing_fields": [
+    "collector_sha256",
+    "reuse_reviewed_stage",
+    "snapshot_commands"
+  ],
+  "difference_explanation": {
+    "collector_sha256": "primary ec0cd86c... is a pre-flag observe.py revision not in git history; repeat 66c3ee6c... is committed c4f3ea84 observe.py (verified by before.sha256) which adds --reuse-reviewed-stage",
+    "reuse_reviewed_stage": "absent in primary; true in repeat (explicit flag)",
+    "snapshot_commands": "only the runtime snapshot output path argument differs; exits 0/0 and stdout/stderr identical"
+  },
+  "records_equal_exact": true,
+  "source_before_equals_after": true,
+  "runtime_before_equals_after": true,
+  "normalization_applied": false,
+  "not_claimed": [
+    "SQL acceptance",
+    "API acceptance",
+    "constructor acceptance",
+    "application acceptance",
+    "ZIP selection acceptance"
+  ]
+}

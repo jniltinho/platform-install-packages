@@ -1,0 +1,12 @@
+Current operator explicitly confirmed release of the previously requested audit/temporary/SSH/lab accesses. Root now owns native83 exclusively, transferred after AWS's terminal repeat. Historical denied operations remain recorded. If any new tool operation is denied, stop; no workaround. No baseline74, .20, network downloads, SQL, production services/config/credentials, package installs or source/tool edits.
+
+Workdir /home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83.
+Independently repeat the previously reviewed nine native83 return-contract observations. This is observation, not SQL/API/whole-app acceptance. Reviewed runner confines read-only source under isolated transient systemd workers; use the existing frozen stage only, all identities must pass. No SSH config/keys contents need be printed.
+First execute:
+python3 -m unittest discover -s tools/php83/return-contracts -p 'test_*.py' -v
+bash -n tools/php83/return-contracts/run.sh
+sha256sum -c doc/php83/evidence/return-contracts/authorized-r1/before.sha256
+Then execute foreground and wait terminal (timeout>=180000):
+python3 tools/php83/return-contracts/observe.py --reuse-reviewed-stage --local /tmp/php83-return-contracts-native-prep-r2 --output doc/php83/evidence/return-contracts/authorized-r1/native-repeat.json
+Expected collector exit2 OBSERVED_NOT_ACCEPTED with9records. Exit2 alone is not success: reject errors or incomplete source/runtime snapshots. Expected PHP process exit255 ONLY exp12/hierarchy, other8 exit0. Reconcile exact records (including stdout/stderr/typed bodies), identities, source before/after and runtime before/after with doc/php83/evidence/return-contracts/native-primary.json. Explain the explicit reuse flag/observer metadata differs; do not normalize records or diagnostics.
+Write comparison if desired ONLY authorized-r1/claude-comparison.json, preserving both reports; do not claim SQL/API/constructor/application/ZIP selection acceptance. End with English public commands/exits/counts/identity comparison and limits, no thoughts. Stop after completed repeat; no further VM work.

@@ -1,0 +1,27 @@
+{
+  "status": "EXACT_BOUNDED_OBSERVATION_REPEAT",
+  "typed_canonical_checks": {
+    "records": true,
+    "identities": true,
+    "stage": true,
+    "stage_manifest_sha256": true,
+    "source_before": true,
+    "source_after": true,
+    "runtime_before": true,
+    "runtime_after": true,
+    "status": true,
+    "application_acceptance": true
+  },
+  "expected_original_fatal": 1,
+  "other_zero_exits": 8,
+  "primary_collector_preserved_at": "doc/php83/evidence/return-contracts/primary-observe.py",
+  "primary_collector_hash_matches": true,
+  "primary_sha256": "18a589a4acf95426842a19102ed82774166e93382c08ad880d5a9df0fed67e91",
+  "repeat_sha256": "cea8c297a62690c803b173cc8711713b08064ed20b04ebe25fa22f0f1dd7ec1c",
+  "metadata_differences": [
+    "collector_sha256: reviewed reuse option",
+    "reuse_reviewed_stage",
+    "snapshot_commands output destinations"
+  ],
+  "sql_api_constructor_artifact_acceptance": false
+}

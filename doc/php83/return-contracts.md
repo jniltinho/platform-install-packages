@@ -1,7 +1,7 @@
 # Exp12 return-contract family: held local preparation
 
-**Latest: nine native83 primary observations complete; independent runtime repeat
-blocked by explicit CLI permission denial. Not selected, not a release.**
+**Latest: nine native83 observations independently repeated by actual Claude
+after explicit operator access confirmation. Not selected, not a release.**
 Historical local-preparation phase: five delta patches against
 pinned exp12 change eleven native return declarations and add exactly three
 method-level ReturnTypeWillChange attributes. No body, cast, parameter, default,
@@ -132,7 +132,7 @@ The r2 runner silences only verifier success banners (not PHP diagnostics), and
 observer checks a pinned composition report for every source map before staging.
 Twenty-six local tests pass. Historical v1 scripts and failed CLI evidence remain.
 
-## Actual native83 primary observations — latest checkpoint
+## Historical native83 primary observations and initial blocked repeat
 
 The nine processes completed; collector exit2 is intentional observational status.
 [Primary](evidence/return-contracts/native-primary.json),
@@ -207,3 +207,34 @@ Finally repeat the unchanged full API/CLI/addition corpora, compiler checks and
 independent execution; expect only declared diagnostics to change after exact
 source-line remapping. API security outcomes, serialization layout and typed
 values remain gates. No new package/build/release selection is requested here.
+
+## Authorized independent native83 repeat — current checkpoint
+
+Following explicit operator confirmation of the requested temporary/SSH/lab
+accesses, actual Claude CLI executed26 local tests, shell syntax and the same
+nine native83 observations. No new operation was denied. Collector exit2 remains
+`OBSERVED_NOT_ACCEPTED`, not automatic success: the coordinator verified all nine
+records and ten identity/status fields by canonical JSON, preserving scalar types,
+array order, raw stdout/stderr and diagnostic contents. Expected original exp12
+hierarchy failure255 remains; the other eight processes exit0. Source and runtime
+snapshots match primary and each other before/after. No SQL/API/constructor ran.
+
+[Independent report](evidence/return-contracts/authorized-r1/native-repeat.json),
+[coordinator comparison](evidence/return-contracts/authorized-r1/coordinator-comparison.json)
+and [public CLI execution](evidence/return-contracts/authorized-r1/claude-public.json).
+Only the reviewed reuse-option collector identity/flag and snapshot output paths
+differ in metadata; no process record was normalized. The native83 reservation was
+released after terminal completion, not during execution. Baseline74 was not used.
+
+Provenance correction to the retained Claude conclusion: the primary collector
+is preserved byte-exact as `evidence/return-contracts/primary-observe.py`, committed
+in `c4f3ea84`. Its hash equals the primary report's recorded collector hash. It is
+not untraceable merely because it was not committed at the live `observe.py` path.
+Claude is the independent repeat executor relative to Codex's primary; its own
+comparison was additionally checked by the coordinator, not falsely called a
+second independent runtime executor.
+
+The historical denial remains above as an earlier failed attempt. This closes
+that execution gap only. Real SQL/typed effects, API integration, constructor
+coverage, full artifact regression and release acceptance remain open. No held
+source patch or ZIP was promoted by this repeat.

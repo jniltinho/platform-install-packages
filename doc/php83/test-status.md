@@ -116,6 +116,11 @@ now covers17 published packages/43,782 payload members with primary and actual
 Claude repeat byte-identical. Original-tree discovery, source-owner reconciliation
 and active-path classification remain open; no broad task checkbox closes.
 
+The held [return-contract family](return-contracts.md) also now has an authorized
+actual Claude repeat of all nine native83 observations, strict record/source/runtime
+comparison and preserved original hierarchy failure. SQL/API/constructor effects
+remain untested by that corpus; no new artifact or release approval follows.
+
 ## Historical artifact-runtime checkpoint: exp11 real-artifact regression
 
 Two identical exp11 ZIP builds select 63 source repairs. Codex and actual Claude
