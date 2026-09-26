@@ -1,0 +1,9 @@
+{
+  "doc/php83/baseline-api.md": "43e9ce2aaff75212e9538c9d68373cd59f73047353c9e9ef538582188b56bfc6",
+  "tools/php83/baseline-api/protocol.py": "4587eab6222c2cacc381b6ef100dc557f1afb814250dcc5ba92b3b2ee7eeca34",
+  "tools/php83/baseline-api/run.py": "39fcfa0e1e3443c92b3c6b6721add0973d247829a9d2100020cecf63e793bdaa",
+  "tools/php83/baseline-api/test_protocol.py": "8e5aba5cc57a44b3e9e224c13f72a3621a67b1250951d6b7e9ab90af59c9aa50",
+  "tools/php83/baseline-api/test_runner.py": "822306cd9d2d5c4fc26bbf8394e9e39f725cc5bf671e69fe963db1a2f0c445c5",
+  "tools/php83/baseline-api/test_transport.py": "2e683bac0901180e1a099e42dd04bf41d0554f2a5f22ac0ab957b9fc5d5a5caa",
+  "tools/php83/baseline-api/transport.py": "5a5896f22aeef0a8baf0ba3869b2cbfebcd655b94ab5671dc13580d1035edf20"
+}

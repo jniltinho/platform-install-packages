@@ -1,0 +1,23 @@
+{
+  "graph_project": "kaltura-rigel-18.20.0-full",
+  "status_observed": "ready",
+  "nodes": 231336,
+  "edges": 800641,
+  "generation": "2026-09-25T12:19:00Z",
+  "coverage_observed": "all6 exact files no_recorded_issue/metadata_match, best effort",
+  "immutable_source_root": "/home/nilton/Projetos/nilton/NOVOS/kaltura-rigel-18.20.0-source/server-Rigel-18.20.0",
+  "source_sha256": {
+    "api_v3/services/MediaService.php": "7ffb9ca7642341eaf65a4387e82c7b63dfdf5e528b5b03da6ea24a56f384f708",
+    "api_v3/lib/KalturaJsonSerializer.php": "c9f7ffd11840395bb0bdd9f8dd43ccbac137c4f33fba619a8e90c7590f3596cc",
+    "api_v3/lib/KalturaSerializer.php": "8cee6b9af7b33a6a66cbd354297290dcc4cc386202c49670482dfd7488538bd0",
+    "api_v3/lib/types/entry/filters/orderEnums/KalturaMediaEntryOrderBy.php": "5a2079eac1059cabc42c090d1cbda97b7aef64b0dbbf381a56f393070c8ee3ad",
+    "api_v3/lib/types/entry/filters/orderEnums/KalturaPlayableEntryOrderBy.php": "1ccf5cd138b28ac858ba7eb3a2aea1aad3cc098a43f726ad5dc5a27aedf12aa8",
+    "api_v3/lib/types/entry/filters/orderEnums/KalturaBaseEntryOrderBy.php": "36197fa5128e0a3d17ae0cc505998ed2ae97dcd43c5ffc3f7693319522e5df01"
+  },
+  "reads": "MediaService getAction/listAction snippets, complete JSON/base serializers, complete three order enums; not whole application",
+  "reused_dependencies": {
+    "tools/php83/baseline-protocol/guarded_http.py": "4cc44f15645ced42e1e156586a79a2795d38f929c6f812eb695e427ee7e47b59",
+    "tools/php83/baseline-protocol/deadline_transport.py": "330c7aedaa57c439af579b9fa9f262c1062bbd66014d3e4c0adbe9b8a6c1dbe2"
+  },
+  "runtime_execution": false
+}

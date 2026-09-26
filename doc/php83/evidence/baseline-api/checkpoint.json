@@ -1,0 +1,42 @@
+{
+  "status": "LOCAL_PREPARATION_36_TESTS_AND_REVIEW_PASS",
+  "vm_executed": false,
+  "baseline_acceptance": false,
+  "native_runtime_attestation": "PENDING",
+  "real_fixture_and_source_media_binding": "PENDING",
+  "guest_log_privacy": "PENDING",
+  "files": {
+    "tools/php83/baseline-api/protocol.py": "4587eab6222c2cacc381b6ef100dc557f1afb814250dcc5ba92b3b2ee7eeca34",
+    "tools/php83/baseline-api/run.py": "39fcfa0e1e3443c92b3c6b6721add0973d247829a9d2100020cecf63e793bdaa",
+    "tools/php83/baseline-api/test_protocol.py": "8e5aba5cc57a44b3e9e224c13f72a3621a67b1250951d6b7e9ab90af59c9aa50",
+    "tools/php83/baseline-api/test_runner.py": "822306cd9d2d5c4fc26bbf8394e9e39f725cc5bf671e69fe963db1a2f0c445c5",
+    "tools/php83/baseline-api/test_transport.py": "2e683bac0901180e1a099e42dd04bf41d0554f2a5f22ac0ab957b9fc5d5a5caa",
+    "tools/php83/baseline-api/transport.py": "5a5896f22aeef0a8baf0ba3869b2cbfebcd655b94ab5671dc13580d1035edf20",
+    "doc/php83/baseline-api.md": "4731e0b7974f49b1da64c49d9f99e6361a1218b6a2ec0fe6ef12d3ed487f4328",
+    "doc/php83/evidence/baseline-api/claude-prompt.txt": "490a67dceb3cf7af3ce082d52869f01842b65f33e6636ff5007c81ba398976c7",
+    "doc/php83/evidence/baseline-api/claude-public.json": "e2a0c755f2ed21f6c7aa4498a6652844502f74c8b4a4c58bc0be6f8842fb7af7",
+    "doc/php83/evidence/baseline-api/claude.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "doc/php83/evidence/baseline-api/claude.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "doc/php83/evidence/baseline-api/local-tests-r2.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "doc/php83/evidence/baseline-api/local-tests-r2.log": "b6e8bb2f13d3b5344bda8020381c648f8a63e734959677596ba13ffca8159832",
+    "doc/php83/evidence/baseline-api/local-tests-r3.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "doc/php83/evidence/baseline-api/local-tests-r3.log": "e94f352dc67d4e6dcac5c2a8c6a44c842d69c617c0087f8810cf1102460743f7",
+    "doc/php83/evidence/baseline-api/local-tests-r4.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "doc/php83/evidence/baseline-api/local-tests-r4.log": "295e0894ffb74496279afd337ac698e0e654eb190f758342e3c9f12d734287d1",
+    "doc/php83/evidence/baseline-api/local-tests-r5.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "doc/php83/evidence/baseline-api/local-tests-r5.log": "5fcd79250e4c464605125ece8979c7974195fdf140bbbc35e740741ad3e60c47",
+    "doc/php83/evidence/baseline-api/local-tests.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "doc/php83/evidence/baseline-api/local-tests.log": "81de71898cede140c3e21a79b24ad8280eb6b3003286a9c80faac183e12d6a20",
+    "doc/php83/evidence/baseline-api/opencode-r2-prompt.txt": "f3e36a2ef5fe2a9cb39f1889221a8493dfe2a18ff3e718e3022ae1ff98c7859f",
+    "doc/php83/evidence/baseline-api/opencode-r2-public.json": "9d6982ef3708303fd72ced5f5893d9f62f0902fbfb0ba8c690d1a93f67f0a326",
+    "doc/php83/evidence/baseline-api/opencode-r2.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "doc/php83/evidence/baseline-api/opencode-r2.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "doc/php83/evidence/baseline-api/review-r2-hashes.json": "b648c410dec0eadf612036a4b08f3224943b13eff6c35f9b37e8586f3cd41ff4",
+    "doc/php83/evidence/baseline-api/source-provenance.json": "538d0c50a947891ee8ce97e66f84657bb3f928cc031f5232da71e45598b54427"
+  },
+  "unchanged_frozen_dependencies": {
+    "tools/php83/baseline-protocol/guarded_http.py": "4cc44f15645ced42e1e156586a79a2795d38f929c6f812eb695e427ee7e47b59",
+    "tools/php83/baseline-protocol/deadline_transport.py": "330c7aedaa57c439af579b9fa9f262c1062bbd66014d3e4c0adbe9b8a6c1dbe2"
+  },
+  "bounded_secret_pattern_scan_hits": []
+}

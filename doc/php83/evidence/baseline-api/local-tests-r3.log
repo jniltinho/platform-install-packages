@@ -1,0 +1,30 @@
+test_api_error_rejected_as_media (test_protocol.ProtocolTests.test_api_error_rejected_as_media) ... ok
+test_bad_token (test_protocol.ProtocolTests.test_bad_token) ... ok
+test_failed_call_not_removed_from_denominator (test_protocol.ProtocolTests.test_failed_call_not_removed_from_denominator) ... ok
+test_false_count_not_integer (test_protocol.ProtocolTests.test_false_count_not_integer) ... ok
+test_full_100_and_exact_operation_counts (test_protocol.ProtocolTests.test_full_100_and_exact_operation_counts) ... ok
+test_immutable_exact_filter_and_pagination (test_protocol.ProtocolTests.test_immutable_exact_filter_and_pagination) ... ok
+test_json_duplicates_and_nan (test_protocol.ProtocolTests.test_json_duplicates_and_nan) ... ok
+test_last_session_failure_blocks_all_66_with_explicit_rows (test_protocol.ProtocolTests.test_last_session_failure_blocks_all_66_with_explicit_rows) ... ok
+test_list_total_count_type_frozen (test_protocol.ProtocolTests.test_list_total_count_type_frozen) ... ok
+test_prior_session_failure_still_invalidates_round (test_protocol.ProtocolTests.test_prior_session_failure_still_invalidates_round) ... ok
+test_private_file_errors_redacted (test_protocol.ProtocolTests.test_private_file_errors_redacted) ... ok
+test_private_file_modes_and_symlink (test_protocol.ProtocolTests.test_private_file_modes_and_symlink) ... ok
+test_report_has_no_secret_or_token_or_error_message (test_protocol.ProtocolTests.test_report_has_no_secret_or_token_or_error_message) ... ok
+test_status_not_ready (test_protocol.ProtocolTests.test_status_not_ready) ... ok
+test_typed_media_not_numeric_coercion (test_protocol.ProtocolTests.test_typed_media_not_numeric_coercion) ... ok
+test_wrong_partner_fixture (test_protocol.ProtocolTests.test_wrong_partner_fixture) ... ok
+test_bad_json_envelope_redacted (test_transport.TransportTests.test_bad_json_envelope_redacted) ... ok
+test_html_even_http200_rejected (test_transport.TransportTests.test_html_even_http200_rejected) ... ok
+test_post_redirect_refused_without_forward (test_transport.TransportTests.test_post_redirect_refused_without_forward) ... ok
+test_private_envelope_timing_and_decoding (test_transport.TransportTests.test_private_envelope_timing_and_decoding) ... ok
+test_production_rejects83_and_fixture (test_transport.TransportTests.test_production_rejects83_and_fixture) ... ok
+test_production_worker_rejects_loopback (test_transport.TransportTests.test_production_worker_rejects_loopback) ... ok
+test_real_post_auth_body_not_url (test_transport.TransportTests.test_real_post_auth_body_not_url) ... ok
+test_real_tls_post (test_transport.TransportTests.test_real_tls_post) ... ok
+test_unframed_oversize (test_transport.TransportTests.test_unframed_oversize) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 2.738s
+
+OK
