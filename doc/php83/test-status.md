@@ -88,6 +88,17 @@ supporting results, and there is still no final release or production cutover.
   and recovery policy remain pending. No accepted warning reduction or new ZIP
   follows from this rejected experiment. [Evidence](serialization-contracts.md).
 
+### Current execution restrictions
+
+The subsequent dispatcher repeat/PHP74 attempt did not execute PHP: Claude hit
+its quota and OpenCode rejected reading the two lab SSH configuration files.
+OpenCode did complete 12 local tests and two separate shell syntax checks; those
+are not native repetition. Checkpoint `e1411647` preserves the exact denied
+operation. Both lab reservations were released. Await explicit operator access
+authorization; do not repeat the denied operation through another executor.
+Baseline privacy changes also await the separately presented policy approval.
+No release, package integration, task completion or production change follows.
+
 ## Historical artifact-runtime checkpoint: exp11 real-artifact regression
 
 Two identical exp11 ZIP builds select 63 source repairs. Codex and actual Claude
