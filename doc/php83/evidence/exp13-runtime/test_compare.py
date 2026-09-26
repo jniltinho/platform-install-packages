@@ -51,4 +51,11 @@ class Comparator(unittest.TestCase):
  def test_ledger_path_escape(self):
   e=self.ledger();next(x for x in e if 'command' in x)['stdout_path']='/etc/passwd'
   with self.assertRaises(ValueError):m.ledger_validate(e,'74','primary')
+ def test_null_productive_hash_cannot_remove_link(self):
+  e=self.ledger();r=next(x for x in e if x['phase']=='api-primary')
+  r['output_sha256']=None;r['output']='/outside/not-a-report.json'
+  with self.assertRaises(ValueError):m.ledger_validate(e,'74','primary')
+ def test_missing_snapshot_output_hash(self):
+  e=self.ledger();next(x for x in e if x['phase']=='primary74-runtime-before')['output_sha256']=None
+  with self.assertRaises(ValueError):m.ledger_validate(e,'74','primary')
 if __name__=='__main__':unittest.main()

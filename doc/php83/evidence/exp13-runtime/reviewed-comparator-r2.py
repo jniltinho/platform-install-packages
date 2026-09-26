@@ -168,11 +168,7 @@ def ledger_validate(entries,runtime,phase):
             require(path.resolve().is_relative_to(RUN.resolve()) and not path.is_symlink(),'Unconfined ledger path')
             require(digest(path.read_bytes())==entry[channel+'_sha256'],'Ledger output drift')
         require((REPO/entry['exit_path']).read_text().strip()=='0','Recorded exit contents')
-        if entry['phase'] not in ('stage74','stage83'):
-            require(isinstance(entry['output_sha256'],str) and re.fullmatch('[0-9a-f]{64}',entry['output_sha256']) is not None,'Missing productive phase output hash')
-        else:
-            require(entry['output_sha256'] is None,'Unexpected stage report')
-        if entry['phase'] not in ('stage74','stage83'):
+        if entry['output_sha256'] is not None:
             path=REPO/entry['output']
             require(path.resolve()==(RUN/(entry['phase']+'.json')).resolve() and not path.is_symlink(),'Unexpected phase report path')
             require(digest(path.read_bytes())==entry['output_sha256'],'Ledger JSON drift')

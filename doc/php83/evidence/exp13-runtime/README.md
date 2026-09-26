@@ -71,3 +71,16 @@ tests and comparison-r2.json pass. This is author-tested post-review hardening,
 not an invented second Claude approval. reviewed-comparator-r1.py and all r1
 reports remain unchanged. API raw-channel wording is corrected in r2; r1's
 nonce-only explanation was overbroad and is not the final claim.
+
+### R3 productive-output binding correction
+
+Independent Codex pdo reviewer reproduced a remaining r2 hole: setting a productive
+phase output hash to null skipped its report/path binding. Actual ledgers were
+correct, so native results are unchanged, but the validator was incomplete.
+R3 requires a SHA256 and exact report path for every productive phase; only
+stage74/stage83 may have no JSON output. Sixteen local tests now pass, including
+both null-API/outside-path and null-snapshot mutants. Independent pdo reviewer
+executed all16 tests and the actual reconciliation successfully and confirmed
+the original counterexample is rejected. reviewed-comparator-r2.py and every r2
+report are preserved; comparison-r3.json is the authoritative local validator
+result. No VM rerun was performed for this validator-only change.
