@@ -1,0 +1,38 @@
+{
+  "cli_exit": 0,
+  "private_sha256": "a4bcade4e9572acac6a6ba6a86bc1091ea5f0092a09cb64ba97f9ca6bf069837",
+  "events": [
+    {
+      "type": "text",
+      "text": "Read-only safety review \u2014 inspecting contracts and running the unit suite."
+    },
+    {
+      "type": "text",
+      "text": "Core harness mapped \u2014 now checking the evidence pins and executing the verification commands."
+    },
+    {
+      "type": "tool_use",
+      "tool": "bash",
+      "status": "completed",
+      "input": {
+        "command": "python3 -m unittest discover -s tools/php83/return-contracts -p 'test_*.py' -v 2>&1",
+        "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+      },
+      "output": "test_all_exact_edits (test_build.Tests.test_all_exact_edits) ... ok\ntest_candidate_collision (test_build.Tests.test_candidate_collision) ... ok\ntest_duplicate_declaration (test_build.Tests.test_duplicate_declaration) ... ok\ntest_existing_output_rejected (test_build.Tests.test_existing_output_rejected) ... ok\ntest_hash_drift (test_build.Tests.test_hash_drift) ... ok\ntest_missing_declaration (test_build.Tests.test_missing_declaration) ... ok\ntest_no_transaction_native_bool (test_build.Tests.test_no_transaction_native_bool) ... ok\ntest_three_narrow_attributes (test_build.Tests.test_three_narrow_attributes) ... ok\ntest_unapproved_target (test_build.Tests.test_unapproved_target) ... ok\ntest_wrong_zip_refused_before_output (test_build.Tests.test_wrong_zip_refused_before_output) ... ok\ntest_bad_archive (test_compose.CompositionTests.test_bad_archive) ... ok\ntest_existing_output (test_compose.CompositionTests.test_existing_output) ... ok\ntest_failed_patch_rejected (test_compose.CompositionTests.test_failed_patch_rejected) ... ok\ntest_offset_rejected (test_compose.CompositionTests.test_offset_rejected) ... ok\ntest_strict_success (test_compose.CompositionTests.test_strict_success) ... ok\ntest_extra_harness (test_observe.ObservationGuards.test_extra_harness) ... ok\ntest_rehashed_malicious_variant (test_observe.ObservationGuards.test_rehashed_malicious_variant) ... ok\ntest_runner_quiet_identity_stdout (test_observe.ObservationGuards.test_runner_quiet_identity_stdout) ... ok\ntest_source_binding (test_observe.ObservationGuards.test_source_binding) ... ok\ntest_wrong_harness (test_observe.ObservationGuards.test_wrong_harness) ... ok\ntest_wrong_prerequisite (test_observe.ObservationGuards.test_wrong_prerequisite) ... ok\ntest_extra_file (test_verify.VerifyTests.test_extra_file) ... ok\ntest_manifest_pin (test_verify.VerifyTests.test_manifest_pin) ... ok\ntest_mutation (test_verify.VerifyTests.test_mutation) ... ok\ntest_positive (test_verify.VerifyTests.test_positive) ... ok\ntest_symlink (test_verify.VerifyTests.test_symlink) ... ok\n\n----------------------------------------------------------------------\nRan 26 tests in 0.007s\n\nOK\n"
+    },
+    {
+      "type": "tool_use",
+      "tool": "bash",
+      "status": "completed",
+      "input": {
+        "command": "bash -n tools/php83/return-contracts/run.sh; echo \"exit:$?\"",
+        "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+      },
+      "output": "exit:0\n"
+    },
+    {
+      "type": "text",
+      "text": "Public concise safety review \u2014 read-only, no VM/network/git/source changes.\n\nScope checked:\n- 3 cohorts: untouched exp12 (expected DebugPDO fatal), v3-only prerequisite, v3+11 returns+3 attrs. Full 7 class files as overlays over full exp12 source; MSSQL unchanged.\n- 9 native observations planned (3 variants x hierarchy/configuration/exception). No SQL, no acceptance (`application_acceptance:False`, `OBSERVED_NOT_ACCEPTED`).\n- Reflection `newInstanceWithoutConstructor` explicitly scoped to wakeup/sleep fixture only, synthetic-safe values. No fake replaced classes; real files + diagnostics retained.\n- Read-only mount/sandbox: `BindReadOnlyPaths` source\u2192`/audit/app`, base\u2192`/audit/probe`, 7 per-file overlays; `systemd-run` as `nobody:nogroup`, `PrivateNetwork=yes`, `~socket socketpair`, `ProtectSystem=strict`, `ProtectHome`, `PrivateTmp`, `NoNewPrivileges`, `InaccessiblePaths`, `MemoryMax=128M`, `RuntimeMaxSec=30`, `php8.3 -n allow_url_fopen=0 allow_url_include=0`.\n- Exit capture/incremental saves/post-fail snapshots: per-record `exit/stdout/stderr/body`, `atomic()` fsync+replace, `pending` tracking, `EXIT` trap re-verify or `exit 70`, `runtime_before/after` + `source_before/after` with `IDENTITY_FAILURE_OR_INCOMPLETE` on drift.\n- Exact pins: `ZIP_SHA de5e61\u2026`, `V3_SHA f966cf\u2026`, `V3_AFTER 85ffdb\u2026`, `COMPOSITION_SHA 1dc5c3\u2026`, harness `probe.php/run.sh/verify.py` sha-checked, `verify.py` enforces 3 variants x 7 files, no `..`/absolute/symlink/extra.\n\nActual commands (foreground, no background, no `observe.py`/PHP executed):\n- `python3 -m unittest discover -s tools/php83/return-contracts -p 'test_*.py' -v` \u2192 `Ran 26 tests OK`, exit 0.\n- `bash -n tools/php83/return-contracts/run.sh` \u2192 syntax OK, exit 0.\n\nBlockers / untested:\n- Native 9-observation runtime NOT executed by this reviewer; requires coordinator-authorized exclusive `native83` host `kaltura-php83-lab`, SSH `/tmp/kaltura-php83-ssh.conf`, `sudo systemd-run`, `php8.3`. Composition file status remains `PREPARED_THREE_COHORTS_NOT_RUNTIME_VALIDATED`.\n- Minor note: `observe.py --output` always `SystemExit(2)` even on `OBSERVED_NOT_ACCEPTED`; `run.sh` bind list derives from `exp12` keys only \u2014 verify/compose mitigate but cross-variant path-set equality not enforced in `verify.py`.\n\nNo permission denials encountered; none bypassed. No defects blocking local safety; no warning-count inference.\n"
+    }
+  ]
+}

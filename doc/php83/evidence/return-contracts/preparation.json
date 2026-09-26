@@ -1,0 +1,60 @@
+{
+  "status": "HELD_LOCAL_PREPARATION_NOT_RUNTIME_VALIDATED",
+  "base_revision": "exp12",
+  "base_zip_sha256": "de5e61a1b54f472e605ef2e87669302a3915616fd85378e0f05706fcb06a7e8b",
+  "selected_manifest_sha256": "593ff6e826978c09704cf89f8cdf099452efdcf74a4c058bc88ee57ca16e74d6",
+  "patch_kind": "delta against selected exp12, NOT cumulative upstream replacement",
+  "files": [
+    {
+      "path": "alpha/apps/kaltura/lib/db/KalturaPDO.php",
+      "before_sha256": "aeb012822d0af7c5fe0e6ea4221f789fc8c886f0c53dbb729a51bc9463a30f0e",
+      "after_sha256": "2c4e638080c9dfaefaab566125b5138bb8fe188e015753ed33321884a474bd51",
+      "patch": "KalturaPDO.php.patch",
+      "patch_sha256": "58fa032dcb151871f0ba82abff906357c04583e50c88b9f8ad6c99b9b431b164",
+      "declaration_edits": 3
+    },
+    {
+      "path": "vendor/propel/util/PropelPDO.php",
+      "before_sha256": "9017430cfa12adc2de1a187f2d034ecba04ab32677cdbdc419ba2a1e1fc5f0d3",
+      "after_sha256": "b9b6043c290e346e90a36d543fbac7a6366fbe3def5668a9d3711d40593278e1",
+      "patch": "PropelPDO.php.patch",
+      "patch_sha256": "a4cb0d9884676dfedadc684c3377c65cfa97c8ee6415094f7134bf6b4e3dc28c",
+      "declaration_edits": 5
+    },
+    {
+      "path": "vendor/propel/util/PropelConfiguration.php",
+      "before_sha256": "955aa16a6da6e24d80ab2f87deb79c64f9182c45a7066b9ea12c93d135812980",
+      "after_sha256": "2cb726b768ac9329dc20e1c1295e20cae2dd2877e61785e3d429b4c186827ab6",
+      "patch": "PropelConfiguration.php.patch",
+      "patch_sha256": "28fb11b83339861438b70b026f234212a819177b132cd8c801faa4eb5d6ce526",
+      "declaration_edits": 4
+    },
+    {
+      "path": "api_v3/lib/exceptions/KalturaAPIException.php",
+      "before_sha256": "7f8352e8fb01c6913f85ae35b4b7acb36466c5d9a0f6b9d5f6581ea84655abcb",
+      "after_sha256": "3c342574b392197e24fe285dc238239fac1bccb33bb808569e09b038ed9eec6e",
+      "patch": "KalturaAPIException.php.patch",
+      "patch_sha256": "a2327f0f565442fb68e0cd760c7e1b41af5799bacc9224dabca7a143b9751bdf",
+      "declaration_edits": 1
+    },
+    {
+      "path": "vendor/propel/util/DebugPDO.php",
+      "before_sha256": "6178d39fd2c11c2bd2dcc220c4234f72dfb11364c11d381e7f7bfaf55089e021",
+      "after_sha256": "3f55ce29c1b53fecdd987e907ea41fafcca65126eb4f8f9c5cdc9db0c861fd78",
+      "patch": "DebugPDO.php.patch",
+      "patch_sha256": "0cfcd2671b4ecbb35d0dd558d1885ecf8ee04302712c66ca2138e21587ab0b8d",
+      "declaration_edits": 1
+    }
+  ],
+  "native_return_declarations": 11,
+  "transaction_attributes": 3,
+  "unchanged_MSSQL_sources": {
+    "vendor/propel/adapter/MSSQL/MssqlPropelPDO.php": "22454680c12ef66b48787ce6c9f34b85ab078db2f9f967cb379af2c15ff37733",
+    "vendor/propel/adapter/MSSQL/MssqlDebugPDO.php": "a3e3ab953fd1321eb4eddd4b812bdbec11fcc5e97067602704c73e2a279d80e5"
+  },
+  "open_prerequisites": [
+    "DebugPDO query signature remains pre-existing incompatible; v3 held prerequisite NOT included or selected.",
+    "Native diagnostic attribution, reflected contracts, full-source load/SQL/serialization tests and independent runtime repeat pending.",
+    "Three scoped transaction attributes defer full return typing to preserve MSSQL int|false|true behavior; no casts or method body changes."
+  ]
+}

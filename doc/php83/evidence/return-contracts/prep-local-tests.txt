@@ -1,0 +1,25 @@
+test_all_exact_edits (test_build.Tests.test_all_exact_edits) ... ok
+test_candidate_collision (test_build.Tests.test_candidate_collision) ... ok
+test_duplicate_declaration (test_build.Tests.test_duplicate_declaration) ... ok
+test_existing_output_rejected (test_build.Tests.test_existing_output_rejected) ... ok
+test_hash_drift (test_build.Tests.test_hash_drift) ... ok
+test_missing_declaration (test_build.Tests.test_missing_declaration) ... ok
+test_no_transaction_native_bool (test_build.Tests.test_no_transaction_native_bool) ... ok
+test_three_narrow_attributes (test_build.Tests.test_three_narrow_attributes) ... ok
+test_unapproved_target (test_build.Tests.test_unapproved_target) ... ok
+test_wrong_zip_refused_before_output (test_build.Tests.test_wrong_zip_refused_before_output) ... ok
+test_bad_archive (test_compose.CompositionTests.test_bad_archive) ... ok
+test_existing_output (test_compose.CompositionTests.test_existing_output) ... ok
+test_failed_patch_rejected (test_compose.CompositionTests.test_failed_patch_rejected) ... ok
+test_offset_rejected (test_compose.CompositionTests.test_offset_rejected) ... ok
+test_strict_success (test_compose.CompositionTests.test_strict_success) ... ok
+test_extra_file (test_verify.VerifyTests.test_extra_file) ... ok
+test_manifest_pin (test_verify.VerifyTests.test_manifest_pin) ... ok
+test_mutation (test_verify.VerifyTests.test_mutation) ... ok
+test_positive (test_verify.VerifyTests.test_positive) ... ok
+test_symlink (test_verify.VerifyTests.test_symlink) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.006s
+
+OK

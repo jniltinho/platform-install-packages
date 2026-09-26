@@ -1,0 +1,9 @@
+{
+  "alpha/apps/kaltura/lib/db/KalturaPDO.php": "aeb012822d0af7c5fe0e6ea4221f789fc8c886f0c53dbb729a51bc9463a30f0e",
+  "vendor/propel/util/PropelPDO.php": "9017430cfa12adc2de1a187f2d034ecba04ab32677cdbdc419ba2a1e1fc5f0d3",
+  "vendor/propel/util/PropelConfiguration.php": "955aa16a6da6e24d80ab2f87deb79c64f9182c45a7066b9ea12c93d135812980",
+  "api_v3/lib/exceptions/KalturaAPIException.php": "7f8352e8fb01c6913f85ae35b4b7acb36466c5d9a0f6b9d5f6581ea84655abcb",
+  "vendor/propel/util/DebugPDO.php": "6178d39fd2c11c2bd2dcc220c4234f72dfb11364c11d381e7f7bfaf55089e021",
+  "vendor/propel/adapter/MSSQL/MssqlPropelPDO.php": "22454680c12ef66b48787ce6c9f34b85ab078db2f9f967cb379af2c15ff37733",
+  "vendor/propel/adapter/MSSQL/MssqlDebugPDO.php": "a3e3ab953fd1321eb4eddd4b812bdbec11fcc5e97067602704c73e2a279d80e5"
+}

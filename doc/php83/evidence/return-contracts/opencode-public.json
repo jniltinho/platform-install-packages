@@ -1,0 +1,27 @@
+{
+  "cli_exit": 0,
+  "private_sha256": "7797580028fa2d4c80ad6bfd6364f164e1f5e1a2ada1d61cd1fc9a4a13edef61",
+  "events": [
+    {
+      "type": "text",
+      "text": "Read-only review in progress \u2014 running the contract suite and inspecting the declared sources."
+    },
+    {
+      "type": "tool_use",
+      "tool": "bash",
+      "status": "completed",
+      "input": {
+        "command": "python3 -m unittest discover -s tools/php83/return-contracts -p 'test_*.py' -v"
+      },
+      "output": "test_all_exact_edits (test_build.Tests.test_all_exact_edits) ... ok\ntest_candidate_collision (test_build.Tests.test_candidate_collision) ... ok\ntest_duplicate_declaration (test_build.Tests.test_duplicate_declaration) ... ok\ntest_existing_output_rejected (test_build.Tests.test_existing_output_rejected) ... ok\ntest_hash_drift (test_build.Tests.test_hash_drift) ... ok\ntest_missing_declaration (test_build.Tests.test_missing_declaration) ... ok\ntest_no_transaction_native_bool (test_build.Tests.test_no_transaction_native_bool) ... ok\ntest_three_narrow_attributes (test_build.Tests.test_three_narrow_attributes) ... ok\ntest_unapproved_target (test_build.Tests.test_unapproved_target) ... ok\ntest_wrong_zip_refused_before_output (test_build.Tests.test_wrong_zip_refused_before_output) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.001s\n\nOK\n"
+    },
+    {
+      "type": "text",
+      "text": "Suite passed \u2014 now inspecting build, pins, patches, and docs."
+    },
+    {
+      "type": "text",
+      "text": "## Independent repo-only review: php83 return-contracts\n\n**Executed:**\n`python3 -m unittest discover -s tools/php83/return-contracts -p 'test_*.py' -v` \u2014 10 tests, OK, exit 0.\n\n**Inspected (read-only):** `tools/php83/return-contracts/build.py`, `source-pins.json` (7 pins), `patches/php83/held/return-contracts/*.patch` (5) + `manifest.json`, `doc/php83/return-contracts.md`, `doc/php83/evidence/return-contracts/preparation.json`.\n\n**Scope verified:**\n- 11 native declarations: KalturaPDO 3 (`prepare:PDOStatement|false`, `exec:int|false`, `query:PDOStatement|false`), PropelPDO 2 (`getAttribute:mixed`, `prepare:PDOStatement|false`), PropelConfiguration 4 (`bool/void/mixed/void`), KalturaAPIException 1 (`__wakeup:void`), DebugPDO 1 (`prepare:PDOStatement|false`).\n- 3 scoped `#[ReturnTypeWillChange]` only on PropelPDO `beginTransaction/commit/rollBack`. No native `:bool` there. Rationale (MSSQL `int|false|true` vs bool parent) documented.\n- Patches show declaration-only + 3 attributes. No casts, body, param, comment changes. Manifest/preparation `HELD_LOCAL_PREPARATION_NOT_RUNTIME_VALIDATED`, delta-vs-exp12 only.\n\n**Guards (builder):** rejects existing output, ZIP/selected-manifest/source-pin drift, unapproved target, `count!=1` missing/duplicate, candidate collision, reverse-substitution byte drift. Tests cover all.\n\n**Prerequisite explicit:** `DebugPDO::query` left incompatible; v3 forwarding NOT included. Doc/manifest list it as open blocker, require separate expected-failure control. No silent fix.\n\n**Defects / unsafe assumptions:**\n1. Hardcoded `server-Rigel-18.20.0/` prefix + fixed manifest path; `zip.read` missing-key raises `KeyError`, not guarded `ValueError`.\n2. Exact `\\t... \\n` match assumes LF+tab; CRLF/space variant fails closed (safe but brittle, no PHP token parse \u2014 doc admits pending).\n3. `unchanged_MSSQL_sources` echoes pins only; no built-output proof of byte-identical (by design \u2014 not transformed).\n4. Inheritance: 4 edges stated, MSSQL follow-up no-edges correctly labeled NOT proof; full token inventory + load tests still pending per doc.\n\n**Not claimed:** No runtime validation, no complete descendant inventory, no promotion approval."
+    }
+  ]
+}

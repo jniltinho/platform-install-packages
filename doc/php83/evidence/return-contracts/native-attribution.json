@@ -1,0 +1,202 @@
+{
+  "status": "NATIVE_DECLARATION_CORROBORATION_NOT_API_RAW_MESSAGE_RECOVERY",
+  "native_report_sha256": "18a589a4acf95426842a19102ed82774166e93382c08ad880d5a9df0fed67e91",
+  "matched_groups": 12,
+  "matched_api_events": 274,
+  "rows": [
+    {
+      "api_group": {
+        "severity": "ApplicationDiagnostic",
+        "path": "/audit/app/api_v3/lib/exceptions/KalturaAPIException.php",
+        "line": 40,
+        "count": 10
+      },
+      "source_sha256": "7f8352e8fb01c6913f85ae35b4b7acb36466c5d9a0f6b9d5f6581ea84655abcb",
+      "native_diagnostic": [
+        8192,
+        "Return type of KalturaAPIException::__wakeup() should either be compatible with Exception::__wakeup(): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+        "/audit/app/api_v3/lib/exceptions/KalturaAPIException.php",
+        40
+      ],
+      "claim": "Secret-free native declaration corroborates same source identity/path/line; original API message text remains unretained."
+    },
+    {
+      "api_group": {
+        "severity": "Deprecated",
+        "path": "/audit/app/alpha/apps/kaltura/lib/db/KalturaPDO.php",
+        "line": 127,
+        "count": 24
+      },
+      "source_sha256": "aeb012822d0af7c5fe0e6ea4221f789fc8c886f0c53dbb729a51bc9463a30f0e",
+      "native_diagnostic": [
+        8192,
+        "Return type of KalturaPDO::exec($sql) should either be compatible with PDO::exec(string $statement): int|false, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+        "/audit/app/alpha/apps/kaltura/lib/db/KalturaPDO.php",
+        127
+      ],
+      "claim": "Secret-free native declaration corroborates same source identity/path/line; original API message text remains unretained."
+    },
+    {
+      "api_group": {
+        "severity": "Deprecated",
+        "path": "/audit/app/alpha/apps/kaltura/lib/db/KalturaPDO.php",
+        "line": 188,
+        "count": 24
+      },
+      "source_sha256": "aeb012822d0af7c5fe0e6ea4221f789fc8c886f0c53dbb729a51bc9463a30f0e",
+      "native_diagnostic": [
+        8192,
+        "Return type of KalturaPDO::query(...$args) should either be compatible with PDO::query(string $query, ?int $fetchMode = null, mixed ...$fetchModeArgs): PDOStatement|false, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+        "/audit/app/alpha/apps/kaltura/lib/db/KalturaPDO.php",
+        188
+      ],
+      "claim": "Secret-free native declaration corroborates same source identity/path/line; original API message text remains unretained."
+    },
+    {
+      "api_group": {
+        "severity": "Deprecated",
+        "path": "/audit/app/vendor/propel/util/PropelConfiguration.php",
+        "line": 60,
+        "count": 24
+      },
+      "source_sha256": "955aa16a6da6e24d80ab2f87deb79c64f9182c45a7066b9ea12c93d135812980",
+      "native_diagnostic": [
+        8192,
+        "Return type of PropelConfiguration::offsetExists($offset) should either be compatible with ArrayAccess::offsetExists(mixed $offset): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+        "/audit/app/vendor/propel/util/PropelConfiguration.php",
+        60
+      ],
+      "claim": "Secret-free native declaration corroborates same source identity/path/line; original API message text remains unretained."
+    },
+    {
+      "api_group": {
+        "severity": "Deprecated",
+        "path": "/audit/app/vendor/propel/util/PropelConfiguration.php",
+        "line": 68,
+        "count": 24
+      },
+      "source_sha256": "955aa16a6da6e24d80ab2f87deb79c64f9182c45a7066b9ea12c93d135812980",
+      "native_diagnostic": [
+        8192,
+        "Return type of PropelConfiguration::offsetSet($offset, $value) should either be compatible with ArrayAccess::offsetSet(mixed $offset, mixed $value): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+        "/audit/app/vendor/propel/util/PropelConfiguration.php",
+        68
+      ],
+      "claim": "Secret-free native declaration corroborates same source identity/path/line; original API message text remains unretained."
+    },
+    {
+      "api_group": {
+        "severity": "Deprecated",
+        "path": "/audit/app/vendor/propel/util/PropelConfiguration.php",
+        "line": 76,
+        "count": 24
+      },
+      "source_sha256": "955aa16a6da6e24d80ab2f87deb79c64f9182c45a7066b9ea12c93d135812980",
+      "native_diagnostic": [
+        8192,
+        "Return type of PropelConfiguration::offsetGet($offset) should either be compatible with ArrayAccess::offsetGet(mixed $offset): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+        "/audit/app/vendor/propel/util/PropelConfiguration.php",
+        76
+      ],
+      "claim": "Secret-free native declaration corroborates same source identity/path/line; original API message text remains unretained."
+    },
+    {
+      "api_group": {
+        "severity": "Deprecated",
+        "path": "/audit/app/vendor/propel/util/PropelConfiguration.php",
+        "line": 84,
+        "count": 24
+      },
+      "source_sha256": "955aa16a6da6e24d80ab2f87deb79c64f9182c45a7066b9ea12c93d135812980",
+      "native_diagnostic": [
+        8192,
+        "Return type of PropelConfiguration::offsetUnset($offset) should either be compatible with ArrayAccess::offsetUnset(mixed $offset): void, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+        "/audit/app/vendor/propel/util/PropelConfiguration.php",
+        84
+      ],
+      "claim": "Secret-free native declaration corroborates same source identity/path/line; original API message text remains unretained."
+    },
+    {
+      "api_group": {
+        "severity": "Deprecated",
+        "path": "/audit/app/vendor/propel/util/PropelPDO.php",
+        "line": 123,
+        "count": 24
+      },
+      "source_sha256": "9017430cfa12adc2de1a187f2d034ecba04ab32677cdbdc419ba2a1e1fc5f0d3",
+      "native_diagnostic": [
+        8192,
+        "Return type of PropelPDO::beginTransaction() should either be compatible with PDO::beginTransaction(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+        "/audit/app/vendor/propel/util/PropelPDO.php",
+        123
+      ],
+      "claim": "Secret-free native declaration corroborates same source identity/path/line; original API message text remains unretained."
+    },
+    {
+      "api_group": {
+        "severity": "Deprecated",
+        "path": "/audit/app/vendor/propel/util/PropelPDO.php",
+        "line": 139,
+        "count": 24
+      },
+      "source_sha256": "9017430cfa12adc2de1a187f2d034ecba04ab32677cdbdc419ba2a1e1fc5f0d3",
+      "native_diagnostic": [
+        8192,
+        "Return type of PropelPDO::commit() should either be compatible with PDO::commit(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+        "/audit/app/vendor/propel/util/PropelPDO.php",
+        139
+      ],
+      "claim": "Secret-free native declaration corroborates same source identity/path/line; original API message text remains unretained."
+    },
+    {
+      "api_group": {
+        "severity": "Deprecated",
+        "path": "/audit/app/vendor/propel/util/PropelPDO.php",
+        "line": 161,
+        "count": 24
+      },
+      "source_sha256": "9017430cfa12adc2de1a187f2d034ecba04ab32677cdbdc419ba2a1e1fc5f0d3",
+      "native_diagnostic": [
+        8192,
+        "Return type of PropelPDO::rollBack() should either be compatible with PDO::rollBack(): bool, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+        "/audit/app/vendor/propel/util/PropelPDO.php",
+        161
+      ],
+      "claim": "Secret-free native declaration corroborates same source identity/path/line; original API message text remains unretained."
+    },
+    {
+      "api_group": {
+        "severity": "Deprecated",
+        "path": "/audit/app/vendor/propel/util/PropelPDO.php",
+        "line": 225,
+        "count": 24
+      },
+      "source_sha256": "9017430cfa12adc2de1a187f2d034ecba04ab32677cdbdc419ba2a1e1fc5f0d3",
+      "native_diagnostic": [
+        8192,
+        "Return type of PropelPDO::getAttribute($attribute) should either be compatible with PDO::getAttribute(int $attribute): mixed, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+        "/audit/app/vendor/propel/util/PropelPDO.php",
+        225
+      ],
+      "claim": "Secret-free native declaration corroborates same source identity/path/line; original API message text remains unretained."
+    },
+    {
+      "api_group": {
+        "severity": "Deprecated",
+        "path": "/audit/app/vendor/propel/util/PropelPDO.php",
+        "line": 244,
+        "count": 24
+      },
+      "source_sha256": "9017430cfa12adc2de1a187f2d034ecba04ab32677cdbdc419ba2a1e1fc5f0d3",
+      "native_diagnostic": [
+        8192,
+        "Return type of PropelPDO::prepare($sql, $driver_options = []) should either be compatible with PDO::prepare(string $query, array $options = []): PDOStatement|false, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice",
+        "/audit/app/vendor/propel/util/PropelPDO.php",
+        244
+      ],
+      "claim": "Secret-free native declaration corroborates same source identity/path/line; original API message text remains unretained."
+    }
+  ],
+  "remaining_api_groups_unconfirmed": 5,
+  "scope": "No SQL/API execution in this new cohort; source/runtime unchanged."
+}

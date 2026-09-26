@@ -1,0 +1,38 @@
+{
+  "status": "PREPARED_THREE_COHORTS_NOT_RUNTIME_VALIDATED",
+  "base_zip_sha256": "de5e61a1b54f472e605ef2e87669302a3915616fd85378e0f05706fcb06a7e8b",
+  "prerequisite_patch_sha256": "f966cf320b74717d134b4dd8710e5deafcbd77f890775cf643868e4cb4ab541e",
+  "prerequisite_debug_after_sha256": "85ffdb6aefb5b538813de368177148e24071da8513f6aaadc8adccdc822cb6cc",
+  "variants": {
+    "exp12": {
+      "alpha/apps/kaltura/lib/db/KalturaPDO.php": "aeb012822d0af7c5fe0e6ea4221f789fc8c886f0c53dbb729a51bc9463a30f0e",
+      "vendor/propel/util/PropelPDO.php": "9017430cfa12adc2de1a187f2d034ecba04ab32677cdbdc419ba2a1e1fc5f0d3",
+      "vendor/propel/util/PropelConfiguration.php": "955aa16a6da6e24d80ab2f87deb79c64f9182c45a7066b9ea12c93d135812980",
+      "api_v3/lib/exceptions/KalturaAPIException.php": "7f8352e8fb01c6913f85ae35b4b7acb36466c5d9a0f6b9d5f6581ea84655abcb",
+      "vendor/propel/util/DebugPDO.php": "6178d39fd2c11c2bd2dcc220c4234f72dfb11364c11d381e7f7bfaf55089e021",
+      "vendor/propel/adapter/MSSQL/MssqlPropelPDO.php": "22454680c12ef66b48787ce6c9f34b85ab078db2f9f967cb379af2c15ff37733",
+      "vendor/propel/adapter/MSSQL/MssqlDebugPDO.php": "a3e3ab953fd1321eb4eddd4b812bdbec11fcc5e97067602704c73e2a279d80e5"
+    },
+    "prerequisite": {
+      "alpha/apps/kaltura/lib/db/KalturaPDO.php": "aeb012822d0af7c5fe0e6ea4221f789fc8c886f0c53dbb729a51bc9463a30f0e",
+      "vendor/propel/util/PropelPDO.php": "9017430cfa12adc2de1a187f2d034ecba04ab32677cdbdc419ba2a1e1fc5f0d3",
+      "vendor/propel/util/PropelConfiguration.php": "955aa16a6da6e24d80ab2f87deb79c64f9182c45a7066b9ea12c93d135812980",
+      "api_v3/lib/exceptions/KalturaAPIException.php": "7f8352e8fb01c6913f85ae35b4b7acb36466c5d9a0f6b9d5f6581ea84655abcb",
+      "vendor/propel/util/DebugPDO.php": "85ffdb6aefb5b538813de368177148e24071da8513f6aaadc8adccdc822cb6cc",
+      "vendor/propel/adapter/MSSQL/MssqlPropelPDO.php": "22454680c12ef66b48787ce6c9f34b85ab078db2f9f967cb379af2c15ff37733",
+      "vendor/propel/adapter/MSSQL/MssqlDebugPDO.php": "a3e3ab953fd1321eb4eddd4b812bdbec11fcc5e97067602704c73e2a279d80e5"
+    },
+    "candidate": {
+      "alpha/apps/kaltura/lib/db/KalturaPDO.php": "2c4e638080c9dfaefaab566125b5138bb8fe188e015753ed33321884a474bd51",
+      "vendor/propel/util/PropelPDO.php": "b9b6043c290e346e90a36d543fbac7a6366fbe3def5668a9d3711d40593278e1",
+      "vendor/propel/util/PropelConfiguration.php": "2cb726b768ac9329dc20e1c1295e20cae2dd2877e61785e3d429b4c186827ab6",
+      "api_v3/lib/exceptions/KalturaAPIException.php": "3c342574b392197e24fe285dc238239fac1bccb33bb808569e09b038ed9eec6e",
+      "vendor/propel/util/DebugPDO.php": "8f800a0146345f05a71950e3785e442d4aee351184309246cb28159a2afe2ea0",
+      "vendor/propel/adapter/MSSQL/MssqlPropelPDO.php": "22454680c12ef66b48787ce6c9f34b85ab078db2f9f967cb379af2c15ff37733",
+      "vendor/propel/adapter/MSSQL/MssqlDebugPDO.php": "a3e3ab953fd1321eb4eddd4b812bdbec11fcc5e97067602704c73e2a279d80e5"
+    }
+  },
+  "composition_commutes": true,
+  "no_artifact_promotion": true,
+  "scope": "Full seven class files as overlays over unchanged full exp12 source. Three cohorts: untouched exp12 expected DebugPDO load failure; v3-only prerequisite; v3 plus family. MSSQL source unchanged."
+}
