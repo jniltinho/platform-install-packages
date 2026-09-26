@@ -69,3 +69,43 @@ known cross-engine layout failure. Selection/build still require explicit approv
 No artifact has been created by this draft. Additional negative tests and exact
 message assertions remain coverage improvements noted by the reviewer; no guard
 failure was observed. The test suite deliberately requires the pinned local ZIP.
+
+## Authorized lab-only selection and reproducible artifact
+
+The coordinator explicitly approved a separate selected manifest after the reviewed
+65-target input and independently repeated Criteria/DEBUG bounded evidence. The
+frozen drafts are unchanged. [Selected manifest](evidence/exp12-candidate/selected-manifest.json)
+records the exact authorized metadata transition, deliberate hierarchy-wide Criteria
+exemption and retained strict cache-layout FAIL. It authorizes neither production,
+publication, packages nor artifact runtime acceptance.
+
+Actual Claude prebuild review executed25 tests and8 checksum checks, reviewed the
+fresh stager and unchanged generic builder/verifier, and found no blocking defect.
+Both fresh builds and actual verification completed exit0:
+
+- Artifact: `platform-install-packages-php83-artifacts/exp12/Rigel-18.20.0-php83-experimental.exp12.zip`
+- Repeat: same filename under `exp12-repeat/`.
+- Both SHA256: `de5e61a1b54f472e605ef2e87669302a3915616fd85378e0f05706fcb06a7e8b`.
+- [Verification](evidence/exp12-candidate/verification.json):65 changed source files
+  against pinned original, reproducible ZIP bytes and exact selected metadata.
+- [Delta](evidence/exp12-candidate/delta.json): exactly3 changed source files versus
+  exp11 (Criteria, pakeApp, sfPakeGenerator),62 prior targets unchanged. Three patch
+  metadata additions, one superseded Criteria metadata removal and changed manifest;
+  every other shared entry retains identical bytes.
+- Original ZIP and every prior artifact listed before the build retain their hashes.
+
+The selected manifest's inherited `zip_built:false` describes its prebuild
+provenance; actual build result is recorded here and in verification evidence.
+Artifact syntax/API/CLI/additions and generator/Criteria regressions remain pending.
+This is an experimental source artifact, **not a release**.
+
+Reproduce with fresh paths only:
+
+```sh
+python3 tools/php83/exp12-candidate/selected.py --original ORIGINAL.zip --output NEW_STAGE
+python3 tools/php83/build-experimental-zip.py ORIGINAL.zip NEW_ARTIFACT_DIR --patch-dir NEW_STAGE
+python3 tools/php83/build-experimental-zip.py ORIGINAL.zip NEW_REPEAT_DIR --patch-dir NEW_STAGE
+python3 tools/php83/verify-experimental-zip.py ORIGINAL.zip EXP12.zip EXP12_REPEAT.zip \
+  doc/php83/evidence/exp12-candidate/selected-manifest.json NEW_VERIFICATION.json
+python3 tools/php83/exp12-candidate/delta.py EXP11.zip EXP12.zip NEW_DELTA.json
+```
