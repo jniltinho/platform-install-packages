@@ -1,4 +1,20 @@
-# exp12 cumulative draft — not selected or built
+# exp12 experimental candidate — current checkpoint
+
+Exp12 has been selected for lab-only experiments and built twice with identical
+SHA-256 `de5e61a1b54f472e605ef2e87669302a3915616fd85378e0f05706fcb06a7e8b`.
+The [selected manifest](evidence/exp12-candidate/selected-manifest.json) has SHA-256
+`593ff6e826978c09704cf89f8cdf099452efdcf74a4c058bc88ee57ca16e74d6`.
+[Whole-artifact compilation](exp12-syntax.md) and
+[bounded runtime regression](evidence/exp12-runtime/README.md) now have independent
+repetitions. Seven compiler rejections and 17 API diagnostic groups / 371 events
+remain. This is not an installable release, full application acceptance or
+production integration approval. Later held XML/PDO repairs are not part of exp12.
+
+The draft/preflight history below records earlier states; its statements that
+an artifact did not yet exist apply to that historical phase, not this checkpoint.
+[Test status](test-status.md) is the current cross-case evidence board.
+
+## Historical cumulative draft — initially not selected or built
 
 Status: **DRAFT_PENDING_CRITERIA_COMPOSITION_NOT_SELECTED**.
 No exp12 ZIP, VM execution, package selection or publication is authorized by this

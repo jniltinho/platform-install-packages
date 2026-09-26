@@ -460,3 +460,15 @@ byte-identically under actual OpenCode; they are not 909 active entrypoints.
 [Diagnostic families](exp12-diagnostic-families.md) organizes the remaining
 17 groups / 371 events; unimplemented families and inheritance constraints stay
 open. No original task or detailed acceptance checkbox closes from this work.
+
+## Held return-contract batch
+
+[Return contracts](return-contracts.md) records 11 native declarations and three
+narrowly justified transaction attributes, with DebugPDO query v3 an explicit
+prerequisite. The nine-process native primary confirms class loading and bounded
+configuration/wakeup behavior, with four unrelated hierarchy warnings retained.
+26 local tests and an actual OpenCode preparation review passed. The attempted
+independent native repeat was **NOT_EXECUTED** after a permission denial reading
+its external staging identities; no alternative tool retried that denied action.
+Real SQL/API parity and independent runtime repetition remain open. This batch
+is held, not selected into exp12 or accepted for release.
