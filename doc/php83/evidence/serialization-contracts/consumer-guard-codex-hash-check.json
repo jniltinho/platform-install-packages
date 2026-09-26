@@ -1,0 +1,29 @@
+{
+  "scope": "Six local current/historical file identities only; not native execution",
+  "checks": [
+    {
+      "path": "tools/php83/serialization-contracts/collect-r2.py",
+      "match": true
+    },
+    {
+      "path": "tools/php83/serialization-contracts/report_contract.py",
+      "match": true
+    },
+    {
+      "path": "tools/php83/serialization-contracts/test_report_contract.py",
+      "match": true
+    },
+    {
+      "path": "doc/php83/evidence/serialization-contracts/attempts/consumer-guard-r1/collect-r2.py",
+      "match": true
+    },
+    {
+      "path": "doc/php83/evidence/serialization-contracts/attempts/consumer-guard-r1/report_contract.py",
+      "match": true
+    },
+    {
+      "path": "doc/php83/evidence/serialization-contracts/attempts/consumer-guard-r1/test_report_contract.py",
+      "match": true
+    }
+  ]
+}

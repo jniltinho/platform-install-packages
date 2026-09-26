@@ -2,7 +2,6 @@
 """Record complete R2 wire/cache observations. Contract acceptance is a separate gate."""
 import json,subprocess,sys,hashlib,base64
 from pathlib import Path
-import report_contract
 from report_contract import check_prior74
 KINDS=['plain','null','decorator','role','profile','cacheable'];OPS=['roundtrip','malformed','invalid-utf8'];CACHE=['hit','expired','malformed','refresh-hit','refresh-miss','invalid-utf8','read-C','read-O']
 TARGETS={k:'vendor/aws/Aws/Common/Credentials/'+n+'.php' for k,n in [('plain','Credentials'),('null','NullCredentials'),('decorator','AbstractCredentialsDecorator'),('profile','RefreshableInstanceProfileCredentials'),('cacheable','CacheableCredentials')]};TARGETS.update({'role':'infra/storage/RefreshableRole.class.php','cache':'vendor/aws/Doctrine/Common/Cache/FileCache.php'})
@@ -20,16 +19,8 @@ def wiredata(w):
  raw=base64.b64decode(w['base64'],validate=True)
  if hashlib.sha256(raw).hexdigest()!=w['sha256'] or raw[:1].decode()!=w['format']:raise ValueError('wire mismatch')
  return w['base64']
-def collector_identity():
- root=Path(__file__).resolve().parent
- module=Path(report_contract.__file__).resolve()
- if module!=root/'report_contract.py':raise ValueError('Unexpected report-contract module path')
- files={'collect-r2.py':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
-        'report_contract.py':hashlib.sha256(module.read_bytes()).hexdigest()}
- digest=hashlib.sha256(json.dumps(files,sort_keys=True,separators=(',', ':')).encode()).hexdigest()
- return {'schema':1,'files':files,'sha256':digest}
-def prior74_wires(prior, manifest_pin, manifest, identity):
- check_prior74(prior,manifest_pin,identity)
+def prior74_wires(prior, manifest_pin, manifest):
+ check_prior74(prior,manifest_pin)
  wires={}
  for r in prior['records']:
   b=validate(r,'74',manifest)
@@ -37,21 +28,15 @@ def prior74_wires(prior, manifest_pin, manifest, identity):
    wires[r['kind']]=b['result']['wire'];wiredata(wires[r['kind']])
  if set(wires)!=set(KINDS):raise ValueError('Incomplete original74 wire producers')
  return wires
-def consume_prior74_bytes(raw, manifest_pin, manifest, identity):
- if type(raw) is not bytes:raise ValueError('Original74 input must be exact file bytes')
- prior=json.loads(raw)
- wires=prior74_wires(prior,manifest_pin,manifest,identity)
- return wires,{'sha256':hashlib.sha256(raw).hexdigest(),'bytes':len(raw),
-               'collector_closure_sha256':identity['sha256']}
 if __name__=='__main__':
  mode=sys.argv[1];out=Path(sys.argv[2]);assert mode in ['74','83'] and not out.exists()
  evidence=Path('doc/php83/evidence/serialization-contracts');meta=json.loads((evidence/'r2-stage-pin.json').read_text());manifest=json.loads((evidence/'r2-stage-identities.json').read_text());reference=json.loads((evidence/'r2-reference-wires.json').read_text());records=[];wires={};errors=[]
  if hashlib.sha256((evidence/'r2-reference-wires.json').read_bytes()).hexdigest()!=manifest['files']['reference-wires.json']:raise ValueError('Reference drift')
  variants=['original'] if mode=='74' else ['original','candidate'];cachevariants=['original'] if mode=='74' else ['original','cachefix','candidate']
- identity=collector_identity();old74={};input_report74=None
+ old74={}
  if mode=='83':
-  raw=Path(sys.argv[3]).read_bytes()
-  old74,input_report74=consume_prior74_bytes(raw,meta['manifest_sha256'],manifest,identity)
+  p=Path(sys.argv[3]);prior=json.loads(p.read_text())
+  old74=prior74_wires(prior,meta['manifest_sha256'],manifest)
  def run(variant,kind,op,payload='',writer=None):
   conf='/tmp/kaltura-php'+mode+'-ssh.conf';alias='baseline74' if mode=='74' else 'php83'
   command=['ssh','-T','-F',conf,alias,'bash '+meta['remote_stage']+'/run.sh '+variant+' '+kind+' '+op+' '+meta['manifest_sha256']]
@@ -78,6 +63,5 @@ if __name__=='__main__':
    run(variant,'cache',case,payload,'recorded83-C' if case=='read-C' else 'recorded83-O' if case=='read-O' else None)
  expected=38 if mode=='74' else 96
  if len(records)!=expected:errors.append({'error':'incomplete matrix','expected':expected,'actual':len(records)})
- if collector_identity()!=identity:raise ValueError('Collector closure changed during observation')
- report={'status':'OBSERVED_NOT_ACCEPTED' if not errors else 'INCOMPLETE_OR_EXECUTION_FAILED','application_acceptance':False,'mode':mode,'collector_sha256':identity['files']['collect-r2.py'],'collector_closure':identity,'input_report74':input_report74,'stage_manifest_sha256':meta['manifest_sha256'],'records':records,'errors':errors}
+ report={'status':'OBSERVED_NOT_ACCEPTED' if not errors else 'INCOMPLETE_OR_EXECUTION_FAILED','application_acceptance':False,'mode':mode,'collector_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'stage_manifest_sha256':meta['manifest_sha256'],'records':records,'errors':errors}
  out.write_text(json.dumps(report,indent=2)+'\n');print(json.dumps({'status':report['status'],'records':len(records),'errors':len(errors)}));sys.exit(bool(errors))

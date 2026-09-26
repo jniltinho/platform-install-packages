@@ -1,0 +1,28 @@
+{
+  "status": "PREPARED_ONLY_COLLECTOR_REVIEW_REQUIRED",
+  "scope": "Exact original74 prior-report consumption only; no candidate source/patch/stage changes",
+  "tests": {
+    "command": "python3 tools/php83/serialization-contracts/test_report_contract.py -v",
+    "exit": 0,
+    "count": 24,
+    "kind": "authorial synthetic repository-local; no PHP/SSH/archive/stage reads"
+  },
+  "current_sha256": {
+    "tools/php83/serialization-contracts/collect-r2.py": "f2a2af435f71b6d03d4f3b5f12155e0fe70b74fd4baa3a66182617e153fd43ba",
+    "tools/php83/serialization-contracts/report_contract.py": "ec4f6b81f737ee7e2e8efe558f3005a9c08f0b1888e929ff18c05ed9fa73a658",
+    "tools/php83/serialization-contracts/test_report_contract.py": "3d5043ec42f6f959fee8d8959058d566e4d51c5f7b445d1c718b7264ee932d20"
+  },
+  "historical_collector_sha256": "62c1eac733660f437066b7a717c26cce66ce647354b6c45c397ea5bb2744ed5c",
+  "historical_stage_pin": "21dd343d4388803467e8f36488d4e2c25ed415e6f6c848a41460ebfea34aac26",
+  "historical_stage_validation": "STALE for revised collector. Do not execute dependent probes with the old phase/pin; new reviewed identity phase and explicit permissions required. Old stage bytes remain preserved, not silently rewritten.",
+  "runtime_execution": false,
+  "independent_execution": false,
+  "permission_blocks_unchanged": true,
+  "patches_sha256": {
+    "patches/php83/held/serialization-contracts/AbstractCredentialsDecorator.patch": "923f125095643e09f63dba1a9c9eba2520f00b06ca3465672458bd6a1e7a966c",
+    "patches/php83/held/serialization-contracts/Credentials.patch": "f2b27b8552951a920b894c2544e2990130f5ae4bea64546171cd4663f3b320a0",
+    "patches/php83/held/serialization-contracts/FileCache.patch": "c3978a6707cad4c8e9a08c2cc24e0b4f626fef544e15ac17bf98efb48b79c2da",
+    "patches/php83/held/serialization-contracts/NullCredentials.patch": "349fc9bb5e8d29765b904e8c7ef853e5fddc8a5a024da4baff0c1370048920be",
+    "patches/php83/held/serialization-contracts/manifest.json": "7f20c73925111fe7219d138601dc130c87f3b51e2e6e386278f4bfe933cfc3bc"
+  }
+}

@@ -88,6 +88,13 @@ supporting results, and there is still no final release or production cutover.
   and recovery policy remain pending. No accepted warning reduction or new ZIP
   follows from this rejected experiment. [Evidence](serialization-contracts.md).
 
+The subsequent repository-local report-consumer repair now checks all38 baseline
+records, binds collector/module identities and records the exact consumed input
+hash. Actual Claude completed two source-only reviews; the second approved the
+two provenance fixes. Codex cross-checked34 synthetic tests and six file hashes.
+This is harness integrity only: native R2 remains unexecuted and old stage
+validation remains stale. See [serialization evidence](serialization-contracts.md).
+
 ### Current execution restrictions
 
 The subsequent dispatcher repeat/PHP74 attempt did not execute PHP: Claude hit

@@ -1,0 +1,13 @@
+Perform a READ-ONLY independent review of this newly revised repository-local Python report consumer. Do not edit files, run shell commands/tests, read /tmp, access SSH/VMs, archives, secrets, or network. Only use Read on the exact public files below in the current repository. No native execution or release acceptance is authorized. Prior denied operations MUST NOT be attempted or circumvented.
+
+Repository /home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83
+Read:
+- tools/php83/serialization-contracts/collect-r2.py
+- tools/php83/serialization-contracts/report_contract.py
+- tools/php83/serialization-contracts/test_report_contract.py
+- doc/php83/evidence/serialization-contracts/attempts/consumer-guard/collect-r2-before.py
+- doc/php83/evidence/serialization-contracts/consumer-guard-phase.json
+- doc/php83/serialization-contracts.md
+
+Question: Does the change correctly reject incomplete, duplicate, reordered, wrong-variant/writer, noninteger-exit, mismatched-pin or malformed original74 reports before consuming recorded wires? Are documentation claims bounded to report integrity, not PHP/application/rollback acceptance? The author executed 24 new synthetic tests; you must NOT claim to have run tests. Identify concrete blockers or limitations with exact lines. Do not invent new acceptance scope. Original stage/regression validation is marked STALE and no native retry will occur before authorization and fresh reviewed identities.
+Return a concise final review: verdict, concrete defects with examples, nonblocking limitations, files reviewed, and 'tests not executed; source review only'.

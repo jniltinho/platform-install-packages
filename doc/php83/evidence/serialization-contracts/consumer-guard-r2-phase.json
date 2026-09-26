@@ -1,0 +1,28 @@
+{
+  "status": "PREPARED_ONLY_CLOSURE_REVIEW_REQUIRED",
+  "collector_closure": {
+    "schema": 1,
+    "files": {
+      "collect-r2.py": "c0a071a1092d5afdf122e450deffc9bb7623136f28da4b3513a7c1b766d9a263",
+      "report_contract.py": "edb330863f82d866559cdf296848c5dd98b3e79ceb59e79b9a369dbbacf7b7bb"
+    },
+    "sha256": "a05e7a1a6a8a53f07f537558ae2b91fb2002abf18e60d473ef6dbe051e3e0ecc"
+  },
+  "test_file_sha256": "c952c6a4fd925f63517666f3cab27f7b8d0af7a159de3e3bf477e9d9bb6a2049",
+  "tests": {
+    "command": "python3 tools/php83/serialization-contracts/test_report_contract.py -v",
+    "count": 34,
+    "exit": 0,
+    "kind": "authorial synthetic repository-local only"
+  },
+  "historical_files": {
+    "doc/php83/evidence/serialization-contracts/attempts/consumer-guard-r1/collect-r2.py": "f2a2af435f71b6d03d4f3b5f12155e0fe70b74fd4baa3a66182617e153fd43ba",
+    "doc/php83/evidence/serialization-contracts/attempts/consumer-guard-r1/report_contract.py": "ec4f6b81f737ee7e2e8efe558f3005a9c08f0b1888e929ff18c05ed9fa73a658",
+    "doc/php83/evidence/serialization-contracts/attempts/consumer-guard-r1/test_report_contract.py": "3d5043ec42f6f959fee8d8959058d566e4d51c5f7b445d1c718b7264ee932d20"
+  },
+  "native_execution": false,
+  "independent_tests": false,
+  "stage_regression_state": "STALE; fresh reviewed phase and explicit permission required; do not execute old stage/pin as approval",
+  "wire_hash_scope": "Internal consistency only, not authenticity or proof of a native producer",
+  "legacy_report_policy": "No collector_closure or a changed closure is rejected; old reports remain historical, never silently upgraded"
+}

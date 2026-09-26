@@ -1,0 +1,10 @@
+Perform a focused READ-ONLY independent final source review. English response. Only use Read on these exact public repository files; do not edit/run commands/tests, access /tmp, SSH, VMs, archives, secrets or network. No denied operation may be retried or bypassed.
+Repository: /home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83
+Files:
+- tools/php83/serialization-contracts/collect-r2.py
+- tools/php83/serialization-contracts/report_contract.py
+- tools/php83/serialization-contracts/test_report_contract.py
+- doc/php83/evidence/serialization-contracts/consumer-guard-r2-phase.json
+- doc/php83/serialization-contracts.md
+Prior Claude review found two defects in the new exact38-record report consumer: collector_sha256 did not attest imported report_contract.py, and prior74 report provenance/raw file hash was not bound into native83 output. Codex now adds collector_closure individual hashes+canonical digest, rejects prior reports missing/mismatching closure, reads prior bytes once and records SHA/size of those bytes; author reports34 synthetic tests, not independently run.
+Review whether those two defects are correctly fixed and whether the changed control flow introduces a concrete defect. Distinguish source-review approval from execution. Legacy R1 reports/patches and stale stage identities must remain historical; no runtime/rollback/release acceptance. Wire hashes only attest internal consistency, not authenticity. Do not reframe deferred C/O/native semantics as passing. Return verdict, concrete blockers if any with examples/lines, bounded limitations, files actually read. Explicitly state tests not executed; source review only.

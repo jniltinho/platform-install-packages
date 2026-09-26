@@ -222,3 +222,107 @@ separately as `r2-final-author-tests.*` and `r2-final-shell.*`. It is **not** a
 substitute for, authorization of, or independent validation of the denied
 OpenCode operation. No further tests or runtime operations were attempted after
 the coordinator's final freeze instruction.
+
+## Repository-local follow-up: exact original74 report consumption
+
+This follow-up changes **no candidate/held patch bytes**. Two Cursor concerns do
+not justify a product alteration in the bounded six-class contract: the retained
+native Exception message intentionally matches observed false-return failure;
+null-returning external subclasses remain unsupported, not silently compatible.
+A redundant guard in unextended NullCredentials is harmless and keeps inherited
+behavior explicit. Original83 cache failure at namespace/implode is an intentional
+negative control; **cachefix-only** separates it from UTF-8 save behavior. Neither
+case is proof of acceptance, and malformed/custom subclass support is not widened.
+
+A real collector defect was corrected: the original74 input was previously
+accepted based on mode/status/count plus six producer bodies, leaving the other
+32 rows unchecked. The revised consumer requires the **exact ordered 38-case
+inventory**, original-only variant, correct writer labels, strict integer exit0,
+string stdout/stderr, false boolean application acceptance, empty errors and
+matching stage pin. It now validates source/probe/runtime/diagnostic shape for
+**all38** bodies before importing the six hash-checked producer wires. This is
+report-integrity validation, not semantic acceptance of any diagnostic or cache
+result. The native83 matrix and candidate implementations are unchanged.
+
+Twenty-four **new synthetic repository-local** tests passed authorially; they
+neither execute the previously denied test operation nor access PHP, stages,
+archives, SSH or `/tmp`. Synthetic payloads are explicitly not native PHP wire
+proof. The historical collector is preserved under
+`evidence/serialization-contracts/attempts/consumer-guard/collect-r2-before.py`.
+[Phase identities](evidence/serialization-contracts/consumer-guard-phase.json)
+record old/new hashes and patch identities. **Previous R2 stage/regression
+validation is stale for this collector revision**: no dependent probe may be run
+with the old phase/pin as approval. Fresh reviewed identities plus explicit
+permission for blocked operations are required; no stage bytes were rewritten.
+
+Review inputs for the coordinator's actual Claude read-only review:
+`collect-r2.py`, `report_contract.py`, `test_report_contract.py`, the preserved
+historical collector, `consumer-guard-phase.json`, and this section. The only
+local test command for this follow-up is:
+
+```sh
+python3 tools/php83/serialization-contracts/test_report_contract.py -v
+```
+
+Do not run the prior denied tests, stage preparers, VM collectors or read SSH
+configuration as part of this review. No independent pass/runtime claim exists
+for this new collector batch. Existing R1 rejection, R2 PREPARED_ONLY status and
+cache rollback/release gates remain unchanged.
+
+### Collector closure and consumed-input identity follow-up
+
+The coordinator's actual Claude read-only review identified two remaining
+integrity gaps; both are addressed locally, without changing candidate patches,
+stages or native evidence. New reports identify the exact two-file collector
+closure (`collect-r2.py` and imported `report_contract.py`), each file SHA-256 and
+a SHA-256 over the canonical filename/hash map. The imported module must resolve
+to the expected sibling file. The closure is checked again before report output.
+The historical single-file `collector_sha256` is retained but is not sufficient:
+prior74 must carry the matching complete closure and matching single-file field.
+Legacy reports lacking the closure are rejected, not silently upgraded.
+
+The native83 path now reads the prior74 report **once as bytes**, validates that
+same buffer and records its SHA-256 and byte length under `input_report74` in the
+new83 report. Equivalent JSON with different whitespace has a different recorded
+input hash. This ties output provenance to the actual consumed bytes, not a later
+re-read or a normalized JSON serialization. No new native74/83 report exists yet.
+
+There are now34 authorial synthetic tests, including changed/missing collector
+or module pins, boolean-vs-integer schema, extra closure files and exact raw-input
+hashing. These tests access only repository-local code and synthetic values; they
+are not the denied prior test operation, PHP execution or independent validation.
+Previous collector/module/tests are preserved in `attempts/consumer-guard-r1/`.
+Current identities are in `consumer-guard-r2-phase.json`; the existing R2
+stage/regression approval remains **STALE**, not refreshed by these tests.
+
+“Hash-checked wires” means **internal base64/format/digest consistency only**.
+A self-consistent fabricated record can pass such consistency checks; hashes are
+not authenticity signatures and do not establish native execution. Authentic
+producer provenance still requires the authorized recorded native runs and real
+independent repetition. C/O semantic compatibility and all earlier permissions,
+cache isolation, rollback and release gates remain unresolved. No application
+or independent-runtime pass is asserted for this collector revision.
+
+### Actual final Claude review and coordinator cross-check
+
+After the previously reported quota reset, actual Claude CLI completed two
+read-only reviews (both exit0). R1 identified the two provenance gaps above;
+R2 approved those fixes with no source-review blocker. Five public files were
+read in R2; no tests, native PHP, VM, SSH, archive or network operation ran in
+Claude. Original public reviews and prompts are preserved as
+`claude-consumer-guard-r{1,2}-*`. No denied operation was retried.
+
+The coordinator separately ran the **new** repository-local
+`test_report_contract.py`:34 synthetic tests passed, and six current/historical
+file hashes matched the frozen phase. This is not the previously denied
+`test_r2.py` operation, native execution, or a claim that Claude executed tests.
+Do not sum the earlier24 and current34 into58 distinct tests. Earlier phase
+JSONs keep their original review/execution states rather than being rewritten.
+
+Residual limits remain explicit: no report authenticity guarantee; C/O semantics,
+read-input lineage and commands are not accepted by these envelope tests; a missing
+writer key is treated as null. The reviewer also noted an existing native-collector
+evidence-retention gap for unexpected JSON shapes/exceptions, to address before
+real execution. No real phase has been run and old stage validation stays STALE.
+Lab access/privacy-policy confirmations and all application/release gates remain
+pending. No source patch, package, production state or task checkbox changed.

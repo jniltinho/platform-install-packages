@@ -1,0 +1,102 @@
+{
+  "executor": "actual Claude CLI",
+  "exit": 0,
+  "scope": "Read-only source review; tests/native/SSH/archive operations not executed",
+  "raw_sha256": "7256028ae0624c528860069633bc3fde2ae42010dc15f4e43dfc1cf98ff547ab",
+  "tools": [
+    {
+      "type": "tool_use",
+      "id": "toolu_01TA4jPmey9365wCmrVeYiwm",
+      "name": "Read",
+      "input": {
+        "file_path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/serialization-contracts/report_contract.py"
+      }
+    },
+    {
+      "type": "tool_use",
+      "id": "toolu_01H3tQmGtiex9aUkv7PCgawg",
+      "name": "Read",
+      "input": {
+        "file_path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/serialization-contracts/collect-r2.py"
+      }
+    },
+    {
+      "type": "tool_result",
+      "tool_use_id": "toolu_01TA4jPmey9365wCmrVeYiwm",
+      "is_error": false,
+      "content_bytes": 2384,
+      "content_sha256": "690a13d6e4f6a707b0f92910592f386ad2551b7788ddf9210c64bd1065e5405c"
+    },
+    {
+      "type": "tool_use",
+      "id": "toolu_01WZbC8wxMEejaRSiqafy6ne",
+      "name": "Read",
+      "input": {
+        "file_path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/serialization-contracts/test_report_contract.py"
+      }
+    },
+    {
+      "type": "tool_use",
+      "id": "toolu_014i7KUcZFswXhXcbiHEgFYH",
+      "name": "Read",
+      "input": {
+        "file_path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/serialization-contracts/consumer-guard-phase.json"
+      }
+    },
+    {
+      "type": "tool_result",
+      "tool_use_id": "toolu_01H3tQmGtiex9aUkv7PCgawg",
+      "is_error": false,
+      "content_bytes": 5748,
+      "content_sha256": "b17d90fa29f051ce26914007958d9f067f3b8147b65f44d08ddb9f74767befbc"
+    },
+    {
+      "type": "tool_result",
+      "tool_use_id": "toolu_01WZbC8wxMEejaRSiqafy6ne",
+      "is_error": false,
+      "content_bytes": 5879,
+      "content_sha256": "3a23db1a7f9206b022de5b38c6f0b6bb5b1ef7e3040f7d7b35c42db1048f0e8a"
+    },
+    {
+      "type": "tool_result",
+      "tool_use_id": "toolu_014i7KUcZFswXhXcbiHEgFYH",
+      "is_error": false,
+      "content_bytes": 2272,
+      "content_sha256": "916392f3bcc41a106ee684fb052927c94a5150dbefcb2811a0d969e28245b757"
+    },
+    {
+      "type": "tool_use",
+      "id": "toolu_0166L1R1Y9v34QDScEPad4T7",
+      "name": "Read",
+      "input": {
+        "file_path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/serialization-contracts/attempts/consumer-guard/collect-r2-before.py"
+      }
+    },
+    {
+      "type": "tool_use",
+      "id": "toolu_013tgGXbPArHiBKP3erqrPb6",
+      "name": "Read",
+      "input": {
+        "file_path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/serialization-contracts.md"
+      }
+    },
+    {
+      "type": "tool_result",
+      "tool_use_id": "toolu_0166L1R1Y9v34QDScEPad4T7",
+      "is_error": false,
+      "content_bytes": 5624,
+      "content_sha256": "f961591be3d251a42c34f88128907593eb815e807e92dd9aa8ebb6b9d151d0b2"
+    },
+    {
+      "type": "tool_result",
+      "tool_use_id": "toolu_013tgGXbPArHiBKP3erqrPb6",
+      "is_error": false,
+      "content_bytes": 18828,
+      "content_sha256": "4572028b3ec51b9c2683b8b90887a54e3dd0755432c54d45579827c381a85fbf"
+    }
+  ],
+  "result": {
+    "is_error": false,
+    "result": "# Revisão independente somente leitura: consumidor do relatório original74\n\n## Veredito\n\n**Aprovo com ressalvas, dentro do escopo de integridade do relatório.** Não encontrei defeito que deixe o consumidor aceitar os casos perguntados antes de importar os wires gravados:\n\n| Caso | Onde é rejeitado |\n|---|---|\n| Relatório incompleto, com linha extra, duplicado ou reordenado | comparação exata e ordenada `actual != expected_keys74()` (`report_contract.py:32`) |\n| Variant ou writer errado | a mesma comparação, porque a chave inclui `variant` e `writer` (`report_contract.py:24`) |\n| Tipos de chave inválidos | `report_contract.py:25` |\n| Exit não inteiro, bool ou diferente de 0 | `type(...) is not int or != 0` (`report_contract.py:28`) |\n| stdout ou stderr ausente ou com tipo errado | `report_contract.py:30` |\n| Pin divergente, `mode`/`status` errados, `application_acceptance` diferente de `False`, `errors` não vazio ou ausente | `report_contract.py:39-41` |\n| Corpo JSON malformado ou divergente | `validate()` em **todas** as 38 linhas (`collect-r2.py:25-26`) |\n\nA ordem esperada em `report_contract.py:7-14` corresponde ao que o próprio coletor gera no modo 74 (`collect-r2.py:46-63`): 18 roundtrip/malformed/invalid-utf8, depois 12 leituras original83/candidate83, depois 8 casos de cache. `old74` só é atribuído quando a função retorna (`collect-r2.py:39`), então qualquer exceção interrompe antes do consumo. Isso corrige o defeito real da versão anterior, que só olhava `mode`, `status` e contagem (`collect-r2-before.py:29-32`) e deixava 32 linhas sem verificação.\n\n## Defeitos concretos (corrigir antes da nova fase de identidades revisadas)\n\n1. **A identidade do coletor não cobre o módulo importado.** `collect-r2.py:66` grava `collector_sha256` apenas de `collect-r2.py`, mas a lógica de rejeição agora está em `report_contract.py`, importado em `collect-r2.py:5`.\n   - **Exemplo:** alterar `report_contract.py` (por exemplo, afrouxar a linha 32) produz relatórios com o mesmo `collector_sha256`.\n   - **Mitigação atual:** `consumer-guard-phase.json:12` registra o hash à parte, mas o relatório gerado não o registra.\n\n2. **O relatório original74 não fica amarrado à sua proveniência.**\n   - `check_prior74` não verifica o `collector_sha256` do relatório anterior. Um relatório gerado pelo coletor histórico `62c1…` (ou sem esse campo) é aceito.\n   - O arquivo `sys.argv[3]` (`collect-r2.py:38`) não tem hash conferido nem registrado no relatório 83.\n   - **Exemplo:** as leituras rotuladas `original74` no relatório 83 só podem ser rastreadas indiretamente, por `input_sha256`.\n\n## Limitações não bloqueantes\n\n- **\"Hash-checked\" significa apenas consistência interna.** `wiredata` (`collect-r2.py:18-21`) compara o sha256 com o valor que vem do mesmo corpo. Não há âncora externa. A frase \"hash-checked producer wires\" (`serialization-contracts.md:243-244`) deveria dizer \"internamente consistente\".\n- **O formato C não é exigido para original74.** `wiredata` apenas confere que o primeiro byte bate com o `format` declarado. Um wire `O` do 7.4 seria importado. Isso é semântico, não de integridade, mas a doc afirma \"six real C payloads\" (`:165`).\n- **Nas linhas de leitura, `input_sha256` e `command` não são verificados** contra os wires de referência nem contra o pin.\n- **Diferenças menores de parsing:**\n  - `writer` ausente é tratado como `None` explícito (`row.get`, `:24`).\n  - Campos extras e chaves JSON duplicadas (vence a última) não são rejeitados.\n- **Erros fora do tipo esperado.** Um `runtime` não string gera `AttributeError` em `collect-r2.py:11`. No consumo isso falha fechado. No `run()` do modo 83 (`:45`), porém, derruba o coletor sem gravar relatório. Isso já existia antes desta mudança.\n- **`manifest` não é conferido contra `meta['manifest_sha256']` dentro do coletor** (`:33`). Também já existia.\n- **Lacunas nos testes (`test_report_contract.py`):**\n  - `reject()` aceita `ValueError`, `KeyError` e `TypeError` sem conferir a mensagem, então um teste pode passar por um motivo não intencional.\n  - Faltam casos para: `records` que não é lista, registro que não é dict, `writer` com tipo inválido, stdout que não é string, `errors` ausente, `format` divergente, `wire` ausente e wire `O` em original74.\n  - Os payloads são sintéticos (`:27`), como a doc reconhece.\n- **Hashes da fase não conferidos.** Não recalculei os hashes de `consumer-guard-phase.json`, porque isso exigiria executar algo.\n\n## Limites da documentação\n\nAs afirmações estão limitadas adequadamente:\n\n- `:243-245` diz \"report-integrity validation, not semantic acceptance\".\n- `:253-256` marca a validação anterior de stage e regressão como STALE.\n- `:269-270` mantém R1 rejeitado, R2 como PREPARED_ONLY e os gates de cache, rollback e release.\n- `consumer-guard-phase.json:18-19` registra `runtime_execution: false` e `independent_execution: false`.\n\nNada afirma aceitação de PHP, da aplicação ou de rollback. A única ressalva é a formulação \"hash-checked\" citada acima.\n\n## Arquivos revisados\n\n- `tools/php83/serialization-contracts/collect-r2.py`\n- `tools/php83/serialization-contracts/report_contract.py`\n- `tools/php83/serialization-contracts/test_report_contract.py`\n- `doc/php83/evidence/serialization-contracts/attempts/consumer-guard/collect-r2-before.py`\n- `doc/php83/evidence/serialization-contracts/consumer-guard-phase.json`\n- `doc/php83/serialization-contracts.md`\n\n**Tests not executed; source review only.** Contei 24 métodos de teste, o que confere com o total declarado, mas não posso confirmar que passam. Não executei nada nativo nem acessei `/tmp`, SSH, VMs, arquivos compactados ou a rede, e não repeti nenhuma operação negada. Esta revisão não é evidência de execução nem aceitação de release."
+  }
+}

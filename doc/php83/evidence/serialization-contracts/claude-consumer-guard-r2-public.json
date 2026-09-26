@@ -1,0 +1,87 @@
+{
+  "executor": "actual Claude CLI",
+  "exit": 0,
+  "scope": "Source review only, no tests or native/SSH/archive operations",
+  "raw_sha256": "019f07ca4b3ced73e553177a1d30d5c319f2f26e103a2a279b7b64e9b5b312ec",
+  "tools": [
+    {
+      "type": "tool_use",
+      "id": "toolu_01X4GZeXwJLjD9xmGuAgHMvB",
+      "name": "Read",
+      "input": {
+        "file_path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/serialization-contracts/report_contract.py"
+      }
+    },
+    {
+      "type": "tool_use",
+      "id": "toolu_01WYteoEYUXN24gjA1WsECko",
+      "name": "Read",
+      "input": {
+        "file_path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/serialization-contracts/collect-r2.py"
+      }
+    },
+    {
+      "type": "tool_result",
+      "tool_use_id": "toolu_01X4GZeXwJLjD9xmGuAgHMvB",
+      "is_error": false,
+      "content_bytes": 2796,
+      "content_sha256": "2216780591e63cd11c424f68d3fbdc9e5b08c99d2a50c1938f4059ad709674a8"
+    },
+    {
+      "type": "tool_use",
+      "id": "toolu_01G4PXDLEhTBLLeMaHaUwGx5",
+      "name": "Read",
+      "input": {
+        "file_path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/serialization-contracts/test_report_contract.py"
+      }
+    },
+    {
+      "type": "tool_result",
+      "tool_use_id": "toolu_01WYteoEYUXN24gjA1WsECko",
+      "is_error": false,
+      "content_bytes": 6966,
+      "content_sha256": "e5b7eeef7d1d63ba6038519dc84c51253481afea8be225e750c36f9160a6ce08"
+    },
+    {
+      "type": "tool_use",
+      "id": "toolu_01Mrz4GrhTxqRUpcdC176pAU",
+      "name": "Read",
+      "input": {
+        "file_path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/serialization-contracts/consumer-guard-r2-phase.json"
+      }
+    },
+    {
+      "type": "tool_use",
+      "id": "toolu_01KHXGDdCiH2CzKvN15TXaEw",
+      "name": "Read",
+      "input": {
+        "file_path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/serialization-contracts.md"
+      }
+    },
+    {
+      "type": "tool_result",
+      "tool_use_id": "toolu_01G4PXDLEhTBLLeMaHaUwGx5",
+      "is_error": false,
+      "content_bytes": 8604,
+      "content_sha256": "1388fdb802023f64b2900422408a444f0b1cce0d730b7236245578a4ee6b6729"
+    },
+    {
+      "type": "tool_result",
+      "tool_use_id": "toolu_01Mrz4GrhTxqRUpcdC176pAU",
+      "is_error": false,
+      "content_bytes": 1834,
+      "content_sha256": "521c181d07cd3c865934dc638bbd48d90853e9166dbfb858155cbc1230035e52"
+    },
+    {
+      "type": "tool_result",
+      "tool_use_id": "toolu_01KHXGDdCiH2CzKvN15TXaEw",
+      "is_error": false,
+      "content_bytes": 21318,
+      "content_sha256": "9d1a394cb521679f65720039c38a98b02f398ff0fea61965a412ab667f6a2cab"
+    }
+  ],
+  "result": {
+    "is_error": false,
+    "result": "## Verdict: source review approved for the two defect fixes, no blockers found\n\n**No tests were run.** This is a source-only review, done entirely with Read. I did not execute `test_report_contract.py` or anything else. The \"34 tests, exit 0\" in `consumer-guard-r2-phase.json:12-16` is the author's own claim, which I have not verified. I also could not recompute any SHA-256 in the phase JSON, so the closure, test-file and historical-file hashes (`consumer-guard-r2-phase.json:3-22`) are unchecked.\n\nThis approval covers report-envelope integrity only. It is not runtime, C/O-semantic, cache, rollback or release acceptance, and the R2 stage/regression validation stays **STALE**.\n\n## Defect 1: the collector hash did not cover the imported `report_contract.py`. Fixed.\n\n- `collect-r2.py:23-30`: `collector_identity()` hashes both files. It also checks that the loaded module resolves to the sibling `report_contract.py` (line 26), and computes a digest over the sorted filename→hash map.\n- `report_contract.py:45-48`: the prior74 report's `collector_closure` is compared with the current closure as canonical JSON, not with Python `==`. A missing closure becomes `null`, which is rejected. `schema: true` produces `\"true\"` rather than `1`, which is also rejected. Extra or changed files are rejected, and the old single-file `collector_sha256` must still match as well.\n- `collect-r2.py:81`: the closure is recomputed before the report is written. If either file changed during the run, the collector stops with an error.\n- As a result, a prior74 report is only accepted if it came from the exact same two-file collector. Old R1 reports have no closure, so they are rejected and stay historical (`serialization-contracts.md:281-282`).\n\n## Defect 2: the prior74 report's file hash was not recorded in the native83 output. Fixed.\n\n- `collect-r2.py:53-54`: the prior74 report is read once as bytes, and that same buffer is passed to `consume_prior74_bytes`.\n- `collect-r2.py:40-45`: the function rejects anything that isn't `bytes`, then parses, validates and hashes that one buffer. It returns the SHA-256, the byte length and `collector_closure_sha256`.\n- `collect-r2.py:82`: this is stored as `input_report74` in the report; in mode 74 it is `None`.\n- Nothing re-reads the file or normalizes the JSON before hashing, so a whitespace-only change gives a different recorded hash (tested at `test_report_contract.py:158-163`).\n\n## Does the new control flow introduce a defect? None found.\n\n- Validating the prior report (line 54) happens before any `ssh` call. Any exception there aborts the run with no report written, so it fails closed.\n- Loading the collector through `spec_from_file_location` in the tests still resolves `report_contract` to the sibling file. If it didn't, the check at line 26 would raise.\n\n## Limitations (not blockers)\n\n1. **Hashes show consistency, not authenticity.** The hashes only show that the file on disk matches the recorded values (`Path(__file__).read_bytes()`); they say nothing about the bytes Python actually executed. There is a small window between `import report_contract` (line 5) and the first `collector_identity()` call (line 51). Transitive imports and the interpreter are not covered. Your doc already frames it this way at `serialization-contracts.md:298-302`.\n2. **Missing vs. null writer.** `report_contract.py:26` uses `row.get('writer')`, so a record with no `writer` key is treated the same as `writer: null`. The collector always writes the key, so this only matters for hand-edited reports.\n3. **Some record fields are never checked.** `command` and `input_sha256` in the 38 prior records are not validated. For example, nothing ties a `read` row's input hash to the six producer wires. `wiredata` (lines 20-22) only checks that the first byte equals the declared `format`; it doesn't require `C`. That is intentional: C/O semantics remain deferred, not passed.\n4. **Existing issue, not new: the native path can crash and lose evidence.** `run()` (line 60) only catches `ValueError`, `KeyError` and `TimeoutExpired`. Two examples: a native body that parses to a JSON array raises `TypeError` at line 12, and a non-string `runtime` raises `AttributeError`. Either would stop the collector with no report written, so the observations collected so far are lost. It fails closed, but it's worth fixing before real execution. The line-81 closure check also discards the whole run by design.\n5. **Docs: two sections could be confused.** `serialization-contracts.md:247` (\"Twenty-four\") and `:252` (the r1 phase JSON) describe the older round and sit next to the newer section at `:290-296`. They are historical and not wrong, but a reader could mix them up.\n\n## Files actually read\n\n- `tools/php83/serialization-contracts/collect-r2.py`\n- `tools/php83/serialization-contracts/report_contract.py`\n- `tools/php83/serialization-contracts/test_report_contract.py`\n- `doc/php83/evidence/serialization-contracts/consumer-guard-r2-phase.json`\n- `doc/php83/serialization-contracts.md`\n\nNothing else was accessed: no `/tmp`, SSH, VMs, archives, network or edits."
+  }
+}

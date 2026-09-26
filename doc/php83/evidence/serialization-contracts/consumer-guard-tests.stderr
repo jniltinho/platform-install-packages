@@ -1,0 +1,29 @@
+test_acceptance_not_boolean_false (__main__.ConsumerGuards.test_acceptance_not_boolean_false) ... ok
+test_bool_exit_nonproducer (__main__.ConsumerGuards.test_bool_exit_nonproducer) ... ok
+test_complete_synthetic_report (__main__.ConsumerGuards.test_complete_synthetic_report) ... ok
+test_duplicate_preserving_count (__main__.ConsumerGuards.test_duplicate_preserving_count) ... ok
+test_errors_retained (__main__.ConsumerGuards.test_errors_retained) ... ok
+test_extra_record (__main__.ConsumerGuards.test_extra_record) ... ok
+test_failure_nonproducer (__main__.ConsumerGuards.test_failure_nonproducer) ... ok
+test_float_exit_nonproducer (__main__.ConsumerGuards.test_float_exit_nonproducer) ... ok
+test_missing_record (__main__.ConsumerGuards.test_missing_record) ... ok
+test_missing_stderr (__main__.ConsumerGuards.test_missing_stderr) ... ok
+test_nonproducer_bad_json (__main__.ConsumerGuards.test_nonproducer_bad_json) ... ok
+test_nonproducer_body_runtime (__main__.ConsumerGuards.test_nonproducer_body_runtime) ... ok
+test_nonproducer_diagnostics_missing (__main__.ConsumerGuards.test_nonproducer_diagnostics_missing) ... ok
+test_nonproducer_loaded_hash (__main__.ConsumerGuards.test_nonproducer_loaded_hash) ... ok
+test_nonproducer_probe_hash (__main__.ConsumerGuards.test_nonproducer_probe_hash) ... ok
+test_producer_wire_hash (__main__.ConsumerGuards.test_producer_wire_hash) ... ok
+test_reordered_preserving_count (__main__.ConsumerGuards.test_reordered_preserving_count) ... ok
+test_stderr_wrong_type (__main__.ConsumerGuards.test_stderr_wrong_type) ... ok
+test_wrong_key_type (__main__.ConsumerGuards.test_wrong_key_type) ... ok
+test_wrong_mode (__main__.ConsumerGuards.test_wrong_mode) ... ok
+test_wrong_pin (__main__.ConsumerGuards.test_wrong_pin) ... ok
+test_wrong_status (__main__.ConsumerGuards.test_wrong_status) ... ok
+test_wrong_variant (__main__.ConsumerGuards.test_wrong_variant) ... ok
+test_wrong_writer (__main__.ConsumerGuards.test_wrong_writer) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.003s
+
+OK
