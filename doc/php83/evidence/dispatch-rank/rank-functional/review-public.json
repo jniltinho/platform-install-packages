@@ -1,0 +1,8 @@
+{
+  "type": null,
+  "subtype": null,
+  "is_error": true,
+  "result": "No complete CLI result",
+  "permission_denials": null,
+  "cli_exit": 124
+}

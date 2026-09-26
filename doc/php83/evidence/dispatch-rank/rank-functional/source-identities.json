@@ -1,0 +1,18 @@
+{
+  "artifact_sha256": "de5e61a1b54f472e605ef2e87669302a3915616fd85378e0f05706fcb06a7e8b",
+  "sources": {
+    "alpha/lib/model/kvote.php": "91e0ec9680df0306eb55075066e86319d65458265a54dc29045057f488cfdd43",
+    "alpha/lib/model/kvotePeer.php": "edf4a9c03613d947e51d110685c2567aff5064433cdf24267ba7d8368883da4a",
+    "alpha/lib/model/om/Basekvote.php": "6fda3d493122ed223a63c564cc76772e8f59e586d030a7f2a2b4d3ff6264fdd1",
+    "alpha/lib/model/om/BasekvotePeer.php": "c1718347544259a0fbb2799aceeb97b1e93e841013dafa04e82f1ccd4dc2d03f",
+    "alpha/apps/kaltura/lib/myStatisticsMgr.class.php": "00b8391baabc9078cd4c8c9aae732df507621af4fffb75183cf87ef42b5e7963",
+    "api_v3/lib/KalturaBaseService.php": "48c4e41bfbb1072d5231e8ae8e300cb3e8bb8eb6e26a653d7925c00442a2999f",
+    "api_v3/lib/KalturaEntryService.php": "9495b584f73df1f4a11812efa964f57f42562159a405693b71e1731d53fe4dd5",
+    "api_v3/services/BaseEntryService.php": "069e3902be3d97f2e8139e445a9e1cfdceefc5d9db9a6882865ff3b17a44b27a",
+    "api_v3/services/MediaService.php": "7ffb9ca7642341eaf65a4387e82c7b63dfdf5e528b5b03da6ea24a56f384f708",
+    "api_v3/services/MixingService.php": "9cc6d1f90ccf2938c23fb3d3906bf21d257102ea0ddc6a388a124280fe04e8fb",
+    "alpha/data/sql/schema.sql": "77197d201523ed76e7ae1f6f27052b144bb393fba22645d692e80c9a33e0965e",
+    "alpha/data/sql/lib.model.schema.sql": "5324fedb964af4943755458b370016c116b5ccb2105f3162ca347ee5e7c48dd3"
+  },
+  "status": "LOCAL_PREPARATION_NOT_EXECUTED"
+}

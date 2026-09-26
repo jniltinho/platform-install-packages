@@ -260,3 +260,15 @@ CLI orchestration provenance, not PHP stdout; public-comparison74 is not asserte
 as equivalent by the comparator. The review's reference to the final row as
 index9 is a numbering slip (nine rows have indices0–8); the exact records and
 comparator are authoritative. This does not expand the bounded acceptance scope.
+
+## Next rank work: local plan only
+
+The [positive contract plan](evidence/dispatch-rank/rank-functional/plan.md)
+prepares24 cases, with15 shared positional cases usable on74, without executing
+SQL or removing the default. Five local inventory tests are not functional
+proof. Prefer integrating the upcoming owned real API flow after privacy fixes
+instead of another AIO/schema: actual kvote save also invokes statistics and
+request teardown persistence. Exact shipped table candidates expose legacy DDL
+and a surprising foreign key; no silent schema rewrite is approved. The next
+runtime prerequisite is named lab ownership and a read-only actual schema/model
+join, followed by one synthetic real API positive request. No VM slot is held.

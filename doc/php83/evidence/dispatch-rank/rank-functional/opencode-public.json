@@ -1,0 +1,23 @@
+{
+  "cli_exit": 0,
+  "events": [
+    {
+      "type": "text",
+      "text": "Repo-local check only \u2014 running the suite and reviewing the plan."
+    },
+    {
+      "type": "bash",
+      "status": "completed",
+      "input": {
+        "command": "python3 -m unittest discover -s tools/php83/dispatch-rank/rank-functional -p \"test_*.py\" 2>&1",
+        "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+      },
+      "output": ".....\n----------------------------------------------------------------------\nRan 5 tests in 0.000s\n\nOK\n",
+      "error": null
+    },
+    {
+      "type": "text",
+      "text": "Critical assessment (repo-local only, no patch/runtime claim):\n\n* `cases.json`: `status=PREPARED_NOT_EXECUTED`, `source_mutation=false`, 24 cases. Breakdown matches `plan.md`: 12 positional boundary (1/5 positive + 0/6 invalid across Base/Media/Mixing) + 3 named-83-only positives + 2 wrong-type + 1 missing-entry + 5 omission-reflection + 1 metadata.\n* Shared-74 cohort 15 = 12 boundary + 2 wrong-type + 1 missing; correctly excludes 3 named-positives + 2 named-omissions that PHP74 must never parse, plus separately-recorded metadata. No inflation of 74 coverage.\n* Decision sound: reuse later owned full-API lab flow after privacy fixes vs. provisioning second miniature AIO/schema to remove one deprecation. Explicitly rejects invented DDL (`Type=InnoDB`, `kuser_id->kshow(id)` naming), fake peer/model/statistics, in-memory-only statistics as persistence proof, and Reflection-injected kuser as substitute for real auth/lifecycle. Notes exp12 socket fixture lacks entry/kvote/kshow and further tables may be needed \u2014 adding 3 tables not proven sufficient.\n* Limitation honest: expected strings (`null-return-and-one-kvote-row`, `INVALID_RANK_VALUE`, `ENTRY_ID_NOT_FOUND`, `ArgumentCountError`) are design inputs, not measured API codes; no SQL runner, no teardown/DB diff yet.\n\nActual tests executed:\n\n`python3 -m unittest discover -s tools/php83/dispatch-rank/rank-functional -p \"test_*.py\"` in `/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83` \u2192 `Ran 5 tests in 0.000s OK`. Inventory-only, consistent with plan: not runtime evidence.\n"
+    }
+  ]
+}

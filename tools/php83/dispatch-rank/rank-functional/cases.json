@@ -1,0 +1,183 @@
+{
+  "schema": 1,
+  "status": "PREPARED_NOT_EXECUTED",
+  "source_mutation": false,
+  "cases": [
+    {
+      "id": "BaseEntryService-rank1",
+      "kind": "public-action-positional",
+      "caller": "BaseEntryService",
+      "entry_type_argument": null,
+      "rank": 1,
+      "expected": "null-return-and-one-kvote-row"
+    },
+    {
+      "id": "BaseEntryService-rank5",
+      "kind": "public-action-positional",
+      "caller": "BaseEntryService",
+      "entry_type_argument": null,
+      "rank": 5,
+      "expected": "null-return-and-one-kvote-row"
+    },
+    {
+      "id": "BaseEntryService-invalid0",
+      "kind": "public-action-positional",
+      "caller": "BaseEntryService",
+      "entry_type_argument": null,
+      "rank": 0,
+      "expected": "INVALID_RANK_VALUE-no-write"
+    },
+    {
+      "id": "BaseEntryService-invalid6",
+      "kind": "public-action-positional",
+      "caller": "BaseEntryService",
+      "entry_type_argument": null,
+      "rank": 6,
+      "expected": "INVALID_RANK_VALUE-no-write"
+    },
+    {
+      "id": "BaseEntryService-named-positive",
+      "kind": "public-action-named-83-only",
+      "caller": "BaseEntryService",
+      "entry_type_argument": null,
+      "rank": 3,
+      "expected": "null-return-and-one-kvote-row"
+    },
+    {
+      "id": "MediaService-rank1",
+      "kind": "public-action-positional",
+      "caller": "MediaService",
+      "entry_type_argument": "MEDIA_CLIP",
+      "rank": 1,
+      "expected": "null-return-and-one-kvote-row"
+    },
+    {
+      "id": "MediaService-rank5",
+      "kind": "public-action-positional",
+      "caller": "MediaService",
+      "entry_type_argument": "MEDIA_CLIP",
+      "rank": 5,
+      "expected": "null-return-and-one-kvote-row"
+    },
+    {
+      "id": "MediaService-invalid0",
+      "kind": "public-action-positional",
+      "caller": "MediaService",
+      "entry_type_argument": "MEDIA_CLIP",
+      "rank": 0,
+      "expected": "INVALID_RANK_VALUE-no-write"
+    },
+    {
+      "id": "MediaService-invalid6",
+      "kind": "public-action-positional",
+      "caller": "MediaService",
+      "entry_type_argument": "MEDIA_CLIP",
+      "rank": 6,
+      "expected": "INVALID_RANK_VALUE-no-write"
+    },
+    {
+      "id": "MediaService-named-positive",
+      "kind": "public-action-named-83-only",
+      "caller": "MediaService",
+      "entry_type_argument": "MEDIA_CLIP",
+      "rank": 3,
+      "expected": "null-return-and-one-kvote-row"
+    },
+    {
+      "id": "MixingService-rank1",
+      "kind": "public-action-positional",
+      "caller": "MixingService",
+      "entry_type_argument": "MIX",
+      "rank": 1,
+      "expected": "null-return-and-one-kvote-row"
+    },
+    {
+      "id": "MixingService-rank5",
+      "kind": "public-action-positional",
+      "caller": "MixingService",
+      "entry_type_argument": "MIX",
+      "rank": 5,
+      "expected": "null-return-and-one-kvote-row"
+    },
+    {
+      "id": "MixingService-invalid0",
+      "kind": "public-action-positional",
+      "caller": "MixingService",
+      "entry_type_argument": "MIX",
+      "rank": 0,
+      "expected": "INVALID_RANK_VALUE-no-write"
+    },
+    {
+      "id": "MixingService-invalid6",
+      "kind": "public-action-positional",
+      "caller": "MixingService",
+      "entry_type_argument": "MIX",
+      "rank": 6,
+      "expected": "INVALID_RANK_VALUE-no-write"
+    },
+    {
+      "id": "MixingService-named-positive",
+      "kind": "public-action-named-83-only",
+      "caller": "MixingService",
+      "entry_type_argument": "MIX",
+      "rank": 3,
+      "expected": "null-return-and-one-kvote-row"
+    },
+    {
+      "id": "MediaService-wrong-type",
+      "kind": "public-action-positional",
+      "caller": "MediaService",
+      "rank": 3,
+      "expected": "ENTRY_ID_NOT_FOUND-no-write"
+    },
+    {
+      "id": "MixingService-wrong-type",
+      "kind": "public-action-positional",
+      "caller": "MixingService",
+      "rank": 3,
+      "expected": "ENTRY_ID_NOT_FOUND-no-write"
+    },
+    {
+      "id": "missing-entry",
+      "kind": "public-action-positional",
+      "caller": "BaseEntryService",
+      "rank": 3,
+      "expected": "ENTRY_ID_NOT_FOUND-no-write"
+    },
+    {
+      "id": "omission-zero-positional",
+      "kind": "protected-method-reflection-83",
+      "expected": "ArgumentCountError-no-write"
+    },
+    {
+      "id": "omission-one-positional",
+      "kind": "protected-method-reflection-83",
+      "expected": "ArgumentCountError-no-write"
+    },
+    {
+      "id": "omission-two-positional",
+      "kind": "protected-method-reflection-83",
+      "expected": "ArgumentCountError-no-write"
+    },
+    {
+      "id": "omission-named-no-entryType",
+      "kind": "protected-method-reflection-83",
+      "expected": "ArgumentCountError-no-write"
+    },
+    {
+      "id": "omission-named-rank-only",
+      "kind": "protected-method-reflection-83",
+      "expected": "ArgumentCountError-no-write"
+    },
+    {
+      "id": "reflection-metadata",
+      "kind": "metadata",
+      "expected": "retain-current-required-count3-and-no-defaults-on83"
+    }
+  ],
+  "limitations": [
+    "Named argument syntax not sent to PHP74",
+    "No fake peer/model/class definitions",
+    "No successful outcome claimed until actual SQL rows and diagnostics recorded"
+  ]
+}
