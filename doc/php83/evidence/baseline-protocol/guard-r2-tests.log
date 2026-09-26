@@ -1,0 +1,20 @@
+test_incomplete_body_is_redacted (test_guarded_http.ErrorNormalizationTests.test_incomplete_body_is_redacted) ... ok
+test_malformed_matching_ca (test_guarded_http.ErrorNormalizationTests.test_malformed_matching_ca) ... ok
+test_all_redirects_refused (test_guarded_http.GuardTests.test_all_redirects_refused) ... ok
+test_bad_lengths (test_guarded_http.GuardTests.test_bad_lengths) ... ok
+test_bad_targets (test_guarded_http.GuardTests.test_bad_targets) ... ok
+test_bounded_body (test_guarded_http.GuardTests.test_bounded_body) ... ok
+test_ca_must_be_explicit_and_pinned (test_guarded_http.GuardTests.test_ca_must_be_explicit_and_pinned) ... ok
+test_invalid_origin (test_guarded_http.GuardTests.test_invalid_origin) ... ok
+test_limit_types (test_guarded_http.GuardTests.test_limit_types) ... ok
+test_literal (test_guarded_http.GuardTests.test_literal) ... ok
+test_nested_bad (test_guarded_http.GuardTests.test_nested_bad) ... ok
+test_nested_good (test_guarded_http.GuardTests.test_nested_good) ... ok
+test_proxy_disabled (test_guarded_http.GuardTests.test_proxy_disabled) ... ok
+test_rejected_before_connection (test_guarded_http.GuardTests.test_rejected_before_connection) ... ok
+test_transport_error_redacted (test_guarded_http.GuardTests.test_transport_error_redacted) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.002s
+
+OK

@@ -1,0 +1,1000 @@
+{
+  "raw_sha256": "8b45fdd753c404676f10ea9792553f80d39109342cfacae3dfaeb7f003bbe76c",
+  "events": [
+    {
+      "type": "text",
+      "timestamp": 1790432598905,
+      "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+      "part": {
+        "id": "prt_0de195b73001ynQFL2RMbcPF8V",
+        "messageID": "msg_0de194649001f46k27zoDXfF2x",
+        "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+        "type": "text",
+        "text": "Prepping your read-only guard review \u2014 inspecting boundaries and running the local test set.",
+        "time": {
+          "start": 1790432598899,
+          "end": 1790432598902
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "rs_01a0de19588676429363ccf86bafe762",
+            "phase": "commentary"
+          }
+        }
+      }
+    },
+    {
+      "type": "tool_use",
+      "timestamp": 1790432599291,
+      "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+      "part": {
+        "type": "tool",
+        "tool": "read",
+        "callID": "call_01a0de195a8574859384cf32dcdb320d",
+        "state": {
+          "status": "completed",
+          "input": {
+            "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/AGENTS.md"
+          },
+          "output": "<path>/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/AGENTS.md</path>\n<type>file</type>\n<content>\n1: # Project agent instructions\n2: \n3: <!-- codebase-memory-mcp:start -->\n4: # Codebase Memory\n5: \n6: For structural code discovery, prefer the `codebase-memory` skill and the\n7: `codebase-memory-mcp` graph tools. Confirm index freshness before broad analysis;\n8: use `check_index_coverage` for every file that supports a graph-based conclusion.\n9: <!-- codebase-memory-mcp:end -->\n10: \n11: ## PHP 8.3 migration test coordination\n12: \n13: For every migration validation cycle, prioritize the actual Claude CLI, Cursor\n14: Agent CLI (`agent`) and OpenCode CLI for test execution and independent review.\n15: Assign explicit, non-overlapping cases and rotate reviewers; an author's review\n16: alone is not independent validation. Codex coordinates the results. Use the\n17: actual CLIs, not another agent merely named after them.\n18: \n19: The operator requested that Grok be deprioritized because it is malfunctioning;\n20: do not require another Grok attempt in each cycle. Preserve previous Grok failures\n21: separately, and use it only when there is a concrete reason to retry. Prefer\n22: OpenCode with Zen's Muse Spark 1.3 Free, resolving the exact installed model ID\n23: (currently `opencode/muse-spark-1.3-contributor-free`). The operator also explicitly\n24: authorized OpenCode MiniMax 3; resolve an installed MiniMax-M3 provider/model ID\n25: before use and verify actual availability. Do not buy plans, add credentials or\n26: silently substitute another paid model. Bound every external CLI attempt, confirm\n27: it is terminal before reassigning its work, and record each actual executor's\n28: result separately. Tool/quota/authentication failures never count as passes.\n29: \n30: For noninteractive Claude runs, supply the prompt via stdin after all options;\n31: do not put a positional prompt after variadic `--allowedTools`, which can consume\n32: it as another tool argument. For shell syntax checks, invoke `bash -n` separately\n33: for each script; extra filenames are arguments, not additional parsed scripts.\n34: \n35: Run independent reviews and isolated tests in parallel. Never run competing\n36: writers, destructive fixtures or benchmark workloads against the same VM,\n37: database or worktree; use separate disposable clones or serialize with an\n38: exclusive owner. Every executor must stay within existing approved lab scope.\n39: \n40: Record CLI availability/authentication/quota/permission failures as BLOCKED or\n41: NOT_EXECUTED, not successful tests. Do not bypass safeguards to satisfy this\n42: rule. A review is not execution evidence. If a CLI is unavailable, report the\n43: gap explicitly and continue only independently authorized safe work.\n44: \n45: Each result must identify the case, executor and reviewer, source/patch/harness\n46: identities, environment, command, exit status, sanitized evidence and any\n47: remaining limitation. Report executed cases, failures, untested scope and\n48: release gates separately; passing harness tests does not prove full application\n49: acceptance. Do not invent a completion percentage or release date.\n50: \n51: These coordination rules do not authorize production changes, `.20` writes,\n52: package/CI integration, publishing, or bypassing the migration proposal's\n53: feasibility, release and cutover approvals.\n\n(End of file - total 53 lines)\n</content>",
+          "metadata": {
+            "preview": "# Project agent instructions\n\n<!-- codebase-memory-mcp:start -->\n# Codebase Memory\n\nFor structural code discovery, prefer the `codebase-memory` skill and the\n`codebase-memory-mcp` graph tools. Confirm index freshness before broad analysis;\nuse `check_index_coverage` for every file that supports a graph-based conclusion.\n<!-- codebase-memory-mcp:end -->\n\n## PHP 8.3 migration test coordination\n\nFor every migration validation cycle, prioritize the actual Claude CLI, Cursor\nAgent CLI (`agent`) and OpenCode CLI for test execution and independent review.\nAssign explicit, non-overlapping cases and rotate reviewers; an author's review\nalone is not independent validation. Codex coordinates the results. Use the\nactual CLIs, not another agent merely named after them.\n\nThe operator requested that Grok be deprioritized because it is malfunctioning;\ndo not require another Grok attempt in each cycle. Preserve previous Grok failures",
+            "truncated": false,
+            "loaded": [],
+            "display": {
+              "type": "file",
+              "path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/AGENTS.md",
+              "text": "# Project agent instructions\n\n<!-- codebase-memory-mcp:start -->\n# Codebase Memory\n\nFor structural code discovery, prefer the `codebase-memory` skill and the\n`codebase-memory-mcp` graph tools. Confirm index freshness before broad analysis;\nuse `check_index_coverage` for every file that supports a graph-based conclusion.\n<!-- codebase-memory-mcp:end -->\n\n## PHP 8.3 migration test coordination\n\nFor every migration validation cycle, prioritize the actual Claude CLI, Cursor\nAgent CLI (`agent`) and OpenCode CLI for test execution and independent review.\nAssign explicit, non-overlapping cases and rotate reviewers; an author's review\nalone is not independent validation. Codex coordinates the results. Use the\nactual CLIs, not another agent merely named after them.\n\nThe operator requested that Grok be deprioritized because it is malfunctioning;\ndo not require another Grok attempt in each cycle. Preserve previous Grok failures\nseparately, and use it only when there is a concrete reason to retry. Prefer\nOpenCode with Zen's Muse Spark 1.3 Free, resolving the exact installed model ID\n(currently `opencode/muse-spark-1.3-contributor-free`). The operator also explicitly\nauthorized OpenCode MiniMax 3; resolve an installed MiniMax-M3 provider/model ID\nbefore use and verify actual availability. Do not buy plans, add credentials or\nsilently substitute another paid model. Bound every external CLI attempt, confirm\nit is terminal before reassigning its work, and record each actual executor's\nresult separately. Tool/quota/authentication failures never count as passes.\n\nFor noninteractive Claude runs, supply the prompt via stdin after all options;\ndo not put a positional prompt after variadic `--allowedTools`, which can consume\nit as another tool argument. For shell syntax checks, invoke `bash -n` separately\nfor each script; extra filenames are arguments, not additional parsed scripts.\n\nRun independent reviews and isolated tests in parallel. Never run competing\nwriters, destructive fixtures or benchmark workloads against the same VM,\ndatabase or worktree; use separate disposable clones or serialize with an\nexclusive owner. Every executor must stay within existing approved lab scope.\n\nRecord CLI availability/authentication/quota/permission failures as BLOCKED or\nNOT_EXECUTED, not successful tests. Do not bypass safeguards to satisfy this\nrule. A review is not execution evidence. If a CLI is unavailable, report the\ngap explicitly and continue only independently authorized safe work.\n\nEach result must identify the case, executor and reviewer, source/patch/harness\nidentities, environment, command, exit status, sanitized evidence and any\nremaining limitation. Report executed cases, failures, untested scope and\nrelease gates separately; passing harness tests does not prove full application\nacceptance. Do not invent a completion percentage or release date.\n\nThese coordination rules do not authorize production changes, `.20` writes,\npackage/CI integration, publishing, or bypassing the migration proposal's\nfeasibility, release and cutover approvals.",
+              "lineStart": 1,
+              "lineEnd": 53,
+              "totalLines": 53,
+              "truncated": false
+            }
+          },
+          "title": "AGENTS.md",
+          "time": {
+            "start": 1790432599283,
+            "end": 1790432599289
+          }
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "fc_01a0de195a8574859384cf32dcdb320d"
+          }
+        },
+        "id": "prt_0de195b77001GdBHmaoDfnyeJx",
+        "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+        "messageID": "msg_0de194649001f46k27zoDXfF2x"
+      }
+    },
+    {
+      "type": "step_finish",
+      "timestamp": 1790432599509,
+      "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+      "part": {
+        "id": "prt_0de195dd0001Omn7xRNGsyJCpR",
+        "reason": "tool-calls",
+        "snapshot": "e455787f31a22ac42b66e354de2bdc9a5080c671",
+        "messageID": "msg_0de194649001f46k27zoDXfF2x",
+        "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+        "type": "step-finish",
+        "tokens": {
+          "total": 79189,
+          "input": 78945,
+          "output": 97,
+          "reasoning": 34,
+          "cache": {
+            "write": 0,
+            "read": 113
+          }
+        },
+        "cost": 0
+      }
+    },
+    {
+      "type": "tool_use",
+      "timestamp": 1790432602724,
+      "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+      "part": {
+        "type": "tool",
+        "tool": "read",
+        "callID": "call_01a0de1961c274a78fe939e91f553104",
+        "state": {
+          "status": "completed",
+          "input": {
+            "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/baseline-protocol/guarded_http.py"
+          },
+          "output": "<path>/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/baseline-protocol/guarded_http.py</path>\n<type>file</type>\n<content>\n1: \"\"\"Local preparation: bounded, fixed-origin lab HTTP; not full baseline acceptance.\"\"\"\n2: from dataclasses import dataclass\n3: import hashlib\n4: import ssl\n5: from urllib.parse import urljoin, urlsplit\n6: from urllib.request import (HTTPRedirectHandler, HTTPSHandler, ProxyHandler,\n7:                             Request, build_opener)\n8: from urllib.error import HTTPError, URLError\n9: \n10: class BoundaryError(ValueError):\n11:     \"\"\"Deliberately omit credential-bearing request URLs from error messages.\"\"\"\n12: \n13: @dataclass(frozen=True)\n14: class Origin:\n15:     ip: str\n16:     scheme: str\n17:     port: int\n18: \n19:     def __post_init__(self):\n20:         if self.ip not in {'192.168.56.74', '192.168.56.83'}:\n21:             raise BoundaryError('Unknown lab identity')\n22:         if self.scheme not in {'http', 'https'}:\n23:             raise BoundaryError('Unsupported transport')\n24:         if type(self.port) is not int or self.port not in {80, 443, 88, 8443, 8080}:\n25:             raise BoundaryError('Unsupported lab port')\n26: \n27:     def validate(self, url):\n28:         # urlsplit strips some controls; reject them BEFORE parsing.\n29:         if not isinstance(url, str) or not url or any(ord(c) <= 32 or ord(c) == 127 for c in url) or '\\\\' in url:\n30:             raise BoundaryError('Invalid URL characters')\n31:         try:\n32:             p = urlsplit(url)\n33:             port = p.port if p.port is not None else (443 if p.scheme == 'https' else 80)\n34:             if (p.scheme != self.scheme or p.hostname != self.ip or port != self.port\n35:                     or p.username is not None or p.password is not None or p.fragment):\n36:                 raise BoundaryError('Refusing non-origin target')\n37:         except ValueError:\n38:             raise BoundaryError('Refusing malformed or non-origin target') from None\n39:         return url\n40: \n41:     def resolve(self, parent, reference):\n42:         self.validate(parent)\n43:         if not isinstance(reference, str) or not reference or any(ord(c) <= 32 or ord(c) == 127 for c in reference) or '\\\\' in reference:\n44:             raise BoundaryError('Invalid nested reference')\n45:         return self.validate(urljoin(parent, reference))\n46: \n47: class NoRedirects(HTTPRedirectHandler):\n48:     def redirect_request(self, req, fp, code, msg, headers, newurl):\n49:         raise BoundaryError('Redirect refused')\n50: \n51: def trusted_context(ca_pem, expected_sha256):\n52:     if not isinstance(ca_pem, bytes) or hashlib.sha256(ca_pem).hexdigest() != expected_sha256:\n53:         raise BoundaryError('Private CA identity mismatch')\n54:     ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)\n55:     ctx.minimum_version = ssl.TLSVersion.TLSv1_2\n56:     ctx.load_verify_locations(cadata=ca_pem.decode('ascii'))\n57:     return ctx\n58: \n59: def read_bounded(response, limit):\n60:     if type(limit) is not int or not 0 < limit <= 64 * 1024 * 1024:\n61:         raise BoundaryError('Invalid body limit')\n62:     size = response.headers.get('Content-Length')\n63:     if size is not None:\n64:         if not size.isascii() or not size.isdecimal() or int(size) > limit:\n65:             raise BoundaryError('Invalid or excessive declared response length')\n66:     data = response.read(limit + 1)\n67:     if len(data) > limit:\n68:         raise BoundaryError('Response body limit exceeded')\n69:     if size is not None and len(data) != int(size):\n70:         raise BoundaryError('Incomplete response body')\n71:     return data\n72: \n73: class Client:\n74:     def __init__(self, origin, ca_pem=None, ca_sha256=None):\n75:         self.origin = origin\n76:         handlers = [ProxyHandler({}), NoRedirects()]\n77:         if origin.scheme == 'https':\n78:             if ca_pem is None or ca_sha256 is None:\n79:                 raise BoundaryError('Explicit pinned private CA required')\n80:             handlers.append(HTTPSHandler(context=trusted_context(ca_pem, ca_sha256)))\n81:         elif ca_pem is not None or ca_sha256 is not None:\n82:             raise BoundaryError('Unexpected CA on plaintext transport')\n83:         self.opener = build_opener(*handlers)\n84: \n85:     def get(self, url, *, limit=1024 * 1024, timeout=30):\n86:         self.origin.validate(url)\n87:         if type(limit) is not int or not 0 < limit <= 64 * 1024 * 1024:\n88:             raise BoundaryError('Invalid body limit')\n89:         if type(timeout) not in {int, float} or not 0 < timeout <= 30:\n90:             raise BoundaryError('Invalid socket timeout')\n91:         try:\n92:             with self.opener.open(Request(url, method='GET'), timeout=timeout) as response:\n93:                 if response.status != 200:\n94:                     raise BoundaryError('Unexpected HTTP status')\n95:                 self.origin.validate(response.geturl())\n96:                 return read_bounded(response, limit)\n97:         except HTTPError as exc:\n98:             exc.close()\n99:             raise BoundaryError('HTTP request rejected') from None\n100:         except (URLError, OSError):\n101:             raise BoundaryError('Transport request failed') from None\n\n(End of file - total 101 lines)\n</content>",
+          "metadata": {
+            "preview": "\"\"\"Local preparation: bounded, fixed-origin lab HTTP; not full baseline acceptance.\"\"\"\nfrom dataclasses import dataclass\nimport hashlib\nimport ssl\nfrom urllib.parse import urljoin, urlsplit\nfrom urllib.request import (HTTPRedirectHandler, HTTPSHandler, ProxyHandler,\n                            Request, build_opener)\nfrom urllib.error import HTTPError, URLError\n\nclass BoundaryError(ValueError):\n    \"\"\"Deliberately omit credential-bearing request URLs from error messages.\"\"\"\n\n@dataclass(frozen=True)\nclass Origin:\n    ip: str\n    scheme: str\n    port: int\n\n    def __post_init__(self):\n        if self.ip not in {'192.168.56.74', '192.168.56.83'}:",
+            "truncated": false,
+            "loaded": [],
+            "display": {
+              "type": "file",
+              "path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/baseline-protocol/guarded_http.py",
+              "text": "\"\"\"Local preparation: bounded, fixed-origin lab HTTP; not full baseline acceptance.\"\"\"\nfrom dataclasses import dataclass\nimport hashlib\nimport ssl\nfrom urllib.parse import urljoin, urlsplit\nfrom urllib.request import (HTTPRedirectHandler, HTTPSHandler, ProxyHandler,\n                            Request, build_opener)\nfrom urllib.error import HTTPError, URLError\n\nclass BoundaryError(ValueError):\n    \"\"\"Deliberately omit credential-bearing request URLs from error messages.\"\"\"\n\n@dataclass(frozen=True)\nclass Origin:\n    ip: str\n    scheme: str\n    port: int\n\n    def __post_init__(self):\n        if self.ip not in {'192.168.56.74', '192.168.56.83'}:\n            raise BoundaryError('Unknown lab identity')\n        if self.scheme not in {'http', 'https'}:\n            raise BoundaryError('Unsupported transport')\n        if type(self.port) is not int or self.port not in {80, 443, 88, 8443, 8080}:\n            raise BoundaryError('Unsupported lab port')\n\n    def validate(self, url):\n        # urlsplit strips some controls; reject them BEFORE parsing.\n        if not isinstance(url, str) or not url or any(ord(c) <= 32 or ord(c) == 127 for c in url) or '\\\\' in url:\n            raise BoundaryError('Invalid URL characters')\n        try:\n            p = urlsplit(url)\n            port = p.port if p.port is not None else (443 if p.scheme == 'https' else 80)\n            if (p.scheme != self.scheme or p.hostname != self.ip or port != self.port\n                    or p.username is not None or p.password is not None or p.fragment):\n                raise BoundaryError('Refusing non-origin target')\n        except ValueError:\n            raise BoundaryError('Refusing malformed or non-origin target') from None\n        return url\n\n    def resolve(self, parent, reference):\n        self.validate(parent)\n        if not isinstance(reference, str) or not reference or any(ord(c) <= 32 or ord(c) == 127 for c in reference) or '\\\\' in reference:\n            raise BoundaryError('Invalid nested reference')\n        return self.validate(urljoin(parent, reference))\n\nclass NoRedirects(HTTPRedirectHandler):\n    def redirect_request(self, req, fp, code, msg, headers, newurl):\n        raise BoundaryError('Redirect refused')\n\ndef trusted_context(ca_pem, expected_sha256):\n    if not isinstance(ca_pem, bytes) or hashlib.sha256(ca_pem).hexdigest() != expected_sha256:\n        raise BoundaryError('Private CA identity mismatch')\n    ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)\n    ctx.minimum_version = ssl.TLSVersion.TLSv1_2\n    ctx.load_verify_locations(cadata=ca_pem.decode('ascii'))\n    return ctx\n\ndef read_bounded(response, limit):\n    if type(limit) is not int or not 0 < limit <= 64 * 1024 * 1024:\n        raise BoundaryError('Invalid body limit')\n    size = response.headers.get('Content-Length')\n    if size is not None:\n        if not size.isascii() or not size.isdecimal() or int(size) > limit:\n            raise BoundaryError('Invalid or excessive declared response length')\n    data = response.read(limit + 1)\n    if len(data) > limit:\n        raise BoundaryError('Response body limit exceeded')\n    if size is not None and len(data) != int(size):\n        raise BoundaryError('Incomplete response body')\n    return data\n\nclass Client:\n    def __init__(self, origin, ca_pem=None, ca_sha256=None):\n        self.origin = origin\n        handlers = [ProxyHandler({}), NoRedirects()]\n        if origin.scheme == 'https':\n            if ca_pem is None or ca_sha256 is None:\n                raise BoundaryError('Explicit pinned private CA required')\n            handlers.append(HTTPSHandler(context=trusted_context(ca_pem, ca_sha256)))\n        elif ca_pem is not None or ca_sha256 is not None:\n            raise BoundaryError('Unexpected CA on plaintext transport')\n        self.opener = build_opener(*handlers)\n\n    def get(self, url, *, limit=1024 * 1024, timeout=30):\n        self.origin.validate(url)\n        if type(limit) is not int or not 0 < limit <= 64 * 1024 * 1024:\n            raise BoundaryError('Invalid body limit')\n        if type(timeout) not in {int, float} or not 0 < timeout <= 30:\n            raise BoundaryError('Invalid socket timeout')\n        try:\n            with self.opener.open(Request(url, method='GET'), timeout=timeout) as response:\n                if response.status != 200:\n                    raise BoundaryError('Unexpected HTTP status')\n                self.origin.validate(response.geturl())\n                return read_bounded(response, limit)\n        except HTTPError as exc:\n            exc.close()\n            raise BoundaryError('HTTP request rejected') from None\n        except (URLError, OSError):\n            raise BoundaryError('Transport request failed') from None",
+              "lineStart": 1,
+              "lineEnd": 101,
+              "totalLines": 101,
+              "truncated": false
+            }
+          },
+          "title": "tools/php83/baseline-protocol/guarded_http.py",
+          "time": {
+            "start": 1790432602702,
+            "end": 1790432602719
+          }
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "fc_01a0de1961c274a78fe939e91f553104"
+          }
+        },
+        "id": "prt_0de196506001XC2ovVMnNBZ9U1",
+        "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+        "messageID": "msg_0de195df2001H2F2M17vXZ2KXH"
+      }
+    },
+    {
+      "type": "tool_use",
+      "timestamp": 1790432602724,
+      "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+      "part": {
+        "type": "tool",
+        "tool": "read",
+        "callID": "call_01a0de19633c770fbd126e3888b805f4",
+        "state": {
+          "status": "completed",
+          "input": {
+            "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/baseline-protocol/test_guarded_http.py"
+          },
+          "output": "<path>/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/baseline-protocol/test_guarded_http.py</path>\n<type>file</type>\n<content>\n1: import io\n2: import unittest\n3: from unittest.mock import Mock, patch\n4: from guarded_http import Origin, Client, BoundaryError, NoRedirects, read_bounded, trusted_context\n5: \n6: class GuardTests(unittest.TestCase):\n7:     def setUp(self):\n8:         self.origin = Origin('192.168.56.74', 'http', 80)\n9:     def test_literal(self):\n10:         self.assertEqual(self.origin.validate('http://192.168.56.74/path?a=1'), 'http://192.168.56.74/path?a=1')\n11:     def test_bad_targets(self):\n12:         urls=['http://192.168.56.20/', 'http://192.168.56.83/', 'http://localhost/',\n13:               'http://192.168.56.74.evil/', 'http://user:secret@192.168.56.74/',\n14:               'http://[::1]/', 'https://192.168.56.74/', 'http://192.168.56.74:8080/',\n15:               'http://192.168.56.74:bad/', 'http://192.168.56.74/#x',\n16:               ' http://192.168.56.74/', '\\x00http://192.168.56.74/',\n17:               'http://192.168.56.74/\\n', 'http://192.168.56.74/\\\\x']\n18:         for u in urls:\n19:             with self.subTest(url=u), self.assertRaises(BoundaryError):self.origin.validate(u)\n20:     def test_invalid_origin(self):\n21:         for args in [('192.168.56.20','http',80),('192.168.56.74','file',80),('192.168.56.74','http',True)]:\n22:             with self.assertRaises(BoundaryError):Origin(*args)\n23:     def test_nested_good(self):\n24:         self.assertEqual(self.origin.resolve('http://192.168.56.74/hls/a.m3u8','seg.ts'),'http://192.168.56.74/hls/seg.ts')\n25:     def test_nested_bad(self):\n26:         for ref in ['//192.168.56.20/a', 'https://192.168.56.74/a', '\\t//192.168.56.20/a', 'file:///tmp/a']:\n27:             with self.assertRaises(BoundaryError):self.origin.resolve('http://192.168.56.74/a',ref)\n28:     def test_all_redirects_refused(self):\n29:         for code in [301,302,303,307,308]:\n30:             with self.assertRaises(BoundaryError):NoRedirects().redirect_request(None,None,code,'',{},'http://192.168.56.74/')\n31:     def response(self, data, length=None):\n32:         r=io.BytesIO(data);r.headers={} if length is None else {'Content-Length':length};return r\n33:     def test_bounded_body(self):\n34:         self.assertEqual(read_bounded(self.response(b'abc','3'),3), b'abc')\n35:         self.assertEqual(read_bounded(self.response(b'abc'),3), b'abc')\n36:     def test_bad_lengths(self):\n37:         for n in ['4','-1','x','2','9999999999999999999999999999999','\uff13']:\n38:             with self.subTest(n=n), self.assertRaises(BoundaryError):read_bounded(self.response(b'abc',n),3)\n39:         with self.assertRaises(BoundaryError):read_bounded(self.response(b'abcd'),3)\n40:     def test_limit_types(self):\n41:         for n in [True,0,-1,1.5,64*1024*1024+1]:\n42:             with self.assertRaises(BoundaryError):read_bounded(self.response(b''),n)\n43:     def test_ca_must_be_explicit_and_pinned(self):\n44:         with self.assertRaises(BoundaryError):Client(Origin('192.168.56.74','https',443))\n45:         with self.assertRaises(BoundaryError):trusted_context(b'not certificate','wrong')\n46:         with self.assertRaises(BoundaryError):Client(self.origin,b'bad','bad')\n47:     @patch('guarded_http.build_opener')\n48:     def test_rejected_before_connection(self, build):\n49:         client=Client(self.origin)\n50:         with self.assertRaises(BoundaryError):client.get('http://192.168.56.20/?secret=not-real')\n51:         client.opener.open.assert_not_called()\n52:     @patch('guarded_http.build_opener')\n53:     def test_proxy_disabled(self, build):\n54:         Client(self.origin)\n55:         self.assertEqual(build.call_args.args[0].proxies,{})\n56:     @patch('guarded_http.build_opener')\n57:     def test_transport_error_redacted(self, build):\n58:         client=Client(self.origin);client.opener.open.side_effect=OSError('secret-value')\n59:         with self.assertRaises(BoundaryError) as caught:client.get('http://192.168.56.74/?ks=secret-value')\n60:         self.assertNotIn('secret-value',str(caught.exception))\n61: \n62: if __name__=='__main__':unittest.main()\n\n(End of file - total 62 lines)\n</content>",
+          "metadata": {
+            "preview": "import io\nimport unittest\nfrom unittest.mock import Mock, patch\nfrom guarded_http import Origin, Client, BoundaryError, NoRedirects, read_bounded, trusted_context\n\nclass GuardTests(unittest.TestCase):\n    def setUp(self):\n        self.origin = Origin('192.168.56.74', 'http', 80)\n    def test_literal(self):\n        self.assertEqual(self.origin.validate('http://192.168.56.74/path?a=1'), 'http://192.168.56.74/path?a=1')\n    def test_bad_targets(self):\n        urls=['http://192.168.56.20/', 'http://192.168.56.83/', 'http://localhost/',\n              'http://192.168.56.74.evil/', 'http://user:secret@192.168.56.74/',\n              'http://[::1]/', 'https://192.168.56.74/', 'http://192.168.56.74:8080/',\n              'http://192.168.56.74:bad/', 'http://192.168.56.74/#x',\n              ' http://192.168.56.74/', '\\x00http://192.168.56.74/',\n              'http://192.168.56.74/\\n', 'http://192.168.56.74/\\\\x']\n        for u in urls:\n            with self.subTest(url=u), self.assertRaises(BoundaryError):self.origin.validate(u)\n    def test_invalid_origin(self):",
+            "truncated": false,
+            "loaded": [],
+            "display": {
+              "type": "file",
+              "path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/baseline-protocol/test_guarded_http.py",
+              "text": "import io\nimport unittest\nfrom unittest.mock import Mock, patch\nfrom guarded_http import Origin, Client, BoundaryError, NoRedirects, read_bounded, trusted_context\n\nclass GuardTests(unittest.TestCase):\n    def setUp(self):\n        self.origin = Origin('192.168.56.74', 'http', 80)\n    def test_literal(self):\n        self.assertEqual(self.origin.validate('http://192.168.56.74/path?a=1'), 'http://192.168.56.74/path?a=1')\n    def test_bad_targets(self):\n        urls=['http://192.168.56.20/', 'http://192.168.56.83/', 'http://localhost/',\n              'http://192.168.56.74.evil/', 'http://user:secret@192.168.56.74/',\n              'http://[::1]/', 'https://192.168.56.74/', 'http://192.168.56.74:8080/',\n              'http://192.168.56.74:bad/', 'http://192.168.56.74/#x',\n              ' http://192.168.56.74/', '\\x00http://192.168.56.74/',\n              'http://192.168.56.74/\\n', 'http://192.168.56.74/\\\\x']\n        for u in urls:\n            with self.subTest(url=u), self.assertRaises(BoundaryError):self.origin.validate(u)\n    def test_invalid_origin(self):\n        for args in [('192.168.56.20','http',80),('192.168.56.74','file',80),('192.168.56.74','http',True)]:\n            with self.assertRaises(BoundaryError):Origin(*args)\n    def test_nested_good(self):\n        self.assertEqual(self.origin.resolve('http://192.168.56.74/hls/a.m3u8','seg.ts'),'http://192.168.56.74/hls/seg.ts')\n    def test_nested_bad(self):\n        for ref in ['//192.168.56.20/a', 'https://192.168.56.74/a', '\\t//192.168.56.20/a', 'file:///tmp/a']:\n            with self.assertRaises(BoundaryError):self.origin.resolve('http://192.168.56.74/a',ref)\n    def test_all_redirects_refused(self):\n        for code in [301,302,303,307,308]:\n            with self.assertRaises(BoundaryError):NoRedirects().redirect_request(None,None,code,'',{},'http://192.168.56.74/')\n    def response(self, data, length=None):\n        r=io.BytesIO(data);r.headers={} if length is None else {'Content-Length':length};return r\n    def test_bounded_body(self):\n        self.assertEqual(read_bounded(self.response(b'abc','3'),3), b'abc')\n        self.assertEqual(read_bounded(self.response(b'abc'),3), b'abc')\n    def test_bad_lengths(self):\n        for n in ['4','-1','x','2','9999999999999999999999999999999','\uff13']:\n            with self.subTest(n=n), self.assertRaises(BoundaryError):read_bounded(self.response(b'abc',n),3)\n        with self.assertRaises(BoundaryError):read_bounded(self.response(b'abcd'),3)\n    def test_limit_types(self):\n        for n in [True,0,-1,1.5,64*1024*1024+1]:\n            with self.assertRaises(BoundaryError):read_bounded(self.response(b''),n)\n    def test_ca_must_be_explicit_and_pinned(self):\n        with self.assertRaises(BoundaryError):Client(Origin('192.168.56.74','https',443))\n        with self.assertRaises(BoundaryError):trusted_context(b'not certificate','wrong')\n        with self.assertRaises(BoundaryError):Client(self.origin,b'bad','bad')\n    @patch('guarded_http.build_opener')\n    def test_rejected_before_connection(self, build):\n        client=Client(self.origin)\n        with self.assertRaises(BoundaryError):client.get('http://192.168.56.20/?secret=not-real')\n        client.opener.open.assert_not_called()\n    @patch('guarded_http.build_opener')\n    def test_proxy_disabled(self, build):\n        Client(self.origin)\n        self.assertEqual(build.call_args.args[0].proxies,{})\n    @patch('guarded_http.build_opener')\n    def test_transport_error_redacted(self, build):\n        client=Client(self.origin);client.opener.open.side_effect=OSError('secret-value')\n        with self.assertRaises(BoundaryError) as caught:client.get('http://192.168.56.74/?ks=secret-value')\n        self.assertNotIn('secret-value',str(caught.exception))\n\nif __name__=='__main__':unittest.main()",
+              "lineStart": 1,
+              "lineEnd": 62,
+              "totalLines": 62,
+              "truncated": false
+            }
+          },
+          "title": "tools/php83/baseline-protocol/test_guarded_http.py",
+          "time": {
+            "start": 1790432602704,
+            "end": 1790432602721
+          }
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "fc_01a0de19633c770fbd126e3888b805f4"
+          }
+        },
+        "id": "prt_0de19650800166rfCYLW2zL4SH",
+        "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+        "messageID": "msg_0de195df2001H2F2M17vXZ2KXH"
+      }
+    },
+    {
+      "type": "tool_use",
+      "timestamp": 1790432602724,
+      "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+      "part": {
+        "type": "tool",
+        "tool": "read",
+        "callID": "call_01a0de1964b47664a61811d4f3055f9e",
+        "state": {
+          "status": "completed",
+          "input": {
+            "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/baseline-protocol/README.md"
+          },
+          "output": "<path>/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/baseline-protocol/README.md</path>\n<type>file</type>\n<content>\n1: # Baseline protocol client preparation\n2: \n3: `guarded_http.py` is a local-only preparation building block, not the installed-AIO\n4: runner and not baseline acceptance. It never defaults to `.20`; the origin fixes\n5: one literal lab IP, transport and port. Every nested URI must use `Origin.resolve`.\n6: Redirects are refused, ambient proxies disabled and HTTPS requires a pinned CA.\n7: Response byte limits and declared lengths are checked; errors omit request URLs.\n8: \n9: Current GET-only interface has no KS/authentication, uploads, API POST, HLS parser,\n10: Range contract, browser, retries or benchmark statistics. It has a **socket timeout,\n11: not a hard whole-request deadline**: a slowly streaming response can exceed that\n12: wall time. A bounded subprocess or reviewed total-deadline transport must be added\n13: before the real baseline workload; do not call the present timeout a total bound.\n14: TLS success/wrong-CA and redirect/no-forwarding transport need real isolated local\n15: server execution; current tests mock the opener and exercise pure guards only.\n16: No network request or VM run has occurred in this preparation.\n17: \n18: Run `python3 -m unittest discover -s tools/php83/baseline-protocol -p 'test_*.py' -v`.\n19: Keep older `tools/php83/lab_target.py` and historic evidence unchanged. Future API\n20: credentials remain in guest memory/private files, never CLI arguments, requests in\n21: public logs, manifests or result reports. Local synthetic test marker strings are\n22: not real credentials.\n\n(End of file - total 22 lines)\n</content>",
+          "metadata": {
+            "preview": "# Baseline protocol client preparation\n\n`guarded_http.py` is a local-only preparation building block, not the installed-AIO\nrunner and not baseline acceptance. It never defaults to `.20`; the origin fixes\none literal lab IP, transport and port. Every nested URI must use `Origin.resolve`.\nRedirects are refused, ambient proxies disabled and HTTPS requires a pinned CA.\nResponse byte limits and declared lengths are checked; errors omit request URLs.\n\nCurrent GET-only interface has no KS/authentication, uploads, API POST, HLS parser,\nRange contract, browser, retries or benchmark statistics. It has a **socket timeout,\nnot a hard whole-request deadline**: a slowly streaming response can exceed that\nwall time. A bounded subprocess or reviewed total-deadline transport must be added\nbefore the real baseline workload; do not call the present timeout a total bound.\nTLS success/wrong-CA and redirect/no-forwarding transport need real isolated local\nserver execution; current tests mock the opener and exercise pure guards only.\nNo network request or VM run has occurred in this preparation.\n\nRun `python3 -m unittest discover -s tools/php83/baseline-protocol -p 'test_*.py' -v`.\nKeep older `tools/php83/lab_target.py` and historic evidence unchanged. Future API\ncredentials remain in guest memory/private files, never CLI arguments, requests in",
+            "truncated": false,
+            "loaded": [],
+            "display": {
+              "type": "file",
+              "path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/baseline-protocol/README.md",
+              "text": "# Baseline protocol client preparation\n\n`guarded_http.py` is a local-only preparation building block, not the installed-AIO\nrunner and not baseline acceptance. It never defaults to `.20`; the origin fixes\none literal lab IP, transport and port. Every nested URI must use `Origin.resolve`.\nRedirects are refused, ambient proxies disabled and HTTPS requires a pinned CA.\nResponse byte limits and declared lengths are checked; errors omit request URLs.\n\nCurrent GET-only interface has no KS/authentication, uploads, API POST, HLS parser,\nRange contract, browser, retries or benchmark statistics. It has a **socket timeout,\nnot a hard whole-request deadline**: a slowly streaming response can exceed that\nwall time. A bounded subprocess or reviewed total-deadline transport must be added\nbefore the real baseline workload; do not call the present timeout a total bound.\nTLS success/wrong-CA and redirect/no-forwarding transport need real isolated local\nserver execution; current tests mock the opener and exercise pure guards only.\nNo network request or VM run has occurred in this preparation.\n\nRun `python3 -m unittest discover -s tools/php83/baseline-protocol -p 'test_*.py' -v`.\nKeep older `tools/php83/lab_target.py` and historic evidence unchanged. Future API\ncredentials remain in guest memory/private files, never CLI arguments, requests in\npublic logs, manifests or result reports. Local synthetic test marker strings are\nnot real credentials.",
+              "lineStart": 1,
+              "lineEnd": 22,
+              "totalLines": 22,
+              "truncated": false
+            }
+          },
+          "title": "tools/php83/baseline-protocol/README.md",
+          "time": {
+            "start": 1790432602707,
+            "end": 1790432602722
+          }
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "fc_01a0de1964b47664a61811d4f3055f9e"
+          }
+        },
+        "id": "prt_0de1965a4001cnpQichkDgQbCy",
+        "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+        "messageID": "msg_0de195df2001H2F2M17vXZ2KXH"
+      }
+    },
+    {
+      "type": "tool_use",
+      "timestamp": 1790432602734,
+      "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+      "part": {
+        "type": "tool",
+        "tool": "glob",
+        "callID": "call_01a0de19679e77349604f9cb958e5d01",
+        "state": {
+          "status": "completed",
+          "input": {
+            "pattern": "openspec/**/*design*"
+          },
+          "output": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/openspec/changes/archive/2026-09-25-add-kaltura-console-go/design.md\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/openspec/changes/archive/2026-09-25-improve-console-playback-quality/design.md\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/openspec/changes/archive/2026-09-25-add-noble-deb-packaging/design.md\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/openspec/changes/migrate-kaltura-php83/design.md",
+          "metadata": {
+            "count": 4,
+            "truncated": false
+          },
+          "title": "",
+          "time": {
+            "start": 1790432602712,
+            "end": 1790432602725
+          }
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "fc_01a0de19679e77349604f9cb958e5d01"
+          }
+        },
+        "id": "prt_0de19688f001Wq2eHITOIq50Mk",
+        "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+        "messageID": "msg_0de195df2001H2F2M17vXZ2KXH"
+      }
+    },
+    {
+      "type": "tool_use",
+      "timestamp": 1790432602734,
+      "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+      "part": {
+        "type": "tool",
+        "tool": "glob",
+        "callID": "call_01a0de19669e7289bd85a8b627ae38af",
+        "state": {
+          "status": "completed",
+          "input": {
+            "pattern": "**/baseline-protocol-plan.md"
+          },
+          "output": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/baseline-protocol-plan.md",
+          "metadata": {
+            "count": 1,
+            "truncated": false
+          },
+          "title": "",
+          "time": {
+            "start": 1790432602710,
+            "end": 1790432602727
+          }
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "fc_01a0de19669e7289bd85a8b627ae38af"
+          }
+        },
+        "id": "prt_0de19678f001Nz2GqntA4oj9HF",
+        "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+        "messageID": "msg_0de195df2001H2F2M17vXZ2KXH"
+      }
+    },
+    {
+      "type": "step_finish",
+      "timestamp": 1790432602917,
+      "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+      "part": {
+        "id": "prt_0de196b22001URYVb6ko5BPPKJ",
+        "reason": "tool-calls",
+        "snapshot": "e455787f31a22ac42b66e354de2bdc9a5080c671",
+        "messageID": "msg_0de195df2001H2F2M17vXZ2KXH",
+        "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+        "type": "step-finish",
+        "tokens": {
+          "total": 80323,
+          "input": 1029,
+          "output": 327,
+          "reasoning": 6,
+          "cache": {
+            "write": 0,
+            "read": 78961
+          }
+        },
+        "cost": 0
+      }
+    },
+    {
+      "type": "tool_use",
+      "timestamp": 1790432605581,
+      "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+      "part": {
+        "type": "tool",
+        "tool": "read",
+        "callID": "call_01a0de196eba702db31f3fedc772e112",
+        "state": {
+          "status": "completed",
+          "input": {
+            "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/baseline-protocol-plan.md"
+          },
+          "output": "<path>/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/baseline-protocol-plan.md</path>\n<type>file</type>\n<content>\n1: # Draft PHP7.4 baseline protocol \u2014 preparation plan\n2: \n3: **Status: PLAN, NOT_EXECUTED.** No VM, package installation, media generation,\n4: benchmark, recovery action or task closure was performed for this document.\n5: Scope: finish the frozen protocol for proposal1.2 / detailed5.5(T0-05), while\n6: preserving related5.22(T5-01), media5.14 and recovery5.23\u20135.24 gates. Do not run\n7: against `.20`, infer production authorization or describe an experimental PHP83\n8: source probe as a full installed AIO candidate.\n9: \n10: ## 1. Existing evidence and reuse boundary\n11: \n12: | Asset | Ready to reuse | Not established / adaptation needed |\n13: |---|---|---|\n14: | `deb/php74-baseline/Vagrantfile` + `bootstrap.sh` | Exact box `bento/ubuntu-24.04` `202510.26.0`;4vCPU/8192MiB; no shared host folder; `.74` identity; published repo+installer checksums; refuses existing app/DB | Disk/controller identity and host contention attestation; bootstrap is not reboot/reprovision/recovery-safe |\n15: | `deb/php83-lab/Vagrantfile` | Same configured box/CPU/RAM and no shared folders | Runtime lab alone is not an installed full PHP83 AIO; current VM state needs fresh attestation, not historical assumptions |\n16: | `deb/php74-baseline/smoke.sh` | Root/hostname/IP/script-hash guards; temporary owned IPv4 egress chain; restores chain on exit | Not a reusable safe media/benchmark client: pinned legacy sanity uses redirects, credentials in arguments/URLs, unbounded curl calls and existing `/tmp/sanity.mp4` without a hash check |\n17: | `evidence/noble-baseline/smoke-http.txt` | Historical zero failures:9services, searchd, API ping/session, UI HTTP200, one short upload READY/HLS segment | No full browser login/ACL, trusted TLS,1080p60/profile/thumbnail/progressive Range, repeated timing or recovery acceptance |\n18: | `tools/php83/lab_target.py`, `test_lab_target.py` | Literal `.74`/`.83` allowlist; rejects `.20`, userinfo,DNS names,unlisted ports and redirects; disables proxies;4 local test cases exist | Not wired into legacy sanity; explicit private-CA context for installed AIO and all nested manifest/segment URLs still need implementation/testing |\n19: | `tools/php83/patch-tests/api-http-client.py`, `api-apache-inner.sh` | Typed JSON/auth negative assertions, no redirects/proxies, nonce/runtime/SAPI checks, trusted/untrusted-CA pattern | Loopback `/probe`, synthetic schema and private Apache; NOT an installed-AIO benchmark client or full UI/worker acceptance |\n20: | `tools/php83/exp11-api/collect.py` | Frozen source/current+previous artifact identities, synthetic owned-unit cleanup, token-safe output allowlist and diagnostics | Session-only bounded corpus, not media.list/get workload or production-equivalent SQL/cache configuration; don't run its temporary DB collector as baseline measurement |\n21: \n22: Local source review confirmed the legacy sanity file matches the reviewed release\n23: blob SHA `aaf36e09e1cf87dfb1dfc610f03821903e1ef899a175dc7ef2e2ce1f9cf334e7`.\n24: It defaults to `.20` when invoked bare; **never invoke it bare**. Reuse existing\n25: smoke evidence as PARTIAL, not a reason to rerun an unsafe credential-bearing\n26: client. The bootstrap `.20` rule is transient across reboot; the smoke chain is\n27: IPv4-only and permits pre-existing connections. Neither implies a persistent\n28: air gap, comprehensive redirect rejection or a complete IPv6 policy.\n29: \n30: ## 2. Freeze manifest before any timing\n31: \n32: Proposed new protocol manifest (not implemented by this plan):\n33: \n34: - Case/run ID, parent tasks, reviewed commit, executor and independent reviewer.\n35: - Published7.4 release/repository/installer SHA and installed `dpkg` package/version\n36:   inventory; original source-to-package map and current generated/overlay hashes.\n37:   Never relabel upstream ZIP as identical to the complete published payload.\n38: - Exact VM UUID/box checksum/version,4vCPU,8GiB, disk/controller/cache settings,\n39:   filesystem/free space, host CPU/hypervisor, host load and timestamps. Both labs\n40:   must match; snapshot restore/drift or shared contention invalidates comparison.\n41: - PHP CLI/web binary,module,INI,Apache/FPM identity; OPcache/JIT/timezone/locale;\n42:   ffmpeg/ffprobe and worker binary versions/hashes; DB/cache/search versions.\n43: - Synthetic partner/user/permission IDs, stable seeded media entry for timed get,\n44:   conversion-profile and flavor definitions, queue/worker concurrency settings.\n45:   Restrict credentials,KS,cookies,TLS keys and raw request bodies to guest-private\n46:   files/memory; publish only sanitized IDs, hashes and explicit predicates.\n47: - Literal target/port/transport allowlist, private CA fingerprint and SAN identity,\n48:   proxy/redirect/DNS restrictions, timeout/retry/response-size policy, cleanup IDs.\n49: - Encoder command/settings, **actual generated** fixture hashes, ffprobe reports,\n50:   expected streams/frames/duration and delivered-profile tolerances. Hash fields\n51:   must remain absent/NOT_RUN until bytes exist; no guessed fixture checksums.\n52: - Exact request sequence, cache-state policy, samples/statistic definitions,\n53:   warmups/round count, media timing boundaries and diagnostic classification.\n54: \n55: The plan's suggested profile/settings are drafts until independently reviewed and\n56: written into this manifest. Do not infer parameters or accepted tolerances from\n57: a successful result after execution.\n58: \n59: ## 3. Minimal synthetic fixture pair\n60: \n61: Decision7 requires10s640x360/25fps and60s1920x1080/60fps H.264/AAC. Use technical\n62: FFmpeg test patterns plus a synthetic tone; no YouTube material, user media or\n63: creative-video tools. Generate **once**, checksum, inspect and copy identical\n64: bytes to both labs rather than regenerate on each encoder build. FFmpeg documents\n65: synthetic video/audio sources; ffprobe provides machine-readable stream/frame\n66: inspection. [FFmpeg filters](https://ffmpeg.org/ffmpeg-filters.html),\n67: [ffprobe documentation](https://ffmpeg.org/ffprobe.html).\n68: \n69: Suggested freeze inputs: testsrc2+sine, yuv420p, libx264 preset medium/CRF18,\n70: fixed GOP of two seconds, explicit25/60 constant rates, AAC128k/48kHz/stereo,\n71: single-threaded generation and stripped variable metadata. Record the exact\n72: encoder build/options; these settings alone are **not** proof of cross-build\n73: byte reproducibility. Verify250/3600 decoded video frames and exact source raster/\n74: nominal rate; freeze audio/container duration tolerances before tests.\n75: \n76: Conversion profiles must explicitly include the accepted delivered360p25 and\n77: 1080p60 properties; do not assume the baseline's default flavors retain60fps.\n78: Each upload must produce READY, expected flavor set and thumbnails. Inspect\n79: actual delivered progressive and HLS streams: raster, frame rate, duration,\n80: codec/audio, manifest structure, referenced segment identity and successful\n81: bounded retrieval; verify206/Content-Range on a valid byte range. Every resolved\n82: manifest/segment URL re-enters the target guard before connection. Negative\n83: wrong-origin/redirect/untrusted-CA cases run before credentials or uploads.\n84: \n85: Proposed bounded limits for independent review before the manifest is frozen:\n86: API/manifest/thumbnail total monotonic deadline30s, no automatic retry; upload120s(short)/600s(long);\n87: READY polling every2s with600s(short)/1800s(long) deadline; manifest cap1MiB,\n88: JSON cap1MiB (read cap+1 and reject overflow, never truncate silently), segment cap64MiB and progressive byte-range window1MiB. Actual\n89: fixture/upload byte caps must be set from the generated file lengths, not guessed.\n90: Require exact delivered raster and declared25/60fps profile, duration tolerance\n91: at most one video frame plus one AAC frame for stream/container accounting;\n92: if the selected baseline encoder/profile cannot meet this draft tolerance,\n93: review/version the protocol before timed runs rather than widen it afterward.\n94: \n95: ## 4. API/media repetitions and statistics\n96: \n97: Decision7 freezes2warmups + at least5measured rounds,100sequential API calls per\n98: round, with session.start/media.list/media.get recorded separately and both\n99: fixtures uploaded/verified each round. One explicit proposed interpretation is\n100: **34 session.start +33 media.list +33 media.get =100 calls**, fixed order each\n101: round; approve this split before implementation (do not silently interpret as\n102: 100 calls per endpoint). Use a pre-seeded fixed get entry and fixed pagination,\n103: ordering/filters so the growing upload corpus does not change list payload size.\n104: No hidden client retries; failures/timeouts retain their sample and mark the row\n105: FAIL rather than disappearing from the denominator.\n106: \n107: Run HTTP and trustedHTTPS as separate protocol rows. At the proposed minimum,\n108: each runtime/transport has700API calls total (200warmup+500measured) and14uploads\n109: (4warmup+10measured). Both transports mean1400calls/28uploads for one runtime;\n110: never call those28 independent fixtures. Compare candidate only when its full\n111: installed lab is ready and identically configured; baseline collection can finish\n112: first without a candidate PASS or release date.\n113: \n114: Per endpoint/round report sample count, median and nearest-rank p95\n115: (zero-based integer index `(95*n+99)//100 - 1`), raw durations and errors. Report pooled endpoint\n116: summaries separately; never mix endpoints or pool away a slow round. For each\n117: fixture distinguish client upload duration, queue wait, worker conversion and\n118: READY visibility plus delivery verification; predeclare timestamp sources and\n119: clock checks. Report at least5 measured sample durations per fixture/transport,\n120: not a misleading latency p95 from one transcode. Warmups remain recorded/excluded.\n121: \n122: Matching workload API median/p95 and transcode wall time must not regress >20%\n123: without explicit review (Decision7). Freeze comparison pairing and aggregation\n124: before measuring; preserve dispersion and every run. Concurrent agent workloads\n125: on either VM **or the shared benchmark host** make measurements INCONCLUSIVE,\n126: not PASS. Separate compatibility changes from optional dependency upgrades.\n127: All exercised-path diagnostics must be classified; fatal/type,worker/job,auth,\n128: extension or contract regressions block acceptance. No blanket warnings waiver.\n129: \n130: ## 5. Small recovery and baseline-preservation boundary\n131: \n132: For protocol readiness, specify a **coherent synthetic baseline checkpoint**:\n133: restrict intake, drain/stop workers, record app/runtime/config/package state,\n134: DB snapshot and media/config file hashes, then preserve a matched snapshot or\n135: reviewed backup set with restricted secrets. Never take/recover a production clone.\n136: A live VM snapshot alone is not evidence of application-consistent recovery.\n137: \n138: Preserve baseline before repeated synthetic uploads so later rounds/retests have\n139: known state. Prefer tagged test fixtures and exact owned-resource cleanup; do not\n140: reset arbitrary partners or delete a DB by a returned untrusted path. Cleanup or\n141: snapshot restore must verify identity, stop only owned work and check services,\n142: login/API/media state afterward. A reboot needs outbound guard reinstallation\n143: **before requests**, not the assumption that bootstrap firewall state survived.\n144: \n145: The complete upgrade/failed-cutover rehearsal remains tasks4.1/4.2 and5.23/5.24:\n146: restore matched app/runtime/config/DB/media after controlled synthetic writes,\n147: account for discarded writes and drain old workers. This plan does not promise\n148: lossless downgrade or waive those later cases. Criteria subclass serialization\n149: already has a native74/83 ordering/cache-key difference; choose and test a real\n150: cold/warm invalidation policy under5.9, not a custom serialization rewrite or\n151: an invented cache-corruption claim.\n152: \n153: ## 6. First three runnable work packages (after review)\n154: \n155: 1. **Local-only protocol/guard tests:** implement manifest validation and fixed\n156:    case inventory; extend literal-target guard to bounded body reads/private CA;\n157:    negative fixtures for proxies,IPv6,DNS/redirects,nested HLS destinations,\n158:    wrong hashes/secrets in reports,changed profiles/missing samples. No VM needed.\n159: 2. **Local synthetic media freeze:** generate/ffprobe/hash the two technical\n160:    fixtures using pinned tools; independently verify stream counts/settings and\n161:    invalid-media detection. This needs compute reservation, not production access.\n162: 3. **Exclusive baseline functional rehearsal before timing:** attest existing\n163:    published74 lab, restore/verify guards, install lab-only trustedTLS identity,\n164:    seed scoped synthetic data and run one untimed HTTP/HTTPS API/media/browser\n165:    smoke with cleanup verification. Only afterward run the frozen repetitions.\n166: \n167: Actual Claude/OpenCode/other authorized independent reviewer must execute/review\n168: frozen inputs and retain terminal/test evidence. Current AGENTS prioritizes\n169: Claude,Cursor,OpenCode; historical Grok-first prose is not a requirement to retry\n170: Grok. Local tests alone do not close1.2/5.5; full acceptance requires the manifest,\n171: real applicable baseline API/UI/worker/media/TLS rows, resources/timings,\n172: independent repetition and documented gaps. No task checkbox changes here.\n173: \n174: ## 7. Retrieval and source provenance\n175: \n176: Installed ai-memory retrieval was used before planning (explicit returned project\n177: scope `default/platform-install-packages-php83`; thin hits broadened globally).\n178: It did not provide a completed baseline protocol; current design/evidence above\n179: are authoritative. Structural graph project for the main worktree was ready\n180: 9934nodes/17666edges, generation2026-09-25T19:28:02Z. Coverage reports the migration\n181: baseline/harness paths as `freshness: missing`; all relied exact files were read\n182: directly. `deb/noble/sanity.sh` had matching metadata. No graph absence/exhaustive\n183: coverage claim is made for this separate migration worktree. Decision7 and\n184: `coverage-matrix.md` retain the broad baseline/performance/recovery gaps.\n185: \n186: ## 8. Actual independent planning review and revised draft decisions\n187: \n188: Actual Claude CLI completed read-only review with exit0, no stderr, no test/VM/\n189: network/FFmpeg execution. It read the draft and specified source files, identified\n190: missing protocol decisions, and did **not** approve execution. Codex separately\n191: verified the legacy release-blob hash and read the four guard test methods; those\n192: claims are not attributed to Claude's restricted file review. This document is a\n193: revised draft, not a frozen executable protocol. All counts and values derived\n194: from the proposed34/33/33 split remain **DRAFT** until manifest review.\n195: \n196: The following decisions resolve or explicitly bound the review findings:\n197: \n198: - **Baseline identity first:** current `.74` has hosted copied83 isolated probes;\n199:   that alone does not prove installed74 package contamination. Attest published\n200:   package versions/checksums, installed app/overlays/config against the recorded\n201:   post-bootstrap baseline, and inspect inactive owned probe services/workloads.\n202:   Missing historical comparison or unexplained drift makes timing INCONCLUSIVE;\n203:   obtain coordinator approval for a fresh isolated published74 clone rather than\n204:   silently reprovision the current shared research VM. No such action is done here.\n205: - **Draft request/session policy:** USER KS with frozen minimum list/get/upload\n206:   privileges for one synthetic partner;34 measured session.start POSTs followed\n207:   by33 media.list and33 media.get using the final freshly issued KS. Setup-only\n208:   admin credentials are never timed. Keep secrets/KS in memory or restricted\n209:   request-body files, not URLs/argv/logs. Freeze expiry/clock constraints to exceed\n210:   the bounded round. Wrong-secret/cross-partner/expired negatives are separate\n211:   functional rows, not hidden timing retries.\n212: - **Client and ordering:** one fixed host-only client location/resource envelope\n213:   for both labs. Complete the API block with workers idle, then one fixture upload\n214:   and wait for READY/delivery, then the second; wait until queues drain before the\n215:   next round. Never run timed API calls during conversion. HTTP/HTTPS order is\n216:   alternated by a fixed schedule, and baseline is remeasured bracketing candidate\n217:   runs (A-before/B/A-after) to detect host/time drift; early baseline results alone\n218:   do not establish a later candidate comparison.\n219: - **Cache state:** use the same published cache/OPcache settings for steady-state\n220:   warm measurements; record API response-cache and backend hit/miss observations,\n221:   not a claim that repeated get calls benchmark uncached PHP. Cold/cache-restart\n222:   functionality is a separate untimed row. Freeze memcached/APCu warm/cold state\n223:   and cache policy per round; do not flush or globally disable a backend just to\n224:   improve timing. Full cross-engine invalidation remains task5.9.\n225: - **Draft20% comparator:** pooled measured API median/p95 per endpoint+transport\n226:   is the primary latency comparison, with all five round summaries retained.\n227:   If max/min round medians exceed1.20 or host contention occurs, classify as\n228:   INCONCLUSIVE and repeat. These are proposed stability limits, not observations.\n229:   Transcode reports median and maximum for five samples (do not pretend this is\n230:   a well-estimated tail distribution); separately gate median worker start\u2192finish\n231:   and median upload-complete\u2192READY at20%, keeping queue and polling effects visible.\n232: - **Guard semantics:** the existing Python30s timeout is a socket-operation\n233:   timeout, not a total deadline; the new client must enforce elapsed monotonic\n234:   budgets. Reject all automatic redirects. A delivery-only manual redirect may\n235:   be allowed by a separately reviewed maximum-hop policy only after validating\n236:   each Location, stripping credentials and rechecking literal destination/port;\n237:   until that policy exists, redirect is explicit FAIL, not silently followed.\n238:   Service URLs must match the frozen literal-IP allowlist; redact query/path KS.\n239: - **Real browser playback:** choose a fixed browser build and actual browser\n240:   executor (for example existing console E2E tooling after inventory), install\n241:   only the lab CA in its isolated profile, reject external egress/assets and\n242:   capture login/session/ACL plus actual playback progression. HTTP200/segment\n243:   retrieval alone does not satisfy this row. Browser executor/profile/asset\n244:   policy remains a concrete implementation gap, not a waived task.\n245: - **Encoder/duration:** add explicit metadata removal, bitexact flags where\n246:   supported, fixed GOP/min-keyint/scene-cut and thread settings to the generated\n247:   command manifest. These do not guarantee cross-build encoding identity.\n248:   Validate AAC priming/padding during the untimed rehearsal before freezing the\n249:   draft frame-based tolerance; version any revision before measured execution.\n250: \n251: Immediate local implementation can proceed on guard/manifest/statistic tests;\n252: media generation and baseline VM operations still need their separate resource\n253: reservations and reviewed frozen inputs. No measured baseline is claimed here.\n\n(End of file - total 253 lines)\n</content>",
+          "metadata": {
+            "preview": "# Draft PHP7.4 baseline protocol \u2014 preparation plan\n\n**Status: PLAN, NOT_EXECUTED.** No VM, package installation, media generation,\nbenchmark, recovery action or task closure was performed for this document.\nScope: finish the frozen protocol for proposal1.2 / detailed5.5(T0-05), while\npreserving related5.22(T5-01), media5.14 and recovery5.23\u20135.24 gates. Do not run\nagainst `.20`, infer production authorization or describe an experimental PHP83\nsource probe as a full installed AIO candidate.\n\n## 1. Existing evidence and reuse boundary\n\n| Asset | Ready to reuse | Not established / adaptation needed |\n|---|---|---|\n| `deb/php74-baseline/Vagrantfile` + `bootstrap.sh` | Exact box `bento/ubuntu-24.04` `202510.26.0`;4vCPU/8192MiB; no shared host folder; `.74` identity; published repo+installer checksums; refuses existing app/DB | Disk/controller identity and host contention attestation; bootstrap is not reboot/reprovision/recovery-safe |\n| `deb/php83-lab/Vagrantfile` | Same configured box/CPU/RAM and no shared folders | Runtime lab alone is not an installed full PHP83 AIO; current VM state needs fresh attestation, not historical assumptions |\n| `deb/php74-baseline/smoke.sh` | Root/hostname/IP/script-hash guards; temporary owned IPv4 egress chain; restores chain on exit | Not a reusable safe media/benchmark client: pinned legacy sanity uses redirects, credentials in arguments/URLs, unbounded curl calls and existing `/tmp/sanity.mp4` without a hash check |\n| `evidence/noble-baseline/smoke-http.txt` | Historical zero failures:9services, searchd, API ping/session, UI HTTP200, one short upload READY/HLS segment | No full browser login/ACL, trusted TLS,1080p60/profile/thumbnail/progressive Range, repeated timing or recovery acceptance |\n| `tools/php83/lab_target.py`, `test_lab_target.py` | Literal `.74`/`.83` allowlist; rejects `.20`, userinfo,DNS names,unlisted ports and redirects; disables proxies;4 local test cases exist | Not wired into legacy sanity; explicit private-CA context for installed AIO and all nested manifest/segment URLs still need implementation/testing |\n| `tools/php83/patch-tests/api-http-client.py`, `api-apache-inner.sh` | Typed JSON/auth negative assertions, no redirects/proxies, nonce/runtime/SAPI checks, trusted/untrusted-CA pattern | Loopback `/probe`, synthetic schema and private Apache; NOT an installed-AIO benchmark client or full UI/worker acceptance |\n| `tools/php83/exp11-api/collect.py` | Frozen source/current+previous artifact identities, synthetic owned-unit cleanup, token-safe output allowlist and diagnostics | Session-only bounded corpus, not media.list/get workload or production-equivalent SQL/cache configuration; don't run its temporary DB collector as baseline measurement |",
+            "truncated": false,
+            "loaded": [],
+            "display": {
+              "type": "file",
+              "path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/baseline-protocol-plan.md",
+              "text": "# Draft PHP7.4 baseline protocol \u2014 preparation plan\n\n**Status: PLAN, NOT_EXECUTED.** No VM, package installation, media generation,\nbenchmark, recovery action or task closure was performed for this document.\nScope: finish the frozen protocol for proposal1.2 / detailed5.5(T0-05), while\npreserving related5.22(T5-01), media5.14 and recovery5.23\u20135.24 gates. Do not run\nagainst `.20`, infer production authorization or describe an experimental PHP83\nsource probe as a full installed AIO candidate.\n\n## 1. Existing evidence and reuse boundary\n\n| Asset | Ready to reuse | Not established / adaptation needed |\n|---|---|---|\n| `deb/php74-baseline/Vagrantfile` + `bootstrap.sh` | Exact box `bento/ubuntu-24.04` `202510.26.0`;4vCPU/8192MiB; no shared host folder; `.74` identity; published repo+installer checksums; refuses existing app/DB | Disk/controller identity and host contention attestation; bootstrap is not reboot/reprovision/recovery-safe |\n| `deb/php83-lab/Vagrantfile` | Same configured box/CPU/RAM and no shared folders | Runtime lab alone is not an installed full PHP83 AIO; current VM state needs fresh attestation, not historical assumptions |\n| `deb/php74-baseline/smoke.sh` | Root/hostname/IP/script-hash guards; temporary owned IPv4 egress chain; restores chain on exit | Not a reusable safe media/benchmark client: pinned legacy sanity uses redirects, credentials in arguments/URLs, unbounded curl calls and existing `/tmp/sanity.mp4` without a hash check |\n| `evidence/noble-baseline/smoke-http.txt` | Historical zero failures:9services, searchd, API ping/session, UI HTTP200, one short upload READY/HLS segment | No full browser login/ACL, trusted TLS,1080p60/profile/thumbnail/progressive Range, repeated timing or recovery acceptance |\n| `tools/php83/lab_target.py`, `test_lab_target.py` | Literal `.74`/`.83` allowlist; rejects `.20`, userinfo,DNS names,unlisted ports and redirects; disables proxies;4 local test cases exist | Not wired into legacy sanity; explicit private-CA context for installed AIO and all nested manifest/segment URLs still need implementation/testing |\n| `tools/php83/patch-tests/api-http-client.py`, `api-apache-inner.sh` | Typed JSON/auth negative assertions, no redirects/proxies, nonce/runtime/SAPI checks, trusted/untrusted-CA pattern | Loopback `/probe`, synthetic schema and private Apache; NOT an installed-AIO benchmark client or full UI/worker acceptance |\n| `tools/php83/exp11-api/collect.py` | Frozen source/current+previous artifact identities, synthetic owned-unit cleanup, token-safe output allowlist and diagnostics | Session-only bounded corpus, not media.list/get workload or production-equivalent SQL/cache configuration; don't run its temporary DB collector as baseline measurement |\n\nLocal source review confirmed the legacy sanity file matches the reviewed release\nblob SHA `aaf36e09e1cf87dfb1dfc610f03821903e1ef899a175dc7ef2e2ce1f9cf334e7`.\nIt defaults to `.20` when invoked bare; **never invoke it bare**. Reuse existing\nsmoke evidence as PARTIAL, not a reason to rerun an unsafe credential-bearing\nclient. The bootstrap `.20` rule is transient across reboot; the smoke chain is\nIPv4-only and permits pre-existing connections. Neither implies a persistent\nair gap, comprehensive redirect rejection or a complete IPv6 policy.\n\n## 2. Freeze manifest before any timing\n\nProposed new protocol manifest (not implemented by this plan):\n\n- Case/run ID, parent tasks, reviewed commit, executor and independent reviewer.\n- Published7.4 release/repository/installer SHA and installed `dpkg` package/version\n  inventory; original source-to-package map and current generated/overlay hashes.\n  Never relabel upstream ZIP as identical to the complete published payload.\n- Exact VM UUID/box checksum/version,4vCPU,8GiB, disk/controller/cache settings,\n  filesystem/free space, host CPU/hypervisor, host load and timestamps. Both labs\n  must match; snapshot restore/drift or shared contention invalidates comparison.\n- PHP CLI/web binary,module,INI,Apache/FPM identity; OPcache/JIT/timezone/locale;\n  ffmpeg/ffprobe and worker binary versions/hashes; DB/cache/search versions.\n- Synthetic partner/user/permission IDs, stable seeded media entry for timed get,\n  conversion-profile and flavor definitions, queue/worker concurrency settings.\n  Restrict credentials,KS,cookies,TLS keys and raw request bodies to guest-private\n  files/memory; publish only sanitized IDs, hashes and explicit predicates.\n- Literal target/port/transport allowlist, private CA fingerprint and SAN identity,\n  proxy/redirect/DNS restrictions, timeout/retry/response-size policy, cleanup IDs.\n- Encoder command/settings, **actual generated** fixture hashes, ffprobe reports,\n  expected streams/frames/duration and delivered-profile tolerances. Hash fields\n  must remain absent/NOT_RUN until bytes exist; no guessed fixture checksums.\n- Exact request sequence, cache-state policy, samples/statistic definitions,\n  warmups/round count, media timing boundaries and diagnostic classification.\n\nThe plan's suggested profile/settings are drafts until independently reviewed and\nwritten into this manifest. Do not infer parameters or accepted tolerances from\na successful result after execution.\n\n## 3. Minimal synthetic fixture pair\n\nDecision7 requires10s640x360/25fps and60s1920x1080/60fps H.264/AAC. Use technical\nFFmpeg test patterns plus a synthetic tone; no YouTube material, user media or\ncreative-video tools. Generate **once**, checksum, inspect and copy identical\nbytes to both labs rather than regenerate on each encoder build. FFmpeg documents\nsynthetic video/audio sources; ffprobe provides machine-readable stream/frame\ninspection. [FFmpeg filters](https://ffmpeg.org/ffmpeg-filters.html),\n[ffprobe documentation](https://ffmpeg.org/ffprobe.html).\n\nSuggested freeze inputs: testsrc2+sine, yuv420p, libx264 preset medium/CRF18,\nfixed GOP of two seconds, explicit25/60 constant rates, AAC128k/48kHz/stereo,\nsingle-threaded generation and stripped variable metadata. Record the exact\nencoder build/options; these settings alone are **not** proof of cross-build\nbyte reproducibility. Verify250/3600 decoded video frames and exact source raster/\nnominal rate; freeze audio/container duration tolerances before tests.\n\nConversion profiles must explicitly include the accepted delivered360p25 and\n1080p60 properties; do not assume the baseline's default flavors retain60fps.\nEach upload must produce READY, expected flavor set and thumbnails. Inspect\nactual delivered progressive and HLS streams: raster, frame rate, duration,\ncodec/audio, manifest structure, referenced segment identity and successful\nbounded retrieval; verify206/Content-Range on a valid byte range. Every resolved\nmanifest/segment URL re-enters the target guard before connection. Negative\nwrong-origin/redirect/untrusted-CA cases run before credentials or uploads.\n\nProposed bounded limits for independent review before the manifest is frozen:\nAPI/manifest/thumbnail total monotonic deadline30s, no automatic retry; upload120s(short)/600s(long);\nREADY polling every2s with600s(short)/1800s(long) deadline; manifest cap1MiB,\nJSON cap1MiB (read cap+1 and reject overflow, never truncate silently), segment cap64MiB and progressive byte-range window1MiB. Actual\nfixture/upload byte caps must be set from the generated file lengths, not guessed.\nRequire exact delivered raster and declared25/60fps profile, duration tolerance\nat most one video frame plus one AAC frame for stream/container accounting;\nif the selected baseline encoder/profile cannot meet this draft tolerance,\nreview/version the protocol before timed runs rather than widen it afterward.\n\n## 4. API/media repetitions and statistics\n\nDecision7 freezes2warmups + at least5measured rounds,100sequential API calls per\nround, with session.start/media.list/media.get recorded separately and both\nfixtures uploaded/verified each round. One explicit proposed interpretation is\n**34 session.start +33 media.list +33 media.get =100 calls**, fixed order each\nround; approve this split before implementation (do not silently interpret as\n100 calls per endpoint). Use a pre-seeded fixed get entry and fixed pagination,\nordering/filters so the growing upload corpus does not change list payload size.\nNo hidden client retries; failures/timeouts retain their sample and mark the row\nFAIL rather than disappearing from the denominator.\n\nRun HTTP and trustedHTTPS as separate protocol rows. At the proposed minimum,\neach runtime/transport has700API calls total (200warmup+500measured) and14uploads\n(4warmup+10measured). Both transports mean1400calls/28uploads for one runtime;\nnever call those28 independent fixtures. Compare candidate only when its full\ninstalled lab is ready and identically configured; baseline collection can finish\nfirst without a candidate PASS or release date.\n\nPer endpoint/round report sample count, median and nearest-rank p95\n(zero-based integer index `(95*n+99)//100 - 1`), raw durations and errors. Report pooled endpoint\nsummaries separately; never mix endpoints or pool away a slow round. For each\nfixture distinguish client upload duration, queue wait, worker conversion and\nREADY visibility plus delivery verification; predeclare timestamp sources and\nclock checks. Report at least5 measured sample durations per fixture/transport,\nnot a misleading latency p95 from one transcode. Warmups remain recorded/excluded.\n\nMatching workload API median/p95 and transcode wall time must not regress >20%\nwithout explicit review (Decision7). Freeze comparison pairing and aggregation\nbefore measuring; preserve dispersion and every run. Concurrent agent workloads\non either VM **or the shared benchmark host** make measurements INCONCLUSIVE,\nnot PASS. Separate compatibility changes from optional dependency upgrades.\nAll exercised-path diagnostics must be classified; fatal/type,worker/job,auth,\nextension or contract regressions block acceptance. No blanket warnings waiver.\n\n## 5. Small recovery and baseline-preservation boundary\n\nFor protocol readiness, specify a **coherent synthetic baseline checkpoint**:\nrestrict intake, drain/stop workers, record app/runtime/config/package state,\nDB snapshot and media/config file hashes, then preserve a matched snapshot or\nreviewed backup set with restricted secrets. Never take/recover a production clone.\nA live VM snapshot alone is not evidence of application-consistent recovery.\n\nPreserve baseline before repeated synthetic uploads so later rounds/retests have\nknown state. Prefer tagged test fixtures and exact owned-resource cleanup; do not\nreset arbitrary partners or delete a DB by a returned untrusted path. Cleanup or\nsnapshot restore must verify identity, stop only owned work and check services,\nlogin/API/media state afterward. A reboot needs outbound guard reinstallation\n**before requests**, not the assumption that bootstrap firewall state survived.\n\nThe complete upgrade/failed-cutover rehearsal remains tasks4.1/4.2 and5.23/5.24:\nrestore matched app/runtime/config/DB/media after controlled synthetic writes,\naccount for discarded writes and drain old workers. This plan does not promise\nlossless downgrade or waive those later cases. Criteria subclass serialization\nalready has a native74/83 ordering/cache-key difference; choose and test a real\ncold/warm invalidation policy under5.9, not a custom serialization rewrite or\nan invented cache-corruption claim.\n\n## 6. First three runnable work packages (after review)\n\n1. **Local-only protocol/guard tests:** implement manifest validation and fixed\n   case inventory; extend literal-target guard to bounded body reads/private CA;\n   negative fixtures for proxies,IPv6,DNS/redirects,nested HLS destinations,\n   wrong hashes/secrets in reports,changed profiles/missing samples. No VM needed.\n2. **Local synthetic media freeze:** generate/ffprobe/hash the two technical\n   fixtures using pinned tools; independently verify stream counts/settings and\n   invalid-media detection. This needs compute reservation, not production access.\n3. **Exclusive baseline functional rehearsal before timing:** attest existing\n   published74 lab, restore/verify guards, install lab-only trustedTLS identity,\n   seed scoped synthetic data and run one untimed HTTP/HTTPS API/media/browser\n   smoke with cleanup verification. Only afterward run the frozen repetitions.\n\nActual Claude/OpenCode/other authorized independent reviewer must execute/review\nfrozen inputs and retain terminal/test evidence. Current AGENTS prioritizes\nClaude,Cursor,OpenCode; historical Grok-first prose is not a requirement to retry\nGrok. Local tests alone do not close1.2/5.5; full acceptance requires the manifest,\nreal applicable baseline API/UI/worker/media/TLS rows, resources/timings,\nindependent repetition and documented gaps. No task checkbox changes here.\n\n## 7. Retrieval and source provenance\n\nInstalled ai-memory retrieval was used before planning (explicit returned project\nscope `default/platform-install-packages-php83`; thin hits broadened globally).\nIt did not provide a completed baseline protocol; current design/evidence above\nare authoritative. Structural graph project for the main worktree was ready\n9934nodes/17666edges, generation2026-09-25T19:28:02Z. Coverage reports the migration\nbaseline/harness paths as `freshness: missing`; all relied exact files were read\ndirectly. `deb/noble/sanity.sh` had matching metadata. No graph absence/exhaustive\ncoverage claim is made for this separate migration worktree. Decision7 and\n`coverage-matrix.md` retain the broad baseline/performance/recovery gaps.\n\n## 8. Actual independent planning review and revised draft decisions\n\nActual Claude CLI completed read-only review with exit0, no stderr, no test/VM/\nnetwork/FFmpeg execution. It read the draft and specified source files, identified\nmissing protocol decisions, and did **not** approve execution. Codex separately\nverified the legacy release-blob hash and read the four guard test methods; those\nclaims are not attributed to Claude's restricted file review. This document is a\nrevised draft, not a frozen executable protocol. All counts and values derived\nfrom the proposed34/33/33 split remain **DRAFT** until manifest review.\n\nThe following decisions resolve or explicitly bound the review findings:\n\n- **Baseline identity first:** current `.74` has hosted copied83 isolated probes;\n  that alone does not prove installed74 package contamination. Attest published\n  package versions/checksums, installed app/overlays/config against the recorded\n  post-bootstrap baseline, and inspect inactive owned probe services/workloads.\n  Missing historical comparison or unexplained drift makes timing INCONCLUSIVE;\n  obtain coordinator approval for a fresh isolated published74 clone rather than\n  silently reprovision the current shared research VM. No such action is done here.\n- **Draft request/session policy:** USER KS with frozen minimum list/get/upload\n  privileges for one synthetic partner;34 measured session.start POSTs followed\n  by33 media.list and33 media.get using the final freshly issued KS. Setup-only\n  admin credentials are never timed. Keep secrets/KS in memory or restricted\n  request-body files, not URLs/argv/logs. Freeze expiry/clock constraints to exceed\n  the bounded round. Wrong-secret/cross-partner/expired negatives are separate\n  functional rows, not hidden timing retries.\n- **Client and ordering:** one fixed host-only client location/resource envelope\n  for both labs. Complete the API block with workers idle, then one fixture upload\n  and wait for READY/delivery, then the second; wait until queues drain before the\n  next round. Never run timed API calls during conversion. HTTP/HTTPS order is\n  alternated by a fixed schedule, and baseline is remeasured bracketing candidate\n  runs (A-before/B/A-after) to detect host/time drift; early baseline results alone\n  do not establish a later candidate comparison.\n- **Cache state:** use the same published cache/OPcache settings for steady-state\n  warm measurements; record API response-cache and backend hit/miss observations,\n  not a claim that repeated get calls benchmark uncached PHP. Cold/cache-restart\n  functionality is a separate untimed row. Freeze memcached/APCu warm/cold state\n  and cache policy per round; do not flush or globally disable a backend just to\n  improve timing. Full cross-engine invalidation remains task5.9.\n- **Draft20% comparator:** pooled measured API median/p95 per endpoint+transport\n  is the primary latency comparison, with all five round summaries retained.\n  If max/min round medians exceed1.20 or host contention occurs, classify as\n  INCONCLUSIVE and repeat. These are proposed stability limits, not observations.\n  Transcode reports median and maximum for five samples (do not pretend this is\n  a well-estimated tail distribution); separately gate median worker start\u2192finish\n  and median upload-complete\u2192READY at20%, keeping queue and polling effects visible.\n- **Guard semantics:** the existing Python30s timeout is a socket-operation\n  timeout, not a total deadline; the new client must enforce elapsed monotonic\n  budgets. Reject all automatic redirects. A delivery-only manual redirect may\n  be allowed by a separately reviewed maximum-hop policy only after validating\n  each Location, stripping credentials and rechecking literal destination/port;\n  until that policy exists, redirect is explicit FAIL, not silently followed.\n  Service URLs must match the frozen literal-IP allowlist; redact query/path KS.\n- **Real browser playback:** choose a fixed browser build and actual browser\n  executor (for example existing console E2E tooling after inventory), install\n  only the lab CA in its isolated profile, reject external egress/assets and\n  capture login/session/ACL plus actual playback progression. HTTP200/segment\n  retrieval alone does not satisfy this row. Browser executor/profile/asset\n  policy remains a concrete implementation gap, not a waived task.\n- **Encoder/duration:** add explicit metadata removal, bitexact flags where\n  supported, fixed GOP/min-keyint/scene-cut and thread settings to the generated\n  command manifest. These do not guarantee cross-build encoding identity.\n  Validate AAC priming/padding during the untimed rehearsal before freezing the\n  draft frame-based tolerance; version any revision before measured execution.\n\nImmediate local implementation can proceed on guard/manifest/statistic tests;\nmedia generation and baseline VM operations still need their separate resource\nreservations and reviewed frozen inputs. No measured baseline is claimed here.",
+              "lineStart": 1,
+              "lineEnd": 253,
+              "totalLines": 253,
+              "truncated": false
+            }
+          },
+          "title": "doc/php83/baseline-protocol-plan.md",
+          "time": {
+            "start": 1790432605572,
+            "end": 1790432605579
+          }
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "fc_01a0de196eba702db31f3fedc772e112"
+          }
+        },
+        "id": "prt_0de1971b7001PLKuIE4L9Vd9rT",
+        "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+        "messageID": "msg_0de196b38001FfIp94rHCbbGNw"
+      }
+    },
+    {
+      "type": "tool_use",
+      "timestamp": 1790432605584,
+      "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+      "part": {
+        "type": "tool",
+        "tool": "grep",
+        "callID": "call_01a0de1970ef7679aa656f1d0750bde1",
+        "state": {
+          "status": "completed",
+          "input": {
+            "path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/openspec/changes/migrate-kaltura-php83",
+            "pattern": "Decision.?7|Decision 7"
+          },
+          "output": "Found 3 matches\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/openspec/changes/migrate-kaltura-php83/design.md:\n  Line 91: | T5 Performance and diagnostics | Decision 7's identical-resource protocol, two warmups and at least five measured rounds; API median/p95, transcode and queue timings; classified diagnostics | More than 20% regression requires explicit review. Shared-host contention or unstable runs are INCONCLUSIVE and require repetition, not PASS. |\n\n\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/openspec/changes/migrate-kaltura-php83/tasks.md:\n  Line 63: - [ ] 5.5 T0-05 \u2014 Freeze the full published-7.4 synthetic baseline, VM resources, fixture hashes, expected outputs and guarded target protocol; verify API/UI/worker/media smoke evidence, runtime/extension reports and baseline timings using Decision 7, including rejected targets/redirects (parent 1.2).\n\n  Line 80: - [ ] 5.22 T5-01 \u2014 Compare unchanged 7.4 baseline and 8.3 candidate in matching labs, separating compatibility-only patches from any selected component upgrade. Run the frozen Decision 7 workload without competing host workloads, recording two warmups, at least five measured rounds, API median/p95, transcode/queue times, dispersion and diagnostic causes/events; verify the 20% review threshold and repeat INCONCLUSIVE measurements (parents 1.2, 3.6).\n",
+          "metadata": {
+            "matches": 3,
+            "truncated": false
+          },
+          "title": "Decision.?7|Decision 7",
+          "time": {
+            "start": 1790432605575,
+            "end": 1790432605583
+          }
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "fc_01a0de1970ef7679aa656f1d0750bde1"
+          }
+        },
+        "id": "prt_0de1971dc0017xM4o7AeW1aIzk",
+        "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+        "messageID": "msg_0de196b38001FfIp94rHCbbGNw"
+      }
+    },
+    {
+      "type": "step_finish",
+      "timestamp": 1790432605699,
+      "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+      "part": {
+        "id": "prt_0de197600001RYeGGrzsYDL1F9",
+        "reason": "tool-calls",
+        "snapshot": "e455787f31a22ac42b66e354de2bdc9a5080c671",
+        "messageID": "msg_0de196b38001FfIp94rHCbbGNw",
+        "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+        "type": "step-finish",
+        "tokens": {
+          "total": 83760,
+          "input": 3609,
+          "output": 166,
+          "reasoning": 0,
+          "cache": {
+            "write": 0,
+            "read": 79985
+          }
+        },
+        "cost": 0
+      }
+    },
+    {
+      "type": "tool_use",
+      "timestamp": 1790432607699,
+      "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+      "part": {
+        "type": "tool",
+        "tool": "read",
+        "callID": "call_01a0de197ae074fba47982cea0cfb596",
+        "state": {
+          "status": "completed",
+          "input": {
+            "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/openspec/changes/migrate-kaltura-php83/design.md"
+          },
+          "output": "<path>/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/openspec/changes/migrate-kaltura-php83/design.md</path>\n<type>file</type>\n<content>\n1: ## Context\n2: \n3: Planning baseline: main `3bd3b189` (migration branch subsequently synchronized with main `1286d0f1`), Kaltura CE Rigel-18.20.0. At proposal creation only packaging/configuration evidence had been inspected. Phase-1 syntax/static evidence is now recorded in `doc/php83/feasibility-status.md`; application runtime acceptance is still pending.\n4: \n5: ### Verified repository evidence\n6: \n7: | Area | Evidence | Consequence |\n8: |---|---|---|\n9: | Source provenance | `build/sources.rc`, `build/package_kaltura_core.sh`, `deb/kaltura-base/debian/rules`; mirrored archive with SHA-256; main `noble-deb-build` pins server commit `29cf45469c1e210498087942f5b76b5c706e4cda` | Audit the extracted exact tree plus packaging overlays/generated client libraries, not arbitrary upstream HEAD. |\n10: | Ubuntu runtime | `deb/kaltura-{base,front,batch}/debian/control` explicitly requires `php7.4-*`; front/batch require `libapache2-mod-php7.4` | Dependencies, enabled Apache module and CLI invocation must move together. |\n11: | Ubuntu 26.04 provider | `deb/ubuntu-26.04/install-aio.sh` configures packages.sury.org using the distro codename | Verify target-suite PHP 8.3 packages and extensions; do not assume an earlier provider or another distro's binaries are suitable. |\n12: | Rocky runtime | `rpm/el9/install-aio.sh` selects `php:remi-7.4`; EL9 branch of `RPM/SPECS/kaltura-front.spec` requires `php-fpm` | Switch and validate web FPM and CLI together; generic RPM dependency names alone do not enforce the right minor version. |\n13: | Extension surface | Base/front/batch package metadata includes MySQL/PDO, XML/XSL, curl, mbstring, GD, GMP, LDAP, zip/intl, APCu/memcache/SSH2 and process support, varying by distro | Reconcile a mandatory extension/SAPI matrix; memcache and memcached, or APC and APCu, are not interchangeable merely by package name. |\n14: | CI guard | `.github/workflows/kaltura-server-packages.yml` rejects PHP 8 and enables Remi 7.4 | Replace the guard with exact 8.3 family checks and positive runtime/module verification, not removal of the guard. |\n15: \n16: Historical `build/sources.rc` also contains legacy PHP 5.3/7.0 source definitions. Do not mechanically replace every PHP string: classify active AIO paths versus historical recipes before editing.\n17: \n18: ## Goals / Non-Goals\n19: \n20: Preserve CE behavior, API shapes, data and operator configuration while moving supported AIO deployments to a coherent PHP 8.3 stack. This is a staged migration, not a declaration that CE already supports 8.3.\n21: \n22: Non-goals: wholesale Kaltura/framework replacement; changing DB engine/schema; DWH enablement; changing ffmpeg/nginx/Elasticsearch versions without a proven blocker and a separate approved scope; PHP in the Go console; production experiments; permanent support for both PHP lines. HTTP/HTTPS behavior and current SAPI topology are retained to avoid combining unrelated migrations.\n23: \n24: ## Decisions\n25: \n26: 1. **Feasibility before runtime substitution.** Inventory exact source revisions, bundled Symfony/Zend/Propel-style or other legacy libraries if present, generated clients, package hooks, cron and batch entrypoints. Run syntax checks with PHP 8.3, pinned PHPCompatibility tooling and targeted runtime probes. Static checks are incomplete by design and never replace real API/UI/worker tests. Record each finding as confirmed, false positive with evidence, or unverified. Do not invent incompatibility counts.\n27: \n28: 2. **Bounded patch ownership and experimental ZIP.** The operator confirmed minimal experimental application repairs during feasibility. Keep the pinned source archive and published PHP 7.4 artifacts immutable. Apply an ordered, version-controlled patch series only to disposable source copies; generate a separately named `Rigel-18.20.0-php83-experimental.<revision>.zip`, not an overwrite of the upstream mirror. Record the upstream archive SHA-256, patch order/hashes, changed-file before/after hashes, license attribution and resulting ZIP SHA-256. Exclude credentials, runtime configuration, databases and media. Freeze archive entry order, timestamps and permissions and verify two builds from identical inputs produce identical hashes. The archive remains experimental, not an installable release or a claim of full compatibility. After go/no-go approval, integrate the same reviewed source transformation into the shared DEB/RPM build step. Verify archive/patch hashes and fail on patch drift or rejected hunks. Prefer small upstream fixes with attribution. If a framework replacement or upstream Kaltura upgrade is required, stop at the feasibility gate and request a revised proposal; do not smuggle it into this migration. Do not perform unpinned Composer updates during package installation.\n29: \n30: 3. **Audit the entire 7.4 \u2192 8.3 path.** Candidate risks include removed functions/curly-brace offsets and stricter signatures/types in 8.0, optional-before-required parameters/internal interface return types/resource-to-object assumptions in 8.1, and dynamic-property deprecations in 8.2; review 8.3 changes too. These are language-level audit targets, NOT confirmed findings in Kaltura. Treat date/time, XML, serialization/session/KS cryptography, DB error semantics, callable behavior and extension-specific resources as regression surfaces. Do not hide failures by disabling all warnings or scattering compatibility attributes globally.\n31: \n32: 4. **Coherent, maintained runtime providers.** For Noble use native Ubuntu 8.3 and its native extensions, with package-origin pinning and per-extension policy/ABI evidence; keep the 7.4 baseline PPA in a separate VM. Elsewhere prefer distro-native 8.3 where available; otherwise require a maintained, signed, suite-compatible provider with pinned package constraints and documented update policy. Compare EL9 AppStream 8.3 and Remi 8.3 package/extension availability. Select one coherent provider in the reviewed manifest; neither is a tested result yet. For Ubuntu 26.04, inability to resolve native/suite-compatible 8.3 and every mandatory extension is a blocker, not permission to mix incompatible distro packages or select 8.4/8.5 silently. Reusing an arbitrary 7.4 extension binary is forbidden. Freeze exact versions/repository origins in the test report, while allowing reviewed security updates within 8.3.\n33: \n34: 5. **Preserve SAPI topology.** Ubuntu retains its tested Apache module arrangement, updated to 8.3; Rocky retains FPM, updated to 8.3. Verify loaded INI paths/extensions independently for CLI and web, worker interpreter paths, OPcache, timeouts, permissions and service restarts. Avoid system-wide alternatives changes that affect unrelated applications. Restart long-running workers during controlled cutover so no old interpreter remains processing jobs.\n35: \n36: 6. **Isolated acceptance matrix.** Begin with fresh Ubuntu 24.04 lab VMs, with distinct hostnames/IPs, no shared production storage, database, credentials or host source mounts. Never clone `.20` or use it as an experiment. Synthetic lab snapshots/clones are allowed. Test runners must reject `.20` and unexpected target addresses after DNS resolution, and refuse redirects to them; host-only/NAT alone does not enforce this boundary. Ubuntu 26.04 and Rocky 9 remain eventual acceptance targets. The expressly authorized `.20` boot and read-only package/service inspection are allowed; normal startup/log/worker writes are not manual migration changes. Do not install/update/remove packages, edit configuration, manually restart services, issue database/media writes, or export secrets there. Record OS, PHP/SAPI/module versions, package revisions and source/patch hashes. For each distro validate fresh install, repeated provisioning, restart/reboot, controlled upgrade from the 7.4 baseline and rollback rehearsal. Containers cover builds/dependency checks; disposable full-service labs cover runtime behavior. HTTP and HTTPS API/delivery must both be exercised, including a trusted CA rather than bypassed TLS validation. Upload both a short deterministic MP4 and a Full HD/60 fps fixture; verify READY, flavors, thumbnails, HLS segments and actual progressive stream properties/Range.\n37: \n38: 7. **Failure and release gates.** Before capturing measurements, freeze the baseline protocol: separate 7.4 and 8.3 labs use the same pinned OS box, 4 vCPU, 8 GiB RAM and matching virtual disk/controller settings. Use checksum-verified published 7.4 server packages, never `.20`, as the application baseline. Generate synthetic 10-second 640x360/25fps and 60-second 1920x1080/60fps H.264/AAC fixtures; record encoder settings and SHA-256 hashes and reuse identical bytes in both labs. After two warm-up rounds, run at least five measured rounds, each with 100 sequential authenticated API calls (session start, media list and media get recorded separately) plus upload-to-READY/stream verification for each fixture. Record sample counts, nearest-rank p95, median, conversion profile and environment details. Capture baseline warnings/performance and run this same bounded workload on 8.3. Block on fatal/type errors, worker/job failures, authentication/permission regressions, missing extensions, changed API contracts or untriaged warnings in exercised paths. The same workload's median and p95 API latency and transcode wall time must not regress more than 20% without explicit review; use multiple repetitions and preserve reports, not a one-off benchmark. Scope exclusions and nonfatal accepted deprecations require named rationale/tests, not blanket ignore rules. Publish no migration release until all distro/runtime and rollback gates pass.\n39: \n40: 8. **Separate improvements from compatibility fixes.** Prefer the smallest justified source change and test it against both the unpatched PHP 7.4 behavior and PHP 8.3 candidate. Evaluate component upgrades in separate changes with exact old/new versions, upstream support and license evidence, compatibility impact, focused tests and a revert path. An upgrade candidate is not automatically selected. Avoid bundling framework replacement, DB changes or unrelated application features. Record any accepted upgrade decision before adding it to the experimental ZIP; larger scope changes require a separately approved proposal. Measure API median/p95 and transcode timing with the frozen protocol before claiming performance improvement. Preserve functionality over speculative speed gains. No experiment authorizes a `.20` deploy, promises zero downtime or bypasses recovery rehearsal.\n41: \n42: 9. **One approved release for packages and source ZIP.** The operator confirmed publishing the accepted, versioned PHP 8.3 source ZIP as an asset of the same GitHub release as the Ubuntu DEB and Rocky Linux RPM repository bundles. Include the source/ordered-patch manifest and installation instructions; SHA256SUMS covers the ZIP, manifest and package bundles. Verify downloaded assets against the checksums and the accepted source/patch identities. Keep the original upstream ZIP and all existing releases unchanged. The current experimental ZIP is not promoted by this planning decision: the final release still requires all runtime/recovery gates and final operator approval.\n43: \n44: ## Risks / Trade-offs\n45: \n46: - **PHP 8.3 support horizon** \u2192 the user specifically requested 8.3; reassess security-support dates before implementation/release. A later minor target needs an explicit updated proposal, not an automatic substitution.\n47: - **Bundled legacy dependencies may be the dominant work** \u2192 Stage 1 produces a go/no-go report before package/runtime work; unsupported dependencies are blockers requiring a bounded repair plan.\n48: - **Warnings may become fatal through application error handlers** \u2192 test handlers with realistic calls and background jobs; suppressing output is not compatibility.\n49: - **Cache/session serialization may differ** \u2192 quiesce workers and invalidate only documented disposable caches; preserve secrets/data. Rehearse login/session behavior and rollback rather than assuming drop-in equivalence.\n50: - **Rollback after new writes can lose data** \u2192 require a maintenance/read-only window until acceptance and recover a matched application/config/DB/media snapshot if needed; package downgrade alone is not a recovery plan.\n51: \n52: ## Migration Plan\n53: \n54: 1. Phase-1 preparation and minimal lab-only source repairs are approved. Prepare isolated baseline and compatibility reports, test individual repairs and build the separately named experimental PHP 8.3 ZIP; obtain go/no-go approval on blockers/provider matrix before production packaging integration.\n55: 2. Develop audited source patches, runtime metadata/config changes and CI assertions on a migration branch. Keep published 7.4 releases untouched.\n56: 3. Complete the three-distro test matrix and a consistent backup/restore rehearsal. Archive sanitized evidence, not secrets/KS/cookies/user media.\n57: 4. Produce a release candidate with documented upgrade commands, maintenance steps, known limitations and rollback instructions. Any live target, window and backups require explicit operator confirmation.\n58: 5. At an approved cutover, stop new uploads and drain/stop workers, snapshot configuration/database/media coherently, install matching packages, restart all PHP processes, validate before reopening intake. On failure, stop writes and restore the matched baseline; do not merely flip `/usr/bin/php`.\n59: \n60: ## Reference sources (checked 2026-09-25)\n61: \n62: - [PHP supported versions](https://www.php.net/supported-versions.php): 8.3 active support ended 2025-12-31; security support ends 2027-12-31.\n63: - [PHP 8.0 incompatible changes](https://www.php.net/manual/en/migration80.incompatible.php).\n64: - [PHP 8.1 incompatible changes](https://www.php.net/manual/en/migration81.incompatible.php).\n65: - [PHP 8.2 deprecations](https://www.php.net/manual/en/migration82.deprecated.php).\n66: - [PHP 8.3 incompatible changes](https://www.php.net/manual/en/migration83.incompatible.php).\n67: - [PHPCompatibility project](https://github.com/PHPCompatibility/PHPCompatibility): static compatibility checks have incomplete coverage; pin the chosen analyzer and its dependencies during implementation.\n68: \n69: ## Phase-1 review boundary (2026-09-25)\n70: \n71: Claude reviewed the planning artifacts without repository/tool access; its findings are advisory, not runtime evidence. The operator approved incorporating the corrections. Source inventory, syntax/static checks, synthetic probes and provider resolution may proceed. The subsequent operator confirmation also permits minimal lab-only source patches and the separate reproducible PHP 8.3 ZIP, without marking feasibility complete or approving package/CI changes. No migration tags, main-spec synchronization or archive before task 4.4. Production data extraction requires separate approval. PHPCompatibility and PHPCS versions plus dependencies must be pinned with checksums/lockfile, checked for PHP 8.3 coverage, and run with `testVersion=7.4-8.3`; syntax checks and E_ALL runtime probes remain separate evidence.\n72: \n73: ## Approved test execution plan (2026-09-25)\n74: \n75: The operator approved this refinement after parallel planning reviews by the\n76: Claude, Grok and Cursor CLIs. Those reviews are advisory, not test execution.\n77: This section operationalizes Decisions 1\u20139 without changing the proposal or\n78: specification gates. The original 24 tasks remain acceptance obligations;\n79: the detailed cases in tasks.md are their execution breakdown, not extra release\n80: scope or an estimate of work completed.\n81: \n82: ### Seven test gates\n83: \n84: | Gate | Required evidence | Entry / exit boundary |\n85: |---|---|---|\n86: | T0 Inventory and coverage | Source, published baseline, ordered patches, harness and fixture hashes; dependency/license/entrypoint inventory; static findings; task-to-case mapping and uncovered paths | Freeze identities and expected results before execution. Unknown coverage is explicit, not PASS. |\n87: | T1 PHP compatibility | Original/candidate differential tests on 7.4 and 8.3; individual fixes then the selected combined patch set; PDO types/errors, JSON/XML, dates/locales, serialization, cron/CLI/workers | Expected original-8.3 failures are controls, not candidate successes. Selected patch omissions or unexpected diagnostics block acceptance. |\n88: | T2 API, security and UI | Real HTTP/trusted HTTPS authorization and response contracts, cross-partner denials, KS failures, real cache backends, eSearch, Admin Console/KMC and Go console | Mock-client and isolated parser tests cannot substitute for full-service or browser evidence. |\n89: | T3 Media and jobs | Frozen short and Full HD/60 fps fixtures; upload-to-READY, flavors/thumbnails, HLS segments and progressive Range; corrupt/empty input and worker failure/retry | Assert actual delivered stream properties and terminal job states, not just status 200 or READY. |\n90: | T4 Three distributions and packages | Ubuntu 24.04, Ubuntu 26.04, Rocky 9; coherent 8.3 provider/extensions/SAPI; fresh install, reprovision and reboot; build/CI rejection cases | Provider resolution may proceed in disposable environments; production package/CI integration still requires task 1.5 approval. Missing providers are BLOCKED, not N/A. |\n91: | T5 Performance and diagnostics | Decision 7's identical-resource protocol, two warmups and at least five measured rounds; API median/p95, transcode and queue timings; classified diagnostics | More than 20% regression requires explicit review. Shared-host contention or unstable runs are INCONCLUSIVE and require repetition, not PASS. |\n92: | T6 Upgrade, recovery and release | Synthetic-state upgrade, matched-state rollback, approved ZIP/DEB/RPM identities, double-build ZIP reproducibility and downloaded asset verification | Full distro/runtime/recovery acceptance plus operator release approval precede publication; `.20` cutover has a separate approval boundary. |\n93: \n94: A candidate is an explicitly selected, reviewed patch manifest, not necessarily\n95: all patches in `held/`. Record each held patch as selected, rejected or deferred\n96: with its reason. The JSON-only exp2 ZIP is neither the complete candidate nor a\n97: release. Its bounded evidence remains useful only for its exact tested scope.\n98: Changing source, selected patches, harness, runtime or configuration makes\n99: previous dependent results stale until rerun or a documented impact review;\n100: retain their history, never silently transfer PASS to a new candidate.\n101: \n102: ### Case and evidence contract\n103: \n104: Expand each case into applicable distro \u00d7 SAPI \u00d7 transport \u00d7 fixture rows before\n105: running it. Record a stable case/run ID, original parent task(s), executor and\n106: independent reviewer, timestamp, commit and source/patch/harness/fixture hashes,\n107: OS/runtime/module/INI/provider identities, target allowlist, preconditions,\n108: exact command, expected result, observed result, exit code, duration, sanitized\n109: log/report paths, defect IDs, cleanup and retest outcome. Do not record credentials,\n110: KS values, cookies, private keys or production data. Commands, timeouts, profile\n111: and stream tolerances must be reviewed before execution rather than inferred\n112: from a successful output. Normalize only explicitly listed volatile fields;\n113: never normalize away types, authorization failures or semantic changes.\n114: \n115: Execution states are NOT_RUN, RUNNING, PASS, FAIL, BLOCKED and INCONCLUSIVE.\n116: A justified N/A requires a named scope rationale and reviewer; mandatory distro\n117: or functional requirements cannot be waived this way. PARTIAL describes aggregate\n118: coverage or older limited evidence, never a passing execution. An unavailable CLI\n119: is BLOCKED/NOT_EXECUTED, not application FAIL and never PASS. Track unknown paths\n120: and new findings alongside the denominator; do not conceal them by shrinking it.\n121: \n122: Report after each batch: planned applicable rows, executed rows, PASS/FAIL/\n123: BLOCKED/INCONCLUSIVE/NOT_RUN counts, stale results, critical defects and release\n124: prerequisites, new discoveries, and the next three runnable cases. Report the\n125: original 24 acceptance tasks separately from detailed-case counts. Neither count\n126: is a completion percentage or release ETA. All applicable rows and independent\n127: review must pass before closing a case; close a parent only when its entire\n128: original acceptance text is satisfied. Syntax validation of this plan does not\n129: complete any application test.\n130: \n131: ### Parallel execution and independent review\n132: \n133: Follow AGENTS.md: involve the actual Claude, Grok and Cursor (`agent`) CLIs in\n134: execution and review over every validation cycle; Codex integrates results.\n135: Default ownership is Claude for differential PHP/API, Grok for negative/security\n136: cases, Cursor for coverage/artifact/distro checks. Rotate reviewers:\n137: Claude \u2192 Grok, Grok \u2192 Cursor, Cursor \u2192 Claude. A blocked reviewer remains visible;\n138: another independent authorized reviewer may provide additional evidence without\n139: pretending that the blocked CLI ran. Review alone is not execution; arrange an\n140: independent rerun of critical cases on the same frozen inputs.\n141: \n142: Parallelize only independent read-only checks or tests in distinct disposable\n143: clones. Reserve each VM/DB/worktree for one mutation owner and each benchmark host\n144: for one workload; serialize if separate clones or an exclusive reservation are\n145: unavailable. Protect `.20`, reject unexpected DNS/redirect targets, use synthetic\n146: data and restore disposable state in cleanup. Do not bypass CLI protections.\n147: \n148: ### Specific regression boundaries\n149: \n150: - Assert PDO numeric/string/NULL/false behavior through actual API contracts and\n151:   generated clients, not just driver return values. Include negative DB paths.\n152: - Exercise original 7.4 serialized objects with 8.3, cold/warm real caches and\n153:   documented invalidation. A mixed 7.4/8.3 rollout is not approved: demonstrate\n154:   that cutover drains/stops old workers. Do not add mixed-runtime support or claim\n155:   arbitrary 8.3 writes can be read by 7.4; rollback restores a coherent snapshot.\n156: - Include KS crypto interoperability, expiry/clock skew, privilege tampering,\n157:   cross-partner denial, XML external-entity rejection without external network\n158:   access, timezone/locale behavior, and active install/plugin/cron entrypoints.\n159:   Optional capabilities are inventoried before inclusion; do not silently add\n160:   DRM/live/DWH or DB/schema upgrades to this change.\n161: - Test browser login/session/ACL behavior and search indexing/query parity. Check\n162:   Apache/FPM body handling and OS service/security-policy behavior in the actual\n163:   target topology. No bypass of TLS verification or SELinux/AppArmor to pass.\n164: - Separate worker orchestration/queue latency from ffmpeg conversion time. Keep\n165:   profiles and OPcache/JIT settings recorded and comparable; record sample counts\n166:   and dispersion. Resolve unstable measurements before applying the 20% gate.\n167: - Rehearse failure after synthetic candidate writes while intake is restricted;\n168:   restore the matched baseline and explicitly account for discarded experimental\n169:   writes. This is recovery rehearsal, not a promise of lossless post-cutover\n170:   downgrade or permission to alter production.\n171: \n172: ### First execution batch\n173: \n174: T0-01: Claude runs the existing local harness suite; Grok independently reviews\n175: and reruns the bounded command. T0-02: Cursor audits source/patch/ZIP identities\n176: and selection gaps; Claude reviews. T0-03: Grok maps each original task to cases,\n177: existing evidence and uncovered scope; Cursor reviews. All are local-only; no\n178: VM, package, CI or release mutation is authorized by this batch. Record tool\n179: failures separately. Subsequent lab cases start only after target ownership,\n180: commands and candidate identities are frozen. These are assignments, not claims\n181: that execution has already happened.\n182: \n183: ### Refinement validation\n184: \n185: All three actual CLIs returned planning reviews of the supplied proposal,\n186: updated design/tasks and delta specs with no blocking planning findings. Claude\n187: identified non-blocking baseline-timing and approval-boundary ambiguities;\n188: the final case wording now explicitly covers baseline runtime/extension/timing\n189: reports, baseline-versus-candidate measurements separated from optional upgrades,\n190: and feasibility approval for both additional distro integrations. Cursor and\n191: Grok confirmed the parent mapping and preserved gates. These were document-only\n192: reviews, not independent runtime execution or release sign-off. Local strict\n193: OpenSpec validation and checks for preserved original text, 24 mapped parents,\n194: 27 unique cases and zero completed checkboxes passed. Application execution\n195: remains the next apply-phase activity.\n\n(End of file - total 195 lines)\n</content>",
+          "metadata": {
+            "preview": "## Context\n\nPlanning baseline: main `3bd3b189` (migration branch subsequently synchronized with main `1286d0f1`), Kaltura CE Rigel-18.20.0. At proposal creation only packaging/configuration evidence had been inspected. Phase-1 syntax/static evidence is now recorded in `doc/php83/feasibility-status.md`; application runtime acceptance is still pending.\n\n### Verified repository evidence\n\n| Area | Evidence | Consequence |\n|---|---|---|\n| Source provenance | `build/sources.rc`, `build/package_kaltura_core.sh`, `deb/kaltura-base/debian/rules`; mirrored archive with SHA-256; main `noble-deb-build` pins server commit `29cf45469c1e210498087942f5b76b5c706e4cda` | Audit the extracted exact tree plus packaging overlays/generated client libraries, not arbitrary upstream HEAD. |\n| Ubuntu runtime | `deb/kaltura-{base,front,batch}/debian/control` explicitly requires `php7.4-*`; front/batch require `libapache2-mod-php7.4` | Dependencies, enabled Apache module and CLI invocation must move together. |\n| Ubuntu 26.04 provider | `deb/ubuntu-26.04/install-aio.sh` configures packages.sury.org using the distro codename | Verify target-suite PHP 8.3 packages and extensions; do not assume an earlier provider or another distro's binaries are suitable. |\n| Rocky runtime | `rpm/el9/install-aio.sh` selects `php:remi-7.4`; EL9 branch of `RPM/SPECS/kaltura-front.spec` requires `php-fpm` | Switch and validate web FPM and CLI together; generic RPM dependency names alone do not enforce the right minor version. |\n| Extension surface | Base/front/batch package metadata includes MySQL/PDO, XML/XSL, curl, mbstring, GD, GMP, LDAP, zip/intl, APCu/memcache/SSH2 and process support, varying by distro | Reconcile a mandatory extension/SAPI matrix; memcache and memcached, or APC and APCu, are not interchangeable merely by package name. |\n| CI guard | `.github/workflows/kaltura-server-packages.yml` rejects PHP 8 and enables Remi 7.4 | Replace the guard with exact 8.3 family checks and positive runtime/module verification, not removal of the guard. |\n\nHistorical `build/sources.rc` also contains legacy PHP 5.3/7.0 source definitions. Do not mechanically replace every PHP string: classify active AIO paths versus historical recipes before editing.\n\n## Goals / Non-Goals\n\nPreserve CE behavior, API shapes, data and operator configuration while moving supported AIO deployments to a coherent PHP 8.3 stack. This is a staged migration, not a declaration that CE already supports 8.3.",
+            "truncated": false,
+            "loaded": [],
+            "display": {
+              "type": "file",
+              "path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/openspec/changes/migrate-kaltura-php83/design.md",
+              "text": "## Context\n\nPlanning baseline: main `3bd3b189` (migration branch subsequently synchronized with main `1286d0f1`), Kaltura CE Rigel-18.20.0. At proposal creation only packaging/configuration evidence had been inspected. Phase-1 syntax/static evidence is now recorded in `doc/php83/feasibility-status.md`; application runtime acceptance is still pending.\n\n### Verified repository evidence\n\n| Area | Evidence | Consequence |\n|---|---|---|\n| Source provenance | `build/sources.rc`, `build/package_kaltura_core.sh`, `deb/kaltura-base/debian/rules`; mirrored archive with SHA-256; main `noble-deb-build` pins server commit `29cf45469c1e210498087942f5b76b5c706e4cda` | Audit the extracted exact tree plus packaging overlays/generated client libraries, not arbitrary upstream HEAD. |\n| Ubuntu runtime | `deb/kaltura-{base,front,batch}/debian/control` explicitly requires `php7.4-*`; front/batch require `libapache2-mod-php7.4` | Dependencies, enabled Apache module and CLI invocation must move together. |\n| Ubuntu 26.04 provider | `deb/ubuntu-26.04/install-aio.sh` configures packages.sury.org using the distro codename | Verify target-suite PHP 8.3 packages and extensions; do not assume an earlier provider or another distro's binaries are suitable. |\n| Rocky runtime | `rpm/el9/install-aio.sh` selects `php:remi-7.4`; EL9 branch of `RPM/SPECS/kaltura-front.spec` requires `php-fpm` | Switch and validate web FPM and CLI together; generic RPM dependency names alone do not enforce the right minor version. |\n| Extension surface | Base/front/batch package metadata includes MySQL/PDO, XML/XSL, curl, mbstring, GD, GMP, LDAP, zip/intl, APCu/memcache/SSH2 and process support, varying by distro | Reconcile a mandatory extension/SAPI matrix; memcache and memcached, or APC and APCu, are not interchangeable merely by package name. |\n| CI guard | `.github/workflows/kaltura-server-packages.yml` rejects PHP 8 and enables Remi 7.4 | Replace the guard with exact 8.3 family checks and positive runtime/module verification, not removal of the guard. |\n\nHistorical `build/sources.rc` also contains legacy PHP 5.3/7.0 source definitions. Do not mechanically replace every PHP string: classify active AIO paths versus historical recipes before editing.\n\n## Goals / Non-Goals\n\nPreserve CE behavior, API shapes, data and operator configuration while moving supported AIO deployments to a coherent PHP 8.3 stack. This is a staged migration, not a declaration that CE already supports 8.3.\n\nNon-goals: wholesale Kaltura/framework replacement; changing DB engine/schema; DWH enablement; changing ffmpeg/nginx/Elasticsearch versions without a proven blocker and a separate approved scope; PHP in the Go console; production experiments; permanent support for both PHP lines. HTTP/HTTPS behavior and current SAPI topology are retained to avoid combining unrelated migrations.\n\n## Decisions\n\n1. **Feasibility before runtime substitution.** Inventory exact source revisions, bundled Symfony/Zend/Propel-style or other legacy libraries if present, generated clients, package hooks, cron and batch entrypoints. Run syntax checks with PHP 8.3, pinned PHPCompatibility tooling and targeted runtime probes. Static checks are incomplete by design and never replace real API/UI/worker tests. Record each finding as confirmed, false positive with evidence, or unverified. Do not invent incompatibility counts.\n\n2. **Bounded patch ownership and experimental ZIP.** The operator confirmed minimal experimental application repairs during feasibility. Keep the pinned source archive and published PHP 7.4 artifacts immutable. Apply an ordered, version-controlled patch series only to disposable source copies; generate a separately named `Rigel-18.20.0-php83-experimental.<revision>.zip`, not an overwrite of the upstream mirror. Record the upstream archive SHA-256, patch order/hashes, changed-file before/after hashes, license attribution and resulting ZIP SHA-256. Exclude credentials, runtime configuration, databases and media. Freeze archive entry order, timestamps and permissions and verify two builds from identical inputs produce identical hashes. The archive remains experimental, not an installable release or a claim of full compatibility. After go/no-go approval, integrate the same reviewed source transformation into the shared DEB/RPM build step. Verify archive/patch hashes and fail on patch drift or rejected hunks. Prefer small upstream fixes with attribution. If a framework replacement or upstream Kaltura upgrade is required, stop at the feasibility gate and request a revised proposal; do not smuggle it into this migration. Do not perform unpinned Composer updates during package installation.\n\n3. **Audit the entire 7.4 \u2192 8.3 path.** Candidate risks include removed functions/curly-brace offsets and stricter signatures/types in 8.0, optional-before-required parameters/internal interface return types/resource-to-object assumptions in 8.1, and dynamic-property deprecations in 8.2; review 8.3 changes too. These are language-level audit targets, NOT confirmed findings in Kaltura. Treat date/time, XML, serialization/session/KS cryptography, DB error semantics, callable behavior and extension-specific resources as regression surfaces. Do not hide failures by disabling all warnings or scattering compatibility attributes globally.\n\n4. **Coherent, maintained runtime providers.** For Noble use native Ubuntu 8.3 and its native extensions, with package-origin pinning and per-extension policy/ABI evidence; keep the 7.4 baseline PPA in a separate VM. Elsewhere prefer distro-native 8.3 where available; otherwise require a maintained, signed, suite-compatible provider with pinned package constraints and documented update policy. Compare EL9 AppStream 8.3 and Remi 8.3 package/extension availability. Select one coherent provider in the reviewed manifest; neither is a tested result yet. For Ubuntu 26.04, inability to resolve native/suite-compatible 8.3 and every mandatory extension is a blocker, not permission to mix incompatible distro packages or select 8.4/8.5 silently. Reusing an arbitrary 7.4 extension binary is forbidden. Freeze exact versions/repository origins in the test report, while allowing reviewed security updates within 8.3.\n\n5. **Preserve SAPI topology.** Ubuntu retains its tested Apache module arrangement, updated to 8.3; Rocky retains FPM, updated to 8.3. Verify loaded INI paths/extensions independently for CLI and web, worker interpreter paths, OPcache, timeouts, permissions and service restarts. Avoid system-wide alternatives changes that affect unrelated applications. Restart long-running workers during controlled cutover so no old interpreter remains processing jobs.\n\n6. **Isolated acceptance matrix.** Begin with fresh Ubuntu 24.04 lab VMs, with distinct hostnames/IPs, no shared production storage, database, credentials or host source mounts. Never clone `.20` or use it as an experiment. Synthetic lab snapshots/clones are allowed. Test runners must reject `.20` and unexpected target addresses after DNS resolution, and refuse redirects to them; host-only/NAT alone does not enforce this boundary. Ubuntu 26.04 and Rocky 9 remain eventual acceptance targets. The expressly authorized `.20` boot and read-only package/service inspection are allowed; normal startup/log/worker writes are not manual migration changes. Do not install/update/remove packages, edit configuration, manually restart services, issue database/media writes, or export secrets there. Record OS, PHP/SAPI/module versions, package revisions and source/patch hashes. For each distro validate fresh install, repeated provisioning, restart/reboot, controlled upgrade from the 7.4 baseline and rollback rehearsal. Containers cover builds/dependency checks; disposable full-service labs cover runtime behavior. HTTP and HTTPS API/delivery must both be exercised, including a trusted CA rather than bypassed TLS validation. Upload both a short deterministic MP4 and a Full HD/60 fps fixture; verify READY, flavors, thumbnails, HLS segments and actual progressive stream properties/Range.\n\n7. **Failure and release gates.** Before capturing measurements, freeze the baseline protocol: separate 7.4 and 8.3 labs use the same pinned OS box, 4 vCPU, 8 GiB RAM and matching virtual disk/controller settings. Use checksum-verified published 7.4 server packages, never `.20`, as the application baseline. Generate synthetic 10-second 640x360/25fps and 60-second 1920x1080/60fps H.264/AAC fixtures; record encoder settings and SHA-256 hashes and reuse identical bytes in both labs. After two warm-up rounds, run at least five measured rounds, each with 100 sequential authenticated API calls (session start, media list and media get recorded separately) plus upload-to-READY/stream verification for each fixture. Record sample counts, nearest-rank p95, median, conversion profile and environment details. Capture baseline warnings/performance and run this same bounded workload on 8.3. Block on fatal/type errors, worker/job failures, authentication/permission regressions, missing extensions, changed API contracts or untriaged warnings in exercised paths. The same workload's median and p95 API latency and transcode wall time must not regress more than 20% without explicit review; use multiple repetitions and preserve reports, not a one-off benchmark. Scope exclusions and nonfatal accepted deprecations require named rationale/tests, not blanket ignore rules. Publish no migration release until all distro/runtime and rollback gates pass.\n\n8. **Separate improvements from compatibility fixes.** Prefer the smallest justified source change and test it against both the unpatched PHP 7.4 behavior and PHP 8.3 candidate. Evaluate component upgrades in separate changes with exact old/new versions, upstream support and license evidence, compatibility impact, focused tests and a revert path. An upgrade candidate is not automatically selected. Avoid bundling framework replacement, DB changes or unrelated application features. Record any accepted upgrade decision before adding it to the experimental ZIP; larger scope changes require a separately approved proposal. Measure API median/p95 and transcode timing with the frozen protocol before claiming performance improvement. Preserve functionality over speculative speed gains. No experiment authorizes a `.20` deploy, promises zero downtime or bypasses recovery rehearsal.\n\n9. **One approved release for packages and source ZIP.** The operator confirmed publishing the accepted, versioned PHP 8.3 source ZIP as an asset of the same GitHub release as the Ubuntu DEB and Rocky Linux RPM repository bundles. Include the source/ordered-patch manifest and installation instructions; SHA256SUMS covers the ZIP, manifest and package bundles. Verify downloaded assets against the checksums and the accepted source/patch identities. Keep the original upstream ZIP and all existing releases unchanged. The current experimental ZIP is not promoted by this planning decision: the final release still requires all runtime/recovery gates and final operator approval.\n\n## Risks / Trade-offs\n\n- **PHP 8.3 support horizon** \u2192 the user specifically requested 8.3; reassess security-support dates before implementation/release. A later minor target needs an explicit updated proposal, not an automatic substitution.\n- **Bundled legacy dependencies may be the dominant work** \u2192 Stage 1 produces a go/no-go report before package/runtime work; unsupported dependencies are blockers requiring a bounded repair plan.\n- **Warnings may become fatal through application error handlers** \u2192 test handlers with realistic calls and background jobs; suppressing output is not compatibility.\n- **Cache/session serialization may differ** \u2192 quiesce workers and invalidate only documented disposable caches; preserve secrets/data. Rehearse login/session behavior and rollback rather than assuming drop-in equivalence.\n- **Rollback after new writes can lose data** \u2192 require a maintenance/read-only window until acceptance and recover a matched application/config/DB/media snapshot if needed; package downgrade alone is not a recovery plan.\n\n## Migration Plan\n\n1. Phase-1 preparation and minimal lab-only source repairs are approved. Prepare isolated baseline and compatibility reports, test individual repairs and build the separately named experimental PHP 8.3 ZIP; obtain go/no-go approval on blockers/provider matrix before production packaging integration.\n2. Develop audited source patches, runtime metadata/config changes and CI assertions on a migration branch. Keep published 7.4 releases untouched.\n3. Complete the three-distro test matrix and a consistent backup/restore rehearsal. Archive sanitized evidence, not secrets/KS/cookies/user media.\n4. Produce a release candidate with documented upgrade commands, maintenance steps, known limitations and rollback instructions. Any live target, window and backups require explicit operator confirmation.\n5. At an approved cutover, stop new uploads and drain/stop workers, snapshot configuration/database/media coherently, install matching packages, restart all PHP processes, validate before reopening intake. On failure, stop writes and restore the matched baseline; do not merely flip `/usr/bin/php`.\n\n## Reference sources (checked 2026-09-25)\n\n- [PHP supported versions](https://www.php.net/supported-versions.php): 8.3 active support ended 2025-12-31; security support ends 2027-12-31.\n- [PHP 8.0 incompatible changes](https://www.php.net/manual/en/migration80.incompatible.php).\n- [PHP 8.1 incompatible changes](https://www.php.net/manual/en/migration81.incompatible.php).\n- [PHP 8.2 deprecations](https://www.php.net/manual/en/migration82.deprecated.php).\n- [PHP 8.3 incompatible changes](https://www.php.net/manual/en/migration83.incompatible.php).\n- [PHPCompatibility project](https://github.com/PHPCompatibility/PHPCompatibility): static compatibility checks have incomplete coverage; pin the chosen analyzer and its dependencies during implementation.\n\n## Phase-1 review boundary (2026-09-25)\n\nClaude reviewed the planning artifacts without repository/tool access; its findings are advisory, not runtime evidence. The operator approved incorporating the corrections. Source inventory, syntax/static checks, synthetic probes and provider resolution may proceed. The subsequent operator confirmation also permits minimal lab-only source patches and the separate reproducible PHP 8.3 ZIP, without marking feasibility complete or approving package/CI changes. No migration tags, main-spec synchronization or archive before task 4.4. Production data extraction requires separate approval. PHPCompatibility and PHPCS versions plus dependencies must be pinned with checksums/lockfile, checked for PHP 8.3 coverage, and run with `testVersion=7.4-8.3`; syntax checks and E_ALL runtime probes remain separate evidence.\n\n## Approved test execution plan (2026-09-25)\n\nThe operator approved this refinement after parallel planning reviews by the\nClaude, Grok and Cursor CLIs. Those reviews are advisory, not test execution.\nThis section operationalizes Decisions 1\u20139 without changing the proposal or\nspecification gates. The original 24 tasks remain acceptance obligations;\nthe detailed cases in tasks.md are their execution breakdown, not extra release\nscope or an estimate of work completed.\n\n### Seven test gates\n\n| Gate | Required evidence | Entry / exit boundary |\n|---|---|---|\n| T0 Inventory and coverage | Source, published baseline, ordered patches, harness and fixture hashes; dependency/license/entrypoint inventory; static findings; task-to-case mapping and uncovered paths | Freeze identities and expected results before execution. Unknown coverage is explicit, not PASS. |\n| T1 PHP compatibility | Original/candidate differential tests on 7.4 and 8.3; individual fixes then the selected combined patch set; PDO types/errors, JSON/XML, dates/locales, serialization, cron/CLI/workers | Expected original-8.3 failures are controls, not candidate successes. Selected patch omissions or unexpected diagnostics block acceptance. |\n| T2 API, security and UI | Real HTTP/trusted HTTPS authorization and response contracts, cross-partner denials, KS failures, real cache backends, eSearch, Admin Console/KMC and Go console | Mock-client and isolated parser tests cannot substitute for full-service or browser evidence. |\n| T3 Media and jobs | Frozen short and Full HD/60 fps fixtures; upload-to-READY, flavors/thumbnails, HLS segments and progressive Range; corrupt/empty input and worker failure/retry | Assert actual delivered stream properties and terminal job states, not just status 200 or READY. |\n| T4 Three distributions and packages | Ubuntu 24.04, Ubuntu 26.04, Rocky 9; coherent 8.3 provider/extensions/SAPI; fresh install, reprovision and reboot; build/CI rejection cases | Provider resolution may proceed in disposable environments; production package/CI integration still requires task 1.5 approval. Missing providers are BLOCKED, not N/A. |\n| T5 Performance and diagnostics | Decision 7's identical-resource protocol, two warmups and at least five measured rounds; API median/p95, transcode and queue timings; classified diagnostics | More than 20% regression requires explicit review. Shared-host contention or unstable runs are INCONCLUSIVE and require repetition, not PASS. |\n| T6 Upgrade, recovery and release | Synthetic-state upgrade, matched-state rollback, approved ZIP/DEB/RPM identities, double-build ZIP reproducibility and downloaded asset verification | Full distro/runtime/recovery acceptance plus operator release approval precede publication; `.20` cutover has a separate approval boundary. |\n\nA candidate is an explicitly selected, reviewed patch manifest, not necessarily\nall patches in `held/`. Record each held patch as selected, rejected or deferred\nwith its reason. The JSON-only exp2 ZIP is neither the complete candidate nor a\nrelease. Its bounded evidence remains useful only for its exact tested scope.\nChanging source, selected patches, harness, runtime or configuration makes\nprevious dependent results stale until rerun or a documented impact review;\nretain their history, never silently transfer PASS to a new candidate.\n\n### Case and evidence contract\n\nExpand each case into applicable distro \u00d7 SAPI \u00d7 transport \u00d7 fixture rows before\nrunning it. Record a stable case/run ID, original parent task(s), executor and\nindependent reviewer, timestamp, commit and source/patch/harness/fixture hashes,\nOS/runtime/module/INI/provider identities, target allowlist, preconditions,\nexact command, expected result, observed result, exit code, duration, sanitized\nlog/report paths, defect IDs, cleanup and retest outcome. Do not record credentials,\nKS values, cookies, private keys or production data. Commands, timeouts, profile\nand stream tolerances must be reviewed before execution rather than inferred\nfrom a successful output. Normalize only explicitly listed volatile fields;\nnever normalize away types, authorization failures or semantic changes.\n\nExecution states are NOT_RUN, RUNNING, PASS, FAIL, BLOCKED and INCONCLUSIVE.\nA justified N/A requires a named scope rationale and reviewer; mandatory distro\nor functional requirements cannot be waived this way. PARTIAL describes aggregate\ncoverage or older limited evidence, never a passing execution. An unavailable CLI\nis BLOCKED/NOT_EXECUTED, not application FAIL and never PASS. Track unknown paths\nand new findings alongside the denominator; do not conceal them by shrinking it.\n\nReport after each batch: planned applicable rows, executed rows, PASS/FAIL/\nBLOCKED/INCONCLUSIVE/NOT_RUN counts, stale results, critical defects and release\nprerequisites, new discoveries, and the next three runnable cases. Report the\noriginal 24 acceptance tasks separately from detailed-case counts. Neither count\nis a completion percentage or release ETA. All applicable rows and independent\nreview must pass before closing a case; close a parent only when its entire\noriginal acceptance text is satisfied. Syntax validation of this plan does not\ncomplete any application test.\n\n### Parallel execution and independent review\n\nFollow AGENTS.md: involve the actual Claude, Grok and Cursor (`agent`) CLIs in\nexecution and review over every validation cycle; Codex integrates results.\nDefault ownership is Claude for differential PHP/API, Grok for negative/security\ncases, Cursor for coverage/artifact/distro checks. Rotate reviewers:\nClaude \u2192 Grok, Grok \u2192 Cursor, Cursor \u2192 Claude. A blocked reviewer remains visible;\nanother independent authorized reviewer may provide additional evidence without\npretending that the blocked CLI ran. Review alone is not execution; arrange an\nindependent rerun of critical cases on the same frozen inputs.\n\nParallelize only independent read-only checks or tests in distinct disposable\nclones. Reserve each VM/DB/worktree for one mutation owner and each benchmark host\nfor one workload; serialize if separate clones or an exclusive reservation are\nunavailable. Protect `.20`, reject unexpected DNS/redirect targets, use synthetic\ndata and restore disposable state in cleanup. Do not bypass CLI protections.\n\n### Specific regression boundaries\n\n- Assert PDO numeric/string/NULL/false behavior through actual API contracts and\n  generated clients, not just driver return values. Include negative DB paths.\n- Exercise original 7.4 serialized objects with 8.3, cold/warm real caches and\n  documented invalidation. A mixed 7.4/8.3 rollout is not approved: demonstrate\n  that cutover drains/stops old workers. Do not add mixed-runtime support or claim\n  arbitrary 8.3 writes can be read by 7.4; rollback restores a coherent snapshot.\n- Include KS crypto interoperability, expiry/clock skew, privilege tampering,\n  cross-partner denial, XML external-entity rejection without external network\n  access, timezone/locale behavior, and active install/plugin/cron entrypoints.\n  Optional capabilities are inventoried before inclusion; do not silently add\n  DRM/live/DWH or DB/schema upgrades to this change.\n- Test browser login/session/ACL behavior and search indexing/query parity. Check\n  Apache/FPM body handling and OS service/security-policy behavior in the actual\n  target topology. No bypass of TLS verification or SELinux/AppArmor to pass.\n- Separate worker orchestration/queue latency from ffmpeg conversion time. Keep\n  profiles and OPcache/JIT settings recorded and comparable; record sample counts\n  and dispersion. Resolve unstable measurements before applying the 20% gate.\n- Rehearse failure after synthetic candidate writes while intake is restricted;\n  restore the matched baseline and explicitly account for discarded experimental\n  writes. This is recovery rehearsal, not a promise of lossless post-cutover\n  downgrade or permission to alter production.\n\n### First execution batch\n\nT0-01: Claude runs the existing local harness suite; Grok independently reviews\nand reruns the bounded command. T0-02: Cursor audits source/patch/ZIP identities\nand selection gaps; Claude reviews. T0-03: Grok maps each original task to cases,\nexisting evidence and uncovered scope; Cursor reviews. All are local-only; no\nVM, package, CI or release mutation is authorized by this batch. Record tool\nfailures separately. Subsequent lab cases start only after target ownership,\ncommands and candidate identities are frozen. These are assignments, not claims\nthat execution has already happened.\n\n### Refinement validation\n\nAll three actual CLIs returned planning reviews of the supplied proposal,\nupdated design/tasks and delta specs with no blocking planning findings. Claude\nidentified non-blocking baseline-timing and approval-boundary ambiguities;\nthe final case wording now explicitly covers baseline runtime/extension/timing\nreports, baseline-versus-candidate measurements separated from optional upgrades,\nand feasibility approval for both additional distro integrations. Cursor and\nGrok confirmed the parent mapping and preserved gates. These were document-only\nreviews, not independent runtime execution or release sign-off. Local strict\nOpenSpec validation and checks for preserved original text, 24 mapped parents,\n27 unique cases and zero completed checkboxes passed. Application execution\nremains the next apply-phase activity.",
+              "lineStart": 1,
+              "lineEnd": 195,
+              "totalLines": 195,
+              "truncated": false
+            }
+          },
+          "title": "openspec/changes/migrate-kaltura-php83/design.md",
+          "time": {
+            "start": 1790432607687,
+            "end": 1790432607696
+          }
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "fc_01a0de197ae074fba47982cea0cfb596"
+          }
+        },
+        "id": "prt_0de197dc4001nkg5IzJmOFR2YZ",
+        "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+        "messageID": "msg_0de197615001YxHW0z2z1uypCo"
+      }
+    },
+    {
+      "type": "step_finish",
+      "timestamp": 1790432607733,
+      "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+      "part": {
+        "id": "prt_0de197df2001KrpU5GdfldIO7Y",
+        "reason": "tool-calls",
+        "snapshot": "e455787f31a22ac42b66e354de2bdc9a5080c671",
+        "messageID": "msg_0de197615001YxHW0z2z1uypCo",
+        "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+        "type": "step-finish",
+        "tokens": {
+          "total": 88667,
+          "input": 5024,
+          "output": 74,
+          "reasoning": 0,
+          "cache": {
+            "write": 0,
+            "read": 83569
+          }
+        },
+        "cost": 0
+      }
+    },
+    {
+      "type": "text",
+      "timestamp": 1790432613055,
+      "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+      "part": {
+        "id": "prt_0de1992ba00185xvF9sPjAWhb7",
+        "messageID": "msg_0de197e07001mF3Jwx2Lm5nMoq",
+        "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+        "type": "text",
+        "text": "Found the 13 guard tests and the Decision 7 scope \u2014 now executing the local verification.",
+        "time": {
+          "start": 1790432613050,
+          "end": 1790432613053
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "rs_01a0de19902170c3837049f0a7eece78",
+            "phase": "commentary"
+          }
+        }
+      }
+    },
+    {
+      "type": "tool_use",
+      "timestamp": 1790432613965,
+      "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+      "part": {
+        "type": "tool",
+        "tool": "bash",
+        "callID": "call_01a0de1991c37699a9d59d9039a7ab91",
+        "state": {
+          "status": "completed",
+          "input": {
+            "command": "python3 -m unittest discover -s tools/php83/baseline-protocol -p 'test_*.py' -v 2>&1; echo \"EXIT:$?\"",
+            "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+          },
+          "output": "test_all_redirects_refused (test_guarded_http.GuardTests.test_all_redirects_refused) ... ok\ntest_bad_lengths (test_guarded_http.GuardTests.test_bad_lengths) ... ok\ntest_bad_targets (test_guarded_http.GuardTests.test_bad_targets) ... ok\ntest_bounded_body (test_guarded_http.GuardTests.test_bounded_body) ... ok\ntest_ca_must_be_explicit_and_pinned (test_guarded_http.GuardTests.test_ca_must_be_explicit_and_pinned) ... ok\ntest_invalid_origin (test_guarded_http.GuardTests.test_invalid_origin) ... ok\ntest_limit_types (test_guarded_http.GuardTests.test_limit_types) ... ok\ntest_literal (test_guarded_http.GuardTests.test_literal) ... ok\ntest_nested_bad (test_guarded_http.GuardTests.test_nested_bad) ... ok\ntest_nested_good (test_guarded_http.GuardTests.test_nested_good) ... ok\ntest_proxy_disabled (test_guarded_http.GuardTests.test_proxy_disabled) ... ok\ntest_rejected_before_connection (test_guarded_http.GuardTests.test_rejected_before_connection) ... ok\ntest_transport_error_redacted (test_guarded_http.GuardTests.test_transport_error_redacted) ... ok\n\n----------------------------------------------------------------------\nRan 13 tests in 0.001s\n\nOK\nEXIT:0\n",
+          "metadata": {
+            "output": "test_all_redirects_refused (test_guarded_http.GuardTests.test_all_redirects_refused) ... ok\ntest_bad_lengths (test_guarded_http.GuardTests.test_bad_lengths) ... ok\ntest_bad_targets (test_guarded_http.GuardTests.test_bad_targets) ... ok\ntest_bounded_body (test_guarded_http.GuardTests.test_bounded_body) ... ok\ntest_ca_must_be_explicit_and_pinned (test_guarded_http.GuardTests.test_ca_must_be_explicit_and_pinned) ... ok\ntest_invalid_origin (test_guarded_http.GuardTests.test_invalid_origin) ... ok\ntest_limit_types (test_guarded_http.GuardTests.test_limit_types) ... ok\ntest_literal (test_guarded_http.GuardTests.test_literal) ... ok\ntest_nested_bad (test_guarded_http.GuardTests.test_nested_bad) ... ok\ntest_nested_good (test_guarded_http.GuardTests.test_nested_good) ... ok\ntest_proxy_disabled (test_guarded_http.GuardTests.test_proxy_disabled) ... ok\ntest_rejected_before_connection (test_guarded_http.GuardTests.test_rejected_before_connection) ... ok\ntest_transport_error_redacted (test_guarded_http.GuardTests.test_transport_error_redacted) ... ok\n\n----------------------------------------------------------------------\nRan 13 tests in 0.001s\n\nOK\nEXIT:0\n",
+            "exit": 0,
+            "truncated": false
+          },
+          "title": "python3 -m unittest discover -s tools/php83/baseline-protocol -p 'test_*.py' -v 2>&1; echo \"EXIT:$?\"",
+          "time": {
+            "start": 1790432613881,
+            "end": 1790432613962
+          }
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "fc_01a0de1991c37699a9d59d9039a7ab91"
+          }
+        },
+        "id": "prt_0de1992be001q4MwQABrJ8Xlh7",
+        "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+        "messageID": "msg_0de197e07001mF3Jwx2Lm5nMoq"
+      }
+    },
+    {
+      "type": "step_finish",
+      "timestamp": 1790432613984,
+      "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+      "part": {
+        "id": "prt_0de19965d001bzu51o0UYBVedU",
+        "reason": "tool-calls",
+        "snapshot": "e455787f31a22ac42b66e354de2bdc9a5080c671",
+        "messageID": "msg_0de197e07001mF3Jwx2Lm5nMoq",
+        "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+        "type": "step-finish",
+        "tokens": {
+          "total": 94448,
+          "input": 5539,
+          "output": 145,
+          "reasoning": 203,
+          "cache": {
+            "write": 0,
+            "read": 88561
+          }
+        },
+        "cost": 0
+      }
+    },
+    {
+      "type": "tool_use",
+      "timestamp": 1790432618457,
+      "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+      "part": {
+        "type": "tool",
+        "tool": "bash",
+        "callID": "call_01a0de19a0f575bea70b9db9590af9c9",
+        "state": {
+          "status": "completed",
+          "input": {
+            "command": "python3 --version 2>&1; sha256sum tools/php83/baseline-protocol/guarded_http.py tools/php83/baseline-protocol/test_guarded_http.py tools/php83/baseline-protocol/README.md doc/php83/baseline-protocol-plan.md 2>&1; git log --oneline -3 2>&1; git status --short 2>&1 | head -20; echo \"EXIT:$?\"",
+            "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+          },
+          "output": "Python 3.12.3\n6e825b1eb87446f50908cc590e03eb51238eeedb9c75879bc8268f28cddee8f6  tools/php83/baseline-protocol/guarded_http.py\n71f839721cae2d39e47ceae55271f0477ff31522bd8fbbacbbbae7368e4c32ca  tools/php83/baseline-protocol/test_guarded_http.py\n1555b80f0b2c0047b47b0f6c9356e4259891d3e7a3c8767aedb125c5fbc3cc86  tools/php83/baseline-protocol/README.md\n4482958d129cbd859c2321756c0af7608426adbd2df776d374f9455540f66dc9  doc/php83/baseline-protocol-plan.md\na294207e test(php83): validate held generator DEBUG numeric token repair\n5f2a80a1 docs(php83): normalize XML command evidence notation\n9005b527 test(php83): validate native XML entity-loader policies\n?? doc/php83/baseline-protocol-plan.md\n?? doc/php83/evidence/baseline-protocol/\n?? doc/php83/evidence/criteria-selection/\n?? doc/php83/evidence/xml-lifecycle/\n?? tools/php83/baseline-protocol/\n?? tools/php83/criteria-composition/\n?? tools/php83/xml-lifecycle/\nEXIT:0\n",
+          "metadata": {
+            "output": "Python 3.12.3\n6e825b1eb87446f50908cc590e03eb51238eeedb9c75879bc8268f28cddee8f6  tools/php83/baseline-protocol/guarded_http.py\n71f839721cae2d39e47ceae55271f0477ff31522bd8fbbacbbbae7368e4c32ca  tools/php83/baseline-protocol/test_guarded_http.py\n1555b80f0b2c0047b47b0f6c9356e4259891d3e7a3c8767aedb125c5fbc3cc86  tools/php83/baseline-protocol/README.md\n4482958d129cbd859c2321756c0af7608426adbd2df776d374f9455540f66dc9  doc/php83/baseline-protocol-plan.md\na294207e test(php83): validate held generator DEBUG numeric token repair\n5f2a80a1 docs(php83): normalize XML command evidence notation\n9005b527 test(php83): validate native XML entity-loader policies\n?? doc/php83/baseline-protocol-plan.md\n?? doc/php83/evidence/baseline-protocol/\n?? doc/php83/evidence/criteria-selection/\n?? doc/php83/evidence/xml-lifecycle/\n?? tools/php83/baseline-protocol/\n?? tools/php83/criteria-composition/\n?? tools/php83/xml-lifecycle/\nEXIT:0\n",
+            "exit": 0,
+            "truncated": false
+          },
+          "title": "python3 --version 2>&1; sha256sum tools/php83/baseline-protocol/guarded_http.py tools/php83/baseline-protocol/test_guarded_http.py tools/php83/baseline-protocol/README.md doc/php83/baseline-protocol-plan.md 2>&1; git log --oneline -3 2>&1; git status --short 2>&1 | head -20; echo \"EXIT:$?\"",
+          "time": {
+            "start": 1790432618437,
+            "end": 1790432618455
+          }
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "fc_01a0de19a0f575bea70b9db9590af9c9"
+          }
+        },
+        "id": "prt_0de19a1e80013VSkikY6K92yaf",
+        "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+        "messageID": "msg_0de19966f0011JmmlpWU0Lm53G"
+      }
+    },
+    {
+      "type": "step_finish",
+      "timestamp": 1790432618552,
+      "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+      "part": {
+        "id": "prt_0de19a835001uPXbRaUAOfKPLd",
+        "reason": "tool-calls",
+        "snapshot": "e455787f31a22ac42b66e354de2bdc9a5080c671",
+        "messageID": "msg_0de19966f0011JmmlpWU0Lm53G",
+        "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+        "type": "step-finish",
+        "tokens": {
+          "total": 95049,
+          "input": 690,
+          "output": 171,
+          "reasoning": 123,
+          "cache": {
+            "write": 0,
+            "read": 94065
+          }
+        },
+        "cost": 0
+      }
+    },
+    {
+      "type": "tool_use",
+      "timestamp": 1790432638780,
+      "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+      "part": {
+        "type": "tool",
+        "tool": "bash",
+        "callID": "call_01a0de19ac0072ecb0276219bb1cc965",
+        "state": {
+          "status": "completed",
+          "input": {
+            "command": "python3 -c \"\nimport sys; sys.path.insert(0,'tools/php83/baseline-protocol')\nfrom unittest.mock import Mock, patch, MagicMock\nfrom guarded_http import Origin, Client, BoundaryError, NoRedirects, read_bounded, trusted_context\nimport io\no = Origin('192.168.56.74','http',80)\nchecks=[]\ndef ck(name, fn, expect_raise=True):\n    try:\n        r = fn()\n        ok = not expect_raise\n        detail = repr(r)[:120] if not expect_raise else 'NO-RAISE:'+repr(r)[:120]\n    except BoundaryError as e:\n        ok = expect_raise; detail='BoundaryError:'+str(e)[:80]\n    except Exception as e:\n        ok=False; detail=type(e).__name__+':'+str(e)[:80]\n    checks.append((name,'PASS' if ok else 'FAIL',detail))\n# 1 literal identity\nck('literal-allow', lambda: o.validate('http://192.168.56.74/path?a=1'), False)\nck('literal-evil-suffix', lambda: o.validate('http://192.168.56.74.evil/'))\nck('literal-prefix-IP', lambda: o.validate('http://192.168.56.7/'))\nck('literal-userinfo', lambda: o.validate('http://user:pw@192.168.56.74/'))\nck('literal-fragment', lambda: o.validate('http://192.168.56.74/#x'))\n# 2 exact scheme/port\nck('scheme-https-vs-http', lambda: o.validate('https://192.168.56.74/'))\nck('port-8080-vs-80', lambda: o.validate('http://192.168.56.74:8080/'))\nck('port-explicit80-allow', lambda: o.validate('http://192.168.56.74:80/x'), False)\nck('port-bad-string', lambda: o.validate('http://192.168.56.74:bad/'))\n# 3 controls before urlsplit\nck('ctrl-leading-space', lambda: o.validate(' http://192.168.56.74/'))\nck('ctrl-newline', lambda: o.validate('http://192.168.56.74/\\n'))\nck('ctrl-nul', lambda: o.validate('\\x00http://192.168.56.74/'))\nck('ctrl-tab', lambda: o.validate('http://192.168.56.74/\\t'))\nck('backslash', lambda: o.validate('http://192.168.56.74/\\\\\\\\x'))\nck('del-127', lambda: o.validate('http://192.168.56.74/\\x7f'))\n# 4 relative HLS references\nck('hls-relative-seg', lambda: o.resolve('http://192.168.56.74/hls/a.m3u8','seg.ts'), False)\nck('hls-abs-path', lambda: o.resolve('http://192.168.56.74/hls/a.m3u8','/hls/seg2.ts'), False)\nck('hls-proto-relative-escape', lambda: o.resolve('http://192.168.56.74/a','//192.168.56.20/a'))\nck('hls-scheme-escape', lambda: o.resolve('http://192.168.56.74/a','https://192.168.56.74/a'))\nck('hls-parent-traversal-contained', lambda: o.resolve('http://192.168.56.74/hls/sub/a.m3u8','../seg.ts'), False)\n# 5 redirects/proxy\nck('redirect-301', lambda: NoRedirects().redirect_request(None,None,301,'',{ Horn:1},'x'.replace('x','http://192.168.56.74/')))\nck('redirect-308', lambda: NoRedirects().redirect_request(None,None,308,'',{},'http://192.168.56.74/'))\nwith patch('guarded_http.build_opener') as b:\n    Client(o); proxies=b.call_args.args[0].proxies\n    checks.append(('proxy-empty', 'PASS' if proxies=={} else 'FAIL', repr(proxies)))\n# 6 pinned CA\nck('ca-hash-mismatch', lambda: trusted_context(b'not certificate','wrong'))\nck('ca-nonbytes', lambda: trusted_context('str-not-bytes','x'*64))\nck('https-requires-ca', lambda: Client(Origin('192.168.56.74','https',443)))\nck('http-rejects-ca', lambda: Client(o,b'bad','bad'))\n# 7 bounded body\ndef resp(data,length=None):\n    r=io.BytesIO(data); r.headers={} if length is None else {'Content-Length':length}; return r\nck('body-exact', lambda: read_bounded(resp(b'abc','3'),3), False)\nck('body-nolength-ok', lambda: read_bounded(resp(b'abc'),3), False)\nck('body-overflow', lambda: read_bounded(resp(b'abcd'),3))\nck('body-declared-too-big', lambda: read_bounded(resp(b'abc','4'),3))\nck('body-declared-short', lambda: read_bounded(resp(b'abc','2'),3))\nck('body-unicode-digit', lambda: read_bounded(resp(b'abc','\\u0e53'.replace('\\u0e53','\\u3007')),3))\nck('limit-bool', lambda: read_bounded(resp(b''),True))\n# 8 sanitized error\nwith patch('guarded_http.build_opener') as b:\n    c=Client(o); c.opener.open.side_effect=OSError('secret-value')\n    try:\n        c.get('http://192.168.56.74/?ks=secret-value'); checks.append(('sanitized', 'FAIL','NO-RAISE'))\n    except BoundaryError as e:\n        checks.append(('sanitized', 'PASS' if 'secret-value' not in str(e) else 'FAIL', 'BoundaryError:'+str(e)[:80]))\nwith patch('guarded_http.build_opener') as b:\n    c=Client(o)\n    try:\n        c.get('http://192.168.56.20/?secret=not-real'); checks.append(('reject-before-connect','FAIL','NO-RAISE'))\n    except BoundaryError:\n        try:\n            c.opener.open.assert_not_called(); checks.append(('reject-before-connect','PASS','open not called'))\n        except AssertionError as e: checks.append(('reject-before-connect','FAIL',str(e)[:80]))\n# 9 GET-only + response-url revalidation + timeout bound (mocked)\nimport inspect\nsrc=inspect.getsource(Client.get)\nchecks.append(('get-method-fixed', 'PASS' if \\\"method='GET'\\\" in src or 'method=\\\"GET\\\"' in src else 'FAIL', 'Request GET pinned' if 'GET' in src else 'no GET'))\nchecks.append(('response-url-revalidated', 'PASS' if 'response.geturl' in src else 'FAIL', 'geturl check'))\nchecks.append(('timeout-upper-bound-30', 'PASS' if '<= 30' in src else 'FAIL', 'timeout<=30'))\nfor n,s,d in checks: print(f'{s} {n} :: {d}')\nprint('TOTAL', len(checks), 'FAIL', sum(1 for c in checks if c[1]==\\\"FAIL\\\"))\n\" 2>&1; echo \"EXIT:$?\"",
+            "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+          },
+          "output": "PASS literal-allow :: 'http://192.168.56.74/path?a=1'\nPASS literal-evil-suffix :: BoundaryError:Refusing malformed or non-origin target\nPASS literal-prefix-IP :: BoundaryError:Refusing malformed or non-origin target\nPASS literal-userinfo :: BoundaryError:Refusing malformed or non-origin target\nPASS literal-fragment :: BoundaryError:Refusing malformed or non-origin target\nPASS scheme-https-vs-http :: BoundaryError:Refusing malformed or non-origin target\nPASS port-8080-vs-80 :: BoundaryError:Refusing malformed or non-origin target\nPASS port-explicit80-allow :: 'http://192.168.56.74:80/x'\nPASS port-bad-string :: BoundaryError:Refusing malformed or non-origin target\nPASS ctrl-leading-space :: BoundaryError:Invalid URL characters\nPASS ctrl-newline :: BoundaryError:Invalid URL characters\nPASS ctrl-nul :: BoundaryError:Invalid URL characters\nPASS ctrl-tab :: BoundaryError:Invalid URL characters\nPASS backslash :: BoundaryError:Invalid URL characters\nPASS del-127 :: BoundaryError:Invalid URL characters\nPASS hls-relative-seg :: 'http://192.168.56.74/hls/seg.ts'\nPASS hls-abs-path :: 'http://192.168.56.74/hls/seg2.ts'\nPASS hls-proto-relative-escape :: BoundaryError:Refusing malformed or non-origin target\nPASS hls-scheme-escape :: BoundaryError:Refusing malformed or non-origin target\nPASS hls-parent-traversal-contained :: 'http://192.168.56.74/hls/seg.ts'\nFAIL redirect-301 :: NameError:name 'Horn' is not defined\nPASS redirect-308 :: BoundaryError:Redirect refused\nPASS proxy-empty :: {}\nPASS ca-hash-mismatch :: BoundaryError:Private CA identity mismatch\nPASS ca-nonbytes :: BoundaryError:Private CA identity mismatch\nPASS https-requires-ca :: BoundaryError:Explicit pinned private CA required\nPASS http-rejects-ca :: BoundaryError:Unexpected CA on plaintext transport\nPASS body-exact :: b'abc'\nPASS body-nolength-ok :: b'abc'\nPASS body-overflow :: BoundaryError:Response body limit exceeded\nPASS body-declared-too-big :: BoundaryError:Invalid or excessive declared response length\nPASS body-declared-short :: BoundaryError:Incomplete response body\nPASS body-unicode-digit :: BoundaryError:Invalid or excessive declared response length\nPASS limit-bool :: BoundaryError:Invalid body limit\nPASS sanitized :: BoundaryError:Transport request failed\nPASS reject-before-connect :: open not called\nPASS get-method-fixed :: Request GET pinned\nPASS response-url-revalidated :: geturl check\nPASS timeout-upper-bound-30 :: timeout<=30\nTOTAL 39 FAIL 1\nEXIT:0\n",
+          "metadata": {
+            "output": "PASS literal-allow :: 'http://192.168.56.74/path?a=1'\nPASS literal-evil-suffix :: BoundaryError:Refusing malformed or non-origin target\nPASS literal-prefix-IP :: BoundaryError:Refusing malformed or non-origin target\nPASS literal-userinfo :: BoundaryError:Refusing malformed or non-origin target\nPASS literal-fragment :: BoundaryError:Refusing malformed or non-origin target\nPASS scheme-https-vs-http :: BoundaryError:Refusing malformed or non-origin target\nPASS port-8080-vs-80 :: BoundaryError:Refusing malformed or non-origin target\nPASS port-explicit80-allow :: 'http://192.168.56.74:80/x'\nPASS port-bad-string :: BoundaryError:Refusing malformed or non-origin target\nPASS ctrl-leading-space :: BoundaryError:Invalid URL characters\nPASS ctrl-newline :: BoundaryError:Invalid URL characters\nPASS ctrl-nul :: BoundaryError:Invalid URL characters\nPASS ctrl-tab :: BoundaryError:Invalid URL characters\nPASS backslash :: BoundaryError:Invalid URL characters\nPASS del-127 :: BoundaryError:Invalid URL characters\nPASS hls-relative-seg :: 'http://192.168.56.74/hls/seg.ts'\nPASS hls-abs-path :: 'http://192.168.56.74/hls/seg2.ts'\nPASS hls-proto-relative-escape :: BoundaryError:Refusing malformed or non-origin target\nPASS hls-scheme-escape :: BoundaryError:Refusing malformed or non-origin target\nPASS hls-parent-traversal-contained :: 'http://192.168.56.74/hls/seg.ts'\nFAIL redirect-301 :: NameError:name 'Horn' is not defined\nPASS redirect-308 :: BoundaryError:Redirect refused\nPASS proxy-empty :: {}\nPASS ca-hash-mismatch :: BoundaryError:Private CA identity mismatch\nPASS ca-nonbytes :: BoundaryError:Private CA identity mismatch\nPASS https-requires-ca :: BoundaryError:Explicit pinned private CA required\nPASS http-rejects-ca :: BoundaryError:Unexpected CA on plaintext transport\nPASS body-exact :: b'abc'\nPASS body-nolength-ok :: b'abc'\nPASS body-overflow :: BoundaryError:Response body limit exceeded\nPASS body-declared-too-big :: BoundaryError:Invalid or excessive declared response length\nPASS body-declared-short :: BoundaryError:Incomplete response body\nPASS body-unicode-digit :: BoundaryError:Invalid or excessive declared response length\nPASS limit-bool :: BoundaryError:Invalid body limit\nPASS sanitized :: BoundaryError:Transport request failed\nPASS reject-before-connect :: open not called\nPASS get-method-fixed :: Request GET pinned\nPASS response-url-revalidated :: geturl check\nPASS timeout-upper-bound-30 :: timeout<=30\nTOTAL 39 FAIL 1\nEXIT:0\n",
+            "exit": 0,
+            "truncated": false
+          },
+          "title": "python3 -c \"\nimport sys; sys.path.insert(0,'tools/php83/baseline-protocol')\nfrom unittest.mock import Mock, patch, MagicMock\nfrom guarded_http import Origin, Client, BoundaryError, NoRedirects, read_bounded, trusted_context\nimport io\no = Origin('192.168.56.74','http',80)\nchecks=[]\ndef ck(name, fn, expect_raise=True):\n    try:\n        r = fn()\n        ok = not expect_raise\n        detail = repr(r)[:120] if not expect_raise else 'NO-RAISE:'+repr(r)[:120]\n    except BoundaryError as e:\n        ok = expect_raise; detail='BoundaryError:'+str(e)[:80]\n    except Exception as e:\n        ok=False; detail=type(e).__name__+':'+str(e)[:80]\n    checks.append((name,'PASS' if ok else 'FAIL',detail))\n# 1 literal identity\nck('literal-allow', lambda: o.validate('http://192.168.56.74/path?a=1'), False)\nck('literal-evil-suffix', lambda: o.validate('http://192.168.56.74.evil/'))\nck('literal-prefix-IP', lambda: o.validate('http://192.168.56.7/'))\nck('literal-userinfo', lambda: o.validate('http://user:pw@192.168.56.74/'))\nck('literal-fragment', lambda: o.validate('http://192.168.56.74/#x'))\n# 2 exact scheme/port\nck('scheme-https-vs-http', lambda: o.validate('https://192.168.56.74/'))\nck('port-8080-vs-80', lambda: o.validate('http://192.168.56.74:8080/'))\nck('port-explicit80-allow', lambda: o.validate('http://192.168.56.74:80/x'), False)\nck('port-bad-string', lambda: o.validate('http://192.168.56.74:bad/'))\n# 3 controls before urlsplit\nck('ctrl-leading-space', lambda: o.validate(' http://192.168.56.74/'))\nck('ctrl-newline', lambda: o.validate('http://192.168.56.74/\\n'))\nck('ctrl-nul', lambda: o.validate('\\x00http://192.168.56.74/'))\nck('ctrl-tab', lambda: o.validate('http://192.168.56.74/\\t'))\nck('backslash', lambda: o.validate('http://192.168.56.74/\\\\\\\\x'))\nck('del-127', lambda: o.validate('http://192.168.56.74/\\x7f'))\n# 4 relative HLS references\nck('hls-relative-seg', lambda: o.resolve('http://192.168.56.74/hls/a.m3u8','seg.ts'), False)\nck('hls-abs-path', lambda: o.resolve('http://192.168.56.74/hls/a.m3u8','/hls/seg2.ts'), False)\nck('hls-proto-relative-escape', lambda: o.resolve('http://192.168.56.74/a','//192.168.56.20/a'))\nck('hls-scheme-escape', lambda: o.resolve('http://192.168.56.74/a','https://192.168.56.74/a'))\nck('hls-parent-traversal-contained', lambda: o.resolve('http://192.168.56.74/hls/sub/a.m3u8','../seg.ts'), False)\n# 5 redirects/proxy\nck('redirect-301', lambda: NoRedirects().redirect_request(None,None,301,'',{ Horn:1},'x'.replace('x','http://192.168.56.74/')))\nck('redirect-308', lambda: NoRedirects().redirect_request(None,None,308,'',{},'http://192.168.56.74/'))\nwith patch('guarded_http.build_opener') as b:\n    Client(o); proxies=b.call_args.args[0].proxies\n    checks.append(('proxy-empty', 'PASS' if proxies=={} else 'FAIL', repr(proxies)))\n# 6 pinned CA\nck('ca-hash-mismatch', lambda: trusted_context(b'not certificate','wrong'))\nck('ca-nonbytes', lambda: trusted_context('str-not-bytes','x'*64))\nck('https-requires-ca', lambda: Client(Origin('192.168.56.74','https',443)))\nck('http-rejects-ca', lambda: Client(o,b'bad','bad'))\n# 7 bounded body\ndef resp(data,length=None):\n    r=io.BytesIO(data); r.headers={} if length is None else {'Content-Length':length}; return r\nck('body-exact', lambda: read_bounded(resp(b'abc','3'),3), False)\nck('body-nolength-ok', lambda: read_bounded(resp(b'abc'),3), False)\nck('body-overflow', lambda: read_bounded(resp(b'abcd'),3))\nck('body-declared-too-big', lambda: read_bounded(resp(b'abc','4'),3))\nck('body-declared-short', lambda: read_bounded(resp(b'abc','2'),3))\nck('body-unicode-digit', lambda: read_bounded(resp(b'abc','\\u0e53'.replace('\\u0e53','\\u3007')),3))\nck('limit-bool', lambda: read_bounded(resp(b''),True))\n# 8 sanitized error\nwith patch('guarded_http.build_opener') as b:\n    c=Client(o); c.opener.open.side_effect=OSError('secret-value')\n    try:\n        c.get('http://192.168.56.74/?ks=secret-value'); checks.append(('sanitized', 'FAIL','NO-RAISE'))\n    except BoundaryError as e:\n        checks.append(('sanitized', 'PASS' if 'secret-value' not in str(e) else 'FAIL', 'BoundaryError:'+str(e)[:80]))\nwith patch('guarded_http.build_opener') as b:\n    c=Client(o)\n    try:\n        c.get('http://192.168.56.20/?secret=not-real'); checks.append(('reject-before-connect','FAIL','NO-RAISE'))\n    except BoundaryError:\n        try:\n            c.opener.open.assert_not_called(); checks.append(('reject-before-connect','PASS','open not called'))\n        except AssertionError as e: checks.append(('reject-before-connect','FAIL',str(e)[:80]))\n# 9 GET-only + response-url revalidation + timeout bound (mocked)\nimport inspect\nsrc=inspect.getsource(Client.get)\nchecks.append(('get-method-fixed', 'PASS' if \\\"method='GET'\\\" in src or 'method=\\\"GET\\\"' in src else 'FAIL', 'Request GET pinned' if 'GET' in src else 'no GET'))\nchecks.append(('response-url-revalidated', 'PASS' if 'response.geturl' in src else 'FAIL', 'geturl check'))\nchecks.append(('timeout-upper-bound-30', 'PASS' if '<= 30' in src else 'FAIL', 'timeout<=30'))\nfor n,s,d in checks: print(f'{s} {n} :: {d}')\nprint('TOTAL', len(checks), 'FAIL', sum(1 for c in checks if c[1]==\\\"FAIL\\\"))\n\" 2>&1; echo \"EXIT:$?\"",
+          "time": {
+            "start": 1790432638717,
+            "end": 1790432638774
+          }
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "fc_01a0de19ac0072ecb0276219bb1cc965"
+          }
+        },
+        "id": "prt_0de19ae1a001RKx1hob27Mm703",
+        "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+        "messageID": "msg_0de19a848001OcvEbA8htfH0vY"
+      }
+    },
+    {
+      "type": "step_finish",
+      "timestamp": 1790432638804,
+      "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+      "part": {
+        "id": "prt_0de19f751001k6H6HtBMifVXfV",
+        "reason": "tool-calls",
+        "snapshot": "0a1fc2eac1acca4d1b2b7fc69a491500d78b7244",
+        "messageID": "msg_0de19a848001OcvEbA8htfH0vY",
+        "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+        "type": "step-finish",
+        "tokens": {
+          "total": 97083,
+          "input": 691,
+          "output": 1687,
+          "reasoning": 0,
+          "cache": {
+            "write": 0,
+            "read": 94705
+          }
+        },
+        "cost": 0
+      }
+    },
+    {
+      "type": "tool_use",
+      "timestamp": 1790432642740,
+      "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+      "part": {
+        "type": "tool",
+        "tool": "bash",
+        "callID": "call_01a0de1a00ab7115a69d70e24950ffa8",
+        "state": {
+          "status": "completed",
+          "input": {
+            "command": "python3 -c \"\nimport sys; sys.path.insert(0,'tools/php83/baseline-protocol')\nfrom guarded_http import NoRedirects, BoundaryError\nfor code in [301,302,303,307,308]:\n    try:\n        NoRedirects().redirect_request(None,None,code,'',{},'http://192.168.56.74/')\n        print(f'FAIL {code} NO-RAISE')\n    except BoundaryError as e:\n        print(f'PASS {code} :: {e}')\n\" 2>&1; echo \"EXIT:$?\"",
+            "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+          },
+          "output": "PASS 301 :: Redirect refused\nPASS 302 :: Redirect refused\nPASS 303 :: Redirect refused\nPASS 307 :: Redirect refused\nPASS 308 :: Redirect refused\nEXIT:0\n",
+          "metadata": {
+            "output": "PASS 301 :: Redirect refused\nPASS 302 :: Redirect refused\nPASS 303 :: Redirect refused\nPASS 307 :: Redirect refused\nPASS 308 :: Redirect refused\nEXIT:0\n",
+            "exit": 0,
+            "truncated": false
+          },
+          "title": "python3 -c \"\nimport sys; sys.path.insert(0,'tools/php83/baseline-protocol')\nfrom guarded_http import NoRedirects, BoundaryError\nfor code in [301,302,303,307,308]:\n    try:\n        NoRedirects().redirect_request(None,None,code,'',{},'http://192.168.56.74/')\n        print(f'FAIL {code} NO-RAISE')\n    except BoundaryError as e:\n        print(f'PASS {code} :: {e}')\n\" 2>&1; echo \"EXIT:$?\"",
+          "time": {
+            "start": 1790432642699,
+            "end": 1790432642739
+          }
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "fc_01a0de1a00ab7115a69d70e24950ffa8"
+          }
+        },
+        "id": "prt_0de1a0197001GQCOSQyuImaUhQ",
+        "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+        "messageID": "msg_0de19f765001O4ZGNw9w3pTG7p"
+      }
+    },
+    {
+      "type": "step_finish",
+      "timestamp": 1790432642800,
+      "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+      "part": {
+        "id": "prt_0de1a06ee0016jxaT0t7ywJ7pi",
+        "reason": "tool-calls",
+        "snapshot": "0a1fc2eac1acca4d1b2b7fc69a491500d78b7244",
+        "messageID": "msg_0de19f765001O4ZGNw9w3pTG7p",
+        "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+        "type": "step-finish",
+        "tokens": {
+          "total": 97944,
+          "input": 2355,
+          "output": 202,
+          "reasoning": 42,
+          "cache": {
+            "write": 0,
+            "read": 95345
+          }
+        },
+        "cost": 0
+      }
+    },
+    {
+      "type": "text",
+      "timestamp": 1790432702174,
+      "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+      "part": {
+        "id": "prt_0de1aeed6001KX5r9K3RHW2oz6",
+        "messageID": "msg_0de1a06ff001XVwJHP1bhW7NDj",
+        "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+        "type": "text",
+        "text": "All 13 harness tests pass \u2014 now probing the remaining edge cases for concrete bugs.",
+        "time": {
+          "start": 1790432702166,
+          "end": 1790432702172
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "rs_01a0de1aeccb75d1b0a5d8137b62ab14",
+            "phase": "commentary"
+          }
+        }
+      }
+    },
+    {
+      "type": "tool_use",
+      "timestamp": 1790432709298,
+      "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+      "part": {
+        "type": "tool",
+        "tool": "bash",
+        "callID": "call_01a0de1aede972b9aa1e4fa88df88952",
+        "state": {
+          "status": "completed",
+          "input": {
+            "command": "python3 -c \"\nimport sys, hashlib; sys.path.insert(0,'tools/php83/baseline-protocol')\nfrom guarded_http import trusted_context, BoundaryError, Client, Origin\nimport http.client\nprint('IncompleteRead MRO:', [c.__name__ for c in http.client.IncompleteRead.__mro__])\n# B1: non-ascii PEM bytes with matching hash\nbad = b'\\xff\\xfe-not-a-pem'; h = hashlib.sha256(bad).hexdigest()\ntry:\n    trusted_context(bad, h); print('B1a NO-RAISE')\nexcept BoundaryError as e: print('B1a BoundaryError:', e)\nexcept Exception as e: print('B1a RAW:', type(e).__name__, str(e)[:100])\n# B1b: ascii garbage with matching hash -> load_verify_locations failure type\nbad2 = b'not a pem at all'; h2 = hashlib.sha256(bad2).hexdigest()\ntry:\n    trusted_context(bad2, h2); print('B1b NO-RAISE')\nexcept BoundaryError as e: print('B1b BoundaryError:', e)\nexcept Exception as e: print('B1b RAW:', type(e).__name__, str(e)[:100])\n# B2: read-path IncompleteRead normalization\nimport io\nfrom unittest.mock import patch\no = Origin('192.168.56.74','http',80)\nwith patch('guarded_http.build_opener') as b:\n    c = Client(o)\n    resp = b''.join\n    m = patch.object(type(c.opener), 'open', create=True)\n    import contextlib\n    fake = io.BytesIO(b'abc'); fake.headers = {'Content-Length':'3'}\n    def badread(n=-1): raise http.client.IncompleteRead(partial=b'ab', expected=3)\n    fake.read = badread\n    cm = c.opener.open.return_value; cm.__enter__.return_value = fake\n    fake.status = 200; fake.geturl = lambda: 'http://192.168.56.74/x'\n    try:\n        c.get('http://192.168.56.74/x'); print('B2 NO-RAISE')\n    except BoundaryError as e: print('B2 BoundaryError:', e)\n    except Exception as e: print('B2 RAW:', type(e).__name__, str(e)[:120])\n\" 2>&1; echo \"EXIT:$?\"",
+            "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+          },
+          "output": "IncompleteRead MRO: ['IncompleteRead', 'HTTPException', 'Exception', 'BaseException', 'object']\nB1a RAW: UnicodeDecodeError 'ascii' codec can't decode byte 0xff in position 0: ordinal not in range(128)\nB1b RAW: SSLError no start line: cadata does not contain a certificate (_ssl.c:3964)\nB2 RAW: IncompleteRead IncompleteRead(2 bytes read, 3 more expected)\nEXIT:0\n",
+          "metadata": {
+            "output": "IncompleteRead MRO: ['IncompleteRead', 'HTTPException', 'Exception', 'BaseException', 'object']\nB1a RAW: UnicodeDecodeError 'ascii' codec can't decode byte 0xff in position 0: ordinal not in range(128)\nB1b RAW: SSLError no start line: cadata does not contain a certificate (_ssl.c:3964)\nB2 RAW: IncompleteRead IncompleteRead(2 bytes read, 3 more expected)\nEXIT:0\n",
+            "exit": 0,
+            "truncated": false
+          },
+          "title": "python3 -c \"\nimport sys, hashlib; sys.path.insert(0,'tools/php83/baseline-protocol')\nfrom guarded_http import trusted_context, BoundaryError, Client, Origin\nimport http.client\nprint('IncompleteRead MRO:', [c.__name__ for c in http.client.IncompleteRead.__mro__])\n# B1: non-ascii PEM bytes with matching hash\nbad = b'\\xff\\xfe-not-a-pem'; h = hashlib.sha256(bad).hexdigest()\ntry:\n    trusted_context(bad, h); print('B1a NO-RAISE')\nexcept BoundaryError as e: print('B1a BoundaryError:', e)\nexcept Exception as e: print('B1a RAW:', type(e).__name__, str(e)[:100])\n# B1b: ascii garbage with matching hash -> load_verify_locations failure type\nbad2 = b'not a pem at all'; h2 = hashlib.sha256(bad2).hexdigest()\ntry:\n    trusted_context(bad2, h2); print('B1b NO-RAISE')\nexcept BoundaryError as e: print('B1b BoundaryError:', e)\nexcept Exception as e: print('B1b RAW:', type(e).__name__, str(e)[:100])\n# B2: read-path IncompleteRead normalization\nimport io\nfrom unittest.mock import patch\no = Origin('192.168.56.74','http',80)\nwith patch('guarded_http.build_opener') as b:\n    c = Client(o)\n    resp = b''.join\n    m = patch.object(type(c.opener), 'open', create=True)\n    import contextlib\n    fake = io.BytesIO(b'abc'); fake.headers = {'Content-Length':'3'}\n    def badread(n=-1): raise http.client.IncompleteRead(partial=b'ab', expected=3)\n    fake.read = badread\n    cm = c.opener.open.return_value; cm.__enter__.return_value = fake\n    fake.status = 200; fake.geturl = lambda: 'http://192.168.56.74/x'\n    try:\n        c.get('http://192.168.56.74/x'); print('B2 NO-RAISE')\n    except BoundaryError as e: print('B2 BoundaryError:', e)\n    except Exception as e: print('B2 RAW:', type(e).__name__, str(e)[:120])\n\" 2>&1; echo \"EXIT:$?\"",
+          "time": {
+            "start": 1790432709235,
+            "end": 1790432709293
+          }
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "fc_01a0de1aede972b9aa1e4fa88df88952"
+          }
+        },
+        "id": "prt_0de1aeedd0019VmO6og9hLYun6",
+        "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+        "messageID": "msg_0de1a06ff001XVwJHP1bhW7NDj"
+      }
+    },
+    {
+      "type": "step_finish",
+      "timestamp": 1790432709328,
+      "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+      "part": {
+        "id": "prt_0de1b0ace001MdlSkyK42IOhmE",
+        "reason": "tool-calls",
+        "snapshot": "b5d7f04034c48f38b85c70e166fe7a35cc9cde4c",
+        "messageID": "msg_0de1a06ff001XVwJHP1bhW7NDj",
+        "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+        "type": "step-finish",
+        "tokens": {
+          "total": 100997,
+          "input": 356,
+          "output": 624,
+          "reasoning": 2368,
+          "cache": {
+            "write": 0,
+            "read": 97649
+          }
+        },
+        "cost": 0
+      }
+    },
+    {
+      "type": "tool_use",
+      "timestamp": 1790432715858,
+      "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+      "part": {
+        "type": "tool",
+        "tool": "bash",
+        "callID": "call_01a0de1b20cc777ebc0aded987a0712a",
+        "state": {
+          "status": "completed",
+          "input": {
+            "command": "ls doc/php83/evidence/baseline-protocol/ 2>&1; echo \"EXIT:$?\"",
+            "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+          },
+          "output": "claude-guard-cli.exit\nclaude-guard-outcome.json\nclaude-guard-prompt.txt\nopencode-guard-prompt.txt\nEXIT:0\n",
+          "metadata": {
+            "output": "claude-guard-cli.exit\nclaude-guard-outcome.json\nclaude-guard-prompt.txt\nopencode-guard-prompt.txt\nEXIT:0\n",
+            "exit": 0,
+            "truncated": false
+          },
+          "title": "ls doc/php83/evidence/baseline-protocol/ 2>&1; echo \"EXIT:$?\"",
+          "time": {
+            "start": 1790432715849,
+            "end": 1790432715857
+          }
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "fc_01a0de1b20cc777ebc0aded987a0712a"
+          }
+        },
+        "id": "prt_0de1b21b7001xO3Kv2ZYDc62uf",
+        "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+        "messageID": "msg_0de1b0ae2001mK8XUsOCZzKJoW"
+      }
+    },
+    {
+      "type": "step_finish",
+      "timestamp": 1790432716013,
+      "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+      "part": {
+        "id": "prt_0de1b24ea001sRdKdJfAdFeYzg",
+        "reason": "tool-calls",
+        "snapshot": "b5d7f04034c48f38b85c70e166fe7a35cc9cde4c",
+        "messageID": "msg_0de1b0ae2001mK8XUsOCZzKJoW",
+        "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+        "type": "step-finish",
+        "tokens": {
+          "total": 101429,
+          "input": 3214,
+          "output": 104,
+          "reasoning": 206,
+          "cache": {
+            "write": 0,
+            "read": 97905
+          }
+        },
+        "cost": 0
+      }
+    },
+    {
+      "type": "tool_use",
+      "timestamp": 1790432743955,
+      "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+      "part": {
+        "type": "tool",
+        "tool": "write",
+        "callID": "call_01a0de1b2b7076deaba467c8faec46d6",
+        "state": {
+          "status": "completed",
+          "input": {
+            "content": "# OpenCode guard review \u2014 baseline-protocol preparation (read-only, local)\n\nStatus: PREPARATION review only. NOT acceptance. No release approval.\nNo network request, VM run, SSH, secret access, or source edit performed.\n\n## Scope and identities\n\n- Reviewed (read-only):\n  - `tools/php83/baseline-protocol/guarded_http.py` sha256 `6e825b1eb87446f50908cc590e03eb51238eeedb9c75879bc8268f28cddee8f6`\n  - `tools/php83/baseline-protocol/test_guarded_http.py` sha256 `71f839721cae2d39e47ceae55271f0477ff31522bd8fbbacbbbae7368e4c32ca`\n  - `tools/php83/baseline-protocol/README.md` sha256 `1555b80f0b2c0047b47b0f6c9356e4259891d3e7a3c8767aedb125c5fbc3cc86`\n  - `doc/php83/baseline-protocol-plan.md` sha256 `4482958d129cbd859c2321756c0af7608426adbd2df776d374f9455540f66dc9`\n  - Decision 7 in `openspec/changes/migrate-kaltura-php83/design.md` (lines 38, 91)\n- Executor: OpenCode (Muse Spark `opencode/muse-spark-1.3-contributor-free`), local worktree only.\n- Environment: Python 3.12.3, Linux, worktree HEAD `a294207e`.\n- Transport used in this review: mocked (`unittest.mock.patch` on `build_opener`) and pure-guard calls only. GET-only interface; no POST/auth/media/TLS handshake executed.\n\n## Commands and exits\n\n1. `python3 -m unittest discover -s tools/php83/baseline-protocol -p 'test_*.py' -v` \u2192 exit 0, **13/13 PASS** (literal, bad_targets, invalid_origin, nested_good, nested_bad, all_redirects_refused, bounded_body, bad_lengths, limit_types, ca_pinned, rejected_before_connection, proxy_disabled, transport_error_redacted).\n2. Boundary probe batch (39 checks, mocked transport): 38 PASS, 1 FAIL caused by a typo in the probe itself (`Horn` NameError in the ad-hoc 301 line), not in source. Re-ran redirect codes cleanly:\n3. `redirect_request` for 301/302/303/307/308 \u2192 all PASS `BoundaryError: Redirect refused`, exit 0.\n4. Error-normalization probes (mocked): confirmed 2 concrete bugs below, exit 0.\n\n## Guard boundary findings (verified)\n\n- Literal identity: exact `scheme/host/port` match enforced; evil-suffix, prefix-IP, userinfo, fragment, IPv6, trailing-dot forms all refused. Explicit `:80` allowed on port-80 origin (correct).\n- Exact scheme/port: cross-scheme and off-list-port refused, including `:bad` (via `p.port` ValueError \u2192 BoundaryError).\n- Controls before urlsplit: leading space, `\\n`, `\\t`, NUL, DEL-127, backslash all rejected pre-parse. Correct order (check precedes `urlsplit`).\n- Relative HLS references: `seg.ts`, absolute-path, and contained `../` resolve inside origin and pass; protocol-relative (`//host`), cross-scheme, and `file:` escapes refused via re-validation of the joined URL. Parent traversal cannot escape origin because any absolute result is re-validated.\n- Redirects/proxy: all five redirect codes refused; `ProxyHandler({})` confirmed (`proxies == {}`), so ambient env proxies are bypassed.\n- Pinned CA: HTTPS without CA refused; HTTP with CA refused; hash mismatch refused; non-bytes CA refused.\n- Bounded body: exact-length match enforced both directions (declared-too-big, declared-too-short, overflow, unicode-digit CL all refused); `bool` limit rejected via `type() is not int`.\n- Sanitized error: `open()` OSError redacted (`Transport request failed`); pre-validation rejects before `open` is called (`assert_not_called` PASS); GET method pinned; `response.geturl()` re-validated; timeout upper-bounded at 30.\n\n## Concrete bugs (report before any baseline extension)\n\n1. `trusted_context`: malformed CA input escapes the BoundaryError contract. Non-ASCII bytes with matching hash raise raw `UnicodeDecodeError` (`.decode('ascii')` outside try); ASCII garbage with matching hash raises raw `ssl.SSLError` (`load_verify_locations`). Caller-supplied path, low severity, but violates the module's own sanitized-error boundary. Fix (not applied here): wrap decode+load in try/except `(UnicodeError, ssl.SSLError, ValueError)` \u2192 BoundaryError.\n2. `Client.get` body-read path not normalized: `response.read()` raising `http.client.IncompleteRead` (an `HTTPException`, **not** `OSError`/`URLError`) propagates raw instead of BoundaryError. Only `open()`-time errors are caught. Existing test covers `open` side-effect only. Fix (not applied here): extend the except clause or wrap `read_bounded` call to map `http.client.HTTPException` (and `Exception` from read) \u2192 BoundaryError without leaking bytes.\n3. Not code bugs but binding limitations (already declared in README; must not be waived): socket `timeout=30` is per-operation, **not** a total/hard deadline \u2014 a slow stream can exceed wall time; no Range/206 contract (206 \u2192 `Unexpected HTTP status`); no POST/auth/HLS parser/retries; TLS success/wrong-CA and redirect transport proven only by mocks, never a real handshake. These block any claim of network/TLS/API/media acceptance.\n\n## Bounded verdict\n\n- The 13 local guard tests pass and the eight inspected boundaries behave as documented for pure-guard, mocked-transport, GET-only preparation.\n- Two concrete low-severity error-normalization bugs (\u00a71\u20132) must be fixed and re-tested before this client carries any real baseline workload.\n- This review is PREPARATION, not acceptance: no network/TLS/API/media evidence produced; hard whole-request deadline and actual-TLS tests remain missing and are explicitly NOT waived. No release approved.\n",
+            "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/baseline-protocol/opencode-guard-review.md"
+          },
+          "output": "Wrote file successfully.",
+          "metadata": {
+            "diagnostics": {},
+            "filepath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/baseline-protocol/opencode-guard-review.md",
+            "exists": false,
+            "truncated": false
+          },
+          "title": "doc/php83/evidence/baseline-protocol/opencode-guard-review.md",
+          "time": {
+            "start": 1790432743947,
+            "end": 1790432743953
+          }
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "fc_01a0de1b2b7076deaba467c8faec46d6"
+          }
+        },
+        "id": "prt_0de1b2c5c001wyT8LwcdfYfzjU",
+        "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+        "messageID": "msg_0de1b24fd001cRg4AI6OCQFLpA"
+      }
+    },
+    {
+      "type": "step_finish",
+      "timestamp": 1790432743991,
+      "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+      "part": {
+        "id": "prt_0de1b923400178b6ItcddVH8UN",
+        "reason": "tool-calls",
+        "snapshot": "19cbad8de6f1f3b6cf69338f620354bf29cf6215",
+        "messageID": "msg_0de1b24fd001cRg4AI6OCQFLpA",
+        "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+        "type": "step-finish",
+        "tokens": {
+          "total": 102993,
+          "input": 381,
+          "output": 1463,
+          "reasoning": 44,
+          "cache": {
+            "write": 0,
+            "read": 101105
+          }
+        },
+        "cost": 0
+      }
+    },
+    {
+      "type": "text",
+      "timestamp": 1790432748513,
+      "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+      "part": {
+        "id": "prt_0de1b9a9c001oLlcVMn7Su3t5R",
+        "messageID": "msg_0de1b924c001FspZ2pHMSK6Xih",
+        "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+        "type": "text",
+        "text": "Review complete. 13/13 local guard tests pass (exit 0, mocked transport only, GET-only, no network/VM/secrets/edits).\n\nWrote `doc/php83/evidence/baseline-protocol/opencode-guard-review.md` with commands, exits, hashes, and bounded verdict.\n\nTwo concrete bugs reported (not fixed \u2014 sources untouched):\n1. `trusted_context` leaks raw `UnicodeDecodeError`/`ssl.SSLError` on malformed CA input instead of `BoundaryError`.\n2. `Client.get` body-read `IncompleteRead` propagates raw \u2014 only `open()` errors are normalized.\n\nVerdict is preparation-only: per-socket timeout is explicitly not a total deadline, and no real TLS/network/API/media evidence exists. No release approved, missing hard-deadline and actual-TLS tests not waived.",
+        "time": {
+          "start": 1790432746140,
+          "end": 1790432748511
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "msg_01a0de1b988672ceb89cd637c8ae80da"
+          }
+        }
+      }
+    },
+    {
+      "type": "step_finish",
+      "timestamp": 1790432748664,
+      "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+      "part": {
+        "id": "prt_0de1ba476001V6QxJ32ErXDxNa",
+        "reason": "stop",
+        "snapshot": "19cbad8de6f1f3b6cf69338f620354bf29cf6215",
+        "messageID": "msg_0de1b924c001FspZ2pHMSK6Xih",
+        "sessionID": "ses_f21e6bdbeffebPXpnIgu0DqjhG",
+        "type": "step-finish",
+        "tokens": {
+          "total": 103206,
+          "input": 1657,
+          "output": 181,
+          "reasoning": 7,
+          "cache": {
+            "write": 0,
+            "read": 101361
+          }
+        },
+        "cost": 0
+      }
+    }
+  ]
+}

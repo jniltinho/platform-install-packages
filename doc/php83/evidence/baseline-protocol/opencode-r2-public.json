@@ -1,0 +1,1386 @@
+{
+  "raw_sha256": "d09ec27a8562e708825451e2a27b817c6aa73b8f077d06b14e485bd5ba2b8320",
+  "events": [
+    {
+      "type": "text",
+      "timestamp": 1790439630352,
+      "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+      "part": {
+        "id": "prt_0de84a60c001fnzoFq6UVrBnTB",
+        "messageID": "msg_0de8491fe001gW2D6h2EwJLQHq",
+        "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+        "type": "text",
+        "text": "Fixes and freeze gates under independent check \u2014 re-running the baseline probes locally.",
+        "time": {
+          "start": 1790439630348,
+          "end": 1790439630351
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "rs_01a0de84a3b875699b9a3c1db4d18e54",
+            "phase": "commentary"
+          }
+        }
+      }
+    },
+    {
+      "type": "tool_use",
+      "timestamp": 1790439630840,
+      "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+      "part": {
+        "type": "tool",
+        "tool": "read",
+        "callID": "call_01a0de84a56277039a034371d085f995",
+        "state": {
+          "status": "completed",
+          "input": {
+            "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/AGENTS.md"
+          },
+          "output": "<path>/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/AGENTS.md</path>\n<type>file</type>\n<content>\n1: # Project agent instructions\n2: \n3: <!-- codebase-memory-mcp:start -->\n4: # Codebase Memory\n5: \n6: For structural code discovery, prefer the `codebase-memory` skill and the\n7: `codebase-memory-mcp` graph tools. Confirm index freshness before broad analysis;\n8: use `check_index_coverage` for every file that supports a graph-based conclusion.\n9: <!-- codebase-memory-mcp:end -->\n10: \n11: ## PHP 8.3 migration test coordination\n12: \n13: For every migration validation cycle, prioritize the actual Claude CLI, Cursor\n14: Agent CLI (`agent`) and OpenCode CLI for test execution and independent review.\n15: Assign explicit, non-overlapping cases and rotate reviewers; an author's review\n16: alone is not independent validation. Codex coordinates the results. Use the\n17: actual CLIs, not another agent merely named after them.\n18: \n19: The operator requested that Grok be deprioritized because it is malfunctioning;\n20: do not require another Grok attempt in each cycle. Preserve previous Grok failures\n21: separately, and use it only when there is a concrete reason to retry. Prefer\n22: OpenCode with Zen's Muse Spark 1.3 Free, resolving the exact installed model ID\n23: (currently `opencode/muse-spark-1.3-contributor-free`). The operator also explicitly\n24: authorized OpenCode MiniMax 3; resolve an installed MiniMax-M3 provider/model ID\n25: before use and verify actual availability. Do not buy plans, add credentials or\n26: silently substitute another paid model. Bound every external CLI attempt, confirm\n27: it is terminal before reassigning its work, and record each actual executor's\n28: result separately. Tool/quota/authentication failures never count as passes.\n29: \n30: For noninteractive Claude runs, supply the prompt via stdin after all options;\n31: do not put a positional prompt after variadic `--allowedTools`, which can consume\n32: it as another tool argument. For shell syntax checks, invoke `bash -n` separately\n33: for each script; extra filenames are arguments, not additional parsed scripts.\n34: \n35: Run independent reviews and isolated tests in parallel. Never run competing\n36: writers, destructive fixtures or benchmark workloads against the same VM,\n37: database or worktree; use separate disposable clones or serialize with an\n38: exclusive owner. Every executor must stay within existing approved lab scope.\n39: \n40: Record CLI availability/authentication/quota/permission failures as BLOCKED or\n41: NOT_EXECUTED, not successful tests. Do not bypass safeguards to satisfy this\n42: rule. A review is not execution evidence. If a CLI is unavailable, report the\n43: gap explicitly and continue only independently authorized safe work.\n44: \n45: Each result must identify the case, executor and reviewer, source/patch/harness\n46: identities, environment, command, exit status, sanitized evidence and any\n47: remaining limitation. Report executed cases, failures, untested scope and\n48: release gates separately; passing harness tests does not prove full application\n49: acceptance. Do not invent a completion percentage or release date.\n50: \n51: These coordination rules do not authorize production changes, `.20` writes,\n52: package/CI integration, publishing, or bypassing the migration proposal's\n53: feasibility, release and cutover approvals.\n\n(End of file - total 53 lines)\n</content>",
+          "metadata": {
+            "preview": "# Project agent instructions\n\n<!-- codebase-memory-mcp:start -->\n# Codebase Memory\n\nFor structural code discovery, prefer the `codebase-memory` skill and the\n`codebase-memory-mcp` graph tools. Confirm index freshness before broad analysis;\nuse `check_index_coverage` for every file that supports a graph-based conclusion.\n<!-- codebase-memory-mcp:end -->\n\n## PHP 8.3 migration test coordination\n\nFor every migration validation cycle, prioritize the actual Claude CLI, Cursor\nAgent CLI (`agent`) and OpenCode CLI for test execution and independent review.\nAssign explicit, non-overlapping cases and rotate reviewers; an author's review\nalone is not independent validation. Codex coordinates the results. Use the\nactual CLIs, not another agent merely named after them.\n\nThe operator requested that Grok be deprioritized because it is malfunctioning;\ndo not require another Grok attempt in each cycle. Preserve previous Grok failures",
+            "truncated": false,
+            "loaded": [],
+            "display": {
+              "type": "file",
+              "path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/AGENTS.md",
+              "text": "# Project agent instructions\n\n<!-- codebase-memory-mcp:start -->\n# Codebase Memory\n\nFor structural code discovery, prefer the `codebase-memory` skill and the\n`codebase-memory-mcp` graph tools. Confirm index freshness before broad analysis;\nuse `check_index_coverage` for every file that supports a graph-based conclusion.\n<!-- codebase-memory-mcp:end -->\n\n## PHP 8.3 migration test coordination\n\nFor every migration validation cycle, prioritize the actual Claude CLI, Cursor\nAgent CLI (`agent`) and OpenCode CLI for test execution and independent review.\nAssign explicit, non-overlapping cases and rotate reviewers; an author's review\nalone is not independent validation. Codex coordinates the results. Use the\nactual CLIs, not another agent merely named after them.\n\nThe operator requested that Grok be deprioritized because it is malfunctioning;\ndo not require another Grok attempt in each cycle. Preserve previous Grok failures\nseparately, and use it only when there is a concrete reason to retry. Prefer\nOpenCode with Zen's Muse Spark 1.3 Free, resolving the exact installed model ID\n(currently `opencode/muse-spark-1.3-contributor-free`). The operator also explicitly\nauthorized OpenCode MiniMax 3; resolve an installed MiniMax-M3 provider/model ID\nbefore use and verify actual availability. Do not buy plans, add credentials or\nsilently substitute another paid model. Bound every external CLI attempt, confirm\nit is terminal before reassigning its work, and record each actual executor's\nresult separately. Tool/quota/authentication failures never count as passes.\n\nFor noninteractive Claude runs, supply the prompt via stdin after all options;\ndo not put a positional prompt after variadic `--allowedTools`, which can consume\nit as another tool argument. For shell syntax checks, invoke `bash -n` separately\nfor each script; extra filenames are arguments, not additional parsed scripts.\n\nRun independent reviews and isolated tests in parallel. Never run competing\nwriters, destructive fixtures or benchmark workloads against the same VM,\ndatabase or worktree; use separate disposable clones or serialize with an\nexclusive owner. Every executor must stay within existing approved lab scope.\n\nRecord CLI availability/authentication/quota/permission failures as BLOCKED or\nNOT_EXECUTED, not successful tests. Do not bypass safeguards to satisfy this\nrule. A review is not execution evidence. If a CLI is unavailable, report the\ngap explicitly and continue only independently authorized safe work.\n\nEach result must identify the case, executor and reviewer, source/patch/harness\nidentities, environment, command, exit status, sanitized evidence and any\nremaining limitation. Report executed cases, failures, untested scope and\nrelease gates separately; passing harness tests does not prove full application\nacceptance. Do not invent a completion percentage or release date.\n\nThese coordination rules do not authorize production changes, `.20` writes,\npackage/CI integration, publishing, or bypassing the migration proposal's\nfeasibility, release and cutover approvals.",
+              "lineStart": 1,
+              "lineEnd": 53,
+              "totalLines": 53,
+              "truncated": false
+            }
+          },
+          "title": "AGENTS.md",
+          "time": {
+            "start": 1790439630831,
+            "end": 1790439630837
+          }
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "fc_01a0de84a56277039a034371d085f995"
+          }
+        },
+        "id": "prt_0de84a63a001nV80NJjFL9ms1d",
+        "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+        "messageID": "msg_0de8491fe001gW2D6h2EwJLQHq"
+      }
+    },
+    {
+      "type": "step_finish",
+      "timestamp": 1790439630944,
+      "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+      "part": {
+        "id": "prt_0de84a85c0017xOHFOJq7rzRrW",
+        "reason": "tool-calls",
+        "snapshot": "5ab9fdcbe0fcf4db8c146f6bd083120f096b22f8",
+        "messageID": "msg_0de8491fe001gW2D6h2EwJLQHq",
+        "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+        "type": "step-finish",
+        "tokens": {
+          "total": 79256,
+          "input": 78966,
+          "output": 96,
+          "reasoning": 81,
+          "cache": {
+            "write": 0,
+            "read": 113
+          }
+        },
+        "cost": 0
+      }
+    },
+    {
+      "type": "tool_use",
+      "timestamp": 1790439633214,
+      "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+      "part": {
+        "type": "tool",
+        "tool": "read",
+        "callID": "call_01a0de84af89722b856f86ada7a7146d",
+        "state": {
+          "status": "completed",
+          "input": {
+            "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+          },
+          "output": "<path>/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83</path>\n<type>directory</type>\n<entries>\n.agents/\n.claude/\n.git\n.github/\n.gitignore\nAGENTS.md\nbuild/\nchef-repo/\nCODE_OF_CONDUCT.md\ncommon/\nCONTRIBUTING.md\ndeb/\ndoc/\ndocker/\nDockerfile\nkaltura-console/\nLICENSE\nopenspec/\npatches/\nprompts/\nREADME.md\nrpm/\nRPM/\nsanity_tests/\ntools/\nvagrant/\n\n(26 entries)\n</entries>",
+          "metadata": {
+            "preview": ".agents/\n.claude/\n.git\n.github/\n.gitignore\nAGENTS.md\nbuild/\nchef-repo/\nCODE_OF_CONDUCT.md\ncommon/\nCONTRIBUTING.md\ndeb/\ndoc/\ndocker/\nDockerfile\nkaltura-console/\nLICENSE\nopenspec/\npatches/\nprompts/",
+            "truncated": false,
+            "loaded": [],
+            "display": {
+              "type": "directory",
+              "path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83",
+              "entries": [
+                ".agents/",
+                ".claude/",
+                ".git",
+                ".github/",
+                ".gitignore",
+                "AGENTS.md",
+                "build/",
+                "chef-repo/",
+                "CODE_OF_CONDUCT.md",
+                "common/",
+                "CONTRIBUTING.md",
+                "deb/",
+                "doc/",
+                "docker/",
+                "Dockerfile",
+                "kaltura-console/",
+                "LICENSE",
+                "openspec/",
+                "patches/",
+                "prompts/",
+                "README.md",
+                "rpm/",
+                "RPM/",
+                "sanity_tests/",
+                "tools/",
+                "vagrant/"
+              ],
+              "offset": 1,
+              "totalEntries": 26,
+              "truncated": false
+            }
+          },
+          "title": "",
+          "time": {
+            "start": 1790439633210,
+            "end": 1790439633213
+          }
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "fc_01a0de84af89722b856f86ada7a7146d"
+          }
+        },
+        "id": "prt_0de84b0a4001TsxmL29zrriOpQ",
+        "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+        "messageID": "msg_0de84a86f001DO3j5LmQSTgUKj"
+      }
+    },
+    {
+      "type": "step_finish",
+      "timestamp": 1790439633320,
+      "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+      "part": {
+        "id": "prt_0de84b1a5001SqOQtFNhOI2Ih3",
+        "reason": "tool-calls",
+        "snapshot": "5ab9fdcbe0fcf4db8c146f6bd083120f096b22f8",
+        "messageID": "msg_0de84a86f001DO3j5LmQSTgUKj",
+        "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+        "type": "step-finish",
+        "tokens": {
+          "total": 80158,
+          "input": 1096,
+          "output": 68,
+          "reasoning": 33,
+          "cache": {
+            "write": 0,
+            "read": 78961
+          }
+        },
+        "cost": 0
+      }
+    },
+    {
+      "type": "tool_use",
+      "timestamp": 1790439635923,
+      "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+      "part": {
+        "type": "tool",
+        "tool": "glob",
+        "callID": "call_01a0de84b71a76349a38b392dc805531",
+        "state": {
+          "status": "completed",
+          "input": {
+            "path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83",
+            "pattern": "**/*freeze_media*"
+          },
+          "output": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/baseline-protocol/freeze_media.py",
+          "metadata": {
+            "count": 1,
+            "truncated": false
+          },
+          "title": "",
+          "time": {
+            "start": 1790439635896,
+            "end": 1790439635917
+          }
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "fc_01a0de84b71a76349a38b392dc805531"
+          }
+        },
+        "id": "prt_0de84b7f90012GavuQuo3bZ9pB",
+        "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+        "messageID": "msg_0de84b1b8001l6pH4j5hUnhqLw"
+      }
+    },
+    {
+      "type": "tool_use",
+      "timestamp": 1790439635923,
+      "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+      "part": {
+        "type": "tool",
+        "tool": "glob",
+        "callID": "call_01a0de84b5ab7648b00eb1f072930a9c",
+        "state": {
+          "status": "completed",
+          "input": {
+            "path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83",
+            "pattern": "**/*guarded_http*"
+          },
+          "output": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/baseline-protocol/reviewed-r1/guarded_http.py\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/baseline-protocol/reviewed-r1/test_guarded_http.py\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/baseline-protocol/guarded_http.py\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/baseline-protocol/test_guarded_http.py",
+          "metadata": {
+            "count": 4,
+            "truncated": false
+          },
+          "title": "",
+          "time": {
+            "start": 1790439635894,
+            "end": 1790439635919
+          }
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "fc_01a0de84b5ab7648b00eb1f072930a9c"
+          }
+        },
+        "id": "prt_0de84b788001E9OPQj8yvLPE48",
+        "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+        "messageID": "msg_0de84b1b8001l6pH4j5hUnhqLw"
+      }
+    },
+    {
+      "type": "tool_use",
+      "timestamp": 1790439635923,
+      "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+      "part": {
+        "type": "tool",
+        "tool": "glob",
+        "callID": "call_01a0de84b95a765fafb6c58a4c8f8a11",
+        "state": {
+          "status": "completed",
+          "input": {
+            "path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83",
+            "pattern": "**/opencode*review*"
+          },
+          "output": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/null-batch/opencode-review.txt\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/pdo-bool/opencode-review.txt\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp8-candidate/opencode-review.txt\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp3-api/opencode-final-review.txt\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp3-api/opencode-review.txt\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/criteria-null/opencode-review.txt\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp11-runtime/opencode-final-review.exit\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp11-runtime/opencode-final-review.outcome.json\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp11-runtime/opencode-final-review.public.txt\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp11-runtime/opencode-prep-review.txt\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp11-runtime/opencode-final-review.stderr\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp11-runtime/opencode-final-review.identities.json\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp11-runtime/opencode-final-review.tool-errors.json\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp11-runtime/opencode-final-review.prompt.txt\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp11-runtime/opencode-final-review.md\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp9-candidate/agents/opencode-review.stderr\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp9-candidate/agents/opencode-review.jsonl\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp9-candidate/agents/opencode-review.exit\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/criteria-return/opencode-review.txt\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/reflection-repair/opencode-review.txt\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp4-api/opencode-review.txt\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp7-candidate/opencode-review.txt\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/provider-runtime/opencode-review.txt\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/baseline-protocol/opencode-guard-review.md\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/config-return/opencode-review.txt\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp6-candidate/opencode-review.txt\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/pdo-return-audit/opencode-review.txt",
+          "metadata": {
+            "count": 27,
+            "truncated": false
+          },
+          "title": "",
+          "time": {
+            "start": 1790439635901,
+            "end": 1790439635921
+          }
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "fc_01a0de84b95a765fafb6c58a4c8f8a11"
+          }
+        },
+        "id": "prt_0de84ba38001CS018bX162U574",
+        "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+        "messageID": "msg_0de84b1b8001l6pH4j5hUnhqLw"
+      }
+    },
+    {
+      "type": "tool_use",
+      "timestamp": 1790439635923,
+      "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+      "part": {
+        "type": "tool",
+        "tool": "glob",
+        "callID": "call_01a0de84b804714aa226ffded083ec38",
+        "state": {
+          "status": "completed",
+          "input": {
+            "path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83",
+            "pattern": "**/baseline-protocol/**"
+          },
+          "output": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/baseline-protocol/freeze_media.py\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/baseline-protocol/README.md\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/baseline-protocol/__pycache__/test_guarded_http.cpython-312.pyc\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/baseline-protocol/__pycache__/guarded_http.cpython-312.pyc\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/baseline-protocol/__pycache__/freeze_media.cpython-312.pyc\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/baseline-protocol/guarded_http.py\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/baseline-protocol/test_guarded_http.py\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/baseline-protocol/claude-guard-cli.exit\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/baseline-protocol/opencode-guard-review.md\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/baseline-protocol/guard-r2-tests.log\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/baseline-protocol/claude-guard-outcome.json\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/baseline-protocol/opencode-r2-prompt.txt\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/baseline-protocol/guard-r2-tests.exit\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/baseline-protocol/claude-guard-prompt.txt\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/baseline-protocol/opencode-guard-prompt.txt\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/baseline-protocol/opencode-guard-cli.exit\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/baseline-protocol/opencode-guard-public.json\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/baseline-protocol/reviewed-r1/guarded_http.py\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/baseline-protocol/reviewed-r1/test_guarded_http.py",
+          "metadata": {
+            "count": 19,
+            "truncated": false
+          },
+          "title": "",
+          "time": {
+            "start": 1790439635900,
+            "end": 1790439635922
+          }
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "fc_01a0de84b804714aa226ffded083ec38"
+          }
+        },
+        "id": "prt_0de84b8e5001JwhqQVOW56rnmD",
+        "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+        "messageID": "msg_0de84b1b8001l6pH4j5hUnhqLw"
+      }
+    },
+    {
+      "type": "step_finish",
+      "timestamp": 1790439636003,
+      "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+      "part": {
+        "id": "prt_0de84bc10001Lo9FhStq4594hI",
+        "reason": "tool-calls",
+        "snapshot": "5ab9fdcbe0fcf4db8c146f6bd083120f096b22f8",
+        "messageID": "msg_0de84b1b8001l6pH4j5hUnhqLw",
+        "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+        "type": "step-finish",
+        "tokens": {
+          "total": 80618,
+          "input": 310,
+          "output": 323,
+          "reasoning": 0,
+          "cache": {
+            "write": 0,
+            "read": 79985
+          }
+        },
+        "cost": 0
+      }
+    },
+    {
+      "type": "tool_use",
+      "timestamp": 1790439638438,
+      "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+      "part": {
+        "type": "tool",
+        "tool": "read",
+        "callID": "call_01a0de84c00d71ddb7bbdfcd40a89645",
+        "state": {
+          "status": "completed",
+          "input": {
+            "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/baseline-protocol/guarded_http.py"
+          },
+          "output": "<path>/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/baseline-protocol/guarded_http.py</path>\n<type>file</type>\n<content>\n1: \"\"\"Local preparation: bounded, fixed-origin lab HTTP; not full baseline acceptance.\"\"\"\n2: from dataclasses import dataclass\n3: import hashlib\n4: from http.client import HTTPException\n5: import ssl\n6: from urllib.parse import urljoin, urlsplit\n7: from urllib.request import (HTTPRedirectHandler, HTTPSHandler, ProxyHandler,\n8:                             Request, build_opener)\n9: from urllib.error import HTTPError, URLError\n10: \n11: class BoundaryError(ValueError):\n12:     \"\"\"Deliberately omit credential-bearing request URLs from error messages.\"\"\"\n13: \n14: @dataclass(frozen=True)\n15: class Origin:\n16:     ip: str\n17:     scheme: str\n18:     port: int\n19: \n20:     def __post_init__(self):\n21:         if self.ip not in {'192.168.56.74', '192.168.56.83'}:\n22:             raise BoundaryError('Unknown lab identity')\n23:         if self.scheme not in {'http', 'https'}:\n24:             raise BoundaryError('Unsupported transport')\n25:         if type(self.port) is not int or self.port not in {80, 443, 88, 8443, 8080}:\n26:             raise BoundaryError('Unsupported lab port')\n27: \n28:     def validate(self, url):\n29:         # urlsplit strips some controls; reject them BEFORE parsing.\n30:         if not isinstance(url, str) or not url or any(ord(c) <= 32 or ord(c) == 127 for c in url) or '\\\\' in url:\n31:             raise BoundaryError('Invalid URL characters')\n32:         try:\n33:             p = urlsplit(url)\n34:             port = p.port if p.port is not None else (443 if p.scheme == 'https' else 80)\n35:             if (p.scheme != self.scheme or p.hostname != self.ip or port != self.port\n36:                     or p.username is not None or p.password is not None or p.fragment):\n37:                 raise BoundaryError('Refusing non-origin target')\n38:         except ValueError:\n39:             raise BoundaryError('Refusing malformed or non-origin target') from None\n40:         return url\n41: \n42:     def resolve(self, parent, reference):\n43:         self.validate(parent)\n44:         if not isinstance(reference, str) or not reference or any(ord(c) <= 32 or ord(c) == 127 for c in reference) or '\\\\' in reference:\n45:             raise BoundaryError('Invalid nested reference')\n46:         return self.validate(urljoin(parent, reference))\n47: \n48: class NoRedirects(HTTPRedirectHandler):\n49:     def redirect_request(self, req, fp, code, msg, headers, newurl):\n50:         raise BoundaryError('Redirect refused')\n51: \n52: def trusted_context(ca_pem, expected_sha256):\n53:     if not isinstance(ca_pem, bytes) or hashlib.sha256(ca_pem).hexdigest() != expected_sha256:\n54:         raise BoundaryError('Private CA identity mismatch')\n55:     ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)\n56:     ctx.minimum_version = ssl.TLSVersion.TLSv1_2\n57:     try:\n58:         ctx.load_verify_locations(cadata=ca_pem.decode('ascii'))\n59:     except (UnicodeError, ssl.SSLError, ValueError):\n60:         raise BoundaryError('Invalid private CA certificate') from None\n61:     return ctx\n62: \n63: def read_bounded(response, limit):\n64:     if type(limit) is not int or not 0 < limit <= 64 * 1024 * 1024:\n65:         raise BoundaryError('Invalid body limit')\n66:     size = response.headers.get('Content-Length')\n67:     if size is not None:\n68:         if not size.isascii() or not size.isdecimal() or int(size) > limit:\n69:             raise BoundaryError('Invalid or excessive declared response length')\n70:     data = response.read(limit + 1)\n71:     if len(data) > limit:\n72:         raise BoundaryError('Response body limit exceeded')\n73:     if size is not None and len(data) != int(size):\n74:         raise BoundaryError('Incomplete response body')\n75:     return data\n76: \n77: class Client:\n78:     def __init__(self, origin, ca_pem=None, ca_sha256=None):\n79:         self.origin = origin\n80:         handlers = [ProxyHandler({}), NoRedirects()]\n81:         if origin.scheme == 'https':\n82:             if ca_pem is None or ca_sha256 is None:\n83:                 raise BoundaryError('Explicit pinned private CA required')\n84:             handlers.append(HTTPSHandler(context=trusted_context(ca_pem, ca_sha256)))\n85:         elif ca_pem is not None or ca_sha256 is not None:\n86:             raise BoundaryError('Unexpected CA on plaintext transport')\n87:         self.opener = build_opener(*handlers)\n88: \n89:     def get(self, url, *, limit=1024 * 1024, timeout=30):\n90:         self.origin.validate(url)\n91:         if type(limit) is not int or not 0 < limit <= 64 * 1024 * 1024:\n92:             raise BoundaryError('Invalid body limit')\n93:         if type(timeout) not in {int, float} or not 0 < timeout <= 30:\n94:             raise BoundaryError('Invalid socket timeout')\n95:         try:\n96:             with self.opener.open(Request(url, method='GET'), timeout=timeout) as response:\n97:                 if response.status != 200:\n98:                     raise BoundaryError('Unexpected HTTP status')\n99:                 self.origin.validate(response.geturl())\n100:                 return read_bounded(response, limit)\n101:         except HTTPError as exc:\n102:             exc.close()\n103:             raise BoundaryError('HTTP request rejected') from None\n104:         except (URLError, OSError, HTTPException):\n105:             raise BoundaryError('Transport request failed') from None\n\n(End of file - total 105 lines)\n</content>",
+          "metadata": {
+            "preview": "\"\"\"Local preparation: bounded, fixed-origin lab HTTP; not full baseline acceptance.\"\"\"\nfrom dataclasses import dataclass\nimport hashlib\nfrom http.client import HTTPException\nimport ssl\nfrom urllib.parse import urljoin, urlsplit\nfrom urllib.request import (HTTPRedirectHandler, HTTPSHandler, ProxyHandler,\n                            Request, build_opener)\nfrom urllib.error import HTTPError, URLError\n\nclass BoundaryError(ValueError):\n    \"\"\"Deliberately omit credential-bearing request URLs from error messages.\"\"\"\n\n@dataclass(frozen=True)\nclass Origin:\n    ip: str\n    scheme: str\n    port: int\n\n    def __post_init__(self):",
+            "truncated": false,
+            "loaded": [],
+            "display": {
+              "type": "file",
+              "path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/baseline-protocol/guarded_http.py",
+              "text": "\"\"\"Local preparation: bounded, fixed-origin lab HTTP; not full baseline acceptance.\"\"\"\nfrom dataclasses import dataclass\nimport hashlib\nfrom http.client import HTTPException\nimport ssl\nfrom urllib.parse import urljoin, urlsplit\nfrom urllib.request import (HTTPRedirectHandler, HTTPSHandler, ProxyHandler,\n                            Request, build_opener)\nfrom urllib.error import HTTPError, URLError\n\nclass BoundaryError(ValueError):\n    \"\"\"Deliberately omit credential-bearing request URLs from error messages.\"\"\"\n\n@dataclass(frozen=True)\nclass Origin:\n    ip: str\n    scheme: str\n    port: int\n\n    def __post_init__(self):\n        if self.ip not in {'192.168.56.74', '192.168.56.83'}:\n            raise BoundaryError('Unknown lab identity')\n        if self.scheme not in {'http', 'https'}:\n            raise BoundaryError('Unsupported transport')\n        if type(self.port) is not int or self.port not in {80, 443, 88, 8443, 8080}:\n            raise BoundaryError('Unsupported lab port')\n\n    def validate(self, url):\n        # urlsplit strips some controls; reject them BEFORE parsing.\n        if not isinstance(url, str) or not url or any(ord(c) <= 32 or ord(c) == 127 for c in url) or '\\\\' in url:\n            raise BoundaryError('Invalid URL characters')\n        try:\n            p = urlsplit(url)\n            port = p.port if p.port is not None else (443 if p.scheme == 'https' else 80)\n            if (p.scheme != self.scheme or p.hostname != self.ip or port != self.port\n                    or p.username is not None or p.password is not None or p.fragment):\n                raise BoundaryError('Refusing non-origin target')\n        except ValueError:\n            raise BoundaryError('Refusing malformed or non-origin target') from None\n        return url\n\n    def resolve(self, parent, reference):\n        self.validate(parent)\n        if not isinstance(reference, str) or not reference or any(ord(c) <= 32 or ord(c) == 127 for c in reference) or '\\\\' in reference:\n            raise BoundaryError('Invalid nested reference')\n        return self.validate(urljoin(parent, reference))\n\nclass NoRedirects(HTTPRedirectHandler):\n    def redirect_request(self, req, fp, code, msg, headers, newurl):\n        raise BoundaryError('Redirect refused')\n\ndef trusted_context(ca_pem, expected_sha256):\n    if not isinstance(ca_pem, bytes) or hashlib.sha256(ca_pem).hexdigest() != expected_sha256:\n        raise BoundaryError('Private CA identity mismatch')\n    ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)\n    ctx.minimum_version = ssl.TLSVersion.TLSv1_2\n    try:\n        ctx.load_verify_locations(cadata=ca_pem.decode('ascii'))\n    except (UnicodeError, ssl.SSLError, ValueError):\n        raise BoundaryError('Invalid private CA certificate') from None\n    return ctx\n\ndef read_bounded(response, limit):\n    if type(limit) is not int or not 0 < limit <= 64 * 1024 * 1024:\n        raise BoundaryError('Invalid body limit')\n    size = response.headers.get('Content-Length')\n    if size is not None:\n        if not size.isascii() or not size.isdecimal() or int(size) > limit:\n            raise BoundaryError('Invalid or excessive declared response length')\n    data = response.read(limit + 1)\n    if len(data) > limit:\n        raise BoundaryError('Response body limit exceeded')\n    if size is not None and len(data) != int(size):\n        raise BoundaryError('Incomplete response body')\n    return data\n\nclass Client:\n    def __init__(self, origin, ca_pem=None, ca_sha256=None):\n        self.origin = origin\n        handlers = [ProxyHandler({}), NoRedirects()]\n        if origin.scheme == 'https':\n            if ca_pem is None or ca_sha256 is None:\n                raise BoundaryError('Explicit pinned private CA required')\n            handlers.append(HTTPSHandler(context=trusted_context(ca_pem, ca_sha256)))\n        elif ca_pem is not None or ca_sha256 is not None:\n            raise BoundaryError('Unexpected CA on plaintext transport')\n        self.opener = build_opener(*handlers)\n\n    def get(self, url, *, limit=1024 * 1024, timeout=30):\n        self.origin.validate(url)\n        if type(limit) is not int or not 0 < limit <= 64 * 1024 * 1024:\n            raise BoundaryError('Invalid body limit')\n        if type(timeout) not in {int, float} or not 0 < timeout <= 30:\n            raise BoundaryError('Invalid socket timeout')\n        try:\n            with self.opener.open(Request(url, method='GET'), timeout=timeout) as response:\n                if response.status != 200:\n                    raise BoundaryError('Unexpected HTTP status')\n                self.origin.validate(response.geturl())\n                return read_bounded(response, limit)\n        except HTTPError as exc:\n            exc.close()\n            raise BoundaryError('HTTP request rejected') from None\n        except (URLError, OSError, HTTPException):\n            raise BoundaryError('Transport request failed') from None",
+              "lineStart": 1,
+              "lineEnd": 105,
+              "totalLines": 105,
+              "truncated": false
+            }
+          },
+          "title": "tools/php83/baseline-protocol/guarded_http.py",
+          "time": {
+            "start": 1790439638419,
+            "end": 1790439638432
+          }
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "fc_01a0de84c00d71ddb7bbdfcd40a89645"
+          }
+        },
+        "id": "prt_0de84c13f0014i0fiypdYMbqZK",
+        "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+        "messageID": "msg_0de84bc3600145dA0QRc150doz"
+      }
+    },
+    {
+      "type": "tool_use",
+      "timestamp": 1790439638438,
+      "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+      "part": {
+        "type": "tool",
+        "tool": "read",
+        "callID": "call_01a0de84c0cf774dab0aa07378fed07e",
+        "state": {
+          "status": "completed",
+          "input": {
+            "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/baseline-protocol/test_guarded_http.py"
+          },
+          "output": "<path>/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/baseline-protocol/test_guarded_http.py</path>\n<type>file</type>\n<content>\n1: import io\n2: import hashlib\n3: from http.client import IncompleteRead\n4: import unittest\n5: from unittest.mock import Mock, patch\n6: from guarded_http import Origin, Client, BoundaryError, NoRedirects, read_bounded, trusted_context\n7: \n8: class GuardTests(unittest.TestCase):\n9:     def setUp(self):\n10:         self.origin = Origin('192.168.56.74', 'http', 80)\n11:     def test_literal(self):\n12:         self.assertEqual(self.origin.validate('http://192.168.56.74/path?a=1'), 'http://192.168.56.74/path?a=1')\n13:     def test_bad_targets(self):\n14:         urls=['http://192.168.56.20/', 'http://192.168.56.83/', 'http://localhost/',\n15:               'http://192.168.56.74.evil/', 'http://user:secret@192.168.56.74/',\n16:               'http://[::1]/', 'https://192.168.56.74/', 'http://192.168.56.74:8080/',\n17:               'http://192.168.56.74:bad/', 'http://192.168.56.74/#x',\n18:               ' http://192.168.56.74/', '\\x00http://192.168.56.74/',\n19:               'http://192.168.56.74/\\n', 'http://192.168.56.74/\\\\x']\n20:         for u in urls:\n21:             with self.subTest(url=u), self.assertRaises(BoundaryError):self.origin.validate(u)\n22:     def test_invalid_origin(self):\n23:         for args in [('192.168.56.20','http',80),('192.168.56.74','file',80),('192.168.56.74','http',True)]:\n24:             with self.assertRaises(BoundaryError):Origin(*args)\n25:     def test_nested_good(self):\n26:         self.assertEqual(self.origin.resolve('http://192.168.56.74/hls/a.m3u8','seg.ts'),'http://192.168.56.74/hls/seg.ts')\n27:     def test_nested_bad(self):\n28:         for ref in ['//192.168.56.20/a', 'https://192.168.56.74/a', '\\t//192.168.56.20/a', 'file:///tmp/a']:\n29:             with self.assertRaises(BoundaryError):self.origin.resolve('http://192.168.56.74/a',ref)\n30:     def test_all_redirects_refused(self):\n31:         for code in [301,302,303,307,308]:\n32:             with self.assertRaises(BoundaryError):NoRedirects().redirect_request(None,None,code,'',{},'http://192.168.56.74/')\n33:     def response(self, data, length=None):\n34:         r=io.BytesIO(data);r.headers={} if length is None else {'Content-Length':length};return r\n35:     def test_bounded_body(self):\n36:         self.assertEqual(read_bounded(self.response(b'abc','3'),3), b'abc')\n37:         self.assertEqual(read_bounded(self.response(b'abc'),3), b'abc')\n38:     def test_bad_lengths(self):\n39:         for n in ['4','-1','x','2','9999999999999999999999999999999','\uff13']:\n40:             with self.subTest(n=n), self.assertRaises(BoundaryError):read_bounded(self.response(b'abc',n),3)\n41:         with self.assertRaises(BoundaryError):read_bounded(self.response(b'abcd'),3)\n42:     def test_limit_types(self):\n43:         for n in [True,0,-1,1.5,64*1024*1024+1]:\n44:             with self.assertRaises(BoundaryError):read_bounded(self.response(b''),n)\n45:     def test_ca_must_be_explicit_and_pinned(self):\n46:         with self.assertRaises(BoundaryError):Client(Origin('192.168.56.74','https',443))\n47:         with self.assertRaises(BoundaryError):trusted_context(b'not certificate','wrong')\n48:         with self.assertRaises(BoundaryError):Client(self.origin,b'bad','bad')\n49:     @patch('guarded_http.build_opener')\n50:     def test_rejected_before_connection(self, build):\n51:         client=Client(self.origin)\n52:         with self.assertRaises(BoundaryError):client.get('http://192.168.56.20/?secret=not-real')\n53:         client.opener.open.assert_not_called()\n54:     @patch('guarded_http.build_opener')\n55:     def test_proxy_disabled(self, build):\n56:         Client(self.origin)\n57:         self.assertEqual(build.call_args.args[0].proxies,{})\n58:     @patch('guarded_http.build_opener')\n59:     def test_transport_error_redacted(self, build):\n60:         client=Client(self.origin);client.opener.open.side_effect=OSError('secret-value')\n61:         with self.assertRaises(BoundaryError) as caught:client.get('http://192.168.56.74/?ks=secret-value')\n62:         self.assertNotIn('secret-value',str(caught.exception))\n63: \n64: class ErrorNormalizationTests(unittest.TestCase):\n65:     def test_malformed_matching_ca(self):\n66:         for data in [b\"invalid PEM\", bytes([255])]:\n67:             with self.subTest(data=data), self.assertRaises(BoundaryError):\n68:                 trusted_context(data, hashlib.sha256(data).hexdigest())\n69: \n70:     @patch('guarded_http.build_opener')\n71:     def test_incomplete_body_is_redacted(self, build):\n72:         client=Client(Origin('192.168.56.74','http',80))\n73:         response=client.opener.open.return_value.__enter__.return_value\n74:         response.status=200\n75:         response.geturl.return_value='http://192.168.56.74/'\n76:         response.headers={}\n77:         response.read.side_effect=IncompleteRead(b'synthetic-sensitive-marker',42)\n78:         with self.assertRaises(BoundaryError) as caught:\n79:             client.get('http://192.168.56.74/')\n80:         self.assertNotIn('synthetic-sensitive-marker',str(caught.exception))\n81:         client.opener.open.return_value.__exit__.assert_called_once()\n82: \n83: if __name__=='__main__':unittest.main()\n\n(End of file - total 83 lines)\n</content>",
+          "metadata": {
+            "preview": "import io\nimport hashlib\nfrom http.client import IncompleteRead\nimport unittest\nfrom unittest.mock import Mock, patch\nfrom guarded_http import Origin, Client, BoundaryError, NoRedirects, read_bounded, trusted_context\n\nclass GuardTests(unittest.TestCase):\n    def setUp(self):\n        self.origin = Origin('192.168.56.74', 'http', 80)\n    def test_literal(self):\n        self.assertEqual(self.origin.validate('http://192.168.56.74/path?a=1'), 'http://192.168.56.74/path?a=1')\n    def test_bad_targets(self):\n        urls=['http://192.168.56.20/', 'http://192.168.56.83/', 'http://localhost/',\n              'http://192.168.56.74.evil/', 'http://user:secret@192.168.56.74/',\n              'http://[::1]/', 'https://192.168.56.74/', 'http://192.168.56.74:8080/',\n              'http://192.168.56.74:bad/', 'http://192.168.56.74/#x',\n              ' http://192.168.56.74/', '\\x00http://192.168.56.74/',\n              'http://192.168.56.74/\\n', 'http://192.168.56.74/\\\\x']\n        for u in urls:",
+            "truncated": false,
+            "loaded": [],
+            "display": {
+              "type": "file",
+              "path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/baseline-protocol/test_guarded_http.py",
+              "text": "import io\nimport hashlib\nfrom http.client import IncompleteRead\nimport unittest\nfrom unittest.mock import Mock, patch\nfrom guarded_http import Origin, Client, BoundaryError, NoRedirects, read_bounded, trusted_context\n\nclass GuardTests(unittest.TestCase):\n    def setUp(self):\n        self.origin = Origin('192.168.56.74', 'http', 80)\n    def test_literal(self):\n        self.assertEqual(self.origin.validate('http://192.168.56.74/path?a=1'), 'http://192.168.56.74/path?a=1')\n    def test_bad_targets(self):\n        urls=['http://192.168.56.20/', 'http://192.168.56.83/', 'http://localhost/',\n              'http://192.168.56.74.evil/', 'http://user:secret@192.168.56.74/',\n              'http://[::1]/', 'https://192.168.56.74/', 'http://192.168.56.74:8080/',\n              'http://192.168.56.74:bad/', 'http://192.168.56.74/#x',\n              ' http://192.168.56.74/', '\\x00http://192.168.56.74/',\n              'http://192.168.56.74/\\n', 'http://192.168.56.74/\\\\x']\n        for u in urls:\n            with self.subTest(url=u), self.assertRaises(BoundaryError):self.origin.validate(u)\n    def test_invalid_origin(self):\n        for args in [('192.168.56.20','http',80),('192.168.56.74','file',80),('192.168.56.74','http',True)]:\n            with self.assertRaises(BoundaryError):Origin(*args)\n    def test_nested_good(self):\n        self.assertEqual(self.origin.resolve('http://192.168.56.74/hls/a.m3u8','seg.ts'),'http://192.168.56.74/hls/seg.ts')\n    def test_nested_bad(self):\n        for ref in ['//192.168.56.20/a', 'https://192.168.56.74/a', '\\t//192.168.56.20/a', 'file:///tmp/a']:\n            with self.assertRaises(BoundaryError):self.origin.resolve('http://192.168.56.74/a',ref)\n    def test_all_redirects_refused(self):\n        for code in [301,302,303,307,308]:\n            with self.assertRaises(BoundaryError):NoRedirects().redirect_request(None,None,code,'',{},'http://192.168.56.74/')\n    def response(self, data, length=None):\n        r=io.BytesIO(data);r.headers={} if length is None else {'Content-Length':length};return r\n    def test_bounded_body(self):\n        self.assertEqual(read_bounded(self.response(b'abc','3'),3), b'abc')\n        self.assertEqual(read_bounded(self.response(b'abc'),3), b'abc')\n    def test_bad_lengths(self):\n        for n in ['4','-1','x','2','9999999999999999999999999999999','\uff13']:\n            with self.subTest(n=n), self.assertRaises(BoundaryError):read_bounded(self.response(b'abc',n),3)\n        with self.assertRaises(BoundaryError):read_bounded(self.response(b'abcd'),3)\n    def test_limit_types(self):\n        for n in [True,0,-1,1.5,64*1024*1024+1]:\n            with self.assertRaises(BoundaryError):read_bounded(self.response(b''),n)\n    def test_ca_must_be_explicit_and_pinned(self):\n        with self.assertRaises(BoundaryError):Client(Origin('192.168.56.74','https',443))\n        with self.assertRaises(BoundaryError):trusted_context(b'not certificate','wrong')\n        with self.assertRaises(BoundaryError):Client(self.origin,b'bad','bad')\n    @patch('guarded_http.build_opener')\n    def test_rejected_before_connection(self, build):\n        client=Client(self.origin)\n        with self.assertRaises(BoundaryError):client.get('http://192.168.56.20/?secret=not-real')\n        client.opener.open.assert_not_called()\n    @patch('guarded_http.build_opener')\n    def test_proxy_disabled(self, build):\n        Client(self.origin)\n        self.assertEqual(build.call_args.args[0].proxies,{})\n    @patch('guarded_http.build_opener')\n    def test_transport_error_redacted(self, build):\n        client=Client(self.origin);client.opener.open.side_effect=OSError('secret-value')\n        with self.assertRaises(BoundaryError) as caught:client.get('http://192.168.56.74/?ks=secret-value')\n        self.assertNotIn('secret-value',str(caught.exception))\n\nclass ErrorNormalizationTests(unittest.TestCase):\n    def test_malformed_matching_ca(self):\n        for data in [b\"invalid PEM\", bytes([255])]:\n            with self.subTest(data=data), self.assertRaises(BoundaryError):\n                trusted_context(data, hashlib.sha256(data).hexdigest())\n\n    @patch('guarded_http.build_opener')\n    def test_incomplete_body_is_redacted(self, build):\n        client=Client(Origin('192.168.56.74','http',80))\n        response=client.opener.open.return_value.__enter__.return_value\n        response.status=200\n        response.geturl.return_value='http://192.168.56.74/'\n        response.headers={}\n        response.read.side_effect=IncompleteRead(b'synthetic-sensitive-marker',42)\n        with self.assertRaises(BoundaryError) as caught:\n            client.get('http://192.168.56.74/')\n        self.assertNotIn('synthetic-sensitive-marker',str(caught.exception))\n        client.opener.open.return_value.__exit__.assert_called_once()\n\nif __name__=='__main__':unittest.main()",
+              "lineStart": 1,
+              "lineEnd": 83,
+              "totalLines": 83,
+              "truncated": false
+            }
+          },
+          "title": "tools/php83/baseline-protocol/test_guarded_http.py",
+          "time": {
+            "start": 1790439638421,
+            "end": 1790439638434
+          }
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "fc_01a0de84c0cf774dab0aa07378fed07e"
+          }
+        },
+        "id": "prt_0de84c1ad001cgMpIB1r4E7Dno",
+        "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+        "messageID": "msg_0de84bc3600145dA0QRc150doz"
+      }
+    },
+    {
+      "type": "tool_use",
+      "timestamp": 1790439638438,
+      "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+      "part": {
+        "type": "tool",
+        "tool": "read",
+        "callID": "call_01a0de84c1d176ba87db8bf41ebe71b3",
+        "state": {
+          "status": "completed",
+          "input": {
+            "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/baseline-protocol/freeze_media.py"
+          },
+          "output": "<path>/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/baseline-protocol/freeze_media.py</path>\n<type>file</type>\n<content>\n1: #!/usr/bin/env python3\n2: \"\"\"Create source-only synthetic fixtures; no upload or workload acceptance.\"\"\"\n3: import argparse\n4: from fractions import Fraction\n5: import hashlib\n6: import json\n7: from pathlib import Path\n8: import shutil\n9: import subprocess\n10: \n11: CASES = [('short360', 10, 640, 360, 25), ('fullhd60', 60, 1920, 1080, 60)]\n12: sha = lambda data: hashlib.sha256(data).hexdigest()\n13: \n14: def command(ffmpeg, case, output):\n15:     name, duration, width, height, fps = case\n16:     return [ffmpeg, '-nostdin', '-hide_banner', '-loglevel', 'error', '-n',\n17:         '-filter_threads', '1', '-filter_complex_threads', '1',\n18:         '-f', 'lavfi', '-i', f'testsrc2=size={width}x{height}:rate={fps}:duration={duration}',\n19:         '-f', 'lavfi', '-i', f'sine=frequency=440:sample_rate=48000:duration={duration}',\n20:         '-map', '0:v:0', '-map', '1:a:0', '-t', str(duration),\n21:         '-c:v', 'libx264', '-threads:v', '1', '-preset', 'medium', '-crf', '18',\n22:         '-pix_fmt', 'yuv420p', '-r', str(fps), '-fps_mode', 'cfr',\n23:         '-g', str(fps*2), '-keyint_min', str(fps*2), '-sc_threshold', '0',\n24:         '-c:a', 'aac', '-threads:a', '1', '-b:a', '128k', '-ar', '48000', '-ac', '2',\n25:         '-map_metadata', '-1', '-fflags', '+bitexact', '-flags:v', '+bitexact',\n26:         '-flags:a', '+bitexact', '-movflags', '+faststart', str(output)]\n27: \n28: def verify(probe, case):\n29:     _, duration, width, height, fps = case\n30:     streams = probe['streams']\n31:     if len(streams) != 2:\n32:         raise ValueError('Expected exactly two streams')\n33:     videos = [s for s in streams if s['codec_type'] == 'video']\n34:     audios = [s for s in streams if s['codec_type'] == 'audio']\n35:     if len(videos) != 1 or len(audios) != 1:\n36:         raise ValueError('Expected one video and one audio stream')\n37:     v, a = videos[0], audios[0]\n38:     if (v['codec_name'], v['width'], v['height'], v['pix_fmt']) != ('h264', width, height, 'yuv420p'):\n39:         raise ValueError('Video format mismatch')\n40:     if Fraction(v['avg_frame_rate']) != fps or Fraction(v['r_frame_rate']) != fps or int(v['nb_read_frames']) != duration*fps:\n41:         raise ValueError('Decoded frame count/rate mismatch')\n42:     if (a['codec_name'], int(a['sample_rate']), a['channels']) != ('aac', 48000, 2):\n43:         raise ValueError('Audio format mismatch')\n44:     tolerance = Fraction(1, fps) + Fraction(1024, 48000)\n45:     for value in [v['duration'], a['duration'], probe['format']['duration']]:\n46:         if abs(Fraction(value) - duration) > tolerance:\n47:             raise ValueError('Duration outside predeclared frame/AAC tolerance')\n48:     return {'decoded_video_frames': duration*fps, 'duration_tolerance_seconds': str(tolerance)}\n49: \n50: def generate(output):\n51:     if output.exists():\n52:         raise ValueError('Refuse existing fixture directory')\n53:     programs = {p: shutil.which(p) for p in ['ffmpeg', 'ffprobe']}\n54:     if not all(programs.values()):\n55:         raise ValueError('Missing media tools')\n56:     identities = {p: {'path': path, 'sha256': sha(Path(path).read_bytes()),\n57:         'version': subprocess.run([path, '-version'], check=True, capture_output=True,\n58:             text=True, timeout=10).stdout} for p,path in programs.items()}\n59:     output.mkdir(parents=True, exist_ok=False)\n60:     manifest = {'status': 'RUNNING', 'tools': identities, 'fixtures': [],\n61:         'application_acceptance': False, 'cross_build_reproducibility': False}\n62:     report = output/'manifest.json'\n63:     try:\n64:         for case in CASES:\n65:             media = output/(case[0]+'.mp4')\n66:             cmd = command(programs['ffmpeg'], case, media)\n67:             result = subprocess.run(cmd, capture_output=True, text=True, timeout=1200)\n68:             row = {'case': list(case), 'command': cmd, 'exit': result.returncode, 'stderr': result.stderr}\n69:             manifest['fixtures'].append(row)\n70:             if result.returncode:\n71:                 raise ValueError('Fixture generation failed')\n72:             probe_cmd = [programs['ffprobe'], '-v', 'error', '-count_frames', '-show_streams', '-show_format', '-of', 'json', str(media)]\n73:             p = subprocess.run(probe_cmd, capture_output=True, text=True, timeout=180)\n74:             row.update({'probe_command': probe_cmd, 'probe_exit': p.returncode, 'probe_stderr': p.stderr})\n75:             if p.returncode:\n76:                 raise ValueError('Fixture probe failed')\n77:             probe = json.loads(p.stdout)\n78:             row.update({'probe': probe, 'validation': verify(probe, case),\n79:                 'sha256': sha(media.read_bytes()), 'bytes': media.stat().st_size})\n80:         for name, ident in identities.items():\n81:             if sha(Path(ident['path']).read_bytes()) != ident['sha256']:\n82:                 raise ValueError('Encoder/prober drift')\n83:         manifest['status'] = 'SOURCE_FIXTURES_VALIDATED_PENDING_INDEPENDENT_REVIEW'\n84:     except Exception as exc:\n85:         manifest['status'] = 'FAILED'\n86:         manifest['error_type'] = type(exc).__name__\n87:         raise\n88:     finally:\n89:         report.write_text(json.dumps(manifest, indent=2)+'\\n')\n90:     return manifest\n91: \n92: if __name__ == '__main__':\n93:     parser = argparse.ArgumentParser()\n94:     parser.add_argument('output', type=Path)\n95:     args = parser.parse_args()\n96:     result = generate(args.output)\n97:     print(json.dumps({'status': result['status'], 'fixtures': len(result['fixtures'])}))\n\n(End of file - total 97 lines)\n</content>",
+          "metadata": {
+            "preview": "#!/usr/bin/env python3\n\"\"\"Create source-only synthetic fixtures; no upload or workload acceptance.\"\"\"\nimport argparse\nfrom fractions import Fraction\nimport hashlib\nimport json\nfrom pathlib import Path\nimport shutil\nimport subprocess\n\nCASES = [('short360', 10, 640, 360, 25), ('fullhd60', 60, 1920, 1080, 60)]\nsha = lambda data: hashlib.sha256(data).hexdigest()\n\ndef command(ffmpeg, case, output):\n    name, duration, width, height, fps = case\n    return [ffmpeg, '-nostdin', '-hide_banner', '-loglevel', 'error', '-n',\n        '-filter_threads', '1', '-filter_complex_threads', '1',\n        '-f', 'lavfi', '-i', f'testsrc2=size={width}x{height}:rate={fps}:duration={duration}',\n        '-f', 'lavfi', '-i', f'sine=frequency=440:sample_rate=48000:duration={duration}',\n        '-map', '0:v:0', '-map', '1:a:0', '-t', str(duration),",
+            "truncated": false,
+            "loaded": [],
+            "display": {
+              "type": "file",
+              "path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/baseline-protocol/freeze_media.py",
+              "text": "#!/usr/bin/env python3\n\"\"\"Create source-only synthetic fixtures; no upload or workload acceptance.\"\"\"\nimport argparse\nfrom fractions import Fraction\nimport hashlib\nimport json\nfrom pathlib import Path\nimport shutil\nimport subprocess\n\nCASES = [('short360', 10, 640, 360, 25), ('fullhd60', 60, 1920, 1080, 60)]\nsha = lambda data: hashlib.sha256(data).hexdigest()\n\ndef command(ffmpeg, case, output):\n    name, duration, width, height, fps = case\n    return [ffmpeg, '-nostdin', '-hide_banner', '-loglevel', 'error', '-n',\n        '-filter_threads', '1', '-filter_complex_threads', '1',\n        '-f', 'lavfi', '-i', f'testsrc2=size={width}x{height}:rate={fps}:duration={duration}',\n        '-f', 'lavfi', '-i', f'sine=frequency=440:sample_rate=48000:duration={duration}',\n        '-map', '0:v:0', '-map', '1:a:0', '-t', str(duration),\n        '-c:v', 'libx264', '-threads:v', '1', '-preset', 'medium', '-crf', '18',\n        '-pix_fmt', 'yuv420p', '-r', str(fps), '-fps_mode', 'cfr',\n        '-g', str(fps*2), '-keyint_min', str(fps*2), '-sc_threshold', '0',\n        '-c:a', 'aac', '-threads:a', '1', '-b:a', '128k', '-ar', '48000', '-ac', '2',\n        '-map_metadata', '-1', '-fflags', '+bitexact', '-flags:v', '+bitexact',\n        '-flags:a', '+bitexact', '-movflags', '+faststart', str(output)]\n\ndef verify(probe, case):\n    _, duration, width, height, fps = case\n    streams = probe['streams']\n    if len(streams) != 2:\n        raise ValueError('Expected exactly two streams')\n    videos = [s for s in streams if s['codec_type'] == 'video']\n    audios = [s for s in streams if s['codec_type'] == 'audio']\n    if len(videos) != 1 or len(audios) != 1:\n        raise ValueError('Expected one video and one audio stream')\n    v, a = videos[0], audios[0]\n    if (v['codec_name'], v['width'], v['height'], v['pix_fmt']) != ('h264', width, height, 'yuv420p'):\n        raise ValueError('Video format mismatch')\n    if Fraction(v['avg_frame_rate']) != fps or Fraction(v['r_frame_rate']) != fps or int(v['nb_read_frames']) != duration*fps:\n        raise ValueError('Decoded frame count/rate mismatch')\n    if (a['codec_name'], int(a['sample_rate']), a['channels']) != ('aac', 48000, 2):\n        raise ValueError('Audio format mismatch')\n    tolerance = Fraction(1, fps) + Fraction(1024, 48000)\n    for value in [v['duration'], a['duration'], probe['format']['duration']]:\n        if abs(Fraction(value) - duration) > tolerance:\n            raise ValueError('Duration outside predeclared frame/AAC tolerance')\n    return {'decoded_video_frames': duration*fps, 'duration_tolerance_seconds': str(tolerance)}\n\ndef generate(output):\n    if output.exists():\n        raise ValueError('Refuse existing fixture directory')\n    programs = {p: shutil.which(p) for p in ['ffmpeg', 'ffprobe']}\n    if not all(programs.values()):\n        raise ValueError('Missing media tools')\n    identities = {p: {'path': path, 'sha256': sha(Path(path).read_bytes()),\n        'version': subprocess.run([path, '-version'], check=True, capture_output=True,\n            text=True, timeout=10).stdout} for p,path in programs.items()}\n    output.mkdir(parents=True, exist_ok=False)\n    manifest = {'status': 'RUNNING', 'tools': identities, 'fixtures': [],\n        'application_acceptance': False, 'cross_build_reproducibility': False}\n    report = output/'manifest.json'\n    try:\n        for case in CASES:\n            media = output/(case[0]+'.mp4')\n            cmd = command(programs['ffmpeg'], case, media)\n            result = subprocess.run(cmd, capture_output=True, text=True, timeout=1200)\n            row = {'case': list(case), 'command': cmd, 'exit': result.returncode, 'stderr': result.stderr}\n            manifest['fixtures'].append(row)\n            if result.returncode:\n                raise ValueError('Fixture generation failed')\n            probe_cmd = [programs['ffprobe'], '-v', 'error', '-count_frames', '-show_streams', '-show_format', '-of', 'json', str(media)]\n            p = subprocess.run(probe_cmd, capture_output=True, text=True, timeout=180)\n            row.update({'probe_command': probe_cmd, 'probe_exit': p.returncode, 'probe_stderr': p.stderr})\n            if p.returncode:\n                raise ValueError('Fixture probe failed')\n            probe = json.loads(p.stdout)\n            row.update({'probe': probe, 'validation': verify(probe, case),\n                'sha256': sha(media.read_bytes()), 'bytes': media.stat().st_size})\n        for name, ident in identities.items():\n            if sha(Path(ident['path']).read_bytes()) != ident['sha256']:\n                raise ValueError('Encoder/prober drift')\n        manifest['status'] = 'SOURCE_FIXTURES_VALIDATED_PENDING_INDEPENDENT_REVIEW'\n    except Exception as exc:\n        manifest['status'] = 'FAILED'\n        manifest['error_type'] = type(exc).__name__\n        raise\n    finally:\n        report.write_text(json.dumps(manifest, indent=2)+'\\n')\n    return manifest\n\nif __name__ == '__main__':\n    parser = argparse.ArgumentParser()\n    parser.add_argument('output', type=Path)\n    args = parser.parse_args()\n    result = generate(args.output)\n    print(json.dumps({'status': result['status'], 'fixtures': len(result['fixtures'])}))",
+              "lineStart": 1,
+              "lineEnd": 97,
+              "totalLines": 97,
+              "truncated": false
+            }
+          },
+          "title": "tools/php83/baseline-protocol/freeze_media.py",
+          "time": {
+            "start": 1790439638423,
+            "end": 1790439638435
+          }
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "fc_01a0de84c1d176ba87db8bf41ebe71b3"
+          }
+        },
+        "id": "prt_0de84c2ab001wGtUDd3YH7u3OL",
+        "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+        "messageID": "msg_0de84bc3600145dA0QRc150doz"
+      }
+    },
+    {
+      "type": "tool_use",
+      "timestamp": 1790439638438,
+      "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+      "part": {
+        "type": "tool",
+        "tool": "read",
+        "callID": "call_01a0de84c2ce7341a899ea2015828593",
+        "state": {
+          "status": "completed",
+          "input": {
+            "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/baseline-protocol/README.md"
+          },
+          "output": "<path>/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/baseline-protocol/README.md</path>\n<type>file</type>\n<content>\n1: # Baseline protocol client preparation\n2: \n3: `guarded_http.py` is a local-only preparation building block, not the installed-AIO\n4: runner and not baseline acceptance. It never defaults to `.20`; the origin fixes\n5: one literal lab IP, transport and port. Every nested URI must use `Origin.resolve`.\n6: Redirects are refused, ambient proxies disabled and HTTPS requires a pinned CA.\n7: Response byte limits and declared lengths are checked; errors omit request URLs.\n8: \n9: Current GET-only interface has no KS/authentication, uploads, API POST, HLS parser,\n10: Range contract, browser, retries or benchmark statistics. It has a **socket timeout,\n11: not a hard whole-request deadline**: a slowly streaming response can exceed that\n12: wall time. A bounded subprocess or reviewed total-deadline transport must be added\n13: before the real baseline workload; do not call the present timeout a total bound.\n14: TLS success/wrong-CA and redirect/no-forwarding transport need real isolated local\n15: server execution; current tests mock the opener and exercise pure guards only.\n16: No network request or VM run has occurred in this preparation.\n17: \n18: Run `python3 -m unittest discover -s tools/php83/baseline-protocol -p 'test_*.py' -v`.\n19: Keep older `tools/php83/lab_target.py` and historic evidence unchanged. Future API\n20: credentials remain in guest memory/private files, never CLI arguments, requests in\n21: public logs, manifests or result reports. Local synthetic test marker strings are\n22: not real credentials.\n23: \n24: `freeze_media.py` prepares the Decision7 source fixtures with explicit commands,\n25: frame counts and predeclared one-video-frame plus one-AAC-frame duration tolerance.\n26: It is **NOT_EXECUTED** pending independent command review. It refuses an existing\n27: directory, never overwrites media, hashes exact encoder/prober binaries and records\n28: versions/commands/results. Linked-library/host identities are not yet attested by\n29: this script. Copy identical validated bytes to labs later; single-threaded encoding\n30: is not a claim of byte reproducibility across encoder builds. It creates technical\n31: test patterns only, not user media or a creative video deliverable.\n\n(End of file - total 31 lines)\n</content>",
+          "metadata": {
+            "preview": "# Baseline protocol client preparation\n\n`guarded_http.py` is a local-only preparation building block, not the installed-AIO\nrunner and not baseline acceptance. It never defaults to `.20`; the origin fixes\none literal lab IP, transport and port. Every nested URI must use `Origin.resolve`.\nRedirects are refused, ambient proxies disabled and HTTPS requires a pinned CA.\nResponse byte limits and declared lengths are checked; errors omit request URLs.\n\nCurrent GET-only interface has no KS/authentication, uploads, API POST, HLS parser,\nRange contract, browser, retries or benchmark statistics. It has a **socket timeout,\nnot a hard whole-request deadline**: a slowly streaming response can exceed that\nwall time. A bounded subprocess or reviewed total-deadline transport must be added\nbefore the real baseline workload; do not call the present timeout a total bound.\nTLS success/wrong-CA and redirect/no-forwarding transport need real isolated local\nserver execution; current tests mock the opener and exercise pure guards only.\nNo network request or VM run has occurred in this preparation.\n\nRun `python3 -m unittest discover -s tools/php83/baseline-protocol -p 'test_*.py' -v`.\nKeep older `tools/php83/lab_target.py` and historic evidence unchanged. Future API\ncredentials remain in guest memory/private files, never CLI arguments, requests in",
+            "truncated": false,
+            "loaded": [],
+            "display": {
+              "type": "file",
+              "path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/baseline-protocol/README.md",
+              "text": "# Baseline protocol client preparation\n\n`guarded_http.py` is a local-only preparation building block, not the installed-AIO\nrunner and not baseline acceptance. It never defaults to `.20`; the origin fixes\none literal lab IP, transport and port. Every nested URI must use `Origin.resolve`.\nRedirects are refused, ambient proxies disabled and HTTPS requires a pinned CA.\nResponse byte limits and declared lengths are checked; errors omit request URLs.\n\nCurrent GET-only interface has no KS/authentication, uploads, API POST, HLS parser,\nRange contract, browser, retries or benchmark statistics. It has a **socket timeout,\nnot a hard whole-request deadline**: a slowly streaming response can exceed that\nwall time. A bounded subprocess or reviewed total-deadline transport must be added\nbefore the real baseline workload; do not call the present timeout a total bound.\nTLS success/wrong-CA and redirect/no-forwarding transport need real isolated local\nserver execution; current tests mock the opener and exercise pure guards only.\nNo network request or VM run has occurred in this preparation.\n\nRun `python3 -m unittest discover -s tools/php83/baseline-protocol -p 'test_*.py' -v`.\nKeep older `tools/php83/lab_target.py` and historic evidence unchanged. Future API\ncredentials remain in guest memory/private files, never CLI arguments, requests in\npublic logs, manifests or result reports. Local synthetic test marker strings are\nnot real credentials.\n\n`freeze_media.py` prepares the Decision7 source fixtures with explicit commands,\nframe counts and predeclared one-video-frame plus one-AAC-frame duration tolerance.\nIt is **NOT_EXECUTED** pending independent command review. It refuses an existing\ndirectory, never overwrites media, hashes exact encoder/prober binaries and records\nversions/commands/results. Linked-library/host identities are not yet attested by\nthis script. Copy identical validated bytes to labs later; single-threaded encoding\nis not a claim of byte reproducibility across encoder builds. It creates technical\ntest patterns only, not user media or a creative video deliverable.",
+              "lineStart": 1,
+              "lineEnd": 31,
+              "totalLines": 31,
+              "truncated": false
+            }
+          },
+          "title": "tools/php83/baseline-protocol/README.md",
+          "time": {
+            "start": 1790439638425,
+            "end": 1790439638436
+          }
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "fc_01a0de84c2ce7341a899ea2015828593"
+          }
+        },
+        "id": "prt_0de84c3c2001ZVNIxlL3NmntlI",
+        "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+        "messageID": "msg_0de84bc3600145dA0QRc150doz"
+      }
+    },
+    {
+      "type": "tool_use",
+      "timestamp": 1790439638440,
+      "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+      "part": {
+        "type": "tool",
+        "tool": "read",
+        "callID": "call_01a0de84bf4575338de6b3e3ff1bdf3f",
+        "state": {
+          "status": "completed",
+          "input": {
+            "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/baseline-protocol/opencode-guard-review.md"
+          },
+          "output": "<path>/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/baseline-protocol/opencode-guard-review.md</path>\n<type>file</type>\n<content>\n1: # OpenCode guard review \u2014 baseline-protocol preparation (read-only, local)\n2: \n3: Status: PREPARATION review only. NOT acceptance. No release approval.\n4: No network request, VM run, SSH, secret access, or source edit performed.\n5: \n6: ## Scope and identities\n7: \n8: - Reviewed (read-only):\n9:   - `tools/php83/baseline-protocol/guarded_http.py` sha256 `6e825b1eb87446f50908cc590e03eb51238eeedb9c75879bc8268f28cddee8f6`\n10:   - `tools/php83/baseline-protocol/test_guarded_http.py` sha256 `71f839721cae2d39e47ceae55271f0477ff31522bd8fbbacbbbae7368e4c32ca`\n11:   - `tools/php83/baseline-protocol/README.md` sha256 `1555b80f0b2c0047b47b0f6c9356e4259891d3e7a3c8767aedb125c5fbc3cc86`\n12:   - `doc/php83/baseline-protocol-plan.md` sha256 `4482958d129cbd859c2321756c0af7608426adbd2df776d374f9455540f66dc9`\n13:   - Decision 7 in `openspec/changes/migrate-kaltura-php83/design.md` (lines 38, 91)\n14: - Executor: OpenCode (Muse Spark `opencode/muse-spark-1.3-contributor-free`), local worktree only.\n15: - Environment: Python 3.12.3, Linux, worktree HEAD `a294207e`.\n16: - Transport used in this review: mocked (`unittest.mock.patch` on `build_opener`) and pure-guard calls only. GET-only interface; no POST/auth/media/TLS handshake executed.\n17: \n18: ## Commands and exits\n19: \n20: 1. `python3 -m unittest discover -s tools/php83/baseline-protocol -p 'test_*.py' -v` \u2192 exit 0, **13/13 PASS** (literal, bad_targets, invalid_origin, nested_good, nested_bad, all_redirects_refused, bounded_body, bad_lengths, limit_types, ca_pinned, rejected_before_connection, proxy_disabled, transport_error_redacted).\n21: 2. Boundary probe batch (39 checks, mocked transport): 38 PASS, 1 FAIL caused by a typo in the probe itself (`Horn` NameError in the ad-hoc 301 line), not in source. Re-ran redirect codes cleanly:\n22: 3. `redirect_request` for 301/302/303/307/308 \u2192 all PASS `BoundaryError: Redirect refused`, exit 0.\n23: 4. Error-normalization probes (mocked): confirmed 2 concrete bugs below, exit 0.\n24: \n25: ## Guard boundary findings (verified)\n26: \n27: - Literal identity: exact `scheme/host/port` match enforced; evil-suffix, prefix-IP, userinfo, fragment, IPv6, trailing-dot forms all refused. Explicit `:80` allowed on port-80 origin (correct).\n28: - Exact scheme/port: cross-scheme and off-list-port refused, including `:bad` (via `p.port` ValueError \u2192 BoundaryError).\n29: - Controls before urlsplit: leading space, `\\n`, `\\t`, NUL, DEL-127, backslash all rejected pre-parse. Correct order (check precedes `urlsplit`).\n30: - Relative HLS references: `seg.ts`, absolute-path, and contained `../` resolve inside origin and pass; protocol-relative (`//host`), cross-scheme, and `file:` escapes refused via re-validation of the joined URL. Parent traversal cannot escape origin because any absolute result is re-validated.\n31: - Redirects/proxy: all five redirect codes refused; `ProxyHandler({})` confirmed (`proxies == {}`), so ambient env proxies are bypassed.\n32: - Pinned CA: HTTPS without CA refused; HTTP with CA refused; hash mismatch refused; non-bytes CA refused.\n33: - Bounded body: exact-length match enforced both directions (declared-too-big, declared-too-short, overflow, unicode-digit CL all refused); `bool` limit rejected via `type() is not int`.\n34: - Sanitized error: `open()` OSError redacted (`Transport request failed`); pre-validation rejects before `open` is called (`assert_not_called` PASS); GET method pinned; `response.geturl()` re-validated; timeout upper-bounded at 30.\n35: \n36: ## Concrete bugs (report before any baseline extension)\n37: \n38: 1. `trusted_context`: malformed CA input escapes the BoundaryError contract. Non-ASCII bytes with matching hash raise raw `UnicodeDecodeError` (`.decode('ascii')` outside try); ASCII garbage with matching hash raises raw `ssl.SSLError` (`load_verify_locations`). Caller-supplied path, low severity, but violates the module's own sanitized-error boundary. Fix (not applied here): wrap decode+load in try/except `(UnicodeError, ssl.SSLError, ValueError)` \u2192 BoundaryError.\n39: 2. `Client.get` body-read path not normalized: `response.read()` raising `http.client.IncompleteRead` (an `HTTPException`, **not** `OSError`/`URLError`) propagates raw instead of BoundaryError. Only `open()`-time errors are caught. Existing test covers `open` side-effect only. Fix (not applied here): extend the except clause or wrap `read_bounded` call to map `http.client.HTTPException` (and `Exception` from read) \u2192 BoundaryError without leaking bytes.\n40: 3. Not code bugs but binding limitations (already declared in README; must not be waived): socket `timeout=30` is per-operation, **not** a total/hard deadline \u2014 a slow stream can exceed wall time; no Range/206 contract (206 \u2192 `Unexpected HTTP status`); no POST/auth/HLS parser/retries; TLS success/wrong-CA and redirect transport proven only by mocks, never a real handshake. These block any claim of network/TLS/API/media acceptance.\n41: \n42: ## Bounded verdict\n43: \n44: - The 13 local guard tests pass and the eight inspected boundaries behave as documented for pure-guard, mocked-transport, GET-only preparation.\n45: - Two concrete low-severity error-normalization bugs (\u00a71\u20132) must be fixed and re-tested before this client carries any real baseline workload.\n46: - This review is PREPARATION, not acceptance: no network/TLS/API/media evidence produced; hard whole-request deadline and actual-TLS tests remain missing and are explicitly NOT waived. No release approved.\n\n(End of file - total 46 lines)\n</content>",
+          "metadata": {
+            "preview": "# OpenCode guard review \u2014 baseline-protocol preparation (read-only, local)\n\nStatus: PREPARATION review only. NOT acceptance. No release approval.\nNo network request, VM run, SSH, secret access, or source edit performed.\n\n## Scope and identities\n\n- Reviewed (read-only):\n  - `tools/php83/baseline-protocol/guarded_http.py` sha256 `6e825b1eb87446f50908cc590e03eb51238eeedb9c75879bc8268f28cddee8f6`\n  - `tools/php83/baseline-protocol/test_guarded_http.py` sha256 `71f839721cae2d39e47ceae55271f0477ff31522bd8fbbacbbbae7368e4c32ca`\n  - `tools/php83/baseline-protocol/README.md` sha256 `1555b80f0b2c0047b47b0f6c9356e4259891d3e7a3c8767aedb125c5fbc3cc86`\n  - `doc/php83/baseline-protocol-plan.md` sha256 `4482958d129cbd859c2321756c0af7608426adbd2df776d374f9455540f66dc9`\n  - Decision 7 in `openspec/changes/migrate-kaltura-php83/design.md` (lines 38, 91)\n- Executor: OpenCode (Muse Spark `opencode/muse-spark-1.3-contributor-free`), local worktree only.\n- Environment: Python 3.12.3, Linux, worktree HEAD `a294207e`.\n- Transport used in this review: mocked (`unittest.mock.patch` on `build_opener`) and pure-guard calls only. GET-only interface; no POST/auth/media/TLS handshake executed.\n\n## Commands and exits\n\n1. `python3 -m unittest discover -s tools/php83/baseline-protocol -p 'test_*.py' -v` \u2192 exit 0, **13/13 PASS** (literal, bad_targets, invalid_origin, nested_good, nested_bad, all_redirects_refused, bounded_body, bad_lengths, limit_types, ca_pinned, rejected_before_connection, proxy_disabled, transport_error_redacted).",
+            "truncated": false,
+            "loaded": [],
+            "display": {
+              "type": "file",
+              "path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/baseline-protocol/opencode-guard-review.md",
+              "text": "# OpenCode guard review \u2014 baseline-protocol preparation (read-only, local)\n\nStatus: PREPARATION review only. NOT acceptance. No release approval.\nNo network request, VM run, SSH, secret access, or source edit performed.\n\n## Scope and identities\n\n- Reviewed (read-only):\n  - `tools/php83/baseline-protocol/guarded_http.py` sha256 `6e825b1eb87446f50908cc590e03eb51238eeedb9c75879bc8268f28cddee8f6`\n  - `tools/php83/baseline-protocol/test_guarded_http.py` sha256 `71f839721cae2d39e47ceae55271f0477ff31522bd8fbbacbbbae7368e4c32ca`\n  - `tools/php83/baseline-protocol/README.md` sha256 `1555b80f0b2c0047b47b0f6c9356e4259891d3e7a3c8767aedb125c5fbc3cc86`\n  - `doc/php83/baseline-protocol-plan.md` sha256 `4482958d129cbd859c2321756c0af7608426adbd2df776d374f9455540f66dc9`\n  - Decision 7 in `openspec/changes/migrate-kaltura-php83/design.md` (lines 38, 91)\n- Executor: OpenCode (Muse Spark `opencode/muse-spark-1.3-contributor-free`), local worktree only.\n- Environment: Python 3.12.3, Linux, worktree HEAD `a294207e`.\n- Transport used in this review: mocked (`unittest.mock.patch` on `build_opener`) and pure-guard calls only. GET-only interface; no POST/auth/media/TLS handshake executed.\n\n## Commands and exits\n\n1. `python3 -m unittest discover -s tools/php83/baseline-protocol -p 'test_*.py' -v` \u2192 exit 0, **13/13 PASS** (literal, bad_targets, invalid_origin, nested_good, nested_bad, all_redirects_refused, bounded_body, bad_lengths, limit_types, ca_pinned, rejected_before_connection, proxy_disabled, transport_error_redacted).\n2. Boundary probe batch (39 checks, mocked transport): 38 PASS, 1 FAIL caused by a typo in the probe itself (`Horn` NameError in the ad-hoc 301 line), not in source. Re-ran redirect codes cleanly:\n3. `redirect_request` for 301/302/303/307/308 \u2192 all PASS `BoundaryError: Redirect refused`, exit 0.\n4. Error-normalization probes (mocked): confirmed 2 concrete bugs below, exit 0.\n\n## Guard boundary findings (verified)\n\n- Literal identity: exact `scheme/host/port` match enforced; evil-suffix, prefix-IP, userinfo, fragment, IPv6, trailing-dot forms all refused. Explicit `:80` allowed on port-80 origin (correct).\n- Exact scheme/port: cross-scheme and off-list-port refused, including `:bad` (via `p.port` ValueError \u2192 BoundaryError).\n- Controls before urlsplit: leading space, `\\n`, `\\t`, NUL, DEL-127, backslash all rejected pre-parse. Correct order (check precedes `urlsplit`).\n- Relative HLS references: `seg.ts`, absolute-path, and contained `../` resolve inside origin and pass; protocol-relative (`//host`), cross-scheme, and `file:` escapes refused via re-validation of the joined URL. Parent traversal cannot escape origin because any absolute result is re-validated.\n- Redirects/proxy: all five redirect codes refused; `ProxyHandler({})` confirmed (`proxies == {}`), so ambient env proxies are bypassed.\n- Pinned CA: HTTPS without CA refused; HTTP with CA refused; hash mismatch refused; non-bytes CA refused.\n- Bounded body: exact-length match enforced both directions (declared-too-big, declared-too-short, overflow, unicode-digit CL all refused); `bool` limit rejected via `type() is not int`.\n- Sanitized error: `open()` OSError redacted (`Transport request failed`); pre-validation rejects before `open` is called (`assert_not_called` PASS); GET method pinned; `response.geturl()` re-validated; timeout upper-bounded at 30.\n\n## Concrete bugs (report before any baseline extension)\n\n1. `trusted_context`: malformed CA input escapes the BoundaryError contract. Non-ASCII bytes with matching hash raise raw `UnicodeDecodeError` (`.decode('ascii')` outside try); ASCII garbage with matching hash raises raw `ssl.SSLError` (`load_verify_locations`). Caller-supplied path, low severity, but violates the module's own sanitized-error boundary. Fix (not applied here): wrap decode+load in try/except `(UnicodeError, ssl.SSLError, ValueError)` \u2192 BoundaryError.\n2. `Client.get` body-read path not normalized: `response.read()` raising `http.client.IncompleteRead` (an `HTTPException`, **not** `OSError`/`URLError`) propagates raw instead of BoundaryError. Only `open()`-time errors are caught. Existing test covers `open` side-effect only. Fix (not applied here): extend the except clause or wrap `read_bounded` call to map `http.client.HTTPException` (and `Exception` from read) \u2192 BoundaryError without leaking bytes.\n3. Not code bugs but binding limitations (already declared in README; must not be waived): socket `timeout=30` is per-operation, **not** a total/hard deadline \u2014 a slow stream can exceed wall time; no Range/206 contract (206 \u2192 `Unexpected HTTP status`); no POST/auth/HLS parser/retries; TLS success/wrong-CA and redirect transport proven only by mocks, never a real handshake. These block any claim of network/TLS/API/media acceptance.\n\n## Bounded verdict\n\n- The 13 local guard tests pass and the eight inspected boundaries behave as documented for pure-guard, mocked-transport, GET-only preparation.\n- Two concrete low-severity error-normalization bugs (\u00a71\u20132) must be fixed and re-tested before this client carries any real baseline workload.\n- This review is PREPARATION, not acceptance: no network/TLS/API/media evidence produced; hard whole-request deadline and actual-TLS tests remain missing and are explicitly NOT waived. No release approved.",
+              "lineStart": 1,
+              "lineEnd": 46,
+              "totalLines": 46,
+              "truncated": false
+            }
+          },
+          "title": "doc/php83/evidence/baseline-protocol/opencode-guard-review.md",
+          "time": {
+            "start": 1790439638417,
+            "end": 1790439638439
+          }
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "fc_01a0de84bf4575338de6b3e3ff1bdf3f"
+          }
+        },
+        "id": "prt_0de84c13d001g1tTbbtBnxgwYd",
+        "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+        "messageID": "msg_0de84bc3600145dA0QRc150doz"
+      }
+    },
+    {
+      "type": "step_finish",
+      "timestamp": 1790439638522,
+      "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+      "part": {
+        "id": "prt_0de84c5f7001xoeoe45DjRnnI3",
+        "reason": "tool-calls",
+        "snapshot": "5ab9fdcbe0fcf4db8c146f6bd083120f096b22f8",
+        "messageID": "msg_0de84bc3600145dA0QRc150doz",
+        "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+        "type": "step-finish",
+        "tokens": {
+          "total": 82783,
+          "input": 2166,
+          "output": 376,
+          "reasoning": 0,
+          "cache": {
+            "write": 0,
+            "read": 80241
+          }
+        },
+        "cost": 0
+      }
+    },
+    {
+      "type": "tool_use",
+      "timestamp": 1790439641470,
+      "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+      "part": {
+        "type": "tool",
+        "tool": "read",
+        "callID": "call_01a0de84cd6d747c885bfa594e5716f5",
+        "state": {
+          "status": "completed",
+          "input": {
+            "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/baseline-protocol/opencode-r2-prompt.txt"
+          },
+          "output": "<path>/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/baseline-protocol/opencode-r2-prompt.txt</path>\n<type>file</type>\n<content>\n1: Read AGENTS.md. Independent LOCAL review: prior opencode-guard-review.md found two error-normalization bugs; reviewed-r1 preserves old source. Re-run tools/php83/baseline-protocol tests (now15), inspect exact new guarded_http.py fixes and validate regression probes. Also review freeze_media.py before ANY encoding: Decision7 fixtures10s640x36025fps and60s1920x108060fps, H264/AAC stereo48k, explicitcommands, atmost onevideo+AACframe duration tolerance, exact250/3600decodedframes, timeout/outputrefusal/hash/version joins. Do NOT run FFmpeg or touch VMs/network. You may run local synthetic unit/probe tests only. Identify blocking command/schema safety defects before generation. Source code is preparation, no release/fullbaselineacceptance. Write doc/php83/evidence/baseline-protocol/opencode-r2-review.md. No application/code edits; preserveprior evidence. Real TLS/harddeadline remain unimplemented and must not be waived.\n\n(End of file - total 1 lines)\n</content>",
+          "metadata": {
+            "preview": "Read AGENTS.md. Independent LOCAL review: prior opencode-guard-review.md found two error-normalization bugs; reviewed-r1 preserves old source. Re-run tools/php83/baseline-protocol tests (now15), inspect exact new guarded_http.py fixes and validate regression probes. Also review freeze_media.py before ANY encoding: Decision7 fixtures10s640x36025fps and60s1920x108060fps, H264/AAC stereo48k, explicitcommands, atmost onevideo+AACframe duration tolerance, exact250/3600decodedframes, timeout/outputrefusal/hash/version joins. Do NOT run FFmpeg or touch VMs/network. You may run local synthetic unit/probe tests only. Identify blocking command/schema safety defects before generation. Source code is preparation, no release/fullbaselineacceptance. Write doc/php83/evidence/baseline-protocol/opencode-r2-review.md. No application/code edits; preserveprior evidence. Real TLS/harddeadline remain unimplemented and must not be waived.",
+            "truncated": false,
+            "loaded": [],
+            "display": {
+              "type": "file",
+              "path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/baseline-protocol/opencode-r2-prompt.txt",
+              "text": "Read AGENTS.md. Independent LOCAL review: prior opencode-guard-review.md found two error-normalization bugs; reviewed-r1 preserves old source. Re-run tools/php83/baseline-protocol tests (now15), inspect exact new guarded_http.py fixes and validate regression probes. Also review freeze_media.py before ANY encoding: Decision7 fixtures10s640x36025fps and60s1920x108060fps, H264/AAC stereo48k, explicitcommands, atmost onevideo+AACframe duration tolerance, exact250/3600decodedframes, timeout/outputrefusal/hash/version joins. Do NOT run FFmpeg or touch VMs/network. You may run local synthetic unit/probe tests only. Identify blocking command/schema safety defects before generation. Source code is preparation, no release/fullbaselineacceptance. Write doc/php83/evidence/baseline-protocol/opencode-r2-review.md. No application/code edits; preserveprior evidence. Real TLS/harddeadline remain unimplemented and must not be waived.",
+              "lineStart": 1,
+              "lineEnd": 1,
+              "totalLines": 1,
+              "truncated": false
+            }
+          },
+          "title": "doc/php83/evidence/baseline-protocol/opencode-r2-prompt.txt",
+          "time": {
+            "start": 1790439641453,
+            "end": 1790439641462
+          }
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "fc_01a0de84cd6d747c885bfa594e5716f5"
+          }
+        },
+        "id": "prt_0de84ce3a001tofBLmBA9HEgDb",
+        "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+        "messageID": "msg_0de84c60b0017pnbGlnJsvdPIq"
+      }
+    },
+    {
+      "type": "tool_use",
+      "timestamp": 1790439641470,
+      "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+      "part": {
+        "type": "tool",
+        "tool": "read",
+        "callID": "call_01a0de84ce7d7250ab9d11deb9213025",
+        "state": {
+          "status": "completed",
+          "input": {
+            "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/baseline-protocol/guard-r2-tests.log"
+          },
+          "output": "<path>/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/baseline-protocol/guard-r2-tests.log</path>\n<type>file</type>\n<content>\n1: test_incomplete_body_is_redacted (test_guarded_http.ErrorNormalizationTests.test_incomplete_body_is_redacted) ... ok\n2: test_malformed_matching_ca (test_guarded_http.ErrorNormalizationTests.test_malformed_matching_ca) ... ok\n3: test_all_redirects_refused (test_guarded_http.GuardTests.test_all_redirects_refused) ... ok\n4: test_bad_lengths (test_guarded_http.GuardTests.test_bad_lengths) ... ok\n5: test_bad_targets (test_guarded_http.GuardTests.test_bad_targets) ... ok\n6: test_bounded_body (test_guarded_http.GuardTests.test_bounded_body) ... ok\n7: test_ca_must_be_explicit_and_pinned (test_guarded_http.GuardTests.test_ca_must_be_explicit_and_pinned) ... ok\n8: test_invalid_origin (test_guarded_http.GuardTests.test_invalid_origin) ... ok\n9: test_limit_types (test_guarded_http.GuardTests.test_limit_types) ... ok\n10: test_literal (test_guarded_http.GuardTests.test_literal) ... ok\n11: test_nested_bad (test_guarded_http.GuardTests.test_nested_bad) ... ok\n12: test_nested_good (test_guarded_http.GuardTests.test_nested_good) ... ok\n13: test_proxy_disabled (test_guarded_http.GuardTests.test_proxy_disabled) ... ok\n14: test_rejected_before_connection (test_guarded_http.GuardTests.test_rejected_before_connection) ... ok\n15: test_transport_error_redacted (test_guarded_http.GuardTests.test_transport_error_redacted) ... ok\n16: \n17: ----------------------------------------------------------------------\n18: Ran 15 tests in 0.002s\n19: \n20: OK\n\n(End of file - total 20 lines)\n</content>",
+          "metadata": {
+            "preview": "test_incomplete_body_is_redacted (test_guarded_http.ErrorNormalizationTests.test_incomplete_body_is_redacted) ... ok\ntest_malformed_matching_ca (test_guarded_http.ErrorNormalizationTests.test_malformed_matching_ca) ... ok\ntest_all_redirects_refused (test_guarded_http.GuardTests.test_all_redirects_refused) ... ok\ntest_bad_lengths (test_guarded_http.GuardTests.test_bad_lengths) ... ok\ntest_bad_targets (test_guarded_http.GuardTests.test_bad_targets) ... ok\ntest_bounded_body (test_guarded_http.GuardTests.test_bounded_body) ... ok\ntest_ca_must_be_explicit_and_pinned (test_guarded_http.GuardTests.test_ca_must_be_explicit_and_pinned) ... ok\ntest_invalid_origin (test_guarded_http.GuardTests.test_invalid_origin) ... ok\ntest_limit_types (test_guarded_http.GuardTests.test_limit_types) ... ok\ntest_literal (test_guarded_http.GuardTests.test_literal) ... ok\ntest_nested_bad (test_guarded_http.GuardTests.test_nested_bad) ... ok\ntest_nested_good (test_guarded_http.GuardTests.test_nested_good) ... ok\ntest_proxy_disabled (test_guarded_http.GuardTests.test_proxy_disabled) ... ok\ntest_rejected_before_connection (test_guarded_http.GuardTests.test_rejected_before_connection) ... ok\ntest_transport_error_redacted (test_guarded_http.GuardTests.test_transport_error_redacted) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 0.002s\n\nOK",
+            "truncated": false,
+            "loaded": [],
+            "display": {
+              "type": "file",
+              "path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/baseline-protocol/guard-r2-tests.log",
+              "text": "test_incomplete_body_is_redacted (test_guarded_http.ErrorNormalizationTests.test_incomplete_body_is_redacted) ... ok\ntest_malformed_matching_ca (test_guarded_http.ErrorNormalizationTests.test_malformed_matching_ca) ... ok\ntest_all_redirects_refused (test_guarded_http.GuardTests.test_all_redirects_refused) ... ok\ntest_bad_lengths (test_guarded_http.GuardTests.test_bad_lengths) ... ok\ntest_bad_targets (test_guarded_http.GuardTests.test_bad_targets) ... ok\ntest_bounded_body (test_guarded_http.GuardTests.test_bounded_body) ... ok\ntest_ca_must_be_explicit_and_pinned (test_guarded_http.GuardTests.test_ca_must_be_explicit_and_pinned) ... ok\ntest_invalid_origin (test_guarded_http.GuardTests.test_invalid_origin) ... ok\ntest_limit_types (test_guarded_http.GuardTests.test_limit_types) ... ok\ntest_literal (test_guarded_http.GuardTests.test_literal) ... ok\ntest_nested_bad (test_guarded_http.GuardTests.test_nested_bad) ... ok\ntest_nested_good (test_guarded_http.GuardTests.test_nested_good) ... ok\ntest_proxy_disabled (test_guarded_http.GuardTests.test_proxy_disabled) ... ok\ntest_rejected_before_connection (test_guarded_http.GuardTests.test_rejected_before_connection) ... ok\ntest_transport_error_redacted (test_guarded_http.GuardTests.test_transport_error_redacted) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 0.002s\n\nOK",
+              "lineStart": 1,
+              "lineEnd": 20,
+              "totalLines": 20,
+              "truncated": false
+            }
+          },
+          "title": "doc/php83/evidence/baseline-protocol/guard-r2-tests.log",
+          "time": {
+            "start": 1790439641455,
+            "end": 1790439641464
+          }
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "fc_01a0de84ce7d7250ab9d11deb9213025"
+          }
+        },
+        "id": "prt_0de84cf4b001yORRBAUUT42yD0",
+        "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+        "messageID": "msg_0de84c60b0017pnbGlnJsvdPIq"
+      }
+    },
+    {
+      "type": "tool_use",
+      "timestamp": 1790439641470,
+      "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+      "part": {
+        "type": "tool",
+        "tool": "read",
+        "callID": "call_01a0de84cf6571bb92fafe7a45d6a139",
+        "state": {
+          "status": "completed",
+          "input": {
+            "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/baseline-protocol/guard-r2-tests.exit"
+          },
+          "output": "<path>/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/baseline-protocol/guard-r2-tests.exit</path>\n<type>file</type>\n<content>\n1: 0\n\n(End of file - total 1 lines)\n</content>",
+          "metadata": {
+            "preview": "0",
+            "truncated": false,
+            "loaded": [],
+            "display": {
+              "type": "file",
+              "path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/baseline-protocol/guard-r2-tests.exit",
+              "text": "0",
+              "lineStart": 1,
+              "lineEnd": 1,
+              "totalLines": 1,
+              "truncated": false
+            }
+          },
+          "title": "doc/php83/evidence/baseline-protocol/guard-r2-tests.exit",
+          "time": {
+            "start": 1790439641456,
+            "end": 1790439641465
+          }
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "fc_01a0de84cf6571bb92fafe7a45d6a139"
+          }
+        },
+        "id": "prt_0de84d032001EASgrBKiLduMxp",
+        "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+        "messageID": "msg_0de84c60b0017pnbGlnJsvdPIq"
+      }
+    },
+    {
+      "type": "tool_use",
+      "timestamp": 1790439641470,
+      "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+      "part": {
+        "type": "tool",
+        "tool": "read",
+        "callID": "call_01a0de84cb4b76fbbd2931216dba9966",
+        "state": {
+          "status": "completed",
+          "input": {
+            "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/baseline-protocol/reviewed-r1/guarded_http.py"
+          },
+          "output": "<path>/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/baseline-protocol/reviewed-r1/guarded_http.py</path>\n<type>file</type>\n<content>\n1: \"\"\"Local preparation: bounded, fixed-origin lab HTTP; not full baseline acceptance.\"\"\"\n2: from dataclasses import dataclass\n3: import hashlib\n4: import ssl\n5: from urllib.parse import urljoin, urlsplit\n6: from urllib.request import (HTTPRedirectHandler, HTTPSHandler, ProxyHandler,\n7:                             Request, build_opener)\n8: from urllib.error import HTTPError, URLError\n9: \n10: class BoundaryError(ValueError):\n11:     \"\"\"Deliberately omit credential-bearing request URLs from error messages.\"\"\"\n12: \n13: @dataclass(frozen=True)\n14: class Origin:\n15:     ip: str\n16:     scheme: str\n17:     port: int\n18: \n19:     def __post_init__(self):\n20:         if self.ip not in {'192.168.56.74', '192.168.56.83'}:\n21:             raise BoundaryError('Unknown lab identity')\n22:         if self.scheme not in {'http', 'https'}:\n23:             raise BoundaryError('Unsupported transport')\n24:         if type(self.port) is not int or self.port not in {80, 443, 88, 8443, 8080}:\n25:             raise BoundaryError('Unsupported lab port')\n26: \n27:     def validate(self, url):\n28:         # urlsplit strips some controls; reject them BEFORE parsing.\n29:         if not isinstance(url, str) or not url or any(ord(c) <= 32 or ord(c) == 127 for c in url) or '\\\\' in url:\n30:             raise BoundaryError('Invalid URL characters')\n31:         try:\n32:             p = urlsplit(url)\n33:             port = p.port if p.port is not None else (443 if p.scheme == 'https' else 80)\n34:             if (p.scheme != self.scheme or p.hostname != self.ip or port != self.port\n35:                     or p.username is not None or p.password is not None or p.fragment):\n36:                 raise BoundaryError('Refusing non-origin target')\n37:         except ValueError:\n38:             raise BoundaryError('Refusing malformed or non-origin target') from None\n39:         return url\n40: \n41:     def resolve(self, parent, reference):\n42:         self.validate(parent)\n43:         if not isinstance(reference, str) or not reference or any(ord(c) <= 32 or ord(c) == 127 for c in reference) or '\\\\' in reference:\n44:             raise BoundaryError('Invalid nested reference')\n45:         return self.validate(urljoin(parent, reference))\n46: \n47: class NoRedirects(HTTPRedirectHandler):\n48:     def redirect_request(self, req, fp, code, msg, headers, newurl):\n49:         raise BoundaryError('Redirect refused')\n50: \n51: def trusted_context(ca_pem, expected_sha256):\n52:     if not isinstance(ca_pem, bytes) or hashlib.sha256(ca_pem).hexdigest() != expected_sha256:\n53:         raise BoundaryError('Private CA identity mismatch')\n54:     ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)\n55:     ctx.minimum_version = ssl.TLSVersion.TLSv1_2\n56:     ctx.load_verify_locations(cadata=ca_pem.decode('ascii'))\n57:     return ctx\n58: \n59: def read_bounded(response, limit):\n60:     if type(limit) is not int or not 0 < limit <= 64 * 1024 * 1024:\n61:         raise BoundaryError('Invalid body limit')\n62:     size = response.headers.get('Content-Length')\n63:     if size is not None:\n64:         if not size.isascii() or not size.isdecimal() or int(size) > limit:\n65:             raise BoundaryError('Invalid or excessive declared response length')\n66:     data = response.read(limit + 1)\n67:     if len(data) > limit:\n68:         raise BoundaryError('Response body limit exceeded')\n69:     if size is not None and len(data) != int(size):\n70:         raise BoundaryError('Incomplete response body')\n71:     return data\n72: \n73: class Client:\n74:     def __init__(self, origin, ca_pem=None, ca_sha256=None):\n75:         self.origin = origin\n76:         handlers = [ProxyHandler({}), NoRedirects()]\n77:         if origin.scheme == 'https':\n78:             if ca_pem is None or ca_sha256 is None:\n79:                 raise BoundaryError('Explicit pinned private CA required')\n80:             handlers.append(HTTPSHandler(context=trusted_context(ca_pem, ca_sha256)))\n81:         elif ca_pem is not None or ca_sha256 is not None:\n82:             raise BoundaryError('Unexpected CA on plaintext transport')\n83:         self.opener = build_opener(*handlers)\n84: \n85:     def get(self, url, *, limit=1024 * 1024, timeout=30):\n86:         self.origin.validate(url)\n87:         if type(limit) is not int or not 0 < limit <= 64 * 1024 * 1024:\n88:             raise BoundaryError('Invalid body limit')\n89:         if type(timeout) not in {int, float} or not 0 < timeout <= 30:\n90:             raise BoundaryError('Invalid socket timeout')\n91:         try:\n92:             with self.opener.open(Request(url, method='GET'), timeout=timeout) as response:\n93:                 if response.status != 200:\n94:                     raise BoundaryError('Unexpected HTTP status')\n95:                 self.origin.validate(response.geturl())\n96:                 return read_bounded(response, limit)\n97:         except HTTPError as exc:\n98:             exc.close()\n99:             raise BoundaryError('HTTP request rejected') from None\n100:         except (URLError, OSError):\n101:             raise BoundaryError('Transport request failed') from None\n\n(End of file - total 101 lines)\n</content>",
+          "metadata": {
+            "preview": "\"\"\"Local preparation: bounded, fixed-origin lab HTTP; not full baseline acceptance.\"\"\"\nfrom dataclasses import dataclass\nimport hashlib\nimport ssl\nfrom urllib.parse import urljoin, urlsplit\nfrom urllib.request import (HTTPRedirectHandler, HTTPSHandler, ProxyHandler,\n                            Request, build_opener)\nfrom urllib.error import HTTPError, URLError\n\nclass BoundaryError(ValueError):\n    \"\"\"Deliberately omit credential-bearing request URLs from error messages.\"\"\"\n\n@dataclass(frozen=True)\nclass Origin:\n    ip: str\n    scheme: str\n    port: int\n\n    def __post_init__(self):\n        if self.ip not in {'192.168.56.74', '192.168.56.83'}:",
+            "truncated": false,
+            "loaded": [],
+            "display": {
+              "type": "file",
+              "path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/baseline-protocol/reviewed-r1/guarded_http.py",
+              "text": "\"\"\"Local preparation: bounded, fixed-origin lab HTTP; not full baseline acceptance.\"\"\"\nfrom dataclasses import dataclass\nimport hashlib\nimport ssl\nfrom urllib.parse import urljoin, urlsplit\nfrom urllib.request import (HTTPRedirectHandler, HTTPSHandler, ProxyHandler,\n                            Request, build_opener)\nfrom urllib.error import HTTPError, URLError\n\nclass BoundaryError(ValueError):\n    \"\"\"Deliberately omit credential-bearing request URLs from error messages.\"\"\"\n\n@dataclass(frozen=True)\nclass Origin:\n    ip: str\n    scheme: str\n    port: int\n\n    def __post_init__(self):\n        if self.ip not in {'192.168.56.74', '192.168.56.83'}:\n            raise BoundaryError('Unknown lab identity')\n        if self.scheme not in {'http', 'https'}:\n            raise BoundaryError('Unsupported transport')\n        if type(self.port) is not int or self.port not in {80, 443, 88, 8443, 8080}:\n            raise BoundaryError('Unsupported lab port')\n\n    def validate(self, url):\n        # urlsplit strips some controls; reject them BEFORE parsing.\n        if not isinstance(url, str) or not url or any(ord(c) <= 32 or ord(c) == 127 for c in url) or '\\\\' in url:\n            raise BoundaryError('Invalid URL characters')\n        try:\n            p = urlsplit(url)\n            port = p.port if p.port is not None else (443 if p.scheme == 'https' else 80)\n            if (p.scheme != self.scheme or p.hostname != self.ip or port != self.port\n                    or p.username is not None or p.password is not None or p.fragment):\n                raise BoundaryError('Refusing non-origin target')\n        except ValueError:\n            raise BoundaryError('Refusing malformed or non-origin target') from None\n        return url\n\n    def resolve(self, parent, reference):\n        self.validate(parent)\n        if not isinstance(reference, str) or not reference or any(ord(c) <= 32 or ord(c) == 127 for c in reference) or '\\\\' in reference:\n            raise BoundaryError('Invalid nested reference')\n        return self.validate(urljoin(parent, reference))\n\nclass NoRedirects(HTTPRedirectHandler):\n    def redirect_request(self, req, fp, code, msg, headers, newurl):\n        raise BoundaryError('Redirect refused')\n\ndef trusted_context(ca_pem, expected_sha256):\n    if not isinstance(ca_pem, bytes) or hashlib.sha256(ca_pem).hexdigest() != expected_sha256:\n        raise BoundaryError('Private CA identity mismatch')\n    ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)\n    ctx.minimum_version = ssl.TLSVersion.TLSv1_2\n    ctx.load_verify_locations(cadata=ca_pem.decode('ascii'))\n    return ctx\n\ndef read_bounded(response, limit):\n    if type(limit) is not int or not 0 < limit <= 64 * 1024 * 1024:\n        raise BoundaryError('Invalid body limit')\n    size = response.headers.get('Content-Length')\n    if size is not None:\n        if not size.isascii() or not size.isdecimal() or int(size) > limit:\n            raise BoundaryError('Invalid or excessive declared response length')\n    data = response.read(limit + 1)\n    if len(data) > limit:\n        raise BoundaryError('Response body limit exceeded')\n    if size is not None and len(data) != int(size):\n        raise BoundaryError('Incomplete response body')\n    return data\n\nclass Client:\n    def __init__(self, origin, ca_pem=None, ca_sha256=None):\n        self.origin = origin\n        handlers = [ProxyHandler({}), NoRedirects()]\n        if origin.scheme == 'https':\n            if ca_pem is None or ca_sha256 is None:\n                raise BoundaryError('Explicit pinned private CA required')\n            handlers.append(HTTPSHandler(context=trusted_context(ca_pem, ca_sha256)))\n        elif ca_pem is not None or ca_sha256 is not None:\n            raise BoundaryError('Unexpected CA on plaintext transport')\n        self.opener = build_opener(*handlers)\n\n    def get(self, url, *, limit=1024 * 1024, timeout=30):\n        self.origin.validate(url)\n        if type(limit) is not int or not 0 < limit <= 64 * 1024 * 1024:\n            raise BoundaryError('Invalid body limit')\n        if type(timeout) not in {int, float} or not 0 < timeout <= 30:\n            raise BoundaryError('Invalid socket timeout')\n        try:\n            with self.opener.open(Request(url, method='GET'), timeout=timeout) as response:\n                if response.status != 200:\n                    raise BoundaryError('Unexpected HTTP status')\n                self.origin.validate(response.geturl())\n                return read_bounded(response, limit)\n        except HTTPError as exc:\n            exc.close()\n            raise BoundaryError('HTTP request rejected') from None\n        except (URLError, OSError):\n            raise BoundaryError('Transport request failed') from None",
+              "lineStart": 1,
+              "lineEnd": 101,
+              "totalLines": 101,
+              "truncated": false
+            }
+          },
+          "title": "doc/php83/evidence/baseline-protocol/reviewed-r1/guarded_http.py",
+          "time": {
+            "start": 1790439641449,
+            "end": 1790439641467
+          }
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "fc_01a0de84cb4b76fbbd2931216dba9966"
+          }
+        },
+        "id": "prt_0de84cc18001X1PU4Nf5OgY90t",
+        "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+        "messageID": "msg_0de84c60b0017pnbGlnJsvdPIq"
+      }
+    },
+    {
+      "type": "tool_use",
+      "timestamp": 1790439641470,
+      "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+      "part": {
+        "type": "tool",
+        "tool": "read",
+        "callID": "call_01a0de84cc38705d980860b6357ef07a",
+        "state": {
+          "status": "completed",
+          "input": {
+            "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/baseline-protocol/reviewed-r1/test_guarded_http.py"
+          },
+          "output": "<path>/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/baseline-protocol/reviewed-r1/test_guarded_http.py</path>\n<type>file</type>\n<content>\n1: import io\n2: import unittest\n3: from unittest.mock import Mock, patch\n4: from guarded_http import Origin, Client, BoundaryError, NoRedirects, read_bounded, trusted_context\n5: \n6: class GuardTests(unittest.TestCase):\n7:     def setUp(self):\n8:         self.origin = Origin('192.168.56.74', 'http', 80)\n9:     def test_literal(self):\n10:         self.assertEqual(self.origin.validate('http://192.168.56.74/path?a=1'), 'http://192.168.56.74/path?a=1')\n11:     def test_bad_targets(self):\n12:         urls=['http://192.168.56.20/', 'http://192.168.56.83/', 'http://localhost/',\n13:               'http://192.168.56.74.evil/', 'http://user:secret@192.168.56.74/',\n14:               'http://[::1]/', 'https://192.168.56.74/', 'http://192.168.56.74:8080/',\n15:               'http://192.168.56.74:bad/', 'http://192.168.56.74/#x',\n16:               ' http://192.168.56.74/', '\\x00http://192.168.56.74/',\n17:               'http://192.168.56.74/\\n', 'http://192.168.56.74/\\\\x']\n18:         for u in urls:\n19:             with self.subTest(url=u), self.assertRaises(BoundaryError):self.origin.validate(u)\n20:     def test_invalid_origin(self):\n21:         for args in [('192.168.56.20','http',80),('192.168.56.74','file',80),('192.168.56.74','http',True)]:\n22:             with self.assertRaises(BoundaryError):Origin(*args)\n23:     def test_nested_good(self):\n24:         self.assertEqual(self.origin.resolve('http://192.168.56.74/hls/a.m3u8','seg.ts'),'http://192.168.56.74/hls/seg.ts')\n25:     def test_nested_bad(self):\n26:         for ref in ['//192.168.56.20/a', 'https://192.168.56.74/a', '\\t//192.168.56.20/a', 'file:///tmp/a']:\n27:             with self.assertRaises(BoundaryError):self.origin.resolve('http://192.168.56.74/a',ref)\n28:     def test_all_redirects_refused(self):\n29:         for code in [301,302,303,307,308]:\n30:             with self.assertRaises(BoundaryError):NoRedirects().redirect_request(None,None,code,'',{},'http://192.168.56.74/')\n31:     def response(self, data, length=None):\n32:         r=io.BytesIO(data);r.headers={} if length is None else {'Content-Length':length};return r\n33:     def test_bounded_body(self):\n34:         self.assertEqual(read_bounded(self.response(b'abc','3'),3), b'abc')\n35:         self.assertEqual(read_bounded(self.response(b'abc'),3), b'abc')\n36:     def test_bad_lengths(self):\n37:         for n in ['4','-1','x','2','9999999999999999999999999999999','\uff13']:\n38:             with self.subTest(n=n), self.assertRaises(BoundaryError):read_bounded(self.response(b'abc',n),3)\n39:         with self.assertRaises(BoundaryError):read_bounded(self.response(b'abcd'),3)\n40:     def test_limit_types(self):\n41:         for n in [True,0,-1,1.5,64*1024*1024+1]:\n42:             with self.assertRaises(BoundaryError):read_bounded(self.response(b''),n)\n43:     def test_ca_must_be_explicit_and_pinned(self):\n44:         with self.assertRaises(BoundaryError):Client(Origin('192.168.56.74','https',443))\n45:         with self.assertRaises(BoundaryError):trusted_context(b'not certificate','wrong')\n46:         with self.assertRaises(BoundaryError):Client(self.origin,b'bad','bad')\n47:     @patch('guarded_http.build_opener')\n48:     def test_rejected_before_connection(self, build):\n49:         client=Client(self.origin)\n50:         with self.assertRaises(BoundaryError):client.get('http://192.168.56.20/?secret=not-real')\n51:         client.opener.open.assert_not_called()\n52:     @patch('guarded_http.build_opener')\n53:     def test_proxy_disabled(self, build):\n54:         Client(self.origin)\n55:         self.assertEqual(build.call_args.args[0].proxies,{})\n56:     @patch('guarded_http.build_opener')\n57:     def test_transport_error_redacted(self, build):\n58:         client=Client(self.origin);client.opener.open.side_effect=OSError('secret-value')\n59:         with self.assertRaises(BoundaryError) as caught:client.get('http://192.168.56.74/?ks=secret-value')\n60:         self.assertNotIn('secret-value',str(caught.exception))\n61: \n62: if __name__=='__main__':unittest.main()\n\n(End of file - total 62 lines)\n</content>",
+          "metadata": {
+            "preview": "import io\nimport unittest\nfrom unittest.mock import Mock, patch\nfrom guarded_http import Origin, Client, BoundaryError, NoRedirects, read_bounded, trusted_context\n\nclass GuardTests(unittest.TestCase):\n    def setUp(self):\n        self.origin = Origin('192.168.56.74', 'http', 80)\n    def test_literal(self):\n        self.assertEqual(self.origin.validate('http://192.168.56.74/path?a=1'), 'http://192.168.56.74/path?a=1')\n    def test_bad_targets(self):\n        urls=['http://192.168.56.20/', 'http://192.168.56.83/', 'http://localhost/',\n              'http://192.168.56.74.evil/', 'http://user:secret@192.168.56.74/',\n              'http://[::1]/', 'https://192.168.56.74/', 'http://192.168.56.74:8080/',\n              'http://192.168.56.74:bad/', 'http://192.168.56.74/#x',\n              ' http://192.168.56.74/', '\\x00http://192.168.56.74/',\n              'http://192.168.56.74/\\n', 'http://192.168.56.74/\\\\x']\n        for u in urls:\n            with self.subTest(url=u), self.assertRaises(BoundaryError):self.origin.validate(u)\n    def test_invalid_origin(self):",
+            "truncated": false,
+            "loaded": [],
+            "display": {
+              "type": "file",
+              "path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/baseline-protocol/reviewed-r1/test_guarded_http.py",
+              "text": "import io\nimport unittest\nfrom unittest.mock import Mock, patch\nfrom guarded_http import Origin, Client, BoundaryError, NoRedirects, read_bounded, trusted_context\n\nclass GuardTests(unittest.TestCase):\n    def setUp(self):\n        self.origin = Origin('192.168.56.74', 'http', 80)\n    def test_literal(self):\n        self.assertEqual(self.origin.validate('http://192.168.56.74/path?a=1'), 'http://192.168.56.74/path?a=1')\n    def test_bad_targets(self):\n        urls=['http://192.168.56.20/', 'http://192.168.56.83/', 'http://localhost/',\n              'http://192.168.56.74.evil/', 'http://user:secret@192.168.56.74/',\n              'http://[::1]/', 'https://192.168.56.74/', 'http://192.168.56.74:8080/',\n              'http://192.168.56.74:bad/', 'http://192.168.56.74/#x',\n              ' http://192.168.56.74/', '\\x00http://192.168.56.74/',\n              'http://192.168.56.74/\\n', 'http://192.168.56.74/\\\\x']\n        for u in urls:\n            with self.subTest(url=u), self.assertRaises(BoundaryError):self.origin.validate(u)\n    def test_invalid_origin(self):\n        for args in [('192.168.56.20','http',80),('192.168.56.74','file',80),('192.168.56.74','http',True)]:\n            with self.assertRaises(BoundaryError):Origin(*args)\n    def test_nested_good(self):\n        self.assertEqual(self.origin.resolve('http://192.168.56.74/hls/a.m3u8','seg.ts'),'http://192.168.56.74/hls/seg.ts')\n    def test_nested_bad(self):\n        for ref in ['//192.168.56.20/a', 'https://192.168.56.74/a', '\\t//192.168.56.20/a', 'file:///tmp/a']:\n            with self.assertRaises(BoundaryError):self.origin.resolve('http://192.168.56.74/a',ref)\n    def test_all_redirects_refused(self):\n        for code in [301,302,303,307,308]:\n            with self.assertRaises(BoundaryError):NoRedirects().redirect_request(None,None,code,'',{},'http://192.168.56.74/')\n    def response(self, data, length=None):\n        r=io.BytesIO(data);r.headers={} if length is None else {'Content-Length':length};return r\n    def test_bounded_body(self):\n        self.assertEqual(read_bounded(self.response(b'abc','3'),3), b'abc')\n        self.assertEqual(read_bounded(self.response(b'abc'),3), b'abc')\n    def test_bad_lengths(self):\n        for n in ['4','-1','x','2','9999999999999999999999999999999','\uff13']:\n            with self.subTest(n=n), self.assertRaises(BoundaryError):read_bounded(self.response(b'abc',n),3)\n        with self.assertRaises(BoundaryError):read_bounded(self.response(b'abcd'),3)\n    def test_limit_types(self):\n        for n in [True,0,-1,1.5,64*1024*1024+1]:\n            with self.assertRaises(BoundaryError):read_bounded(self.response(b''),n)\n    def test_ca_must_be_explicit_and_pinned(self):\n        with self.assertRaises(BoundaryError):Client(Origin('192.168.56.74','https',443))\n        with self.assertRaises(BoundaryError):trusted_context(b'not certificate','wrong')\n        with self.assertRaises(BoundaryError):Client(self.origin,b'bad','bad')\n    @patch('guarded_http.build_opener')\n    def test_rejected_before_connection(self, build):\n        client=Client(self.origin)\n        with self.assertRaises(BoundaryError):client.get('http://192.168.56.20/?secret=not-real')\n        client.opener.open.assert_not_called()\n    @patch('guarded_http.build_opener')\n    def test_proxy_disabled(self, build):\n        Client(self.origin)\n        self.assertEqual(build.call_args.args[0].proxies,{})\n    @patch('guarded_http.build_opener')\n    def test_transport_error_redacted(self, build):\n        client=Client(self.origin);client.opener.open.side_effect=OSError('secret-value')\n        with self.assertRaises(BoundaryError) as caught:client.get('http://192.168.56.74/?ks=secret-value')\n        self.assertNotIn('secret-value',str(caught.exception))\n\nif __name__=='__main__':unittest.main()",
+              "lineStart": 1,
+              "lineEnd": 62,
+              "totalLines": 62,
+              "truncated": false
+            }
+          },
+          "title": "doc/php83/evidence/baseline-protocol/reviewed-r1/test_guarded_http.py",
+          "time": {
+            "start": 1790439641451,
+            "end": 1790439641468
+          }
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "fc_01a0de84cc38705d980860b6357ef07a"
+          }
+        },
+        "id": "prt_0de84cd050013hdve8HyGHaTnS",
+        "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+        "messageID": "msg_0de84c60b0017pnbGlnJsvdPIq"
+      }
+    },
+    {
+      "type": "step_finish",
+      "timestamp": 1790439641539,
+      "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+      "part": {
+        "id": "prt_0de84d1b7001lQrckb55MNgSBZ",
+        "reason": "tool-calls",
+        "snapshot": "5ab9fdcbe0fcf4db8c146f6bd083120f096b22f8",
+        "messageID": "msg_0de84c60b0017pnbGlnJsvdPIq",
+        "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+        "type": "step-finish",
+        "tokens": {
+          "total": 89920,
+          "input": 7199,
+          "output": 405,
+          "reasoning": 27,
+          "cache": {
+            "write": 0,
+            "read": 82289
+          }
+        },
+        "cost": 0
+      }
+    },
+    {
+      "type": "text",
+      "timestamp": 1790439645061,
+      "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+      "part": {
+        "id": "prt_0de84df82001KsXKCvbWpF3dTv",
+        "messageID": "msg_0de84d1d4001w5KChP8WSok7o8",
+        "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+        "type": "text",
+        "text": "Prior review and current sources mapped \u2014 now verifying the error-normalization fixes and freeze gates.",
+        "time": {
+          "start": 1790439645058,
+          "end": 1790439645060
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "rs_01a0de84ddb572d388b66bbe2a44112c",
+            "phase": "commentary"
+          }
+        }
+      }
+    },
+    {
+      "type": "tool_use",
+      "timestamp": 1790439646663,
+      "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+      "part": {
+        "type": "tool",
+        "tool": "grep",
+        "callID": "call_01a0de84dedb70e08f05d4836c5e2547",
+        "state": {
+          "status": "completed",
+          "input": {
+            "path": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/openspec/changes/migrate-kaltura-php83",
+            "pattern": "Decision ?7|fixtures|freeze_media|640x360|1920x1080"
+          },
+          "output": "Found 13 matches\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/openspec/changes/migrate-kaltura-php83/design.md:\n  Line 38: 7. **Failure and release gates.** Before capturing measurements, freeze the baseline protocol: separate 7.4 and 8.3 labs use the same pinned OS box, 4 vCPU, 8 GiB RAM and matching virtual disk/controller settings. Use checksum-verified published 7.4 server packages, never `.20`, as the application baseline. Generate synthetic 10-second 640x360/25fps and 60-second 1920x1080/60fps H.264/AAC fixtures; record encoder settings and SHA-256 hashes and reuse identical bytes in both labs. After two warm-up rounds, run at least five measured rounds, each with 100 sequential authenticated API calls (session start, media list and media get recorded separately) plus upload-to-READY/stream verification for each fixture. Record sample counts, nearest-rank p95, median, conversion profile and environment details. Capture baseline warnings/performance and run this same bounded workload on 8.3. Block on fatal/type errors, worker/job failures, authentication/permission regressions, missing extensions, changed API contracts or untriaged warnings in exercised paths. The same workload's median and p95 API latency and transcode wall time must not regress more than 20% without explicit review; use multiple repetitions and preserve reports, not a one-off benchmark. Scope exclusions and nonfatal accepted deprecations require named rationale/tests, not blanket ignore rules. Publish no migration release until all distro/runtime and rollback gates pass.\n\n  Line 89: | T3 Media and jobs | Frozen short and Full HD/60 fps fixtures; upload-to-READY, flavors/thumbnails, HLS segments and progressive Range; corrupt/empty input and worker failure/retry | Assert actual delivered stream properties and terminal job states, not just status 200 or READY. |\n\n  Line 91: | T5 Performance and diagnostics | Decision 7's identical-resource protocol, two warmups and at least five measured rounds; API median/p95, transcode and queue timings; classified diagnostics | More than 20% regression requires explicit review. Shared-host contention or unstable runs are INCONCLUSIVE and require repetition, not PASS. |\n\n\n/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/openspec/changes/migrate-kaltura-php83/tasks.md:\n  Line 19: - [ ] 2.6 Replace PHP-8-rejection CI checks with positive exact-family and extension assertions; verify fixtures reject 7.4, 8.2/8.4, absent modules and misleading RPM release strings, while accepting the intended 8.3 transaction.\n\n  Line 27: - [ ] 3.5 Run short deterministic and Full HD/60 fps upload fixtures across HTTP and trusted HTTPS API/delivery; verify READY, thumbnails/flavors, HLS manifest/segment, progressive resolution/frame rate/Range and existing Go console E2E behavior.\n\n  Line 63: - [ ] 5.5 T0-05 \u2014 Freeze the full published-7.4 synthetic baseline, VM resources, fixture hashes, expected outputs and guarded target protocol; verify API/UI/worker/media smoke evidence, runtime/extension reports and baseline timings using Decision 7, including rejected targets/redirects (parent 1.2).\n\n  Line 66: - [ ] 5.8 T1-02 \u2014 Exercise PDO/database error paths and JSON/XML/generated-client contracts with numeric, string, NULL and false fixtures; verify explicit type/value comparisons and no broad normalization of differences (parents 2.1, 2.2, 3.4).\n\n  Line 69: - [ ] 5.11 T2-01 \u2014 Run real HTTP and trusted-HTTPS API authentication/authorization on each target, including cross-partner denial, tampered/expired/skewed KS, privilege edits and legacy crypto fixtures; verify exact error/response contracts and no secret leakage (parent 3.4).\n\n  Line 72: - [ ] 5.14 T3-01 \u2014 Upload the frozen 10-second 360p25 and 60-second 1080p60 fixtures through HTTP and trusted HTTPS across the distro matrix; verify READY, each required flavor/thumbnail, HLS manifest/segments and progressive 206/Content-Range using delivered-stream inspection and predeclared tolerances/timeouts (parent 3.5).\n\n  Line 73: - [ ] 5.15 T3-02 \u2014 Exercise empty/corrupt uploads and worker failure/retry in disposable fixtures; verify rejected input, explicit terminal job/flavor states, no duplicate or indefinitely stuck processing and cleanup (parents 2.2, 3.5).\n\n  Line 79: - [ ] 5.21 T4-06 \u2014 After the feasibility approval, exercise package/CI negative fixtures for PHP 7.4, 8.2/8.4, missing extensions, mismatched ABI, misleading RPM strings and bad hashes; verify fail-closed behavior and correct 8.3 acceptance (parents 2.3, 2.6).\n\n  Line 80: - [ ] 5.22 T5-01 \u2014 Compare unchanged 7.4 baseline and 8.3 candidate in matching labs, separating compatibility-only patches from any selected component upgrade. Run the frozen Decision 7 workload without competing host workloads, recording two warmups, at least five measured rounds, API median/p95, transcode/queue times, dispersion and diagnostic causes/events; verify the 20% review threshold and repeat INCONCLUSIVE measurements (parents 1.2, 3.6).\n\n  Line 275: with actual full files, configured task listing and controlled class fixtures.\n",
+          "metadata": {
+            "matches": 13,
+            "truncated": false
+          },
+          "title": "Decision ?7|fixtures|freeze_media|640x360|1920x1080",
+          "time": {
+            "start": 1790439646631,
+            "end": 1790439646653
+          }
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "fc_01a0de84dedb70e08f05d4836c5e2547"
+          }
+        },
+        "id": "prt_0de84dfa9001zIfnoz9sZwbfOW",
+        "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+        "messageID": "msg_0de84d1d4001w5KChP8WSok7o8"
+      }
+    },
+    {
+      "type": "tool_use",
+      "timestamp": 1790439646694,
+      "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+      "part": {
+        "type": "tool",
+        "tool": "bash",
+        "callID": "call_01a0de84e0b27311ad2cb97454d0a501",
+        "state": {
+          "status": "completed",
+          "input": {
+            "command": "git log --oneline -8 -- tools/php83/baseline-protocol/ doc/php83/evidence/baseline-protocol/ && git status --short -- tools/php83/baseline-protocol/ doc/php83/evidence/baseline-protocol/ && sha256sum tools/php83/baseline-protocol/guarded_http.py tools/php83/baseline-protocol/test_guarded_http.py tools/php83/baseline-protocol/freeze_media.py tools/php83/baseline-protocol/README.md doc/php83/evidence/baseline-protocol/reviewed-r1/guarded_http.py doc/php83/evidence/baseline-protocol/reviewed-r1/test_guarded_http.py && diff -u doc/php83/evidence/baseline-protocol/reviewed-r1/guarded_http.py tools/php83/baseline-protocol/guarded_http.py; diff -u doc/php83/evidence/baseline-protocol/reviewed-r1/test_guarded_http.py tools/php83/baseline-protocol/test_guarded_http.py",
+            "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+          },
+          "output": "?? doc/php83/evidence/baseline-protocol/\n?? tools/php83/baseline-protocol/\n4cc44f15645ced42e1e156586a79a2795d38f929c6f812eb695e427ee7e47b59  tools/php83/baseline-protocol/guarded_http.py\nfd7cf96639553f5e516e8d89d095c080b2ec8646461dc3a03036902ef9961912  tools/php83/baseline-protocol/test_guarded_http.py\ne1ab367ca3cdf6dea452a99bbb19a85725b33d3900889b57d1057a4baaf38f69  tools/php83/baseline-protocol/freeze_media.py\ne321a3ddd87d67d19e8ef0406def0b98cb014fb8ee5c5e46794b81d8682f4acf  tools/php83/baseline-protocol/README.md\n6e825b1eb87446f50908cc590e03eb51238eeedb9c75879bc8268f28cddee8f6  doc/php83/evidence/baseline-protocol/reviewed-r1/guarded_http.py\n71f839721cae2d39e47ceae55271f0477ff31522bd8fbbacbbbae7368e4c32ca  doc/php83/evidence/baseline-protocol/reviewed-r1/test_guarded_http.py\n--- doc/php83/evidence/baseline-protocol/reviewed-r1/guarded_http.py\t2026-09-26 13:19:58.216265556 -0300\n+++ tools/php83/baseline-protocol/guarded_http.py\t2026-09-26 13:19:58.223265567 -0300\n@@ -1,6 +1,7 @@\n \"\"\"Local preparation: bounded, fixed-origin lab HTTP; not full baseline acceptance.\"\"\"\n from dataclasses import dataclass\n import hashlib\n+from http.client import HTTPException\n import ssl\n from urllib.parse import urljoin, urlsplit\n from urllib.request import (HTTPRedirectHandler, HTTPSHandler, ProxyHandler,\n@@ -53,7 +54,10 @@\n         raise BoundaryError('Private CA identity mismatch')\n     ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)\n     ctx.minimum_version = ssl.TLSVersion.TLSv1_2\n-    ctx.load_verify_locations(cadata=ca_pem.decode('ascii'))\n+    try:\n+        ctx.load_verify_locations(cadata=ca_pem.decode('ascii'))\n+    except (UnicodeError, ssl.SSLError, ValueError):\n+        raise BoundaryError('Invalid private CA certificate') from None\n     return ctx\n \n def read_bounded(response, limit):\n@@ -97,5 +101,5 @@\n         except HTTPError as exc:\n             exc.close()\n             raise BoundaryError('HTTP request rejected') from None\n-        except (URLError, OSError):\n+        except (URLError, OSError, HTTPException):\n             raise BoundaryError('Transport request failed') from None\n--- doc/php83/evidence/baseline-protocol/reviewed-r1/test_guarded_http.py\t2026-09-26 13:19:58.216265556 -0300\n+++ tools/php83/baseline-protocol/test_guarded_http.py\t2026-09-26 13:19:58.223265567 -0300\n@@ -1,4 +1,6 @@\n import io\n+import hashlib\n+from http.client import IncompleteRead\n import unittest\n from unittest.mock import Mock, patch\n from guarded_http import Origin, Client, BoundaryError, NoRedirects, read_bounded, trusted_context\n@@ -59,4 +61,23 @@\n         with self.assertRaises(BoundaryError) as caught:client.get('http://192.168.56.74/?ks=secret-value')\n         self.assertNotIn('secret-value',str(caught.exception))\n \n+class ErrorNormalizationTests(unittest.TestCase):\n+    def test_malformed_matching_ca(self):\n+        for data in [b\"invalid PEM\", bytes([255])]:\n+            with self.subTest(data=data), self.assertRaises(BoundaryError):\n+                trusted_context(data, hashlib.sha256(data).hexdigest())\n+\n+    @patch('guarded_http.build_opener')\n+    def test_incomplete_body_is_redacted(self, build):\n+        client=Client(Origin('192.168.56.74','http',80))\n+        response=client.opener.open.return_value.__enter__.return_value\n+        response.status=200\n+        response.geturl.return_value='http://192.168.56.74/'\n+        response.headers={}\n+        response.read.side_effect=IncompleteRead(b'synthetic-sensitive-marker',42)\n+        with self.assertRaises(BoundaryError) as caught:\n+            client.get('http://192.168.56.74/')\n+        self.assertNotIn('synthetic-sensitive-marker',str(caught.exception))\n+        client.opener.open.return_value.__exit__.assert_called_once()\n+\n if __name__=='__main__':unittest.main()\n",
+          "metadata": {
+            "output": "?? doc/php83/evidence/baseline-protocol/\n?? tools/php83/baseline-protocol/\n4cc44f15645ced42e1e156586a79a2795d38f929c6f812eb695e427ee7e47b59  tools/php83/baseline-protocol/guarded_http.py\nfd7cf96639553f5e516e8d89d095c080b2ec8646461dc3a03036902ef9961912  tools/php83/baseline-protocol/test_guarded_http.py\ne1ab367ca3cdf6dea452a99bbb19a85725b33d3900889b57d1057a4baaf38f69  tools/php83/baseline-protocol/freeze_media.py\ne321a3ddd87d67d19e8ef0406def0b98cb014fb8ee5c5e46794b81d8682f4acf  tools/php83/baseline-protocol/README.md\n6e825b1eb87446f50908cc590e03eb51238eeedb9c75879bc8268f28cddee8f6  doc/php83/evidence/baseline-protocol/reviewed-r1/guarded_http.py\n71f839721cae2d39e47ceae55271f0477ff31522bd8fbbacbbbae7368e4c32ca  doc/php83/evidence/baseline-protocol/reviewed-r1/test_guarded_http.py\n--- doc/php83/evidence/baseline-protocol/reviewed-r1/guarded_http.py\t2026-09-26 13:19:58.216265556 -0300\n+++ tools/php83/baseline-protocol/guarded_http.py\t2026-09-26 13:19:58.223265567 -0300\n@@ -1,6 +1,7 @@\n \"\"\"Local preparation: bounded, fixed-origin lab HTTP; not full baseline acceptance.\"\"\"\n from dataclasses import dataclass\n import hashlib\n+from http.client import HTTPException\n import ssl\n from urllib.parse import urljoin, urlsplit\n from urllib.request import (HTTPRedirectHandler, HTTPSHandler, ProxyHandler,\n@@ -53,7 +54,10 @@\n         raise BoundaryError('Private CA identity mismatch')\n     ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)\n     ctx.minimum_version = ssl.TLSVersion.TLSv1_2\n-    ctx.load_verify_locations(cadata=ca_pem.decode('ascii'))\n+    try:\n+        ctx.load_verify_locations(cadata=ca_pem.decode('ascii'))\n+    except (UnicodeError, ssl.SSLError, ValueError):\n+        raise BoundaryError('Invalid private CA certificate') from None\n     return ctx\n \n def read_bounded(response, limit):\n@@ -97,5 +101,5 @@\n         except HTTPError as exc:\n             exc.close()\n             raise BoundaryError('HTTP request rejected') from None\n-        except (URLError, OSError):\n+        except (URLError, OSError, HTTPException):\n             raise BoundaryError('Transport request failed') from None\n--- doc/php83/evidence/baseline-protocol/reviewed-r1/test_guarded_http.py\t2026-09-26 13:19:58.216265556 -0300\n+++ tools/php83/baseline-protocol/test_guarded_http.py\t2026-09-26 13:19:58.223265567 -0300\n@@ -1,4 +1,6 @@\n import io\n+import hashlib\n+from http.client import IncompleteRead\n import unittest\n from unittest.mock import Mock, patch\n from guarded_http import Origin, Client, BoundaryError, NoRedirects, read_bounded, trusted_context\n@@ -59,4 +61,23 @@\n         with self.assertRaises(BoundaryError) as caught:client.get('http://192.168.56.74/?ks=secret-value')\n         self.assertNotIn('secret-value',str(caught.exception))\n \n+class ErrorNormalizationTests(unittest.TestCase):\n+    def test_malformed_matching_ca(self):\n+        for data in [b\"invalid PEM\", bytes([255])]:\n+            with self.subTest(data=data), self.assertRaises(BoundaryError):\n+                trusted_context(data, hashlib.sha256(data).hexdigest())\n+\n+    @patch('guarded_http.build_opener')\n+    def test_incomplete_body_is_redacted(self, build):\n+        client=Client(Origin('192.168.56.74','http',80))\n+        response=client.opener.open.return_value.__enter__.return_value\n+        response.status=200\n+        response.geturl.return_value='http://192.168.56.74/'\n+        response.headers={}\n+        response.read.side_effect=IncompleteRead(b'synthetic-sensitive-marker',42)\n+        with self.assertRaises(BoundaryError) as caught:\n+            client.get('http://192.168.56.74/')\n+        self.assertNotIn('synthetic-sensitive-marker',str(caught.exception))\n+        client.opener.open.return_value.__exit__.assert_called_once()\n+\n if __name__=='__main__':unittest.main()\n",
+            "exit": 1,
+            "truncated": false
+          },
+          "title": "git log --oneline -8 -- tools/php83/baseline-protocol/ doc/php83/evidence/baseline-protocol/ && git status --short -- tools/php83/baseline-protocol/ doc/php83/evidence/baseline-protocol/ && sha256sum tools/php83/baseline-protocol/guarded_http.py tools/php83/baseline-protocol/test_guarded_http.py tools/php83/baseline-protocol/freeze_media.py tools/php83/baseline-protocol/README.md doc/php83/evidence/baseline-protocol/reviewed-r1/guarded_http.py doc/php83/evidence/baseline-protocol/reviewed-r1/test_guarded_http.py && diff -u doc/php83/evidence/baseline-protocol/reviewed-r1/guarded_http.py tools/php83/baseline-protocol/guarded_http.py; diff -u doc/php83/evidence/baseline-protocol/reviewed-r1/test_guarded_http.py tools/php83/baseline-protocol/test_guarded_http.py",
+          "time": {
+            "start": 1790439646635,
+            "end": 1790439646693
+          }
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "fc_01a0de84e0b27311ad2cb97454d0a501"
+          }
+        },
+        "id": "prt_0de84e17d0019iduOFXAqNfXkn",
+        "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+        "messageID": "msg_0de84d1d4001w5KChP8WSok7o8"
+      }
+    },
+    {
+      "type": "step_finish",
+      "timestamp": 1790439646719,
+      "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+      "part": {
+        "id": "prt_0de84e5fc001w5iO28la8o2pRt",
+        "reason": "tool-calls",
+        "snapshot": "5ab9fdcbe0fcf4db8c146f6bd083120f096b22f8",
+        "messageID": "msg_0de84d1d4001w5KChP8WSok7o8",
+        "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+        "type": "step-finish",
+        "tokens": {
+          "total": 93949,
+          "input": 3943,
+          "output": 413,
+          "reasoning": 136,
+          "cache": {
+            "write": 0,
+            "read": 89457
+          }
+        },
+        "cost": 0
+      }
+    },
+    {
+      "type": "tool_use",
+      "timestamp": 1790439651794,
+      "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+      "part": {
+        "type": "tool",
+        "tool": "bash",
+        "callID": "call_01a0de84f4c77509855b79b4f86ba694",
+        "state": {
+          "status": "completed",
+          "input": {
+            "command": "python3 -m unittest discover -s tools/php83/baseline-protocol -p 'test_*.py' -v 2>&1; echo \"EXIT:$?\"",
+            "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+          },
+          "output": "test_incomplete_body_is_redacted (test_guarded_http.ErrorNormalizationTests.test_incomplete_body_is_redacted) ... ok\ntest_malformed_matching_ca (test_guarded_http.ErrorNormalizationTests.test_malformed_matching_ca) ... ok\ntest_all_redirects_refused (test_guarded_http.GuardTests.test_all_redirects_refused) ... ok\ntest_bad_lengths (test_guarded_http.GuardTests.test_bad_lengths) ... ok\ntest_bad_targets (test_guarded_http.GuardTests.test_bad_targets) ... ok\ntest_bounded_body (test_guarded_http.GuardTests.test_bounded_body) ... ok\ntest_ca_must_be_explicit_and_pinned (test_guarded_http.GuardTests.test_ca_must_be_explicit_and_pinned) ... ok\ntest_invalid_origin (test_guarded_http.GuardTests.test_invalid_origin) ... ok\ntest_limit_types (test_guarded_http.GuardTests.test_limit_types) ... ok\ntest_literal (test_guarded_http.GuardTests.test_literal) ... ok\ntest_nested_bad (test_guarded_http.GuardTests.test_nested_bad) ... ok\ntest_nested_good (test_guarded_http.GuardTests.test_nested_good) ... ok\ntest_proxy_disabled (test_guarded_http.GuardTests.test_proxy_disabled) ... ok\ntest_rejected_before_connection (test_guarded_http.GuardTests.test_rejected_before_connection) ... ok\ntest_transport_error_redacted (test_guarded_http.GuardTests.test_transport_error_redacted) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 0.003s\n\nOK\nEXIT:0\n",
+          "metadata": {
+            "output": "test_incomplete_body_is_redacted (test_guarded_http.ErrorNormalizationTests.test_incomplete_body_is_redacted) ... ok\ntest_malformed_matching_ca (test_guarded_http.ErrorNormalizationTests.test_malformed_matching_ca) ... ok\ntest_all_redirects_refused (test_guarded_http.GuardTests.test_all_redirects_refused) ... ok\ntest_bad_lengths (test_guarded_http.GuardTests.test_bad_lengths) ... ok\ntest_bad_targets (test_guarded_http.GuardTests.test_bad_targets) ... ok\ntest_bounded_body (test_guarded_http.GuardTests.test_bounded_body) ... ok\ntest_ca_must_be_explicit_and_pinned (test_guarded_http.GuardTests.test_ca_must_be_explicit_and_pinned) ... ok\ntest_invalid_origin (test_guarded_http.GuardTests.test_invalid_origin) ... ok\ntest_limit_types (test_guarded_http.GuardTests.test_limit_types) ... ok\ntest_literal (test_guarded_http.GuardTests.test_literal) ... ok\ntest_nested_bad (test_guarded_http.GuardTests.test_nested_bad) ... ok\ntest_nested_good (test_guarded_http.GuardTests.test_nested_good) ... ok\ntest_proxy_disabled (test_guarded_http.GuardTests.test_proxy_disabled) ... ok\ntest_rejected_before_connection (test_guarded_http.GuardTests.test_rejected_before_connection) ... ok\ntest_transport_error_redacted (test_guarded_http.GuardTests.test_transport_error_redacted) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 0.003s\n\nOK\nEXIT:0\n",
+            "exit": 0,
+            "truncated": false
+          },
+          "title": "python3 -m unittest discover -s tools/php83/baseline-protocol -p 'test_*.py' -v 2>&1; echo \"EXIT:$?\"",
+          "time": {
+            "start": 1790439651737,
+            "end": 1790439651793
+          }
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "fc_01a0de84f4c77509855b79b4f86ba694"
+          }
+        },
+        "id": "prt_0de84f599001WI7ZaG7xkg20Up",
+        "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+        "messageID": "msg_0de84e60f001G5uJBm2rvP07We"
+      }
+    },
+    {
+      "type": "step_finish",
+      "timestamp": 1790439651843,
+      "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+      "part": {
+        "id": "prt_0de84fa00001cq1e4h80l5tcI1",
+        "reason": "tool-calls",
+        "snapshot": "5ab9fdcbe0fcf4db8c146f6bd083120f096b22f8",
+        "messageID": "msg_0de84e60f001G5uJBm2rvP07We",
+        "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+        "type": "step-finish",
+        "tokens": {
+          "total": 96574,
+          "input": 3008,
+          "output": 118,
+          "reasoning": 151,
+          "cache": {
+            "write": 0,
+            "read": 93297
+          }
+        },
+        "cost": 0
+      }
+    },
+    {
+      "type": "tool_use",
+      "timestamp": 1790439663122,
+      "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+      "part": {
+        "type": "tool",
+        "tool": "bash",
+        "callID": "call_01a0de850ba27414b9e747138eed2815",
+        "state": {
+          "status": "completed",
+          "input": {
+            "command": "python3 - <<'EOF' 2>&1; echo \"EXIT:$?\"\nimport sys, hashlib, importlib.util\nsys.path.insert(0, 'tools/php83/baseline-protocol')\nimport guarded_http as new\nfrom guarded_http import BoundaryError\nfrom unittest.mock import patch\nfrom http.client import IncompleteRead, BadStatusLine, RemoteDisconnected\n\n# Probe N1: non-ASCII bytes, matching hash -> must be BoundaryError (r1 raised UnicodeDecodeError)\nd1 = bytes([255])\ntry:\n    new.trusted_context(d1, hashlib.sha256(d1).hexdigest())\n    print(\"N1 UNEXPECTED-PASS\")\nexcept BoundaryError as e:\n    print(\"N1 PASS BoundaryError:\", e)\nexcept Exception as e:\n    print(\"N1 FAIL raw:\", type(e).__name__, e)\n\n# Probe N2: ASCII garbage, matching hash -> must be BoundaryError (r1 raised ssl.SSLError)\nd2 = b\"invalid PEM\"\ntry:\n    new.trusted_context(d2, hashlib.sha256(d2).hexdigest())\n    print(\"N2 UNEXPECTED-PASS\")\nexcept BoundaryError as e:\n    print(\"N2 PASS BoundaryError:\", e)\nexcept Exception as e:\n    print(\"N2 FAIL raw:\", type(e).__name__, e)\n\n# Probe N3: IncompleteRead in body-read path, secret bytes must not leak\nwith patch('guarded_http.build_opener'):\n    c = new.Client(new.Origin('192.168.56.74','http',80))\n    r = c.opener.open.return_value.__enter__.return_value\n    r.status = 200; r.geturl.return_value='http://192.168.56.74/'; r.headers={}\n    r.read.side_effect = IncompleteRead(b'probe-secret-N3', 42)\n    try:\n        c.get('http://192.168.56.74/')\n        print(\"N3 UNEXPECTED-PASS\")\n    except BoundaryError as e:\n        leaked = 'probe-secret-N3' in str(e)\n        print(\"N3 PASS BoundaryError leaked=\" , leaked)\n        assert not leaked\n    print(\"N3 exit-called:\", c.opener.open.return_value.__exit__.assert_called_once() is None)\n\n# Probe N4: other HTTPException subclass in read path (BadStatusLine) -> BoundaryError\nwith patch('guarded_http.build_opener'):\n    c = new.Client(new.Origin('192.168.56.74','http',80))\n    r = c.opener.open.return_value.__enter__.return_value\n    r.status = 200; r.geturl.return_value='http://192.168.56.74/'; r.headers={}\n    r.read.side_effect = BadStatusLine('bad-line')\n    try:\n        c.get('http://192.168.56.74/')\n        print(\"N4 UNEXPECTED-PASS\")\n    except BoundaryError as e:\n        print(\"N4 PASS BoundaryError:\", e)\n    except Exception as e:\n        print(\"N4 FAIL raw:\", type(e).__name__)\n\n# Probe N5: RemoteDisconnected at open time -> BoundaryError (covered by extended except)\nwith patch('guarded_http.build_opener'):\n    c = new.Client(new.Origin('192.168.56.74','http',80))\n    c.opener.open.side_effect = RemoteDisconnected('gone')\n    try:\n        c.get('http://192.168.56.74/')\n        print(\"N5 UNEXPECTED-PASS\")\n    except BoundaryError as e:\n        print(\"N5 PASS BoundaryError:\", e)\n    except Exception as e:\n        print(\"N5 FAIL raw:\", type(e).__name__)\n\n# Probe R1-confirm: old reviewed-r1 source still raises raw errors (read-only load, no edit)\nspec = importlib.util.spec_from_file_location(\"guarded_http_r1\", \"doc/php83/evidence/baseline-protocol/reviewed-r1/guarded_http.py\")\nr1 = importlib.util.module_from_spec(spec); spec.loader.exec_module(r1)\nfor label, data in [(\"R1-nonascii\", bytes([255])), (\"R1-ascii-garbage\", b\"invalid PEM\")]:\n    try:\n        r1.trusted_context(data, hashlib.sha256(data).hexdigest())\n        print(label, \"UNEXPECTED-PASS\")\n    except r1.BoundaryError:\n        print(label, \"unexpectedly BoundaryError (r1 fixed? no)\")\n    except Exception as e:\n        print(label, \"CONFIRMED-OLD-RAW:\", type(e).__name__)\nprint(\"has_HTTPException_catch_new:\", 'HTTPException' in open('tools/php83/baseline-protocol/guarded_http.py').read())\nprint(\"has_HTTPException_catch_r1:\", 'HTTPException' in open('doc/php83/evidence/baseline-protocol/reviewed-r1/guarded_http.py').read())\nEOF",
+            "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+          },
+          "output": "N1 PASS BoundaryError: Invalid private CA certificate\nN2 PASS BoundaryError: Invalid private CA certificate\nN3 PASS BoundaryError leaked= False\nN3 exit-called: True\nN4 PASS BoundaryError: Transport request failed\nN5 PASS BoundaryError: Transport request failed\nR1-nonascii CONFIRMED-OLD-RAW: UnicodeDecodeError\nR1-ascii-garbage CONFIRMED-OLD-RAW: SSLError\nhas_HTTPException_catch_new: True\nhas_HTTPException_catch_r1: False\nEXIT:0\n",
+          "metadata": {
+            "output": "N1 PASS BoundaryError: Invalid private CA certificate\nN2 PASS BoundaryError: Invalid private CA certificate\nN3 PASS BoundaryError leaked= False\nN3 exit-called: True\nN4 PASS BoundaryError: Transport request failed\nN5 PASS BoundaryError: Transport request failed\nR1-nonascii CONFIRMED-OLD-RAW: UnicodeDecodeError\nR1-ascii-garbage CONFIRMED-OLD-RAW: SSLError\nhas_HTTPException_catch_new: True\nhas_HTTPException_catch_r1: False\nEXIT:0\n",
+            "exit": 0,
+            "truncated": false
+          },
+          "title": "python3 - <<'EOF' 2>&1; echo \"EXIT:$?\"\nimport sys, hashlib, importlib.util\nsys.path.insert(0, 'tools/php83/baseline-protocol')\nimport guarded_http as new\nfrom guarded_http import BoundaryError\nfrom unittest.mock import patch\nfrom http.client import IncompleteRead, BadStatusLine, RemoteDisconnected\n\n# Probe N1: non-ASCII bytes, matching hash -> must be BoundaryError (r1 raised UnicodeDecodeError)\nd1 = bytes([255])\ntry:\n    new.trusted_context(d1, hashlib.sha256(d1).hexdigest())\n    print(\"N1 UNEXPECTED-PASS\")\nexcept BoundaryError as e:\n    print(\"N1 PASS BoundaryError:\", e)\nexcept Exception as e:\n    print(\"N1 FAIL raw:\", type(e).__name__, e)\n\n# Probe N2: ASCII garbage, matching hash -> must be BoundaryError (r1 raised ssl.SSLError)\nd2 = b\"invalid PEM\"\ntry:\n    new.trusted_context(d2, hashlib.sha256(d2).hexdigest())\n    print(\"N2 UNEXPECTED-PASS\")\nexcept BoundaryError as e:\n    print(\"N2 PASS BoundaryError:\", e)\nexcept Exception as e:\n    print(\"N2 FAIL raw:\", type(e).__name__, e)\n\n# Probe N3: IncompleteRead in body-read path, secret bytes must not leak\nwith patch('guarded_http.build_opener'):\n    c = new.Client(new.Origin('192.168.56.74','http',80))\n    r = c.opener.open.return_value.__enter__.return_value\n    r.status = 200; r.geturl.return_value='http://192.168.56.74/'; r.headers={}\n    r.read.side_effect = IncompleteRead(b'probe-secret-N3', 42)\n    try:\n        c.get('http://192.168.56.74/')\n        print(\"N3 UNEXPECTED-PASS\")\n    except BoundaryError as e:\n        leaked = 'probe-secret-N3' in str(e)\n        print(\"N3 PASS BoundaryError leaked=\" , leaked)\n        assert not leaked\n    print(\"N3 exit-called:\", c.opener.open.return_value.__exit__.assert_called_once() is None)\n\n# Probe N4: other HTTPException subclass in read path (BadStatusLine) -> BoundaryError\nwith patch('guarded_http.build_opener'):\n    c = new.Client(new.Origin('192.168.56.74','http',80))\n    r = c.opener.open.return_value.__enter__.return_value\n    r.status = 200; r.geturl.return_value='http://192.168.56.74/'; r.headers={}\n    r.read.side_effect = BadStatusLine('bad-line')\n    try:\n        c.get('http://192.168.56.74/')\n        print(\"N4 UNEXPECTED-PASS\")\n    except BoundaryError as e:\n        print(\"N4 PASS BoundaryError:\", e)\n    except Exception as e:\n        print(\"N4 FAIL raw:\", type(e).__name__)\n\n# Probe N5: RemoteDisconnected at open time -> BoundaryError (covered by extended except)\nwith patch('guarded_http.build_opener'):\n    c = new.Client(new.Origin('192.168.56.74','http',80))\n    c.opener.open.side_effect = RemoteDisconnected('gone')\n    try:\n        c.get('http://192.168.56.74/')\n        print(\"N5 UNEXPECTED-PASS\")\n    except BoundaryError as e:\n        print(\"N5 PASS BoundaryError:\", e)\n    except Exception as e:\n        print(\"N5 FAIL raw:\", type(e).__name__)\n\n# Probe R1-confirm: old reviewed-r1 source still raises raw errors (read-only load, no edit)\nspec = importlib.util.spec_from_file_location(\"guarded_http_r1\", \"doc/php83/evidence/baseline-protocol/reviewed-r1/guarded_http.py\")\nr1 = importlib.util.module_from_spec(spec); spec.loader.exec_module(r1)\nfor label, data in [(\"R1-nonascii\", bytes([255])), (\"R1-ascii-garbage\", b\"invalid PEM\")]:\n    try:\n        r1.trusted_context(data, hashlib.sha256(data).hexdigest())\n        print(label, \"UNEXPECTED-PASS\")\n    except r1.BoundaryError:\n        print(label, \"unexpectedly BoundaryError (r1 fixed? no)\")\n    except Exception as e:\n        print(label, \"CONFIRMED-OLD-RAW:\", type(e).__name__)\nprint(\"has_HTTPException_catch_new:\", 'HTTPException' in open('tools/php83/baseline-protocol/guarded_http.py').read())\nprint(\"has_HTTPException_catch_r1:\", 'HTTPException' in open('doc/php83/evidence/baseline-protocol/reviewed-r1/guarded_http.py').read())\nEOF",
+          "time": {
+            "start": 1790439663061,
+            "end": 1790439663120
+          }
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "fc_01a0de850ba27414b9e747138eed2815"
+          }
+        },
+        "id": "prt_0de850c87001lnblFVBYJaARCi",
+        "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+        "messageID": "msg_0de84fa12001XzkaGryBYf4LJj"
+      }
+    },
+    {
+      "type": "step_finish",
+      "timestamp": 1790439663179,
+      "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+      "part": {
+        "id": "prt_0de8526480014L1HW4FWHJWRdO",
+        "reason": "tool-calls",
+        "snapshot": "65db89051692f3b8a91b9aa9e2c2add6448a634e",
+        "messageID": "msg_0de84fa12001XzkaGryBYf4LJj",
+        "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+        "type": "step-finish",
+        "tokens": {
+          "total": 98278,
+          "input": 692,
+          "output": 1100,
+          "reasoning": 245,
+          "cache": {
+            "write": 0,
+            "read": 96241
+          }
+        },
+        "cost": 0
+      }
+    },
+    {
+      "type": "tool_use",
+      "timestamp": 1790439712734,
+      "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+      "part": {
+        "type": "tool",
+        "tool": "bash",
+        "callID": "call_01a0de85d1c7730f8294ff3796384a3d",
+        "state": {
+          "status": "completed",
+          "input": {
+            "command": "python3 --version && git rev-parse HEAD 2>&1 && python3 -m py_compile tools/php83/baseline-protocol/guarded_http.py tools/php83/baseline-protocol/test_guarded_http.py tools/php83/baseline-protocol/freeze_media.py && echo COMPILE-OK && python3 - <<'EOF' 2>&1\nimport ast\nsrc = open('tools/php83/baseline-protocol/freeze_media.py').read()\nt = ast.parse(src)\nprint(\"CASES:\", [r.value.elts and [e.value if isinstance(e, ast.Constant) else ast.dump(e) for e in r.value.elts] for r in [n for n in ast.walk(t) if isinstance(n, ast.Assign) and getattr(n.targets[0],'id','')=='CASES'][0].value.elts])\nprint(\"has shell=True:\", \"shell=True\" in src, \"| has shell=False:\", \"shell=False\" in src)\nprint(\"timeouts:\", [n.keywords and [(k.arg, (k.value.value if isinstance(k.value, ast.Constant) else '?')) for k in n.keywords if k.arg=='timeout'] for n in ast.walk(t) if isinstance(n, ast.Call) and getattr(n.func,'attr','')=='run'])\nprint(\"no-overwrite -n:\", \"'-n'\" in src, \"| mkdir exist_ok=False:\", \"exist_ok=False\" in src, \"| refuse-existing:\", \"Refuse existing fixture directory\" in src)\nprint(\"count_frames:\", \"-count_frames\" in src, \"| nb_read_frames check:\", \"nb_read_frames\" in src)\nprint(\"tolerance expr:\", [l.strip() for l in src.splitlines() if 'tolerance' in l and 'Fraction' in l])\nprint(\"single-thread flags:\", all(s in src for s in ['-filter_threads', '-filter_complex_threads', \"'-threads:v', '1'\", \"'-threads:a', '1'\"]))\nprint(\"codecs:\", \"'libx264'\" in src, \"'aac'\" in src, \"'48000'\" in src, \"'-ac', '2'\" in src)\nprint(\"hash/version joins:\", \"sha256\" in src, \"-version\" in src, \"drift\" in src)\nprint(\"non-acceptance flags:\", \"'application_acceptance': False\" in src, \"'cross_build_reproducibility': False\" in src)\nprint(\"direct-key indexing in verify (KeyError-prone):\", \"probe['streams']\" in src, \"v['avg_frame_rate']\" in src)\nprint(\"finally manifest write:\", \"finally:\" in src, \"report.write_text\" in src)\nEOF",
+            "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+          },
+          "output": "Python 3.12.3\na294207e935d23eba1a8d77d331fe46dde3e7b47\nCOMPILE-OK\nTraceback (most recent call last):\n  File \"<stdin>\", line 4, in <module>\nAttributeError: 'Tuple' object has no attribute 'value'\n",
+          "metadata": {
+            "output": "Python 3.12.3\na294207e935d23eba1a8d77d331fe46dde3e7b47\nCOMPILE-OK\nTraceback (most recent call last):\n  File \"<stdin>\", line 4, in <module>\nAttributeError: 'Tuple' object has no attribute 'value'\n",
+            "exit": 1,
+            "truncated": false
+          },
+          "title": "python3 --version && git rev-parse HEAD 2>&1 && python3 -m py_compile tools/php83/baseline-protocol/guarded_http.py tools/php83/baseline-protocol/test_guarded_http.py tools/php83/baseline-protocol/freeze_media.py && echo COMPILE-OK && python3 - <<'EOF' 2>&1\nimport ast\nsrc = open('tools/php83/baseline-protocol/freeze_media.py').read()\nt = ast.parse(src)\nprint(\"CASES:\", [r.value.elts and [e.value if isinstance(e, ast.Constant) else ast.dump(e) for e in r.value.elts] for r in [n for n in ast.walk(t) if isinstance(n, ast.Assign) and getattr(n.targets[0],'id','')=='CASES'][0].value.elts])\nprint(\"has shell=True:\", \"shell=True\" in src, \"| has shell=False:\", \"shell=False\" in src)\nprint(\"timeouts:\", [n.keywords and [(k.arg, (k.value.value if isinstance(k.value, ast.Constant) else '?')) for k in n.keywords if k.arg=='timeout'] for n in ast.walk(t) if isinstance(n, ast.Call) and getattr(n.func,'attr','')=='run'])\nprint(\"no-overwrite -n:\", \"'-n'\" in src, \"| mkdir exist_ok=False:\", \"exist_ok=False\" in src, \"| refuse-existing:\", \"Refuse existing fixture directory\" in src)\nprint(\"count_frames:\", \"-count_frames\" in src, \"| nb_read_frames check:\", \"nb_read_frames\" in src)\nprint(\"tolerance expr:\", [l.strip() for l in src.splitlines() if 'tolerance' in l and 'Fraction' in l])\nprint(\"single-thread flags:\", all(s in src for s in ['-filter_threads', '-filter_complex_threads', \"'-threads:v', '1'\", \"'-threads:a', '1'\"]))\nprint(\"codecs:\", \"'libx264'\" in src, \"'aac'\" in src, \"'48000'\" in src, \"'-ac', '2'\" in src)\nprint(\"hash/version joins:\", \"sha256\" in src, \"-version\" in src, \"drift\" in src)\nprint(\"non-acceptance flags:\", \"'application_acceptance': False\" in src, \"'cross_build_reproducibility': False\" in src)\nprint(\"direct-key indexing in verify (KeyError-prone):\", \"probe['streams']\" in src, \"v['avg_frame_rate']\" in src)\nprint(\"finally manifest write:\", \"finally:\" in src, \"report.write_text\" in src)\nEOF",
+          "time": {
+            "start": 1790439712652,
+            "end": 1790439712732
+          }
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "fc_01a0de85d1c7730f8294ff3796384a3d"
+          }
+        },
+        "id": "prt_0de85d29e001tjOmt2rWeWMkSe",
+        "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+        "messageID": "msg_0de85265e001rCwRSDveKwoa58"
+      }
+    },
+    {
+      "type": "step_finish",
+      "timestamp": 1790439712786,
+      "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+      "part": {
+        "id": "prt_0de85e810001VNGY3j5tfOCmvW",
+        "reason": "tool-calls",
+        "snapshot": "66040673f11bebc95698657754599987ea08bf98",
+        "messageID": "msg_0de85265e001rCwRSDveKwoa58",
+        "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+        "type": "step-finish",
+        "tokens": {
+          "total": 101693,
+          "input": 1535,
+          "output": 636,
+          "reasoning": 2641,
+          "cache": {
+            "write": 0,
+            "read": 96881
+          }
+        },
+        "cost": 0
+      }
+    },
+    {
+      "type": "tool_use",
+      "timestamp": 1790439716582,
+      "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+      "part": {
+        "type": "tool",
+        "tool": "bash",
+        "callID": "call_01a0de85eebd757093f1bb27d77cfac9",
+        "state": {
+          "status": "completed",
+          "input": {
+            "command": "python3 - <<'EOF' 2>&1\nimport ast\nsrc = open('tools/php83/baseline-protocol/freeze_media.py').read()\nt = ast.parse(src)\nfor n in ast.walk(t):\n    if isinstance(n, ast.Assign) and getattr(n.targets[0],'id','')=='CASES':\n        print(\"CASES:\", ast.literal_eval(n.value))\nprint(\"shell=True:\", \"shell=True\" in src)\nprint(\"timeouts present:\", src.count(\"timeout=\"))\nprint(\"no-overwrite -n:\", \"'-n'\" in src, \"| exist_ok=False:\", \"exist_ok=False\" in src, \"| refuse-existing:\", \"Refuse existing fixture directory\" in src)\nprint(\"count_frames:\", \"-count_frames\" in src, \"| nb_read_frames:\", \"nb_read_frames\" in src)\nprint(\"tolerance lines:\", [l.strip() for l in src.splitlines() if 'olerance' in l])\nprint(\"single-thread:\", all(s in src for s in [\"'1'\", 'filter_threads']))\nprint(\"codecs libx264/aac/48000/ac2:\", \"'libx264'\" in src, \"'aac'\" in src, \"'48000'\" in src, \"'-ac', '2'\" in src)\nprint(\"sha/version/drift:\", \"sha256\" in src, \"-version\" in src, \"drift\" in src)\nprint(\"non-acceptance flags:\", \"application_acceptance': False\" in src, \"cross_build_reproducibility': False\" in src)\nprint(\"direct-key indexing:\", \"probe['streams']\" in src)\nprint(\"finally+write_text:\", \"finally:\" in src and \"report.write_text\" in src)\nprint(\"frames: short360=\", 10*25, \" fullhd60=\", 60*60)\nEOF",
+            "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+          },
+          "output": "CASES: [('short360', 10, 640, 360, 25), ('fullhd60', 60, 1920, 1080, 60)]\nshell=True: False\ntimeouts present: 3\nno-overwrite -n: True | exist_ok=False: True | refuse-existing: True\ncount_frames: True | nb_read_frames: True\ntolerance lines: ['tolerance = Fraction(1, fps) + Fraction(1024, 48000)', 'if abs(Fraction(value) - duration) > tolerance:', \"raise ValueError('Duration outside predeclared frame/AAC tolerance')\", \"return {'decoded_video_frames': duration*fps, 'duration_tolerance_seconds': str(tolerance)}\"]\nsingle-thread: True\ncodecs libx264/aac/48000/ac2: True True True True\nsha/version/drift: True True True\nnon-acceptance flags: True True\ndirect-key indexing: True\nfinally+write_text: True\nframes: short360= 250  fullhd60= 3600\n",
+          "metadata": {
+            "output": "CASES: [('short360', 10, 640, 360, 25), ('fullhd60', 60, 1920, 1080, 60)]\nshell=True: False\ntimeouts present: 3\nno-overwrite -n: True | exist_ok=False: True | refuse-existing: True\ncount_frames: True | nb_read_frames: True\ntolerance lines: ['tolerance = Fraction(1, fps) + Fraction(1024, 48000)', 'if abs(Fraction(value) - duration) > tolerance:', \"raise ValueError('Duration outside predeclared frame/AAC tolerance')\", \"return {'decoded_video_frames': duration*fps, 'duration_tolerance_seconds': str(tolerance)}\"]\nsingle-thread: True\ncodecs libx264/aac/48000/ac2: True True True True\nsha/version/drift: True True True\nnon-acceptance flags: True True\ndirect-key indexing: True\nfinally+write_text: True\nframes: short360= 250  fullhd60= 3600\n",
+            "exit": 0,
+            "truncated": false
+          },
+          "title": "python3 - <<'EOF' 2>&1\nimport ast\nsrc = open('tools/php83/baseline-protocol/freeze_media.py').read()\nt = ast.parse(src)\nfor n in ast.walk(t):\n    if isinstance(n, ast.Assign) and getattr(n.targets[0],'id','')=='CASES':\n        print(\"CASES:\", ast.literal_eval(n.value))\nprint(\"shell=True:\", \"shell=True\" in src)\nprint(\"timeouts present:\", src.count(\"timeout=\"))\nprint(\"no-overwrite -n:\", \"'-n'\" in src, \"| exist_ok=False:\", \"exist_ok=False\" in src, \"| refuse-existing:\", \"Refuse existing fixture directory\" in src)\nprint(\"count_frames:\", \"-count_frames\" in src, \"| nb_read_frames:\", \"nb_read_frames\" in src)\nprint(\"tolerance lines:\", [l.strip() for l in src.splitlines() if 'olerance' in l])\nprint(\"single-thread:\", all(s in src for s in [\"'1'\", 'filter_threads']))\nprint(\"codecs libx264/aac/48000/ac2:\", \"'libx264'\" in src, \"'aac'\" in src, \"'48000'\" in src, \"'-ac', '2'\" in src)\nprint(\"sha/version/drift:\", \"sha256\" in src, \"-version\" in src, \"drift\" in src)\nprint(\"non-acceptance flags:\", \"application_acceptance': False\" in src, \"cross_build_reproducibility': False\" in src)\nprint(\"direct-key indexing:\", \"probe['streams']\" in src)\nprint(\"finally+write_text:\", \"finally:\" in src and \"report.write_text\" in src)\nprint(\"frames: short360=\", 10*25, \" fullhd60=\", 60*60)\nEOF",
+          "time": {
+            "start": 1790439716561,
+            "end": 1790439716581
+          }
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "fc_01a0de85eebd757093f1bb27d77cfac9"
+          }
+        },
+        "id": "prt_0de85ef98001Pc5gcwMbgQx1z7",
+        "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+        "messageID": "msg_0de85e827001c4QPZAphZyMDPg"
+      }
+    },
+    {
+      "type": "step_finish",
+      "timestamp": 1790439716648,
+      "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+      "part": {
+        "id": "prt_0de85f725001MAPKpjLv0cx4y1",
+        "reason": "tool-calls",
+        "snapshot": "66040673f11bebc95698657754599987ea08bf98",
+        "messageID": "msg_0de85e827001c4QPZAphZyMDPg",
+        "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+        "type": "step-finish",
+        "tokens": {
+          "total": 102295,
+          "input": 3497,
+          "output": 463,
+          "reasoning": 46,
+          "cache": {
+            "write": 0,
+            "read": 98289
+          }
+        },
+        "cost": 0
+      }
+    },
+    {
+      "type": "text",
+      "timestamp": 1790439724828,
+      "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+      "part": {
+        "id": "prt_0de861717001prgtQ5dyZ857gC",
+        "messageID": "msg_0de85f7380016v5ockQf6wn5Bf",
+        "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+        "type": "text",
+        "text": "All probes pass and the freeze-gate review is complete \u2014 writing the evidence file.",
+        "time": {
+          "start": 1790439724823,
+          "end": 1790439724826
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "rs_01a0de86155573dca0f6b6bfc0366a03",
+            "phase": "commentary"
+          }
+        }
+      }
+    },
+    {
+      "type": "tool_use",
+      "timestamp": 1790439753257,
+      "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+      "part": {
+        "type": "tool",
+        "tool": "write",
+        "callID": "call_01a0de86164570c4a2f3708c7bf81573",
+        "state": {
+          "status": "completed",
+          "input": {
+            "content": "# OpenCode r2 review \u2014 baseline-protocol preparation (read-only, local, synthetic-only)\n\nStatus: PREPARATION review only. NOT acceptance. No release approval.\nNo FFmpeg run, no network request, no VM/SSH run, no secret access, no application/code edit performed.\nPrior evidence preserved untouched (`opencode-guard-review.md`, `reviewed-r1/`, `guard-r2-tests.log/.exit`).\n\n## Scope and identities\n\n- Reviewed (read-only):\n  - `tools/php83/baseline-protocol/guarded_http.py` sha256 `4cc44f15645ced42e1e156586a79a2795d38f929c6f812eb695e427ee7e47b59`\n  - `tools/php83/baseline-protocol/test_guarded_http.py` sha256 `fd7cf96639553f5e516e8d89d095c080b2ec8646461dc3a03036902ef9961912`\n  - `tools/php83/baseline-protocol/freeze_media.py` sha256 `e1ab367ca3cdf6dea452a99bbb19a85725b33d3900889b57d1057a4baaf38f69`\n  - `tools/php83/baseline-protocol/README.md` sha256 `e321a3ddd87d67d19e8ef0406def0b98cb014fb8ee5c5e46794b81d8682f4acf`\n  - `doc/php83/evidence/baseline-protocol/reviewed-r1/guarded_http.py` sha256 `6e825b1eb87446f50908cc590e03eb51238eeedb9c75879bc8268f28cddee8f6`\n  - `doc/php83/evidence/baseline-protocol/reviewed-r1/test_guarded_http.py` sha256 `71f839721cae2d39e47ceae55271f0477ff31522bd8fbbacbbbae7368e4c32ca`\n  - `doc/php83/baseline-protocol-plan.md` and Decision 7 in `openspec/changes/migrate-kaltura-php83/design.md` (lines 38, 91) per r1 citations (not re-hashed here).\n- Executor: OpenCode (Muse Spark `opencode/muse-spark-1.3-contributor-free`), local worktree only.\n- Environment: Python 3.12.3, Linux, worktree HEAD `a294207e`. NOTE: `tools/php83/baseline-protocol/` and `doc/php83/evidence/baseline-protocol/` are UNTRACKED (`git status` shows `??` for both); the new sources exist only in the worktree, not in any commit.\n- Transport used in this review: mocked (`unittest.mock.patch` on `build_opener`) and pure-guard calls only, plus static AST/`py_compile` inspection of `freeze_media.py`. `generate()` was NEVER called; no `ffmpeg`/`ffprobe` binary was executed (not even `-version`). GET-only interface; no POST/auth/media/TLS handshake executed.\n\n## Commands and exits (all local, synthetic-only)\n\n1. `python3 -m unittest discover -s tools/php83/baseline-protocol -p 'test_*.py' -v` \u2192 exit 0, **15/15 PASS** (13 prior guard tests + 2 new `ErrorNormalizationTests`). Independently reproduces the preserved `guard-r2-tests.log` (15 ok, exit 0).\n2. Regression probe batch (ad-hoc heredoc, mocked transport, exit 0): N1 non-ASCII matching-hash CA \u2192 BoundaryError; N2 ASCII-garbage matching-hash CA \u2192 BoundaryError; N3 `IncompleteRead` with synthetic secret in body-read path \u2192 BoundaryError with no leak and context-manager `__exit__` called; N4 `BadStatusLine` in read path \u2192 BoundaryError; N5 `RemoteDisconnected` at open \u2192 BoundaryError.\n3. r1-confirm probes (read-only `importlib` load of `reviewed-r1/guarded_http.py`, exit 0): both malformed matching-hash CAs raise RAW `UnicodeDecodeError` / `ssl.SSLError`; r1 source contains no `HTTPException` catch. Confirms `reviewed-r1/` preserves the OLD (buggy) source \u2014 it is a frozen reference, not the fixed code.\n4. `python3 -m py_compile` on `guarded_http.py`, `test_guarded_http.py`, `freeze_media.py` \u2192 OK (compile check only, no execution).\n5. Static AST inspection of `freeze_media.py` (no subprocess executed): CASES exact, no `shell=True`, 3 `timeout=` sites, `-n` + `exist_ok=False` + refusal string present, `-count_frames` + `nb_read_frames` present, tolerance expression as specified, single-thread flags present, libx264/AAC/48k/stereo present, sha256/`-version`/drift re-check present, both non-acceptance flags False, `finally:` + `report.write_text` present (see defect B1).\n\n## Exact new `guarded_http.py` fixes vs `reviewed-r1` (verified by `diff -u`)\n\n- Hunk 1: `from http.client import HTTPException` added (new import).\n- Hunk 2 (`trusted_context`, r1-bug \u00a71): bare `ctx.load_verify_locations(cadata=ca_pem.decode('ascii'))` wrapped in `try/except (UnicodeError, ssl.SSLError, ValueError)` \u2192 `BoundaryError('Invalid private CA certificate')`. Matches the r1-proposed fix exactly, including the `ValueError` arm.\n- Hunk 3 (`Client.get`, r1-bug \u00a72): `except (URLError, OSError)` extended to `except (URLError, OSError, HTTPException)` \u2192 `BoundaryError('Transport request failed')`. Covers `IncompleteRead` and every other `http.client` read-path failure without leaking bytes.\n- New tests (`ErrorNormalizationTests`): `test_malformed_matching_ca` (both r1 payloads: `b\"invalid PEM\"` and `bytes([255])`, hash-matched) and `test_incomplete_body_is_redacted` (`IncompleteRead(b'synthetic-sensitive-marker', 42)`, asserts BoundaryError, asserts marker absent from message, asserts `__exit__` called once). 13 \u2192 15 tests; old 13 unchanged and still passing.\n\n## Guard regression validation\n\n- Probes N1/N2 close r1-bug \u00a71: both payload classes that previously escaped as raw `UnicodeDecodeError`/`ssl.SSLError` (re-confirmed raw on the r1 copy) now normalize to BoundaryError with no CA bytes in the message.\n- Probes N3/N4/N5 close r1-bug \u00a72: body-read `IncompleteRead` (with secret payload \u2014 no leak), `BadStatusLine`, and open-time `RemoteDisconnected` all normalize to BoundaryError; context-manager cleanup verified.\n- No regressions: literal/evil-target/controls/nested/redirect/proxy/CA/body-limit/pre-validation/GET-pin/`geturl`-revalidation/timeout-bound behavior unchanged (13/13 old tests pass unmodified).\n\n## `freeze_media.py` pre-encoding review (Decision 7 mapping, static only \u2014 NOT_EXECUTED)\n\n| Decision 7 / prompt requirement | Static finding |\n|---|---|\n| Fixtures 10s 640x360/25fps + 60s 1920x1080/60fps | `CASES = [('short360', 10, 640, 360, 25), ('fullhd60', 60, 1920, 1080, 60)]` \u2014 exact. |\n| H.264 / AAC stereo 48k | `-c:v libx264 \u2026 -pix_fmt yuv420p -r <fps> -fps_mode cfr -g <2*fps> -keyint_min <2*fps> -sc_threshold 0`; `-c:a aac -b:a 128k -ar 48000 -ac 2`. Explicit. |\n| Explicit commands | List-form argv, no `shell=True` anywhere; full command + probe command + exits + stderr recorded per fixture row. |\n| At most one video + one AAC frame duration tolerance | `tolerance = Fraction(1, fps) + Fraction(1024, 48000)` applied to video, audio, and container durations \u2014 exactly one video frame + one AAC frame (1024 samples @ 48 kHz). |\n| Exact 250 / 3600 decoded frames | `int(v['nb_read_frames']) != duration*fps` with `-count_frames` in probe; 10\u00d725=250, 60\u00d760=3600; `avg_frame_rate` and `r_frame_rate` both asserted == fps. |\n| Timeout | `timeout=1200` generate, `timeout=180` probe, `timeout=10` tool `-version`. Present on every subprocess call. |\n| Output refusal | `output.exists()` \u2192 `ValueError('Refuse existing fixture directory')`, `-n` flag, `mkdir(\u2026, exist_ok=False)`. BUT see defect B1. |\n| Hash/version joins | ffmpeg+ffprobe path+sha256+`-version` stdout recorded pre-run; binaries re-hashed post-run (`Encoder/prober drift`); per-fixture media sha256 + byte size; manifest always written. Linked-library/host attestation absent \u2014 already declared in README, not waived. |\n| Preparation-only marking | `status` starts `RUNNING`, ends `SOURCE_FIXTURES_VALIDATED_PENDING_INDEPENDENT_REVIEW`; `application_acceptance: False`, `cross_build_reproducibility: False`. Correct. |\n| Stream shape | `len(streams) != 2` refused; exactly one video + one audio enforced. Correct. |\n\n## Blocking defects before ANY encoding (must fix first)\n\n- **B1 (BLOCKING \u2014 output-refusal join broken): `generate()` writes into the directory it just refused.** When `output` pre-exists, the `ValueError('Refuse existing fixture directory')` raise is followed by the `finally:` block's `report.write_text(...)`, which creates/overwrites `manifest.json` INSIDE the pre-existing directory \u2014 the very directory generation refused to touch. Same root cause masks `mkdir` failures: if `mkdir` raises, `finally` raises `FileNotFoundError`/`NotADirectoryError` over the original error. Fix before generation (e.g. only write the manifest when this run created the directory; return before any write on the pre-exists path). No media bytes are overwritten (only `manifest.json`), but the stated \"refuses an existing directory, never overwrites\" guarantee does not hold as written.\n- **B2 (non-blocking, recommend): `verify()` uses direct key indexing** (`probe['streams']`, `v['avg_frame_rate']`, `v['nb_read_frames']`, `a['duration']`, \u2026). A probe JSON missing keys (e.g. `nb_read_frames` without `-count_frames`, `duration: \"N/A\"`, `avg_frame_rate: \"0/0\"` \u2192 `ZeroDivisionError`) raises raw `KeyError`/`TypeError`/`ZeroDivisionError` instead of a named `ValueError`. Fail-CLOSED (`generate` catches `Exception` \u2192 `FAILED`, no false PASS), so not verdict-blocking, but normalize to `ValueError('<field> mismatch/missing')` for triageable manifests.\n- **Observations (non-blocking):** full-file `media.read_bytes()` hashing holds ~100s-of-MB 1080p60 in RAM (fine for lab, note for constrained hosts); audio frame counts not asserted (video frames + duration tolerance cover the prompt's exact-frame requirement); no profile/level/SAR/DAR/sample-fmt assertions (Decision 7 does not require them); `output` symlink/parent-race edges unhandled (covered by `exist_ok=False` fail-closed).\n\n## Explicitly NOT waived / untested scope\n\n- Real TLS handshake (success/wrong-CA), real redirect/no-forwarding transport, and hard whole-request deadline remain UNIMPLEMENTED: `timeout=30` is a per-operation socket timeout, documented in README, and must not be called a total bound.\n- No network/TLS/API/media evidence produced by this review; `freeze_media.py` is NOT_EXECUTED (no bytes generated, no hashes exist yet); cross-build reproducibility and linked-library attestation absent by declaration.\n- GET-only, no KS/auth, no uploads, no HLS parser, no Range/206 contract, no retries/benchmark statistics.\n- Passing 15/15 harness tests does not prove full application acceptance and does not approve any release, baseline workload, or cutover.\n\n## Bounded verdict\n\n- The two r1 error-normalization bugs are FIXED in `tools/php83/baseline-protocol/guarded_http.py` exactly as prescribed, covered by 2 new regression tests (15/15 PASS, exit 0), and independently validated by probes N1\u2013N5; `reviewed-r1/` confirmed frozen at the old buggy source (hashes match the r1 record).\n- `freeze_media.py` matches Decision 7 on fixtures, codecs, explicit commands, stream shape, tolerance, exact frame counts, timeouts, and hash/version joins \u2014 BUT defect B1 blocks encoding: fix the refuse-then-write manifest path (and consider B2 normalization) before ANY generation run.\n- This review is PREPARATION, not acceptance: real-TLS/hard-deadline work remains missing and is explicitly NOT waived. No release approved. No code or prior evidence modified.\n",
+            "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/baseline-protocol/opencode-r2-review.md"
+          },
+          "output": "Wrote file successfully.",
+          "metadata": {
+            "diagnostics": {},
+            "filepath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/baseline-protocol/opencode-r2-review.md",
+            "exists": false,
+            "truncated": false
+          },
+          "title": "doc/php83/evidence/baseline-protocol/opencode-r2-review.md",
+          "time": {
+            "start": 1790439753248,
+            "end": 1790439753256
+          }
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "fc_01a0de86164570c4a2f3708c7bf81573"
+          }
+        },
+        "id": "prt_0de86171b001HCAbnhkZ6sQdhj",
+        "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+        "messageID": "msg_0de85f7380016v5ockQf6wn5Bf"
+      }
+    },
+    {
+      "type": "step_finish",
+      "timestamp": 1790439753357,
+      "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+      "part": {
+        "id": "prt_0de86868a001GugWCV7PbT1hAB",
+        "reason": "tool-calls",
+        "snapshot": "4a67561ba253dbe32c9425a1d391d2928dfe98fb",
+        "messageID": "msg_0de85f7380016v5ockQf6wn5Bf",
+        "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+        "type": "step-finish",
+        "tokens": {
+          "total": 106158,
+          "input": 796,
+          "output": 3037,
+          "reasoning": 580,
+          "cache": {
+            "write": 0,
+            "read": 101745
+          }
+        },
+        "cost": 0
+      }
+    },
+    {
+      "type": "tool_use",
+      "timestamp": 1790439760420,
+      "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+      "part": {
+        "type": "tool",
+        "tool": "bash",
+        "callID": "call_01a0de869f7f75819b160ed640c6ad39",
+        "state": {
+          "status": "completed",
+          "input": {
+            "command": "git status --short && sha256sum doc/php83/evidence/baseline-protocol/opencode-r2-review.md",
+            "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+          },
+          "output": "?? doc/php83/baseline-protocol-plan.md\n?? doc/php83/evidence/baseline-protocol/\n?? doc/php83/evidence/criteria-selection/\n?? doc/php83/evidence/exp12-candidate/\n?? doc/php83/evidence/xml-lifecycle/\n?? doc/php83/exp12-candidate.md\n?? doc/php83/xml-lifecycle.md\n?? tools/php83/baseline-protocol/\n?? tools/php83/criteria-composition/\n?? tools/php83/exp12-candidate/\n?? tools/php83/xml-lifecycle/\n871c15bd692640e23eba11f8143894c7578e84d314fb9da4db5749de9efd19be  doc/php83/evidence/baseline-protocol/opencode-r2-review.md\n",
+          "metadata": {
+            "output": "?? doc/php83/baseline-protocol-plan.md\n?? doc/php83/evidence/baseline-protocol/\n?? doc/php83/evidence/criteria-selection/\n?? doc/php83/evidence/exp12-candidate/\n?? doc/php83/evidence/xml-lifecycle/\n?? doc/php83/exp12-candidate.md\n?? doc/php83/xml-lifecycle.md\n?? tools/php83/baseline-protocol/\n?? tools/php83/criteria-composition/\n?? tools/php83/exp12-candidate/\n?? tools/php83/xml-lifecycle/\n871c15bd692640e23eba11f8143894c7578e84d314fb9da4db5749de9efd19be  doc/php83/evidence/baseline-protocol/opencode-r2-review.md\n",
+            "exit": 0,
+            "truncated": false
+          },
+          "title": "git status --short && sha256sum doc/php83/evidence/baseline-protocol/opencode-r2-review.md",
+          "time": {
+            "start": 1790439760403,
+            "end": 1790439760419
+          }
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "fc_01a0de869f7f75819b160ed640c6ad39"
+          }
+        },
+        "id": "prt_0de86a059001OjtVB8Dgus2g0m",
+        "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+        "messageID": "msg_0de8686a0001Gpeow1czzEZfqy"
+      }
+    },
+    {
+      "type": "step_finish",
+      "timestamp": 1790439760535,
+      "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+      "part": {
+        "id": "prt_0de86a2940012MQW5Npekwm5uv",
+        "reason": "tool-calls",
+        "snapshot": "4a67561ba253dbe32c9425a1d391d2928dfe98fb",
+        "messageID": "msg_0de8686a0001Gpeow1czzEZfqy",
+        "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+        "type": "step-finish",
+        "tokens": {
+          "total": 106334,
+          "input": 3670,
+          "output": 106,
+          "reasoning": 45,
+          "cache": {
+            "write": 0,
+            "read": 102513
+          }
+        },
+        "cost": 0
+      }
+    },
+    {
+      "type": "text",
+      "timestamp": 1790439764694,
+      "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+      "part": {
+        "id": "prt_0de86aa80001DgpMGz6m5XtwP3",
+        "messageID": "msg_0de86a2a9001VQWAL3PJIt6wL1",
+        "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+        "type": "text",
+        "text": "Independent local r2 review complete. `doc/php83/evidence/baseline-protocol/opencode-r2-review.md` written (sha256 `871c15bd\u2026`); no code or prior evidence touched, no tracked files modified.\n\n- **Guarded HTTP (15/15 PASS, exit 0):** both r1 error-normalization bugs fixed exactly as prescribed \u2014 `trusted_context` wraps decode+load \u2192 `BoundaryError`, `Client.get` catches `HTTPException` \u2192 `BoundaryError`. New `ErrorNormalizationTests` cover both; independent probes N1\u2013N5 (incl. secret-leak and `__exit__` checks) all pass. `reviewed-r1/` confirmed frozen at old source (raw `UnicodeDecodeError`/`SSLError` re-confirmed, hashes match r1 record).\n- **freeze_media.py (static only, NOT_EXECUTED):** matches Decision 7 \u2014 10s 640x360/25fps + 60s 1920x1080/60fps, H264/AAC stereo 48k, explicit list-form commands, 1-video-frame + 1-AAC-frame tolerance, exact 250/3600 decoded frames, timeouts on all 3 subprocess sites, hash/version joins, non-acceptance flags.\n- **Blocking defect B1 before ANY encoding:** `generate()`'s `finally` writes `manifest.json` into a pre-existing directory it just refused \u2014 fix the refuse-then-write path first. B2 (raw `KeyError` on missing probe keys, fail-closed) recommended non-blocking.\n- Real TLS handshake, hard whole-request deadline, and media acceptance remain unimplemented and explicitly not waived. Preparation only; no release.",
+        "time": {
+          "start": 1790439762560,
+          "end": 1790439764693
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "msg_01a0de86a927719fbd47a957a51a304e"
+          }
+        }
+      }
+    },
+    {
+      "type": "step_finish",
+      "timestamp": 1790439764849,
+      "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+      "part": {
+        "id": "prt_0de86b36f00111Qo1AS1GtgqMS",
+        "reason": "stop",
+        "snapshot": "34ecfebb7ca7492acadc1b51cb11cbebfd823f02",
+        "messageID": "msg_0de86a2a9001VQWAL3PJIt6wL1",
+        "sessionID": "ses_f217b7327ffe2PqGptFzBOUfQA",
+        "type": "step-finish",
+        "tokens": {
+          "total": 106898,
+          "input": 419,
+          "output": 365,
+          "reasoning": 17,
+          "cache": {
+            "write": 0,
+            "read": 106097
+          }
+        },
+        "cost": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"executor":"Claude CLI","exit":124,"status":"TIMEOUT_NO_REVIEW_RESULT","stdout_bytes":0,"stderr_bytes":0,"test_execution_confirmed":false,"retry_policy":"Preserve failure; use separately identified available executor, not a pass."}

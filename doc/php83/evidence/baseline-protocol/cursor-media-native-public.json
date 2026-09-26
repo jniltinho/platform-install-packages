@@ -1,0 +1,8 @@
+{
+  "type": "result",
+  "subtype": "success",
+  "is_error": false,
+  "duration_ms": 129299,
+  "result": "Vou ler AGENTS.md, `freeze_media.py`, o manifesto e o plano Decision7, e em seguida validar s\u00f3 os fixtures locais com hash e ffprobe \u2014 sem regenerar m\u00eddia nem usar VM/rede.Documenta\u00e7\u00e3o e manifesto lidos. Em seguida confiro o plano Decision7 e o formato de evid\u00eancia existente; depois executo hash e ffprobe nos dois fixtures.Fixtures acess\u00edveis. Vou hashear os dois arquivos e os bin\u00e1rios, depois rodar ffprobe em s\u00e9rie com timeout de 180s.Hashes batem com o manifesto. Rodando ffprobe em s\u00e9rie nos dois arquivos.Probes OK. Montando a valida\u00e7\u00e3o completa e os relat\u00f3rios sanitizados.**PASS** \u2014 valida\u00e7\u00e3o independente dos source fixtures `baseline-media-r1` (s\u00f3 fixture; sem aceita\u00e7\u00e3o de aplica\u00e7\u00e3o).\n\n| Item | Resultado |\n|---|---|\n| `short360.mp4` | sha/bytes = manifesto; H264 640\u00d7360 @25; AAC 48k stereo; **250** frames; dura\u00e7\u00f5es dentro de `23/375`; ffprobe exit **0** (~0s) |\n| `fullhd60.mp4` | sha/bytes = manifesto; H264 1920\u00d71080 @60; AAC 48k stereo; **3600** frames; dura\u00e7\u00f5es dentro de `19/500`; ffprobe exit **0** (~10s) |\n| `/usr/bin/ffmpeg` / `ffprobe` | sha256 id\u00eanticos ao manifesto (`ed16af62\u2026` / `272f6ebc\u2026`); 6.1.1-3ubuntu5 |\n\nEscopo: sem regenerar m\u00eddia, upload, VM ou rede. Manifesto/artefato anteriores intactos (`1a356b49\u2026`).\n\nRelat\u00f3rios novos:\n- `doc/php83/evidence/baseline-protocol/media-independent.json`\n- `doc/php83/evidence/baseline-protocol/media-independent.md`",
+  "raw_sha256": "9dc3960647a62e297eac4de6567a431eb41bf0d3a4049197021374bcc3f58faa"
+}

@@ -1,0 +1,29 @@
+test_bad_schema_fails_closed (test_freeze_media.MediaPreparationTests.test_bad_schema_fails_closed) ... ok
+test_command_no_overwrite_and_expected_encoder (test_freeze_media.MediaPreparationTests.test_command_no_overwrite_and_expected_encoder) ... ok
+test_duration_rejected (test_freeze_media.MediaPreparationTests.test_duration_rejected) ... ok
+test_existing_directory_does_not_write_manifest_or_execute (test_freeze_media.MediaPreparationTests.test_existing_directory_does_not_write_manifest_or_execute) ... ok
+test_existing_file_unchanged (test_freeze_media.MediaPreparationTests.test_existing_file_unchanged) ... ok
+test_extra_stream_rejected (test_freeze_media.MediaPreparationTests.test_extra_stream_rejected) ... ok
+test_two_valid_expected_streams (test_freeze_media.MediaPreparationTests.test_two_valid_expected_streams) ... ok
+test_wrong_decoded_frames (test_freeze_media.MediaPreparationTests.test_wrong_decoded_frames) ... ok
+test_wrong_raster (test_freeze_media.MediaPreparationTests.test_wrong_raster) ... ok
+test_incomplete_body_is_redacted (test_guarded_http.ErrorNormalizationTests.test_incomplete_body_is_redacted) ... ok
+test_malformed_matching_ca (test_guarded_http.ErrorNormalizationTests.test_malformed_matching_ca) ... ok
+test_all_redirects_refused (test_guarded_http.GuardTests.test_all_redirects_refused) ... ok
+test_bad_lengths (test_guarded_http.GuardTests.test_bad_lengths) ... ok
+test_bad_targets (test_guarded_http.GuardTests.test_bad_targets) ... ok
+test_bounded_body (test_guarded_http.GuardTests.test_bounded_body) ... ok
+test_ca_must_be_explicit_and_pinned (test_guarded_http.GuardTests.test_ca_must_be_explicit_and_pinned) ... ok
+test_invalid_origin (test_guarded_http.GuardTests.test_invalid_origin) ... ok
+test_limit_types (test_guarded_http.GuardTests.test_limit_types) ... ok
+test_literal (test_guarded_http.GuardTests.test_literal) ... ok
+test_nested_bad (test_guarded_http.GuardTests.test_nested_bad) ... ok
+test_nested_good (test_guarded_http.GuardTests.test_nested_good) ... ok
+test_proxy_disabled (test_guarded_http.GuardTests.test_proxy_disabled) ... ok
+test_rejected_before_connection (test_guarded_http.GuardTests.test_rejected_before_connection) ... ok
+test_transport_error_redacted (test_guarded_http.GuardTests.test_transport_error_redacted) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.004s
+
+OK
