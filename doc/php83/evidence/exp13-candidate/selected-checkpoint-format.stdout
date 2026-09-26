@@ -1,0 +1,1111 @@
+doc/php83/evidence/exp13-candidate/selected-r1/0001-myCaptchaImage.class.php.patch:4: space before tab in indent.
++ 	$rand_max  = strlen($key_chars) - 1;
+doc/php83/evidence/exp13-candidate/selected-r1/0001-myCaptchaImage.class.php.patch:5: space before tab in indent.
++ 	for ($i = 0; $i < $this->length; $i++) {
+doc/php83/evidence/exp13-candidate/selected-r1/0001-myCaptchaImage.class.php.patch:6: space before tab in indent.
++ 	    $rand_pos  = rand(0, $rand_max);
+doc/php83/evidence/exp13-candidate/selected-r1/0001-myCaptchaImage.class.php.patch:9: space before tab in indent.
++ 	}
+doc/php83/evidence/exp13-candidate/selected-r1/0001-myCaptchaImage.class.php.patch:10: space before tab in indent.
++ 	$this->captcha = $text; // save what we create
+doc/php83/evidence/exp13-candidate/selected-r1/0001-myCaptchaImage.class.php.patch:11: trailing whitespace.
++ 	
+doc/php83/evidence/exp13-candidate/selected-r1/0001-myCaptchaImage.class.php.patch:11: new blank line at EOF.
+doc/php83/evidence/exp13-candidate/selected-r1/0002-S3.php.patch:4: space before tab in indent.
++ 			elseif ($header == 'Content-Type')
+doc/php83/evidence/exp13-candidate/selected-r1/0002-S3.php.patch:5: space before tab in indent.
++ 				$this->response->headers['type'] = $value;
+doc/php83/evidence/exp13-candidate/selected-r1/0002-S3.php.patch:6: space before tab in indent.
++ 			elseif ($header == 'ETag')
+doc/php83/evidence/exp13-candidate/selected-r1/0002-S3.php.patch:9: space before tab in indent.
++ 			elseif (preg_match('/^x-amz-meta-.*$/', $header))
+doc/php83/evidence/exp13-candidate/selected-r1/0002-S3.php.patch:10: space before tab in indent.
++ 				$this->response->headers[$header] = is_numeric($value) ? (int)$value : $value;
+doc/php83/evidence/exp13-candidate/selected-r1/0002-S3.php.patch:11: space before tab in indent.
++ 		}
+doc/php83/evidence/exp13-candidate/selected-r1/0002-Services_JSON.class.patch:6: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0002-Services_JSON.class.patch:9: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0002-Services_JSON.class.patch:22: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0002-Services_JSON.class.patch:35: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0002-Services_JSON.class.patch:40: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0002-Services_JSON.class.patch:43: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0002-Services_JSON.class.patch:53: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0002-Services_JSON.class.patch:59: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0002-Services_JSON.class.patch:126: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0002-Services_JSON.class.patch:130: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0002-Services_JSON.class.patch:141: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0002-Services_JSON.class.patch:144: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0002-Services_JSON.class.patch:149: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0002-Services_JSON.class.patch:154: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0002-Services_JSON.class.patch:163: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0002-Services_JSON.class.patch:170: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0002-Services_JSON.class.patch:172: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0002-Services_JSON.class.patch:179: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0002-Services_JSON.class.patch:188: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0002-Services_JSON.class.patch:195: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0002-Services_JSON.class.patch:201: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0002-Services_JSON.class.patch:208: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0003-Encoder.patch:13: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0003-Encoder.patch:26: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0003-kAkamaiSecureHDUrlTokenizer.php.patch:4: space before tab in indent.
++     	$bin = "";
+doc/php83/evidence/exp13-candidate/selected-r1/0003-kAkamaiSecureHDUrlTokenizer.php.patch:5: space before tab in indent.
++     	$i = 0;
+doc/php83/evidence/exp13-candidate/selected-r1/0003-kAkamaiSecureHDUrlTokenizer.php.patch:6: space before tab in indent.
++     	do {
+doc/php83/evidence/exp13-candidate/selected-r1/0003-kAkamaiSecureHDUrlTokenizer.php.patch:9: space before tab in indent.
++         	$i += 2;
+doc/php83/evidence/exp13-candidate/selected-r1/0003-kAkamaiSecureHDUrlTokenizer.php.patch:10: space before tab in indent.
++     	} while ($i < strlen($str));
+doc/php83/evidence/exp13-candidate/selected-r1/0003-kAkamaiSecureHDUrlTokenizer.php.patch:11: space before tab in indent.
++     	return $bin;
+doc/php83/evidence/exp13-candidate/selected-r1/0004-Decoder.patch:6: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0004-Decoder.patch:15: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0004-Decoder.patch:18: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0004-Decoder.patch:32: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0004-Decoder.patch:50: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0004-Decoder.patch:53: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0004-S3.php.patch:4: space before tab in indent.
++ 			elseif ($header == 'Content-Type')
+doc/php83/evidence/exp13-candidate/selected-r1/0004-S3.php.patch:5: space before tab in indent.
++ 				$this->response->headers['type'] = $value;
+doc/php83/evidence/exp13-candidate/selected-r1/0004-S3.php.patch:6: space before tab in indent.
++ 			elseif ($header == 'ETag')
+doc/php83/evidence/exp13-candidate/selected-r1/0004-S3.php.patch:9: space before tab in indent.
++ 			elseif (preg_match('/^x-amz-meta-.*$/', $header))
+doc/php83/evidence/exp13-candidate/selected-r1/0004-S3.php.patch:10: space before tab in indent.
++ 				$this->response->headers[$header] = is_numeric($value) ? (int)$value : $value;
+doc/php83/evidence/exp13-candidate/selected-r1/0004-S3.php.patch:11: space before tab in indent.
++ 		}
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:4: space before tab in indent.
++ 				return $retary;
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:5: space before tab in indent.
++ 			}
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:6: space before tab in indent.
++ 		case '>':
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:9: space before tab in indent.
++ 			return Array($tagname, $attary, $tagtype, $lt, $pos);
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:10: space before tab in indent.
++ 			break;
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:11: space before tab in indent.
++ 		default:
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:13: space before tab in indent.
++ 					}
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:14: space before tab in indent.
++ 					list($pos, $attval, $match) = $regary;
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:15: space before tab in indent.
++ 					$pos++;
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:18: space before tab in indent.
++ 				} else if ($quot == '"'){
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:19: space before tab in indent.
++ 					$regary = tln_findnxreg($body, $pos+1, '\"');
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:20: space before tab in indent.
++ 					if ($regary == false){
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:22: space before tab in indent.
++ 					}
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:23: space before tab in indent.
++ 					list($pos, $attval, $match) = $regary;
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:24: space before tab in indent.
++ 					$pos++;
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:27: space before tab in indent.
++ 				} else {
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:28: space before tab in indent.
++ 					/**
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:29: space before tab in indent.
++ 					 * These are hateful. Look for \s, or >.
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:31: space before tab in indent.
++ 					 * If it's ">" it will be caught at the top.
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:32: space before tab in indent.
++ 					 */
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:33: space before tab in indent.
++ 					$attval = preg_replace('/\"/s', '&quot;', $attval);
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:36: space before tab in indent.
++ 				}
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:37: space before tab in indent.
++ 			} else if (preg_match('|[\w/>]|', $char)) {
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:38: space before tab in indent.
++ 				/**
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:39: space before tab in indent.
++ 				 * That was attribute type 4.
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:40: space before tab in indent.
++ 				 */
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:43: space before tab in indent.
++ 			} else {
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:44: space before tab in indent.
++ 				/**
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:45: space before tab in indent.
++ 				 * An illegal character. Find next '>' and return.
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:47: space before tab in indent.
++ 			if ($hex){
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:48: space before tab in indent.
++ 				$numval = hexdec($numval);
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:49: space before tab in indent.
++ 			}
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:52: space before tab in indent.
++ 		}
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:53: space before tab in indent.
++ 		$attvalue = strtr($attvalue, $repl);
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:54: space before tab in indent.
++ 		return true;
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:56: space before tab in indent.
++ 			if (preg_match($matchtag, $tagname)){
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:57: space before tab in indent.
++ 				foreach ($matchattrs as $matchattr){
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:58: space before tab in indent.
++ 					if (preg_match($matchattr, $attname)){
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:61: space before tab in indent.
++ 						continue;
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:62: space before tab in indent.
++ 					}
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:63: space before tab in indent.
++ 				}
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:65: space before tab in indent.
++ 						list($valmatch, $valrepl) = $valary;
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:66: space before tab in indent.
++ 						$newvalue = preg_replace($valmatch,$valrepl,$attvalue);
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:67: space before tab in indent.
++ 						if ($newvalue != $attvalue){
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:70: space before tab in indent.
++ 						}
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:71: space before tab in indent.
++ 					}
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:72: space before tab in indent.
++ 				}
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:74: space before tab in indent.
++ 					$skip_content = false;
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:75: space before tab in indent.
++ 				} else {
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:76: space before tab in indent.
++ 					if ($skip_content == false){
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:77: trailing whitespace.
++-						if (isset($open_tags{$tagname}) && 
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:80: trailing whitespace.
+++						if (isset($open_tags[$tagname]) && 
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:83: space before tab in indent.
++ 						} else {
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:84: space before tab in indent.
++ 							$tagname = false;
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:85: space before tab in indent.
++ 						}
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:87: space before tab in indent.
++ 							$tagname = false;
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:88: space before tab in indent.
++ 						} else {
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:89: space before tab in indent.
++ 							if ($tagtype == 1){
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:94: space before tab in indent.
++ 								} else {
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:97: space before tab in indent.
++ 								}
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:98: space before tab in indent.
++ 							}
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:99: space before tab in indent.
++ 							/**
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:101: space before tab in indent.
++ 	);
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:102: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:103: space before tab in indent.
++ 	if ($block_external_images){
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:106: space before tab in indent.
++ 				'/^([\'\"])\s*https*:.*([\'\"])/si');
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:109: space before tab in indent.
++ 				"\\1$trans_image_path\\1");
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:112: space before tab in indent.
++ 				'/url\(([\'\"])\s*https*:.*([\'\"])\)/si');
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:115: space before tab in indent.
++ 				"url(\\1$trans_image_path\\1)");
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:116: space before tab in indent.
++ 	}
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:117: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0006-htmlfilter.php.patch:117: new blank line at EOF.
+doc/php83/evidence/exp13-candidate/selected-r1/0007-Sitemap.php.patch:6: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0011-Encoder.php.patch:4: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0014-XmlToAppData.php.patch:4: space before tab in indent.
++ 							$this->isForReferenceOnly = ($isForRefOnly !== null ? (strtolower($isForRefOnly) === "true") : true); // defaults to TRUE
+doc/php83/evidence/exp13-candidate/selected-r1/0014-XmlToAppData.php.patch:5: space before tab in indent.
++ 						}
+doc/php83/evidence/exp13-candidate/selected-r1/0014-XmlToAppData.php.patch:6: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0014-XmlToAppData.php.patch:9: space before tab in indent.
++ 							$f = new PhingFile($this->currentXmlFile);
+doc/php83/evidence/exp13-candidate/selected-r1/0014-XmlToAppData.php.patch:10: space before tab in indent.
++ 							$xf = new PhingFile($f->getParent(), $xmlFile);
+doc/php83/evidence/exp13-candidate/selected-r1/0014-XmlToAppData.php.patch:11: space before tab in indent.
++ 							$xmlFile = $xf->getPath();
+doc/php83/evidence/exp13-candidate/selected-r1/0015-MatchValidator.php.patch:4: space before tab in indent.
++ 	private function prepareRegexp($exp)
+doc/php83/evidence/exp13-candidate/selected-r1/0015-MatchValidator.php.patch:5: space before tab in indent.
++ 	{
+doc/php83/evidence/exp13-candidate/selected-r1/0015-MatchValidator.php.patch:6: space before tab in indent.
++ 		// remove surrounding '/' marks so that they don't get escaped in next step
+doc/php83/evidence/exp13-candidate/selected-r1/0015-MatchValidator.php.patch:9: space before tab in indent.
++ 			$exp = '/' . $exp . '/';
+doc/php83/evidence/exp13-candidate/selected-r1/0015-MatchValidator.php.patch:10: space before tab in indent.
++ 		}
+doc/php83/evidence/exp13-candidate/selected-r1/0015-MatchValidator.php.patch:11: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0015-MatchValidator.php.patch:11: new blank line at EOF.
+doc/php83/evidence/exp13-candidate/selected-r1/0016-NotMatchValidator.php.patch:4: space before tab in indent.
++ 	private function prepareRegexp($exp)
+doc/php83/evidence/exp13-candidate/selected-r1/0016-NotMatchValidator.php.patch:5: space before tab in indent.
++ 	{
+doc/php83/evidence/exp13-candidate/selected-r1/0016-NotMatchValidator.php.patch:6: space before tab in indent.
++ 		// remove surrounding '/' marks so that they don't get escaped in next step
+doc/php83/evidence/exp13-candidate/selected-r1/0016-NotMatchValidator.php.patch:9: space before tab in indent.
++ 			$exp = '/' . $exp . '/';
+doc/php83/evidence/exp13-candidate/selected-r1/0016-NotMatchValidator.php.patch:10: space before tab in indent.
++ 		}
+doc/php83/evidence/exp13-candidate/selected-r1/0016-NotMatchValidator.php.patch:11: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0016-NotMatchValidator.php.patch:11: new blank line at EOF.
+doc/php83/evidence/exp13-candidate/selected-r1/0018-UrlHelper.php.patch:4: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0018-UrlHelper.php.patch:10: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0019-sfDateFormat.class.php.patch:23: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0019-sfDateFormat.class.php.patch:25: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0019-sfDateFormat.class.php.patch:40: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0019-sfDateFormat.class.php.patch:56: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0019-sfDateFormat.class.php.patch:59: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0020-sfNumberFormat.class.php.patch:9: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0023-sfFinder.class.php.patch:13: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0024-PgSQLResultSet.php.patch:4: space before tab in indent.
++ 					$res[] = $this->strToArray(implode(',', $subarr[$in_subarr]));
+doc/php83/evidence/exp13-candidate/selected-r1/0024-PgSQLResultSet.php.patch:5: space before tab in indent.
++ 					$in_subarr--;
+doc/php83/evidence/exp13-candidate/selected-r1/0024-PgSQLResultSet.php.patch:6: space before tab in indent.
++ 				}
+doc/php83/evidence/exp13-candidate/selected-r1/0024-PgSQLResultSet.php.patch:7: trailing whitespace.
++-			} elseif ($tok{0} === '{') { // we're inside a new sub-array							   
+doc/php83/evidence/exp13-candidate/selected-r1/0024-PgSQLResultSet.php.patch:8: trailing whitespace.
+++			} elseif ($tok[0] === '{') { // we're inside a new sub-array							   
+doc/php83/evidence/exp13-candidate/selected-r1/0024-PgSQLResultSet.php.patch:9: space before tab in indent.
++ 				if ('}' !== substr($tok, -1, 1)) {
+doc/php83/evidence/exp13-candidate/selected-r1/0024-PgSQLResultSet.php.patch:10: space before tab in indent.
++ 					$in_subarr++;
+doc/php83/evidence/exp13-candidate/selected-r1/0024-PgSQLResultSet.php.patch:11: space before tab in indent.
++ 					// if sub-array has more than one element
+doc/php83/evidence/exp13-candidate/selected-r1/0026-pakeFinder.class.php.patch:4: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0027-pakeGetopt.class.php.patch:4: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0027-pakeGetopt.class.php.patch:12: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0027-pakeGetopt.class.php.patch:22: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0027-pakeGetopt.class.php.patch:32: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0027-pakeGetopt.class.php.patch:51: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0030-Capsule.php.patch:7: trailing whitespace.
++-        if ( !($file{0} == DIRECTORY_SEPARATOR || $file{0} == '/') 
+doc/php83/evidence/exp13-candidate/selected-r1/0030-Capsule.php.patch:8: trailing whitespace.
+++        if ( !($file[0] == DIRECTORY_SEPARATOR || $file[0] == '/') 
+doc/php83/evidence/exp13-candidate/selected-r1/0030-Capsule.php.patch:10: trailing whitespace.
++-                && !($file{1} == ':' && ($file{2} ==  DIRECTORY_SEPARATOR || $file{2} == '/'))) { 
+doc/php83/evidence/exp13-candidate/selected-r1/0030-Capsule.php.patch:11: trailing whitespace.
+++                && !($file[1] == ':' && ($file[2] ==  DIRECTORY_SEPARATOR || $file[2] == '/'))) { 
+doc/php83/evidence/exp13-candidate/selected-r1/0032-UnixFileSystem.php.patch:48: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0032-UnixFileSystem.php.patch:53: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0032-UnixFileSystem.php.patch:67: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0032-UnixFileSystem.php.patch:67: new blank line at EOF.
+doc/php83/evidence/exp13-candidate/selected-r1/0033-Win32FileSystem.php.patch:5: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0033-Win32FileSystem.php.patch:90: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0033-Win32FileSystem.php.patch:99: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0033-Win32FileSystem.php.patch:110: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0033-Win32FileSystem.php.patch:118: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0033-Win32FileSystem.php.patch:123: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0033-Win32FileSystem.php.patch:133: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0033-Win32FileSystem.php.patch:142: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0033-Win32FileSystem.php.patch:153: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0033-Win32FileSystem.php.patch:158: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0033-Win32FileSystem.php.patch:166: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0034-Properties.php.patch:6: trailing whitespace.
++                     
+doc/php83/evidence/exp13-candidate/selected-r1/0036-PropertyTask.php.patch:9: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0037-Path.php.patch:4: trailing whitespace.
++      * replacements.  
+doc/php83/evidence/exp13-candidate/selected-r1/0038-FileUtils.php.patch:4: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0038-FileUtils.php.patch:11: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0038-FileUtils.php.patch:16: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0038-FileUtils.php.patch:18: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0038-FileUtils.php.patch:25: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0038-FileUtils.php.patch:27: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0038-FileUtils.php.patch:29: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0038-FileUtils.php.patch:33: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0039-PathTokenizer.php.patch:4: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0039-PathTokenizer.php.patch:5: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0039-PathTokenizer.php.patch:6: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0039-PathTokenizer.php.patch:9: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0039-PathTokenizer.php.patch:11: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0039-PathTokenizer.php.patch:11: new blank line at EOF.
+doc/php83/evidence/exp13-candidate/selected-r1/0041-DataModelBuilder.php.patch:4: space before tab in indent.
++ 		// This is a slight hack to workaround camel case inconsistencies for the DDL classes.
+doc/php83/evidence/exp13-candidate/selected-r1/0041-DataModelBuilder.php.patch:5: space before tab in indent.
++ 		// Basically, we want to turn ?.?.?.sqliteDDLBuilder into ?.?.?.SqliteDDLBuilder
+doc/php83/evidence/exp13-candidate/selected-r1/0041-DataModelBuilder.php.patch:6: space before tab in indent.
++ 		$lastdotpos = strrpos($classpath, '.');
+doc/php83/evidence/exp13-candidate/selected-r1/0041-DataModelBuilder.php.patch:9: space before tab in indent.
++ 		else ucfirst($classpath);
+doc/php83/evidence/exp13-candidate/selected-r1/0041-DataModelBuilder.php.patch:10: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0041-DataModelBuilder.php.patch:11: space before tab in indent.
++ 		return Phing::import($classpath);
+doc/php83/evidence/exp13-candidate/selected-r1/0042-XmlToAppData.php.patch:4: space before tab in indent.
++ 							$this->isForReferenceOnly = ($isForRefOnly !== null ? (strtolower($isForRefOnly) === "true") : true); // defaults to TRUE
+doc/php83/evidence/exp13-candidate/selected-r1/0042-XmlToAppData.php.patch:5: space before tab in indent.
++ 						}
+doc/php83/evidence/exp13-candidate/selected-r1/0042-XmlToAppData.php.patch:6: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/0042-XmlToAppData.php.patch:9: space before tab in indent.
++ 							$f = new PhingFile($this->currentXmlFile);
+doc/php83/evidence/exp13-candidate/selected-r1/0042-XmlToAppData.php.patch:10: space before tab in indent.
++ 							$xf = new PhingFile($f->getParent(), $xmlFile);
+doc/php83/evidence/exp13-candidate/selected-r1/0042-XmlToAppData.php.patch:11: space before tab in indent.
++ 							$xmlFile = $xf->getPath();
+doc/php83/evidence/exp13-candidate/selected-r1/0043-AbstractPropelDataModelTask.php.patch:4: space before tab in indent.
++ 		// This is a slight hack to workaround camel case inconsistencies for the DDL classes.
+doc/php83/evidence/exp13-candidate/selected-r1/0043-AbstractPropelDataModelTask.php.patch:5: space before tab in indent.
++ 		// Basically, we want to turn ?.?.?.sqliteDDLBuilder into ?.?.?.SqliteDDLBuilder
+doc/php83/evidence/exp13-candidate/selected-r1/0043-AbstractPropelDataModelTask.php.patch:6: space before tab in indent.
++ 		$lastdotpos = strrpos($classpath, '.');
+doc/php83/evidence/exp13-candidate/selected-r1/0043-AbstractPropelDataModelTask.php.patch:9: space before tab in indent.
++ 		else ucfirst($classpath);
+doc/php83/evidence/exp13-candidate/selected-r1/0043-AbstractPropelDataModelTask.php.patch:10: trailing whitespace.
++ 		
+doc/php83/evidence/exp13-candidate/selected-r1/0043-AbstractPropelDataModelTask.php.patch:11: space before tab in indent.
++ 		if (empty($classpath)) {
+doc/php83/evidence/exp13-candidate/selected-r1/Criteria-dynamic-hierarchy.patch:9: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/Criteria-dynamic-hierarchy.patch:10: space before tab in indent.
++ 	/** Comparison type. */
+doc/php83/evidence/exp13-candidate/selected-r1/Criteria-dynamic-hierarchy.patch:12: space before tab in indent.
++ 	 * Implementing SPL IteratorAggregate interface.  This allows
+doc/php83/evidence/exp13-candidate/selected-r1/Criteria-dynamic-hierarchy.patch:13: space before tab in indent.
++ 	 * you to foreach () over a Criteria object.
+doc/php83/evidence/exp13-candidate/selected-r1/Criteria-dynamic-hierarchy.patch:14: space before tab in indent.
++ 	 */
+doc/php83/evidence/exp13-candidate/selected-r1/Criteria-dynamic-hierarchy.patch:17: space before tab in indent.
++ 	{
+doc/php83/evidence/exp13-candidate/selected-r1/Criteria-dynamic-hierarchy.patch:18: space before tab in indent.
++ 		return new CriterionIterator($this);
+doc/php83/evidence/exp13-candidate/selected-r1/Criteria-dynamic-hierarchy.patch:19: space before tab in indent.
++ 	}
+doc/php83/evidence/exp13-candidate/selected-r1/Criteria-dynamic-hierarchy.patch:21: space before tab in indent.
++ 		$this->criteriaSize = count($this->criteriaKeys);
+doc/php83/evidence/exp13-candidate/selected-r1/Criteria-dynamic-hierarchy.patch:22: space before tab in indent.
++ 	}
+doc/php83/evidence/exp13-candidate/selected-r1/Criteria-dynamic-hierarchy.patch:23: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/Criteria-dynamic-hierarchy.patch:26: space before tab in indent.
++ 		$this->idx = 0;
+doc/php83/evidence/exp13-candidate/selected-r1/Criteria-dynamic-hierarchy.patch:27: space before tab in indent.
++ 	}
+doc/php83/evidence/exp13-candidate/selected-r1/Criteria-dynamic-hierarchy.patch:28: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/Criteria-dynamic-hierarchy.patch:31: space before tab in indent.
++ 		return $this->idx < $this->criteriaSize;
+doc/php83/evidence/exp13-candidate/selected-r1/Criteria-dynamic-hierarchy.patch:32: space before tab in indent.
++ 	}
+doc/php83/evidence/exp13-candidate/selected-r1/Criteria-dynamic-hierarchy.patch:33: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/Criteria-dynamic-hierarchy.patch:36: space before tab in indent.
++ 		return $this->criteriaKeys[$this->idx];
+doc/php83/evidence/exp13-candidate/selected-r1/Criteria-dynamic-hierarchy.patch:37: space before tab in indent.
++ 	}
+doc/php83/evidence/exp13-candidate/selected-r1/Criteria-dynamic-hierarchy.patch:38: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/Criteria-dynamic-hierarchy.patch:41: space before tab in indent.
++ 		return $this->criteria->getCriterion($this->criteriaKeys[$this->idx]);
+doc/php83/evidence/exp13-candidate/selected-r1/Criteria-dynamic-hierarchy.patch:42: space before tab in indent.
++ 	}
+doc/php83/evidence/exp13-candidate/selected-r1/Criteria-dynamic-hierarchy.patch:43: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/Criteria-dynamic-hierarchy.patch:46: space before tab in indent.
++ 		$this->idx++;
+doc/php83/evidence/exp13-candidate/selected-r1/Criteria-dynamic-hierarchy.patch:47: space before tab in indent.
++ 	}
+doc/php83/evidence/exp13-candidate/selected-r1/Criteria-dynamic-hierarchy.patch:48: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/Criteria-dynamic-hierarchy.patch:50: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/Criteria-dynamic-hierarchy.patch:51: space before tab in indent.
++ 		//init $this->realtable
+doc/php83/evidence/exp13-candidate/selected-r1/Criteria-dynamic-hierarchy.patch:52: space before tab in indent.
++ 		$realtable = $criteria->getTableForAlias($this->table);
+doc/php83/evidence/exp13-candidate/selected-r1/Criteria-dynamic-hierarchy.patch:55: space before tab in indent.
++ 			$realtable = $this->table;
+doc/php83/evidence/exp13-candidate/selected-r1/Criteria-dynamic-hierarchy.patch:56: space before tab in indent.
++ 		}
+doc/php83/evidence/exp13-candidate/selected-r1/Criteria-dynamic-hierarchy.patch:57: space before tab in indent.
++ 		$this->realtable = $realtable;
+doc/php83/evidence/exp13-candidate/selected-r1/HTMLPurifier-autoload.patch:15: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaActionReflector-parameter-class.patch:4: space before tab in indent.
++ 		return $this->_actionInfo;
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaActionReflector-parameter-class.patch:5: space before tab in indent.
++ 	}
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaActionReflector-parameter-class.patch:6: trailing whitespace.
++ 	
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaActionReflector-parameter-class.patch:43: space before tab in indent.
++ 	/**
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaActionReflector-parameter-class.patch:44: space before tab in indent.
++ 	 * Action returns array of the parameters the action method expects
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaActionReflector-parameter-class.patch:45: space before tab in indent.
++ 	 * @return array<KalturaParamInfo>
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaActionReflector-parameter-class.patch:47: trailing whitespace.
++ 					
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaActionReflector-parameter-class.patch:48: space before tab in indent.
++ 				$parsedDocComment = new KalturaDocCommentParser( $docComment, array(
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaActionReflector-parameter-class.patch:49: space before tab in indent.
++ 					KalturaDocCommentParser::DOCCOMMENT_REPLACENET_PARAM_NAME => $name , ) );
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaActionReflector-parameter-class.patch:52: space before tab in indent.
++ 				if ($paramClass)
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaActionReflector-parameter-class.patch:53: space before tab in indent.
++ 				{
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaActionReflector-parameter-class.patch:54: space before tab in indent.
++ 					$type = $paramClass->getName();
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaActionReflector-parameter-class.patch:56: space before tab in indent.
++ 					$paramInfo->setDefaultValue($reflectionParam->getDefaultValue());
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaActionReflector-parameter-class.patch:57: space before tab in indent.
++ 					$paramInfo->setOptional(true);
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaActionReflector-parameter-class.patch:58: space before tab in indent.
++ 				}
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaActionReflector-parameter-class.patch:61: space before tab in indent.
++ 				{
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaActionReflector-parameter-class.patch:62: space before tab in indent.
++ 					$paramInfo->setOptional(true);
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaActionReflector-parameter-class.patch:63: space before tab in indent.
++ 				}
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaLog-null-analytics.patch:4: space before tab in indent.
++ 		$message = '';
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaLog-null-analytics.patch:5: space before tab in indent.
++ 		foreach ($data as $value)
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaLog-null-analytics.patch:6: space before tab in indent.
++ 		{
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaLog-null-analytics.patch:9: space before tab in indent.
++ 		}
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaLog-null-analytics.patch:10: space before tab in indent.
++ 		$message = substr($message, 0, -1);
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaLog-null-analytics.patch:11: space before tab in indent.
++ 		self::logByType($message, self::LOG_TYPE_ANALYTICS, self::NOTICE);
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaStatement-bool-results.patch:4: space before tab in indent.
++ 		self::$dryRun = $dryRun;
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaStatement-bool-results.patch:5: space before tab in indent.
++ 	}
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaStatement-bool-results.patch:6: trailing whitespace.
++ 	
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaStatement-bool-results.patch:9: space before tab in indent.
++ 	{
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaStatement-bool-results.patch:10: space before tab in indent.
++ 		$index = count($this->values) + 1;
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaStatement-bool-results.patch:11: space before tab in indent.
++ 		if(is_null($value))
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaStatement-bool-results.patch:13: space before tab in indent.
++ 		return parent::bindValue ($parameter, $value, $data_type);
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaStatement-bool-results.patch:14: space before tab in indent.
++ 	}
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaStatement-bool-results.patch:15: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaStatement-bool-results.patch:16: trailing whitespace.
++-	public function execute ($input_parameters = null) 
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaStatement-bool-results.patch:17: trailing whitespace.
+++	public function execute ($input_parameters = null): bool 
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaStatement-bool-results.patch:18: space before tab in indent.
++ 	{
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaStatement-bool-results.patch:19: space before tab in indent.
++ 		if (!kQueryCache::isCurrentQueryHandled())
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaStatement-bool-results.patch:20: space before tab in indent.
++ 			kApiCache::disableConditionalCache();
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaStatement-bool-results.patch:22: space before tab in indent.
++ 		if(self::$dryRun && !preg_match('/^(\/\*.+\*\/ )?SELECT/i', $sql))
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaStatement-bool-results.patch:23: space before tab in indent.
++ 		{
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaStatement-bool-results.patch:24: space before tab in indent.
++ 			KalturaLog::debug("Sql dry run - " . (microtime(true) - $sqlStart) . " seconds");
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaStatement-bool-results.patch:26: space before tab in indent.
++ 		}
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaStatement-bool-results.patch:27: space before tab in indent.
++ 		else
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaStatement-bool-results.patch:28: space before tab in indent.
++ 		{
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaStatement-bool-results.patch:29: space before tab in indent.
++ 			try
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaStatement-bool-results.patch:30: space before tab in indent.
++ 			{
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaStatement-bool-results.patch:33: space before tab in indent.
++ 			}
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaStatement-bool-results.patch:34: space before tab in indent.
++ 			catch(PropelException $pex)
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaStatement-bool-results.patch:35: space before tab in indent.
++ 			{
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaStatement-bool-results.patch:37: space before tab in indent.
++ 			KalturaLog::debug("Sql took - " . $sqlTook . " seconds");
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaStatement-bool-results.patch:38: space before tab in indent.
++ 			KalturaMonitorClient::monitorDatabaseAccess($sql, $sqlTook);
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaStatement-bool-results.patch:39: space before tab in indent.
++ 		}
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaStatement-bool-results.patch:41: space before tab in indent.
++ 	}
+doc/php83/evidence/exp13-candidate/selected-r1/KalturaStatement-bool-results.patch:42: trailing whitespace.
++ 	
+doc/php83/evidence/exp13-candidate/selected-r1/Partner-null-permission-name.patch:4: space before tab in indent.
++ 		$names = $this->getFromCustomData('always_allowed_permission_names');
+doc/php83/evidence/exp13-candidate/selected-r1/Partner-null-permission-name.patch:5: space before tab in indent.
++ 		// add ALWAYS_ALLOWED_ACTIONS only when always_allowed_permission_names was not specified explicitly
+doc/php83/evidence/exp13-candidate/selected-r1/Partner-null-permission-name.patch:6: space before tab in indent.
++ 		// it's required to support the scenario where ALWAYS_ALLOWED_ACTIONS should be disabled (by specifying a "dummy" permission in always_allowed_permission_names)
+doc/php83/evidence/exp13-candidate/selected-r1/Partner-null-permission-name.patch:9: space before tab in indent.
++ 			$names = PermissionName::ALWAYS_ALLOWED_ACTIONS.','.$names;
+doc/php83/evidence/exp13-candidate/selected-r1/Partner-null-permission-name.patch:10: space before tab in indent.
++ 		}
+doc/php83/evidence/exp13-candidate/selected-r1/Partner-null-permission-name.patch:11: space before tab in indent.
++ 		$names = trim($names, ',');
+doc/php83/evidence/exp13-candidate/selected-r1/PermissionPeer-null-dependency.patch:4: space before tab in indent.
++ 			}
+doc/php83/evidence/exp13-candidate/selected-r1/PermissionPeer-null-dependency.patch:5: space before tab in indent.
++ 			foreach ($permissions as $key => $permission)
+doc/php83/evidence/exp13-candidate/selected-r1/PermissionPeer-null-dependency.patch:6: space before tab in indent.
++ 			{
+doc/php83/evidence/exp13-candidate/selected-r1/PermissionPeer-null-dependency.patch:9: space before tab in indent.
++ 				$dependsOn = explode(',', $dependsOn);
+doc/php83/evidence/exp13-candidate/selected-r1/PermissionPeer-null-dependency.patch:10: space before tab in indent.
++ 				if ($dependsOn)
+doc/php83/evidence/exp13-candidate/selected-r1/PermissionPeer-null-dependency.patch:11: space before tab in indent.
++ 				{
+doc/php83/evidence/exp13-candidate/selected-r1/base-object-ternary.patch:4: space before tab in indent.
++ 				$res .= ' ' . $attr . '="' . kString::xmlEncode($val) . '"';
+doc/php83/evidence/exp13-candidate/selected-r1/base-object-ternary.patch:5: space before tab in indent.
++ 			}
+doc/php83/evidence/exp13-candidate/selected-r1/base-object-ternary.patch:6: space before tab in indent.
++ 		}
+doc/php83/evidence/exp13-candidate/selected-r1/base-object-ternary.patch:11: trailing whitespace, space before tab in indent.
++ 		return $res;		
+doc/php83/evidence/exp13-candidate/selected-r1/base-object-ternary.patch:12: space before tab in indent.
++ 	}
+doc/php83/evidence/exp13-candidate/selected-r1/base-object-ternary.patch:13: trailing whitespace.
++ 	
+doc/php83/evidence/exp13-candidate/selected-r1/base-object-ternary.patch:13: new blank line at EOF.
+doc/php83/evidence/exp13-candidate/selected-r1/dateUtils-ternary.patch:4: space before tab in indent.
++ 		$minutes = (int)(( $time_in_secs - $hours * 3600 ) / 60);
+doc/php83/evidence/exp13-candidate/selected-r1/dateUtils-ternary.patch:5: space before tab in indent.
++ 		$seconds = (int)( $time_in_secs - $minutes * 60 - $hours * 3600 ) ;
+doc/php83/evidence/exp13-candidate/selected-r1/dateUtils-ternary.patch:6: space before tab in indent.
++ 		$decimal = (int)(($time_in_msecs%1000) / 100 );
+doc/php83/evidence/exp13-candidate/selected-r1/dateUtils-ternary.patch:7: trailing whitespace.
++-		$str = ( $hours > 10 ? "$hours:" : $hours > 0 ? "0$hours:" : "" ) .  
+doc/php83/evidence/exp13-candidate/selected-r1/dateUtils-ternary.patch:8: trailing whitespace.
+++		$str = ( ( $hours > 10 ? "$hours:" : $hours > 0 ) ? "0$hours:" : "" ) .  
+doc/php83/evidence/exp13-candidate/selected-r1/dateUtils-ternary.patch:9: trailing whitespace, space before tab in indent.
++ 			( $minutes > 10 ? $minutes : "0$minutes" ) . ":" . 
+doc/php83/evidence/exp13-candidate/selected-r1/dateUtils-ternary.patch:10: space before tab in indent.
++ 			( $seconds > 10 ? $seconds : "0$seconds" ) . ".$decimal";
+doc/php83/evidence/exp13-candidate/selected-r1/dateUtils-ternary.patch:11: space before tab in indent.
++ 		return $str ;
+doc/php83/evidence/exp13-candidate/selected-r1/doc-comment-property.patch:4: space before tab in indent.
++ 	 */
+doc/php83/evidence/exp13-candidate/selected-r1/doc-comment-property.patch:5: space before tab in indent.
++ 	public $utf8truncate;
+doc/php83/evidence/exp13-candidate/selected-r1/doc-comment-property.patch:6: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-alpha__apps__kaltura__lib__db__KalturaPDO.php.patch:4: space before tab in indent.
++ 	/* (non-PHPdoc)
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-alpha__apps__kaltura__lib__db__KalturaPDO.php.patch:5: space before tab in indent.
++ 	 * @see PropelPDO::prepare()
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-alpha__apps__kaltura__lib__db__KalturaPDO.php.patch:6: space before tab in indent.
++ 	 */
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-alpha__apps__kaltura__lib__db__KalturaPDO.php.patch:9: space before tab in indent.
++ 	{
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-alpha__apps__kaltura__lib__db__KalturaPDO.php.patch:10: space before tab in indent.
++ 		$comment = $this->getCommentWrapped();
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-alpha__apps__kaltura__lib__db__KalturaPDO.php.patch:11: space before tab in indent.
++ 		$sql = $comment . $sql;
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-alpha__apps__kaltura__lib__db__KalturaPDO.php.patch:13: space before tab in indent.
++ 	/* (non-PHPdoc)
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-alpha__apps__kaltura__lib__db__KalturaPDO.php.patch:14: space before tab in indent.
++ 	 * @see PDO::exec()
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-alpha__apps__kaltura__lib__db__KalturaPDO.php.patch:15: space before tab in indent.
++ 	 */
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-alpha__apps__kaltura__lib__db__KalturaPDO.php.patch:18: space before tab in indent.
++ 	{
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-alpha__apps__kaltura__lib__db__KalturaPDO.php.patch:19: space before tab in indent.
++ 		$comment = $this->getCommentWrapped();
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-alpha__apps__kaltura__lib__db__KalturaPDO.php.patch:20: space before tab in indent.
++ 		$sql = $comment . $sql;
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-alpha__apps__kaltura__lib__db__KalturaPDO.php.patch:22: space before tab in indent.
++ 	/* (non-PHPdoc)
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-alpha__apps__kaltura__lib__db__KalturaPDO.php.patch:23: space before tab in indent.
++ 	 * @see PDO::query()
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-alpha__apps__kaltura__lib__db__KalturaPDO.php.patch:24: space before tab in indent.
++ 	 */
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-alpha__apps__kaltura__lib__db__KalturaPDO.php.patch:27: space before tab in indent.
++ 	{
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-alpha__apps__kaltura__lib__db__KalturaPDO.php.patch:28: space before tab in indent.
++ 		kApiCache::disableConditionalCache();
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-alpha__apps__kaltura__lib__db__KalturaPDO.php.patch:29: trailing whitespace.
++ 	
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-alpha__apps__kaltura__lib__db__KalturaPDO.php.patch:31: trailing whitespace.
++-		
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-alpha__apps__kaltura__lib__db__KalturaPDO.php.patch:34: space before tab in indent.
++ 		KalturaLog::debug($sql);
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-alpha__apps__kaltura__lib__db__KalturaPDO.php.patch:35: trailing whitespace.
++ 		
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-alpha__apps__kaltura__lib__db__KalturaPDO.php.patch:36: space before tab in indent.
++ 		$comment = $this->getCommentWrapped();
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-alpha__apps__kaltura__lib__db__KalturaPDO.php.patch:38: space before tab in indent.
++ 		$sqlStart = microtime(true);
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-alpha__apps__kaltura__lib__db__KalturaPDO.php.patch:39: space before tab in indent.
++ 		try
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-alpha__apps__kaltura__lib__db__KalturaPDO.php.patch:40: space before tab in indent.
++ 		{
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-alpha__apps__kaltura__lib__db__KalturaPDO.php.patch:46: space before tab in indent.
++ 		}
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-alpha__apps__kaltura__lib__db__KalturaPDO.php.patch:47: space before tab in indent.
++ 		catch(PropelException $pex)
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-alpha__apps__kaltura__lib__db__KalturaPDO.php.patch:48: space before tab in indent.
++ 		{
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-alpha__config__kConf.php.patch:10: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-api_v3__lib__KalturaFrontController.php.patch:10: space before tab in indent.
++ 	private static $instance;
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-api_v3__lib__KalturaFrontController.php.patch:12: space before tab in indent.
++ 			'masterPartnerId' => kCurrentContext::$master_partner_id,
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-api_v3__lib__KalturaFrontController.php.patch:13: space before tab in indent.
++ 			'ks' => kCurrentContext::$ks,
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-api_v3__lib__KalturaFrontController.php.patch:14: space before tab in indent.
++ 			'isAdmin' => intval(kCurrentContext::$is_admin_session),
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-api_v3__lib__KalturaFrontController.php.patch:17: space before tab in indent.
++ 			'duration' => $duration,
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-api_v3__lib__KalturaFrontController.php.patch:18: space before tab in indent.
++ 			'success' => intval($success),
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-api_v3__lib__KalturaFrontController.php.patch:19: space before tab in indent.
++ 			'errorCode' => $errorCode,
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-api_v3__lib__exceptions__KalturaAPIException.php.patch:4: space before tab in indent.
++ 		return array('code', 'message', 'args', 'codeStr');
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-api_v3__lib__exceptions__KalturaAPIException.php.patch:5: space before tab in indent.
++ 	}
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-api_v3__lib__exceptions__KalturaAPIException.php.patch:6: trailing whitespace.
++ 	
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-api_v3__lib__exceptions__KalturaAPIException.php.patch:9: space before tab in indent.
++ 	{
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-api_v3__lib__exceptions__KalturaAPIException.php.patch:10: space before tab in indent.
++ 		//When running on PHP7 the code string does not get un-serialized
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-api_v3__lib__exceptions__KalturaAPIException.php.patch:11: space before tab in indent.
++ 		//(This is probably due to the fact that the Exception base class has a code attribute which is of type int)
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:4: trailing whitespace.
++ <?php
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:5: trailing whitespace.
+++require_once __DIR__ . '/kXmlEntityLoaderPolicy.php';
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:6: trailing whitespace.
++ class kSoapClient extends SoapClient 
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:7: trailing whitespace.
++ {
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:8: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:9: trailing whitespace.
++-	public function __construct($wsdl,$options=array())
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:10: trailing whitespace.
++-	{	
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:11: trailing whitespace.
++-		$this->beforeCall();
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:12: trailing whitespace.
++-		parent::__construct($wsdl, $options);
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:13: trailing whitespace.
++-		$this->afterCall();
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:14: trailing whitespace.
++-	}
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:15: trailing whitespace.
++-	public function __call ($function_name , $arguments)
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:16: trailing whitespace.
++-	{
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:17: trailing whitespace.
++-		$this->beforeCall();
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:18: trailing whitespace.
++-		$ret = parent::__call($function_name, $arguments);
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:19: trailing whitespace.
++-		$this->afterCall();
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:20: trailing whitespace.
++-		return $ret;
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:21: trailing whitespace.
++-	}
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:22: trailing whitespace.
++-	public function __soapCall ($function_name, $arguments, $options = NULL, $input_headers = NULL, &$output_headers = NULL)
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:23: trailing whitespace.
+++	public function __construct($wsdl, $options = array())
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:24: trailing whitespace, space before tab in indent.
++ 	{
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:25: trailing whitespace.
++-		$this->beforeCall();
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:26: trailing whitespace.
++-		$ret = parent::__soapCall($function_name, $arguments);
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:27: trailing whitespace.
++-		$this->afterCall();
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:28: trailing whitespace.
++-		return $ret;
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:29: trailing whitespace.
+++		$scope = kXmlEntityLoaderPolicy::beginSoapScope();
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:30: trailing whitespace.
+++		$error = null;
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:31: trailing whitespace.
+++		try {
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:32: trailing whitespace.
+++			parent::__construct($wsdl, $options);
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:33: trailing whitespace.
+++		} catch (Throwable $failure) {
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:34: trailing whitespace.
+++			$error = $failure;
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:35: trailing whitespace.
+++			throw $failure;
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:36: trailing whitespace.
+++		} finally {
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:37: trailing whitespace.
+++			kXmlEntityLoaderPolicy::endSoapScope($scope, $error);
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:38: trailing whitespace.
+++		}
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:39: trailing whitespace, space before tab in indent.
++ 	}
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:40: trailing whitespace.
++-	private function beforeCall()
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:41: trailing whitespace.
+++
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:42: trailing whitespace.
+++	public function __call($function_name, $arguments): mixed
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:43: trailing whitespace, space before tab in indent.
++ 	{
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:44: trailing whitespace.
++-		stream_wrapper_restore('http');
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:45: trailing whitespace.
++-		stream_wrapper_restore('https');
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:46: trailing whitespace.
++-		libxml_disable_entity_loader(false);
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:47: trailing whitespace.
+++		$scope = kXmlEntityLoaderPolicy::beginSoapScope();
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:48: trailing whitespace.
+++		$error = null;
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:49: trailing whitespace.
+++		try {
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:50: trailing whitespace.
+++			return parent::__call($function_name, $arguments);
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:51: trailing whitespace.
+++		} catch (Throwable $failure) {
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:52: trailing whitespace.
+++			$error = $failure;
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:53: trailing whitespace.
+++			throw $failure;
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:54: trailing whitespace.
+++		} finally {
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:55: trailing whitespace.
+++			kXmlEntityLoaderPolicy::endSoapScope($scope, $error);
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:56: trailing whitespace.
+++		}
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:57: trailing whitespace, space before tab in indent.
++ 	}
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:58: trailing whitespace.
++-	private function afterCall()
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:59: trailing whitespace.
+++
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:60: trailing whitespace.
+++	public function __soapCall($function_name, $arguments, $options = NULL, $input_headers = NULL, &$output_headers = NULL): mixed
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:61: trailing whitespace, space before tab in indent.
++ 	{
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:62: trailing whitespace.
++-		libxml_disable_entity_loader(true);
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:63: trailing whitespace.
++-		stream_wrapper_unregister('https');
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:64: trailing whitespace.
++-		stream_wrapper_unregister('http');
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:65: trailing whitespace.
+++		$scope = kXmlEntityLoaderPolicy::beginSoapScope();
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:66: trailing whitespace.
+++		$error = null;
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:67: trailing whitespace.
+++		try {
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:68: trailing whitespace.
+++			// Preserve existing argument forwarding; headers/options are a separate repair.
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:69: trailing whitespace.
+++			return parent::__soapCall($function_name, $arguments);
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:70: trailing whitespace.
+++		} catch (Throwable $failure) {
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:71: trailing whitespace.
+++			$error = $failure;
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:72: trailing whitespace.
+++			throw $failure;
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:73: trailing whitespace.
+++		} finally {
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:74: trailing whitespace.
+++			kXmlEntityLoaderPolicy::endSoapScope($scope, $error);
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:75: trailing whitespace.
+++		}
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:76: trailing whitespace, space before tab in indent.
++ 	}
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:77: trailing whitespace.
++-
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-infra__general__kSoapClient.php.patch:78: trailing whitespace.
++ }
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__aws__Aws__Common__Credentials__Credentials.php.patch:6: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__aws__Aws__Common__Credentials__NullCredentials.php.patch:6: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__DebugPDO.php.patch:4: space before tab in indent.
++ 	 * @param      array One or more key=>value pairs to set attribute values for the PDOStatement object that this method returns.
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__DebugPDO.php.patch:5: space before tab in indent.
++ 	 * @return     PDOStatement
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__DebugPDO.php.patch:6: space before tab in indent.
++ 	 */
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__DebugPDO.php.patch:9: space before tab in indent.
++ 	{
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__DebugPDO.php.patch:10: space before tab in indent.
++ 		$debug	= $this->getDebugSnapshot();
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__DebugPDO.php.patch:11: space before tab in indent.
++ 		$return	= parent::prepare($sql, $driver_options);
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__DebugPDO.php.patch:13: space before tab in indent.
++ 	 * @see        http://php.net/manual/en/pdo.query.php for a description of the possible parameters.
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__DebugPDO.php.patch:14: space before tab in indent.
++ 	 * @return     PDOStatement
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__DebugPDO.php.patch:15: space before tab in indent.
++ 	 */
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__DebugPDO.php.patch:18: space before tab in indent.
++ 	{
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__DebugPDO.php.patch:19: space before tab in indent.
++ 		$debug	= $this->getDebugSnapshot();
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__DebugPDO.php.patch:27: trailing whitespace.
++ 		
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__DebugPDO.php.patch:30: space before tab in indent.
++ 		$this->log($sql, null, __METHOD__, $debug);
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__DebugPDO.php.patch:31: space before tab in indent.
++ 		$this->setLastExecutedQuery($sql);
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__DebugPDO.php.patch:32: space before tab in indent.
++ 		$this->incrementQueryCount();
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelConfiguration.php.patch:4: space before tab in indent.
++ 	/**
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelConfiguration.php.patch:5: space before tab in indent.
++ 	 * @see        http://www.php.net/ArrayAccess
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelConfiguration.php.patch:6: space before tab in indent.
++ 	 */
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelConfiguration.php.patch:9: space before tab in indent.
++ 	{
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelConfiguration.php.patch:10: space before tab in indent.
++ 		return isset($this->parameter[$offset]) || array_key_exists($offset, $this->parameters);
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelConfiguration.php.patch:11: space before tab in indent.
++ 	}
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelConfiguration.php.patch:13: space before tab in indent.
++ 	/**
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelConfiguration.php.patch:14: space before tab in indent.
++ 	 * @see        http://www.php.net/ArrayAccess
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelConfiguration.php.patch:15: space before tab in indent.
++ 	 */
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelConfiguration.php.patch:18: space before tab in indent.
++ 	{
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelConfiguration.php.patch:19: space before tab in indent.
++ 		$this->parameter[$offset] = $value;
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelConfiguration.php.patch:20: space before tab in indent.
++ 	}
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelConfiguration.php.patch:22: space before tab in indent.
++ 	/**
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelConfiguration.php.patch:23: space before tab in indent.
++ 	 * @see        http://www.php.net/ArrayAccess
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelConfiguration.php.patch:24: space before tab in indent.
++ 	 */
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelConfiguration.php.patch:27: space before tab in indent.
++ 	{
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelConfiguration.php.patch:28: space before tab in indent.
++ 		return $this->parameters[$offset];
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelConfiguration.php.patch:29: space before tab in indent.
++ 	}
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelConfiguration.php.patch:31: space before tab in indent.
++ 	/**
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelConfiguration.php.patch:32: space before tab in indent.
++ 	 * @see        http://www.php.net/ArrayAccess
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelConfiguration.php.patch:33: space before tab in indent.
++ 	 */
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelConfiguration.php.patch:36: space before tab in indent.
++ 	{
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelConfiguration.php.patch:37: space before tab in indent.
++ 		unset($this->parameters[$offset]);
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelConfiguration.php.patch:38: space before tab in indent.
++ 	}
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelPDO.php.patch:4: space before tab in indent.
++ 	/**
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelPDO.php.patch:5: space before tab in indent.
++ 	 * Overrides PDO::beginTransaction() to prevent errors due to already-in-progress transaction.
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelPDO.php.patch:6: space before tab in indent.
++ 	 */
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelPDO.php.patch:8: space before tab in indent.
++ 	public function beginTransaction()
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelPDO.php.patch:9: space before tab in indent.
++ 	{
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelPDO.php.patch:10: space before tab in indent.
++ 		$return = true;
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelPDO.php.patch:12: space before tab in indent.
++ 	 * Overrides PDO::commit() to only commit the transaction if we are in the outermost
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelPDO.php.patch:13: space before tab in indent.
++ 	 * transaction nesting level.
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelPDO.php.patch:14: space before tab in indent.
++ 	 */
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelPDO.php.patch:16: space before tab in indent.
++ 	public function commit()
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelPDO.php.patch:17: space before tab in indent.
++ 	{
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelPDO.php.patch:18: space before tab in indent.
++ 		$return = true;
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelPDO.php.patch:20: space before tab in indent.
++ 	 * transaction nesting level
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelPDO.php.patch:21: space before tab in indent.
++ 	 * @return     boolean Whether operation was successful.
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelPDO.php.patch:22: space before tab in indent.
++ 	 */
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelPDO.php.patch:24: space before tab in indent.
++ 	public function rollBack()
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelPDO.php.patch:25: space before tab in indent.
++ 	{
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelPDO.php.patch:26: space before tab in indent.
++ 		$return = true;
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelPDO.php.patch:28: space before tab in indent.
++ 	 * @param      int $attribute The attribute to set (e.g. PropelPDO::PROPEL_ATTR_CACHE_PREPARES).
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelPDO.php.patch:29: space before tab in indent.
++ 	 * @param      mixed $value The attribute value.
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelPDO.php.patch:30: space before tab in indent.
++ 	 */
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelPDO.php.patch:33: space before tab in indent.
++ 	{
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelPDO.php.patch:34: space before tab in indent.
++ 		switch($attribute) {
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelPDO.php.patch:35: space before tab in indent.
++ 			case self::PROPEL_ATTR_CACHE_PREPARES:
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelPDO.php.patch:36: space before tab in indent.
++ 				$this->cachePreparedStatements = $value;
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelPDO.php.patch:39: space before tab in indent.
++ 			default:
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelPDO.php.patch:42: space before tab in indent.
++ 		}
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelPDO.php.patch:43: space before tab in indent.
++ 	}
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelPDO.php.patch:44: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelPDO.php.patch:46: space before tab in indent.
++ 	 *
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelPDO.php.patch:47: space before tab in indent.
++ 	 * @param      int $attribute The attribute to get (e.g. PropelPDO::PROPEL_ATTR_CACHE_PREPARES).
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelPDO.php.patch:48: space before tab in indent.
++ 	 */
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelPDO.php.patch:51: space before tab in indent.
++ 	{
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelPDO.php.patch:52: space before tab in indent.
++ 		switch($attribute) {
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelPDO.php.patch:53: space before tab in indent.
++ 			case self::PROPEL_ATTR_CACHE_PREPARES:
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelPDO.php.patch:55: space before tab in indent.
++ 	 * @param      array
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelPDO.php.patch:56: space before tab in indent.
++ 	 * @return     PDOStatement
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelPDO.php.patch:57: space before tab in indent.
++ 	 */
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelPDO.php.patch:60: space before tab in indent.
++ 	{
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelPDO.php.patch:61: space before tab in indent.
++ 		if ($this->cachePreparedStatements) {
+doc/php83/evidence/exp13-candidate/selected-r1/exp13-vendor__propel__util__PropelPDO.php.patch:62: space before tab in indent.
++ 			$key = $sql;
+doc/php83/evidence/exp13-candidate/selected-r1/generator-debug.patch:10: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/generator-debug.patch:19: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/generator-debug.patch:28: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/myCustomData-null-argument.patch:4: space before tab in indent.
++ 			$this->data = array();
+doc/php83/evidence/exp13-candidate/selected-r1/myCustomData-null-argument.patch:5: space before tab in indent.
++ 		try
+doc/php83/evidence/exp13-candidate/selected-r1/myCustomData-null-argument.patch:6: space before tab in indent.
++ 		{
+doc/php83/evidence/exp13-candidate/selected-r1/myCustomData-null-argument.patch:9: space before tab in indent.
++ 			if ( $this->data == null )
+doc/php83/evidence/exp13-candidate/selected-r1/myCustomData-null-argument.patch:10: space before tab in indent.
++ 			{
+doc/php83/evidence/exp13-candidate/selected-r1/myCustomData-null-argument.patch:11: space before tab in indent.
++ 				$this->data = array();
+doc/php83/evidence/exp13-candidate/selected-r1/pake-relative-path.patch:5: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/pake-relative-path.patch:10: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/sfCore.class.php.patch:36: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/sfCore.class.php.patch:39: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/symfony-cli-autoload.patch:6: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/symfony-cli-autoload.patch:11: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/symfony-cli-autoload.patch:14: trailing whitespace.
++ 
+doc/php83/evidence/exp13-candidate/selected-r1/symfony-cli-autoload.patch:18: trailing whitespace.
++ 

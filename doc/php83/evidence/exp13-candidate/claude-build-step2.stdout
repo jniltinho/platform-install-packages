@@ -1,0 +1,40 @@
+{
+  "status": "VERIFIED_REPRODUCIBLE_EXPERIMENT_NOT_RUNTIME_ACCEPTED",
+  "zip_sha256": "6d0bc4947207e6c5457b7843948d263aa8d5f251480e58cbf9086c0add79a944",
+  "repeat_sha256": "6d0bc4947207e6c5457b7843948d263aa8d5f251480e58cbf9086c0add79a944",
+  "zip_bytes": 91210445,
+  "original_sha256": "58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28",
+  "exp12_sha256": "de5e61a1b54f472e605ef2e87669302a3915616fd85378e0f05706fcb06a7e8b",
+  "targets": 75,
+  "preserved_exp12_entries": 62,
+  "delta_modified": 12,
+  "delta_added": 1,
+  "added_paths": [
+    "infra/general/kXmlEntityLoaderPolicy.php"
+  ],
+  "delta_paths": [
+    "alpha/apps/kaltura/lib/db/KalturaPDO.php",
+    "alpha/config/kConf.php",
+    "api_v3/lib/KalturaFrontController.php",
+    "api_v3/lib/exceptions/KalturaAPIException.php",
+    "infra/general/kSoapClient.php",
+    "infra/general/kXmlEntityLoaderPolicy.php",
+    "vendor/aws/Aws/Common/Credentials/AbstractCredentialsDecorator.php",
+    "vendor/aws/Aws/Common/Credentials/Credentials.php",
+    "vendor/aws/Aws/Common/Credentials/NullCredentials.php",
+    "vendor/aws/Doctrine/Common/Cache/FileCache.php",
+    "vendor/propel/util/DebugPDO.php",
+    "vendor/propel/util/PropelConfiguration.php",
+    "vendor/propel/util/PropelPDO.php"
+  ],
+  "php_family_counts": {
+    "exp12": 11784,
+    "exp13": 11785
+  },
+  "full_source_inventory_verified": true,
+  "metadata_files": 77,
+  "selected_manifest_sha256": "4414dee2337cd2858e0553ce73cd9809975d69326be56033bf88bd3599ce81ba",
+  "verifier_sha256": "bfaf3bbba77a438354136e52730da7d57244bd6658faed0f3c62226c712d9e26",
+  "application_acceptance": false,
+  "release_approved": false
+}

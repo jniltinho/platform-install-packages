@@ -1,4 +1,40 @@
-# exp13 source composition — proposed, not selected
+# exp13 experimental source artifact — reproduced, runtime pending
+
+## Current selected-r1 result
+
+Coordinator authorized laboratory selection after SQL gate commit `004b75da`:
+91 typed rows per cohort, exact primary/Claude repeat, 15→4 warnings retained.
+The proposal below is preserved unchanged in its historical phase. New
+[selected-r1 manifest](evidence/exp13-candidate/selected-r1/manifest.json) has SHA256
+`4414dee2337cd2858e0553ce73cd9809975d69326be56033bf88bd3599ce81ba`.
+Selection is explicitly **not** application, package, production or release approval.
+Actual Claude selection review completed exit0 and independently ran 4 selection
+and 9 preparation tests; no blocking defect for the authorized lab builds.
+
+Codex built primary once; actual Claude CLI independently executed a second build
+and verifier (both exit0). ZIP bytes, build reports and SHA256SUMS are identical.
+Final artifact in sibling `platform-install-packages-php83-artifacts/exp13/`:
+`Rigel-18.20.0-php83-experimental.exp13.zip`, **91,210,445 bytes**, SHA256:
+`6d0bc4947207e6c5457b7843948d263aa8d5f251480e58cbf9086c0add79a944`.
+
+[Verification](evidence/exp13-candidate/verification.json) and
+[actual Claude build/review](evidence/exp13-candidate/claude-build-review.json)
+confirm original and exp12 hashes unchanged, 75 cumulative targets, 62 preserved
+exp12 entries, 12 modifications plus one added helper, and PHP-family count
+11,784→11,785. Every source member is checked, not merely the changed-file list.
+Four further author verifier tests passed, including retained actual artifacts and
+negative controls; Claude did not execute those additional four tests.
+
+Verifier limitations remain visible: some report counts are literals, but Claude
+independently recomputed them; builder pin and build-report/SHA256SUMS equality
+were checked separately by Claude. This proves reproducibility on the same local
+toolchain, not cross-toolchain determinism. No artifact PHP/compiler/runtime has
+been executed by this task. Parent coordinates subsequent lab acceptance matrices.
+AWS mixed-version cache and recovery gates remain open. No VM/package/CI/tag or
+production operation was performed. Historical patch whitespace warnings are
+preserved, not suppressed or silently reformatted.
+
+## Historical proposed-r1 phase
 
 This is a **local source-patch proposal**, not a built ZIP, a PHP execution, or a
 release decision. Exp12 remains unchanged. Real SQL validation and independent

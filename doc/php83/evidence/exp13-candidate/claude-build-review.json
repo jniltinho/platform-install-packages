@@ -1,0 +1,96 @@
+{
+  "case": "exp13 independent repeat laboratory build + verifier execution",
+  "executor": "Claude Code CLI (claude-opus-5-5)",
+  "reviewer": "Claude (independent of builder/verifier author; not independent of the prior selection review, same executor)",
+  "environment": "local workstation, Python 3.12.3; no VM/PHP/SQL/config/network/production",
+  "verdict": "REPEAT_BUILD_BYTE_IDENTICAL_AND_VERIFIER_PASSED",
+  "status": "EXPERIMENTAL_LAB_ONLY_NOT_RUNTIME_OR_APPLICATION_OR_RELEASE_ACCEPTED",
+  "preconditions": {
+    "selection_review_verdict": "NO_BLOCKERS_FOR_AUTHORIZED_LAB_BUILDS",
+    "selected_manifest_sha256_matches_review": true,
+    "builder_sha256_matches_inputs_json_pin": true,
+    "builder_unmodified_vs_HEAD": true,
+    "repeat_output_dir_absent_before_build": true
+  },
+  "steps": {
+    "step1_build": {
+      "command": "python3 tools/php83/zip-builder-v2/build.py /tmp/kaltura-php83-audit/Rigel-18.20.0.zip ../platform-install-packages-php83-artifacts/exp13-repeat --patch-dir doc/php83/evidence/exp13-candidate/selected-r1",
+      "exit": 0,
+      "files": {
+        "doc/php83/evidence/exp13-candidate/claude-build-step1.command": "794025dc111b9f63dd36f26adb2d09de8f083b5140d6638453350c7e2cd474bc",
+        "doc/php83/evidence/exp13-candidate/claude-build-step1.stdout": "52ae2f771e97250999462b8af87b2e3893cc133e176a00a143052099e965ba11",
+        "doc/php83/evidence/exp13-candidate/claude-build-step1.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "doc/php83/evidence/exp13-candidate/claude-build-step1.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      }
+    },
+    "step2_verify": {
+      "command": "python3 tools/php83/exp13-candidate/verify.py --original /tmp/kaltura-php83-audit/Rigel-18.20.0.zip --exp12 ../platform-install-packages-php83-artifacts/exp12/Rigel-18.20.0-php83-experimental.exp12.zip --primary ../platform-install-packages-php83-artifacts/exp13/Rigel-18.20.0-php83-experimental.exp13.zip --repeat ../platform-install-packages-php83-artifacts/exp13-repeat/Rigel-18.20.0-php83-experimental.exp13.zip",
+      "exit": 0,
+      "files": {
+        "doc/php83/evidence/exp13-candidate/claude-build-step2.command": "62588383635f666f2129c5f9b25fb2633c28b6cf1a4b142ad9bd8e227b9cc83a",
+        "doc/php83/evidence/exp13-candidate/claude-build-step2.stdout": "5ad2928230ccdd99e3ca80aad5ce178929facb51ce5010d3b0793a05b11a5c57",
+        "doc/php83/evidence/exp13-candidate/claude-build-step2.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "doc/php83/evidence/exp13-candidate/claude-build-step2.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      }
+    }
+  },
+  "checks": {
+    "primary_repeat_zip_byte_identical": true,
+    "primary_repeat_build_report_byte_identical": true,
+    "primary_repeat_SHA256SUMS_identical": true,
+    "original_sha256_unchanged": true,
+    "exp12_sha256_unchanged": true,
+    "targets": 75,
+    "preserved_exp12_entries": 62,
+    "delta_modified": 12,
+    "delta_added": 1,
+    "added_path": "infra/general/kXmlEntityLoaderPolicy.php",
+    "removed_vs_exp12": 0,
+    "php_family_counts": {
+      "exp12": 11784,
+      "exp13": 11785
+    },
+    "independent_recount": "62/12/1, delta subset of 75 targets, and PHP counts recomputed by reviewer outside verify.py; matched"
+  },
+  "hashes": {
+    "sources": {
+      "tools/php83/zip-builder-v2/build.py": "3fc3e7f1524c044ef91f390cd6e4836bfeb6b9442ab45fefa6c07d6fcaba1707",
+      "tools/php83/exp13-candidate/verify.py": "bfaf3bbba77a438354136e52730da7d57244bd6658faed0f3c62226c712d9e26",
+      "tools/php83/exp13-candidate/select.py": "118179ef7b9a4d112c532ec1e7edc54a5bfaa31e4e7e6f3ba21b1645493b59ed",
+      "tools/php83/exp13-candidate/inputs.json": "63f180adec8e9d164423dabf7fff605d3605cc72c9a2ada9c1ced6319e9c9527",
+      "doc/php83/evidence/exp13-candidate/selected-r1/manifest.json": "4414dee2337cd2858e0553ce73cd9809975d69326be56033bf88bd3599ce81ba",
+      "doc/php83/evidence/exp13-candidate/proposed-r1/manifest.json": "b6ec7cc58a1828611d9c4558a8557eaa6fbf57ea72a40ef02e2095d9af177b17",
+      "doc/php83/evidence/exp13-candidate/proposed-r1/composition.json": "d2658b6debc4f132232bc538a3db5103eaf5a435a430d10686e7c477f5b30765"
+    },
+    "inputs": {
+      "/tmp/kaltura-php83-audit/Rigel-18.20.0.zip": "58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28",
+      "../platform-install-packages-php83-artifacts/exp12/Rigel-18.20.0-php83-experimental.exp12.zip": "de5e61a1b54f472e605ef2e87669302a3915616fd85378e0f05706fcb06a7e8b"
+    },
+    "outputs": {
+      "../platform-install-packages-php83-artifacts/exp13/Rigel-18.20.0-php83-experimental.exp13.zip": "6d0bc4947207e6c5457b7843948d263aa8d5f251480e58cbf9086c0add79a944",
+      "../platform-install-packages-php83-artifacts/exp13/SHA256SUMS": "4ca46d60f1ac29115fa506dd05e14f68a8c19860526d977468f5568f5d7b84f3",
+      "../platform-install-packages-php83-artifacts/exp13/build-report.json": "145426c5e7bbb231be4380daa9b021a3354750c0e68e71a29ebc55bf9d6cfb62",
+      "../platform-install-packages-php83-artifacts/exp13-repeat/Rigel-18.20.0-php83-experimental.exp13.zip": "6d0bc4947207e6c5457b7843948d263aa8d5f251480e58cbf9086c0add79a944",
+      "../platform-install-packages-php83-artifacts/exp13-repeat/SHA256SUMS": "4ca46d60f1ac29115fa506dd05e14f68a8c19860526d977468f5568f5d7b84f3",
+      "../platform-install-packages-php83-artifacts/exp13-repeat/build-report.json": "145426c5e7bbb231be4380daa9b021a3354750c0e68e71a29ebc55bf9d6cfb62"
+    }
+  },
+  "weaknesses": [
+    "verify.py emits preserved_exp12_entries=62, delta_modified=12, delta_added=1 as literals; it only asserts len(delta)==13 and the single addition. Values were recomputed independently here.",
+    "verify.py checks builder identity against the worktree build.py, not the inputs.json pin; the pin was checked separately here.",
+    "verify.py does not compare build-report.json/SHA256SUMS between builds; compared separately here (identical).",
+    "verify.py assumes every original member starts with upstream_root (unasserted slice); missing embedded manifest keys would raise KeyError rather than a clear ValueError.",
+    "Repeat build ran on the same machine, worktree, builder file and Python as the primary: proves determinism, not toolchain independence.",
+    "verify.py, select.py, sql-pins.json and selected-r1/ are untracked; identity is by hash only.",
+    "New untracked tools/php83/exp13-candidate/test_verify.py and tools/php83/exp13-syntax/ appeared during this cycle from another writer; not reviewed or executed here."
+  ],
+  "untested_scope": [
+    "PHP 8.3 lint/compile of exp13",
+    "runtime/cache/rollback",
+    "application acceptance",
+    "package/CI/release/cutover"
+  ],
+  "application_acceptance": false,
+  "release_approved": false,
+  "tools_or_manifests_edited": false
+}

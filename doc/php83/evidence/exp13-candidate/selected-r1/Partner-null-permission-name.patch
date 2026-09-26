@@ -1,0 +1,11 @@
+--- a/alpha/lib/model/Partner.php
++++ b/alpha/lib/model/Partner.php
+@@ -1428,7 +1428,7 @@
+ 		$names = $this->getFromCustomData('always_allowed_permission_names');
+ 		// add ALWAYS_ALLOWED_ACTIONS only when always_allowed_permission_names was not specified explicitly
+ 		// it's required to support the scenario where ALWAYS_ALLOWED_ACTIONS should be disabled (by specifying a "dummy" permission in always_allowed_permission_names)
+-		if (!trim($names)) {
++		if (!trim($names ?? '')) {
+ 			$names = PermissionName::ALWAYS_ALLOWED_ACTIONS.','.$names;
+ 		}
+ 		$names = trim($names, ',');

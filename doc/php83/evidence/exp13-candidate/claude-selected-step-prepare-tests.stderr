@@ -1,0 +1,14 @@
+test_after_hash (tools.php83.exp13-candidate.test_prepare.Guards.test_after_hash) ... ok
+test_archive_identity (tools.php83.exp13-candidate.test_prepare.Guards.test_archive_identity) ... ok
+test_cumulative_replay (tools.php83.exp13-candidate.test_prepare.Guards.test_cumulative_replay) ... ok
+test_duplicate_delta (tools.php83.exp13-candidate.test_prepare.Guards.test_duplicate_delta) ... ok
+test_exact_delta_inventory (tools.php83.exp13-candidate.test_prepare.Guards.test_exact_delta_inventory) ... ok
+test_existing_output (tools.php83.exp13-candidate.test_prepare.Guards.test_existing_output) ... ok
+test_input_drift (tools.php83.exp13-candidate.test_prepare.Guards.test_input_drift) ... ok
+test_pinned_inputs (tools.php83.exp13-candidate.test_prepare.Guards.test_pinned_inputs) ... ok
+test_proposal_not_selected (tools.php83.exp13-candidate.test_prepare.Guards.test_proposal_not_selected) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.006s
+
+OK

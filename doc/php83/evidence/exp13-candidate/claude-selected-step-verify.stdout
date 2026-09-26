@@ -1,0 +1,80 @@
+{
+ "proposal_sha": "b6ec7cc58a1828611d9c4558a8557eaa6fbf57ea72a40ef02e2095d9af177b17",
+ "proposal_sha_ok": true,
+ "proposal_committed_equal": true,
+ "proposal_worktree_clean": true,
+ "patch_rows_equal": true,
+ "patch_count": 75,
+ "patch_bytes_mismatch": [],
+ "selected_files_extra": [],
+ "changed_keys": [
+  "conditional_families",
+  "pending",
+  "selection_approved",
+  "selection_authorization",
+  "status"
+ ],
+ "proposal_status": "PROPOSED_ONLY_PENDING_SQL_AND_COORDINATOR_SELECTION",
+ "proposal_pending": [
+  "Real SQL primary and independent repeat",
+  "Explicit coordinator source selection/build approval",
+  "Built artifact compiler/runtime regression",
+  "Cache namespace and snapshot/rollback rehearsal; original readers reject AWS O payloads",
+  "Aggregate application/package/release gates"
+ ],
+ "selected_pending": [
+  "Built artifact compiler/runtime regression",
+  "Cache namespace and snapshot/rollback rehearsal; original readers reject AWS O payloads",
+  "Aggregate application/package/release gates"
+ ],
+ "proposal_conditional": [
+  "returns plus DebugPDO-query-v3"
+ ],
+ "sql_pins_ok": {
+  "doc/php83/evidence/return-contracts-sql/comparison-r2.json": true,
+  "doc/php83/evidence/return-contracts-sql/primary-r1.json": true,
+  "doc/php83/evidence/return-contracts-sql/independent-r1.json": true,
+  "doc/php83/evidence/return-contracts-sql/finalreview-public.json": true,
+  "doc/php83/evidence/return-contracts-sql/finalreview.exit": true,
+  "doc/php83/evidence/return-contracts-sql/final-r2-tests.exit": true
+ },
+ "sql_pins_committed_004b75da": {
+  "doc/php83/evidence/return-contracts-sql/comparison-r2.json": true,
+  "doc/php83/evidence/return-contracts-sql/primary-r1.json": true,
+  "doc/php83/evidence/return-contracts-sql/independent-r1.json": true,
+  "doc/php83/evidence/return-contracts-sql/finalreview-public.json": true,
+  "doc/php83/evidence/return-contracts-sql/finalreview.exit": true,
+  "doc/php83/evidence/return-contracts-sql/final-r2-tests.exit": true
+ },
+ "sql_pins_head_clean": true,
+ "comparison": {
+  "status": "BOUNDED_SQL_CONTRACT_AND_INDEPENDENT_REPEAT",
+  "cases_per_cohort": 91,
+  "cohorts_per_run": 2,
+  "native_repeat_records_exact": true,
+  "diagnostics": [
+   15,
+   4
+  ],
+  "application_acceptance": false
+ },
+ "auth": {
+  "decision": "Coordinator explicitly authorized exp13 experimental selection and two reproducible builds after SQL primary/Claude repeat and final OpenCode review",
+  "proposal_commit": "fd157eb4",
+  "proposal_sha256": "b6ec7cc58a1828611d9c4558a8557eaa6fbf57ea72a40ef02e2095d9af177b17",
+  "sql_commit": "004b75da",
+  "sql_evidence": {
+   "doc/php83/evidence/return-contracts-sql/comparison-r2.json": "cb782e9fd2d5f6e35fa903805a07ce00e0e08ac4e6449b965f040469d65f24a1",
+   "doc/php83/evidence/return-contracts-sql/primary-r1.json": "f24d952bef28746ccfc707bf620f37d18f32857d623b9f1897f5ba446e254b62",
+   "doc/php83/evidence/return-contracts-sql/independent-r1.json": "433fbd9a70987592fbe15668db50e7a1a03f28fd95ad09cccf1072e24462e33b",
+   "doc/php83/evidence/return-contracts-sql/finalreview-public.json": "b4ea10a343c6d1eeff721f5fc6cc20532c509e19a4b44202c421c6eed375683a",
+   "doc/php83/evidence/return-contracts-sql/finalreview.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+   "doc/php83/evidence/return-contracts-sql/final-r2-tests.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+  },
+  "build_approved": true,
+  "production_approved": false,
+  "release_approved": false,
+  "package_ci_approved": false,
+  "artifact_runtime_acceptance": false
+ }
+}

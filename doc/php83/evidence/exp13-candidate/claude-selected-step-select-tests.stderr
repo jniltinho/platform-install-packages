@@ -1,0 +1,9 @@
+test_authorized (tools.php83.exp13-candidate.test_select.Selection.test_authorized) ... ok
+test_drift (tools.php83.exp13-candidate.test_select.Selection.test_drift) ... ok
+test_existing (tools.php83.exp13-candidate.test_select.Selection.test_existing) ... ok
+test_sql_drift (tools.php83.exp13-candidate.test_select.Selection.test_sql_drift) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.004s
+
+OK

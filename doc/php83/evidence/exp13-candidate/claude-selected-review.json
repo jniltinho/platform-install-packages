@@ -1,0 +1,85 @@
+{
+  "case": "exp13 selection adapter local independent review",
+  "executor": "Claude Code CLI (claude-opus-5-5)",
+  "reviewer": "Claude (independent of selection author)",
+  "environment": "local workstation, Python3; no VM/PHP/SQL/network/production; NO BUILD",
+  "scope": "source/inputs only",
+  "verdict": "NO_BLOCKERS_FOR_AUTHORIZED_LAB_BUILDS",
+  "status_confirmed": "EXPERIMENTAL_SELECTED_LAB_ONLY_NOT_FOR_PRODUCTION",
+  "checks": {
+    "frozen_proposal_sha256_b6ec7cc5_preserved": true,
+    "proposal_manifest_equals_commit_fd157eb4_and_clean": true,
+    "sql_pins_match_worktree_and_commit_004b75da": true,
+    "sql_comparison_contract": "91 cases/cohort, 2 cohorts, native repeat exact, diagnostics 15->4, application_acceptance false",
+    "patch_rows_identical_to_proposal": true,
+    "patch_count": 75,
+    "selected_patch_bytes_match_proposal_and_row_sha": true,
+    "extra_files_in_selected": [],
+    "changed_manifest_keys": [
+      "conditional_families",
+      "pending",
+      "selection_approved",
+      "selection_authorization",
+      "status"
+    ],
+    "production_release_package_ci_runtime_acceptance": false,
+    "zip_built": false,
+    "application_acceptance": false
+  },
+  "steps": {
+    "select-tests": {
+      "command": "python3 -m unittest -v tools/php83/exp13-candidate/test_select.py",
+      "exit": 0,
+      "tests_ran": 4,
+      "files": {
+        "doc/php83/evidence/exp13-candidate/claude-selected-step-select-tests.command": "b9007f227bf851b709bccbed9690367bd9ec54efb68705b40e7d5709c8d26ad4",
+        "doc/php83/evidence/exp13-candidate/claude-selected-step-select-tests.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "doc/php83/evidence/exp13-candidate/claude-selected-step-select-tests.stderr": "d00cadee25dd84f577106077efe1996b15a23765c1466d3731f30c94b35d34b6",
+        "doc/php83/evidence/exp13-candidate/claude-selected-step-select-tests.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      }
+    },
+    "prepare-tests": {
+      "command": "python3 -m unittest -v tools/php83/exp13-candidate/test_prepare.py",
+      "exit": 0,
+      "tests_ran": 9,
+      "files": {
+        "doc/php83/evidence/exp13-candidate/claude-selected-step-prepare-tests.command": "42e6a116cfb10e9edd0140058fdc38abc0a24f703b6b9c834ab7d659852059b9",
+        "doc/php83/evidence/exp13-candidate/claude-selected-step-prepare-tests.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "doc/php83/evidence/exp13-candidate/claude-selected-step-prepare-tests.stderr": "98f251a10b3671b5edac2ba84a0e127b6e468c3d722c521f39d4da06a026dc95",
+        "doc/php83/evidence/exp13-candidate/claude-selected-step-prepare-tests.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      }
+    },
+    "verify": {
+      "command": "python3 doc/php83/evidence/exp13-candidate/claude-selected-step-verify.py (copy of /tmp/cverify.py, executed from /tmp)",
+      "exit": 0,
+      "tests_ran": null,
+      "files": {
+        "doc/php83/evidence/exp13-candidate/claude-selected-step-verify.command": "c2ccd1e254a95c4bcf924db5f4be05aba687bf989004b7671e97884918c28aac",
+        "doc/php83/evidence/exp13-candidate/claude-selected-step-verify.stdout": "c9b5c04ed9a5fbf7fee4d1e805ca01dcdc05221d5e2c443eb774e77ff4253e69",
+        "doc/php83/evidence/exp13-candidate/claude-selected-step-verify.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "doc/php83/evidence/exp13-candidate/claude-selected-step-verify.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "doc/php83/evidence/exp13-candidate/claude-selected-step-verify.py": "72d6c88cd42143268b7fc5220a8bd6c753997ab3d4b6a57adfc63152d39d51b8"
+      }
+    }
+  },
+  "blockers": [],
+  "limitations": [
+    "select.py, test_select.py, sql-pins.json are untracked (uncommitted); identity is by hash below only.",
+    "conditional_families [\"returns plus DebugPDO-query-v3\"] is cleared to [] without recording the resolution in the manifest; resolution rests on the SQL gate evidence, not an explicit field.",
+    "pending is trimmed positionally (pending[2:]); correct only because the proposal is SHA-pinned.",
+    "Commit anchors prove content equality with fd157eb4/004b75da, not authorization; authorization is the coordinator statement recorded in selection_authorization.",
+    "test_select.py has no happy-path stage() test and does not assert pending/conditional_families contents; stage output was checked by this review instead.",
+    "Authoring-side select.exit/select-tests.exit (0) were read, not re-executed; stage() not re-run (would refuse existing output).",
+    "No build, compiler/runtime, cache/rollback, or application/package/release gates executed; these remain pending."
+  ],
+  "file_hashes": {
+    "tools/php83/exp13-candidate/select.py": "118179ef7b9a4d112c532ec1e7edc54a5bfaa31e4e7e6f3ba21b1645493b59ed",
+    "tools/php83/exp13-candidate/test_select.py": "ef148e8b2c97c5ca65dc551fe6367c96635a77f5ec967ef476a28b020cc6cb00",
+    "tools/php83/exp13-candidate/sql-pins.json": "d08fcb9cdbd98ecf6a4c3696084abdb43a26f33c12b7b62543d70ba6eb03a220",
+    "tools/php83/exp13-candidate/test_prepare.py": "e42edc82dbfcd26d9d267fcb56dc0cebb94403ea6e68beb865352e0674e08c96",
+    "tools/php83/exp13-candidate/prepare.py": "f5116dba13a8d16dbded59fcb619ff90447cb8715900218eb2190e72eae590b3",
+    "doc/php83/evidence/exp13-candidate/selected-r1/manifest.json": "4414dee2337cd2858e0553ce73cd9809975d69326be56033bf88bd3599ce81ba",
+    "doc/php83/evidence/exp13-candidate/proposed-r1/manifest.json": "b6ec7cc58a1828611d9c4558a8557eaa6fbf57ea72a40ef02e2095d9af177b17",
+    "doc/php83/evidence/return-contracts-sql/comparison-r2.json": "cb782e9fd2d5f6e35fa903805a07ce00e0e08ac4e6449b965f040469d65f24a1"
+  }
+}

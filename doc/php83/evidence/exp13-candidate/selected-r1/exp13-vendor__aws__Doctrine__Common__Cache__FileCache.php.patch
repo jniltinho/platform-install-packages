@@ -1,0 +1,11 @@
+--- a/vendor/aws/Doctrine/Common/Cache/FileCache.php
++++ b/vendor/aws/Doctrine/Common/Cache/FileCache.php
+@@ -111,7 +111,7 @@
+     {
+         return $this->directory
+             . DIRECTORY_SEPARATOR
+-            . implode(str_split(hash('sha256', $id), 2), DIRECTORY_SEPARATOR)
++            . implode(DIRECTORY_SEPARATOR, str_split(hash('sha256', $id), 2))
+             . DIRECTORY_SEPARATOR
+             . preg_replace($this->disallowedCharacterPatterns, $this->replacementCharacters, $id)
+             . $this->extension;
