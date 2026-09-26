@@ -1,0 +1,16 @@
+test_actual_tls_success (test_deadline_transport.DeadlineTests.test_actual_tls_success) ... ok
+test_actual_wrong_ca_rejected (test_deadline_transport.DeadlineTests.test_actual_wrong_ca_rejected) ... ok
+test_http_success_proxy_environment_ignored (test_deadline_transport.DeadlineTests.test_http_success_proxy_environment_ignored) ... ok
+test_invalid_deadlines (test_deadline_transport.DeadlineTests.test_invalid_deadlines) ... ok
+test_invalid_limits (test_deadline_transport.DeadlineTests.test_invalid_limits) ... ok
+test_kill_fallback_reaps_sigterm_resistant_worker (test_deadline_transport.DeadlineTests.test_kill_fallback_reaps_sigterm_resistant_worker) ... ok
+test_public_entry_rejects_loopback_subclass (test_deadline_transport.DeadlineTests.test_public_entry_rejects_loopback_subclass) ... ok
+test_public_origin_remains_fixed (test_deadline_transport.DeadlineTests.test_public_origin_remains_fixed) ... ok
+test_real_body_limit (test_deadline_transport.DeadlineTests.test_real_body_limit) ... ok
+test_redirect_not_forwarded (test_deadline_transport.DeadlineTests.test_redirect_not_forwarded) ... ok
+test_slow_drip_total_deadline_and_reap (test_deadline_transport.DeadlineTests.test_slow_drip_total_deadline_and_reap) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 4.965s
+
+OK

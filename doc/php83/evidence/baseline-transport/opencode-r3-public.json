@@ -1,0 +1,8 @@
+{
+  "exit": 0,
+  "public": [
+    "Read-only check of drip/kill guards \u2014 running the 19-test suite.",
+    "19/19 OK in 5.530s (`python3 -m unittest discover -s tools/php83/baseline-protocol -p 'test_deadline_transport.py' -v`).\n\nGuards establish paths, not startup timeout:\n\n* `test_slow_drip_total_deadline_and_reap` (test_deadline_transport.py:121-127): asserts `Handler.hits == ['/drip']` after `Total deadline exceeded`. `hits` is appended server-side in `do_GET` (line 42), so server actually received `/drip`. Also asserts elapsed `<1.8s` (deadline `.7`) and no leaked children.\n* `test_kill_fallback_reaps_sigterm_resistant_worker` (128-134): asserts `ready.value == 1` with message `SIGTERM ignore handler must actually be installed`. `resistant_worker` (32-35) installs `signal.signal(SIGTERM, SIG_IGN)` *before* setting `ready=1`, via spawn-context shared `RawValue`, so `1` proves child passed handler-install and entered sleep; timeout + reap (`<1.8s`) is therefore SIGTERM-resistant kill-fallback path, not spawn/startup timeout.\n\nNo application acceptance claimed.\n"
+  ],
+  "raw_sha256": "9d9b7ac54868489fffc7bedc54c73f288122071a6c2dccdc5acba29c44905a78"
+}
