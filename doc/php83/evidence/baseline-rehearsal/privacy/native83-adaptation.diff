@@ -1,0 +1,107 @@
+--- native74_guest.py
++++ native83_guest.py
+@@ -2,8 +2,8 @@
+ """Synthetic-only isolated CLI process matrix; no app bootstrap, SQL, HTTP or auth."""
+ import hashlib,json,os,socket,subprocess,sys
+ from pathlib import Path
+-ROOT=Path('/home/vagrant/baseline-privacy-synthetic-r1')
+-PHP='/usr/bin/php7.4';JSON='/usr/lib/php/20190902/json.so'
++ROOT=Path('/home/vagrant/php83-privacy-synthetic-r1')
++PHP='/usr/bin/php8.3'
+ def sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+ def pins(expected):
+  actual={}
+@@ -14,11 +14,11 @@
+  if actual!=expected:raise ValueError('Stage changed')
+  return actual
+ def main(manifest_sha):
+- if socket.gethostname()!='kaltura-php74-baseline' or sha(ROOT/'manifest.json')!=manifest_sha:raise ValueError('Identity')
++ if socket.gethostname()!='kaltura-php83-lab' or sha(ROOT/'manifest.json')!=manifest_sha:raise ValueError('Identity')
+  manifest=json.loads((ROOT/'manifest.json').read_text());before=pins(manifest['files'])
+- runtime={'php_sha256':sha(PHP),'json_module_sha256':sha(JSON),'php_version':subprocess.check_output([PHP,'-n','-r','echo PHP_VERSION;'],timeout=10).decode()}
+- if runtime['php_sha256']!=manifest['expected_php_sha256'] or runtime['php_version']!='7.4.33':raise ValueError('Native PHP identity')
+- command=[PHP,'-n','-d','extension='+JSON,'-d','display_errors=stderr','-d','log_errors=0','-d','error_reporting=-1','-d','zend.exception_ignore_args=0']
++ runtime={'php_sha256':sha(PHP),'json_provider':'builtin','php_version':subprocess.check_output([PHP,'-n','-r','echo PHP_VERSION;'],timeout=10).decode()}
++ if runtime['php_sha256']!=manifest['expected_php_sha256'] or runtime['php_version']!='8.3.6':raise ValueError('Native PHP identity')
++ command=[PHP,'-n','-d','display_errors=stderr','-d','log_errors=0','-d','error_reporting=-1','-d','zend.exception_ignore_args=0']
+  results=[]
+  for variant in ['original','privacy']:
+   source=ROOT/variant
+@@ -29,7 +29,7 @@
+   p=subprocess.run(command+[str(ROOT/'probe.php'),str(source),variant],capture_output=True,timeout=20)
+   results.append({'variant':variant,'exit':p.returncode,'stdout':p.stdout.decode(),'stderr':p.stderr.decode(),'lint':lint})
+  after=pins(manifest['files'])
+- if runtime['php_sha256']!=sha(PHP) or runtime['json_module_sha256']!=sha(JSON):raise ValueError('Runtime drift')
++ if runtime['php_sha256']!=sha(PHP):raise ValueError('Runtime drift')
+  return {'status':'SYNTHETIC_NATIVE_OBSERVATIONS_ONLY','hostname':socket.gethostname(),'runtime':runtime,'configuration':command[1:],'stage_before':before,'stage_after':after,'processes':results,'application_deployed':False,'real_auth_executed':False}
+ if __name__=='__main__':
+  try:print(json.dumps(main(sys.argv[1]),sort_keys=True))
+--- run_native74.py
++++ run_native83.py
+@@ -1,22 +1,22 @@
+ #!/usr/bin/env python3
+-"""Coordinator-granted exclusive74, synthetic class files only; never deploy application."""
++"""Coordinator-granted exclusive83, synthetic class files only; never deploy application."""
+ import hashlib,io,json,shlex,subprocess,tarfile
+ from pathlib import Path
+ import prepare,compare
+ HERE=Path(__file__).resolve().parent;ROOT=HERE.parents[3]
+ OUT=ROOT/'doc/php83/evidence/baseline-rehearsal/privacy'
+-STAGE='/home/vagrant/baseline-privacy-synthetic-r1';SSH=['ssh','-T','-F','/tmp/kaltura-php74-ssh.conf','baseline74']
++STAGE='/home/vagrant/php83-privacy-synthetic-r1';SSH=['ssh','-T','-F','/tmp/kaltura-php83-ssh.conf','php83']
+ def sha(raw):return hashlib.sha256(raw).hexdigest()
+ def main():
+- if any((OUT/name).exists() for name in ['native74-primary.json','native74-primary.exit','native74-stage.json']):raise ValueError('Refuse overwrite')
++ if any((OUT/name).exists() for name in ['native83-primary.json','native83-primary.exit','native83-stage.json']):raise ValueError('Refuse overwrite')
+  deps=['vendor/ZendFramework/library/Zend/Log/Formatter/Simple.php','vendor/ZendFramework/library/Zend/Log/Formatter/Interface.php']
+- original=prepare.archive('/tmp/kaltura-php83-audit/Rigel-18.20.0.zip',prepare.UPSTREAM,prepare.TARGETS+deps)
+- inventory=json.loads((OUT.parent/'inventory-r2.json').read_text())['observation']
+- expected_php=inventory['public_file_sha256']['/usr/bin/php7.4']
++ original=prepare.archive(ROOT.parent/'platform-install-packages-php83-artifacts/exp12/Rigel-18.20.0-php83-experimental.exp12.zip',prepare.EXP12,prepare.TARGETS+deps)
++ inventory=json.loads((ROOT/'doc/php83/evidence/return-contracts/native-primary-runtime-before.json').read_text())['identity']
++ expected_php=inventory['files']['/usr/bin/php8.3']
+  blobs={}
+  for path,raw in original.items():
+   blobs['original/'+path]=raw;blobs['privacy/'+path]=prepare.transform(path,raw) if path in prepare.TARGETS else raw
+- blobs['probe.php']=(HERE/'probe.php').read_bytes();blobs['native74_guest.py']=(HERE/'native74_guest.py').read_bytes()
++ blobs['probe.php']=(HERE/'probe.php').read_bytes();blobs['native83_guest.py']=(HERE/'native83_guest.py').read_bytes()
+  manifest={'files':{p:sha(raw) for p,raw in blobs.items()},'expected_php_sha256':expected_php,'status':'SYNTHETIC_ONLY_NOT_APPLICATION_DEPLOYMENT'}
+  manifest_bytes=json.dumps(manifest,sort_keys=True).encode();manifest_sha=sha(manifest_bytes);blobs['manifest.json']=manifest_bytes
+  archive=io.BytesIO()
+@@ -24,21 +24,21 @@
+   for name,raw in blobs.items():
+    info=tarfile.TarInfo(name);info.size=len(raw);info.mode=0o444;tar.addfile(info,io.BytesIO(raw))
+  guard='''import socket,json,subprocess
+-assert socket.gethostname()=="kaltura-php74-baseline"
++assert socket.gethostname()=="kaltura-php83-lab"
+ a=json.loads(subprocess.check_output(["ip","-j","-4","addr"],timeout=10))
+ ips={x.get("local") for link in a for x in link.get("addr_info",[])}
+-assert "192.168.56.74" in ips and not ips.intersection({"192.168.56.20","192.168.56.21","192.168.56.30","192.168.56.83"})
++assert "192.168.56.83" in ips and not ips.intersection({"192.168.56.20","192.168.56.21","192.168.56.30","192.168.56.74"})
+ '''
+  command='set -eu; python3 -c '+shlex.quote(guard)+'; test ! -e '+STAGE+'; sudo mkdir -m0755 '+STAGE+'; sudo tar -xf - -C '+STAGE+'; sudo find '+STAGE+' -type f -exec chmod 0444 {} +'
+  p=subprocess.run(SSH+[command],input=archive.getvalue(),capture_output=True,timeout=60)
+  if p.returncode:raise ValueError('Fresh safe staging failed')
+- (OUT/'native74-stage.json').write_text(json.dumps({'stage':STAGE,'manifest_sha256':manifest_sha,'manifest':manifest,'runner_sha256':sha(Path(__file__).read_bytes())},indent=2)+'\n')
+- command='sudo systemd-run --quiet --wait --pipe --collect --unit baseline-privacy-synthetic-r1 --uid=vagrant -p PrivateNetwork=yes -p PrivateTmp=yes -p ProtectSystem=strict -p ProtectHome=read-only -p NoNewPrivileges=yes -p RuntimeMaxSec=120 python3 -B '+STAGE+'/native74_guest.py '+manifest_sha
++ (OUT/'native83-stage.json').write_text(json.dumps({'stage':STAGE,'manifest_sha256':manifest_sha,'manifest':manifest,'runner_sha256':sha(Path(__file__).read_bytes())},indent=2)+'\n')
++ command='sudo systemd-run --quiet --wait --pipe --collect --unit php83-privacy-synthetic-r1 --uid=vagrant -p PrivateNetwork=yes -p PrivateTmp=yes -p ProtectSystem=strict -p ProtectHome=read-only -p NoNewPrivileges=yes -p RuntimeMaxSec=120 python3 -B '+STAGE+'/native83_guest.py '+manifest_sha
+  p=subprocess.run(SSH+[command],capture_output=True,timeout=150)
+- (OUT/'native74-primary.exit').write_text(str(p.returncode)+'\n');(OUT/'native74-primary.stderr').write_bytes(p.stderr)
++ (OUT/'native83-primary.exit').write_text(str(p.returncode)+'\n');(OUT/'native83-primary.stderr').write_bytes(p.stderr)
+  if p.returncode:raise ValueError('Synthetic native runner failed')
+  observation=json.loads(p.stdout)
+- (OUT/'native74-primary.json').write_text(json.dumps(observation,indent=2)+'\n')
++ (OUT/'native83-primary.json').write_text(json.dumps(observation,indent=2)+'\n')
+  if len(observation['processes'])!=2:raise ValueError('Native process count')
+  reports=[]
+  for i,variant in enumerate(['original','privacy']):
+@@ -48,6 +48,6 @@
+  expected=[]
+  for variant in ['original','privacy']:
+   expected.append({name:manifest['files'][variant+'/'+path] for name,path in zip(['log','front','dispatcher','formatter','formatter_interface'],prepare.TARGETS+deps)})
+- result=compare.compare(*reports,'7.4',*expected)
+- (OUT/'native74-comparison.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result))
++ result=compare.compare(*reports,'8.3',*expected)
++ (OUT/'native83-comparison.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result))
+ if __name__=='__main__':main()

@@ -1,0 +1,79 @@
+{
+  "status": "PREPARED_NOT_SELECTED_NOT_DEPLOYED",
+  "upstream_sha256": "58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28",
+  "exp12_sha256": "de5e61a1b54f472e605ef2e87669302a3915616fd85378e0f05706fcb06a7e8b",
+  "helper_sha256": "f0d7c1eef83778c79e3cdc41ebc71e87e98791150f5193c17ca2448a0c41e267",
+  "targets": [
+    {
+      "variant": "baseline74-policy",
+      "path": "infra/log/KalturaLog.php",
+      "original_sha256": "9b7a7c3dd37616ffd2ac9720ece862641c43bb687a2db4e8fc9cbcb259ff5449",
+      "prior_sha256": "9b7a7c3dd37616ffd2ac9720ece862641c43bb687a2db4e8fc9cbcb259ff5449",
+      "after_sha256": "e6ffa1b6fc452904c9c1a508d816181a0871f009f491ec3a9a1bfce1a69ba003",
+      "delta_patch": "baseline74-policy/infra__log__KalturaLog.php.delta.patch",
+      "delta_sha256": "899d482b4b2a14e34559511a47c9a121e2638b8140bc3b1e8a4711be22772fdd",
+      "cumulative_patch": "baseline74-policy/infra__log__KalturaLog.php.cumulative.patch",
+      "cumulative_sha256": "899d482b4b2a14e34559511a47c9a121e2638b8140bc3b1e8a4711be22772fdd"
+    },
+    {
+      "variant": "baseline74-policy",
+      "path": "api_v3/lib/KalturaFrontController.php",
+      "original_sha256": "5f2eeffe526d4a0ee245b6f10f4e9600e0f7c8bcb4a52eef41e3a66bbd9ab7a1",
+      "prior_sha256": "5f2eeffe526d4a0ee245b6f10f4e9600e0f7c8bcb4a52eef41e3a66bbd9ab7a1",
+      "after_sha256": "79570bd2be507f0045281a903aa13bd2de4037c2e12df3370075c4445184a4ca",
+      "delta_patch": "baseline74-policy/api_v3__lib__KalturaFrontController.php.delta.patch",
+      "delta_sha256": "3e32346ea0a7a7679f4d3d0d6f5f8a2757a6ea3c4d2925f1a40fe116d3d98009",
+      "cumulative_patch": "baseline74-policy/api_v3__lib__KalturaFrontController.php.cumulative.patch",
+      "cumulative_sha256": "3e32346ea0a7a7679f4d3d0d6f5f8a2757a6ea3c4d2925f1a40fe116d3d98009"
+    },
+    {
+      "variant": "baseline74-policy",
+      "path": "api_v3/lib/KalturaDispatcher.php",
+      "original_sha256": "be20609b269f08cf1317a79046f5b43cddc8be4cd14dd01fbc0d928fdd24fce2",
+      "prior_sha256": "be20609b269f08cf1317a79046f5b43cddc8be4cd14dd01fbc0d928fdd24fce2",
+      "after_sha256": "9ce4b17a9fb1bef95fbbbbc6f08cb396a6cc944b055bac8413d740ce5d73c7b9",
+      "delta_patch": "baseline74-policy/api_v3__lib__KalturaDispatcher.php.delta.patch",
+      "delta_sha256": "52e00282bab8fe3f956aeed7c1a51a3d35adfc6a8373003233c1fd1c4460de92",
+      "cumulative_patch": "baseline74-policy/api_v3__lib__KalturaDispatcher.php.cumulative.patch",
+      "cumulative_sha256": "52e00282bab8fe3f956aeed7c1a51a3d35adfc6a8373003233c1fd1c4460de92"
+    },
+    {
+      "variant": "exp12-policy",
+      "path": "infra/log/KalturaLog.php",
+      "original_sha256": "9b7a7c3dd37616ffd2ac9720ece862641c43bb687a2db4e8fc9cbcb259ff5449",
+      "prior_sha256": "dd2a01851114e821a88f266dd060e55a80d7cd795001369c9c14e7d2a794381f",
+      "after_sha256": "a61bda9fc5cc9127c6dedca6156515557562fc068d8324f7fe03baeba146074a",
+      "delta_patch": "exp12-policy/infra__log__KalturaLog.php.delta.patch",
+      "delta_sha256": "899d482b4b2a14e34559511a47c9a121e2638b8140bc3b1e8a4711be22772fdd",
+      "cumulative_patch": "exp12-policy/infra__log__KalturaLog.php.cumulative.patch",
+      "cumulative_sha256": "a36fb5a5eb153c0b05985e0b19af4a05f85a1e566260b178b39363172f2576ae"
+    },
+    {
+      "variant": "exp12-policy",
+      "path": "api_v3/lib/KalturaFrontController.php",
+      "original_sha256": "5f2eeffe526d4a0ee245b6f10f4e9600e0f7c8bcb4a52eef41e3a66bbd9ab7a1",
+      "prior_sha256": "189607dca3b5ef33270d8e4dfe081daf6a76f39d5fd49066ee0b83f24c62d71a",
+      "after_sha256": "b6767f6870afe540c726acef26ba9c263fc976d0b699b87eac749ab88f0c31bc",
+      "delta_patch": "exp12-policy/api_v3__lib__KalturaFrontController.php.delta.patch",
+      "delta_sha256": "d445ed9fc88a367b992b236942ad896835f2ded2f9d5f4d4d6d2dbb9ab8484e8",
+      "cumulative_patch": "exp12-policy/api_v3__lib__KalturaFrontController.php.cumulative.patch",
+      "cumulative_sha256": "62e432bf0f52313cd571de4b2e6f37e41bdf9a5a440e78fc5555597803a1fd1d"
+    },
+    {
+      "variant": "exp12-policy",
+      "path": "api_v3/lib/KalturaDispatcher.php",
+      "original_sha256": "be20609b269f08cf1317a79046f5b43cddc8be4cd14dd01fbc0d928fdd24fce2",
+      "prior_sha256": "be20609b269f08cf1317a79046f5b43cddc8be4cd14dd01fbc0d928fdd24fce2",
+      "after_sha256": "9ce4b17a9fb1bef95fbbbbc6f08cb396a6cc944b055bac8413d740ce5d73c7b9",
+      "delta_patch": "exp12-policy/api_v3__lib__KalturaDispatcher.php.delta.patch",
+      "delta_sha256": "52e00282bab8fe3f956aeed7c1a51a3d35adfc6a8373003233c1fd1c4460de92",
+      "cumulative_patch": "exp12-policy/api_v3__lib__KalturaDispatcher.php.cumulative.patch",
+      "cumulative_sha256": "52e00282bab8fe3f956aeed7c1a51a3d35adfc6a8373003233c1fd1c4460de92"
+    }
+  ],
+  "global_privacy_claim": false,
+  "exception_trace_gate": "PENDING",
+  "runtime_tests_executed": false,
+  "same_policy_required_both_labs": true,
+  "application_acceptance": false
+}

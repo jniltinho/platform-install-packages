@@ -22,6 +22,17 @@ The following earlier plan/inventory sections are chronological history, not a
 claim that no native rehearsal occurred. Synthetic offline receipts remain only
 validator fixtures, never native execution evidence.
 
+### Subsequent synthetic privacy preparation (not real API success)
+
+A separately reviewed three-target log-copy policy passed two isolated synthetic
+native probes and six lints on each of PHP7.4.33/PHP8.3.6, with unchanged source
+and runtime identities and empty stderr. Nevertheless the actual Zend formatter
+still exposes a synthetic secret prefix in exception arguments on both runtimes.
+Both comparisons retain full_privacy_accepted=false. No application repair,
+valid USER request or media upload followed. See the
+[privacy proposal/current receipts](baseline-rehearsal-privacy-proposal.md) and
+[pending trace-display option](baseline-rehearsal-trace-proposal.md).
+
 ## Historical preparation: sequence and ownership
 
 1. Coordinator grants exclusive baseline74; verify guest hostname and actual

@@ -1,0 +1,7 @@
+{
+  "unit": "php83-privacy-synthetic-r1.service",
+  "state": "inactive",
+  "exit": 4,
+  "no_running_unit": true,
+  "read_only_synthetic_stage_retained": true
+}

@@ -1,0 +1,106 @@
+{
+  "application_deployed": false,
+  "base_archive_sha256": "de5e61a1b54f472e605ef2e87669302a3915616fd85378e0f05706fcb06a7e8b",
+  "configuration": [
+    "-n",
+    "-d",
+    "display_errors=stderr",
+    "-d",
+    "log_errors=0",
+    "-d",
+    "error_reporting=-1",
+    "-d",
+    "zend.exception_ignore_args=0"
+  ],
+  "hostname": "kaltura-php83-lab",
+  "processes": [
+    {
+      "exit": 0,
+      "lint": [
+        {
+          "exit": 0,
+          "path": "infra/log/KalturaLog.php",
+          "stderr": "",
+          "stdout": "No syntax errors detected in /home/vagrant/php83-privacy-synthetic-r1/original/infra/log/KalturaLog.php\n"
+        },
+        {
+          "exit": 0,
+          "path": "api_v3/lib/KalturaFrontController.php",
+          "stderr": "",
+          "stdout": "No syntax errors detected in /home/vagrant/php83-privacy-synthetic-r1/original/api_v3/lib/KalturaFrontController.php\n"
+        },
+        {
+          "exit": 0,
+          "path": "api_v3/lib/KalturaDispatcher.php",
+          "stderr": "",
+          "stdout": "No syntax errors detected in /home/vagrant/php83-privacy-synthetic-r1/original/api_v3/lib/KalturaDispatcher.php\n"
+        }
+      ],
+      "stderr": "",
+      "stdout": "{\"variant\":\"original\",\"php\":\"8.3.6\",\"sapi\":\"cli\",\"sources\":{\"log\":\"dd2a01851114e821a88f266dd060e55a80d7cd795001369c9c14e7d2a794381f\",\"front\":\"189607dca3b5ef33270d8e4dfe081daf6a76f39d5fd49066ee0b83f24c62d71a\",\"dispatcher\":\"be20609b269f08cf1317a79046f5b43cddc8be4cd14dd01fbc0d928fdd24fce2\",\"formatter\":\"23ca5efb61bb3b44a6ae1f10bdb1f8a445cade3b972dd681e3078229d7b695ff\",\"formatter_interface\":\"7f26df6c3bd59575f54e949c5eddcc27ef10aefeebd6a20894df0842976077ce\"},\"rows\":{\"request_input_unchanged\":true,\"request_sensitive_fields_absent\":false,\"ordinary_strings_not_indiscriminately_replaced\":true,\"request_key_order_preserved\":true,\"native_decoded_post_fields_absent\":false,\"actual_dispatch_arguments_unchanged\":true,\"positional_secret_absent\":false,\"positional_nonsensitive_types_preserved\":true,\"real_dto_unchanged\":true,\"dto_token_absent\":false,\"dto_private_nonsensitive_value_preserved\":true,\"dto_log_shape\":\"original-object-print\",\"typed_array_items_kept\":true,\"typed_array_otp_absent\":false,\"additional_auth_fields_absent\":false,\"analytics_null\":{\"level\":5,\"event_type\":\"LOG_TYPE_ANALYTICS\",\"field_count\":10,\"request_end\":\"request_end\",\"partner\":\"102\",\"ks_field_expected\":true,\"context_unchanged\":true,\"unrelated_fields\":[\"102\",\"\",\"0\",\"\\\"fixture-user\\\"\",\"1\",\"\",\"7\"]},\"analytics_empty\":{\"level\":5,\"event_type\":\"LOG_TYPE_ANALYTICS\",\"field_count\":10,\"request_end\":\"request_end\",\"partner\":\"102\",\"ks_field_expected\":true,\"context_unchanged\":true,\"unrelated_fields\":[\"102\",\"\",\"0\",\"\\\"fixture-user\\\"\",\"1\",\"\",\"7\"]},\"analytics_string\":{\"level\":5,\"event_type\":\"LOG_TYPE_ANALYTICS\",\"field_count\":10,\"request_end\":\"request_end\",\"partner\":\"102\",\"ks_field_expected\":true,\"context_unchanged\":true,\"unrelated_fields\":[\"102\",\"\",\"0\",\"\\\"fixture-user\\\"\",\"1\",\"\",\"7\"]},\"exception_object_identity_preserved\":true,\"exception_priority_preserved\":true,\"trace_observation\":{\"full_marker_present\":false,\"prefix15_present\":true,\"ignore_args_ini\":\"0\",\"formatter_contains_diagnostic\":true,\"formatter_contains_frame\":true},\"privacy_accepted\":false}}\n",
+      "variant": "original"
+    },
+    {
+      "exit": 0,
+      "lint": [
+        {
+          "exit": 0,
+          "path": "infra/log/KalturaLog.php",
+          "stderr": "",
+          "stdout": "No syntax errors detected in /home/vagrant/php83-privacy-synthetic-r1/privacy/infra/log/KalturaLog.php\n"
+        },
+        {
+          "exit": 0,
+          "path": "api_v3/lib/KalturaFrontController.php",
+          "stderr": "",
+          "stdout": "No syntax errors detected in /home/vagrant/php83-privacy-synthetic-r1/privacy/api_v3/lib/KalturaFrontController.php\n"
+        },
+        {
+          "exit": 0,
+          "path": "api_v3/lib/KalturaDispatcher.php",
+          "stderr": "",
+          "stdout": "No syntax errors detected in /home/vagrant/php83-privacy-synthetic-r1/privacy/api_v3/lib/KalturaDispatcher.php\n"
+        }
+      ],
+      "stderr": "",
+      "stdout": "{\"variant\":\"privacy\",\"php\":\"8.3.6\",\"sapi\":\"cli\",\"sources\":{\"log\":\"455920271618a0050a9bde8f20bb7533dbebc325d352571d6ee126c225410a3e\",\"front\":\"b6767f6870afe540c726acef26ba9c263fc976d0b699b87eac749ab88f0c31bc\",\"dispatcher\":\"9ce4b17a9fb1bef95fbbbbc6f08cb396a6cc944b055bac8413d740ce5d73c7b9\",\"formatter\":\"23ca5efb61bb3b44a6ae1f10bdb1f8a445cade3b972dd681e3078229d7b695ff\",\"formatter_interface\":\"7f26df6c3bd59575f54e949c5eddcc27ef10aefeebd6a20894df0842976077ce\"},\"rows\":{\"request_input_unchanged\":true,\"request_sensitive_fields_absent\":true,\"ordinary_strings_not_indiscriminately_replaced\":true,\"request_key_order_preserved\":true,\"native_decoded_post_fields_absent\":true,\"actual_dispatch_arguments_unchanged\":true,\"positional_secret_absent\":true,\"positional_nonsensitive_types_preserved\":true,\"real_dto_unchanged\":true,\"dto_token_absent\":true,\"dto_private_nonsensitive_value_preserved\":true,\"dto_log_shape\":\"class-tagged-visibility-field-array\",\"typed_array_items_kept\":true,\"typed_array_otp_absent\":true,\"additional_auth_fields_absent\":true,\"mapping_failure_visible\":true,\"depth_bounded\":true,\"analytics_null\":{\"level\":5,\"event_type\":\"LOG_TYPE_ANALYTICS\",\"field_count\":10,\"request_end\":\"request_end\",\"partner\":\"102\",\"ks_field_expected\":true,\"context_unchanged\":true,\"unrelated_fields\":[\"102\",\"\",\"0\",\"\\\"fixture-user\\\"\",\"1\",\"\",\"7\"]},\"analytics_empty\":{\"level\":5,\"event_type\":\"LOG_TYPE_ANALYTICS\",\"field_count\":10,\"request_end\":\"request_end\",\"partner\":\"102\",\"ks_field_expected\":true,\"context_unchanged\":true,\"unrelated_fields\":[\"102\",\"\",\"0\",\"\\\"fixture-user\\\"\",\"1\",\"\",\"7\"]},\"analytics_string\":{\"level\":5,\"event_type\":\"LOG_TYPE_ANALYTICS\",\"field_count\":10,\"request_end\":\"request_end\",\"partner\":\"102\",\"ks_field_expected\":true,\"context_unchanged\":true,\"unrelated_fields\":[\"102\",\"\",\"0\",\"\\\"fixture-user\\\"\",\"1\",\"\",\"7\"]},\"exception_object_identity_preserved\":true,\"exception_priority_preserved\":true,\"trace_observation\":{\"full_marker_present\":false,\"prefix15_present\":true,\"ignore_args_ini\":\"0\",\"formatter_contains_diagnostic\":true,\"formatter_contains_frame\":true},\"privacy_accepted\":false}}\n",
+      "variant": "privacy"
+    }
+  ],
+  "real_auth_executed": false,
+  "runtime": {
+    "json_provider": "builtin",
+    "php_sha256": "1c564e6bafa56d03359c3774be6f4c77d0edecabd2075e18556940a56747c8d7",
+    "php_version": "8.3.6"
+  },
+  "source_base": "unmodified exp12 versus exp12 plus privacy; original label is pair-control, not upstream ZIP",
+  "stage_after": {
+    "native83_guest.py": "77e5a137992d3daf947d0a0f0218954881ac7a15f3baff282f8aebd8acd31c9c",
+    "original/api_v3/lib/KalturaDispatcher.php": "be20609b269f08cf1317a79046f5b43cddc8be4cd14dd01fbc0d928fdd24fce2",
+    "original/api_v3/lib/KalturaFrontController.php": "189607dca3b5ef33270d8e4dfe081daf6a76f39d5fd49066ee0b83f24c62d71a",
+    "original/infra/log/KalturaLog.php": "dd2a01851114e821a88f266dd060e55a80d7cd795001369c9c14e7d2a794381f",
+    "original/vendor/ZendFramework/library/Zend/Log/Formatter/Interface.php": "7f26df6c3bd59575f54e949c5eddcc27ef10aefeebd6a20894df0842976077ce",
+    "original/vendor/ZendFramework/library/Zend/Log/Formatter/Simple.php": "23ca5efb61bb3b44a6ae1f10bdb1f8a445cade3b972dd681e3078229d7b695ff",
+    "privacy/api_v3/lib/KalturaDispatcher.php": "9ce4b17a9fb1bef95fbbbbc6f08cb396a6cc944b055bac8413d740ce5d73c7b9",
+    "privacy/api_v3/lib/KalturaFrontController.php": "b6767f6870afe540c726acef26ba9c263fc976d0b699b87eac749ab88f0c31bc",
+    "privacy/infra/log/KalturaLog.php": "455920271618a0050a9bde8f20bb7533dbebc325d352571d6ee126c225410a3e",
+    "privacy/vendor/ZendFramework/library/Zend/Log/Formatter/Interface.php": "7f26df6c3bd59575f54e949c5eddcc27ef10aefeebd6a20894df0842976077ce",
+    "privacy/vendor/ZendFramework/library/Zend/Log/Formatter/Simple.php": "23ca5efb61bb3b44a6ae1f10bdb1f8a445cade3b972dd681e3078229d7b695ff",
+    "probe.php": "9431ea817698d16b1e5a9489ebbafceb7735f798b9c6de99a52489199daf9c56"
+  },
+  "stage_before": {
+    "native83_guest.py": "77e5a137992d3daf947d0a0f0218954881ac7a15f3baff282f8aebd8acd31c9c",
+    "original/api_v3/lib/KalturaDispatcher.php": "be20609b269f08cf1317a79046f5b43cddc8be4cd14dd01fbc0d928fdd24fce2",
+    "original/api_v3/lib/KalturaFrontController.php": "189607dca3b5ef33270d8e4dfe081daf6a76f39d5fd49066ee0b83f24c62d71a",
+    "original/infra/log/KalturaLog.php": "dd2a01851114e821a88f266dd060e55a80d7cd795001369c9c14e7d2a794381f",
+    "original/vendor/ZendFramework/library/Zend/Log/Formatter/Interface.php": "7f26df6c3bd59575f54e949c5eddcc27ef10aefeebd6a20894df0842976077ce",
+    "original/vendor/ZendFramework/library/Zend/Log/Formatter/Simple.php": "23ca5efb61bb3b44a6ae1f10bdb1f8a445cade3b972dd681e3078229d7b695ff",
+    "privacy/api_v3/lib/KalturaDispatcher.php": "9ce4b17a9fb1bef95fbbbbc6f08cb396a6cc944b055bac8413d740ce5d73c7b9",
+    "privacy/api_v3/lib/KalturaFrontController.php": "b6767f6870afe540c726acef26ba9c263fc976d0b699b87eac749ab88f0c31bc",
+    "privacy/infra/log/KalturaLog.php": "455920271618a0050a9bde8f20bb7533dbebc325d352571d6ee126c225410a3e",
+    "privacy/vendor/ZendFramework/library/Zend/Log/Formatter/Interface.php": "7f26df6c3bd59575f54e949c5eddcc27ef10aefeebd6a20894df0842976077ce",
+    "privacy/vendor/ZendFramework/library/Zend/Log/Formatter/Simple.php": "23ca5efb61bb3b44a6ae1f10bdb1f8a445cade3b972dd681e3078229d7b695ff",
+    "probe.php": "9431ea817698d16b1e5a9489ebbafceb7735f798b9c6de99a52489199daf9c56"
+  },
+  "status": "SYNTHETIC_NATIVE_OBSERVATIONS_ONLY"
+}

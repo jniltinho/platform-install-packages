@@ -1,0 +1,12 @@
+{
+  "status": "PREPARED_NOT_REVIEWED_NOT_DEPLOYED",
+  "files": {
+    "tools/php83/baseline-rehearsal/privacy/probe.php": "345570b048eca6921a04e128ac479b8fb72085c054000d86432714c2270d3e07",
+    "tools/php83/baseline-rehearsal/privacy/log-copy-methods.php.inc": "f0d7c1eef83778c79e3cdc41ebc71e87e98791150f5193c17ca2448a0c41e267",
+    "tools/php83/baseline-rehearsal/privacy/prepare.py": "aede11acf8abc11753ac37745606587806bca671cc43bb15bcce675d08a0a118",
+    "tools/php83/baseline-rehearsal/privacy/test_prepare.py": "7031dfd5cdbc138af8a55bc37949b4ef31521e8fd18a5e97b75f0fef3b27c5f8"
+  },
+  "host_php_available": false,
+  "native_execution": false,
+  "application_acceptance": false
+}

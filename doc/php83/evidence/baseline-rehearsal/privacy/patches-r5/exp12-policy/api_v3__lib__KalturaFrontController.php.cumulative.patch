@@ -1,0 +1,23 @@
+--- a/api_v3/lib/KalturaFrontController.php
++++ b/api_v3/lib/KalturaFrontController.php
+@@ -71,9 +71,9 @@
+ 			'request_end',
+ 			'partnerId' => kCurrentContext::$partner_id,
+ 			'masterPartnerId' => kCurrentContext::$master_partner_id,
+-			'ks' => kCurrentContext::$ks,
++			'ks' => KalturaLog::sensitiveValueForLog(kCurrentContext::$ks),
+ 			'isAdmin' => intval(kCurrentContext::$is_admin_session),
+-			'kuserId' => '"' . str_replace('"', '\\"', (kCurrentContext::$uid ? kCurrentContext::$uid : kCurrentContext::$ks_uid)) . '"',
++			'kuserId' => '"' . str_replace('"', '\\"', ((kCurrentContext::$uid ? kCurrentContext::$uid : kCurrentContext::$ks_uid) ?? '')) . '"',
+ 			'duration' => $duration,
+ 			'success' => intval($success),
+ 			'errorCode' => $errorCode,
+@@ -93,7 +93,7 @@
+ 		
+ 		set_error_handler(array(&$this, "errorHandler"));
+ 		
+-		KalturaLog::debug("Params [" . print_r($this->params, true) . "]");
++		KalturaLog::debug("Params [" . print_r(KalturaLog::paramsForLog($this->params), true) . "]");
+ 		try {	
+ 			$this->setSerializerByFormat();
+ 		}

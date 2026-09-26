@@ -1,0 +1,25 @@
+{
+  "stage": "/home/vagrant/php83-privacy-synthetic-r1",
+  "manifest_sha256": "e319f2f29eb2f538f4714a056c1bc2071db2aaa000f85fba4488c1781383ac7b",
+  "manifest": {
+    "files": {
+      "original/infra/log/KalturaLog.php": "dd2a01851114e821a88f266dd060e55a80d7cd795001369c9c14e7d2a794381f",
+      "privacy/infra/log/KalturaLog.php": "455920271618a0050a9bde8f20bb7533dbebc325d352571d6ee126c225410a3e",
+      "original/api_v3/lib/KalturaFrontController.php": "189607dca3b5ef33270d8e4dfe081daf6a76f39d5fd49066ee0b83f24c62d71a",
+      "privacy/api_v3/lib/KalturaFrontController.php": "b6767f6870afe540c726acef26ba9c263fc976d0b699b87eac749ab88f0c31bc",
+      "original/api_v3/lib/KalturaDispatcher.php": "be20609b269f08cf1317a79046f5b43cddc8be4cd14dd01fbc0d928fdd24fce2",
+      "privacy/api_v3/lib/KalturaDispatcher.php": "9ce4b17a9fb1bef95fbbbbc6f08cb396a6cc944b055bac8413d740ce5d73c7b9",
+      "original/vendor/ZendFramework/library/Zend/Log/Formatter/Simple.php": "23ca5efb61bb3b44a6ae1f10bdb1f8a445cade3b972dd681e3078229d7b695ff",
+      "privacy/vendor/ZendFramework/library/Zend/Log/Formatter/Simple.php": "23ca5efb61bb3b44a6ae1f10bdb1f8a445cade3b972dd681e3078229d7b695ff",
+      "original/vendor/ZendFramework/library/Zend/Log/Formatter/Interface.php": "7f26df6c3bd59575f54e949c5eddcc27ef10aefeebd6a20894df0842976077ce",
+      "privacy/vendor/ZendFramework/library/Zend/Log/Formatter/Interface.php": "7f26df6c3bd59575f54e949c5eddcc27ef10aefeebd6a20894df0842976077ce",
+      "probe.php": "9431ea817698d16b1e5a9489ebbafceb7735f798b9c6de99a52489199daf9c56",
+      "native83_guest.py": "77e5a137992d3daf947d0a0f0218954881ac7a15f3baff282f8aebd8acd31c9c"
+    },
+    "expected_php_sha256": "1c564e6bafa56d03359c3774be6f4c77d0edecabd2075e18556940a56747c8d7",
+    "status": "SYNTHETIC_ONLY_NOT_APPLICATION_DEPLOYMENT",
+    "source_base": "unmodified exp12 versus exp12 plus privacy; original label is pair-control, not upstream ZIP",
+    "base_archive_sha256": "de5e61a1b54f472e605ef2e87669302a3915616fd85378e0f05706fcb06a7e8b"
+  },
+  "runner_sha256": "ec88606d6500e2021f1602df226f769cee2ee638d1973f6b5e0fa8d78249d159"
+}

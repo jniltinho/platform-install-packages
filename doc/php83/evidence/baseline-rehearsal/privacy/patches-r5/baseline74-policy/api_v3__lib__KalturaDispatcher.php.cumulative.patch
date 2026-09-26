@@ -1,0 +1,11 @@
+--- a/api_v3/lib/KalturaDispatcher.php
++++ b/api_v3/lib/KalturaDispatcher.php
+@@ -95,7 +95,7 @@
+ 		$deserializer = new KalturaRequestDeserializer($params);
+ 		$this->arguments = $deserializer->buildActionArguments($actionParams);
+ 		KalturaLog::debug("Dispatching service [".$service."], action [".$action."], reqIndex [".
+-			kCurrentContext::$multiRequest_index."] with params " . print_r($this->arguments, true));
++			kCurrentContext::$multiRequest_index."] with params " . print_r(KalturaLog::argumentsForLog($this->arguments, $actionParams), true));
+ 
+ 		$responseProfile = $deserializer->getResponseProfile();
+ 		if($responseProfile)

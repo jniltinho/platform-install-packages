@@ -1,0 +1,31 @@
+test_all_original_delta_replays_strictly (test_prepare.PrepareTests.test_all_original_delta_replays_strictly) ... ok
+test_anchor_drift (test_prepare.PrepareTests.test_anchor_drift) ... ok
+test_bad_archive_pin_before_reading_zip (test_prepare.PrepareTests.test_bad_archive_pin_before_reading_zip) ... ok
+test_dispatch_actual_arguments_not_assigned (test_prepare.PrepareTests.test_dispatch_actual_arguments_not_assigned) ... ok
+test_existing_output_refused_before_archives (test_prepare.PrepareTests.test_existing_output_refused_before_archives) ... ok
+test_front_only_log_copies_changed (test_prepare.PrepareTests.test_front_only_log_copies_changed) ... ok
+test_helper_no_clone_serialize_or_eval (test_prepare.PrepareTests.test_helper_no_clone_serialize_or_eval) ... ok
+test_no_log_level_or_exception_changes (test_prepare.PrepareTests.test_no_log_level_or_exception_changes) ... ok
+test_second_application_refused (test_prepare.PrepareTests.test_second_application_refused) ... ok
+test_three_known_targets (test_prepare.PrepareTests.test_three_known_targets) ... ok
+test_unknown_target (test_prepare.PrepareTests.test_unknown_target) ... ok
+test_wrong_replay_result_rejected (test_prepare.PrepareTests.test_wrong_replay_result_rejected) ... ERROR
+
+======================================================================
+ERROR: test_wrong_replay_result_rejected (test_prepare.PrepareTests.test_wrong_replay_result_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/baseline-rehearsal/privacy/test_prepare.py", line 40, in test_wrong_replay_result_rejected
+    with self.assertRaises(ValueError):p.strict_replay('a.php',raw,p.patch_bytes('a.php',raw,after),b'wrong')
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/baseline-rehearsal/privacy/prepare.py", line 39, in strict_replay
+    target=Path(tmp)/path;target.parent.mkdir(parents=True);target.write_bytes(before)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileExistsError: [Errno 17] File exists: '/tmp/privacy-local-replay-1cl4icbm'
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.004s
+
+FAILED (errors=1)

@@ -1,0 +1,6 @@
+{
+  "status": "SYNTHETIC_LOG_COPY_CONTRACT_MATCH",
+  "trace_gate": "BLOCKED_SENSITIVE_TRACE_OBSERVED",
+  "full_privacy_accepted": false,
+  "application_accepted": false
+}

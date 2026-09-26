@@ -1,0 +1,14 @@
+{
+  "status": "PREPARED_NATIVE_NOT_EXECUTED",
+  "files": {
+    "tools/php83/baseline-rehearsal/privacy/native74_guest.py": "e87a8f2ef3e0942f18db765ddc96a0b4fc9e5016b5b8b6ee867106a91ada32a4",
+    "tools/php83/baseline-rehearsal/privacy/probe.php": "9431ea817698d16b1e5a9489ebbafceb7735f798b9c6de99a52489199daf9c56",
+    "tools/php83/baseline-rehearsal/privacy/log-copy-methods.php.inc": "93e27b1263830a58d661b6ff82260851f68ffd53f25ba1643ca533955df026d9",
+    "tools/php83/baseline-rehearsal/privacy/test_compare.py": "0c2955609fcb7919a6ac4a277b6d2b6a30f1dad8a0dd42dea9cd071936d79df7",
+    "tools/php83/baseline-rehearsal/privacy/prepare.py": "033821a65f338f14263057b3eb1a799c3acdb22bb951e39cfc3956ad6547ffc8",
+    "tools/php83/baseline-rehearsal/privacy/test_prepare.py": "ad9a391d0feebf579b96c3b67d789023cf99009f705a16b65dafd08f9527815d",
+    "tools/php83/baseline-rehearsal/privacy/run_native74.py": "8a5fd30b5bdf143b310840a0ebd8616ce573dfb7bda5d5cc512a451fa794d0cb",
+    "tools/php83/baseline-rehearsal/privacy/compare.py": "7bb57fcf3fb6d2e4a6b8021152da39c41e0cc2ad649a3522b1c8a1b189dc0928"
+  },
+  "runtime_scope": "74 isolated synthetic class tests only; no application patch/auth"
+}

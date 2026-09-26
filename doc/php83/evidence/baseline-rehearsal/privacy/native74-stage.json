@@ -1,0 +1,23 @@
+{
+  "stage": "/home/vagrant/baseline-privacy-synthetic-r1",
+  "manifest_sha256": "4fa213949c41012a6ae7269dd07faf9a8efc5a0f42046d9a9931f91f0494c7b9",
+  "manifest": {
+    "files": {
+      "original/infra/log/KalturaLog.php": "9b7a7c3dd37616ffd2ac9720ece862641c43bb687a2db4e8fc9cbcb259ff5449",
+      "privacy/infra/log/KalturaLog.php": "3a11102a0b7673959947eb262dee566459d0f2a58ef255ec1f9582c54ca67578",
+      "original/api_v3/lib/KalturaFrontController.php": "5f2eeffe526d4a0ee245b6f10f4e9600e0f7c8bcb4a52eef41e3a66bbd9ab7a1",
+      "privacy/api_v3/lib/KalturaFrontController.php": "79570bd2be507f0045281a903aa13bd2de4037c2e12df3370075c4445184a4ca",
+      "original/api_v3/lib/KalturaDispatcher.php": "be20609b269f08cf1317a79046f5b43cddc8be4cd14dd01fbc0d928fdd24fce2",
+      "privacy/api_v3/lib/KalturaDispatcher.php": "9ce4b17a9fb1bef95fbbbbc6f08cb396a6cc944b055bac8413d740ce5d73c7b9",
+      "original/vendor/ZendFramework/library/Zend/Log/Formatter/Simple.php": "23ca5efb61bb3b44a6ae1f10bdb1f8a445cade3b972dd681e3078229d7b695ff",
+      "privacy/vendor/ZendFramework/library/Zend/Log/Formatter/Simple.php": "23ca5efb61bb3b44a6ae1f10bdb1f8a445cade3b972dd681e3078229d7b695ff",
+      "original/vendor/ZendFramework/library/Zend/Log/Formatter/Interface.php": "7f26df6c3bd59575f54e949c5eddcc27ef10aefeebd6a20894df0842976077ce",
+      "privacy/vendor/ZendFramework/library/Zend/Log/Formatter/Interface.php": "7f26df6c3bd59575f54e949c5eddcc27ef10aefeebd6a20894df0842976077ce",
+      "probe.php": "9431ea817698d16b1e5a9489ebbafceb7735f798b9c6de99a52489199daf9c56",
+      "native74_guest.py": "e87a8f2ef3e0942f18db765ddc96a0b4fc9e5016b5b8b6ee867106a91ada32a4"
+    },
+    "expected_php_sha256": "5ed671ea6fe1cfb9f6e7dde2b259ec5821d7e0eae95c31d103d5468f2e617c59",
+    "status": "SYNTHETIC_ONLY_NOT_APPLICATION_DEPLOYMENT"
+  },
+  "runner_sha256": "8a5fd30b5bdf143b310840a0ebd8616ce573dfb7bda5d5cc512a451fa794d0cb"
+}

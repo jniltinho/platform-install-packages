@@ -1,0 +1,90 @@
+--- a/infra/log/KalturaLog.php
++++ b/infra/log/KalturaLog.php
+@@ -21,6 +21,87 @@
+     
+     const LOG_TYPE_ANALYTICS = 'LOG_TYPE_ANALYTICS';
+     const STANDARD_ERROR = 'STANDARD_ERROR';
++
++	/** Return a display-only copy. Never mutate request or dispatch values. */
++	public static function isSensitiveLogField($name)
++	{
++		$parts = explode(':', (string)$name);
++		$name = strtolower(end($parts));
++		return in_array($name, array('secret', 'adminsecret', 'ks', 'password',
++			'oldpassword', 'newpassword', 'token', 'uploadtokenid',
++			'tokenhash', 'hashkey', 'cmspassword', 'otp'), true);
++	}
++
++	public static function sensitiveValueForLog($value)
++	{
++		return $value === null || $value === '' ? $value : '[REDACTED]';
++	}
++
++	public static function paramsForLog(array $params, $depth = 0)
++	{
++		if ($depth >= 32)
++			return array('__log_copy_limit__' => true);
++		$copy = array();
++		foreach ($params as $name => $value)
++		{
++			if (self::isSensitiveLogField($name))
++				$copy[$name] = self::sensitiveValueForLog($value);
++			elseif (is_array($value))
++				$copy[$name] = self::paramsForLog($value, $depth + 1);
++			elseif (is_object($value))
++				$copy[$name] = self::publicObjectForLog($value, $depth + 1);
++			else
++				$copy[$name] = $value;
++		}
++		return $copy;
++	}
++
++	public static function publicObjectForLog($value, $depth = 0)
++	{
++		// Read-only display view: casting does not invoke clone/getters/serialization.
++		// Preserve protected TypedArray storage too, with explicit visibility labels.
++		$properties = array();
++		foreach ((array)$value as $key => $property)
++		{
++			if (strpos($key, "\0") === 0)
++			{
++				$parts = explode("\0", $key);
++				$name = ($parts[1] === '*' ? 'protected' : 'private:' . $parts[1]) . ':' . $parts[2];
++			}
++			else
++				$name = 'public:' . $key;
++			$properties[$name] = $property;
++		}
++		return array('__class__' => get_class($value),
++			'__properties__' => self::paramsForLog($properties, $depth));
++	}
++
++	public static function argumentsForLog(array $arguments, array $actionParams)
++	{
++		// buildActionArguments appends values in the action-parameter iteration order.
++		// An inconsistent log view must not throw or change actual dispatch behavior.
++		if (count($arguments) !== count($actionParams) ||
++			(count($arguments) && array_keys($arguments) !== range(0, count($arguments) - 1)))
++			return array('__log_copy_mapping_mismatch__' => true);
++		$copy = array();
++		$index = 0;
++		foreach ($actionParams as $param)
++		{
++			if (!is_object($param) || !method_exists($param, 'getName'))
++				return array('__log_copy_mapping_mismatch__' => true);
++			$value = $arguments[$index];
++			if (self::isSensitiveLogField($param->getName()))
++				$copy[$index] = self::sensitiveValueForLog($value);
++			elseif (is_array($value))
++				$copy[$index] = self::paramsForLog($value);
++			elseif (is_object($value))
++				$copy[$index] = self::publicObjectForLog($value);
++			else
++				$copy[$index] = $value;
++			$index++;
++		}
++		return $copy;
++	}
+ 
+ 	public static function isInitialized()
+ 	{
