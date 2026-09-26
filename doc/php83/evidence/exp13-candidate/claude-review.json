@@ -1,0 +1,44 @@
+{
+  "case": "exp13 local source-composition proposal review",
+  "executor": "Claude CLI (claude-opus-5-5)",
+  "reviewer": "Claude CLI (independent of preparer author)",
+  "scope": "LOCAL ONLY: tools/php83/exp13-candidate/{prepare.py,inputs.json,test_prepare.py}, doc/php83/exp13-candidate.md, evidence/exp13-candidate/proposed-r1/{manifest,composition}.json and patch files; read-only grep of unchanged tools/php83/zip-builder-v2/build.py",
+  "not_executed": ["VM/SSH/SQL/PHP/application", "prepare.py re-run (would read archives)", "ZIP build/staging/archive extraction"],
+  "identities": {
+    "prepare_py_sha256": "f5116dba13a8d16dbded59fcb619ff90447cb8715900218eb2190e72eae590b3",
+    "composition_preparer_sha256_matches_current_file": true,
+    "builder_sha256": "3fc3e7f1524c044ef91f390cd6e4836bfeb6b9442ab45fefa6c07d6fcaba1707",
+    "builder_matches_inputs_pin": true,
+    "builder_untracked_changes": "none reported by git status"
+  },
+  "test_execution": {
+    "command": "python3 tools/php83/exp13-candidate/test_prepare.py",
+    "exit_status": 0,
+    "result": "Ran 9 tests, OK",
+    "evidence": ["claude-tests.stdout", "claude-tests.stderr", "claude-tests.exit"]
+  },
+  "verified_locally": {
+    "prior_entries": "code requires exp12 len==65 and replays all 65 strictly (patch --fuzz=0, rejects offset/fuzz) against original then byte-compares exp12; composition reports strict_prior_replays=65",
+    "total_unique_targets": "manifest 75 rows, 75 unique paths, 75 unique patch leaves, 75 patch files present, all sha256 match",
+    "preserved_exactly": "62 rows byte-identical (dict equality) to pinned exp12 selected-manifest rows",
+    "cumulative_replacements": "3: KalturaFrontController-null-user, KalturaPDO-query, PropelPDO-bool-setAttribute; each regenerated as cumulative diff from original upstream, re-verified by strict replay; superseded rows retained in manifest and composition",
+    "new_helper": "exactly one operation=add: infra/general/kXmlEntityLoaderPolicy.php, before_sha256 null, collision-checked against original and exp12",
+    "operations": "62 inherited rows omit operation (builder default 'replace'), 12 explicit replace, 1 add; builder accepts only replace/add",
+    "debugpdo": "chain = return-contract delta then DebugPDO-query-v3; alternate order replayed; both equal final 8f800a0146345f05a71950e3785e442d4aee351184309246cb28159a2afe2ea0 (matches doc); both_orders_equal=true",
+    "conditional_pending": "status PROPOSED_ONLY_PENDING_SQL_AND_COORDINATOR_SELECTION, selection_approved=false, zip_built=false, application_acceptance=false; all 5 returns-family targets conditional_on_sql=true; pending list includes SQL primary+repeat and coordinator selection"
+  },
+  "builder_selection_gate": {
+    "observation": "zip-builder-v2 build.py contains no reference to selection_approved/status; it would build an unselected manifest if invoked",
+    "documented": "doc explicitly states builder is not a policy/selection gate and requires a future coordinator-reviewed selection transition validating the frozen proposal before any build",
+    "assessment": "acceptable as documented control; not enforced in code"
+  },
+  "findings": [
+    {"severity": "low", "summary": "No test exercises prepare() end-to-end or asserts 62/3/DebugPDO-order invariants from the evidence manifest; test_proposal_not_selected checks only 75 rows, 1 add and flags."},
+    {"severity": "low", "summary": "Selection gate is procedural only; a future selection step should reject status/selection_approved mismatches before calling the builder."},
+    {"severity": "info", "summary": "Doc phrase '74 replacements' relies on builder default for 62 rows without operation key; accurate but implicit."},
+    {"severity": "info", "summary": "Delta chain for superseded targets lists only the new held patch; the prior repair is recorded in superseded_prior rather than chain."}
+  ],
+  "blocking_defects": [],
+  "limitations": "Source/metadata review only; no archive re-replay by reviewer, no runtime, SQL, compiler or build evidence. Does not constitute selection, build approval or application acceptance.",
+  "verdict": "NO_BLOCKING_DEFECTS_FOR_PROPOSAL_STAGE"
+}

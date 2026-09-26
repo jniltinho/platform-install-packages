@@ -1,0 +1,12 @@
+{
+  "raw_sha256": "803d22a950e12865112ba901572e423ed394be4ad09d11c649255f4869002f92",
+  "sanitized_sha256": "88018b9c5f363e2ce5e1f2de5e40913e9e3e3a97f7005b06bd9cb92759b25372",
+  "counts": {
+    "system": 13,
+    "assistant": 10,
+    "rate_limit_event": 3,
+    "user": 5,
+    "result": 1
+  },
+  "policy": "Current tool calls and matching results plus public final only; no thinking, system/init/hook/history retained."
+}

@@ -1,0 +1,11 @@
+--- a/vendor/htmlpurifier/library/HTMLPurifier/TagTransform/Font.php
++++ b/vendor/htmlpurifier/library/HTMLPurifier/TagTransform/Font.php
+@@ -75,7 +75,7 @@
+         if (isset($attr['size'])) {
+             // normalize large numbers
+             if ($attr['size'] !== '') {
+-                if ($attr['size']{0} == '+' || $attr['size']{0} == '-') {
++                if ($attr['size'][0] == '+' || $attr['size'][0] == '-') {
+                     $size = (int)$attr['size'];
+                     if ($size < -2) {
+                         $attr['size'] = '-2';

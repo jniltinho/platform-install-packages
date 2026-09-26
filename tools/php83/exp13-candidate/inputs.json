@@ -1,0 +1,34 @@
+{
+  "exp12": {
+    "path": "doc/php83/evidence/exp12-candidate/selected-manifest.json",
+    "sha256": "593ff6e826978c09704cf89f8cdf099452efdcf74a4c058bc88ee57ca16e74d6"
+  },
+  "xml": {
+    "path": "patches/php83/held/xml-lifecycle/manifest.json",
+    "sha256": "bfdb4ce09f56aacb186e9d73b83c3c14d1f831dcb3eb131dbccd233dd655299e"
+  },
+  "aws": {
+    "path": "patches/php83/held/serialization-contracts/manifest.json",
+    "sha256": "7f20c73925111fe7219d138601dc130c87f3b51e2e6e386278f4bfe933cfc3bc"
+  },
+  "dispatcher": {
+    "path": "patches/php83/held/dispatch-rank/manifest.json",
+    "sha256": "cf86152fb75c506920f9def24efe72c8750a56097d1d3fdf02977cff5611bace"
+  },
+  "returns": {
+    "path": "patches/php83/held/return-contracts/manifest.json",
+    "sha256": "3700e05f7f3c64aff65b8ba8affa4452181f73d76320101542dde4de76e460d1"
+  },
+  "debug": {
+    "path": "patches/php83/held/DebugPDO-query-v3.json",
+    "sha256": "f2a78ba9ba8e543e3db65e4ae30c46505a1bf5ec03e3c6ef0196738d53edaffc"
+  },
+  "composition": {
+    "path": "doc/php83/evidence/return-contracts/composition-preparation-r2.json",
+    "sha256": "1dc5c3aaefff37ec506434132b20028281f14232219f60b896b3aeca675da024"
+  },
+  "builder": {
+    "path": "tools/php83/zip-builder-v2/build.py",
+    "sha256": "3fc3e7f1524c044ef91f390cd6e4836bfeb6b9442ab45fefa6c07d6fcaba1707"
+  }
+}

@@ -1,0 +1,281 @@
+{
+  "status": "PROPOSED_ONLY_PENDING_SQL_AND_COORDINATOR_SELECTION",
+  "input_pins": {
+    "exp12": {
+      "path": "doc/php83/evidence/exp12-candidate/selected-manifest.json",
+      "sha256": "593ff6e826978c09704cf89f8cdf099452efdcf74a4c058bc88ee57ca16e74d6"
+    },
+    "xml": {
+      "path": "patches/php83/held/xml-lifecycle/manifest.json",
+      "sha256": "bfdb4ce09f56aacb186e9d73b83c3c14d1f831dcb3eb131dbccd233dd655299e"
+    },
+    "aws": {
+      "path": "patches/php83/held/serialization-contracts/manifest.json",
+      "sha256": "7f20c73925111fe7219d138601dc130c87f3b51e2e6e386278f4bfe933cfc3bc"
+    },
+    "dispatcher": {
+      "path": "patches/php83/held/dispatch-rank/manifest.json",
+      "sha256": "cf86152fb75c506920f9def24efe72c8750a56097d1d3fdf02977cff5611bace"
+    },
+    "returns": {
+      "path": "patches/php83/held/return-contracts/manifest.json",
+      "sha256": "3700e05f7f3c64aff65b8ba8affa4452181f73d76320101542dde4de76e460d1"
+    },
+    "debug": {
+      "path": "patches/php83/held/DebugPDO-query-v3.json",
+      "sha256": "f2a78ba9ba8e543e3db65e4ae30c46505a1bf5ec03e3c6ef0196738d53edaffc"
+    },
+    "composition": {
+      "path": "doc/php83/evidence/return-contracts/composition-preparation-r2.json",
+      "sha256": "1dc5c3aaefff37ec506434132b20028281f14232219f60b896b3aeca675da024"
+    },
+    "builder": {
+      "path": "tools/php83/zip-builder-v2/build.py",
+      "sha256": "3fc3e7f1524c044ef91f390cd6e4836bfeb6b9442ab45fefa6c07d6fcaba1707"
+    }
+  },
+  "preparer_sha256": "f5116dba13a8d16dbded59fcb619ff90447cb8715900218eb2190e72eae590b3",
+  "strict_prior_replays": 65,
+  "delta_targets": [
+    {
+      "path": "alpha/config/kConf.php",
+      "family": "xml",
+      "exp12_sha256": "d02983c560f6813c3546f2294a324d7a955f669e5b867d56d9a878c397cfa015",
+      "final_sha256": "e83d565b1c88c15812e180efff0f84d978bb46e04391985bfe9f0b481f56f5df",
+      "chain": [
+        {
+          "patch": "patches/php83/held/xml-lifecycle/kConf.php.patch",
+          "sha256": "bebd5328f4523e68822ef29ae1e12aeba8ac2decf8bad3f718519b35bfa3d618",
+          "before_sha256": "d02983c560f6813c3546f2294a324d7a955f669e5b867d56d9a878c397cfa015",
+          "after_sha256": "e83d565b1c88c15812e180efff0f84d978bb46e04391985bfe9f0b481f56f5df"
+        }
+      ],
+      "superseded_prior": null,
+      "conditional_on_sql": false
+    },
+    {
+      "path": "infra/general/kSoapClient.php",
+      "family": "xml",
+      "exp12_sha256": "6fe1abef06f3f365fc1862de0e25ffeaef9da156e731fd7cc17b386623561b7e",
+      "final_sha256": "0091ab9704783d547f80b3035c26b1aa6f88bd973032df4722fcf3c4ce20d4ce",
+      "chain": [
+        {
+          "patch": "patches/php83/held/xml-lifecycle/kSoapClient.php.patch",
+          "sha256": "481f0673ebdb9dc7a332f8180637be65488642cbaceeb324b8a7dc2695d0f334",
+          "before_sha256": "6fe1abef06f3f365fc1862de0e25ffeaef9da156e731fd7cc17b386623561b7e",
+          "after_sha256": "0091ab9704783d547f80b3035c26b1aa6f88bd973032df4722fcf3c4ce20d4ce"
+        }
+      ],
+      "superseded_prior": null,
+      "conditional_on_sql": false
+    },
+    {
+      "path": "infra/general/kXmlEntityLoaderPolicy.php",
+      "family": "xml",
+      "exp12_sha256": null,
+      "final_sha256": "00bbe2929d9fffe2f1c86581845f8a11e8089d1b24734018297d2a0cc2104889",
+      "chain": [
+        {
+          "patch": "patches/php83/held/xml-lifecycle/kXmlEntityLoaderPolicy.php.patch",
+          "sha256": "8fa61c38b5e996b5f025efbb60890fe1a01e3beadd054e4aa11cc436552eaf7c",
+          "before_sha256": null,
+          "after_sha256": "00bbe2929d9fffe2f1c86581845f8a11e8089d1b24734018297d2a0cc2104889"
+        }
+      ],
+      "superseded_prior": null,
+      "conditional_on_sql": false
+    },
+    {
+      "path": "vendor/aws/Aws/Common/Credentials/Credentials.php",
+      "family": "aws",
+      "exp12_sha256": "033b5c890519270b14536db4b93ca260d071554b2afc8a6d2b96d0397ca4da90",
+      "final_sha256": "7913bbb5ddd1d57a2935014c4e259ac03e063c97fa90ee4b4ac177e2b52fb5d2",
+      "chain": [
+        {
+          "patch": "patches/php83/held/serialization-contracts/Credentials.patch",
+          "sha256": "f2b27b8552951a920b894c2544e2990130f5ae4bea64546171cd4663f3b320a0",
+          "before_sha256": "033b5c890519270b14536db4b93ca260d071554b2afc8a6d2b96d0397ca4da90",
+          "after_sha256": "7913bbb5ddd1d57a2935014c4e259ac03e063c97fa90ee4b4ac177e2b52fb5d2"
+        }
+      ],
+      "superseded_prior": null,
+      "conditional_on_sql": false
+    },
+    {
+      "path": "vendor/aws/Aws/Common/Credentials/NullCredentials.php",
+      "family": "aws",
+      "exp12_sha256": "d44d7e14527c4c0aad730d03973969890e3741655667999d586596a485107c53",
+      "final_sha256": "294481b0f57b9d1c8a446479babf9899d722d65e7c6553c25b19c6b98b06f741",
+      "chain": [
+        {
+          "patch": "patches/php83/held/serialization-contracts/NullCredentials.patch",
+          "sha256": "349fc9bb5e8d29765b904e8c7ef853e5fddc8a5a024da4baff0c1370048920be",
+          "before_sha256": "d44d7e14527c4c0aad730d03973969890e3741655667999d586596a485107c53",
+          "after_sha256": "294481b0f57b9d1c8a446479babf9899d722d65e7c6553c25b19c6b98b06f741"
+        }
+      ],
+      "superseded_prior": null,
+      "conditional_on_sql": false
+    },
+    {
+      "path": "vendor/aws/Aws/Common/Credentials/AbstractCredentialsDecorator.php",
+      "family": "aws",
+      "exp12_sha256": "e7e265a862684685f90d7911bfc0367ceacf23710108b4e3846322cbba896375",
+      "final_sha256": "1a9fd1dbead188bacc82fd3b1348b5023042fb31b61c8735d0f90a2e98195b4d",
+      "chain": [
+        {
+          "patch": "patches/php83/held/serialization-contracts/AbstractCredentialsDecorator.patch",
+          "sha256": "923f125095643e09f63dba1a9c9eba2520f00b06ca3465672458bd6a1e7a966c",
+          "before_sha256": "e7e265a862684685f90d7911bfc0367ceacf23710108b4e3846322cbba896375",
+          "after_sha256": "1a9fd1dbead188bacc82fd3b1348b5023042fb31b61c8735d0f90a2e98195b4d"
+        }
+      ],
+      "superseded_prior": null,
+      "conditional_on_sql": false
+    },
+    {
+      "path": "vendor/aws/Doctrine/Common/Cache/FileCache.php",
+      "family": "aws",
+      "exp12_sha256": "4df80a6c6d7e00689202bedd4cc9eaa152174f5026da99de6ae09be4eb91012a",
+      "final_sha256": "766142ffc63cfe53bb7009c68ca6efc20017d026337b28c6f22d1aff93e3a306",
+      "chain": [
+        {
+          "patch": "patches/php83/held/serialization-contracts/FileCache.patch",
+          "sha256": "c3978a6707cad4c8e9a08c2cc24e0b4f626fef544e15ac17bf98efb48b79c2da",
+          "before_sha256": "4df80a6c6d7e00689202bedd4cc9eaa152174f5026da99de6ae09be4eb91012a",
+          "after_sha256": "766142ffc63cfe53bb7009c68ca6efc20017d026337b28c6f22d1aff93e3a306"
+        }
+      ],
+      "superseded_prior": null,
+      "conditional_on_sql": false
+    },
+    {
+      "path": "api_v3/lib/KalturaFrontController.php",
+      "family": "dispatcher",
+      "exp12_sha256": "189607dca3b5ef33270d8e4dfe081daf6a76f39d5fd49066ee0b83f24c62d71a",
+      "final_sha256": "98eee32e47092d371ef31a90c2fea6c2575d2505a4c4cefdc625dd60c44fd12a",
+      "chain": [
+        {
+          "patch": "patches/php83/held/dispatch-rank/FrontController-dynamic-policy.patch",
+          "sha256": "1d962fe1f29ebe023512c861fb722d9326a010a562ac75d5cc4fcda50a050c09",
+          "before_sha256": "189607dca3b5ef33270d8e4dfe081daf6a76f39d5fd49066ee0b83f24c62d71a",
+          "after_sha256": "98eee32e47092d371ef31a90c2fea6c2575d2505a4c4cefdc625dd60c44fd12a"
+        }
+      ],
+      "superseded_prior": {
+        "patch": "KalturaFrontController-null-user.patch",
+        "sha256": "e5a93a5868f21fd56a71a826be884ecd13a0eabf1e2c97e85c42527622297603",
+        "path": "api_v3/lib/KalturaFrontController.php",
+        "before_sha256": "5f2eeffe526d4a0ee245b6f10f4e9600e0f7c8bcb4a52eef41e3a66bbd9ab7a1",
+        "after_sha256": "189607dca3b5ef33270d8e4dfe081daf6a76f39d5fd49066ee0b83f24c62d71a",
+        "source_patch": "patches/php83/held/KalturaFrontController-null-user.patch"
+      },
+      "conditional_on_sql": false
+    },
+    {
+      "path": "alpha/apps/kaltura/lib/db/KalturaPDO.php",
+      "family": "returns",
+      "exp12_sha256": "aeb012822d0af7c5fe0e6ea4221f789fc8c886f0c53dbb729a51bc9463a30f0e",
+      "final_sha256": "2c4e638080c9dfaefaab566125b5138bb8fe188e015753ed33321884a474bd51",
+      "chain": [
+        {
+          "patch": "patches/php83/held/return-contracts/KalturaPDO.php.patch",
+          "sha256": "58fa032dcb151871f0ba82abff906357c04583e50c88b9f8ad6c99b9b431b164",
+          "before_sha256": "aeb012822d0af7c5fe0e6ea4221f789fc8c886f0c53dbb729a51bc9463a30f0e",
+          "after_sha256": "2c4e638080c9dfaefaab566125b5138bb8fe188e015753ed33321884a474bd51"
+        }
+      ],
+      "superseded_prior": {
+        "patch": "KalturaPDO-query.patch",
+        "sha256": "51403c941fa0197b9f484c5acfa443a8a8435fc69098712df39a6e49471a43fe",
+        "path": "alpha/apps/kaltura/lib/db/KalturaPDO.php",
+        "before_sha256": "97b756bed876d42da87f6a023b6ecf7af7c2b8454bb382da56ba9c54acae848d",
+        "after_sha256": "aeb012822d0af7c5fe0e6ea4221f789fc8c886f0c53dbb729a51bc9463a30f0e",
+        "source_patch": "patches/php83/held/KalturaPDO-query.patch"
+      },
+      "conditional_on_sql": true
+    },
+    {
+      "path": "vendor/propel/util/PropelPDO.php",
+      "family": "returns",
+      "exp12_sha256": "9017430cfa12adc2de1a187f2d034ecba04ab32677cdbdc419ba2a1e1fc5f0d3",
+      "final_sha256": "b9b6043c290e346e90a36d543fbac7a6366fbe3def5668a9d3711d40593278e1",
+      "chain": [
+        {
+          "patch": "patches/php83/held/return-contracts/PropelPDO.php.patch",
+          "sha256": "a4cb0d9884676dfedadc684c3377c65cfa97c8ee6415094f7134bf6b4e3dc28c",
+          "before_sha256": "9017430cfa12adc2de1a187f2d034ecba04ab32677cdbdc419ba2a1e1fc5f0d3",
+          "after_sha256": "b9b6043c290e346e90a36d543fbac7a6366fbe3def5668a9d3711d40593278e1"
+        }
+      ],
+      "superseded_prior": {
+        "patch": "PropelPDO-bool-setAttribute.patch",
+        "sha256": "794b4d9d7b65d0b868a009228d56483ec2b086054c970c2f495b651d82aa8145",
+        "path": "vendor/propel/util/PropelPDO.php",
+        "before_sha256": "9e4f602f50bc24432107f34a2f3b4a995518fe28c46be9dc8f642dbb9ca74d22",
+        "after_sha256": "9017430cfa12adc2de1a187f2d034ecba04ab32677cdbdc419ba2a1e1fc5f0d3",
+        "source_patch": "patches/php83/held/PropelPDO-bool-setAttribute.patch"
+      },
+      "conditional_on_sql": true
+    },
+    {
+      "path": "vendor/propel/util/PropelConfiguration.php",
+      "family": "returns",
+      "exp12_sha256": "955aa16a6da6e24d80ab2f87deb79c64f9182c45a7066b9ea12c93d135812980",
+      "final_sha256": "2cb726b768ac9329dc20e1c1295e20cae2dd2877e61785e3d429b4c186827ab6",
+      "chain": [
+        {
+          "patch": "patches/php83/held/return-contracts/PropelConfiguration.php.patch",
+          "sha256": "28fb11b83339861438b70b026f234212a819177b132cd8c801faa4eb5d6ce526",
+          "before_sha256": "955aa16a6da6e24d80ab2f87deb79c64f9182c45a7066b9ea12c93d135812980",
+          "after_sha256": "2cb726b768ac9329dc20e1c1295e20cae2dd2877e61785e3d429b4c186827ab6"
+        }
+      ],
+      "superseded_prior": null,
+      "conditional_on_sql": true
+    },
+    {
+      "path": "api_v3/lib/exceptions/KalturaAPIException.php",
+      "family": "returns",
+      "exp12_sha256": "7f8352e8fb01c6913f85ae35b4b7acb36466c5d9a0f6b9d5f6581ea84655abcb",
+      "final_sha256": "3c342574b392197e24fe285dc238239fac1bccb33bb808569e09b038ed9eec6e",
+      "chain": [
+        {
+          "patch": "patches/php83/held/return-contracts/KalturaAPIException.php.patch",
+          "sha256": "a2327f0f565442fb68e0cd760c7e1b41af5799bacc9224dabca7a143b9751bdf",
+          "before_sha256": "7f8352e8fb01c6913f85ae35b4b7acb36466c5d9a0f6b9d5f6581ea84655abcb",
+          "after_sha256": "3c342574b392197e24fe285dc238239fac1bccb33bb808569e09b038ed9eec6e"
+        }
+      ],
+      "superseded_prior": null,
+      "conditional_on_sql": true
+    },
+    {
+      "path": "vendor/propel/util/DebugPDO.php",
+      "family": "returns",
+      "exp12_sha256": "6178d39fd2c11c2bd2dcc220c4234f72dfb11364c11d381e7f7bfaf55089e021",
+      "final_sha256": "8f800a0146345f05a71950e3785e442d4aee351184309246cb28159a2afe2ea0",
+      "chain": [
+        {
+          "patch": "patches/php83/held/return-contracts/DebugPDO.php.patch",
+          "sha256": "0cfcd2671b4ecbb35d0dd558d1885ecf8ee04302712c66ca2138e21587ab0b8d",
+          "before_sha256": "6178d39fd2c11c2bd2dcc220c4234f72dfb11364c11d381e7f7bfaf55089e021",
+          "after_sha256": "3f55ce29c1b53fecdd987e907ea41fafcca65126eb4f8f9c5cdc9db0c861fd78"
+        },
+        {
+          "patch": "patches/php83/held/DebugPDO-query-v3.patch",
+          "sha256": "f966cf320b74717d134b4dd8710e5deafcbd77f890775cf643868e4cb4ab541e",
+          "after_sha256": "8f800a0146345f05a71950e3785e442d4aee351184309246cb28159a2afe2ea0",
+          "both_orders_equal": true
+        }
+      ],
+      "superseded_prior": null,
+      "conditional_on_sql": true
+    }
+  ],
+  "target_count": 75,
+  "expected_php_family_count": 11785,
+  "zip_built": false,
+  "runtime_executed": false,
+  "selected": false
+}

@@ -1,0 +1,17 @@
+--- a/vendor/symfony/vendor/pake/pakeFinder.class.php
++++ b/vendor/symfony/vendor/pake/pakeFinder.class.php
+@@ -523,10 +523,10 @@
+ 
+   public static function isPathAbsolute($path)
+   {
+-    if ($path{0} == '/' || $path{0} == '\\' ||
+-        (strlen($path) > 3 && ctype_alpha($path{0}) &&
+-         $path{1} == ':' &&
+-         ($path{2} == '\\' || $path{2} == '/')
++    if ($path[0] == '/' || $path[0] == '\\' ||
++        (strlen($path) > 3 && ctype_alpha($path[0]) &&
++         $path[1] == ':' &&
++         ($path[2] == '\\' || $path[2] == '/')
+         )
+        )
+     {
