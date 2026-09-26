@@ -1,0 +1,19 @@
+{
+  "status": "BOUNDED_TYPED_STATE_PARITY",
+  "input_sha256": {
+    "native-primary.json": "640141338ef1d4e1fe2cbc38e6de28cba53c13c24cae62d0b4b37bdb7acfbcab",
+    "native-authorized-independent.json": "ca78d8251847017ba72ceea082aeaf6584759b2ccb0413fbe256a071dc4e54cc",
+    "baseline74-authorized-primary.json": "c989f435911a6fdf0252357de0d0b30d73887e352809e8a665bb11ea57cea942"
+  },
+  "native_independent_records_exact": true,
+  "baseline74_original_attribute_all_9_rows_exact": true,
+  "baseline74_original_attribute83_rows_exact_except_7_class_attribute_metadata": true,
+  "serialized_states_exact": 8,
+  "baseline74_diagnostics_each": 0,
+  "attribute83_unrelated_control_diagnostics": 1,
+  "metadata_exemption": "AllowDynamicProperties attribute explicit; descendants/future properties exempt",
+  "baseline74_executor": "Codex",
+  "native83_repeat_executor": "actual Claude CLI",
+  "application_acceptance": false,
+  "rank_successful_body_exercised": false
+}

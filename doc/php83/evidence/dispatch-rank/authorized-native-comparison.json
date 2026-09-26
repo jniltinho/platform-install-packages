@@ -1,0 +1,17 @@
+{
+  "status": "BOUNDED_REPEAT_MATCH",
+  "checks": {
+    "records": true,
+    "files": true,
+    "checksum_manifest_sha256": true,
+    "source_before_after": true,
+    "runtime_before_after": true
+  },
+  "input_sha256": {
+    "native-primary.json": "640141338ef1d4e1fe2cbc38e6de28cba53c13c24cae62d0b4b37bdb7acfbcab",
+    "native-authorized-independent.json": "ca78d8251847017ba72ceea082aeaf6584759b2ccb0413fbe256a071dc4e54cc"
+  },
+  "different_collector_expected": true,
+  "application_acceptance": false,
+  "rank_positive_body_tested": false
+}

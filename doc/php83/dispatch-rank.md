@@ -1,7 +1,8 @@
-# Dispatcher storage and rank argument contract — local preparation
+# Dispatcher storage and rank argument contract — bounded observations
 
-**Latest: four native83 primary observations completed; independent repeat and
-PHP74 comparison pending. No repair selection or release.**
+**Latest: four native83 primary + four actual Claude repeat observations and
+three PHP74 dispatcher observations completed. Typed state/serialization parity
+is bounded to the recorded fixture. No repair selection or release.**
 Historical local-preparation phase: six local builder tests passed.
 Two complete FrontController comparison variants are prepared, not selected.
 No rank patch/default removal exists. New preparations originate within this
@@ -205,3 +206,57 @@ must not be normalized because their hashes are evidence. A separate check of
 new harness and authored Markdown is clean. No global whitespace exemption was
 added. Private CLI streams were reduced to public execution/text events; thought
 fields and hook history are not part of the committed report.
+
+## Authorized independent native repeat (2026-09-26)
+
+After the operator explicitly authorized audit temporary paths, SSH configuration
+access and lab tests, actual Claude completed the four native83 processes in a
+new phase. The historical denial above remains intact. Twelve local tests and
+shell syntax passed. Each native probe exited0, while the observer intentionally
+exited2 (`OBSERVED_NOT_ACCEPTED`). The independent executor's report is
+[authorized-claude-public.json](evidence/dispatch-rank/authorized-claude-public.json).
+
+[Canonical typed comparison](evidence/dispatch-rank/authorized-native-comparison.json)
+checks exact records (including stdout/stderr), source-file identities and checksum
+manifest against the original primary. Source and runtime identities are equal
+before/after. The collector hash differs only because the explicit reuse option
+was added; output filenames also differ, not probe records. No source or probe
+was changed. Claude's caveat about reviewing its own comparison does not replace
+the distinction: Codex ran the primary, actual Claude ran this independent repeat.
+No rank-body success, application boot, SQL or release acceptance follows.
+Native83 was released immediately after the CLI terminated. PHP74 comparison
+remains queued pending the other worker's exclusive-lab handoff.
+
+## PHP74 helper comparison completed
+
+After the AWS worker explicitly handed off baseline74, Codex executed the three
+real dispatcher variants with the reviewed PHP74-specific helper. Each exited0,
+with empty stderr and zero diagnostics; source/runtime snapshots match exactly.
+The lab was immediately returned to AWS. The collector remains observation-only
+(exit2), and whole-exp12 PHP74 support is not implied.
+
+[Reproducible comparator](evidence/dispatch-rank/compare-authorized.py) verifies
+[the stored result](evidence/dispatch-rank/authorized-state-comparison.json):
+original74 and attribute74 have identical nine rows; original74 and attribute83
+have identical typed state and eight serialized byte strings except exactly
+seven direct-class `AllowDynamicProperties` reflection metadata entries. The
+synthetic descendant has no own reflection attribute but inherits the exemption.
+Attribute83 retains the single unrelated KalturaDispatcher deprecation. Public
+property declaration remains only a counterexample, not a selected repair.
+
+The held patch manifest's `NOT_RUNTIME_VALIDATED` status describes its original
+preparation phase and is retained as frozen provenance, not current whole-app
+acceptance. These newer records add bounded runtime proof without promoting it.
+Rank still has only reflection/omission evidence; valid positional/named calls,
+real persistence and API behavior need their separately scoped positive contract.
+
+Actual Claude independently ran and reviewed the stored comparator (exit0,
+byte-identical output), without another VM execution:
+[public review](evidence/dispatch-rank/authorized-state-review-public.json).
+Its useful limits are retained: PHP74 `class_attributes=[]` is an explicit
+unavailable-API adapter, not native reflection evidence; runtime74 inventory also
+includes copied83 libraries not loaded by this probe; executor labels come from
+CLI orchestration provenance, not PHP stdout; public-comparison74 is not asserted
+as equivalent by the comparator. The review's reference to the final row as
+index9 is a numbering slip (nine rows have indices0–8); the exact records and
+comparator are authoritative. This does not expand the bounded acceptance scope.
