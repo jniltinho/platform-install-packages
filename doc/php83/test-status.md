@@ -17,7 +17,7 @@ and [execution contract](../../openspec/changes/migrate-kaltura-php83/design.md)
   ran in the isolated labs; no production/package/release acceptance follows.
   No release ETA or application completion percentage is inferred.
 
-## Current built candidate: exp13 — compiler repeated, API/CLI pending
+## Current built candidate: exp13 — bounded artifact regressions repeated
 
 [exp13](exp13-candidate.md) was built by Codex and independently rebuilt by actual
 Claude (`4c5e058f`), producing identical91,210,445-byte ZIPs with SHA256
@@ -28,8 +28,13 @@ plus one added XML helper. Privacy patches remain excluded. [Whole-artifact comp
 Claude repetition (`4eee520f`):11,785 files,11,778 accepted, the same seven
 historical rejects, zero incomplete rows. Diagnostic files decrease73→72, solely
 removing KalturaAPIException::__wakeup's warning. Raw channels and source/runtime
-identities agree. API/CLI validation is still pending; source-stage results are
-not relabelled as fresh artifact execution. There is no accepted release.
+identities agree. [API/CLI artifact evidence](evidence/exp13-runtime/README.md)
+now includes primary and actual Claude repetitions (`030c2831`): four API modes,
+48 CLI rows (44 successful and four original fatal controls),20 typed contract
+comparisons. API diagnostics decrease **17 groups/371 events →1 group/1 event**;
+CLI raw channels agree. Raw API stderr is explicitly **UNCOMPARED**, not assumed
+equal or known to differ only by temporary paths. Source-stage results are not
+relabelled as fresh artifact execution. There is no accepted release.
 
 This build milestone was accepted by verified-TLS SMTP on2026-09-26 at17:39:06
 America/Sao_Paulo; inbox delivery is not confirmed.
@@ -40,6 +45,21 @@ matching runtime snapshots. Source files, including the added helper, come from
 the verified ZIP. Expected rejection/SoapFault controls remain explicit; this is
 not full web-SAPI, application or release acceptance. XML status email was
 accepted by verified-TLS SMTP at17:52:50 America/Sao_Paulo; inbox unconfirmed.
+
+[Actual-artifact credentials/cache](exp13-serialization.md) adds88 native83
+processes and88 actual Claude repetitions (`56edfd53`), with complete reports,
+source identities and four runtime snapshots identical. The46 historical R3
+observations used for analysis are explicitly NOT_RERUN, not additional native
+passes. Old readers still reject candidate O-format records; application and
+rollback acceptance remain false. The API/cache milestone email was accepted
+by verified-TLS SMTP at18:05:37 America/Sao_Paulo; inbox delivery unconfirmed.
+
+Independent review found a comparator-only gap in API ledger validation when an
+output hash is null. Actual retained reports have the expected hashes/paths;
+the narrow validator correction (`e213aaed`) now passes16 tests and independent
+Codex review, reproduces the original bypass rejection and reconciles unchanged
+native reports. No native replay or changed acceptance scope follows. Full AIO, privacy, distro/provider,
+performance and recovery gates remain open.
 
 ## Last runtime-validated bounded artifact and baseline preparation: exp12
 
