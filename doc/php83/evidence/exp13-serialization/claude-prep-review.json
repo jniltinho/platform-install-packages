@@ -1,0 +1,119 @@
+{
+  "case": "exp13-serialization local preparation review",
+  "executor": "Claude CLI (claude-opus-5-5)",
+  "reviewer_role": "independent of adapter author",
+  "scope": "LOCAL ONLY: no VM, SSH, PHP, runtime, stage upload; no source/stage/ZIP edits",
+  "reviewed_identities": {
+    "tools/php83/exp13-serialization/common.py": "06a56ff9e609145b125a4e2f96f7a114da7c27277178d4ec237f2d24254a6d1d",
+    "tools/php83/exp13-serialization/prepare.py": "28efe5d957a0b176cd57292a53c6435e709d9474020c0634a07dc4f5c796953f",
+    "tools/php83/exp13-serialization/collect.py": "6e35c5dad1ef39477c096c80d6b4e19dd4080a7a5468478c4c7b0753b45f9a0c",
+    "tools/php83/exp13-serialization/stage.py": "849d632629ae9c6e23b9b77190a2b90abd5675ae2fcc185fb5c3e895d0d90c0e",
+    "tools/php83/exp13-serialization/test_adapter.py": "4d5b0ed6d1bef276d46550c81f76f3d7e4c8d60ad8345d57245dc3e548ae1ad8",
+    "tools/php83/exp13-serialization/input-pins.json": "dbd49511b260ecdd7fa431ef395c45c72717a5a01d0a846dc8177e9d244383da",
+    "tools/php83/exp13-serialization/stage/identities.json": "1b776f75be61759fa7a4fd74bb9aae750da3c96294b9404a856b0014f3b064fe",
+    "tools/php83/exp13-serialization/stage/run.sh": "3460bf8c83f1bff07cb99cf43fcf6a607e29ac125b2d5c9f1f242ec045bad101",
+    "doc/php83/exp13-serialization.md": "01fb691b7eb5ef9f425103f8d8b442adf6dc5584185b526a36d341ee8060dc96",
+    "doc/php83/evidence/exp13-serialization/preparation.json": "849ce67704d6598a28ff7b04ba157aea8d249587e5076bdd40e90d209ddfb5e2"
+  },
+  "artifact_pins_verified": {
+    "exp12": "de5e61a1b54f472e605ef2e87669302a3915616fd85378e0f05706fcb06a7e8b",
+    "exp13": "6d0bc4947207e6c5457b7843948d263aa8d5f251480e58cbf9086c0add79a944"
+  },
+  "r3_closure": "5f628293182feed0066274ed89dff3d362cd6ad781d2ba4b9198df9aef6df7d5",
+  "stage_manifest_sha256": "1b776f75be61759fa7a4fd74bb9aae750da3c96294b9404a856b0014f3b064fe",
+  "steps": [
+    {
+      "step": 1,
+      "command": "python3 tools/php83/exp13-serialization/test_adapter.py -v",
+      "cwd": "repository root",
+      "env": "PYTHONDONTWRITEBYTECODE=1",
+      "exit": 0,
+      "stdout": {
+        "file": "doc/php83/evidence/exp13-serialization/claude-prep-step1.stdout",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "file": "doc/php83/evidence/exp13-serialization/claude-prep-step1.stderr",
+        "sha256": "c7368e441d983e9d3526bbb48442f0f436ddf9669d7152aa8a0a091f26e69b7b"
+      },
+      "result": "7 tests OK"
+    },
+    {
+      "step": 2,
+      "command": "python3 tools/php83/serialization-contracts/test_reconcile_r3.py -v",
+      "cwd": "repository root",
+      "env": "PYTHONDONTWRITEBYTECODE=1",
+      "exit": 0,
+      "stdout": {
+        "file": "doc/php83/evidence/exp13-serialization/claude-prep-step2.stdout",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "file": "doc/php83/evidence/exp13-serialization/claude-prep-step2.stderr",
+        "sha256": "61e129b1408b004ba9aa6ee017526b92c88dd12bf1f68c9c7dcd22d305a78c6e"
+      },
+      "result": "8 tests OK"
+    },
+    {
+      "step": 3,
+      "command": "bash -n tools/php83/exp13-serialization/stage/run.sh",
+      "cwd": "repository root",
+      "env": "PYTHONDONTWRITEBYTECODE=1",
+      "exit": 0,
+      "stdout": {
+        "file": "doc/php83/evidence/exp13-serialization/claude-prep-step3.stdout",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "file": "doc/php83/evidence/exp13-serialization/claude-prep-step3.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "result": "bash -n syntax OK"
+    },
+    {
+      "step": 4,
+      "command": "python3 doc/php83/evidence/exp13-serialization/claude-prep-step4-verify.py",
+      "cwd": "repository root",
+      "env": "PYTHONDONTWRITEBYTECODE=1",
+      "exit": 0,
+      "stdout": {
+        "file": "doc/php83/evidence/exp13-serialization/claude-prep-step4.stdout",
+        "sha256": "6a9db68e9fd31716499e8f847220a6b7975f045108acdfcdbd455ae3f5b54f7f"
+      },
+      "stderr": {
+        "file": "doc/php83/evidence/exp13-serialization/claude-prep-step4.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "result": "independent read-only ZIP/stage/matrix check, all matched",
+      "script_sha256": "b8185252df83107411105d6f56a4f58f4898c4c8cc7a96eae15c2764ce25c451"
+    }
+  ],
+  "verified": [
+    "Matrix is 88 rows = R3 native83 96 minus 8 cachefix; 44 per variant (18 roundtrip/malformed/invalid-utf8, 18 reads by original83-r2/candidate83-r2/original74, 8 filesystem cache); order equals R3 inventory.",
+    "22 source files per variant read from the actual pinned exp12/exp13 ZIPs, each byte-identical to the R3 closure and to the local stage; 4 candidate files differ from original (Credentials, NullCredentials, AbstractCredentialsDecorator, FileCache).",
+    "Stage inventory equals manifest (48 files + identities.json); no cachefix sources; probe.php, cache-probe.php and reference-wires.json byte-identical to R3 pins and not duplicated in tracked sources (stage/ is gitignored).",
+    "run.sh differs from reviewed run-r2.sh only by phase/path and removal of the baseline74 branch and cachefix variant; sandbox, pre/post manifest and runtime checks unchanged.",
+    "Current83 read rows consume wires produced by this run (roundtrips precede reads); original74 reads and cache read-C/read-O use explicitly pinned historical inputs.",
+    "compare() injects 38 historical74 and 8 historical cachefix83 rows only in memory into the unchanged pinned reconcile-r3 oracle; only counts/check labels are exported; report states 88 new processes, rows NOT_RERUN, no 134-pass claim.",
+    "Rollback incompatibility explicit: oracle requires original readers to reject candidate O wires; report fixes rollback_compatible:false and application_acceptance:false.",
+    "Collector retains per-row command, input hash, integer exit, raw base64 and decoded channels, timeout/launch errors and failures; rejects bool exits, invalid UTF-8 output, probe/loaded drift; collector closure is rechecked after the run; oracle modules are pinned by input-pins and loaded from their own directory (no common/report_contract name collision)."
+  ],
+  "caveats_non_blocking": [
+    "collect.py must be run from the repository root: reconcile-r3.py resolves its evidence path relative to CWD; from another CWD compare() raises FileNotFoundError (OSError, not caught) after the 88 processes and the report would not be written.",
+    "Only ValueError/KeyError/TypeError are caught around compare(); any other exception type there would also lose the in-memory observations before write.",
+    "Runtime PHP identity is pinned to R3 native83 runtime_files; if the VM runtime changed since R3, run.sh pre-verify will fail closed (detected, not a pass).",
+    "Adapter tests replay historical rows as synthetic input; they validate plumbing only, not native execution."
+  ],
+  "blockers": [],
+  "readiness": "READY for stage.py + 88 native83 processes only after explicit exclusive native83 grant from the coordinator, run from repository root with new output names.",
+  "not_claimed": [
+    "native execution",
+    "application/package/release acceptance",
+    "rollback compatibility",
+    "134 new passes"
+  ],
+  "limitations": [
+    "Review is not execution evidence.",
+    "No SSH config, VM state or remote path availability was checked."
+  ]
+}

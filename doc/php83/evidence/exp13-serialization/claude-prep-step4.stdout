@@ -1,0 +1,44 @@
+{
+ "input_pins_sha256": "dbd49511b260ecdd7fa431ef395c45c72717a5a01d0a846dc8177e9d244383da",
+ "input_pins_all_match": true,
+ "preparation_sha256": "849ce67704d6598a28ff7b04ba157aea8d249587e5076bdd40e90d209ddfb5e2",
+ "zip_sha256": {
+  "exp12": "de5e61a1b54f472e605ef2e87669302a3915616fd85378e0f05706fcb06a7e8b",
+  "exp13": "6d0bc4947207e6c5457b7843948d263aa8d5f251480e58cbf9086c0add79a944"
+ },
+ "sources_per_variant": {
+  "original": 22,
+  "candidate": 22
+ },
+ "zip_or_stage_mismatch": [],
+ "stage_manifest_sha256": "1b776f75be61759fa7a4fd74bb9aae750da3c96294b9404a856b0014f3b064fe",
+ "stage_files": 48,
+ "stage_file_hash_mismatch": [],
+ "stage_inventory_equals_manifest": true,
+ "cachefix_in_stage": false,
+ "probes_equal_R3": {
+  "probe.php": true,
+  "cache-probe.php": true,
+  "reference-wires.json": true
+ },
+ "candidate_vs_original_differing_sources": [
+  "vendor/aws/Aws/Common/Credentials/AbstractCredentialsDecorator.php",
+  "vendor/aws/Aws/Common/Credentials/Credentials.php",
+  "vendor/aws/Aws/Common/Credentials/NullCredentials.php",
+  "vendor/aws/Doctrine/Common/Cache/FileCache.php"
+ ],
+ "matrix": {
+  "r3_83_rows": 96,
+  "selected": 88,
+  "by_variant": {
+   "original": 44,
+   "candidate": 44
+  },
+  "reads_by_writer": {
+   "original83-r2": 12,
+   "candidate83-r2": 12,
+   "original74": 12
+  },
+  "cache": 16
+ }
+}

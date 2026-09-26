@@ -1,0 +1,12 @@
+{
+  "tools/php83/serialization-contracts/probe.php": "05cf3a11fa581aec617983b9d1ed2a9945898a08078980c4e551bd87029c46d9",
+  "tools/php83/serialization-contracts/cache-probe.php": "f5fc09a0a544838456a928a663d5cfbd6e8760b793d29106aa688baaa17cdf56",
+  "tools/php83/serialization-contracts/run-r2.sh": "e8aad95d194289d6ec18063eaeabf5fd0c2fb63dd25fe418b3f00c7757635425",
+  "tools/php83/serialization-contracts/collect-r2.py": "d697f38348f6409b987f97a5b027107fab57a7afdc809983dabc2202970309f8",
+  "tools/php83/serialization-contracts/report_contract.py": "edb330863f82d866559cdf296848c5dd98b3e79ceb59e79b9a369dbbacf7b7bb",
+  "tools/php83/serialization-contracts/reconcile-r3.py": "4af03337e9b005e5dd5306e2d4c593cad78a9b96e39c4e2d928f23e0edadfb48",
+  "doc/php83/evidence/serialization-contracts/r3-stage-identities.json": "5f628293182feed0066274ed89dff3d362cd6ad781d2ba4b9198df9aef6df7d5",
+  "doc/php83/evidence/serialization-contracts/r3-primary74.json": "981e8808e34ae3a4bafc30cc570f8473e5126e5aafe021e21661efc6ecc83ed3",
+  "doc/php83/evidence/serialization-contracts/r3-primary83.json": "13afae9a8351eaa10950889710b63427838f2cc5b6faf5080dc81228ee54fcf8",
+  "doc/php83/evidence/serialization-contracts/r3-reference-wires.json": "51743a1f267a78f49eea76cd041837a45c0955ac6c7269421d43bc4f4f4b280a"
+}

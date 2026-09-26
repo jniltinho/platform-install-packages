@@ -1,0 +1,14 @@
+test_artifact_sources (__main__.Adapter.test_artifact_sources) ... ok
+test_diagnostic_change (__main__.Adapter.test_diagnostic_change) ... ok
+test_exit_bool (__main__.Adapter.test_exit_bool) ... ok
+test_historical88_replay_only (__main__.Adapter.test_historical88_replay_only) ... ok
+test_inventory (__main__.Adapter.test_inventory) ... ok
+test_missing (__main__.Adapter.test_missing) ... ok
+test_no74_wrapper (__main__.Adapter.test_no74_wrapper) ... ok
+test_oracle_oserror_retains_rows (__main__.Adapter.test_oracle_oserror_retains_rows) ... ok
+test_wrong_cwd_before_native (__main__.Adapter.test_wrong_cwd_before_native) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.040s
+
+OK

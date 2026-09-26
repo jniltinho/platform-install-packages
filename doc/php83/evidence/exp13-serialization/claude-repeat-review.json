@@ -1,0 +1,133 @@
+{
+ "case": "exp13-serialization independent native83 88-process repeat (claude-repeat)",
+ "executor": "Claude CLI (claude-opus-5-5)",
+ "reviewer_role": "independent repeat of primary; guard review of final2 changes",
+ "grant": "root-granted exclusive native83 AWS88 repeat; primary terminal (exit 0) before start",
+ "scope_excluded": [
+  "baseline74 rerun",
+  ".20",
+  "SQL",
+  "API",
+  "system changes",
+  "source/stage edits"
+ ],
+ "identities": {
+  "tools/php83/exp13-serialization/collect.py": "ff519f0d86d8045e804f8bb8931f387f2840f2a92a79b80a28ac3589a6e4ba3a",
+  "tools/php83/exp13-serialization/common.py": "06a56ff9e609145b125a4e2f96f7a114da7c27277178d4ec237f2d24254a6d1d",
+  "tools/php83/exp13-serialization/prepare.py": "28efe5d957a0b176cd57292a53c6435e709d9474020c0634a07dc4f5c796953f",
+  "tools/php83/exp13-serialization/stage.py": "849d632629ae9c6e23b9b77190a2b90abd5675ae2fcc185fb5c3e895d0d90c0e",
+  "tools/php83/exp13-serialization/test_adapter.py": "d763c8bb3fd7c03be21248f21c5721b16fa48c2eb1725e972595ff18c4a14621",
+  "tools/php83/exp13-serialization/input-pins.json": "dbd49511b260ecdd7fa431ef395c45c72717a5a01d0a846dc8177e9d244383da",
+  "tools/php83/exp13-serialization/stage/run.sh": "3460bf8c83f1bff07cb99cf43fcf6a607e29ac125b2d5c9f1f242ec045bad101",
+  "tools/php83/exp13-serialization/stage/identities.json": "1b776f75be61759fa7a4fd74bb9aae750da3c96294b9404a856b0014f3b064fe",
+  "doc/php83/evidence/exp13-serialization/reviewed-r1/collect.py": "6e35c5dad1ef39477c096c80d6b4e19dd4080a7a5468478c4c7b0753b45f9a0c",
+  "doc/php83/evidence/exp13-serialization/reviewed-r1/test_adapter.py": "4d5b0ed6d1bef276d46550c81f76f3d7e4c8d60ad8345d57245dc3e548ae1ad8",
+  "doc/php83/evidence/exp13-serialization/preparation.json": "849ce67704d6598a28ff7b04ba157aea8d249587e5076bdd40e90d209ddfb5e2",
+  "doc/php83/exp13-serialization.md": "01fb691b7eb5ef9f425103f8d8b442adf6dc5584185b526a36d341ee8060dc96"
+ },
+ "final_guard_review": {
+  "diff_base": "evidence/exp13-serialization/reviewed-r1 (collect 6e35c5da..., test_adapter 4d5b0ed6...)",
+  "wrong_cwd_guard": "PASS: Path.cwd().resolve()==c.ROOT checked after overwrite refusal and before c.inputs()/stage reads/any ssh; test_wrong_cwd_before_native asserts ValueError with patched cwd",
+  "adjudicate": "PASS: adjudicate() catches Exception (was ValueError/KeyError/TypeError), sets FAIL_RETAINED_OBSERVATIONS with typed contract_error, records list untouched and still written; test_oracle_oserror_retains_rows asserts 88 rows kept on OSError",
+  "blocking_defects": [],
+  "non_blocking_notes": [
+   "per-row observation loop still catches a fixed exception tuple; an exception outside it would abort before the report is written (pre-existing, unchanged by final2)"
+  ]
+ },
+ "steps": [
+  {
+   "id": "claude-repeat-guards",
+   "command": "PYTHONDONTWRITEBYTECODE=1 python3 tools/php83/exp13-serialization/test_adapter.py -v",
+   "cwd": "repository root",
+   "exit": 0,
+   "stdout": {
+    "file": "doc/php83/evidence/exp13-serialization/claude-repeat-guards.stdout",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   },
+   "stderr": {
+    "file": "doc/php83/evidence/exp13-serialization/claude-repeat-guards.stderr",
+    "sha256": "babbe4f4dd3c48e3b7a6867327ceba331e7ebb195c17a05271cdb8500115ab25"
+   },
+   "result": "9 tests OK"
+  },
+  {
+   "id": "claude-repeat-step1",
+   "command": "python3 doc/php83/evidence/exp10-runtime/snapshot-php83.py doc/php83/evidence/exp13-serialization/claude-before.json",
+   "cwd": "repository root",
+   "exit": 0,
+   "stdout": {
+    "file": "doc/php83/evidence/exp13-serialization/claude-repeat-step1.stdout",
+    "sha256": "1c3ce1ded149763b42db5044aefe120888c6e0b428c06835c2cc47bb15c4ee23"
+   },
+   "stderr": {
+    "file": "doc/php83/evidence/exp13-serialization/claude-repeat-step1.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   },
+   "result": "snapshot {files:39,modes:2}"
+  },
+  {
+   "id": "claude-repeat-step2",
+   "command": "python3 tools/php83/exp13-serialization/collect.py doc/php83/evidence/exp13-serialization/claude.json",
+   "cwd": "repository root",
+   "exit": 0,
+   "stdout": {
+    "file": "doc/php83/evidence/exp13-serialization/claude-repeat-step2.stdout",
+    "sha256": "7d63c052a7df72ec042abf030795c5064476d55263b014ede0d7d4be6790ba4b"
+   },
+   "stderr": {
+    "file": "doc/php83/evidence/exp13-serialization/claude-repeat-step2.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   },
+   "result": "PASS_BOUNDED_88_ARTIFACT_CONTRACT, 88 records, 0 failures"
+  },
+  {
+   "id": "claude-repeat-step3",
+   "command": "python3 doc/php83/evidence/exp10-runtime/snapshot-php83.py doc/php83/evidence/exp13-serialization/claude-after.json",
+   "cwd": "repository root",
+   "exit": 0,
+   "stdout": {
+    "file": "doc/php83/evidence/exp13-serialization/claude-repeat-step3.stdout",
+    "sha256": "1c3ce1ded149763b42db5044aefe120888c6e0b428c06835c2cc47bb15c4ee23"
+   },
+   "stderr": {
+    "file": "doc/php83/evidence/exp13-serialization/claude-repeat-step3.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   },
+   "result": "snapshot {files:39,modes:2}"
+  }
+ ],
+ "outputs": {
+  "claude-before.json": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491",
+  "claude.json": "a65d67afb9057c5286fd17aec7c44d0f7f8ee94dee64968888ef7a1f563b9016",
+  "claude-after.json": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491"
+ },
+ "local_comparison": {
+  "primary_vs_claude_report_byte_exact": true,
+  "report_sha256": "a65d67afb9057c5286fd17aec7c44d0f7f8ee94dee64968888ef7a1f563b9016",
+  "matrix_exact_88_ordered_unique": true,
+  "all_exit_int_0": true,
+  "four_runtime_snapshots_identical": true,
+  "runtime_snapshot_sha256": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491",
+  "collector_closure_pins_match_current_files": true,
+  "manifest_sha256": "1b776f75be61759fa7a4fd74bb9aae750da3c96294b9404a856b0014f3b064fe",
+  "artifact_pins": {
+   "exp12": "de5e61a1b54f472e605ef2e87669302a3915616fd85378e0f05706fcb06a7e8b",
+   "exp13": "6d0bc4947207e6c5457b7843948d263aa8d5f251480e58cbf9086c0add79a944"
+  }
+ },
+ "not_rerun": {
+  "historical74_rows": 38,
+  "historical_cachefix83_rows": 8,
+  "note": "analysis-only join into frozen typed reconcile-r3; NOT counted as 134 new passes; only 88 new native83 processes"
+ },
+ "rollback": "C->O rollback remains incompatible (rollback_compatible=false) even with PASS_BOUNDED",
+ "limitations": [
+  "bounded synthetic corpus on pinned artifact only",
+  "no application acceptance",
+  "no release acceptance",
+  "no 7.4 baseline rerun",
+  "harness PASS is not full application validation"
+ ],
+ "application_acceptance": false,
+ "release_acceptance": false
+}

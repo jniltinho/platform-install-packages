@@ -1,0 +1,52 @@
+{
+  "status": "PASS_BOUNDED_ACTUAL_EXP13_SERIALIZATION_WITH_INDEPENDENT_REPEAT",
+  "new_processes_primary": 88,
+  "new_processes_claude": 88,
+  "full_reports_byte_identical": true,
+  "report_sha256": "a65d67afb9057c5286fd17aec7c44d0f7f8ee94dee64968888ef7a1f563b9016",
+  "runtime_snapshot_sha256": {
+    "primary-before.json": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491",
+    "primary-after.json": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491",
+    "claude-before.json": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491",
+    "claude-after.json": "83b656a2baa2e231c52f228813aa1d262e5fa06aae6c4bb05abecebe3d0c9491"
+  },
+  "manifest_sha256": "1b776f75be61759fa7a4fd74bb9aae750da3c96294b9404a856b0014f3b064fe",
+  "collector_closure": {
+    "collect.py": "ff519f0d86d8045e804f8bb8931f387f2840f2a92a79b80a28ac3589a6e4ba3a",
+    "common.py": "06a56ff9e609145b125a4e2f96f7a114da7c27277178d4ec237f2d24254a6d1d",
+    "input-pins.json": "dbd49511b260ecdd7fa431ef395c45c72717a5a01d0a846dc8177e9d244383da"
+  },
+  "artifact_pins": {
+    "exp12": "de5e61a1b54f472e605ef2e87669302a3915616fd85378e0f05706fcb06a7e8b",
+    "exp13": "6d0bc4947207e6c5457b7843948d263aa8d5f251480e58cbf9086c0add79a944"
+  },
+  "contract": {
+    "status": "MATCHED_BOUNDED_ARTIFACT_CONTRACT_WITH_KNOWN_WIRE_BREAK",
+    "new_native83_processes": 88,
+    "historical74_rows_NOT_RERUN": 38,
+    "historical_cachefix83_rows_NOT_RERUN": 8,
+    "typed_oracle_checks": [
+      "typed wire behavior and C/O readers: plain",
+      "typed wire behavior and C/O readers: null",
+      "typed wire behavior and C/O readers: decorator",
+      "typed wire behavior and C/O readers: role",
+      "typed wire behavior and C/O readers: profile",
+      "typed wire behavior and C/O readers: cacheable",
+      "real filesystem cache: hit",
+      "real filesystem cache: expired",
+      "real filesystem cache: malformed",
+      "real filesystem cache: refresh-hit",
+      "real filesystem cache: refresh-miss",
+      "real filesystem cache: invalid-utf8",
+      "real filesystem cache: read-C",
+      "real filesystem cache: read-O"
+    ],
+    "rollback_compatible": false,
+    "application_acceptance": false
+  },
+  "historical74_NOT_RERUN": true,
+  "historical_cachefix_NOT_RERUN": true,
+  "rollback_compatible": false,
+  "application_acceptance": false,
+  "cli_terminal_exit": "see claude-repeat.exit"
+}

@@ -1,0 +1,13 @@
+test_actual_retained (__main__.Contract.test_actual_retained) ... ok
+test_bool_exit (__main__.Contract.test_bool_exit) ... ok
+test_delayed_utf8 (__main__.Contract.test_delayed_utf8) ... ok
+test_missing_case (__main__.Contract.test_missing_case) ... ok
+test_old_reader_now_accepts (__main__.Contract.test_old_reader_now_accepts) ... ok
+test_typed_getter (__main__.Contract.test_typed_getter) ... ok
+test_warning_loss (__main__.Contract.test_warning_loss) ... ok
+test_wrong_save_phase (__main__.Contract.test_wrong_save_phase) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.032s
+
+OK
