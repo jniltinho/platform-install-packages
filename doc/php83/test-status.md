@@ -70,7 +70,7 @@ reconciles historical provider probes with SOAP/APC gaps, without selecting a
 production provider. No broad task checkbox closes from these
 supporting results, and there is still no final release or production cutover.
 
-## Subsequent held investigations — not integrated into exp12
+## Historical held investigations — superseded by access-confirmed follow-up
 
 - Dispatcher/rank checkpoint `30c397af`: four native83 primary processes with
   unchanged runtime/source identities. The targeted dynamic-property attribute
@@ -120,6 +120,40 @@ The held [return-contract family](return-contracts.md) also now has an authorize
 actual Claude repeat of all nine native83 observations, strict record/source/runtime
 comparison and preserved original hierarchy failure. SQL/API/constructor effects
 remain untested by that corpus; no new artifact or release approval follows.
+
+### Latest reviewed source batches and remaining privacy gate
+
+- [Dispatcher](dispatch-rank.md): actual Claude native83 repetition and the
+  original74 comparison are complete (`31ddd27c`). Eight serialized states
+  retain bounded parity with the targeted attribute; its inheritance/future-name
+  exemption remains explicit. Rank persistence remains untested.
+- [Credential/cache R3](serialization-contracts.md):38 original74 and96 native83
+  observations are independently repeated by actual Claude (`db4cd39d`). The
+  repaired candidate rejects invalid UTF-8 before writing a cache record.
+  Original readers reject the candidate O wire format: rollback compatibility
+  and application acceptance remain false. The earlier rejected60-record phase
+  above is historical, not the latest candidate result.
+- [Real SQL return contracts](return-contracts-sql.md):91 typed rows per cohort,
+  primary and actual Claude repeat, match the explicit oracle (`004b75da`).
+  Declaration diagnostics decrease15 to4 without suppression;38 local tests and
+  independent OpenCode review pass. Four fresh private database services are
+  stopped; source/runtime identities are unchanged. Logging/monitor/cache seams,
+  MSSQL and full API acceptance remain outside this fixture.
+- [Privacy observations](baseline-rehearsal-privacy-proposal.md): four native
+  probes and12 lints complete on74/83 (`58bd0d1c`). Parameter-copy behavior passes,
+  but native exception traces still expose a15-character synthetic-secret prefix.
+  Full privacy is **FAIL**; no valid USER authentication/upload or installed-app
+  patch follows. The [trace proposal](baseline-rehearsal-trace-proposal.md) awaits
+  policy confirmation and full-pipeline validation, not just formatter tests.
+- [exp13 proposal](exp13-candidate.md) freezes75 targets, preserving62 prior
+  results with three cumulative replacements and ten new targets. The SQL gate
+  is now recorded; selection and two experimental builds are in progress, not
+  completed or promoted. Previous source-stage passes do not establish acceptance
+  of the eventual ZIP. Privacy changes are excluded from this candidate.
+
+Status email for the SQL milestone was accepted by verified-TLS SMTP on
+2026-09-26 at17:33:32 America/Sao_Paulo; inbox delivery is not confirmed.
+No parent/detailed task count changes from these bounded results.
 
 ## Historical artifact-runtime checkpoint: exp11 real-artifact regression
 
