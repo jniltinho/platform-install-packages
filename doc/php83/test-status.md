@@ -17,7 +17,7 @@ and [execution contract](../../openspec/changes/migrate-kaltura-php83/design.md)
   ran in the isolated labs; no production/package/release acceptance follows.
   No release ETA or application completion percentage is inferred.
 
-## New artifact and baseline preparation: exp12
+## Current bounded artifact checkpoint and baseline preparation: exp12
 
 [exp12](exp12-candidate.md) was built twice with identical SHA256
 `de5e61a1b54f472e605ef2e87669302a3915616fd85378e0f05706fcb06a7e8b`.
@@ -27,8 +27,20 @@ differ from exp11. Source-stage Criteria/generator behavior was independently
 repeated; these results do **not** transfer automatically to the new ZIP.
 [Paired whole-artifact compilation](exp12-syntax.md) now has primary and actual
 Claude repetition:7→7 residual rejects, no outcome/diagnostic drift and no
-incomplete files. API/CLI artifact regression remains a separate pending gate.
-The last completed full bounded artifact-runtime checkpoint remains exp11 below.
+incomplete files. [Actual-artifact runtime evidence](evidence/exp12-runtime/README.md)
+now also has primary and actual Claude repetitions, reconciled by the strict
+comparator and independent Cursor review. API diagnostics decreased from
+**18 groups / 503 events to 17 groups / 371 events**: exactly the 132-event
+Criteria marker group disappeared; other groups remain visible. This is bounded
+synthetic SQL/Apache HTTP/trusted-HTTPS evidence, not complete AIO acceptance.
+
+The checkpoint includes 48 CLI rows (44 successful processes and 4 expected
+original83 failures), 20 typed baseline comparisons, 68 curly-offset class cases,
+17 additional repair processes, 72 generator rows and 4 Criteria processes.
+The initial loaded-source metadata mismatch and interrupted independent generator
+attempt remain preserved; narrow hash-bound revalidation and a completed fresh
+repeat are separately identified. Both runtime identities remained unchanged.
+The historical exp11 checkpoint below is retained, not the current candidate.
 
 [Criteria](criteria-marker.md) preserves same-runtime state in its bounded corpus,
 but three pre-existing74/83 subclass serialization-order differences remain a
@@ -40,11 +52,14 @@ Actual kConf/Soap lifecycle exploration is separate and not an approved repair.
 [Source media](baseline-media.md) now includes independently validated10s360p25
 and60s1080p60 H.264/AAC fixtures; no application upload/delivery claim follows.
 [Deadline transport](baseline-transport.md) has19 independently executed local
-tests including real synthetic TLS and cleanup; API POST/workload integration
-and timing boundaries remain pending. No broad task checkbox closes from these
+tests including real synthetic TLS and cleanup. [API protocol](baseline-api.md)
+has 36 independently executed local tests; real baseline rehearsal and measured
+rounds remain pending. [Provider decision draft](provider-decision-draft.md)
+reconciles historical provider probes with SOAP/APC gaps, without selecting a
+production provider. No broad task checkbox closes from these
 supporting results, and there is still no final release or production cutover.
 
-## Last completed artifact-runtime checkpoint: exp11 real-artifact regression
+## Historical artifact-runtime checkpoint: exp11 real-artifact regression
 
 Two identical exp11 ZIP builds select 63 source repairs. Codex and actual Claude
 independently compile all 11,784 PHP-family files per artifact: exp10 rejects11,

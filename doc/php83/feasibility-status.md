@@ -5,16 +5,18 @@ This is partial evidence, **not a compatibility or migration approval**.
 
 ## Current evidence boundary
 
-The newest twice-built experimental artifact is exp12; its actual-artifact
-regression is pending. The last completed bounded runtime checkpoint is exp11,
-not the initial runtime-only lab state described below. [Test status](test-status.md) links the reproducible ZIP,
-whole-source compiler and independently repeated bounded API/CLI evidence.
-The exp11 checkpoint retained seven compiler rejections and18 API diagnostic
-groups; do not transfer these counts or its acceptance to exp12 before execution. Complete
-application/distro/performance/recovery acceptance and production integration
-approval are still open. [Dependency attribution](dependency-attribution-followup.md)
-is partial, and the [Riak alias-only experiment](riak-alias.md) was rejected.
-No go/no-go or release approval is implied by a successful bounded experiment.
+The newest twice-built experimental artifact is exp12. Its bounded actual-artifact
+compiler and runtime checks now have primary and independent repetitions.
+[Test status](test-status.md) links the exact ZIP, whole-source compiler and
+API/CLI evidence. Exp12 retains seven compiler rejections and 17 API diagnostic
+groups / 371 events; its Criteria repair removes one 132-event group relative
+to exp11. Do not interpret this bounded workload as complete application acceptance.
+
+Complete application/distro/performance/recovery acceptance and production
+integration approval are still open. [Dependency attribution](dependency-attribution-followup.md)
+and the [provider decision draft](provider-decision-draft.md) remain partial.
+The [Riak alias-only experiment](riak-alias.md) was rejected. No go/no-go or
+release approval is implied by a successful bounded experiment.
 
 The sections below are chronological historical observations. Statements such as
 "no application installed" or "no task complete" refer to their original phase,

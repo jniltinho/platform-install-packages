@@ -1,0 +1,12 @@
+{
+  "executor": "Codex local join",
+  "reviewer": "actual Cursor Agent CLI",
+  "reviewer_exit": 0,
+  "primary_sha256": "a6dc6f58bae355d8a9bfbfcbd973f03796dbea02a9a02de7567eb28fb80b85ae",
+  "independent_byte_equal": true,
+  "raw_cli_sha256": "4a73919275d22ab4167c0dc9463c74e9adc9d3c96045f7506290d3c113f87c33",
+  "reviewed_document": "reviewed-draft.md",
+  "final_document_change": "Editorial spacing plus review link only",
+  "runtime_executed": false,
+  "tasks_closed": 0
+}
