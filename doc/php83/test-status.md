@@ -17,19 +17,29 @@ and [execution contract](../../openspec/changes/migrate-kaltura-php83/design.md)
   ran in the isolated labs; no production/package/release acceptance follows.
   No release ETA or application completion percentage is inferred.
 
-## Current built candidate: exp13 — artifact runtime validation pending
+## Current built candidate: exp13 — compiler repeated, API/CLI pending
 
 [exp13](exp13-candidate.md) was built by Codex and independently rebuilt by actual
 Claude (`4c5e058f`), producing identical91,210,445-byte ZIPs with SHA256
 `6d0bc4947207e6c5457b7843948d263aa8d5f251480e58cbf9086c0add79a944`.
 The original and exp12 archives are unchanged. All75 targets are verified;
 62 prior results remain identical, and the exp12→13 delta is12 modified files
-plus one added XML helper. Privacy patches remain excluded. Compiler and API/CLI
-validation of this actual ZIP are pending; prior source-stage evidence is not
-relabelled as fresh artifact execution. There is no accepted release.
+plus one added XML helper. Privacy patches remain excluded. [Whole-artifact compiler validation](exp13-syntax.md) now has primary and actual
+Claude repetition (`4eee520f`):11,785 files,11,778 accepted, the same seven
+historical rejects, zero incomplete rows. Diagnostic files decrease73→72, solely
+removing KalturaAPIException::__wakeup's warning. Raw channels and source/runtime
+identities agree. API/CLI validation is still pending; source-stage results are
+not relabelled as fresh artifact execution. There is no accepted release.
 
 This build milestone was accepted by verified-TLS SMTP on2026-09-26 at17:39:06
 America/Sao_Paulo; inbox delivery is not confirmed.
+
+[Actual-artifact XML contracts](exp13-xml.md) now have40 primary processes and40
+actual Claude repetitions (`b4360935`), with identical complete reports and four
+matching runtime snapshots. Source files, including the added helper, come from
+the verified ZIP. Expected rejection/SoapFault controls remain explicit; this is
+not full web-SAPI, application or release acceptance. XML status email was
+accepted by verified-TLS SMTP at17:52:50 America/Sao_Paulo; inbox unconfirmed.
 
 ## Last runtime-validated bounded artifact and baseline preparation: exp12
 
