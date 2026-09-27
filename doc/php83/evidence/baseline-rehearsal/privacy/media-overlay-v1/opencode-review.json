@@ -1,0 +1,73 @@
+{
+  "exit": 0,
+  "seconds": 98.902,
+  "stdout_sha256": "7b8f92e0892668366119a2ad4d38094ba723d41a1efe9b1681247de3a4b32a76",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "public_events": [
+    {
+      "type": "text",
+      "timestamp": 1790470013644,
+      "sessionID": "ses_f1fabd80effeChlOGhH3BB8cIR",
+      "part": {
+        "id": "prt_0e05442c7001Fpd60U578ixm26",
+        "messageID": "msg_0e0542bf0001MGHUTUcNhAKYFN",
+        "sessionID": "ses_f1fabd80effeChlOGhH3BB8cIR",
+        "type": "text",
+        "text": "Read-only review of the privacy overlay v1 drivers \u2014 running its suite and checking sequencing.",
+        "time": {
+          "start": 1790470013639,
+          "end": 1790470013642
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "rs_01a0e0543fe2709a8a1cf72e1af0a52a",
+            "phase": "commentary"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "timestamp": 1790470032995,
+      "sessionID": "ses_f1fabd80effeChlOGhH3BB8cIR",
+      "part": {
+        "id": "prt_0e0548d3c001Dt1hVmrpjGj0he",
+        "messageID": "msg_0e0545f86001L6fnwkgKM4FqBH",
+        "sessionID": "ses_f1fabd80effeChlOGhH3BB8cIR",
+        "type": "text",
+        "text": "Found the v1 drivers and v2 reference \u2014 executing the unit suite now.",
+        "time": {
+          "start": 1790470032700,
+          "end": 1790470032993
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "rs_01a0e05471dd704abdbae17499067a2a",
+            "phase": "commentary"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "timestamp": 1790470104604,
+      "sessionID": "ses_f1fabd80effeChlOGhH3BB8cIR",
+      "part": {
+        "id": "prt_0e0558611001Vg006vdIqSUoGP",
+        "messageID": "msg_0e05520c60012SK3ft96M4Gwmu",
+        "sessionID": "ses_f1fabd80effeChlOGhH3BB8cIR",
+        "type": "text",
+        "text": "Read-only review complete. Real driver was not executed (no SSH/VM).\n\n**Tests executed (actual):**\n`python3 -m unittest discover -s tools/php83/baseline-rehearsal/privacy/media-overlay-v1 -p \"test_*.py\" -v` \u2192 **18/18 pass** (10 in `test_guest.py`, 8 in `test_runner.py`), in ~0.001s.\n\n**Scope verified against `guest.py` / `run.py` (static, no credentials output):**\n- Sequencing: wrong-secret gate + audit (lines 77\u201381) precedes partner-secret SQL read (line 83); enforced by `test_secret_read_after_gate`. `user_attempted` checkpoint precedes KS send; `upload_attempted` checkpoint precedes upload; `media_window=(start,jstart)` is set before upload so the failure handler covers the full media window.\n- Upload/entry/READY: single pinned synthetic file (`MEDIA_SOURCE_PIN`, \u22642 MB), upload-token shape check, owned entry via `media_projection`, `addContent`, READY poll bounded by `time.monotonic()+600`, sleep 2, poll count recorded, terminal states fail as `READY_NOT_REACHED`.\n- Source binding: exactly one `isOriginal` asset, `version.isdigit()` (version 0 allowed by design), read-only `file_sync` SELECT with digit/ID/int-gated interpolation, single `owned_storage` candidate scoped under `/opt/kaltura/web/content`, `STORED_SOURCE_BYTES` SHA check plus `SOURCE_AFTER` re-check.\n- Filtered list: `media.list` with `idEqual` + pager, `totalCount==1`, `typed_equal` projection identity.\n- Source delivery GET: `Origin('192.168.56.74','http',80).validate(url)` (literal-74, userinfo/fragment refused at transport layer), guest-side `no query`, `no /ks/`, `secret/ks not in url`, then `deadline.get(..., limit=2 MB, deadline=30)` \u2014 redirects refused via `NoRedirects` plus response-URL revalidation; delivered bytes SHA-checked (`HTTP_SOURCE_BYTES`).\n- Failure retention: `except` path attempts `media_failure_privacy` audit over `media_window`; scan errors recorded as class-only. Error codes bounded to fixed `[A-Z0-9_]` tokens (plus `Failed` family); no backend text/values exported. `run.py` forbids secret-bearing receipt keys (nested), preserves complete receipts on partial/timeout output.\n- Bounded runtime: guest poll 600 s + 30 s operation deadlines inside `run.py` `RuntimeMaxSec=1100` / 1130 s SSH timeout; stage pinned (root-owned 0444, hash-verified), never-overwrite, `PENDING_REVIEW`/freeze/source drift gates before SSH, unit cleanup asserted.\n\n**Blocking defects: none found** in this narrowed scope. Non-blocking notes only: `READY_NOT_REACHED` conflates timeout vs. terminal status into one code; guest depends on the pre-existing `/home/vagrant/privacy-application-overlay-v3` stage (fail-closed via manifest pin if absent); `originals` truthiness list conflates `True==1` but still rejects all non-original markers, matching the `untimed_driver.py` pattern. No benchmark/TLS/full-matrix claims in the reports.",
+        "time": {
+          "start": 1790470096401,
+          "end": 1790470104601
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "msg_01a0e055855074149ae1d3f26fc83fb8"
+          }
+        }
+      }
+    }
+  ]
+}

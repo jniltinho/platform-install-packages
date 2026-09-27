@@ -1,0 +1,16 @@
+{
+  "project": "kaltura-rigel-18.20.0-full",
+  "generation": "2026-09-25T12:19:00Z",
+  "index_state": "ready",
+  "nodes": 231336,
+  "edges": 800641,
+  "path": "api_v3/lib/types/conversionProfile/KalturaAsset.php",
+  "coverage": "no_recorded_issue",
+  "freshness": "metadata_match",
+  "direct_source_read": "lines1-120",
+  "fields_confirmed": [
+    "entryId",
+    "partnerId"
+  ],
+  "limitations": "coverage is best effort; runtime response must independently satisfy guards"
+}

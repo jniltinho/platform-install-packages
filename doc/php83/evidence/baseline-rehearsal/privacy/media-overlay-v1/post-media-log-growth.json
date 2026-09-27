@@ -1,0 +1,8 @@
+{
+  "appended_bytes_since_user_cutoff": 12766543,
+  "files_grown": 20,
+  "max_file_append_bytes": 11289025,
+  "during_observation_seconds": 0.20236685901181772,
+  "during_observation_added_bytes": 0,
+  "content_read": false
+}

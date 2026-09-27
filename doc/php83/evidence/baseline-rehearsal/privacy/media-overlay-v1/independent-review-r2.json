@@ -1,0 +1,10 @@
+{
+  "reviewer": "/root/exp9_harness",
+  "local_tests": 21,
+  "exit": 0,
+  "freeze_files_unchanged": 11,
+  "scope": "strict partner and entry joins in add/addContent/every get; original asset tenant and entry join",
+  "prior_cli": "OpenCode actual18 tests passed but did not detect missing ownership joins; its report preserved",
+  "runtime_execution_by_reviewer": false,
+  "status": "NO_BLOCKER_FOR_SINGLE_SYNTHETIC_FIXTURE"
+}
