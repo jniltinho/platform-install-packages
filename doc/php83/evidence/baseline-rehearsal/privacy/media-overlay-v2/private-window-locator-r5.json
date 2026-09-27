@@ -1,0 +1,1300 @@
+{
+  "matches": [
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/KalturaEvent.php",
+      "source_line": 29,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/KalturaEvent.php",
+      "source_line": 29,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/KalturaEvent.php",
+      "source_line": 29,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/KalturaEvent.php",
+      "source_line": 31,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/KalturaEvent.php",
+      "source_line": 31,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/KalturaEvent.php",
+      "source_line": 31,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectAddedEvent.php",
+      "source_line": 29,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectAddedEvent.php",
+      "source_line": 29,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectAddedEvent.php",
+      "source_line": 29,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectAddedEvent.php",
+      "source_line": 29,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectAddedEvent.php",
+      "source_line": 29,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectAddedEvent.php",
+      "source_line": 29,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectAddedEvent.php",
+      "source_line": 31,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectAddedEvent.php",
+      "source_line": 31,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectAddedEvent.php",
+      "source_line": 31,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectAddedEvent.php",
+      "source_line": 31,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectAddedEvent.php",
+      "source_line": 31,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectAddedEvent.php",
+      "source_line": 31,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kApplicativeEvent.php",
+      "source_line": 34,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kApplicativeEvent.php",
+      "source_line": 34,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kApplicativeEvent.php",
+      "source_line": 34,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForIndexInheritedTreeEvent.php",
+      "source_line": 37,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForIndexInheritedTreeEvent.php",
+      "source_line": 37,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForIndexInheritedTreeEvent.php",
+      "source_line": 37,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForIndexInheritedTreeEvent.php",
+      "source_line": 37,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForIndexInheritedTreeEvent.php",
+      "source_line": 37,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForIndexInheritedTreeEvent.php",
+      "source_line": 37,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForIndexInheritedTreeEvent.php",
+      "source_line": 39,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForIndexInheritedTreeEvent.php",
+      "source_line": 39,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForIndexInheritedTreeEvent.php",
+      "source_line": 39,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForIndexInheritedTreeEvent.php",
+      "source_line": 39,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForIndexInheritedTreeEvent.php",
+      "source_line": 39,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForIndexInheritedTreeEvent.php",
+      "source_line": 39,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectCopiedEvent.php",
+      "source_line": 61,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectCopiedEvent.php",
+      "source_line": 61,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectCopiedEvent.php",
+      "source_line": 61,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectCopiedEvent.php",
+      "source_line": 63,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectCopiedEvent.php",
+      "source_line": 63,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectCopiedEvent.php",
+      "source_line": 63,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectCreatedEvent.php",
+      "source_line": 27,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectCreatedEvent.php",
+      "source_line": 27,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectCreatedEvent.php",
+      "source_line": 27,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectCreatedEvent.php",
+      "source_line": 48,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectCreatedEvent.php",
+      "source_line": 48,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectCreatedEvent.php",
+      "source_line": 48,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectCreatedEvent.php",
+      "source_line": 48,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectCreatedEvent.php",
+      "source_line": 48,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectCreatedEvent.php",
+      "source_line": 48,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectCreatedEvent.php",
+      "source_line": 50,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectCreatedEvent.php",
+      "source_line": 50,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectCreatedEvent.php",
+      "source_line": 50,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectCreatedEvent.php",
+      "source_line": 50,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectCreatedEvent.php",
+      "source_line": 50,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectCreatedEvent.php",
+      "source_line": 50,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectDeletedEvent.php",
+      "source_line": 29,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectDeletedEvent.php",
+      "source_line": 29,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectDeletedEvent.php",
+      "source_line": 29,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectDeletedEvent.php",
+      "source_line": 29,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectDeletedEvent.php",
+      "source_line": 29,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectDeletedEvent.php",
+      "source_line": 29,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectDeletedEvent.php",
+      "source_line": 31,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectDeletedEvent.php",
+      "source_line": 31,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectDeletedEvent.php",
+      "source_line": 31,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectDeletedEvent.php",
+      "source_line": 31,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectDeletedEvent.php",
+      "source_line": 31,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectDeletedEvent.php",
+      "source_line": 31,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReplacedEvent.php",
+      "source_line": 40,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReplacedEvent.php",
+      "source_line": 40,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReplacedEvent.php",
+      "source_line": 40,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReplacedEvent.php",
+      "source_line": 40,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReplacedEvent.php",
+      "source_line": 40,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReplacedEvent.php",
+      "source_line": 40,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReplacedEvent.php",
+      "source_line": 42,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReplacedEvent.php",
+      "source_line": 42,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReplacedEvent.php",
+      "source_line": 42,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReplacedEvent.php",
+      "source_line": 42,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReplacedEvent.php",
+      "source_line": 42,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReplacedEvent.php",
+      "source_line": 42,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectUpdatedEvent.php",
+      "source_line": 29,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectUpdatedEvent.php",
+      "source_line": 29,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectUpdatedEvent.php",
+      "source_line": 29,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectUpdatedEvent.php",
+      "source_line": 29,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectUpdatedEvent.php",
+      "source_line": 29,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectUpdatedEvent.php",
+      "source_line": 29,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectUpdatedEvent.php",
+      "source_line": 31,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectUpdatedEvent.php",
+      "source_line": 31,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectUpdatedEvent.php",
+      "source_line": 31,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectUpdatedEvent.php",
+      "source_line": 31,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectUpdatedEvent.php",
+      "source_line": 31,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectUpdatedEvent.php",
+      "source_line": 31,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kBatchJobStatusEvent.php",
+      "source_line": 40,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kBatchJobStatusEvent.php",
+      "source_line": 40,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kBatchJobStatusEvent.php",
+      "source_line": 40,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kBatchJobStatusEvent.php",
+      "source_line": 42,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kBatchJobStatusEvent.php",
+      "source_line": 42,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kBatchJobStatusEvent.php",
+      "source_line": 42,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectErasedEvent.php",
+      "source_line": 27,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectErasedEvent.php",
+      "source_line": 27,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectErasedEvent.php",
+      "source_line": 27,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectErasedEvent.php",
+      "source_line": 27,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectErasedEvent.php",
+      "source_line": 27,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectErasedEvent.php",
+      "source_line": 27,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectErasedEvent.php",
+      "source_line": 29,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectErasedEvent.php",
+      "source_line": 29,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectErasedEvent.php",
+      "source_line": 29,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectErasedEvent.php",
+      "source_line": 29,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectErasedEvent.php",
+      "source_line": 29,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectErasedEvent.php",
+      "source_line": 29,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectErasedEvent.php",
+      "source_line": 50,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectErasedEvent.php",
+      "source_line": 50,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectErasedEvent.php",
+      "source_line": 50,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForElasticIndexEvent.php",
+      "source_line": 23,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForElasticIndexEvent.php",
+      "source_line": 23,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForElasticIndexEvent.php",
+      "source_line": 23,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForElasticIndexEvent.php",
+      "source_line": 50,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForElasticIndexEvent.php",
+      "source_line": 50,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForElasticIndexEvent.php",
+      "source_line": 50,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForElasticIndexEvent.php",
+      "source_line": 50,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForElasticIndexEvent.php",
+      "source_line": 50,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForElasticIndexEvent.php",
+      "source_line": 50,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForElasticIndexEvent.php",
+      "source_line": 52,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForElasticIndexEvent.php",
+      "source_line": 52,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForElasticIndexEvent.php",
+      "source_line": 52,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForElasticIndexEvent.php",
+      "source_line": 52,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForElasticIndexEvent.php",
+      "source_line": 52,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForElasticIndexEvent.php",
+      "source_line": 52,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectSavedEvent.php",
+      "source_line": 28,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectSavedEvent.php",
+      "source_line": 28,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectSavedEvent.php",
+      "source_line": 28,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectSavedEvent.php",
+      "source_line": 49,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectSavedEvent.php",
+      "source_line": 49,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectSavedEvent.php",
+      "source_line": 49,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectSavedEvent.php",
+      "source_line": 49,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectSavedEvent.php",
+      "source_line": 49,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectSavedEvent.php",
+      "source_line": 49,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectSavedEvent.php",
+      "source_line": 51,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectSavedEvent.php",
+      "source_line": 51,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectSavedEvent.php",
+      "source_line": 51,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectSavedEvent.php",
+      "source_line": 51,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectSavedEvent.php",
+      "source_line": 51,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectSavedEvent.php",
+      "source_line": 51,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForReplacmentEvent.php",
+      "source_line": 29,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForReplacmentEvent.php",
+      "source_line": 29,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForReplacmentEvent.php",
+      "source_line": 29,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForReplacmentEvent.php",
+      "source_line": 29,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForReplacmentEvent.php",
+      "source_line": 29,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForReplacmentEvent.php",
+      "source_line": 29,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForReplacmentEvent.php",
+      "source_line": 31,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForReplacmentEvent.php",
+      "source_line": 31,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForReplacmentEvent.php",
+      "source_line": 31,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForReplacmentEvent.php",
+      "source_line": 31,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForReplacmentEvent.php",
+      "source_line": 31,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForReplacmentEvent.php",
+      "source_line": 31,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectInvalidateCacheEvent.php",
+      "source_line": 30,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectInvalidateCacheEvent.php",
+      "source_line": 30,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectInvalidateCacheEvent.php",
+      "source_line": 30,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectInvalidateCacheEvent.php",
+      "source_line": 30,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectInvalidateCacheEvent.php",
+      "source_line": 30,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectInvalidateCacheEvent.php",
+      "source_line": 30,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectInvalidateCacheEvent.php",
+      "source_line": 32,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectInvalidateCacheEvent.php",
+      "source_line": 32,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectInvalidateCacheEvent.php",
+      "source_line": 32,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectInvalidateCacheEvent.php",
+      "source_line": 32,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectInvalidateCacheEvent.php",
+      "source_line": 32,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectInvalidateCacheEvent.php",
+      "source_line": 32,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectDataChangedEvent.php",
+      "source_line": 45,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectDataChangedEvent.php",
+      "source_line": 45,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectDataChangedEvent.php",
+      "source_line": 45,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectDataChangedEvent.php",
+      "source_line": 45,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectDataChangedEvent.php",
+      "source_line": 45,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectDataChangedEvent.php",
+      "source_line": 45,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectDataChangedEvent.php",
+      "source_line": 47,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectDataChangedEvent.php",
+      "source_line": 47,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectDataChangedEvent.php",
+      "source_line": 47,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectDataChangedEvent.php",
+      "source_line": 47,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectDataChangedEvent.php",
+      "source_line": 47,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectDataChangedEvent.php",
+      "source_line": 47,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForIndexRelatedObjectsEvent.php",
+      "source_line": 29,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForIndexRelatedObjectsEvent.php",
+      "source_line": 29,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForIndexRelatedObjectsEvent.php",
+      "source_line": 29,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForIndexRelatedObjectsEvent.php",
+      "source_line": 29,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForIndexRelatedObjectsEvent.php",
+      "source_line": 29,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForIndexRelatedObjectsEvent.php",
+      "source_line": 29,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForIndexRelatedObjectsEvent.php",
+      "source_line": 31,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForIndexRelatedObjectsEvent.php",
+      "source_line": 31,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForIndexRelatedObjectsEvent.php",
+      "source_line": 31,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForIndexRelatedObjectsEvent.php",
+      "source_line": 31,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForIndexRelatedObjectsEvent.php",
+      "source_line": 31,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForIndexRelatedObjectsEvent.php",
+      "source_line": 31,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForIndexEvent.php",
+      "source_line": 27,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForIndexEvent.php",
+      "source_line": 27,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForIndexEvent.php",
+      "source_line": 27,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForIndexEvent.php",
+      "source_line": 27,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForIndexEvent.php",
+      "source_line": 27,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForIndexEvent.php",
+      "source_line": 27,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForIndexEvent.php",
+      "source_line": 32,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForIndexEvent.php",
+      "source_line": 32,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForIndexEvent.php",
+      "source_line": 32,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForIndexEvent.php",
+      "source_line": 32,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForIndexEvent.php",
+      "source_line": 32,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectReadyForIndexEvent.php",
+      "source_line": 32,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectChangedEvent.php",
+      "source_line": 34,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectChangedEvent.php",
+      "source_line": 34,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectChangedEvent.php",
+      "source_line": 34,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectChangedEvent.php",
+      "source_line": 55,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectChangedEvent.php",
+      "source_line": 55,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectChangedEvent.php",
+      "source_line": 55,
+      "static_literal": "] started handling ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectChangedEvent.php",
+      "source_line": 55,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectChangedEvent.php",
+      "source_line": 55,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectChangedEvent.php",
+      "source_line": 55,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectChangedEvent.php",
+      "source_line": 57,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectChangedEvent.php",
+      "source_line": 57,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectChangedEvent.php",
+      "source_line": 57,
+      "static_literal": "] finished handling ["
+    },
+    {
+      "window_line": 621,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectChangedEvent.php",
+      "source_line": 57,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 625,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectChangedEvent.php",
+      "source_line": 57,
+      "static_literal": "] object type ["
+    },
+    {
+      "window_line": 1102,
+      "source": "alpha/apps/kaltura/lib/events/events/kObjectChangedEvent.php",
+      "source_line": 57,
+      "static_literal": "] object type ["
+    }
+  ]
+}

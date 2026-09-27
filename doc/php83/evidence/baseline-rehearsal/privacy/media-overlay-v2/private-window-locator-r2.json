@@ -1,0 +1,80 @@
+[
+  {
+    "file": "/opt/kaltura/log/batch/capturethumb-0-2026-09-27.log",
+    "long_token_lines": 8,
+    "with_ks_substring": 8,
+    "source_identifiers": {}
+  },
+  {
+    "file": "/opt/kaltura/log/batch/convert-0-2026-09-27.log",
+    "long_token_lines": 21,
+    "with_ks_substring": 21,
+    "source_identifiers": {}
+  },
+  {
+    "file": "/opt/kaltura/log/batch/dbcleanup-0-2026-09-27.log",
+    "long_token_lines": 1,
+    "with_ks_substring": 1,
+    "source_identifiers": {}
+  },
+  {
+    "file": "/opt/kaltura/log/batch/dropfolderwatcher-0-2026-09-27.log",
+    "long_token_lines": 10,
+    "with_ks_substring": 10,
+    "source_identifiers": {}
+  },
+  {
+    "file": "/opt/kaltura/log/batch/extractmedia-0-2026-09-27.log",
+    "long_token_lines": 6,
+    "with_ks_substring": 6,
+    "source_identifiers": {}
+  },
+  {
+    "file": "/opt/kaltura/log/batch/jobsuspender-0-2026-09-27.log",
+    "long_token_lines": 1,
+    "with_ks_substring": 1,
+    "source_identifiers": {}
+  },
+  {
+    "file": "/opt/kaltura/log/batch/kschedulehelper-0-2026-09-27.log",
+    "long_token_lines": 6,
+    "with_ks_substring": 6,
+    "source_identifiers": {}
+  },
+  {
+    "file": "/opt/kaltura/log/batch/partnerloadcleanup-0-2026-09-27.log",
+    "long_token_lines": 1,
+    "with_ks_substring": 1,
+    "source_identifiers": {}
+  },
+  {
+    "file": "/opt/kaltura/log/batch/postconvert-0-2026-09-27.log",
+    "long_token_lines": 7,
+    "with_ks_substring": 7,
+    "source_identifiers": {}
+  },
+  {
+    "file": "/opt/kaltura/log/batch/validatelivemediaservers-0-2026-09-27.log",
+    "long_token_lines": 2,
+    "with_ks_substring": 2,
+    "source_identifiers": {}
+  },
+  {
+    "file": "/opt/kaltura/log/kaltura_apache_access.log",
+    "long_token_lines": 1,
+    "with_ks_substring": 0,
+    "source_identifiers": {}
+  },
+  {
+    "file": "/opt/kaltura/log/kaltura_api_v3.log",
+    "long_token_lines": 4,
+    "with_ks_substring": 4,
+    "source_identifiers": {}
+  },
+  {
+    "file": "/opt/kaltura/log/kaltura_batch.log",
+    "long_token_lines": 15,
+    "with_ks_substring": 9,
+    "source_identifiers": {}
+  }
+]

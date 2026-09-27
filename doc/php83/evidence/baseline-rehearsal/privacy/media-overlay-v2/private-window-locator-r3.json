@@ -1,0 +1,30 @@
+{
+  "file": "/opt/kaltura/log/kaltura_api_v3.log",
+  "rows": [
+    {
+      "window_line": 621,
+      "method": "KalturaSerializableStream->_write",
+      "encoded_session_shape": true
+    },
+    {
+      "window_line": 625,
+      "method": "KalturaSerializableStream->_write",
+      "encoded_session_shape": true
+    },
+    {
+      "window_line": 1102,
+      "method": "KalturaSerializableStream->_write",
+      "encoded_session_shape": true
+    },
+    {
+      "window_line": 35878,
+      "method": "KalturaSerializableStream->_write",
+      "encoded_session_shape": true
+    }
+  ],
+  "distinct_session_candidates": 2,
+  "candidate_occurrence_counts": [
+    1,
+    3
+  ]
+}
