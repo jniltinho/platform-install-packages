@@ -1,0 +1,9 @@
+{
+  "status": "LOCAL_RECIPE_NOT_APPLIED",
+  "files": {
+    "tools/php83/baseline-rehearsal/privacy/application-overlay-v3/guest.py": "7b4aeab57e5cbabf45fe4322302f14f06d4c47d9ae03afe0ec91fa6ac33833b5",
+    "tools/php83/baseline-rehearsal/privacy/application-overlay-v3/README.md": "408fd0cbdf55ca43008ab4c48faf614eea567c9cfd1b4e4750eb3dec322c7834",
+    "tools/php83/baseline-rehearsal/privacy/application-overlay-v3/prepare.py": "87f6a56c83540ad9594717971ed007874162d3f0334841a7c8889f633177aa89",
+    "tools/php83/baseline-rehearsal/privacy/application-overlay-v3/test_overlay.py": "476dbdebd0a4fbbf98937e4efccdddc3304f4cce777295d60adc72225a57ed0f"
+  }
+}

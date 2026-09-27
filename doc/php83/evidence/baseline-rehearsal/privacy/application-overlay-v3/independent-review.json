@@ -1,0 +1,12 @@
+{
+  "reviewer": "/root/pdo_bootstrap",
+  "local_tests": 20,
+  "exit": 0,
+  "extra_adversarial_test": "actual in-memory loop with old PID/starttime rejected and retained residue",
+  "freeze_intact": true,
+  "actual_receipt_review": "guest int0/exact status,10commands0,4finalhashes+metadata,config beforeafter equal,old PID absent,new3 scripts",
+  "limits": [
+    "disk/cache evidence only, web APC unobserved",
+    "NO_AUTH_ACCEPTANCE"
+  ]
+}
