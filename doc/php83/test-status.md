@@ -34,8 +34,11 @@ OpenCode 1.18.32 with no global permission overrides; its
 [documented external-path approval default](https://dev.opencode.ai/docs/permissions/)
 suggests a noninteractive approval boundary. No permission was
 changed and no rejected read was retried by another executor. A separate request
-for a temporary, strictly read-only two-file permission is pending. Compiler is
-still NOT_EXECUTED; the privacy work proceeds independently in the lab.
+for temporary CLI permission was subsequently approved: the operator explicitly
+authorized OpenCode permissions needed for the laboratory tests. A new isolated
+compiler attempt is assigned to `.83`; the historical denials remain intact.
+Until actual results arrive, compiler is still NOT_EXECUTED. No global permission
+change, production access or release acceptance follows from this authorization.
 
 ## Current built candidate: exp14 — API/CLI repeated; compiler blocked
 
@@ -95,10 +98,14 @@ pre-rendered-string and extras.message controls still leak by design: this is no
 a universal sanitizer. The repeat has an additional 55-file/library/INI identity
 snapshot, not a retroactive claim about the primary interval.
 
-The `.74` installed configuration/cache audit and append-window scanner are in
-progress. Independent review caught a scanner bug that could miss an observed
-truncate-after-growth event; the correction must pass review before any USER
-rehearsal. No installed overlay or new valid USER/upload acceptance is claimed.
+The append-window scanner now passes 23 tests and independent review, including
+the previously failing truncate-after-growth and processing-deadline cases
+(`6f9c20bc`). Installed read-only auditing and the application/rollback recipe
+are committed in `14265040`: six audit tests and 14 recipe tests pass, with an
+independent 14-test/frozen-source review. The reviewed recipe includes post-start
+and rollback source/configuration checks. Controlled application is now assigned
+exclusively to `.74`, separately from the `.83` compiler run. No installed overlay
+or new valid USER/upload acceptance is claimed until execution evidence arrives.
 Any subsequent overlay must be labelled a modified lab baseline, not unchanged
 published packages; benchmark acceptance remains separate.
 

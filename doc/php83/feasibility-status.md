@@ -15,8 +15,9 @@ remains UNCOMPARED. XML/AWS source joins are NOT_RERUN, not fresh execution.
 
 Exp14's whole-artifact compiler run is NOT_EXECUTED: Claude hit a session limit,
 and OpenCode received a new permission rejection before native staging. The operator renewed that authorization explicitly, but a fresh OpenCode
-attempt was rejected again. A temporary, strictly scoped read-only CLI permission
-is now awaiting separate confirmation; no executor bypasses the rejected read. The last actual full compiler repetition is exp13, with11,785 files
+attempt was rejected again. The operator subsequently explicitly authorized OpenCode permissions required
+for the lab tests. A new ephemeral-permission attempt is assigned to `.83`; the
+previous rejections remain recorded, and no native result is claimed yet. The last actual full compiler repetition is exp13, with11,785 files
 and seven retained rejections. Its independent XML/cache runtime reports remain
 bounded historical evidence for that artifact.
 
