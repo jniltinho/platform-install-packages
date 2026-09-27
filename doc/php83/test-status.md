@@ -4,6 +4,27 @@ Snapshot: 2026-09-26, migration branch. This is a scoped evidence board, not a
 release estimate. [Detailed plan](../../openspec/changes/migrate-kaltura-php83/tasks.md)
 and [execution contract](../../openspec/changes/migrate-kaltura-php83/design.md).
 
+## Current task audit and latest real blocker
+
+[All-task audit](task-audit-current.md) reconciles all 51 OpenSpec tasks against
+current evidence. Strict OpenSpec validation passes, but validates planning only:
+3 support tasks are complete and 48 tasks remain open. No new checkbox has been
+closed from compiler results or local harness counts alone.
+
+The `.74` privacy-overlay baseline now has two real short-media observations:
+both upload to READY and return HTTP source bytes with the expected SHA and owned
+entry/asset/FileSync binding. The first final privacy audit was INCOMPLETE with
+its specific cause lost; the instrumented replay found three full KS and three
+prefix matches in file logs. These are separate failures, not an overall PASS.
+Journal in the replay had three new records and zero marker matches. Follow-up
+private diagnosis identifies SQL INSERT/UPDATE logging of entry custom data;
+a narrow display-only prepared-statement repair is in progress. No credentials
+or raw matched log lines are exported. Further auth/upload waits for the repair.
+
+The source ZIP remains exp14; these PHP 7.4 lab observations do not establish a
+functional PHP 8.3 AIO. No release, task archive, production cutover or performance
+acceptance is claimed.
+
 ## Counts and boundaries
 
 - Original acceptance obligations: **0 of 24 complete**.

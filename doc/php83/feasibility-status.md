@@ -35,7 +35,12 @@ on `.74` with successful source/metadata/process/configuration guards. This is
 fresh web/provider and nonce/USER checks subsequently passed (`92cb1f0c`) on
 PHP 7.4.33 with the overlay. USER acceptance and negative controls were observed,
 with zero canary matches in finite file windows; journal had zero new records.
-Upload/playback and PHP 8.3 full-application acceptance remain pending. Old readers reject the candidate cache wire format, and cache
+Two subsequent short-media runs reached READY and verified owned HTTP source
+delivery, but their final privacy gates did not pass: V1 was INCOMPLETE with
+lost cause; V2 found three full KS/prefix matches in SQL log lines. A narrow
+prepared-statement display repair is in progress. PHP 8.3 full-application
+acceptance remains pending. The [51-task audit](task-audit-current.md) confirms
+no additional task closure from these partial runs. Old readers reject the candidate cache wire format, and cache
 recovery/rollback is not accepted. The rank repair preserves PHP8.3 signature
 behavior but changes PHP7.4 reflection metadata; positive rank persistence remains
 untested. No go/no-go, package integration or release approval follows.
