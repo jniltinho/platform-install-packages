@@ -1,0 +1,8 @@
+{
+  "executor": "Codex coordinator /root",
+  "attribution": "Coordinator message: actual local replay terminal0, cmp byte-identical, strict OpenSpec validation0; not executed by author on behalf of coordinator",
+  "output": "/tmp/php83-repair-root-final-eZNcIJ/ledger.json",
+  "reported_sha256": "066781c2326821c763d0c408f8132de1af314b073a26e3490467b5a5259ba338",
+  "retained_ledger_sha256": "066781c2326821c763d0c408f8132de1af314b073a26e3490467b5a5259ba338",
+  "vm_executed": false
+}
