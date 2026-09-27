@@ -25,12 +25,14 @@ These fixtures do not establish complete AIO acceptance. The baseline rehearsal
 stopped before valid USER authentication/upload because exception traces expose
 synthetic-secret prefixes. The subsequent repeated real logging-pipeline probe
 confirms both the possible Throwable interception point and unresolved intrinsic/
-string exposure paths; no installed fix was applied. The operator has now explicitly approved the
+string exposure paths. The operator has now explicitly approved the
 narrow logging-policy correction. Its source-stage primary and actual OpenCode
 repeat each completed four PHP processes and 52 lints with matching channels and
-reports (`5e45a074`); 23 local guards pass. Installed configuration/cache auditing
-and a fail-closed append-window scanner remain in progress, without an
-installed-application privacy acceptance. Old readers reject the candidate cache wire format, and cache
+reports (`5e45a074`); 23 local guards pass. The reviewed append-window scanner passes 23 tests. After two failed application
+attempts and a verified rollback, application V3 installed the four-file overlay
+on `.74` with successful source/metadata/process/configuration guards. This is
+`OVERLAY_INSTALLED_NO_AUTH_ACCEPTANCE`, not an installed-application privacy pass;
+fresh web/provider and nonce/USER/upload gates remain pending. Old readers reject the candidate cache wire format, and cache
 recovery/rollback is not accepted. The rank repair preserves PHP8.3 signature
 behavior but changes PHP7.4 reflection metadata; positive rank persistence remains
 untested. No go/no-go, package integration or release approval follows.

@@ -105,9 +105,14 @@ the previously failing truncate-after-growth and processing-deadline cases
 (`6f9c20bc`). Installed read-only auditing and the application/rollback recipe
 are committed in `14265040`: six audit tests and 14 recipe tests pass, with an
 independent 14-test/frozen-source review. The reviewed recipe includes post-start
-and rollback source/configuration checks. Controlled application is now assigned
-exclusively to `.74`, separately from the `.83` compiler run. No installed overlay
-or new valid USER/upload acceptance is claimed until execution evidence arrives.
+and rollback source/configuration checks. The first application aborted before mutation on a third daemon. The second
+failed process readiness after mutation and required a verified manual rollback;
+these failures remain in `e7a23841`. A bounded readiness correction was
+independently reviewed with 20 local tests. The third application now reports
+`exit=0` and `OVERLAY_INSTALLED_NO_AUTH_ACCEPTANCE`: four final source hashes and
+metadata, fresh process identities and post-start configuration checks agree.
+The `.74` lab is now modified by the approved privacy overlay. Fresh web/provider,
+invalid nonce log-window checks and valid USER/upload acceptance are still pending.
 Any subsequent overlay must be labelled a modified lab baseline, not unchanged
 published packages; benchmark acceptance remains separate.
 
