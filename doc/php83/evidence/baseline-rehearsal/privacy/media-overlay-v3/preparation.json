@@ -1,0 +1,13 @@
+{
+  "status": "PREPARED_NOT_EXECUTED",
+  "delta": [
+    "fresh media-overlay-v3 stage",
+    "application-overlay-v4 root",
+    "exact installed V4 manifest pin"
+  ],
+  "installed_manifest_sha256": "cf16bc5c49acbe5863934ba737c72e2b65878c84048389354e79163afeca0cb8",
+  "source_targets": 5,
+  "scanner_policy_unchanged": true,
+  "auth_or_upload_executed": false,
+  "previous_failure": "V2 PRIVATE_MARKER_LOGGED full KS3/prefix3"
+}

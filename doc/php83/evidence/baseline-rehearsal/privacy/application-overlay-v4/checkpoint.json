@@ -1,0 +1,14 @@
+{
+  "status": "REAL_OBSERVATION_COMPLETE",
+  "files": {
+    "doc/php83/evidence/baseline-rehearsal/privacy/application-overlay-v4/application-primary-stderr-sha256.txt": "38acb15d02d5ac0f2a2789602e9df950c380d2799b4bdb59394e4eeabdd3a662",
+    "doc/php83/evidence/baseline-rehearsal/privacy/application-overlay-v4/application-primary.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "doc/php83/evidence/baseline-rehearsal/privacy/application-overlay-v4/application-primary.json": "0bda15e64cd6d38f23056a3f029e91ba3d613092c47da15bb5b7af1e8198207a",
+    "doc/php83/evidence/baseline-rehearsal/privacy/application-overlay-v4/codex-receipt-review.json": "a50a5a71ae4b4cc0fe98e85968a99a5c80813c384fa286a823ce732017956d22",
+    "doc/php83/evidence/baseline-rehearsal/privacy/application-overlay-v4/codex-review.json": "8be1cce665938a846561a7ec213f5cb6771b8ac43c90e1a81cf931a6c1106f56",
+    "doc/php83/evidence/baseline-rehearsal/privacy/application-overlay-v4/local-tests.log": "beb81d14174aef816eba34400bc9e7e256eab3efdceffb7b083b51a2a465324b",
+    "doc/php83/evidence/baseline-rehearsal/privacy/application-overlay-v4/prep-r2-freeze.json": "1d671080691dd28c2010921917d6a8cbb4daad80fdef8af98a5839bd2bbf208f",
+    "doc/php83/evidence/baseline-rehearsal/privacy/application-overlay-v4/preparation-r2.json": "cf16bc5c49acbe5863934ba737c72e2b65878c84048389354e79163afeca0cb8"
+  },
+  "no_release_approval": true
+}

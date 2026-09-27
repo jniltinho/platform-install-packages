@@ -1,0 +1,10 @@
+{
+  "status": "LOCAL_PREPARATION_ONLY",
+  "files": {
+    "tools/php83/baseline-rehearsal/privacy/application-overlay-v4/guest.py": "c4a0bd01f4a2f619c4010c890ad48a173777fe74aca687e06036f7c42ec4ff95",
+    "tools/php83/baseline-rehearsal/privacy/application-overlay-v4/test_apply.py": "d3a4108670cb8ecd1aac0c34d958abfe99dbbbd5ea25a20a80f04101c2331f18",
+    "tools/php83/baseline-rehearsal/privacy/application-overlay-v4/apply.py": "911dd0d78dd0f683dcf77355886f7db250221443735c7be0d70141887e33c11e",
+    "tools/php83/baseline-rehearsal/privacy/application-overlay-v4/prepare.py": "c4133262cc2fabc858e0bb7a6d6727599552e110db1051a195da81bcfb2f3cc4",
+    "tools/php83/baseline-rehearsal/privacy/application-overlay-v4/test_overlay.py": "3f011d0d527061d780cc4be275801bd7f9a464ec5560ff29bf7c9459ecef1307"
+  }
+}

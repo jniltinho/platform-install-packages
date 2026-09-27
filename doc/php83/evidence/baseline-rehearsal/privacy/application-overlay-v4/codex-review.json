@@ -1,0 +1,16 @@
+{
+  "reviewer": "exp9_harness",
+  "executor": "independent Codex agent",
+  "tests": 21,
+  "exit": 0,
+  "frozen_hashes_preserved": 5,
+  "changed_targets": [
+    "infra/log/KalturaLog.php",
+    "alpha/apps/kaltura/lib/db/KalturaStatement.php"
+  ],
+  "other_targets_unchanged": 3,
+  "rollback": "V3 overlay plus original74 Statement",
+  "result": "NO_CONCRETE_BLOCKER_IN_LOCAL_DELTA",
+  "native_caller74_receipt_required": true,
+  "installed": false
+}

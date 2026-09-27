@@ -1,0 +1,8 @@
+{
+  "reviewer": "exp9_harness",
+  "tests": 24,
+  "exit": 0,
+  "frozen_hashes": 11,
+  "result": "NO_CONCRETE_BLOCKER_IN_MINIMAL_DELTA",
+  "native_executed_by_reviewer": false
+}

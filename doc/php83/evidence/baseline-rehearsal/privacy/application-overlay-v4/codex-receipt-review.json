@@ -1,0 +1,15 @@
+{
+  "reviewer": "pdo_bootstrap",
+  "status": "PASS_LIMITED_INSTALLED_RECEIPT",
+  "guest_exit": 0,
+  "sources": 5,
+  "commands": 10,
+  "wrapper_stderr_bytes": 0,
+  "batch_private_stderr_bytes": [
+    86,
+    172
+  ],
+  "auth_executed_by_installer": false,
+  "rollback_executed": false,
+  "configuration_unchanged": true
+}

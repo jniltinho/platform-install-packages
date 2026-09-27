@@ -1,0 +1,17 @@
+{
+  "reviewer": "pdo_bootstrap",
+  "scope": "local receipt/source/freeze joins only",
+  "status": "PASS_BOUNDED_REAL_OBSERVATION",
+  "freeze_hashes": 11,
+  "stage_joins": 9,
+  "source_targets": 5,
+  "file_patterns_media": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "journal_new_records": 0,
+  "independent_native_repeat": false,
+  "no_full83_or_universal_privacy_claim": true
+}
