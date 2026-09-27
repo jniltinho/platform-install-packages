@@ -1,0 +1,73 @@
+{
+  "exit": 0,
+  "seconds": 57.204,
+  "stdout_sha256": "ee45432bb50495c93cab1fe7a204c239b63faf51d44c6f06dd94dc002e70477e",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "public_events": [
+    {
+      "type": "text",
+      "timestamp": 1790469191260,
+      "sessionID": "ses_f1fb86634ffe4Ocjf5qZiuUNZE",
+      "part": {
+        "id": "prt_0e047b657001cEWnKJ53wOwoyF",
+        "messageID": "msg_0e0479ddf001ctpP6AN5Yt12ga",
+        "sessionID": "ses_f1fb86634ffe4Ocjf5qZiuUNZE",
+        "type": "text",
+        "text": "Read-only review of the nonce overlay driver \u2014 checking guards, secret handling, and running its 11 tests.",
+        "time": {
+          "start": 1790469191255,
+          "end": 1790469191259
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "rs_01a0e047b41774a58fa8cd74d72d1549",
+            "phase": "commentary"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "timestamp": 1790469194211,
+      "sessionID": "ses_f1fb86634ffe4Ocjf5qZiuUNZE",
+      "part": {
+        "id": "prt_0e047c1de001RvzBzisdX5Zw1b",
+        "messageID": "msg_0e047b945001cj206BfZEB9awQ",
+        "sessionID": "ses_f1fb86634ffe4Ocjf5qZiuUNZE",
+        "type": "text",
+        "text": "Files reviewed \u2014 now executing the unit suite.",
+        "time": {
+          "start": 1790469194206,
+          "end": 1790469194209
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "rs_01a0e047c07a7602b3209c2e495ab617",
+            "phase": "commentary"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "timestamp": 1790469240103,
+      "sessionID": "ses_f1fb86634ffe4Ocjf5qZiuUNZE",
+      "part": {
+        "id": "prt_0e048414d001GLKCnW0OPAGGFa",
+        "messageID": "msg_0e047c4040013kNrrX3ehkZ9M5",
+        "sessionID": "ses_f1fb86634ffe4Ocjf5qZiuUNZE",
+        "type": "text",
+        "text": "Local read-only review \u2014 `tools/php83/baseline-rehearsal/privacy/nonce-overlay-v1/guest.py` + `run.py` only. No SSH/VM/git/edits, no `/tmp` or external-path reads, no native journal execution.\n\n## Test result (actual)\n\nCommand executed:\n\n`python3 -m unittest discover -s tools/php83/baseline-rehearsal/privacy/nonce-overlay-v1 -p \"test_*.py\" -v`\n\nResult: **11 tests ran, OK, 0 failures** (`0.000s`):\n\n- `test_guest` (6): `test_body_only_no_media`, `test_complete_finite_pair`, `test_missing_journal`, `test_secret_read_after_gate`, `test_tail_rejected`, `test_zero_requires_exact_types` \u2014 all `ok`\n- `test_runner` (5): `test_destination_and_cleanup`, `test_only_fixed_dependencies`, `test_pending_reject_before_ssh`, `test_private_field_nested_rejected`, `test_safe_receipt` \u2014 all `ok`\n\nThis is harness evidence only, not privacy acceptance.\n\n## What the pair does correctly (observed in these two files)\n\n- **Wrong-secret gate before secret read:** `guest.py:65-74` runs canary `session.start` \u2192 `WRONG_SECRET_CONTROL` \u2192 `audit()` \u2192 `wrong_secret_rejected` before `guest.py:71` SQL `SELECT secret`. No credential read precedes the gate except partner-ID from state file.\n- **POST-only path + nonce strip:** `guest.py:41,47` probes via `legacy.PostTransport(...).request(...)` and `provider.pop('nonce',None)` before checkpointing provider.\n- **Finite windows, double-checked:** `guest.py:48-63` snapshots file+journal, checks `COMPLETE_FINITE_FILE_WINDOW` + `uncovered_tail_bytes==0`, journal `COMPLETE_FINITE_JOURNAL_WINDOW` + `cutoff_covered`, re-scans file window after journal drain and requires `end_offsets` stable (`FILE_TAIL_DURING_JOURNAL`), plus `PATTERN_COUNT`, `CONFIG_DRIFT`, `SOURCE_DRIFT`, `RUNTIME_PIN` per audit.\n- **Pins:** overlay manifest pin `66253ff6...` (`guest.py:5,35`), per-stage and per-module digests (`guest.py:36,39,63`); runner freezes staged `FILES` (`run.py:8,20-22`), `0444`/uid-0 verify (`run.py:32-34`), `Never overwrite` + `PENDING_REVIEW` \u2192 no SSH (`run.py:18-19`).\n- **Receipt hygiene (key-level):** guest exception handler emits only bounded `Rejected` codes or `type().__name__` (`guest.py:85`); runner `check_public` rejects `secret/password/ks/token/raw_body/response/canary/nonce/user_id` keys recursively (`run.py:11-16`).\n- **Cleanup:** runner `finally` stops unit, asserts `is-active` is `inactive/unknown`, writes `cleanup.json` (`run.py:43-47`); systemd unit has `RuntimeMaxSec=360`, `ProtectSystem=strict`, `ProtectHome=read-only`, `PrivateTmp=yes` (`run.py:36`).\n\n## Concrete driver defects / limitations (in these two files)\n\n1. **Load-before-verify on overlay:** `guest.py:33` `load(.../home/vagrant/privacy-application-overlay-v3/guest.py)` executes the module, then `guest.py:34-36` checks its manifest. Compromised overlay top-level code runs before the pin is checked.\n2. **Weak network-policy parse:** `guest.py:29` substring-checks `'0.0.0.0/0'`, `'::/0'`, `'192.168.56.74'` in `systemctl show` output without binding values to `IPAddressDeny` vs `IPAddressAllow`, and without asserting the exact allow-set (`localhost` + `192.168.56.74/32`). Extra/wrong Allow entries are not excluded by this check alone; the strictness lives in `run.py:36`, not in the guest re-check.\n3. **IP blocklist, not allowlist:** `guest.py:26` requires `.74` present and excludes `.20/.21/.30/.83` only. Other unexpected addresses are not rejected by this line.\n4. **Public-receipt guard is key-name only:** `run.py:11-16` blocks forbidden dict keys, not secret string values under allowed keys. If a scanner observation echoed hit bytes under an allowed key, this check would not catch it. Guest avoids putting `secret/ks/canary` directly in `report`, but `report['last_privacy_observation']` carries full `files`/`journal` dicts whose content shape is defined outside these two files \u2014 cannot confirm value-privacy from this pair alone.\n5. **Guest trusts stage for legacy/scanners:** `guest.py:30-32` loads `untimed_driver` + both `scan.py` without independent digest re-check; integrity depends entirely on runner `verify()`. Staged-file list (`run.py:8`) also does not include the overlay tree \u2014 overlay trust is only the guest-side manifest check (see #1).\n6. **Remote stage dir not removed:** runner cleanup stops the unit but never removes `STAGE=/home/vagrant/privacy-nonce-overlay-v1`. Staged blobs are driver source only, but full cleanup is unit-only, not stage removal.\n7. **Hardcoded `/tmp` SSH config:** `run.py:7` `SSH=[..., '-F', '/tmp/kaltura-php74-ssh.conf', ...]` \u2014 path accepted without validation in this file (not read here per constraint; flagging as unvalidated dependency, not verified).\n\n## Journal caveat (explicit)\n\nJournal scanner (`journal-window-v1/scan.py`) has its own review in progress. **Not claimed approved; no native journal execution performed.** The `JOURNAL_STATUS`/`complete` handshake (`guest.py:18,51`) and finite-window verdict therefore remain conditional on that separate review.\n\nNo blanket privacy acceptance.",
+        "time": {
+          "start": 1790469226829,
+          "end": 1790469240101
+        },
+        "metadata": {
+          "openai": {
+            "itemId": "msg_01a0e048408a7508ab6daed56e03a5db"
+          }
+        }
+      }
+    }
+  ]
+}

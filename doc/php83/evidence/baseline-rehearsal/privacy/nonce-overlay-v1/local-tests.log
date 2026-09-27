@@ -1,0 +1,16 @@
+test_body_only_no_media (test_guest.Tests.test_body_only_no_media) ... ok
+test_complete_finite_pair (test_guest.Tests.test_complete_finite_pair) ... ok
+test_missing_journal (test_guest.Tests.test_missing_journal) ... ok
+test_secret_read_after_gate (test_guest.Tests.test_secret_read_after_gate) ... ok
+test_tail_rejected (test_guest.Tests.test_tail_rejected) ... ok
+test_zero_requires_exact_types (test_guest.Tests.test_zero_requires_exact_types) ... ok
+test_destination_and_cleanup (test_runner.Tests.test_destination_and_cleanup) ... ok
+test_only_fixed_dependencies (test_runner.Tests.test_only_fixed_dependencies) ... ok
+test_pending_reject_before_ssh (test_runner.Tests.test_pending_reject_before_ssh) ... ok
+test_private_field_nested_rejected (test_runner.Tests.test_private_field_nested_rejected) ... ok
+test_safe_receipt (test_runner.Tests.test_safe_receipt) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.000s
+
+OK

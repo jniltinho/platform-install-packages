@@ -1,0 +1,14 @@
+{
+  "stage": "/home/vagrant/privacy-nonce-overlay-v2",
+  "unit": "privacy-nonce-7fec04ba",
+  "files": {
+    "tools/php83/baseline-protocol/guarded_http.py": "4cc44f15645ced42e1e156586a79a2795d38f929c6f812eb695e427ee7e47b59",
+    "tools/php83/baseline-protocol/deadline_transport.py": "330c7aedaa57c439af579b9fa9f262c1062bbd66014d3e4c0adbe9b8a6c1dbe2",
+    "tools/php83/baseline-api/transport.py": "5a5896f22aeef0a8baf0ba3869b2cbfebcd655b94ab5671dc13580d1035edf20",
+    "tools/php83/baseline-api/protocol.py": "4587eab6222c2cacc381b6ef100dc557f1afb814250dcc5ba92b3b2ee7eeca34",
+    "tools/php83/baseline-rehearsal/untimed_driver.py": "b461835902bde19d3ec3ca555a88dac640176aa7318315d9cb4bee3d29df14b5",
+    "tools/php83/baseline-rehearsal/privacy/append-window-v1/scan.py": "43189edbe0cfb9f4a0654b7b8425f8f4a876bf270a309f96309142a0ec5b34fc",
+    "tools/php83/baseline-rehearsal/privacy/journal-window-v1/scan.py": "a390e2464c3df47b36ed0b2e19607887b908351d3e7245439e392646239ba5e8",
+    "tools/php83/baseline-rehearsal/privacy/nonce-overlay-v2/guest.py": "269dd0d944e05d554c66df2dd152c1110b86111d4f7d236cf19668f4e65c2235"
+  }
+}

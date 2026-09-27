@@ -1,0 +1,30 @@
+{
+  "reviewer": "/root/pdo_bootstrap",
+  "status": "BOUNDED_GATE_CONFIRMED",
+  "guest_exit": 0,
+  "stderr_bytes": 0,
+  "provider": "PHP7.4.33/apache2handler",
+  "files": 410,
+  "invalid_nonce_scanned_bytes": 13831,
+  "user_scanned_bytes": 27329,
+  "nonce_counts": [
+    0,
+    0
+  ],
+  "user_counts": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "journal_new_records": 0,
+  "journal_bytes_each": 4173,
+  "source_metadata_and_stage_joins": true,
+  "cleanup": "inactive",
+  "executor": "Codex actual native",
+  "limits": [
+    "journal anchor read with zero new records, not evidence of scanning new messages",
+    "OpenCode prep V1 and Codex V2 review are not independent native repeat",
+    "no upload, universal privacy or full runtime-loaded attestation"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "actual_spawn_dynamic_module_error": true,
+  "actual_spawn_normal_stderr_empty": true,
+  "normal_guard_rejected_before_network": true,
+  "dynamic_exit": 0,
+  "normal_exit": 0,
+  "network_executed": false
+}
