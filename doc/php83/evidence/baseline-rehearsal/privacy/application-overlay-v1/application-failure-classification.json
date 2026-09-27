@@ -1,0 +1,12 @@
+{
+  "status": "NOT_APPLIED",
+  "guest_exit": 1,
+  "launcher_exit": 0,
+  "native_error_code": "APPLICATION_PROCESS_INVENTORY",
+  "backup_directory_exists": false,
+  "service_stop_executed": false,
+  "source_write_executed": false,
+  "additional_observed_script": "/opt/kaltura/app/plugins/search/providers/sphinx_search/scripts/populateFromLog.php",
+  "cause_of_new_process": "NOT_ATTRIBUTED",
+  "followup": "Versioned application-overlay-v2 adds exact init/PID guard; old stage and raw restricted guest error retained"
+}

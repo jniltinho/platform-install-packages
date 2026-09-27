@@ -1,0 +1,14 @@
+{
+  "reviewer": "/root/pdo_bootstrap",
+  "status": "NO_NEW_BLOCKER_FOR_BOUNDED_INVENTORY_DELTA",
+  "tests": 17,
+  "exit": 0,
+  "freeze_intact": true,
+  "scope": "V1->V2 adds only separate paths and Sphinx populate daemon/controller/PID to service boundary",
+  "limitations": [
+    "init script uses kill -9, not graceful drain",
+    "no authentication acceptance",
+    "V1 observed failure preserved; no Monit causality proven"
+  ],
+  "vm_execution_by_reviewer": false
+}

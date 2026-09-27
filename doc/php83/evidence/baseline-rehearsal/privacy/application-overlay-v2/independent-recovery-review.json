@@ -1,0 +1,18 @@
+{
+  "reviewer": "/root/pdo_bootstrap",
+  "status": "RESTORED_SOURCE_AND_PROCESS_STATE_CONFIRMED",
+  "joins": [
+    "four original hashes and metadata match before/prep/post-audit",
+    "five service starts exit0",
+    "Apache and three application scripts observed",
+    "Apache and Monit active"
+  ],
+  "limits": [
+    "process readiness is not full application health",
+    "original failure root cause not proven",
+    "stop timeout residue not captured historically",
+    "inline recovery not pre-frozen source",
+    "web APC not directly observed"
+  ],
+  "next_minimal_fix": "bounded readiness polling, retain observed residues; no generic kill or unobserved timeout waiver"
+}

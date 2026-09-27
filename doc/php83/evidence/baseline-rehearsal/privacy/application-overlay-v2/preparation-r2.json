@@ -1,0 +1,48 @@
+{
+  "status": "LAB_OVERLAY_PREPARED_NOT_APPLIED",
+  "before": {
+    "infra/log/KalturaLog.php": "9b7a7c3dd37616ffd2ac9720ece862641c43bb687a2db4e8fc9cbcb259ff5449",
+    "infra/log/KalturaSerializableStream.php": "e3d45f152ae749c2555b72bb9215c1a6532ee774be8c4548ecff8440ab658fce",
+    "api_v3/lib/KalturaFrontController.php": "5f2eeffe526d4a0ee245b6f10f4e9600e0f7c8bcb4a52eef41e3a66bbd9ab7a1",
+    "api_v3/lib/KalturaDispatcher.php": "be20609b269f08cf1317a79046f5b43cddc8be4cd14dd01fbc0d928fdd24fce2"
+  },
+  "after": {
+    "infra/log/KalturaLog.php": "e73b07433ea3f68dc2d309b35e33b63ce1ffb2599e7f7e8699f2b1d314740778",
+    "infra/log/KalturaSerializableStream.php": "8411013a6f2ac78b6d092594d088ba9a5fbe71ada9de00692a369388c40dc04c",
+    "api_v3/lib/KalturaFrontController.php": "79570bd2be507f0045281a903aa13bd2de4037c2e12df3370075c4445184a4ca",
+    "api_v3/lib/KalturaDispatcher.php": "9ce4b17a9fb1bef95fbbbbc6f08cb396a6cc944b055bac8413d740ce5d73c7b9"
+  },
+  "support_sources": {
+    "infra/log/KalturaLogFactory.php": "75359966d2777870b2b8ff2151f5697e2a0fe69e62ef0e9131cab30645223a7b",
+    "alpha/apps/kaltura/lib/cache/kLoggerCache.php": "8300f56aacf491425f33935b8de749a553f36d3b21637bea5ddfd0a34da1c208",
+    "api_v3/bootstrap.php": "2ecf8731957174857319d5df8a1a72ba1d8c7cdcad8b1ff03f6d29b6daed4754",
+    "alpha/config/kConfCacheManager.php": "19d4ffb4866339cae93eb8949fd06275978799804454e81d68dd7692fe050333",
+    "infra/kEnvironment.php": "708f2497ade7d59522943d17d0bd788e2b18aec45504c59e3f8ecf5dd303e15d",
+    "alpha/config/cache/kFileSystemConf.php": "b4555d97ad06a9d70487c47ddd8f0544e1513fdfc6ffc9ff657e37b6f859651a",
+    "alpha/config/cache/kBaseConfCache.php": "44c267219c51d2745c78c46ae2793903d542a19f6d8a9982da64580ba8a47f88",
+    "alpha/config/cache/kMapCacheInterface.php": "4e6053e9d2266317aab80db1c968333c364acb9a9084e111756ab3928300ff80",
+    "vendor/ZendFramework/library/Zend/Config.php": "065597c625046207683d14682bffcdbfd0aed862ad456a3dbefcf9b538e97a2f",
+    "vendor/ZendFramework/library/Zend/Config/Ini.php": "e1f8362e93d3285f07752ecbe1e61c015c121ed1ff2199c4a79a6c0db556a7c6",
+    "vendor/ZendFramework/library/Zend/Config/Exception.php": "98e275864aa331e2e80b1e3f4e51486b6448cc0d91befb8a52c870eb14365282",
+    "vendor/ZendFramework/library/Zend/Exception.php": "691ae30a13c915f308cccd3f5c61f3d53dafbcd744d9ef31037ba9a92ad0ab26",
+    "infra/log/UniqueId.php": "fff7d4ad8f596c73bb55c728760e2f726065fc22be5ccf7944eb96c260e79af0",
+    "alpha/apps/kaltura/lib/request/LogIp.php": "90ea8faf0b923db8c1d72458b572b55ed8922b9903c0fa7cbd1e7a910524fa02",
+    "infra/log/KalturaLogFilterType.php": "40a36973cac0b339eeb743e2ba63e44c49ab8f87eebf04f35f19857a4aaf69d3"
+  },
+  "modules": {
+    "/usr/bin/php7.4": "5ed671ea6fe1cfb9f6e7dde2b259ec5821d7e0eae95c31d103d5468f2e617c59",
+    "/usr/lib/php/20190902/json.so": "80efe3d6f144e717b9fcef7750f81736cbd55c1e91041d24be58e70c18199343",
+    "/usr/lib/php/20190902/memcache.so": "cd5f48204d0752697476fd3488b4a39ac7fe3a75f6ae8ba52e354a1bd38c7616"
+  },
+  "files": {
+    "candidate/infra/log/KalturaLog.php": "e73b07433ea3f68dc2d309b35e33b63ce1ffb2599e7f7e8699f2b1d314740778",
+    "candidate/infra/log/KalturaSerializableStream.php": "8411013a6f2ac78b6d092594d088ba9a5fbe71ada9de00692a369388c40dc04c",
+    "candidate/api_v3/lib/KalturaFrontController.php": "79570bd2be507f0045281a903aa13bd2de4037c2e12df3370075c4445184a4ca",
+    "candidate/api_v3/lib/KalturaDispatcher.php": "9ce4b17a9fb1bef95fbbbbc6f08cb396a6cc944b055bac8413d740ce5d73c7b9",
+    "logger.php": "f29f3c8c751cc73c542074e814028fc4c5b2a35477a98aeb422dfbe3942dde97",
+    "cache.php": "747eecb7e8aafa05e7d5d44af10a914388a3e9ff14f54e8062261a1c287d17da",
+    "guest.py": "9d78c0e1418eb3aea3b0d2c9dc3e250be9a4239c8c521c36b53300a590eae43c"
+  },
+  "original_zip": "58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28",
+  "trace_policy_source_sha256": "b5d30ef9e801fe21bbd345338ad7cdda64795977466be8774e6d31713e59846e"
+}

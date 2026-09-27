@@ -1,0 +1,269 @@
+{
+  "exit": 2,
+  "stdout_sha256": "7cce5e9211e556bd95adf1199256536d955bf66f06550bfb772d54fab0384029",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0,
+  "manifest_sha256": "1bd60806e4379e5384852b1f7ff16390f67e9a9f457d81b7f1fdf58bf6e20342",
+  "receipt": {
+    "after": {
+      "api_v3/lib/KalturaDispatcher.php": {
+        "gid": 0,
+        "mode": 436,
+        "sha256": "9ce4b17a9fb1bef95fbbbbc6f08cb396a6cc944b055bac8413d740ce5d73c7b9",
+        "uid": 0
+      },
+      "api_v3/lib/KalturaFrontController.php": {
+        "gid": 0,
+        "mode": 436,
+        "sha256": "79570bd2be507f0045281a903aa13bd2de4037c2e12df3370075c4445184a4ca",
+        "uid": 0
+      },
+      "infra/log/KalturaLog.php": {
+        "gid": 0,
+        "mode": 436,
+        "sha256": "e73b07433ea3f68dc2d309b35e33b63ce1ffb2599e7f7e8699f2b1d314740778",
+        "uid": 0
+      },
+      "infra/log/KalturaSerializableStream.php": {
+        "gid": 0,
+        "mode": 436,
+        "sha256": "8411013a6f2ac78b6d092594d088ba9a5fbe71ada9de00692a369388c40dc04c",
+        "uid": 0
+      }
+    },
+    "auth_executed": false,
+    "baseline_label": "PUBLISHED_PHP74_WITH_APPROVED_PRIVACY_OVERLAY",
+    "before": {
+      "api_v3/lib/KalturaDispatcher.php": {
+        "gid": 0,
+        "mode": 436,
+        "sha256": "be20609b269f08cf1317a79046f5b43cddc8be4cd14dd01fbc0d928fdd24fce2",
+        "uid": 0
+      },
+      "api_v3/lib/KalturaFrontController.php": {
+        "gid": 0,
+        "mode": 436,
+        "sha256": "5f2eeffe526d4a0ee245b6f10f4e9600e0f7c8bcb4a52eef41e3a66bbd9ab7a1",
+        "uid": 0
+      },
+      "infra/log/KalturaLog.php": {
+        "gid": 0,
+        "mode": 436,
+        "sha256": "9b7a7c3dd37616ffd2ac9720ece862641c43bb687a2db4e8fc9cbcb259ff5449",
+        "uid": 0
+      },
+      "infra/log/KalturaSerializableStream.php": {
+        "gid": 0,
+        "mode": 436,
+        "sha256": "e3d45f152ae749c2555b72bb9215c1a6532ee774be8c4548ecff8440ab658fce",
+        "uid": 0
+      }
+    },
+    "benchmark_executed": false,
+    "commands": [
+      {
+        "argv": [
+          "systemctl",
+          "stop",
+          "monit.service"
+        ],
+        "exit": 0,
+        "stderr_bytes": 0,
+        "stdout_bytes": 0
+      },
+      {
+        "argv": [
+          "/etc/init.d/kaltura-batch",
+          "stop"
+        ],
+        "exit": 0,
+        "stderr_bytes": 86,
+        "stdout_bytes": 110
+      },
+      {
+        "argv": [
+          "/etc/init.d/kaltura-elastic-populate",
+          "stop"
+        ],
+        "exit": 0,
+        "stderr_bytes": 0,
+        "stdout_bytes": 85
+      },
+      {
+        "argv": [
+          "/etc/init.d/kaltura-populate",
+          "stop"
+        ],
+        "exit": 0,
+        "stderr_bytes": 0,
+        "stdout_bytes": 54
+      },
+      {
+        "argv": [
+          "systemctl",
+          "stop",
+          "apache2.service"
+        ],
+        "exit": 0,
+        "stderr_bytes": 0,
+        "stdout_bytes": 0
+      },
+      {
+        "argv": [
+          "systemctl",
+          "start",
+          "apache2.service"
+        ],
+        "exit": 0,
+        "stderr_bytes": 0,
+        "stdout_bytes": 0
+      },
+      {
+        "argv": [
+          "/etc/init.d/kaltura-elastic-populate",
+          "start"
+        ],
+        "exit": 0,
+        "stderr_bytes": 0,
+        "stdout_bytes": 85
+      },
+      {
+        "argv": [
+          "/etc/init.d/kaltura-batch",
+          "start"
+        ],
+        "exit": 0,
+        "stderr_bytes": 172,
+        "stdout_bytes": 90
+      },
+      {
+        "argv": [
+          "/etc/init.d/kaltura-populate",
+          "start"
+        ],
+        "exit": 0,
+        "stderr_bytes": 0,
+        "stdout_bytes": 247
+      },
+      {
+        "argv": [
+          "systemctl",
+          "start",
+          "monit.service"
+        ],
+        "exit": 0,
+        "stderr_bytes": 0,
+        "stdout_bytes": 0
+      },
+      {
+        "argv": [
+          "systemctl",
+          "stop",
+          "monit.service"
+        ],
+        "exit": 0,
+        "stderr_bytes": 0,
+        "stdout_bytes": 0
+      },
+      {
+        "argv": [
+          "/etc/init.d/kaltura-batch",
+          "stop"
+        ],
+        "exit": 0,
+        "stderr_bytes": 86,
+        "stdout_bytes": 110
+      },
+      {
+        "argv": [
+          "/etc/init.d/kaltura-elastic-populate",
+          "stop"
+        ],
+        "exit": 0,
+        "stderr_bytes": 0,
+        "stdout_bytes": 85
+      },
+      {
+        "argv": [
+          "/etc/init.d/kaltura-populate",
+          "stop"
+        ],
+        "exit": 0,
+        "stderr_bytes": 0,
+        "stdout_bytes": 54
+      },
+      {
+        "argv": [
+          "systemctl",
+          "stop",
+          "apache2.service"
+        ],
+        "exit": 0,
+        "stderr_bytes": 0,
+        "stdout_bytes": 0
+      }
+    ],
+    "failure_code": "NEW_PROCESS_INVENTORY",
+    "old_processes": {
+      "327487": {
+        "comm": "apache2",
+        "scripts": [],
+        "starttime": "13351310"
+      },
+      "327488": {
+        "comm": "apache2",
+        "scripts": [],
+        "starttime": "13351310"
+      },
+      "327489": {
+        "comm": "apache2",
+        "scripts": [],
+        "starttime": "13351310"
+      },
+      "327490": {
+        "comm": "apache2",
+        "scripts": [],
+        "starttime": "13351310"
+      },
+      "327491": {
+        "comm": "apache2",
+        "scripts": [],
+        "starttime": "13351310"
+      },
+      "327543": {
+        "comm": "php",
+        "scripts": [
+          "/opt/kaltura/app/batch/KGenericBatchMgr.class.php"
+        ],
+        "starttime": "13353965"
+      },
+      "327654": {
+        "comm": "php",
+        "scripts": [
+          "/opt/kaltura/app/plugins/search/providers/sphinx_search/scripts/populateFromLog.php"
+        ],
+        "starttime": "13354177"
+      },
+      "328203": {
+        "comm": "apache2",
+        "scripts": [],
+        "starttime": "13447064"
+      },
+      "50507": {
+        "comm": "apache2",
+        "scripts": [],
+        "starttime": "25421"
+      },
+      "50568": {
+        "comm": "php",
+        "scripts": [
+          "/opt/kaltura/app/plugins/search/providers/elastic_search/scripts/populateElasticFromLog.php"
+        ],
+        "starttime": "25482"
+      }
+    },
+    "rollback_failure_code": "OLD_APPLICATION_PROCESSES_REMAIN",
+    "status": "FAILED_RECOVERY_REQUIRED_NO_AUTH"
+  },
+  "launcher_sha256": "3717b1f34fcaf72d40c2bb02e34828089078cd7fa412103959dc0d3d99cc40a3"
+}

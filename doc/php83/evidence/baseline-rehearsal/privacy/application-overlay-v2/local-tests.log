@@ -1,0 +1,22 @@
+test_native_guard (test_apply.Tests.test_native_guard) ... ok
+test_no_auth (test_apply.Tests.test_no_auth) ... ok
+test_reviewed_payload (test_apply.Tests.test_reviewed_payload) ... ok
+test_double_output (test_overlay.Tests.test_double_output) ... ok
+test_exact_replacement_metadata (test_overlay.Tests.test_exact_replacement_metadata) ... ok
+test_mutation_during_start_rolls_back (test_overlay.Tests.test_mutation_during_start_rolls_back) ... ok
+test_no_real_auth_or_log_suppression (test_overlay.Tests.test_no_real_auth_or_log_suppression) ... ok
+test_private_error_not_exported (test_overlay.Tests.test_private_error_not_exported) ... ok
+test_quiescence_failclosed (test_overlay.Tests.test_quiescence_failclosed) ... ok
+test_real_source_preparation (test_overlay.Tests.test_real_source_preparation) ... ok
+test_recovery_failure_explicit (test_overlay.Tests.test_recovery_failure_explicit) ... ok
+test_refuse_existing_temporary (test_overlay.Tests.test_refuse_existing_temporary) ... ok
+test_source_drift (test_overlay.Tests.test_source_drift) ... ok
+test_source_symlink (test_overlay.Tests.test_source_symlink) ... ok
+test_success_requires_final_callback (test_overlay.Tests.test_success_requires_final_callback) ... ok
+test_support_disjoint (test_overlay.Tests.test_support_disjoint) ... ok
+test_system_change_fails_closed (test_overlay.Tests.test_system_change_fails_closed) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.214s
+
+OK

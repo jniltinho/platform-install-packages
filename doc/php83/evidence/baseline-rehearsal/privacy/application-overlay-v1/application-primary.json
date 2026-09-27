@@ -1,0 +1,9 @@
+{
+  "exit": 1,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "e0246d5736ea083ed42f6e904502eebaf92ae36b6e1d158076301626d893fe79",
+  "stderr_bytes": 618,
+  "manifest_sha256": "bf80267bbb8ad5efb5a9550e72f6628ef50fb657f6ff94bf907fab96fdda6288",
+  "status": "INCOMPLETE_NO_PUBLIC_RECEIPT",
+  "launcher_sha256": "4b0a08bb8c65e6bdb85ceedf1e20ecea247729c89b886309e5482210bff929fd"
+}
