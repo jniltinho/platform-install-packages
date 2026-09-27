@@ -1,0 +1,69 @@
+{
+  "status": "INDEPENDENT_BOUNDED_COMPILER_NONREGRESSION",
+  "inputs_sha256": {
+    "doc/php83/evidence/exp14-syntax/opencode-independent.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "doc/php83/evidence/exp14-syntax/opencode-independent.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "doc/php83/evidence/exp14-syntax/opencode-independent.json": "51a92e72a3d0fa002652b55408969b8bc7be3478ed1dc20c83f5e0cced15a525",
+    "doc/php83/evidence/exp14-syntax/codex-repeat.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "doc/php83/evidence/exp14-syntax/codex-repeat.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "doc/php83/evidence/exp14-syntax/codex-repeat.json": "5c1d884896a50228535575433291f0dd8f8fb584d0b07cb5b6fde93b0a5b2a55"
+  },
+  "logical_rows": 23570,
+  "comparison": {
+    "bounded_compiler_nonregression": true,
+    "changed_paths": [
+      "api_v3/lib/KalturaEntryService.php"
+    ],
+    "added_paths": [],
+    "metadata_delta": [
+      {
+        "path": ".php83-experimental/manifest.json",
+        "exp13_sha256": "fb79e763092e10daf93b4ea9ee082233f889b431a7f5dbf39e10db5b7a4f636f",
+        "exp14_sha256": "9dbb2d68bb82289951c987e21056adb131ba7c1ee268ed01e017a067bd3b102e"
+      },
+      {
+        "path": ".php83-experimental/rank-signature.patch",
+        "exp13_sha256": null,
+        "exp14_sha256": "41144c89d6254ba8a9b2396c43b1e89b15ecdce55cabaedcb82c7fce0d825d4b"
+      }
+    ],
+    "remaining_rejected_paths": [
+      "vendor/aws/Doctrine/Common/Cache/RiakCache.php",
+      "vendor/symfony-data/generator/sfPropelAdmin/default/skeleton/actions/actions.class.php",
+      "vendor/symfony-data/generator/sfPropelCrud/default/skeleton/actions/actions.class.php",
+      "vendor/symfony-data/skeleton/batch/default.php",
+      "vendor/symfony-data/skeleton/batch/rotate_log.php",
+      "vendor/symfony-data/skeleton/controller/controller.php",
+      "vendor/symfony-data/skeleton/module/module/actions/actions.class.php"
+    ],
+    "diagnostic_delta": [
+      {
+        "path": "api_v3/lib/KalturaEntryService.php",
+        "before_diagnostics": "Deprecated: Optional parameter $entryType declared before required parameter $rank is implicitly treated as a required parameter in api_v3/lib/KalturaEntryService.php on line 1836",
+        "after_diagnostics": ""
+      }
+    ],
+    "candidate_all_files_compile": false,
+    "application_acceptance": false
+  },
+  "summaries": {
+    "exp13": {
+      "files_scanned": 11785,
+      "compiler_rejected": 7,
+      "compiler_accepted": 11778,
+      "incomplete": 0,
+      "diagnostic_files": 72,
+      "accepted_with_diagnostics": 65
+    },
+    "exp14": {
+      "files_scanned": 11785,
+      "compiler_rejected": 7,
+      "compiler_accepted": 11778,
+      "incomplete": 0,
+      "diagnostic_files": 71,
+      "accepted_with_diagnostics": 64
+    }
+  },
+  "application_acceptance": false,
+  "comparator_sha256": "27d5ad4e773e8762717ad13f28696c8594bd859ecf8cbeecd349cde33db1d797"
+}

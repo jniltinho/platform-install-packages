@@ -1,12 +1,21 @@
-# Exp14 compiler validation — local adapter ready, native pending
+# Exp14 compiler validation — independent bounded nonregression
 
-The coordinator supplied the independently reproduced final ZIP pin
+Actual OpenCode Muse Free performed the first native83 scan; Codex independently
+repeated it on the same frozen stage. Both collectors exited 0, and the strict
+[comparison](evidence/exp14-syntax/comparison.json) passed: **23,570 rows per run**,
+11,785 files per artifact, seven identical historical rejections. Diagnostic-file
+counts fell from 72 to 71 (accepted-with-diagnostics 65 to 64), solely removing
+the rank optional-before-required diagnostic. Every other native result/channel
+is identical; only per-file duration is excluded from the repeat comparison.
+Source, harness and runtime identities matched before/after both executions.
+This is **not full application or release acceptance**, and not an all-files
+compile PASS. Native83 was released after both processes terminated.
+
+The verified exp14 ZIP remains
 `459feaf9caf2abe55963dce0cac51b8b593e4ff1b46d2eaf9cb7d5c3f13f62a1`
-(91,210,691 bytes). The thin compiler adapter is implemented; 50 unique synthetic
-local tests and two separate Bash syntax checks pass. Actual Claude returned a session limit; the OpenCode fallback executed the local
-tests but received an explicit permission denial before staging. Native compiler
-execution is **NOT_EXECUTED**, not PASS. No alternate executor retried the denied
-read/verification. Native83 was released without any VM call in this phase.
+(91,210,691 bytes). Actual OpenCode also ran 50 local guard tests and both shell
+syntax checks successfully. Earlier quota/permission failures below are retained
+as historical phases, not overwritten or retroactively counted as success.
 
 The original [plan contract](evidence/exp14-syntax/preparation-contract.json) and
 [pending input](evidence/exp14-syntax/pending-input-contract.json) are retained
@@ -207,3 +216,38 @@ is a hypothesis, not proof of a configured explicit deny. No permission was
 changed by this worker, no rejected checksum file was read, and a narrowly scoped
 temporary permission proposal is awaiting the user's specific technical approval.
 All native compiler work remains **NOT_EXECUTED** until that boundary is resolved.
+
+## Authorized-r2: executed compiler phase
+
+The user explicitly authorized OpenCode access needed for continuing the tests.
+The coordinator granted exclusive native83 and process-local `--auto`; no global
+configuration was changed and explicit denies would still stop the phase. The
+previously denied checksum reads succeeded in this new phase, followed by actual
+staging and compilation. There was no new denial or access to native74/.20.
+
+- [OpenCode public execution record](evidence/exp14-syntax/authorized-r2-public.json):
+  CLI0, 50 tests, separate Bash checks, stage0, first collector0. Thinking and hook
+  bodies are excluded; raw private stream identity is retained.
+- [OpenCode native report](evidence/exp14-syntax/opencode-independent.json) and
+  [Codex repeat](evidence/exp14-syntax/codex-repeat.json) retain every raw native
+  stdout/stderr field, source hashes and runtime identities; both wrapper stderr
+  sidecars are empty and exits are 0.
+- [Strict comparison](evidence/exp14-syntax/comparison.json): exact source delta
+  is KalturaEntryService.php only, with two individually named metadata deltas.
+  Inventories are complete and unchanged in count; no rejection is waived.
+
+Reproduction on the already frozen stage (use new output names rather than
+overwriting the retained reports) follows `execute-native.py`; the completed
+comparison command was:
+
+```sh
+python3 tools/php83/exp14-syntax/compare.py \
+  doc/php83/evidence/exp14-syntax/opencode-independent.json \
+  doc/php83/evidence/exp14-syntax/codex-repeat.json \
+  doc/php83/evidence/exp14-syntax/comparison.json
+```
+
+XML/AWS behavior was NOT_RERUN by this compiler phase. No application entrypoint,
+SQL, generated application, package build or publication was executed. Six raw
+Symfony templates and the Riak reserved Object rejection remain visible; compiler
+coverage alone does not close their generation/provider acceptance obligations.

@@ -1,0 +1,331 @@
+{
+  "executor": "actual OpenCode opencode/muse-spark-1.3-contributor-free",
+  "process_exit": 0,
+  "authorization": "User explicitly authorized OpenCode access and continuing tests; coordinator granted process-local --auto and exclusive native83. No global config changes. Historical denials preserved.",
+  "ephemeral_permission": "opencode run --pure --auto (explicit denies still apply)",
+  "raw_stream_sha256": "4707059f6681ac98702c6c4e3bb60e30cc64dd9ccd524f0654b2cb2d5264134f",
+  "events": [
+    {
+      "type": "text",
+      "text": "Authorized lab tests starting \u2014 reading specs and staging the bounded run."
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "status": "completed",
+      "input": {
+        "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+      },
+      "error": null,
+      "output_sha256": "edfb3f99d59af20be82848fdd6772908ba322d1d7d60f843c02897a024d659c0",
+      "output_length": 383
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "status": "completed",
+      "input": {
+        "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp14-syntax"
+      },
+      "error": null,
+      "output_sha256": "10cbf454987bce90784336381995c56c89fdea05431283bee87e996502fb9c0d",
+      "output_length": 753
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "status": "completed",
+      "input": {
+        "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/exp14-syntax"
+      },
+      "error": null,
+      "output_sha256": "528bc5e78cbfc0b1ea1116e32f2851715c6d39e9e5d19a56e9bdbc513428f668",
+      "output_length": 295
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "status": "completed",
+      "input": {
+        "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/exp14-syntax.md"
+      },
+      "error": null,
+      "output_sha256": "c9c05be6b1f4beddc878b06293c6dfa1f5c1fe14723e7f433d81bfea5af6972b",
+      "output_length": 14419
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "status": "completed",
+      "input": {
+        "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/exp14-syntax/input-contract.json"
+      },
+      "error": null,
+      "output_sha256": "27c0ff7a71866789c889583f00809c57746d2532997f1ee0cad8aa8f4a0a0acb",
+      "output_length": 1849
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "status": "completed",
+      "input": {
+        "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp14-syntax/stage-primary.sh"
+      },
+      "error": null,
+      "output_sha256": "a7a0b57b25004444d93c0e6e3fb63ca29bae1933b70d3f321112f71368749971",
+      "output_length": 1358
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "status": "completed",
+      "input": {
+        "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp14-syntax/execute-native.py"
+      },
+      "error": null,
+      "output_sha256": "2f140ad016ece8780a52a2a1fa8eb1377554cc01d3c4fd71a8b4e985a28bb559",
+      "output_length": 1703
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "status": "completed",
+      "input": {
+        "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83-artifacts/exp14/SHA256SUMS"
+      },
+      "error": null,
+      "output_sha256": "729c07b98acdc7cda9318110eaa0475a17914b894b00890f3c66990f3fb274a0",
+      "output_length": 288
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "status": "completed",
+      "input": {
+        "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83-artifacts/exp13/SHA256SUMS"
+      },
+      "error": null,
+      "output_sha256": "a60dd3b15f2c96f8af0488778c0db1fe0e5a33bfae78fb1d41b1a3279fdde811",
+      "output_length": 288
+    },
+    {
+      "type": "text",
+      "text": "Pins verified \u2014 now inspecting the adapter and evidence writers for blocking defects."
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "status": "completed",
+      "input": {
+        "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/exp14-syntax/scan.py"
+      },
+      "error": null,
+      "output_sha256": "2aa7ab77a1264e8023f1c3162a2f559fbf5e96b97cedf9740e6dba8a93ebebd3",
+      "output_length": 7613
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "status": "completed",
+      "input": {
+        "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/exp14-syntax/stage.py"
+      },
+      "error": null,
+      "output_sha256": "87f31fe521c03ae25d75e15c73b3144f46fe0fdeed012a6cc833501a3c4e5bd7",
+      "output_length": 1691
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "status": "completed",
+      "input": {
+        "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/exp14-syntax/run.sh"
+      },
+      "error": null,
+      "output_sha256": "5fca3bf87c995080c9d68f105c520753da20e01cb8000b594181814448212ab3",
+      "output_length": 1273
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "status": "completed",
+      "input": {
+        "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/exp14-syntax/compare.py"
+      },
+      "error": null,
+      "output_sha256": "340c7374295c84704d05c2f93566a3460f19e635551e22916be6b94314502a15",
+      "output_length": 3935
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "status": "completed",
+      "input": {
+        "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/exp14-syntax/preflight.py"
+      },
+      "error": null,
+      "output_sha256": "f4079a2262afa38bd14a6ecfb35f191817810373dc90f0c100527b446f2ccd27",
+      "output_length": 2081
+    },
+    {
+      "type": "tool_use",
+      "tool": "bash",
+      "status": "completed",
+      "input": {
+        "command": "ls -l doc/php83/evidence/exp14-syntax/opencode-stage.* doc/php83/evidence/exp14-syntax/opencode-independent.* 2>&1; echo \"---EXIST_CHECK_EXIT:$?\"; cat doc/php83/evidence/exp14-syntax/prep-freeze.json; echo \"---\"; cat doc/php83/evidence/exp14-syntax/final-pin-preflight.json | head -c 2000",
+        "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+      },
+      "error": null,
+      "output_sha256": "a6ea28a59d36e7f0abebc3fef2f545921622c45fd79c96e399baf380c6c5dee4",
+      "output_length": 2083
+    },
+    {
+      "type": "tool_use",
+      "tool": "bash",
+      "status": "completed",
+      "input": {
+        "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/exp14-syntax -p \"test_*.py\" -v",
+        "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+      },
+      "error": null,
+      "output_sha256": "63cb7d21ce5216225d028c972bfbd51237ce64cf05f2131584dee5367436d4c7",
+      "output_length": 3724
+    },
+    {
+      "type": "tool_use",
+      "tool": "bash",
+      "status": "completed",
+      "input": {
+        "command": "bash -n tools/php83/exp14-syntax/run.sh; echo \"run.sh bash-n exit:$?\"",
+        "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+      },
+      "error": null,
+      "output_sha256": "9267595a55c477de9d81dfcfd5118147d655a2aa525c0a605c514a331b295571",
+      "output_length": 21
+    },
+    {
+      "type": "tool_use",
+      "tool": "bash",
+      "status": "completed",
+      "input": {
+        "command": "bash -n doc/php83/evidence/exp14-syntax/stage-primary.sh; echo \"stage-primary.sh bash-n exit:$?\"",
+        "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+      },
+      "error": null,
+      "output_sha256": "c74989ee8260389f0bb8f41bb65da192e4129046a52b56804c25307d0ca596a6",
+      "output_length": 31
+    },
+    {
+      "type": "text",
+      "text": "Local guards pass (50 OK, syntax clean) \u2014 final adapter verification before staging."
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "status": "completed",
+      "input": {
+        "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/exp14-syntax/frozen-core.py"
+      },
+      "error": null,
+      "output_sha256": "05a234dfdcb04fa1940655c528328b23286b4d65ff9227ba5d60fdee104c2300",
+      "output_length": 14101
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "status": "completed",
+      "input": {
+        "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/exp14-syntax/frozen-exp13-scan.py"
+      },
+      "error": null,
+      "output_sha256": "e04a7f95b86701d0186cdc27eed229271ee5d3ad93068af2c672a73a8c64907b",
+      "output_length": 9122
+    },
+    {
+      "type": "tool_use",
+      "tool": "bash",
+      "status": "completed",
+      "input": {
+        "command": "ls -l /tmp/kaltura-php83-ssh.conf 2>&1; echo \"sshconf_exit:$?\"; test -d /home/vagrant/php-candidate-syntax-exp14 && echo \"local_stage_exists\" || echo \"local_stage_absent\"; ls -l ../platform-install-packages-php83-artifacts/exp14/ ../platform-install-packages-php83-artifacts/exp13/ 2>&1 | head -n 20",
+        "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+      },
+      "error": null,
+      "output_sha256": "78e0423eec7a63d6b68c496fac225d9d27f9bc2598f4fee1f9e64596465ad93a",
+      "output_length": 675
+    },
+    {
+      "type": "text",
+      "text": "No blocking defects \u2014 executing the single authorized stage run."
+    },
+    {
+      "type": "tool_use",
+      "tool": "bash",
+      "status": "completed",
+      "input": {
+        "command": "bash doc/php83/evidence/exp14-syntax/stage-primary.sh >doc/php83/evidence/exp14-syntax/opencode-stage.stdout 2>doc/php83/evidence/exp14-syntax/opencode-stage.stderr; echo \"$?\" >doc/php83/evidence/exp14-syntax/opencode-stage.exit; echo \"STAGE_EXIT:$(cat doc/php83/evidence/exp14-syntax/opencode-stage.exit)\"; wc -c doc/php83/evidence/exp14-syntax/opencode-stage.stdout doc/php83/evidence/exp14-syntax/opencode-stage.stderr",
+        "timeout": 600000,
+        "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+      },
+      "error": null,
+      "output_sha256": "1f55d4e3968651fdd297423a22eb85b3a55cb76b5707ee100aff76a9d62ad8ce",
+      "output_length": 139
+    },
+    {
+      "type": "tool_use",
+      "tool": "read",
+      "status": "completed",
+      "input": {
+        "filePath": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/doc/php83/evidence/exp14-syntax/opencode-stage.stdout"
+      },
+      "error": null,
+      "output_sha256": "a79e40f451870853b486aa3afb4efd50deb37dbb44a270cfad132e1994ed0ee3",
+      "output_length": 775
+    },
+    {
+      "type": "tool_use",
+      "tool": "bash",
+      "status": "completed",
+      "input": {
+        "command": "PYTHONDONTWRITEBYTECODE=1 python3 doc/php83/evidence/exp14-syntax/execute-native.py opencode-independent",
+        "timeout": 2500000,
+        "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+      },
+      "error": null,
+      "output_sha256": "4acb4293a70fd80e0b6b3fd1a64b2ec7ac8bb3d65fd12ccb9c2699b17013ed23",
+      "output_length": 264
+    },
+    {
+      "type": "text",
+      "text": "Native execution complete \u2014 verifying the bounded report without dumping the full JSON."
+    },
+    {
+      "type": "tool_use",
+      "tool": "bash",
+      "status": "completed",
+      "input": {
+        "command": "PYTHONDONTWRITEBYTECODE=1 python3 -c \"\nimport json,hashlib,pathlib\nbase=pathlib.Path('doc/php83/evidence/exp14-syntax')\nrep=json.loads((base/'opencode-independent.json').read_text())\nprint('status:',rep.get('status'))\nprint('keys:',sorted(rep.keys()))\nprint('runtime_before==after:',rep.get('runtime_before')==rep.get('runtime_after'))\nprint('harness_before==after:',rep.get('harness_before')==rep.get('harness_after'))\nrb=rep.get('runtime_before',{})\nprint('runtime:',rb.get('command'),str(rb.get('version',''))[:30],'env:',rb.get('environment'))\nprint('harness_files:',sorted(rep.get('harness_before',{}).keys()))\nfor v in ('exp13','exp14'):\n  vv=rep['variants'][v]\n  print(v,'zip:',vv.get('zip_sha256'),'src_before==after:',vv.get('source_before')==vv.get('source_after'),'records:',len(vv.get('records',[])),'summary:',vv.get('summary'))\ncomp=rep.get('comparison',{})\nprint('comparison_keys:',sorted(comp.keys()))\nprint('changed:',comp.get('changed_paths'),'added:',comp.get('added_paths'))\nprint('remaining_rejected:',len(comp.get('remaining_rejected_paths',[])),comp.get('remaining_rejected_paths'))\nprint('diag_delta:',json.dumps(comp.get('diagnostic_delta'))[:800])\nprint('candidate_all_compile:',comp.get('candidate_all_files_compile'),'app_accept:',comp.get('application_acceptance'))\nprint('total_rows:',sum(len(rep['variants'][v]['records']) for v in rep['variants']))\n\"\n",
+        "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+      },
+      "error": null,
+      "output_sha256": "2729ed7741a04292710544e19f11db0ce3117ef7b9db10f0f1a5508e3400a274",
+      "output_length": 2108
+    },
+    {
+      "type": "tool_use",
+      "tool": "bash",
+      "status": "completed",
+      "input": {
+        "command": "PYTHONDONTWRITEBYTECODE=1 python3 -c \"\nimport json,pathlib\nrep=json.loads(pathlib.Path('doc/php83/evidence/exp14-syntax/opencode-independent.json').read_text())\nprint('bounded_nonregression:',rep['comparison'].get('bounded_compiler_nonregression'))\nprint('metadata_delta:',len(rep['comparison'].get('metadata_delta',[])))\nprint('input_contract_pins:',rep['input_contract']['pins'])\n\"\nls -l doc/php83/evidence/exp14-syntax/opencode-stage.stdout doc/php83/evidence/exp14-syntax/opencode-stage.stderr doc/php83/evidence/exp14-syntax/opencode-stage.exit doc/php83/evidence/exp14-syntax/opencode-independent.json doc/php83/evidence/exp14-syntax/opencode-independent.stderr doc/php83/evidence/exp14-syntax/opencode-independent.exit\ncat doc/php83/evidence/exp14-syntax/opencode-stage.exit doc/php83/evidence/exp14-syntax/opencode-independent.exit\nwc -c doc/php83/evidence/exp14-syntax/opencode-independent.stderr; cat doc/php83/evidence/exp14-syntax/opencode-independent.stderr | head -c 200; echo\nPYTHONDONTWRITEBYTECODE=1 python3 -c \"import hashlib,json,pathlib; f=json.loads(pathlib.Path('doc/php83/evidence/exp14-syntax/prep-freeze.json').read_text()); bad=[n for n,p in f.items() if hashlib.sha256(pathlib.Path(n).read_bytes()).hexdigest()!=p]; print('freeze_drift:',bad if bad else 'none')\"\n",
+        "workdir": "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83"
+      },
+      "error": null,
+      "output_sha256": "b179397baeafb6f84a2c23546ac2d914f0dee2812fe2fc9ae6c7dd4a49294372",
+      "output_length": 938
+    },
+    {
+      "type": "text",
+      "text": "OpenCode independent exp14-syntax execution complete. No source/tool edits. No SSH secrets printed. No 74 access.\n\n**Pins (verified via SHA256SUMS reads):**\n- exp13 `6d0bc494...` / exp14 `459feaf9caf2abe55963dce0cac51b8b593e4ff1b46d2eaf9cb7d5c3f13f62a1` \u2014 match `input-contract.json` and preflight.\n\n**Local guards (direct, no tail pipe):**\n- `PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/exp14-syntax -p \"test_*.py\" -v` \u2192 50 tests OK\n- `bash -n tools/php83/exp14-syntax/run.sh` \u2192 exit 0\n- `bash -n doc/php83/evidence/exp14-syntax/stage-primary.sh` \u2192 exit 0\n\n**Adapter review \u2014 no blocking defect:**\n- `scan.py`: parent pin `81e5d9a0...`, core via parent `fd98fdb4...`, VARIANTS exp13/exp14, FILES 6, prior pin exact, counts 11785/11785, exactly 1 target `KalturaEntryService.php` 9495b5\u2026\u2192b48fd2\u2026, 7 historical rejects exact unwaived, metadata 2 rows under `.php83-experimental/` only, exit strict int 0/255, command exact, diagnostics derived from retained raw stdout/stderr, whole-archive delta = 1+2 only.\n- `compare.py`: only `duration_ns` dropped, validates COMPLETE_BOUNDED, app_accept False, contract/runtime/harness exact, source_before==after, summary==core.summarize, sidecars `.exit=0` + `.stderr empty`.\n- `execute-native.py`: prep-freeze hash check + `load_contract()` before SSH, single `ssh run.sh` timeout 600, `xb` never-overwrite `.json/.stderr/.exit`.\n- `stage.py`/`run.sh`: euid 1000, host `kaltura-php83-lab`, fresh root, ZIP pin + duplicate/traversal/symlink checks, post-stage root-owned read-only; runner `PrivateNetwork=yes`, `SystemCallFilter=~socket socketpair EPERM`, `AF_UNIX` only, `ProtectSystem=strict`, read-only binds, `env -i`, compile-only no app entrypoints.\n\n**Stage (once, no overwrite):**\n- `bash doc/php83/evidence/exp14-syntax/stage-primary.sh >.../opencode-stage.stdout 2>.../opencode-stage.stderr` \u2192 exit 0 (`opencode-stage.exit`=0), stderr 0B, stdout 566B: preflight LOCAL_PREFLIGHT_ONLY delta 3, counts 11785/11785 + `Fresh extraction completed`.\n\n**Native (once, stage 0 only):**\n- `PYTHONDONTWRITEBYTECODE=1 python3 doc/php83/evidence/exp14-syntax/execute-native.py opencode-independent` \u2192 exit 0, sha `51a92e72...`, JSON 28450949B, `.stderr` 0B, `.exit` 0.\n\n**Report (summary-only, full 28MB JSON not printed):**\n- status COMPLETE_BOUNDED, bounded_compiler_nonregression True\n- total rows 23570 (11785+11785), incomplete 0\n- exp13: accepted 11778 / rejected 7 / diagnostic_files 72 / accepted_with_diag 65\n- exp14: accepted 11778 / rejected 7 / diagnostic_files 71 / accepted_with_diag 64\n- changed `['api_v3/lib/KalturaEntryService.php']`, added `[]`, metadata_delta 2\n- remaining 7 rejects identical both variants (RiakCache + 6 symfony), not waived\n- diagnostic_delta: rank `Deprecated ... $rank ... line 1836` \u2192 `\"\"`, all other 11784 unchanged\n- runtime_before==after (PHP 8.3.6, LC_ALL=C TZ=UTC), harness_before==after (6 files), source_before==after both, freeze_drift none\n- candidate_all_files_compile False, application_acceptance False\n\nCollector exit 0 = bounded report only, not all-PHP passes; per-file 255s are the 7 recorded rejections. No SQL/app/ZIP/package changes in this plan.\n\n**Remaining limits:** needs Codex second-scan repeat + strict comparator (`comparison.json`) before independent nonregression claim; XML/AWS/USER/media/privacy/Criteria/rollback/package/release gates remain open NOT_RERUN; VM released, no competing operation."
+    }
+  ],
+  "application_acceptance": false
+}
