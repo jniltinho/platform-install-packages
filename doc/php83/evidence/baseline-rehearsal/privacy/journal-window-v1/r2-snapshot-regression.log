@@ -1,0 +1,14 @@
+test_latest_snapshot_highwater_not_discarded (jregression.Tests.test_latest_snapshot_highwater_not_discarded) ... FAIL
+
+======================================================================
+FAIL: test_latest_snapshot_highwater_not_discarded (jregression.Tests.test_latest_snapshot_highwater_not_discarded)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/baseline-rehearsal/privacy/journal-window-v1/test_scan.py", line 44, in test_latest_snapshot_highwater_not_discarded
+    with self.assertRaisesRegex(m.Incomplete,'OBSERVED_CURSOR_MISSING'):
+AssertionError: Incomplete not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)

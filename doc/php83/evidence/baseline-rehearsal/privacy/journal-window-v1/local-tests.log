@@ -1,0 +1,20 @@
+test_boot_change (test_scan.Tests.test_boot_change) ... ok
+test_bytes_and_records (test_scan.Tests.test_bytes_and_records) ... ok
+test_cutoff_decode_and_exclude_start (test_scan.Tests.test_cutoff_decode_and_exclude_start) ... ok
+test_deadline (test_scan.Tests.test_deadline) ... ok
+test_drain_not_double_count (test_scan.Tests.test_drain_not_double_count) ... ok
+test_duplicate_sequence (test_scan.Tests.test_duplicate_sequence) ... ok
+test_empty_malformed_duplicate_fields (test_scan.Tests.test_empty_malformed_duplicate_fields) ... ok
+test_missing_anchor (test_scan.Tests.test_missing_anchor) ... ok
+test_missing_end (test_scan.Tests.test_missing_end) ... ok
+test_null_truncation_and_bad_encoding (test_scan.Tests.test_null_truncation_and_bad_encoding) ... ok
+test_private_process_error (test_scan.Tests.test_private_process_error) ... ok
+test_private_snapshot (test_scan.Tests.test_private_snapshot) ... ok
+test_runner_exit_stderr_timeout (test_scan.Tests.test_runner_exit_stderr_timeout) ... ok
+test_runner_private_output_and_switches (test_scan.Tests.test_runner_private_output_and_switches) ... ok
+test_tail_incomplete (test_scan.Tests.test_tail_incomplete) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.002s
+
+OK

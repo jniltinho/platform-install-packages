@@ -1,0 +1,8 @@
+{
+  "status": "RETAINED_R1_FALSE_COMPLETION_REPRODUCED",
+  "tests": 2,
+  "failures": 2,
+  "errors": 0,
+  "meaning": "Required Incomplete absent for observed tail disappearance and missing suffix across drain",
+  "native_execution": false
+}

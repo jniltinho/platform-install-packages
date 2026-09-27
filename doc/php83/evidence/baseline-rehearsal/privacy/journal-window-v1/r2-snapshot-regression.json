@@ -1,0 +1,8 @@
+{
+  "status": "RETAINED_R2_FALSE_COMPLETION_REPRODUCED",
+  "tests": 1,
+  "failures": 1,
+  "errors": 0,
+  "meaning": "Required Incomplete absent when previously observed latest snapshot cursor disappeared",
+  "native_execution": false
+}

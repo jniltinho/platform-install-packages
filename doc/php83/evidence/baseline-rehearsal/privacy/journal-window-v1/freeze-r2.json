@@ -1,0 +1,9 @@
+{
+  "status": "PREPARED_LOCAL_R1_OBSERVED_TAIL_FIXED",
+  "files": {
+    "tools/php83/baseline-rehearsal/privacy/journal-window-v1/scan.py": "9cc9166c1ff833ec5660cab86c727bf71541dff7c6b02269d2fe9ac8682ff9aa",
+    "tools/php83/baseline-rehearsal/privacy/journal-window-v1/test_scan.py": "1dd4c4b30fc56ef7f1473ab421188edcb9c97e19f98a19fd8debc4054b7d3153",
+    "doc/php83/baseline-privacy-journal-window.md": "dcd4a352dc0d49fdf5f2da08525d6bfd5e30aad2f21a6f0bd1a3a49782ca4ec6"
+  },
+  "native_execution": false
+}

@@ -1,0 +1,37 @@
+test_boot_change (test_scan.Tests.test_boot_change) ... ok
+test_bytes_and_records (test_scan.Tests.test_bytes_and_records) ... ok
+test_cutoff_decode_and_exclude_start (test_scan.Tests.test_cutoff_decode_and_exclude_start) ... ok
+test_deadline (test_scan.Tests.test_deadline) ... ok
+test_drain_not_double_count (test_scan.Tests.test_drain_not_double_count) ... ok
+test_duplicate_sequence (test_scan.Tests.test_duplicate_sequence) ... ok
+test_empty_malformed_duplicate_fields (test_scan.Tests.test_empty_malformed_duplicate_fields) ... ok
+test_latest_snapshot_highwater_not_discarded (test_scan.Tests.test_latest_snapshot_highwater_not_discarded) ... ok
+test_missing_anchor (test_scan.Tests.test_missing_anchor) ... ok
+test_missing_end (test_scan.Tests.test_missing_end) ... FAIL
+test_null_truncation_and_bad_encoding (test_scan.Tests.test_null_truncation_and_bad_encoding) ... ok
+test_observed_suffix_missing_next_round (test_scan.Tests.test_observed_suffix_missing_next_round) ... ok
+test_observed_tail_disappeared (test_scan.Tests.test_observed_tail_disappeared) ... ok
+test_private_process_error (test_scan.Tests.test_private_process_error) ... ok
+test_private_snapshot (test_scan.Tests.test_private_snapshot) ... ok
+test_runner_exit_stderr_timeout (test_scan.Tests.test_runner_exit_stderr_timeout) ... ok
+test_runner_private_output_and_switches (test_scan.Tests.test_runner_private_output_and_switches) ... ok
+test_snapshot_highwater_normal_drain (test_scan.Tests.test_snapshot_highwater_normal_drain) ... ok
+test_suffix_boot_duplicate_invalid (test_scan.Tests.test_suffix_boot_duplicate_invalid) ... ok
+test_tail_incomplete (test_scan.Tests.test_tail_incomplete) ... ok
+
+======================================================================
+FAIL: test_missing_end (test_scan.Tests.test_missing_end)
+----------------------------------------------------------------------
+journal_scan.Incomplete: OBSERVED_CURSOR_MISSING
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/baseline-rehearsal/privacy/journal-window-v1/test_scan.py", line 28, in test_missing_end
+    with self.assertRaisesRegex(m.Incomplete,'END_CURSOR_MISSING'):
+AssertionError: "END_CURSOR_MISSING" does not match "OBSERVED_CURSOR_MISSING"
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.004s
+
+FAILED (failures=1)

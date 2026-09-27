@@ -1,0 +1,24 @@
+{
+  "status": "PASS_BOUNDED_LOCAL_R3_REVIEW",
+  "reviewer": "independent Codex agent /root/exp9_harness",
+  "provenance": "Reviewer terminal report, not native execution",
+  "recorded_at_utc": "2026-09-27T00:36:25.673242+00:00",
+  "tests": 20,
+  "exit": 0,
+  "freeze_unchanged": true,
+  "reviewed_file_sha256": {
+    "tools/php83/baseline-rehearsal/privacy/journal-window-v1/scan.py": "a390e2464c3df47b36ed0b2e19607887b908351d3e7245439e392646239ba5e8",
+    "tools/php83/baseline-rehearsal/privacy/journal-window-v1/test_scan.py": "00b0baf4bc5028fe54c4ba0fc014a2486d10c5c07c4793efa6845fae7c2d7439",
+    "doc/php83/baseline-privacy-journal-window.md": "41f9c618cb470b81a4d332aea7ef81cfbded7d9c4ff0ee087b81040d6a6f06e4"
+  },
+  "reviewed_contract": "All observed cursor identities from end/latest/fetch must reappear until covered, and observed subset seen before COMPLETE",
+  "remaining_concrete_local_blocker_found": false,
+  "native_execution": false,
+  "privacy_acceptance": false,
+  "limitations": [
+    "finite cutoff only",
+    "unobserved hostile interior deletion not proved absent",
+    "future writes not covered",
+    "combined file/journal driver gate required"
+  ]
+}
