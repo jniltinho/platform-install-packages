@@ -111,8 +111,15 @@ these failures remain in `e7a23841`. A bounded readiness correction was
 independently reviewed with 20 local tests. The third application now reports
 `exit=0` and `OVERLAY_INSTALLED_NO_AUTH_ACCEPTANCE`: four final source hashes and
 metadata, fresh process identities and post-start configuration checks agree.
-The `.74` lab is now modified by the approved privacy overlay. Fresh web/provider,
-invalid nonce log-window checks and valid USER/upload acceptance are still pending.
+The `.74` lab is now modified by the approved privacy overlay. Fresh web/provider and invalid-nonce/USER checks now pass in actual execution
+(`92cb1f0c`): PHP 7.4.33/apache2handler, wrong secret rejected, USER session
+accepted and ADMIN with USER secret rejected. Four source hashes/metadata remain
+unchanged; cleanup is inactive. The finite scan covered 410 files, 13,831 appended
+bytes for nonce and 27,329 for USER, with no full/prefix canary matches. Journal
+had zero new records (anchor bytes are not new log coverage). The actual executor
+was Codex; CLI preparation and independent receipt review are not a second native
+run. Upload/playback remain pending, and this baseline result is not PHP 8.3
+full-application acceptance.
 Any subsequent overlay must be labelled a modified lab baseline, not unchanged
 published packages; benchmark acceptance remains separate.
 

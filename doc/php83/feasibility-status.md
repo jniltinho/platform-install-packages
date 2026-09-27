@@ -32,7 +32,10 @@ reports (`5e45a074`); 23 local guards pass. The reviewed append-window scanner p
 attempts and a verified rollback, application V3 installed the four-file overlay
 on `.74` with successful source/metadata/process/configuration guards. This is
 `OVERLAY_INSTALLED_NO_AUTH_ACCEPTANCE`, not an installed-application privacy pass;
-fresh web/provider and nonce/USER/upload gates remain pending. Old readers reject the candidate cache wire format, and cache
+fresh web/provider and nonce/USER checks subsequently passed (`92cb1f0c`) on
+PHP 7.4.33 with the overlay. USER acceptance and negative controls were observed,
+with zero canary matches in finite file windows; journal had zero new records.
+Upload/playback and PHP 8.3 full-application acceptance remain pending. Old readers reject the candidate cache wire format, and cache
 recovery/rollback is not accepted. The rank repair preserves PHP8.3 signature
 behavior but changes PHP7.4 reflection metadata; positive rank persistence remains
 untested. No go/no-go, package integration or release approval follows.
