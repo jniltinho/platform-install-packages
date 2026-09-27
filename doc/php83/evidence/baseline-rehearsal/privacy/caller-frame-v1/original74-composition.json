@@ -1,0 +1,10 @@
+{
+  "status": "PREPARED_NOT_NATIVE74_EXECUTED",
+  "base_archive_sha256": "58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28",
+  "path": "infra/log/KalturaLog.php",
+  "original_sha256": "9b7a7c3dd37616ffd2ac9720ece862641c43bb687a2db4e8fc9cbcb259ff5449",
+  "overlay_before_sha256": "e73b07433ea3f68dc2d309b35e33b63ce1ffb2599e7f7e8699f2b1d314740778",
+  "caller_after_sha256": "40e4db5733cfab59e0e873f94ee64166de380d86425625411dc716f6cb1003dd",
+  "patch_sha256": "dbaf327ebcd75407e9e781fbbdbdae222d59eb42cd5b4c062c2882f2e14e3f9c",
+  "native83_uses_exp14_not_original74": true
+}

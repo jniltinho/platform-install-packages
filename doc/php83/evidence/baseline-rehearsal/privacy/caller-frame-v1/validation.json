@@ -1,0 +1,20 @@
+[
+  {
+    "status": "BOUNDED_CALLER_CONTRACT_PASS",
+    "variant": "original",
+    "cases": 6,
+    "application_acceptance": false
+  },
+  {
+    "status": "BOUNDED_CALLER_CONTRACT_PASS",
+    "variant": "overlay",
+    "cases": 6,
+    "application_acceptance": false
+  },
+  {
+    "status": "BOUNDED_CALLER_CONTRACT_PASS",
+    "variant": "repaired",
+    "cases": 6,
+    "application_acceptance": false
+  }
+]

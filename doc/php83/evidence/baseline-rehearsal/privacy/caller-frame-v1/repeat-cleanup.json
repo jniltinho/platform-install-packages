@@ -1,0 +1,5 @@
+{
+  "exit": 4,
+  "stdout": "inactive\n",
+  "stderr": "Failed to stop privacy-caller-frame-v1-repeat.service: Unit privacy-caller-frame-v1-repeat.service not loaded.\n"
+}

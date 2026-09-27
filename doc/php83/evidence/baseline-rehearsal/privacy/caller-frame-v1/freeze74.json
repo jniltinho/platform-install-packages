@@ -1,0 +1,10 @@
+{
+  "tools/php83/baseline-rehearsal/privacy/caller-frame-v1/validate.py": "a616d417e0ad2bd8ae1ca8edd7caa553cfbdb0ee4bb6b2e71c72b35695784f93",
+  "tools/php83/baseline-rehearsal/privacy/caller-frame-v1/guest.py": "56f7602605de212fd4ac2f1e3dd43ebf0d2ce3ce771a23b2b7ccaf70e186a452",
+  "tools/php83/baseline-rehearsal/privacy/caller-frame-v1/probe.php": "a9674b5394abaacee742a89918ab8d4e82f6a8f6cd2a6e949e9ff659a39e23e7",
+  "tools/php83/baseline-rehearsal/privacy/caller-frame-v1/test_observe74.py": "cddd918f113565c8c19dd3fd62401adab7d6a090481af33f69622b2353decd2d",
+  "tools/php83/baseline-rehearsal/privacy/caller-frame-v1/prepare.py": "e9c56689c8738196e76a28ca1fa19290c868fba8df11733522b4b1015159b050",
+  "tools/php83/baseline-rehearsal/privacy/caller-frame-v1/observe74.py": "6f5e35f60925efb8e5e7f19cbb225db5713c05447370859db9fb337805702025",
+  "tools/php83/baseline-rehearsal/privacy/caller-frame-v1/test_prepare.py": "9a57ce4286d8c77310ad9c727d716e7a47c8ae45f30113a6c217c52417dc0889",
+  "tools/php83/baseline-rehearsal/privacy/caller-frame-v1/run.py": "32087b3ccdc11796c64182d851380402edc779430adf51284322b94f76c12774"
+}

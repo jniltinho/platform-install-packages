@@ -1,0 +1,13 @@
+--- a/infra/log/KalturaLog.php
++++ b/infra/log/KalturaLog.php
+@@ -297,6 +297,10 @@
+ 				(isset($backtrace[$backtraceIndex]["class"]) && is_int(strpos($backtrace[$backtraceIndex]["class"], 'Log')))
+ 				||
+ 				(isset($backtrace[$backtraceIndex]["function"]) && $backtrace[$backtraceIndex]["function"] == 'log')
++				||
++				(isset($backtrace[$backtraceIndex]["class"], $backtrace[$backtraceIndex]["function"])
++				 && $backtrace[$backtraceIndex]["class"] === 'KalturaSerializableStream'
++				 && $backtrace[$backtraceIndex]["function"] === '_write')
+ 			)
+ 		)
+ 			$backtraceIndex++;

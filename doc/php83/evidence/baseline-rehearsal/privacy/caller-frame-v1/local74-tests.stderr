@@ -1,0 +1,16 @@
+test_different_runtime_rejected (test_observe74.AdapterTests.test_different_runtime_rejected) ... ok
+test_original83_not_valid74 (test_observe74.AdapterTests.test_original83_not_valid74) ... ok
+test_upstream_stage_and_module_pins (test_observe74.AdapterTests.test_upstream_stage_and_module_pins) ... ok
+test_boolean_not_integer (test_prepare.Tests.test_boolean_not_integer) ... ok
+test_drift (test_prepare.Tests.test_drift) ... ok
+test_empty_sources (test_prepare.Tests.test_empty_sources) ... ok
+test_exact_addition (test_prepare.Tests.test_exact_addition) ... ok
+test_missing_record (test_prepare.Tests.test_missing_record) ... ok
+test_overlay_regression_required (test_prepare.Tests.test_overlay_regression_required) ... ok
+test_positive_synthetic_contract (test_prepare.Tests.test_positive_synthetic_contract) ... ok
+test_wrong_caller (test_prepare.Tests.test_wrong_caller) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.310s
+
+OK

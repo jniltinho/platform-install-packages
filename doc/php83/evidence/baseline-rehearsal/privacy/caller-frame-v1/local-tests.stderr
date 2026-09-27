@@ -1,0 +1,13 @@
+test_boolean_not_integer (test_prepare.Tests.test_boolean_not_integer) ... ok
+test_drift (test_prepare.Tests.test_drift) ... ok
+test_empty_sources (test_prepare.Tests.test_empty_sources) ... ok
+test_exact_addition (test_prepare.Tests.test_exact_addition) ... ok
+test_missing_record (test_prepare.Tests.test_missing_record) ... ok
+test_overlay_regression_required (test_prepare.Tests.test_overlay_regression_required) ... ok
+test_positive_synthetic_contract (test_prepare.Tests.test_positive_synthetic_contract) ... ok
+test_wrong_caller (test_prepare.Tests.test_wrong_caller) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.000s
+
+OK

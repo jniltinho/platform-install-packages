@@ -1,0 +1,16 @@
+{
+  "status": "BOUNDED_CALLER_NATIVE74_REPEATED",
+  "processes_per_execution": 3,
+  "cases_per_execution": 18,
+  "lints_per_execution": 36,
+  "runtime_snapshot_objects": 55,
+  "runtime_before_after_equal": true,
+  "primary_repeat_typed_equal": true,
+  "upstream74_records_equal_exp14_83_records": true,
+  "diagnostics_and_stderr_empty": true,
+  "frozen_tools_unchanged": true,
+  "executor_primary": "Codex",
+  "executor_repeat": "actual Claude CLI",
+  "application_modified": false,
+  "privacy_acceptance": false
+}
