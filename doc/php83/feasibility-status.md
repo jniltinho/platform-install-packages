@@ -37,8 +37,11 @@ PHP 7.4.33 with the overlay. USER acceptance and negative controls were observed
 with zero canary matches in finite file windows; journal had zero new records.
 Two subsequent short-media runs reached READY and verified owned HTTP source
 delivery, but their final privacy gates did not pass: V1 was INCOMPLETE with
-lost cause; V2 found three full KS/prefix matches in SQL log lines. A narrow
-prepared-statement display repair is in progress. PHP 8.3 full-application
+lost cause; V2 found three full KS/prefix matches in SQL log lines. The subsequent prepared-statement DEBUG repair and caller correction were
+validated and installed as overlay V4. Media V3 then passed the same real short
+flow, including finite privacy windows with zero secret/KS matches over 416 files
+and 7,145,043 appended bytes (`3c64e6a5`); journal had no new records. Earlier
+failures remain distinct. PHP 8.3 full-application
 acceptance remains pending. The [51-task audit](task-audit-current.md) confirms
 no additional task closure from these partial runs. Old readers reject the candidate cache wire format, and cache
 recovery/rollback is not accepted. The rank repair preserves PHP8.3 signature

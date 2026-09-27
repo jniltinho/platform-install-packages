@@ -4,30 +4,41 @@ Snapshot: 2026-09-26, migration branch. This is a scoped evidence board, not a
 release estimate. [Detailed plan](../../openspec/changes/migrate-kaltura-php83/tasks.md)
 and [execution contract](../../openspec/changes/migrate-kaltura-php83/design.md).
 
-## Current task audit and latest real blocker
+## Current task audit and resolved exercised-path privacy blocker
 
 [All-task audit](task-audit-current.md) reconciles all 51 OpenSpec tasks against
-current evidence. Strict OpenSpec validation passes, but validates planning only:
-3 support tasks are complete and 48 tasks remain open. No new checkbox has been
-closed from compiler results or local harness counts alone.
+retained evidence. Strict OpenSpec validation passes, but validates planning,
+not runtime acceptance. Task 1.6 now closes from the reviewed 76-path exp14 evidence join (`5bf6cb0b`),
+including original preservation, focused repair-family contracts and reproducible
+ZIP construction. Total: **4/51**; case 5.7 and full application/release gates stay
+open. This is not closure from compiler or local harness counts alone.
 
-The `.74` privacy-overlay baseline now has two real short-media observations:
-both upload to READY and return HTTP source bytes with the expected SHA and owned
-entry/asset/FileSync binding. The first final privacy audit was INCOMPLETE with
-its specific cause lost; the instrumented replay found three full KS and three
-prefix matches in file logs. These are separate failures, not an overall PASS.
-Journal in the replay had three new records and zero marker matches. Follow-up
-private diagnosis identifies SQL INSERT/UPDATE logging of entry custom data;
-a narrow display-only prepared-statement repair is in progress. No credentials
-or raw matched log lines are exported. Further auth/upload waits for the repair.
+Media V1's final privacy INCOMPLETE and V2's three KS/full-prefix log matches
+remain preserved. The attribution was refined to prepared INSERT into
+`track_entry`, not an inferred mix of entry INSERT/UPDATE operations. A minimal
+prepared-statement DEBUG display repair preserves executed SQL/bind values while
+logging its template and type descriptors (`2c8b5b84`). A separate caller-frame
+repair restores useful emitter attribution (`7bd83a03`). Native PHP 7.4/8.3 tests
+and actual Claude repeats are retained for these prerequisites.
 
-The source ZIP remains exp14; these PHP 7.4 lab observations do not establish a
-functional PHP 8.3 AIO. No release, task archive, production cutover or performance
-acceptance is claimed.
+[Media V3](evidence/baseline-rehearsal/privacy/media-overlay-v3/README.md),
+committed in `3c64e6a5`, now passes the real `.74` sequence after overlay V4:
+invalid-secret rejection, USER authentication, ADMIN negative control, upload,
+READY, owned list and exact original-source HTTP delivery. The finite media
+window covered 416 files / 7,145,043 appended bytes with zero full/prefix secret
+and KS matches; journal had zero new records. Five installed source hashes and
+metadata remained unchanged. Independent receipt review is not another native
+media execution. Prior failures are not relabelled PASS.
+
+This resolves the observed prepared-bound-value logging defect in this route,
+not universal log privacy. The source ZIP remains exp14; the PHP 7.4 lab with
+approved overlay is not unchanged published source or functional PHP 8.3 AIO.
+The next runtime step is an isolated full-application PHP 8.3 pilot. No benchmark,
+TLS/HLS, release, task archive or `.20` cutover is approved by this checkpoint.
 
 ## Counts and boundaries
 
-- Original acceptance obligations: **0 of 24 complete**.
+- Original obligations: **1 of 24 complete** (task 1.6, experimental artifact only).
 - Detailed cases: **3 of 27 complete; 24 remain open**. Several open cases now
   contain actual partial lab evidence; they must not be called wholly NOT_RUN or
   fully accepted. Consult each case's scoped evidence in the detailed task list.

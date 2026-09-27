@@ -6,7 +6,7 @@
 - [ ] 1.4 Produce the three-distro provider/extension/SAPI matrix (native Noble pinned origins; EL9 AppStream versus Remi evaluation); verify signed suite-compatible PHP 8.3 package resolution and loaded modules in clean test environments, without mixing unsupported distro packages or extension ABIs.
 - [ ] 1.5 Write a go/no-go feasibility report with bounded repairs, upstream references and blockers; verify operator approval before production runtime/package integration (lab-only source experiments in 1.6 are already authorized), stopping for a revised proposal if a framework/Kaltura upgrade is needed.
 
-- [ ] 1.6 Develop minimal experimental source patches for confirmed failures in disposable lab trees; verify focused before/after behavior on PHP 7.4 and PHP 8.3, then generate the separately named experimental ZIP twice and compare hashes; record original archive, ordered patch, changed-file and ZIP identities, retaining the original 7.4 artifacts and excluding secrets/runtime data.
+- [x] 1.6 Develop minimal experimental source patches for confirmed failures in disposable lab trees; verify focused before/after behavior on PHP 7.4 and PHP 8.3, then generate the separately named experimental ZIP twice and compare hashes; record original archive, ordered patch, changed-file and ZIP identities, retaining the original 7.4 artifacts and excluding secrets/runtime data.
 - [ ] 1.7 Evaluate dependency upgrade candidates independently from compatibility fixes; record pinned old/new versions, support/license evidence, expected benefit, regression/revert tests and the explicit per-component selection or deferral decision; verify no upgrade is silently bundled or performance gain asserted without comparable measurements.
 
 ## 2. Compatibility patches and packaging
@@ -86,6 +86,28 @@ case does not automatically close its original parent.
 
 ## Detailed-case execution evidence
 
+### Task 1.6 closure — bounded experimental artifact, 2026-09-26
+
+Task 1.6 is complete for exp14, not for production integration or full AIO.
+The 76-path reconciliation in `doc/php83/repair-coverage-exp14.md` and commit
+`5bf6cb0b` joins original/final/ordered-patch identities, focused repair-family
+contracts, the two identical experimental ZIP builds and combined API/CLI/compiler
+records. Actual Claude and the coordinator independently reproduced ledger-r2
+byte-for-byte (SHA256 `066781c2326821c763d0c408f8132de1af314b073a26e3490467b5a5259ba338`).
+The original archive and published artifacts remain unchanged; the experimental
+ZIP excludes runtime credentials, databases and media.
+
+The task owner explicitly accepts the full 43-file/153-pair, hash-bound token
+transformation proof plus native before/after compiler controls and focused
+three-file behavioral corpus for the syntax-equivalent curly-offset repair.
+This does not claim dynamic method execution in all 43 files. Intentional type,
+serialization and reflection differences remain documented. Seven unrelated
+compiler rejects, cache rollback, full application acceptance and release gates
+remain open. Detailed case 5.7 retains its stronger per-repair coverage assessment
+and is not closed automatically. Lab privacy overlays are separate from exp14;
+this closure is not approval of a later expanded source artifact.
+
+
 T0-01 / 5.1 is complete for frozen commit `e93dc4cf`: Claude executed the
 68-test local harness, Grok independently reran and reviewed it, and Cursor
 reviewed the result. Codex also reran the suite and verified all 107 tracked
@@ -98,7 +120,8 @@ after Grok exited at its turn limit; Cursor reviewed the corrected matrix.
 See `doc/php83/patch-inventory.md`, `doc/php83/coverage-matrix.md` and
 `doc/php83/evidence/batch2-inventory/`. No held patch was promoted.
 See `doc/php83/test-status.md` and `doc/php83/evidence/batch1-local/`.
-The original 24 acceptance tasks remain unchecked.
+Of the original 24 tasks, only the bounded experimental-artifact task 1.6 is
+now complete; the remaining 23 original obligations stay open.
 
 T4-01 / 5.16 now has partial real CLI/Apache/FPM provider evidence on all three
 targets and independent reruns (`doc/php83/provider-runtime.md`). It remains
