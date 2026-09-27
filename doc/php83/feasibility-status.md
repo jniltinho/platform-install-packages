@@ -13,13 +13,13 @@ repair. Codex and OpenCode independently ran its four-mode API/48-row CLI matrix
 the sanitized API ledger decreases from one group/event to zero. Raw API stderr
 remains UNCOMPARED. XML/AWS source joins are NOT_RERUN, not fresh execution.
 
-Exp14's whole-artifact compiler run is NOT_EXECUTED: Claude hit a session limit,
-and OpenCode received a new permission rejection before native staging. The operator renewed that authorization explicitly, but a fresh OpenCode
-attempt was rejected again. The operator subsequently explicitly authorized OpenCode permissions required
-for the lab tests. A new ephemeral-permission attempt is assigned to `.83`; the
-previous rejections remain recorded, and no native result is claimed yet. The last actual full compiler repetition is exp13, with11,785 files
-and seven retained rejections. Its independent XML/cache runtime reports remain
-bounded historical evidence for that artifact.
+Exp14's whole-artifact compiler now has actual OpenCode primary and an independent
+Codex repeat (`23d52765`), enabled by renewed explicit CLI authorization. Each
+execution has 23,570 rows across exp13/exp14; strict comparison passes with raw
+channels and source/runtime identities retained. Both artifacts retain seven
+compiler rejects; diagnostic files decrease 72→71 only from the rank warning.
+This is bounded compiler nonregression, not all-files compilation or application
+acceptance. Historical quota/permission failures remain recorded separately.
 
 These fixtures do not establish complete AIO acceptance. The baseline rehearsal
 stopped before valid USER authentication/upload because exception traces expose

@@ -35,12 +35,12 @@ OpenCode 1.18.32 with no global permission overrides; its
 suggests a noninteractive approval boundary. No permission was
 changed and no rejected read was retried by another executor. A separate request
 for temporary CLI permission was subsequently approved: the operator explicitly
-authorized OpenCode permissions needed for the laboratory tests. A new isolated
-compiler attempt is assigned to `.83`; the historical denials remain intact.
-Until actual results arrive, compiler is still NOT_EXECUTED. No global permission
+authorized OpenCode permissions needed for the laboratory tests. The new isolated
+compiler attempt completed on `.83` with actual OpenCode and a Codex repeat
+(`23d52765`); the historical denials remain intact. No global permission
 change, production access or release acceptance follows from this authorization.
 
-## Current built candidate: exp14 — API/CLI repeated; compiler blocked
+## Current built candidate: exp14 — API/CLI and bounded compiler repeated
 
 [exp14](exp14-candidate.md), committed in `0c152ce1`, was built by Codex and
 independently rebuilt by actual Claude with identical ZIP bytes:
@@ -63,14 +63,16 @@ with exact repeated stdout/stderr. Source/runtime checks and owned DB cleanup
 are retained. XML/AWS on exp14 are **NOT_RERUN_SOURCE_JOIN_ONLY**; their unchanged
 source identities do not become fresh runtime passes.
 
-[Whole-artifact compiler](exp14-syntax.md) remains **NOT_EXECUTED** (`356db251`).
-Claude hit its session limit. OpenCode then received an explicit permission
-rejection while verifying local tool/contract metadata and reading the exp13/14
-SHA256SUMS files, before staging or any native compiler execution. The exact
-command/error is retained, and the affected operation was stopped. Explicit
-operator confirmation was subsequently received; a second rejection and the
-separate narrow technical permission request are described above. No alternate
-executor retries that denied operation. Separately authorized API/CLI execution does not close this gate.
+[Whole-artifact compiler](exp14-syntax.md) now has actual OpenCode primary and
+Codex independent repetition (`23d52765`): 23,570 rows per run, 11,785 files per
+artifact. Both retain 11,778 accepted and seven rejected files; zero incomplete
+rows. Diagnostic files decrease 72→71, only the rank declaration warning.
+The strict comparison preserves raw channels, source/harness/runtime identities
+and diagnostics, excluding only per-row duration. The seven historical rejects
+remain open: **not all candidate files compile**, and full application acceptance
+is still false. Earlier quota and permission failures remain historical evidence;
+the renewed user authorization enabled this separate successful attempt. `.83`
+is released with no pending compiler process.
 
 The [real logging-pipeline observation](evidence/baseline-rehearsal/privacy/pipeline/README.md)
 was independently repeated by actual Claude (`8f6d39a0`). Throwable reaches the
