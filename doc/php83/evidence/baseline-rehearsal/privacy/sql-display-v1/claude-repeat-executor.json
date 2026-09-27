@@ -1,0 +1,13 @@
+{
+  "exit": 0,
+  "elapsed_seconds": 48.58438118099002,
+  "stderr_bytes": 0,
+  "public": {
+    "type": "result",
+    "subtype": "success",
+    "is_error": false,
+    "result": "Executei a repeti\u00e7\u00e3o em baseline74 usando o `observe.py` congelado. Nenhuma sa\u00edda anterior foi sobrescrita e n\u00e3o houve nega\u00e7\u00e3o de permiss\u00e3o nem edi\u00e7\u00e3o de c\u00f3digo-fonte ou testes.\n\n| Etapa | Sa\u00edda | Resultado |\n|---|---|---|\n| `observe.py` | **2** | `OBSERVED_NOT_ACCEPTED`, 4 registros. N\u00e3o \u00e9 PASS. |\n| `compare.py claude-repeat.json` | **0** | `PASS_BOUNDED_DISPLAY_POLICY` |\n| `unittest discover` (sql-display-v1) | **0** | 31 testes OK |\n\n**Relat\u00f3rio:** `doc/php83/evidence/baseline-rehearsal/privacy/sql-display-v1/claude-repeat.json` (arquivo novo, sha256 `13f1442c\u2026a7b48e`).\n\n**Paridade finita (resultado do `compare.py`):**\n- 4 cohorts: `original74`, `display74`, `exp14statement83` e `display83`.\n- 56 linhas de INSERT/UPDATE.\n- Os efeitos nativos na mesma engine foram iguais em todos os cohorts, e os `diagnostic_counts` ficaram em `[0,0,0,0]`.\n- O controle negativo de literal inline foi mantido (`inline_literal_negative_retained: true`).\n- O runtime e o c\u00f3digo-fonte ficaram id\u00eanticos antes e depois da execu\u00e7\u00e3o (`runtime_before == runtime_after` e `source_before == source_after`).\n- O c\u00f3digo-fonte continua como `PREPARED_NOT_INSTALLED`, e os hashes before/after dos dois alvos batem com a prepara\u00e7\u00e3o.\n\n**Limpeza:** as quatro unidades MariaDB novas e privadas (`php83-display-sql-<uuid>`) foram paradas: `stop_exit 0`, estado `inactive`. O registro de limpeza n\u00e3o diz explicitamente se os datadirs em `/tmp/kaltura-display-sql.*` na .74 foram removidos, ent\u00e3o essa remo\u00e7\u00e3o continua sem confirma\u00e7\u00e3o.\n\n**Limites:**\n- `application_acceptance: false`, `universal_privacy: false` e `installed: false`. N\u00e3o h\u00e1 aceita\u00e7\u00e3o global de privacidade nem da aplica\u00e7\u00e3o.\n- Os marcadores de fixture nos relat\u00f3rios s\u00e3o strings sint\u00e9ticas fixas, n\u00e3o KS de usu\u00e1rio real.\n- N\u00e3o houve contato com produ\u00e7\u00e3o, .20, .83, banco da aplica\u00e7\u00e3o nem credenciais.",
+    "duration_ms": 46651,
+    "num_turns": 7
+  }
+}

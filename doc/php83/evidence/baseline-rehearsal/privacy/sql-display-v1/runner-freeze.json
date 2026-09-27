@@ -1,0 +1,14 @@
+{
+  "status": "LOCAL_PREPARATION_NOT_EXECUTED_NATIVE",
+  "author": "Codex exp9_harness",
+  "independent_review": "PENDING",
+  "local_tests": 15,
+  "files": {
+    "tools/php83/baseline-rehearsal/privacy/sql-display-v1/run.sh": "7c91cb1063c52472da0e09696f5a8d678aded5161fe0a5d45b45905a685b40bc",
+    "tools/php83/baseline-rehearsal/privacy/sql-display-v1/start-db.sh": "7ebf511fa4ab14432472fd42096e4e4aea109ed1934a830fbecb5b78d4a372a3",
+    "tools/php83/baseline-rehearsal/privacy/sql-display-v1/observe.py": "1d592f4bd9bf92975371e7f3181bb56229f8da51b88644e4e825a41aeca62bea",
+    "tools/php83/baseline-rehearsal/privacy/sql-display-v1/verify.py": "341fffd0dffaad3e8d7ffecf6d5e8ac186041044e68dc81170917622011c6512",
+    "tools/php83/baseline-rehearsal/privacy/sql-display-v1/test_runner.py": "ec50917ffb3763272bd95b358357d93701fa5e5d7f22e50a9522da1276591658"
+  },
+  "no_vm_execution": true
+}

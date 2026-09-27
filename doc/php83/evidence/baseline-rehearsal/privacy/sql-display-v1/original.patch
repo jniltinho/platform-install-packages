@@ -1,0 +1,38 @@
+--- a/alpha/apps/kaltura/lib/db/KalturaStatement.php
++++ b/alpha/apps/kaltura/lib/db/KalturaStatement.php
+@@ -8,6 +8,8 @@
+ 	protected static $dryRun = false;
+ 	
+ 	protected $values = array();
++	// Display metadata only. Never retain another copy of argument values.
++	protected $logValueTypes = array();
+ 	
+ 	/**
+ 	 * @param bool $dryRun
+@@ -20,6 +22,7 @@
+ 	public function bindValue ($parameter, $value, $data_type = null)
+ 	{
+ 		$index = count($this->values) + 1;
++		$this->logValueTypes[":p{$index}"] = gettype($value);
+ 		if(is_null($value))
+ 			$this->values[":p{$index}"] = "NULL";
+ 		else
+@@ -58,7 +61,17 @@
+ 			
+ 		$sql = str_replace($search, $replace, $this->queryString);
+ 		
+-		KalturaLog::debug($sql);
++		// Keep the original SQL for execution, dry-run and monitoring. Only the
++		// DEBUG representation uses placeholders plus value-free type metadata.
++		$logTypes = $this->logValueTypes;
++		if (!is_null($input_parameters))
++		{
++			$logTypes = array();
++			$logIndex = 1;
++			foreach ($input_parameters as $logValue)
++				$logTypes[':p' . $logIndex++] = gettype($logValue);
++		}
++		KalturaLog::debug($this->queryString . ' [bind-types:' . json_encode($logTypes) . ']');
+ 		
+ 		$sqlStart = microtime(true);
+ 		if(self::$dryRun && !preg_match('/^(\/\*.+\*\/ )?SELECT/i', $sql))

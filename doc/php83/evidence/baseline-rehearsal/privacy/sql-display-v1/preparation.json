@@ -1,0 +1,22 @@
+{
+  "status": "PREPARED_NOT_INSTALLED",
+  "targets": [
+    {
+      "version": "original",
+      "path": "alpha/apps/kaltura/lib/db/KalturaStatement.php",
+      "before_sha256": "a80d6029db03e1880adf240b157489d6f25b47163c394d0b0969300416378d70",
+      "after_sha256": "bd8ab13a8fb745eb603b9c35633e24637adb5356a1792642d884c6f7e1d85bd2",
+      "patch_sha256": "0193077049a0249d8f3e1168c0a5a82115a0c916ecd98b258c04ddce04657476"
+    },
+    {
+      "version": "exp14",
+      "path": "alpha/apps/kaltura/lib/db/KalturaStatement.php",
+      "before_sha256": "e1c21b05e6c43ae98d9483b1ab1825068bed72234b32ea6c40e9886ed6a2c7d3",
+      "after_sha256": "0435bb8731682ed8a531ab5574d65a4637a69486ec85c88aa48fa01e7aba5dca",
+      "patch_sha256": "de3294474cd8e8e8df41475086f9ba7c7c0c65a3a902bb0e5798f239434417cd"
+    }
+  ],
+  "privacy_acceptance": false,
+  "native_executed": false,
+  "limit": "Prepared bound values only; SQL template literals and direct PDO logs unchanged"
+}

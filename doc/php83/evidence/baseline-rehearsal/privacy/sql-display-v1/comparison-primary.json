@@ -1,0 +1,16 @@
+{
+  "status": "PASS_BOUNDED_DISPLAY_POLICY",
+  "cohorts": 4,
+  "insert_update_rows": 56,
+  "inline_literal_negative_retained": true,
+  "same_engine_native_effects_equal": true,
+  "diagnostic_counts": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "application_acceptance": false,
+  "universal_privacy": false,
+  "installed": false
+}

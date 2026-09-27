@@ -1,0 +1,23 @@
+{
+  "status": "BOUNDED_NATIVE_AND_REPEAT_COMPLETE_NOT_INSTALLED",
+  "files": {
+    "tools/php83/baseline-rehearsal/privacy/sql-display-v1/test_runner.py": "ec50917ffb3763272bd95b358357d93701fa5e5d7f22e50a9522da1276591658",
+    "tools/php83/baseline-rehearsal/privacy/sql-display-v1/verify.py": "341fffd0dffaad3e8d7ffecf6d5e8ac186041044e68dc81170917622011c6512",
+    "tools/php83/baseline-rehearsal/privacy/sql-display-v1/probe.php": "1c0a6e9ee881a8e57242ac01bb44c4084647f527bf5ac55ce9b8904e49560e3e",
+    "tools/php83/baseline-rehearsal/privacy/sql-display-v1/test_compare.py": "eb0c4178bcffbba1e9746b62d4c755d523dfd6d37c6dd690fbbb7a0263d2becf",
+    "tools/php83/baseline-rehearsal/privacy/sql-display-v1/observe.py": "1d592f4bd9bf92975371e7f3181bb56229f8da51b88644e4e825a41aeca62bea",
+    "tools/php83/baseline-rehearsal/privacy/sql-display-v1/run.sh": "7c91cb1063c52472da0e09696f5a8d678aded5161fe0a5d45b45905a685b40bc",
+    "tools/php83/baseline-rehearsal/privacy/sql-display-v1/start-db.sh": "7ebf511fa4ab14432472fd42096e4e4aea109ed1934a830fbecb5b78d4a372a3",
+    "tools/php83/baseline-rehearsal/privacy/sql-display-v1/prepare.py": "be88625c6e6d97a446f4386b045621debf8486dddb81c0092211249e8ed002b9",
+    "tools/php83/baseline-rehearsal/privacy/sql-display-v1/test_prepare.py": "19d6c877519f3311389e868e06b90e8b74f4dcfe91855fa16d98727500943072",
+    "tools/php83/baseline-rehearsal/privacy/sql-display-v1/compare.py": "57242d2977152e255c25a2d2bd05fdd84fae2400d3e834bb946b8b38a6e3bc2a"
+  },
+  "native_reports": {
+    "primary.json": "1210a359f724ae2fc23394eceb18fb156c31e9a0affc9e72d974a3adeb1bd3a5",
+    "claude-repeat.json": "13f1442c2e71dc7409982d5dcda7a1d08b41393f3b47f41663ce2940b0b7a48e",
+    "repeat-exact.json": "dc1f5b35d82e90825aad667c025ed1916a61a02ac62e54306b9da4eec03ff663"
+  },
+  "local_tests": 36,
+  "actual_claude_native_repeat": true,
+  "application_acceptance": false
+}

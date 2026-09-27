@@ -1,0 +1,13 @@
+{
+  "author": "candidate_plan",
+  "reviewer": "exp9_harness",
+  "tests": 17,
+  "exit": 0,
+  "microdelta": "Named execute arrays; exact private datadir; six synthetic values; observed track_entry fixture",
+  "runner_author": "exp9_harness",
+  "runner_reviewer": "candidate_plan",
+  "runner_tests": 8,
+  "bash_files_checked_separately": 2,
+  "native_executed": false,
+  "limits": "Only local review, source graph/direct-read; no runtime acceptance"
+}

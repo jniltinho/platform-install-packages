@@ -1,0 +1,20 @@
+test_anchor_drift (test_prepare.Tests.test_anchor_drift) ... ok
+test_bound_and_input_paths (test_prepare.Tests.test_bound_and_input_paths) ... ok
+test_debug_only_template (test_prepare.Tests.test_debug_only_template) ... ok
+test_no_extra_value_storage (test_prepare.Tests.test_no_extra_value_storage) ... ok
+test_old_value_array_unchanged (test_prepare.Tests.test_old_value_array_unchanged) ... ok
+test_real_execution_unchanged (test_prepare.Tests.test_real_execution_unchanged) ... ok
+test_twice_rejected (test_prepare.Tests.test_twice_rejected) ... ok
+test_cohorts_and_modes (test_runner.Tests.test_cohorts_and_modes) ... ok
+test_collector_retains_finally_and_no_error_values (test_runner.Tests.test_collector_retains_finally_and_no_error_values) ... ok
+test_drift (test_runner.Tests.test_drift) ... ok
+test_exact_stage (test_runner.Tests.test_exact_stage) ... ok
+test_extra_nested_manifest (test_runner.Tests.test_extra_nested_manifest) ... ok
+test_lifecycle_isolated (test_runner.Tests.test_lifecycle_isolated) ... ok
+test_manifest_pin (test_runner.Tests.test_manifest_pin) ... ok
+test_symlink (test_runner.Tests.test_symlink) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.002s
+
+OK

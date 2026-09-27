@@ -1,0 +1,12 @@
+test_anchor_drift (test_prepare.Tests.test_anchor_drift) ... ok
+test_bound_and_input_paths (test_prepare.Tests.test_bound_and_input_paths) ... ok
+test_debug_only_template (test_prepare.Tests.test_debug_only_template) ... ok
+test_no_extra_value_storage (test_prepare.Tests.test_no_extra_value_storage) ... ok
+test_old_value_array_unchanged (test_prepare.Tests.test_old_value_array_unchanged) ... ok
+test_real_execution_unchanged (test_prepare.Tests.test_real_execution_unchanged) ... ok
+test_twice_rejected (test_prepare.Tests.test_twice_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.000s
+
+OK

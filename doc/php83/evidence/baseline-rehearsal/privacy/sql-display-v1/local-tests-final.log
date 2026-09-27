@@ -1,0 +1,41 @@
+test_actual (test_compare.Tests.test_actual) ... ok
+test_binding_boolean_not_integer (test_compare.Tests.test_binding_boolean_not_integer) ... ok
+test_body_not_bound (test_compare.Tests.test_body_not_bound) ... ok
+test_cleanup (test_compare.Tests.test_cleanup) ... ok
+test_cleanup_bool_not_int (test_compare.Tests.test_cleanup_bool_not_int) ... ok
+test_diagnostics_required_empty (test_compare.Tests.test_diagnostics_required_empty) ... ok
+test_duplicate_cohort (test_compare.Tests.test_duplicate_cohort) ... ok
+test_exit_bool (test_compare.Tests.test_exit_bool) ... ok
+test_inline_negative (test_compare.Tests.test_inline_negative) ... ok
+test_missing_case (test_compare.Tests.test_missing_case) ... ok
+test_monitor_change (test_compare.Tests.test_monitor_change) ... ok
+test_native_stderr (test_compare.Tests.test_native_stderr) ... ok
+test_old_leak_required (test_compare.Tests.test_old_leak_required) ... ok
+test_policy_return (test_compare.Tests.test_policy_return) ... ok
+test_reused_db (test_compare.Tests.test_reused_db) ... ok
+test_runtime_drift (test_compare.Tests.test_runtime_drift) ... ok
+test_same_tamper_both83_expected_bool (test_compare.Tests.test_same_tamper_both83_expected_bool) ... ok
+test_source_body_pin (test_compare.Tests.test_source_body_pin) ... ok
+test_source_drift (test_compare.Tests.test_source_drift) ... ok
+test_anchor_drift (test_prepare.Tests.test_anchor_drift) ... ok
+test_bound_and_input_paths (test_prepare.Tests.test_bound_and_input_paths) ... ok
+test_debug_only_template (test_prepare.Tests.test_debug_only_template) ... ok
+test_no_extra_value_storage (test_prepare.Tests.test_no_extra_value_storage) ... ok
+test_old_value_array_unchanged (test_prepare.Tests.test_old_value_array_unchanged) ... ok
+test_probe_named_arrays (test_prepare.Tests.test_probe_named_arrays) ... ok
+test_real_execution_unchanged (test_prepare.Tests.test_real_execution_unchanged) ... ok
+test_source_authority_pin (test_prepare.Tests.test_source_authority_pin) ... ok
+test_twice_rejected (test_prepare.Tests.test_twice_rejected) ... ok
+test_cohorts_and_modes (test_runner.Tests.test_cohorts_and_modes) ... ok
+test_collector_retains_finally_and_no_error_values (test_runner.Tests.test_collector_retains_finally_and_no_error_values) ... ok
+test_drift (test_runner.Tests.test_drift) ... ok
+test_exact_stage (test_runner.Tests.test_exact_stage) ... ok
+test_extra_nested_manifest (test_runner.Tests.test_extra_nested_manifest) ... ok
+test_lifecycle_isolated (test_runner.Tests.test_lifecycle_isolated) ... ok
+test_manifest_pin (test_runner.Tests.test_manifest_pin) ... ok
+test_symlink (test_runner.Tests.test_symlink) ... ok
+
+----------------------------------------------------------------------
+Ran 36 tests in 0.013s
+
+OK

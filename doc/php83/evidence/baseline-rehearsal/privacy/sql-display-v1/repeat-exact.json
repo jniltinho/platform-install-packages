@@ -1,0 +1,33 @@
+{
+  "status": "PASS_EXACT_FINITE_REPEAT",
+  "rows": [
+    {
+      "cohort": "original74",
+      "stdout_exact": true,
+      "stderr_exact_empty": true,
+      "stdout_sha256": "4c191b1d22ef593440e7c142f89b4ab87ee4a681bbd8478242a98c873f99b5fc"
+    },
+    {
+      "cohort": "display74",
+      "stdout_exact": true,
+      "stderr_exact_empty": true,
+      "stdout_sha256": "5afc3eb14b2e941cefbbc5ce54eafcbd04bd9ba03c7de0decc532ef01cdfb291"
+    },
+    {
+      "cohort": "exp14statement83",
+      "stdout_exact": true,
+      "stderr_exact_empty": true,
+      "stdout_sha256": "1a52cd22d5dd3b7a165508fbb268dbd9aca1967ff8740736b767af75ed76a92b"
+    },
+    {
+      "cohort": "display83",
+      "stdout_exact": true,
+      "stderr_exact_empty": true,
+      "stdout_sha256": "7388ae13db04e3d175682aeb82672064f2aa56f1a07444effc13811a55997c69"
+    }
+  ],
+  "runtime_same_all_four_snapshots": true,
+  "executor_primary": "Codex",
+  "executor_repeat": "actual Claude CLI",
+  "application_acceptance": false
+}

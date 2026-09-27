@@ -31,3 +31,12 @@ sql-display-v1; no new application correction installed yet.
 Claude preparation review executed 24 local tests and verified 11 frozen hashes.
 It is not an independent native replay. V1 remains indeterminate, not relabeled
 as this later proven leak. Both uploaded lab fixtures remain retained.
+
+## Correction after narrower SQL projection
+The earlier entry/CUSTOM_DATA/UPDATE description was based on substrings and
+was over-specific. `private-sql-shape.json` plus
+`private-sql-table-source.json` identify all three as **INSERT INTO track_entry**;
+source table literals independently match BaseTrackEntryPeer and its map.
+BaseTrackEntryPeer.doInsert829/853 invokes BasePeer's prepare/bind/execute path.
+The raw source line/KS remains guest-private. This corrects attribution, not the
+recorded full-KS occurrence count or the original scanner outcome.
