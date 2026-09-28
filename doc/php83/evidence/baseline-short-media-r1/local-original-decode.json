@@ -1,0 +1,38 @@
+{
+  "case": "LOCAL_PINNED_ORIGINAL_SHORT_DECODE",
+  "executor": "Codex review_simulation",
+  "environment": "local host, offline protocol_whitelist=file",
+  "source_sha256": "612d179c75f8f2374b7ac59c2dd7edba65e38eb357b870e8ad8c2e83d63b5473",
+  "source_bytes": 1511134,
+  "tools": {
+    "/usr/bin/ffmpeg": "ed16af623947494a72e284b6eb8ff225f2da22b38b5d5069c2fd4b4ba3384e41",
+    "/usr/bin/ffprobe": "272f6ebc634a63d9c8b4ca68e964119d980f25154e5aa2c35e5487da48e9a58f"
+  },
+  "probe_command": "timeout20 /usr/bin/ffprobe -v error -protocol_whitelist file -show_entries stream=codec_type,codec_name,width,height,avg_frame_rate,sample_rate,channels,nb_frames,duration:format=duration,size -of json <pinned-original>",
+  "probe_exit": 0,
+  "observation": {
+    "video_codec": "h264",
+    "width": 640,
+    "height": 360,
+    "fps": "25/1",
+    "video_frames": 250,
+    "video_duration_seconds": "10.000000",
+    "audio_codec": "aac",
+    "audio_sample_rate": 48000,
+    "audio_channels": 2,
+    "audio_duration_seconds": "10.000000",
+    "audio_frames": 470,
+    "container_duration_seconds": "10.000000"
+  },
+  "decode_command": "timeout25 /usr/bin/ffmpeg -nostdin -hide_banner -v error -xerror -protocol_whitelist file -threads 1 -i <pinned-original> -map 0:v:0 -map 0:a:0 -f null -",
+  "decode_exit": 0,
+  "decode_stderr_bytes": 0,
+  "all_selected_original_streams_decoded": true,
+  "native_hls_tested": false,
+  "downloaded_response_decoded": false,
+  "full_acceptance": false,
+  "limits": [
+    "Original fixture only, not transcoded flavors or HLS.",
+    "Local executable pins do not attest guest binaries/runtime libraries."
+  ]
+}

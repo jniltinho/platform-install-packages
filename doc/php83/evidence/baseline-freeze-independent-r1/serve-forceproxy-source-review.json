@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "decision": "NARROW_SOURCE_SUPPORTED_FORCEPROXY_PAIR_APPROVED",
+  "pins": {
+    "run_serve_progressive_r3.py": "e41e6448f3757624b39d67d07a9019620ce0df856dc2a8e5cc0d1278d20f1c32",
+    "guest_serve_progressive_r3.py": "e65c2b9026f74da55e499d870e506757c0f51d79c0072e18e93e05fb40a05037",
+    "serve_flavor_guard_r2.py": "6ce91879e79b033d954a7932396de3bb825d30df81343ce1728461ec3344f914",
+    "test_serve_forceproxy.py": "00cf23124ee53e115d0f3324c41fcfa84656509ac79a66cd9b39c2cb41788e4a"
+  },
+  "test_command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/baseline-freeze-r1 -p test_serve_forceproxy.py -v",
+  "tests": 6,
+  "exit": 0,
+  "test_history": "Initial wrong filename selector discovered0 tests; not counted as PASS. Correct selector rerun6 PASS.",
+  "source_proof": {
+    "file": "alpha/lib/model/DeliveryProfileAkamaiHttp.php",
+    "sha256": "116ebbe16200e83e16e008f3aea610b7e9ae2a012704f7796068926e447ad2b9",
+    "lines": "17\u201329",
+    "behavior": "Native route producer appends exact /forceproxy/true when no clipping."
+  },
+  "review": [
+    "Only optional unique forceproxy with literal true accepted; all other unknown/duplicate keys and credential checks unchanged.",
+    "Source identity pinned pre/post. No inferred actual delivery profile type or proof old unknown key was forceproxy.",
+    "Failed privacy scan now exports fixed incomplete class and allowlisted underlying code."
+  ],
+  "limits": [
+    "No reviewer VM calls.",
+    "Old failures preserved, no privacy or full acceptance claim from source tests."
+  ]
+}

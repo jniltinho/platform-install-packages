@@ -1,0 +1,83 @@
+{
+  "schema": 1,
+  "decision": "BOUNDED_NATIVE_ORIGINAL_PROGRESSIVE_AND_FINITE_PRIVACY_ACCEPTED",
+  "artifact_sha256": "e9ee5b2bfd9d658b8f2a124c6b5dc078c101a7aed4444200c9e41bb9b27ead9e",
+  "source_pins": {
+    "convergence.py": "b7f8114c27a930c471d3640c76ad60f28e0c0133b63abb5a4d805fa7c01cceca",
+    "direct_content.py": "c8d3ce3e02cc5389407f6c3e9bda8aa348b60ab53735580f72056a754c75fb37",
+    "guest_serve_progressive_r3.py": "e65c2b9026f74da55e499d870e506757c0f51d79c0072e18e93e05fb40a05037",
+    "media_get443.py": "7417ba4ca341f84626c7b0138ac4fbdf7103e89a0975b55be210e7047d95af30",
+    "observation_v2.py": "ec32386df1c745f5754ece19f3127f6da85415e644c8556e6c07666b2ea1abc5",
+    "privacy_logs_r2.py": "d67eb65900c3134c91efaf94b18ba482b59261c81b0084de0cea3bcd37d5246c",
+    "privacy_provenance.py": "ecb0a81c37d19d9842699a928e16e6e2838fb35f68fefb281c495f5505923931",
+    "protocol_v2.py": "147d74b0a04779fd0819ebe210d8a1a6aea4af8fbc773683a278e540ce70d4b8",
+    "rehearsal.py": "ccf78ba0b1d3c94f05f63fd2d87c351953022c149c0e75392b5c86be2c02bb70",
+    "route_descriptor.py": "a9276e52f8a238303c1011f781f13f066134d12b315afd3634f9f87eeea1fee9",
+    "serve_flavor_guard_r2.py": "6ce91879e79b033d954a7932396de3bb825d30df81343ce1728461ec3344f914",
+    "settle.py": "2b1382fc7ff4163240d9c6e3342738ce90ab8537df9ea9999497a44e24d84764",
+    "short_delivery443.py": "9aa829f6c1927eb493fa4f1f5d9c1584d6a8f93b253015912ce253ba24fb1e76",
+    "url_privacy.py": "338f0339e23b7d385fce17ea6fa152016342bca8d42129d5efc3f2a5183c1f6f"
+  },
+  "guest_exit": 0,
+  "unit_inactive": true,
+  "progressive": {
+    "bytes": 1511134,
+    "case": "ORIGINAL_PROGRESSIVE",
+    "decoded": false,
+    "full_acceptance": false,
+    "range_checks": 2,
+    "requests": 3,
+    "sha256": "612d179c75f8f2374b7ac59c2dd7edba65e38eb357b870e8ad8c2e83d63b5473"
+  },
+  "serve_route_join": {
+    "closed_unique_pairs": true,
+    "historical_failure_reclassified": false,
+    "native_url_unchanged": true,
+    "owned_identity_equal": true,
+    "source_filename_equal": true
+  },
+  "round_privacy": {
+    "batches": [
+      {
+        "files": {
+          "counts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "status": "COMPLETE_FINITE_FILE_WINDOW",
+          "uncovered_tail_bytes": 0
+        },
+        "journal": {
+          "complete": true,
+          "counts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "cutoff_covered": true,
+          "status": "COMPLETE_FINITE_JOURNAL_WINDOW"
+        },
+        "scope": "FINITE_COMMON_END_ROUND_WINDOW"
+      }
+    ],
+    "common_end_verified": true,
+    "pattern_count": 4
+  },
+  "source_before_after_equal": true,
+  "interpretation": [
+    "Three native unchanged-URL GETs verify1511134original bytes/source SHA and two ranges.",
+    "Closed unique source-supported route and exact private source-derived public filename validated; current secret/KS full/prefix remained protected.",
+    "Four actual credential patterns completezero in file/journal common-end window, all8 audit-phase provenance records completezero.",
+    "All executed staged pins equal reviewed local files; source before/after equal, unit inactive.",
+    "Successful current scope does not reclassify any historical failed run or explain its original matched pattern."
+  ],
+  "limits": [
+    "No reviewer VM calls.",
+    "Response body not decoded in guest; local original offline decode is separate evidence.",
+    "No HLS, browser playback, transcoded rendition or full baseline acceptance.",
+    "Finite observed windows/patterns only, no future/global privacy claim."
+  ]
+}

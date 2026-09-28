@@ -4,6 +4,12 @@ Atualizado: 2026-09-28T19:28:22.517639+00:00
 
 **5 concluídas / 46 abertas / 51 tarefas.** Os 24 requisitos originais e 27 casos detalhados se sobrepõem; não são 51 funcionalidades independentes. Sem percentual ou previsão de conclusão inferidos de testes.
 
+## Latest accepted partial milestone: native HTTPS progressive delivery
+
+Native serve-progressive R3 completed with exit 0 and an inactive unit: the original 1,511,134-byte file matched SHA256 `612d179c75f8f2374b7ac59c2dd7edba65e38eb357b870e8ad8c2e83d63b5473`, and both byte ranges passed. Four current-secret/KS full/prefix patterns were zero in complete finite file/journal scans with a verified common end. Source identities remained unchanged. The guard accepts only a fully consumed, unique named-parameter route with exact owned identifiers and privately source-derived filename; unknown fields and credentials remain rejected. No native URL rewriting, historical failure waiver, task completion or release approval.
+
+Next functional subcase: a bounded native HLS playback-context observation (no media GET), followed by reviewed HLS/decode tests. Long media, UI and formal repeated measurements remain open. Earlier failures below are historical evidence, not the current progressive result.
+
 ## Contagem por área
 
 | Área | Concluídas | Abertas |
@@ -124,3 +130,9 @@ provisionamento ou identidade do disco atual.
 - Native joined-path R2 passed those privacy gates but rejected the returned native URL (`DIRECT_URL_MISMATCH`) before GET. Its failure audit covered six full/prefix secret, KS and returned-candidate patterns with zero matches and complete finite file/journal coverage.
 - These failures remain failures. The filesystem paths observed in logs do not prove the format of the API-returned URL. Next: one bounded no-GET route-shape observation with closed identity booleans, not arbitrary URL exemptions or raw URL publication.
 - No additional OpenSpec task completed: 5/51 complete, 46 open; task 1.2 remains in progress. No new completion email is due.
+
+### No-GET route observation completed
+
+The bounded native observation exited 0 with six privacy patterns complete and zero across the common file/journal end. It confirms a `SERVE_FLAVOR` route, exact owned tenant/entry/asset/version and a filename equal to the privately source-derived expected name. No URL or credential was persisted/exported, and no GET was issued. The original fixed-order regex did not match; the next guard must consume the entire source-supported named-parameter route and reject every unknown or duplicate field. Historical failures are not reclassified.
+
+The pinned original short video also completed local offline ffmpeg decoding twice (author and root): exit 0, no stderr, video and audio selected. This is not HLS/browser or downloaded-response decode acceptance.

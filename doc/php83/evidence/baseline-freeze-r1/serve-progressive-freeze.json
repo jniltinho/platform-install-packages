@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "scope": "ONE_NATIVE_SERVE_FLAVOR_PROGRESSIVE_PROBE_PENDING_INDEPENDENT_REVIEW",
+  "files": {
+    "tools/php83/baseline-freeze-r1/serve_flavor_guard.py": "3b21c8546f2efb3c781b7cddfb99c27399d505f41da9b981f27835d673abd9e7",
+    "tools/php83/baseline-freeze-r1/test_serve_flavor_guard.py": "8c3f18079897e9055e7d52d900013b05409ec663680968de2e9e8ab0531b1a9f",
+    "tools/php83/baseline-freeze-r1/prepare_serve_progressive.py": "e05230c020c9667b0a5dbeab9c2580309d76fc7d1edee03252d144dd3ff9c122",
+    "tools/php83/baseline-freeze-r1/guest_serve_progressive.py": "317688ac736a9a2a8567edc7d779e989b9ac9e7765a0ccd64ac74bead3a954c2",
+    "tools/php83/baseline-freeze-r1/run_serve_progressive.py": "b2470690da294d26612d3552ba0caeae397ff4764126958445296ee4c4508290",
+    "tools/php83/baseline-freeze-r1/test_serve_progressive.py": "f5a4269e2ca52bf9f069224591bbb0c009d160db89f180f8c01b4e8b6b9f3317"
+  },
+  "source_pins": {
+    "/opt/kaltura/app/vendor/symfony/controller/sfRouting.class.php": "52a0fb006d480654a2f233514729b9bd61001efd930b3745d6a25472abf5bbdb",
+    "/opt/kaltura/app/alpha/apps/kaltura/modules/extwidget/actions/serveFlavorAction.class.php": "9e4d7470625adb3288b7692cbd093c8a0162f8bf781f72495c03524c79bb7610",
+    "/opt/kaltura/app/alpha/apps/kaltura/config/routing.yml": "835673cace780736154e06ba55c3c66c3c4a5e24d1c588d3a72b62c3aa50ca9b",
+    "/opt/kaltura/app/api_v3/services/FlavorAssetService.php": "162606b083296c54258ba364f25bbb305b688ba8d4cf8a547b9a19a821355206"
+  },
+  "tests": [
+    {
+      "command": "python3 -B -m unittest discover -s tools/php83/baseline-freeze-r1 -p 'test_serve*.py' -q",
+      "count": 13,
+      "exit": 0
+    },
+    {
+      "command": "python3 -B -m unittest discover -s tools/php83/baseline-freeze-r1 -p 'test_*.py' -q",
+      "count": 157,
+      "exit": 0
+    }
+  ],
+  "native_executed_by_author": false,
+  "historical_privacy_failure_reclassified": false,
+  "full_acceptance": false
+}

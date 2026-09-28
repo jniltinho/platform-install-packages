@@ -1,0 +1,56 @@
+{
+  "schema": 1,
+  "decision": "INVALID_NONCE_APPEND_TAIL_FAILURE_PRESERVED",
+  "artifact_sha256": "d86fdc18cf9b6f7ea6bdd0d91d42b3f96abf0ab3a43393932f64d680bb913bff",
+  "guest_exit": 2,
+  "unit_inactive": true,
+  "final_closed_receipt": {
+    "failure_code": "FILE_TAIL_DURING_JOURNAL",
+    "failure_stage": "INVALID_NONCE_PRIVACY",
+    "last_audit_quiet": {
+      "audit": 1,
+      "maximum_seconds": 30,
+      "quiet_seconds": 2,
+      "samples": 9,
+      "stage": "INVALID_NONCE_PRIVACY",
+      "status": "QUIET_WINDOW_OBSERVED"
+    },
+    "match_provenance": [
+      {
+        "any_match": false,
+        "audit": 1,
+        "file_window_complete": true,
+        "final_privacy_acceptance": false,
+        "journal_window_complete": true,
+        "patterns": [
+          {
+            "categories": [
+              "INVALID_CANARY_FULL"
+            ],
+            "file_count": 0,
+            "index": 1,
+            "journal_count": 0
+          },
+          {
+            "categories": [
+              "INVALID_CANARY_PREFIX"
+            ],
+            "file_count": 0,
+            "index": 2,
+            "journal_count": 0
+          }
+        ],
+        "phase": "files_and_journal",
+        "schema": 1
+      }
+    ],
+    "status": "FAILED_OR_INCOMPLETE_MEDIA_OBSERVATION"
+  },
+  "interpretation": [
+    "Quiet observed before scan does not guarantee no subsequent writes. Files advanced during journal observation; strict equality correctly failed.",
+    "Only invalid-canary first scan provenance is completezero. Postjournal stable window not accepted.",
+    "Failure occurs before real secret read/current USER authentication and before media GET.",
+    "Any new bounded scan convergence must preserve original starts, prior matches, strict final common end and finite attempts; never imply this historical attempt passed."
+  ],
+  "reviewer_vm_calls": false
+}

@@ -1,0 +1,23 @@
+{
+  "scope": "OPTIONAL_SOURCE_SUPPORTED_FORCEPROXY_TRUE_ONLY",
+  "files": {
+    "tools/php83/baseline-freeze-r1/serve_flavor_guard_r2.py": "6ce91879e79b033d954a7932396de3bb825d30df81343ce1728461ec3344f914",
+    "tools/php83/baseline-freeze-r1/prepare_serve_progressive_r3.py": "340081f1b72e38fd642bb8339c0fad112de58a1d87fae1134a7cba18fb0cb777",
+    "tools/php83/baseline-freeze-r1/guest_serve_progressive_r3.py": "e65c2b9026f74da55e499d870e506757c0f51d79c0072e18e93e05fb40a05037",
+    "tools/php83/baseline-freeze-r1/run_serve_progressive_r3.py": "e41e6448f3757624b39d67d07a9019620ce0df856dc2a8e5cc0d1278d20f1c32",
+    "tools/php83/baseline-freeze-r1/test_serve_forceproxy.py": "00cf23124ee53e115d0f3324c41fcfa84656509ac79a66cd9b39c2cb41788e4a"
+  },
+  "native_source": "alpha/lib/model/DeliveryProfileAkamaiHttp.php",
+  "native_source_sha256": "116ebbe16200e83e16e008f3aea610b7e9ae2a012704f7796068926e447ad2b9",
+  "native_source_lines": [
+    17,
+    29
+  ],
+  "selected_profile_type_proven": false,
+  "historical_failure_reclassified": false,
+  "tests": {
+    "focused": 6,
+    "exit": 0
+  },
+  "full_acceptance": false
+}

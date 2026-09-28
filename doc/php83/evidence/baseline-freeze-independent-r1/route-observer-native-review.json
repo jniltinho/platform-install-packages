@@ -1,0 +1,74 @@
+{
+  "schema": 1,
+  "decision": "NO_GET_ROUTE_IDENTITY_OBSERVED_NOT_DELIVERY_AUTHORIZATION",
+  "artifact_sha256": "fb4de3663c1339abf3eb0916e633200488dead887a5d817e1a27d2a69f1940b6",
+  "guest_exit": 0,
+  "unit_inactive": true,
+  "route": {
+    "candidate_count": 1,
+    "candidate_patterns_exempted": false,
+    "credential_marker_present": false,
+    "current_credential_present": false,
+    "direct_file_sync_path_equal": false,
+    "expected_filename_known": true,
+    "filename_equal_expected": true,
+    "full_acceptance": false,
+    "get_requests": 0,
+    "long_segment_roles": [
+      "FILENAME"
+    ],
+    "origin_https443": true,
+    "owned_asset_equal": true,
+    "owned_entry_equal": true,
+    "partner_equal": true,
+    "query_present": false,
+    "raw_url_persisted": false,
+    "route_kind": "SERVE_FLAVOR",
+    "source_serve_flavor_grammar": false,
+    "subpartner_equal": true,
+    "version_equal": true
+  },
+  "round_privacy": {
+    "batches": [
+      {
+        "files": {
+          "counts": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "status": "COMPLETE_FINITE_FILE_WINDOW",
+          "uncovered_tail_bytes": 0
+        },
+        "journal": {
+          "complete": true,
+          "counts": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cutoff_covered": true,
+          "status": "COMPLETE_FINITE_JOURNAL_WINDOW"
+        },
+        "scope": "FINITE_COMMON_END_ROUND_WINDOW"
+      }
+    ],
+    "common_end_verified": true,
+    "pattern_count": 6
+  },
+  "source_before_after_equal": true,
+  "interpretation": [
+    "Native selected route is SERVE_FLAVOR, not direct FileSync path.",
+    "Exact source-derived expected filename equality and tenant/entry/asset/version identities observed; one long FILENAME candidate, no current credential marker/query.",
+    "All six patterns completezero with common end; no candidate exemption and no GET performed.",
+    "Fixed assumed-order grammar false means whole structure is not yet validated. Future GET guard must verify every key/value against closed source-supported grammar, unique keys and no extra signed/unknown fields.",
+    "Current proof does not establish the cause of historical PRIVATE_MARKER_LOGGED, which remains preserved."
+  ],
+  "reviewer_vm_calls": false
+}

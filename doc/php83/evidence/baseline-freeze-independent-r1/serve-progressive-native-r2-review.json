@@ -1,0 +1,39 @@
+{
+  "schema": 1,
+  "decision": "UNKNOWN_ROUTE_KEY_REJECTED_BEFORE_GET_NO_FINAL_PRIVACY_ACCEPTANCE",
+  "artifact_sha256": "19d50d39abfa1589ec5ccf4f8e226f6253b285ef0dc8762961c40d03c2251f2c",
+  "guest_exit": 2,
+  "unit_inactive": true,
+  "failure_code": "SOURCE_ROUTE_UNKNOWN_KEY",
+  "route_observation": {
+    "candidate_count": 1,
+    "candidate_patterns_exempted": false,
+    "credential_marker_present": false,
+    "current_credential_present": false,
+    "direct_file_sync_path_equal": false,
+    "expected_filename_known": true,
+    "filename_equal_expected": true,
+    "full_acceptance": false,
+    "get_requests": 0,
+    "long_segment_roles": [
+      "FILENAME"
+    ],
+    "origin_https443": true,
+    "owned_asset_equal": true,
+    "owned_entry_equal": true,
+    "partner_equal": true,
+    "query_present": false,
+    "raw_url_persisted": false,
+    "route_kind": "SERVE_FLAVOR",
+    "source_serve_flavor_grammar": false,
+    "subpartner_equal": true,
+    "version_equal": true
+  },
+  "interpretation": [
+    "Known filename/tenant/entry/asset/version equal does not validate additional route key. Unknown key correctly blocked GET.",
+    "Individual audit3 file/journal provenance zero and complete does not imply final batch/common-end acceptance. No final failure_privacy boolean published; do not claim complete failure privacy.",
+    "Failure class should be preserved as a bounded enum in future host projection rather than silently omitted.",
+    "Only source-supported extra fixed keys/values may be considered; no wildcard unknown-key exemption or blind probe authorized."
+  ],
+  "reviewer_vm_calls": false
+}

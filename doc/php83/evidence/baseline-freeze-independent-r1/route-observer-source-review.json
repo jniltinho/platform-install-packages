@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "decision": "NO_GET_ROUTE_OBSERVER_SOURCE_APPROVED",
+  "pins": {
+    "run_route_observer.py": "dc958b85edb7131dd80d651c3264418c2ef0574d918ca8b8ed82e18cf51e7e4b",
+    "guest_route_observer.py": "5268b5544bb601f37d19b3a2a5d9a5f0708a32e20b8a1d3b383fa808340dba3d",
+    "route_descriptor.py": "a9276e52f8a238303c1011f781f13f066134d12b315afd3634f9f87eeea1fee9",
+    "test_route_observer.py": "75cfee2d9b7bd0ff5b9b0a7d5985b0499824398fbd9b922449c768b0787e9390"
+  },
+  "test_command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/baseline-freeze-r1 -p test_route_observer.py -v",
+  "tests": 8,
+  "exit": 0,
+  "review": [
+    "One native getUrl after existing authenticated controls/source observations; no GET modules staged or calls retained.",
+    "Single fixed bounded SQL row join obtains private flavor parameter name; native filename byte sanitizer and relevant source pins checked. Unsupported input yields unknown expected filename.",
+    "Closed enums/booleans/counters only; all long candidates remain privacy patterns. No filename exemption or request authorization.",
+    "Quiet/original starts/common end/source-final/TLS log inventories and before-throw provenance retained."
+  ],
+  "limits": [
+    "Raw URL not retained even privately; only closed descriptor persists. Future missing detail cannot be reconstructed from it.",
+    "Route grammar descriptor is not a GET allowlist, origin approval or authorization.",
+    "No reviewer VM calls; old failure remains unreclassified."
+  ]
+}

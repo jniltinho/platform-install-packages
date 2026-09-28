@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "decision": "BOUNDED_SAME_START_SCAN_CONVERGENCE_APPROVED",
+  "pins": {
+    "convergence.py": "b7f8114c27a930c471d3640c76ad60f28e0c0133b63abb5a4d805fa7c01cceca",
+    "guest_serve_progressive_r2.py": "09e5ddba62d5ae9815724028afc25d017e865eaf1be09fe05a833b07842fae9e",
+    "run_serve_progressive_r2.py": "3290262fdeaa7b89dc7ae5c2413ba3c69c02779bcc32c1c846a0f4eae7320bf4",
+    "prepare_serve_progressive_r2.py": "30e22606c0e530e5b86e9adbd5b4398d0d4c1b42ca72990c3f39b6fd4d7ae585",
+    "test_serve_convergence.py": "61d678852b3d9e9add1a7ce832a413d5c81c9b38143c809602011bbf6bc5183b"
+  },
+  "test_command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/baseline-freeze-r1 -p test_serve_convergence.py -v",
+  "tests": {
+    "new_cases": 7,
+    "imported_prior_quiet_cases": 6,
+    "total": 13,
+    "exit": 0
+  },
+  "review": [
+    "Only complete-zero FILE_TAIL_DURING_JOURNAL eligible for at most3 attempts; original start objects unchanged.",
+    "Early file positive recorded with journal explicitly incomplete; journal or postjournal file positives recorded and rejected before tail retry.",
+    "Unknown/opaque scanner errors, UNDRAINED_TAIL, identity changes, truncation and common-end mismatch are terminal.",
+    "No API repetition or original-window reset. Strict final common-end remains."
+  ],
+  "limitations": [
+    "210s is a checked decision budget, not hard callback preemption; existing operation bounds retained.",
+    "Continuous append can still fail after3 attempts or at strict batch common end; no guarantee of progress by relaxing detection.",
+    "Tests/source only; no reviewer VM calls.",
+    "Historical failures remain failed; no full acceptance."
+  ]
+}

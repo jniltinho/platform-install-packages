@@ -1,0 +1,11 @@
+{
+  "executor": "Codex root",
+  "case": "independent local original decode repetition",
+  "source_sha256": "612d179c75f8f2374b7ac59c2dd7edba65e38eb357b870e8ad8c2e83d63b5473",
+  "command": "timeout 25 /usr/bin/ffmpeg -nostdin -hide_banner -v error -xerror -protocol_whitelist file -threads 1 -i <pinned-original-short-fixture> -map 0:v:0 -map 0:a:0 -f null -",
+  "exit": 0,
+  "stderr_bytes": 0,
+  "downloaded_response_decoded": false,
+  "hls_tested": false,
+  "task_complete": false
+}

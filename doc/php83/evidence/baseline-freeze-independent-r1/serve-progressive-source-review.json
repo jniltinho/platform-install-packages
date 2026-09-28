@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "decision": "BOUNDED_SOURCE_JOINED_SERVE_FLAVOR_PROBE_APPROVED",
+  "pins": {
+    "run_serve_progressive.py": "b2470690da294d26612d3552ba0caeae397ff4764126958445296ee4c4508290",
+    "guest_serve_progressive.py": "317688ac736a9a2a8567edc7d779e989b9ac9e7765a0ccd64ac74bead3a954c2",
+    "serve_flavor_guard.py": "3b21c8546f2efb3c781b7cddfb99c27399d505f41da9b981f27835d673abd9e7",
+    "prepare_serve_progressive.py": "e05230c020c9667b0a5dbeab9c2580309d76fc7d1edee03252d144dd3ff9c122",
+    "test_serve_flavor_guard.py": "8c3f18079897e9055e7d52d900013b05409ec663680968de2e9e8ab0531b1a9f",
+    "test_serve_progressive.py": "f5a4269e2ca52bf9f069224591bbb0c009d160db89f180f8c01b4e8b6b9f3317"
+  },
+  "test_command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/baseline-freeze-r1 -p 'test_serve*.py' -q",
+  "tests": 13,
+  "exit": 0,
+  "review": [
+    "Native pinned sfRouting constructs named key/value pairs via parse_str; order need not match previous regex.",
+    "Guard requires exact tenant/action prefix, unique closed pair keys, fixed entry/asset/version and exact privately source-derived filename. Unknown/duplicate keys, wrong values/origin, query/fragment, encodings and current secret/KS full/prefix rejected.",
+    "Early explicit port0 bug fixed in final3b21 guard with negative test.",
+    "Only exact identified public filename stops being a heuristic candidate; rejected routes enroll candidates for failure scans.",
+    "Pinned source/filename SQL/FileSync mapping checks retained; unchanged443 transport and3GET source/range checks.",
+    "All original privacy windows/quiet/common-end/provenance/TLS inventory checks remain, old failures not reclassified."
+  ],
+  "limits": [
+    "Source/local tests only, no reviewer VM calls.",
+    "No arbitrary public-filename exemption or URI rewriting.",
+    "No HLS/decode/browser playback/full acceptance."
+  ]
+}

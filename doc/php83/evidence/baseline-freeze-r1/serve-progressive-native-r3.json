@@ -1,0 +1,654 @@
+{
+  "approved_freeze": false,
+  "files": {
+    "convergence.py": "b7f8114c27a930c471d3640c76ad60f28e0c0133b63abb5a4d805fa7c01cceca",
+    "direct_content.py": "c8d3ce3e02cc5389407f6c3e9bda8aa348b60ab53735580f72056a754c75fb37",
+    "guest_serve_progressive_r3.py": "e65c2b9026f74da55e499d870e506757c0f51d79c0072e18e93e05fb40a05037",
+    "media_get443.py": "7417ba4ca341f84626c7b0138ac4fbdf7103e89a0975b55be210e7047d95af30",
+    "observation_v2.py": "ec32386df1c745f5754ece19f3127f6da85415e644c8556e6c07666b2ea1abc5",
+    "privacy_logs_r2.py": "d67eb65900c3134c91efaf94b18ba482b59261c81b0084de0cea3bcd37d5246c",
+    "privacy_provenance.py": "ecb0a81c37d19d9842699a928e16e6e2838fb35f68fefb281c495f5505923931",
+    "protocol_v2.py": "147d74b0a04779fd0819ebe210d8a1a6aea4af8fbc773683a278e540ce70d4b8",
+    "rehearsal.py": "ccf78ba0b1d3c94f05f63fd2d87c351953022c149c0e75392b5c86be2c02bb70",
+    "route_descriptor.py": "a9276e52f8a238303c1011f781f13f066134d12b315afd3634f9f87eeea1fee9",
+    "serve_flavor_guard_r2.py": "6ce91879e79b033d954a7932396de3bb825d30df81343ce1728461ec3344f914",
+    "settle.py": "2b1382fc7ff4163240d9c6e3342738ce90ab8537df9ea9999497a44e24d84764",
+    "short_delivery443.py": "9aa829f6c1927eb493fa4f1f5d9c1584d6a8f93b253015912ce253ba24fb1e76",
+    "url_privacy.py": "338f0339e23b7d385fce17ea6fa152016342bca8d42129d5efc3f2a5183c1f6f"
+  },
+  "guest_exit": 0,
+  "phase_receipts": [
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "admin_escalation_rejected": true,
+      "asset_version": "2",
+      "baseline_label": "PUBLISHED_PHP74_WITH_APPROVED_PRIVACY_OVERLAY",
+      "entry_version_status": "OBSERVED_FROM_ENTRY_DATA",
+      "file_sync_id": 315,
+      "fixture": {
+        "entry": {
+          "id": "0_wzmt2sfy",
+          "mediaType": 1,
+          "objectType": "KalturaMediaEntry",
+          "partnerId": 102,
+          "status": 2
+        },
+        "list_total_count": 1,
+        "media_get_version": -1,
+        "observed_entry_data_version": 0,
+        "order_by": "+createdAt",
+        "page_index": 1,
+        "page_size": 1,
+        "source_asset": {
+          "file_sync_id": 315,
+          "id": "0_ewuu0o46",
+          "version": "2"
+        },
+        "source_media_sha256": "612d179c75f8f2374b7ac59c2dd7edba65e38eb357b870e8ad8c2e83d63b5473",
+        "version": 2
+      },
+      "invalid_nonce": {
+        "files": {
+          "counts": [
+            0,
+            0
+          ],
+          "status": "COMPLETE_FINITE_FILE_WINDOW",
+          "uncovered_tail_bytes": 0
+        },
+        "journal": {
+          "complete": true,
+          "counts": [
+            0,
+            0
+          ],
+          "cutoff_covered": true,
+          "status": "COMPLETE_FINITE_JOURNAL_WINDOW"
+        },
+        "scope": "FINITE_OBSERVATION_WINDOW"
+      },
+      "last_audit_quiet": {
+        "audit": 4,
+        "maximum_seconds": 30,
+        "quiet_seconds": 2,
+        "samples": 9,
+        "stage": "BATCH_PRIVACY",
+        "status": "QUIET_WINDOW_OBSERVED"
+      },
+      "match_provenance": [
+        {
+          "any_match": false,
+          "audit": 1,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "INVALID_CANARY_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "INVALID_CANARY_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_and_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 1,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "INVALID_CANARY_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "INVALID_CANARY_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_after_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 2,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "CURRENT_SECRET_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_SECRET_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_FULL"
+              ],
+              "file_count": 0,
+              "index": 3,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 4,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_and_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 2,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "CURRENT_SECRET_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_SECRET_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_FULL"
+              ],
+              "file_count": 0,
+              "index": 3,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 4,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_after_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 3,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "CURRENT_SECRET_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_SECRET_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_FULL"
+              ],
+              "file_count": 0,
+              "index": 3,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 4,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_and_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 3,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "CURRENT_SECRET_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_SECRET_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_FULL"
+              ],
+              "file_count": 0,
+              "index": 3,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 4,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_after_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 4,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "CURRENT_SECRET_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_SECRET_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_FULL"
+              ],
+              "file_count": 0,
+              "index": 3,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 4,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_and_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 4,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "CURRENT_SECRET_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_SECRET_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_FULL"
+              ],
+              "file_count": 0,
+              "index": 3,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 4,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_after_journal",
+          "schema": 1
+        }
+      ],
+      "media_privacy": {
+        "files": {
+          "counts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "status": "COMPLETE_FINITE_FILE_WINDOW",
+          "uncovered_tail_bytes": 0
+        },
+        "journal": {
+          "complete": true,
+          "counts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "cutoff_covered": true,
+          "status": "COMPLETE_FINITE_JOURNAL_WINDOW"
+        },
+        "scope": "FINITE_OBSERVATION_WINDOW"
+      },
+      "native_url_shape": {
+        "credential_path": false,
+        "port": "443",
+        "query_present": false,
+        "scheme": "https",
+        "target_host_match": true
+      },
+      "original_asset_id": "0_ewuu0o46",
+      "overlay_manifest_sha256": "cf16bc5c49acbe5863934ba737c72e2b65878c84048389354e79163afeca0cb8",
+      "profile": {
+        "selected_profile_id": 14,
+        "status": "UNRESOLVED_API_PROFILE"
+      },
+      "progressive": {
+        "bytes": 1511134,
+        "case": "ORIGINAL_PROGRESSIVE",
+        "decoded": false,
+        "full_acceptance": false,
+        "range_checks": 2,
+        "requests": 3,
+        "sha256": "612d179c75f8f2374b7ac59c2dd7edba65e38eb357b870e8ad8c2e83d63b5473"
+      },
+      "quiet_window": {
+        "maximum_seconds": 30,
+        "quiet_seconds": 2,
+        "samples": 18,
+        "status": "QUIET_WINDOW_OBSERVED"
+      },
+      "round_privacy": {
+        "batches": [
+          {
+            "files": {
+              "counts": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "status": "COMPLETE_FINITE_FILE_WINDOW",
+              "uncovered_tail_bytes": 0
+            },
+            "journal": {
+              "complete": true,
+              "counts": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "cutoff_covered": true,
+              "status": "COMPLETE_FINITE_JOURNAL_WINDOW"
+            },
+            "scope": "FINITE_COMMON_END_ROUND_WINDOW"
+          }
+        ],
+        "common_end_verified": true,
+        "pattern_count": 4
+      },
+      "runtime_pins_verified": true,
+      "serve_route_join": {
+        "closed_unique_pairs": true,
+        "historical_failure_reclassified": false,
+        "native_url_unchanged": true,
+        "owned_identity_equal": true,
+        "source_filename_equal": true
+      },
+      "source_sha256": "612d179c75f8f2374b7ac59c2dd7edba65e38eb357b870e8ad8c2e83d63b5473",
+      "sources_after": {
+        "alpha/apps/kaltura/lib/db/KalturaStatement.php": {
+          "gid": 0,
+          "mode": 436,
+          "sha256": "bd8ab13a8fb745eb603b9c35633e24637adb5356a1792642d884c6f7e1d85bd2",
+          "uid": 0
+        },
+        "api_v3/lib/KalturaDispatcher.php": {
+          "gid": 0,
+          "mode": 436,
+          "sha256": "9ce4b17a9fb1bef95fbbbbc6f08cb396a6cc944b055bac8413d740ce5d73c7b9",
+          "uid": 0
+        },
+        "api_v3/lib/KalturaFrontController.php": {
+          "gid": 0,
+          "mode": 436,
+          "sha256": "79570bd2be507f0045281a903aa13bd2de4037c2e12df3370075c4445184a4ca",
+          "uid": 0
+        },
+        "infra/log/KalturaLog.php": {
+          "gid": 0,
+          "mode": 436,
+          "sha256": "40e4db5733cfab59e0e873f94ee64166de380d86425625411dc716f6cb1003dd",
+          "uid": 0
+        },
+        "infra/log/KalturaSerializableStream.php": {
+          "gid": 0,
+          "mode": 436,
+          "sha256": "8411013a6f2ac78b6d092594d088ba9a5fbe71ada9de00692a369388c40dc04c",
+          "uid": 0
+        }
+      },
+      "sources_before": {
+        "alpha/apps/kaltura/lib/db/KalturaStatement.php": {
+          "gid": 0,
+          "mode": 436,
+          "sha256": "bd8ab13a8fb745eb603b9c35633e24637adb5356a1792642d884c6f7e1d85bd2",
+          "uid": 0
+        },
+        "api_v3/lib/KalturaDispatcher.php": {
+          "gid": 0,
+          "mode": 436,
+          "sha256": "9ce4b17a9fb1bef95fbbbbc6f08cb396a6cc944b055bac8413d740ce5d73c7b9",
+          "uid": 0
+        },
+        "api_v3/lib/KalturaFrontController.php": {
+          "gid": 0,
+          "mode": 436,
+          "sha256": "79570bd2be507f0045281a903aa13bd2de4037c2e12df3370075c4445184a4ca",
+          "uid": 0
+        },
+        "infra/log/KalturaLog.php": {
+          "gid": 0,
+          "mode": 436,
+          "sha256": "40e4db5733cfab59e0e873f94ee64166de380d86425625411dc716f6cb1003dd",
+          "uid": 0
+        },
+        "infra/log/KalturaSerializableStream.php": {
+          "gid": 0,
+          "mode": 436,
+          "sha256": "8411013a6f2ac78b6d092594d088ba9a5fbe71ada9de00692a369388c40dc04c",
+          "uid": 0
+        }
+      },
+      "status": "EXISTING_MEDIA_FREEZE_OBSERVATION_COMPLETE",
+      "stored_source_sha256": "612d179c75f8f2374b7ac59c2dd7edba65e38eb357b870e8ad8c2e83d63b5473",
+      "tls_transport": {
+        "ca_sha256": "5ca573deffda2a3f40bc104258c7c36472d2f924a2a945cec6cb1fd99f541bef",
+        "port": 8443,
+        "scheme": "https",
+        "tls_logs_in_every_inventory": true
+      },
+      "upload_attempted": false,
+      "user_privacy": {
+        "files": {
+          "counts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "status": "COMPLETE_FINITE_FILE_WINDOW",
+          "uncovered_tail_bytes": 0
+        },
+        "journal": {
+          "complete": true,
+          "counts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "cutoff_covered": true,
+          "status": "COMPLETE_FINITE_JOURNAL_WINDOW"
+        },
+        "scope": "FINITE_OBSERVATION_WINDOW"
+      },
+      "version_observations": [
+        {
+          "outcome": "TYPED_PROJECTION_MATCH",
+          "requested": -1
+        },
+        {
+          "outcome": "TYPED_PROJECTION_MATCH",
+          "requested": 0
+        }
+      ],
+      "wrong_secret_rejected": true
+    }
+  ],
+  "status": "OBSERVATION_CAPTURED_NOT_APPROVED",
+  "stderr_bytes": 0,
+  "stdout_bytes": 157600,
+  "unit": "baseline-freeze-b1174826",
+  "unit_inactive": true
+}
