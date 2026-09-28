@@ -1,0 +1,82 @@
+{
+  "/opt/kaltura/app/configurations/apache/kaltura.conf": {
+    "sha256": "71cae12776233315de4a3af5605c4f4221db3d82f08ee4ef4bb914e53f2ef795",
+    "uid": 0,
+    "gid": 0,
+    "mode": "0o644",
+    "directives": [
+      "<VirtualHost *:80>",
+      "SetEnvIf",
+      "ErrorLog",
+      "CustomLog",
+      "Include \"/opt/kaltura/app/configurations/apache/conf.d/enabled.*.conf\"",
+      "</VirtualHost>"
+    ]
+  },
+  "/etc/apache2/ports.conf": {
+    "sha256": "ca3f42f4f226ca53efba66a162f224375b78ff4be50ed146d303753b53fee76f",
+    "uid": 0,
+    "gid": 0,
+    "mode": "0o644",
+    "directives": [
+      "Listen 80",
+      "<IfModule ssl_module>",
+      "Listen 443",
+      "</IfModule>",
+      "<IfModule mod_gnutls.c>",
+      "Listen 443",
+      "</IfModule>"
+    ]
+  },
+  "/etc/apache2/apache2.conf": {
+    "sha256": "96e05361253da0d9be1ec6c7c9003cbbb261ba65b659bd6e40ca0eac43093c43",
+    "uid": 0,
+    "gid": 0,
+    "mode": "0o644",
+    "directives": [
+      "DefaultRuntimeDir",
+      "PidFile",
+      "Timeout",
+      "KeepAlive",
+      "MaxKeepAliveRequests",
+      "KeepAliveTimeout",
+      "User",
+      "Group",
+      "HostnameLookups",
+      "ErrorLog",
+      "LogLevel",
+      "IncludeOptional mods-enabled/*.load",
+      "IncludeOptional mods-enabled/*.conf",
+      "Include ports.conf",
+      "<Directory",
+      "Options",
+      "AllowOverride",
+      "Require",
+      "</Directory>",
+      "<Directory",
+      "AllowOverride",
+      "Require",
+      "</Directory>",
+      "<Directory",
+      "Options",
+      "AllowOverride",
+      "Require",
+      "</Directory>",
+      "AccessFileName",
+      "<FilesMatch",
+      "Require",
+      "</FilesMatch>",
+      "LogFormat",
+      "LogFormat",
+      "LogFormat",
+      "LogFormat",
+      "LogFormat",
+      "IncludeOptional conf-enabled/*.conf",
+      "IncludeOptional sites-enabled/*.conf"
+    ]
+  },
+  "enabled_module_paths": {
+    "ssl": false,
+    "socache_shmcb": false
+  }
+}

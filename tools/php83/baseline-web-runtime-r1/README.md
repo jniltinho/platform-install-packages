@@ -1,4 +1,13 @@
-# Separate current Apache PHP7.4 probe (not native-executed)
+# Separate current Apache PHP7.4 probe
+
+Current result: root executed frozen r4 successfully; independent closed-receipt
+review accepted PHP7.4.33/apache2handler and53 loaded modules, nonce match, owned
+file removal, inactive unit and unchanged VM. See
+`doc/php83/evidence/baseline-web-runtime-r1/native.json` and
+`doc/php83/evidence/baseline-freeze-independent-r1/web-runtime-native-review.json`.
+The fresh stage is now consumed: do not rerun this wrapper automatically. Earlier
+pre-execution review notes below are retained as history, not current status.
+This is not full application/baseline acceptance.
 
 Root coordinator only. This case creates one random-named PHP file under the existing installed vhost, posts a synthetic nonce and verifies owned-inode cleanup. No app bootstrap/credentials/DB, service restart, configuration or package changes. Passing means only that this exact current route returns PHP7.4 apache2handler and the expected php.ini path/module names; never full baseline acceptance.
 

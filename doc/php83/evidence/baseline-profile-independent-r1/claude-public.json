@@ -1,0 +1,24 @@
+{
+  "case": "PROFILE_SOCKET_FIXED_READONLY_OBSERVER",
+  "executor": "actual Claude CLI",
+  "terminal_exit": 0,
+  "test_command": "PYTHONDONTWRITEBYTECODE=1 python3 tools/php83/baseline-freeze-r1/test_profile_socket.py -v",
+  "tests_passed": 8,
+  "test_exit": 0,
+  "permission_denials": 0,
+  "verdict": "SCOPED_READONLY_APPROVAL_NO_CODE_BLOCKER",
+  "vm_db_network_executed": false,
+  "source_hash_verified_by_cli": false,
+  "source_hash_independently_verified_by_codex": true,
+  "findings": [
+    "Native receipt should supplement exact command/timestamp/target/reviewer execution provenance",
+    "Guard/secret-read/query lifecycle not unit tested",
+    "Overflow test also contains duplicates; distinct129-row negative not isolated",
+    "ip uses PATH rather than absolute path"
+  ],
+  "limitations": [
+    "Stored profile metadata only; no APIauthorization/fullacceptance",
+    "Status/type numeric values observed, not semantic acceptance",
+    "Raw CLI response/session/usage excluded"
+  ]
+}

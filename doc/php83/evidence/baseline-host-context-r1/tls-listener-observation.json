@@ -1,0 +1,10 @@
+{
+  "target": "192.168.56.74",
+  "tls_listener_ports": [],
+  "authenticated_requests": 0,
+  "tls_verified": false,
+  "full_acceptance": false,
+  "observed_at_utc": "2026-09-28T18:27:45.923812+00:00",
+  "executor": "Codex root",
+  "command": "strict SSH baseline74 sudo python3 stdin: guarded hostname/IP and /usr/bin/ss -H -ltn; closed ports443/8443 projection"
+}

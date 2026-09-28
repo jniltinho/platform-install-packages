@@ -1,0 +1,18 @@
+{
+  "case": "PROFILE_SOCKET_NATIVE_PROVENANCE",
+  "receipt_sha256": "407fde0a9c508bfe5baaf92778b03e9e9ae3b67e24ffa9f16311aac93cfd36d3",
+  "receipt_written_at_utc": "2026-09-28T18:24:34.384492+00:00",
+  "timestamp_basis": "filesystem mtime of exclusively created receipt; exact start time not captured",
+  "executor": "Codex root",
+  "reviewer": "Codex review_simulation; actual Claude CLI local8 tests only",
+  "vm_uuid": "9e954729-16f3-4eda-9db5-b94e5ada9e44",
+  "target": "192.168.56.74",
+  "transport": "SSH baseline74 strict pinned TOFU config via localhost2201",
+  "remote_command": "sudo -n python3 -B -",
+  "stdin_source": "tools/php83/baseline-freeze-r1/profile_socket.py",
+  "source_sha256": "9735aad64f31a3329de5844f9061da9f18f12e1b34787971d9ee360872443776",
+  "host_preflight": "pinned strict SSH config+knownhosts; VBoxManage showvminfo exact UUID and reviewed host_guard",
+  "exit_status": 0,
+  "stderr_bytes": 0,
+  "full_acceptance": false
+}

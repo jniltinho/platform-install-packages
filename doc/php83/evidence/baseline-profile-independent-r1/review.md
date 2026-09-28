@@ -1,0 +1,7 @@
+# Native stored-profile receipt independent review
+
+Codex read frozen profile_socket.py SHA9735aad64f31a3329de5844f9061da9f18f12e1b34787971d9ee360872443776 and independently ran its eight pure tests:exit0. Root's profile-socket-native.json source identity matches, actual exit0/stderr0. Stored profile14 belongs to synthetic tenant102, status2,type1,not deleted; configured flavor IDs[0,2,3,4,5,6,7,19]. Fixed socket/server/schema identity and five read-only SELECTs are reflected in the receipt. Projection contains only known synthetic IDs and numeric metadata, no credentials/secret hashes/arbitrary text.
+
+No confidentiality or scoped-truthfulness blocker. This verifies stored configuration observation, not API profile authorization, successful transcoding of each configured flavor, worker health or full baseline acceptance. API's unresolved profile response remains separate and unmodified. Reviewer performed no VM/SSH/DB operation. Actual Claude local-only review/test attempt is separate and pending terminal; never inferred as PASS from this receipt.
+
+Actual Claude terminal0:8/8 pure tests passed, no tool denials, narrow approval/no code blocker. Curated claude-public.json records limitations; exclude claude-raw.json from publication. CLI did not hash the observer; this Codex review independently matched the native receipt pin. Native receipt SHA407fde0a9c508bfe5baaf92778b03e9e9ae3b67e24ffa9f16311aac93cfd36d3. Recommend coordinator append command/time/exact target provenance in a separate receipt, not invent it from this review.
