@@ -1,0 +1,9 @@
+{
+  "status": "PRE_E_STATE_PRESERVED",
+  "snapshot_id": "657c3be2-75f9-4305-9ba0-0319b55b8547",
+  "vm_uuid": "33f4f25f-1cf2-4cc5-90ff-d519c29b2aee",
+  "machine_id_sha256": "ad9adac39d0fb440883f0b82c8c45058596b74a6d9e98da2746e4dbdafd3aad8",
+  "baseline_dpkg_sha256": "de3df72f0f65e5ab9959f8f5470ff063815301a6174c1c8e090a1415e8432731",
+  "restore_automatically": false,
+  "full_recovery_acceptance": false
+}

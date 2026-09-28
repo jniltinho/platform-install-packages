@@ -1,0 +1,27 @@
+{
+  "audit_since": "2026-09-28T04:30:00Z",
+  "baseline_dpkg_sha256": "de3df72f0f65e5ab9959f8f5470ff063815301a6174c1c8e090a1415e8432731",
+  "d3_terminal_sha256": "d1cbc949a3f66752a7551ecd540d36795743893462054462dc45787089765478",
+  "executor_sha256": "d63af73cd1620cedf491b2105b553e9880b9bdd170bfceec3bcb3c4008fb8230",
+  "full_acceptance": false,
+  "machine_id_sha256": "ad9adac39d0fb440883f0b82c8c45058596b74a6d9e98da2746e4dbdafd3aad8",
+  "package": {
+    "architecture": "all",
+    "local_deb": "/var/lib/kaltura-php83-pilot/packages-phase-d/kaltura-server_18.20.0-1+php83lab1_all.deb",
+    "package": "kaltura-server",
+    "previous": null,
+    "sha256": "e53154baff6e5f091a0ee876e558e0469ff38e06f7b4ab5b4207d29573c1b387",
+    "version": "18.20.0-1+php83lab1"
+  },
+  "pending": [
+    "full_seed_persistence",
+    "effective_authorization",
+    "full_application_acceptance"
+  ],
+  "phase": "E",
+  "release_authorized": false,
+  "schema": 1,
+  "snapshot_sha256": "7f95b2119b9ebece3564f9e353ae7ccea2f4b416ce949591d8c8627dbffb9738",
+  "status": "LAB_INCREMENTAL_AUTHORIZED",
+  "workers_policy": "HELD"
+}

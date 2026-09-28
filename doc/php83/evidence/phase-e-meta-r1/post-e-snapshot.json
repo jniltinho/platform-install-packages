@@ -1,0 +1,9 @@
+{
+  "status": "POST_E_PACKAGES_INSTALLED_STATE_PRESERVED",
+  "snapshot_id": "b52e0c96-0186-4ff1-9676-16eb8c9d5d7d",
+  "vm_uuid": "33f4f25f-1cf2-4cc5-90ff-d519c29b2aee",
+  "dpkg_sha256": "3dc52ae9d5e66c8025313e070dc8088462a7a2bc5753f69d4b575a292c027143",
+  "workers_policy": "HELD",
+  "nginx": "STOPPED",
+  "full_acceptance": false
+}

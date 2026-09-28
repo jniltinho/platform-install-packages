@@ -1,0 +1,122 @@
+{
+  "hashes": {
+    "after-dpkg.txt": "3dc52ae9d5e66c8025313e070dc8088462a7a2bc5753f69d4b575a292c027143",
+    "contract.json": "b3fa6bc2680c0aebe1b55ee22be6655f53f843072e0ff0fce7bceeeac0987ab8",
+    "terminal.json": "4024f00f8e9b51a483cb4fd77765d0b017966602624610293575fd3360bff897"
+  },
+  "installed_kaltura_packages": [
+    [
+      "kaltura-base",
+      "18.20.0-1+php83lab2",
+      "all"
+    ],
+    [
+      "kaltura-batch",
+      "18.20.0-1+php83lab3",
+      "all"
+    ],
+    [
+      "kaltura-db",
+      "18.20.0-1+php83lab4",
+      "all"
+    ],
+    [
+      "kaltura-elasticsearch",
+      "7.17-1+php83lab6",
+      "all"
+    ],
+    [
+      "kaltura-ffmpeg",
+      "6.1-1+php83lab1",
+      "all"
+    ],
+    [
+      "kaltura-ffmpeg-aux",
+      "6.1-1+php83lab1",
+      "all"
+    ],
+    [
+      "kaltura-front",
+      "18.20.0-1+php83lab2",
+      "all"
+    ],
+    [
+      "kaltura-html5-analytics",
+      "0.3-1+php83lab1",
+      "all"
+    ],
+    [
+      "kaltura-html5-studio",
+      "2.2.3-1+php83lab1",
+      "all"
+    ],
+    [
+      "kaltura-html5-studio3",
+      "3.18.0-1+php83lab1",
+      "all"
+    ],
+    [
+      "kaltura-html5lib",
+      "2.98-1+php83lab1",
+      "all"
+    ],
+    [
+      "kaltura-html5lib3",
+      "3.8.1-1+php83lab1",
+      "all"
+    ],
+    [
+      "kaltura-kmcng",
+      "5.17.0-1+php83lab1",
+      "all"
+    ],
+    [
+      "kaltura-nginx",
+      "1.23.0-1+php83lab3",
+      "amd64"
+    ],
+    [
+      "kaltura-postinst",
+      "1.0.34-1+php83lab2",
+      "all"
+    ],
+    [
+      "kaltura-server",
+      "18.20.0-1+php83lab1",
+      "all"
+    ],
+    [
+      "kaltura-sphinx",
+      "2.2.11-1+php83lab1",
+      "all"
+    ]
+  ],
+  "services-after.json": {
+    "apache2": "active",
+    "elasticsearch": "active",
+    "mariadb": "active",
+    "monit": "active"
+  },
+  "terminal.json": {
+    "checks": {
+      "generated_secrets": true,
+      "input_canaries": true,
+      "package_observation": true,
+      "unchanged_runtime_and_privacy_metadata": true
+    },
+    "full_acceptance": false,
+    "full_application_acceptance": false,
+    "normal_apt_attempted": true,
+    "pending": [
+      "full_seed_persistence",
+      "effective_authorization",
+      "full_application_acceptance"
+    ],
+    "phase": "E",
+    "resume_supported": false,
+    "service_actions": false,
+    "status": "LAB_INCREMENTAL_E_META_INSTALLED_SERVICES_UNCHANGED_NGINX_STOPPED_WORKERS_HELD",
+    "worker_hold_preserved": true,
+    "workers_policy": "HELD"
+  }
+}
