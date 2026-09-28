@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "decision": "NO_NESTED_GET_ORIGIN_DIAGNOSTIC_R3_APPROVED",
+  "pins": {
+    "run_hls_first_r3.py": "919e362a48988fa83837a98c9cf96b243c6f16be173bae2ad433404aef258ca9",
+    "guest_hls_first_r3.py": "fb37bffcd88f6407590635da57bf9c4bbcda2e081bd06e13d4036087e1a446b6",
+    "hls_first_r3.py": "66369b4109ec7b1de9206f38d9548b66a0c1d1d2dfd451da093a34bde7c999ed",
+    "nested_descriptor.py": "8d912931a8f41e23bd068d8f5576250a8c19bef79fcf3b3a88e348c603a4a89f",
+    "test_hls_nested_descriptor.py": "f089cd1d0aa72a3e57fbcff0f0e8fa1685c9c128b3dd6414657d29dc335c9306"
+  },
+  "test_command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/baseline-freeze-r1 -p test_hls_nested_descriptor.py -v",
+  "tests": 6,
+  "exit": 0,
+  "test_history": "Initial wrong test selector found0 tests, not counted; corrected6 PASS.",
+  "review": [
+    "Exactly one first manifestGET; reference origin classification before strict parser, no nested requests or origin relaxation.",
+    "Closed <=32 scheme/hostmatch/port/auth flags; private candidate enrollment before origin rejection.",
+    "Full public_rows success/negative/failure tested, descriptor preserved on parser rejection."
+  ],
+  "limits": [
+    "Unsupported tags/overbound/malformed references may remain uncovered; whole response privacy not established.",
+    "No nested resource/segment/decode/HLS acceptance.",
+    "No reviewer VM calls."
+  ]
+}

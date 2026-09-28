@@ -18,14 +18,17 @@ unit (`baseline-freeze-e9c1d318`): `HLS_MANIFEST_REJECTED`. A separately reviewe
 second diagnostic probe also ended with exit 2/inactive (`baseline-freeze-8dcb3711`),
 but narrowed the failure: HTTP 200, HLS content type, 201-byte body, EXTM3U header,
 one STREAM-INF and one URI line, followed by the parser's `ORIGIN` rejection.
-No raw URL/body was exported and no nested request was made. This does not yet
-identify the mismatching scheme, host, port or other origin condition. Failure
+No raw URL/body was exported and no nested request was made. A third diagnostic probe identified the nested reference as HTTPS on the owned
+.74 host with explicit port 88 (no query, userinfo or fragment). It ended with
+exit 2/inactive (`baseline-freeze-f101d171`), preserving the origin rejection
+and making zero nested requests. Candidate enrollment completed; this is not
+whole-response privacy proof or a working TLS media listener. Failure
 scans of enrolled patterns were complete and zero; whole-reference coverage was
 not established. Both failing receipts remain preserved.
 
-Next: source-backed closed classification of the nested reference before any
-nested GET, then a bounded correction/test without rewriting URLs or weakening
-target/TLS protections. The pure long-upload chunk planner passed seven local
+Next: bounded read-only inspection of the port-88 media listener and its lab
+configuration, then a source-supported HTTPS correction without rewriting native
+URLs or weakening target/TLS protections. The pure long-upload chunk planner passed seven local
 and independent tests plus actual Claude source review; a strict type flaw was
 fixed with its original finding preserved. It has not uploaded anything. Long
 media, thumbnails, UI, environment provenance and formal repeated measurements

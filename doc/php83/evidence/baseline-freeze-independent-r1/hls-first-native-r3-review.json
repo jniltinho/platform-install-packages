@@ -1,0 +1,35 @@
+{
+  "schema": 1,
+  "decision": "NESTED_HTTPS88_ORIGIN_IDENTIFIED_NO_NESTED_REQUEST",
+  "artifact_sha256": "9d916ebd72bb96f54591e9917bc2a69f0458270f094711cf8197ddfe8e855e2b",
+  "guest_exit": 2,
+  "unit_inactive": true,
+  "nested": {
+    "candidate_enrollment_complete": true,
+    "nested_get_authorized": false,
+    "raw_values_exported": false,
+    "references": [
+      {
+        "fragment": false,
+        "nested_requested": false,
+        "owned_host_match": true,
+        "port": "88",
+        "port_explicit": true,
+        "query": false,
+        "scheme": "https",
+        "userinfo": false
+      }
+    ]
+  },
+  "failure_code": "HLS_MANIFEST_REJECTED",
+  "failure_privacy": {
+    "finite_scans_complete_and_zero": true
+  },
+  "interpretation": [
+    "Closed reference classifier identifies owned host .74, HTTPS explicit88, no query/userinfo/fragment; current443-only parser correctly rejects origin.",
+    "Reference candidate enrollment complete and final known/enrolled patterns zero does not establish whole response privacy.",
+    "No nested request or HLS playback/decode; original overall failed observation remains failed.",
+    "Next step is bounded read-only listener/config88 observation, not more manifest-origin probes or URL rewriting."
+  ],
+  "reviewer_vm_calls": false
+}
