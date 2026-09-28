@@ -1,0 +1,41 @@
+{
+  "schema": 1,
+  "decision": "NATIVE_TWO_PROTOCOL_CONTEXT_SELECTION_ACCEPTED_PARTIAL",
+  "receipt_sha256": "f6a09da7879e10e8fbc288dc56927a1c514169cf3f5fc545c9dd414d7ab9fd13",
+  "guest_exit": 0,
+  "unit_inactive": true,
+  "source_pins_and_recovery_proof_joined": true,
+  "selection": {
+    "api_calls": 2,
+    "case": "NATIVE_HTTP_HTTPS_PROFILE_SELECTION_NO_GET",
+    "full_acceptance": false,
+    "media_gets": 0,
+    "response_secret_coverage_complete": false,
+    "selections": [
+      {
+        "profile_id": 1001,
+        "requested_protocol": "http",
+        "selected_expected_profile": true,
+        "source_url_scheme": "http"
+      },
+      {
+        "profile_id": 1004,
+        "requested_protocol": "https",
+        "selected_expected_profile": true,
+        "source_url_scheme": "https"
+      }
+    ],
+    "source_urls_enrolled": true
+  },
+  "finite_common_end_known_patterns": 6,
+  "all_counts_zero": true,
+  "new_nginx_logs_in_every_inventory": true,
+  "prior_mutation_attempt_success": false,
+  "recovery_adjudication_required": true,
+  "limits": [
+    "Actual HTTP1001 and HTTPS1004 context selection for fixed READY asset only.",
+    "No media GET, HLS playback/decode, atomic transaction or rollback claim.",
+    "Fullresponse coveragefalse and original failed mutation retained.",
+    "No VM calls by reviewer."
+  ]
+}

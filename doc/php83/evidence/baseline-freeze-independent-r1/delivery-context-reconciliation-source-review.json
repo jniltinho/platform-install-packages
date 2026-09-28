@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "decision": "READ_ONLY_CONTEXT_RECONCILIATION_SOURCE_PASS",
+  "pins": {
+    "run_delivery_context_pair_r2.py": "5fdd1259f2a93f5b3605d75145bcab6b5f7056d3f6837a46a121a6e6213c19a5",
+    "guest_delivery_context_pair_r2.py": "dd887c2097eb5d017f79773dc352575602fc1fff738bc73c502a6ad1a4dacbb8",
+    "delivery_context_pair_r2.py": "ecfbec3480ef22772e50717773277834125404bef681ec687ea39a6b38b0f385",
+    "prepare_delivery_context_pair_r2.py": "9bfdcd761d4dfee061e1e9e8762491e74d2d01bb1a199e33c22f8303b51b0605",
+    "test_delivery_context_reconciliation.py": "5f747f9a4fee766d8f932719ff8be44256a47efe75a452f021d541ea9eb00a8e"
+  },
+  "independent_tests": 5,
+  "exit": 0,
+  "test_command": "python3 -m unittest discover -s tools/php83/baseline-freeze-r1 -p test_delivery_context_reconciliation.py -v",
+  "initial_test_filename_miss": "test_delivery_context_recovery.py collected0; not a pass, corrected command above executed5",
+  "scope": [
+    "Accept actual wrapped read-only recovery receipt with exact expected delta, one clone, finite privacy, source pins and inactiveunit.",
+    "Exactly HTTP1001 then HTTPSreceipt1004 native context calls, no GET/write.",
+    "Guest proof hash and host full projection preserve reconciliation-not-commit flags.",
+    "New nginx mandatory log adapter retained; prior recoveryunit inactive guard."
+  ],
+  "limits": [
+    "Historical mutation NESTED_TRANSACTION failure remains failure.",
+    "No restoration/cache/atomic-commit claim; recovery adjudication remains required.",
+    "No whole-response secret coverage or media delivery authorization.",
+    "No VM calls by reviewer."
+  ]
+}

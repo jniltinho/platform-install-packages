@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "decision": "CONTEXT_PAIR_SOURCE_PASS_CONDITIONAL_ACTUAL_MUTATION_PROOF",
+  "pins": {
+    "run_delivery_context_pair.py": "d5800f38604761e917572337335e24527507466c1456b6e929ef3b0cdb264da6",
+    "guest_delivery_context_pair.py": "05bd5431a8a618d11f0f5a4126793c227cc39e1fe70cbb45b7eb8e764ba64826",
+    "delivery_context_pair.py": "d8230e2e491970138d3740d72625c9e25716d5328d4c6137933adfc34259389e",
+    "prepare_delivery_context_pair.py": "c8dfac31fc0fa6681d5d2bff76d327435e6e3664fb36371f4274c0639c4a9614"
+  },
+  "independent_tests": 10,
+  "exit": 0,
+  "scope": [
+    "Exactly two context API calls, HTTP expected1001 and HTTPS exact committed proof ID; no media GET.",
+    "Proof hash staged and checked before credentials, required in full success projection.",
+    "Mandatory nginx private-log adapter composed after Apache and legacy for all inventory calls.",
+    "Full success projection and missing/drift/privacy/source failures independently exercised."
+  ],
+  "conditions": [
+    "Actual split commit and finite privacy proof must exist; no synthetic receipt accepted operationally.",
+    "Root must verify mutation unit inactive/exclusive before running; built-in prior unit guard is earlier observer492b4caa only."
+  ],
+  "limitations": [
+    "Profile selection observation only; URL scheme counted, not delivery authorization.",
+    "Response_secret_coverage_complete remains false.",
+    "No VM/API by reviewer."
+  ]
+}
