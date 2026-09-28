@@ -1,0 +1,16 @@
+{
+  "reviewer": "independent Codex agent /root/exp9_harness",
+  "source": "terminal collaboration report",
+  "local_tests": 22,
+  "tests_exit": 0,
+  "frozen_source_hashes_equal": 2,
+  "actual_published_package": "kaltura-postinst",
+  "member": "add_caption.php",
+  "metadata_mutants_rejected": 14,
+  "mutant_scope": "7 fields, unchanged and expected-replacement controls",
+  "retained_attempt_limitation": "First selected metapackage lacked a regular member; local StopIteration, then correctly selected actual postinst member and reran. Not hidden or counted as pass.",
+  "verdict": "NO_CONCRETE_BLOCKER_FOR_FINAL_DEB_VERIFICATION",
+  "vm_used": false,
+  "hooks_executed": false,
+  "actual_private_debs_verified": false
+}

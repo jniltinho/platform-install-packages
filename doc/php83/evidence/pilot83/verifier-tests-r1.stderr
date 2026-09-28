@@ -1,0 +1,27 @@
+test_add (test_verify_private_debs.Tests.test_add) ... ok
+test_add_collision_any_type (test_verify_private_debs.Tests.test_add_collision_any_type) ... ok
+test_bad_paths (test_verify_private_debs.Tests.test_bad_paths) ... ok
+test_bool_metadata (test_verify_private_debs.Tests.test_bool_metadata) ... ok
+test_duplicate_expected (test_verify_private_debs.Tests.test_duplicate_expected) ... ok
+test_duplicate_tar (test_verify_private_debs.Tests.test_duplicate_tar) ... ok
+test_full_package (test_verify_private_debs.Tests.test_full_package) ... ok
+test_input_hash (test_verify_private_debs.Tests.test_input_hash) ... ok
+test_md5 (test_verify_private_debs.Tests.test_md5) ... ok
+test_md5_missing_duplicate_wrong_extra (test_verify_private_debs.Tests.test_md5_missing_duplicate_wrong_extra) ... ok
+test_metadata_mode_uid_gid (test_verify_private_debs.Tests.test_metadata_mode_uid_gid) ... ok
+test_missing (test_verify_private_debs.Tests.test_missing) ... ok
+test_mtime_permitted (test_verify_private_debs.Tests.test_mtime_permitted) ... ok
+test_nonregular_delta (test_verify_private_debs.Tests.test_nonregular_delta) ... ok
+test_pax_security_retained (test_verify_private_debs.Tests.test_pax_security_retained) ... ok
+test_replace (test_verify_private_debs.Tests.test_replace) ... ok
+test_replace_wrong_before (test_verify_private_debs.Tests.test_replace_wrong_before) ... ok
+test_special_member (test_verify_private_debs.Tests.test_special_member) ... ok
+test_symlink_preserved (test_verify_private_debs.Tests.test_symlink_preserved) ... ok
+test_unchanged (test_verify_private_debs.Tests.test_unchanged) ... ok
+test_unexpected_addition (test_verify_private_debs.Tests.test_unexpected_addition) ... ok
+test_unexpected_content (test_verify_private_debs.Tests.test_unexpected_content) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.005s
+
+OK

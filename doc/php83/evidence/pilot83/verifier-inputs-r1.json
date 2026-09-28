@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "inputs": {
+    "bundle": {
+      "path": "/tmp/kaltura-php83-audit/release/kaltura-server-noble-repo.tar.gz",
+      "sha256": "91629580441f6a896ebf9e51f0256532221715bee57a3e5a64c66ff0c4e3127b"
+    },
+    "published": {
+      "path": "doc/php83/evidence/pilot83/published-control-inputs.json",
+      "sha256": "798cee663130d7f2d3e8b626038ccbf5056bb50998ac86c2e62785d8956c9a27"
+    },
+    "payload": {
+      "path": "doc/php83/evidence/pilot83/payload-preparation-r4.json",
+      "sha256": "097ddb95ac682aaadd8ca65580517253b87d8eec4d66ab597e71efc58860864f"
+    },
+    "controls": {
+      "path": "doc/php83/evidence/pilot83/control-preparation-r1.json",
+      "sha256": "9fd5027282271206a80a5436a6adda5905b4ab8da8d9e276b7bdfdd936289bfb"
+    },
+    "hooks": {
+      "path": "doc/php83/evidence/pilot83/hooks-transformation-r2.json",
+      "sha256": "3f397abc0dfc65eb9109168adb1ba79a565a6e683a78c4f73e2d3972abfb599f"
+    },
+    "privacy_contract": {
+      "path": "tools/php83/pilot83/privacy-contract.json",
+      "sha256": "74a6e7e1332e43a2752c4e8d5024555ab0132a5fa3db6c23201f124ec52302ce"
+    }
+  },
+  "new_helpers": [
+    {
+      "package": "kaltura-postinst",
+      "path": "opt/kaltura/bin/pilot83-private-hook-functions.sh",
+      "source_path": "tools/php83/pilot83/private-hook-functions.sh",
+      "before_sha256": null,
+      "after_sha256": "6fbc97208186f8d5558c7822f988df03375baac6656db3bb6d3c408e8cfe9dbe",
+      "mode": 420,
+      "uid": 0,
+      "gid": 0
+    },
+    {
+      "package": "kaltura-postinst",
+      "path": "opt/kaltura/bin/pilot83-private-argv.php",
+      "source_path": "tools/php83/pilot83/private-argv.php",
+      "before_sha256": null,
+      "after_sha256": "f08566c2dfc4b7547711cb9e1f2d0e80478c676ad71e45e69b3289580edd21aa",
+      "mode": 420,
+      "uid": 0,
+      "gid": 0
+    }
+  ]
+}
