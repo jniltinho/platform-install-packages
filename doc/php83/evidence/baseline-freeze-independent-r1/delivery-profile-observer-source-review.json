@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "decision": "BOUNDED_SELECTED_PROFILE_OBSERVER_SOURCE_PASS",
+  "pins": {
+    "run_delivery_profile_observer.py": "64bd3714140c999700d4f0123c2802ed33b373f0f37f9602a847947236782f4b",
+    "guest_delivery_profile_observer.py": "ae4239d1e7233a3cf04d8da257de9fbd10bfaf3425e4b29bd9031ce1a7be6fb1",
+    "delivery_profile_observation.py": "c3a81bae3480ab4fcd4bf9b7e76377933cdf334bdb662f028e2156ab12b943fd",
+    "prepare_delivery_profile_observer.py": "18a7775b198cc313ec5f7c2c954220faf1db21e20c6743bec00077f13e63af13",
+    "test_delivery_profile_observer.py": "b564d6561e9687d5dc239b8d4cdd7fdba3acf7f0ceb7a66b656ccabd1f682268"
+  },
+  "independent_tests": 7,
+  "exit": 0,
+  "scope": [
+    "One existing READY-context observation; ID selected from exactly one validated descriptor, not guessed.",
+    "Fixed numeric-only SELECT LIMIT2 joins stored row ID; no SQL write or media GET.",
+    "Source peer pin before authentication and postcheck; existing TLS/private inventory, quiet/convergence, same starts and common end unchanged.",
+    "Full public_rows success/negative/failure tests executed; raw URL and extra fields excluded."
+  ],
+  "limitations": [
+    "No VM execution by reviewer.",
+    "Profile/global ownership allowed exactly0 or102; no assertion of actual row until native receipt.",
+    "Stored URL shape is not trusted delivery authorization.",
+    "Context response_secret_coverage_complete remains false; known/enrolled-pattern scans are not blanket response privacy."
+  ]
+}

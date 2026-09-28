@@ -1,0 +1,41 @@
+{
+  "schema": 1,
+  "decision": "NATIVE_SELECTED_PROFILE_OBSERVATION_ACCEPTED_PARTIAL",
+  "receipt_sha256": "bfc1f00261c2696398b64ab622d0d5aa891d7a10724791922d75d2424b93ddb0",
+  "native_executor": "root coordinator",
+  "independent_vm_calls": 0,
+  "guest_exit": 0,
+  "unit_inactive": true,
+  "staged_pins_match": true,
+  "source_before_after_match": true,
+  "delivery_profile": {
+    "configuration_changed": false,
+    "fragment": false,
+    "full_acceptance": false,
+    "is_default": true,
+    "media_protocols": "NULL",
+    "owned_host_match": true,
+    "parent_id": 0,
+    "partner_id": 0,
+    "path_hls": true,
+    "port": 88,
+    "port_explicit": true,
+    "profile_id": 1001,
+    "profile_type": 61,
+    "query": false,
+    "selected_descriptor_id_joined": true,
+    "sql_selects": 1,
+    "status": 0,
+    "streamer_type": "applehttp",
+    "url_scheme": "absent",
+    "userinfo": false
+  },
+  "known_enrolled_pattern_count": 6,
+  "finite_common_end_scans_complete_zero": true,
+  "limitations": [
+    "No media GET, TLS88 correction, SQL mutation or full application acceptance.",
+    "Context response_secret_coverage_complete remains false.",
+    "Raw stored profile type/status enums are observed numbers, not inferred semantic authorization.",
+    "Historical HLS failures unchanged."
+  ]
+}

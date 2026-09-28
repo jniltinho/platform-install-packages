@@ -1,6 +1,6 @@
 # PHP 8.3 — status atual e tarefas restantes
 
-Atualizado: 2026-09-28T20:33:15.146862+00:00
+Atualizado: 2026-09-28T20:46:12.995659+00:00
 
 **5 concluídas / 46 abertas / 51 tarefas.** Os 24 requisitos originais e 27 casos detalhados se sobrepõem; não são 51 funcionalidades independentes. Sem percentual ou previsão de conclusão inferidos de testes.
 
@@ -26,9 +26,30 @@ whole-response privacy proof or a working TLS media listener. Failure
 scans of enrolled patterns were complete and zero; whole-reference coverage was
 not established. Both failing receipts remain preserved.
 
-Next: bounded read-only inspection of the port-88 media listener and its lab
-configuration, then a source-supported HTTPS correction without rewriting native
-URLs or weakening target/TLS protections. The pure long-upload chunk planner passed seven local
+The subsequent fixed-target, unauthenticated port-88 observation exited 0:
+HTTP returned 302 and the pinned-CA TLS handshake failed with
+`WRONG_VERSION_NUMBER`. The inspected regular nginx configuration contains a
+non-SSL port-88 listener; lexical counters are not full effective-config proof.
+No redirect was followed and no configuration was changed.
+
+A subsequent successful context-to-SQL observation joined the actual selected
+profile: ID1001, type61, global owner0, default=true, parent0, status0, null
+protocol restriction, owned-host port88 and `/hls` path. Guest exit0/inactive,
+six enrolled patterns complete-zero/common-end; no media GET or SQL mutation.
+A read-only nginx inventory also found an empty ssl.conf, the expected packaged
+SSL template, root-owned configuration ancestry and no listener on8444. This
+observed free port is rechecked before any change; no private key bytes were read.
+
+Next: a narrowly reviewed, reversible lab HTTPS-media setup on a separate port
+and protocol-specific profile mapping, preserving HTTP. The native profile copies its configured port into the returned
+URL; merely adding a TLS listener will not fix that mapping. No response URL
+rewriting, blanket origin relaxation, broad profile SQL or package hook rerun.
+
+Offline decoding preparation passed ten lifecycle/safety tests and independent
+real decoding of the exact original fixture (250 frames, zero stderr). A CLI
+review's process-group lifecycle concern was fixed and independently retested.
+This is local fixture decoding, not downloaded-response or HLS decoding; host
+dynamic-library cohort attestation remains absent. The pure long-upload chunk planner passed seven local
 and independent tests plus actual Claude source review; a strict type flaw was
 fixed with its original finding preserved. It has not uploaded anything. Long
 media, thumbnails, UI, environment provenance and formal repeated measurements
