@@ -1,0 +1,6 @@
+SnapshotName="php83-pre-private-pilot-20260928"
+SnapshotUUID="5fbc9e28-ae82-4410-aa24-978eb408f019"
+SnapshotDescription="Private lab pre-install recovery point; native83 runtime only, no application/database; authorized pilot."
+CurrentSnapshotName="php83-pre-private-pilot-20260928"
+CurrentSnapshotUUID="5fbc9e28-ae82-4410-aa24-978eb408f019"
+CurrentSnapshotNode="SnapshotName"

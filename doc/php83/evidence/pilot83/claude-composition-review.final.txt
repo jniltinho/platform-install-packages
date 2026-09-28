@@ -1,0 +1,49 @@
+Não encontrei defeito bloqueante na preparação. Dou aprovação limitada: o payload r3 e os controls r1 servem como bytes de entrada para o piloto privado `+php83lab1`, restrito ao `.83`. A instalação continua bloqueada até o verificador final dos pacotes e a revisão dos hooks, que não fizeram parte desta revisão.
+
+**Revisão / execução:** Claude CLI (Opus 5.5), nesta sessão; os arquivos foram escritos por outro autor, não por mim. Ambiente: worktree local na branch `proposal/migrate-kaltura-php83`, sem SSH, VM, rede, build, instalação ou git, e sem alterar arquivos.
+
+## Testes executados (cada um separadamente)
+
+| Comando | Resultado | Exit |
+|---|---|---|
+| `python3 -m unittest discover -s tools/php83/pilot83 -p test_compose_payload.py -v` | 10 testes, OK | 0 |
+| `python3 -m unittest discover -s tools/php83/pilot83 -p test_control_policy.py -v` | 8 testes, OK | 0 |
+
+## Arquivos congelados
+
+- Os sha256 dos 5 arquivos congelados são idênticos aos registrados em `payload-freeze-r1.json` e `control-freeze-r1.json`.
+- `/tmp/kaltura-pilot83-payload-r3/manifest.json` tem o mesmo sha256 de `payload-preparation-r3.json` (`6cc59ce2…`).
+- Os 17 `control.diff` têm os mesmos `diff_sha256` registrados em `control-preparation-r1.json`.
+
+## Encadeamento: payload publicado → 76 exp14 → 5 alvos de privacidade → 78 caminhos únicos
+
+- **78 linhas, todas únicas:** os 76 caminhos selecionados estão todos presentes. Os 5 alvos de privacidade (`policy.TARGETS` com 4 caminhos, mais `sql.TARGET`) coincidem em 3 caminhos com a seleção (`KalturaLog.php`, `KalturaStatement.php`, `KalturaFrontController.php`). Os 2 caminhos extras são `KalturaDispatcher.php` e `KalturaSerializableStream.php`.
+- **Hashes conferidos:** para os 76 caminhos, o `before` do manifest selecionado é igual a `published_sha256`, e o `after` é igual a `exp14_sha256`.
+- **Nenhuma mudança não selecionada entra:** nos 2 extras, o arquivo publicado é idêntico ao do exp14, então só a correção de privacidade altera esses arquivos. Fora dos alvos de privacidade, `after == exp14` em todos os casos.
+- **Correções de privacidade conferidas:** os `after_sha256` dos 5 alvos aparecem nas evidências já registradas em `baseline-rehearsal/privacy/{caller-frame-v1,sql-display-v1,trace-policy-v1,application-overlay-v1}`. A ordem de aplicação (primeiro trace-policy, depois caller-frame) é a mesma do `caller-frame-v1/prepare.py`.
+- **Sem sobrescrever overlays de empacotamento ou extras de cliente:** cada alvo substituído precisa ter bytes publicados idênticos ao upstream `Rigel-18.20.0.zip` (senão falha com `PUBLISHED_OVERLAY_COLLISION`), um único dono (`MULTIPLE_OWNERS`) e cobertura completa (`MISSING_SOURCE_TARGET`). As 77 substituições estão todas em `kaltura-base`.
+- **Arquivo adicionado:** há um só, `infra/general/kXmlEntityLoaderPolicy.php`. O código exige que ele não exista nem no zip upstream nem como arquivo regular no payload publicado.
+
+## Controls
+
+- **Versão:** os 17 pacotes recebem apenas o sufixo `+php83lab1`.
+- **Substituições de PHP:** `php7.4` vira `php8.3` só em `Depends`, `Pre-Depends` e `Recommends`, e somente nos 5 pacotes de runtime. Contagens: base 11, front 10, batch 10, html5lib 1, html5lib3 1. Não resta nenhum `php7.4`.
+- **SOAP:** `kaltura-base` passa a depender de `php8.3-common` e `php8.3-soap` na revisão exata `8.3.6-0ubuntu0.24.04.11`.
+- **APCu:** `php8.3-apcu` continua em front e batch.
+- **Dependências entre pacotes kaltura:** nenhuma tem versão fixa, então o sufixo novo não quebra a resolução.
+
+## Pontos menores (não bloqueiam)
+
+1. **Checagem de ausência do arquivo adicionado:** no payload publicado, ela só olha arquivos regulares. Um symlink, diretório ou hardlink no mesmo caminho não seria detectado. O verificador final deveria checar a ausência para qualquer tipo de membro.
+2. **Permissões do arquivo adicionado:** ele recebe modo `0o644` e não tem uid/gid registrados, enquanto os vizinhos publicados são `0o664`. O build e o verificador precisam definir e checar dono e modo explicitamente.
+3. **Revisão fixa do PHP:** a dependência exata `8.3.6-0ubuntu0.24.04.11` falha fechada se o `.83` tiver outra revisão. Isso é aceitável no piloto, mas a resolução do apt ainda está `NOT_EXECUTED`.
+4. **Cobertura dos testes:** os testes unitários não passam pelo `compose()` completo. A evidência de integração é apenas a execução r3, com uma única execução registrada.
+
+## O que continua pendente
+
+- Build dos DEBs e verificador final dos pacotes.
+- Maintainer scripts e hooks: não inspecionei `private-hook-functions`/`transform-hooks`, por instrução.
+- Resolução do apt e prova de que o PHP 8.3 nativo é o provedor.
+- Instalação no `.83` e aceitação em runtime: SOAP, APC, privacidade e o fluxo API → USER → upload → worker → READY → entrega.
+
+Esta revisão não é evidência de execução nesses pontos, e os testes passando não provam aceitação da aplicação.

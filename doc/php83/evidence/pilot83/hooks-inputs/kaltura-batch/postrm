@@ -1,0 +1,10 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installinit/13.14.1ubuntu5
+if [ "$1" = "remove" ] && [ -x "/etc/init.d/kaltura-batch" ] ; then
+	chmod -x "/etc/init.d/kaltura-batch" >/dev/null || true
+fi
+if [ -z "${DPKG_ROOT:-}" ] && [ "$1" = "purge" ] ; then
+	update-rc.d kaltura-batch remove >/dev/null
+fi
+# End automatically added section

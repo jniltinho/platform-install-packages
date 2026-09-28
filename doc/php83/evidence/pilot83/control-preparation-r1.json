@@ -1,0 +1,179 @@
+{
+  "status": "PRIVATE_CONTROLS_PREPARED_NOT_BUILT",
+  "bundle_sha256": "91629580441f6a896ebf9e51f0256532221715bee57a3e5a64c66ff0c4e3127b",
+  "packages": [
+    {
+      "package": "kaltura-postinst",
+      "before_version": "1.0.34-1",
+      "after_version": "1.0.34-1+php83lab1",
+      "php_dependency_substitutions": 0,
+      "soap_exact_revision": null,
+      "before_sha256": "fde40d3356445a8582efb4df610b3127fb33167629f79f1bad853ab5518db64f",
+      "after_sha256": "12e36a28984a3353a7d0e0edc516cf9735d4302a226cf31358d0bc5bda61b0f1",
+      "diff_sha256": "fd9d1bcce61373a56fa17835861e00a6463747e5ac8e7ecab912f561146c9368"
+    },
+    {
+      "package": "kaltura-ffmpeg",
+      "before_version": "6.1-1",
+      "after_version": "6.1-1+php83lab1",
+      "php_dependency_substitutions": 0,
+      "soap_exact_revision": null,
+      "before_sha256": "92835662ee660d870d4372502037114960d0bc0257187bf0bb18758fc28cf4a4",
+      "after_sha256": "ec0037eee61b5799d8f095a92afccc32ff3ad2aedbdacc79a747e26535d78eab",
+      "diff_sha256": "01cc057c42dd1173c30917bc9e58a4ac73ab1aa1f43475e4526a4377884649b3"
+    },
+    {
+      "package": "kaltura-base",
+      "before_version": "18.20.0-1",
+      "after_version": "18.20.0-1+php83lab1",
+      "php_dependency_substitutions": 11,
+      "soap_exact_revision": "8.3.6-0ubuntu0.24.04.11",
+      "before_sha256": "e66d0a00d9247137795ef33b831453c391ac4f57ea0905962edafe4c7f373fcf",
+      "after_sha256": "60fe7807aa27473b3ec81008608225d7f5189749795cb59b3f477bf8bb74e674",
+      "diff_sha256": "dc436b4a42fe3d11ecacf53fc67c4e14904e6dc3a7a3ce6ae10b6c13b037b6d9"
+    },
+    {
+      "package": "kaltura-front",
+      "before_version": "18.20.0-1",
+      "after_version": "18.20.0-1+php83lab1",
+      "php_dependency_substitutions": 10,
+      "soap_exact_revision": null,
+      "before_sha256": "424b98f6a7999f5a150ff6326942b2082e2b1d8626f2015d12c597f22d7386e3",
+      "after_sha256": "cbec14ac8a3d7b70e5c5c914b5d9e9c84f5965a3ae14808698d6309d8d072f9b",
+      "diff_sha256": "310c5e5d0fbb4a207eacf9e5745139ce16cf589231f5a04137a8f70779e1f188"
+    },
+    {
+      "package": "kaltura-html5-studio3",
+      "before_version": "3.18.0-1",
+      "after_version": "3.18.0-1+php83lab1",
+      "php_dependency_substitutions": 0,
+      "soap_exact_revision": null,
+      "before_sha256": "2ecfac51cbdf54c93641d9c5299e882c16acb936d9bd52a78ffb933597ce594f",
+      "after_sha256": "d648ff8e6baaca7f626d722d3bc2bd640e79581c1a02d51caae3a72ab878b83c",
+      "diff_sha256": "7ca39bed7708b572c1ed13e537038b560f80952e7d82c35ea7213b725ef02ecb"
+    },
+    {
+      "package": "kaltura-ffmpeg-aux",
+      "before_version": "6.1-1",
+      "after_version": "6.1-1+php83lab1",
+      "php_dependency_substitutions": 0,
+      "soap_exact_revision": null,
+      "before_sha256": "7f6b096e0e42c30e88e5c662a05e5592119e7c4b462b9e0eadf480a870f832a3",
+      "after_sha256": "c148d44571ec705f46f42759c8f793d6d581f674b1bd339f8412fcbc7c212000",
+      "diff_sha256": "6b3489d42717e088696c70e982c0c5f41fe0dcec227cce84df86135f62a75fe4"
+    },
+    {
+      "package": "kaltura-server",
+      "before_version": "18.20.0-1",
+      "after_version": "18.20.0-1+php83lab1",
+      "php_dependency_substitutions": 0,
+      "soap_exact_revision": null,
+      "before_sha256": "b78eee31535ddbbd026ffd8797da7b153d706436b08b90c4b6dcfc47046b100f",
+      "after_sha256": "8238362625f5ff60527c51e9d4a5012699e994776760e6ca0a1d780290894368",
+      "diff_sha256": "c78c82e3af0ca2171f86c5009dc06f39e31cad838bb1a9529f79f11c240cc4df"
+    },
+    {
+      "package": "kaltura-batch",
+      "before_version": "18.20.0-1",
+      "after_version": "18.20.0-1+php83lab1",
+      "php_dependency_substitutions": 10,
+      "soap_exact_revision": null,
+      "before_sha256": "6cf965827afefe7ad17fecc1cd2c5c56c4181b6a172727b4e4a1b6c1bb31573e",
+      "after_sha256": "2be94f0073559f3c6d2284f168dd813a2ffceedfcfd6246069aad73dd271ed86",
+      "diff_sha256": "0d072c9141573556eda87458a3cc92beb139937262fd2c101cf5908b4ee9b2ea"
+    },
+    {
+      "package": "kaltura-nginx",
+      "before_version": "1.23.0-1",
+      "after_version": "1.23.0-1+php83lab1",
+      "php_dependency_substitutions": 0,
+      "soap_exact_revision": null,
+      "before_sha256": "9df6cd6561fd042d253ef1a2661ca59aa04d50a5c5ba831c8c78c24e185a1e89",
+      "after_sha256": "12183e14bb9a8da4e3478b639f6df9b623e89680e35e2f129bdeaa618fd55300",
+      "diff_sha256": "4a2d8c1b21ac0320da3cc71d9de2f344141a6deccea60893e1c52c2ed2f54e38"
+    },
+    {
+      "package": "kaltura-html5-analytics",
+      "before_version": "0.3-1",
+      "after_version": "0.3-1+php83lab1",
+      "php_dependency_substitutions": 0,
+      "soap_exact_revision": null,
+      "before_sha256": "18392010beba14c2c20b7049e4b7c1816fae86548823e41cf9bced3e667e74d1",
+      "after_sha256": "e54393b4c2eec6b1ee0153ce54eeb30944df5f384bcb94874b1cb436cbdbe762",
+      "diff_sha256": "08dcaad9af3d0834a0df8f57a27eb23b1e69cf1afa06091732235ef258b443f2"
+    },
+    {
+      "package": "kaltura-html5-studio",
+      "before_version": "2.2.3-1",
+      "after_version": "2.2.3-1+php83lab1",
+      "php_dependency_substitutions": 0,
+      "soap_exact_revision": null,
+      "before_sha256": "6ff1d561b3301fa97b9fc9ad84b85d615a2ad87b2a64a4dd41fcffd5dcc4de3d",
+      "after_sha256": "5c064059a5c8b6f604de7abb36b2ee01df3c3c7616c8654487c9752905d65a9e",
+      "diff_sha256": "ea5770baac497cae84b69ac2d4cb5fe0119428b2b00ed2ab3c770c528ccd9b21"
+    },
+    {
+      "package": "kaltura-html5lib",
+      "before_version": "2.98-1",
+      "after_version": "2.98-1+php83lab1",
+      "php_dependency_substitutions": 1,
+      "soap_exact_revision": null,
+      "before_sha256": "4ac534128f34f06fba67dc035d3daa62f61f829664ef136f3dd40e3ca6fe46e7",
+      "after_sha256": "de98df3e29e4b7869b66d46cc0a5e5830da9a02699e71afc768c135f0f9b3354",
+      "diff_sha256": "bca9fe0f14009e21c7b1f8f0720603444a1cb6eff4c0917201fe08e397a32dbf"
+    },
+    {
+      "package": "kaltura-elasticsearch",
+      "before_version": "7.17-1",
+      "after_version": "7.17-1+php83lab1",
+      "php_dependency_substitutions": 0,
+      "soap_exact_revision": null,
+      "before_sha256": "f4cb4b83012e39d64d40bda7371d3f383a208b78ba31e23a1f401cd3cedd5dd7",
+      "after_sha256": "eec9c1e11d2c54ad12360175da6064d4dd34aaff4cc4ab73a9533d3a205e53c0",
+      "diff_sha256": "3724d91203380c24c25e266130f5f3dfcc783f42f284544bbeadb3b82efb54c5"
+    },
+    {
+      "package": "kaltura-html5lib3",
+      "before_version": "3.8.1-1",
+      "after_version": "3.8.1-1+php83lab1",
+      "php_dependency_substitutions": 1,
+      "soap_exact_revision": null,
+      "before_sha256": "93edb9337c63f8125ed8e95e1fe58c4488b7cb4df6152189e4bfb63cb292dbfe",
+      "after_sha256": "d754a64f33cf0cdb085c86ebeb82120689f108f00e4269a64d40e2bc67fda80b",
+      "diff_sha256": "11efca00e6ab2a5e691768a58bcc04f87e2f9a382e2f39172b7324537867b00d"
+    },
+    {
+      "package": "kaltura-sphinx",
+      "before_version": "2.2.11-1",
+      "after_version": "2.2.11-1+php83lab1",
+      "php_dependency_substitutions": 0,
+      "soap_exact_revision": null,
+      "before_sha256": "1a5051a3b299a4edd4dd27a0ac9ed121d46014f11b094c6d8d23fd2ef2969130",
+      "after_sha256": "66c84cc5facf52d3ad322e8501e7e59ef838b5c188f04d5fb34f209c046309ab",
+      "diff_sha256": "622c6049a283d9fb2b3e347fdf96e3faf57ba680074f7afa02daf1974f0e09cd"
+    },
+    {
+      "package": "kaltura-kmcng",
+      "before_version": "5.17.0-1",
+      "after_version": "5.17.0-1+php83lab1",
+      "php_dependency_substitutions": 0,
+      "soap_exact_revision": null,
+      "before_sha256": "842926d8ca53253cbbc326b7fd57ab75ac5c7da178ea4ea0846d3939e8babec6",
+      "after_sha256": "37eb6034b8806c58b302a49bb8fe6bef55fa4abd3667cf50594c05be64efb55a",
+      "diff_sha256": "4e401c8d3459e78288506d4c59f216f3b90d45ec9a477cafe5c88d26edc7ef57"
+    },
+    {
+      "package": "kaltura-db",
+      "before_version": "18.20.0-1",
+      "after_version": "18.20.0-1+php83lab1",
+      "php_dependency_substitutions": 0,
+      "soap_exact_revision": null,
+      "before_sha256": "c57981f08a4ce833c86418ca26a2b0acb3b5ef8dbda35f34a208d1a9d1ef968e",
+      "after_sha256": "6e478a5fa0be25d9a50c5ec6c29deaabe6dd1b8bd133c17df29e763f3dd64289",
+      "diff_sha256": "a73c332933ad2d02a826a7235c65195d827ec8217ac32e0e2041b061d7dea09b"
+    }
+  ],
+  "apt_resolution": "NOT_EXECUTED",
+  "native_provider_proof": "PENDING_INSTALLATION",
+  "installed": false
+}

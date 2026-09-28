@@ -1,0 +1,30 @@
+{
+  "status": "SYNTHETIC_NATIVE_BRIDGE_ONLY",
+  "executor": "Codex",
+  "before": {
+    "/home/vagrant/pilot83-bridge-r1/private-argv.php": "f08566c2dfc4b7547711cb9e1f2d0e80478c676ad71e45e69b3289580edd21aa",
+    "/home/vagrant/pilot83-bridge-r1/probe-private-argv-native.py": "304960ed8061d99476c92d934221dc1ecbc2b7f0ec9f8608c1cfa8a9d1d3dc72",
+    "/usr/bin/php8.3": "1c564e6bafa56d03359c3774be6f4c77d0edecabd2075e18556940a56747c8d7",
+    "/etc/php/8.3/cli/php.ini": "b8573764f63e098e77e37cfbb8a41adccc25a0c03cbc323c74f5b73e4a59aebf"
+  },
+  "after": {
+    "/home/vagrant/pilot83-bridge-r1/private-argv.php": "f08566c2dfc4b7547711cb9e1f2d0e80478c676ad71e45e69b3289580edd21aa",
+    "/home/vagrant/pilot83-bridge-r1/probe-private-argv-native.py": "304960ed8061d99476c92d934221dc1ecbc2b7f0ec9f8608c1cfa8a9d1d3dc72",
+    "/usr/bin/php8.3": "1c564e6bafa56d03359c3774be6f4c77d0edecabd2075e18556940a56747c8d7",
+    "/etc/php/8.3/cli/php.ini": "b8573764f63e098e77e37cfbb8a41adccc25a0c03cbc323c74f5b73e4a59aebf"
+  },
+  "commands": [
+    {
+      "exit": 0,
+      "stderr_bytes": 0,
+      "stdout": "No syntax errors detected in /home/vagrant/pilot83-bridge-r1/private-argv.php\n"
+    },
+    {
+      "exit": 0,
+      "stderr_bytes": 0,
+      "stdout": "{\n  \"cases\": [\n    {\n      \"case\": \"valid\",\n      \"exit\": 0,\n      \"stdout_contract\": true,\n      \"stderr_bytes\": 0,\n      \"passed\": true\n    },\n    {\n      \"case\": \"file_mode\",\n      \"exit\": 92,\n      \"stdout_contract\": true,\n      \"stderr_bytes\": 0,\n      \"passed\": true\n    },\n    {\n      \"case\": \"parent_mode\",\n      \"exit\": 92,\n      \"stdout_contract\": true,\n      \"stderr_bytes\": 0,\n      \"passed\": true\n    },\n    {\n      \"case\": \"symlink\",\n      \"exit\": 92,\n      \"stdout_contract\": true,\n      \"stderr_bytes\": 0,\n      \"passed\": true\n    },\n    {\n      \"case\": \"missing_nul\",\n      \"exit\": 92,\n      \"stdout_contract\": true,\n      \"stderr_bytes\": 0,\n      \"passed\": true\n    },\n    {\n      \"case\": \"wrong_basename\",\n      \"exit\": 92,\n      \"stdout_contract\": true,\n      \"stderr_bytes\": 0,\n      \"passed\": true\n    },\n    {\n      \"case\": \"outside_root\",\n      \"exit\": 92,\n      \"stdout_contract\": true,\n      \"stderr_bytes\": 0,\n      \"passed\": true\n    },\n    {\n      \"case\": \"valid_repeat\",\n      \"exit\": 0,\n      \"stdout_contract\": true,\n      \"stderr_bytes\": 0,\n      \"passed\": true\n    }\n  ],\n  \"cleanup_complete\": true,\n  \"application_invoked\": false,\n  \"secret_exported\": false\n}\n"
+    }
+  ],
+  "app_hooks_executed": false,
+  "installed": false
+}

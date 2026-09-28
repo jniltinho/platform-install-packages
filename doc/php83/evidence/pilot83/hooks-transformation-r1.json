@@ -1,0 +1,762 @@
+{
+  "status": "LOCAL_PREPARATION_NOT_INSTALL_ACCEPTANCE",
+  "rows": [
+    {
+      "path": "opt/kaltura/bin/kaltura-functions.rc",
+      "before_sha256": "7dfb684d83787f1c84ccba08b51ee7f4b578feba3ce111717e3fc09cc68f0ab4",
+      "after_sha256": "732501b7d9db4812757f2050bceaf662cda7bfe8213b6ef5349712ace664bc4b",
+      "changed_lines": [
+        {
+          "original_line": 104,
+          "before_sha256": "dd14b954ccc4f113f3d518a8b4a07933cd5f3650cc40fddb47b83acee410b312",
+          "after_sha256": "aa2b7b7ff3b6477f33bab1704d5bbb84c4ec1633ac79e791919b2a05352c7ecc"
+        },
+        {
+          "original_line": 109,
+          "before_sha256": "5824321e1c0ca8b2364a3a23022849e4200949bbc330e5d5ae9b3f0961f5de4c",
+          "after_sha256": "7aac04c7cec8153412a924c45367e5d34b9c8d9a9c99f6858a76414f4f01fc62"
+        },
+        {
+          "original_line": 114,
+          "before_sha256": "27405838a3185e8415cb7ba8f3b610117d36b1b668e711f667be97ad76e2be81",
+          "after_sha256": "ad79a3c485be2ee8fc91c56550fa6fd262da92e8a5d297f4766e4489e472c0a8"
+        },
+        {
+          "original_line": 135,
+          "before_sha256": "3e66c94144d646d381fbe43616e1822d3ddd1e320ecdc59a719233c13d476d21",
+          "after_sha256": "9bf92e3767a4c54753417bfe4a755356357ee901ff0898b2c0a1cc22448eca36"
+        },
+        {
+          "original_line": 137,
+          "before_sha256": "b3af669eea15ab2bcba9115c93e093f7d6a7603038b5e4a272a71d288879b871",
+          "after_sha256": "0eb8660aec8e60143607fe27683669da631350cff6c1df4b78aa3980a5ea01bb"
+        },
+        {
+          "original_line": 141,
+          "before_sha256": "4af0224773a35cb8dc0c06ccf898e7be7dc6e1978d2a3e0a3ad5cc6b047c236e",
+          "after_sha256": "56efa4b7436b918fe71194a85e4f92bf1492c97a70e1eee0b843439f6ca221c2"
+        },
+        {
+          "original_line": 612,
+          "before_sha256": "adf4d03567aa44790103afea02a8f42f103afa59dc29542094fdf4e50553ee80",
+          "after_sha256": "c5879a53c3d2114bbeb295fd337dcefd5cc10213e15b49430d597acaf409e8c2"
+        }
+      ],
+      "status": "PRIVATE_PAYLOAD_HELPER_NOT_EXECUTED",
+      "output": "doc/php83/evidence/pilot83/hooks-prepared-r1/kaltura-postinst/opt/kaltura/bin/kaltura-functions.rc",
+      "syntax_exit": 0
+    },
+    {
+      "package": "kaltura-base",
+      "hook": "postinst",
+      "before_sha256": "54df2fdbd55447c21ba4ea44f5cfce98ee69ff454b892091cf9473b2448ff8c0",
+      "after_sha256": "a000a611cddf62ad2042a9f1a5bd1f83a821e241b15d29b572a019cea818260c",
+      "changed_lines": [
+        {
+          "original_line": 53,
+          "before_sha256": "64afa86f768e0d09719f110da36117546c19a6c6503dc630a5b2758db45fa169",
+          "after_sha256": "d4e9b8e0ecd55f8f389665bc7f2d64e2b0fb7989de4586f2f1058cda75a15720"
+        },
+        {
+          "original_line": 68,
+          "before_sha256": "9871f9d632866aa5c3e6474e59cea5c96ca67a514573a38e296740351f306250",
+          "after_sha256": "d8f48f4d5992c51b4faac1e5e3771256374662ca88a368a01685befc85588fce"
+        },
+        {
+          "original_line": 69,
+          "before_sha256": "a9773c9ecd3b77621d4c942dbeda4160fd84f5f5dd383a17ebac42c9567f698e",
+          "after_sha256": "c49ad287471a5a53f2aa0cd3afa966f9ec450f3cdc4dd1a4e33eb121784b73e6"
+        },
+        {
+          "original_line": 70,
+          "before_sha256": "82a53969f8a9d1ea9711690c9a1134431a845b15bc9dad55c69e1a79d6251fd6",
+          "after_sha256": "1865d7fb63a10d00713ddce4f5302a90b8cfe6bb6809c87b4e77b1afd938971f"
+        },
+        {
+          "original_line": 71,
+          "before_sha256": "06d0557757b390d7f76fbef12e12a7e7f735c979ba4df02e451bc1e0d60fbb6f",
+          "after_sha256": "1146fedf0baed3e8b38d4ec4c19ac724729c45ec7585d76b52b73c49629bb528"
+        },
+        {
+          "original_line": 73,
+          "before_sha256": "90775aee88e8d816881b70d154a80cc004ea6779472c282a7400705463109d02",
+          "after_sha256": "403bf706de7eeb970029bd4b494436dbc96ba1d051c37e72ff7a84220bb51a66"
+        },
+        {
+          "original_line": 83,
+          "before_sha256": "4dec71fcf6616b213ff775beb259f343def367ff3b16fe67f17a5a79e22964e2",
+          "after_sha256": "2f4e93824bb6d3a99c8e8e40d21d38cce21616ebeb16230bf383f6d2435f5e65"
+        },
+        {
+          "original_line": 85,
+          "before_sha256": "3ce5e0b05bf72ee34e15f8d433399642866319eb7698809b7e6cb6b3b99039c6",
+          "after_sha256": "d66df3c36b184c89e818f15010ad0d09138d8e1e22b79070536eab94b1fdb54d"
+        },
+        {
+          "original_line": 86,
+          "before_sha256": "1e5be33d55663cd513ab8938de8bb38e348c56b1acd205af4c245178f42549b6",
+          "after_sha256": "7f464c84baa86c490a3b6409e26842797ae9e6606f091c2c7017e2720924d6c6"
+        },
+        {
+          "original_line": 87,
+          "before_sha256": "81c00f9f68e509339d982d73239ee75b3222be9e28f2b925130d201dfd171ea3",
+          "after_sha256": "84e04c252707be051e953051c64633ebd442999ee28173f7b7635923fc6326e2"
+        },
+        {
+          "original_line": 88,
+          "before_sha256": "941c04ff237a8721cdf9f306f84532f4a579b4bcefdfa7a27a5a57970b968f25",
+          "after_sha256": "2704c91728ee9529e3cc16afda7912f56936ddb15da89ca05dd6aa3bd3febab3"
+        },
+        {
+          "original_line": 293,
+          "before_sha256": "d959b31438d57fe4f55c92f85347fd9a01d916ccaec25ff7974293f7ba42ae19",
+          "after_sha256": "a3494b18e2742d3432dbd66d0acd3b402ade08432b78cf1799dd5182323953ba"
+        },
+        {
+          "original_line": 334,
+          "before_sha256": "a45f124621363a9b79bf71cc236575129dcfb07a0d42198ce4c79c786614495d",
+          "after_sha256": "dc54e03d9a14847b9bc53faf85009a89cd55bb6d0f064920f856a3a4163ebcfb"
+        },
+        {
+          "original_line": 371,
+          "before_sha256": "ab6fe5085cf52a1068fbe946728a5fc3e84a2777b28ccdfd4840f07fda30340e",
+          "after_sha256": "1c8042a3dc0c400e24174a1d1e1f226bb97fa001ef6fafa5aad7bb2bb7c25c5a"
+        },
+        {
+          "original_line": 404,
+          "before_sha256": "eb1bdd1391d3f702c333c8de638ab59cd05a02a43b5ebdd516b6695e2d76f749",
+          "after_sha256": "2c0ca36eaf587b9f1218887fa9fef1da65124f9a51e5b384c5c4186657452384"
+        },
+        {
+          "original_line": 461,
+          "before_sha256": "78c7d92d4d613baa812aab7872f250707fabc483302dfba43438cb605978f4bf",
+          "after_sha256": "b60c6531cfda327e350f07a1791091d3664d573887a0dc7b31dfe22152cef9f1"
+        },
+        {
+          "original_line": 472,
+          "before_sha256": "fed78cd49f7b3f1b17dea68e32c14b067bed28c5983f6d9a0e7f204aaec52d8a",
+          "after_sha256": "249d07080ac6c4897143587bd3f2874ad2434f960203e937c83ec678b29878d6"
+        },
+        {
+          "original_line": 479,
+          "before_sha256": "a74269e626add193e4770fee9e9f4ef3421621f63123034775afed6879f40111",
+          "after_sha256": "e30f475fa7e40d789d33807d86945e1bc1dee7c5b0abdf7987c21a9aeba52571"
+        },
+        {
+          "original_line": 498,
+          "before_sha256": "4aa1972af62187dd9cc789b6e8c680ffbf97af59bc4fcbcb31fd69a0eb25aee3",
+          "after_sha256": "d28ca14acab9ad7f123d5c34814311670291e94a8c952da6e480f386498b2f09"
+        },
+        {
+          "original_line": 508,
+          "before_sha256": "c870c80bc507d0135f9d5718174c762c4a62b86f75dadf591296d2ac60c025c4",
+          "after_sha256": "e23682b236ef1583a62e4ea0266a5be0effdb469f707598efde6afe92d2108ef"
+        }
+      ],
+      "status": "PRIVATE_DERIVATION_NOT_EXECUTED",
+      "limits": [
+        "Only direct commands in exact pinned maintainer hooks; reached payload helper scripts need separate review.",
+        "Pre-existing optional-command redirects/guards remain; no new failure masking introduced.",
+        "Intrinsic child diagnostics and intended credential storage require installation privacy gate."
+      ],
+      "output": "doc/php83/evidence/pilot83/hooks-prepared-r1/kaltura-base/postinst",
+      "syntax_exit": 0
+    },
+    {
+      "package": "kaltura-base",
+      "hook": "postrm",
+      "before_sha256": "434230792adf5e00a679477543f22c0e99f1c0f5d4aa7dae8184b5f6e393cfc7",
+      "after_sha256": "434230792adf5e00a679477543f22c0e99f1c0f5d4aa7dae8184b5f6e393cfc7",
+      "changed_lines": [],
+      "status": "PRIVATE_DERIVATION_NOT_EXECUTED",
+      "limits": [
+        "Only direct commands in exact pinned maintainer hooks; reached payload helper scripts need separate review.",
+        "Pre-existing optional-command redirects/guards remain; no new failure masking introduced.",
+        "Intrinsic child diagnostics and intended credential storage require installation privacy gate."
+      ],
+      "output": "doc/php83/evidence/pilot83/hooks-prepared-r1/kaltura-base/postrm",
+      "syntax_exit": 0
+    },
+    {
+      "package": "kaltura-base",
+      "hook": "preinst",
+      "before_sha256": "fe37d6aba3a813d5b10252beb497cfa97345ae2fc8ae66c0eebfdf713c7dd040",
+      "after_sha256": "fe37d6aba3a813d5b10252beb497cfa97345ae2fc8ae66c0eebfdf713c7dd040",
+      "changed_lines": [],
+      "status": "PRIVATE_DERIVATION_NOT_EXECUTED",
+      "limits": [
+        "Only direct commands in exact pinned maintainer hooks; reached payload helper scripts need separate review.",
+        "Pre-existing optional-command redirects/guards remain; no new failure masking introduced.",
+        "Intrinsic child diagnostics and intended credential storage require installation privacy gate."
+      ],
+      "output": "doc/php83/evidence/pilot83/hooks-prepared-r1/kaltura-base/preinst",
+      "syntax_exit": 0
+    },
+    {
+      "package": "kaltura-base",
+      "hook": "prerm",
+      "before_sha256": "96ff493df9197ac730f3eda720d833e164800f8ecf547848c5f6329ffc50c246",
+      "after_sha256": "96ff493df9197ac730f3eda720d833e164800f8ecf547848c5f6329ffc50c246",
+      "changed_lines": [],
+      "status": "PRIVATE_DERIVATION_NOT_EXECUTED",
+      "limits": [
+        "Only direct commands in exact pinned maintainer hooks; reached payload helper scripts need separate review.",
+        "Pre-existing optional-command redirects/guards remain; no new failure masking introduced.",
+        "Intrinsic child diagnostics and intended credential storage require installation privacy gate."
+      ],
+      "output": "doc/php83/evidence/pilot83/hooks-prepared-r1/kaltura-base/prerm",
+      "syntax_exit": 0
+    },
+    {
+      "package": "kaltura-front",
+      "hook": "postinst",
+      "before_sha256": "3c5f374a0c2d73d308e9cb776277ce896026daed7501fbcd51559827abc3d4ae",
+      "after_sha256": "d38dc8e034f62f036eb94101a4d118fadd6ec4a5c086305e68fbc7b0394dbc9f",
+      "changed_lines": [
+        {
+          "original_line": 62,
+          "before_sha256": "56c4aa6c0f59d8390126d2fb2e6b88fe75a2d718fa4cf066341f611c76a719da",
+          "after_sha256": "8945ea0611d7bd37109a56669f5a3939ef92c42efa71a98873aa41fa8ca850c9"
+        },
+        {
+          "original_line": 64,
+          "before_sha256": "aa102255885fe45a74b4be2a52d56d714921925fc03d285acb99876e7e00b8a3",
+          "after_sha256": "7d0e5ef3bdc10fcba76d1f9bdb892649c805d8ab83adceab599077dd7f4f568c"
+        },
+        {
+          "original_line": 108,
+          "before_sha256": "87fcd8976dd5ac31e690c6429c66a29d6d59bf99c90b7f7fe19b51a2afa13bdb",
+          "after_sha256": "4136c1f9a7e2f307bdcd2dd912114d437dae951383b06e5807b0fccae0869200"
+        },
+        {
+          "original_line": 145,
+          "before_sha256": "56c4aa6c0f59d8390126d2fb2e6b88fe75a2d718fa4cf066341f611c76a719da",
+          "after_sha256": "8945ea0611d7bd37109a56669f5a3939ef92c42efa71a98873aa41fa8ca850c9"
+        },
+        {
+          "original_line": 147,
+          "before_sha256": "f655e962e5ced9773ef329585085e5cab4208e9e0bce71b6e19420ddd128019e",
+          "after_sha256": "8ba4a42962c436ce6ddbc75df44945451b85a0a376ead2b832ae93649acff7fc"
+        },
+        {
+          "original_line": 197,
+          "before_sha256": "70591a21b45652c06243520d38bf058373021c160eca38ba29f0783e8d17bb0a",
+          "after_sha256": "7efce2981797dbfd02c6004af42fd530b2bdd60d29872bf02b114c956a9b74d9"
+        },
+        {
+          "original_line": 260,
+          "before_sha256": "348076cc09228af36a3ceabb44a6fdcda507fd063465047cbdc545ef9a8c730e",
+          "after_sha256": "8809813c43e7241afb5cfeb13bc4dae1950384b8154fa5402c062b9779ce733d"
+        },
+        {
+          "original_line": 270,
+          "before_sha256": "5c1aa366273d7569e1e293ccde5b1ef48c52f0499e668b879e3b76922512b2e1",
+          "after_sha256": "5e9027c7b21fb2e9a3b2397994a8a29b056b833a6a010b03867c53c83e935fdd"
+        },
+        {
+          "original_line": 280,
+          "before_sha256": "bf46ea3d57bd4d08bdd2629dad1418f399c4228cfa536482304d7734c428bdbe",
+          "after_sha256": "b253051f347d50c1cf5206278a8654de5d6dab39c0c1cd1c6c0f7b736d6440e0"
+        },
+        {
+          "original_line": 283,
+          "before_sha256": "0e03dcb7a4233f4aa64a0d2cd0d16844ec7bbbdc47751f35eb975740cb52d5c7",
+          "after_sha256": "bb0f0ade7659dc92afb15942caa0c212125dba89afe5f7f3f92b36497aa9f9cf"
+        },
+        {
+          "original_line": 285,
+          "before_sha256": "afffce1acac22ce0bfbf6e0a5a1334ec3c7705765c9520133ae8c21ede185276",
+          "after_sha256": "92343a3a547ab4c736f9b74ca979a2cf63e7b5a53f186b4ca9c67b1429dd2954"
+        },
+        {
+          "original_line": 291,
+          "before_sha256": "0c3f28f1a147974e412da20b4a58cb6a0e3b7f6f961fba4c42fd13890e196097",
+          "after_sha256": "a1e0e0632d42347f4b68e537b4c4d6077abcdfeef72993a26e79421cac5def0f"
+        },
+        {
+          "original_line": 296,
+          "before_sha256": "9c817c9f53e51b92d5388552c27438b1a17a78d4ae5735488453581b36f9456a",
+          "after_sha256": "2bf08cfcbfc6ee091aac8a5d5b744112d54535cf9170d3ca76801203cb6e4568"
+        }
+      ],
+      "status": "PRIVATE_DERIVATION_NOT_EXECUTED",
+      "limits": [
+        "Only direct commands in exact pinned maintainer hooks; reached payload helper scripts need separate review.",
+        "Pre-existing optional-command redirects/guards remain; no new failure masking introduced.",
+        "Intrinsic child diagnostics and intended credential storage require installation privacy gate."
+      ],
+      "output": "doc/php83/evidence/pilot83/hooks-prepared-r1/kaltura-front/postinst",
+      "syntax_exit": 0
+    },
+    {
+      "package": "kaltura-front",
+      "hook": "postrm",
+      "before_sha256": "434230792adf5e00a679477543f22c0e99f1c0f5d4aa7dae8184b5f6e393cfc7",
+      "after_sha256": "434230792adf5e00a679477543f22c0e99f1c0f5d4aa7dae8184b5f6e393cfc7",
+      "changed_lines": [],
+      "status": "PRIVATE_DERIVATION_NOT_EXECUTED",
+      "limits": [
+        "Only direct commands in exact pinned maintainer hooks; reached payload helper scripts need separate review.",
+        "Pre-existing optional-command redirects/guards remain; no new failure masking introduced.",
+        "Intrinsic child diagnostics and intended credential storage require installation privacy gate."
+      ],
+      "output": "doc/php83/evidence/pilot83/hooks-prepared-r1/kaltura-front/postrm",
+      "syntax_exit": 0
+    },
+    {
+      "package": "kaltura-front",
+      "hook": "prerm",
+      "before_sha256": "537d3dddd4af94b845ebb4f5690daf9f48591a51aa5ca1f43709f1a33275153f",
+      "after_sha256": "537d3dddd4af94b845ebb4f5690daf9f48591a51aa5ca1f43709f1a33275153f",
+      "changed_lines": [],
+      "status": "PRIVATE_DERIVATION_NOT_EXECUTED",
+      "limits": [
+        "Only direct commands in exact pinned maintainer hooks; reached payload helper scripts need separate review.",
+        "Pre-existing optional-command redirects/guards remain; no new failure masking introduced.",
+        "Intrinsic child diagnostics and intended credential storage require installation privacy gate."
+      ],
+      "output": "doc/php83/evidence/pilot83/hooks-prepared-r1/kaltura-front/prerm",
+      "syntax_exit": 0
+    },
+    {
+      "package": "kaltura-batch",
+      "hook": "postinst",
+      "before_sha256": "db4c89d4c92c615f5bc95f393fd642ea144abfc0efcd35b5d84abc0819ae8a1a",
+      "after_sha256": "58951e229d1facada0968eeeabf5fe72de04567c50b4021b02dbf45cdc7b0976",
+      "changed_lines": [
+        {
+          "original_line": 48,
+          "before_sha256": "13df93d2458670e62b1edd056549820fb1d2459ac7b07536a75eb4a82e06f263",
+          "after_sha256": "0eb1336e417de8191189e37263fde5705638e453bbda4de51e9d9f57351291a7"
+        },
+        {
+          "original_line": 55,
+          "before_sha256": "e31c7e31f436c2feee1eae17ae0f25e3c721914c78d6093b7339caea6f64bf0d",
+          "after_sha256": "d923b2edfc2d5add69b18735ac64e2eadca5e43fedce0f44ce836f399fdbec46"
+        },
+        {
+          "original_line": 58,
+          "before_sha256": "ce89b8c4efa426abac9096e406d1d46a82fbaf1074c5a359052884c70db98246",
+          "after_sha256": "26cc1b688c01ba7a3964c2bcdca335eb5773c2ee7c14c6b9ea56357a7a91ad31"
+        },
+        {
+          "original_line": 74,
+          "before_sha256": "30345c062023f5846834b0d17004620cefbb111511786fd4bb2b99cdb0f9a1f5",
+          "after_sha256": "49b1a5723fe3e5fdefbba84b2d14ea577eabf0f3c69d936bd7c970bfb293c6d1"
+        }
+      ],
+      "status": "PRIVATE_DERIVATION_NOT_EXECUTED",
+      "limits": [
+        "Only direct commands in exact pinned maintainer hooks; reached payload helper scripts need separate review.",
+        "Pre-existing optional-command redirects/guards remain; no new failure masking introduced.",
+        "Intrinsic child diagnostics and intended credential storage require installation privacy gate."
+      ],
+      "output": "doc/php83/evidence/pilot83/hooks-prepared-r1/kaltura-batch/postinst",
+      "syntax_exit": 0
+    },
+    {
+      "package": "kaltura-batch",
+      "hook": "postrm",
+      "before_sha256": "93b38c9f1758e07019ab4793e02459694644c8d39a198fff400e221efbd89ed3",
+      "after_sha256": "93b38c9f1758e07019ab4793e02459694644c8d39a198fff400e221efbd89ed3",
+      "changed_lines": [],
+      "status": "PRIVATE_DERIVATION_NOT_EXECUTED",
+      "limits": [
+        "Only direct commands in exact pinned maintainer hooks; reached payload helper scripts need separate review.",
+        "Pre-existing optional-command redirects/guards remain; no new failure masking introduced.",
+        "Intrinsic child diagnostics and intended credential storage require installation privacy gate."
+      ],
+      "output": "doc/php83/evidence/pilot83/hooks-prepared-r1/kaltura-batch/postrm",
+      "syntax_exit": 0
+    },
+    {
+      "package": "kaltura-batch",
+      "hook": "preinst",
+      "before_sha256": "2a959532e3942332a1df2ed0e5638aa68ef75ec20fa39d1f4326e03d4cd6077f",
+      "after_sha256": "2a959532e3942332a1df2ed0e5638aa68ef75ec20fa39d1f4326e03d4cd6077f",
+      "changed_lines": [],
+      "status": "PRIVATE_DERIVATION_NOT_EXECUTED",
+      "limits": [
+        "Only direct commands in exact pinned maintainer hooks; reached payload helper scripts need separate review.",
+        "Pre-existing optional-command redirects/guards remain; no new failure masking introduced.",
+        "Intrinsic child diagnostics and intended credential storage require installation privacy gate."
+      ],
+      "output": "doc/php83/evidence/pilot83/hooks-prepared-r1/kaltura-batch/preinst",
+      "syntax_exit": 0
+    },
+    {
+      "package": "kaltura-batch",
+      "hook": "prerm",
+      "before_sha256": "a3cc6a4f369d128ea7193f00d9c2453e4a9274154e44f7b1a3252bb40a4948b0",
+      "after_sha256": "a3cc6a4f369d128ea7193f00d9c2453e4a9274154e44f7b1a3252bb40a4948b0",
+      "changed_lines": [],
+      "status": "PRIVATE_DERIVATION_NOT_EXECUTED",
+      "limits": [
+        "Only direct commands in exact pinned maintainer hooks; reached payload helper scripts need separate review.",
+        "Pre-existing optional-command redirects/guards remain; no new failure masking introduced.",
+        "Intrinsic child diagnostics and intended credential storage require installation privacy gate."
+      ],
+      "output": "doc/php83/evidence/pilot83/hooks-prepared-r1/kaltura-batch/prerm",
+      "syntax_exit": 0
+    },
+    {
+      "package": "kaltura-nginx",
+      "hook": "postinst",
+      "before_sha256": "46b06bd8f1f5900425a3aee9af4303f0724b34b0b46d9ccda04f021633684c9a",
+      "after_sha256": "46b06bd8f1f5900425a3aee9af4303f0724b34b0b46d9ccda04f021633684c9a",
+      "changed_lines": [],
+      "status": "PRIVATE_DERIVATION_NOT_EXECUTED",
+      "limits": [
+        "Only direct commands in exact pinned maintainer hooks; reached payload helper scripts need separate review.",
+        "Pre-existing optional-command redirects/guards remain; no new failure masking introduced.",
+        "Intrinsic child diagnostics and intended credential storage require installation privacy gate."
+      ],
+      "output": "doc/php83/evidence/pilot83/hooks-prepared-r1/kaltura-nginx/postinst",
+      "syntax_exit": 0
+    },
+    {
+      "package": "kaltura-nginx",
+      "hook": "postrm",
+      "before_sha256": "a2c55e5251f08367c70bd144707045d466b408a9010ec58962c6aab10b09353c",
+      "after_sha256": "a2c55e5251f08367c70bd144707045d466b408a9010ec58962c6aab10b09353c",
+      "changed_lines": [],
+      "status": "PRIVATE_DERIVATION_NOT_EXECUTED",
+      "limits": [
+        "Only direct commands in exact pinned maintainer hooks; reached payload helper scripts need separate review.",
+        "Pre-existing optional-command redirects/guards remain; no new failure masking introduced.",
+        "Intrinsic child diagnostics and intended credential storage require installation privacy gate."
+      ],
+      "output": "doc/php83/evidence/pilot83/hooks-prepared-r1/kaltura-nginx/postrm",
+      "syntax_exit": 0
+    },
+    {
+      "package": "kaltura-nginx",
+      "hook": "preinst",
+      "before_sha256": "9cd3a42c52aa5f777084716658371cacadd996baf00f25d7ff0668d408415840",
+      "after_sha256": "9cd3a42c52aa5f777084716658371cacadd996baf00f25d7ff0668d408415840",
+      "changed_lines": [],
+      "status": "PRIVATE_DERIVATION_NOT_EXECUTED",
+      "limits": [
+        "Only direct commands in exact pinned maintainer hooks; reached payload helper scripts need separate review.",
+        "Pre-existing optional-command redirects/guards remain; no new failure masking introduced.",
+        "Intrinsic child diagnostics and intended credential storage require installation privacy gate."
+      ],
+      "output": "doc/php83/evidence/pilot83/hooks-prepared-r1/kaltura-nginx/preinst",
+      "syntax_exit": 0
+    },
+    {
+      "package": "kaltura-nginx",
+      "hook": "prerm",
+      "before_sha256": "7c14321b7e66331f87923fab9c4d44c1702cc9b947879c1406eec16f87355792",
+      "after_sha256": "7c14321b7e66331f87923fab9c4d44c1702cc9b947879c1406eec16f87355792",
+      "changed_lines": [],
+      "status": "PRIVATE_DERIVATION_NOT_EXECUTED",
+      "limits": [
+        "Only direct commands in exact pinned maintainer hooks; reached payload helper scripts need separate review.",
+        "Pre-existing optional-command redirects/guards remain; no new failure masking introduced.",
+        "Intrinsic child diagnostics and intended credential storage require installation privacy gate."
+      ],
+      "output": "doc/php83/evidence/pilot83/hooks-prepared-r1/kaltura-nginx/prerm",
+      "syntax_exit": 0
+    },
+    {
+      "package": "kaltura-html5lib",
+      "hook": "postinst",
+      "before_sha256": "2d11b8e007677d94399b5e45d9d604efe501fafb56ee3f8d44b33bf162b2ded4",
+      "after_sha256": "4f188a64cc88bc485b1e3c61696471704e6a4a111ca1b2655bf91bf6959adbbb",
+      "changed_lines": [
+        {
+          "original_line": 6,
+          "before_sha256": "2815d72d5579fd1aa94b8530124f02e9f254b23280017f0b84dae552e38ab9ab",
+          "after_sha256": "662a06b762fea996a6cc35110f53901edf28111172bfef1f519fd54c2711b20c"
+        }
+      ],
+      "status": "PRIVATE_DERIVATION_NOT_EXECUTED",
+      "limits": [
+        "Only direct commands in exact pinned maintainer hooks; reached payload helper scripts need separate review.",
+        "Pre-existing optional-command redirects/guards remain; no new failure masking introduced.",
+        "Intrinsic child diagnostics and intended credential storage require installation privacy gate."
+      ],
+      "output": "doc/php83/evidence/pilot83/hooks-prepared-r1/kaltura-html5lib/postinst",
+      "syntax_exit": 0
+    },
+    {
+      "package": "kaltura-elasticsearch",
+      "hook": "postinst",
+      "before_sha256": "586c0cb91ba3dc6adcb8a63bcac2e4ec129757cce16f3afc2db5d4c89c07e9d0",
+      "after_sha256": "586c0cb91ba3dc6adcb8a63bcac2e4ec129757cce16f3afc2db5d4c89c07e9d0",
+      "changed_lines": [],
+      "status": "PRIVATE_DERIVATION_NOT_EXECUTED",
+      "limits": [
+        "Only direct commands in exact pinned maintainer hooks; reached payload helper scripts need separate review.",
+        "Pre-existing optional-command redirects/guards remain; no new failure masking introduced.",
+        "Intrinsic child diagnostics and intended credential storage require installation privacy gate."
+      ],
+      "output": "doc/php83/evidence/pilot83/hooks-prepared-r1/kaltura-elasticsearch/postinst",
+      "syntax_exit": 0
+    },
+    {
+      "package": "kaltura-elasticsearch",
+      "hook": "postrm",
+      "before_sha256": "1c52b16ebedd21cd928ced73f42e7b31ea6d8dbf96a33fe4157f83fb206d277a",
+      "after_sha256": "1c52b16ebedd21cd928ced73f42e7b31ea6d8dbf96a33fe4157f83fb206d277a",
+      "changed_lines": [],
+      "status": "PRIVATE_DERIVATION_NOT_EXECUTED",
+      "limits": [
+        "Only direct commands in exact pinned maintainer hooks; reached payload helper scripts need separate review.",
+        "Pre-existing optional-command redirects/guards remain; no new failure masking introduced.",
+        "Intrinsic child diagnostics and intended credential storage require installation privacy gate."
+      ],
+      "output": "doc/php83/evidence/pilot83/hooks-prepared-r1/kaltura-elasticsearch/postrm",
+      "syntax_exit": 0
+    },
+    {
+      "package": "kaltura-elasticsearch",
+      "hook": "preinst",
+      "before_sha256": "c5d687c827d35271c1698dff8979b46bba6eadcc703d8e69c235ffce4cbcc41e",
+      "after_sha256": "c5d687c827d35271c1698dff8979b46bba6eadcc703d8e69c235ffce4cbcc41e",
+      "changed_lines": [],
+      "status": "PRIVATE_DERIVATION_NOT_EXECUTED",
+      "limits": [
+        "Only direct commands in exact pinned maintainer hooks; reached payload helper scripts need separate review.",
+        "Pre-existing optional-command redirects/guards remain; no new failure masking introduced.",
+        "Intrinsic child diagnostics and intended credential storage require installation privacy gate."
+      ],
+      "output": "doc/php83/evidence/pilot83/hooks-prepared-r1/kaltura-elasticsearch/preinst",
+      "syntax_exit": 0
+    },
+    {
+      "package": "kaltura-elasticsearch",
+      "hook": "prerm",
+      "before_sha256": "2e0e4169995dfd585deb66162690280e579b61360821cca3a4d1b70cf974eff7",
+      "after_sha256": "2e0e4169995dfd585deb66162690280e579b61360821cca3a4d1b70cf974eff7",
+      "changed_lines": [],
+      "status": "PRIVATE_DERIVATION_NOT_EXECUTED",
+      "limits": [
+        "Only direct commands in exact pinned maintainer hooks; reached payload helper scripts need separate review.",
+        "Pre-existing optional-command redirects/guards remain; no new failure masking introduced.",
+        "Intrinsic child diagnostics and intended credential storage require installation privacy gate."
+      ],
+      "output": "doc/php83/evidence/pilot83/hooks-prepared-r1/kaltura-elasticsearch/prerm",
+      "syntax_exit": 0
+    },
+    {
+      "package": "kaltura-sphinx",
+      "hook": "postinst",
+      "before_sha256": "bb77bb0021df5394a208dbd9f247f2b5a709aac7a902b6bd2ecf98f8de01311b",
+      "after_sha256": "bb77bb0021df5394a208dbd9f247f2b5a709aac7a902b6bd2ecf98f8de01311b",
+      "changed_lines": [],
+      "status": "PRIVATE_DERIVATION_NOT_EXECUTED",
+      "limits": [
+        "Only direct commands in exact pinned maintainer hooks; reached payload helper scripts need separate review.",
+        "Pre-existing optional-command redirects/guards remain; no new failure masking introduced.",
+        "Intrinsic child diagnostics and intended credential storage require installation privacy gate."
+      ],
+      "output": "doc/php83/evidence/pilot83/hooks-prepared-r1/kaltura-sphinx/postinst",
+      "syntax_exit": 0
+    },
+    {
+      "package": "kaltura-sphinx",
+      "hook": "postrm",
+      "before_sha256": "1ad0b46ec5fe8d1f231c09c82a7af99b33c720bb2c65b1fd8b49dcb5975b79a1",
+      "after_sha256": "1ad0b46ec5fe8d1f231c09c82a7af99b33c720bb2c65b1fd8b49dcb5975b79a1",
+      "changed_lines": [],
+      "status": "PRIVATE_DERIVATION_NOT_EXECUTED",
+      "limits": [
+        "Only direct commands in exact pinned maintainer hooks; reached payload helper scripts need separate review.",
+        "Pre-existing optional-command redirects/guards remain; no new failure masking introduced.",
+        "Intrinsic child diagnostics and intended credential storage require installation privacy gate."
+      ],
+      "output": "doc/php83/evidence/pilot83/hooks-prepared-r1/kaltura-sphinx/postrm",
+      "syntax_exit": 0
+    },
+    {
+      "package": "kaltura-sphinx",
+      "hook": "preinst",
+      "before_sha256": "412a171a3813d65f6644a67925144d50f546534aa46832f8599b7188c81d08bc",
+      "after_sha256": "412a171a3813d65f6644a67925144d50f546534aa46832f8599b7188c81d08bc",
+      "changed_lines": [],
+      "status": "PRIVATE_DERIVATION_NOT_EXECUTED",
+      "limits": [
+        "Only direct commands in exact pinned maintainer hooks; reached payload helper scripts need separate review.",
+        "Pre-existing optional-command redirects/guards remain; no new failure masking introduced.",
+        "Intrinsic child diagnostics and intended credential storage require installation privacy gate."
+      ],
+      "output": "doc/php83/evidence/pilot83/hooks-prepared-r1/kaltura-sphinx/preinst",
+      "syntax_exit": 0
+    },
+    {
+      "package": "kaltura-sphinx",
+      "hook": "prerm",
+      "before_sha256": "91979bf8ab4eafb9d32602c928a2a82f3bc91c69d6b6893b865448a6884c2f5b",
+      "after_sha256": "91979bf8ab4eafb9d32602c928a2a82f3bc91c69d6b6893b865448a6884c2f5b",
+      "changed_lines": [],
+      "status": "PRIVATE_DERIVATION_NOT_EXECUTED",
+      "limits": [
+        "Only direct commands in exact pinned maintainer hooks; reached payload helper scripts need separate review.",
+        "Pre-existing optional-command redirects/guards remain; no new failure masking introduced.",
+        "Intrinsic child diagnostics and intended credential storage require installation privacy gate."
+      ],
+      "output": "doc/php83/evidence/pilot83/hooks-prepared-r1/kaltura-sphinx/prerm",
+      "syntax_exit": 0
+    },
+    {
+      "package": "kaltura-db",
+      "hook": "postinst",
+      "before_sha256": "ac9527c54e9829536fa41679d5beb7bd7f2daffb7a26fddeb0c9d0c983a8b2a4",
+      "after_sha256": "fbeaa790d1ec65c0d0d7f3a36b75b8865dda8aaa53a485ebc3565e437367eae9",
+      "changed_lines": [
+        {
+          "original_line": 31,
+          "before_sha256": "d1d5ee49da06aedad2b9274ce38268afea30ac166b509d1e844a3bd7b47133a3",
+          "after_sha256": "4c7575640da68ca5cfeec44ae282c83946a101a903cd4ab9a0a71e70d5f10cd6"
+        },
+        {
+          "original_line": 41,
+          "before_sha256": "25d23c9d9f54ecc9db39aa432bd6307ef1da9b3dcb0e7a055e777f5ee301bba2",
+          "after_sha256": "ebd7067462ce8250dddc35d3b9415b2c2713176c0c84048923b4d149c2a38ee0"
+        },
+        {
+          "original_line": 44,
+          "before_sha256": "ff0888a4c2af57982755454049ecc93cf9b7f2c63c36d55cd8087c54b4bb3905",
+          "after_sha256": "bd4110408379f5d8dd09112937b599ce2b420efde87aa4e9a8da78e5278b552b"
+        },
+        {
+          "original_line": 46,
+          "before_sha256": "fac38ac199946de585be46e6a42a55b00253a2341f30514ace7332491e1499f3",
+          "after_sha256": "9279f26d956fcfc4b1d0c9e0f8bfd86f598b91d36c7aa799eb8952a198e0db0c"
+        },
+        {
+          "original_line": 53,
+          "before_sha256": "7a02750d24910a978044b8eb6be5f438fec01d4f2c03caf141e11b7ca9aa74de",
+          "after_sha256": "87657d3b664cad83948dfbc7bce5e26bd4025f416513eb09760060d4ed71bcc9"
+        },
+        {
+          "original_line": 54,
+          "before_sha256": "a85995d6f7a4ff6a6e9952a3a15deb7f5a4112629345c5756729073f303324c0",
+          "after_sha256": "c22818266b244b06c8fa64a7d16a3a9fab0e6eae3307c52346e76b0da581197a"
+        },
+        {
+          "original_line": 58,
+          "before_sha256": "270290f8260f535fb8bc6211c209f898d9cd3667b62936dec76c023a9b3865ec",
+          "after_sha256": "69e03daa7ace34ff544b34138c66c579851dfbd94549b761af982b1d32aaf3a8"
+        },
+        {
+          "original_line": 141,
+          "before_sha256": "1fb904614eebd9f7af68cb3f8a51365884ee2bd60d90fc6fce5e1896bb00373d",
+          "after_sha256": "0c7a4d5cf46c001f7c1a50613c6544a2db969dbc916a612fb80b15e62c00c047"
+        },
+        {
+          "original_line": 146,
+          "before_sha256": "7f84cac3df998ceb20938023f8109b84396c1e7b0e83422ba121df8283efb7ee",
+          "after_sha256": "678b91e3246ec90149009a2f740710b7700f0c72a08bdb7c5c47b39bf92af5b3"
+        },
+        {
+          "original_line": 169,
+          "before_sha256": "737b00ac7cb180b0ae6847dd6b019933f497af940ece4ef67a4e58ee1dec55b0",
+          "after_sha256": "ac689affc57e849b34a088eef039c2959684dce7aa683db22190b639d71c3642"
+        },
+        {
+          "original_line": 187,
+          "before_sha256": "955d9cb4a48234066be9356aa04da0536143ab9365c94c112bd0ea12390cc7c4",
+          "after_sha256": "11021169da2b6174bd8ec93039e71ac66af0aff811280fefc0b5cbdd9d65222f"
+        },
+        {
+          "original_line": 190,
+          "before_sha256": "15c1c8a33579c0f6c699cabca3bfc41ad02512feb3720db7a8f858943bf41446",
+          "after_sha256": "0b2bb7043a6eb1d11fb1a3f5e472ed302a0643bb6c8bcb3769bdffff88eb1a79"
+        },
+        {
+          "original_line": 192,
+          "before_sha256": "9bd481a920b39873aa3905446055edfead0b0d8b77488a1c1ceeda287eb789eb",
+          "after_sha256": "ed1dfc367d2f9746be3e9bd30eee8b2becd2f73cae6d1a24c231b4e85fa04068"
+        },
+        {
+          "original_line": 195,
+          "before_sha256": "4f6fcf3e6421656e651d25dba6118b02e67ceb6f702134ec4dd4644cc52de2a3",
+          "after_sha256": "2ae1c195165ea2ee3af5e53d42a881cb1ef3f78731392d0e7ea3601153f25f69"
+        },
+        {
+          "original_line": 201,
+          "before_sha256": "0f0343f3e21e6309301014ae5898530ac828bd615405f821d93643d769943d41",
+          "after_sha256": "4830386ddc51fb9d6718e12befae0c382b9fab2b984a87854ffedd72bb3eb10f"
+        },
+        {
+          "original_line": 205,
+          "before_sha256": "66be84b14079d173514e0291b313d46c88f9e50eedfd928856d0470917c02e71",
+          "after_sha256": "b0c8d927ee047da652bd8f26992a6a80bff40d9d622a36ceeaf29054a2456525"
+        },
+        {
+          "original_line": 209,
+          "before_sha256": "877ce03e14e8cc24c71440c44d9bb7ec5bb500e4c47d3b5fbda96e97648325c0",
+          "after_sha256": "7555a5326704c59d500217b21d4e92db5d93f7d42588d2b9a053f77678e1ae90"
+        },
+        {
+          "original_line": 212,
+          "before_sha256": "addd68b3e1fdedf842ec52df99554a903f65910aa9a63011903ed942e9f3a768",
+          "after_sha256": "9497757602529509ccd8515d315bcc68d9241216885b0e799796a2f7474ab74e"
+        },
+        {
+          "original_line": 234,
+          "before_sha256": "18d9b83557942a25aaa75168d0303740e758b0ff9206850941eff3c99f68fba0",
+          "after_sha256": "597c78c7370e6cf00bb5904ea4330cfdfdc2676149cd9130e635747d18ae9770"
+        },
+        {
+          "original_line": 236,
+          "before_sha256": "6f1479eb7c2b4228054a54fb4628867a6862134ac267d26119c780c5bb242a40",
+          "after_sha256": "735b24adf6978264f6eef2f0540ee6943ce08c345c9628eda29c1f8ef4fe29b5"
+        },
+        {
+          "original_line": 238,
+          "before_sha256": "247e97839e542825a78f24c0bbc96e87addc687d9a519eb9ddbfb8c9ccbead46",
+          "after_sha256": "2c45b7d60bb73ce8e27cd4b9d2a18f53c4a239001875fc61e4c36245cd53a704"
+        },
+        {
+          "original_line": 245,
+          "before_sha256": "add5e6629a9d8f11962e11a2e03afc553d68208c259c4b2a4a10d1c42fc47291",
+          "after_sha256": "d34cacfc39b54fb344c64c847360900731a4cc20f54b149cacf30865698bbca4"
+        },
+        {
+          "original_line": 249,
+          "before_sha256": "04ee2ca631a0ed6cbac116bf2ca673235b8a368d726ab818997ccc7718a9bcda",
+          "after_sha256": "38e9b51f7f5b26022b8be6d5ac5b9e9fdd59ea294df303d68d6faac5481f651b"
+        },
+        {
+          "original_line": 260,
+          "before_sha256": "749e35c53758cbe1e3bf6e288f79c9f1c5282a8df14b39a2c8de88df84e74fc0",
+          "after_sha256": "7d66bab4d9f8d279143fea8d733489eb87c2f30d4ded7131dcf51bf666a9d7b7"
+        },
+        {
+          "original_line": 263,
+          "before_sha256": "98856bc828d13f3806937e9114b45157bb1ec3dd18112064271a9b1f781ab52c",
+          "after_sha256": "51d8205b33889cea6bc0afac2ffeb6730643f21ab61c3ef65a0df58ca3cda991"
+        }
+      ],
+      "status": "PRIVATE_DERIVATION_NOT_EXECUTED",
+      "limits": [
+        "Only direct commands in exact pinned maintainer hooks; reached payload helper scripts need separate review.",
+        "Pre-existing optional-command redirects/guards remain; no new failure masking introduced.",
+        "Intrinsic child diagnostics and intended credential storage require installation privacy gate."
+      ],
+      "output": "doc/php83/evidence/pilot83/hooks-prepared-r1/kaltura-db/postinst",
+      "syntax_exit": 0
+    },
+    {
+      "package": "kaltura-db",
+      "hook": "postrm",
+      "before_sha256": "434230792adf5e00a679477543f22c0e99f1c0f5d4aa7dae8184b5f6e393cfc7",
+      "after_sha256": "434230792adf5e00a679477543f22c0e99f1c0f5d4aa7dae8184b5f6e393cfc7",
+      "changed_lines": [],
+      "status": "PRIVATE_DERIVATION_NOT_EXECUTED",
+      "limits": [
+        "Only direct commands in exact pinned maintainer hooks; reached payload helper scripts need separate review.",
+        "Pre-existing optional-command redirects/guards remain; no new failure masking introduced.",
+        "Intrinsic child diagnostics and intended credential storage require installation privacy gate."
+      ],
+      "output": "doc/php83/evidence/pilot83/hooks-prepared-r1/kaltura-db/postrm",
+      "syntax_exit": 0
+    }
+  ],
+  "executed_hooks": false,
+  "native_php_bridge_executed": false
+}

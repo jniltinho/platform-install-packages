@@ -1,0 +1,15 @@
+test_added_source_patch (test_compose_payload.PayloadGuards.test_added_source_patch) ... ok
+test_collision (test_compose_payload.PayloadGuards.test_collision) ... ok
+test_count (test_compose_payload.PayloadGuards.test_count) ... ok
+test_fresh_only (test_compose_payload.PayloadGuards.test_fresh_only) ... ok
+test_hash_drift (test_compose_payload.PayloadGuards.test_hash_drift) ... ok
+test_no_change_not_patch (test_compose_payload.PayloadGuards.test_no_change_not_patch) ... ok
+test_no_newline_patch (test_compose_payload.PayloadGuards.test_no_newline_patch) ... ok
+test_paths (test_compose_payload.PayloadGuards.test_paths) ... ok
+test_privacy_five_unique (test_compose_payload.PayloadGuards.test_privacy_five_unique) ... ok
+test_selection_actual (test_compose_payload.PayloadGuards.test_selection_actual) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.004s
+
+OK

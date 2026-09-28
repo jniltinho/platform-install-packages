@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/pilot83/verify-private-debs.py", line 154, in <module>
+    a=argparse.ArgumentParser();a.add_argument('first',type=pathlib.Path);a.add_argument('second',type=pathlib.Path);a.add_argument('--inputs',type=pathlib.Path,required=True);a.add_argument('--inputs-sha256',required=True);a.add_argument('--output',type=pathlib.Path,required=True);x=a.parse_args();print(json.dumps(verify(x.first,x.second,x.inputs,x.inputs_sha256,x.output),indent=2))
+                                                                                                                                                                                                                                                                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/pilot83/verify-private-debs.py", line 147, in verify
+    for f in files:compare_package(before,read_deb(f),deltas[name]['data'],deltas[name]['control'])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/pilot83/verify-private-debs.py", line 73, in compare_package
+    verify_md5(after['data'],after['control'])
+  File "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/pilot83/verify-private-debs.py", line 66, in verify_md5
+    match=re.fullmatch(rb'([0-9a-f]{32})  (.+)',line);require(match is not None,'MD5SUMS_LINE')
+                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/pilot83/verify-private-debs.py", line 6, in require
+    if not ok:raise ValueError(code)
+              ^^^^^^^^^^^^^^^^^^^^^^
+ValueError: MD5SUMS_LINE

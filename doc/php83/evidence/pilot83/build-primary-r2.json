@@ -1,0 +1,1264 @@
+{
+  "status": "PRIVATE_DEBS_BUILT_NOT_VERIFIED_NOT_INSTALLED",
+  "freeze_hashes": {
+    "payload-freeze-r2.json": "da251e4a37165e11e8c224ded99465dc1c2914a300a77317a0026c0168113316",
+    "control-freeze-r1.json": "cab16486bf81c42e6affbbe45b78e98541bc128b7e028eb5c4559abbe438d7ee",
+    "hooks-freeze-r2.json": "243f271e89345b9b7776515128bb9dd82e90967b358031269d506343ca2ff865"
+  },
+  "packages": [
+    {
+      "package": "kaltura-postinst",
+      "input_sha256": "bbb6e455f4736db8102be51c6cd433486dcbeab0bc159ae8641750c08fd8945b",
+      "file": "../platform-install-packages-php83-artifacts/pilot83-private-r2/packages/kaltura-postinst_1.0.34-1+php83lab1_all.deb",
+      "sha256": "c8d860fe88d77f6e6add4b26ece6e99a3fc74d00245f0fb22956e994dbcb5792",
+      "bytes": 51796,
+      "deltas": [
+        {
+          "path": "DEBIAN/control",
+          "reason": "private version/native83 dependency selection",
+          "before_sha256": "fde40d3356445a8582efb4df610b3127fb33167629f79f1bad853ab5518db64f",
+          "after_sha256": "12e36a28984a3353a7d0e0edc516cf9735d4302a226cf31358d0bc5bda61b0f1",
+          "mode": 420,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/bin/kaltura-functions.rc",
+          "reason": "reviewed reached installation helper",
+          "before_sha256": "7dfb684d83787f1c84ccba08b51ee7f4b578feba3ce111717e3fc09cc68f0ab4",
+          "after_sha256": "732501b7d9db4812757f2050bceaf662cda7bfe8213b6ef5349712ace664bc4b",
+          "mode": 420,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/bin/pilot83-private-hook-functions.sh",
+          "reason": "private installer transport",
+          "before_sha256": null,
+          "after_sha256": "6fbc97208186f8d5558c7822f988df03375baac6656db3bb6d3c408e8cfe9dbe",
+          "mode": 420,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/bin/pilot83-private-argv.php",
+          "reason": "private installer transport",
+          "before_sha256": null,
+          "after_sha256": "f08566c2dfc4b7547711cb9e1f2d0e80478c676ad71e45e69b3289580edd21aa",
+          "mode": 420,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "DEBIAN/md5sums",
+          "reason": "regenerated package file checksums",
+          "before_sha256": null,
+          "after_sha256": "0ac318993b8f03e84b2531da6165808c6a5fac685187ba41f4c7a09e2b576b92",
+          "mode": 420,
+          "uid": 0,
+          "gid": 0
+        }
+      ]
+    },
+    {
+      "package": "kaltura-ffmpeg",
+      "input_sha256": "396d2a393400391a3f39747f2f3e802c2e2c7f3d7ef3cf84c58f22d55cfe0dcf",
+      "file": "../platform-install-packages-php83-artifacts/pilot83-private-r2/packages/kaltura-ffmpeg_6.1-1+php83lab1_all.deb",
+      "sha256": "85a0da3f12f79c32da1473acf7f9b85826611e3a4ca8716f98d85ac9ec70bdab",
+      "bytes": 1576,
+      "deltas": [
+        {
+          "path": "DEBIAN/control",
+          "reason": "private version/native83 dependency selection",
+          "before_sha256": "92835662ee660d870d4372502037114960d0bc0257187bf0bb18758fc28cf4a4",
+          "after_sha256": "ec0037eee61b5799d8f095a92afccc32ff3ad2aedbdacc79a747e26535d78eab",
+          "mode": 420,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "DEBIAN/md5sums",
+          "reason": "regenerated package file checksums",
+          "before_sha256": "7c9748fc320e00b821956e423fdf0523b1dccb755065a59388e5fa11b935fbca",
+          "after_sha256": "7c9748fc320e00b821956e423fdf0523b1dccb755065a59388e5fa11b935fbca",
+          "mode": 420,
+          "uid": 0,
+          "gid": 0
+        }
+      ]
+    },
+    {
+      "package": "kaltura-base",
+      "input_sha256": "985aefac3b349b5b5ab5e28a72ba7727343692f4e697f94342b50ea3e74c4cfe",
+      "file": "../platform-install-packages-php83-artifacts/pilot83-private-r2/packages/kaltura-base_18.20.0-1+php83lab1_all.deb",
+      "sha256": "659c0f6781687718d8c2770332a720658a96451f735aeb0f5f1e56e421997eee",
+      "bytes": 78984684,
+      "deltas": [
+        {
+          "path": "DEBIAN/control",
+          "reason": "private version/native83 dependency selection",
+          "before_sha256": "e66d0a00d9247137795ef33b831453c391ac4f57ea0905962edafe4c7f373fcf",
+          "after_sha256": "60fe7807aa27473b3ec81008608225d7f5189749795cb59b3f477bf8bb74e674",
+          "mode": 420,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "DEBIAN/postinst",
+          "reason": "reviewed private hook transport",
+          "before_sha256": "54df2fdbd55447c21ba4ea44f5cfce98ee69ff454b892091cf9473b2448ff8c0",
+          "after_sha256": "c7871e14ff0ddbdcbed858bfe63377bc1be75397515c9e8c06009bec3c23601b",
+          "mode": 493,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/alpha/apps/kaltura/lib/Services_JSON.class.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "6b83716ffb5a10a641293508a58443e3117f24613da4be0c7b038e1cc0851aa9",
+          "after_sha256": "f8611508758756f0a2264cc1a7aa022d8a8af8d80a0abdeba49a9a30e23d1358",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/ZendFramework/library/Zend/Json/Encoder.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "7af0946f20f81f7cbef204f9cdb907d9c52407fa7e4797bd613d12f778baf720",
+          "after_sha256": "e74ee2fae9c48c2d99859ee0821f17293d2586e73a2ff9844ec530b2d6a5bf64",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/ZendFramework/library/Zend/Json/Decoder.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "7336a0a91cdb2da465642e3322d77cae04f788c6b3e937cd2e1cbd4aff0aa996",
+          "after_sha256": "1d3ef5a95568db6dfe2db823766965a4b887f4689b2a182835b9390695360673",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/alpha/apps/kaltura/lib/dateUtils.class.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "023ab7d9f3de70014225615c089c5ee26477a6b974da301232abd719e656a599",
+          "after_sha256": "490aef40d4e5a8c0312f481dc0dcf85577d753963e6dbe35648bc03bb13eadc1",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/api_v3/lib/reflection/KalturaDocCommentParser.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "5941bf6b13c889997f2d7158594f65c4bdd89ae142379864eddc782f8d53970d",
+          "after_sha256": "7b843ea1900763216df77bba2b6b091582c41e716a2989754cadc22e77f29f5e",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/propel/util/Criteria.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "0626bb5b976ae7eedccaf5060675cd7c7ca56b22fc2c9d6c1a51ce485a303543",
+          "after_sha256": "f8f726443dbc3af363f6c08db2d6baa92591b37bb14abd104ac6a5951b5f6d8d",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/alpha/apps/kaltura/lib/myCustomData.class.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "d318d8a9629f90e68bccc6dde92adbff9d369a61d65c911e80eac0527b83d5a2",
+          "after_sha256": "03712d6f301ad2567b3a842fcef84f89c07018f661a85eb43d203d8289c143d5",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/alpha/lib/model/Partner.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "27dfd30c3f0190e29a86489c10f154b8098f8d2b2b4a8928799056ee4c3d6f07",
+          "after_sha256": "9fd78239a94da6268a92f72b335acffffde05a49152798cd611a0153b876e714",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/alpha/lib/model/PermissionPeer.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "95f41a27363ab23d76a2f52259f9a325139da1174fdefd17500479b2c1a2ad16",
+          "after_sha256": "cc7569a58686cbe4c56fa1e6f72663b3bf71147d741427eb4176d8d891255f59",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/infra/log/KalturaLog.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "9b7a7c3dd37616ffd2ac9720ece862641c43bb687a2db4e8fc9cbcb259ff5449",
+          "after_sha256": "43d3f90e3ae050ba657411de0d3ce0e4a77691777c077f20f7b174053a5f5b1e",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/api_v3/lib/reflection/KalturaActionReflector.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "0b00d1466c92138c71e8b3141a26affbd248476c0a138f3b470f0717c49ce607",
+          "after_sha256": "b6b9ea91b1e1902bdf718bdfd5d3573ffd826662d1f25c35d7eb2a7004f15d7d",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/ZendFramework/library/Zend/Config.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "065597c625046207683d14682bffcdbfd0aed862ad456a3dbefcf9b538e97a2f",
+          "after_sha256": "ccdbe8edbc8498fd52a3ac9456fe1085edbd09e77d4f332f7c279b94825e805b",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/alpha/apps/kaltura/lib/db/KalturaStatement.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "a80d6029db03e1880adf240b157489d6f25b47163c394d0b0969300416378d70",
+          "after_sha256": "0435bb8731682ed8a531ab5574d65a4637a69486ec85c88aa48fa01e7aba5dca",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/alpha/apps/kaltura/lib/myCaptchaImage.class.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "8e402b0ccd11d8a62e65e0623463fac5812b1e068d48c2dfa4050618c6f5aa21",
+          "after_sha256": "a13dacebf63e5240cf437c54d0d8bd04897b621a5625a9e06b784b7541b4d973",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/alpha/apps/kaltura/lib/s3/S3.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "aaf68bbaa4067ab58168be51fa450f06decb432cc98eafc5a37c6defce8dd8fe",
+          "after_sha256": "2bc562aaaca70d998c26d2c4ee0c238b4ed32236bfc079a6a4061f8e1a43bf1a",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/alpha/apps/kaltura/lib/storage/urlTokenizers/kAkamaiSecureHDUrlTokenizer.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "ade9029930b0cdca877262ccac5ad7ae37bcaa577a5822c74763c4039540416c",
+          "after_sha256": "f2343a155810f2f1a11790eb10d496eb3510790fcdb05f784f2c02efd4e27f41",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/infra/general/S3.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "2bb3f488e8305b6399cf7ed041e382333216204fbc02187bef02c1e6e4ce3acb",
+          "after_sha256": "223b95984a9db2d91f93d1d3e6aaafd69159ed0b3ea221c0c84810ca18618929",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/IP2Location/IP2Location.inc.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "142e90a7337ab3561c8df0ed2bfa9dd2e33af7e80d5e2af1bc89712c2f139ced",
+          "after_sha256": "d7c0b4db2284abc4e46ba9ad2d0aed5cf18fd20df8615edf6524610aced64d00",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/PHPMailer/extras/htmlfilter.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "ea02afbfef091267eb86dc47afb302900dd312d987767051a6e5697592dc78a8",
+          "after_sha256": "ca6dcde0ce637642af97df27e3e4abcd882f0b7bc8d083136b5240bdf7903e7a",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/ZendFramework/library/Zend/View/Helper/Navigation/Sitemap.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "5220cde25a81eda81b9744080c615ffc5e36017b33a53dc7a909871078af7957",
+          "after_sha256": "0f1f798d01bf50f8772f4f477ccfe41a356cf91368869fda63bf7fb758535317",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/google-api-php-client-1.1.2/src/Google/Utils.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "deaa15a8550814910dd96bd4679459df366cf98c8ea71c60d27fc6f75e6eb433",
+          "after_sha256": "702aef5136606a005e331bb74181a480e7b3226f41f51127acd70e926f765dec",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/google-api-php-client/src/service/Google_Utils.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "525c9b2e69ae8d3b3039c486cc3417a52cb55107c329ce2f34cd1671b4f28fcd",
+          "after_sha256": "27a4c379d02366d618bf84490d0ba2d0bbd1944fe9ea0547f1dd862c7382adb0",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/htmlpurifier/library/HTMLPurifier/ChildDef/Custom.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "e33babccfe0f50fe87c55bd010fe5ed27d9baa18dc62527f027a2bef9d0e0149",
+          "after_sha256": "259d05d70ba1a7e20afee5ab30968d478b42bd0475c21c9ea0a9e44265f582e4",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/htmlpurifier/library/HTMLPurifier/Encoder.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "b1b735e555c6dc070cf7a39ed2fd111b983a1fe1312561b92a63825cae9d34fc",
+          "after_sha256": "657cb46cabdce5c915043ac6e8546467186f44a98c2f5f60b0e5079259ea5d7b",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/htmlpurifier/library/HTMLPurifier/TagTransform/Font.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "c0c2e803fdb13990a69d085b8723e0d1dd3abc1a2433aa536f409e9ab074bd9b",
+          "after_sha256": "d3534502c2d64bfc6cb8473ccaac00f330a8ce14d549fd9910d4723a327cb64a",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/propel/engine/GeneratorConfig.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "1b6b36c3af5f7b2cdf417a4eed35bf843aa44b3c1e86f5e11db0a3faa47599ee",
+          "after_sha256": "c6da06c81d7c24bd99d31e56a4df96f83fc1cff63a306e72cbe494b7670e9059",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/propel/engine/database/transform/XmlToAppData.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "75311115454e3d967137cb77db84216d6c48cf70478f3662530b7383261516b2",
+          "after_sha256": "238e3a7b8afa62e34604277c7d4becc49d5654818d933d15d561ca2af5db6c87",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/propel/validator/MatchValidator.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "b916a75bd40c96c3b19402e9e94a95f9da48fd3d91446e5b412ac78504a07746",
+          "after_sha256": "e91e78eba7f42d4262710b440e17f9bed84a02426527776de6987c62df1858a0",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/propel/validator/NotMatchValidator.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "6ece40c0d22b4f29e64789be2d6f7a77c1b6a2cf9a54942a4210266b4cb4ad24",
+          "after_sha256": "0b7bf422c61da3b15389d5685829584247b6fca64fbaabbeb19155052bf2085c",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/symfony/controller/sfRouting.class.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "52a0fb006d480654a2f233514729b9bd61001efd930b3745d6a25472abf5bbdb",
+          "after_sha256": "26190ee57d75efe0ccdc6d55621639fc5ccb33b5657f2b741599cf2cbcfcf226",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/symfony/helper/UrlHelper.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "ed19a9a3a785e96a05dd263d0c1718d28b8bedacb3a9238d971ebb4070cfacc4",
+          "after_sha256": "68bf9a9ea831f1caaf83d17e393a50e6a403046bce4e483be13a197a6d846ebe",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/symfony/i18n/sfDateFormat.class.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "30c09e9cb2099a41a42beaad255c27abe8da0369231c6622cb13724c1ab52d91",
+          "after_sha256": "0f65583956ce9e075bb37ea0f4bfa97e516c395a3c21be0f24d415692a082d3e",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/symfony/i18n/sfNumberFormat.class.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "859516d015730cb68978a39c70acc062b4dbbd103f3492582355be7b0b8f4997",
+          "after_sha256": "8ba67a4753f5846501740c63582875b66fc743455eac34ce8529a81aa26578f9",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/symfony/i18n/sfNumberFormatInfo.class.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "8734733838790b2d980f2f2a4fa64435c1f24766434329f8aba347540c8df075",
+          "after_sha256": "9eac158d6b2d05b79dedae0b906cf3dca810b094f990f135b0a4f9b5d62db27a",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/symfony/util/Spyc.class.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "6cdd311eeaedd77d69cab14f8730597f935527aa0b9776e91be6b4da1af91a2c",
+          "after_sha256": "d0fced9f083a1961d7a391710f727b60645f0b3e0b76bd53cdc81b62365f5ce3",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/symfony/util/sfFinder.class.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "a318b76683cb32035412bb5e576a31ac21b82c99f5b991e0963b6aa5e74b2e3c",
+          "after_sha256": "8ba0951504ec25d3a4c4fdb384e76a62d4fbec0f334026b6cdc1aab9a21af933",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/symfony/vendor/creole/drivers/pgsql/PgSQLResultSet.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "6b9e5e44a2974919e7af21879f24cd7c3f006c83ad8a72dfa4f150c161dc6aff",
+          "after_sha256": "5ef6c7852273355797604f05b91ec1a8d6ced2e4af2d49a37fdf93866c38fc5a",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/symfony/vendor/creole/util/sql/SQLStatementExtractor.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "b2376ee910ad81054acb486c19175b9734f742a9e01f305669a4df5a4e71fc8e",
+          "after_sha256": "9e7c4e1e0211c172df232f9d4f94ff22944444a74aa20aaabdc6f5fe6d849a8c",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/symfony/vendor/pake/pakeFinder.class.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "9adef4dc3d354b31230852b849cff083812c483fb12c8ec23ff7e4f2ae724fd1",
+          "after_sha256": "f29bb5e68e7d20d3b6807b0d115222e3146ed9e59257aef735c2720fa147505b",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/symfony/vendor/pake/pakeGetopt.class.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "0eccb66f094c62bbb3292cbeda1f3f9667bc873e988a882f0bf645586460a734",
+          "after_sha256": "19d140a6eaa1cd45b3ad45dcff478d43715e285bdf0e5cbecd5a116cb3fbf8ca",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/symfony/vendor/pake/pakeYaml.class.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "4c04f1e193a3feb729b907faaadedf9980aee596740a37b7506b40e644373634",
+          "after_sha256": "362f5e60d975e89b3f21194726803a586f565bd795a2c9a3ee5dfbcc963e1b00",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/symfony/vendor/phing/Phing.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "0a8a42e467fed195d87f08eddd37f47c8502a14eba17b615308215e8230bb950",
+          "after_sha256": "12eacae906f4d1a1eb286cd6e4b7abd425dff2db241668431389e1d99bd2dd19",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/symfony/vendor/phing/lib/Capsule.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "4413e03eea4deab268c4df43654a95f2832e9d65d514c58e4c27b54713f8e479",
+          "after_sha256": "8b3cc412f7aad016ddcb326ee88aaffae0ce3242693a1d111a394e2ac400383d",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/symfony/vendor/phing/system/io/BufferedReader.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "519f605ad05b7f9a531436c70c2106d8373c478353a9bea2828edb1d61a8a6aa",
+          "after_sha256": "9381f82e07b410eae3fc9c11bbf2fba3d502fee91d9f8529e37721a359f01290",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/symfony/vendor/phing/system/io/UnixFileSystem.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "6b2be485a6d663ea518eff34069ed72609082679b2abf38b93830b9f53fdf3ec",
+          "after_sha256": "4f8491e496a0824afa42f3f900e137d1a9272eadfda40523f363ab8e4035fe30",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/symfony/vendor/phing/system/io/Win32FileSystem.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "0053d619bcf928de2028fb7be0aa383fa507d99acecbf429f857ee2f2f69312b",
+          "after_sha256": "2faab654d8562bef738011070f24b4fd00ab61aa51a22f69b055af138eed2a99",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/symfony/vendor/phing/system/util/Properties.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "ff11c5458a0bd3e42431bd503ecbabbb05c3962731739c122c346458fbd27cb7",
+          "after_sha256": "714f7ffc26cb8973210af0849f07799bb4582ba181ddf13d375e2b440c1c4e6d",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/symfony/vendor/phing/tasks/system/CvsPassTask.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "7e639057ee4c4e36627769a8eb4c02cfd43316e412fcc14d2cadf5a058dbcf65",
+          "after_sha256": "e599463f6840a7fb754f18a34e971ef283f688abe7fae28f0534129558721d7c",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/symfony/vendor/phing/tasks/system/PropertyTask.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "d7438f1c032d68c43530e0f56c3180cc8ab2776c0ed7c3dce47701876e42213c",
+          "after_sha256": "2b50acf5092da69b6f82e920ae158b4cbfd3164e6c934327026fc5f4eb708dc0",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/symfony/vendor/phing/types/Path.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "fc4ab9e9d26c05eae839c88e19bbfe14a46369beb3271e1425c4f37b3260231d",
+          "after_sha256": "b481b02f3618accffbae4a85a9d4b706a09bc1cdbcfb3724675b9657b4a8f8f8",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/symfony/vendor/phing/util/FileUtils.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "e142a918fc0e5a794a8340128f69118a98b665c01f4a3c9b52ce70d9427c290a",
+          "after_sha256": "642626dc9711dd2ba394936c1fa566e3ceba3b380fd9cf4c8d0eea64820c4cf8",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/symfony/vendor/phing/util/PathTokenizer.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "c7f35dd598a48d72d16ae4105b15f8eeb101af568625faed43c3f89eb37370a7",
+          "after_sha256": "cdb6868915df709985283fc1f98d9726a21bb95c5847d8d2de4d1ee3685d50f3",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/symfony/vendor/phing/util/StringHelper.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "8b9c26dc7060af8fb30b6101d01e6b0574bfbb6efdc7b34dabdf27dbe6ee574a",
+          "after_sha256": "a598140b5daabf4a81c7fe351d34877032dcb3d005ea0d3a86992efe3b390cab",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/symfony/vendor/propel-generator/classes/propel/engine/builder/DataModelBuilder.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "3d7fb936cdd229bc4e9171017589a83a63ef8ac2f1d1cbafd152afcd97b36e0f",
+          "after_sha256": "4be92fde934721dd9a013006d048d852b38c56d08ee1b1bdf0654fd5dd7ff9e4",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/symfony/vendor/propel-generator/classes/propel/engine/database/transform/XmlToAppData.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "6499d96463d59b2f291ef2dc2817467d0a57623f39234ff119dfc0d6d47fa49c",
+          "after_sha256": "2508ff261f8146c6b6bff27b291967f99cc38d78902772f5da0f5fa7a6d1f6d7",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/symfony/vendor/propel-generator/classes/propel/phing/AbstractPropelDataModelTask.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "e604840d3ba4170112bd5326021236c7e22aa0199ca110b7ff1466bdd222b189",
+          "after_sha256": "788a06debcdffd58fec037c36199d0a220d4b8668e44d3ea10777f8fc603037b",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/alpha/apps/kaltura/lib/baseObjectUtils.class.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "1834b0ce9ab903af000e95c6a1c065a8dfaa64a91cd454a57de3b44824ee9e03",
+          "after_sha256": "cd74355a19c1366f26a8dd31be503e439fd5d39fa2152de947e7f264e7dff218",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/htmlpurifier/library/HTMLPurifier.autoload.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "b845e45b8428bb01d9870cd55a5ad005c4e005329cd5cf418a4642f9b96803fa",
+          "after_sha256": "3ae42813026c862d3a778d44fa027a3845f7c3e637bf352b7c46d4b41bc04414",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/symfony-data/bin/symfony.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "f934f3d5d56a5b5430bf37a6741f2a782ff377f858d0327e4056c6d2dc45234a",
+          "after_sha256": "9c3c561f44e20dee9b51ecfa580884bc895dcc2c71381692a4e2f20f6e0b44b8",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/symfony/util/sfCore.class.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "09f1cdbd38be0e97939bc56ac4ae7895ccf9c7622098afeb46f40adbef6def46",
+          "after_sha256": "19a644c1c1ad033c4e5ddf438fe5165ace3b9886427af2861c5763ad39bbd60d",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/symfony/vendor/pake/pakeApp.class.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "72f538165dd3226b46c35ddac7700c0f3a6046e74f4646b74ca5bd541d59b120",
+          "after_sha256": "d5bdc4612a5c9ae76fe8f594eaefeff1059175f0a36d756a1010612830bf39b8",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/symfony-data/tasks/sfPakeGenerator.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "67682683048afeaef9ed55bd95a5920792b2c6ab3b4ec11c804985ead4b347eb",
+          "after_sha256": "6958f51ba82e9f4922eb8a7437dc1301ffd81032dd168f9c70516dee21f9e6d9",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/alpha/config/kConf.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "d02983c560f6813c3546f2294a324d7a955f669e5b867d56d9a878c397cfa015",
+          "after_sha256": "e83d565b1c88c15812e180efff0f84d978bb46e04391985bfe9f0b481f56f5df",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/infra/general/kSoapClient.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "6fe1abef06f3f365fc1862de0e25ffeaef9da156e731fd7cc17b386623561b7e",
+          "after_sha256": "0091ab9704783d547f80b3035c26b1aa6f88bd973032df4722fcf3c4ce20d4ce",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/infra/general/kXmlEntityLoaderPolicy.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": null,
+          "after_sha256": "00bbe2929d9fffe2f1c86581845f8a11e8089d1b24734018297d2a0cc2104889",
+          "mode": 420,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/aws/Aws/Common/Credentials/Credentials.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "033b5c890519270b14536db4b93ca260d071554b2afc8a6d2b96d0397ca4da90",
+          "after_sha256": "7913bbb5ddd1d57a2935014c4e259ac03e063c97fa90ee4b4ac177e2b52fb5d2",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/aws/Aws/Common/Credentials/NullCredentials.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "d44d7e14527c4c0aad730d03973969890e3741655667999d586596a485107c53",
+          "after_sha256": "294481b0f57b9d1c8a446479babf9899d722d65e7c6553c25b19c6b98b06f741",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/aws/Aws/Common/Credentials/AbstractCredentialsDecorator.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "e7e265a862684685f90d7911bfc0367ceacf23710108b4e3846322cbba896375",
+          "after_sha256": "1a9fd1dbead188bacc82fd3b1348b5023042fb31b61c8735d0f90a2e98195b4d",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/aws/Doctrine/Common/Cache/FileCache.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "4df80a6c6d7e00689202bedd4cc9eaa152174f5026da99de6ae09be4eb91012a",
+          "after_sha256": "766142ffc63cfe53bb7009c68ca6efc20017d026337b28c6f22d1aff93e3a306",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/api_v3/lib/KalturaFrontController.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "5f2eeffe526d4a0ee245b6f10f4e9600e0f7c8bcb4a52eef41e3a66bbd9ab7a1",
+          "after_sha256": "02d35523b968e6b9579831906e1e7b7c48ff7dcbf6cfaf69938e48023762ec08",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/alpha/apps/kaltura/lib/db/KalturaPDO.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "97b756bed876d42da87f6a023b6ecf7af7c2b8454bb382da56ba9c54acae848d",
+          "after_sha256": "2c4e638080c9dfaefaab566125b5138bb8fe188e015753ed33321884a474bd51",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/propel/util/PropelPDO.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "9e4f602f50bc24432107f34a2f3b4a995518fe28c46be9dc8f642dbb9ca74d22",
+          "after_sha256": "b9b6043c290e346e90a36d543fbac7a6366fbe3def5668a9d3711d40593278e1",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/propel/util/PropelConfiguration.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "955aa16a6da6e24d80ab2f87deb79c64f9182c45a7066b9ea12c93d135812980",
+          "after_sha256": "2cb726b768ac9329dc20e1c1295e20cae2dd2877e61785e3d429b4c186827ab6",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/api_v3/lib/exceptions/KalturaAPIException.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "7f8352e8fb01c6913f85ae35b4b7acb36466c5d9a0f6b9d5f6581ea84655abcb",
+          "after_sha256": "3c342574b392197e24fe285dc238239fac1bccb33bb808569e09b038ed9eec6e",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/vendor/propel/util/DebugPDO.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "6178d39fd2c11c2bd2dcc220c4234f72dfb11364c11d381e7f7bfaf55089e021",
+          "after_sha256": "8f800a0146345f05a71950e3785e442d4aee351184309246cb28159a2afe2ea0",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/api_v3/lib/KalturaEntryService.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "9495b584f73df1f4a11812efa964f57f42562159a405693b71e1731d53fe4dd5",
+          "after_sha256": "b48fd2bb6d94157490294d8acb3fd8918c63d7a35c1ae024529658a4f40c895a",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/api_v3/lib/KalturaDispatcher.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "be20609b269f08cf1317a79046f5b43cddc8be4cd14dd01fbc0d928fdd24fce2",
+          "after_sha256": "9ce4b17a9fb1bef95fbbbbc6f08cb396a6cc944b055bac8413d740ce5d73c7b9",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "opt/kaltura/app/infra/log/KalturaSerializableStream.php",
+          "reason": "selected exp14/privacy composition",
+          "before_sha256": "e3d45f152ae749c2555b72bb9215c1a6532ee774be8c4548ecff8440ab658fce",
+          "after_sha256": "8411013a6f2ac78b6d092594d088ba9a5fbe71ada9de00692a369388c40dc04c",
+          "mode": 436,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "DEBIAN/md5sums",
+          "reason": "regenerated package file checksums",
+          "before_sha256": null,
+          "after_sha256": "a20071e6e4c4137bbda089ba70c75ad6878b2ac7f4b1387ee6d4fbfe1437a127",
+          "mode": 420,
+          "uid": 0,
+          "gid": 0
+        }
+      ]
+    },
+    {
+      "package": "kaltura-front",
+      "input_sha256": "605864d8885980ccc1c38ae4db963304013995666c99e8f04e4388fc9d1a9990",
+      "file": "../platform-install-packages-php83-artifacts/pilot83-private-r2/packages/kaltura-front_18.20.0-1+php83lab1_all.deb",
+      "sha256": "7ca3fb7358ce0de1a14281429c800633525ec6a82affde4404595d10c216e9eb",
+      "bytes": 5764,
+      "deltas": [
+        {
+          "path": "DEBIAN/control",
+          "reason": "private version/native83 dependency selection",
+          "before_sha256": "424b98f6a7999f5a150ff6326942b2082e2b1d8626f2015d12c597f22d7386e3",
+          "after_sha256": "cbec14ac8a3d7b70e5c5c914b5d9e9c84f5965a3ae14808698d6309d8d072f9b",
+          "mode": 420,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "DEBIAN/postinst",
+          "reason": "reviewed private hook transport",
+          "before_sha256": "3c5f374a0c2d73d308e9cb776277ce896026daed7501fbcd51559827abc3d4ae",
+          "after_sha256": "e4cf502463e3f4a75c33aa243e70ffc598d9b393bfdf2c6687cdf1dbe1eda65f",
+          "mode": 493,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "DEBIAN/md5sums",
+          "reason": "regenerated package file checksums",
+          "before_sha256": null,
+          "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "mode": 420,
+          "uid": 0,
+          "gid": 0
+        }
+      ]
+    },
+    {
+      "package": "kaltura-html5-studio3",
+      "input_sha256": "75cc09f87c50ec4bcb10d2320411919a7920239868cabd3b1ca345ed087aff43",
+      "file": "../platform-install-packages-php83-artifacts/pilot83-private-r2/packages/kaltura-html5-studio3_3.18.0-1+php83lab1_all.deb",
+      "sha256": "daf7ac51a22c9fe71dbf7ad3dec3887e3568fcc9cf87ce5fd4e8eb263948a951",
+      "bytes": 530556,
+      "deltas": [
+        {
+          "path": "DEBIAN/control",
+          "reason": "private version/native83 dependency selection",
+          "before_sha256": "2ecfac51cbdf54c93641d9c5299e882c16acb936d9bd52a78ffb933597ce594f",
+          "after_sha256": "d648ff8e6baaca7f626d722d3bc2bd640e79581c1a02d51caae3a72ab878b83c",
+          "mode": 420,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "DEBIAN/md5sums",
+          "reason": "regenerated package file checksums",
+          "before_sha256": null,
+          "after_sha256": "97247cf5e067ff26dd976bd590e653d4b600a2a130678759e6e18b1d3d997ef0",
+          "mode": 420,
+          "uid": 0,
+          "gid": 0
+        }
+      ]
+    },
+    {
+      "package": "kaltura-ffmpeg-aux",
+      "input_sha256": "0ca4c03e5325f3a2d6c443059915317760b2006d473c3b9faa70886ae89c3e7a",
+      "file": "../platform-install-packages-php83-artifacts/pilot83-private-r2/packages/kaltura-ffmpeg-aux_6.1-1+php83lab1_all.deb",
+      "sha256": "510d07d441312a55b6427a7fa8c87ac1a29ebdd60e7f685608511f9b866d1636",
+      "bytes": 1508,
+      "deltas": [
+        {
+          "path": "DEBIAN/control",
+          "reason": "private version/native83 dependency selection",
+          "before_sha256": "7f6b096e0e42c30e88e5c662a05e5592119e7c4b462b9e0eadf480a870f832a3",
+          "after_sha256": "c148d44571ec705f46f42759c8f793d6d581f674b1bd339f8412fcbc7c212000",
+          "mode": 420,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "DEBIAN/md5sums",
+          "reason": "regenerated package file checksums",
+          "before_sha256": "a0cb62228a84e6d23daf78e4c06a391038756d8260dd1b9e55f980f733985146",
+          "after_sha256": "a0cb62228a84e6d23daf78e4c06a391038756d8260dd1b9e55f980f733985146",
+          "mode": 420,
+          "uid": 0,
+          "gid": 0
+        }
+      ]
+    },
+    {
+      "package": "kaltura-server",
+      "input_sha256": "e4ac1cdb4c506085965ce92c37aabc235cc7bca79241acc0ccc772e22d6fe214",
+      "file": "../platform-install-packages-php83-artifacts/pilot83-private-r2/packages/kaltura-server_18.20.0-1+php83lab1_all.deb",
+      "sha256": "e53154baff6e5f091a0ee876e558e0469ff38e06f7b4ab5b4207d29573c1b387",
+      "bytes": 1304,
+      "deltas": [
+        {
+          "path": "DEBIAN/control",
+          "reason": "private version/native83 dependency selection",
+          "before_sha256": "b78eee31535ddbbd026ffd8797da7b153d706436b08b90c4b6dcfc47046b100f",
+          "after_sha256": "8238362625f5ff60527c51e9d4a5012699e994776760e6ca0a1d780290894368",
+          "mode": 420,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "DEBIAN/md5sums",
+          "reason": "regenerated package file checksums",
+          "before_sha256": null,
+          "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "mode": 420,
+          "uid": 0,
+          "gid": 0
+        }
+      ]
+    },
+    {
+      "package": "kaltura-batch",
+      "input_sha256": "1cd9b6fdae828dff7932f080c12f5ac34fe159c8d57edf24393ff0faa7b1bd64",
+      "file": "../platform-install-packages-php83-artifacts/pilot83-private-r2/packages/kaltura-batch_18.20.0-1+php83lab1_all.deb",
+      "sha256": "6061128c94eca95a9d7cca722020469278114fe9eef38b701544f8d422b95989",
+      "bytes": 4476,
+      "deltas": [
+        {
+          "path": "DEBIAN/control",
+          "reason": "private version/native83 dependency selection",
+          "before_sha256": "6cf965827afefe7ad17fecc1cd2c5c56c4181b6a172727b4e4a1b6c1bb31573e",
+          "after_sha256": "2be94f0073559f3c6d2284f168dd813a2ffceedfcfd6246069aad73dd271ed86",
+          "mode": 420,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "DEBIAN/postinst",
+          "reason": "reviewed private hook transport",
+          "before_sha256": "db4c89d4c92c615f5bc95f393fd642ea144abfc0efcd35b5d84abc0819ae8a1a",
+          "after_sha256": "eed5ed589be8be67d535410c7654e220f719890a2ace7f64d0b1fb8db224a9f8",
+          "mode": 493,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "DEBIAN/md5sums",
+          "reason": "regenerated package file checksums",
+          "before_sha256": null,
+          "after_sha256": "44b2356625e293429de90eea4f69e858a32d6cd0930f54cb0f5c30fe69435ec3",
+          "mode": 420,
+          "uid": 0,
+          "gid": 0
+        }
+      ]
+    },
+    {
+      "package": "kaltura-nginx",
+      "input_sha256": "79fe482b249abdc949b21acc24f04ab664963845e64ceb3bc373431d2f3303c7",
+      "file": "../platform-install-packages-php83-artifacts/pilot83-private-r2/packages/kaltura-nginx_1.23.0-1+php83lab1_amd64.deb",
+      "sha256": "3e747bcbb025c642bda5d13ca9c467ca8a0f06591069de40c104fba2f2f9deea",
+      "bytes": 929512,
+      "deltas": [
+        {
+          "path": "DEBIAN/control",
+          "reason": "private version/native83 dependency selection",
+          "before_sha256": "9df6cd6561fd042d253ef1a2661ca59aa04d50a5c5ba831c8c78c24e185a1e89",
+          "after_sha256": "12183e14bb9a8da4e3478b639f6df9b623e89680e35e2f129bdeaa618fd55300",
+          "mode": 420,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "DEBIAN/md5sums",
+          "reason": "regenerated package file checksums",
+          "before_sha256": "2cbe509c3b9d8092665cd3a9ce1d97497622987de38cc12d3c404fc03f6068d1",
+          "after_sha256": "8c0f207725c5b49ed8cb18a796fcf35c5696806e189c37634fb9aa950e344228",
+          "mode": 420,
+          "uid": 0,
+          "gid": 0
+        }
+      ]
+    },
+    {
+      "package": "kaltura-html5-analytics",
+      "input_sha256": "271f9713d237143c9089ca186c49cf7fd72cd86498c2e60dcb496cf722e705b0",
+      "file": "../platform-install-packages-php83-artifacts/pilot83-private-r2/packages/kaltura-html5-analytics_0.3-1+php83lab1_all.deb",
+      "sha256": "185ddef63e736d05782213f90d7403629023d8d433071de80f8bd682f5fabf4d",
+      "bytes": 1734192,
+      "deltas": [
+        {
+          "path": "DEBIAN/control",
+          "reason": "private version/native83 dependency selection",
+          "before_sha256": "18392010beba14c2c20b7049e4b7c1816fae86548823e41cf9bced3e667e74d1",
+          "after_sha256": "e54393b4c2eec6b1ee0153ce54eeb30944df5f384bcb94874b1cb436cbdbe762",
+          "mode": 420,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "DEBIAN/md5sums",
+          "reason": "regenerated package file checksums",
+          "before_sha256": null,
+          "after_sha256": "8ddc3fd82854f0430d8e157f57cf4c622692f26e03f253ceafd33b2488e45963",
+          "mode": 420,
+          "uid": 0,
+          "gid": 0
+        }
+      ]
+    },
+    {
+      "package": "kaltura-html5-studio",
+      "input_sha256": "3edadd17e6b18763850715dd11b0b21b77e76b2bf5f851cbfc6fe1eb17160110",
+      "file": "../platform-install-packages-php83-artifacts/pilot83-private-r2/packages/kaltura-html5-studio_2.2.3-1+php83lab1_all.deb",
+      "sha256": "f38b0e11532a0a55d266fb8a2ae2fe6fff5d9bf0be953e0047a05462d18daf71",
+      "bytes": 496812,
+      "deltas": [
+        {
+          "path": "DEBIAN/control",
+          "reason": "private version/native83 dependency selection",
+          "before_sha256": "6ff1d561b3301fa97b9fc9ad84b85d615a2ad87b2a64a4dd41fcffd5dcc4de3d",
+          "after_sha256": "5c064059a5c8b6f604de7abb36b2ee01df3c3c7616c8654487c9752905d65a9e",
+          "mode": 420,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "DEBIAN/md5sums",
+          "reason": "regenerated package file checksums",
+          "before_sha256": null,
+          "after_sha256": "1f1fe3c246d3befed1f6e0ebef7e74e66a6362fd37bf1508c1c6cdc9951caf20",
+          "mode": 420,
+          "uid": 0,
+          "gid": 0
+        }
+      ]
+    },
+    {
+      "package": "kaltura-html5lib",
+      "input_sha256": "742f6a9de6e414e747de40f1e726ce1043c08f7937e3f82ff765ff0ebddfe3d1",
+      "file": "../platform-install-packages-php83-artifacts/pilot83-private-r2/packages/kaltura-html5lib_2.98-1+php83lab1_all.deb",
+      "sha256": "0de1aa169caf463cdcf260bccdc9297b6d356115ad124c037ffb9cb082226c10",
+      "bytes": 90041164,
+      "deltas": [
+        {
+          "path": "DEBIAN/control",
+          "reason": "private version/native83 dependency selection",
+          "before_sha256": "4ac534128f34f06fba67dc035d3daa62f61f829664ef136f3dd40e3ca6fe46e7",
+          "after_sha256": "de98df3e29e4b7869b66d46cc0a5e5830da9a02699e71afc768c135f0f9b3354",
+          "mode": 420,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "DEBIAN/postinst",
+          "reason": "reviewed private hook transport",
+          "before_sha256": "2d11b8e007677d94399b5e45d9d604efe501fafb56ee3f8d44b33bf162b2ded4",
+          "after_sha256": "4f188a64cc88bc485b1e3c61696471704e6a4a111ca1b2655bf91bf6959adbbb",
+          "mode": 493,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "DEBIAN/md5sums",
+          "reason": "regenerated package file checksums",
+          "before_sha256": null,
+          "after_sha256": "130a3bc97a7133d4c98c6df3adba322764d54b7e0b8ea4877732bc41b2f60e07",
+          "mode": 420,
+          "uid": 0,
+          "gid": 0
+        }
+      ]
+    },
+    {
+      "package": "kaltura-elasticsearch",
+      "input_sha256": "2099350d0d5e9db653005d424865437432bfb66f6f7b153dfcdfa251bc3af0df",
+      "file": "../platform-install-packages-php83-artifacts/pilot83-private-r2/packages/kaltura-elasticsearch_7.17-1+php83lab1_all.deb",
+      "sha256": "1a65b5771752e593963d01d39621e5d463c1793eacbe13760d47d69c2aeeca91",
+      "bytes": 427752,
+      "deltas": [
+        {
+          "path": "DEBIAN/control",
+          "reason": "private version/native83 dependency selection",
+          "before_sha256": "f4cb4b83012e39d64d40bda7371d3f383a208b78ba31e23a1f401cd3cedd5dd7",
+          "after_sha256": "eec9c1e11d2c54ad12360175da6064d4dd34aaff4cc4ab73a9533d3a205e53c0",
+          "mode": 420,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "DEBIAN/postinst",
+          "reason": "reviewed private hook transport",
+          "before_sha256": "586c0cb91ba3dc6adcb8a63bcac2e4ec129757cce16f3afc2db5d4c89c07e9d0",
+          "after_sha256": "0a1eddacff396b54a7c2f45466e8b1c80362f66d50d42ab56c52b7847376f40d",
+          "mode": 493,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "DEBIAN/md5sums",
+          "reason": "regenerated package file checksums",
+          "before_sha256": null,
+          "after_sha256": "1f51716ec43d6f7393e071b68af3daa4ce101b976026316294301e6bc65b8e08",
+          "mode": 420,
+          "uid": 0,
+          "gid": 0
+        }
+      ]
+    },
+    {
+      "package": "kaltura-html5lib3",
+      "input_sha256": "cc06bb2e835b5a4e941812b5370aee8a0ba35dc8ea7ef8dcee66c6ba622c42ec",
+      "file": "../platform-install-packages-php83-artifacts/pilot83-private-r2/packages/kaltura-html5lib3_3.8.1-1+php83lab1_all.deb",
+      "sha256": "306989108d7d6fa14f120381669f1ae56697a522cd332bbbd84ebd4662b094cc",
+      "bytes": 2305280,
+      "deltas": [
+        {
+          "path": "DEBIAN/control",
+          "reason": "private version/native83 dependency selection",
+          "before_sha256": "93edb9337c63f8125ed8e95e1fe58c4488b7cb4df6152189e4bfb63cb292dbfe",
+          "after_sha256": "d754a64f33cf0cdb085c86ebeb82120689f108f00e4269a64d40e2bc67fda80b",
+          "mode": 420,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "DEBIAN/md5sums",
+          "reason": "regenerated package file checksums",
+          "before_sha256": null,
+          "after_sha256": "d36897d0ed46127db4dc647150929525f2ca275dcb082be54ae640da4a87afd9",
+          "mode": 420,
+          "uid": 0,
+          "gid": 0
+        }
+      ]
+    },
+    {
+      "package": "kaltura-sphinx",
+      "input_sha256": "b55fbe57c6156f213572aa8140dc36f9631e4b2eb1ab62987e043c9a4b0d10a7",
+      "file": "../platform-install-packages-php83-artifacts/pilot83-private-r2/packages/kaltura-sphinx_2.2.11-1+php83lab1_all.deb",
+      "sha256": "7e7490cbe4ce1bcc6529c61c68c1d09797ba85157c87b37dcf3134a860f98ec3",
+      "bytes": 4596,
+      "deltas": [
+        {
+          "path": "DEBIAN/control",
+          "reason": "private version/native83 dependency selection",
+          "before_sha256": "1a5051a3b299a4edd4dd27a0ac9ed121d46014f11b094c6d8d23fd2ef2969130",
+          "after_sha256": "66c84cc5facf52d3ad322e8501e7e59ef838b5c188f04d5fb34f209c046309ab",
+          "mode": 420,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "DEBIAN/postinst",
+          "reason": "reviewed private hook transport",
+          "before_sha256": "bb77bb0021df5394a208dbd9f247f2b5a709aac7a902b6bd2ecf98f8de01311b",
+          "after_sha256": "fc4fda2d981b0709299ae4e806a3b1831563aa7b2875dd50ed510fb601bf37b9",
+          "mode": 493,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "DEBIAN/md5sums",
+          "reason": "regenerated package file checksums",
+          "before_sha256": "28b2ddd729a93ebfa13e81135e4d9953ae9898cffc8a6297fb569b14b50b68c4",
+          "after_sha256": "1f4ed0a79e0946e0ef5f1de8b200ea308b793ec0859caf9d79856cea9b805534",
+          "mode": 420,
+          "uid": 0,
+          "gid": 0
+        }
+      ]
+    },
+    {
+      "package": "kaltura-kmcng",
+      "input_sha256": "705938b84b0a08ed3a940953854316f38ca3e3e911e3c8487a95b066e2914ddb",
+      "file": "../platform-install-packages-php83-artifacts/pilot83-private-r2/packages/kaltura-kmcng_5.17.0-1+php83lab1_all.deb",
+      "sha256": "e99ab8ebc5ec192dc92e768555f5a22c1998fe0af24103f53c96d84576358bd3",
+      "bytes": 1594680,
+      "deltas": [
+        {
+          "path": "DEBIAN/control",
+          "reason": "private version/native83 dependency selection",
+          "before_sha256": "842926d8ca53253cbbc326b7fd57ab75ac5c7da178ea4ea0846d3939e8babec6",
+          "after_sha256": "37eb6034b8806c58b302a49bb8fe6bef55fa4abd3667cf50594c05be64efb55a",
+          "mode": 420,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "DEBIAN/md5sums",
+          "reason": "regenerated package file checksums",
+          "before_sha256": null,
+          "after_sha256": "45a540bdab616bc3025b5afc3f041f250a186ab80f51f79a2925a893c247fcaf",
+          "mode": 420,
+          "uid": 0,
+          "gid": 0
+        }
+      ]
+    },
+    {
+      "package": "kaltura-db",
+      "input_sha256": "c0624d507b2c5ecd9965c877e85ab511060ecd3e0939564fd031908e1bd1a3e2",
+      "file": "../platform-install-packages-php83-artifacts/pilot83-private-r2/packages/kaltura-db_18.20.0-1+php83lab1_all.deb",
+      "sha256": "6da66d0705e3351f3af6aadce11088363bca1e272451efee838387de260a5cba",
+      "bytes": 5028,
+      "deltas": [
+        {
+          "path": "DEBIAN/control",
+          "reason": "private version/native83 dependency selection",
+          "before_sha256": "c57981f08a4ce833c86418ca26a2b0acb3b5ef8dbda35f34a208d1a9d1ef968e",
+          "after_sha256": "6e478a5fa0be25d9a50c5ec6c29deaabe6dd1b8bd133c17df29e763f3dd64289",
+          "mode": 420,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "DEBIAN/postinst",
+          "reason": "reviewed private hook transport",
+          "before_sha256": "ac9527c54e9829536fa41679d5beb7bd7f2daffb7a26fddeb0c9d0c983a8b2a4",
+          "after_sha256": "ba018a2f00615535f7176c0d705689ae95389c558f8e170755ab85d8323345bf",
+          "mode": 493,
+          "uid": 0,
+          "gid": 0
+        },
+        {
+          "path": "DEBIAN/md5sums",
+          "reason": "regenerated package file checksums",
+          "before_sha256": null,
+          "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "mode": 420,
+          "uid": 0,
+          "gid": 0
+        }
+      ]
+    }
+  ],
+  "installed": false,
+  "hooks_executed": false,
+  "published": false
+}

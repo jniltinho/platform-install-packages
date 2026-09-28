@@ -1,0 +1,24 @@
+test_base_sensitive_sed_and_native_pin (test_private_hooks.Tests.test_base_sensitive_sed_and_native_pin) ... ok
+test_drift (test_private_hooks.Tests.test_drift) ... ok
+test_drop_branches_fail_closed (test_private_hooks.Tests.test_drop_branches_fail_closed) ... ok
+test_helper_syntax (test_private_hooks.Tests.test_helper_syntax) ... ok
+test_mysql_database_argument_preserved (test_private_hooks.Tests.test_mysql_database_argument_preserved) ... ok
+test_mysql_defaults_injection_rejected (test_private_hooks.Tests.test_mysql_defaults_injection_rejected) ... ok
+test_mysql_duplicate_password_rejected (test_private_hooks.Tests.test_mysql_duplicate_password_rejected) ... ok
+test_mysql_failure_preserved_and_cleanup (test_private_hooks.Tests.test_mysql_failure_preserved_and_cleanup) ... ok
+test_mysql_no_secret_argv_private_content (test_private_hooks.Tests.test_mysql_no_secret_argv_private_content) ... ok
+test_mysql_unsafe_password_rejected (test_private_hooks.Tests.test_mysql_unsafe_password_rejected) ... ok
+test_payload_helper_pin_and_message (test_private_hooks.Tests.test_payload_helper_pin_and_message) ... ok
+test_php_bridge_guards_static_not_native (test_private_hooks.Tests.test_php_bridge_guards_static_not_native) ... ok
+test_php_nul_argv_transport_only (test_private_hooks.Tests.test_php_nul_argv_transport_only) ... ok
+test_published_hook_pin (test_private_hooks.Tests.test_published_hook_pin) ... ok
+test_secret_only_sed (test_private_hooks.Tests.test_secret_only_sed) ... ok
+test_sed_private_program_and_failure (test_private_hooks.Tests.test_sed_private_program_and_failure) ... ok
+test_sed_real_byte_semantics (test_private_hooks.Tests.test_sed_real_byte_semantics) ... ok
+test_source_failure_fails_closed (test_private_hooks.Tests.test_source_failure_fails_closed) ... ok
+test_unknown (test_private_hooks.Tests.test_unknown) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.110s
+
+OK

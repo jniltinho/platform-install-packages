@@ -1,0 +1,667 @@
+# if we happen to already have system.ini lets source it
+RC_FILE=/etc/kaltura.d/system.ini
+if [  -r "$RC_FILE" ];then
+	. $RC_FILE
+else
+	BASE_DIR=/opt/kaltura
+fi
+COLORS_RC=`dirname $0`/colors.sh
+if [ -r $COLORS_RC ];then
+	. $COLORS_RC
+fi
+if [ -r /etc/sysconfig/clock ];then
+        . /etc/sysconfig/clock
+fi
+
+function get_tz()
+{
+	if [ -r /etc/sysconfig/clock ];then
+		. /etc/sysconfig/clock
+	fi
+	if [ -n "$ZONE" ];then
+		echo $ZONE
+	else
+	        LOCALTIME_MD5=`md5sum /etc/localtime|awk -F " " '{print $1}'`
+        	TZGUESS=`find /usr/share/zoneinfo -type f | xargs md5sum | grep $LOCALTIME_MD5|tail -1|awk -F " " '{print $2}'|sed 's@/usr/share/zoneinfo/@@g'`
+	        echo $TZGUESS
+	fi
+}
+
+if [ -z "$ZONE" ];then
+	ZONE="`get_tz`"
+fi
+export ZONE
+
+if [ -r $BASE_DIR/app/configurations/consent_msgs ];then
+	. $BASE_DIR/app/configurations/consent_msgs 
+fi
+CONSENT_FILE=/opt/kaltura/bin/contact.rc
+SPHINX_DAEMON=kaltura-sphinx
+BATCH_DAEMON=kaltura-batch
+MEMCACHE_DAEMON=memcached
+
+DISTRO=`lsb_release -i -s`
+if [ "$DISTRO" = "Ubuntu" -o "$DISTRO" = "Debian" ];then
+	APACHE_DAEMON=apache2
+	MYSQL_DAEMON=mysql
+	MONIT_DAEMON=monit
+	# we don't monit sphinx on Debian right now, it causes sphinx to crash for some reason
+	ALL_DAEMONS="$APACHE_DAEMON $BATCH_DAEMON $MONIT_DAEMON $MEMCACHE_DAEMON"
+	INIT_CONFIG_UTIL=sysv-rc-conf
+	PACKAGE_TYPE=deb
+	QUERY_COMMAND="dpkg -l"
+	MAIL_LOG=/var/log/mail.log
+else
+	APACHE_DAEMON=httpd
+	MYSQL_DAEMON=mysqld
+	MONIT_DAEMON=kaltura-monit
+	INIT_CONFIG_UTIL=chkconfig
+	ALL_DAEMONS="$APACHE_DAEMON $SPHINX_DAEMON $BATCH_DAEMON $MONIT_DAEMON $MEMCACHE_DAEMON"
+	PACKAGE_TYPE=rpm
+	QUERY_COMMAND="rpm -q"
+	MAIL_LOG=/var/log/maillog
+fi
+POST_INST_MAIL_SUBJECT='Your new Kaltura server is up! and 6 Quick Tips For Smooth Kaltura Maintenance'
+POST_INST_MAIL_TMPL=$BASE_DIR/app/configurations/post_inst_mail
+
+ANALYTICS_SERVER_URI="https://installytics.kaltura.org/report/add_rec.php"
+NEWSLETTER_URL="https://agentcontribs.kaltura.org/newsletter_subscribe.php"
+NEWSLETTER_MSG="
+To keep up with the bi-weekly Kaltura releases, and stay up to date with 
+the latest news, security and bug updates, and connect with the global
+Kaltura community - sign up for our regular Kaltura Community updates.
+Please enter your email to sign up, or enter NO to pass.
+"
+
+call_base_config()
+{
+
+	if [ -n "$1" -a -r "$1" ];then
+		ANSFILE=$1
+		. $ANSFILE
+	fi
+	if [ ! -r $BASE_DIR/app/base-config.lock ];then
+		`dirname $0`/kaltura-base-config.sh $ANSFILE
+	else
+		echo -e "${CYAN}base-config skipped as /opt/kaltura/app/base-config.lock was found. Remove the lock to reconfigure.${NORMAL}"
+	fi
+
+}
+
+
+check_mysql_settings()
+{
+	DB_USER=$1
+	DB_PASSWD=$2
+	DB_HOST=$3
+	DB_PORT=$4
+	RC=0
+	#OPEN_FILES_LIMIT=`echo "select @@open_files_limit;" | mysql -u$DB_USER -p$DB_PASSWD -h$DB_HOST -P$DB_PORT -N`
+	#if [ "$OPEN_FILES_LIMIT" -lt 20000 ];then
+	#	MSG="$MSG\nplease set the following in my.cnf and restart the daemon:\nopen_files_limit = 20000 in my.cnf"
+	#	RC=1
+	#fi
+	LOWER_CASE_TABLE_NAMES=`echo "select @@lower_case_table_names;" | mysql -u$DB_USER -p$DB_PASSWD -h$DB_HOST -P$DB_PORT -N`
+	if [ "$LOWER_CASE_TABLE_NAMES" -ne 1 ];then
+		MSG="$MSG\nlower_case_table_names=1"
+		RC=1
+	fi
+	INNODB_LOG_FILE_SIZE=`echo "select @@innodb_log_file_size;" | mysql -u$DB_USER -p$DB_PASSWD -h$DB_HOST -P$DB_PORT -N`
+	if [ "$INNODB_LOG_FILE_SIZE" -lt 33554432 ];then
+		echo "innodb_log_file_size => 32M"
+		return 1
+	fi
+	MAX_ALLOWED_PACKET=`echo "select @@max_allowed_packet;" | mysql -u$DB_USER -p$DB_PASSWD -h$DB_HOST -P$DB_PORT -N`
+	if [ "$MAX_ALLOWED_PACKET" -lt 16777216 ];then
+		MSG="$MSG\nmax_allowed_packet = 16M"
+		RC=1
+	fi
+
+	echo -en "${BRIGHT_RED}$MSG${NORMAL}\n"
+	return $RC
+	
+}
+
+check_connectivity()
+{
+	DB_USER=$1
+	DB_PASSWD=$2
+	DB_HOST=$3
+	DB_PORT=$4
+	SPHINX_SERVER=$5
+	SERVICE_URL=$6
+	RC=0
+	MSG="${CYAN}Connectivity test passed:)${NORMAL}"
+	echo "select version();" | mysql -u$DB_USER -p$DB_PASSWD -h$DB_HOST -P$DB_PORT -N > /dev/null 2>&1
+	if [ $? -ne 0 ];then
+		MSG="${BRIGHT_RED}ERROR: Couldn't connect with mysql -u$DB_USER -p$DB_PASSWD -h$DB_HOST -P$DB_PORT.${NORMAL}"
+		RC=1
+	fi
+	
+	echo "show tables;" | mysql -h$SPHINX_SERVER -P9312  > /dev/null 2>&1
+	if [ $? -ne 0 ];then
+		MSG="$MSG\n${BRIGHT_RED}ERROR: Couldn't connect to Sphinx with mysql -h$SPHINX_SERVER -P9312.${NORMAL}"
+		RC=1
+	fi
+	curl -f "$SERVICE_URL/api_v3/index.php?service=system&action=ping" -k  > /dev/null 2>&1
+	if [ $? -ne 0 ];then
+		MSG="$MSG\n${BRIGHT_RED}ERROR: Couldn't make an API request to $SERVICE_URL/api_v3/index.php?service=system&action=ping.${NORMAL}"
+		RC=1
+	fi
+
+	echo -en "$MSG\n"
+	return $RC
+}
+
+# ssl functions
+check_cert_key()
+{
+	CRT_FILE=$1
+	KEY_FILE=$2
+	# check key and crt match
+	CRT_SUM=`openssl x509 -in $CRT_FILE -modulus -noout | openssl md5`
+	KEY_SUM=`openssl rsa -in $KEY_FILE -modulus -noout | openssl md5`
+	if [ "$CRT_SUM" != "$KEY_SUM" ];then
+		echo -e "${BRIGHT_RED}
+
+	MD5 sums between .key and .crt files DO NOT MATCH
+	# openssl rsa -in $KEY_PATH -modulus -noout | openssl md5
+	$KEY_HASH
+	# openssl x509 -in $CERT_PATH -modulus -noout | openssl md5
+	$CRT_HASH
+	${NORMAL}
+	"
+		return 1
+	fi
+
+}
+
+is_self_signed()
+{
+	# check if cert is self signed:
+	CRT_FILE=$1
+	if openssl verify  $CRT_FILE | grep 'self signed certificate' -q ;then
+		echo -en "
+
+	${YELLOW}WARNING: self signed cerificate detected. Will set settings.clientConfig.verifySSL=0 in $APP_DIR/configurations/admin.ini.${NORMAL}
+
+
+	"
+		return 1
+	fi
+}
+
+configure_apache_ssl()
+{
+	KALTURA_SSL_CONFFILE=$1
+	if [ -f /etc/httpd/conf.d/ssl.conf ];then
+		echo "Moving /etc/httpd/conf.d/ssl.conf to /etc/httpd/conf.d/ssl.conf.ks.bak."
+		mv /etc/httpd/conf.d/ssl.conf /etc/httpd/conf.d/ssl.conf.ks.bak
+	fi
+	sed -i "s#@SSL_CERTIFICATE_FILE@#$CRT_FILE#g" $KALTURA_SSL_CONFFILE
+	sed -i "s#@SSL_CERTIFICATE_KEY_FILE@#$KEY_FILE#g" $KALTURA_SSL_CONFFILE
+	ln -fs $KALTURA_SSL_CONFFILE /etc/httpd/conf.d/  
+}
+
+send_post_inst_msg()
+{
+	MAILTO=$1
+	mail -s "$POST_INST_MAIL_SUBJECT" -r "Kaltura Video Platform <kaltura@$KALTURA_VIRTUAL_HOST_NAME>" $MAILTO < $POST_INST_MAIL_TMPL 
+	
+}
+send_install_becon()
+{
+#	if ! check_if_upgrade;then
+#		return 0 
+#	fi
+	trap - ERR
+	#echo $USER_CONSENT
+	if [ -r $CONSENT_FILE ];then
+		. $CONSENT_FILE
+	fi
+	if [ -z "$USER_CONSENT" -o "$USER_CONSENT" = 0 ];then
+		return 0 
+	fi
+	#echo sending becobeep
+	TIMEZONE="`get_tz`"
+	# just to be on the very safe side:
+	if [ -z "$TIMEZONE" ];then
+		TIMEZONE="UNKNOWN"
+	fi
+        ROLE=$1
+        ACTION=$2
+
+	if [ -n $3 ];then
+		ERR_LINE=$3
+	else
+		ERR_LINE="0"
+	fi
+        RC_FILE=/etc/kaltura.d/system.ini
+        if [ -r "$RC_FILE" ];then
+        	. $RC_FILE
+	fi
+	if which dmidecode >/dev/null 2>&1;then
+                UNIQ=`dmidecode -t 4`
+		# if it failed fallback to blkid
+			if [ $? -ne 0 ];then
+			    UNIQ=`blkid`
+			fi
+		# if it failed this way [still returns 0] then fallback
+			if echo $UNIQ |grep -q "No SMBIOS nor DMI entry";then
+				UNIQ=`blkid`
+			fi
+	# if the dmidecode is not installed..
+        elif which blkid >/dev/null 2>&1;then
+                UNIQ=`blkid`
+        fi
+
+        if [ -n "$UNIQ" ];then
+                MACHINE_ID=`echo -n $UNIQ | md5sum|awk -F " " '{print $1}'`
+                EPOCH=`date +%s`
+                INSTALL_ID=`echo $UNIQ : $EPOCH | md5sum|awk -F " " '{print $1}'`
+	# if, despite our efforts we got no uniq ID...
+        else
+                MACHINE_ID="did_not_find_blkid_or_dmidecode"
+                INSTALL_ID="did_not_find_blkid_or_dmidecode"
+        fi
+
+	#set -x
+
+	if  echo $SERVICE_URL | grep -q 'https://' ;then
+		IS_SSL=true
+	else
+		IS_SSL=false
+	fi
+	if [ -n "$GET_UPDATES_NEWSLETTER" ];then
+		SUBSCRIBE4UPDATES=1
+	else
+		SUBSCRIBE4UPDATES=0
+	fi
+
+	# if this is an RHEL based distro then it would have this file.
+	# checking this instead of which rpm because it is possible to install rpm on a Debiab/Ubuntu system
+	if [ "$PACKAGE_TYPE" = rpm ] ;then
+		KALTURA_VERSION=`rpm -qa kaltura-base --queryformat %{version}`
+		KALTURA_REVISION=`rpm -qa kaltura-base --queryformat %{release}`
+	elif [ "$PACKAGE_TYPE" = deb ];then
+		KALTURA_VERSION=`dpkg-query -W -f'${Version}' kaltura-base|awk -F "-" '{print $1}'`
+		KALTURA_REVISION=`dpkg-query -W -f'${Version}' kaltura-base | awk -F "+" '{print $2}'`
+	fi
+	REVISION=`lsb_release -r|awk '{print $NF}'`
+        CODENAME=`lsb_release -i|awk '{print $NF}'`
+        RELEASE="$CODENAME-$REVISION"
+	curl --data "event_type=$ACTION&server_role=$ROLE&user_email=$CONTACT_MAIL&machine_id=$MACHINE_ID&installation_id=$INSTALL_ID&timestamp=`date +%s`&kernel_version=`uname -r`&machine_arch=`uname -m`&linux_flavor=$RELEASE&service_url=$SERVICE_URL&install_err_line=$ERR_LINE&timezone=$TIMEZONE&package_type=$PACKAGE_TYPE&kaltura_version=$KALTURA_VERSION&package_revision=$KALTURA_REVISION&subscribed_for_ce_updates=$SUBSCRIBE4UPDATES" $ANALYTICS_SERVER_URI 
+
+#	set +x
+	trap 'my_trap_handler ${LINENO} ${$?}' ERR
+}
+
+my_trap_handler()
+{
+        MYSELF=`basename "$0"`               # equals to my script name
+        LASTLINE="$1"            # argument 1: last line of error occurence
+        LASTERR="$2"             # argument 2: error code of last command
+	if [ "$PACKAGE_TYPE" = rpm ] ;then
+        	POSTINST_VER=`rpm -q kaltura-postinst`
+	elif [ "$PACKAGE_TYPE" = deb ];then
+		POSTINST_VER=`dpkg-query -W -f'${Version}' kaltura-postinst|awk -F "-" '{print $1}'`
+	fi
+	if [ -d /opt/kaltura/log ];then
+		TAR_PATH=/opt/kaltura/log/log_`date +%d_%m_%y_%H_%M`.tar.gz	
+                echo -en "
+
+${BRIGHT_RED}$MYSELF FAILED with: $LASTERR on line $LASTLINE${NORMAL}
+
+Archving logs to $TAR_PATH...
+"
+
+		mkdir -p /tmp/tmpdir_kaltura
+		cp /opt/kaltura/log/*log /tmp/tmpdir_kaltura
+		cd /tmp/tmpdir_kaltura
+		tar zcf $TAR_PATH *log
+	fi	
+	if [ -r $CONSENT_FILE ];then
+		. $CONSENT_FILE 
+	fi
+	
+       	send_install_becon "${MYSELF}" "install_fail" "${LASTLINE},${POSTINST_VER}"
+        exit 11
+}
+
+validate_mail()
+{
+	regex="^[a-z0-9!#\$%&'*+/=?^_\`{|}~-]+(\.[a-z0-9!#$%&'*+/=?^_\`{|}~-]+)*@([a-z0-9]([a-z0-9-]*[a-z0-9])?\.)+[a-z0-9]([a-z0-9-]*[a-z0-9])?\$"
+	MAIL_ADDR=$1
+	if [[ $MAIL_ADDR =~ $regex ]] ; then
+	    return 0
+	else
+	    return 1
+	fi
+}
+
+get_tracking_consent()
+{
+
+        echo -en "\n${BRIGHT_BLUE}$PRE_CONSENT\n
+[Y|n]:${NORMAL}"
+
+	shopt -s nocasematch
+
+	CONTACT_MAIL="$1"
+	read -e ANS
+	if [ "$ANS" = "no" -o "$ANS" = "n" ];then 
+		echo "USER_CONSENT=0" > $CONSENT_FILE
+	else
+		echo "USER_CONSENT=1" >> $CONSENT_FILE
+		echo "CONTACT_MAIL=$CONTACT_MAIL" >> $CONSENT_FILE
+	fi
+	shopt -u nocasematch
+	. $CONSENT_FILE
+}
+
+get_newsletter_consent()
+{
+	echo -en "${BRIGHT_BLUE}$NEWSLETTER_MSG
+	
+
+[Email\NO]:${NORMAL}"
+
+	if [ -z CONTACT_MAIL ];then
+		CONTACT_MAIL="mailhere"
+	fi
+	read -e CONTACT_MAIL
+	while [ "$CONTACT_MAIL" != "NO" ];do
+		if validate_mail "$CONTACT_MAIL";then
+			echo -e "${BRIGHT_BLUE}Registering for the newsletter... this will take a few seconds.${NORMAL}"
+			curl "$NEWSLETTER_URL?email=$CONTACT_MAIL"
+			echo "GET_UPDATES_NEWSLETTER=$CONTACT_MAIL" >> $CONSENT_FILE
+			export CONTACT_MAIL
+			return 0
+		fi	
+		echo "Please input a valid mail address or 'NO'"
+		read -e CONTACT_MAIL
+	done
+}
+check_if_upgrade()
+{
+	trap - ERR
+	if [ "$PACKAGE_TYPE" = rpm ];then
+		CUR_BASE_VERSION=`rpm -qa kaltura-base --queryformat %{version}-%{release}`
+	elif [ "$PACKAGE_TYPE" = deb ];then
+		CUR_BASE_VERSION=`dpkg-query -W -f'${Version}' kaltura-base|awk -F "-" '{print $1}'`
+	fi
+	LAST_BASE_VERSION=`cat $BASE_DIR/bin/last_base_ver 2> /dev/null`
+	if [ "$CUR_BASE_VERSION" = "$LAST_BASE_VERSION" ];then
+		return 1 
+	fi
+	return 0 
+	trap 'my_trap_handler ${LINENO} ${$?}' ERR
+}
+
+write_last_base_version()
+{
+	if [ "$PACKAGE_TYPE" = rpm ];then
+		CUR_BASE_VERSION=`rpm -qa kaltura-base --queryformat %{version}-%{release}`
+	elif [ "$PACKAGE_TYPE" = deb ];then
+		CUR_BASE_VERSION=`dpkg-query -W -f'${Version}' kaltura-base|awk -F "-" '{print $1}'`
+	fi
+	echo "$CUR_BASE_VERSION" > $BASE_DIR/bin/last_base_ver
+}
+
+check_daemon_init_status()
+{
+#set -x
+        DAEMON=$1
+        if $INIT_CONFIG_UTIL $DAEMON;then
+                return 0
+        fi
+        return 1
+#set +x
+}
+
+check_daemon_status()
+{
+#set -x
+        DAEMON=$1
+        if service $DAEMON status >/dev/null;then
+                return 0
+        fi
+#set +x
+        return 1
+}
+
+check_monit()
+{
+        DAEMON=$1
+        service $DAEMON stop >/dev/null
+	for i in `seq 1 120`;do
+        	if service $DAEMON status >/dev/null;then
+                	return 0
+        	fi
+	echo -e "${CYAN}Napping $i seconds to allow the daemon $DAEMON to finish its init after monit restarted it..${NORMAL}"
+	sleep 1
+	done
+        return 1
+} 
+
+check_space()
+{
+	# newer versions of df no longer support the --direct opt and instead have --output=avail
+	# so try the first and if SPACE is not populated, try the other. God help us all..
+        SPACE=`df -k --direct $1 2>/dev/null |sed '1,1d' |awk -F " " '{print $4}'`
+        if [ -z "$SPACE" ];then
+                SPACE=`df --output=avail $1 | awk 'NR == 2 { print $1  }'`
+        fi
+        if [ $SPACE -lt 700000 ];then
+                echo "$SPACE"
+                return 1
+        else
+                echo "$SPACE"
+                return 0
+        fi
+}
+
+
+check_start_page()
+{
+        # requesting the service URL should get a HTTP 301 to start page
+        GOOD_STRING="Kaltura Platform Start Page - Getting Started"
+        START_PAGE=`curl -ks "$SERVICE_URL"  | grep 'The document has moved '|sed 's@.*a href="\(.*\)".*@\1@g'`
+        curl -ks $START_PAGE | grep "$GOOD_STRING" -q
+        if [ $? -eq 0 ];then
+                echo "Successfully found \"$GOOD_STRING\" on page $START_PAGE"
+                return 0
+        else
+                echo "Did not find \"$GOOD_STRING\" on page $START_PAGE :("
+                return 1
+        fi      
+}
+
+check_testme_page()
+{
+	TESTME_PAGE=`curl -ks "$SERVICE_URL/api_v3/testme"  | grep 'The document has moved '|sed 's@.*a href="\(.*\)".*@\1@g'`
+	GOOD_STRING='Kaltura - Test Me Console'
+	curl -ks $TESTME_PAGE | grep "$GOOD_STRING" -q
+	if [ $? -eq 0 ];then
+		echo "Successfully found '$GOOD_STRING' on page $TESTME_PAGE"
+		return 0
+	else
+		echo "Did not find '$GOOD_STRING' on page $TESTME_PAGE :("
+		return 1
+	fi	
+} 
+check_kmc_index_page()
+{
+	GOOD_STRING='Kaltura - Open Source Video Platform'
+	curl -ks -L "$SERVICE_URL/kmc"  | grep -q "$GOOD_STRING"
+	if [ $? -eq 0 ];then
+		echo "Successfully found '$GOOD_STRING'"
+		return 0
+	else
+		echo "Did not find '$GOOD_STRING' :("
+		return 1
+	fi
+}
+
+check_kmcng_index_page()
+{
+	GOOD_STRING='Kaltura Management Console'
+	curl -ks -L "$SERVICE_URL/kmcng"  | grep -q "$GOOD_STRING"
+	if [ $? -eq 0 ];then
+		echo "Successfully found '$GOOD_STRING'"
+		return 0
+	else
+		echo "Did not find '$GOOD_STRING' :("
+		return 1
+	fi
+}
+check_studio_index_page()
+{
+	GOOD_STRING='Universal Studio'
+	HTML5_STUDIO_DIR=`ls -ld $BASE_DIR/apps/studio/v* 2>/dev/null|awk -F " " '{print $NF}' |tail -1`
+	STUDIO_VER=`basename $HTML5_STUDIO_DIR`
+	if ! grep -q "^studio_version\s*=\s*$STUDIO_VER" $APP_DIR/configurations/appVersions.ini;then
+        	if ! grep -q "^studio_version\s*=\s*$STUDIO_VER" $APP_DIR/configurations/base.ini;then
+                	echo "Wrong value for studio_version in $APP_DIR/configurations/base.ini" 
+                	return 1
+        	fi
+        fi
+
+	STUDIO_URL="$SERVICE_URL/apps/studio/$STUDIO_VER/index.html"
+
+	curl -ks $STUDIO_URL  | grep -q "$GOOD_STRING"
+	if [ $? -eq 0 ];then
+		echo "Successfully found '$GOOD_STRING'"
+		return 0
+	else
+		echo "Did not find '$GOOD_STRING' :("
+		return 1
+	fi
+}
+
+check_clipapp_index_page()
+{
+	# this looks like a weird 'GOOD' string but this what it outputs when requesting it with no params
+	GOOD_STRING='Invalid partner id'
+	if [ "$PACKAGE_TYPE" = rpm ];then
+		CLIPAPP_VERSION=`rpm -qa kaltura-clipapp --queryformat %{version}`
+	elif [ "$PACKAGE_TYPE" = deb ];then
+		CLIPAPP_VERSION=`dpkg-query -W -f'${Version}' kaltura-clipapp|awk -F "-" '{print $1}'`
+	fi
+	curl -ks "$SERVICE_URL/apps/clipapp/v$CLIPAPP_VERSION/index.php"  | grep -q "$GOOD_STRING"
+	if [ $? -eq 0 ];then
+		echo "Successfully found '$GOOD_STRING'"
+		return 0
+	else
+		echo "Did not find '$GOOD_STRING' :("
+		return 1
+	fi
+}
+check_admin_console_index_page()
+{
+	AC_PAGE=`curl -ks "$SERVICE_URL/admin_console"  | grep 'The document has moved '|sed 's@.*a href="\(.*\)".*@\1@g'`
+	GOOD_STRING='Kaltura Admin Console'
+	curl -ks $AC_PAGE | grep "$GOOD_STRING" -q
+	if [ $? -eq 0 ];then
+		echo "Successfully found '$GOOD_STRING' on page $AC_PAGE"
+		return 0
+	else
+		echo "Did not find '$GOOD_STRING' on page $AC_PAGE :("
+		return 1
+	fi	
+}
+
+test_red5_conn()
+{
+	$BASE_DIR/bin/fms_push_file_monitor.sh $BASE_DIR/web/content/templates/entry/data/kmc_logo.flv rtmp://$RED5_HOST/oflaDemo/
+	RC=$?
+	return $RC 
+
+}
+
+report()
+{
+	TNAME=$1
+	RC=$2
+	MESSAGE=$3
+	TIME=$4
+	if [ "$RC" -eq 0 ];then
+		COLOR=${GREEN}
+		STAT="PASSED"
+	else
+		COLOR=${BRIGHT_RED}
+		STAT="FAILED"
+	fi
+
+
+	echo -e "[${CYAN}$TNAME${NORMAL}] [${COLOR}$STAT, RC: $RC${NORMAL}] - [$TIME]"
+#	echo -e "$TNAME,,`hostname`,$MESSAGE,$RC, $TIME" >> /tmp/`hostname`-reportme.`date +%d_%m_%Y`.csv
+	if [ "$PACKAGE_TYPE" = rpm ];then
+		CUR_BASE_VERSION=`rpm -qa kaltura-base --queryformat %{version}`
+	elif [ "$PACKAGE_TYPE" = deb ];then
+		CUR_BASE_VERSION=`dpkg-query -W -f'${Version}' kaltura-base|awk -F "-" '{print $1}'`
+	fi
+	echo "INSERT INTO csi_log VALUES(NULL,'$TNAME','`hostname`',`date +%s`,\"$MESSAGE\",$RC,$TIME,'$CUR_BASE_VERSION');" >> /tmp/`hostname`-reportme.`date +%d_%m_%Y`.sql
+}
+
+check_missing_web_files()
+{
+	MISSING_LIST="/tmp/missing_web_files_`date +%d_%m_%Y`"
+	TMP_MISSING_LIST="/tmp/missing_web_files_tmp_`date +%d_%m_%Y`"
+	# query to get all ui_confs
+	for i in `echo "select conf_file_path from ui_conf" | mysql -N -h $DB1_HOST -u $DB1_USER -P$DB1_PORT -p$DB1_PASS kaltura`;do 
+		if [ -r "$WEB_DIR/$i" ];then 
+			# run line by line over the XML to find the paths
+			while read L;do 
+				PATH_TO_SKIN=`echo $L|grep "/content" | sed 's#.*\(/content.*.htm\|/content.*.png\|/content.*.swf\|/content.*.xml\|/content.*.pdf\|/content.*.zip\).*#\1#g'` 
+				if [ -n "$PATH_TO_SKIN" ];then
+					if [ ! -r "$WEB_DIR$PATH_TO_SKIN" ];then 
+						echo "$WEB_DIR/$PATH_TO_SKIN is missing" >> $TMP_MISSING_LIST;
+						MATCH=1
+					fi
+				fi;
+			done < $WEB_DIR/$i;
+		else 
+			echo "UI conf $WEB_DIR/$i is missing" >> $TMP_MISSING_LIST;
+			MATCH=1
+		fi;
+	done
+	if [ $MATCH = 1 ];then
+		awk -F ' ' '{print $1}' $TMP_MISSING_LIST|sort -u > $MISSING_LIST
+		echo "See $MISSING_LIST for a list of misses"
+		return 1
+	else
+		return 0
+	fi
+}
+
+check_kmc_config_versions()
+{
+        COMP_NAME=$1
+        KMC_VER=$2
+#	set -x
+	if [ "$PACKAGE_TYPE" = rpm ];then
+        	COMP_VER=`rpm -q $COMP_NAME --queryformat %{version}`
+	elif [ "$PACKAGE_TYPE" = deb ];then
+		COMP_VER=`dpkg-query -W -f'${Version}' $COMP_NAME|awk -F "-" '{print $1}'`
+	fi
+                grep -q $COMP_VER /opt/kaltura/web/flash/kmc/$KMC_VER/config.ini -m1
+                RC=$?
+		if [ $RC -eq 0 ];then
+			echo "$COMP_NAME $COMP_VER found in /opt/kaltura/web/flash/kmc/$KMC_VER/config.ini"
+			return $RC
+		else
+			echo "$COMP_NAME $COMP_VER NOT found in /opt/kaltura/web/flash/kmc/$KMC_VER/config.ini"
+			return $RC
+		fi
+}
+
+gen_partner_secret()
+{
+	PATTERN="A-Za-z0-9_~@#$%^*()_+-="
+	SECRET=`< /dev/urandom tr -dc "A-Za-z0-9_~@#$%^*()_+-=" | head -c100`
+	HASHED_SECRET=`echo $SECRET|md5sum`
+	SECRET=`echo $HASHED_SECRET|awk -F " " '{print $1}'`
+	echo $SECRET
+}
+

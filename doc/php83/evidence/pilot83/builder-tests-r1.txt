@@ -1,0 +1,12 @@
+test_added_collision (test_build_private_debs.BuildGuards.test_added_collision) ... ok
+test_missing_replace (test_build_private_debs.BuildGuards.test_missing_replace) ... ok
+test_outside (test_build_private_debs.BuildGuards.test_outside) ... ok
+test_requires_fakeroot (test_build_private_debs.BuildGuards.test_requires_fakeroot) ... ok
+test_symlink_parent (test_build_private_debs.BuildGuards.test_symlink_parent) ... ok
+test_symlink_target (test_build_private_debs.BuildGuards.test_symlink_target) ... ok
+test_write_preserves_metadata (test_build_private_debs.BuildGuards.test_write_preserves_metadata) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.001s
+
+OK

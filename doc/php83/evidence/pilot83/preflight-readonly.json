@@ -1,0 +1,37 @@
+{
+  "exit": 0,
+  "stderr_bytes": 0,
+  "result": {
+    "hostname": "kaltura-php83-lab",
+    "ips": [
+      "10.0.2.15",
+      "127.0.0.1",
+      "192.168.56.83"
+    ],
+    "os": "PRETTY_NAME=\"Ubuntu 24.04.3 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"24.04\"\nVERSION=\"24.04.3 LTS (Noble Numbat)\"\nVERSION_CODENAME=noble\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=noble\nLOGO=ubuntu-logo\n",
+    "paths": {
+      "/opt/kaltura/app": false,
+      "/opt/kaltura/bin": false,
+      "/opt/kaltura/web": false,
+      "/var/lib/mysql": false,
+      "/etc/apache2/mods-enabled/php8.3.load": true,
+      "/etc/php/8.3/mods-available/soap.ini": false
+    },
+    "packages": {
+      "exit": 1,
+      "stdout": "libapache2-mod-php8.3 8.3.6-0ubuntu0.24.04.11 installed\nmemcached  not-installed\nphp8.3-apcu 5.1.22+4.0.11-2ubuntu1 installed\nphp8.3-calendar  not-installed\nphp8.3-cli 8.3.6-0ubuntu0.24.04.11 installed\nphp8.3-common 8.3.6-0ubuntu0.24.04.11 installed\nphp8.3-ctype  not-installed\nphp8.3-curl 8.3.6-0ubuntu0.24.04.11 installed\nphp8.3-dom  not-installed\nphp8.3-exif  not-installed\nphp8.3-ffi  not-installed\nphp8.3-fileinfo  not-installed\nphp8.3-ftp  not-installed\nphp8.3-gd 8.3.6-0ubuntu0.24.04.11 installed\nphp8.3-gettext  not-installed\nphp8.3-gmp 8.3.6-0ubuntu0.24.04.11 installed\nphp8.3-iconv  not-installed\nphp8.3-intl 8.3.6-0ubuntu0.24.04.11 installed\nphp8.3-json  not-installed\nphp8.3-ldap 8.3.6-0ubuntu0.24.04.11 installed\nphp8.3-mbstring 8.3.6-0ubuntu0.24.04.11 installed\nphp8.3-memcache 8.0+4.0.5.2+3.0.9~20170802.e702b5f9+-8ubuntu1 installed\nphp8.3-mysql 8.3.6-0ubuntu0.24.04.11 installed\nphp8.3-mysqli  not-installed\nphp8.3-mysqlnd  not-installed\nphp8.3-opcache 8.3.6-0ubuntu0.24.04.11 installed\nphp8.3-pdo  not-installed\nphp8.3-pdo-mysql  not-installed\nphp8.3-phar  not-installed\nphp8.3-posix  not-installed\nphp8.3-readline 8.3.6-0ubuntu0.24.04.11 installed\nphp8.3-shmop  not-installed\nphp8.3-simplexml  not-installed\nphp8.3-sockets  not-installed\nphp8.3-ssh2 1.3.1+0.13-7ubuntu3 installed\nphp8.3-sysvmsg  not-installed\nphp8.3-sysvsem  not-installed\nphp8.3-sysvshm  not-installed\nphp8.3-tokenizer  not-installed\nphp8.3-xml 8.3.6-0ubuntu0.24.04.11 installed\nphp8.3-xmlreader  not-installed\nphp8.3-xmlwriter  not-installed\nphp8.3-xsl  not-installed\nphp8.3-zip 8.3.6-0ubuntu0.24.04.11 installed\n",
+      "stderr_bytes": 290
+    },
+    "php": {
+      "exit": 0,
+      "stdout": "[\"8.3.6\",\"cli\",\"\\/etc\\/php\\/8.3\\/cli\\/php.ini\",[\"Core\",\"date\",\"libxml\",\"openssl\",\"pcre\",\"zlib\",\"filter\",\"hash\",\"json\",\"pcntl\",\"random\",\"Reflection\",\"SPL\",\"session\",\"standard\",\"sodium\",\"mysqlnd\",\"PDO\",\"xml\",\"apcu\",\"calendar\",\"ctype\",\"curl\",\"dom\",\"mbstring\",\"FFI\",\"fileinfo\",\"ftp\",\"gd\",\"gettext\",\"gmp\",\"iconv\",\"intl\",\"ldap\",\"exif\",\"memcache\",\"mysqli\",\"pdo_mysql\",\"Phar\",\"posix\",\"readline\",\"shmop\",\"SimpleXML\",\"sockets\",\"ssh2\",\"sysvmsg\",\"sysvsem\",\"sysvshm\",\"tokenizer\",\"xmlreader\",\"xmlwriter\",\"xsl\",\"zip\",\"Zend OPcache\"]]",
+      "stderr_bytes": 0
+    },
+    "services": {
+      "exit": 0,
+      "stdout": "Id=apache2.service\nActiveState=active\nSubState=running\n\nId=mariadb.service\nActiveState=inactive\nSubState=dead\n\nId=memcached.service\nActiveState=inactive\nSubState=dead\n\nId=elasticsearch.service\nActiveState=inactive\nSubState=dead\n\nId=monit.service\nActiveState=inactive\nSubState=dead\n",
+      "stderr_bytes": 0
+    }
+  },
+  "readonly": true
+}

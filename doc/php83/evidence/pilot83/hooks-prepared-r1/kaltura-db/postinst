@@ -1,0 +1,276 @@
+#!/bin/bash -
+# Private lab only. Reject tracing before loading any credential values.
+[[ $- != *x* ]] || exit 92
+. /opt/kaltura/bin/pilot83-private-hook-functions.sh || exit 92
+#===============================================================================
+#          FILE: kaltura-db-config.sh
+#         USAGE: ./kaltura-db-config.sh 
+#   DESCRIPTION: 
+#       OPTIONS: ---
+# 	LICENSE: AGPLv3+
+#  REQUIREMENTS: ---
+#          BUGS: ---
+#         NOTES: ---
+#        AUTHOR: Jess Portnoy, <jess.portnoy@kaltura.com>
+#  ORGANIZATION: Kaltura, inc.
+#       CREATED: 01/09/14 04:57:40 EST
+#      REVISION:  ---
+#===============================================================================
+#set -o nounset                              # Treat unset variables as an error
+
+KALTURA_GROUP=kaltura
+KALTURA_USER=kaltura
+APACHE_USER=www-data
+deploy_kmc_and_studio()
+{
+	HTML5_DIR=`ls -ld $BASE_DIR/web/html5/html5lib/v* 2>/dev/null|awk -F " " '{print $NF}' |tail -1`
+	HTML5_VER=`basename $HTML5_DIR`
+	HTML5_STUDIO_DIR=`ls -ld $BASE_DIR/apps/studio/v* 2>/dev/null|awk -F " " '{print $NF}' |tail -1`
+	HTML5_STUDIO_VER=`basename $HTML5_STUDIO_DIR`
+	if [ -f "$BASE_DIR/apps/studio/$HTML5_STUDIO_VER/studio.template.ini" ];then
+		sed -e "s#@HTML5_STUDIO_VER@#$HTML5_STUDIO_VER#g" -e "s#@HTML5_VER@#$HTML5_VER#g" -e "s#@CDN_HOST@#$KALTURA_VIRTUAL_HOST_NAME#g" $BASE_DIR/apps/studio/$HTML5_STUDIO_VER/studio.template.ini > $BASE_DIR/apps/studio/$HTML5_STUDIO_VER/studio.ini		      
+	fi
+	if [ -r "$BASE_DIR/apps/studio/$HTML5_STUDIO_VER/studio.ini" ];then
+		/usr/bin/php8.3 $BASE_DIR/app/deployment/uiconf/deploy_v2.php --user=www-data --ini=$BASE_DIR/apps/studio/$HTML5_STUDIO_VER/studio.ini >> /dev/null
+		chown -R $APACHE_USER.$KALTURA_GROUP $WEB_DIR/content/generatedUiConf/
+		sed -i "s@^\(studio_version\s*=\)\(.*\)@\1 $HTML5_STUDIO_VER@g" -i $BASE_DIR/app/configurations/local.ini
+	fi
+	HTML5_STUDIO3_DIR=`ls -ld $BASE_DIR/apps/studioV3/v* 2>/dev/null|awk -F " " '{print $NF}' |tail -1`
+	HTML5_STUDIO3_VER=`basename $HTML5_STUDIO3_DIR`
+	if [ -f "$BASE_DIR/apps/studioV3/$HTML5_STUDIO3_VER/studio.template.ini" ];then
+		sed -e "s#@HTML5_STUDIO3_VER@#$HTML5_STUDIO3_VER#g" -e "s#@HTML5_VER@#$HTML5_VER#g" -e "s#@CDN_HOST@#$KALTURA_VIRTUAL_HOST_NAME#g" -e "s#@SERVICE_URL@#$SERVICE_URL#g" $BASE_DIR/apps/studioV3/$HTML5_STUDIO3_VER/studio.template.ini > $BASE_DIR/apps/studioV3/$HTML5_STUDIO3_VER/studio.ini		      
+	fi
+	if [ -r "$BASE_DIR/apps/studioV3/$HTML5_STUDIO3_VER/studio.ini" ];then
+		/usr/bin/php8.3 $BASE_DIR/app/deployment/uiconf/deploy_v2.php --user=www-data --ini=$BASE_DIR/apps/studioV3/$HTML5_STUDIO3_VER/studio.ini >> /dev/null
+		HTML5LIB3_VERSION=`dpkg-query -W -f'${Version}' kaltura-html5lib3|awk -F "-" '{print $1}'`
+		HTML5LIB3_BASEDIR=$BASE_DIR/html5/html5lib/playkitSources/kaltura-ovp-player
+		PARTNER_ZERO_SECRET=`echo "select admin_secret from partner where id=0" | pilot83_private_mysql -N -h $DB1_HOST -p$DB1_PASS $DB1_NAME -u$DB1_USER  -P$DB1_PORT`
+		if [ -r $HTML5LIB3_BASEDIR/create_playkit_uiconf.php ];then
+			pilot83_private_php "$HTML5LIB3_BASEDIR/create_playkit_uiconf.php" 0 "$PARTNER_ZERO_SECRET" $SERVICE_URL $HTML5LIB3_VERSION
+		fi
+	fi
+
+	KMC_VERSION=`grep "^kmc_version" $APP_DIR/configurations/local.ini|awk -F "=" '{print $2}'|sed 's@\s*@@g'`
+	KMCNG_VERSION=`grep "^kmcng_version" $APP_DIR/configurations/local.ini|awk -F "=" '{print $2}'|sed 's@\s*@@g'`
+	echo -e "${BRIGHT_BLUE}Generating UI confs..${NORMAL}"
+	/usr/bin/php8.3 $APP_DIR/deployment/uiconf/deploy_v2.php --ini=$WEB_DIR/flash/kmc/$KMC_VERSION/config.ini --user=www-data >> $LOG_DIR/deploy_v2.log  2>&1
+	/usr/bin/php8.3 $APP_DIR/deployment/uiconf/deploy_v2.php --ini=$BASE_DIR/apps/kmcng/$KMCNG_VERSION/deploy/config.ini --user=www-data >> $LOG_DIR/deploy_v2.log  2>&1
+	STUDIO_VERSION=`grep "^studio_version" $APP_DIR/configurations/local.ini|awk -F "=" '{print $2}'|sed 's@\s*@@g'`
+	if [ -r "$BASE_DIR/apps/studio/$STUDIO_VERSION/studio.ini" ];then
+		echo -e "${BRIGHT_BLUE}Generating Studio UI confs..${NORMAL}"
+		/usr/bin/php8.3 $APP_DIR/deployment/uiconf/deploy_v2.php --ini=$BASE_DIR/apps/studio/$STUDIO_VERSION/studio.ini --user=www-data >> $LOG_DIR/deploy_v2.log  2>&1
+	fi
+	chown -R $APACHE_USER.$KALTURA_GROUP $WEB_DIR/content
+	if [ -d $APP_DIR/deployment/updates/scripts/patches ];then
+		for i in $APP_DIR/deployment/updates/scripts/patches/*.sh;do
+			$i
+		done
+	fi
+	find  $WEB_DIR/content/generatedUiConf -type d -exec chmod 775 {} \;
+
+	set +e
+	rm -rf $BASE_DIR/cache/*
+
+
+}
+
+RC_FILE=/etc/kaltura.d/system.ini
+if [ ! -r "$RC_FILE" ];then
+	echo -e "${BRIGHT_RED}ERROR: could not find $RC_FILE so, exiting..${NORMAL}"
+	exit 2
+fi
+. $RC_FILE
+KALTURA_FUNCTIONS_RC=$BASE_DIR/bin/kaltura-functions.rc
+if [ ! -r "$KALTURA_FUNCTIONS_RC" ];then
+	echo "Could not find $KALTURA_FUNCTIONS_RC so, exiting.."
+	exit 3
+fi
+. $KALTURA_FUNCTIONS_RC
+
+if [ -n "$2" ];then
+	deploy_kmc_and_studio
+	exit $?
+fi
+
+if [ "$1" = "configure" ]; then
+	. /usr/share/debconf/confmodule
+	DB_ACTIONS_RC=$BASE_DIR/bin/db_actions.rc
+	if [ ! -r "$DB_ACTIONS_RC" ];then
+		echo -e "${BRIGHT_RED}ERROR: could not find $DB_ACTIONS_RC so, exiting..${NORMAL}"
+		exit 3
+	fi
+	. $DB_ACTIONS_RC
+	db_get 'kaltura-base/db_hostname'
+	DB1_HOST=$RET
+	if [ -z "$DB1_HOST" ];then
+		db_set 'kaltura-db/db_hostname' "`hostname`"
+	else
+		db_set 'kaltura-db/db_hostname' $DB1_HOST
+	fi
+	db_input critical 'kaltura-db/db_hostname' || true
+	db_go || true
+	db_get 'kaltura-db/db_hostname'
+	MYSQL_HOST=$RET
+
+	db_input critical 'kaltura-db/db_port' || true
+	db_go || true
+	db_get 'kaltura-db/db_port'
+	MYSQL_PORT=$RET
+
+	db_input critical 'kaltura-db/mysql_super_user' || true
+	db_go || true
+	db_get 'kaltura-db/mysql_super_user'
+	MYSQL_SUPER_USER=$RET
+
+	db_input critical 'kaltura-db/mysql_super_passwd' || true
+	db_go || true
+	db_get 'kaltura-db/mysql_super_passwd'
+	MYSQL_SUPER_USER_PASSWD=$RET
+
+
+	trap 'my_trap_handler "${LINENO}" ${$?}' ERR
+	send_install_becon "`basename $0`" "install_start" 0 
+
+
+	if [ "$IS_UPGRADE" = 'upgrade' ];then
+		echo "calling upgrade script instead."
+		# the upgrade script is more complex naturally.. will include a check for schema
+		# decide how far back to run alter scripts, etc.
+	fi
+	KALTURA_DB=$DB1_NAME
+
+	# check DB connectivity:
+	echo -e "${CYAN}Checking MySQL version..${NORMAL}"
+	MYVER=`echo "select version();" | pilot83_private_mysql -h$MYSQL_HOST -u$MYSQL_SUPER_USER -p$MYSQL_SUPER_USER_PASSWD -P$MYSQL_PORT -N`
+
+	if [ $? -ne 0 ];then
+cat << EOF
+Failed to run:
+# MySQL connectivity failed; credential-bearing command intentionally not rendered.
+Check your settings and run dpkg-reconfigure kaltura-db."
+EOF
+		exit 4
+	fi
+	if ! check_mysql_settings $MYSQL_SUPER_USER $MYSQL_SUPER_USER_PASSWD $MYSQL_HOST $MYSQL_PORT ;then
+		if [ $MYSQL_HOST = 'localhost' -o $MYSQL_HOST = '127.0.0.1' ];then
+			db_input critical 'kaltura-db/fix_mysql_settings' || true
+			db_go || true
+			db_get 'kaltura-db/fix_mysql_settings'
+			if [ "$RET" = true ];then
+				$BASE_DIR/bin/kaltura-mysql-settings.sh
+			else
+				echo "Please adjust your settings manually and re-run." 
+				exit 8
+			fi
+		else
+			exit 7
+		fi
+	fi
+	trap - ERR
+	if [ -z "$POPULATE_ONLY" ];then
+		# check whether the 'kaltura' already exists:
+		echo "use kaltura" | pilot83_private_mysql -h$MYSQL_HOST -u$MYSQL_SUPER_USER -p$MYSQL_SUPER_USER_PASSWD -P$MYSQL_PORT $KALTURA_DB 2> /dev/null
+		if [ $? -eq 0 ];then
+			db_reset 'kaltura-db/db_already_installed'
+			db_input critical 'kaltura-db/db_already_installed' || true
+			db_go || true
+			db_get 'kaltura-db/db_already_installed'
+			if [ "$RET" = true ];then
+				$BASE_DIR/bin/kaltura-drop-db.sh $MYSQL_SUPER_USER_PASSWD
+			else
+				exit 0
+			fi
+		fi 
+	trap 'my_trap_handler "${LINENO}" ${$?}' ERR
+
+		# this is the DB creation part, we want to exit if something fails here:
+		set -e
+
+		# create users:
+		USER_EXISTS=`echo "SELECT EXISTS(SELECT 1 FROM mysql.user WHERE user = 'kaltura');" |  pilot83_private_mysql -N -h$MYSQL_HOST -u$MYSQL_SUPER_USER -p$MYSQL_SUPER_USER_PASSWD -P$MYSQL_PORT`
+		if [ "$USER_EXISTS" != "1" ];then	
+			echo "CREATE USER kaltura;"
+			echo "CREATE USER kaltura@'%' IDENTIFIED BY '$DB1_PASS' ;"  | pilot83_private_mysql -h$MYSQL_HOST -u$MYSQL_SUPER_USER -p$MYSQL_SUPER_USER_PASSWD -P$MYSQL_PORT
+		fi
+		USER_EXISTS=`echo "SELECT EXISTS(SELECT 1 FROM mysql.user WHERE user = 'etl');" |  pilot83_private_mysql -N -h$MYSQL_HOST -u$MYSQL_SUPER_USER -p$MYSQL_SUPER_USER_PASSWD -P$MYSQL_PORT`
+		if [ "$USER_EXISTS" != "1" ];then	
+			echo "CREATE USER etl@'%';"
+			echo "CREATE USER etl IDENTIFIED BY '$DWH_PASS' ;"  | pilot83_private_mysql -h$MYSQL_HOST -u$MYSQL_SUPER_USER -p$MYSQL_SUPER_USER_PASSWD -P$MYSQL_PORT
+		fi
+		#done
+		# create the DBs:
+		for DB in $OP_DBS $DWH_DBS;do 
+			echo "CREATE DATABASE $DB;"
+			echo "CREATE DATABASE $DB;" | pilot83_private_mysql -h$MYSQL_HOST -u$MYSQL_SUPER_USER -p$MYSQL_SUPER_USER_PASSWD -P$MYSQL_PORT
+			PRIVS=${DB}_PRIVILEGES
+			DB_USER=${DB}_USER
+			# apply privileges:
+			echo "GRANT ${!PRIVS} ON $DB.* TO '${!DB_USER}'@'%';FLUSH PRIVILEGES;" | pilot83_private_mysql -h$MYSQL_HOST -u$MYSQL_SUPER_USER -p$MYSQL_SUPER_USER_PASSWD -P$MYSQL_PORT
+			DB_SQL_FILES=${DB}_SQL_FILES
+			# run table creation scripts:
+			for SQL in ${!DB_SQL_FILES};do 
+				pilot83_private_mysql -h$MYSQL_HOST -u$MYSQL_SUPER_USER -p$MYSQL_SUPER_USER_PASSWD -P$MYSQL_PORT $DB < $SQL
+			done
+		done
+		echo "GRANT SELECT ON kaltura.* TO 'etl'@'%';FLUSH PRIVILEGES;" | pilot83_private_mysql -h$MYSQL_HOST -u$MYSQL_SUPER_USER -p$MYSQL_SUPER_USER_PASSWD -P$MYSQL_PORT
+
+		# DB schema created. Before we move onto populating, lets check MySQL and Sphinx connectivity.
+	fi
+	set +e
+
+	echo "Checking connectivity to needed daemons..."
+	if ! check_connectivity $DB1_USER $DB1_PASS $DB1_HOST $DB1_PORT $SPHINX_HOST $SERVICE_URL;then
+		db_reset 'kaltura-db/remove_db'
+		db_input critical 'kaltura-db/remove_db' || true
+		db_go || true
+		db_get 'kaltura-db/remove_db'
+		if [ "$RET" = true ];then
+			$BASE_DIR/bin/kaltura-drop-db.sh $MYSQL_SUPER_USER_PASSWD
+			exit 6
+		fi
+		exit 6
+	fi
+	echo "Cleaning cache.."
+	rm -rf $APP_DIR/cache/*
+	echo -e "${CYAN}Populating DB with data.. please wait..${NORMAL}"
+	echo -e "${CYAN}Output for $APP_DIR/deployment/base/scripts/installPlugins.php being logged into $LOG_DIR/installPlugins.log ${NORMAL}"
+	/usr/bin/php8.3 $APP_DIR/deployment/base/scripts/installPlugins.php >> $LOG_DIR/installPlugins.log  2>&1
+	echo -e "${CYAN}Output for $APP_DIR/deployment/base/scripts/insertDefaults.php being logged into $LOG_DIR/insertDefaults.log ${NORMAL}"
+	/usr/bin/php8.3 $APP_DIR/deployment/base/scripts/insertDefaults.php $APP_DIR/deployment/base/scripts/init_data >> $LOG_DIR/insertDefaults.log  2>&1
+	echo -e "${CYAN}Output for $APP_DIR/deployment/base/scripts/insertPermissions.php being logged into $LOG_DIR/insertPermissions.log ${NORMAL}"
+	/usr/bin/php8.3 $APP_DIR/deployment/base/scripts/insertPermissions.php  >> $LOG_DIR/insertPermissions.log 2>&1
+	echo -e "${CYAN}Output for $APP_DIR/deployment/base/scripts/insertContent.php being logged into $LOG_DIR/insertContent.log ${NORMAL}"
+	mkdir -p $WEB_DIR/content/generatedUiConf $WEB_DIR/content/entry/data $WEB_DIR/content/batchfiles $WEB_DIR/content/uploads 
+	find  $WEB_DIR/content/generatedUiConf -type d -exec chmod 775 {} \; -exec chown $APACHE_USER.$KALTURA_GROUP {} \;
+	find  $WEB_DIR/content/entry -type d -exec chmod 775 {} \; -exec chown $APACHE_USER.$KALTURA_GROUP {} \;
+	chown $APACHE_USER.$KALTURA_GROUP $WEB_DIR/content/batchfiles $WEB_DIR/content/uploads $APP_DIR/cache
+	chmod 775 $WEB_DIR/content/batchfiles $WEB_DIR/content/uploads $APP_DIR/cache
+	/usr/bin/php8.3 $APP_DIR/deployment/base/scripts/insertContent.php >> $LOG_DIR/insertContent.log  2>&1
+	if [ $? -ne 0 ];then
+cat << EOF
+Failed to run:
+/usr/bin/php8.3 $APP_DIR/deployment/base/scripts/insertContent.php >> $LOG_DIR/insertContent.log  2>&1
+EOF
+		echo -e "${BRIGHT_RED}Please check your setup and then run $0 again.${NORMAL}"
+		exit 8
+	fi
+	db_get 'kaltura-front/is_apache_ssl'
+        IS_SSL="$RET"
+
+	if [ "$IS_SSL" = true ];then
+	# force KMC login via HTTPs.
+		KMCNG_VERSION=`grep "^kmcng_version" $BASE_DIR/app/configurations/local.ini|awk -F "=" '{print $2}'|sed 's@\s*@@g'`
+		/usr/bin/php8.3 $APP_DIR/deployment/base/scripts/insertPermissions.php -d $APP_DIR/deployment/permissions/ssl/ > /dev/null 2>&1
+	fi
+	deploy_kmc_and_studio
+	: # private pilot: retain installation logs; no deletion
+
+
+
+	if [ "$DB1_HOST" = `hostname` -o "$DB1_HOST" = '127.0.0.1' -o "$DB1_HOST" = 'localhost' ];then
+		ln -sf $BASE_DIR/app/configurations/monit/monit.avail/mysqld.rc $BASE_DIR/app/configurations/monit/monit.d/enabled.mysqld.rc
+		/etc/init.d/monit stop >> /dev/null 2>&1
+		/etc/init.d/monit restart
+	fi
+	send_install_becon "`basename $0`" "install_success" 0 
+fi

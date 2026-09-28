@@ -1,0 +1,66 @@
+Revisão concluída. Escrevendo o relatório final.
+
+# Revisão local independente: hooks privados do pilot83
+
+**Executor:** Claude CLI (Opus 5.5). A revisão foi só local e de leitura. Não houve edições, SSH, VM, rede, builds, instalações, uso de git nem execução de hooks do mantenedor. Uma ressalva: gravei diffs temporários em `/tmp/review-hooks-diff/`, fora do repositório.
+
+**Resultado:** um defeito concreto e uma lacuna de privacidade fazem com que a preparação r1 não possa ser aprovada como está. O restante do escopo revisado está correto.
+
+## Comandos executados
+
+| Comando | Resultado | Exit |
+|---|---|---|
+| `python3 -m unittest discover -s tools/php83/pilot83 -p test_private_hooks.py -v` | 16 testes, todos OK (0,078s) | 0 |
+| `bash -n tools/php83/pilot83/private-hook-functions.sh` | sem saída | 0 |
+
+## O que foi verificado e está correto
+
+- **Freeze:** os SHA-256 dos 4 arquivos batem com `hooks-freeze-r1.json`.
+- **Correspondência exata dos originais:** as 28 entradas de `hooks-inputs.json` batem com os bytes locais. Os 26 hooks de controle batem com `published-hook-inputs.json`, sem nenhum hook publicado faltando. O `kaltura-html5lib/postinst` do repositório difere do publicado, mas a transformação usa o publicado.
+- **Reprodução:** recalculei as 27 transformações. Os bytes são idênticos a `hooks-prepared-r1/` e os `after_sha256`/`changed_lines` são idênticos a `hooks-transformation-r1.json`. Seis arquivos mudaram (base 20 linhas, db 25, front 13, batch 4, html5lib 1, functions.rc 7) e 21 ficaram iguais.
+- **Segredos saem do argv de exec via arquivos privados**, sem ocultação em terminal:
+  - mysql recebe `--defaults-extra-file` em modo 0600, dentro de um diretório 0700 em `/run`.
+  - sed recebe o programa por `-f`.
+  - php recebe os argumentos por um arquivo com separador NUL.
+  - Os arquivos temporários são removidos ao sair e o status de saída do processo filho é preservado (testado com 17, 9 e 12). A recusa de xtrace (`set -x`) acontece antes de carregar credenciais.
+  - Não sobra nenhum `sed` sem transformação que carregue segredo.
+- **Gramática de opções do MySQL:**
+  - São recusados: `-p` sem valor, `--password` sem `=`, `--defaults*`/`--login-path*` e senha duplicada.
+  - A senha fica restrita a um alfabeto sem aspas nem barra invertida, o que torna seguro `password="…"`.
+  - `-P` (porta) não é confundido com `-p`.
+- **sed:** a junção dos `-e` com newline em `-f` equivale ao original. O `-i` duplicado do batch funciona no GNU sed. Flags não suportadas falham fechadas (exit 92).
+- **Ponte de argv do PHP:** a análise foi só estática.
+  - Verificações: lstat/fstat com ino/dev, diretório pai 0700 e arquivo 0600 de uid 0, `realpath`, prefixo `/opt/kaltura/` e basename `create_playkit_uiconf.php`. O arquivo é apagado antes do `require`, e `$argv`/`$argc`/`$_SERVER` são restaurados.
+  - O `HTML5LIB3_BASEDIR` vem de `$BASE_DIR`. Se houver symlink ou `//`, a ponte falha fechada.
+- **Remoção de deleção:** o único alvo, `rm -f $APP_DIR/log/kaltura-*.log` no kaltura-db, foi neutralizado. O `rm -f` restante no preinst/prerm não foi alterado, como pretendido.
+- **Caminhos do PHP 8.3:** as trocas estão corretas:
+  - `php` executável passa a `/usr/bin/php8.3`;
+  - `@PHP_BIN@` passa a `/usr/bin/php8.3`;
+  - `phpenmod` passa a `phpenmod -v 8.3`;
+  - os `php.ini` e `mods-available` passam a apontar para `/etc/php/8.3`.
+- **functions.rc alcançado:** tem exatamente 7 âncoras (6 pipes para `pilot83_private_mysql` e a mensagem de erro sem a credencial). O pin de SHA rejeita qualquer desvio. Ele é carregado por base, batch, db, front, sphinx e elasticsearch. `db_actions.rc` não chama mysql nem php.
+
+## Defeitos e bloqueios concretos
+
+1. **DEFEITO (correção)** em `kaltura-base/postinst`, linha original 334 (preparada 337). A regex `(?<![\w/-])mysql(?=\s)` também renomeou o argumento de banco `mysql` no fim da linha:
+   `… -p$SUPER_USER_PASSWD pilot83_private_mysql`
+
+   O MySQL vai responder "Unknown database". Como a linha fica dentro de `set +e`, a falha é silenciosa e o `UPDATE mysql.user … PASSWORD('$DB1_PASS')` não é aplicado. Isso acontece no caminho em que `DB1_PASS` está vazio e a senha é gerada automaticamente. O teste não cobre esse caso.
+
+   Correção necessária: trocar só a posição de comando, nunca argumentos, e adicionar um teste de regressão para essa linha.
+2. **LACUNA DE PRIVACIDADE** em `kaltura-db/postinst`, linhas preparadas 179 e 228. Ambas continuam com `$BASE_DIR/bin/kaltura-drop-db.sh $MYSQL_SUPER_USER_PASSWD`, que coloca a senha de superusuário no argv de exec. Por dentro, `kaltura-drop-db.sh` repassa `-p$DBPASSWD` ao mysql.
+
+   Esse caminho é alcançado quando já existe um banco `kaltura` e a opção de derrubá-lo é aceita, ou quando falha a conectividade e `remove_db` é aceito. Esse caminho é destrutivo. O limite "reached payload helper scripts need separate review" não cobre isso, porque o vazamento está no próprio hook do mantenedor.
+
+## Riscos plausíveis, não confirmados localmente
+
+- **Precedência de opções do MySQL:** no original, `-p` na linha de comando prevalece. Agora a senha vem de `--defaults-extra-file`, que é lido antes de `~/.my.cnf` e `~/.mylogin.cnf` do root. Portanto, uma senha definida ali passaria a sobrescrever a desejada. Vale verificar a ausência desses arquivos em .83 no gate de instalação.
+- **Retorno ao carregar o functions.rc:** o `return 92` no topo do functions.rc só sai do `source`. Quem o carrega com `. $KALTURA_FUNCTIONS_RC` segue em frente sem as funções. O efeito é uma falha tardia do tipo "command not found", não uma parada imediata.
+- **Disponibilidade dos arquivos auxiliares:** não verifiquei qual pacote entrega `/opt/kaltura/bin/pilot83-private-hook-functions.sh` e `pilot83-private-argv.php`, nem se eles já existem antes de cada postinst que os carrega (ordem de dependências). Não há evidência disso nos arquivos revisados.
+
+## Limites do escopo
+
+- Não há PHP local, então não afirmo nada sobre execução real da ponte. O teste troca `php8.3` por um processo filho sintético e só verifica a ponte estaticamente.
+- MySQL e sed reais do sistema não foram exercitados, exceto um teste de bytes com o sed local.
+- `kaltura-mysql-settings.sh` está nas entradas, mas não foi transformado. Não encontrei credenciais nele.
+- Nenhum hook foi executado e nenhum DEB foi construído ou instalado. O gate de instalação e privacidade continua pendente, e 16/16 testes aprovados não significam aceitação da aplicação.

@@ -1,0 +1,6 @@
+{
+  "tools/php83/pilot83/private-hook-functions.sh": "6fbc97208186f8d5558c7822f988df03375baac6656db3bb6d3c408e8cfe9dbe",
+  "tools/php83/pilot83/private-argv.php": "f08566c2dfc4b7547711cb9e1f2d0e80478c676ad71e45e69b3289580edd21aa",
+  "tools/php83/pilot83/transform-hooks.py": "0c79ac31f9d2c3a89b007faff7a450daa35d607988854732551bdf35bf46c6df",
+  "tools/php83/pilot83/test_private_hooks.py": "6b9ec6a195d372c5959ef7770eb1259e93d5f9cfde12db0d76abebb9506d89e7"
+}

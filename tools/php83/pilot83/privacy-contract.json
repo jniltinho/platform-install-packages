@@ -1,0 +1,23 @@
+{
+  "expected_privacy_after": {
+    "infra/log/KalturaLog.php": "43d3f90e3ae050ba657411de0d3ce0e4a77691777c077f20f7b174053a5f5b1e",
+    "api_v3/lib/KalturaFrontController.php": "02d35523b968e6b9579831906e1e7b7c48ff7dcbf6cfaf69938e48023762ec08",
+    "api_v3/lib/KalturaDispatcher.php": "9ce4b17a9fb1bef95fbbbbc6f08cb396a6cc944b055bac8413d740ce5d73c7b9",
+    "infra/log/KalturaSerializableStream.php": "8411013a6f2ac78b6d092594d088ba9a5fbe71ada9de00692a369388c40dc04c",
+    "alpha/apps/kaltura/lib/db/KalturaStatement.php": "0435bb8731682ed8a531ab5574d65a4637a69486ec85c88aa48fa01e7aba5dca"
+  },
+  "helpers": {
+    "tools/php83/baseline-rehearsal/privacy/prepare.py": "033821a65f338f14263057b3eb1a799c3acdb22bb951e39cfc3956ad6547ffc8",
+    "tools/php83/baseline-rehearsal/privacy/log-copy-methods.php.inc": "93e27b1263830a58d661b6ff82260851f68ffd53f25ba1643ca533955df026d9",
+    "tools/php83/baseline-rehearsal/privacy/trace-policy-v1/prepare.py": "eaf4aa1adc9db40d53342ddb8f83dd498a8d5904007878ebadc2f92510805ec4",
+    "tools/php83/baseline-rehearsal/privacy/trace-policy-v1/writer-methods.php.inc": "b5d30ef9e801fe21bbd345338ad7cdda64795977466be8774e6d31713e59846e",
+    "tools/php83/baseline-rehearsal/privacy/caller-frame-v1/prepare.py": "e9c56689c8738196e76a28ca1fa19290c868fba8df11733522b4b1015159b050",
+    "tools/php83/baseline-rehearsal/privacy/pipeline/prepare.py": "26b20837059c2b2ce54bd2207140da3bde4cd888b85ea9e40611ad13dbd6d0c7",
+    "tools/php83/baseline-rehearsal/privacy/sql-display-v1/prepare.py": "be88625c6e6d97a446f4386b045621debf8486dddb81c0092211249e8ed002b9"
+  },
+  "evidence": {
+    "doc/php83/evidence/baseline-rehearsal/privacy/trace-policy-v1/preparation.json": "053abb7c6657c6d484256c9a8f7ee4232c878afe3d31c26b4832fe3b01c2fb65",
+    "doc/php83/evidence/baseline-rehearsal/privacy/caller-frame-v1/preparation.json": "12bafce30f553ee93be71f7b435adeeb06dab46985b5e29b1b84e103a17c8397",
+    "doc/php83/evidence/baseline-rehearsal/privacy/sql-display-v1/preparation.json": "da0c0c97db823b2ed31a575a012b4cb33f20f66f3ab1c60b865d245994e8d53b"
+  }
+}

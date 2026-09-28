@@ -1,0 +1,62 @@
+# Revisão do plano do piloto nativo PHP 8.3
+
+**Veredito:** não encontrei nenhum bloqueio de segurança. O plano ordenado chega a um fluxo nativo 8.3 real, de API → USER sintético → upload → worker → READY → entrega. Ele também respeita as regras exigidas:
+
+- **Pacotes e baseline:** não chama os pacotes derivados de "inalterados". O `.74` aparece como "modified laboratory baseline" em `doc/php83/pilot83.md:156-158`.
+- **Hooks do dpkg:** não contorna hooks. Proíbe registros falsos, hooks extraídos e o configurador RPM (`pilot83.md:44-45`, `:83-86`).
+- **PHP74:** não usa PHP74 como rota de escape (`:58-62`, `:145-146`).
+- **SOAP, APC e privacidade:** não dispensa nenhum desses gates (`:118-132`; `provider-pilot83-followup.md:49-56`, `:84-103`).
+
+Há duas contradições concretas que devem ser corrigidas no texto antes da execução autorizada. Os outros quatro pontos são ajustes menores.
+
+## Contradições concretas
+
+1. **A regra de provedores externos entra em conflito com as dependências instaladas na etapa B.**
+   - `pilot83.md:61-62` diz que qualquer seleção de "foreign-provider" faz o piloto falhar.
+   - A etapa B (`:107-109`) instala Elasticsearch e `server`. Segundo `published-control-inputs.json:143`, `kaltura-elasticsearch` tem `Pre-Depends: elasticsearch (>= 7.17), elasticsearch (<< 8)`.
+   - Por conhecimento geral, e não por algo que eu tenha consultado aqui, esse pacote não vem do arquivo Ubuntu.
+   - `kaltura-server` (`:78`) depende dele. `kaltura-sphinx` (`:165`) também depende de `sphinxsearch`, cuja origem não está registrada.
+   - **Correção mínima:** limitar a proibição a provedores de runtime/extensões PHP. Na etapa A, listar cada origem externa não PHP permitida, com chave e pin assinados. A alternativa é tirar `elasticsearch`/`server` do primeiro slice e declarar isso como fora do escopo.
+
+2. **A ordem da privacidade deixa as credenciais da instalação sem varredura.**
+   - `pilot83.md:126` manda auditar os writers "before new secrets".
+   - Só que a etapa B (`:110-111`) já introduz credenciais de DB, serviços e tenant durante os hooks.
+   - Nenhuma varredura cobre a saída dos hooks, os logs de instalação do APT/dpkg ou o armazenamento do debconf, caso ele seja usado.
+   - **Correção mínima:** trocar para "before nonce/USER secrets". Acrescentar um baseline dos writers antes da etapa B e uma varredura pós-B das credenciais do laboratório, sem exportar valores, antes da etapa C.
+
+## Ajustes menores
+
+3. **O código de saída do preflight está incompleto na documentação.**
+   - `pilot83.md:28` registra só o código de saída zero do wrapper.
+   - Em `preflight-readonly.json:21-23`, a subconsulta de pacotes tem `exit: 1` e `stderr_bytes: 290`.
+   - Linhas como `php8.3-xsl`, `-dom`, `-mysqli` e `-pdo` aparecem como `not-installed`, mas os módulos correspondentes estão carregados no CLI (`:27`).
+   - **Correção:** declarar isso e dizer que a simulação de dependências decide as dependências virtuais, não essas linhas. Isso importa porque `front` e `batch` dependem de `php7.4-xsl` (`published-control-inputs.json:46,89`).
+
+4. **Provider e piloto divergem sobre o FPM.**
+   - `provider-pilot83-followup.md:11` admite "Apache PHP module or FPM".
+   - `pilot83.md:65-66` exclui o FPM.
+   - **Correção:** alinhar o provider ao mod_php para este piloto.
+
+5. **A data do provider está no futuro.** `provider-pilot83-followup.md:3` traz a data de 2026-09-27, posterior a hoje (2026-09-26). Corrigir a data.
+
+6. **Faltam identidades de entrada na etapa A.**
+   - A etapa A (`pilot83.md:92-98`) não congela a identidade do manifesto das 76 alterações do exp14.
+   - Também não congela a do patch da política de privacidade de cinco alvos (`:51-54`).
+   - Também não prevê executor e revisor separados para o primeiro slice, como o `AGENTS.md` exige.
+   - **Correção:** acrescentar esses três itens à etapa A.
+
+## Continua pendente (NOT_EXECUTED)
+
+- Autorização dos pacotes privados `+php83lab`.
+- Composição e revisão dos bytes reais de hooks e payload das DEBs.
+- Simulação da closure de dependências.
+- Ponto de recuperação da VM.
+- Instalação.
+- Ativação do SOAP 8.3.6-0ubuntu0.24.04.11 com o controle de WSDL local nas três SAPIs.
+- Auditoria dos mapeamentos de cache e das duas requisições web.
+- Varreduras de privacidade.
+- USER sintético, READY com workers 8.3 e entrega dos bytes originais.
+
+TLS/206/HLS, UI e busca, conversão, recuperação e reboot continuam como gates posteriores. Não são pré-requisitos do primeiro slice.
+
+Esta revisão foi só leitura dos cinco artefatos pedidos. Não executei testes, não observei a VM e não alterei nenhum arquivo.

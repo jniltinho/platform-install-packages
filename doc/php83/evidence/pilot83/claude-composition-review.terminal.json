@@ -1,0 +1,8 @@
+{
+  "exit": 0,
+  "elapsed_seconds": 98.766,
+  "stdout_bytes": 5015,
+  "stderr_bytes": 0,
+  "executor": "actual Claude CLI",
+  "scope": "local frozen payload/control review and tests only"
+}

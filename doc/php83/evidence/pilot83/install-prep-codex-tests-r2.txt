@@ -1,0 +1,22 @@
+test_duplicate (test_install_lab.Tests.test_duplicate) ... ok
+test_external_pin_version_arch_drift (test_install_lab.Tests.test_external_pin_version_arch_drift) ... ok
+test_external_required (test_install_lab.Tests.test_external_required) ... ok
+test_missing_origins (test_install_lab.Tests.test_missing_origins) ... ok
+test_missing_package (test_install_lab.Tests.test_missing_package) ... ok
+test_no_install_subprocess (test_install_lab.Tests.test_no_install_subprocess) ... ok
+test_no_installer_and_no_auth (test_install_lab.Tests.test_no_installer_and_no_auth) ... ok
+test_no_recovery (test_install_lab.Tests.test_no_recovery) ... ok
+test_no_zip_or_external_escape (test_install_lab.Tests.test_no_zip_or_external_escape) ... ok
+test_path_escape (test_install_lab.Tests.test_path_escape) ... ok
+test_pending_before_commands (test_install_lab.Tests.test_pending_before_commands) ... ok
+test_regular_identity (test_install_lab.Tests.test_regular_identity) ... ok
+test_revision (test_install_lab.Tests.test_revision) ... ok
+test_simulation_exact18 (test_install_lab.Tests.test_simulation_exact18) ... ok
+test_synthetic_valid_schema_not_real_proof (test_install_lab.Tests.test_synthetic_valid_schema_not_real_proof) ... ok
+test_unpinned (test_install_lab.Tests.test_unpinned) ... ok
+test_wrong_host (test_install_lab.Tests.test_wrong_host) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.002s
+
+OK

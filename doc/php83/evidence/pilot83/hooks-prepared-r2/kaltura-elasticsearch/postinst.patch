@@ -1,0 +1,19 @@
+--- postinst
++++ postinst
+@@ -1,4 +1,7 @@
+ #!/bin/bash
++# Private lab only. Reject tracing before loading any credential values.
++[[ $- != *x* ]] || exit 92
++. /opt/kaltura/bin/pilot83-private-hook-functions.sh || exit 92
+ KALTURA_FUNCTIONS_RC=/opt/kaltura/bin/kaltura-functions.rc
+ if [ ! -r "$KALTURA_FUNCTIONS_RC" ];then
+         OUT="${BRIGHT_RED}ERROR:could not find $KALTURA_FUNCTIONS_RC so, exiting..${NORMAL}"
+@@ -7,7 +10,7 @@
+ fi
+ 
+ 
+-. $KALTURA_FUNCTIONS_RC
++. $KALTURA_FUNCTIONS_RC || exit 92
+ BASE_RC=/etc/profile.d/kaltura-base.sh
+ if [ ! -r "$BASE_RC" ];then
+         OUT="${BRIGHT_RED}ERROR:could not find $BASE_RC so, exiting..${NORMAL}"

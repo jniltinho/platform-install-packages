@@ -1,0 +1,193 @@
+{
+  "status": "READONLY_PUBLISHED_INPUT_INVENTORY",
+  "bundle_sha256": "91629580441f6a896ebf9e51f0256532221715bee57a3e5a64c66ff0c4e3127b",
+  "packages": [
+    {
+      "member": "./kaltura-postinst_1.0.34-1_all.deb",
+      "sha256": "bbb6e455f4736db8102be51c6cd433486dcbeab0bc159ae8641750c08fd8945b",
+      "bytes": 49476,
+      "control": {
+        "Package": "kaltura-postinst",
+        "Version": "1.0.34-1",
+        "Architecture": "all",
+        "Depends": "bc, unzip, lsb-release, dmidecode"
+      }
+    },
+    {
+      "member": "./kaltura-ffmpeg_6.1-1_all.deb",
+      "sha256": "396d2a393400391a3f39747f2f3e802c2e2c7f3d7ef3cf84c58f22d55cfe0dcf",
+      "bytes": 1390,
+      "control": {
+        "Package": "kaltura-ffmpeg",
+        "Version": "6.1-1",
+        "Architecture": "all",
+        "Depends": "ffmpeg"
+      }
+    },
+    {
+      "member": "./kaltura-base_18.20.0-1_all.deb",
+      "sha256": "985aefac3b349b5b5ab5e28a72ba7727343692f4e697f94342b50ea3e74c4cfe",
+      "bytes": 79470490,
+      "control": {
+        "Package": "kaltura-base",
+        "Version": "18.20.0-1",
+        "Architecture": "all",
+        "Depends": "rsync, mariadb-client | default-mysql-client, cron, systemd-timesyncd | chrony, default-mta | mail-transport-agent, monit, mailutils | bsd-mailx, kaltura-postinst, bash, curl, unzip, php7.4-cli, php7.4-xml, php7.4-curl, php7.4-mysql, php7.4-mbstring, php7.4-gd, php7.4-gmp, php7.4-ldap, php7.4-memcache, php7.4-zip, php7.4-intl"
+      }
+    },
+    {
+      "member": "./kaltura-front_18.20.0-1_all.deb",
+      "sha256": "605864d8885980ccc1c38ae4db963304013995666c99e8f04e4388fc9d1a9990",
+      "bytes": 5518,
+      "control": {
+        "Package": "kaltura-front",
+        "Version": "18.20.0-1",
+        "Architecture": "all",
+        "Depends": "apache2, libapache2-mod-php7.4, php7.4-cli, php7.4-mysql, php7.4-xsl, php7.4-curl, php7.4-gmp, php7.4-gd, php7.4-apcu, php7.4-memcache, php7.4-ssh2, imagemagick, libapache2-mod-xsendfile, sshpass, kaltura-ffmpeg, kaltura-ffmpeg-aux, mediainfo, memcached, openssl, kaltura-base, libxml2-utils, kaltura-kmcng, kaltura-html5lib, kaltura-html5lib3, kaltura-html5-studio, kaltura-html5-studio3, kaltura-html5-analytics"
+      }
+    },
+    {
+      "member": "./kaltura-html5-studio3_3.18.0-1_all.deb",
+      "sha256": "75cc09f87c50ec4bcb10d2320411919a7920239868cabd3b1ca345ed087aff43",
+      "bytes": 549924,
+      "control": {
+        "Package": "kaltura-html5-studio3",
+        "Version": "3.18.0-1",
+        "Architecture": "all"
+      }
+    },
+    {
+      "member": "./kaltura-ffmpeg-aux_6.1-1_all.deb",
+      "sha256": "0ca4c03e5325f3a2d6c443059915317760b2006d473c3b9faa70886ae89c3e7a",
+      "bytes": 1310,
+      "control": {
+        "Package": "kaltura-ffmpeg-aux",
+        "Version": "6.1-1",
+        "Architecture": "all",
+        "Depends": "ffmpeg"
+      }
+    },
+    {
+      "member": "./kaltura-server_18.20.0-1_all.deb",
+      "sha256": "e4ac1cdb4c506085965ce92c37aabc235cc7bca79241acc0ccc772e22d6fe214",
+      "bytes": 1064,
+      "control": {
+        "Package": "kaltura-server",
+        "Version": "18.20.0-1",
+        "Architecture": "all",
+        "Depends": "kaltura-front, kaltura-batch, kaltura-db, kaltura-sphinx, kaltura-nginx, kaltura-elasticsearch, kaltura-html5lib"
+      }
+    },
+    {
+      "member": "./kaltura-batch_18.20.0-1_all.deb",
+      "sha256": "1cd9b6fdae828dff7932f080c12f5ac34fe159c8d57edf24393ff0faa7b1bd64",
+      "bytes": 4172,
+      "control": {
+        "Package": "kaltura-batch",
+        "Version": "18.20.0-1",
+        "Architecture": "all",
+        "Depends": "apache2, libapache2-mod-php7.4, php7.4-cli, php7.4-mysql, php7.4-xsl, php7.4-curl, php7.4-gmp, php7.4-gd, php7.4-apcu, php7.4-memcache, php7.4-ssh2, imagemagick, libapache2-mod-xsendfile, sshpass, kaltura-ffmpeg, kaltura-ffmpeg-aux, mediainfo, memcached, openssl, kaltura-base, sox"
+      }
+    },
+    {
+      "member": "./kaltura-nginx_1.23.0-1_amd64.deb",
+      "sha256": "79fe482b249abdc949b21acc24f04ab664963845e64ceb3bc373431d2f3303c7",
+      "bytes": 983956,
+      "control": {
+        "Package": "kaltura-nginx",
+        "Version": "1.23.0-1",
+        "Architecture": "amd64",
+        "Depends": "kaltura-postinst, debconf (>= 0.5) | debconf-2.0, libavcodec60 (>= 7:6.0), libavfilter9 (>= 7:6.0), libavutil58 (>= 7:6.0), libc6 (>= 2.38), libcrypt1 (>= 1:4.1.0), libpcre3, libssl3t64 (>= 3.0.0), libswscale7 (>= 7:6.0), libxml2 (>= 2.7.4), zlib1g (>= 1:1.1.4)",
+        "Conflicts": "nginx"
+      }
+    },
+    {
+      "member": "./kaltura-html5-analytics_0.3-1_all.deb",
+      "sha256": "271f9713d237143c9089ca186c49cf7fd72cd86498c2e60dcb496cf722e705b0",
+      "bytes": 1772894,
+      "control": {
+        "Package": "kaltura-html5-analytics",
+        "Version": "0.3-1",
+        "Architecture": "all"
+      }
+    },
+    {
+      "member": "./kaltura-html5-studio_2.2.3-1_all.deb",
+      "sha256": "3edadd17e6b18763850715dd11b0b21b77e76b2bf5f851cbfc6fe1eb17160110",
+      "bytes": 514238,
+      "control": {
+        "Package": "kaltura-html5-studio",
+        "Version": "2.2.3-1",
+        "Architecture": "all"
+      }
+    },
+    {
+      "member": "./kaltura-html5lib_2.98-1_all.deb",
+      "sha256": "742f6a9de6e414e747de40f1e726ce1043c08f7937e3f82ff765ff0ebddfe3d1",
+      "bytes": 90019538,
+      "control": {
+        "Package": "kaltura-html5lib",
+        "Version": "2.98-1",
+        "Architecture": "all",
+        "Depends": "apache2-mpm-prefork | apache2-bin, libapache2-mod-php7.4, kaltura-base"
+      }
+    },
+    {
+      "member": "./kaltura-elasticsearch_7.17-1_all.deb",
+      "sha256": "2099350d0d5e9db653005d424865437432bfb66f6f7b153dfcdfa251bc3af0df",
+      "bytes": 434324,
+      "control": {
+        "Package": "kaltura-elasticsearch",
+        "Version": "7.17-1",
+        "Architecture": "all",
+        "Pre-Depends": "kaltura-base, elasticsearch (>= 7.17), elasticsearch (<< 8)"
+      }
+    },
+    {
+      "member": "./kaltura-html5lib3_3.8.1-1_all.deb",
+      "sha256": "cc06bb2e835b5a4e941812b5370aee8a0ba35dc8ea7ef8dcee66c6ba622c42ec",
+      "bytes": 2378526,
+      "control": {
+        "Package": "kaltura-html5lib3",
+        "Version": "3.8.1-1",
+        "Architecture": "all",
+        "Depends": "apache2-mpm-prefork | apache2-bin, libapache2-mod-php7.4, kaltura-base"
+      }
+    },
+    {
+      "member": "./kaltura-sphinx_2.2.11-1_all.deb",
+      "sha256": "b55fbe57c6156f213572aa8140dc36f9631e4b2eb1ab62987e043c9a4b0d10a7",
+      "bytes": 4344,
+      "control": {
+        "Package": "kaltura-sphinx",
+        "Version": "2.2.11-1",
+        "Architecture": "all",
+        "Depends": "sphinxsearch, kaltura-base"
+      }
+    },
+    {
+      "member": "./kaltura-kmcng_5.17.0-1_all.deb",
+      "sha256": "705938b84b0a08ed3a940953854316f38ca3e3e911e3c8487a95b066e2914ddb",
+      "bytes": 1630598,
+      "control": {
+        "Package": "kaltura-kmcng",
+        "Version": "5.17.0-1",
+        "Architecture": "all",
+        "Depends": "kaltura-base, apache2-mpm-prefork | apache2-bin, kaltura-html5-studio, kaltura-html5-studio3, kaltura-html5-analytics"
+      }
+    },
+    {
+      "member": "./kaltura-db_18.20.0-1_all.deb",
+      "sha256": "c0624d507b2c5ecd9965c877e85ab511060ecd3e0939564fd031908e1bd1a3e2",
+      "bytes": 4682,
+      "control": {
+        "Package": "kaltura-db",
+        "Version": "18.20.0-1",
+        "Architecture": "all",
+        "Depends": "kaltura-base, mariadb-client | default-mysql-client"
+      }
+    }
+  ],
+  "derived_packages_built": false,
+  "installed": false
+}

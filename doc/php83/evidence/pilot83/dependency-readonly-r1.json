@@ -1,0 +1,20 @@
+{
+  "status": "READONLY_NO_APT_UPDATE_OR_INSTALL",
+  "results": {
+    "policy": {
+      "exit": 0,
+      "stdout": "php8.3-common:\n  Installed: 8.3.6-0ubuntu0.24.04.11\n  Candidate: 8.3.6-0ubuntu0.24.04.11\n  Version table:\n *** 8.3.6-0ubuntu0.24.04.11 1001\n        500 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages\n        500 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages\n        100 /var/lib/dpkg/status\n     8.3.6-0maysync1 1001\n        500 http://us.archive.ubuntu.com/ubuntu noble/main amd64 Packages\nphp8.3-soap:\n  Installed: (none)\n  Candidate: 8.3.6-0ubuntu0.24.04.11\n  Version table:\n     8.3.6-0ubuntu0.24.04.11 1001\n        500 http://us.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages\n        500 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages\n     8.3.6-0maysync1 1001\n        500 http://us.archive.ubuntu.com/ubuntu noble/universe amd64 Packages\nlibapache2-mod-php8.3:\n  Installed: 8.3.6-0ubuntu0.24.04.11\n  Candidate: 8.3.6-0ubuntu0.24.04.11\n  Version table:\n *** 8.3.6-0ubuntu0.24.04.11 1001\n        500 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages\n        500 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages\n        100 /var/lib/dpkg/status\n     8.3.6-0maysync1 1001\n        500 http://us.archive.ubuntu.com/ubuntu noble/main amd64 Packages\nmariadb-server:\n  Installed: (none)\n  Candidate: 1:10.11.14-0ubuntu0.24.04.1\n  Version table:\n     1:10.11.14-0ubuntu0.24.04.1 500\n        500 http://us.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages\n     1:10.11.13-0ubuntu0.24.04.1 500\n        500 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages\n     1:10.11.7-2ubuntu2 500\n        500 http://us.archive.ubuntu.com/ubuntu noble/universe amd64 Packages\nmemcached:\n  Installed: (none)\n  Candidate: 1.6.24-1ubuntu0.3\n  Version table:\n     1.6.24-1ubuntu0.3 500\n        500 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages\n        500 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages\n     1.6.24-1build3 500\n        500 http://us.archive.ubuntu.com/ubuntu noble/main amd64 Packages\nsphinxsearch:\n  Installed: (none)\n  Candidate: 2.2.11-8build1\n  Version table:\n     2.2.11-8build1 500\n        500 http://us.archive.ubuntu.com/ubuntu noble/universe amd64 Packages\nffmpeg:\n  Installed: (none)\n  Candidate: 7:6.1.1-3ubuntu5\n  Version table:\n     7:6.1.1-3ubuntu5 500\n        500 http://us.archive.ubuntu.com/ubuntu noble/universe amd64 Packages\nmonit:\n  Installed: (none)\n  Candidate: 1:5.33.0-2build2\n  Version table:\n     1:5.33.0-2build2 500\n        500 http://us.archive.ubuntu.com/ubuntu noble/universe amd64 Packages\nlibnginx-mod-http-lua:\n  Installed: (none)\n  Candidate: 1:0.10.26-2\n  Version table:\n     1:0.10.26-2 500\n        500 http://us.archive.ubuntu.com/ubuntu noble/universe amd64 Packages\n",
+      "stderr_bytes": 0
+    },
+    "disk": {
+      "exit": 0,
+      "stdout": "Filesystem                          1B-blocks        Used   Available Use% Mounted on\n/dev/mapper/ubuntu--vg-ubuntu--lv 32574881792 14508945408 16385069056  47% /\n/dev/mapper/ubuntu--vg-ubuntu--lv 32574881792 14508945408 16385069056  47% /\n",
+      "stderr_bytes": 0
+    },
+    "provider": {
+      "exit": 0,
+      "stdout": "libapache2-mod-php8.3 8.3.6-0ubuntu0.24.04.11 installed\nphp8.3-common 8.3.6-0ubuntu0.24.04.11 installed\n",
+      "stderr_bytes": 0
+    }
+  }
+}

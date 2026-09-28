@@ -1,0 +1,46 @@
+A microrrevisão local encontrou as três correções do R1 corretas e não achou nenhum defeito novo nelas. O escopo foi estreito e não vale como aceitação da aplicação nem de privacidade.
+
+**Executor/revisor:** Claude CLI (Opus 5.5), só leitura local. Não houve VM, rede, build, instalação, uso de git nem escrita no repositório. Uso de `/tmp`: um diretório temporário com cópia do `functions.rc`, que já removi.
+
+## Testes (19)
+
+`python3 -m unittest discover -s tools/php83/pilot83 -p test_private_hooks.py -v` terminou com **exit 0: 19 testes, todos OK (0,088s)**. São os 16 de antes mais três novos:
+- `test_mysql_database_argument_preserved`
+- `test_drop_branches_fail_closed`
+- `test_source_failure_fails_closed`
+
+## Integridade
+
+- Os SHA-256 dos 4 arquivos batem com `hooks-freeze-r2.json`.
+- `private-hook-functions.sh` e `private-argv.php` são idênticos byte a byte aos de `hooks-reviewed-r1/`.
+- Recalculei as 27 transformações a partir de `hooks-inputs/`:
+  - os bytes são idênticos a `hooks-prepared-r2/`;
+  - `after_sha256` e `changed_lines` são idênticos a `hooks-transformation-r2.json`, inclusive no payload `functions.rc`;
+  - nenhuma diferença.
+- O diff de `transform-hooks.py` entre r1 e r2 contém só as três correções e um texto novo de limite.
+
+## Correções confirmadas
+
+1. **Troca do MySQL só na posição de comando.** A regex passou a ser `(^[ \t]*|[|;][ \t]*)mysql(?=\s)`.
+   - Em `kaltura-base/postinst:337`, a linha continua terminando em ` mysql`, ou seja, o banco `mysql` foi preservado.
+   - Nenhum `mysql` em posição de comando ficou sem troca.
+   - O número de invocações trocadas é igual ao r1: base 7, db 11, front 6, batch 2, html5lib 1.
+   - `mysql.user` e os outros usos textuais não foram alterados.
+2. **Os dois ramos de `kaltura-drop-db.sh` falham fechados com 94.**
+   - As linhas preparadas `kaltura-db/postinst` 179 e 228 fazem `printf … PRIVATE_PILOT_FRESH_DATABASE_REQUIRED >&2; exit 94`.
+   - Não sobra nenhuma referência a `kaltura-drop-db.sh`, e o teste executa as duas linhas e confere o exit 94.
+   - O `exit 6` que ficou depois da linha 228 é inalcançável e inofensivo.
+   - Isso restringe o piloto a instalação nova, como declarado nos limites.
+3. **Falha ao carregar o `functions.rc` aborta com 92.** Os 7 pontos de `source` recebem `|| exit 92`: base (2), batch, db, front, sphinx e elasticsearch. Nenhum ficou sem essa proteção. Verificado localmente com bash:
+   - sem o helper, o `return 92` do rc chega ao hook e ele sai com **92**;
+   - com `-x` ativo, também sai com **92**;
+   - no caminho normal, carregar o rc sem as 3 linhas de cabeçalho retorna **0**, porque o arquivo termina em definições de função e o `|| exit 92` não dispara à toa.
+
+## Bloqueios e riscos que continuam
+
+- **Disponibilidade do helper, agora com escopo maior.** Sphinx e elasticsearch passaram a ser transformados por causa do `|| exit 92` e agora também carregam `/opt/kaltura/bin/pilot83-private-hook-functions.sh`. Isso é fail-closed, mas ainda não foi comprovado qual pacote entrega o helper nem que ele existe antes de cada postinst.
+- **Mudança de comportamento.** Um `functions.rc` ausente ou ilegível agora aborta com 92 em sphinx, elasticsearch, batch e front. Antes o hook seguia em frente. Isso é intencional e fail-closed, mas é uma mudança.
+- **Precedência do MySQL.** `--defaults-extra-file` pode ser sobrescrito por `~/.my.cnf` ou `~/.mylogin.cnf` do root. É preciso verificar no gate de instalação.
+- **Helpers alcançados.** `kaltura-drop-db.sh` não é mais chamado, mas os outros helpers de payload alcançados ainda não foram revisados.
+- **Ponte PHP nativa:** os 8 casos sintéticos nativos foram observados em execução separada. **Eu não executei a ponte nativa**; aqui ela só foi verificada estaticamente e com um stub.
+- **Gates pendentes:** nenhum hook foi executado de fato, nenhum DEB foi construído ou instalado, e o gate de instalação e privacidade continua aberto. Os 19 testes aprovados provam só o harness, não a aceitação da aplicação.

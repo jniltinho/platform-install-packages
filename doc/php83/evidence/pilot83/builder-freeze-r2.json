@@ -1,0 +1,5 @@
+{
+  "tools/php83/pilot83/build-private-debs.py": "e06fc81ca8b682a7090b4f34b1f5620967324b7ede683632bc8b96684aea8d78",
+  "tools/php83/pilot83/test_build_private_debs.py": "08fd9e36962d953440e15945e39bf77b93fa3b6d19a921cfa2c7a5b758c0826b",
+  "tools/php83/pilot83/build-input-contract.json": "c6f0ac0c3089973746e2a367fae2233c39bf0a89632f4863a3d1591225e73f22"
+}

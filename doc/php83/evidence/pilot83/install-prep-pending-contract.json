@@ -1,0 +1,4 @@
+{
+  "status": "PENDING",
+  "reason": "Guest package paths, proof receipts, native runtime closure and recovery-point pins must be independently supplied; no fabricated readiness."
+}

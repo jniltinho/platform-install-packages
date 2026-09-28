@@ -1,0 +1,198 @@
+[
+  {
+    "package": "kaltura-postinst",
+    "kind": "payload",
+    "path": "opt/kaltura/bin/kaltura-functions.rc",
+    "sha256": "7dfb684d83787f1c84ccba08b51ee7f4b578feba3ce111717e3fc09cc68f0ab4",
+    "local": "doc/php83/evidence/pilot83/hooks-inputs/kaltura-postinst/opt/kaltura/bin/kaltura-functions.rc"
+  },
+  {
+    "package": "kaltura-postinst",
+    "kind": "payload",
+    "path": "opt/kaltura/bin/kaltura-mysql-settings.sh",
+    "sha256": "69d50771ae0e71a705384cb961cc908d037654de818c55b461152dece4394c35",
+    "local": "doc/php83/evidence/pilot83/hooks-inputs/kaltura-postinst/opt/kaltura/bin/kaltura-mysql-settings.sh"
+  },
+  {
+    "package": "kaltura-base",
+    "kind": "control",
+    "path": "postinst",
+    "sha256": "54df2fdbd55447c21ba4ea44f5cfce98ee69ff454b892091cf9473b2448ff8c0",
+    "local": "doc/php83/evidence/pilot83/hooks-inputs/kaltura-base/postinst"
+  },
+  {
+    "package": "kaltura-base",
+    "kind": "control",
+    "path": "postrm",
+    "sha256": "434230792adf5e00a679477543f22c0e99f1c0f5d4aa7dae8184b5f6e393cfc7",
+    "local": "doc/php83/evidence/pilot83/hooks-inputs/kaltura-base/postrm"
+  },
+  {
+    "package": "kaltura-base",
+    "kind": "control",
+    "path": "preinst",
+    "sha256": "fe37d6aba3a813d5b10252beb497cfa97345ae2fc8ae66c0eebfdf713c7dd040",
+    "local": "doc/php83/evidence/pilot83/hooks-inputs/kaltura-base/preinst"
+  },
+  {
+    "package": "kaltura-base",
+    "kind": "control",
+    "path": "prerm",
+    "sha256": "96ff493df9197ac730f3eda720d833e164800f8ecf547848c5f6329ffc50c246",
+    "local": "doc/php83/evidence/pilot83/hooks-inputs/kaltura-base/prerm"
+  },
+  {
+    "package": "kaltura-front",
+    "kind": "control",
+    "path": "postinst",
+    "sha256": "3c5f374a0c2d73d308e9cb776277ce896026daed7501fbcd51559827abc3d4ae",
+    "local": "doc/php83/evidence/pilot83/hooks-inputs/kaltura-front/postinst"
+  },
+  {
+    "package": "kaltura-front",
+    "kind": "control",
+    "path": "postrm",
+    "sha256": "434230792adf5e00a679477543f22c0e99f1c0f5d4aa7dae8184b5f6e393cfc7",
+    "local": "doc/php83/evidence/pilot83/hooks-inputs/kaltura-front/postrm"
+  },
+  {
+    "package": "kaltura-front",
+    "kind": "control",
+    "path": "prerm",
+    "sha256": "537d3dddd4af94b845ebb4f5690daf9f48591a51aa5ca1f43709f1a33275153f",
+    "local": "doc/php83/evidence/pilot83/hooks-inputs/kaltura-front/prerm"
+  },
+  {
+    "package": "kaltura-batch",
+    "kind": "control",
+    "path": "postinst",
+    "sha256": "db4c89d4c92c615f5bc95f393fd642ea144abfc0efcd35b5d84abc0819ae8a1a",
+    "local": "doc/php83/evidence/pilot83/hooks-inputs/kaltura-batch/postinst"
+  },
+  {
+    "package": "kaltura-batch",
+    "kind": "control",
+    "path": "postrm",
+    "sha256": "93b38c9f1758e07019ab4793e02459694644c8d39a198fff400e221efbd89ed3",
+    "local": "doc/php83/evidence/pilot83/hooks-inputs/kaltura-batch/postrm"
+  },
+  {
+    "package": "kaltura-batch",
+    "kind": "control",
+    "path": "preinst",
+    "sha256": "2a959532e3942332a1df2ed0e5638aa68ef75ec20fa39d1f4326e03d4cd6077f",
+    "local": "doc/php83/evidence/pilot83/hooks-inputs/kaltura-batch/preinst"
+  },
+  {
+    "package": "kaltura-batch",
+    "kind": "control",
+    "path": "prerm",
+    "sha256": "a3cc6a4f369d128ea7193f00d9c2453e4a9274154e44f7b1a3252bb40a4948b0",
+    "local": "doc/php83/evidence/pilot83/hooks-inputs/kaltura-batch/prerm"
+  },
+  {
+    "package": "kaltura-nginx",
+    "kind": "control",
+    "path": "postinst",
+    "sha256": "46b06bd8f1f5900425a3aee9af4303f0724b34b0b46d9ccda04f021633684c9a",
+    "local": "doc/php83/evidence/pilot83/hooks-inputs/kaltura-nginx/postinst"
+  },
+  {
+    "package": "kaltura-nginx",
+    "kind": "control",
+    "path": "postrm",
+    "sha256": "a2c55e5251f08367c70bd144707045d466b408a9010ec58962c6aab10b09353c",
+    "local": "doc/php83/evidence/pilot83/hooks-inputs/kaltura-nginx/postrm"
+  },
+  {
+    "package": "kaltura-nginx",
+    "kind": "control",
+    "path": "preinst",
+    "sha256": "9cd3a42c52aa5f777084716658371cacadd996baf00f25d7ff0668d408415840",
+    "local": "doc/php83/evidence/pilot83/hooks-inputs/kaltura-nginx/preinst"
+  },
+  {
+    "package": "kaltura-nginx",
+    "kind": "control",
+    "path": "prerm",
+    "sha256": "7c14321b7e66331f87923fab9c4d44c1702cc9b947879c1406eec16f87355792",
+    "local": "doc/php83/evidence/pilot83/hooks-inputs/kaltura-nginx/prerm"
+  },
+  {
+    "package": "kaltura-html5lib",
+    "kind": "control",
+    "path": "postinst",
+    "sha256": "2d11b8e007677d94399b5e45d9d604efe501fafb56ee3f8d44b33bf162b2ded4",
+    "local": "doc/php83/evidence/pilot83/hooks-inputs/kaltura-html5lib/postinst"
+  },
+  {
+    "package": "kaltura-elasticsearch",
+    "kind": "control",
+    "path": "postinst",
+    "sha256": "586c0cb91ba3dc6adcb8a63bcac2e4ec129757cce16f3afc2db5d4c89c07e9d0",
+    "local": "doc/php83/evidence/pilot83/hooks-inputs/kaltura-elasticsearch/postinst"
+  },
+  {
+    "package": "kaltura-elasticsearch",
+    "kind": "control",
+    "path": "postrm",
+    "sha256": "1c52b16ebedd21cd928ced73f42e7b31ea6d8dbf96a33fe4157f83fb206d277a",
+    "local": "doc/php83/evidence/pilot83/hooks-inputs/kaltura-elasticsearch/postrm"
+  },
+  {
+    "package": "kaltura-elasticsearch",
+    "kind": "control",
+    "path": "preinst",
+    "sha256": "c5d687c827d35271c1698dff8979b46bba6eadcc703d8e69c235ffce4cbcc41e",
+    "local": "doc/php83/evidence/pilot83/hooks-inputs/kaltura-elasticsearch/preinst"
+  },
+  {
+    "package": "kaltura-elasticsearch",
+    "kind": "control",
+    "path": "prerm",
+    "sha256": "2e0e4169995dfd585deb66162690280e579b61360821cca3a4d1b70cf974eff7",
+    "local": "doc/php83/evidence/pilot83/hooks-inputs/kaltura-elasticsearch/prerm"
+  },
+  {
+    "package": "kaltura-sphinx",
+    "kind": "control",
+    "path": "postinst",
+    "sha256": "bb77bb0021df5394a208dbd9f247f2b5a709aac7a902b6bd2ecf98f8de01311b",
+    "local": "doc/php83/evidence/pilot83/hooks-inputs/kaltura-sphinx/postinst"
+  },
+  {
+    "package": "kaltura-sphinx",
+    "kind": "control",
+    "path": "postrm",
+    "sha256": "1ad0b46ec5fe8d1f231c09c82a7af99b33c720bb2c65b1fd8b49dcb5975b79a1",
+    "local": "doc/php83/evidence/pilot83/hooks-inputs/kaltura-sphinx/postrm"
+  },
+  {
+    "package": "kaltura-sphinx",
+    "kind": "control",
+    "path": "preinst",
+    "sha256": "412a171a3813d65f6644a67925144d50f546534aa46832f8599b7188c81d08bc",
+    "local": "doc/php83/evidence/pilot83/hooks-inputs/kaltura-sphinx/preinst"
+  },
+  {
+    "package": "kaltura-sphinx",
+    "kind": "control",
+    "path": "prerm",
+    "sha256": "91979bf8ab4eafb9d32602c928a2a82f3bc91c69d6b6893b865448a6884c2f5b",
+    "local": "doc/php83/evidence/pilot83/hooks-inputs/kaltura-sphinx/prerm"
+  },
+  {
+    "package": "kaltura-db",
+    "kind": "control",
+    "path": "postinst",
+    "sha256": "ac9527c54e9829536fa41679d5beb7bd7f2daffb7a26fddeb0c9d0c983a8b2a4",
+    "local": "doc/php83/evidence/pilot83/hooks-inputs/kaltura-db/postinst"
+  },
+  {
+    "package": "kaltura-db",
+    "kind": "control",
+    "path": "postrm",
+    "sha256": "434230792adf5e00a679477543f22c0e99f1c0f5d4aa7dae8184b5f6e393cfc7",
+    "local": "doc/php83/evidence/pilot83/hooks-inputs/kaltura-db/postrm"
+  }
+]

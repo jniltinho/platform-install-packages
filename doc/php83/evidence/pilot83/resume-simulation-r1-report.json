@@ -1,0 +1,12 @@
+{
+  "status": "SIMULATED_ONLY_NOT_INSTALL_APPROVED",
+  "apt_exit": 0,
+  "stdout_sha256": "1bcc3c4fadaf8c893f70a07594b3f2682b0abfe53f76c3aa928b77d3399a761c",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "private_packages": 17,
+  "external_packages": 1,
+  "package_arguments": 18,
+  "native_php_revision": "8.3.6-0ubuntu0.24.04.11",
+  "mutation": false,
+  "dependency_origins_accepted": false
+}

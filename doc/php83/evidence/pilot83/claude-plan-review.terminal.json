@@ -1,0 +1,10 @@
+{
+  "executor": "actual Claude CLI",
+  "exit": 0,
+  "elapsed_seconds": 86.444,
+  "stdout_bytes": 4724,
+  "stderr_bytes": 0,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "scope": "local plan review only; no tests or VM",
+  "plan_sha256": "450315400db135b3be2308ca345b87360215e30b0ddf98901fb1934d2af884e0"
+}

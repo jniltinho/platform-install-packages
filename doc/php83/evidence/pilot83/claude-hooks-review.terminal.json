@@ -1,0 +1,8 @@
+{
+  "exit": 0,
+  "elapsed_seconds": 171.971,
+  "stdout_bytes": 6605,
+  "stderr_bytes": 0,
+  "executor": "actual Claude CLI",
+  "scope": "local hooks review and tests only"
+}

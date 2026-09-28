@@ -1,0 +1,568 @@
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  ffmpeg fontconfig gcc-14-base guile-3.0-libs hicolor-icon-theme imagemagick
+  imagemagick-6-common imagemagick-6.q16 libapache2-mod-xsendfile
+  libasound2-data libasound2t64 libass9 libasyncns0 libavc1394-0 libavcodec60
+  libavdevice60 libavfilter9 libavformat60 libavutil58 libblas3 libbluray2
+  libbs2b0 libcaca0 libcairo-gobject2 libcairo2 libcdio-cdda2t64
+  libcdio-paranoia2t64 libcdio19t64 libchromaprint1 libcjson1 libcodec2-1.2
+  libconfig-inifiles-perl libdatrie1 libdav1d7 libdc1394-25 libdecor-0-0
+  libdrm-amdgpu1 libdrm-common libdrm-intel1 libdrm2 libevent-2.1-7t64
+  libevent-core-2.1-7t64 libfftw3-double3 libflac12t64 libflite1 libgbm1
+  libgc1 libgcc-s1 libgdk-pixbuf-2.0-0 libgdk-pixbuf2.0-common libgfortran5
+  libgl1 libgl1-mesa-dri libglvnd0 libglx-mesa0 libglx0 libgme0 libgomp1
+  libgraphite2-3 libgsasl18 libgsm1 libgssglue1 libharfbuzz0b libhwy1t64
+  libidn12 libiec61883-0 libjack-jackd2-0 libjxl0.7 liblapack3 liblcms2-2
+  liblilv-0-0 libllvm20 liblqr-1-0 libltdl7 libmagickcore-6.q16-7t64
+  libmagickwand-6.q16-7t64 libmailutils9t64 libmariadb3 libmbedcrypto7t64
+  libmediainfo0v5 libmms0 libmp3lame0 libmpg123-0t64 libmysofa1
+  libmysqlclient21 libnorm1t64 libnsl2 libntlm0 libodbc2 libogg0
+  libopenal-data libopenal1 libopencore-amrnb0 libopencore-amrwb0 libopenjp2-7
+  libopenmpt0t64 libopus0 libpango-1.0-0 libpangocairo-1.0-0 libpangoft2-1.0-0
+  libpciaccess0 libpcre3 libpgm-5.3-0t64 libpixman-1-0 libplacebo338
+  libpocketsphinx3 libpostproc57 libpq5 libpulse0 librabbitmq4 librav1e0
+  libraw1394-11 libraw23t64 libre2-10 librist4 librsvg2-2 librubberband2
+  libsamplerate0 libsdl2-2.0-0 libserd-0-0 libshine3 libsnappy1v5 libsndfile1
+  libsndio7.0 libsord-0-0 libsox-fmt-alsa libsox-fmt-base libsox3 libsoxr0
+  libspeex1 libsphinxbase3t64 libsratom-0-0 libsrt1.5-gnutls libssh-4
+  libssh-gcrypt-4 libstdc++6 libsvtav1enc1d1 libswresample4 libswscale7
+  libthai-data libthai0 libtheora0 libtinyxml2-10 libtwolame0 libudfread0
+  libunibreak5 libva-drm2 libva-x11-2 libva2 libvdpau1 libvidstab1.1
+  libvorbis0a libvorbisenc2 libvorbisfile3 libvpl2 libvpx9 libvulkan1
+  libwavpack1 libwayland-client0 libwayland-cursor0 libwayland-egl1
+  libwebpdemux2 libwebpmux3 libx11-xcb1 libx264-164 libx265-199 libxcb-dri3-0
+  libxcb-glx0 libxcb-present0 libxcb-randr0 libxcb-render0 libxcb-shape0
+  libxcb-shm0 libxcb-sync1 libxcb-xfixes0 libxcursor1 libxext6 libxfixes3
+  libxi6 libxml2 libxml2-utils libxrandr2 libxrender1 libxshmfence1 libxss1
+  libxv1 libxvidcore4 libxxf86vm1 libzen0t64 libzimg2 libzix-0-0 libzmq5
+  libzvbi-common libzvbi0t64 mailutils mailutils-common mariadb-client
+  mariadb-client-core mariadb-common mediainfo memcached mesa-libgallium monit
+  mysql-common ocl-icd-libopencl1 php8.3-soap postfix sox sphinxsearch sshpass
+  x11-common
+Suggested packages:
+  ffmpeg-doc imagemagick-6-doc autotrace cups-bsd | lpr | lprng enscript gimp
+  gnuplot grads graphviz hp2xx html2ps libwmf-bin mplayer povray radiance
+  sane-utils texlive-base-bin transfig libraw-bin xdg-utils alsa-utils
+  libasound2-plugins libcuda1 libnvcuvid1 libnvidia-encode1 libbluray-bdj
+  libfftw3-bin libfftw3-dev jackd2 liblcms2-utils libmagickcore-6.q16-7-extra
+  odbc-postgresql tdsodbc libportaudio2 opus-tools pulseaudio libraw1394-doc
+  librsvg2-bin serdi sndiod sordi libsox-fmt-all speex mailutils-mh
+  mailutils-doc mediainfo-gui libanyevent-perl libcache-memcached-perl
+  libmemcached libyaml-perl sysvinit-core opencl-icd postfix-cdb postfix-doc
+  postfix-ldap postfix-lmdb postfix-mta-sts-resolver postfix-mysql
+  postfix-pcre postfix-pgsql postfix-sqlite procmail sasl2-bin
+  | dovecot-common
+Recommended packages:
+  libmagickcore-6.q16-7-extra ghostscript netpbm alsa-ucm-conf
+  alsa-topology-conf libaacs0 default-libdecor-0-plugin-1
+  | libdecor-0-plugin-1 libgdk-pixbuf2.0-bin gsasl-common fonts-urw-base35
+  pocketsphinx-en-us librsvg2-common va-driver-all | va-driver
+  vdpau-driver-all | vdpau-driver mesa-vulkan-drivers | vulkan-icd
+  libdbd-mariadb-perl | libdbd-mysql-perl libdbi-perl
+The following NEW packages will be installed:
+  elasticsearch ffmpeg fontconfig guile-3.0-libs hicolor-icon-theme
+  imagemagick imagemagick-6-common imagemagick-6.q16 kaltura-base
+  kaltura-batch kaltura-db kaltura-elasticsearch kaltura-ffmpeg
+  kaltura-ffmpeg-aux kaltura-front kaltura-html5-analytics
+  kaltura-html5-studio kaltura-html5-studio3 kaltura-html5lib
+  kaltura-html5lib3 kaltura-kmcng kaltura-nginx kaltura-postinst
+  kaltura-server kaltura-sphinx libapache2-mod-xsendfile libasound2-data
+  libasound2t64 libass9 libasyncns0 libavc1394-0 libavcodec60 libavdevice60
+  libavfilter9 libavformat60 libavutil58 libblas3 libbluray2 libbs2b0 libcaca0
+  libcairo-gobject2 libcairo2 libcdio-cdda2t64 libcdio-paranoia2t64
+  libcdio19t64 libchromaprint1 libcjson1 libcodec2-1.2 libconfig-inifiles-perl
+  libdatrie1 libdav1d7 libdc1394-25 libdecor-0-0 libdrm-amdgpu1 libdrm-intel1
+  libevent-2.1-7t64 libfftw3-double3 libflac12t64 libflite1 libgbm1 libgc1
+  libgdk-pixbuf-2.0-0 libgdk-pixbuf2.0-common libgfortran5 libgl1
+  libgl1-mesa-dri libglvnd0 libglx-mesa0 libglx0 libgme0 libgomp1
+  libgraphite2-3 libgsasl18 libgsm1 libgssglue1 libharfbuzz0b libhwy1t64
+  libidn12 libiec61883-0 libjack-jackd2-0 libjxl0.7 liblapack3 liblcms2-2
+  liblilv-0-0 libllvm20 liblqr-1-0 libltdl7 libmagickcore-6.q16-7t64
+  libmagickwand-6.q16-7t64 libmailutils9t64 libmariadb3 libmbedcrypto7t64
+  libmediainfo0v5 libmms0 libmp3lame0 libmpg123-0t64 libmysofa1
+  libmysqlclient21 libnorm1t64 libnsl2 libntlm0 libodbc2 libogg0
+  libopenal-data libopenal1 libopencore-amrnb0 libopencore-amrwb0 libopenjp2-7
+  libopenmpt0t64 libopus0 libpango-1.0-0 libpangocairo-1.0-0 libpangoft2-1.0-0
+  libpciaccess0 libpcre3 libpgm-5.3-0t64 libpixman-1-0 libplacebo338
+  libpocketsphinx3 libpostproc57 libpq5 libpulse0 librabbitmq4 librav1e0
+  libraw1394-11 libraw23t64 libre2-10 librist4 librsvg2-2 librubberband2
+  libsamplerate0 libsdl2-2.0-0 libserd-0-0 libshine3 libsnappy1v5 libsndfile1
+  libsndio7.0 libsord-0-0 libsox-fmt-alsa libsox-fmt-base libsox3 libsoxr0
+  libspeex1 libsphinxbase3t64 libsratom-0-0 libsrt1.5-gnutls libssh-gcrypt-4
+  libsvtav1enc1d1 libswresample4 libswscale7 libthai-data libthai0 libtheora0
+  libtinyxml2-10 libtwolame0 libudfread0 libunibreak5 libva-drm2 libva-x11-2
+  libva2 libvdpau1 libvidstab1.1 libvorbis0a libvorbisenc2 libvorbisfile3
+  libvpl2 libvpx9 libvulkan1 libwavpack1 libwayland-client0 libwayland-cursor0
+  libwayland-egl1 libwebpdemux2 libwebpmux3 libx11-xcb1 libx264-164
+  libx265-199 libxcb-dri3-0 libxcb-glx0 libxcb-present0 libxcb-randr0
+  libxcb-render0 libxcb-shape0 libxcb-shm0 libxcb-sync1 libxcb-xfixes0
+  libxcursor1 libxext6 libxfixes3 libxi6 libxml2-utils libxrandr2 libxrender1
+  libxshmfence1 libxss1 libxv1 libxvidcore4 libxxf86vm1 libzen0t64 libzimg2
+  libzix-0-0 libzmq5 libzvbi-common libzvbi0t64 mailutils mailutils-common
+  mariadb-client mariadb-client-core mariadb-common mediainfo memcached
+  mesa-libgallium monit mysql-common ocl-icd-libopencl1 php8.3-soap postfix
+  sox sphinxsearch sshpass x11-common
+The following packages will be upgraded:
+  gcc-14-base libdrm-common libdrm2 libevent-core-2.1-7t64 libgcc-s1 libssh-4
+  libstdc++6 libxml2
+8 upgraded, 221 newly installed, 0 to remove and 220 not upgraded.
+Inst gcc-14-base [14.2.0-4ubuntu2~24.04] (14.2.0-4ubuntu2~24.04.1 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64]) [libstdc++6:amd64 libgcc-s1:amd64 ]
+Conf gcc-14-base (14.2.0-4ubuntu2~24.04.1 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64]) [libstdc++6:amd64 libgcc-s1:amd64 ]
+Inst libstdc++6 [14.2.0-4ubuntu2~24.04] (14.2.0-4ubuntu2~24.04.1 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64]) [libgcc-s1:amd64 ]
+Conf libstdc++6 (14.2.0-4ubuntu2~24.04.1 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64]) [libgcc-s1:amd64 ]
+Inst libgcc-s1 [14.2.0-4ubuntu2~24.04] (14.2.0-4ubuntu2~24.04.1 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf libgcc-s1 (14.2.0-4ubuntu2~24.04.1 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst libgomp1 (14.2.0-4ubuntu2~24.04.1 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst libfftw3-double3 (3.3.10-1ubuntu3 Ubuntu:24.04/noble [amd64])
+Inst liblcms2-2 (2.14-2ubuntu0.1 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst liblqr-1-0 (0.4.2-2.1build2 Ubuntu:24.04/noble [amd64])
+Inst libltdl7 (2.4.7-7build1 Ubuntu:24.04/noble [amd64])
+Inst libopenjp2-7 (2.5.0-2ubuntu0.5 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst libraw23t64 (0.21.2-2.1ubuntu0.24.04.2 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst libwebpdemux2 (1.3.2-0.4build3 Ubuntu:24.04/noble [amd64])
+Inst libwebpmux3 (1.3.2-0.4build3 Ubuntu:24.04/noble [amd64])
+Inst libxext6 (2:1.3.4-1build2 Ubuntu:24.04/noble [amd64])
+Inst libxml2 [2.9.14+dfsg-1.3ubuntu3.5] (2.9.14+dfsg-1.3ubuntu3.9 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst imagemagick-6-common (8:6.9.12.98+dfsg1-5.2build2 Ubuntu:24.04/noble [all])
+Inst libmagickcore-6.q16-7t64 (8:6.9.12.98+dfsg1-5.2build2 Ubuntu:24.04/noble [amd64])
+Inst libmagickwand-6.q16-7t64 (8:6.9.12.98+dfsg1-5.2build2 Ubuntu:24.04/noble [amd64])
+Inst libevent-2.1-7t64 (2.1.12-stable-9ubuntu2.1 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst memcached (1.6.24-1ubuntu0.3 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst libnsl2 (1.3.0-3build3 Ubuntu:24.04/noble [amd64])
+Inst postfix (3.8.6-1ubuntu0.1 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst php8.3-soap (8.3.6-0ubuntu0.24.04.11 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst libconfig-inifiles-perl (3.000003-2ubuntu0.1 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [all])
+Inst mysql-common (5.8+1.1.0build1 Ubuntu:24.04/noble [all])
+Inst mariadb-common (1:10.11.14-0ubuntu0.24.04.1 Ubuntu:24.04/noble-updates [all])
+Inst libmariadb3 (1:10.11.14-0ubuntu0.24.04.1 Ubuntu:24.04/noble-updates [amd64])
+Inst mariadb-client-core (1:10.11.14-0ubuntu0.24.04.1 Ubuntu:24.04/noble-updates [amd64])
+Inst mariadb-client (1:10.11.14-0ubuntu0.24.04.1 Ubuntu:24.04/noble-updates [amd64])
+Inst monit (1:5.33.0-2build2 Ubuntu:24.04/noble [amd64])
+Inst mailutils-common (1:3.17-1.1build3 Ubuntu:24.04/noble [all])
+Inst libgssglue1 (0.9-1build1 Ubuntu:24.04/noble [amd64])
+Inst libidn12 (1.42-1ubuntu0.1 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst libntlm0 (1.7-1build1 Ubuntu:24.04/noble [amd64])
+Inst libgsasl18 (2.2.1-1willsync1ubuntu0.1 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst libgc1 (1:8.2.6-1build1 Ubuntu:24.04/noble [amd64])
+Inst guile-3.0-libs (3.0.9-1build2 Ubuntu:24.04/noble [amd64])
+Inst libmysqlclient21 (8.0.46-0ubuntu0.24.04.4 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst libpq5 (16.15-0ubuntu0.24.04.1 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst libmailutils9t64 (1:3.17-1.1build3 Ubuntu:24.04/noble [amd64])
+Inst mailutils (1:3.17-1.1build3 Ubuntu:24.04/noble [amd64])
+Inst kaltura-postinst (1.0.34-1+php83lab1 local-deb [all])
+Inst kaltura-base (18.20.0-1+php83lab1 local-deb [all])
+Inst elasticsearch (7.17.29 local-deb [amd64])
+Conf libxml2 (2.9.14+dfsg-1.3ubuntu3.9 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf php8.3-soap (8.3.6-0ubuntu0.24.04.11 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf libconfig-inifiles-perl (3.000003-2ubuntu0.1 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [all])
+Conf mysql-common (5.8+1.1.0build1 Ubuntu:24.04/noble [all])
+Conf mariadb-common (1:10.11.14-0ubuntu0.24.04.1 Ubuntu:24.04/noble-updates [all])
+Conf libmariadb3 (1:10.11.14-0ubuntu0.24.04.1 Ubuntu:24.04/noble-updates [amd64])
+Conf mariadb-client-core (1:10.11.14-0ubuntu0.24.04.1 Ubuntu:24.04/noble-updates [amd64])
+Conf mariadb-client (1:10.11.14-0ubuntu0.24.04.1 Ubuntu:24.04/noble-updates [amd64])
+Conf libnsl2 (1.3.0-3build3 Ubuntu:24.04/noble [amd64])
+Conf postfix (3.8.6-1ubuntu0.1 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf monit (1:5.33.0-2build2 Ubuntu:24.04/noble [amd64])
+Conf mailutils-common (1:3.17-1.1build3 Ubuntu:24.04/noble [all])
+Conf libgssglue1 (0.9-1build1 Ubuntu:24.04/noble [amd64])
+Conf libidn12 (1.42-1ubuntu0.1 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf libntlm0 (1.7-1build1 Ubuntu:24.04/noble [amd64])
+Conf libgsasl18 (2.2.1-1willsync1ubuntu0.1 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf libgc1 (1:8.2.6-1build1 Ubuntu:24.04/noble [amd64])
+Conf guile-3.0-libs (3.0.9-1build2 Ubuntu:24.04/noble [amd64])
+Conf libltdl7 (2.4.7-7build1 Ubuntu:24.04/noble [amd64])
+Conf libmysqlclient21 (8.0.46-0ubuntu0.24.04.4 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf libpq5 (16.15-0ubuntu0.24.04.1 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf libmailutils9t64 (1:3.17-1.1build3 Ubuntu:24.04/noble [amd64])
+Conf mailutils (1:3.17-1.1build3 Ubuntu:24.04/noble [amd64])
+Conf kaltura-postinst (1.0.34-1+php83lab1 local-deb [all])
+Conf kaltura-base (18.20.0-1+php83lab1 local-deb [all])
+Conf elasticsearch (7.17.29 local-deb [amd64])
+Inst kaltura-elasticsearch (7.17-1+php83lab1 local-deb [all])
+Inst libdrm-common [2.4.122-1~ubuntu0.24.04.1] (2.4.125-1ubuntu0.1~24.04.2 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [all])
+Inst libdrm2 [2.4.122-1~ubuntu0.24.04.1] (2.4.125-1ubuntu0.1~24.04.2 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst libva2 (2.20.0-2ubuntu0.2 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst libva-drm2 (2.20.0-2ubuntu0.2 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst libx11-xcb1 (2:1.8.7-1build1 Ubuntu:24.04/noble [amd64])
+Inst libxcb-dri3-0 (1.15-1ubuntu2 Ubuntu:24.04/noble [amd64])
+Inst libxfixes3 (1:6.0.0-2build1 Ubuntu:24.04/noble [amd64])
+Inst libva-x11-2 (2.20.0-2ubuntu0.2 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst libvdpau1 (1.5-2build1 Ubuntu:24.04/noble [amd64])
+Inst libpciaccess0 (0.17-3ubuntu0.24.04.3 Ubuntu:24.04/noble-updates [amd64])
+Inst libdrm-intel1 (2.4.125-1ubuntu0.1~24.04.2 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst libwayland-client0 (1.22.0-2.1build1 Ubuntu:24.04/noble [amd64])
+Inst libvpl2 (2023.3.0-1build1 Ubuntu:24.04/noble [amd64])
+Inst ocl-icd-libopencl1 (2.3.2-1build1 Ubuntu:24.04/noble, Ubuntu:24.04/noble-updates [amd64])
+Inst libavutil58 (7:6.1.1-3ubuntu5 Ubuntu:24.04/noble [amd64])
+Inst libpixman-1-0 (0.42.2-1build1 Ubuntu:24.04/noble [amd64])
+Inst libxcb-render0 (1.15-1ubuntu2 Ubuntu:24.04/noble [amd64])
+Inst libxcb-shm0 (1.15-1ubuntu2 Ubuntu:24.04/noble [amd64])
+Inst libxrender1 (1:0.9.10-1.1build1 Ubuntu:24.04/noble [amd64])
+Inst libcairo2 (1.18.0-3build1 Ubuntu:24.04/noble [amd64])
+Inst libcodec2-1.2 (1.2.0-2build1 Ubuntu:24.04/noble [amd64])
+Inst libdav1d7 (1.4.1-1build1 Ubuntu:24.04/noble [amd64])
+Inst libgsm1 (1.0.22-1build1 Ubuntu:24.04/noble [amd64])
+Inst libhwy1t64 (1.0.7-8.1build1 Ubuntu:24.04/noble [amd64])
+Inst libjxl0.7 (0.7.0-10.2ubuntu6.1 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst libmp3lame0 (3.100-6build1 Ubuntu:24.04/noble [amd64])
+Inst libopus0 (1.4-1build1 Ubuntu:24.04/noble [amd64])
+Inst librav1e0 (0.7.1-2 Ubuntu:24.04/noble [amd64])
+Inst libcairo-gobject2 (1.18.0-3build1 Ubuntu:24.04/noble [amd64])
+Inst libgdk-pixbuf2.0-common (2.42.10+dfsg-3ubuntu3.3 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [all])
+Inst libgdk-pixbuf-2.0-0 (2.42.10+dfsg-3ubuntu3.3 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst fontconfig (2.15.0-1.1ubuntu2 Ubuntu:24.04/noble [amd64])
+Inst libgraphite2-3 (1.3.14-2ubuntu0.24.04.1 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst libharfbuzz0b (8.3.0-2build2 Ubuntu:24.04/noble [amd64])
+Inst libthai-data (0.1.29-2build1 Ubuntu:24.04/noble [all])
+Inst libdatrie1 (0.2.13-3build1 Ubuntu:24.04/noble [amd64])
+Inst libthai0 (0.1.29-2build1 Ubuntu:24.04/noble [amd64])
+Inst libpango-1.0-0 (1.52.1+ds-1build1 Ubuntu:24.04/noble [amd64])
+Inst libpangoft2-1.0-0 (1.52.1+ds-1build1 Ubuntu:24.04/noble [amd64])
+Inst libpangocairo-1.0-0 (1.52.1+ds-1build1 Ubuntu:24.04/noble [amd64])
+Inst librsvg2-2 (2.58.0+dfsg-1build1 Ubuntu:24.04/noble [amd64])
+Inst libshine3 (3.1.1-2build1 Ubuntu:24.04/noble [amd64])
+Inst libsnappy1v5 (1.1.10-1build1 Ubuntu:24.04/noble [amd64])
+Inst libspeex1 (1.2.1-2ubuntu2.24.04.1 Ubuntu:24.04/noble-updates [amd64])
+Inst libsvtav1enc1d1 (1.7.0+dfsg-2build1 Ubuntu:24.04/noble [amd64])
+Inst libsoxr0 (0.1.3-4build3 Ubuntu:24.04/noble [amd64])
+Inst libswresample4 (7:6.1.1-3ubuntu5 Ubuntu:24.04/noble [amd64])
+Inst libogg0 (1.3.5-3build1 Ubuntu:24.04/noble [amd64])
+Inst libtheora0 (1.1.1+dfsg.1-16.1build3 Ubuntu:24.04/noble [amd64])
+Inst libtwolame0 (0.4.0-2build3 Ubuntu:24.04/noble [amd64])
+Inst libvorbis0a (1.3.7-1build3 Ubuntu:24.04/noble [amd64])
+Inst libvorbisenc2 (1.3.7-1build3 Ubuntu:24.04/noble [amd64])
+Inst libvpx9 (1.14.0-1ubuntu2.3 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst libx264-164 (2:0.164.3108+git31e19f9-1 Ubuntu:24.04/noble [amd64])
+Inst libx265-199 (3.5-2build1 Ubuntu:24.04/noble [amd64])
+Inst libxvidcore4 (2:1.3.7-1build1 Ubuntu:24.04/noble [amd64])
+Inst libzvbi-common (0.2.42-2 Ubuntu:24.04/noble [all])
+Inst libzvbi0t64 (0.2.42-2 Ubuntu:24.04/noble [amd64])
+Inst libavcodec60 (7:6.1.1-3ubuntu5 Ubuntu:24.04/noble [amd64])
+Inst libasound2-data (1.2.11-1ubuntu0.3 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [all])
+Inst libasound2t64 (1.2.11-1ubuntu0.3 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst libraw1394-11 (2.1.2-2build3 Ubuntu:24.04/noble [amd64])
+Inst libavc1394-0 (0.5.4-5build3 Ubuntu:24.04/noble [amd64])
+Inst libunibreak5 (5.1-2build1 Ubuntu:24.04/noble [amd64])
+Inst libass9 (1:0.17.1-2build1 Ubuntu:24.04/noble [amd64])
+Inst libudfread0 (1.1.2-1build1 Ubuntu:24.04/noble [amd64])
+Inst libbluray2 (1:1.3.4-1build1 Ubuntu:24.04/noble [amd64])
+Inst libchromaprint1 (1.5.1-5 Ubuntu:24.04/noble [amd64])
+Inst libgme0 (0.6.3-7build1 Ubuntu:24.04/noble [amd64])
+Inst libmpg123-0t64 (1.32.5-1ubuntu1.1 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst libvorbisfile3 (1.3.7-1build3 Ubuntu:24.04/noble [amd64])
+Inst libopenmpt0t64 (0.7.3-1.1build3 Ubuntu:24.04/noble [amd64])
+Inst librabbitmq4 (0.11.0-1ubuntu0.2 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst libcjson1 (1.7.17-1 Ubuntu:24.04/noble [amd64])
+Inst libmbedcrypto7t64 (2.28.8-1 Ubuntu:24.04/noble [amd64])
+Inst librist4 (0.2.10+dfsg-2 Ubuntu:24.04/noble [amd64])
+Inst libsrt1.5-gnutls (1.5.3-1build2 Ubuntu:24.04/noble [amd64])
+Inst libssh-gcrypt-4 (0.10.6-2ubuntu0.5 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst libnorm1t64 (1.5.9+dfsg-3.1build1 Ubuntu:24.04/noble [amd64])
+Inst libpgm-5.3-0t64 (5.3.128~dfsg-2.1build1 Ubuntu:24.04/noble [amd64])
+Inst libzmq5 (4.3.5-1build2 Ubuntu:24.04/noble [amd64])
+Inst libavformat60 (7:6.1.1-3ubuntu5 Ubuntu:24.04/noble [amd64])
+Inst libbs2b0 (3.1.0+dfsg-7build1 Ubuntu:24.04/noble [amd64])
+Inst libflite1 (2.2-6build3 Ubuntu:24.04/noble [amd64])
+Inst libserd-0-0 (0.32.2-1 Ubuntu:24.04/noble [amd64])
+Inst libzix-0-0 (0.4.2-2build1 Ubuntu:24.04/noble [amd64])
+Inst libsord-0-0 (0.16.16-2build1 Ubuntu:24.04/noble [amd64])
+Inst libsratom-0-0 (0.6.16-1build1 Ubuntu:24.04/noble [amd64])
+Inst liblilv-0-0 (0.24.22-1build1 Ubuntu:24.04/noble [amd64])
+Inst libmysofa1 (1.3.2+dfsg-2ubuntu2 Ubuntu:24.04/noble [amd64])
+Inst libvulkan1 (1.3.275.0-1build1 Ubuntu:24.04/noble [amd64])
+Inst libplacebo338 (6.338.2-2build1 Ubuntu:24.04/noble [amd64])
+Inst libblas3 (3.12.0-3build1.1 Ubuntu:24.04/noble-updates [amd64])
+Inst libgfortran5 (14.2.0-4ubuntu2~24.04.1 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst liblapack3 (3.12.0-3build1.1 Ubuntu:24.04/noble-updates [amd64])
+Inst libasyncns0 (0.8-6build4 Ubuntu:24.04/noble [amd64])
+Inst libflac12t64 (1.4.3+ds-2.1ubuntu2 Ubuntu:24.04/noble [amd64])
+Inst libsndfile1 (1.2.2-1ubuntu5.24.04.1 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst libpulse0 (1:16.1+dfsg1-2ubuntu10.1 Ubuntu:24.04/noble-updates [amd64])
+Inst libsphinxbase3t64 (0.8+5prealpha+1-17build2 Ubuntu:24.04/noble [amd64])
+Inst libpocketsphinx3 (0.8.0+real5prealpha+1-15ubuntu5 Ubuntu:24.04/noble [amd64])
+Inst libpostproc57 (7:6.1.1-3ubuntu5 Ubuntu:24.04/noble [amd64])
+Inst libsamplerate0 (0.2.2-4build1 Ubuntu:24.04/noble [amd64])
+Inst librubberband2 (3.3.0+dfsg-2build1 Ubuntu:24.04/noble [amd64])
+Inst libswscale7 (7:6.1.1-3ubuntu5 Ubuntu:24.04/noble [amd64])
+Inst libvidstab1.1 (1.1.0-2build1 Ubuntu:24.04/noble [amd64])
+Inst libzimg2 (3.0.5+ds1-1build1 Ubuntu:24.04/noble [amd64])
+Inst libavfilter9 (7:6.1.1-3ubuntu5 Ubuntu:24.04/noble [amd64])
+Inst libcaca0 (0.99.beta20-4ubuntu0.2 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst libcdio19t64 (2.1.0-4.1ubuntu1.2 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst libcdio-cdda2t64 (10.2+2.0.1-1.1build2 Ubuntu:24.04/noble [amd64])
+Inst libcdio-paranoia2t64 (10.2+2.0.1-1.1build2 Ubuntu:24.04/noble [amd64])
+Inst libdc1394-25 (2.2.6-4build1 Ubuntu:24.04/noble [amd64])
+Inst libglvnd0 (1.7.0-1build1 Ubuntu:24.04/noble [amd64])
+Inst libxcb-glx0 (1.15-1ubuntu2 Ubuntu:24.04/noble [amd64])
+Inst libxcb-present0 (1.15-1ubuntu2 Ubuntu:24.04/noble [amd64])
+Inst libxcb-xfixes0 (1.15-1ubuntu2 Ubuntu:24.04/noble [amd64])
+Inst libxxf86vm1 (1:1.1.4-1build4 Ubuntu:24.04/noble [amd64])
+Inst libdrm-amdgpu1 (2.4.125-1ubuntu0.1~24.04.2 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst libllvm20 (1:20.1.2-0ubuntu1~24.04.3 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst libxcb-randr0 (1.15-1ubuntu2 Ubuntu:24.04/noble [amd64])
+Inst libxcb-sync1 (1.15-1ubuntu2 Ubuntu:24.04/noble [amd64])
+Inst libxshmfence1 (1.3-1build5 Ubuntu:24.04/noble [amd64])
+Inst mesa-libgallium (25.2.8-0ubuntu0.24.04.2 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst libgbm1 (25.2.8-0ubuntu0.24.04.2 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst libgl1-mesa-dri (25.2.8-0ubuntu0.24.04.2 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst libglx-mesa0 (25.2.8-0ubuntu0.24.04.2 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst libglx0 (1.7.0-1build1 Ubuntu:24.04/noble [amd64])
+Inst libgl1 (1.7.0-1build1 Ubuntu:24.04/noble [amd64])
+Inst libiec61883-0 (1.2.0-6build1 Ubuntu:24.04/noble [amd64])
+Inst libjack-jackd2-0 (1.9.21~dfsg-3ubuntu3 Ubuntu:24.04/noble [amd64])
+Inst libopenal-data (1:1.23.1-4build1 Ubuntu:24.04/noble [all])
+Inst libsndio7.0 (1.9.0-0.3build3 Ubuntu:24.04/noble [amd64])
+Inst libopenal1 (1:1.23.1-4build1 Ubuntu:24.04/noble [amd64])
+Inst libdecor-0-0 (0.2.2-1build2 Ubuntu:24.04/noble [amd64])
+Inst libwayland-cursor0 (1.22.0-2.1build1 Ubuntu:24.04/noble [amd64])
+Inst libwayland-egl1 (1.22.0-2.1build1 Ubuntu:24.04/noble [amd64])
+Inst libxcursor1 (1:1.2.1-1build1 Ubuntu:24.04/noble [amd64])
+Inst libxi6 (2:1.8.1-1build1 Ubuntu:24.04/noble [amd64])
+Inst libxrandr2 (2:1.5.2-2build1 Ubuntu:24.04/noble [amd64])
+Inst x11-common (1:7.7+23ubuntu3 Ubuntu:24.04/noble [all])
+Inst libxss1 (1:1.2.3-1build3 Ubuntu:24.04/noble [amd64])
+Inst libsdl2-2.0-0 (2.30.0+dfsg-1ubuntu3.1 Ubuntu:24.04/noble-updates [amd64])
+Inst libxcb-shape0 (1.15-1ubuntu2 Ubuntu:24.04/noble [amd64])
+Inst libxv1 (2:1.0.11-1.1build1 Ubuntu:24.04/noble [amd64])
+Inst libavdevice60 (7:6.1.1-3ubuntu5 Ubuntu:24.04/noble [amd64])
+Inst ffmpeg (7:6.1.1-3ubuntu5 Ubuntu:24.04/noble [amd64])
+Inst hicolor-icon-theme (0.17-2 Ubuntu:24.04/noble [all])
+Inst imagemagick-6.q16 (8:6.9.12.98+dfsg1-5.2build2 Ubuntu:24.04/noble [amd64])
+Inst imagemagick (8:6.9.12.98+dfsg1-5.2build2 Ubuntu:24.04/noble [amd64])
+Inst kaltura-ffmpeg (6.1-1+php83lab1 local-deb [all])
+Inst kaltura-ffmpeg-aux (6.1-1+php83lab1 local-deb [all])
+Inst libodbc2 (2.3.12-1ubuntu0.24.04.1 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst libre2-10 (20230301-3build1 Ubuntu:24.04/noble [amd64])
+Inst sphinxsearch (2.2.11-8build1 Ubuntu:24.04/noble [amd64])
+Inst kaltura-sphinx (2.2.11-1+php83lab1 local-deb [all])
+Inst libevent-core-2.1-7t64 [2.1.12-stable-9ubuntu2] (2.1.12-stable-9ubuntu2.1 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst libmms0 (0.6.4-3build1 Ubuntu:24.04/noble [amd64])
+Inst libtinyxml2-10 (10.0.0+dfsg-2 Ubuntu:24.04/noble [amd64])
+Inst libzen0t64 (0.4.41-2.1build1 Ubuntu:24.04/noble [amd64])
+Inst libmediainfo0v5 (24.01+dfsg-1build2 Ubuntu:24.04/noble [amd64])
+Inst libopencore-amrnb0 (0.1.6-1build1 Ubuntu:24.04/noble [amd64])
+Inst libopencore-amrwb0 (0.1.6-1build1 Ubuntu:24.04/noble [amd64])
+Inst libpcre3 (2:8.39-15build1 Ubuntu:24.04/noble [amd64])
+Inst libsox3 (14.4.2+git20190427-4build4 Ubuntu:24.04/noble [amd64])
+Inst libsox-fmt-alsa (14.4.2+git20190427-4build4 Ubuntu:24.04/noble [amd64])
+Inst libwavpack1 (5.6.0-1build1 Ubuntu:24.04/noble [amd64])
+Inst libsox-fmt-base (14.4.2+git20190427-4build4 Ubuntu:24.04/noble [amd64])
+Inst libssh-4 [0.10.6-2ubuntu0.1] (0.10.6-2ubuntu0.5 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst libxml2-utils (2.9.14+dfsg-1.3ubuntu3.9 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst mediainfo (24.01.1-1build2 Ubuntu:24.04/noble [amd64])
+Inst sox (14.4.2+git20190427-4build4 Ubuntu:24.04/noble [amd64])
+Inst libapache2-mod-xsendfile (0.12-2build1 Ubuntu:24.04/noble [amd64])
+Inst sshpass (1.09-1 Ubuntu:24.04/noble [amd64])
+Inst kaltura-batch (18.20.0-1+php83lab1 local-deb [all])
+Inst kaltura-db (18.20.0-1+php83lab1 local-deb [all])
+Inst kaltura-html5-studio (2.2.3-1+php83lab1 local-deb [all])
+Inst kaltura-html5-studio3 (3.18.0-1+php83lab1 local-deb [all])
+Inst kaltura-html5-analytics (0.3-1+php83lab1 local-deb [all])
+Inst kaltura-kmcng (5.17.0-1+php83lab1 local-deb [all])
+Inst kaltura-html5lib (2.98-1+php83lab1 local-deb [all])
+Inst kaltura-html5lib3 (3.8.1-1+php83lab1 local-deb [all])
+Inst kaltura-front (18.20.0-1+php83lab1 local-deb [all])
+Inst kaltura-nginx (1.23.0-1+php83lab1 local-deb [amd64])
+Inst kaltura-server (18.20.0-1+php83lab1 local-deb [all])
+Conf libgomp1 (14.2.0-4ubuntu2~24.04.1 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf libfftw3-double3 (3.3.10-1ubuntu3 Ubuntu:24.04/noble [amd64])
+Conf liblcms2-2 (2.14-2ubuntu0.1 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf liblqr-1-0 (0.4.2-2.1build2 Ubuntu:24.04/noble [amd64])
+Conf libopenjp2-7 (2.5.0-2ubuntu0.5 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf libraw23t64 (0.21.2-2.1ubuntu0.24.04.2 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf libwebpdemux2 (1.3.2-0.4build3 Ubuntu:24.04/noble [amd64])
+Conf libwebpmux3 (1.3.2-0.4build3 Ubuntu:24.04/noble [amd64])
+Conf libxext6 (2:1.3.4-1build2 Ubuntu:24.04/noble [amd64])
+Conf imagemagick-6-common (8:6.9.12.98+dfsg1-5.2build2 Ubuntu:24.04/noble [all])
+Conf libmagickcore-6.q16-7t64 (8:6.9.12.98+dfsg1-5.2build2 Ubuntu:24.04/noble [amd64])
+Conf libmagickwand-6.q16-7t64 (8:6.9.12.98+dfsg1-5.2build2 Ubuntu:24.04/noble [amd64])
+Conf libevent-2.1-7t64 (2.1.12-stable-9ubuntu2.1 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf memcached (1.6.24-1ubuntu0.3 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf kaltura-elasticsearch (7.17-1+php83lab1 local-deb [all])
+Conf libdrm-common (2.4.125-1ubuntu0.1~24.04.2 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [all])
+Conf libdrm2 (2.4.125-1ubuntu0.1~24.04.2 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf libva2 (2.20.0-2ubuntu0.2 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf libva-drm2 (2.20.0-2ubuntu0.2 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf libx11-xcb1 (2:1.8.7-1build1 Ubuntu:24.04/noble [amd64])
+Conf libxcb-dri3-0 (1.15-1ubuntu2 Ubuntu:24.04/noble [amd64])
+Conf libxfixes3 (1:6.0.0-2build1 Ubuntu:24.04/noble [amd64])
+Conf libva-x11-2 (2.20.0-2ubuntu0.2 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf libvdpau1 (1.5-2build1 Ubuntu:24.04/noble [amd64])
+Conf libpciaccess0 (0.17-3ubuntu0.24.04.3 Ubuntu:24.04/noble-updates [amd64])
+Conf libdrm-intel1 (2.4.125-1ubuntu0.1~24.04.2 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf libwayland-client0 (1.22.0-2.1build1 Ubuntu:24.04/noble [amd64])
+Conf libvpl2 (2023.3.0-1build1 Ubuntu:24.04/noble [amd64])
+Conf ocl-icd-libopencl1 (2.3.2-1build1 Ubuntu:24.04/noble, Ubuntu:24.04/noble-updates [amd64])
+Conf libavutil58 (7:6.1.1-3ubuntu5 Ubuntu:24.04/noble [amd64])
+Conf libpixman-1-0 (0.42.2-1build1 Ubuntu:24.04/noble [amd64])
+Conf libxcb-render0 (1.15-1ubuntu2 Ubuntu:24.04/noble [amd64])
+Conf libxcb-shm0 (1.15-1ubuntu2 Ubuntu:24.04/noble [amd64])
+Conf libxrender1 (1:0.9.10-1.1build1 Ubuntu:24.04/noble [amd64])
+Conf libcairo2 (1.18.0-3build1 Ubuntu:24.04/noble [amd64])
+Conf libcodec2-1.2 (1.2.0-2build1 Ubuntu:24.04/noble [amd64])
+Conf libdav1d7 (1.4.1-1build1 Ubuntu:24.04/noble [amd64])
+Conf libgsm1 (1.0.22-1build1 Ubuntu:24.04/noble [amd64])
+Conf libhwy1t64 (1.0.7-8.1build1 Ubuntu:24.04/noble [amd64])
+Conf libjxl0.7 (0.7.0-10.2ubuntu6.1 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf libmp3lame0 (3.100-6build1 Ubuntu:24.04/noble [amd64])
+Conf libopus0 (1.4-1build1 Ubuntu:24.04/noble [amd64])
+Conf librav1e0 (0.7.1-2 Ubuntu:24.04/noble [amd64])
+Conf libcairo-gobject2 (1.18.0-3build1 Ubuntu:24.04/noble [amd64])
+Conf libgdk-pixbuf2.0-common (2.42.10+dfsg-3ubuntu3.3 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [all])
+Conf libgdk-pixbuf-2.0-0 (2.42.10+dfsg-3ubuntu3.3 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf fontconfig (2.15.0-1.1ubuntu2 Ubuntu:24.04/noble [amd64])
+Conf libgraphite2-3 (1.3.14-2ubuntu0.24.04.1 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf libharfbuzz0b (8.3.0-2build2 Ubuntu:24.04/noble [amd64])
+Conf libthai-data (0.1.29-2build1 Ubuntu:24.04/noble [all])
+Conf libdatrie1 (0.2.13-3build1 Ubuntu:24.04/noble [amd64])
+Conf libthai0 (0.1.29-2build1 Ubuntu:24.04/noble [amd64])
+Conf libpango-1.0-0 (1.52.1+ds-1build1 Ubuntu:24.04/noble [amd64])
+Conf libpangoft2-1.0-0 (1.52.1+ds-1build1 Ubuntu:24.04/noble [amd64])
+Conf libpangocairo-1.0-0 (1.52.1+ds-1build1 Ubuntu:24.04/noble [amd64])
+Conf librsvg2-2 (2.58.0+dfsg-1build1 Ubuntu:24.04/noble [amd64])
+Conf libshine3 (3.1.1-2build1 Ubuntu:24.04/noble [amd64])
+Conf libsnappy1v5 (1.1.10-1build1 Ubuntu:24.04/noble [amd64])
+Conf libspeex1 (1.2.1-2ubuntu2.24.04.1 Ubuntu:24.04/noble-updates [amd64])
+Conf libsvtav1enc1d1 (1.7.0+dfsg-2build1 Ubuntu:24.04/noble [amd64])
+Conf libsoxr0 (0.1.3-4build3 Ubuntu:24.04/noble [amd64])
+Conf libswresample4 (7:6.1.1-3ubuntu5 Ubuntu:24.04/noble [amd64])
+Conf libogg0 (1.3.5-3build1 Ubuntu:24.04/noble [amd64])
+Conf libtheora0 (1.1.1+dfsg.1-16.1build3 Ubuntu:24.04/noble [amd64])
+Conf libtwolame0 (0.4.0-2build3 Ubuntu:24.04/noble [amd64])
+Conf libvorbis0a (1.3.7-1build3 Ubuntu:24.04/noble [amd64])
+Conf libvorbisenc2 (1.3.7-1build3 Ubuntu:24.04/noble [amd64])
+Conf libvpx9 (1.14.0-1ubuntu2.3 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf libx264-164 (2:0.164.3108+git31e19f9-1 Ubuntu:24.04/noble [amd64])
+Conf libx265-199 (3.5-2build1 Ubuntu:24.04/noble [amd64])
+Conf libxvidcore4 (2:1.3.7-1build1 Ubuntu:24.04/noble [amd64])
+Conf libzvbi-common (0.2.42-2 Ubuntu:24.04/noble [all])
+Conf libzvbi0t64 (0.2.42-2 Ubuntu:24.04/noble [amd64])
+Conf libavcodec60 (7:6.1.1-3ubuntu5 Ubuntu:24.04/noble [amd64])
+Conf libasound2-data (1.2.11-1ubuntu0.3 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [all])
+Conf libasound2t64 (1.2.11-1ubuntu0.3 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf libraw1394-11 (2.1.2-2build3 Ubuntu:24.04/noble [amd64])
+Conf libavc1394-0 (0.5.4-5build3 Ubuntu:24.04/noble [amd64])
+Conf libunibreak5 (5.1-2build1 Ubuntu:24.04/noble [amd64])
+Conf libass9 (1:0.17.1-2build1 Ubuntu:24.04/noble [amd64])
+Conf libudfread0 (1.1.2-1build1 Ubuntu:24.04/noble [amd64])
+Conf libbluray2 (1:1.3.4-1build1 Ubuntu:24.04/noble [amd64])
+Conf libchromaprint1 (1.5.1-5 Ubuntu:24.04/noble [amd64])
+Conf libgme0 (0.6.3-7build1 Ubuntu:24.04/noble [amd64])
+Conf libmpg123-0t64 (1.32.5-1ubuntu1.1 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf libvorbisfile3 (1.3.7-1build3 Ubuntu:24.04/noble [amd64])
+Conf libopenmpt0t64 (0.7.3-1.1build3 Ubuntu:24.04/noble [amd64])
+Conf librabbitmq4 (0.11.0-1ubuntu0.2 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf libcjson1 (1.7.17-1 Ubuntu:24.04/noble [amd64])
+Conf libmbedcrypto7t64 (2.28.8-1 Ubuntu:24.04/noble [amd64])
+Conf librist4 (0.2.10+dfsg-2 Ubuntu:24.04/noble [amd64])
+Conf libsrt1.5-gnutls (1.5.3-1build2 Ubuntu:24.04/noble [amd64])
+Conf libssh-gcrypt-4 (0.10.6-2ubuntu0.5 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf libnorm1t64 (1.5.9+dfsg-3.1build1 Ubuntu:24.04/noble [amd64])
+Conf libpgm-5.3-0t64 (5.3.128~dfsg-2.1build1 Ubuntu:24.04/noble [amd64])
+Conf libzmq5 (4.3.5-1build2 Ubuntu:24.04/noble [amd64])
+Conf libavformat60 (7:6.1.1-3ubuntu5 Ubuntu:24.04/noble [amd64])
+Conf libbs2b0 (3.1.0+dfsg-7build1 Ubuntu:24.04/noble [amd64])
+Conf libflite1 (2.2-6build3 Ubuntu:24.04/noble [amd64])
+Conf libserd-0-0 (0.32.2-1 Ubuntu:24.04/noble [amd64])
+Conf libzix-0-0 (0.4.2-2build1 Ubuntu:24.04/noble [amd64])
+Conf libsord-0-0 (0.16.16-2build1 Ubuntu:24.04/noble [amd64])
+Conf libsratom-0-0 (0.6.16-1build1 Ubuntu:24.04/noble [amd64])
+Conf liblilv-0-0 (0.24.22-1build1 Ubuntu:24.04/noble [amd64])
+Conf libmysofa1 (1.3.2+dfsg-2ubuntu2 Ubuntu:24.04/noble [amd64])
+Conf libvulkan1 (1.3.275.0-1build1 Ubuntu:24.04/noble [amd64])
+Conf libplacebo338 (6.338.2-2build1 Ubuntu:24.04/noble [amd64])
+Conf libblas3 (3.12.0-3build1.1 Ubuntu:24.04/noble-updates [amd64])
+Conf libgfortran5 (14.2.0-4ubuntu2~24.04.1 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf liblapack3 (3.12.0-3build1.1 Ubuntu:24.04/noble-updates [amd64])
+Conf libasyncns0 (0.8-6build4 Ubuntu:24.04/noble [amd64])
+Conf libflac12t64 (1.4.3+ds-2.1ubuntu2 Ubuntu:24.04/noble [amd64])
+Conf libsndfile1 (1.2.2-1ubuntu5.24.04.1 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf libpulse0 (1:16.1+dfsg1-2ubuntu10.1 Ubuntu:24.04/noble-updates [amd64])
+Conf libsphinxbase3t64 (0.8+5prealpha+1-17build2 Ubuntu:24.04/noble [amd64])
+Conf libpocketsphinx3 (0.8.0+real5prealpha+1-15ubuntu5 Ubuntu:24.04/noble [amd64])
+Conf libpostproc57 (7:6.1.1-3ubuntu5 Ubuntu:24.04/noble [amd64])
+Conf libsamplerate0 (0.2.2-4build1 Ubuntu:24.04/noble [amd64])
+Conf librubberband2 (3.3.0+dfsg-2build1 Ubuntu:24.04/noble [amd64])
+Conf libswscale7 (7:6.1.1-3ubuntu5 Ubuntu:24.04/noble [amd64])
+Conf libvidstab1.1 (1.1.0-2build1 Ubuntu:24.04/noble [amd64])
+Conf libzimg2 (3.0.5+ds1-1build1 Ubuntu:24.04/noble [amd64])
+Conf libavfilter9 (7:6.1.1-3ubuntu5 Ubuntu:24.04/noble [amd64])
+Conf libcaca0 (0.99.beta20-4ubuntu0.2 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf libcdio19t64 (2.1.0-4.1ubuntu1.2 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf libcdio-cdda2t64 (10.2+2.0.1-1.1build2 Ubuntu:24.04/noble [amd64])
+Conf libcdio-paranoia2t64 (10.2+2.0.1-1.1build2 Ubuntu:24.04/noble [amd64])
+Conf libdc1394-25 (2.2.6-4build1 Ubuntu:24.04/noble [amd64])
+Conf libglvnd0 (1.7.0-1build1 Ubuntu:24.04/noble [amd64])
+Conf libxcb-glx0 (1.15-1ubuntu2 Ubuntu:24.04/noble [amd64])
+Conf libxcb-present0 (1.15-1ubuntu2 Ubuntu:24.04/noble [amd64])
+Conf libxcb-xfixes0 (1.15-1ubuntu2 Ubuntu:24.04/noble [amd64])
+Conf libxxf86vm1 (1:1.1.4-1build4 Ubuntu:24.04/noble [amd64])
+Conf libdrm-amdgpu1 (2.4.125-1ubuntu0.1~24.04.2 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf libllvm20 (1:20.1.2-0ubuntu1~24.04.3 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf libxcb-randr0 (1.15-1ubuntu2 Ubuntu:24.04/noble [amd64])
+Conf libxcb-sync1 (1.15-1ubuntu2 Ubuntu:24.04/noble [amd64])
+Conf libxshmfence1 (1.3-1build5 Ubuntu:24.04/noble [amd64])
+Conf mesa-libgallium (25.2.8-0ubuntu0.24.04.2 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf libgbm1 (25.2.8-0ubuntu0.24.04.2 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf libgl1-mesa-dri (25.2.8-0ubuntu0.24.04.2 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf libglx-mesa0 (25.2.8-0ubuntu0.24.04.2 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf libglx0 (1.7.0-1build1 Ubuntu:24.04/noble [amd64])
+Conf libgl1 (1.7.0-1build1 Ubuntu:24.04/noble [amd64])
+Conf libiec61883-0 (1.2.0-6build1 Ubuntu:24.04/noble [amd64])
+Conf libjack-jackd2-0 (1.9.21~dfsg-3ubuntu3 Ubuntu:24.04/noble [amd64])
+Conf libopenal-data (1:1.23.1-4build1 Ubuntu:24.04/noble [all])
+Conf libsndio7.0 (1.9.0-0.3build3 Ubuntu:24.04/noble [amd64])
+Conf libopenal1 (1:1.23.1-4build1 Ubuntu:24.04/noble [amd64])
+Conf libdecor-0-0 (0.2.2-1build2 Ubuntu:24.04/noble [amd64])
+Conf libwayland-cursor0 (1.22.0-2.1build1 Ubuntu:24.04/noble [amd64])
+Conf libwayland-egl1 (1.22.0-2.1build1 Ubuntu:24.04/noble [amd64])
+Conf libxcursor1 (1:1.2.1-1build1 Ubuntu:24.04/noble [amd64])
+Conf libxi6 (2:1.8.1-1build1 Ubuntu:24.04/noble [amd64])
+Conf libxrandr2 (2:1.5.2-2build1 Ubuntu:24.04/noble [amd64])
+Conf x11-common (1:7.7+23ubuntu3 Ubuntu:24.04/noble [all])
+Conf libxss1 (1:1.2.3-1build3 Ubuntu:24.04/noble [amd64])
+Conf libsdl2-2.0-0 (2.30.0+dfsg-1ubuntu3.1 Ubuntu:24.04/noble-updates [amd64])
+Conf libxcb-shape0 (1.15-1ubuntu2 Ubuntu:24.04/noble [amd64])
+Conf libxv1 (2:1.0.11-1.1build1 Ubuntu:24.04/noble [amd64])
+Conf libavdevice60 (7:6.1.1-3ubuntu5 Ubuntu:24.04/noble [amd64])
+Conf ffmpeg (7:6.1.1-3ubuntu5 Ubuntu:24.04/noble [amd64])
+Conf hicolor-icon-theme (0.17-2 Ubuntu:24.04/noble [all])
+Conf imagemagick-6.q16 (8:6.9.12.98+dfsg1-5.2build2 Ubuntu:24.04/noble [amd64])
+Conf imagemagick (8:6.9.12.98+dfsg1-5.2build2 Ubuntu:24.04/noble [amd64])
+Conf kaltura-ffmpeg (6.1-1+php83lab1 local-deb [all])
+Conf kaltura-ffmpeg-aux (6.1-1+php83lab1 local-deb [all])
+Conf libodbc2 (2.3.12-1ubuntu0.24.04.1 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf libre2-10 (20230301-3build1 Ubuntu:24.04/noble [amd64])
+Conf sphinxsearch (2.2.11-8build1 Ubuntu:24.04/noble [amd64])
+Conf kaltura-sphinx (2.2.11-1+php83lab1 local-deb [all])
+Conf libevent-core-2.1-7t64 (2.1.12-stable-9ubuntu2.1 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf libmms0 (0.6.4-3build1 Ubuntu:24.04/noble [amd64])
+Conf libtinyxml2-10 (10.0.0+dfsg-2 Ubuntu:24.04/noble [amd64])
+Conf libzen0t64 (0.4.41-2.1build1 Ubuntu:24.04/noble [amd64])
+Conf libmediainfo0v5 (24.01+dfsg-1build2 Ubuntu:24.04/noble [amd64])
+Conf libopencore-amrnb0 (0.1.6-1build1 Ubuntu:24.04/noble [amd64])
+Conf libopencore-amrwb0 (0.1.6-1build1 Ubuntu:24.04/noble [amd64])
+Conf libpcre3 (2:8.39-15build1 Ubuntu:24.04/noble [amd64])
+Conf libsox3 (14.4.2+git20190427-4build4 Ubuntu:24.04/noble [amd64])
+Conf libsox-fmt-alsa (14.4.2+git20190427-4build4 Ubuntu:24.04/noble [amd64])
+Conf libwavpack1 (5.6.0-1build1 Ubuntu:24.04/noble [amd64])
+Conf libsox-fmt-base (14.4.2+git20190427-4build4 Ubuntu:24.04/noble [amd64])
+Conf libssh-4 (0.10.6-2ubuntu0.5 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf libxml2-utils (2.9.14+dfsg-1.3ubuntu3.9 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf mediainfo (24.01.1-1build2 Ubuntu:24.04/noble [amd64])
+Conf sox (14.4.2+git20190427-4build4 Ubuntu:24.04/noble [amd64])
+Conf libapache2-mod-xsendfile (0.12-2build1 Ubuntu:24.04/noble [amd64])
+Conf sshpass (1.09-1 Ubuntu:24.04/noble [amd64])
+Conf kaltura-batch (18.20.0-1+php83lab1 local-deb [all])
+Conf kaltura-db (18.20.0-1+php83lab1 local-deb [all])
+Conf kaltura-html5-studio (2.2.3-1+php83lab1 local-deb [all])
+Conf kaltura-html5-studio3 (3.18.0-1+php83lab1 local-deb [all])
+Conf kaltura-html5-analytics (0.3-1+php83lab1 local-deb [all])
+Conf kaltura-kmcng (5.17.0-1+php83lab1 local-deb [all])
+Conf kaltura-html5lib (2.98-1+php83lab1 local-deb [all])
+Conf kaltura-html5lib3 (3.8.1-1+php83lab1 local-deb [all])
+Conf kaltura-front (18.20.0-1+php83lab1 local-deb [all])
+Conf kaltura-nginx (1.23.0-1+php83lab1 local-deb [amd64])
+Conf kaltura-server (18.20.0-1+php83lab1 local-deb [all])

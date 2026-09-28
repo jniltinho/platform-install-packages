@@ -1,0 +1,12 @@
+{
+  "status": "STOPPED_EXISTING_DESTINATION",
+  "executor": "Codex",
+  "stage_script_exit": 1,
+  "failed_guard": "source directory present, destination must not exist",
+  "destination": "/var/lib/kaltura-php83-pilot",
+  "destination_modified_by_this_stage_script": false,
+  "private_credentials_generated": false,
+  "package_installation_attempted": false,
+  "coordination_required": true,
+  "limitation": "Earlier compound SSH/scp shell command did not stop on SSH guard exit; scp created only the vagrant transfer staging directory. No promotion, existing destination overwrite or package execution occurred."
+}

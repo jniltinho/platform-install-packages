@@ -1,0 +1,62 @@
+{
+  "status": "LOCAL_RECIPE_ONLY_NO_INSTALLER",
+  "target": {
+    "hostname": "kaltura-php83-lab",
+    "ip": "192.168.56.83"
+  },
+  "inputs_ready": false,
+  "legacy_order": [
+    [
+      "kaltura-postinst",
+      "kaltura-base"
+    ],
+    [
+      "kaltura-kmcng",
+      "kaltura-html5lib",
+      "kaltura-html5lib3",
+      "kaltura-html5-studio",
+      "kaltura-html5-studio3",
+      "kaltura-html5-analytics"
+    ],
+    [
+      "kaltura-front"
+    ],
+    [
+      "kaltura-sphinx"
+    ],
+    [
+      "kaltura-db"
+    ],
+    [
+      "kaltura-batch"
+    ],
+    [
+      "kaltura-nginx"
+    ],
+    [
+      "kaltura-elasticsearch"
+    ],
+    [
+      "kaltura-server"
+    ]
+  ],
+  "dependency_only_packages": [
+    "kaltura-ffmpeg",
+    "kaltura-ffmpeg-aux"
+  ],
+  "steps": [
+    "Verify independently authenticated DEB hashes, exact native provider/dependency origins and recovery-point receipt; unknown/PENDING blocks before guest actions.",
+    "Read-only hostname/IP/root/empty app+datadir/root .my.cnf/.mylogin.cnf guards; verify installed runtime file hashes and native PHP package revision.",
+    "APT --simulate all17 local private DEBs; retain complete private solver output and public exit/hash. Resolve origins and reject every PHP74/foreign runtime or removal before mutation.",
+    "Future reviewed executor: create new root0700 private state; generate fresh credentials there, never argv or exported env; debconf via stdin only.",
+    "Future reviewed executor: prevent automatic service start during dependency transaction; write lower_case_table_names=1 BEFORE any MariaDB package postinst or datadir initialization. Abort if datadir already exists. No legacy mysql-settings fallback.",
+    "Install matched native dependencies and pinned local Elasticsearch/ICU files only after authenticated origin review. Never run legacy PPA bootstrap or live curl prerequisite hook.",
+    "Initialize fresh MariaDB using approved config; establish private socket/@@datadir before SQL. Root/app/admin credentials only through private defaults files and SQL stdin.",
+    "Normal APT package transactions in listed legacy order, no manual hooks/dpkg force; verify solver-selected prerequisites. Capture all exits, private logs and installation canary windows.",
+    "On error, stop exact owned services; retain failed evidence then restore pre-install VM recovery point. Do not erase logs or call destructive legacy drop-db.",
+    "Installation privacy, CLI/web/worker/provider/cache gates must pass before nonce/USER/media. This recipe implements NONE of those acceptance gates."
+  ],
+  "mutation_implemented": false,
+  "auth_implemented": false,
+  "rollback_implemented": false
+}

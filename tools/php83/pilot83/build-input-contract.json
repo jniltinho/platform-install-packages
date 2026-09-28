@@ -1,0 +1,20 @@
+{
+  "doc/php83/evidence/pilot83/control-freeze-r1.json": "cab16486bf81c42e6affbbe45b78e98541bc128b7e028eb5c4559abbe438d7ee",
+  "doc/php83/evidence/pilot83/control-preparation-r1.json": "9fd5027282271206a80a5436a6adda5905b4ab8da8d9e276b7bdfdd936289bfb",
+  "doc/php83/evidence/pilot83/hooks-freeze-r2.json": "243f271e89345b9b7776515128bb9dd82e90967b358031269d506343ca2ff865",
+  "doc/php83/evidence/pilot83/hooks-transformation-r2.json": "3f397abc0dfc65eb9109168adb1ba79a565a6e683a78c4f73e2d3972abfb599f",
+  "doc/php83/evidence/pilot83/payload-freeze-r2.json": "da251e4a37165e11e8c224ded99465dc1c2914a300a77317a0026c0168113316",
+  "doc/php83/evidence/pilot83/payload-preparation-r4.json": "097ddb95ac682aaadd8ca65580517253b87d8eec4d66ab597e71efc58860864f",
+  "doc/php83/evidence/pilot83/published-control-inputs.json": "798cee663130d7f2d3e8b626038ccbf5056bb50998ac86c2e62785d8956c9a27",
+  "doc/php83/evidence/pilot83/published-hook-inputs.json": "4b9353da6889b09e32d9e33e2c2893624ad8074a04b4799368254af0b48818e5",
+  "tools/php83/pilot83/compose-payload.py": "9eff02383176063b6688c9fd9c753a0dad039750a3a5d3ea91743d7ac741240b",
+  "tools/php83/pilot83/control-policy.py": "85597943541e405c673a8b7359abd869e5ce8df78431cf68b15501e7826528b2",
+  "tools/php83/pilot83/prepare-controls.py": "ba825a09c6a9502290372c3414f9c1f1cc6ba27e36282a18dea7f9126781e050",
+  "tools/php83/pilot83/privacy-contract.json": "74a6e7e1332e43a2752c4e8d5024555ab0132a5fa3db6c23201f124ec52302ce",
+  "tools/php83/pilot83/private-argv.php": "f08566c2dfc4b7547711cb9e1f2d0e80478c676ad71e45e69b3289580edd21aa",
+  "tools/php83/pilot83/private-hook-functions.sh": "6fbc97208186f8d5558c7822f988df03375baac6656db3bb6d3c408e8cfe9dbe",
+  "tools/php83/pilot83/test_compose_payload.py": "ba66bdf2b96178c3c9a45a29aba8ef800c9e7236acace89cf6e8ab16042a5696",
+  "tools/php83/pilot83/test_control_policy.py": "a196cf3271fec2c602ce8dbbb1db91bb9de9c2799c140e146c7dd4662315763e",
+  "tools/php83/pilot83/test_private_hooks.py": "1a248c8219176c95f8b6102fb2bc46a2477bb4fb00350e3656b0de52854dcce0",
+  "tools/php83/pilot83/transform-hooks.py": "6c4c38bc20bd8fa4530045e71b4aaf8b9f34ce8c185afb2b68ece708d7044bbb"
+}

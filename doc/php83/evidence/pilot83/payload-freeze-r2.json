@@ -1,0 +1,6 @@
+{
+  "tools/php83/pilot83/compose-payload.py": "9eff02383176063b6688c9fd9c753a0dad039750a3a5d3ea91743d7ac741240b",
+  "tools/php83/pilot83/test_compose_payload.py": "ba66bdf2b96178c3c9a45a29aba8ef800c9e7236acace89cf6e8ab16042a5696",
+  "tools/php83/pilot83/privacy-contract.json": "74a6e7e1332e43a2752c4e8d5024555ab0132a5fa3db6c23201f124ec52302ce",
+  "doc/php83/evidence/pilot83/payload-preparation-r4.json": "097ddb95ac682aaadd8ca65580517253b87d8eec4d66ab597e71efc58860864f"
+}

@@ -1,0 +1,33 @@
+{
+  "status": "NONSECRET_TRANSFER_PREPARED_NOT_INSTALLED",
+  "files": {
+    "packages/kaltura-postinst_1.0.34-1+php83lab1_all.deb": "c8d860fe88d77f6e6add4b26ece6e99a3fc74d00245f0fb22956e994dbcb5792",
+    "packages/kaltura-ffmpeg_6.1-1+php83lab1_all.deb": "85a0da3f12f79c32da1473acf7f9b85826611e3a4ca8716f98d85ac9ec70bdab",
+    "packages/kaltura-base_18.20.0-1+php83lab1_all.deb": "659c0f6781687718d8c2770332a720658a96451f735aeb0f5f1e56e421997eee",
+    "packages/kaltura-front_18.20.0-1+php83lab1_all.deb": "7ca3fb7358ce0de1a14281429c800633525ec6a82affde4404595d10c216e9eb",
+    "packages/kaltura-html5-studio3_3.18.0-1+php83lab1_all.deb": "daf7ac51a22c9fe71dbf7ad3dec3887e3568fcc9cf87ce5fd4e8eb263948a951",
+    "packages/kaltura-ffmpeg-aux_6.1-1+php83lab1_all.deb": "510d07d441312a55b6427a7fa8c87ac1a29ebdd60e7f685608511f9b866d1636",
+    "packages/kaltura-server_18.20.0-1+php83lab1_all.deb": "e53154baff6e5f091a0ee876e558e0469ff38e06f7b4ab5b4207d29573c1b387",
+    "packages/kaltura-batch_18.20.0-1+php83lab1_all.deb": "6061128c94eca95a9d7cca722020469278114fe9eef38b701544f8d422b95989",
+    "packages/kaltura-nginx_1.23.0-1+php83lab1_amd64.deb": "3e747bcbb025c642bda5d13ca9c467ca8a0f06591069de40c104fba2f2f9deea",
+    "packages/kaltura-html5-analytics_0.3-1+php83lab1_all.deb": "185ddef63e736d05782213f90d7403629023d8d433071de80f8bd682f5fabf4d",
+    "packages/kaltura-html5-studio_2.2.3-1+php83lab1_all.deb": "f38b0e11532a0a55d266fb8a2ae2fe6fff5d9bf0be953e0047a05462d18daf71",
+    "packages/kaltura-html5lib_2.98-1+php83lab1_all.deb": "0de1aa169caf463cdcf260bccdc9297b6d356115ad124c037ffb9cb082226c10",
+    "packages/kaltura-elasticsearch_7.17-1+php83lab1_all.deb": "1a65b5771752e593963d01d39621e5d463c1793eacbe13760d47d69c2aeeca91",
+    "packages/kaltura-html5lib3_3.8.1-1+php83lab1_all.deb": "306989108d7d6fa14f120381669f1ae56697a522cd332bbbd84ebd4662b094cc",
+    "packages/kaltura-sphinx_2.2.11-1+php83lab1_all.deb": "7e7490cbe4ce1bcc6529c61c68c1d09797ba85157c87b37dcf3134a860f98ec3",
+    "packages/kaltura-kmcng_5.17.0-1+php83lab1_all.deb": "e99ab8ebc5ec192dc92e768555f5a22c1998fe0af24103f53c96d84576358bd3",
+    "packages/kaltura-db_18.20.0-1+php83lab1_all.deb": "6da66d0705e3351f3af6aadce11088363bca1e272451efee838387de260a5cba",
+    "packages-external/elasticsearch-7.17.29-amd64.deb": "4a4ecb74e77a6b04a35c5c007d1ec212e99979d300f1fe281d5225562a16cb73",
+    "packages-external/analysis-icu-7.17.29.zip": "0da200c82c22d521e7dadc1c24a7841d40aeb01c9785dae822cf87a20750cea8",
+    "proofs/private-deb-verification.json": "796472e7920b8390610e4bb5207f7e5560cb26f23ae2db5e6a1befb5c9e5129b",
+    "proofs/dependency-origins.json": "59810c3c59a8ce05b1bd942e4f467177bfdceee2254783e43866563a6de6bc1d",
+    "proofs/recovery-point.json": "efcdfe030dd22c6a599daefdc79a5fba98062f40ac1700cc35cf2a5b4f201a39",
+    "tools/install-lab.py": "045493549bbccc7b8c6c2e15edc4cc7782b3642323ef24e00f8578c9abc0b3bf",
+    "preflight-contract.json": "718f9209f3af58c9d5e8734b2a77ea90e1bef02953768d4c55cc66bde8a7e7a4"
+  },
+  "contract_sha256": "718f9209f3af58c9d5e8734b2a77ea90e1bef02953768d4c55cc66bde8a7e7a4",
+  "runtime_objects": 113,
+  "private_credentials_generated": false,
+  "source_runtime_paths": 113
+}

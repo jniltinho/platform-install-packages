@@ -1,0 +1,14 @@
+{
+  "status": "READONLY_EXISTING_RECEIPT_UNATTRIBUTED",
+  "report": {
+    "status": "SIMULATED_ONLY_NOT_INSTALL_APPROVED",
+    "apt_exit": 0,
+    "native_php_revision": "8.3.6-0ubuntu0.24.04.11",
+    "mutation": false,
+    "dependency_origins_accepted": false
+  },
+  "report_sha256": "7a4c9785686949be1f6e4f2be1380f5415d27084c7da85ce66367c70728de6d8",
+  "app_exists": false,
+  "mysql_datadir_exists": false,
+  "existing_state_modified": false
+}
