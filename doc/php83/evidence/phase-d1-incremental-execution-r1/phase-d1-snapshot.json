@@ -1,0 +1,7 @@
+{
+  "status": "PRE_D1_STATE_PRESERVED",
+  "baseline_dpkg_sha256": "ad5016dcd1806a257caaedcc1d7d50c19e7feef5b647acd2e2226d03e6778e1e",
+  "machine_id_sha256": "ad9adac39d0fb440883f0b82c8c45058596b74a6d9e98da2746e4dbdafd3aad8",
+  "snapshot_id": "910ab347-70db-4c1c-b881-8bc979a8e02b",
+  "restore_automatically": false
+}

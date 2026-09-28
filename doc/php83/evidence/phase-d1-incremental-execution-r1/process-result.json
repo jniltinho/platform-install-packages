@@ -1,0 +1,12 @@
+{
+  "executor": "Codex coordinator via SSH to explicitly allowed php83 lab",
+  "command": "python3 -B /var/lib/kaltura-php83-pilot/tools/application-phase-d1-incremental.py --contract /var/lib/kaltura-php83-pilot/proofs/phase-d1-incremental-contract.json --contract-sha256 40b090e3d257fc351c85bf07e0c3d241b521db1dc2bbbb2b2f22c104b2e88f48 --execute-contract 40b090e3d257fc351c85bf07e0c3d241b521db1dc2bbbb2b2f22c104b2e88f48",
+  "ssh_pipeline_exit": 0,
+  "pipefail": true,
+  "guard_passed": true,
+  "guest_contract_sha256": "724910c7029cd902a5a685903b6fc0517275e911482e2f5bad70e9e1b78553ef",
+  "guest_terminal_sha256": "50416eda849b3f562fb9e2cad399668288a62eae0b6b0dbbc18864e997f2eb0f",
+  "after_dpkg_sha256": "a2ca4db18e7a6ca11bacea1c33b3c8f217b389a3ca5efddae6bffaf38c304d47",
+  "note": "Guest contract uses executor JSON serialization; differs bytewise from staged pretty-printed contract, with identical values. Terminal export adds newline. No private logs exported.",
+  "full_acceptance": false
+}

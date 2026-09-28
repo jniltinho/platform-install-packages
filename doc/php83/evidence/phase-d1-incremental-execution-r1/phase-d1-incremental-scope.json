@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "status": "LAB_INCREMENTAL_AUTHORIZED",
+  "target": {
+    "hostname": "kaltura-php83-lab",
+    "ip": "192.168.56.83"
+  },
+  "phase": "D1",
+  "package": {
+    "package": "kaltura-batch",
+    "version": "18.20.0-1+php83lab3",
+    "architecture": "all",
+    "previous": null,
+    "sha256": "c2e36051a86ba4136709f8646db42ab1dbad863d2d830e4896fc75b6ed9e72fa",
+    "local_deb": "/var/lib/kaltura-php83-pilot/packages-phase-d/kaltura-batch_18.20.0-1+php83lab3_all.deb"
+  },
+  "full_acceptance": false,
+  "pending": [
+    "full_seed_persistence",
+    "effective_authorization",
+    "full_application_acceptance"
+  ],
+  "workers_policy": "HELD",
+  "release_authorized": false,
+  "machine_id_sha256": "ad9adac39d0fb440883f0b82c8c45058596b74a6d9e98da2746e4dbdafd3aad8",
+  "baseline_dpkg_sha256": "ad5016dcd1806a257caaedcc1d7d50c19e7feef5b647acd2e2226d03e6778e1e",
+  "phase_c_terminal_sha256": "4260e919e09713f80a276b46851d2c92bcbaa9a4b5da796eeafc890d3d3a93e1",
+  "complete": false,
+  "source_overlay_sha256": {
+    "/opt/kaltura/app/alpha/lib/model/UserLoginData.php": "a0ee0a51538a4c856738f83929417a3b4fb09d323c9fef22eb1f0a385c3d5d15",
+    "/opt/kaltura/app/tests/standAloneClient/exec.php": "4c7d6461e8426f133b4eaa9ffe9f659b0e0c1fe8d4585ba5c675890cc75b8c90",
+    "/opt/kaltura/app/alpha/lib/model/entry.php": "cfd10bcecd51040e171a1d412584a8571d671b0e4ce318b4f440d6231dc1c4e3",
+    "/opt/kaltura/app/plugins/event_notification/providers/email/lib/api/recipient/KalturaEmailNotificationCategoryRecipientProvider.php": "5f8b9979e8becb11a295520473e5f827dcd6425674d91b77d92266d634443d02",
+    "/opt/kaltura/app/plugins/event_notification/lib/api/types/KalturaEventNotificationParameter.php": "78c6b83da922b55359c2c1b2ad181d5711983c056330f71f3fc3c4e74d0c91b5"
+  }
+}
