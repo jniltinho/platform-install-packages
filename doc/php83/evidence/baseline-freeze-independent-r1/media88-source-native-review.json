@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "decision": "BOUNDED_READ_ONLY_DIAGNOSTIC_REVIEW_PASS",
+  "source_sha256": "e8e9c6fa04eab9ea471b44864719d82ac0338c73a58aee1e0fcb7d967e0b3c0b",
+  "independent_tests": 4,
+  "test_exit": 0,
+  "native_receipt_sha256": "76028cad17a4ed388546cafd324fe11bb4a1d73f9844a39bd03befa25af9480b",
+  "native_executor": "root coordinator; reviewer made no VM calls",
+  "observed": {
+    "http88_status": 302,
+    "tls88_reason": "WRONG_VERSION_NUMBER",
+    "configuration_changed": false,
+    "application_acceptance": false
+  },
+  "interpretation": "Fixed endpoint answered plaintext HTTP and rejected the pinned-CA TLS handshake. Consistent with a plaintext port88; does not prove complete effective nginx configuration or authorize authenticated HTTPS delivery.",
+  "limitations": [
+    "Configuration counts are lexical, not parsed include closure or effective configuration.",
+    "Leaf-link refusal and owner/mode checks do not attest full parent-chain, ACL or concurrent stability.",
+    "External root executor supplied overall40-second bound; socket3-second bounds are per operation.",
+    "No redirect followed, credentials, SQL, private key read or configuration writes."
+  ]
+}

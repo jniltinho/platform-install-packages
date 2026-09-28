@@ -1,0 +1,69 @@
+{
+  "command": "pinned strict SSH root Python stdin; fixed no-auth port88 probe",
+  "executor": "root coordinator",
+  "exit": 0,
+  "host": {
+    "UUID": "9e954729-16f3-4eda-9db5-b94e5ada9e44",
+    "VMState": "running",
+    "cpus": "4",
+    "memory": "8192",
+    "name": "kaltura-php74-noble-baseline"
+  },
+  "no_authenticated_api_calls": true,
+  "observation": {
+    "application_acceptance": false,
+    "configuration_changed": false,
+    "configurations": {
+      "0": {
+        "gid": 0,
+        "mode": 511,
+        "state": "LINK_NOT_FOLLOWED",
+        "uid": 0
+      },
+      "1": {
+        "configuration_effective_proven": false,
+        "gid": 0,
+        "include_directive_count": 4,
+        "listen88_count": 1,
+        "listen88_ssl_count": 0,
+        "mode": 420,
+        "ssl_certificate_directive": false,
+        "ssl_on_present": false,
+        "state": "REGULAR",
+        "uid": 0
+      },
+      "2": {
+        "gid": 0,
+        "mode": 511,
+        "state": "LINK_NOT_FOLLOWED",
+        "uid": 0
+      },
+      "3": {
+        "configuration_effective_proven": false,
+        "gid": 0,
+        "include_directive_count": 6,
+        "listen88_count": 0,
+        "listen88_ssl_count": 0,
+        "mode": 420,
+        "ssl_certificate_directive": false,
+        "ssl_on_present": false,
+        "state": "REGULAR",
+        "uid": 0
+      }
+    },
+    "http88": {
+      "request": "GET_ROOT_NO_CREDENTIALS",
+      "status": 302,
+      "transport": "CONNECTED"
+    },
+    "schema": 1,
+    "scope": "PORT88_NO_AUTH_READ_ONLY_DIAGNOSIS",
+    "tls88": {
+      "pinned_ca_verified": false,
+      "reason": "WRONG_VERSION_NUMBER",
+      "status": "FAILED"
+    }
+  },
+  "source_sha256": "e8e9c6fa04eab9ea471b44864719d82ac0338c73a58aee1e0fcb7d967e0b3c0b",
+  "stderr_bytes": 0
+}

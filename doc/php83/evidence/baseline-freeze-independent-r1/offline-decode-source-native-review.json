@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "decision": "LOCAL_ORIGINAL_BYTES_DECODER_REVIEW_AND_EXECUTION_PASS",
+  "module_sha256": "e3e975ac5cb1af36fd413cbad34b8f56bcbaa0cb8cdb209afd60fb10534b87e0",
+  "contract_sha256": "6dbcdba82dcd6a25ff98948ff8cc4aa53f72a40b52036c7169560dd3c6227e89",
+  "binary_pins": {
+    "ffmpeg": "ed16af623947494a72e284b6eb8ff225f2da22b38b5d5069c2fd4b4ba3384e41",
+    "ffprobe": "272f6ebc634a63d9c8b4ca68e964119d980f25154e5aa2c35e5487da48e9a58f"
+  },
+  "independent_tests": 9,
+  "test_exit": 0,
+  "native_local_result": {
+    "codec_dimensions_fps_frames_audio_matched": true,
+    "video_frames": 250,
+    "full_decode_verified": true,
+    "full_acceptance": false,
+    "case": "OFFLINE_ORIGINAL_BYTES_ONLY",
+    "media_bytes": 1511134,
+    "source_sha256": "612d179c75f8f2374b7ac59c2dd7edba65e38eb357b870e8ad8c2e83d63b5473",
+    "network_input_allowed": false,
+    "delivery_verified": false,
+    "dynamic_library_cohort_verified": false
+  },
+  "elapsed_seconds": 0.31,
+  "scope": [
+    "Actual pinned original bytes only; executable bytes verified/sealed memfd, file-only protocol, fixed argv.",
+    "Native ffprobe plus ffmpeg selected original video/audio decode succeeded, not just metadata inspection.",
+    "Separate stdout/stderr caps, CPU and checked wall deadline, processgroup kill and leader wait."
+  ],
+  "limitations": [
+    "Host dynamic libraries not cohort attested; no VM or fetched response/HLS decode.",
+    "Caller must run dedicated single-thread process because preexec resource limits.",
+    "No adopted-grandchild wait/subreaper assertion.",
+    "Imported decode contract also contains unrelated selected-HLS expectations; public decode entry calls only original_mp4 and exact original hash."
+  ]
+}

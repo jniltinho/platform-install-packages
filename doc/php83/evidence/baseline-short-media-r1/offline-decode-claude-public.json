@@ -1,0 +1,27 @@
+{
+  "case": "OFFLINE_ORIGINAL_BYTES_ONLY",
+  "executor": "actual Claude CLI",
+  "terminal_exit": 0,
+  "tests": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 python3 tools/php83/baseline-short-media-r1/test_offline_decode.py -v",
+    "passed": 9,
+    "exit": 0
+  },
+  "pins": {
+    "offline_decode.py": "e3e975ac5cb1af36fd413cbad34b8f56bcbaa0cb8cdb209afd60fb10534b87e0",
+    "test_offline_decode.py": "1afea53f45e6bae9d11f0d5a4deec0c7d8f437ecba36585f6aa797817564fe60",
+    "decode_contract.py": "6dbcdba82dcd6a25ff98948ff8cc4aa53f72a40b52036c7169560dd3c6227e89"
+  },
+  "review": "NO_BLOCKERS_FOR_PINNED_ORIGINAL_SCOPE",
+  "findings": [
+    "Post-wait killpg has theoretical process-group-ID reuse race; lifecycle followup recommended.",
+    "Group cleanup is not subreaper/cgroup containment.",
+    "No success-path decode in unit suite; independent Codex and author separately executed real local fixture."
+  ],
+  "limitations": [
+    "CLI did not execute actual fixture decode.",
+    "Dynamic library cohort unverified.",
+    "No delivery, HLS, VM or full application acceptance."
+  ],
+  "raw_cli_published": false
+}

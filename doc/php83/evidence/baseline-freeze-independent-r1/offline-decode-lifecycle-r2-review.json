@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "decision": "REVISED_LOCAL_ORIGINAL_DECODER_PASS",
+  "module_sha256": "8940b878a572b968969acdc66090184568169dadff2713e51dcf64126ca1cae4",
+  "tests_sha256": "f1fb511c684f782e91bccd871bf69a66a5257f443c0c6582784f049452dc8f59",
+  "independent_tests": 10,
+  "test_exit": 0,
+  "delta": "Success observes exited leader with waitid WNOWAIT, retaining its PID until finally killpg then wait; removes old success-path recycled-PGID race.",
+  "native_local_decode_repeated": true,
+  "native_local_result": {
+    "full_decode_verified": true,
+    "media_bytes": 1511134,
+    "video_frames": 250,
+    "source_sha256": "612d179c75f8f2374b7ac59c2dd7edba65e38eb357b870e8ad8c2e83d63b5473"
+  },
+  "historical_receipt": "offline-decode-source-native-review.json remains evidence of original tested code, not approval of its discovered cleanup race",
+  "limitations": [
+    "Dedicated single-thread process required.",
+    "No adopted-grandchild reaping/subreaper assertion.",
+    "Dynamic libraries not cohort-attested.",
+    "Local original bytes only, not HLS or fetched response decode.",
+    "Actual Claude old-source review does not attest this revised source."
+  ]
+}
