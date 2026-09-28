@@ -1,0 +1,18 @@
+{
+  "case": "READ_ONLY_PROFILE_RECOVERY_ENVELOPE",
+  "executor": "Codex author local Python",
+  "sources": {
+    "profile_recovery_runtime.py": "b0d1ddb89ac36ad607ad72e963d44a8fb3cbf9576042928c024f68088fbc851d",
+    "test_profile_recovery_runtime.py": "6b3e9c94347e4ce7bef6454cedc81d832e2f32bff3a3f4928882381e12faee9d"
+  },
+  "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/baseline-media-tls-r1 -p test_profile_recovery_runtime.py -v",
+  "tests": 7,
+  "exit": 0,
+  "vm_execution": false,
+  "scope": "Fresh bounded privacy window and read-only observer; no retry, state writes, bootstrap or mutation. Original failed operation remains failed.",
+  "limitations": [
+    "Inherited privacy covers native/default and authorized root DB credentials, not every bootstrap secret.",
+    "Candidate scope global type61 defaults only; cache and rollback remain unverified.",
+    "Local tests use an injected context and synthetic output, not native DB."
+  ]
+}

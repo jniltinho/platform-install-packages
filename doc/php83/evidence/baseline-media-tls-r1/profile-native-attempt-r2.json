@@ -1,0 +1,44 @@
+{
+  "unit": "baseline-profile-84f67fc9",
+  "guest_exit": 2,
+  "stderr_bytes": 0,
+  "unit_inactive": true,
+  "observation": {
+    "apply_attempted": true,
+    "automatic_rollback": false,
+    "failure_code": "NATIVE_FAILED_CLOSED",
+    "failure_phase": "APPLY",
+    "failure_privacy_passed": true,
+    "finite_audits_completed": 2,
+    "full_acceptance": false,
+    "native_failure_code": "NESTED_TRANSACTION",
+    "native_failure_stage": "NATIVE_TRANSACTION",
+    "prepare_completed": true,
+    "privacy_passed": false,
+    "recovery_required": true,
+    "secret_coverage": "native_default_DB_and_authorized_root_DB_only",
+    "status": "PROFILE_MUTATION_FAILED_OR_INCOMPLETE"
+  },
+  "pins": {
+    "profile_runtime.py": "625a2fac3538ed7b7d4114d130c40101e3a20dbe855184515446b50f3c33e64f",
+    "profile_envelope.py": "cfd18005fed262d5eaa66c8a7b8861dd048a5ceceda9048ea933976703dd7bcd",
+    "observe_r2.py": "14c9a9c4b1238c452295fa00083962e090b8d7b12f32d75073413e17bfc1c221",
+    "install.py": "2822c11fe941f22f57323febebeb52066995f891b4d1ef7d5b097b1f38ffc138",
+    "privacy_logs.py": "24ea4beb525a9084e1a17667654a815cbdb1fc1d6a84188133454b4c5e0c19a0",
+    "credential_patterns.py": "61f307b51e923296e2c36fd36a976ff8c6576b2ec6c271a71c138d84b13e7fc2",
+    "credential_read.py": "379b1f314d0d39f17ab3df1d13aaf39e61c3c358db0bcc3491cb99babe4c3ab9",
+    "profile_process.py": "5af1540b25c861611fe52f0a1b3cbe09d570c8c52f79a996678daed8ba7d6fbd",
+    "delivery_profile_split.php": "682ec53750b050bf8d7ee9836f91776433442c1da0eb3ad78283ba33dc2e5f3b",
+    "privacy_logs_r2.py": "d67eb65900c3134c91efaf94b18ba482b59261c81b0084de0cea3bcd37d5246c",
+    "settle.py": "2b1382fc7ff4163240d9c6e3342738ce90ab8537df9ea9999497a44e24d84764",
+    "convergence.py": "b7f8114c27a930c471d3640c76ad60f28e0c0133b63abb5a4d805fa7c01cceca",
+    "snapshot.json": "2484fa4ff88b4ac432a544ef1395455809ff28e37e96e56951b6fba56f2e14aa"
+  },
+  "full_acceptance": false,
+  "case": "NATIVE_PROFILE_SPLIT_R2_APPLY_REJECTED",
+  "limitations": [
+    "Recovery required; no retry or automatic rollback.",
+    "Finite failure audit covers enrolled native/root DB patterns only.",
+    "No committed split, profile selection or HLS success claimed."
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "case": "LOCAL_NATIVE_PROFILE_SPLIT_ENVELOPE",
+  "source_pins": {
+    "profile_runtime.py": "2155aec6e421fdbe9a9eebeba745f2d8610850f36c6af6624c1d7315c228ca4f",
+    "profile_envelope.py": "cfd18005fed262d5eaa66c8a7b8861dd048a5ceceda9048ea933976703dd7bcd",
+    "profile_process.py": "5af1540b25c861611fe52f0a1b3cbe09d570c8c52f79a996678daed8ba7d6fbd",
+    "credential_patterns.py": "c83376180af7db43c2ac0992f3aaee4571891d1e3ed8f5cd3761b22981377e22",
+    "credential_read.py": "379b1f314d0d39f17ab3df1d13aaf39e61c3c358db0bcc3491cb99babe4c3ab9",
+    "privacy_logs.py": "24ea4beb525a9084e1a17667654a815cbdb1fc1d6a84188133454b4c5e0c19a0",
+    "test_profile_runtime.py": "eb695dec14712c0914969a909ed8f321ef51ed8bd03beac71d2f8746c32bb724",
+    "test_profile_envelope.py": "621fa28cc84340fb5bf52109dc633217025641bf072da4f45c30e5c9e452ca00",
+    "test_profile_process.py": "859d1ead63db5c1b3696ea13eebca3297f19fdf095bce1192486fdc655238a19",
+    "test_credential_patterns.py": "dab4cc78174ad468163dbabc1686290e1ad3ab0879527198b28cd94d2914e11d",
+    "test_credential_read.py": "a3c17accd9170c262dd4edb3680bc804b5f75fe19b15f02237b76e60673163b6",
+    "test_privacy_logs.py": "f7131c95d67ea9f20a8d28264fcf06f994cf23f3725a454e4faba65833f4f5df"
+  },
+  "author_tests": {
+    "profile": 17,
+    "credential": 7,
+    "log_adapter": 4,
+    "all_exit": 0
+  },
+  "actual_claude": {
+    "source_revision": "prior runtime eef77fbec58609674f423e5ef165daa3da6b68c73d5c5477f1c7b3994d8af82e",
+    "exit": 1,
+    "status": "INCOMPLETE_MAX_TURNS",
+    "accepted": false,
+    "raw_output_published": false
+  },
+  "delta": [
+    "Add two exact previously reviewed transitive transport dependency pins before import.",
+    "Require actual False booleans in native prepare result."
+  ],
+  "privacy_scope": "finite default-native-DB plus authorized-root-DB full and prefix patterns; not all bootstrap secrets",
+  "native_mutation_executed_by_author": false,
+  "full_acceptance": false
+}

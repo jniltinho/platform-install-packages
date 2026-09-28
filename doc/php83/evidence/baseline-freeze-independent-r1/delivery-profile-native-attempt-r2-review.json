@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "decision": "NATIVE_APPLY_FAILED_RECOVERY_REQUIRED_NO_RETRY",
+  "receipt_sha256": "1c05f1fffd7ea8fc9615bc2b44c42f7ae802c35106d7538fa8d0094046545fa6",
+  "native_executor": "root coordinator",
+  "independent_vm_calls": 0,
+  "observed": {
+    "apply_attempted": true,
+    "automatic_rollback": false,
+    "failure_code": "NATIVE_FAILED_CLOSED",
+    "failure_phase": "APPLY",
+    "failure_privacy_passed": true,
+    "finite_audits_completed": 2,
+    "full_acceptance": false,
+    "native_failure_code": "NESTED_TRANSACTION",
+    "native_failure_stage": "NATIVE_TRANSACTION",
+    "prepare_completed": true,
+    "privacy_passed": false,
+    "recovery_required": true,
+    "secret_coverage": "native_default_DB_and_authorized_root_DB_only",
+    "status": "PROFILE_MUTATION_FAILED_OR_INCOMPLETE"
+  },
+  "source_finding": {
+    "file": "alpha/apps/kaltura/lib/db/KalturaPDO.php",
+    "sha256": "97b756bed876d42da87f6a023b6ecf7af7c2b8454bb382da56ba9c54acae848d",
+    "lines": "228-233",
+    "behavior": "If noTransaction option truthy, beginTransaction returns true without invoking PropelPDO begin/increment. Existing source pin set and fixture omitted this subclass behavior."
+  },
+  "control_flow": "Payload NESTED_TRANSACTION follows both successful save returns and strict comparison of both resulting rows; before explicit payload commit and after-before-commit file. At depth0 catch skips forceRollBack. Writes may have autocommitted; no rollback or unchanged DB inference is justified.",
+  "next_action": "Read-only exact private19-column backup comparison against original1001 and bounded candidate clone rows; no replay, corrective write, authentication or context probe until state is established.",
+  "review_accountability": "Earlier component and envelope reviews did not detect omitted subclass semantics. Real copyInto/setUrl fixture with save/DB doubles did not prove native transaction behavior; prior approvals preserved as historical, not current mutation readiness.",
+  "limits": [
+    "Known native/root password failure scans passed finite windows only.",
+    "No actual current DB state claimed before read-only recovery receipt."
+  ]
+}

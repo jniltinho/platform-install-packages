@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "decision": "READ_ONLY_RECOVERY_ENVELOPE_SOURCE_PASS",
+  "pins": {
+    "profile_recovery_runtime.py": "b0d1ddb89ac36ad607ad72e963d44a8fb3cbf9576042928c024f68088fbc851d",
+    "test_profile_recovery_runtime.py": "6b3e9c94347e4ce7bef6454cedc81d832e2f32bff3a3f4928882381e12faee9d"
+  },
+  "independent_tests": 7,
+  "exit": 0,
+  "scope": [
+    "Final observerecf663, runtime625a, transport9735 pinned; no mutation invoke/state creation.",
+    "Fresh precredential boundary and mandatory nginx log inventory; same-start audits on success/failure.",
+    "Private child output scanning and exact closed schema/typed booleans/IDs.",
+    "All observations retain recovery_required true and retry_authorized false."
+  ],
+  "limits": [
+    "Known native/root DB patterns only, not blanket bootstrap secret coverage.",
+    "Candidate rows globaltype61defaults only, no database/cache rollback inference.",
+    "No auth/context/corrective-write authorization from read-only success.",
+    "No VM calls by reviewer."
+  ]
+}

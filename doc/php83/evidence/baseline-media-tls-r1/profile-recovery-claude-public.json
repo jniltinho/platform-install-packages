@@ -1,0 +1,22 @@
+{
+  "case": "read-only-profile-recovery-envelope",
+  "executor": "actual Claude CLI",
+  "terminal_exit": 0,
+  "tests": 7,
+  "test_exit": 0,
+  "initial_invocation": "Wrong working directory ImportError; corrected within same bounded attempt.",
+  "verdict": "CHANGES_REQUIRED",
+  "reviewed_source_sha256": "b0d1ddb89ac36ad607ad72e963d44a8fb3cbf9576042928c024f68088fbc851d",
+  "findings": [
+    {
+      "finding": "Invalid patterns assigned before validation could reach failure audit.",
+      "disposition": "Plausible failure-path defect; actual successful observation used validated patterns. Preserve deployed revision; fix in separate future derivative."
+    },
+    {
+      "finding": "Repository helper paths differ from deployed same-directory paths.",
+      "disposition": "Staging prerequisite, not actual runtime failure: coordinator staged exact pinned helpers beside runtime and native read-only execution succeeded."
+    }
+  ],
+  "native_observation_scope": "Stored intended row split observed independently; original mutation failed and remains non-atomic, no cache/selection/retry claim.",
+  "raw_cli_published": false
+}

@@ -1,0 +1,29 @@
+{
+  "case": "native-fixed-key-credential-parser-r2",
+  "executor": "Codex author local Python",
+  "source_sha256": {
+    "credential_patterns.py": "61f307b51e923296e2c36fd36a976ff8c6576b2ec6c271a71c138d84b13e7fc2",
+    "profile_runtime.py": "625a2fac3538ed7b7d4114d130c40101e3a20dbe855184515446b50f3c33e64f",
+    "test_credential_patterns.py": "8661d976d8a519fcf44662d199421242096db1cd4fb723bc0917d0737dbe3b7f"
+  },
+  "commands": [
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/baseline-media-tls-r1 -p 'test_credential*.py' -v",
+      "tests": 12,
+      "exit": 0
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/baseline-media-tls-r1 -p 'test_profile*.py' -v",
+      "tests": 17,
+      "exit": 0
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/baseline-media-tls-r1 -p 'test_privacy_logs.py' -v",
+      "tests": 4,
+      "exit": 0
+    }
+  ],
+  "native_execution": false,
+  "actual_credential_read": false,
+  "full_acceptance": false
+}

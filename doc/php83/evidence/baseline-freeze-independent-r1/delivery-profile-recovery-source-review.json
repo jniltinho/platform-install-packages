@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "decision": "READ_ONLY_RECOVERY_HELPER_SOURCE_PASS_ENVELOPE_PENDING",
+  "pins": {
+    "delivery_profile_recovery.py": "ecf663ca573c2c1c887d37c5aab29571c2c38dea93ed6c17de2f317b9cf37a82",
+    "test_delivery_profile_recovery.py": "6ca91a3e8c2a9f3ee38f182b9e8b8d62bea0ae099199076281c64ba0ce8ff8ee"
+  },
+  "independent_tests": 5,
+  "exit": 0,
+  "scope": [
+    "Root socket identity before fixed read-only SELECT. No bootstrap/API/save/rollback.",
+    "Private root700/600 backup, exact19-column schema; no raw row values/hashes exported.",
+    "Original1001 plus at most two globaltype61/default candidate rows, duplicates and drift detected; source KalturaPDO newly pinned."
+  ],
+  "conditions": [
+    "Outer fresh precredential finite privacy boundary and mandatory nginx logs, unchanged starts on failures.",
+    "Root exclusive observation window; before backup never overwritten."
+  ],
+  "limits": [
+    "Candidate scope not all database rows; no external cache/transaction rollback proof.",
+    "Same-length concurrent root-owned backup mutation not independently excluded by helper; exclusive coordinator prerequisite.",
+    "No corrective action or retry authorization from result.",
+    "No VM calls by reviewer."
+  ],
+  "final_pre_execution_delta": {
+    "payload_sha256": "ecf663ca573c2c1c887d37c5aab29571c2c38dea93ed6c17de2f317b9cf37a82",
+    "tests_sha256": "6ca91a3e8c2a9f3ee38f182b9e8b8d62bea0ae099199076281c64ba0ce8ff8ee",
+    "change": "All19columns use HEX(CAST AS BINARY), preventing numericHEX/ASCII decoder mismatch. Initial66d never executed, preserved above as historical source review.",
+    "independent_tests": 5,
+    "exit": 0
+  }
+}

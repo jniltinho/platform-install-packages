@@ -1,0 +1,54 @@
+{
+  "unit": "baseline-profile-91c456f4",
+  "guest_exit": 0,
+  "stderr_bytes": 0,
+  "unit_inactive": true,
+  "observation": {
+    "finite_audits_completed": 1,
+    "full_acceptance": false,
+    "observation": {
+      "cache_state_verified": false,
+      "candidate_rows": 1,
+      "candidate_scope": "GLOBAL_TYPE61_DEFAULTS_ONLY",
+      "db_identity_verified": true,
+      "full_acceptance": false,
+      "matching_https_clone_ids": [
+        1004
+      ],
+      "original_profile_id": 1001,
+      "original_relation": "EXPECTED_HTTP_DELTA",
+      "private_before_compared": true,
+      "recovery_performed": false,
+      "retry_authorized": false,
+      "sql_select_count": 3,
+      "status": "READ_ONLY_SPLIT_RECOVERY_OBSERVED",
+      "transaction_rollback_proven": false,
+      "unexpected_candidate_rows": 0
+    },
+    "privacy_passed": true,
+    "recovery_performed": false,
+    "recovery_required": true,
+    "retry_authorized": false,
+    "secret_coverage": "native_default_DB_and_authorized_root_DB_only",
+    "status": "READ_ONLY_RECOVERY_OBSERVED_FINITE_PRIVACY"
+  },
+  "pins": {
+    "profile_runtime.py": "625a2fac3538ed7b7d4114d130c40101e3a20dbe855184515446b50f3c33e64f",
+    "profile_envelope.py": "cfd18005fed262d5eaa66c8a7b8861dd048a5ceceda9048ea933976703dd7bcd",
+    "observe_r2.py": "14c9a9c4b1238c452295fa00083962e090b8d7b12f32d75073413e17bfc1c221",
+    "install.py": "2822c11fe941f22f57323febebeb52066995f891b4d1ef7d5b097b1f38ffc138",
+    "privacy_logs.py": "24ea4beb525a9084e1a17667654a815cbdb1fc1d6a84188133454b4c5e0c19a0",
+    "credential_patterns.py": "61f307b51e923296e2c36fd36a976ff8c6576b2ec6c271a71c138d84b13e7fc2",
+    "credential_read.py": "379b1f314d0d39f17ab3df1d13aaf39e61c3c358db0bcc3491cb99babe4c3ab9",
+    "profile_process.py": "5af1540b25c861611fe52f0a1b3cbe09d570c8c52f79a996678daed8ba7d6fbd",
+    "delivery_profile_split.php": "682ec53750b050bf8d7ee9836f91776433442c1da0eb3ad78283ba33dc2e5f3b",
+    "privacy_logs_r2.py": "d67eb65900c3134c91efaf94b18ba482b59261c81b0084de0cea3bcd37d5246c",
+    "settle.py": "2b1382fc7ff4163240d9c6e3342738ce90ab8537df9ea9999497a44e24d84764",
+    "convergence.py": "b7f8114c27a930c471d3640c76ad60f28e0c0133b63abb5a4d805fa7c01cceca",
+    "snapshot.json": "2484fa4ff88b4ac432a544ef1395455809ff28e37e96e56951b6fba56f2e14aa",
+    "profile_recovery_runtime.py": "b0d1ddb89ac36ad607ad72e963d44a8fb3cbf9576042928c024f68088fbc851d",
+    "delivery_profile_recovery.py": "ecf663ca573c2c1c887d37c5aab29571c2c38dea93ed6c17de2f317b9cf37a82",
+    "profile_socket.py": "9735aad64f31a3329de5844f9061da9f18f12e1b34787971d9ee360872443776"
+  },
+  "full_acceptance": false
+}

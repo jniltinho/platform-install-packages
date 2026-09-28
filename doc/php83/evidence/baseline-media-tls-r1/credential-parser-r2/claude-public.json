@@ -1,0 +1,17 @@
+{
+  "case": "native-fixed-key-credential-parser-r2",
+  "executor": "actual Claude CLI",
+  "terminal_exit": 0,
+  "verdict": "CHANGES_REQUIRED",
+  "reviewed_parser_sha256": "27a3b92fc91a67d9074f003bfb3982e6b32bbd50882c9b5696be3dc3ba5ae385",
+  "executed_tests": 10,
+  "test_exit": 0,
+  "findings": [
+    "Reject native INI interpolation/expression syntax to preserve literal credential identity.",
+    "Reject nonstandard control line separators and require quoted DSN."
+  ],
+  "resolution": "Final source conservatively rejects ambiguous forms; final independent delta review is separate.",
+  "final_source_approval": false,
+  "vm_execution": false,
+  "private_data_read": false
+}

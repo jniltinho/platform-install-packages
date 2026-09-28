@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "decision": "READ_ONLY_RECOVERY_NATIVE_OBSERVATION_ACCEPTED",
+  "receipt_sha256": "32ec55f9d69182743f7b5b7b18dbbfaf4867fe0a75dbec81fedcc1e85f0479b4",
+  "native_executor": "root coordinator",
+  "independent_vm_calls": 0,
+  "observed_original_relation": "EXPECTED_HTTP_DELTA",
+  "matching_https_clone_ids": [
+    1004
+  ],
+  "candidate_rows": 1,
+  "unexpected_candidate_rows": 0,
+  "finite_known_pattern_privacy": true,
+  "finite_audits_completed": 1,
+  "interpretation": "Current original1001 and exactly one globaltype61default candidate match intended two-row deltas against private backup. This establishes persisted state in the read-only snapshot, not successful execution of the failed atomic mutation envelope.",
+  "limits": [
+    "Historical NESTED_TRANSACTION failure remains failure, no retroactive commit-success or rollback claim.",
+    "No cache/runtime profile selection/HLS acceptance.",
+    "recovery_required remains true, recovery_performed and retry_authorized false.",
+    "Separate explicitly reviewed no-write selection probe may observe existing rows; never synthesize committed-success proof."
+  ]
+}
