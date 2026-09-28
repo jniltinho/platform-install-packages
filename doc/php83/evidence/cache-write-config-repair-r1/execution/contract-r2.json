@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "status": "LAB_CACHE_WRITE_REPAIR_AUTHORIZED",
+  "machine_id_sha256": "ad9adac39d0fb440883f0b82c8c45058596b74a6d9e98da2746e4dbdafd3aad8",
+  "full_acceptance": false,
+  "release_authorized": false,
+  "executor_sha256": "de3aa641b31f4612d993b671d81aa21ae46002aee5b2cfb7e513433b201f4ad0",
+  "snapshot_sha256": "e7aff0e04d14813b76e6132e419f643d98afb3df135988e6639bdf26083e50fa",
+  "baseline_dpkg_sha256": "a2ca4db18e7a6ca11bacea1c33b3c8f217b389a3ca5efddae6bffaf38c304d47",
+  "d1_contract_sha256": "724910c7029cd902a5a685903b6fc0517275e911482e2f5bad70e9e1b78553ef",
+  "d1_terminal_sha256": "50416eda849b3f562fb9e2cad399668288a62eae0b6b0dbbc18864e997f2eb0f"
+}

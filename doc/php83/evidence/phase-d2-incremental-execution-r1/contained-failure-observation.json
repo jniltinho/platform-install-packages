@@ -1,0 +1,64 @@
+{
+  "terminal": {
+    "status": "FAILED_REQUIRES_OPERATOR_RECOVERY",
+    "checks": {
+      "package_observation": true,
+      "metadata": true,
+      "input_canaries": true,
+      "es_private_log_capture": true,
+      "generated_secrets": true
+    },
+    "normal_apt_attempted": true,
+    "worker_hold_preserved": true,
+    "failure_contained": true,
+    "resume_supported": false,
+    "full_application_acceptance": false,
+    "full_acceptance": false,
+    "pending": [
+      "full_seed_persistence",
+      "effective_authorization",
+      "full_application_acceptance"
+    ],
+    "phase": "D2",
+    "workers_policy": "HELD"
+  },
+  "prestart": {
+    "config_sha256": "a53a482115267fdb79f1c0a588f775e24c66243abbee0019c7433cc7367c171c",
+    "geoip_downloader": false,
+    "native_modes": "0640",
+    "network": "127.0.0.1",
+    "service_started": false,
+    "status": "EXACT_PRIVATE_ES_PRESTART_CONFIG_READY"
+  },
+  "terminal_sha256": "9f65070e9a2075ae9734ae898bcbc14bc43c31ac4a16a1c9e2bc85f14b6b92ae",
+  "metadata": [
+    {
+      "path": "/opt/kaltura/log",
+      "uid": 0,
+      "gid": 33,
+      "mode": "0o1770"
+    },
+    {
+      "path": "/opt/kaltura/log/elasticsearch",
+      "uid": 112,
+      "gid": 0,
+      "mode": "0o755"
+    },
+    {
+      "path": "/opt/kaltura/var/lib/elasticsearch",
+      "uid": 112,
+      "gid": 0,
+      "mode": "0o755"
+    }
+  ],
+  "package": "7.17-1+php83lab4\tiF ",
+  "services": {
+    "apache2": "inactive",
+    "monit": "inactive",
+    "mariadb": "active",
+    "elasticsearch": "failed"
+  },
+  "coordinator_executor_exit": 78,
+  "diagnosis": "ES startup java.nio.file.AccessDeniedException at /opt/kaltura/log/elasticsearch; parent root:www-data01770 excludes elasticsearch112. Do not weaken parent privacy.",
+  "full_acceptance": false
+}

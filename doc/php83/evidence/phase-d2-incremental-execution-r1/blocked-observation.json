@@ -1,0 +1,17 @@
+{
+  "status": "PRE_APT_BLOCKED_CONFIG_PLACEHOLDER",
+  "guard_exit": 78,
+  "code": "CACHE_EXTRA_ENDPOINT",
+  "normal_apt_attempted": false,
+  "run_created": false,
+  "generated_config": "/opt/kaltura/app/configurations/kRemoteMemCacheConf.ini",
+  "field": "write_address_list.1",
+  "value_class": "UNRENDERED_TEMPLATE_TOKEN",
+  "token": "@MEMACHED_HOSTNAME_FOR_WRITE@",
+  "occurrences": 1,
+  "before_sha256": "77b21c0ddf8e9987a014c0283639458b8da46d2df010438ec62ab92433d63980",
+  "proposed_loopback_postimage_sha256": "238c2f883b8ec0a09d15b4bf5676bc8b593c6ddce467a3ae9820bcdf34948ee8",
+  "source_observation": "deb/kaltura-base/debian/postinst contains internal spaces in corresponding sed token",
+  "full_acceptance": false,
+  "workers_policy": "HELD"
+}

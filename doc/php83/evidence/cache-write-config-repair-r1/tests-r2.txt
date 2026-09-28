@@ -1,0 +1,20 @@
+test_authenticated_public_template (__main__.Tests.test_authenticated_public_template) ... ok
+test_contract (__main__.Tests.test_contract) ... ok
+test_contract_negatives (__main__.Tests.test_contract_negatives) ... ok
+test_duplicate_token_even_authenticated (__main__.Tests.test_duplicate_token_even_authenticated) ... ok
+test_exact_known_root_group_parent (__main__.Tests.test_exact_known_root_group_parent) ... ok
+test_exact_single_replacement (__main__.Tests.test_exact_single_replacement) ... ok
+test_file_metadata_rejected (__main__.Tests.test_file_metadata_rejected) ... ok
+test_fresh_refuses_any_existing_path (__main__.Tests.test_fresh_refuses_any_existing_path) ... ok
+test_parent_exception_is_exact (__main__.Tests.test_parent_exception_is_exact) ... ok
+test_parent_symlink_rejected (__main__.Tests.test_parent_symlink_rejected) ... ok
+test_postimage_pin (__main__.Tests.test_postimage_pin) ... ok
+test_private_exclusive_0600 (__main__.Tests.test_private_exclusive_0600) ... ok
+test_public_failure_has_no_exception_payload (__main__.Tests.test_public_failure_has_no_exception_payload) ... ok
+test_stopped_states (__main__.Tests.test_stopped_states) ... ok
+test_symlink_read_refused (__main__.Tests.test_symlink_read_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.002s
+
+OK

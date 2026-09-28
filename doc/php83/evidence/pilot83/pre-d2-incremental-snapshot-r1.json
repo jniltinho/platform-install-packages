@@ -1,0 +1,11 @@
+{
+  "kind": "paused_full_memory_disk_checkpoint",
+  "vm_uuid": "33f4f25f-1cf2-4cc5-90ff-d519c29b2aee",
+  "name": "php83-pre-d2-incremental-20260928T153219Z",
+  "created_utc": "2026-09-28T15:32:19.635841+00:00",
+  "full_application_recovery_acceptance": false,
+  "restore_automatically": false,
+  "snapshot_exit": 0,
+  "snapshot_id": "c721bf36-3bb4-4003-9f88-f9e6c2fc844d",
+  "resume_exit": 0
+}

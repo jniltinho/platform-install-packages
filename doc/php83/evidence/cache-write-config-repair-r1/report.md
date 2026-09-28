@@ -1,0 +1,21 @@
+# Exact lab-only cache write placeholder repair
+
+Source defect: `deb/kaltura-base/debian/postinst` line404 renders the misspelled token `@MEMACHED_HOST    NAME_FOR_WRITE@`, while the public remote cache template uses `@MEMACHED_HOSTNAME_FOR_WRITE@`. The copied public template SHA40751f37cba28413e64e2413810da0231389ba57b14b593ba86f7f5bca8fe158 derives exactly the root-observed341-byte preimage when only host/port are rendered. No guest/private configuration was read or exported by this author. Template source: sibling artifact `exp3-extracted/server-Rigel-18.20.0/configurations/kRemoteMemCacheConf.template.ini`.
+
+Helper replaces one literal token with127.0.0.1 only, fixed target, beforeSHA77b21c0ddf8e9987a014c0283639458b8da46d2df010438ec62ab92433d63980 and afterSHA238c2f883b8ec0a09d15b4bf5676bc8b593c6ddce467a3ae9820bcdf34948ee8. This is an explicit local overlay, not a reinstallation, renderer replay, package rewrite or final acceptance. Future source correction proposal: repair the literal sed token in a separately reviewed fresh artifact; do not replay base postinst. That proposal is NOT implemented here.
+
+## Root execution protocol (not executed by author)
+
+Root must stop Apache and Monit outside this helper; MariaDB remains active. Workers remain held/absent. Confirm fresh D2 canonical/retired directories and repairRUN/temp absent. Source chain pins unchanged through reviewed D1/C10. Root snapshots cover coherent recovery; never remove previous repair state to retry.
+
+Stage root-owned helper under `/var/lib/kaltura-php83-pilot/tools/`, trusted parents without group/other writes or xattrs. New root-owned externally pinned contract: schema1, status LAB_CACHE_WRITE_REPAIR_AUTHORIZED, machine_id_sha256 exact existing .83 hash, full_acceptance false, release_authorized false; executor_sha256, snapshot_sha256, baseline_dpkg_sha256, d1_contract_sha256, d1_terminal_sha256. Audit window comes from the pinned D1 contract, never reset. Root observed candidate cohort: baseline a2ca4db18e7a6ca11bacea1c33b3c8f217b389a3ca5efddae6bffaf38c304d47; D1 contract724910c7029cd902a5a685903b6fc0517275e911482e2f5bad70e9e1b78553ef; D1 terminal50416eda849b3f562fb9e2cad399668288a62eae0b6b0dbbc18864e997f2eb0f. These remain execution-time checks, not author runtime claims.
+
+Snapshot proof fixed `/var/lib/kaltura-php83-pilot/proofs/cache-write-repair-r1-snapshot.json`: status PRE_CACHE_WRITE_REPAIR_STATE_PRESERVED, exact machine and current baseline hashes, snapshot_id of actual root recovery checkpoint, restore_automatically false. Coordinator reports c721bf36-3bb4-4003-9f88-f9e6c2fc844d; must authenticate/provide actual receipt.
+
+Invoke `python3 -B /var/lib/kaltura-php83-pilot/tools/cache-write-config-repair-r1.py --contract ROOT_PATH --contract-sha256 SHA --execute-contract SHA` under root. Inputs only paths/publicpins, no credentials argv/env/output. Journal `/var/lib/kaltura-php83-cache-write-repair-r1`0700; original.ini/intent/terminal0600. Atomic target replacement preserves root:root0644 after exact preimage and inode/content checks. Exclusive temp never reused or automatically removed. Every post-write failure keeps evidence and requires recovery; no rollback/retry. Services never started/stopped by helper.
+
+Pre/post generated-secret audit, private-input canary scan, held marker/inode, log modes, fixed source overlay, dpkg and unrelated private config equality retained. No secret bytes/hashes in public result. Root must inspect successful terminal, repeat frozen D2 preflight and only then consider its normal transaction. Application/cache effective-runtime behavior remains D2's responsibility; no cache reset or broad exception.
+
+## Local validation and limitations
+
+12 local Python tests PASS, including actual public-template derivation matching both immutable pins, synthetic exactdelta/duplicate/mutation failures, contract scope negatives, existing-state refusal, O_EXCL0600 backup and danglinglink rejection, unsafe metadata, stopped service states. No native system/service/DB operation, VM/SSH, Docker, or package manipulation. Tests exercise pure functions/local disposable files, not complete guest application. Independent review pending. Target publication/release/full acceptance remains false.

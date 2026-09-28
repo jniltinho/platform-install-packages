@@ -1,0 +1,1 @@
+{"status": "BLOCKED_OR_FAILED", "failure_code": "UNEXPECTED_FAILURE", "source_line": 226, "resume_supported": false, "full_application_acceptance": false, "full_acceptance": false, "pending": ["full_seed_persistence", "effective_authorization", "full_application_acceptance"], "phase": "D2", "workers_policy": "HELD"}
