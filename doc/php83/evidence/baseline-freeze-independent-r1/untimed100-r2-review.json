@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "decision": "BOUNDED_SOURCE_APPROVED_ROOT_SERIAL_EXECUTION_BEFORE_TLS",
+  "pins": {
+    "run_untimed_r2": "579fed90216a54878d3384c2a3799f6bd9327c885d9bbe8f36934c3c10c4fc94",
+    "guest_untimed_r2": "b6d8c3e0145690c070ff78c2cb09de8ff74ede5641c662873fedc62406395b4c",
+    "settle": "2b1382fc7ff4163240d9c6e3342738ce90ab8537df9ea9999497a44e24d84764",
+    "test_settle": "73ff79c13aaad05ce2c7fd5a71560cac7be6e0f8011686008768bdb59cceb942"
+  },
+  "tests": {
+    "combined": 69,
+    "exit": 0
+  },
+  "review": [
+    "Settling waits for2s unchanged complete filemarks plus journalcursor",
+    "Original pre-round scan start and journal boundary retained; no dropped accumulated writes",
+    "Finite scanners unchanged; latefile/latejournal mutations reject common-end validation",
+    "No automatic API replay; fresh stage/output and previousunitinactive guard",
+    "Closed failure phase/sourcecode and bounded scannererror rows retained",
+    "TLS not yet installed by root sequencing; future TLS requires newlog inventory adapter"
+  ],
+  "limits": [
+    "30s decision deadline does not preempt an in-progress bounded snapshot; late completion rejects",
+    "No native or VM calls by reviewer",
+    "Original100 failure remains preserved",
+    "Not full baseline/performance acceptance"
+  ]
+}

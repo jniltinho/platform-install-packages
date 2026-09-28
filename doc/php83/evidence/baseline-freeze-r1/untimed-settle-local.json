@@ -1,0 +1,21 @@
+{
+  "status": "LOCAL_SETTLE_DERIVATIVE_TESTED",
+  "pins": {
+    "tools/php83/baseline-freeze-r1/settle.py": "2b1382fc7ff4163240d9c6e3342738ce90ab8537df9ea9999497a44e24d84764",
+    "tools/php83/baseline-freeze-r1/prepare_untimed_r2.py": "699a5f8769fd5e976bcaa78cc3928a307599385afb7a2a7f1a8533e7fc5b89ea",
+    "tools/php83/baseline-freeze-r1/guest_untimed_r2.py": "b6d8c3e0145690c070ff78c2cb09de8ff74ede5641c662873fedc62406395b4c",
+    "tools/php83/baseline-freeze-r1/run_untimed_r2.py": "579fed90216a54878d3384c2a3799f6bd9327c885d9bbe8f36934c3c10c4fc94",
+    "tools/php83/baseline-freeze-r1/test_settle.py": "73ff79c13aaad05ce2c7fd5a71560cac7be6e0f8011686008768bdb59cceb942"
+  },
+  "focused_tests": 7,
+  "combined_tests": 69,
+  "exit": 0,
+  "native_execution": false,
+  "prior_actual": "100 functional calls passed; original finite scanner rejected UNDRAINED_TAIL; overall original remains failed",
+  "scanner_limits_unchanged": true,
+  "scanner_start_boundaries_unchanged": true,
+  "api_retries_inside_runner": 0,
+  "tls_execution_order": "BEFORE new TLS setup; existing pinned logging inventory only",
+  "performance_acceptance": false,
+  "full_acceptance": false
+}

@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "input_sha256": "a4b4a419cb1ab80a4293ad746385169ec430f6f3b12bddd203a7ca9869b213ed",
+  "guest_exit": 2,
+  "unit_inactive": true,
+  "decision": "FUNCTIONAL100_EXECUTED_OVERALL_OBSERVATION_FAILED",
+  "functional_counts": {
+    "planned": 100,
+    "attempted": 100,
+    "passed": 100,
+    "failed": 0,
+    "not_executed": 0,
+    "aborted": false
+  },
+  "round_token_count": 34,
+  "round_privacy_present": false,
+  "limits": [
+    "No overall privacy acceptance; postround failure cause not retained in reduced receipt",
+    "No automatic rerun",
+    "Diagnostic timings are not performance acceptance",
+    "No VM calls by reviewer"
+  ]
+}

@@ -1,6 +1,6 @@
 # PHP 8.3 — status atual e tarefas restantes
 
-Atualizado: 2026-09-28T18:26:05.775065+00:00
+Atualizado: 2026-09-28T18:45:50.802357+00:00
 
 **5 concluídas / 46 abertas / 51 tarefas.** Os 24 requisitos originais e 27 casos detalhados se sobrepõem; não são 51 funcionalidades independentes. Sem percentual ou previsão de conclusão inferidos de testes.
 
@@ -71,15 +71,19 @@ seus bloqueadores históricos não representam este status atual.
   unidade inativa e identidade da VM preservada. Revisão independente aprovada.
 - Testes auxiliares:39 do coletor V2,8 do observador SQL e13 do wrapper web,
   incluindo limpeza real de fixture local sob SIGTERM. Não são tarefas completas.
-- Ensaio nativo V2:100 chamadas tentadas/100 resultados funcionais válidos
-  (34session.start/33media.list/33media.get), mas execução global exit2: as
-  verificações finais de privacidade falharam com UNDRAINED_TAIL. Unidade
-  encerrada. Não é aceite da rodada, benchmark ou tarefa completa.
-- HTTPS:nenhum listener443/8443; preparação TLS parou antes da mudança de
-  configuração por PARENT_TRUST (/var/log com grupo gravável). Não alteramos
-  permissões para passar. Correções específicas seguem em revisão.
-- Próximo: resolver a coleta finita de logs e preparar HTTPS isolado, sem
-  omitir falhas; mídia/UI e medições completas continuam pendentes.
+- Ensaio nativo corrigido R2:100/100 chamadas válidas,34 sessões/33 listagens/
+  33 consultas;72 marcadores em três janelas completas sem correspondência.
+  Exit0, unidade inativa e revisão independente aprovada. Falha UNDRAINED_TAIL
+  da rodada anterior preservada; a correção aguarda estabilidade limitada sem
+  avançar o início da janela nem omitir logs.
+- HTTPS isolado instalado em192.168.56.74:8443: TLS1.3, CA privada/IP SAN
+  validada, CA incorreta rejeitada; HTTP80 e móduloPHP7 preservados. Teste real
+  HTTP após o restart confirmou PHP7.4.33/apache2handler e removeu o próprio
+  arquivo de prova. Nenhum segredo/chave exportado. R1 bloqueado por metadados
+  permanece preservado; R2 usa diretório de logs próprio sem chmod em /var/log.
+- Próximo:100 chamadas autenticadas HTTPS com CA fixada e inclusão obrigatória
+  dos dois novos logs em todas as verificações de privacidade. Depois completar
+  HLS/Range/mídia longa/UI e as medições formais. Tarefa1.2 ainda aberta.
 
 R1/R2 e seus resultados parciais/falhos permanecem preservados. Tarefa1.2 aberta;
 nenhuma alteração em produção. Fonte do box: novo download oficial de651.326.766

@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "input_sha256": "c1991c793af5f54ec5e25b805a2a388cefb450f9d4763b5afcac6c3cc2259bae",
+  "decision": "ONE_NATIVE_UNTIMED_HTTP_API_REHEARSAL_ACCEPTED_WITH_FINITE_PRIVACY",
+  "closed_projection_roundtrip": true,
+  "deployed_source_pins_match_reviewed": true,
+  "native_exit": 0,
+  "unit_inactive": true,
+  "stderr_bytes": 0,
+  "calls": {
+    "session.start": 34,
+    "media.list": 33,
+    "media.get": 33
+  },
+  "planned": 100,
+  "attempted": 100,
+  "passed": 100,
+  "failed": 0,
+  "not_executed": 0,
+  "aborted": false,
+  "round_token_count": 34,
+  "privacy": {
+    "patterns": 72,
+    "batch_sizes": [
+      32,
+      32,
+      8
+    ],
+    "file_and_journal_matches": 0,
+    "all_complete": true,
+    "common_end_verified": true,
+    "uncovered_tail_bytes": 0,
+    "initial_control_user_and_media_windows_complete": true
+  },
+  "quiet_window": {
+    "maximum_seconds": 30,
+    "quiet_seconds": 2,
+    "samples": 9,
+    "status": "QUIET_WINDOW_OBSERVED"
+  },
+  "source_before_after_exact_expected": true,
+  "runtime_pins_verified": true,
+  "reviewer_vm_calls": 0,
+  "limits": [
+    "Common-end verification is attested by reviewed pinned guest; raw private boundaries deliberately not exported",
+    "No future-write or historical-log privacy claim",
+    "Diagnostic timings not measured benchmark; no two warmups/five rounds",
+    "HTTP method rehearsal only, not HTTPS/UI/upload/worker/media/playback/fullbaseline",
+    "R1 failure preserved separately; this does not rewrite it"
+  ]
+}

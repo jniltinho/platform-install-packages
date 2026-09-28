@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "input_sha256": "77a4447a14f59f1e7d45528ac5ac75791602ad13f49e40dba84ff1c123fcf23d",
+  "decision": "NATIVE_TLS_HANDSHAKE_OBSERVATION_ACCEPTED",
+  "closed_schema_verified": true,
+  "frozen_r2_local_pins_verified": 5,
+  "root_reported_exit": 0,
+  "stderr_bytes": 0,
+  "observations": {
+    "full_acceptance": false,
+    "http80_listeners_preserved": true,
+    "http_api_tested": false,
+    "keys_exported": false,
+    "listener": "192.168.56.74:8443",
+    "php7_module_preserved": true,
+    "privacy_inventory_adapter_required": true,
+    "public_ca_der_sha256": "97a4cd0a7452a76aa12b1ac7c4439a0c7254fefdfb1c75c576f79f4f6e3eefe8",
+    "public_ca_pem_sha256": "5ca573deffda2a3f40bc104258c7c36472d2f924a2a945cec6cb1fd99f541bef",
+    "rollback_complete": false,
+    "status": "LAB_TLS_INSTALLED_TRUSTED_HANDSHAKE_ONLY",
+    "tls_version": "TLSv1.3",
+    "wrong_ca_rejected": true
+  },
+  "source_link_limit": "Native receipt reports root execution of immutable stage but does not itself embed source hashes; local frozen source hashes verified separately",
+  "remaining": [
+    "Must extend every credential-bearing workload log inventory with pinned privateTLS adapter",
+    "Pinned publicCA trust required, never disabled verification",
+    "Root separately checks unauthenticated native HTTP/HTTPS provider/application routing",
+    "No HTTPS authenticatedAPI/media/fullbaseline acceptance from handshake",
+    "No privatekeys or keyhashes exported; listed hashes are publicCA only",
+    "No reviewer VM calls"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "executor": "Codex root",
+  "exit": 0,
+  "stderr_bytes": 0,
+  "command": "strict SSH baseline74 sudo python3 -B stdin; verify immutable r2 stage then setup_r2.py --execute",
+  "result": {
+    "full_acceptance": false,
+    "http80_listeners_preserved": true,
+    "http_api_tested": false,
+    "keys_exported": false,
+    "listener": "192.168.56.74:8443",
+    "php7_module_preserved": true,
+    "privacy_inventory_adapter_required": true,
+    "public_ca_der_sha256": "97a4cd0a7452a76aa12b1ac7c4439a0c7254fefdfb1c75c576f79f4f6e3eefe8",
+    "public_ca_pem_sha256": "5ca573deffda2a3f40bc104258c7c36472d2f924a2a945cec6cb1fd99f541bef",
+    "rollback_complete": false,
+    "status": "LAB_TLS_INSTALLED_TRUSTED_HANDSHAKE_ONLY",
+    "tls_version": "TLSv1.3",
+    "wrong_ca_rejected": true
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "decision": "BOUNDED_TLS_R2_SOURCE_APPROVED",
+  "tests": {
+    "focused": 11,
+    "exit": 0
+  },
+  "pins": {
+    "setup_r2.py": "34e5f874c5b32126b3b6341c49cc93c5f8ad46d19183408730a5cba86994aae8",
+    "render_r2.py": "7fabc4fffd242d8d54922efee01bb2f7ead0d73d7d53ad9424f5587e71297a93",
+    "privacy_logs_r2.py": "d67eb65900c3134c91efaf94b18ba482b59261c81b0084de0cea3bcd37d5246c"
+  },
+  "review": [
+    "No trust relaxation/chmod of original unsafe /var/log ancestor",
+    "Separate root700 TLS log directory and exact root600 files",
+    "Adapter must extend EVERY future finite snapshot/rescan before credentials",
+    "HTTP80 listener equality and php7 module post/rollback checks added",
+    "Current setup remains handshake-only; no actual TLS execution by reviewer"
+  ]
+}

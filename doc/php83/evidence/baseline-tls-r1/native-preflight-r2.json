@@ -1,0 +1,13 @@
+{
+  "executor": "Codex root",
+  "source_pins": {
+    "setup_r2.py": "34e5f874c5b32126b3b6341c49cc93c5f8ad46d19183408730a5cba86994aae8",
+    "render_r2.py": "7fabc4fffd242d8d54922efee01bb2f7ead0d73d7d53ad9424f5587e71297a93"
+  },
+  "exit": 0,
+  "stderr_bytes": 0,
+  "result": {
+    "status": "TLS_PREFLIGHT_ONLY",
+    "full_acceptance": false
+  }
+}

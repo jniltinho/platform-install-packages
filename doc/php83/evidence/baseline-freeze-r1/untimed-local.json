@@ -1,0 +1,20 @@
+{
+  "status": "LOCAL_UNTIMED_RUNNER_TESTED",
+  "source_pins": {
+    "tools/php83/baseline-freeze-r1/rehearsal.py": "ccf78ba0b1d3c94f05f63fd2d87c351953022c149c0e75392b5c86be2c02bb70",
+    "tools/php83/baseline-freeze-r1/prepare_untimed.py": "732921d29d058c0c916a26e000fc338fdf042e71b6073d263a223358548d7651",
+    "tools/php83/baseline-freeze-r1/guest_untimed.py": "3f95f1ced7b530e42b90e1872b34add4f1ddea0c6da174a79bda8a324955d56c",
+    "tools/php83/baseline-freeze-r1/run_untimed.py": "9c62eb1a195dd8b7028ad18997f5ca47c4beb1aa57cd7ec64d03599a8786dc92",
+    "tools/php83/baseline-freeze-r1/test_untimed.py": "6372d073a71c1af62050dd218e9d9c92a43c7bc7b7200edabdcdf423d11a3218"
+  },
+  "tests_focused": 8,
+  "tests_combined": 60,
+  "exit": 0,
+  "executor": "Codex author",
+  "native_execution": false,
+  "protocol_calls": 100,
+  "diagnostic_timings_only": true,
+  "performance_acceptance": false,
+  "full_acceptance": false,
+  "review_test_addition": "Explicit33/65 unique-pattern rebalance cases; productionsource unchanged"
+}

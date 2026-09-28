@@ -1,0 +1,24 @@
+{
+  "case": "BASELINE_TLS_R2_INDEPENDENT_DELTA",
+  "executor": "actual Claude CLI",
+  "terminal_exit": 0,
+  "tests_passed": 11,
+  "test_exit": 0,
+  "permission_denials": 0,
+  "verdict": "NO_MATERIAL_DELTA_BLOCKER",
+  "vm_services_db_network_openssl_executed": false,
+  "findings": [
+    "Privacy adapter must be enforced by each future authenticated harness, not only setup receipt",
+    "Adapter checks metadata; existing scanner owns inode/rotation continuity",
+    "php7_module check is parsed configuration, not live process/provider proof",
+    "PORTS_PIN/SHAPE ValueError still maps to generic UNEXPECTED",
+    "Additional negative-test coverage remains possible"
+  ],
+  "coordinator_corrections": [
+    "frozen-r2.sha256 exists in doc/php83/evidence/baseline-tls-r1, not tool directory; staging references that file",
+    "Native preflight now executed by root separately; CLI did not execute it"
+  ],
+  "source_freeze": "doc/php83/evidence/baseline-tls-r1/frozen-r2.sha256",
+  "full_acceptance": false,
+  "raw_cli_metadata_excluded": true
+}

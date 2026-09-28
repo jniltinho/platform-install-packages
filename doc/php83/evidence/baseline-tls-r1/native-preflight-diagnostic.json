@@ -1,0 +1,42 @@
+{
+  "status": "PREFLIGHT_REJECTED",
+  "code": "PARENT_TRUST",
+  "parent_metadata": {
+    "/var": {
+      "uid": 0,
+      "gid": 0,
+      "mode": "0o755",
+      "directory": true
+    },
+    "/var/lib": {
+      "uid": 0,
+      "gid": 0,
+      "mode": "0o755",
+      "directory": true
+    },
+    "/var/log": {
+      "uid": 0,
+      "gid": 104,
+      "mode": "0o775",
+      "directory": true
+    },
+    "/var/log/apache2": {
+      "uid": 0,
+      "gid": 4,
+      "mode": "0o750",
+      "directory": true
+    },
+    "/etc/apache2/conf-available": {
+      "uid": 0,
+      "gid": 0,
+      "mode": "0o755",
+      "directory": true
+    },
+    "/etc/apache2/conf-enabled": {
+      "uid": 0,
+      "gid": 0,
+      "mode": "0o755",
+      "directory": true
+    }
+  }
+}

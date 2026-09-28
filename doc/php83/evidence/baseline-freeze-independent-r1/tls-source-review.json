@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "decision": "BOUNDED_TLS_SOURCE_APPROVED_FOR_ROOT_PREFLIGHT_AND_SERIALIZED_TRANSITION",
+  "pins": {
+    "setup.py": "1666cc30fc01a2114be43c3cf66053d7114481eb76698969fe3bbc8a86b26d39",
+    "render.py": "01f790ea2023c6d5990c5344e665d540b98847432bd7e92262f4d7a4b8b8fa9d",
+    "test_setup.py": "d6c7814810b464584209d3407f283690b5922a5c1356bcef6ac0afcbfffd0555",
+    "test_render.py": "cee1927b2b742fb25ffd85e65f3cbcb328256db4cf18525ac99e20de900ae165"
+  },
+  "tests": {
+    "passed": 11,
+    "exit": 0,
+    "scope": "pure renderer and modeled setup/rollback; not native"
+  },
+  "review": [
+    "Exact target/private absent paths and pinned public configuration required",
+    "Only two pinned conditional443 Listen lines replaced;80 config preserved",
+    "Dedicated .74:8443 listener, private7dayCA, leafIP SAN and serverAuth",
+    "No globaltrust install, keymaterial export or application profile/credential change",
+    "Configtest/scopedrestart, trusted and wrongCA handshake tests",
+    "Rollback only own identified config/link plus exact priorports; keys/logs retained"
+  ],
+  "limits": [
+    "No VM calls by reviewer",
+    "No active HTTP route/probe after TLS setup; root must verify before functional claim",
+    "New root600 errorlog must enter finite scans before authentication",
+    "SIGKILL/hostfailure can prevent rollback and requires inspection",
+    "TLS handshake alone is not HTTPS API/media or fullbaseline acceptance"
+  ]
+}

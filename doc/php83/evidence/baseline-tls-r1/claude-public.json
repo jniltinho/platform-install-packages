@@ -1,0 +1,21 @@
+{
+  "case": "BASELINE_TLS_R1_SOURCE_AND_MODELED_TEST_REVIEW",
+  "executor": "actual Claude CLI",
+  "terminal_exit": 0,
+  "tests_passed": 11,
+  "test_exit": 0,
+  "permission_denials": 0,
+  "first_test_attempt": "Wrong working directory caused import error; repeated from repository root successfully",
+  "source_change": false,
+  "vm_services_openssl_executed": false,
+  "material_finding": "Success/rollback do not independently verify preserved HTTP80 and PHP7 handler; root external acceptance checks or reviewed helper delta required",
+  "other_limits": [
+    "Trusted /var/log parent may block on syslog groupwrite; no blanket permission relaxation",
+    "CA helper tests do not execute actual OpenSSL",
+    "SIGTERM after successful mutation may prevent terminal receipt; inspect not replay",
+    "Included app config set needs coordinator identity review",
+    "Modeled tests do not cover all interruption/preflight/command-bound failures"
+  ],
+  "scope": "No private key disclosure/listener scope blocker; not native acceptance",
+  "raw_cli_metadata_excluded": true
+}
