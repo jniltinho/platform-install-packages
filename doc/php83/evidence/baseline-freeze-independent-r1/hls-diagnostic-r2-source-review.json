@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "decision": "FIRST_HLS_CLOSED_DIAGNOSTIC_R2_APPROVED",
+  "pins": {
+    "run_hls_first_r2.py": "ce04dbcf0d1eeb2f46baaca53c12167fa761ce2b071ac4d97663fbfe0fdc4a39",
+    "guest_hls_first_r2.py": "357d463c14164a5a9647d34582820bed773d703d48e3e6a5f0496722bd17e231",
+    "hls_first_r2.py": "7dd522de24ddff8fddbf9bf918b17288818b6057a74f300700b90bc615dd3077",
+    "manifest_diagnostic.py": "c270871ab2ccfdd1b848e2081470b165052e2bcd0dc4b2ccad6151e5c7fc0ce4",
+    "test_hls_diagnostic.py": "1893f2ab222a1b4f2caa35f7dbef6177f3eedd17810901f64933db496d64534d"
+  },
+  "test_command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/baseline-freeze-r1 -p test_hls_diagnostic.py -v",
+  "tests": 7,
+  "exit": 0,
+  "review": [
+    "Exactly one real request; same private response reused in unchanged fetch/header/parser validation.",
+    "Closed status/MIME/bodybyte/tag counters and allowlisted reason recorded before reject; no raw header/body/URL/hash exported.",
+    "Full public_rows success/negative/failure tests executed; required checks retained."
+  ],
+  "limits": [
+    "Opaque HTTP/transport failure may retain statusNone; not fabricated.",
+    "Failure scans cover known/enrolled patterns, not whole manifest/response.",
+    "No nestedGET/decode/fullHLS acceptance or reviewer VM calls."
+  ]
+}

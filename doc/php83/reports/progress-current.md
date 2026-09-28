@@ -13,19 +13,24 @@ HTTPS HLS source and matching selected flavor, with complete finite scans of the
 six enrolled patterns. Whole-response secret coverage and playback were not
 claimed by that API observation.
 
-The first native HLS manifest attempt has now ended with guest exit 2 and an
-inactive unit (`baseline-freeze-e9c1d318`): `HLS_MANIFEST_REJECTED` during
-`API_ROUND`. The source-bound native route guard passed, but the current combined
-error does not distinguish transport from parser rejection. No successful
-manifest parse, nested fetch or decode is claimed. Failure-path scans of enrolled
-patterns completed with zero matches; that is not whole-manifest privacy proof.
+The first native HLS manifest attempt ended with guest exit 2 and an inactive
+unit (`baseline-freeze-e9c1d318`): `HLS_MANIFEST_REJECTED`. A separately reviewed
+second diagnostic probe also ended with exit 2/inactive (`baseline-freeze-8dcb3711`),
+but narrowed the failure: HTTP 200, HLS content type, 201-byte body, EXTM3U header,
+one STREAM-INF and one URI line, followed by the parser's `ORIGIN` rejection.
+No raw URL/body was exported and no nested request was made. This does not yet
+identify the mismatching scheme, host, port or other origin condition. Failure
+scans of enrolled patterns were complete and zero; whole-reference coverage was
+not established. Both failing receipts remain preserved.
 
-Next: a separately reviewed closed diagnostic receipt to identify the exact HLS
-failure without persisting URLs or response bodies, then the smallest supported
-repair/test. A pure long-upload chunk planner is being tested independently in
-parallel; it has not uploaded anything. Long media, thumbnails, UI, environment
-provenance and formal repeated measurements remain open. All historical failures
-below remain evidence, not the current execution state. No task checkbox changed.
+Next: source-backed closed classification of the nested reference before any
+nested GET, then a bounded correction/test without rewriting URLs or weakening
+target/TLS protections. The pure long-upload chunk planner passed seven local
+and independent tests plus actual Claude source review; a strict type flaw was
+fixed with its original finding preserved. It has not uploaded anything. Long
+media, thumbnails, UI, environment provenance and formal repeated measurements
+remain open. No task checkbox changed; historical reports below are not current
+blocker instructions.
 
 ## Contagem por área
 

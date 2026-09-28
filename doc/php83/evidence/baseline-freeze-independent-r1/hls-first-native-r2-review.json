@@ -1,0 +1,46 @@
+{
+  "schema": 1,
+  "decision": "FIRST_MANIFEST_HTTP200_NESTED_ORIGIN_REJECTED",
+  "artifact_sha256": "56d7e6d45fc81dc931b2a9a7f3e372012fb4513672f33dfd5f03bec54d5901ff",
+  "guest_exit": 2,
+  "unit_inactive": true,
+  "diagnostic": {
+    "body_bytes": 201,
+    "content_type": "HLS",
+    "extm3u_first_line": true,
+    "line_limit_exceeded": false,
+    "other_tags": 0,
+    "raw_values_exported": false,
+    "reason": "ORIGIN",
+    "status": 200,
+    "tag_counts": {
+      "EXT-X-ALLOW-CACHE": 0,
+      "EXT-X-DISCONTINUITY": 0,
+      "EXT-X-ENDLIST": 0,
+      "EXT-X-INDEPENDENT-SEGMENTS": 0,
+      "EXT-X-KEY": 0,
+      "EXT-X-MAP": 0,
+      "EXT-X-MEDIA": 0,
+      "EXT-X-MEDIA-SEQUENCE": 0,
+      "EXT-X-PLAYLIST-TYPE": 0,
+      "EXT-X-PROGRAM-DATE-TIME": 0,
+      "EXT-X-STREAM-INF": 1,
+      "EXT-X-TARGETDURATION": 0,
+      "EXT-X-VERSION": 0,
+      "EXTINF": 0,
+      "EXTM3U": 1
+    },
+    "uri_lines": 1
+  },
+  "failure_privacy": {
+    "finite_scans_complete_and_zero": true
+  },
+  "interpretation": [
+    "First source-bound manifest request returned HTTP200,HLS MIME,201 bytes,EXTM3U and one stream-inf/URI line.",
+    "Parser rejected reference origin before nested request; overall HLS observation remains failed.",
+    "No raw reference or classified scheme/host/port yet; do not assume HTTP downgrade, wrongport or host cause.",
+    "Failure scan zero concerns known/enrolled patterns only; parser failed before reference enrollment, not whole manifest/privacy acceptance."
+  ],
+  "next_gate": "Only bounded closed origin classification without nestedGET. Preserve exact native reference, no URL rewriting or relaxed origin boundary.",
+  "reviewer_vm_calls": false
+}
