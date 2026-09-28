@@ -1,0 +1,38 @@
+{
+  "binary_sha256": "1a995dddd470f013258b1890cfc7c9e3b10c344461eb085de6b2ef8f991faec0",
+  "scope": "SYNTHETIC_HOST_LOOPBACK_FIXTURE_NOT_GUEST",
+  "cases": [
+    {
+      "collector_available": true,
+      "exit": 0,
+      "responses": [
+        "HTTP/1.1 404 Not Found",
+        "HTTP/1.1 502 Bad Gateway",
+        "HTTP/1.1 414 Request-URI Too Large"
+      ],
+      "datagrams": 2,
+      "max_datagram": 376,
+      "access_canary": false,
+      "stderr_canary": true,
+      "datagram_canary": true,
+      "stderr_bytes": 619,
+      "access_bytes": 81
+    },
+    {
+      "collector_available": false,
+      "exit": 0,
+      "responses": [
+        "HTTP/1.1 404 Not Found",
+        "HTTP/1.1 502 Bad Gateway",
+        "HTTP/1.1 414 Request-URI Too Large"
+      ],
+      "datagrams": 0,
+      "max_datagram": 0,
+      "access_canary": false,
+      "stderr_canary": true,
+      "datagram_canary": false,
+      "stderr_bytes": 791,
+      "access_bytes": 81
+    }
+  ]
+}

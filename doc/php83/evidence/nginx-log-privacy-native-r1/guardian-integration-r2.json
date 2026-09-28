@@ -1,0 +1,99 @@
+{
+  "binary_sha256": "1a995dddd470f013258b1890cfc7c9e3b10c344461eb085de6b2ef8f991faec0",
+  "guardian_sha256": "498269bbef1c5a68ffedc4ba5f6215cd4662c3dcc7d0ef5ee2bc4d3b3f7ecc21",
+  "sanitizer_sha256": "b44f3cdc8c38c6c00a1ef099c0a4742650b3b209e70814924115c1c5f146fffb",
+  "cases": [
+    {
+      "case": "reload_reopen",
+      "result": {
+        "status": "STOPPED",
+        "input_bytes": 2490,
+        "child_reaped": true
+      },
+      "observed": {
+        "statuses": [
+          "404",
+          "502",
+          "414",
+          "404",
+          "404"
+        ],
+        "errors": [],
+        "reopen_new_file": true
+      },
+      "event_count": 8,
+      "reasons": [
+        "connect_failure",
+        "file_missing"
+      ],
+      "canary_absent": true,
+      "listener_closed": true
+    },
+    {
+      "case": "collector_lost",
+      "result": {
+        "status": "FAILED",
+        "input_bytes": 1280,
+        "child_reaped": true
+      },
+      "observed": {
+        "statuses": [
+          "404",
+          "502",
+          "414"
+        ],
+        "errors": []
+      },
+      "event_count": 4,
+      "reasons": [
+        "connect_failure",
+        "file_missing"
+      ],
+      "canary_absent": true,
+      "listener_closed": true
+    },
+    {
+      "case": "startup_error",
+      "result": {
+        "status": "CHILD_EXIT",
+        "input_bytes": 139,
+        "child_reaped": true
+      },
+      "observed": {
+        "statuses": [],
+        "errors": []
+      },
+      "event_count": 1,
+      "reasons": [
+        "unclassified"
+      ],
+      "canary_absent": true,
+      "listener_closed": true
+    },
+    {
+      "case": "invalid_reload",
+      "result": {
+        "status": "STOPPED",
+        "input_bytes": 2230,
+        "child_reaped": true
+      },
+      "observed": {
+        "statuses": [
+          "404",
+          "502",
+          "414",
+          "404"
+        ],
+        "errors": []
+      },
+      "event_count": 8,
+      "reasons": [
+        "connect_failure",
+        "file_missing",
+        "unclassified"
+      ],
+      "canary_absent": true,
+      "listener_closed": true
+    }
+  ]
+}
