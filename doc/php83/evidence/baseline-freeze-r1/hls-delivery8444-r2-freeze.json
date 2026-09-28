@@ -1,0 +1,22 @@
+{
+  "change": "Closed ffprobe facts before metadata rejection; existing projection predicates unchanged plus bounded ASCII rational precondition",
+  "files": {
+    "tools/php83/baseline-freeze-r1/decode_diagnostic.py": "e6c913791e8176df8883e85cde449111d6e5aee7c9d55ed8a3df2581b8e9fc01",
+    "tools/php83/baseline-freeze-r1/guest_hls_delivery8444_r2.py": "e00d85dd59c3014325b18f214b5ee27d098194a6392db6aa44725b1ba8d024cc",
+    "tools/php83/baseline-freeze-r1/hls_decode_r2.py": "9bb3ad909ca3225b76eed3f42adb58b662517399ad4561fca3d03654dc1fb3fd",
+    "tools/php83/baseline-freeze-r1/hls_delivery8444_r2.py": "fec502c37cc418de0dc7167855f98c822d5b3bc3db86d4033fb30b87d7640ada",
+    "tools/php83/baseline-freeze-r1/prepare_hls_delivery8444_r2.py": "3f22c6834d40c952e1ff3efb6477a70a821fe741a349f3dda1b9f81b81fbd59c",
+    "tools/php83/baseline-freeze-r1/run_hls_delivery8444_r2.py": "8c61ddcba648e543e524777be4d3ae636b5b999c074e1f90104d72c4398b3b9e",
+    "tools/php83/baseline-freeze-r1/test_hls_decode_diagnostic.py": "ba396165ea3356c709688bd59bd9e451e9a3c07b04026747ac86f2056b940652"
+  },
+  "full_acceptance": false,
+  "historical_failure_preserved": true,
+  "independent_review": "PENDING_FINAL",
+  "native_execution": false,
+  "schema": 1,
+  "tests": {
+    "aggregate": 313,
+    "exit": 0,
+    "focused": 11
+  }
+}

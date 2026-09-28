@@ -1,0 +1,120 @@
+{
+  "schema": 1,
+  "decision": "PRESERVED_THREE_STREAM_METADATA_REJECTION",
+  "receipt_sha256": "795adec46946529d365e93263f3549f65ac3917c6e45f220a3f7f565a7a3c0b9",
+  "native_executor": "root coordinator",
+  "independent_vm_calls": 0,
+  "failure_code": "HLS_DECODE_METADATA",
+  "closed_decode_diagnostic": {
+    "audio_count": 1,
+    "duration": {
+      "denominator": 1,
+      "numerator": 10,
+      "state": "NUMBER"
+    },
+    "other_count": 1,
+    "raw_values_exported": false,
+    "root_object": true,
+    "schema": 1,
+    "stream_count": 3,
+    "streams": [
+      {
+        "avg_frame_rate": {
+          "denominator": 1,
+          "numerator": 25,
+          "state": "NUMBER"
+        },
+        "channels": {
+          "state": "MISSING",
+          "value": null
+        },
+        "codec": "H264",
+        "height": {
+          "state": "NUMBER",
+          "value": 360
+        },
+        "kind": "VIDEO",
+        "nb_read_frames": {
+          "state": "NUMBER",
+          "value": 250
+        },
+        "sample_rate": {
+          "state": "MISSING",
+          "value": null
+        },
+        "width": {
+          "state": "NUMBER",
+          "value": 640
+        }
+      },
+      {
+        "avg_frame_rate": {
+          "denominator": null,
+          "numerator": null,
+          "state": "INVALID"
+        },
+        "channels": {
+          "state": "NUMBER",
+          "value": 2
+        },
+        "codec": "AAC",
+        "height": {
+          "state": "MISSING",
+          "value": null
+        },
+        "kind": "AUDIO",
+        "nb_read_frames": {
+          "state": "NUMBER",
+          "value": 432
+        },
+        "sample_rate": {
+          "state": "NUMBER",
+          "value": 44100
+        },
+        "width": {
+          "state": "MISSING",
+          "value": null
+        }
+      },
+      {
+        "avg_frame_rate": {
+          "denominator": null,
+          "numerator": null,
+          "state": "INVALID"
+        },
+        "channels": {
+          "state": "MISSING",
+          "value": null
+        },
+        "codec": "OTHER",
+        "height": {
+          "state": "MISSING",
+          "value": null
+        },
+        "kind": "OTHER",
+        "nb_read_frames": {
+          "state": "MISSING",
+          "value": null
+        },
+        "sample_rate": {
+          "state": "MISSING",
+          "value": null
+        },
+        "width": {
+          "state": "MISSING",
+          "value": null
+        }
+      }
+    ],
+    "streams_array": true,
+    "video_count": 1
+  },
+  "failure_finite_known_pattern_privacy": true,
+  "interpretation": "Third stream currently classified only OTHER/OTHER, so exact-two-stream rejection is supported. Neither typeDATA nor code timed_id3 is yet observed.",
+  "limits": [
+    "Optional timedID3 source evidence is not actual third-stream identification.",
+    "Future correction must permit only exact supported DATA/timed_id3 pair, reject arbitraryOTHER and duplicate/excess streams.",
+    "Full ffmpegdecode not reached; ffprobe metadata/frame count not decode acceptance.",
+    "No profilegolden/dynamiclibrary/taskcompletion claims."
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "commit": "1750eb08021e362859887fdfe842ed6a4997f576",
+  "files": [
+    {
+      "path": "vod/hls/hls_muxer.c",
+      "url": "https://raw.githubusercontent.com/kaltura/nginx-vod-module/1750eb08021e362859887fdfe842ed6a4997f576/vod/hls/hls_muxer.c",
+      "git_blob_sha1": "1588cf71b9e8420ecd28dc330e0a60a26c3d4331",
+      "sha256": "dc6ff486292bdc9d99161ac7e1bf0d517515f530a544180c55adba901a7036f8",
+      "bytes": 30805
+    },
+    {
+      "path": "vod/hls/mpegts_encoder_filter.c",
+      "url": "https://raw.githubusercontent.com/kaltura/nginx-vod-module/1750eb08021e362859887fdfe842ed6a4997f576/vod/hls/mpegts_encoder_filter.c",
+      "git_blob_sha1": "eae2b620ab10384bccaa8f7cfa5f975f2706670f",
+      "sha256": "f881e8ccbc4af7b5862c696523d70739926e4fd4c583d8a5f37e6fa6fb069326",
+      "bytes": 36328
+    },
+    {
+      "path": "vod/hls/id3_encoder_filter.c",
+      "url": "https://raw.githubusercontent.com/kaltura/nginx-vod-module/1750eb08021e362859887fdfe842ed6a4997f576/vod/hls/id3_encoder_filter.c",
+      "git_blob_sha1": "fd31a16fe373c1283e50d4c7496e2db13130690d",
+      "sha256": "107cb6383bdb703c80805132d8718afe3025602ea44ac60c9e2ea1b408ed9c4b",
+      "bytes": 2271
+    }
+  ],
+  "native_third_stream_identity_verified": false
+}

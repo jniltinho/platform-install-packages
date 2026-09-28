@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "decision": "BOUNDED_FIVE_SEGMENT_FETCH_AND_LOCAL_DECODE_SOURCE_PASS",
+  "pins": {
+    "run_hls_delivery8444.py": "2ef1935877d288f338a2eed6ed897372ae33357c310cb96bcafe08f5ba365a57",
+    "guest_hls_delivery8444.py": "6ad49706944501fb9bc0784c611e362788d0aa683cbfc941f0ee2d734e969d13",
+    "prepare_hls_delivery8444.py": "c4b4420ba99322cd9c0dafb578a9bd5d620f3cc13e639c4e9934c85aa00ccaa2",
+    "hls_segments.py": "5d8e38218b899dff4181caf3bc8febf5966989d3a61f77f29c15380fab4bee05",
+    "hls_decode.py": "2fda1a247b2d3cc284329224525e6afcb5593463bb3d685bafd0c83a6f69e72a",
+    "hls_delivery8444.py": "cd805d0e83070fdac669d196a502e76ae83e134d88ba0ebad2c5f50896dbefa5",
+    "offline_decode.py": "8940b878a572b968969acdc66090184568169dadff2713e51dcf64126ca1cae4",
+    "test_hls_segments.py": "9c566815849964c7decf9e6994e8aac97cc4ef438a04e19e8fd4e50c9441dff3",
+    "test_hls_delivery8444.py": "1af9bfe7144248395dd3ba8457e818478a7e31fae1e044b2ff1791c41335f817"
+  },
+  "independent_tests": {
+    "segments": 7,
+    "full_wrapper": 7
+  },
+  "exit": 0,
+  "scope": [
+    "One context, two manifests, exactly five fixed sibling seg-N-v1-a1.ts routes validated before first segment GET.",
+    "Unknown tags/extra paths/query/encoding/current credentials/cardinality/order/duration failures reject; TARGETDURATION>=maxEXTINF fixed and tested.",
+    "Total2MiB bounded fetchedbytes, every TS packet188byte sync framing and strict response checks.",
+    "Pinned sealed binaries/private memfd file-only ffprobe and full ffmpeg video/audio decode, observed metadata not original golden.",
+    "Exact new guestpinloop executed via AST; full host success and negative projection covered.",
+    "Both TLSlog inventories, currentUSER/privatepattern and common-end guards unchanged."
+  ],
+  "limits": [
+    "Source/modeled tests only, no actual network or fetched-media decode by reviewer.",
+    "Dynamic library cohort not attested, profile golden equivalencefalse, whole-response secret coveragefalse.",
+    "Historical mutation/previous HLS failures unchanged; no taskcompletion claimed."
+  ]
+}

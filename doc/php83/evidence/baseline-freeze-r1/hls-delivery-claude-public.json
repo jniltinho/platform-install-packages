@@ -1,0 +1,52 @@
+{
+  "case": "HLS_SEGMENT_FETCH_AND_LOCAL_DECODE_SOURCE_REVIEW",
+  "executor": "actual Claude CLI",
+  "terminal_exit": 0,
+  "original_verdict": "BLOCKED_MISSING_SEGMENT_ENROLLMENT",
+  "sources": {
+    "run_hls_delivery8444.py": "2ef1935877d288f338a2eed6ed897372ae33357c310cb96bcafe08f5ba365a57",
+    "guest_hls_delivery8444.py": "6ad49706944501fb9bc0784c611e362788d0aa683cbfc941f0ee2d734e969d13",
+    "hls_segments.py": "5d8e38218b899dff4181caf3bc8febf5966989d3a61f77f29c15380fab4bee05",
+    "hls_decode.py": "2fda1a247b2d3cc284329224525e6afcb5593463bb3d685bafd0c83a6f69e72a",
+    "hls_delivery8444.py": "cd805d0e83070fdac669d196a502e76ae83e134d88ba0ebad2c5f50896dbefa5",
+    "test_hls_segments.py": "9c566815849964c7decf9e6994e8aac97cc4ef438a04e19e8fd4e50c9441dff3",
+    "test_hls_delivery8444.py": "1af9bfe7144248395dd3ba8457e818478a7e31fae1e044b2ff1791c41335f817",
+    "hls_media8444.py": "cc97c2b6fdd5fc49f01b98a6a9fe332189ee9309a7a795400c517d239ebc7381",
+    "nested_descriptor.py": "8d912931a8f41e23bd068d8f5576250a8c19bef79fcf3b3a88e348c603a4a89f"
+  },
+  "commands": [
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/baseline-freeze-r1 -p test_hls_segments.py -v",
+      "tests": 7,
+      "exit": 0
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/baseline-freeze-r1 -p test_hls_delivery8444.py -v",
+      "tests": 7,
+      "exit": 0
+    }
+  ],
+  "finding_adjudication": {
+    "executor": "Independent Codex source read and synthetic execution",
+    "result": "ALLEGATION_NOT_PRESENT_IN_COMPOSED_SOURCE",
+    "explanation": "Claude explicitly did not read hls_media8444 or nested_descriptor. Pinned media observer enrolls every resolved media reference and requires complete enrollment before returning, before segment parse/fetch.",
+    "executed_additional_check": "Using real test_hls_delivery8444 fixture with only decoder mocked, intercept segments.fetch and assert exactly five targets and every target already in enrolled; then call original fetch.",
+    "additional_check_exit": 0,
+    "additional_check_assertions_passed": true,
+    "source_mutated": false
+  },
+  "bounded_review_findings": [
+    "Exact owned-parent/sequence/track guard verified.",
+    "Exactly five segments and aggregate2MiB bound retained.",
+    "Decoder sealed memfd and fixed binaries, file-only protocol, CPU/memory/output/wall/process cleanup bounds retained.",
+    "No golden equivalence, dynamic-library cohort, full application or universal privacy claims."
+  ],
+  "limitations": [
+    "Claude did not independently approve after dependency adjudication.",
+    "Local decoder mocked in supplemental enrollment check; no VM/TLS/DB/actual media delivery performed by reviewer.",
+    "Response secret coverage remains explicitly incomplete; enrolled known-pattern finite audit only."
+  ],
+  "raw_cli_published": false,
+  "native_acceptance": false,
+  "full_acceptance": false
+}

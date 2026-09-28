@@ -1,0 +1,23 @@
+{
+  "change": "Optional exactly one type=data codec=timed_id3 auxiliary stream; unknown auxiliary streams rejected, AV constraints retained",
+  "files": {
+    "tools/php83/baseline-freeze-r1/decode_diagnostic_r3.py": "0aa4ce20f348c43d586d60bc8e0582f31091cb5060ca9e48db86afff10ad92d8",
+    "tools/php83/baseline-freeze-r1/guest_hls_delivery8444_r3.py": "0ab983cf74d994d5e1d3333e4c109a8b918d98ac8ad7c6cc7e21862dbabf8840",
+    "tools/php83/baseline-freeze-r1/hls_decode_r3.py": "5fde3ab2d4d3daafa910f32148870f53b392dbf4d856063d7fe4487d43aa8733",
+    "tools/php83/baseline-freeze-r1/hls_delivery8444_r3.py": "e93dba292d3e574828d215c13deeaae588c1efb3167bbc6ba54d8e39f85a37d0",
+    "tools/php83/baseline-freeze-r1/prepare_hls_delivery8444_r3.py": "cfe4b183bba83d84897818e589a1ca3b1686c9913693bcb71c03137e804648a9",
+    "tools/php83/baseline-freeze-r1/run_hls_delivery8444_r3.py": "eb6bc912acb66644abb887677715705205cfce507fca3da98ba19b1cca7612c0",
+    "tools/php83/baseline-freeze-r1/test_hls_id3.py": "f5570884d6d64fa86e699d0ab3add8611eeee584a7ad96b39fda0931cb2b25bc"
+  },
+  "full_acceptance": false,
+  "historical_OTHER_identity_reclassified": false,
+  "independent_review": "PENDING_FINAL",
+  "native_execution": false,
+  "schema": 1,
+  "source_evidence": "doc/php83/evidence/nginx-vod-1.33-id3-source-r1/findings.md",
+  "tests": {
+    "aggregate": 322,
+    "exit": 0,
+    "focused": 9
+  }
+}

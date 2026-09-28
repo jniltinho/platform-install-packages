@@ -1,0 +1,26 @@
+{
+  "files": {
+    "tools/php83/baseline-freeze-r1/guest_hls_delivery8444.py": "6ad49706944501fb9bc0784c611e362788d0aa683cbfc941f0ee2d734e969d13",
+    "tools/php83/baseline-freeze-r1/hls_decode.py": "2fda1a247b2d3cc284329224525e6afcb5593463bb3d685bafd0c83a6f69e72a",
+    "tools/php83/baseline-freeze-r1/hls_delivery8444.py": "cd805d0e83070fdac669d196a502e76ae83e134d88ba0ebad2c5f50896dbefa5",
+    "tools/php83/baseline-freeze-r1/hls_segments.py": "5d8e38218b899dff4181caf3bc8febf5966989d3a61f77f29c15380fab4bee05",
+    "tools/php83/baseline-freeze-r1/offline_decode.py": "8940b878a572b968969acdc66090184568169dadff2713e51dcf64126ca1cae4",
+    "tools/php83/baseline-freeze-r1/prepare_hls_delivery8444.py": "c4b4420ba99322cd9c0dafb578a9bd5d620f3cc13e639c4e9934c85aa00ccaa2",
+    "tools/php83/baseline-freeze-r1/run_hls_delivery8444.py": "2ef1935877d288f338a2eed6ed897372ae33357c310cb96bcafe08f5ba365a57",
+    "tools/php83/baseline-freeze-r1/test_hls_delivery8444.py": "1af9bfe7144248395dd3ba8457e818478a7e31fae1e044b2ff1791c41335f817",
+    "tools/php83/baseline-freeze-r1/test_hls_segments.py": "9c566815849964c7decf9e6994e8aac97cc4ef438a04e19e8fd4e50c9441dff3"
+  },
+  "full_acceptance": false,
+  "independent_review": "PENDING",
+  "native_execution": false,
+  "schema": 1,
+  "scope": "One current owned context, master443, media8444, five source-guarded sibling TS segments and bounded private local decode",
+  "source_reference": "doc/php83/evidence/nginx-vod-1.33-segment-source-r1/grammar.md",
+  "test_limit": "Decoder subprocess run is mocked in new unit tests; native downloaded TS decode not executed by author",
+  "tests": {
+    "aggregate": 302,
+    "exit": 0,
+    "full_wrapper": 7,
+    "segment_and_decode_unit": 7
+  }
+}

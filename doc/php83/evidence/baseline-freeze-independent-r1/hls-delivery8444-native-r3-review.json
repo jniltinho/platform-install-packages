@@ -1,0 +1,41 @@
+{
+  "reviewer": "Codex independent /root/skill_forward_test",
+  "status": "ACCEPTED_BOUNDED_NATIVE_MILESTONE",
+  "receipt_sha256": "7c7e2309ce171394029747367e20147240bfdf243aacbdb65df4f10f50d649a5",
+  "source_pins_match_reviewed_files": true,
+  "native_exit": 0,
+  "unit_inactive": true,
+  "requests": 7,
+  "segment_count": 5,
+  "segment_bytes": 702744,
+  "full_decode_scope": "ONE_VIDEO_ONE_AUDIO",
+  "observed_metadata": {
+    "audio_channels": 2,
+    "audio_codec": "aac",
+    "audio_sample_rate": 44100,
+    "auxiliary_timed_id3_streams": 1,
+    "duration_milliseconds": 10000,
+    "fps_denominator": 1,
+    "fps_numerator": 25,
+    "height": 360,
+    "video_codec": "h264",
+    "video_frames": 250,
+    "width": 640
+  },
+  "known_pattern_count": 4,
+  "finite_common_end_complete_zero": true,
+  "stable_common_end_attempt": 1,
+  "limitations": [
+    "Prior R1 and R2 failures remain failures; prior OTHER not retrospectively reclassified",
+    "Auxiliary DATA/TIMED_ID3 descriptor observed now; payload not verified",
+    "No profile-golden equivalence or dynamic-library cohort attestation",
+    "No whole-response privacy or OpenSpec task completion",
+    "Prior profile mutation remains failed and recovery adjudication required"
+  ],
+  "review_actions": [
+    "Compared every staged module pin to frozen local source",
+    "Validated closed delivery and diagnostic schemas",
+    "Validated round projection, provenance completeness, exact common-end stability and source identity"
+  ],
+  "native_execution_by": "root only; reviewer made no VM/API requests"
+}

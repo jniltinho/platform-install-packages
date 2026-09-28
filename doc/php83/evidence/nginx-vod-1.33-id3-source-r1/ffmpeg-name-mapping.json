@@ -1,0 +1,62 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/FFmpeg/FFmpeg/n6.1.1/libavformat/mpegts.c",
+    "tag": "n6.1.1",
+    "full_source_sha256": "47e51a6897502875695436faeeddf38d6906ccf796b3747ec988dee01e42535a",
+    "full_source_bytes": 119156,
+    "excerpts": [
+      {
+        "first_line": 869,
+        "lines": [
+          "    { MKTAG('H', 'E', 'V', 'C'), AVMEDIA_TYPE_VIDEO, AV_CODEC_ID_HEVC  },",
+          "    { MKTAG('K', 'L', 'V', 'A'), AVMEDIA_TYPE_DATA,  AV_CODEC_ID_SMPTE_KLV },",
+          "    { MKTAG('V', 'A', 'N', 'C'), AVMEDIA_TYPE_DATA,  AV_CODEC_ID_SMPTE_2038 },",
+          "    { MKTAG('I', 'D', '3', ' '), AVMEDIA_TYPE_DATA,  AV_CODEC_ID_TIMED_ID3 },",
+          "    { MKTAG('V', 'C', '-', '1'), AVMEDIA_TYPE_VIDEO, AV_CODEC_ID_VC1   },",
+          "    { MKTAG('O', 'p', 'u', 's'), AVMEDIA_TYPE_AUDIO, AV_CODEC_ID_OPUS  },",
+          "    { 0 },",
+          "};",
+          ""
+        ]
+      },
+      {
+        "first_line": 877,
+        "lines": [
+          "",
+          "static const StreamType METADATA_types[] = {",
+          "    { MKTAG('K','L','V','A'), AVMEDIA_TYPE_DATA, AV_CODEC_ID_SMPTE_KLV },",
+          "    { MKTAG('I','D','3',' '), AVMEDIA_TYPE_DATA, AV_CODEC_ID_TIMED_ID3 },",
+          "    { 0 },",
+          "};",
+          "",
+          "/* descriptor present */",
+          "static const StreamType DESC_types[] = {"
+        ]
+      }
+    ],
+    "installed_version_or_build_correspondence_proven": false
+  },
+  {
+    "url": "https://raw.githubusercontent.com/FFmpeg/FFmpeg/n6.1.1/libavcodec/codec_desc.c",
+    "tag": "n6.1.1",
+    "full_source_sha256": "6b33d90dc1813109ca307e0588e4d9c6a94134729b1299e9fc7682c5fbe8db8f",
+    "full_source_bytes": 137969,
+    "excerpts": [
+      {
+        "first_line": 3665,
+        "lines": [
+          "        .long_name = NULL_IF_CONFIG_SMALL(\"DVD Nav packet\"),",
+          "    },",
+          "    {",
+          "        .id        = AV_CODEC_ID_TIMED_ID3,",
+          "        .type      = AVMEDIA_TYPE_DATA,",
+          "        .name      = \"timed_id3\",",
+          "        .long_name = NULL_IF_CONFIG_SMALL(\"timed ID3 metadata\"),",
+          "    },",
+          "    {"
+        ]
+      }
+    ],
+    "installed_version_or_build_correspondence_proven": false
+  }
+]

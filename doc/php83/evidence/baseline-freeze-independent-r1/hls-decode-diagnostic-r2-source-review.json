@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "decision": "CLOSED_DECODER_DIAGNOSTIC_R2_SOURCE_PASS",
+  "pins": {
+    "run_hls_delivery8444_r2.py": "8c61ddcba648e543e524777be4d3ae636b5b999c074e1f90104d72c4398b3b9e",
+    "guest_hls_delivery8444_r2.py": "e00d85dd59c3014325b18f214b5ee27d098194a6392db6aa44725b1ba8d024cc",
+    "decode_diagnostic.py": "e6c913791e8176df8883e85cde449111d6e5aee7c9d55ed8a3df2581b8e9fc01",
+    "hls_decode_r2.py": "9bb3ad909ca3225b76eed3f42adb58b662517399ad4561fca3d03654dc1fb3fd",
+    "test_hls_decode_diagnostic.py": "ba396165ea3356c709688bd59bd9e451e9a3c07b04026747ac86f2056b940652"
+  },
+  "independent_tests": 11,
+  "exit": 0,
+  "initial_finding": "Short exponent notation passed to Fraction before bounding could allocate enormous integers. Reviewer requested bounded grammar and safe precondition before original projection.",
+  "resolution": "Strict bounded ASCII decimal/rational grammar before Fraction; facts callback then NUMBER precondition blocks unsafe rate/duration before original projection. Exponent/Unicode/whitespace/underscore/long-denominator tests use mocks, never execute giant allocation.",
+  "scope": [
+    "Closed cardinality/codec enums/bounded numeric facts only, no raw ffprobe tags/strings/URLs.",
+    "Original acceptance projection AST unchanged with strictly narrower safe numeric precondition.",
+    "Full host success/failure and exact generated pin-loop tests executed."
+  ],
+  "limits": [
+    "Prior fetched-segment metadata rejection preserved; no guessed failing field.",
+    "No actual VM/GET by reviewer.",
+    "No decoder success or golden equivalence until native result."
+  ]
+}

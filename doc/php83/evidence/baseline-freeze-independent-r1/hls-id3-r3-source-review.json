@@ -1,0 +1,34 @@
+{
+  "reviewer": "Codex independent /root/skill_forward_test",
+  "scope": "Bounded local source and pure test review; no VM/API/media request",
+  "status": "APPROVED_BOUNDED_SOURCE",
+  "pins": {
+    "run_hls_delivery8444_r3.py": "eb6bc912acb66644abb887677715705205cfce507fca3da98ba19b1cca7612c0",
+    "guest_hls_delivery8444_r3.py": "0ab983cf74d994d5e1d3333e4c109a8b918d98ac8ad7c6cc7e21862dbabf8840",
+    "hls_decode_r3.py": "5fde3ab2d4d3daafa910f32148870f53b392dbf4d856063d7fe4487d43aa8733",
+    "decode_diagnostic_r3.py": "0aa4ce20f348c43d586d60bc8e0582f31091cb5060ca9e48db86afff10ad92d8",
+    "hls_delivery8444_r3.py": "e93dba292d3e574828d215c13deeaae588c1efb3167bbc6ba54d8e39f85a37d0",
+    "test_hls_id3.py": "f5570884d6d64fa86e699d0ab3add8611eeee584a7ad96b39fda0931cb2b25bc",
+    "prepare_hls_delivery8444_r3.py": "cfe4b183bba83d84897818e589a1ca3b1686c9913693bcb71c03137e804648a9"
+  },
+  "test": {
+    "command": "python3 -B -m unittest discover -s tools/php83/baseline-freeze-r1 -p 'test_hls_id3.py' -v",
+    "exit": 0,
+    "passed": 9
+  },
+  "verified": [
+    "Exact optional maximum one data/timed_id3 stream, unknown and duplicate auxiliary streams rejected",
+    "Prior AV predicates and bounded ASCII ratio precondition retained",
+    "Generated guest exact pin loop executed against real files; generator equality and all runner pins verified by test",
+    "Full public success projection joins observed DATA/TIMED_ID3 cardinality to auxiliary count and rejects OTHER",
+    "Guest delta preserves prior workload, TLS and finite privacy controls",
+    "Source note distinguishes nginx-vod ID3 PMT announcement from payload; FFmpeg reference naming is not installed build attestation"
+  ],
+  "limitations": [
+    "No new native observation performed by reviewer",
+    "Earlier R2 OTHER stream is not retrospectively identified as timed_id3 and failure remains",
+    "ffmpeg maps one video and one audio only; auxiliary metadata payload is not verified",
+    "No golden equivalence, dynamic library cohort, full response-secret coverage or task completion claim",
+    "No new actual external CLI result claimed"
+  ]
+}

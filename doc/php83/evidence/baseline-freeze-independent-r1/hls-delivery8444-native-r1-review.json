@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "decision": "PRESERVED_NATIVE_SEGMENT_FETCH_PARTIAL_METADATA_REJECTION",
+  "receipt_sha256": "bacf5ff796e43c8e2a5908c69ac14143a5b92215cd77141225e1565cb993e266",
+  "native_executor": "root coordinator",
+  "independent_vm_calls": 0,
+  "guest_exit": 2,
+  "unit_inactive": true,
+  "failure_code": "HLS_DECODE_METADATA",
+  "failure_stage": "API_ROUND",
+  "segments_received": 5,
+  "segment_bytes_received": 702744,
+  "exact_segment_routes_validated": true,
+  "failure_known_pattern_finite_scan_complete_zero": true,
+  "interpretation": "Five exact-route TS segments fetched; ffprobe metadata projection rejected before the subsequent full ffmpeg decode. No full-decode success or golden equivalence established.",
+  "limits": [
+    "No raw ffprobe output or tags needed/exported.",
+    "Specific rejected metadata field not established by this receipt; no guessed diagnosis.",
+    "Failure privacy known patterns only, no whole-response/completeHLS acceptance.",
+    "Historical failures and mutation adjudication unchanged."
+  ]
+}

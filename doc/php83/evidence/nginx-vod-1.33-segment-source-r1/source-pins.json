@@ -1,0 +1,65 @@
+{
+  "tag": "1.33",
+  "tag_resolved_commit": "1750eb08021e362859887fdfe842ed6a4997f576",
+  "tag_api": "https://api.github.com/repos/kaltura/nginx-vod-module/git/ref/tags/1.33",
+  "tree_truncated": false,
+  "files": [
+    {
+      "path": "ngx_http_vod_hls.c",
+      "url": "https://raw.githubusercontent.com/kaltura/nginx-vod-module/1750eb08021e362859887fdfe842ed6a4997f576/ngx_http_vod_hls.c",
+      "git_blob_sha1": "4cbf9eddd5cc58e045a08f76fdc216ab013ac94f",
+      "sha256": "1a8add7127579c1ab251881aef75b97501667e1cb3b7f73cdb9f1035605ec6bb",
+      "bytes": 38882
+    },
+    {
+      "path": "ngx_http_vod_hls_conf.h",
+      "url": "https://raw.githubusercontent.com/kaltura/nginx-vod-module/1750eb08021e362859887fdfe842ed6a4997f576/ngx_http_vod_hls_conf.h",
+      "git_blob_sha1": "8a3098c5f4a54ab6a0b697fa7c17981826555704",
+      "sha256": "80d78af26e749f770096e30549378c2ffd8efb6eb12db08645816c8cf50c22e7",
+      "bytes": 781
+    },
+    {
+      "path": "vod/hls/m3u8_builder.c",
+      "url": "https://raw.githubusercontent.com/kaltura/nginx-vod-module/1750eb08021e362859887fdfe842ed6a4997f576/vod/hls/m3u8_builder.c",
+      "git_blob_sha1": "02db57aa4edc1323af9b8c8607dfb2d96f5da046",
+      "sha256": "32ee8b16f97b357ca54e897f5615e39ff428eaa8822918cde76468440c79bde4",
+      "bytes": 42010
+    },
+    {
+      "path": "vod/manifest_utils.c",
+      "url": "https://raw.githubusercontent.com/kaltura/nginx-vod-module/1750eb08021e362859887fdfe842ed6a4997f576/vod/manifest_utils.c",
+      "git_blob_sha1": "637a3d5069d311fc8e975c3b2266beccdaac3f4f",
+      "sha256": "42c88e98379f05b395c873bb1999855fbe5e27efd3484fd879e2a91b2979d5d6",
+      "bytes": 24334
+    },
+    {
+      "path": "ngx_http_vod_utils.c",
+      "url": "https://raw.githubusercontent.com/kaltura/nginx-vod-module/1750eb08021e362859887fdfe842ed6a4997f576/ngx_http_vod_utils.c",
+      "git_blob_sha1": "9449393a65b5516fa8d040700c0a68e27692b812",
+      "sha256": "5eab87f2be531b892e71068c694675dc00888fb8e939d3d99b0f6e147bf6d426",
+      "bytes": 12182
+    },
+    {
+      "path": "ngx_http_vod_hls_commands.h",
+      "url": "https://raw.githubusercontent.com/kaltura/nginx-vod-module/1750eb08021e362859887fdfe842ed6a4997f576/ngx_http_vod_hls_commands.h",
+      "git_blob_sha1": "5f68b33cb20ae0966154df63415647bfcf0aeb9e",
+      "sha256": "3df56209ffb049480264e80152c80168e70f9ca86fe38e8bcb2fbe17267efe38",
+      "bytes": 5845
+    },
+    {
+      "path": "ngx_http_vod_request_parse.c",
+      "url": "https://raw.githubusercontent.com/kaltura/nginx-vod-module/1750eb08021e362859887fdfe842ed6a4997f576/ngx_http_vod_request_parse.c",
+      "git_blob_sha1": "98f4c086c1afb7282325628dd648a18c2f7cfb12",
+      "sha256": "d463c22d5dc48c640ca5f60280b3ae5d174a45ac24cd314c9f316decb8c3eb28",
+      "bytes": 29422
+    },
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/kaltura/nginx-vod-module/1750eb08021e362859887fdfe842ed6a4997f576/LICENSE",
+      "git_blob_sha1": "d5445e7ac8422305d107420de4ab8e1ee6227cca",
+      "sha256": "60c66d170d6d9ef655c1f072f5cd681c9d8f5cecbca1257bd145f95c97409565",
+      "bytes": 34500
+    }
+  ],
+  "binary_source_build_correspondence_proven": false
+}
