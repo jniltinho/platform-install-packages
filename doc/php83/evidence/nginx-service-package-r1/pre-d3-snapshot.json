@@ -1,0 +1,9 @@
+{
+  "status": "PRE_D3_STATE_PRESERVED",
+  "vm_uuid": "33f4f25f-1cf2-4cc5-90ff-d519c29b2aee",
+  "machine_id_sha256": "ad9adac39d0fb440883f0b82c8c45058596b74a6d9e98da2746e4dbdafd3aad8",
+  "full_recovery_acceptance": false,
+  "snapshot_id": "11fb9df0-42ee-48c2-af4f-e6badc036cef",
+  "baseline_dpkg_sha256": "6c73bbed89e4883d5b587a0f99b97e3a8d0edd063a646beda5bafea8c9eab3ab",
+  "restore_automatically": false
+}

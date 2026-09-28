@@ -1,0 +1,10 @@
+{
+  "scope": "SYNTHETIC_SYSTEMD_CGROUP_ONLY_NOT_NGINX_INSTALL",
+  "executor": "Codex coordinator",
+  "guest_identity_verified": true,
+  "main_sigkill_descendant_terminated": true,
+  "status": "PASS",
+  "unit_inactive": true,
+  "unit": "kaltura-php83-cgroup-fixture-r1.service",
+  "limitation": "Python supervisor and sleep child; does not prove installed nginx wrapper behavior"
+}

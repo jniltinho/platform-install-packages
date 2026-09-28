@@ -1,0 +1,13 @@
+{
+  "status": "TWO_BUILDS_CONTROL_ONLY_PASS",
+  "sha256": "c52b28cd2aa081a8254089cb5d32ab72b177975a95f5b23b021600cce375bc19",
+  "data_archive_byte_identical": true,
+  "changed": [
+    "./control",
+    "./postinst"
+  ],
+  "control_metadata_unchanged_except_size_checksum": true,
+  "embedded_helper_exact": true,
+  "bash_syntax_exit": 0,
+  "installed": false
+}

@@ -1,0 +1,1 @@
+{"executor":"actual Claude CLI","scope":"read-only renderer review","exit":1,"result":"INCOMPLETE_MAX_TURNS","max_turns":4,"pass":false,"credential_changes":false}

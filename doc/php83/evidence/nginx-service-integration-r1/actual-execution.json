@@ -1,0 +1,59 @@
+{
+  "hashes": {
+    "after-dpkg.txt": "de3df72f0f65e5ab9959f8f5470ff063815301a6174c1c8e090a1415e8432731",
+    "contract.json": "486d87fbcfc7a4e760d6f10544aaf2469e86f218152af30c76ccd7c10c4a4120",
+    "terminal.json": "d1cbc949a3f66752a7551ecd540d36795743893462054462dc45787089765478"
+  },
+  "nginx-log-scan.json": {
+    "access_events": 1,
+    "checks_passed": true,
+    "closed_events": 2,
+    "files": 4,
+    "findings": 0,
+    "scan_complete": true,
+    "scope": "BOUNDED_NEW_LOGS_AND_EXISTING_GENERATED_COLLECTOR",
+    "synthetic_probe_executed": true
+  },
+  "runtime.json": {
+    "exact_lab_listeners": true,
+    "http_statuses": [
+      200,
+      404
+    ],
+    "master_count": 1,
+    "supervised": true,
+    "worker_count": 5
+  },
+  "services-after.json": {
+    "apache2": "active",
+    "elasticsearch": "active",
+    "mariadb": "active",
+    "monit": "active"
+  },
+  "terminal.json": {
+    "checks": {
+      "baseline_services_preserved": true,
+      "generated_secrets": true,
+      "hold_and_metadata": true,
+      "input_canaries": true,
+      "new_synthetic_logging": true,
+      "nginx_stopped": true,
+      "package_observation": true
+    },
+    "failure_contained": true,
+    "full_acceptance": false,
+    "full_application_acceptance": false,
+    "normal_apt_attempted": true,
+    "pending": [
+      "full_seed_persistence",
+      "effective_authorization",
+      "full_application_acceptance"
+    ],
+    "phase": "D3",
+    "privacy_scope": "BOUNDED_SYNTHETIC_AND_EXISTING_COLLECTORS_NOT_FULL_AUTHENTICATED_TRAFFIC",
+    "resume_supported": false,
+    "status": "LAB_INCREMENTAL_D3_INSTALLED_SYNTHETIC_LOGGING_CHECKED_NGINX_STOPPED_WORKERS_HELD",
+    "worker_hold_preserved": true,
+    "workers_policy": "HELD"
+  }
+}
