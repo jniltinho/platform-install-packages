@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "decision": "PURE_METADATA_MODULE_APPROVED_FOR_REVIEWED_TLS_PRIVACY_WRAPPER",
+  "pins": {
+    "metadata.py": "a3a60d6ad5ddfcadebf13181d757915e41fb4fd65d16c1c08c3f5b4263bf59bb",
+    "test_metadata.py": "693d318451845ad4e3136642d9439cf4f65b5e7038f9aa7c368cc89c3859498f"
+  },
+  "tests": {
+    "passed": 9,
+    "exit": 0
+  },
+  "review": [
+    "One fixed flavorasset.list, exactentry/tenant,51page bound with50max and exacttotal",
+    "Perasset unique ID/owner/bounded scalar projection",
+    "Single original fixedassetid/version2 identity",
+    "Drops arbitrarydescription/tags/URLs; catches caller exception without values",
+    "No network/credentials/upload/profile mutation; caller must supply reviewedcurrentUSER/TLS/privacy lifecycle"
+  ],
+  "native_semantics": [
+    "size field unit is KBytes, not exact filebytes",
+    "version is asset version, not entry desired version",
+    "isOriginal publicAPI type is boolean"
+  ],
+  "limits": [
+    "No native media observation by reviewer",
+    "No playback/READYallflavors/worker acceptance implied",
+    "Author actualCLI pending not counted asPASS"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "api_v3/services/FlavorAssetService.php": "162606b083296c54258ba364f25bbb305b688ba8d4cf8a547b9a19a821355206",
+  "api_v3/lib/types/conversionProfile/KalturaFlavorAsset.php": "e0a8d4cfeaab4b34b3a7e3625c0cd022d1c7e665ff408327cd0b0227e8adde10",
+  "api_v3/lib/types/conversionProfile/KalturaAsset.php": "5742649590640d0a84c4b04419435b84db4ceeea293c5ec031b470d3fc42473b",
+  "api_v3/lib/types/enums/KalturaFlavorAssetStatus.php": "8e0f1c8846eb9966b6f2e1aefcd1b0e38a3fc540f28e00fff20e153b002870d9",
+  "api_v3/lib/types/enums/KalturaAssetStatus.php": "1d117e0f940a95ac97514c4ed1990789ee4f05f3f2b4fc2a482ba221cc337d3f",
+  "alpha/lib/model/flavorAsset.php": "18973d5b14c451199f16dcb45b7f9ee758bcd7733264ab01612dc40be5ae3bf0",
+  "alpha/apps/kaltura/modules/extwidget/actions/playManifestAction.class.php": "24832b13f6721daf9df703c0d7ccb68e509459d4699056f794b806533abcd678"
+}

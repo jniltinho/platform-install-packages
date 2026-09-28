@@ -1,0 +1,29 @@
+{
+  "aggregate_exit": 0,
+  "aggregate_tests": 82,
+  "files": {
+    "guest_metadata.py": "34045ad35098b834866ab0dbc29108858d327c61807915ef182ac52dcdc87462",
+    "prepare_metadata.py": "987d7a832b0d6a99851137762592e6438a891fd6a02ffe9cf9b3e629a295c29d",
+    "run_metadata.py": "d498bcb299d070813adb6427213b95af4c999eca7952ffe9343b4243fccde897",
+    "short_metadata.py": "a3a60d6ad5ddfcadebf13181d757915e41fb4fd65d16c1c08c3f5b4263bf59bb",
+    "test_metadata.py": "42b78dc31d3083127f46be05de482d5dd3b3d970627834505c9a734fb6eedbea"
+  },
+  "focused_exit": 0,
+  "focused_tests": 7,
+  "full_acceptance": false,
+  "native_executed_by_author": false,
+  "new_stage": "/var/lib/kaltura-baseline-short-metadata-r1",
+  "notes": [
+    "No upload or repeated100-call workload",
+    "Original source/entry/profile observation retained",
+    "Existing USER KS passed only in memory",
+    "TLS sink adapter precedes credentials and wraps every inventory",
+    "Original finite-window start, bounded quiet settle and common-end checks retained",
+    "Metadata failures use literal closed code allowlist, no response values",
+    "Immutable earlier versions retained"
+  ],
+  "playback_tested": false,
+  "previous_https_unit": "baseline-freeze-3b21eb13",
+  "scope": "ONE_ADDITIONAL_FLAVOR_LIST_WITH_EXISTING_OBSERVATION_AND_TLS_PRIVACY",
+  "size_unit": "API_KBytes"
+}

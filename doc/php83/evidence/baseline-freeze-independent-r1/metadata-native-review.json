@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "input_sha256": "0d120b2fe653965e37e0ce2805b70e75e504f88a98d9bcf4ab19871cc1a32cd3",
+  "decision": "NATIVE_SCOPED_FLAVOR_METADATA_ACCEPTED",
+  "closed_projection_roundtrip": true,
+  "runner_sha256": "d498bcb299d070813adb6427213b95af4c999eca7952ffe9343b4243fccde897",
+  "guest_sha256": "34045ad35098b834866ab0dbc29108858d327c61807915ef182ac52dcdc87462",
+  "wrapper_tests": {
+    "passed": 82,
+    "exit": 0
+  },
+  "asset_count": 7,
+  "status_counts": {
+    "READY_2": 4,
+    "NOT_APPLICABLE_4": 3
+  },
+  "native_enum_sha256": "8e0f1c8846eb9966b6f2e1aefcd1b0e38a3fc540f28e00fff20e153b002870d9",
+  "size_unit": "API_KBytes",
+  "guest_exit": 0,
+  "unit_inactive": true,
+  "privacy": "4patterns allfile+journalzero/complete/commonend",
+  "limits": [
+    "NOT_APPLICABLE reason not observed; neither workerfailure nor acceptance waiver inferred",
+    "No playback/decode/fulldelivery acceptance",
+    "No reviewerVM calls"
+  ]
+}

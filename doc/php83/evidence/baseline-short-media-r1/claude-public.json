@@ -1,0 +1,20 @@
+{
+  "case": "existing-short-flavor-metadata",
+  "executor": "actual Claude CLI",
+  "terminal_exit": 0,
+  "tests": 9,
+  "tests_exit": 0,
+  "material_blockers": [],
+  "permission_denials": [],
+  "sources": {
+    "metadata.py": "a3a60d6ad5ddfcadebf13181d757915e41fb4fd65d16c1c08c3f5b4263bf59bb",
+    "test_metadata.py": "693d318451845ad4e3136642d9439cf4f65b5e7038f9aa7c368cc89c3859498f"
+  },
+  "limits": [
+    "Pure tests and source review only; no native API, playback or full acceptance.",
+    "Injected caller must enforce bounded TLS transport and complete saved privacy windows.",
+    "Do not serialize exception context; errors exposed only by fixed code.",
+    "API default deleted-asset filtering not attested; complete list means returned filter scope.",
+    "Size metadata is KBytes, not media body bytes."
+  ]
+}

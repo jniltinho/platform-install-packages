@@ -1,6 +1,6 @@
 # PHP 8.3 — status atual e tarefas restantes
 
-Atualizado: 2026-09-28T18:50:46.490646+00:00
+Atualizado: 2026-09-28T18:59:43.713726+00:00
 
 **5 concluídas / 46 abertas / 51 tarefas.** Os 24 requisitos originais e 27 casos detalhados se sobrepõem; não são 51 funcionalidades independentes. Sem percentual ou previsão de conclusão inferidos de testes.
 
@@ -85,8 +85,12 @@ seus bloqueadores históricos não representam este status atual.
   sem correspondência em janelas completas, incluindo os dois novos logs.
   Exit0/unidade inativa; revisão independente aprovada. É ensaio funcional,
   não benchmark ou aceite completo da tarefa.
-- Próximo:metadados dos flavors da mídia existente, HLS/Range, mídia longa/UI e
-  medições formais. Tarefa1.2 ainda aberta.
+- Metadados reais da mídia curta:7 assets,4 READY (original e3 versões) e3
+  NOT_APPLICABLE, conforme enum nativo. Consulta viaHTTPS exit0, janelas de
+  privacidade completas e revisão independente aprovada. Não inferimos motivo
+  dos3 itens nem aceite de reprodução a partir apenas do status.
+- Próximo:download/Range da mídia existente, HLS, mídia longa/UI e medições
+  formais. Tarefa1.2 ainda aberta.
 
 R1/R2 e seus resultados parciais/falhos permanecem preservados. Tarefa1.2 aberta;
 nenhuma alteração em produção. Fonte do box: novo download oficial de651.326.766

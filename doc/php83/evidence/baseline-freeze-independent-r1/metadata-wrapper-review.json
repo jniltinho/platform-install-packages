@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "decision": "METADATA_WRAPPER_BOUNDED_SOURCE_APPROVED",
+  "pins": {
+    "run_metadata": "d498bcb299d070813adb6427213b95af4c999eca7952ffe9343b4243fccde897",
+    "guest_metadata": "34045ad35098b834866ab0dbc29108858d327c61807915ef182ac52dcdc87462",
+    "prepare_metadata": "987d7a832b0d6a99851137762592e6438a891fd6a02ffe9cf9b3e629a295c29d",
+    "test_metadata": "42b78dc31d3083127f46be05de482d5dd3b3d970627834505c9a734fb6eedbea"
+  },
+  "tests": {
+    "aggregate": 82,
+    "exit": 0
+  },
+  "review": [
+    "One metadata.list using current USERKS and pinnedCA HTTPS",
+    "No100call repetition or upload/profilewrite",
+    "TLSlogs included everyinventory beforeauth and through final scans",
+    "Original windowstarts and commonend/quiet/sourcefinal guards unchanged",
+    "Closed host projection canonicalizes exact metadata schema and rejects injected round claims"
+  ],
+  "qualifier": "Wrapper size_unit=KiB; native public field documents KBytes, exact divisor evidence requested separately before interpreting sizes as exact binary units. Never equate rounded API size with exact sourcebyte length.",
+  "limits": [
+    "No reviewerVM calls",
+    "No native metadata observation yet",
+    "No playback/fulldecode/fullbaseline acceptance"
+  ]
+}
