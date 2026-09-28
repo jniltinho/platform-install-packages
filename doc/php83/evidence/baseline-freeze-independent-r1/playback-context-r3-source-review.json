@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "decision": "PURE_NO_GET_CONTEXT_R3_DELTA_REVIEWED",
+  "pins": {
+    "playback_context_r3.py": "f0ec70528883e94a8d97ade697c58ff8588585c0814d06faddc948fabe436420",
+    "test_playback_context_r3.py": "f797b568281b3e7b9f0e513d96554b4d25589190422a1c7e01b056404d986880"
+  },
+  "test_command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/baseline-short-media-r1 -p test_playback_context_r3.py -v",
+  "tests": 10,
+  "exit": 0,
+  "review": [
+    "All bounded source URL strings enrolled before metadata rejection.",
+    "Unknown top/source keys and nonempty DRM/captions/bumper rejected after source URL enrollment.",
+    "Whole response secret coverage explicitly false; opaque actions/messages/flavorAssets only counted, not recursively classified."
+  ],
+  "limits": [
+    "No native wrapper reviewed; no GET permission.",
+    "Future failure projection must preserve incomplete coverage and cannot claim all-response privacy pass.",
+    "No reviewer VM calls; previous source variants retained."
+  ]
+}

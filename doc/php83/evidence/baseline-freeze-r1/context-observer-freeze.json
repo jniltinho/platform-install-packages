@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "scope": "ONE_PLAYBACK_CONTEXT_NO_GET",
+  "files": {
+    "tools/php83/baseline-freeze-r1/playback_context_r3.py": "f0ec70528883e94a8d97ade697c58ff8588585c0814d06faddc948fabe436420",
+    "tools/php83/baseline-freeze-r1/context_urls.py": "1ecf0476baed260a405ddd6fb6da0b1eee42b612de61d5762761c84b3c6a2bff",
+    "tools/php83/baseline-freeze-r1/prepare_context_observer.py": "ec172ac08acde182cb7c776a0e6ccb49d8a6d9af302c315172225944ca6c16c0",
+    "tools/php83/baseline-freeze-r1/guest_context_observer.py": "32c4e5027839ba176c11d16850c8d48a815928f43a5c3f9023813021747df363",
+    "tools/php83/baseline-freeze-r1/run_context_observer.py": "e6aad7d28f1fb3cf7f0413a60cdc5c7ff92f321b0cd2fad912bd25fee9b96906",
+    "tools/php83/baseline-freeze-r1/test_context_observer.py": "906d392db3b2656f8e151761b66f117eddd978b130a622233bb8ac281873b220"
+  },
+  "api_calls_in_new_case": 1,
+  "get_requests": 0,
+  "response_secret_coverage_complete": false,
+  "delivery_authorized": false,
+  "tests": {
+    "focused": 7,
+    "exit": 0
+  },
+  "native_executed_by_author": false,
+  "full_acceptance": false
+}

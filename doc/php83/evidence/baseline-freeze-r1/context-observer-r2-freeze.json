@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "scope": "ONE_SELECTED_READY_TRANSCODED_CONTEXT_NO_GET",
+  "files": {
+    "tools/php83/baseline-freeze-r1/playback_context_r4.py": "8bb6c410b034a8c140ef9408c8e49ee826e5561399eae5b0778629effed9a0f5",
+    "tools/php83/baseline-freeze-r1/context_selected.py": "64bd6fb3cd957eec51b6abd9baf9ccd4713bbf930a6405d6f07cf7db94344d8b",
+    "tools/php83/baseline-freeze-r1/prepare_context_observer_r2.py": "0872916d0b2d7268847b4453d0f24c981895af7a375d955e6e9991d4f385bc46",
+    "tools/php83/baseline-freeze-r1/guest_context_observer_r2.py": "e717197ccbb7cd560230471c3ba8a4abdc58fb813adb772fc82ac01d370f4555",
+    "tools/php83/baseline-freeze-r1/run_context_observer_r2.py": "2206c96b6fee499d02ab13dacc74d621895e3b84d6fe767c03928dc1d6d416ef",
+    "tools/php83/baseline-freeze-r1/test_context_selected.py": "0937729a058d3c60fda837acfc6f017ac41f96040f40dcfd695190e4127ba768"
+  },
+  "selected_asset": "0_21p06l2j",
+  "uses_existing_asset_response": true,
+  "extra_asset_api_calls": 0,
+  "get_requests": 0,
+  "response_secret_coverage_complete": false,
+  "tests": {
+    "focused": 7,
+    "exit": 0
+  },
+  "native_executed_by_author": false,
+  "full_acceptance": false
+}

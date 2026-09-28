@@ -1,0 +1,1546 @@
+{
+  "approved_freeze": false,
+  "files": {
+    "context_urls.py": "1ecf0476baed260a405ddd6fb6da0b1eee42b612de61d5762761c84b3c6a2bff",
+    "convergence.py": "b7f8114c27a930c471d3640c76ad60f28e0c0133b63abb5a4d805fa7c01cceca",
+    "direct_content.py": "c8d3ce3e02cc5389407f6c3e9bda8aa348b60ab53735580f72056a754c75fb37",
+    "guest_context_observer.py": "32c4e5027839ba176c11d16850c8d48a815928f43a5c3f9023813021747df363",
+    "observation_v2.py": "ec32386df1c745f5754ece19f3127f6da85415e644c8556e6c07666b2ea1abc5",
+    "playback_context_r3.py": "f0ec70528883e94a8d97ade697c58ff8588585c0814d06faddc948fabe436420",
+    "privacy_logs_r2.py": "d67eb65900c3134c91efaf94b18ba482b59261c81b0084de0cea3bcd37d5246c",
+    "privacy_provenance.py": "ecb0a81c37d19d9842699a928e16e6e2838fb35f68fefb281c495f5505923931",
+    "protocol_v2.py": "147d74b0a04779fd0819ebe210d8a1a6aea4af8fbc773683a278e540ce70d4b8",
+    "rehearsal.py": "ccf78ba0b1d3c94f05f63fd2d87c351953022c149c0e75392b5c86be2c02bb70",
+    "route_descriptor.py": "a9276e52f8a238303c1011f781f13f066134d12b315afd3634f9f87eeea1fee9",
+    "settle.py": "2b1382fc7ff4163240d9c6e3342738ce90ab8537df9ea9999497a44e24d84764",
+    "url_privacy.py": "338f0339e23b7d385fce17ea6fa152016342bca8d42129d5efc3f2a5183c1f6f"
+  },
+  "guest_exit": 2,
+  "phase_receipts": [
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "failure_code": "FILES_UNDRAINED_TAIL",
+      "failure_stage": "BATCH_PRIVACY",
+      "last_audit_quiet": {
+        "audit": 5,
+        "maximum_seconds": 30,
+        "quiet_seconds": 2,
+        "samples": 10,
+        "stage": "BATCH_PRIVACY",
+        "status": "QUIET_WINDOW_OBSERVED"
+      },
+      "match_provenance": [
+        {
+          "any_match": false,
+          "audit": 1,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "INVALID_CANARY_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "INVALID_CANARY_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_and_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 1,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "INVALID_CANARY_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "INVALID_CANARY_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_after_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 2,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "CURRENT_SECRET_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_SECRET_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_FULL"
+              ],
+              "file_count": 0,
+              "index": 3,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 4,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_and_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 2,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "CURRENT_SECRET_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_SECRET_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_FULL"
+              ],
+              "file_count": 0,
+              "index": 3,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 4,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_after_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 3,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "CURRENT_SECRET_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_SECRET_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_FULL"
+              ],
+              "file_count": 0,
+              "index": 3,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 4,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_and_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 3,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "CURRENT_SECRET_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_SECRET_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_FULL"
+              ],
+              "file_count": 0,
+              "index": 3,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 4,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_after_journal",
+          "schema": 1
+        }
+      ],
+      "playback_context": {
+        "actions": 0,
+        "api_calls": 1,
+        "case": "NATIVE_HLS_CONTEXT_NO_GET",
+        "decoded": false,
+        "delivery_authorized": false,
+        "flavor_assets": 0,
+        "full_acceptance": false,
+        "hls_fetched": false,
+        "messages": 0,
+        "original_https_hls_descriptors": 0,
+        "response_secret_coverage_complete": false,
+        "sources": 0
+      },
+      "privacy_errors": [
+        {
+          "audit": 4,
+          "code": "UNDRAINED_TAIL",
+          "phase": "files_initial"
+        }
+      ],
+      "quiet_window": {
+        "maximum_seconds": 30,
+        "quiet_seconds": 2,
+        "samples": 9,
+        "status": "QUIET_WINDOW_OBSERVED"
+      },
+      "status": "FAILED_OR_INCOMPLETE_MEDIA_OBSERVATION"
+    },
+    {
+      "failure_code": "FILES_UNDRAINED_TAIL",
+      "failure_stage": "BATCH_PRIVACY",
+      "last_audit_quiet": {
+        "audit": 5,
+        "maximum_seconds": 30,
+        "quiet_seconds": 2,
+        "samples": 10,
+        "stage": "BATCH_PRIVACY",
+        "status": "QUIET_WINDOW_OBSERVED"
+      },
+      "match_provenance": [
+        {
+          "any_match": false,
+          "audit": 1,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "INVALID_CANARY_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "INVALID_CANARY_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_and_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 1,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "INVALID_CANARY_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "INVALID_CANARY_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_after_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 2,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "CURRENT_SECRET_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_SECRET_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_FULL"
+              ],
+              "file_count": 0,
+              "index": 3,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 4,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_and_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 2,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "CURRENT_SECRET_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_SECRET_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_FULL"
+              ],
+              "file_count": 0,
+              "index": 3,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 4,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_after_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 3,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "CURRENT_SECRET_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_SECRET_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_FULL"
+              ],
+              "file_count": 0,
+              "index": 3,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 4,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_and_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 3,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "CURRENT_SECRET_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_SECRET_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_FULL"
+              ],
+              "file_count": 0,
+              "index": 3,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 4,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_after_journal",
+          "schema": 1
+        }
+      ],
+      "playback_context": {
+        "actions": 0,
+        "api_calls": 1,
+        "case": "NATIVE_HLS_CONTEXT_NO_GET",
+        "decoded": false,
+        "delivery_authorized": false,
+        "flavor_assets": 0,
+        "full_acceptance": false,
+        "hls_fetched": false,
+        "messages": 0,
+        "original_https_hls_descriptors": 0,
+        "response_secret_coverage_complete": false,
+        "sources": 0
+      },
+      "privacy_errors": [
+        {
+          "audit": 4,
+          "code": "UNDRAINED_TAIL",
+          "phase": "files_initial"
+        }
+      ],
+      "quiet_window": {
+        "maximum_seconds": 30,
+        "quiet_seconds": 2,
+        "samples": 9,
+        "status": "QUIET_WINDOW_OBSERVED"
+      },
+      "status": "FAILED_OR_INCOMPLETE_MEDIA_OBSERVATION"
+    },
+    {
+      "failure_code": "FILES_UNDRAINED_TAIL",
+      "failure_stage": "BATCH_PRIVACY",
+      "last_audit_quiet": {
+        "audit": 5,
+        "maximum_seconds": 30,
+        "quiet_seconds": 2,
+        "samples": 10,
+        "stage": "BATCH_PRIVACY",
+        "status": "QUIET_WINDOW_OBSERVED"
+      },
+      "match_provenance": [
+        {
+          "any_match": false,
+          "audit": 1,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "INVALID_CANARY_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "INVALID_CANARY_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_and_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 1,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "INVALID_CANARY_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "INVALID_CANARY_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_after_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 2,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "CURRENT_SECRET_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_SECRET_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_FULL"
+              ],
+              "file_count": 0,
+              "index": 3,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 4,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_and_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 2,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "CURRENT_SECRET_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_SECRET_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_FULL"
+              ],
+              "file_count": 0,
+              "index": 3,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 4,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_after_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 3,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "CURRENT_SECRET_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_SECRET_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_FULL"
+              ],
+              "file_count": 0,
+              "index": 3,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 4,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_and_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 3,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "CURRENT_SECRET_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_SECRET_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_FULL"
+              ],
+              "file_count": 0,
+              "index": 3,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 4,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_after_journal",
+          "schema": 1
+        }
+      ],
+      "playback_context": {
+        "actions": 0,
+        "api_calls": 1,
+        "case": "NATIVE_HLS_CONTEXT_NO_GET",
+        "decoded": false,
+        "delivery_authorized": false,
+        "flavor_assets": 0,
+        "full_acceptance": false,
+        "hls_fetched": false,
+        "messages": 0,
+        "original_https_hls_descriptors": 0,
+        "response_secret_coverage_complete": false,
+        "sources": 0
+      },
+      "privacy_errors": [
+        {
+          "audit": 4,
+          "code": "UNDRAINED_TAIL",
+          "phase": "files_initial"
+        }
+      ],
+      "quiet_window": {
+        "maximum_seconds": 30,
+        "quiet_seconds": 2,
+        "samples": 9,
+        "status": "QUIET_WINDOW_OBSERVED"
+      },
+      "status": "FAILED_OR_INCOMPLETE_MEDIA_OBSERVATION"
+    },
+    {
+      "failure_code": "FILES_UNDRAINED_TAIL",
+      "failure_stage": "BATCH_PRIVACY",
+      "last_audit_quiet": {
+        "audit": 5,
+        "maximum_seconds": 30,
+        "quiet_seconds": 2,
+        "samples": 10,
+        "stage": "BATCH_PRIVACY",
+        "status": "QUIET_WINDOW_OBSERVED"
+      },
+      "match_provenance": [
+        {
+          "any_match": false,
+          "audit": 1,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "INVALID_CANARY_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "INVALID_CANARY_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_and_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 1,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "INVALID_CANARY_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "INVALID_CANARY_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_after_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 2,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "CURRENT_SECRET_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_SECRET_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_FULL"
+              ],
+              "file_count": 0,
+              "index": 3,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 4,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_and_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 2,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "CURRENT_SECRET_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_SECRET_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_FULL"
+              ],
+              "file_count": 0,
+              "index": 3,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 4,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_after_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 3,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "CURRENT_SECRET_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_SECRET_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_FULL"
+              ],
+              "file_count": 0,
+              "index": 3,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 4,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_and_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 3,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "CURRENT_SECRET_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_SECRET_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_FULL"
+              ],
+              "file_count": 0,
+              "index": 3,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 4,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_after_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 5,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "CURRENT_SECRET_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_SECRET_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_FULL"
+              ],
+              "file_count": 0,
+              "index": 3,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 4,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_and_journal",
+          "schema": 1
+        }
+      ],
+      "playback_context": {
+        "actions": 0,
+        "api_calls": 1,
+        "case": "NATIVE_HLS_CONTEXT_NO_GET",
+        "decoded": false,
+        "delivery_authorized": false,
+        "flavor_assets": 0,
+        "full_acceptance": false,
+        "hls_fetched": false,
+        "messages": 0,
+        "original_https_hls_descriptors": 0,
+        "response_secret_coverage_complete": false,
+        "sources": 0
+      },
+      "privacy_errors": [
+        {
+          "audit": 4,
+          "code": "UNDRAINED_TAIL",
+          "phase": "files_initial"
+        }
+      ],
+      "quiet_window": {
+        "maximum_seconds": 30,
+        "quiet_seconds": 2,
+        "samples": 9,
+        "status": "QUIET_WINDOW_OBSERVED"
+      },
+      "status": "FAILED_OR_INCOMPLETE_MEDIA_OBSERVATION"
+    },
+    {
+      "failure_code": "FILES_UNDRAINED_TAIL",
+      "failure_privacy": {
+        "finite_scans_complete_and_zero": true
+      },
+      "failure_stage": "BATCH_PRIVACY",
+      "last_audit_quiet": {
+        "audit": 5,
+        "maximum_seconds": 30,
+        "quiet_seconds": 2,
+        "samples": 10,
+        "stage": "BATCH_PRIVACY",
+        "status": "QUIET_WINDOW_OBSERVED"
+      },
+      "match_provenance": [
+        {
+          "any_match": false,
+          "audit": 1,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "INVALID_CANARY_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "INVALID_CANARY_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_and_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 1,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "INVALID_CANARY_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "INVALID_CANARY_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_after_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 2,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "CURRENT_SECRET_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_SECRET_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_FULL"
+              ],
+              "file_count": 0,
+              "index": 3,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 4,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_and_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 2,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "CURRENT_SECRET_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_SECRET_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_FULL"
+              ],
+              "file_count": 0,
+              "index": 3,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 4,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_after_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 3,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "CURRENT_SECRET_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_SECRET_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_FULL"
+              ],
+              "file_count": 0,
+              "index": 3,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 4,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_and_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 3,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "CURRENT_SECRET_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_SECRET_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_FULL"
+              ],
+              "file_count": 0,
+              "index": 3,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 4,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_after_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 5,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "CURRENT_SECRET_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_SECRET_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_FULL"
+              ],
+              "file_count": 0,
+              "index": 3,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 4,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_and_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 5,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "CURRENT_SECRET_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_SECRET_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_FULL"
+              ],
+              "file_count": 0,
+              "index": 3,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 4,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_after_journal",
+          "schema": 1
+        }
+      ],
+      "playback_context": {
+        "actions": 0,
+        "api_calls": 1,
+        "case": "NATIVE_HLS_CONTEXT_NO_GET",
+        "decoded": false,
+        "delivery_authorized": false,
+        "flavor_assets": 0,
+        "full_acceptance": false,
+        "hls_fetched": false,
+        "messages": 0,
+        "original_https_hls_descriptors": 0,
+        "response_secret_coverage_complete": false,
+        "sources": 0
+      },
+      "privacy_errors": [
+        {
+          "audit": 4,
+          "code": "UNDRAINED_TAIL",
+          "phase": "files_initial"
+        }
+      ],
+      "quiet_window": {
+        "maximum_seconds": 30,
+        "quiet_seconds": 2,
+        "samples": 9,
+        "status": "QUIET_WINDOW_OBSERVED"
+      },
+      "status": "FAILED_OR_INCOMPLETE_MEDIA_OBSERVATION"
+    }
+  ],
+  "status": "FAILED_OBSERVATION",
+  "stderr_bytes": 0,
+  "stdout_bytes": 628241,
+  "unit": "baseline-freeze-51a2b804",
+  "unit_inactive": true
+}

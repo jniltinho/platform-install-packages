@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "scope": "HOST_PUBLIC_PROJECTION_BUG_ONLY",
+  "files": {
+    "tools/php83/baseline-freeze-r1/run_context_observer_r3.py": "6b26885cb8b47cae47ec9d0e1ac07ad2d113114b17f33e8eb01f3bfa6ed36cf5",
+    "tools/php83/baseline-freeze-r1/test_context_capture.py": "72831c7bc43b8e17bee56bd32a2bb51441fa465dc5fe73b930770724680e7900"
+  },
+  "guest_changed": false,
+  "native_r2_reconstructed": false,
+  "tests": {
+    "full_public_rows_synthetic_cases": 5,
+    "aggregate": 195,
+    "exit": 0
+  },
+  "author_review_miss": "Prior tests exercised context_projection but missed inherited required native_url_shape in full public_rows success path. Added full-path regression tests.",
+  "full_acceptance": false
+}

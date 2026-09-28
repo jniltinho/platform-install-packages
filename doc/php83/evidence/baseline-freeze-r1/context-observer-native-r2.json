@@ -1,0 +1,27 @@
+{
+  "approved_freeze": false,
+  "failure_stage": "PUBLIC_PROJECTION",
+  "files": {
+    "context_selected.py": "64bd6fb3cd957eec51b6abd9baf9ccd4713bbf930a6405d6f07cf7db94344d8b",
+    "context_urls.py": "1ecf0476baed260a405ddd6fb6da0b1eee42b612de61d5762761c84b3c6a2bff",
+    "convergence.py": "b7f8114c27a930c471d3640c76ad60f28e0c0133b63abb5a4d805fa7c01cceca",
+    "direct_content.py": "c8d3ce3e02cc5389407f6c3e9bda8aa348b60ab53735580f72056a754c75fb37",
+    "guest_context_observer_r2.py": "e717197ccbb7cd560230471c3ba8a4abdc58fb813adb772fc82ac01d370f4555",
+    "observation_v2.py": "ec32386df1c745f5754ece19f3127f6da85415e644c8556e6c07666b2ea1abc5",
+    "playback_context_r4.py": "8bb6c410b034a8c140ef9408c8e49ee826e5561399eae5b0778629effed9a0f5",
+    "privacy_logs_r2.py": "d67eb65900c3134c91efaf94b18ba482b59261c81b0084de0cea3bcd37d5246c",
+    "privacy_provenance.py": "ecb0a81c37d19d9842699a928e16e6e2838fb35f68fefb281c495f5505923931",
+    "protocol_v2.py": "147d74b0a04779fd0819ebe210d8a1a6aea4af8fbc773683a278e540ce70d4b8",
+    "rehearsal.py": "ccf78ba0b1d3c94f05f63fd2d87c351953022c149c0e75392b5c86be2c02bb70",
+    "route_descriptor.py": "a9276e52f8a238303c1011f781f13f066134d12b315afd3634f9f87eeea1fee9",
+    "settle.py": "2b1382fc7ff4163240d9c6e3342738ce90ab8537df9ea9999497a44e24d84764",
+    "short_metadata.py": "a3a60d6ad5ddfcadebf13181d757915e41fb4fd65d16c1c08c3f5b4263bf59bb",
+    "url_privacy.py": "338f0339e23b7d385fce17ea6fa152016342bca8d42129d5efc3f2a5183c1f6f"
+  },
+  "guest_exit": 0,
+  "status": "FAILED_OR_INCOMPLETE_CAPTURE",
+  "stderr_bytes": 0,
+  "stdout_bytes": 157796,
+  "unit": "baseline-freeze-28018daf",
+  "unit_inactive": true
+}

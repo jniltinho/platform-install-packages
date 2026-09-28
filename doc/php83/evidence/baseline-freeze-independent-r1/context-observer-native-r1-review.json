@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "decision": "EMPTY_ORIGINAL_CONTEXT_OBSERVED_OVERALL_PRIVACY_SCAN_FAILED",
+  "artifact_sha256": "b06f974622bafe910cdc41a8bb87fe864550dc0dac6a86b2dfe927753ce7cdb4",
+  "guest_exit": 2,
+  "unit_inactive": true,
+  "context": {
+    "actions": 0,
+    "api_calls": 1,
+    "case": "NATIVE_HLS_CONTEXT_NO_GET",
+    "decoded": false,
+    "delivery_authorized": false,
+    "flavor_assets": 0,
+    "full_acceptance": false,
+    "hls_fetched": false,
+    "messages": 0,
+    "original_https_hls_descriptors": 0,
+    "response_secret_coverage_complete": false,
+    "sources": 0
+  },
+  "failure_code": "FILES_UNDRAINED_TAIL",
+  "failure_stage": "BATCH_PRIVACY",
+  "failure_privacy": {
+    "finite_scans_complete_and_zero": true
+  },
+  "interpretation": [
+    "Original-filter typed context returned zero sources/flavorAssets/actions/messages; no HLS request or delivery authorization.",
+    "Overall failed at BATCH_PRIVACY undrained tail; later completezero failure scans cover enrolled patterns only, not acceptance of the failed batch or whole response coverage.",
+    "Empty filtered response does not establish no HLS support or broken conversion. Source-level original exclusion must be checked before any separately reviewed READY rendition observation.",
+    "No identical workload replay recommended; historical failure preserved."
+  ],
+  "reviewer_vm_calls": false
+}

@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "decision": "PURE_NO_GET_CONTEXT_R2_PREPARATION_REVIEWED",
+  "pins": {
+    "playback_context_r2.py": "41e25f96aff60860b9383ac7fecb0fcf42d040024663cda3e8b79a0e0b2b6eb4",
+    "test_playback_context_r2.py": "807ae86a4187e4d4c6fac180ca732bf2de4fb727cc1d289c03777aaff8aada30"
+  },
+  "tests": 7,
+  "exit": 0,
+  "test_command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/baseline-short-media-r1 -p test_playback_context_r2.py -v",
+  "finding_resolution": "Original sequential enrollment could miss later URLs after early metadata failure. Separate R2 enrolls every bounded valid URL first; malformed/excess/callback failure reports URL_ENROLLMENT_INCOMPLETE. Original source preserved.",
+  "wrapper_requirement": "CALL/CONTEXT_TYPE/URL_ENROLLMENT_INCOMPLETE must never yield all-returned-URL privacy PASS. Callback must enroll only, never GET. All future wrapper guards remain unreviewed.",
+  "offline_decode_receipt": {
+    "sha256": "fcfb19acd757af1c106b5c05d72e0a54f171c0c67e6efae74d6b957362d2168f",
+    "recorded_decode_exit": 0,
+    "recorded_decode_stderr_bytes": 0,
+    "interpretation": "Separate ffmpeg full selected-stream null decode of pinned local original, not merely ffprobe; receipt reviewed, not independently reexecuted. No downloaded response/HLS/browser decode claim."
+  },
+  "limits": [
+    "Pure module only, no native wrapper authorization.",
+    "No reviewer VM/network calls."
+  ]
+}

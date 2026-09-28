@@ -1,0 +1,16 @@
+{
+  "case": "no-get-context-selected-transcode-r4",
+  "executor": "actual Claude CLI",
+  "terminal_exit": 1,
+  "terminal_reason": "error_max_turns",
+  "verdict": "INCOMPLETE_NOT_PASS",
+  "permission_denials": [],
+  "independent_test_execution_confirmed": false,
+  "author_tests": 14,
+  "author_tests_exit": 0,
+  "source_sha256": "8bb6c410b034a8c140ef9408c8e49ee826e5561399eae5b0778629effed9a0f5",
+  "limitations": [
+    "No final review verdict returned.",
+    "No VM/API/GET execution."
+  ]
+}

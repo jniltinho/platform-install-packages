@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "decision": "BOUNDED_PARAMS2_NO_GET_CONTEXT_WRAPPER_APPROVED",
+  "pins": {
+    "run_context_observer_r2.py": "2206c96b6fee499d02ab13dacc74d621895e3b84d6fe767c03928dc1d6d416ef",
+    "guest_context_observer_r2.py": "e717197ccbb7cd560230471c3ba8a4abdc58fb813adb772fc82ac01d370f4555",
+    "context_selected.py": "64bd6fb3cd957eec51b6abd9baf9ccd4713bbf930a6405d6f07cf7db94344d8b",
+    "playback_context_r4.py": "8bb6c410b034a8c140ef9408c8e49ee826e5561399eae5b0778629effed9a0f5",
+    "test_context_selected.py": "0937729a058d3c60fda837acfc6f017ac41f96040f40dcfd695190e4127ba768"
+  },
+  "test_command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/baseline-freeze-r1 -p test_context_selected.py -v",
+  "tests": 7,
+  "exit": 0,
+  "test_history": "Wrong initial filename selector found0 tests, not counted; corrected selector7 PASS.",
+  "review": [
+    "Only exact0_21p06l2j selected from already-fetched assets; duplicate rejected.",
+    "Pinned canonical integer normalization and onlyFalse/0/string0 accepted nonoriginal; R4 validates exactidentity/owner/params2/version2/READY/MP4/size before context call.",
+    "One context API only, no added metadataAPI/getUrl/GET. Optional tags remain null if absent.",
+    "Prior privacy/convergence/closed projections retained; whole response coverage remains false."
+  ],
+  "limitations": [
+    "R4 actual Claude reported maxturns incomplete, not successful final review; independent module14 tests previously passed.",
+    "No HLS delivery/decode/full response privacy or full acceptance claim.",
+    "No reviewer VM calls."
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "schema": 1,
+  "decision": "SELECTED_READY_NO_GET_HLS_CONTEXT_OBSERVATION_ACCEPTED",
+  "artifact_sha256": "2f4dcff41eabec88fdfb6c9156b7b0880e777346586c10dbe0242f5cee3907a0",
+  "guest_exit": 0,
+  "unit_inactive": true,
+  "context": {
+    "actions": 0,
+    "api_calls": 1,
+    "case": "NATIVE_HLS_CONTEXT_NO_GET",
+    "decoded": false,
+    "delivery_authorized": false,
+    "flavor_assets": 1,
+    "full_acceptance": false,
+    "hls_fetched": false,
+    "messages": 0,
+    "response_secret_coverage_complete": false,
+    "selected_hls_tag_match": true,
+    "selected_https_hls_descriptors": 1,
+    "sources": 1
+  },
+  "round_privacy": {
+    "batches": [
+      {
+        "files": {
+          "counts": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "status": "COMPLETE_FINITE_FILE_WINDOW",
+          "uncovered_tail_bytes": 0
+        },
+        "journal": {
+          "complete": true,
+          "counts": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cutoff_covered": true,
+          "status": "COMPLETE_FINITE_JOURNAL_WINDOW"
+        },
+        "scope": "FINITE_COMMON_END_ROUND_WINDOW"
+      }
+    ],
+    "common_end_verified": true,
+    "pattern_count": 6
+  },
+  "source_before_after_equal": true,
+  "source_pins_verified": true,
+  "interpretation": [
+    "One source/context flavor observed for exact selected knownREADY params2 rendition, native tag match true and one HTTPS HLS descriptor.",
+    "Six enrolled patterns zero complete at verified common end. Whole response secret coverage remains explicitly false.",
+    "No HLS GET, segment fetch, decode, player or delivery authorization; descriptor count is not safe URL proof.",
+    "Corrected current capture succeeds; previous discarded capture failure remains failed and unreconstructed."
+  ],
+  "next_gate": "Future HLS request requires separately reviewed actual closed URL source/identity/origin/privacy proof and bounded fetch contract, not inferred route rewriting.",
+  "reviewer_vm_calls": false
+}

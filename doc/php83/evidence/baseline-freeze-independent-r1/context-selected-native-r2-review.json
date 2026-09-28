@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "decision": "PUBLIC_PROJECTION_FAILURE_NO_CONTEXT_OR_PRIVACY_ACCEPTANCE",
+  "artifact_sha256": "3396642e60343dce0ba87ed806f8021e004080245655f43321ae35efcd192fb7",
+  "status": "FAILED_OR_INCOMPLETE_CAPTURE",
+  "guest_exit": 0,
+  "failure_stage": "PUBLIC_PROJECTION",
+  "unit_inactive": true,
+  "review_miss": "Independent focused module/context_projection tests failed to cover complete public_rows success path; leftover native_url_shape requirement invalid for noGET guest was missed. Previous source approval is superseded for host success capture.",
+  "interpretation": [
+    "Guest0 alone does not provide HLS counts, source-final or privacy acceptance; raw capture discarded and cannot be reconstructed from this receipt.",
+    "Preserve failed native attempt. Corrected host derivative needs full synthetic public_rows success without URL shape and negative source/privacy tests before another bounded observation."
+  ],
+  "reviewer_vm_calls": false
+}

@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "decision": "BOUNDED_NO_GET_CONTEXT_OBSERVER_APPROVED",
+  "pins": {
+    "run_context_observer.py": "e6aad7d28f1fb3cf7f0413a60cdc5c7ff92f321b0cd2fad912bd25fee9b96906",
+    "guest_context_observer.py": "32c4e5027839ba176c11d16850c8d48a815928f43a5c3f9023813021747df363",
+    "context_urls.py": "1ecf0476baed260a405ddd6fb6da0b1eee42b612de61d5762761c84b3c6a2bff",
+    "playback_context_r3.py": "f0ec70528883e94a8d97ade697c58ff8588585c0814d06faddc948fabe436420",
+    "test_context_observer.py": "906d392db3b2656f8e151761b66f117eddd978b130a622233bb8ac281873b220"
+  },
+  "test_command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/baseline-freeze-r1 -p test_context_observer.py -v",
+  "tests": 7,
+  "exit": 0,
+  "review": [
+    "Exactly one context API call replaces full getUrl/GET block; GET modules not staged.",
+    "Reviewed R3 source-URL first-pass enrollment retained, bounded decoded long URL candidates scanned privately.",
+    "Unsupported short query/auth values, malformed or overbound URL enrollment explicitly incomplete.",
+    "Closed descriptor only; response_secret_coverage_complete always false.",
+    "Existing quiet/convergence/original starts/common-end/provenance/source/TLS inventory guards preserved."
+  ],
+  "limits": [
+    "Finite scans on failure concern only enrolled patterns, never all response secret coverage. CONTEXT_TYPE/URL_ENROLLMENT_INCOMPLETE/RESPONSE_COVERAGE_INCOMPLETE remain incomplete scope even if enrolled counts zero.",
+    "No HLS GET/segment/decode/player/whole response privacy approval.",
+    "No reviewer VM calls."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "decision": "HOST_NO_GET_FULL_CAPTURE_FIX_APPROVED",
+  "pins": {
+    "run_context_observer_r3.py": "6b26885cb8b47cae47ec9d0e1ac07ad2d113114b17f33e8eb01f3bfa6ed36cf5",
+    "test_context_capture.py": "72831c7bc43b8e17bee56bd32a2bb51441fa465dc5fe73b930770724680e7900"
+  },
+  "test_command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/baseline-freeze-r1 -p test_context_capture.py -v",
+  "tests": 5,
+  "exit": 0,
+  "review": [
+    "Minimal host change removes irrelevant successful noGET native_url_shape requirement; fresh stage/priorunit updated only.",
+    "Actual public_rows exercised with full synthetic report without URLshape; assemble/source/TLS/privacy/provenance/context required fields remain validated.",
+    "Missing fields/positive privacy counts reject; unexpected private field excluded; fixed incomplete failure code retained.",
+    "Guest and dependencies unchanged."
+  ],
+  "limitations": [
+    "Prior source review missed inherited full-success projection defect; explicitly preserved as reviewer/test coverage failure.",
+    "Synthetic report is not reconstructed native evidence. Lost nativeR2 capture cannot establish HLS counts/privacy.",
+    "No reviewer VM calls; subsequent execution remains separate."
+  ]
+}

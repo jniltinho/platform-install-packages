@@ -1,0 +1,8 @@
+{
+  "api_v3/services/BaseEntryService.php": "069e3902be3d97f2e8139e445a9e1cfdceefc5d9db9a6882865ff3b17a44b27a",
+  "api_v3/lib/types/entry/KalturaPlaybackContextOptions.php": "a5c454215b941eb419c8fb1ec6b8c52b2d7c72420fe1a0a7fb1c7458c2ffdd2f",
+  "api_v3/lib/types/entry/KalturaEntryContextDataParams.php": "54180315b70bd4b2c1ae0d244b4ebbe9b6a8441d7e830a6a2db96952b83d8a98",
+  "api_v3/lib/types/KalturaPlaybackContext.php": "ce15333113641e5f55de20cd7f9c971d4f3bdaf5ba5ab352710d025ee27f0e20",
+  "api_v3/lib/types/KalturaPlaybackSource.php": "aa806bad2c3133d11a731f7b28039258a776c70543aa9e403a9ad2e4353065c5",
+  "alpha/lib/model/DeliveryProfileAppleHttp.php": "75698c78c6d2675b192bf61165826dec321486b17c61ff73b4d2c6e4d882ceda"
+}

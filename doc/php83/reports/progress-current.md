@@ -136,3 +136,13 @@ provisionamento ou identidade do disco atual.
 The bounded native observation exited 0 with six privacy patterns complete and zero across the common file/journal end. It confirms a `SERVE_FLAVOR` route, exact owned tenant/entry/asset/version and a filename equal to the privately source-derived expected name. No URL or credential was persisted/exported, and no GET was issued. The original fixed-order regex did not match; the next guard must consume the entire source-supported named-parameter route and reject every unknown or duplicate field. Historical failures are not reclassified.
 
 The pinned original short video also completed local offline ffmpeg decoding twice (author and root): exit 0, no stderr, video and audio selected. This is not HLS/browser or downloaded-response decode acceptance.
+
+### HLS context probe started after progressive milestone
+
+The first native no-GET context call, filtered to the original asset, returned a typed context with zero sources and zero flavor assets. This is not proof that HLS is absent or broken. The round failed with `FILES_UNDRAINED_TAIL` at batch privacy; a subsequent finite failure scan was complete and zero only for the enrolled patterns, not the whole response. The failure is preserved. Source review shows HLS tag filtering; the next bounded observation will use an already observed READY rendition after validating its live owned metadata, rather than repeating the same original-filter call.
+
+### READY rendition HLS context captured successfully
+
+Corrected native context R3 exited 0 with an inactive unit: one live READY rendition, HLS tags matched, and one HTTPS HLS descriptor. Six enrolled patterns were zero in complete finite file/journal windows with a common end; source identities matched. No HLS GET or decode yet, and whole-response secret coverage remains explicitly false. Independent review accepted only this bounded observation.
+
+A preceding guest exit-0 run lost its public projection because the host incorrectly required a progressive-only URL field. That capture remains incomplete; a host-only correction now has five full success/failure projection tests, followed by the separate successful native observation. No lost results were invented or reconstructed.

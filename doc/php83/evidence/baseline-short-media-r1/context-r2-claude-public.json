@@ -1,0 +1,17 @@
+{
+  "case": "no-get-playback-context-r2",
+  "executor": "actual Claude CLI",
+  "terminal_exit": 0,
+  "tests": 7,
+  "tests_exit": 0,
+  "earlier_attempt": "Wrong working directory ImportError; subsequent exact command in repository passed.",
+  "verdict": "BLOCKED_FOR_NATIVE_INTEGRATION",
+  "finding": "Only sources[].url enrolled; nonempty DRM/caption/bumper or unknown fields can contain uncovered private response values. Exact source models confirm drm/playbackCaptions/bumperData fields.",
+  "permission_denials": [],
+  "source_sha256": "41e25f96aff60860b9383ac7fecb0fcf42d040024663cda3e8b79a0e0b2b6eb4",
+  "limits": [
+    "No VM/API/GET executed.",
+    "Closed counts never authorize delivery or complete privacy acceptance.",
+    "No source correction yet authorized/frozen after this finding."
+  ]
+}

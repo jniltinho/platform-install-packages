@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "decision": "PURE_SELECTED_READY_CONTEXT_R4_REVIEWED",
+  "pins": {
+    "playback_context_r4.py": "8bb6c410b034a8c140ef9408c8e49ee826e5561399eae5b0778629effed9a0f5",
+    "test_playback_context_r4.py": "51500fdf6d337f025aaeeb591efdbc94b5021c46b53213895c0a1b6eacde4a72"
+  },
+  "test_command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/baseline-short-media-r1 -p test_playback_context_r4.py -q",
+  "tests": 14,
+  "exit": 0,
+  "review": [
+    "Exact known nonoriginal IDs/params2\u20134; typed entry/partner/READY/nonoriginal/version2/MP4 and bounded positive size required.",
+    "Optional already-observed tags produce closed eligibility bool, absent tags remain None.",
+    "One noGET context observation; full response coverage false and previous enrollment guards unchanged."
+  ],
+  "limits": [
+    "Root planned params2 only; general module known3 set does not authorize3 native workloads.",
+    "Future wrapper must verify live selected metadata and projected fields, not trust historical snapshot.",
+    "Native HLS filtering is tag eligibility, not categorically isOriginal exclusion.",
+    "No reviewer VM calls or HLS/delivery approval."
+  ]
+}

@@ -1,0 +1,19 @@
+test_bad_tags (test_playback_context_r4.Tests.test_bad_tags) ... ok
+test_bad_type (test_playback_context_r4.Tests.test_bad_type) ... ok
+test_empty (test_playback_context_r4.Tests.test_empty) ... ok
+test_empty_optional_fields (test_playback_context_r4.Tests.test_empty_optional_fields) ... ok
+test_enroll_all_before_metadata_failure (test_playback_context_r4.Tests.test_enroll_all_before_metadata_failure) ... ok
+test_excess (test_playback_context_r4.Tests.test_excess) ... ok
+test_fixed_call (test_playback_context_r4.Tests.test_fixed_call) ... ok
+test_known_three (test_playback_context_r4.Tests.test_known_three) ... ok
+test_no_eligible (test_playback_context_r4.Tests.test_no_eligible) ... ok
+test_optional_secret_carriers (test_playback_context_r4.Tests.test_optional_secret_carriers) ... ok
+test_private_error (test_playback_context_r4.Tests.test_private_error) ... ok
+test_selected_rejected_before_call (test_playback_context_r4.Tests.test_selected_rejected_before_call) ... ok
+test_tag_projection (test_playback_context_r4.Tests.test_tag_projection) ... ok
+test_unknown_fields (test_playback_context_r4.Tests.test_unknown_fields) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.001s
+
+OK
