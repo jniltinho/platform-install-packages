@@ -1,0 +1,280 @@
+{
+  "components": {
+    "geoip2": {
+      "archive_sha256": "0ab21a12ed067a3969203b73dd0c45e4d2a7256a2bdc3cc566b08a60b6fc7ec9",
+      "bundled_license_text_present": false,
+      "commit": "b28a0ed0190cd76c878ed7002a5d1bb8c5f4c175",
+      "declared_upstream_license": "Apache-2.0",
+      "files": [
+        {
+          "equal": true,
+          "local_sha256": "e211161c5945c195105680466fd582b24a61a2b924ae175303bf09fa29026a8e",
+          "path": "vendor/MaxMind/GeoIP2/Compat/JsonSerializable.php",
+          "upstream_path": "src/Compat/JsonSerializable.php",
+          "upstream_sha256": "e211161c5945c195105680466fd582b24a61a2b924ae175303bf09fa29026a8e"
+        },
+        {
+          "equal": true,
+          "local_sha256": "50501d503f1af8dfbb6f86f4b3460ca9ab672d6ccb9384dd19085af6a80f0908",
+          "path": "vendor/MaxMind/GeoIP2/Database/Reader.php",
+          "upstream_path": "src/Database/Reader.php",
+          "upstream_sha256": "50501d503f1af8dfbb6f86f4b3460ca9ab672d6ccb9384dd19085af6a80f0908"
+        },
+        {
+          "equal": true,
+          "local_sha256": "2e0ccacb40127d70cd1ce2043bd71a2baabec2611a59616e1d364a1a977b4313",
+          "path": "vendor/MaxMind/GeoIP2/Exception/AddressNotFoundException.php",
+          "upstream_path": "src/Exception/AddressNotFoundException.php",
+          "upstream_sha256": "2e0ccacb40127d70cd1ce2043bd71a2baabec2611a59616e1d364a1a977b4313"
+        },
+        {
+          "equal": true,
+          "local_sha256": "dd6e806b09e7d51c8ebf57be46ff646946a7c510c44211f57d490ecb5c0b10dc",
+          "path": "vendor/MaxMind/GeoIP2/Exception/AuthenticationException.php",
+          "upstream_path": "src/Exception/AuthenticationException.php",
+          "upstream_sha256": "dd6e806b09e7d51c8ebf57be46ff646946a7c510c44211f57d490ecb5c0b10dc"
+        },
+        {
+          "equal": true,
+          "local_sha256": "1fc515b47da192590afdb01d5fd2c230c8ae9d9b57c823ebe943049bc70064e8",
+          "path": "vendor/MaxMind/GeoIP2/Exception/GeoIp2Exception.php",
+          "upstream_path": "src/Exception/GeoIp2Exception.php",
+          "upstream_sha256": "1fc515b47da192590afdb01d5fd2c230c8ae9d9b57c823ebe943049bc70064e8"
+        },
+        {
+          "equal": true,
+          "local_sha256": "1217514d9d6d85cf9da62e832238323e7705659496a3994991a7d96fe6f42166",
+          "path": "vendor/MaxMind/GeoIP2/Exception/HttpException.php",
+          "upstream_path": "src/Exception/HttpException.php",
+          "upstream_sha256": "1217514d9d6d85cf9da62e832238323e7705659496a3994991a7d96fe6f42166"
+        },
+        {
+          "equal": true,
+          "local_sha256": "36dfeec594d7259dffdcd42284ed9b620c60ed530db4c22bdfeb8112e0a91531",
+          "path": "vendor/MaxMind/GeoIP2/Exception/InvalidRequestException.php",
+          "upstream_path": "src/Exception/InvalidRequestException.php",
+          "upstream_sha256": "36dfeec594d7259dffdcd42284ed9b620c60ed530db4c22bdfeb8112e0a91531"
+        },
+        {
+          "equal": true,
+          "local_sha256": "9927d0204895298e2c3ed7f165d262de5374bfb378c1c25fa803eb26339bd2ac",
+          "path": "vendor/MaxMind/GeoIP2/Exception/OutOfQueriesException.php",
+          "upstream_path": "src/Exception/OutOfQueriesException.php",
+          "upstream_sha256": "9927d0204895298e2c3ed7f165d262de5374bfb378c1c25fa803eb26339bd2ac"
+        },
+        {
+          "equal": true,
+          "local_sha256": "4317dde12c3c36004b13c6db2d1232ca346898ef3a92645f4a2304c9beafba4e",
+          "path": "vendor/MaxMind/GeoIP2/Model/AbstractModel.php",
+          "upstream_path": "src/Model/AbstractModel.php",
+          "upstream_sha256": "4317dde12c3c36004b13c6db2d1232ca346898ef3a92645f4a2304c9beafba4e"
+        },
+        {
+          "equal": true,
+          "local_sha256": "0963d40c4cbf5d07f779a5434c45441e5358995421920c3caa04e2ac853df0a8",
+          "path": "vendor/MaxMind/GeoIP2/Model/AnonymousIp.php",
+          "upstream_path": "src/Model/AnonymousIp.php",
+          "upstream_sha256": "0963d40c4cbf5d07f779a5434c45441e5358995421920c3caa04e2ac853df0a8"
+        },
+        {
+          "equal": true,
+          "local_sha256": "b978c60bdde6b086cee4803b6969145a9a8b57731988f7d7bbef75aae93e4761",
+          "path": "vendor/MaxMind/GeoIP2/Model/City.php",
+          "upstream_path": "src/Model/City.php",
+          "upstream_sha256": "b978c60bdde6b086cee4803b6969145a9a8b57731988f7d7bbef75aae93e4761"
+        },
+        {
+          "equal": true,
+          "local_sha256": "15e65a1ef1aeb0b0ed52f389c19a88956d50bb9a11c5936f5db9ec9c1539d9cd",
+          "path": "vendor/MaxMind/GeoIP2/Model/ConnectionType.php",
+          "upstream_path": "src/Model/ConnectionType.php",
+          "upstream_sha256": "15e65a1ef1aeb0b0ed52f389c19a88956d50bb9a11c5936f5db9ec9c1539d9cd"
+        },
+        {
+          "equal": true,
+          "local_sha256": "3f05506f0450fd8fa70f1d57d65c1b46ea4c24ae3fab6603a6d400e57e4af10a",
+          "path": "vendor/MaxMind/GeoIP2/Model/Country.php",
+          "upstream_path": "src/Model/Country.php",
+          "upstream_sha256": "3f05506f0450fd8fa70f1d57d65c1b46ea4c24ae3fab6603a6d400e57e4af10a"
+        },
+        {
+          "equal": true,
+          "local_sha256": "765531931283f3f44c8b449a02929bcf9df92a7a6f220cee8b0f607a881311ef",
+          "path": "vendor/MaxMind/GeoIP2/Model/Domain.php",
+          "upstream_path": "src/Model/Domain.php",
+          "upstream_sha256": "765531931283f3f44c8b449a02929bcf9df92a7a6f220cee8b0f607a881311ef"
+        },
+        {
+          "equal": true,
+          "local_sha256": "166b07afb091b5fb4d9ff2e02cc7cdf9c4783ec88a37fc5cac0c1481bd392597",
+          "path": "vendor/MaxMind/GeoIP2/Model/Enterprise.php",
+          "upstream_path": "src/Model/Enterprise.php",
+          "upstream_sha256": "166b07afb091b5fb4d9ff2e02cc7cdf9c4783ec88a37fc5cac0c1481bd392597"
+        },
+        {
+          "equal": true,
+          "local_sha256": "b2eab7eba78cef05205674ac1f48142f2e4f70b193492f774594f3b4fe5dba36",
+          "path": "vendor/MaxMind/GeoIP2/Model/Insights.php",
+          "upstream_path": "src/Model/Insights.php",
+          "upstream_sha256": "b2eab7eba78cef05205674ac1f48142f2e4f70b193492f774594f3b4fe5dba36"
+        },
+        {
+          "equal": true,
+          "local_sha256": "2e4bf3a1e59578ffe07f9633291c9b929b96e859fcd022db860fb35e9c845e3a",
+          "path": "vendor/MaxMind/GeoIP2/Model/Isp.php",
+          "upstream_path": "src/Model/Isp.php",
+          "upstream_sha256": "2e4bf3a1e59578ffe07f9633291c9b929b96e859fcd022db860fb35e9c845e3a"
+        },
+        {
+          "equal": true,
+          "local_sha256": "80b3594d1a48b34c768a4e6487923d743005cb396d05f9627ae3956bc7582961",
+          "path": "vendor/MaxMind/GeoIP2/ProviderInterface.php",
+          "upstream_path": "src/ProviderInterface.php",
+          "upstream_sha256": "80b3594d1a48b34c768a4e6487923d743005cb396d05f9627ae3956bc7582961"
+        },
+        {
+          "equal": true,
+          "local_sha256": "959c4a01a06c654c0dfb908398fb5396d1b1cfb980432eaa940279b4bc632bf3",
+          "path": "vendor/MaxMind/GeoIP2/Record/AbstractPlaceRecord.php",
+          "upstream_path": "src/Record/AbstractPlaceRecord.php",
+          "upstream_sha256": "959c4a01a06c654c0dfb908398fb5396d1b1cfb980432eaa940279b4bc632bf3"
+        },
+        {
+          "equal": true,
+          "local_sha256": "80b5a79a66b73946b607eb36f37fcca001eddf4ae7ef05cb7ac806c6c11ac304",
+          "path": "vendor/MaxMind/GeoIP2/Record/AbstractRecord.php",
+          "upstream_path": "src/Record/AbstractRecord.php",
+          "upstream_sha256": "80b5a79a66b73946b607eb36f37fcca001eddf4ae7ef05cb7ac806c6c11ac304"
+        },
+        {
+          "equal": true,
+          "local_sha256": "bd2eb7c6e79662957e99a3b5e32dda5fe8046335245bac43bcf10c4cd86ba021",
+          "path": "vendor/MaxMind/GeoIP2/Record/City.php",
+          "upstream_path": "src/Record/City.php",
+          "upstream_sha256": "bd2eb7c6e79662957e99a3b5e32dda5fe8046335245bac43bcf10c4cd86ba021"
+        },
+        {
+          "equal": true,
+          "local_sha256": "bf0d0495aa1741b99edfcb567603fd57dd134fe8cc96249bf3b6b0aa67ace8d7",
+          "path": "vendor/MaxMind/GeoIP2/Record/Continent.php",
+          "upstream_path": "src/Record/Continent.php",
+          "upstream_sha256": "bf0d0495aa1741b99edfcb567603fd57dd134fe8cc96249bf3b6b0aa67ace8d7"
+        },
+        {
+          "equal": true,
+          "local_sha256": "f772e9e9770c4b428bd3b7966333e5465c59668a8afe04e309ad558816191792",
+          "path": "vendor/MaxMind/GeoIP2/Record/Country.php",
+          "upstream_path": "src/Record/Country.php",
+          "upstream_sha256": "f772e9e9770c4b428bd3b7966333e5465c59668a8afe04e309ad558816191792"
+        },
+        {
+          "equal": true,
+          "local_sha256": "94f596eaf2a1bee89a1a8bdcfd2620289ebff4311f5c34b34c4635852feedc8e",
+          "path": "vendor/MaxMind/GeoIP2/Record/Location.php",
+          "upstream_path": "src/Record/Location.php",
+          "upstream_sha256": "94f596eaf2a1bee89a1a8bdcfd2620289ebff4311f5c34b34c4635852feedc8e"
+        },
+        {
+          "equal": true,
+          "local_sha256": "ae4a07edd52b4eab5ab839f70638e22acda177f5ae4f386ab215f1478a655fca",
+          "path": "vendor/MaxMind/GeoIP2/Record/MaxMind.php",
+          "upstream_path": "src/Record/MaxMind.php",
+          "upstream_sha256": "ae4a07edd52b4eab5ab839f70638e22acda177f5ae4f386ab215f1478a655fca"
+        },
+        {
+          "equal": true,
+          "local_sha256": "5dcdcbb83f9f4a327fcd921e2b8051c86e02e924807221236d8410f96645d0d9",
+          "path": "vendor/MaxMind/GeoIP2/Record/Postal.php",
+          "upstream_path": "src/Record/Postal.php",
+          "upstream_sha256": "5dcdcbb83f9f4a327fcd921e2b8051c86e02e924807221236d8410f96645d0d9"
+        },
+        {
+          "equal": true,
+          "local_sha256": "3b1850dc679097ddbdef20445c2e00172728ccf6b2f5c8fc95141060e5f20a78",
+          "path": "vendor/MaxMind/GeoIP2/Record/RepresentedCountry.php",
+          "upstream_path": "src/Record/RepresentedCountry.php",
+          "upstream_sha256": "3b1850dc679097ddbdef20445c2e00172728ccf6b2f5c8fc95141060e5f20a78"
+        },
+        {
+          "equal": true,
+          "local_sha256": "b43003ed03e644f3d2ba1de02b7698734e81340ad886153130c560afbfa4e22b",
+          "path": "vendor/MaxMind/GeoIP2/Record/Subdivision.php",
+          "upstream_path": "src/Record/Subdivision.php",
+          "upstream_sha256": "b43003ed03e644f3d2ba1de02b7698734e81340ad886153130c560afbfa4e22b"
+        },
+        {
+          "equal": true,
+          "local_sha256": "aedb0e79fe4f189949ae4c7f2a04b618eb4b7c80057762bf79227712bd34c482",
+          "path": "vendor/MaxMind/GeoIP2/Record/Traits.php",
+          "upstream_path": "src/Record/Traits.php",
+          "upstream_sha256": "aedb0e79fe4f189949ae4c7f2a04b618eb4b7c80057762bf79227712bd34c482"
+        },
+        {
+          "equal": true,
+          "local_sha256": "3489016ed5cfb72f09fdd79d198605f9a5e45e31da3e66da6d4ae7f0f96ffbf9",
+          "path": "vendor/MaxMind/GeoIP2/WebService/Client.php",
+          "upstream_path": "src/WebService/Client.php",
+          "upstream_sha256": "3489016ed5cfb72f09fdd79d198605f9a5e45e31da3e66da6d4ae7f0f96ffbf9"
+        }
+      ],
+      "license_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "license_url": "https://raw.githubusercontent.com/maxmind/GeoIP2-php/b28a0ed0190cd76c878ed7002a5d1bb8c5f4c175/LICENSE",
+      "observed_tag": "v2.4.5",
+      "release_compliance_approved": false,
+      "repository": "https://github.com/maxmind/GeoIP2-php",
+      "unique_original_version_proven": false
+    },
+    "reader": {
+      "archive_sha256": "6529c8b5956b700a604866904ec7fc9f6a00a2b12da3d0d2383e976907751ccf",
+      "bundled_license_text_present": false,
+      "commit": "7eeccf61b078bb23bb07b1a151a7e5db52871e65",
+      "declared_upstream_license": "Apache-2.0",
+      "files": [
+        {
+          "equal": true,
+          "local_sha256": "3ba6fecf114749f05cf7303158dfca8f88e343d7e379c5eaffcd26116b0110c9",
+          "path": "vendor/MaxMind/MaxMind/Db/Reader.php",
+          "upstream_path": "src/MaxMind/Db/Reader.php",
+          "upstream_sha256": "3ba6fecf114749f05cf7303158dfca8f88e343d7e379c5eaffcd26116b0110c9"
+        },
+        {
+          "equal": true,
+          "local_sha256": "be657c11ab8ce29fa14c4ad6a2f884862a1cf436e48c6f6b8612d8b0fd71fa05",
+          "path": "vendor/MaxMind/MaxMind/Db/Reader/Decoder.php",
+          "upstream_path": "src/MaxMind/Db/Reader/Decoder.php",
+          "upstream_sha256": "be657c11ab8ce29fa14c4ad6a2f884862a1cf436e48c6f6b8612d8b0fd71fa05"
+        },
+        {
+          "equal": true,
+          "local_sha256": "93f12e08c8fb70771568019da1428cd0b98d3188119bef86617b4ffff5e92bf7",
+          "path": "vendor/MaxMind/MaxMind/Db/Reader/InvalidDatabaseException.php",
+          "upstream_path": "src/MaxMind/Db/Reader/InvalidDatabaseException.php",
+          "upstream_sha256": "93f12e08c8fb70771568019da1428cd0b98d3188119bef86617b4ffff5e92bf7"
+        },
+        {
+          "equal": true,
+          "local_sha256": "701e91dfb8ee063e2c38dcf7ad70310460e95cee2498b1c0971687724cf7942e",
+          "path": "vendor/MaxMind/MaxMind/Db/Reader/Metadata.php",
+          "upstream_path": "src/MaxMind/Db/Reader/Metadata.php",
+          "upstream_sha256": "701e91dfb8ee063e2c38dcf7ad70310460e95cee2498b1c0971687724cf7942e"
+        },
+        {
+          "equal": true,
+          "local_sha256": "ad04e18505d72683e08c7feb87444e1474c7630647e69c099d231853f925cae4",
+          "path": "vendor/MaxMind/MaxMind/Db/Reader/Util.php",
+          "upstream_path": "src/MaxMind/Db/Reader/Util.php",
+          "upstream_sha256": "ad04e18505d72683e08c7feb87444e1474c7630647e69c099d231853f925cae4"
+        }
+      ],
+      "license_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "license_url": "https://raw.githubusercontent.com/maxmind/MaxMind-DB-Reader-php/7eeccf61b078bb23bb07b1a151a7e5db52871e65/LICENSE",
+      "observed_tag": "v1.1.3",
+      "release_compliance_approved": false,
+      "repository": "https://github.com/maxmind/MaxMind-DB-Reader-php",
+      "unique_original_version_proven": false
+    }
+  },
+  "original_archive_sha256": "58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28",
+  "schema": 1,
+  "scope": "35 byte-identical source files joined to official pinned upstream license declarations; no claim of unique original provenance or redistribution compliance."
+}

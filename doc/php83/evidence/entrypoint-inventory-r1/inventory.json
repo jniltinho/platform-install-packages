@@ -1,0 +1,497 @@
+{
+  "archive_candidates": [
+    {
+      "owners": [
+        {
+          "package_file": "kaltura-batch_18.20.0-1_all.deb",
+          "package_sha256": "1cd9b6fdae828dff7932f080c12f5ac34fe159c8d57edf24393ff0faa7b1bd64"
+        }
+      ],
+      "path": "etc/init.d/kaltura-batch",
+      "sha256": "a8eb09c22f10f222142d253123ec2ef807c3070a45500b6f6705334735b2ca86"
+    },
+    {
+      "owners": [
+        {
+          "package_file": "kaltura-base_18.20.0-1_all.deb",
+          "package_sha256": "985aefac3b349b5b5ab5e28a72ba7727343692f4e697f94342b50ea3e74c4cfe"
+        }
+      ],
+      "path": "opt/kaltura/app/configurations/cron/api.template",
+      "sha256": "8c949a5ac1bea30e363094320dd1f8ed59e54ccea4d570196d8076de3c89f5f3"
+    },
+    {
+      "owners": [
+        {
+          "package_file": "kaltura-base_18.20.0-1_all.deb",
+          "package_sha256": "985aefac3b349b5b5ab5e28a72ba7727343692f4e697f94342b50ea3e74c4cfe"
+        }
+      ],
+      "path": "opt/kaltura/app/configurations/cron/cleanup.template",
+      "sha256": "80db023ef0cbde45fecfc5a2844b976dbbaad100aa2805b38ea61196b014c51a"
+    },
+    {
+      "owners": [
+        {
+          "package_file": "kaltura-base_18.20.0-1_all.deb",
+          "package_sha256": "985aefac3b349b5b5ab5e28a72ba7727343692f4e697f94342b50ea3e74c4cfe"
+        }
+      ],
+      "path": "opt/kaltura/app/configurations/cron/dwh.template",
+      "sha256": "07f196bbbcdddc6263d8cfbc582be272baf76aeb134a143a394ec6a378ebd509"
+    },
+    {
+      "owners": [
+        {
+          "package_file": "kaltura-base_18.20.0-1_all.deb",
+          "package_sha256": "985aefac3b349b5b5ab5e28a72ba7727343692f4e697f94342b50ea3e74c4cfe"
+        }
+      ],
+      "path": "opt/kaltura/app/configurations/cron/kava.template",
+      "sha256": "134b5b2b3347209f0a0b4f62935aad0c760303957ef58e3fa02474089c6fff02"
+    }
+  ],
+  "archive_inventory_sha256": "42c3e2411c3973e1f5591d4aacd31d1af2a7a05929af935992ab2ebcdae67501",
+  "full_entrypoint_inventory_complete": false,
+  "limitations": [
+    "Curated selection, not complete ZIP registry; consolidated inventory owns per-file source scan.",
+    "DWH/Kava cron candidates do not prove activation.",
+    "Repository hook declarations differ from private lab overlays; do not transfer their identity to installed packages.",
+    "Sibling graph generation 2026-09-25T19:28:02Z is best-effort only; current worktree pinned direct sources are authoritative.",
+    "No runtime, VM, hook, network or database execution; no task closure."
+  ],
+  "routes": [
+    {
+      "classification": "current_workflow_selected",
+      "evidence": [
+        {
+          "lines": [
+            {
+              "line": 33,
+              "text": "- dist: noble"
+            },
+            {
+              "line": 78,
+              "text": "- dist: noble"
+            }
+          ],
+          "path": ".github/workflows/kaltura-server-packages.yml",
+          "sha256": "873406100928abc20cdbfe29c1f2ee1cb8aab3c194b61a7f66e6a70a4aa29cd3"
+        },
+        {
+          "lines": [
+            {
+              "line": 35,
+              "text": "- dist: ubuntu-26.04"
+            },
+            {
+              "line": 80,
+              "text": "- dist: ubuntu-26.04"
+            }
+          ],
+          "path": ".github/workflows/kaltura-server-packages.yml",
+          "sha256": "873406100928abc20cdbfe29c1f2ee1cb8aab3c194b61a7f66e6a70a4aa29cd3"
+        },
+        {
+          "lines": [
+            {
+              "line": 43,
+              "text": "run: SRC=\"$GITHUB_WORKSPACE\" bash deb/${{ matrix.dist }}/build.sh"
+            }
+          ],
+          "path": ".github/workflows/kaltura-server-packages.yml",
+          "sha256": "873406100928abc20cdbfe29c1f2ee1cb8aab3c194b61a7f66e6a70a4aa29cd3"
+        },
+        {
+          "lines": [
+            {
+              "line": 60,
+              "text": "run: SRC=\"$GITHUB_WORKSPACE\" bash rpm/el9/build.sh"
+            }
+          ],
+          "path": ".github/workflows/kaltura-server-packages.yml",
+          "sha256": "873406100928abc20cdbfe29c1f2ee1cb8aab3c194b61a7f66e6a70a4aa29cd3"
+        },
+        {
+          "lines": [
+            {
+              "line": 34,
+              "text": "if ! dpkg-buildpackage -b -uc -us -d > ../$pkg.build.log 2>&1; then"
+            }
+          ],
+          "path": "deb/noble/build.sh",
+          "sha256": "9c2a289116341c55bc016e680529ff9d70769a0b886b3070e92877de6406b4de"
+        }
+      ],
+      "id": "ci-build",
+      "kind": "build",
+      "meaning": "Declared DEB matrix and RPM build; not evidence of CI execution."
+    },
+    {
+      "classification": "current_target_declared",
+      "evidence": [
+        {
+          "lines": [
+            {
+              "line": 2,
+              "text": "# Installs and configures a Kaltura CE 18.20.0 All-In-One on Ubuntu 24.04 from the local repo."
+            }
+          ],
+          "path": "deb/noble/install-aio.sh",
+          "sha256": "1469f6547b54153b2afcb73e80618213534e3d04f58747215796814bd798c88d"
+        }
+      ],
+      "id": "noble-install",
+      "kind": "install",
+      "meaning": "Local Ubuntu 24.04 installer; comments are intention, not idempotence verification."
+    },
+    {
+      "classification": "install_hook_declared",
+      "evidence": [
+        {
+          "lines": [
+            {
+              "line": 234,
+              "text": "php $APP_DIR/deployment/base/scripts/installPlugins.php >> $LOG_DIR/installPlugins.log  2>&1"
+            }
+          ],
+          "path": "deb/kaltura-db/debian/postinst",
+          "sha256": "ac9527c54e9829536fa41679d5beb7bd7f2daffb7a26fddeb0c9d0c983a8b2a4"
+        }
+      ],
+      "id": "installPlugins",
+      "kind": "plugin",
+      "meaning": "Packaging-source invocation, not installed private derivative identity or proof of seed completion."
+    },
+    {
+      "classification": "install_hook_declared",
+      "evidence": [
+        {
+          "lines": [
+            {
+              "line": 236,
+              "text": "php $APP_DIR/deployment/base/scripts/insertDefaults.php $APP_DIR/deployment/base/scripts/init_data >> $LOG_DIR/insertDefaults.log  2>&1"
+            }
+          ],
+          "path": "deb/kaltura-db/debian/postinst",
+          "sha256": "ac9527c54e9829536fa41679d5beb7bd7f2daffb7a26fddeb0c9d0c983a8b2a4"
+        }
+      ],
+      "id": "insertDefaults",
+      "kind": "install",
+      "meaning": "Packaging-source invocation, not installed private derivative identity or proof of seed completion."
+    },
+    {
+      "classification": "install_hook_declared",
+      "evidence": [
+        {
+          "lines": [
+            {
+              "line": 238,
+              "text": "php $APP_DIR/deployment/base/scripts/insertPermissions.php  >> $LOG_DIR/insertPermissions.log 2>&1"
+            },
+            {
+              "line": 260,
+              "text": "php $APP_DIR/deployment/base/scripts/insertPermissions.php -d $APP_DIR/deployment/permissions/ssl/ > /dev/null 2>&1"
+            }
+          ],
+          "path": "deb/kaltura-db/debian/postinst",
+          "sha256": "ac9527c54e9829536fa41679d5beb7bd7f2daffb7a26fddeb0c9d0c983a8b2a4"
+        }
+      ],
+      "id": "insertPermissions",
+      "kind": "install",
+      "meaning": "Packaging-source invocation, not installed private derivative identity or proof of seed completion."
+    },
+    {
+      "classification": "install_hook_declared",
+      "evidence": [
+        {
+          "lines": [
+            {
+              "line": 245,
+              "text": "php $APP_DIR/deployment/base/scripts/insertContent.php >> $LOG_DIR/insertContent.log  2>&1"
+            }
+          ],
+          "path": "deb/kaltura-db/debian/postinst",
+          "sha256": "ac9527c54e9829536fa41679d5beb7bd7f2daffb7a26fddeb0c9d0c983a8b2a4"
+        }
+      ],
+      "id": "insertContent",
+      "kind": "install",
+      "meaning": "Packaging-source invocation, not installed private derivative identity or proof of seed completion."
+    },
+    {
+      "classification": "install_hook_declared",
+      "evidence": [
+        {
+          "lines": [
+            {
+              "line": 227,
+              "text": "ln -sf $APP_DIR/configurations/cron/api /etc/cron.d/kaltura-api"
+            }
+          ],
+          "path": "deb/kaltura-front/debian/postinst",
+          "sha256": "3c5f374a0c2d73d308e9cb776277ce896026daed7501fbcd51559827abc3d4ae"
+        }
+      ],
+      "id": "api-cron",
+      "kind": "cron",
+      "meaning": "Front creates cron.d link; actual crond activation not measured."
+    },
+    {
+      "classification": "explicitly_commented_out",
+      "evidence": [
+        {
+          "lines": [
+            {
+              "line": 228,
+              "text": "# currently causing issues, commenting"
+            }
+          ],
+          "path": "deb/kaltura-front/debian/postinst",
+          "sha256": "3c5f374a0c2d73d308e9cb776277ce896026daed7501fbcd51559827abc3d4ae"
+        },
+        {
+          "lines": [
+            {
+              "line": 229,
+              "text": "#ln -sf $APP_DIR/configurations/cron/cleanup /etc/cron.d/kaltura-cleanup"
+            }
+          ],
+          "path": "deb/kaltura-front/debian/postinst",
+          "sha256": "3c5f374a0c2d73d308e9cb776277ce896026daed7501fbcd51559827abc3d4ae"
+        }
+      ],
+      "id": "cleanup-cron",
+      "kind": "cron",
+      "meaning": "This hook does not create cleanup link; other activation remains unresolved."
+    },
+    {
+      "classification": "native_start_declared_guarded",
+      "evidence": [
+        {
+          "lines": [
+            {
+              "line": 25,
+              "text": "BATCHDIR=$APP_DIR/batch"
+            }
+          ],
+          "path": "deb/kaltura-batch/debian/kaltura-batch.init",
+          "sha256": "a8eb09c22f10f222142d253123ec2ef807c3070a45500b6f6705334735b2ca86"
+        },
+        {
+          "lines": [
+            {
+              "line": 26,
+              "text": "BATCHEXE=KGenericBatchMgr.class.php"
+            }
+          ],
+          "path": "deb/kaltura-batch/debian/kaltura-batch.init",
+          "sha256": "a8eb09c22f10f222142d253123ec2ef807c3070a45500b6f6705334735b2ca86"
+        },
+        {
+          "lines": [
+            {
+              "line": 53,
+              "text": "if [ -r $BASE_DIR/maintenance ]; then"
+            }
+          ],
+          "path": "deb/kaltura-batch/debian/kaltura-batch.init",
+          "sha256": "a8eb09c22f10f222142d253123ec2ef807c3070a45500b6f6705334735b2ca86"
+        },
+        {
+          "lines": [
+            {
+              "line": 83,
+              "text": "cd $BATCHDIR"
+            }
+          ],
+          "path": "deb/kaltura-batch/debian/kaltura-batch.init",
+          "sha256": "a8eb09c22f10f222142d253123ec2ef807c3070a45500b6f6705334735b2ca86"
+        },
+        {
+          "lines": [
+            {
+              "line": 85,
+              "text": "su $OS_KALTURA_USER -c \"nohup $PHP_BIN $BATCHEXE $PHP_BIN $CONFIG_FILE >> $LOG_DIR/kaltura_batch.log 2>&1 &\""
+            }
+          ],
+          "path": "deb/kaltura-batch/debian/kaltura-batch.init",
+          "sha256": "a8eb09c22f10f222142d253123ec2ef807c3070a45500b6f6705334735b2ca86"
+        }
+      ],
+      "id": "batch",
+      "kind": "cli",
+      "meaning": "Resolves BATCHDIR/BATCHEXE; maintenance returns failure before start. ps/awk process matching is not a PHP invocation."
+    },
+    {
+      "classification": "reviewed_template_route_declared",
+      "evidence": [
+        {
+          "lines": [
+            {
+              "line": 3,
+              "text": "DocumentRoot \"@APP_DIR@/alpha/web\""
+            }
+          ],
+          "path": "doc/php83/evidence/apache-php83-handler-r3/template.after.conf",
+          "sha256": "beb493a555bf69684b9f1d8d7f173a139b03f71da23bd89a57ee48b85cdc3ae4"
+        },
+        {
+          "lines": [
+            {
+              "line": 144,
+              "text": "RewriteRule ^api/(.*)$ /api_v3/index.php/$1 [L]"
+            }
+          ],
+          "path": "doc/php83/evidence/apache-php83-handler-r3/template.after.conf",
+          "sha256": "beb493a555bf69684b9f1d8d7f173a139b03f71da23bd89a57ee48b85cdc3ae4"
+        },
+        {
+          "lines": [
+            {
+              "line": 157,
+              "text": "RewriteCond %{QUERY_STRING}  service=stats&action=collect"
+            }
+          ],
+          "path": "doc/php83/evidence/apache-php83-handler-r3/template.after.conf",
+          "sha256": "beb493a555bf69684b9f1d8d7f173a139b03f71da23bd89a57ee48b85cdc3ae4"
+        },
+        {
+          "lines": [
+            {
+              "line": 158,
+              "text": "RewriteRule api_v3/index.php /alive.html [L]"
+            }
+          ],
+          "path": "doc/php83/evidence/apache-php83-handler-r3/template.after.conf",
+          "sha256": "beb493a555bf69684b9f1d8d7f173a139b03f71da23bd89a57ee48b85cdc3ae4"
+        }
+      ],
+      "id": "api-web",
+      "kind": "web",
+      "meaning": "PHP8 reviewed template route; conditions/aliases are not blanket reachability proof."
+    },
+    {
+      "classification": "packaging_tool_input_declared",
+      "evidence": [
+        {
+          "lines": [
+            {
+              "line": 19,
+              "text": "clientlibs_archive := $(SOURCE_PACKAGING_DIR)/clients-generator-$(KALTURA_SERVER_VERSION).zip"
+            }
+          ],
+          "path": "deb/kaltura-base/debian/rules",
+          "sha256": "a04a57217492085a2edd6b3e7e747f9f5816e0036e2a81b08e8c9641f4770fe5"
+        },
+        {
+          "lines": [
+            {
+              "line": 34,
+              "text": "unzip -qq -o $(clientlibs_archive)"
+            }
+          ],
+          "path": "deb/kaltura-base/debian/rules",
+          "sha256": "a04a57217492085a2edd6b3e7e747f9f5816e0036e2a81b08e8c9641f4770fe5"
+        },
+        {
+          "lines": [
+            {
+              "line": 35,
+              "text": "mv clients-generator-$(KALTURA_SERVER_VERSION) $(tree)/clients-generator"
+            }
+          ],
+          "path": "deb/kaltura-base/debian/rules",
+          "sha256": "a04a57217492085a2edd6b3e7e747f9f5816e0036e2a81b08e8c9641f4770fe5"
+        },
+        {
+          "lines": [
+            {
+              "line": 28,
+              "text": "wget $KALTURA_CLIENTS_GENERATOR_URI -O$RPM_SOURCES_DIR/clients-generator-$KALTURA_SERVER_VERSION.zip"
+            }
+          ],
+          "path": "build/package_kaltura_clients-generator.sh",
+          "sha256": "bb45ae98321d175fbad04e812947a10f41bef2cb249768361b352ad2102886d4"
+        }
+      ],
+      "id": "client-generator",
+      "kind": "generatedclient",
+      "meaning": "Generator archive unpacked into packaged tree; this is not proof every generated client is active."
+    },
+    {
+      "classification": "explicit_legacy_target",
+      "evidence": [
+        {
+          "lines": [
+            {
+              "line": 4,
+              "text": "echo \"deb [arch=amd64] http://installrepo.kaltura.org/repo/apt/debian naos main\" > /etc/apt/sources.list.d/kaltura.list"
+            }
+          ],
+          "path": "deb/install_kaltura_all_in_1.sh",
+          "sha256": "89cb0d1f8965e7de41d259c74f092b15b8445a5a7bee8922a033f0bba7941f48"
+        },
+        {
+          "lines": [
+            {
+              "line": 17,
+              "text": "# Debian Jessie [8]: You must also make sure the following Wheezy repos are enabled in /etc/apt/sources.list"
+            }
+          ],
+          "path": "deb/install_kaltura_all_in_1.sh",
+          "sha256": "89cb0d1f8965e7de41d259c74f092b15b8445a5a7bee8922a033f0bba7941f48"
+        }
+      ],
+      "id": "naos-install",
+      "kind": "install",
+      "meaning": "Naos/Jessie/Wheezy source target contrasts selected Noble workflow; not a claim unreachable or deleted."
+    },
+    {
+      "classification": "alternative_target_not_selected_by_this_workflow",
+      "evidence": [
+        {
+          "lines": [
+            {
+              "line": 9,
+              "text": "DIST=ce"
+            }
+          ],
+          "path": "deb/build_all",
+          "sha256": "a1fc7c7ae6ee4d889d621a7a54c95c2f7f292b086f00e4ee7a762a660a8ee61a"
+        },
+        {
+          "lines": [
+            {
+              "line": 29,
+              "text": "dpkg-buildpackage -b -uc"
+            }
+          ],
+          "path": "deb/build_all",
+          "sha256": "a1fc7c7ae6ee4d889d621a7a54c95c2f7f292b086f00e4ee7a762a660a8ee61a"
+        }
+      ],
+      "id": "legacy-build-all",
+      "kind": "build",
+      "meaning": "Default ce target differs current explicit workflow entrypoint; other callers unverified."
+    }
+  ],
+  "runtime_activation_verified": false,
+  "schema": 1,
+  "scope": "CURATED_SOURCE_DECLARATIONS_NOT_RUNTIME_REACHABILITY",
+  "source_pins": {
+    ".github/workflows/kaltura-server-packages.yml": "873406100928abc20cdbfe29c1f2ee1cb8aab3c194b61a7f66e6a70a4aa29cd3",
+    "build/package_kaltura_clients-generator.sh": "bb45ae98321d175fbad04e812947a10f41bef2cb249768361b352ad2102886d4",
+    "deb/build_all": "a1fc7c7ae6ee4d889d621a7a54c95c2f7f292b086f00e4ee7a762a660a8ee61a",
+    "deb/install_kaltura_all_in_1.sh": "89cb0d1f8965e7de41d259c74f092b15b8445a5a7bee8922a033f0bba7941f48",
+    "deb/kaltura-base/debian/rules": "a04a57217492085a2edd6b3e7e747f9f5816e0036e2a81b08e8c9641f4770fe5",
+    "deb/kaltura-batch/debian/kaltura-batch.init": "a8eb09c22f10f222142d253123ec2ef807c3070a45500b6f6705334735b2ca86",
+    "deb/kaltura-db/debian/postinst": "ac9527c54e9829536fa41679d5beb7bd7f2daffb7a26fddeb0c9d0c983a8b2a4",
+    "deb/kaltura-front/debian/postinst": "3c5f374a0c2d73d308e9cb776277ce896026daed7501fbcd51559827abc3d4ae",
+    "deb/noble/build.sh": "9c2a289116341c55bc016e680529ff9d70769a0b886b3070e92877de6406b4de",
+    "deb/noble/install-aio.sh": "1469f6547b54153b2afcb73e80618213534e3d04f58747215796814bd798c88d",
+    "doc/php83/evidence/apache-php83-handler-r3/template.after.conf": "beb493a555bf69684b9f1d8d7f173a139b03f71da23bd89a57ee48b85cdc3ae4"
+  }
+}

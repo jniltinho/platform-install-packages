@@ -1,0 +1,49 @@
+{
+  "executor": "independent Codex reviewer, not comparator author",
+  "source_sha256": "653015c33a5d3ef247545eaf65d249899815b4a54ba60a08ab9bffc1abf42b85",
+  "actual_compare_exit": 0,
+  "matched_files": 35,
+  "component_counts": {
+    "geoip2": 30,
+    "reader": 5
+  },
+  "report_byte_identical": true,
+  "report_sha256": "ff442cc63b86a6d434cc8db8adc4a0bc29348b34e3e4da7a362298f1ea69e124",
+  "inputs_unchanged_before_after": true,
+  "input_pins": {
+    "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83/tools/php83/license-notice-census-r1/compare_upstream.py": "653015c33a5d3ef247545eaf65d249899815b4a54ba60a08ab9bffc1abf42b85",
+    "/tmp/kaltura-php83-audit/Rigel-18.20.0.zip": "58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28",
+    "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83-artifacts/upstream-attribution-r1/geoip2-b28a0ed.zip": "0ab21a12ed067a3969203b73dd0c45e4d2a7256a2bdc3cc566b08a60b6fc7ec9",
+    "/home/nilton/Projetos/nilton/NOVOS/platform-install-packages-php83-artifacts/upstream-attribution-r1/reader-7eeccf6.zip": "6529c8b5956b700a604866904ec7fc9f6a00a2b12da3d0d2383e976907751ccf"
+  },
+  "negative_cases": [
+    {
+      "case": "wrong_original_pin",
+      "rejected": true
+    },
+    {
+      "case": "wrong_upstream_pin",
+      "rejected": true
+    },
+    {
+      "case": "source_byte_difference",
+      "rejected": true,
+      "trust_override_for_guard_test": true
+    },
+    {
+      "case": "missing_license_declaration",
+      "rejected": true,
+      "trust_override_for_guard_test": true
+    },
+    {
+      "case": "wrong_member_count",
+      "rejected": true,
+      "trust_override_for_guard_test": true
+    }
+  ],
+  "declared_upstream_license": "Apache-2.0",
+  "unique_version_proven": false,
+  "bundled_license_present": false,
+  "redistribution_compliance_approved": false,
+  "limitation": "Comparator verifies then reopens archive paths; this run independently checked unchanged input hashes before/after. No hostile concurrent-mutation guarantee."
+}

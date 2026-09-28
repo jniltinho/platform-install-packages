@@ -1,0 +1,52 @@
+{
+  "schema": 1,
+  "reviewer": "independent Codex subagent; not inventory author",
+  "decision": "TASK_1_1_SOURCE_INVENTORY_ACCEPTABLE_WITH_EXPLICIT_UNRESOLVED_METADATA",
+  "tests": {
+    "command": "python3 -B -m unittest discover -s tools/php83/inventory-closure-r1 -p test_*.py -v",
+    "exit": 0,
+    "passed": 17
+  },
+  "reproductions": {
+    "components-r2.json": "ce32fe92b810c2b094d11a7bf7b1761a1c13d511e84ef2e976f58d5616c8ba86",
+    "maxmind-join.json": "6efd1e89d1d6cf8d39271ea7968f0de8932b71114b7d07877bbab16c5c7b75dd",
+    "reviewed-notices-join.json": "9d1a44b532b3537e2f0abcabca530db2798af4c0f8e51c93ff2c53d83ceb4fa9"
+  },
+  "reproduction_identity": "All three independently rebuilt in memory and byte-identical; full original registry independently reproduced earlier",
+  "requirement_assessment": {
+    "checksum_verified_extraction": "15175 regular files / 186369136 bytes independently verified earlier",
+    "dependencies": "4999 vendor files joined; nested notice census, nonvendor notice scopes and explicit unresolved metadata retained",
+    "generated_clients": "3 explicit source scopes, 37 header candidates, 714 packaged path candidates and 112 generator PHP sources; not runtime execution",
+    "overlays": "11782 identical / 2 changed / 1670 package-only PHP with exact package owners; nonPHP absence not inferred",
+    "php_entrypoints": "Full original member inventory plus bounded PHP/tag/invocation candidate scan and package candidate rows; binary/oversize/dynamic blind spots explicit",
+    "revisions_and_licenses": "Exact archive/package/file revisions; literal component declarations and explicit scoped unknowns. MaxMind35 byte matches and upstream license declared, not unique provenance or legal compliance",
+    "active_historical_build_paths": "13 source-backed route declarations distinguish selected workflow, legacy and alternative build paths; not build/runtime success"
+  },
+  "not_accepted": [
+    "task5.4 static findings closure",
+    "resolved metadata for every component",
+    "transitive SBOM or legal redistribution compliance",
+    "exhaustive dynamic runtime reachability",
+    "fresh install/reboot or full application acceptance"
+  ],
+  "publication": {
+    "manifest": "doc/php83/evidence/inventory-closure-r1/publish-manifest.json",
+    "manifest_sha256": "e17c98d96e00f4bd8060305c30b5dfb9d6ef5cc7fd7e37d85c5455e1e6c9c29f",
+    "verified_owned_pins": 16,
+    "verified_dependency_pins": 8,
+    "gzip_decompressed_identity": true,
+    "gzip_mtime": 0,
+    "focused_secret_pattern_hits": 0,
+    "literal_new_component_declaration_excerpts_reviewed": 71,
+    "exclusions": [
+      ".extracted tree",
+      "raw archives",
+      "uncompressed inventory attempt duplicates",
+      "raw CLI logs/transcripts",
+      "runtime configuration/credentials",
+      "__pycache__"
+    ],
+    "scope": "Reviewed enumerated metadata/code only; not whole-repository or host secret certification; no stage or commit performed"
+  },
+  "external_cli_attempts": "Earlier Claude/OpenCode attempts timed out; advisory text is not CLI PASS. Independent executed tests/rebuilds above are terminal PASS."
+}

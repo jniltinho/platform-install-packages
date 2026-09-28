@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "inputs": [
+    {
+      "filename": "geoip2-b28a0ed.zip",
+      "url": "https://codeload.github.com/maxmind/GeoIP2-php/zip/b28a0ed0190cd76c878ed7002a5d1bb8c5f4c175",
+      "sha256": "0ab21a12ed067a3969203b73dd0c45e4d2a7256a2bdc3cc566b08a60b6fc7ec9",
+      "use": "read-only offline attribution input; never executed"
+    },
+    {
+      "filename": "reader-7eeccf6.zip",
+      "url": "https://codeload.github.com/maxmind/MaxMind-DB-Reader-php/zip/7eeccf61b078bb23bb07b1a151a7e5db52871e65",
+      "sha256": "6529c8b5956b700a604866904ec7fc9f6a00a2b12da3d0d2383e976907751ccf",
+      "use": "read-only offline attribution input; never executed"
+    }
+  ],
+  "original_source_sha256": "58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28",
+  "retrieval_policy": "Fetch into an owned external artifacts directory, verify SHA256 before comparator use. No source archive is committed or installed."
+}

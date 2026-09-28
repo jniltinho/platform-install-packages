@@ -1,0 +1,137 @@
+{
+  "schema": 1,
+  "scope": "PUBLIC_INPUTS_ONLY_CANDIDATE_MANIFEST_NOT_STAGE_AUTHORIZATION",
+  "owned_files": [
+    {
+      "path": "doc/php83/evidence/inventory-closure-r1/.gitignore",
+      "sha256": "8f43a4f6266b90f7373071c61048be644b4f3bf33dc98a13430d9fb4d4beba3b",
+      "bytes": 28
+    },
+    {
+      "path": "doc/php83/evidence/inventory-closure-r1/components-r2.json",
+      "sha256": "ce32fe92b810c2b094d11a7bf7b1761a1c13d511e84ef2e976f58d5616c8ba86",
+      "bytes": 400106
+    },
+    {
+      "path": "doc/php83/evidence/inventory-closure-r1/inventory-reviewed.json.gz",
+      "sha256": "b37c1324383d7ad61497c70eefb98bec7290624ea4c55782df8c3972eeb2da5e",
+      "bytes": 2656743
+    },
+    {
+      "path": "doc/php83/evidence/inventory-closure-r1/maxmind-join.json",
+      "sha256": "6efd1e89d1d6cf8d39271ea7968f0de8932b71114b7d07877bbab16c5c7b75dd",
+      "bytes": 1117
+    },
+    {
+      "path": "doc/php83/evidence/inventory-closure-r1/report.md",
+      "sha256": "65531be0be069f7b005a37c7190e5cf09b7dc69e1952e013834897e3dac078d5",
+      "bytes": 7269
+    },
+    {
+      "path": "doc/php83/evidence/inventory-closure-r1/result.json",
+      "sha256": "e6bd90bf37723e89891e487b98dbd057e6c2610c4ba3274854de93d760d34a97",
+      "bytes": 1668
+    },
+    {
+      "path": "doc/php83/evidence/inventory-closure-r1/reviewed-notices-join.json",
+      "sha256": "9d1a44b532b3537e2f0abcabca530db2798af4c0f8e51c93ff2c53d83ceb4fa9",
+      "bytes": 644
+    },
+    {
+      "path": "doc/php83/evidence/inventory-closure-r1/supplement-join.json",
+      "sha256": "8a8acbd01625590622bc652aec37759aa9483464e3bb773abdeca132754f0de7",
+      "bytes": 640
+    },
+    {
+      "path": "tools/php83/inventory-closure-r1/build.py",
+      "sha256": "edfca0034a1d7ddca7b2be14ab935c946ca04d842e42838edaed15edca5ac8e0",
+      "bytes": 9176
+    },
+    {
+      "path": "tools/php83/inventory-closure-r1/components.py",
+      "sha256": "d9287ea102e0dc595dfb28fcbcb0339272dfa50daa1accd115cb4afc35c08b32",
+      "bytes": 4907
+    },
+    {
+      "path": "tools/php83/inventory-closure-r1/join_maxmind.py",
+      "sha256": "6c9ae1b5da74eba71f53a557079d9f0da04ce7d1f66dd90bfe577c98ff065036",
+      "bytes": 1937
+    },
+    {
+      "path": "tools/php83/inventory-closure-r1/join_reviewed_notices.py",
+      "sha256": "e8d9aecb7a7d0d363e57474b2d3a13f59235def2f4dc403d8f8744e035123ee4",
+      "bytes": 927
+    },
+    {
+      "path": "tools/php83/inventory-closure-r1/join_supplements.py",
+      "sha256": "ffd8457a76c47510fba64dfc414956286fa22c05cdd22e116d42cb01d440468a",
+      "bytes": 2334
+    },
+    {
+      "path": "tools/php83/inventory-closure-r1/test_components.py",
+      "sha256": "2214559bdba050b44b4ef0f631b8aec373d0fac7e14878acd2b9e0d620efae24",
+      "bytes": 1213
+    },
+    {
+      "path": "tools/php83/inventory-closure-r1/test_inventory.py",
+      "sha256": "fa400e98015a8db6e25c9239e167ec21fe3233f6be06e008e2732b6665509ec3",
+      "bytes": 4373
+    },
+    {
+      "path": "tools/php83/inventory-closure-r1/test_supplements.py",
+      "sha256": "5ba29d7fa8c3de63973b1a196fa9adfc9ca3858ae98a0c8b3eceef25256bd284",
+      "bytes": 1166
+    }
+  ],
+  "required_dependency_files": [
+    {
+      "path": "doc/php83/evidence/dependency-attribution-followup/primary.json",
+      "sha256": "232ad945d54ef3bfda5a8c7777be146bf2641b0551143b166e84a4c50b843ec2",
+      "bytes": 63165
+    },
+    {
+      "path": "doc/php83/evidence/entrypoint-inventory/authorized-real-r1/inventory.json.gz",
+      "sha256": "6ec8336710939b3d465fe49a21ff73d777df30ddb0b5cfd5a04eeb046ae8f50b",
+      "bytes": 2674735
+    },
+    {
+      "path": "doc/php83/evidence/entrypoint-inventory-r1/inventory.json",
+      "sha256": "cab11981558027198246f05322940585bad9ed2c7ef4b4ef3126d65d0e849a50",
+      "bytes": 17878
+    },
+    {
+      "path": "doc/php83/evidence/license-notice-census-r1/maxmind-attribution.json",
+      "sha256": "ff442cc63b86a6d434cc8db8adc4a0bc29348b34e3e4da7a362298f1ea69e124",
+      "bytes": 14388
+    },
+    {
+      "path": "doc/php83/evidence/license-notice-census-r1/primary.json",
+      "sha256": "d9fcc34179afb31e3aa07546df278765834f37dc4d337623a5a6ef09db138409",
+      "bytes": 3110803
+    },
+    {
+      "path": "doc/php83/evidence/license-notice-census-r1/reviewed-r2.json",
+      "sha256": "180b76929ebd2b10457ef430b200eca149ed5189aeac74051ab9a430243fc160",
+      "bytes": 3890322
+    },
+    {
+      "path": "doc/php83/evidence/package-identities/primary.json",
+      "sha256": "9e76e1f9664527102528ea2eb46aae38a0d06d441cf270dc48724086af1515c9",
+      "bytes": 8776601
+    },
+    {
+      "path": "tools/php83/entrypoint-inventory/build.py",
+      "sha256": "d2ed28e1df69479a2f795861c1713966cab0d4ba2f32511afcc15dd3702b3202",
+      "bytes": 22760
+    }
+  ],
+  "external_input": "checksum-pinned original ZIP operator-supplied",
+  "decompression_instructions": "report.md",
+  "excluded": [
+    ".extracted/",
+    "uncompressed inventory*.json",
+    "raw CLI outputs",
+    "runtime configs",
+    "credentials"
+  ]
+}

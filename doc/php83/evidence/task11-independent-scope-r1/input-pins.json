@@ -1,0 +1,8 @@
+{
+  "openspec/changes/migrate-kaltura-php83/tasks.md": "00d399866c9b5ce369e36d4850363574597fcaa688cd81527193a6c06e906cd0",
+  "openspec/changes/migrate-kaltura-php83/design.md": "0b01ab860b835c2383d025deb75a50292ebca02b8e75a874aa4a3068e5538c4a",
+  "doc/php83/dependency-attribution-followup.md": "cab16a52bf75ed2d70c4f367a2d5ffd218e437f7bae1073e8d03d3ec644f13ed",
+  "doc/php83/entrypoint-inventory.md": "60cafda558d26ccee263dae5230d73d0900cdec45e1d392948050c17a941e087",
+  "doc/php83/inventory-ledger.md": "9be27b9fb1e5dc6fd9137d7312c410235949ff38dc6da7d73f4c0cae22d40584",
+  "tools/php83/entrypoint-inventory/build.py": "d2ed28e1df69479a2f795861c1713966cab0d4ba2f32511afcc15dd3702b3202"
+}

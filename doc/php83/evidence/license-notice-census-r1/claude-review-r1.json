@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "executor": "actual Claude CLI",
+  "terminal_exit": 0,
+  "scope": "R1 census independent execution and review only; not subsequent R2 or upstream comparator",
+  "executed": {
+    "tests": 5,
+    "test_exit": 0,
+    "rebuild_exit": 0,
+    "comparison_exit": 0,
+    "output_sha256": "d9fcc34179afb31e3aa07546df278765834f37dc4d337623a5a6ef09db138409"
+  },
+  "findings": [
+    "LF line numbering differed after form feeds",
+    "Display excerpts use replacement decoding and stripping, not raw bytes",
+    "Prefixed/suffixed notice basenames were not complete-scan candidates"
+  ],
+  "disposition": "Root fixed all three in R2, added three tests; independent R2 review pending",
+  "raw_cli_output_published": false,
+  "task_complete": false
+}

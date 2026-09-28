@@ -1,0 +1,26 @@
+{
+  "executor": "independent Codex reviewer",
+  "source_sha256": "ffd8457a76c47510fba64dfc414956286fa22c05cdd22e116d42cb01d440468a",
+  "tests_sha256": "5ba29d7fa8c3de63973b1a196fa9adfc9ca3858ae98a0c8b3eceef25256bd284",
+  "tests": 3,
+  "tests_passed": true,
+  "actual_join_passed": true,
+  "byte_identical_to_author": true,
+  "report_sha256": "8a8acbd01625590622bc652aec37759aa9483464e3bb773abdeca132754f0de7",
+  "result": {
+    "schema": 1,
+    "inputs": {
+      "doc/php83/evidence/inventory-closure-r1/inventory-reviewed.json": "4cd9212e48d806ce7a5cdf852712f4f685cd32182add9a0ec0dacd46567ed162",
+      "doc/php83/evidence/license-notice-census-r1/primary.json": "d9fcc34179afb31e3aa07546df278765834f37dc4d337623a5a6ef09db138409",
+      "doc/php83/evidence/entrypoint-inventory-r1/inventory.json": "cab11981558027198246f05322940585bad9ed2c7ef4b4ef3126d65d0e849a50"
+    },
+    "status": "SUPPLEMENT_IDENTITY_JOINS_PASS",
+    "vendor_file_identities": 4999,
+    "route_declarations": 13,
+    "route_archive_owner_joins": 5,
+    "license_applicability": "NOT_ADJUDICATED",
+    "runtime_activation_verified": false,
+    "task_1_1_complete": false
+  },
+  "scope": "Identity links only; no semantic route or license adjudication added."
+}

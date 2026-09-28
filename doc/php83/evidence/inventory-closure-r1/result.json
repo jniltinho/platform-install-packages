@@ -1,0 +1,45 @@
+{
+  "status": "ORIGINAL_EXTRACTION_AND_IDENTITY_JOIN_PASS_NOT_TASK_CLOSURE",
+  "report_sha256": "4cd9212e48d806ce7a5cdf852712f4f685cd32182add9a0ec0dacd46567ed162",
+  "report_bytes": 17724510,
+  "builder_sha256": "edfca0034a1d7ddca7b2be14ab935c946ca04d842e42838edaed15edca5ac8e0",
+  "tests_sha256": "fa400e98015a8db6e25c9239e167ec21fe3233f6be06e008e2732b6665509ec3",
+  "local_tests": 11,
+  "local_exit": 0,
+  "extraction": {
+    "bytes": 186369136,
+    "files": 15175,
+    "manifest_sha256": "72b17d8e875b03f6feb0d16e59b1e046923a07b7ca884982296fafcdea7c6f4e",
+    "status": "ALL_ORIGINAL_REGULAR_BYTES_VERIFIED"
+  },
+  "summary": {
+    "dependency_directory_rows": 20,
+    "original_invocation_candidates": 5537,
+    "package_relations": {
+      "changed_original_bytes": 2,
+      "package_only_php_overlay": 1670,
+      "same_original_bytes": 11782
+    },
+    "packaged_entrypoint_candidates": 18336,
+    "packaged_php": 13454,
+    "scan_dispositions": {
+      "binary_unscanned": 294,
+      "bounded_text_scanned": 14873,
+      "oversize_unscanned": 8
+    },
+    "source_classes": {
+      "executable_bit": 35,
+      "generated_client_path_candidate": 179,
+      "php_family": 11784,
+      "php_open_tag_candidate": 11840,
+      "php_shebang": 2
+    },
+    "source_files": 15175
+  },
+  "remaining": [
+    "Source-backed active/historical route classification from separate reviewer",
+    "Scoped revision/license gaps from separate attribution lane",
+    "Generated-client identity/classification join beyond path heuristics; actual execution is separate runtime scope",
+    "Non-PHP packaged-file semantic coverage; exact original member registry is complete"
+  ]
+}

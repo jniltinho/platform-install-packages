@@ -1,6 +1,6 @@
 ## 1. Baseline and feasibility gate
 
-- [ ] 1.1 Extract the checksum-verified pinned Kaltura archive and enumerate bundled dependencies, generated clients, packaging overlays and PHP entrypoints; verify a reproducible inventory records revisions, licenses and active versus historical build paths.
+- [x] 1.1 Extract the checksum-verified pinned Kaltura archive and enumerate bundled dependencies, generated clients, packaging overlays and PHP entrypoints; verify a reproducible inventory records revisions, licenses and active versus historical build paths.
 - [ ] 1.2 Reproduce the PHP 7.4 baseline from checksum-verified published packages in a fresh isolated lab, never `.20`; freeze the design's VM/fixture/API/repetition protocol first, enforce target/DNS/redirect guards, and use synthetic data only; verify API/UI/upload/worker/playback checks and save sanitized runtime, extension and timing reports.
 - [ ] 1.3 Run PHP 8.3 syntax checks and a PHP-8.3-capable pinned PHPCompatibility/PHPCS analyzer with testVersion=7.4-8.3 against the exact packaged application, clients and installer PHP; verify every reported finding is classified with a source location and evidence, including manual checks the analyzer cannot cover.
 - [ ] 1.4 Produce the three-distro provider/extension/SAPI matrix (native Noble pinned origins; EL9 AppStream versus Remi evaluation); verify signed suite-compatible PHP 8.3 package resolution and loaded modules in clean test environments, without mixing unsupported distro packages or extension ABIs.

@@ -1,0 +1,255 @@
+{
+  "source_pins": {
+    ".github/workflows/kaltura-server-packages.yml": "873406100928abc20cdbfe29c1f2ee1cb8aab3c194b61a7f66e6a70a4aa29cd3",
+    "build/package_kaltura_clients-generator.sh": "bb45ae98321d175fbad04e812947a10f41bef2cb249768361b352ad2102886d4",
+    "deb/build_all": "a1fc7c7ae6ee4d889d621a7a54c95c2f7f292b086f00e4ee7a762a660a8ee61a",
+    "deb/install_kaltura_all_in_1.sh": "89cb0d1f8965e7de41d259c74f092b15b8445a5a7bee8922a033f0bba7941f48",
+    "deb/kaltura-base/debian/rules": "a04a57217492085a2edd6b3e7e747f9f5816e0036e2a81b08e8c9641f4770fe5",
+    "deb/kaltura-batch/debian/kaltura-batch.init": "a8eb09c22f10f222142d253123ec2ef807c3070a45500b6f6705334735b2ca86",
+    "deb/kaltura-db/debian/postinst": "ac9527c54e9829536fa41679d5beb7bd7f2daffb7a26fddeb0c9d0c983a8b2a4",
+    "deb/kaltura-front/debian/postinst": "3c5f374a0c2d73d308e9cb776277ce896026daed7501fbcd51559827abc3d4ae",
+    "deb/noble/build.sh": "9c2a289116341c55bc016e680529ff9d70769a0b886b3070e92877de6406b4de",
+    "deb/noble/install-aio.sh": "1469f6547b54153b2afcb73e80618213534e3d04f58747215796814bd798c88d",
+    "doc/php83/evidence/apache-php83-handler-r3/template.after.conf": "beb493a555bf69684b9f1d8d7f173a139b03f71da23bd89a57ee48b85cdc3ae4"
+  },
+  "routes": [
+    {
+      "id": "ci-build",
+      "kind": "build",
+      "classification": "current_workflow_selected",
+      "meaning": "Declared DEB matrix and RPM build; not evidence of CI execution.",
+      "anchors": [
+        [
+          ".github/workflows/kaltura-server-packages.yml",
+          "dist: noble"
+        ],
+        [
+          ".github/workflows/kaltura-server-packages.yml",
+          "dist: ubuntu-26.04"
+        ],
+        [
+          ".github/workflows/kaltura-server-packages.yml",
+          "bash deb/${{ matrix.dist }}/build.sh"
+        ],
+        [
+          ".github/workflows/kaltura-server-packages.yml",
+          "bash rpm/el9/build.sh"
+        ],
+        [
+          "deb/noble/build.sh",
+          "dpkg-buildpackage -b -uc -us -d"
+        ]
+      ]
+    },
+    {
+      "id": "noble-install",
+      "kind": "install",
+      "classification": "current_target_declared",
+      "meaning": "Local Ubuntu 24.04 installer; comments are intention, not idempotence verification.",
+      "anchors": [
+        [
+          "deb/noble/install-aio.sh",
+          "# Installs and configures"
+        ]
+      ]
+    },
+    {
+      "id": "installPlugins",
+      "kind": "plugin",
+      "classification": "install_hook_declared",
+      "meaning": "Packaging-source invocation, not installed private derivative identity or proof of seed completion.",
+      "anchors": [
+        [
+          "deb/kaltura-db/debian/postinst",
+          "\tphp $APP_DIR/deployment/base/scripts/installPlugins.php"
+        ]
+      ]
+    },
+    {
+      "id": "insertDefaults",
+      "kind": "install",
+      "classification": "install_hook_declared",
+      "meaning": "Packaging-source invocation, not installed private derivative identity or proof of seed completion.",
+      "anchors": [
+        [
+          "deb/kaltura-db/debian/postinst",
+          "\tphp $APP_DIR/deployment/base/scripts/insertDefaults.php"
+        ]
+      ]
+    },
+    {
+      "id": "insertPermissions",
+      "kind": "install",
+      "classification": "install_hook_declared",
+      "meaning": "Packaging-source invocation, not installed private derivative identity or proof of seed completion.",
+      "anchors": [
+        [
+          "deb/kaltura-db/debian/postinst",
+          "\tphp $APP_DIR/deployment/base/scripts/insertPermissions.php"
+        ]
+      ]
+    },
+    {
+      "id": "insertContent",
+      "kind": "install",
+      "classification": "install_hook_declared",
+      "meaning": "Packaging-source invocation, not installed private derivative identity or proof of seed completion.",
+      "anchors": [
+        [
+          "deb/kaltura-db/debian/postinst",
+          "\tphp $APP_DIR/deployment/base/scripts/insertContent.php"
+        ]
+      ]
+    },
+    {
+      "id": "api-cron",
+      "kind": "cron",
+      "classification": "install_hook_declared",
+      "meaning": "Front creates cron.d link; actual crond activation not measured.",
+      "anchors": [
+        [
+          "deb/kaltura-front/debian/postinst",
+          "\tln -sf $APP_DIR/configurations/cron/api"
+        ]
+      ]
+    },
+    {
+      "id": "cleanup-cron",
+      "kind": "cron",
+      "classification": "explicitly_commented_out",
+      "meaning": "This hook does not create cleanup link; other activation remains unresolved.",
+      "anchors": [
+        [
+          "deb/kaltura-front/debian/postinst",
+          "# currently causing issues"
+        ],
+        [
+          "deb/kaltura-front/debian/postinst",
+          "#ln -sf $APP_DIR/configurations/cron/cleanup"
+        ]
+      ]
+    },
+    {
+      "id": "batch",
+      "kind": "cli",
+      "classification": "native_start_declared_guarded",
+      "meaning": "Resolves BATCHDIR/BATCHEXE; maintenance returns failure before start. ps/awk process matching is not a PHP invocation.",
+      "anchors": [
+        [
+          "deb/kaltura-batch/debian/kaltura-batch.init",
+          "BATCHDIR="
+        ],
+        [
+          "deb/kaltura-batch/debian/kaltura-batch.init",
+          "BATCHEXE="
+        ],
+        [
+          "deb/kaltura-batch/debian/kaltura-batch.init",
+          "if [ -r $BASE_DIR/maintenance ]"
+        ],
+        [
+          "deb/kaltura-batch/debian/kaltura-batch.init",
+          "cd $BATCHDIR"
+        ],
+        [
+          "deb/kaltura-batch/debian/kaltura-batch.init",
+          "nohup $PHP_BIN"
+        ]
+      ]
+    },
+    {
+      "id": "api-web",
+      "kind": "web",
+      "classification": "reviewed_template_route_declared",
+      "meaning": "PHP8 reviewed template route; conditions/aliases are not blanket reachability proof.",
+      "anchors": [
+        [
+          "doc/php83/evidence/apache-php83-handler-r3/template.after.conf",
+          "DocumentRoot"
+        ],
+        [
+          "doc/php83/evidence/apache-php83-handler-r3/template.after.conf",
+          "RewriteRule ^api/"
+        ],
+        [
+          "doc/php83/evidence/apache-php83-handler-r3/template.after.conf",
+          "RewriteCond %{QUERY_STRING}"
+        ],
+        [
+          "doc/php83/evidence/apache-php83-handler-r3/template.after.conf",
+          "RewriteRule api_v3/index.php /alive.html"
+        ]
+      ]
+    },
+    {
+      "id": "client-generator",
+      "kind": "generatedclient",
+      "classification": "packaging_tool_input_declared",
+      "meaning": "Generator archive unpacked into packaged tree; this is not proof every generated client is active.",
+      "anchors": [
+        [
+          "deb/kaltura-base/debian/rules",
+          "clientlibs_archive :="
+        ],
+        [
+          "deb/kaltura-base/debian/rules",
+          "unzip -qq -o $(clientlibs_archive)"
+        ],
+        [
+          "deb/kaltura-base/debian/rules",
+          "mv clients-generator-"
+        ],
+        [
+          "build/package_kaltura_clients-generator.sh",
+          "wget $KALTURA_CLIENTS_GENERATOR_URI"
+        ]
+      ]
+    },
+    {
+      "id": "naos-install",
+      "kind": "install",
+      "classification": "explicit_legacy_target",
+      "meaning": "Naos/Jessie/Wheezy source target contrasts selected Noble workflow; not a claim unreachable or deleted.",
+      "anchors": [
+        [
+          "deb/install_kaltura_all_in_1.sh",
+          "debian naos main"
+        ],
+        [
+          "deb/install_kaltura_all_in_1.sh",
+          "# Debian Jessie"
+        ]
+      ]
+    },
+    {
+      "id": "legacy-build-all",
+      "kind": "build",
+      "classification": "alternative_target_not_selected_by_this_workflow",
+      "meaning": "Default ce target differs current explicit workflow entrypoint; other callers unverified.",
+      "anchors": [
+        [
+          "deb/build_all",
+          "DIST=ce"
+        ],
+        [
+          "deb/build_all",
+          "dpkg-buildpackage -b -uc"
+        ]
+      ]
+    }
+  ],
+  "archive_candidate_paths": [
+    "etc/init.d/kaltura-batch",
+    "opt/kaltura/app/configurations/cron/api.template",
+    "opt/kaltura/app/configurations/cron/cleanup.template",
+    "opt/kaltura/app/configurations/cron/dwh.template",
+    "opt/kaltura/app/configurations/cron/kava.template"
+  ],
+  "limitations": [
+    "Curated selection, not complete ZIP registry; consolidated inventory owns per-file source scan.",
+    "DWH/Kava cron candidates do not prove activation.",
+    "Repository hook declarations differ from private lab overlays; do not transfer their identity to installed packages.",
+    "Sibling graph generation 2026-09-25T19:28:02Z is best-effort only; current worktree pinned direct sources are authoritative.",
+    "No runtime, VM, hook, network or database execution; no task closure."
+  ]
+}

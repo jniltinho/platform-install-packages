@@ -1,0 +1,124 @@
+{
+  "project": "home-nilton-Projetos-nilton-NOVOS-platform-install-packages",
+  "signal": "best_effort",
+  "indexed_at": "2026-09-25T19:28:02Z",
+  "metadata": {
+    "generation": "2026-09-25T19:28:02Z",
+    "index_mode": "full",
+    "recorded_at": "2026-09-25T19:28:24Z",
+    "recording_status": "complete",
+    "ignored_files_stored": 100,
+    "ignored_files_total": 100,
+    "hash_records_complete": true,
+    "coverage_version": 3,
+    "generation_matches": true
+  },
+  "paths": [
+    {
+      "requested_path": ".github/workflows/kaltura-server-packages.yml",
+      "path": ".github/workflows/kaltura-server-packages.yml",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "deb/noble/build.sh",
+      "path": "deb/noble/build.sh",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "deb/noble/install-aio.sh",
+      "path": "deb/noble/install-aio.sh",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "deb/kaltura-base/debian/rules",
+      "path": "deb/kaltura-base/debian/rules",
+      "status": "no_recorded_issue",
+      "freshness": "not_tracked",
+      "recommended_action": "read_source_and_reindex",
+      "coverage": []
+    },
+    {
+      "requested_path": "deb/kaltura-db/debian/postinst",
+      "path": "deb/kaltura-db/debian/postinst",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "deb/kaltura-front/debian/postinst",
+      "path": "deb/kaltura-front/debian/postinst",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "deb/kaltura-batch/debian/kaltura-batch.init",
+      "path": "deb/kaltura-batch/debian/kaltura-batch.init",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "build/package_kaltura_core.sh",
+      "path": "build/package_kaltura_core.sh",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "build/package_kaltura_clients-generator.sh",
+      "path": "build/package_kaltura_clients-generator.sh",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "deb/install_kaltura_all_in_1.sh",
+      "path": "deb/install_kaltura_all_in_1.sh",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "deb/build_all",
+      "path": "deb/build_all",
+      "status": "no_recorded_issue",
+      "freshness": "metadata_match",
+      "recommended_action": "use_graph_with_best_effort_caveat",
+      "coverage": []
+    },
+    {
+      "requested_path": "doc/php83/evidence/apache-php83-handler-r3/template.after.conf",
+      "path": "doc/php83/evidence/apache-php83-handler-r3/template.after.conf",
+      "status": "no_recorded_issue",
+      "freshness": "missing",
+      "recommended_action": "read_source_and_reindex",
+      "coverage": []
+    },
+    {
+      "requested_path": "tools/php83/entrypoint-inventory/build.py",
+      "path": "tools/php83/entrypoint-inventory/build.py",
+      "status": "no_recorded_issue",
+      "freshness": "missing",
+      "recommended_action": "read_source_and_reindex",
+      "coverage": []
+    }
+  ],
+  "scopes": [],
+  "caveat": "Best-effort signal only. No recorded issue does not prove graph or source completeness; read flagged source and qualify claims when metadata is changed or unavailable."
+}

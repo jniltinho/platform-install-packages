@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "executor": "actual Cursor Agent CLI",
+  "mode": "ask read-only",
+  "terminal_exit": 1,
+  "status": "NOT_EXECUTED",
+  "reason": "Authentication required",
+  "review_executed": false,
+  "tests_executed": 0,
+  "credentials_added": false,
+  "raw_output_published": false
+}
