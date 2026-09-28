@@ -1,0 +1,109 @@
+{
+  "transform_sha256": "af2e7e54c9196df2d65e67fb22c428c485b97e00d45935517a5c6a83f72f44ce",
+  "binary_sha256": "1a995dddd470f013258b1890cfc7c9e3b10c344461eb085de6b2ef8f991faec0",
+  "guardian_sha256": "090c5e8faaf9a0fc468ad31994b2077cc8b50858b3577a0d1c7e327433be1af5",
+  "sanitizer_sha256": "b44f3cdc8c38c6c00a1ef099c0a4742650b3b209e70814924115c1c5f146fffb",
+  "cases": [
+    {
+      "case": "reload_reopen",
+      "result": {
+        "status": "STOPPED",
+        "input_bytes": 2538,
+        "child_reaped": true
+      },
+      "observed": {
+        "statuses": [
+          "404",
+          "502",
+          "414",
+          "400",
+          "404",
+          "404"
+        ],
+        "errors": [],
+        "replacement_worker_transition": true,
+        "old_worker_count": 1,
+        "new_worker_count": 1,
+        "reopen_new_file": true,
+        "custom_method_OTHER": true
+      },
+      "event_count": 8,
+      "reasons": [
+        "connect_failure",
+        "file_missing"
+      ],
+      "canary_absent": true,
+      "listener_closed": true
+    },
+    {
+      "case": "collector_lost",
+      "result": {
+        "status": "FAILED",
+        "input_bytes": 1296,
+        "child_reaped": true
+      },
+      "observed": {
+        "statuses": [
+          "404",
+          "502",
+          "414",
+          "400"
+        ],
+        "errors": [],
+        "custom_method_OTHER": true
+      },
+      "event_count": 4,
+      "reasons": [
+        "connect_failure",
+        "file_missing"
+      ],
+      "canary_absent": true,
+      "listener_closed": true
+    },
+    {
+      "case": "startup_error",
+      "result": {
+        "status": "CHILD_EXIT",
+        "input_bytes": 148,
+        "child_reaped": true
+      },
+      "observed": {
+        "statuses": [],
+        "errors": []
+      },
+      "event_count": 1,
+      "reasons": [
+        "unclassified"
+      ],
+      "canary_absent": true,
+      "listener_closed": true
+    },
+    {
+      "case": "invalid_reload",
+      "result": {
+        "status": "STOPPED",
+        "input_bytes": 2280,
+        "child_reaped": true
+      },
+      "observed": {
+        "statuses": [
+          "404",
+          "502",
+          "414",
+          "400",
+          "404"
+        ],
+        "errors": [],
+        "custom_method_OTHER": true
+      },
+      "event_count": 8,
+      "reasons": [
+        "connect_failure",
+        "file_missing",
+        "unclassified"
+      ],
+      "canary_absent": true,
+      "listener_closed": true
+    }
+  ]
+}
