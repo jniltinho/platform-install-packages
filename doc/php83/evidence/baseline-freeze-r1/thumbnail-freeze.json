@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "case": "OWNED_READY_THUMBNAIL_JPEG",
+  "files": {
+    "tools/php83/baseline-freeze-r1/thumbnail.py": "a36e2e4b5ec2c2d7173f8d3063d7c600b6aca4f8ab546fc65b5b560a05e0d52c",
+    "tools/php83/baseline-freeze-r1/thumbnail_decode.py": "75b104a7acd9d6e5a35bbd0b461fe70df0a1f956ef77f08652eafddf97eb22a4",
+    "tools/php83/baseline-freeze-r1/prepare_thumbnail.py": "719b8106968838b35cf3b24ddab0458abbac56caf8f7bd7b26fcf099e2d912db",
+    "tools/php83/baseline-freeze-r1/guest_thumbnail.py": "6761fc5a0b4aad5f979d52fd1eb49f6c86988f0c82a39ca0c4a4e3abb23bd9b9",
+    "tools/php83/baseline-freeze-r1/run_thumbnail.py": "5688b5112342248401228b04ff149dd13f2b08145a7352f59c70e9e86f8e88f8",
+    "tools/php83/baseline-freeze-r1/test_thumbnail.py": "d080bebd4f107287720144e26dd95f51edbc2b5aa50b2ad964a27133d4e456c6"
+  },
+  "tests": [
+    {
+      "command": "python3 -B -m unittest discover -s tools/php83/baseline-freeze-r1 -p test_thumbnail.py -q",
+      "tests": 8,
+      "exit": 0
+    },
+    {
+      "command": "python3 -B -m unittest discover -s tools/php83/baseline-freeze-r1 -p 'test_*.py' -q",
+      "tests": 330,
+      "exit": 0
+    }
+  ],
+  "native_execution": false,
+  "independent_review": "PENDING",
+  "full_acceptance": false,
+  "review_delta": "Explicit err_detect explode for both MJPEG readers; final independent delta pending"
+}

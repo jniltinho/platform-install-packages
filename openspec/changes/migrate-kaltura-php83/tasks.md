@@ -339,3 +339,5 @@ not merely the original import alias. Actual Cursor repeats native83 rejection;
 no Reflection/backend code is reached and no patch is selected. See
 `doc/php83/riak-alias.md`. This corrects the insufficient upstream-alias hypothesis;
 all seven exp11 rejected files and provider compatibility gates remain open.
+
+Thumbnail checkpoint 2026-09-28 (1.2 / 5.5 partial, Baseline74 lab only): r1 THUMB_ROW root cause is the collector, not Kaltura — pinned source stores thumbAsset size in bytes via filesize(); native r2 observed one READY 640x360 jpg asset (45227 bytes). Native r3 then showed getUrl embeds a server-generated download KS (`/ks/`), so the guard refused a credentialed GET; no JPEG GET/decode has run. See `doc/php83/evidence/baseline-freeze-r1/thumbnail-native-r2-r3.md`. Actual checkbox count is 5/51 (1.1, 1.6, 5.1–5.3); none closed here.
