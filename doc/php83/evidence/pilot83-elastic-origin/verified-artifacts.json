@@ -1,0 +1,44 @@
+{
+  "key_fingerprint": "46095ACC8548582C1A2699A9D27D666CD88E42B4",
+  "release_signature_verified": true,
+  "packages_gz_sha256": "5363c1bd93eda5e2923bc8ba0eb93377fc869a9159714faeb8571cade9b6bd8f",
+  "package": {
+    "Package": "elasticsearch",
+    "Priority": "optional",
+    "Section": "web",
+    "Installed-Size": "529058",
+    "Maintainer": "Elasticsearch Team <info@elastic.co>",
+    "Architecture": "amd64",
+    "Source": "elasticsearch",
+    "Version": "7.17.29",
+    "Depends": "bash (>= 4.1), libc6, adduser, coreutils (>= 8.4)",
+    "Conflicts": "elasticsearch-oss",
+    "Filename": "pool/main/e/elasticsearch/elasticsearch-7.17.29-amd64.deb",
+    "Size": "325488012",
+    "MD5sum": "ed5d277b4a9fe6ba7848ae0596aced7c",
+    "SHA1": "8e5a1d3b8d1359d000e2d19da608c480ff77a454",
+    "SHA256": "4a4ecb74e77a6b04a35c5c007d1ec212e99979d300f1fe281d5225562a16cb73",
+    "SHA512": "935b3c4d3b8eade62476392f842730cb8d4d6c7eb07f8025b4c085887b019125bb8f998bd1f19353930086f5e88c68d3bf4aaadbe177182f012dd98907231853",
+    "Description": "Distributed RESTful search engine built for the cloud",
+    "Homepage": "https://www.elastic.co/",
+    "License": "Elastic-License"
+  },
+  "deb_download_verified": true,
+  "plugin": {
+    "sha512": "0fd03cdfda357d2358293801be04722df9650810cf1a7243ae57cb419ba5df0c2b4f5e84c8c368d373a9b40b768cc729e9fce14ecb3fe86b5426d470dab0233c",
+    "sha256": "0da200c82c22d521e7dadc1c24a7841d40aeb01c9785dae822cf87a20750cea8",
+    "size": 11680217,
+    "descriptor": {
+      "type": "isolated",
+      "description": "The ICU Analysis plugin integrates the Lucene ICU module into Elasticsearch, adding ICU-related analysis components.",
+      "version": "7.17.29",
+      "name": "analysis-icu",
+      "classname": "org.elasticsearch.plugin.analysis.icu.AnalysisICUPlugin",
+      "java.version": "1.8",
+      "elasticsearch.version": "7.17.29",
+      "extended.plugins": "",
+      "has.native.controller": "false"
+    },
+    "checksum_source": "official HTTPS .sha512; not an independent signature"
+  }
+}

@@ -1,0 +1,3 @@
+gpgv: Signature made Thu Jun 19 02:43:10 2025 -03
+gpgv:                using RSA key 46095ACC8548582C1A2699A9D27D666CD88E42B4
+gpgv: Good signature from "Elasticsearch (Elasticsearch Signing Key) <dev_ops@elasticsearch.org>"
