@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "decision": "NATIVE_ADDITIVE_TLS_HANDSHAKE_ONLY_ACCEPTED",
+  "receipt_sha256": "c9633bc409a8a68b7a161081d396eefd71b76b071d78aeca81d6d41837f5eed4",
+  "source_pins_match": true,
+  "native_executor": "root coordinator",
+  "independent_vm_calls": 0,
+  "observation": {
+    "apache443_8443_handshake_preserved": true,
+    "credential_requests_authorized": false,
+    "full_acceptance": false,
+    "http88_listener_preserved": true,
+    "private_logs": [
+      "/var/lib/kaltura-baseline-media-tls-r1/access.log",
+      "/var/lib/kaltura-baseline-media-tls-r1/error.log"
+    ],
+    "profile_database_changed": false,
+    "rollback_complete": false,
+    "status": "LAB_MEDIA_TLS8444_HANDSHAKE_ONLY",
+    "wrong_ca_rejected": true
+  },
+  "limits": [
+    "Successful source path proves trusted-CA8444 handshake and wrong-CA rejection; no media GET/HLS/decode/authentication acceptance.",
+    "HTTP88 preservation is listener preservation, not HTTP response/body equivalence.",
+    "rollback_complete false is expected for successful retained installation; snapshot exists, restore untested.",
+    "New nginx access/error logs must join every privacy inventory before credentials.",
+    "Profile database remains unchanged; no selection/cache repair inferred."
+  ]
+}

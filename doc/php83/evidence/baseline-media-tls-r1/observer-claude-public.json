@@ -1,0 +1,18 @@
+{
+  "executor": "actual Claude CLI",
+  "case": "READONLY_MEDIA_TLS_OBSERVER_R1",
+  "exit": 0,
+  "tests_passed": 8,
+  "command": "PYTHONDONTWRITEBYTECODE=1 python3 tools/php83/baseline-media-tls-r1/test_observe.py -v",
+  "source_sha256": "40e17964d961ff456baa9dbc5ee18d577fbda8d3535834e31aaaeb2572a4e6c0",
+  "findings": [
+    "Reject combined certificate/private-key PEM before exporting public certificate hash.",
+    "Add explicit key-never-read regression test."
+  ],
+  "resolution": "Addressed in new observe_r2.py14c9a9c4; known actual R1 CA/leaf pins match prior separately generated certificates, no demonstrated private-key export.",
+  "limitations": [
+    "Pure tests only; CLI did not execute guest observer.",
+    "R2 independently reviewed separately, not claimed reviewed by this CLI."
+  ],
+  "raw_cli_published": false
+}

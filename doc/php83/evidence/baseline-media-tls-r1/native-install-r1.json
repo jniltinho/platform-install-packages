@@ -1,0 +1,36 @@
+{
+  "command": "reviewed pinned installer via finite systemd unit; no authenticated requests",
+  "executor": "root coordinator",
+  "exit": 0,
+  "host": {
+    "UUID": "9e954729-16f3-4eda-9db5-b94e5ada9e44",
+    "VMState": "running",
+    "cpus": "4",
+    "memory": "8192",
+    "name": "kaltura-php74-noble-baseline"
+  },
+  "observation": {
+    "apache443_8443_handshake_preserved": true,
+    "credential_requests_authorized": false,
+    "full_acceptance": false,
+    "http88_listener_preserved": true,
+    "private_logs": [
+      "/var/lib/kaltura-baseline-media-tls-r1/access.log",
+      "/var/lib/kaltura-baseline-media-tls-r1/error.log"
+    ],
+    "profile_database_changed": false,
+    "rollback_complete": false,
+    "status": "LAB_MEDIA_TLS8444_HANDSHAKE_ONLY",
+    "wrong_ca_rejected": true
+  },
+  "snapshot_uuid": "357bc3f1-8477-45d3-9dee-57b5ec0f1daf",
+  "source_pins": {
+    "install.py": "2822c11fe941f22f57323febebeb52066995f891b4d1ef7d5b097b1f38ffc138",
+    "observe_r2.py": "14c9a9c4b1238c452295fa00083962e090b8d7b12f32d75073413e17bfc1c221"
+  },
+  "stderr_bytes": 0,
+  "unit": "baseline-media-tls-install-r1",
+  "unit_inactive": true,
+  "wrapper_exit": 0,
+  "wrapper_stderr_bytes": 0
+}

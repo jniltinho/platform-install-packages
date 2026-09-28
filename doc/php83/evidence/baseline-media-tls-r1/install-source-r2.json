@@ -1,0 +1,24 @@
+{
+  "case": "LAB74_ADDITIVE_NGINX_TLS8444_SOURCE",
+  "sources": {
+    "install.py": "2822c11fe941f22f57323febebeb52066995f891b4d1ef7d5b097b1f38ffc138",
+    "test_install.py": "628f78dc66498f8b87bf62b5508accd8b33a51762042281505655a57ee2693fd",
+    "observe_r2.py": "14c9a9c4b1238c452295fa00083962e090b8d7b12f32d75073413e17bfc1c221"
+  },
+  "tests": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 python3 tools/php83/baseline-media-tls-r1/test_install.py -v",
+    "passed": 11,
+    "exit": 0
+  },
+  "review_fix": "Success terminal receipt creation now inside rollback-protected path; injected persistence failure restores SSL and reloads prior config.",
+  "actual_claude_prior_source": {
+    "sha256": "04f25bf67cc50057fa08b496b4ce4aa402da4bfd9df6f842f791a44ae1b165bf",
+    "exit": 1,
+    "result": "INCOMPLETE_MAX_TURNS",
+    "accepted": false
+  },
+  "native_execution_by_author": false,
+  "database_changes": false,
+  "credential_requests_authorized": false,
+  "full_acceptance": false
+}

@@ -1,0 +1,12 @@
+{
+  "case": "OWNED_PHP74_PRE_MEDIA_TLS_PROFILE_SNAPSHOT",
+  "vm_uuid": "9e954729-16f3-4eda-9db5-b94e5ada9e44",
+  "snapshot_uuid": "357bc3f1-8477-45d3-9dee-57b5ec0f1daf",
+  "snapshot_name": "php74-before-media-tls-profile-r1",
+  "command_exit": 0,
+  "vm_running_after": true,
+  "vm_directory_owner_mode_verified": "current_user/0700",
+  "private_state_exported": false,
+  "restore_rehearsed": false,
+  "full_acceptance": false
+}

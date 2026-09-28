@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "source_sha256": "04f25bf67cc50057fa08b496b4ce4aa402da4bfd9df6f842f791a44ae1b165bf",
+  "independent_tests": 10,
+  "exit": 0,
+  "decision": "READ_ONLY_PREFLIGHT_OK_EXECUTION_CORRECTION_REQUESTED",
+  "finding": "terminal.json creation outside mutation try/except can fail after successful TLS reload, leaving installed state with generic rejection and no rollback attempt.",
+  "requested_test": "Inject final terminal persistence failure after successful mutation and assert explicit rollback or controlled durable failure state.",
+  "no_vm_calls": true
+}

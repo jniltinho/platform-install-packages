@@ -1,0 +1,20 @@
+{
+  "configuration_changed": false,
+  "exit": 0,
+  "host": {
+    "UUID": "9e954729-16f3-4eda-9db5-b94e5ada9e44",
+    "VMState": "running",
+    "cpus": "4",
+    "memory": "8192",
+    "name": "kaltura-php74-noble-baseline"
+  },
+  "observation": {
+    "full_acceptance": false,
+    "status": "MEDIA_TLS8444_PREFLIGHT_ONLY"
+  },
+  "pins": {
+    "install.py": "2822c11fe941f22f57323febebeb52066995f891b4d1ef7d5b097b1f38ffc138",
+    "observe_r2.py": "14c9a9c4b1238c452295fa00083962e090b8d7b12f32d75073413e17bfc1c221"
+  },
+  "stderr_bytes": 0
+}

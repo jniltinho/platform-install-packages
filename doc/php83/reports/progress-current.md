@@ -40,8 +40,17 @@ A read-only nginx inventory also found an empty ssl.conf, the expected packaged
 SSL template, root-owned configuration ancestry and no listener on8444. This
 observed free port is rechecked before any change; no private key bytes were read.
 
-Next: a narrowly reviewed, reversible lab HTTPS-media setup on a separate port
-and protocol-specific profile mapping, preserving HTTP. The native profile copies its configured port into the returned
+The reviewed additive nginx TLS8444 installer subsequently completed with exit0
+and an inactive bounded unit. Correct CA succeeded, wrong CA was rejected,
+Apache443/8443 handshakes and the HTTP88 listener were preserved. Only the empty
+ssl.conf was replaced; the database profile was not changed. New media logs are
+root-owned0600 inside a0700 directory and must join mandatory scans before any
+authenticated media request. Snapshot357bc3f1-8477-45d3-9dee-57b5ec0f1daf was
+created in the private owned VM directory before this change; restoration has
+not been rehearsed.
+
+Next: a narrowly reviewed native protocol-specific profile mapping, preserving
+HTTP, with private whole-row backup, exact delta and cache lifecycle validation. The native profile copies its configured port into the returned
 URL; merely adding a TLS listener will not fix that mapping. No response URL
 rewriting, blanket origin relaxation, broad profile SQL or package hook rerun.
 

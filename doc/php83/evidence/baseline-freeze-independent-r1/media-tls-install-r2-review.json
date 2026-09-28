@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "decision": "BOUNDED_UNAUTHENTICATED_TLS_INSTALL_SOURCE_PASS",
+  "pins": {
+    "install.py": "2822c11fe941f22f57323febebeb52066995f891b4d1ef7d5b097b1f38ffc138",
+    "test_install.py": "628f78dc66498f8b87bf62b5508accd8b33a51762042281505655a57ee2693fd",
+    "observe_r2.py": "14c9a9c4b1238c452295fa00083962e090b8d7b12f32d75073413e17bfc1c221"
+  },
+  "independent_tests": 11,
+  "exit": 0,
+  "resolved_finding": "Success receipt persistence now inside mutation handler; fault-injection after full modeled success verifies rollback empty SSL plus second reload and failed terminal.",
+  "scope": [
+    "Fixed eleven configuration hashes and binary/certificate/metadata guards; exclusive empty SSL replacement and owned-inode rollback.",
+    "Root master pidfile/executable/cmdline checked and pidfd HUP; no raw nginx diagnostic output exported.",
+    "Existing listener preservation and right/wrong CA handshakes, no DB/API/authenticated media requests.",
+    "Pinned base.conf off directives limited to status locations; no private copy needed."
+  ],
+  "conditions": [
+    "External exclusive coordinator and preserved recovery snapshot.",
+    "Pinned observer module on staging.",
+    "Mandatory new private log inventory integration before authenticated traffic."
+  ],
+  "limitations": [
+    "Source and modeled tests only; no VM calls by reviewer.",
+    "Partially written terminal file can remain if persistence fails; captured exit/status/rollback flags take precedence over file presence.",
+    "SIGKILL/power loss require explicit recovery inspection; no restore test claimed.",
+    "Actual Claude old-source max-turns result incomplete, not revised approval."
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "exit": 0,
+  "metadata": {
+    "/var/lib/kaltura-baseline-media-tls-r1": {
+      "directory": true,
+      "gid": 0,
+      "mode": "0o700",
+      "nlink": 2,
+      "regular": false,
+      "uid": 0,
+      "xattrs_present": false
+    },
+    "/var/lib/kaltura-baseline-media-tls-r1/access.log": {
+      "directory": false,
+      "gid": 0,
+      "mode": "0o600",
+      "nlink": 1,
+      "regular": true,
+      "uid": 0,
+      "xattrs_present": false
+    },
+    "/var/lib/kaltura-baseline-media-tls-r1/error.log": {
+      "directory": false,
+      "gid": 0,
+      "mode": "0o600",
+      "nlink": 1,
+      "regular": true,
+      "uid": 0,
+      "xattrs_present": false
+    }
+  },
+  "read_log_contents": false
+}
