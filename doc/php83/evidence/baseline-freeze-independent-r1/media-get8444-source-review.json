@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "decision": "FIXED_TLS8444_GET_TRANSPORT_COMPONENT_PASS",
+  "pins": {
+    "media_get8444.py": "741712af0acb01c0cf5531cd5c474da34572b9725afcbf19223e5b35a815c064",
+    "test_media_get8444.py": "014cd9d107d22a83bc939ea98bc2b81a7c71c39498bcb5ec17937e54bd6fe4b3"
+  },
+  "independent_tests": 5,
+  "exit": 0,
+  "scope": [
+    "Exact baseline74 HTTPS8444 subclass only, generic Origin unchanged.",
+    "Queries/fragments including empty delimiters forbidden.",
+    "Pinned CA, no redirects/proxy, fixed headers, bounded30-second private IPC and body/header caps inherited."
+  ],
+  "limitations": [
+    "No source-bound nested route authorization or response parser approval.",
+    "No integration or actual GET/VM execution by reviewer.",
+    "New nginx log inventory must be mandatory in authenticated wrapper."
+  ]
+}

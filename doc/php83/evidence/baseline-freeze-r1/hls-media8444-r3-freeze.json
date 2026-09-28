@@ -1,0 +1,27 @@
+{
+  "change": "Whole-batch finite common-end convergence only; workload byte-identical to R2",
+  "deadline_seconds": 700,
+  "files": {
+    "tools/php83/baseline-freeze-r1/common_end.py": "3264c66211a8730c35ca192a764603f71c8cd21fad0f64ca68c7db7aa637b096",
+    "tools/php83/baseline-freeze-r1/guest_hls_media8444_r3.py": "26fcdfcf317f5d0dfc5a1540635c7d02a38517cfe797faa7258de6820e76c4b0",
+    "tools/php83/baseline-freeze-r1/prepare_hls_media8444_r3.py": "0aaf9024a6cbd88ac581d030da7046c8b20b4deb00f1f84074ab635137edc1ba",
+    "tools/php83/baseline-freeze-r1/run_hls_media8444_r3.py": "2dcfd728b36de055cb49ee292a293560b68d536018b6bda84abc46901277e1e6",
+    "tools/php83/baseline-freeze-r1/test_common_end.py": "a3e462a803ed9ec4541923a24c23a1680db23e5bc0f6d70b095efe0c4425b5d0",
+    "tools/php83/baseline-freeze-r1/test_hls_media8444_r3.py": "bef7235e3ca570610f065ed7a268d70f709f4a6d58d72b5b069f8b48ca3b3171"
+  },
+  "full_acceptance": false,
+  "independent_review": "PENDING",
+  "maximum_sweeps": 3,
+  "native_execution": false,
+  "opaque_incomplete_retry": false,
+  "original_boundaries_unchanged": true,
+  "positive_retry": false,
+  "schema": 1,
+  "tests": {
+    "actual_ast_integration_and_projection": 5,
+    "aggregate": 288,
+    "exit": 0,
+    "helper": 10
+  },
+  "workload_retries": 0
+}

@@ -1,0 +1,36 @@
+{
+  "files": {
+    "tools/php83/baseline-freeze-r1/guest_hls_media8444.py": "3b91f946c0145067d292c125b1fb6f96ad5eaefe0e931e03f2129eebb2daedad",
+    "tools/php83/baseline-freeze-r1/hls_context_proof.py": "a2bf5ee4de39119ad4c0c2eb743bdb381e7550eb2d2dd80534dc28572644bdc5",
+    "tools/php83/baseline-freeze-r1/hls_media8444.py": "cc97c2b6fdd5fc49f01b98a6a9fe332189ee9309a7a795400c517d239ebc7381",
+    "tools/php83/baseline-freeze-r1/hls_nested8444.py": "fcbadbb8a86b84c6bea05880ce7dfe341188a63bceb1564d5d9239946b73cb3e",
+    "tools/php83/baseline-freeze-r1/hls_playlist_bridge.py": "9f19a1e72e378e9867cda2a60f8823275de90948cc28564739886536f3b03e52",
+    "tools/php83/baseline-freeze-r1/hls_response.py": "a43fb5f9a0848cbf5fef5d7cf70423255a023f6f7b06d8a9d81da0508f93f62a",
+    "tools/php83/baseline-freeze-r1/prepare_hls_media8444.py": "1645c87a3473d6f43d7714c472f7f39ba38c8687f9ce0aba0df31f0e3695bd8b",
+    "tools/php83/baseline-freeze-r1/run_hls_media8444.py": "ae3fb8a9075503755c2ceb4f7fc8e89d88a5009bda12dd1e9e41444f347e92f5",
+    "tools/php83/baseline-freeze-r1/test_hls_media8444.py": "da5eb84e7d3f6f94e4c010ed0f93454bd4198fa422f0f93121655d946b7f051e"
+  },
+  "full_acceptance": false,
+  "independent_review": "PENDING",
+  "native_execution": false,
+  "remaining": [
+    "Authenticated nginx-vod-module1.33 segment producer source",
+    "Actual media playlist semantics",
+    "Segment download and decode",
+    "Task1.2 full environmental and functional freeze"
+  ],
+  "schema": 1,
+  "scope": "one current HTTPS context; one master443 GET; one exact owned index.m3u8 GET8444; no segment requests",
+  "tests": [
+    {
+      "command": "python3 -B -m unittest discover -s tools/php83/baseline-freeze-r1 -p test_hls_media8444.py -v",
+      "count": 9,
+      "exit": 0
+    },
+    {
+      "command": "python3 -B -m unittest discover -s tools/php83/baseline-freeze-r1 -p 'test_*.py' -q",
+      "count": 267,
+      "exit": 0
+    }
+  ]
+}

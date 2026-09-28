@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "decision": "HLS_R2_PREFLIGHT_LOOP_CORRECTION_SOURCE_PASS",
+  "pins": {
+    "run_hls_media8444_r2.py": "039ba87f2b4a9a28898eace404a71d9a6ff27b48574eec2e8d5bfcbf69eb4465",
+    "guest_hls_media8444_r2.py": "f842e0b6aff69ea36d41dae9473876a8ffb5a56c8c9e12415d1104676068176e",
+    "prepare_hls_media8444_r2.py": "b64ff595e8bf79d133a3bbbb545e01a9540d008b1f5e02b440cc65397abb39b5",
+    "test_hls_media8444_r2.py": "5a35ddd4e70ca306d54e07d02f77a5df3d02ca3af516c458d803c809777a3aed"
+  },
+  "independent_tests": 6,
+  "exit": 0,
+  "historical_failure_receipt_sha256": "b1454ed4243588ca3494872e7e40d9892241b08c9ec202b7952e1c96b4e957e3",
+  "review_miss": "Prior review and9tests checked generated source equality/projections, not execution of module pin loop. Dict iteration without.items caused unpackValueError before auth/GET; independent reviewer failed to detect it.",
+  "regression": [
+    "Exact original AST loop reproduces failure.",
+    "Exact corrected AST loop authenticates all real source bytes.",
+    "Altered source fails HLS_PIN; absent source fails closed before imports.",
+    "Single semantic guestdelta .items; host full success/negative projections retained."
+  ],
+  "limits": [
+    "No native execution by reviewer, originalfailure preserved.",
+    "Same two-manifest-only scope, zero segment/decode/atomicity acceptance."
+  ]
+}

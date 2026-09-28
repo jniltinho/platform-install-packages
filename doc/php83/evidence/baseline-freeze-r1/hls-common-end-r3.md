@@ -1,0 +1,11 @@
+# Common-end convergence, separate R3
+
+R2's two manifests returned HTTP 200 (master 203 bytes, media 872 bytes, five URI/EXTINF lines and ENDLIST), but the operation **failed** its common privacy end gate. Later complete-zero failure scans do not retrospectively make it pass. The saved R2 result and source remain immutable.
+
+Previously `audit_all` took its expected cutoff before each batch performed its own quiet period and complete scans. Background append between those points could produce valid complete-zero scans yet unequal final cutoff. The new pure helper performs at most three **whole-batch** sweeps within a 700-second deadline, not API/media retries. Every call receives the original start and journal start objects. The actual guest `audit_all` function is executed in the integration fixture, not merely inspected for a string.
+
+All batches must finish complete and zero before considering retry. File inventories/device/inode must remain identical; sizes may only increase, mtime cannot regress or change at unchanged size, and journal boot must remain equal. Every scanner offset must be between the before/after sizes. Positive matches and scanner exceptions escape immediately and remain recorded by the existing guest. Rotation/truncation/config/source failures are not append retries. No nested per-batch convergence is invoked inside these sweeps, avoiding multiplying retry bounds.
+
+Success still requires unchanged full before/after snapshots and every batch's end offsets equal the same cutoff. Each completed attempt emits only fixed classification and counts, never filenames/cursors/log data. Continuous append exhausts and fails; unsafe changes fail immediately. Existing early per-phase audits retain their historical behavior. The 1100-second service cap and host timeout remain unchanged as outer bounds; this is finite observation, not a claim that future logs remain quiet.
+
+Run protocol stays the same with new `run_hls_media8444_r3.py`, exclusive stage `/var/lib/kaltura-baseline-hls-media8444-r3`, previous failed unit `baseline-freeze-2329cd95.service` inactive, and the exact successful protocol-selection receipt supplied via `--split-proof`/SHA. Root alone executes after independent review. No profile writes, new uploads, segments, decode or full baseline acceptance are authorized by this derivative.

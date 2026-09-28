@@ -1,0 +1,51 @@
+{
+  "case": "HLS_R3_COMMON_END_FINITE_CONVERGENCE",
+  "executor": "actual Claude CLI",
+  "terminal_exit": 0,
+  "verdict": "BOUNDED_SOURCE_REVIEW_NO_MATERIAL_BLOCKER",
+  "sources": {
+    "common_end.py": "3264c66211a8730c35ca192a764603f71c8cd21fad0f64ca68c7db7aa637b096",
+    "test_common_end.py": "a3e462a803ed9ec4541923a24c23a1680db23e5bc0f6d70b095efe0c4425b5d0",
+    "prepare_hls_media8444_r3.py": "0aaf9024a6cbd88ac581d030da7046c8b20b4deb00f1f84074ab635137edc1ba",
+    "guest_hls_media8444_r3.py": "26fcdfcf317f5d0dfc5a1540635c7d02a38517cfe797faa7258de6820e76c4b0",
+    "run_hls_media8444_r3.py": "2dcfd728b36de055cb49ee292a293560b68d536018b6bda84abc46901277e1e6",
+    "test_hls_media8444_r3.py": "bef7235e3ca570610f065ed7a268d70f709f4a6d58d72b5b069f8b48ca3b3171"
+  },
+  "commands": [
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/baseline-freeze-r1 -p test_common_end.py -v",
+      "tests": 10,
+      "exit": 0
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/baseline-freeze-r1 -p test_hls_media8444_r3.py -v",
+      "tests": 5,
+      "exit": 0
+    }
+  ],
+  "review_scope": [
+    "Original file/journal starts retained for every sweep.",
+    "Only complete-zero scans and append-only identity-preserving drift permit another audit sweep.",
+    "No workload/auth/media GET replay.",
+    "Unsafe identity, positive or opaque incomplete results remain terminal.",
+    "At most3 sweeps and700-second checked deadline, strict final common-end offsets."
+  ],
+  "conditional_finding_resolution": {
+    "finding": "Production snapshot value equality was outside Claude read scope.",
+    "coordinator_source_check": "Both exact pinned Mark and Cursor use frozen dataclasses with value equality.",
+    "sources": {
+      "append-window-v1/scan.py": "43189edbe0cfb9f4a0654b7b8425f8f4a876bf270a309f96309142a0ec5b34fc",
+      "journal-window-v1/scan.py": "a390e2464c3df47b36ed0b2e19607887b908351d3e7245439e392646239ba5e8"
+    }
+  },
+  "limitations": [
+    "Pure tests use synthetic snapshots; no VM/API/DB/HLS execution by reviewer.",
+    "Opaque journal cursors and underlying scanner deadlines retain their established scope.",
+    "An APPEND_ONLY diagnostic can precede terminal no-observed-append rejection; not privacy success.",
+    "Unsafe drift between sweeps may fail without a separate diagnostic row.",
+    "Failure-path audit can start its own bounded convergence; outer unit deadline still applies."
+  ],
+  "raw_cli_published": false,
+  "native_acceptance": false,
+  "full_acceptance": false
+}

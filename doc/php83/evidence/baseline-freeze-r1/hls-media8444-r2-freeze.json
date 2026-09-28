@@ -1,0 +1,20 @@
+{
+  "change": "Only dict.items() in newly generated guest dependency pin loop; new stage and inactive previous unit guard",
+  "files": {
+    "tools/php83/baseline-freeze-r1/guest_hls_media8444_r2.py": "f842e0b6aff69ea36d41dae9473876a8ffb5a56c8c9e12415d1104676068176e",
+    "tools/php83/baseline-freeze-r1/prepare_hls_media8444_r2.py": "b64ff595e8bf79d133a3bbbb545e01a9540d008b1f5e02b440cc65397abb39b5",
+    "tools/php83/baseline-freeze-r1/run_hls_media8444_r2.py": "039ba87f2b4a9a28898eace404a71d9a6ff27b48574eec2e8d5bfcbf69eb4465",
+    "tools/php83/baseline-freeze-r1/test_hls_media8444_r2.py": "5a35ddd4e70ca306d54e07d02f77a5df3d02ca3af516c458d803c809777a3aed"
+  },
+  "full_acceptance": false,
+  "historical_failure_preserved": true,
+  "native_execution": false,
+  "original_preflight_bug": "Dictionary iteration unpacked a filename rather than a key/value pair; ValueError before module imports and credentials",
+  "regression": "Execute exact original AST loop to reproduce ValueError, exact fixed loop against all real module bytes, drift HLS_PIN, AST-only-change comparison, full public projection",
+  "schema": 1,
+  "tests": {
+    "aggregate": 273,
+    "exit": 0,
+    "focused": 6
+  }
+}

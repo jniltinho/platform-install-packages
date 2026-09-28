@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "decision": "FINITE_SAME_START_WHOLE_BATCH_CONVERGENCE_SOURCE_PASS",
+  "pins": {
+    "common_end.py": "3264c66211a8730c35ca192a764603f71c8cd21fad0f64ca68c7db7aa637b096",
+    "guest_hls_media8444_r3.py": "26fcdfcf317f5d0dfc5a1540635c7d02a38517cfe797faa7258de6820e76c4b0",
+    "run_hls_media8444_r3.py": "2dcfd728b36de055cb49ee292a293560b68d536018b6bda84abc46901277e1e6",
+    "prepare_hls_media8444_r3.py": "0aaf9024a6cbd88ac581d030da7046c8b20b4deb00f1f84074ab635137edc1ba",
+    "test_common_end.py": "a3e462a803ed9ec4541923a24c23a1680db23e5bc0f6d70b095efe0c4425b5d0",
+    "test_hls_media8444_r3.py": "bef7235e3ca570610f065ed7a268d70f709f4a6d58d72b5b069f8b48ca3b3171"
+  },
+  "independent_tests": {
+    "helper": 10,
+    "integration": 5
+  },
+  "exit": 0,
+  "scope": [
+    "At most3 complete sweeps and checked700second budget; no nested inner retry in batch path.",
+    "Exact AST integration test preserves original start/jstart identity and repeats every batch, workload block unchanged.",
+    "All counts zero and complete scans required before append-only retry; positive/incomplete/identity/truncate/rotation/boot/config errors terminal.",
+    "Final equal snapshots and all batch end_offsets at shared cutoff required; fixed diagnostic counters only."
+  ],
+  "limits": [
+    "700second checked budget not asynchronous cancellation; externally finite1100second unit containment retained.",
+    "Historical R2 COMMON_AUDIT_END_DRIFT failure preserved.",
+    "No GET/context workload replay within sweep, segments/decode still absent.",
+    "No VM calls by reviewer."
+  ]
+}
