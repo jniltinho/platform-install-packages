@@ -82,3 +82,20 @@ Commands: `run_thumbnail_rN.py --check ...` (READ_ONLY_PREFLIGHT_PASSED) then on
   (or serve via API POST, or first explain why the KS is required) is an operator
   decision; the "no credentials in GET" rule is not relaxed here.
 - UI/Admin/KMC, FullHD60 upload, timing protocol and remaining 1.2 cases stay open.
+
+## Why getUrl embeds a download KS — read-only probe (`thumb-ks-reason-r1.json`)
+
+`tools/php83/baseline-freeze-r1/thumb_ks_reason.py` reuses the pinned `profile_socket.py`
+transport (sha256 9735aad6…; guest-side password, DB identity check, READ ONLY
+transaction, 4 aggregate SELECTs) and exports counts/booleans only. Guest guard
+re-verifies installed `entry.php`, `asset.php`, `PermissionPeer.php`,
+`accessControl.php`, `thumbAsset.php` against the pinned archive. Exit 0, stderr 0.
+
+Observed: partner 102 has `FEATURE_ENTITLEMENT` active (status 1), which alone
+makes `asset::isKsNeededForDownload()` true. The entry is not secured: moderation
+normal, no future start / near end date, own live access control without rules.
+So every getUrl for this partner's assets embeds a server-generated download KS by
+design. How partner 102 acquired entitlement (installer default vs lab overlay) is
+not yet established. Local tests: `test_thumb_ks_reason` 5 OK. Limitations:
+compressed ACL rules are not decoded (rules column empty/`a:0:{}` check only);
+timestamps compared with DB `NOW()`.
