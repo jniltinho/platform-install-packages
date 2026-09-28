@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "decision": "PURE_PLAN_STRICT_IDENTITY_FINDING",
+  "pins": {
+    "plan.py": "9180e6ab3df09f5b4d04ee1cda1ad63e9a5a208612c0de877ffaab9035edde8f",
+    "test_plan.py": "004f5194a0870a028b22d0138bdc3d443a410d7b778a296eff278329278a20a6"
+  },
+  "tests": 6,
+  "exit": 0,
+  "finding": "require_next tuple/dataclass equality accepts bool/float aliases in Part fields and returns supplied noncanonical object. Independently reproduced first Part(number=True,offset=False,length=float(CHUNK),resume=0,final_chunk=0,resume_at=-1.0).",
+  "recommendation": "Enforce exact Part and field types before equality or return canonical object after strict validation; test bool/float aliases.",
+  "correct_scope": [
+    "Generated canonical plan covers112 contiguous chunks with one final marker.",
+    "Caller must prove file/transport/token/acknowledgement; planner cannot prevent lying about remote acknowledgements or actual replay."
+  ],
+  "reviewer_vm_calls": false
+}

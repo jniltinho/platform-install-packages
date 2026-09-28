@@ -1,0 +1,34 @@
+{
+  "schema": 1,
+  "decision": "PURE_LONG_PLAN_FIX_REVIEWED",
+  "independent_tests": 7,
+  "exit": 0,
+  "fix": "Exact Part and each scalar type validated before dataclass equality, correcting preserved bool/float alias finding.",
+  "actual_cli": {
+    "executor": "actual Claude CLI",
+    "input_source_pins": {
+      "plan.py": "789d43b05fb26ecaf497d531514e653427d889369ca6d956876577688fb59e89",
+      "test_plan.py": "b0873ebbbea559f2018087fbdc8e1c5c07ff2aed2d632b84268e6958d3a21edb",
+      "README.md": "4828e26e8096fde235e68cb3c719d49055d85e210af6f624ae0fc527133ee075"
+    },
+    "exit": 0,
+    "elapsed_seconds": 46.72,
+    "stdout_bytes": 7072,
+    "stderr_bytes": 0,
+    "tests_executed_by_cli": false
+  },
+  "cli_verdict": "No blocking finding, source-only review; no tests executed by CLI.",
+  "nonblocking_findings": [
+    "Stateless require_next cannot prevent same arguments being called twice; docstring should align with README caller-counter limitation.",
+    "Completion versus invalid acknowledgement use same error category; future executor must explicitly validate remote completion.",
+    "Minor maintenance/test coverage suggestions do not alter execution evidence."
+  ],
+  "limits": [
+    "Native upload semantics/filebytes/tokenownership/acknowledgements/transport untested.",
+    "No upload/VM authorization or claim.",
+    "Original flaw receipt retained."
+  ],
+  "raw_cli_published": false,
+  "final_source_sha256": "2ce02e69e93c068c1ca34f732d906ed24aa9d0efa3feae7900d536a8e388c30c",
+  "final_delta": "Verified exact inverse of one docstring sentence reproduces Claude input789d43b0. No executable code changed. Stateless limitation now explicit; prior CLI input pins preserved."
+}
