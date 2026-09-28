@@ -1,0 +1,24 @@
+{
+  "scope": "FIRST_SOURCE_BOUND_HLS_MANIFEST_ONLY",
+  "files": {
+    "tools/php83/baseline-freeze-r1/hls_source_r2.py": "b1b4e5ed19d1589b84fb4e09bf4b98dd32d668e64b54ea69efde59bdf33d80bb",
+    "tools/php83/baseline-freeze-r1/hls_first.py": "ca5bc2ad461642c8efc5f600881de32f8850f5ef18f7bb1878fcce375ac503ad",
+    "tools/php83/baseline-freeze-r1/prepare_hls_first.py": "2543d33f34b02ee431811df6ca6623776153e0bb8102baf29ed290f2621f0b43",
+    "tools/php83/baseline-freeze-r1/guest_hls_first.py": "453af48e64cd98f36e8302dc5970cebe07229b2fe0257c1db4bbe21f1fc95d16",
+    "tools/php83/baseline-freeze-r1/run_hls_first.py": "517767eaaf188b43487a2f5593b0e545a6d41feb21213d9997996e3549c31ce2",
+    "tools/php83/baseline-freeze-r1/test_hls_first.py": "c1731b6aff953921d0151d18aa595d4882fac12ad733d1f6f85f30b85b429771"
+  },
+  "tests": {
+    "focused": 8,
+    "exit": 0
+  },
+  "maximum_manifest_bytes": 65536,
+  "nested_requests": 0,
+  "response_secret_coverage_complete": false,
+  "source_pin": {
+    "path": "/opt/kaltura/app/alpha/apps/kaltura/lib/myEntryUtils.class.php",
+    "sha256": "70ebf2b99fbd5b898f88700b5c696eb1d64258f52bbfeb77bb68f8ef57306089"
+  },
+  "native_executed_by_author": false,
+  "full_acceptance": false
+}

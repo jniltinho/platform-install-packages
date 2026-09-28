@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "decision": "FIRST_HLS_MANIFEST_REJECTED_NOT_HLS_ACCEPTANCE",
+  "artifact_sha256": "76219e70d070fb90828e6f463bb48add880d2dffa6b5abc0593a866e6d7a7054",
+  "guest_exit": 2,
+  "unit_inactive": true,
+  "final_closed_receipt": {
+    "failure_code": "HLS_MANIFEST_REJECTED",
+    "failure_privacy": {
+      "finite_scans_complete_and_zero": true
+    },
+    "failure_stage": "API_ROUND",
+    "hls_route": {
+      "credential_free_fixed_grammar": true,
+      "nested_get_authorized": false,
+      "route": "NATIVE_PLAYMANIFEST",
+      "source_bound": true
+    },
+    "last_audit_quiet": {
+      "audit": 3,
+      "maximum_seconds": 30,
+      "quiet_seconds": 2,
+      "samples": 9,
+      "stage": "API_ROUND",
+      "status": "QUIET_WINDOW_OBSERVED"
+    },
+    "status": "FAILED_OR_INCOMPLETE_MEDIA_OBSERVATION"
+  },
+  "interpretation": [
+    "Exact source-bound first URL guard passed; overall HLS_MANIFEST_REJECTED does not identify HTTP/header/body/parser cause.",
+    "No successful manifest receipt or nested GET; no HLS/playback/decode acceptance.",
+    "Failure finite scans completezero only for known/enrolled patterns. Manifest parse may fail before reference enrollment; no whole-manifest/response privacy claim.",
+    "Preserve failure; next separately reviewed diagnostic should export closed transport/parser code/counts, never raw body/URLs/headers."
+  ],
+  "reviewer_vm_calls": false
+}

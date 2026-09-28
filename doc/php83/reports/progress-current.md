@@ -1,14 +1,31 @@
 # PHP 8.3 — status atual e tarefas restantes
 
-Atualizado: 2026-09-28T19:28:22.517639+00:00
+Atualizado: 2026-09-28T20:33:15.146862+00:00
 
 **5 concluídas / 46 abertas / 51 tarefas.** Os 24 requisitos originais e 27 casos detalhados se sobrepõem; não são 51 funcionalidades independentes. Sem percentual ou previsão de conclusão inferidos de testes.
 
-## Latest accepted partial milestone: native HTTPS progressive delivery
+## Current execution: task 1.2 baseline acceptance
 
-Native serve-progressive R3 completed with exit 0 and an inactive unit: the original 1,511,134-byte file matched SHA256 `612d179c75f8f2374b7ac59c2dd7edba65e38eb357b870e8ad8c2e83d63b5473`, and both byte ranges passed. Four current-secret/KS full/prefix patterns were zero in complete finite file/journal scans with a verified common end. Source identities remained unchanged. The guard accepts only a fully consumed, unique named-parameter route with exact owned identifiers and privately source-derived filename; unknown fields and credentials remain rejected. No native URL rewriting, historical failure waiver, task completion or release approval.
+No operator authorization is pending for the already approved isolated lab work.
+Native progressive HTTPS delivery is accepted for byte/hash and two Range checks.
+The subsequent READY rendition playback-context observation also passed: one
+HTTPS HLS source and matching selected flavor, with complete finite scans of the
+six enrolled patterns. Whole-response secret coverage and playback were not
+claimed by that API observation.
 
-Next functional subcase: a bounded native HLS playback-context observation (no media GET), followed by reviewed HLS/decode tests. Long media, UI and formal repeated measurements remain open. Earlier failures below are historical evidence, not the current progressive result.
+The first native HLS manifest attempt has now ended with guest exit 2 and an
+inactive unit (`baseline-freeze-e9c1d318`): `HLS_MANIFEST_REJECTED` during
+`API_ROUND`. The source-bound native route guard passed, but the current combined
+error does not distinguish transport from parser rejection. No successful
+manifest parse, nested fetch or decode is claimed. Failure-path scans of enrolled
+patterns completed with zero matches; that is not whole-manifest privacy proof.
+
+Next: a separately reviewed closed diagnostic receipt to identify the exact HLS
+failure without persisting URLs or response bodies, then the smallest supported
+repair/test. A pure long-upload chunk planner is being tested independently in
+parallel; it has not uploaded anything. Long media, thumbnails, UI, environment
+provenance and formal repeated measurements remain open. All historical failures
+below remain evidence, not the current execution state. No task checkbox changed.
 
 ## Contagem por área
 

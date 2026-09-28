@@ -1,0 +1,6 @@
+{
+  "alpha/apps/kaltura/lib/myEntryUtils.class.php": "70ebf2b99fbd5b898f88700b5c696eb1d64258f52bbfeb77bb68f8ef57306089",
+  "alpha/apps/kaltura/lib/kPlaybackContextDataHelper.php": "7d7ec74448fb4161dabe3ebf02e0be5ee9ae07e0e3c69e1c97c08bb0305eaaab",
+  "alpha/apps/kaltura/lib/kManifestRenderers.php": "0eae1dcf29f46d4c459b3f749cfd3222550181f40139a8aec04001074871df14",
+  "alpha/lib/model/DeliveryProfileAppleHttp.php": "75698c78c6d2675b192bf61165826dec321486b17c61ff73b4d2c6e4d882ceda"
+}

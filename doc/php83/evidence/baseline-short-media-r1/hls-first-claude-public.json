@@ -1,0 +1,15 @@
+{
+  "case": "first-native-hls-manifest-guard-r2",
+  "executor": "actual Claude CLI",
+  "terminal_exit": 0,
+  "tests": 5,
+  "tests_exit": 0,
+  "permission_denials": [],
+  "verdict": "APPROVED_FIRST_MANIFEST_GUARD_ONLY",
+  "source_sha256": "b1b4e5ed19d1589b84fb4e09bf4b98dd32d668e64b54ea69efde59bdf33d80bb",
+  "limits": [
+    "No VM/network/native route execution.",
+    "Caller separately validates READY ownership, CA/deadline/no redirects/privacy.",
+    "Does not approve nested URI GET or decode."
+  ]
+}

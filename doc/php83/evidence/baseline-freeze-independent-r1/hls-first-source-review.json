@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "decision": "BOUNDED_FIRST_HLS_MANIFEST_ONLY_SOURCE_APPROVED",
+  "pins": {
+    "run_hls_first.py": "517767eaaf188b43487a2f5593b0e545a6d41feb21213d9997996e3549c31ce2",
+    "guest_hls_first.py": "453af48e64cd98f36e8302dc5970cebe07229b2fe0257c1db4bbe21f1fc95d16",
+    "hls_first.py": "ca5bc2ad461642c8efc5f600881de32f8850f5ef18f7bb1878fcce375ac503ad",
+    "hls_source_r2.py": "b1b4e5ed19d1589b84fb4e09bf4b98dd32d668e64b54ea69efde59bdf33d80bb",
+    "test_hls_first.py": "c1731b6aff953921d0151d18aa595d4882fac12ad733d1f6f85f30b85b429771"
+  },
+  "test_command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/baseline-freeze-r1 -p test_hls_first.py -q",
+  "tests": 8,
+  "exit": 0,
+  "review": [
+    "One context and one first-manifest GET only, <=64KiB, same pinnedCA443 bounded transport. No nested GET.",
+    "Exact descriptor/source-derived route/profile/selected rendition/currentcredentials guard before GET; no URL rewrite.",
+    "Successful bounded playlist parse yields references enrolled privately, never fetched.",
+    "Full public_rows success exercised without irrelevant URLshape requirement; required source/context/privacy/TLS/route fields checked and private extras excluded.",
+    "Quiet/convergence/original starts/provenance/sourcefinal retained."
+  ],
+  "limitations": [
+    "Unsupported manifest parser failure can occur before references enroll. Zero finite scans then cover known/enrolled patterns only, not whole manifest or response.",
+    "Context response coverage explicitly false; unknown fields/failed enrollment never establish global privacy.",
+    "No nested resources/segments/decode/playback/full HLS acceptance.",
+    "No reviewer VM calls."
+  ]
+}

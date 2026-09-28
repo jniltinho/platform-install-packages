@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "decision": "FIRST_HLS_URL_SOURCE_GUARD_R2_REVIEWED",
+  "pins": {
+    "hls_source_r2.py": "b1b4e5ed19d1589b84fb4e09bf4b98dd32d668e64b54ea69efde59bdf33d80bb",
+    "test_hls_source_r2.py": "f6f03edbb4fc24a6a8acaac3d42e34c1958a8d13e298063d9fba838bf96f6826"
+  },
+  "tests": 5,
+  "exit": 0,
+  "test_command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/baseline-short-media-r1 -p test_hls_source_r2.py -q",
+  "source_proof": {
+    "file": "alpha/apps/kaltura/lib/myEntryUtils.class.php",
+    "sha256": "70ebf2b99fbd5b898f88700b5c696eb1d64258f52bbfeb77bb68f8ef57306089",
+    "lines": "1947\u20131984",
+    "verified": "Native partner/subpartner both102; exact selected flavor/profile/protocol manifest route."
+  },
+  "review": [
+    "Strict source descriptor keys/DRM/protocol/profile identity and exact full HTTPS443 URL path, no rewrite.",
+    "Current credential/prefix checks unconditional; percent/control/backslash/query/fragment rejected.",
+    "Requested bare?/# gap corrected in separateR2; oldsource retained."
+  ],
+  "limits": [
+    "First manifest URL only; no nested URLs, segments, decode or full HLS permission.",
+    "Pure source/tests, no reviewer VM. Future transport/wrapper needs independent review."
+  ]
+}
