@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kaltura PHP 8.3 Migration"
+  short_description: "Legacy Kaltura migration and isolated lab testing"
+  default_prompt: "Use $kaltura-php83-migration to advance the next safe lab step and record validated evidence."

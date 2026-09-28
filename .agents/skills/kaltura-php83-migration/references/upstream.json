@@ -1,0 +1,12 @@
+{
+  "repository": "https://github.com/krzysztofsurdy/code-virtuoso",
+  "commit": "b593433ffcb227bd4034f94d5dee6e2a48859e76",
+  "path": "skills/playbooks/php-upgrade",
+  "license": "MIT",
+  "original_files_sha256": {
+    "SKILL.md": "0d554b5146778e763e84d81cc2227486557a46c3632423b322b4694d7ec7eacf",
+    "references/version-changes.md": "c9139a5dd58459a455c1abec6ea1d32f655719e23732dbe5e79c631ed8dfb2e9",
+    "references/upgrade-process.md": "c32c6a74db6295658ba5e9d8818661a19a88d7f1929a44e704e51cea6698dc06"
+  },
+  "adaptation": "Kaltura-specific rewrite; generic upgrade and version references replaced, not active upstream instructions"
+}
