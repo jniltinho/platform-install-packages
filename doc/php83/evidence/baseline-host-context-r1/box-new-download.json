@@ -1,0 +1,43 @@
+{
+  "status": "NEWLY_DOWNLOADED_CACHE_COMPARISON_NOT_HISTORICAL_PROOF",
+  "source_url": "https://vagrantcloud.com/bento/boxes/ubuntu-24.04/versions/202510.26.0/providers/virtualbox/amd64/vagrant.box",
+  "archive_bytes": 651326766,
+  "archive_sha256": "14ae82e423c270d1c03907faf90691b0fbd673b16bfc369a949808e4e6991b82",
+  "members": [
+    {
+      "member": "15076530450/Vagrantfile",
+      "bytes": 258,
+      "download_member_sha256": "c460ea810dcaa59eb318763dc63ded5ce3525571b80aa14c4de8de86c6b3d89a",
+      "cache_sha256": "c460ea810dcaa59eb318763dc63ded5ce3525571b80aa14c4de8de86c6b3d89a",
+      "byte_identity": true
+    },
+    {
+      "member": "15076530450/box.ovf",
+      "bytes": 12010,
+      "download_member_sha256": "77ff68534dcc512a52ecabba77fad970d876cdf8b3a843194965c6c50e512bc7",
+      "cache_sha256": "77ff68534dcc512a52ecabba77fad970d876cdf8b3a843194965c6c50e512bc7",
+      "byte_identity": true
+    },
+    {
+      "member": "15076530450/metadata.json",
+      "bytes": 49,
+      "download_member_sha256": "e736a4f2813679dc974566957c677d4cc8e64f02251243b71e829c3707da0a0a",
+      "cache_sha256": "e736a4f2813679dc974566957c677d4cc8e64f02251243b71e829c3707da0a0a",
+      "byte_identity": true
+    },
+    {
+      "member": "15076530450/ubuntu-24.04-amd64-disk001.vmdk",
+      "bytes": 660467712,
+      "download_member_sha256": "d5fb31ae860c0d8ed68f04461e1dea5348b6a46c885158e0a3de52f0108f31b5",
+      "cache_sha256": "d5fb31ae860c0d8ed68f04461e1dea5348b6a46c885158e0a3de52f0108f31b5",
+      "byte_identity": true
+    }
+  ],
+  "all_four_match": true,
+  "no_extraction_or_execution": true,
+  "historical_provisioning_proven": false,
+  "current_vm_disk_identity_proven": false,
+  "initial_comparison_exit": 1,
+  "initial_comparison_reason": "Exact root member policy rejected numeric top-level directory; no extraction performed",
+  "subsequent_comparison": "Pinned archive and exact observed prefix15076530450 with four-member allowlist"
+}

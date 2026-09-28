@@ -1,0 +1,232 @@
+{
+  "schema": 1,
+  "executor": "Codex root",
+  "runner_sha256": "6bbcbc935598d4f6edf5267359e2f97b6368f60cfd57917d582b406e74bbf6ae",
+  "preflight_exit": 0,
+  "execution_exit": 0,
+  "result_sha256": "b2afd31dbc7183ae5f19596b55e34971b761639a7048aa60928724d51c94e62d",
+  "result": {
+    "approved_freeze": false,
+    "files": {
+      "guest.py": "6826f1b731dd9edcfefd0cf4c39f5fe5a85797f4443d0bc7fc37d67f661931cb",
+      "observation.py": "e945b7f0ff5a9896f942281a123ee8c76ea398e45bffce9fb3d95ff8f3796364"
+    },
+    "guest_exit": 0,
+    "phase_receipts": [
+      {
+        "status": "INCOMPLETE"
+      },
+      {
+        "status": "INCOMPLETE"
+      },
+      {
+        "status": "INCOMPLETE"
+      },
+      {
+        "status": "INCOMPLETE"
+      },
+      {
+        "status": "INCOMPLETE"
+      },
+      {
+        "status": "INCOMPLETE"
+      },
+      {
+        "status": "INCOMPLETE"
+      },
+      {
+        "status": "INCOMPLETE"
+      },
+      {
+        "status": "INCOMPLETE"
+      },
+      {
+        "status": "INCOMPLETE"
+      },
+      {
+        "status": "INCOMPLETE"
+      },
+      {
+        "status": "INCOMPLETE"
+      },
+      {
+        "status": "INCOMPLETE"
+      },
+      {
+        "status": "INCOMPLETE"
+      },
+      {
+        "status": "INCOMPLETE"
+      },
+      {
+        "admin_escalation_rejected": true,
+        "asset_version": "2",
+        "baseline_label": "PUBLISHED_PHP74_WITH_APPROVED_PRIVACY_OVERLAY",
+        "entry_version_status": "UNRESOLVED",
+        "file_sync_id": 315,
+        "fixture": null,
+        "invalid_nonce": {
+          "files": {
+            "counts": [
+              0,
+              0
+            ],
+            "status": "COMPLETE_FINITE_FILE_WINDOW",
+            "uncovered_tail_bytes": 0
+          },
+          "journal": {
+            "complete": true,
+            "counts": [
+              0,
+              0
+            ],
+            "cutoff_covered": true,
+            "status": "COMPLETE_FINITE_JOURNAL_WINDOW"
+          },
+          "scope": "FINITE_OBSERVATION_WINDOW"
+        },
+        "media_privacy": {
+          "files": {
+            "counts": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "status": "COMPLETE_FINITE_FILE_WINDOW",
+            "uncovered_tail_bytes": 0
+          },
+          "journal": {
+            "complete": true,
+            "counts": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "cutoff_covered": true,
+            "status": "COMPLETE_FINITE_JOURNAL_WINDOW"
+          },
+          "scope": "FINITE_OBSERVATION_WINDOW"
+        },
+        "original_asset_id": "0_ewuu0o46",
+        "overlay_manifest_sha256": "cf16bc5c49acbe5863934ba737c72e2b65878c84048389354e79163afeca0cb8",
+        "profile": {
+          "selected_profile_id": 14,
+          "status": "UNRESOLVED_API_PROFILE"
+        },
+        "runtime_pins_verified": true,
+        "source_sha256": "612d179c75f8f2374b7ac59c2dd7edba65e38eb357b870e8ad8c2e83d63b5473",
+        "sources_after": {
+          "alpha/apps/kaltura/lib/db/KalturaStatement.php": {
+            "gid": 0,
+            "mode": 436,
+            "sha256": "bd8ab13a8fb745eb603b9c35633e24637adb5356a1792642d884c6f7e1d85bd2",
+            "uid": 0
+          },
+          "api_v3/lib/KalturaDispatcher.php": {
+            "gid": 0,
+            "mode": 436,
+            "sha256": "9ce4b17a9fb1bef95fbbbbc6f08cb396a6cc944b055bac8413d740ce5d73c7b9",
+            "uid": 0
+          },
+          "api_v3/lib/KalturaFrontController.php": {
+            "gid": 0,
+            "mode": 436,
+            "sha256": "79570bd2be507f0045281a903aa13bd2de4037c2e12df3370075c4445184a4ca",
+            "uid": 0
+          },
+          "infra/log/KalturaLog.php": {
+            "gid": 0,
+            "mode": 436,
+            "sha256": "40e4db5733cfab59e0e873f94ee64166de380d86425625411dc716f6cb1003dd",
+            "uid": 0
+          },
+          "infra/log/KalturaSerializableStream.php": {
+            "gid": 0,
+            "mode": 436,
+            "sha256": "8411013a6f2ac78b6d092594d088ba9a5fbe71ada9de00692a369388c40dc04c",
+            "uid": 0
+          }
+        },
+        "sources_before": {
+          "alpha/apps/kaltura/lib/db/KalturaStatement.php": {
+            "gid": 0,
+            "mode": 436,
+            "sha256": "bd8ab13a8fb745eb603b9c35633e24637adb5356a1792642d884c6f7e1d85bd2",
+            "uid": 0
+          },
+          "api_v3/lib/KalturaDispatcher.php": {
+            "gid": 0,
+            "mode": 436,
+            "sha256": "9ce4b17a9fb1bef95fbbbbc6f08cb396a6cc944b055bac8413d740ce5d73c7b9",
+            "uid": 0
+          },
+          "api_v3/lib/KalturaFrontController.php": {
+            "gid": 0,
+            "mode": 436,
+            "sha256": "79570bd2be507f0045281a903aa13bd2de4037c2e12df3370075c4445184a4ca",
+            "uid": 0
+          },
+          "infra/log/KalturaLog.php": {
+            "gid": 0,
+            "mode": 436,
+            "sha256": "40e4db5733cfab59e0e873f94ee64166de380d86425625411dc716f6cb1003dd",
+            "uid": 0
+          },
+          "infra/log/KalturaSerializableStream.php": {
+            "gid": 0,
+            "mode": 436,
+            "sha256": "8411013a6f2ac78b6d092594d088ba9a5fbe71ada9de00692a369388c40dc04c",
+            "uid": 0
+          }
+        },
+        "status": "EXISTING_MEDIA_FREEZE_OBSERVATION_COMPLETE",
+        "stored_source_sha256": "612d179c75f8f2374b7ac59c2dd7edba65e38eb357b870e8ad8c2e83d63b5473",
+        "upload_attempted": false,
+        "user_privacy": {
+          "files": {
+            "counts": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "status": "COMPLETE_FINITE_FILE_WINDOW",
+            "uncovered_tail_bytes": 0
+          },
+          "journal": {
+            "complete": true,
+            "counts": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "cutoff_covered": true,
+            "status": "COMPLETE_FINITE_JOURNAL_WINDOW"
+          },
+          "scope": "FINITE_OBSERVATION_WINDOW"
+        },
+        "version_observations": [
+          {
+            "outcome": "TYPED_PROJECTION_MATCH",
+            "requested": -1
+          },
+          {
+            "outcome": "TYPED_PROJECTION_MATCH",
+            "requested": 0
+          }
+        ],
+        "wrong_secret_rejected": true
+      }
+    ],
+    "status": "OBSERVATION_CAPTURED_NOT_APPROVED",
+    "stderr_bytes": 0,
+    "stdout_bytes": 1032953,
+    "unit": "baseline-freeze-fe117e92",
+    "unit_inactive": true
+  },
+  "scope": "Native existing-entry read-only API observation; no upload or profile mutation; not approved baseline freeze",
+  "task_complete": false
+}

@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "runner_sha256": "6bbcbc935598d4f6edf5267359e2f97b6368f60cfd57917d582b406e74bbf6ae",
+  "decision": "BOUNDED_SOURCE_APPROVED_FOR_ROOT_READ_ONLY_CHECK",
+  "tests": {
+    "combined": 28,
+    "exit": 0
+  },
+  "preserved_negative": {
+    "native_r1": "FAILED_OR_INCOMPLETE_CAPTURE; actual cause unknown",
+    "local_reproducer": "Producer-allowed unresolved fixture rejected by original runner as FIXTURE_SCHEMA; does not identify actual native cause"
+  },
+  "review": [
+    "No stage writes; exact root-owned immutable stage bytes/modes/members/ACL absence and prior unit inactivity required",
+    "Exit and capture byte counts retained before public parser",
+    "Unresolved entry version observed with null fixture, not fabricated",
+    "Strict finite privacy requirements and reduced fixed public schema retained",
+    "New exclusive output/unit only; existing negative receipt untouched"
+  ],
+  "limitations": [
+    "No VM/SSH execution by reviewer",
+    "Runtime failure diagnosis still requires new bounded native evidence",
+    "No full baseline freeze/task1.2 acceptance"
+  ]
+}

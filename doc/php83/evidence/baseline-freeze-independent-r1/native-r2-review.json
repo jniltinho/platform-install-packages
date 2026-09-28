@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "native_receipt_sha256": "b2afd31dbc7183ae5f19596b55e34971b761639a7048aa60928724d51c94e62d",
+  "public_projection_roundtrip": true,
+  "guest_exit": 0,
+  "unit_inactive": true,
+  "privacy_windows": "All3 zero complete; finite windows only",
+  "fixture": null,
+  "entry_version": "UNRESOLVED",
+  "version_requests": [
+    -1,
+    0
+  ],
+  "profile": {
+    "selected_profile_id": 14,
+    "status": "UNRESOLVED_API_PROFILE"
+  },
+  "source_pins": {
+    "alpha/lib/model/entry.php": "b677a171f5cc51f6a692eab774938b1a582e21e177ec40ff36aaf4277886dfb5",
+    "api_v3/lib/KalturaEntryService.php": "9495b584f73df1f4a11812efa964f57f42562159a405693b71e1731d53fe4dd5",
+    "api_v3/services/MediaService.php": "7ffb9ca7642341eaf65a4387e82c7b63dfdf5e528b5b03da6ea24a56f384f708"
+  },
+  "decision": "OBSERVATION_ACCEPTED_NOT_FROZEN_BASELINE",
+  "source_conclusion": "Native media.get defaults to -1; positive-only fixture is harness policy not task requirement. Typed matches do not prove version content. A separately reviewed versioned selection contract may freeze current/default semantics with source identity, without inventing asset2 as entry version.",
+  "remaining": [
+    "Typed projection and list count must be exported independently of positive version fixture",
+    "Profile14 tenant/global/flavor mapping unresolved",
+    "VM snapshot/environment and native Apache observation pending",
+    "Decision7 complete runtime/repetition workloads pending"
+  ],
+  "prior_failure": "Native R1 remains failed; R2 does not establish its actual cause"
+}
