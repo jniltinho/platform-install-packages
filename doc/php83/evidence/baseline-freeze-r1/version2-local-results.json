@@ -1,0 +1,22 @@
+{
+  "status": "LOCAL_V2_CURRENT_SELECTION_CANDIDATE",
+  "pins": {
+    "tools/php83/baseline-freeze-r1/observation_v2.py": "ec32386df1c745f5754ece19f3127f6da85415e644c8556e6c07666b2ea1abc5",
+    "tools/php83/baseline-freeze-r1/prepare_v2.py": "f04ba6b96745c33dfe2267444c7afb030a8d73f181bb22c2ae6865a3368350d5",
+    "tools/php83/baseline-freeze-r1/guest_v2.py": "6eaaf54dd2365eb8093952631234fed1711badd607976c0e6b39115f0a6994f8",
+    "tools/php83/baseline-freeze-r1/assemble_v2.py": "c16e02fce4057fbd587b33e8e3fe9fb443577ac60bfbe2f9d4c28b2a4fea6017",
+    "tools/php83/baseline-freeze-r1/protocol_v2.py": "147d74b0a04779fd0819ebe210d8a1a6aea4af8fbc773683a278e540ce70d4b8",
+    "tools/php83/baseline-freeze-r1/run_v3.py": "14c58cf885b7885b9612f3bf947e431f26214a11b912360016bcd4fcffa7755b",
+    "tools/php83/baseline-freeze-r1/test_v2.py": "e85b58c395ebbee877f07d06072cd70426ae8ed39524a4d60a989ed7497dcfc2"
+  },
+  "focused_tests": 11,
+  "combined_tests": 39,
+  "exit": 0,
+  "executor": "Codex author",
+  "vm_execution": false,
+  "protocol_v1_unchanged": true,
+  "benchmark_native_executed": false,
+  "full_acceptance": false,
+  "prior_fixture_test_attempt": "One initial test path typo (tools/baseline-api versus tools/php83/baseline-api) corrected; final10PASS",
+  "review_fix": "Exact top-level asset_version string2 join before public output, rejects arbitrary value/type"
+}

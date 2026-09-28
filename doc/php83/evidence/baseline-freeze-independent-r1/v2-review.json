@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "pins": {
+    "guest_v2": "6eaaf54dd2365eb8093952631234fed1711badd607976c0e6b39115f0a6994f8",
+    "observation_v2": "ec32386df1c745f5754ece19f3127f6da85415e644c8556e6c07666b2ea1abc5",
+    "assemble_v2": "c16e02fce4057fbd587b33e8e3fe9fb443577ac60bfbe2f9d4c28b2a4fea6017",
+    "run_v3": "14c58cf885b7885b9612f3bf947e431f26214a11b912360016bcd4fcffa7755b",
+    "protocol_v2": "147d74b0a04779fd0819ebe210d8a1a6aea4af8fbc773683a278e540ce70d4b8",
+    "test_v2": "e85b58c395ebbee877f07d06072cd70426ae8ed39524a4d60a989ed7497dcfc2"
+  },
+  "decision": "BOUNDED_SOURCE_APPROVED_FOR_ROOT_PREFLIGHT",
+  "tests": {
+    "combined": 39,
+    "exit": 0,
+    "new_focused": 11,
+    "fake_transport_100_calls": "PASS_NOT_NATIVE_TIMINGS"
+  },
+  "semantic_review": [
+    "Native MediaService.getAction defaults version=-1; explicit default-current selector satisfies same Decision7 media.get method obligation",
+    "This does not claim historical/positive version content validation",
+    "Observed entry.data null/empty maps native getVersion zero; otherwise bounded numeric or unresolved",
+    "Source asset version2 and FileSync315 remain independent identity fields",
+    "Native public conversion profile type is KalturaConversionProfile backed by conversionProfile2",
+    "Native get/list partner filter allows tenant/global0; explicit owner checks preserved",
+    "Configured flavor IDs including empty list are not generated-asset claims",
+    "Original protocol.py SHA4587eab6 unchanged"
+  ],
+  "resolved_finding": "Top-level asset_version newly exported by runner must join exact string2; negative arbitrarystring/int/bool cases passed",
+  "boundaries": [
+    "All target/network/privacy-before-auth/finite scan guards retained",
+    "Fresh exclusive stage; old native failures preserved",
+    "No VM/SSH calls by reviewer",
+    "No approved freeze, native repetition or full task1.2 acceptance",
+    "Prior actual CLI failures remain non-PASS"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "box_name": "bento/ubuntu-24.04",
+  "box_sha256": null,
+  "box_version": "202510.26.0",
+  "cpus": 4,
+  "disk_capacity_bytes": 68719476736,
+  "disk_controller": "IntelAhci",
+  "memory_mib": 8192,
+  "observed_readonly": true,
+  "snapshot_id": null,
+  "vm_uuid": "9e954729-16f3-4eda-9db5-b94e5ada9e44"
+}

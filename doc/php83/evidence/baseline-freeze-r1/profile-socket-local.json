@@ -1,0 +1,14 @@
+{
+  "status": "LOCAL_READ_ONLY_COLLECTOR_TESTED",
+  "pins": {
+    "tools/php83/baseline-freeze-r1/profile_socket.py": "9735aad64f31a3329de5844f9061da9f18f12e1b34787971d9ee360872443776",
+    "tools/php83/baseline-freeze-r1/test_profile_socket.py": "bbc0e9d7f16995da314fd8e5000b2e4d7889966e904dca1c0961240d97bc71f0"
+  },
+  "executor": "Codex author",
+  "tests": 8,
+  "exit": 0,
+  "vm_execution": false,
+  "api_replayed": false,
+  "api_authorization_verified": false,
+  "full_acceptance": false
+}

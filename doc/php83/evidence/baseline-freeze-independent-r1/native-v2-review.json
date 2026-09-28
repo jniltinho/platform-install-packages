@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "input_sha256": "e296ea9c8e3a7ee24c28dfdbc38ee8e99ff4cb884a1dfc34edae86d6ae370e0c",
+  "projection_roundtrip": true,
+  "guest_exit": 0,
+  "unit_inactive": true,
+  "privacy": "All3 finite windows zero and complete",
+  "fixture": {
+    "version": 2,
+    "media_get_version": -1,
+    "observed_entry_data_version": 0,
+    "list_total_count": 1,
+    "list_total_count_type": "int",
+    "source_asset_version": "2",
+    "file_sync_id": 315
+  },
+  "profile": {
+    "selected_profile_id": 14,
+    "status": "UNRESOLVED_API_PROFILE"
+  },
+  "profile_diagnosis": "Reason not observed. Parser unresolved branch is wrong objectType/non-dict; missing partnerId would instead fail scalar validation. Native public class declares partnerId explicitly.",
+  "next": "Independently reviewed bounded SELECT-only profile14 owner/status/configured flavor observation; no replay/upload/profile mutation required",
+  "acceptance": "UNTIMED_NATIVE_OBSERVATION_ONLY; no baseline full acceptance or API profile permission claim",
+  "review_execution_note": "First local inspection imported protocol_v2 without transport module path and failed before roundtrip; corrected inspection omitted unused protocol import and roundtrip passed."
+}

@@ -1,0 +1,55 @@
+{
+  "apache_runtime_current": "UNVERIFIED_NO_WEB_FILE_PROBE",
+  "approved_freeze": false,
+  "baseline_label": "PUBLISHED_PHP74_WITH_APPROVED_PRIVACY_OVERLAY",
+  "environment": {
+    "box_name": "bento/ubuntu-24.04",
+    "box_sha256": null,
+    "box_version": "202510.26.0",
+    "cpus": 4,
+    "disk_capacity_bytes": 68719476736,
+    "disk_controller": "IntelAhci",
+    "memory_mib": 8192,
+    "observed_readonly": true,
+    "snapshot_id": null,
+    "vm_uuid": "9e954729-16f3-4eda-9db5-b94e5ada9e44"
+  },
+  "full_acceptance": false,
+  "overlay_manifest_sha256": "cf16bc5c49acbe5863934ba737c72e2b65878c84048389354e79163afeca0cb8",
+  "profile": {
+    "selected_profile_id": 14,
+    "status": "UNRESOLVED_API_PROFILE"
+  },
+  "protocol_fixture": {
+    "entry": {
+      "id": "0_wzmt2sfy",
+      "mediaType": 1,
+      "objectType": "KalturaMediaEntry",
+      "partnerId": 102,
+      "status": 2
+    },
+    "list_total_count": 1,
+    "media_get_version": -1,
+    "observed_entry_data_version": 0,
+    "order_by": "+createdAt",
+    "page_index": 1,
+    "page_size": 1,
+    "source_asset": {
+      "file_sync_id": 315,
+      "id": "0_ewuu0o46",
+      "version": "2"
+    },
+    "source_media_sha256": "612d179c75f8f2374b7ac59c2dd7edba65e38eb357b870e8ad8c2e83d63b5473",
+    "version": 2
+  },
+  "recovery_snapshot_attested": false,
+  "remaining": [
+    "Current native Apache runtime observation",
+    "Independent environment/protocol approval",
+    "Full task1.2 runtime/repetition acceptance"
+  ],
+  "schema": 2,
+  "selection_semantics": "CURRENT_DEFAULT_MINUS_ONE_NOT_HISTORICAL_VERSION_PROOF",
+  "source_media_sha256": "612d179c75f8f2374b7ac59c2dd7edba65e38eb357b870e8ad8c2e83d63b5473",
+  "status": "OBSERVATION_ENVELOPE_PENDING_APPROVAL"
+}

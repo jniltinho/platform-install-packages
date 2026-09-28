@@ -1,0 +1,22 @@
+{
+  "entry": {
+    "id": "0_wzmt2sfy",
+    "mediaType": 1,
+    "objectType": "KalturaMediaEntry",
+    "partnerId": 102,
+    "status": 2
+  },
+  "list_total_count": 1,
+  "media_get_version": -1,
+  "observed_entry_data_version": 0,
+  "order_by": "+createdAt",
+  "page_index": 1,
+  "page_size": 1,
+  "source_asset": {
+    "file_sync_id": 315,
+    "id": "0_ewuu0o46",
+    "version": "2"
+  },
+  "source_media_sha256": "612d179c75f8f2374b7ac59c2dd7edba65e38eb357b870e8ad8c2e83d63b5473",
+  "version": 2
+}

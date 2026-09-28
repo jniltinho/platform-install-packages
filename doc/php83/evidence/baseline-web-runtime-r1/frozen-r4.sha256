@@ -1,0 +1,4 @@
+9f84a50ff7aa74db30574d076c56486345c64059a4bb1f5ad397b6f71d4ae5cd  tools/php83/baseline-web-runtime-r1/guest.py
+4db6ccebda5874b896916a45103a50b4a411d599a175de98874b6afdd59dd288  tools/php83/baseline-web-runtime-r1/run.py
+b1edb6ff3c4fa9f99c9d3da3291a779800f7309813ca2ed8827d23958b84c921  tools/php83/baseline-web-runtime-r1/pins.json
+ed4bf4f1bc9b5f6951d2d7960b0ee42e6d41525a65a3da974c46c71e183e20b4  tools/php83/baseline-web-runtime-r1/test_web.py

@@ -1,6 +1,6 @@
 # PHP 8.3 — status atual e tarefas restantes
 
-Atualizado: 2026-09-28T17:58:42.816852+00:00
+Atualizado: 2026-09-28T18:26:05.775065+00:00
 
 **5 concluídas / 46 abertas / 51 tarefas.** Os 24 requisitos originais e 27 casos detalhados se sobrepõem; não são 51 funcionalidades independentes. Sem percentual ou previsão de conclusão inferidos de testes.
 
@@ -42,7 +42,7 @@ publicado na branch proposal/migrate-kaltura-php83.
 | Censo lexical corrigido |8 testes; reprodução independente idêntica|Não resolve aplicabilidade legal|
 | MaxMind |35 arquivos idênticos;5 negativos rejeitados|Não prova versão original única|
 | Contexto .74 |4 testes root/Codex/Claude; coleta real exit0|Não é freeze completo|
-| Coletor baseline R2 |28 testes locais; observação nativa exit0|Versão concreta/perfil ainda não resolvidos; não é freeze aprovado|
+| Coletor baseline R2 |28 testes locais; observação nativa exit0|Marco histórico parcial; substituído pelas observações V2 abaixo, não é freeze aprovado|
 
 Contagens acima se sobrepõem; não são somadas como tarefas concluídas. Tentativas
 Claude/OpenCode incompletas e Cursor sem autenticação não são PASS.
@@ -60,15 +60,22 @@ seus bloqueadores históricos não representam este status atual.
 
 ## Resultado nativo mais recente
 
-R1 falhou na captura e foi preservado (c951138b); R2 corrigiu a captura de
-observações incompletas e terminou exit0. `media.get(-1)` e `media.get(0)`
-coincidiram em projeção tipada. Fixture continua nulo e perfil14 ainda não
-classificado. Revisão de fonte encontrou duas hipóteses específicas do helper:
-exigia versão positiva que a API não exige e esperava nome incorreto da classe
-de perfil. Próxima correção será versionada/revisada, sem alterar o protocolo
-antigo nem inventar versão a partir do asset2. Tarefa1.2 permanece aberta.
+- V2: coleta real exit0, fixture tipado com seleção explícita media.get(-1),
+  versão de dados0 separada da versão2 do asset. Três janelas de privacidade
+  completas sem correspondências. Fonte/testes revistos independentemente.
+- Perfil14: cinco SELECT limitados, somente leitura, exit0/stderr0; pertence ao
+  parceiro102, status2/tipo1, não excluído, oito flavors configurados. Isso não
+  resolve a autorização de consulta do perfil pela API.
+- Apache: teste real exit0/stderr0, PHP7.4.33/apache2handler e53 módulos,
+  /etc/php/7.4/apache2/php.ini; nonce confirmado, arquivo próprio removido,
+  unidade inativa e identidade da VM preservada. Revisão independente aprovada.
+- Testes auxiliares:39 do coletor V2,8 do observador SQL e13 do wrapper web,
+  incluindo limpeza real de fixture local sob SIGTERM. Não são tarefas completas.
+- Próximo: ensaio funcional não cronometrado das100 chamadas API com o protocolo
+  V2, depois completar mídia/HTTPS/UI e protocolo antes das medições formais.
 
-Fonte do box: novo download oficial de651.326.766 bytes, SHA
-14ae82e423c270d1c03907faf90691b0fbd673b16bfc369a949808e4e6991b82;
-os quatro arquivos correspondem ao cache atual. Não é prova retrospectiva de
-provisionamento nem identidade do disco da VM em execução.
+R1/R2 e seus resultados parciais/falhos permanecem preservados. Tarefa1.2 aberta;
+nenhuma alteração em produção. Fonte do box: novo download oficial de651.326.766
+bytes, SHA14ae82e423c270d1c03907faf90691b0fbd673b16bfc369a949808e4e6991b82,
+com quatro arquivos correspondentes ao cache; não prova retrospectiva do
+provisionamento ou identidade do disco atual.

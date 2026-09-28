@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "scope": "Independent source and isolated-local-test review only",
+  "decision": "BOUNDED_SOURCE_APPROVED_FOR_ROOT_PREFLIGHT",
+  "pins": {
+    "guest.py": "9f84a50ff7aa74db30574d076c56486345c64059a4bb1f5ad397b6f71d4ae5cd",
+    "run.py": "4db6ccebda5874b896916a45103a50b4a411d599a175de98874b6afdd59dd288",
+    "pins.json": "b1edb6ff3c4fa9f99c9d3da3291a779800f7309813ca2ed8827d23958b84c921",
+    "test_web.py": "ed4bf4f1bc9b5f6951d2d7960b0ee42e6d41525a65a3da974c46c71e183e20b4"
+  },
+  "tests": {
+    "passed": 13,
+    "exit": 0,
+    "actual_local_signal_case": "SIGTERM during request cleaned own file"
+  },
+  "review": [
+    "Target hostname/IP and network policy fixed to .74; pinned direct transport rejects redirects/proxies",
+    "No application bootstrap/credential reads/SQL/service modifications",
+    "Trusted dirfd chain and exclusive nonce PHP file; inode/content identity checked before own-file unlink",
+    "Closed provider schema, exact Apache PHP7.4 ini and nonce check",
+    "TERM/INT masked through complete create/write/fsync/close and entire cleanup; signal handler enters finally",
+    "Host verifies inactive unit and unchanged VM identity after probe"
+  ],
+  "limitations": [
+    "SIGKILL, crash or partial disk-write failure cannot guarantee own-file cleanup; failure remains incomplete and requires root inspection",
+    "No guest/native runtime executed by reviewer",
+    "Current-cycle Claude timeout and Cursor authentication failure not relabeled PASS",
+    "No task1.2 full acceptance"
+  ]
+}

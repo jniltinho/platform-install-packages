@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "review_scope": "Read-only independent local receipt validation; no VM calls",
+  "input_sha256": "98510f38c32cf2988e962d5b614890626dd20c7d4b80e3607f8b9f614b0f3d5d",
+  "frozen_source_manifest": "doc/php83/evidence/baseline-web-runtime-r1/frozen-r4.sha256",
+  "source_pin_checks": 6,
+  "frozen_r4_checks": 4,
+  "provider_closed_schema_roundtrip": true,
+  "runner_pin_verified": true,
+  "native_report": {
+    "status": "CURRENT_WEB_OBSERVATION_CAPTURED",
+    "guest_exit": 0,
+    "stderr_bytes": 0,
+    "unit_inactive": true,
+    "host_unchanged": true,
+    "php_version": "7.4.33",
+    "sapi": "apache2handler",
+    "ini_file": "/etc/php/7.4/apache2/php.ini",
+    "module_count": 53,
+    "nonce_verified": true,
+    "probe_removed": true,
+    "app_credentials_read": false,
+    "sql_executed": false
+  },
+  "decision": "CURRENT_NATIVE_APACHE_PHP74_PROVIDER_OBSERVATION_ACCEPTED",
+  "limits": [
+    "Reported native probe execution by root; reviewer did not repeat it",
+    "No application bootstrap/API/UI/upload/worker/playback acceptance inferred",
+    "Module inventory is loaded names, not extension functional coverage",
+    "Successful cleanup for this execution only; no SIGKILL cleanup claim",
+    "Full baseline/repetition/performance acceptance remains false"
+  ]
+}

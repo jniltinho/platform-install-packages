@@ -1,0 +1,32 @@
+{
+  "executor": "Codex root",
+  "source_sha256": "9735aad64f31a3329de5844f9061da9f18f12e1b34787971d9ee360872443776",
+  "exit_status": 0,
+  "stderr_bytes": 0,
+  "observation": {
+    "api_authorization_verified": false,
+    "configured_flavor_ids": [
+      0,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      19
+    ],
+    "db_identity_verified": true,
+    "entry_id": "0_wzmt2sfy",
+    "entry_partner_id": 102,
+    "full_acceptance": false,
+    "profile_not_deleted": true,
+    "profile_partner_id": 102,
+    "profile_status": 2,
+    "profile_type": 1,
+    "schema": 1,
+    "select_count": 5,
+    "selected_profile_id": 14,
+    "status": "READ_ONLY_STORED_PROFILE_OBSERVED"
+  },
+  "full_acceptance": false
+}
