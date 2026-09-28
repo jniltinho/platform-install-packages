@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "payload_interface": [
+    "prepare",
+    "apply"
+  ],
+  "state": "/var/lib/kaltura-baseline-delivery-split-r1",
+  "source_pins": {
+    "deployment/bootstrap.php": "bb8d4275f73bb14b06441d40f589e988f3b062b6fe4f0aaedc0fb3c7d0ab36de",
+    "alpha/lib/model/DeliveryProfile.php": "2fa1974f9feb7479b00f3c60eb3c44b80039acb187c2e913d4e7bd4fee5c269f",
+    "alpha/lib/model/DeliveryProfilePeer.php": "dbfd0df052c0f3a5246ac3300f1dab8862793163d395c6a0677976ce4817f84f",
+    "alpha/lib/model/om/BaseDeliveryProfile.php": "0bd05e4a212e2e914cb6bc476e3bd85f680b25dcc9e5aca6a908fb68a2e3150a",
+    "alpha/lib/model/om/BaseDeliveryProfilePeer.php": "9805a9bf1c4d0fe721ff90673ec848b9732722f8e5f6df8e3a4bf44d928f75e0",
+    "alpha/lib/model/map/DeliveryProfileTableMap.php": "75a6eb94c163600443111e405ba38fb666d81feb0cec35fea7cab6f31eaf2669",
+    "alpha/lib/model/DeliveryProfileVodPackagerHls.php": "664b7d41cc60728c329ae3eb38409c02e5d83a54a0be12d02416af8dfd2e6241",
+    "alpha/lib/model/Partner.php": "27dfd30c3f0190e29a86489c10f154b8098f8d2b2b4a8928799056ee4c3d6f07",
+    "vendor/propel/util/PropelPDO.php": "9e4f602f50bc24432107f34a2f3b4a995518fe28c46be9dc8f642dbb9ca74d22"
+  },
+  "local_pins": {
+    "delivery_profile_split.php": "682ec53750b050bf8d7ee9836f91776433442c1da0eb3ad78283ba33dc2e5f3b",
+    "test_delivery_profile_split.php": "9ae3c568309a616a5d198a84c61756423dbbfc7f1dbdda22f61633d437c12912",
+    "run_delivery_split_fixture.py": "9146a715ddf110c823aa7c0744a686e56060c089131f8ec1f45ab0762fb92aa6"
+  },
+  "native_tests": {
+    "runtimes": [
+      "7.4.3-4ubuntu2.29",
+      "8.3.32"
+    ],
+    "cases_each": 8,
+    "real_methods": [
+      "copyInto",
+      "setUrl"
+    ],
+    "orm_save_and_database": "TEST_DOUBLES",
+    "live_execution": false
+  },
+  "requires_outer_backup_fsync": true,
+  "requires_outer_privacy_and_source_guards": true,
+  "full_acceptance": false
+}

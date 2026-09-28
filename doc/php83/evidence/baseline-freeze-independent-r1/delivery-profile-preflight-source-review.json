@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "decision": "READ_ONLY_PROFILE_PREFLIGHT_SOURCE_PASS",
+  "pins": {
+    "delivery_profile_preflight.py": "f018aa4b169d129a7a8103be3b23cd299beec8ab9bf0b0578ca8b9eb1498934c",
+    "test_delivery_profile_preflight.py": "2fa11cb3f1f2c5ff24586299d3eb88454440a4544fcd2aa5d44cb217a433ffae",
+    "profile_socket.py": "9735aad64f31a3329de5844f9061da9f18f12e1b34787971d9ee360872443776"
+  },
+  "independent_tests": 6,
+  "exit": 0,
+  "scope": "Pinned target/private option/socket transport; exact previously native-selected1001, three SELECTs including identity, READ ONLY transaction, bounded scalar/nullness/length projection. No API/GET/write.",
+  "limitations": [
+    "Nullable parent/priority observed, not normalized into assumptions.",
+    "Opaque semantics, whole-row backup, cache invalidation and mutation readiness remain false.",
+    "No VM execution by reviewer."
+  ]
+}

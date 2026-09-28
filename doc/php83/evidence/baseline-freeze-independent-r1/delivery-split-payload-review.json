@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "decision": "LIFECYCLE_PAYLOAD_COMPONENT_REVIEW_PASS_ENVELOPE_PENDING",
+  "pins": {
+    "delivery_profile_split.php": "682ec53750b050bf8d7ee9836f91776433442c1da0eb3ad78283ba33dc2e5f3b",
+    "test_delivery_profile_split.php": "9ae3c568309a616a5d198a84c61756423dbbfc7f1dbdda22f61633d437c12912",
+    "run_delivery_split_fixture.py": "9146a715ddf110c823aa7c0744a686e56060c089131f8ec1f45ab0762fb92aa6"
+  },
+  "independent_offline_runs": [
+    {
+      "runtime": "7.4.3-4ubuntu2.29",
+      "cases": 8,
+      "exit": 0,
+      "stderr_bytes": 0
+    },
+    {
+      "runtime": "8.3.32",
+      "cases": 8,
+      "exit": 0,
+      "stderr_bytes": 0
+    }
+  ],
+  "real_methods": [
+    "copyInto",
+    "setUrl"
+  ],
+  "database_and_save": "EXPLICIT_TEST_DOUBLES_NOT_NATIVE_DB",
+  "required_outer_gates": [
+    "Fixed target and source pins before bootstrap, exact TLS availability and mandatory complete log inventories before credentials.",
+    "Exclusive root-private whole-row backup validated and fsynced before apply; preserved recovery snapshot.",
+    "No retry after intent or ambiguous commit; bounded process containment and honest failure/recovery reporting."
+  ],
+  "limitations": [
+    "Global default1001 split can affect other selectors; no per-partner isolation claim.",
+    "Native timestamps are expressly permitted deltas.",
+    "ORM external cache/events need separate runtime verification; DB rollback is not external cache rollback.",
+    "No VM/API or live DB calls by reviewer.",
+    "Full envelope approval still pending."
+  ]
+}

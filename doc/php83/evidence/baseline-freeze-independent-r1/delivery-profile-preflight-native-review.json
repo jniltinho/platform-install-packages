@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "decision": "READ_ONLY_PROFILE_PREFLIGHT_NATIVE_ACCEPTED_PARTIAL",
+  "receipt_sha256": "d350a0f087f857280ac31ad08815a93510083477d256a3d357efa66f9490139f",
+  "source_pins_match": true,
+  "native_executor": "root coordinator",
+  "independent_vm_calls": 0,
+  "observation": {
+    "cache_invalidation_verified": false,
+    "configuration_changed": false,
+    "db_identity_verified": true,
+    "full_acceptance": false,
+    "host_name_null": false,
+    "host_name_owned": true,
+    "is_default": true,
+    "media_protocols_null": true,
+    "mutation_ready": false,
+    "opaque_fields": {
+      "custom_data": {
+        "byte_length": 0,
+        "is_null": true
+      },
+      "recognizer": {
+        "byte_length": 0,
+        "is_null": true
+      },
+      "tokenizer": {
+        "byte_length": 0,
+        "is_null": true
+      }
+    },
+    "opaque_semantics_verified": false,
+    "original_http_url_exact": true,
+    "parent_id": 0,
+    "partner_id": 0,
+    "priority": 0,
+    "profile_id": 1001,
+    "profile_status": 0,
+    "profile_type": 61,
+    "schema": 1,
+    "sql_select_count": 3,
+    "status": "READ_ONLY_DELIVERY_PROFILE_PREFLIGHT",
+    "streamer_type": "applehttp",
+    "whole_row_backup_created": false
+  },
+  "limitations": [
+    "Null opaque fields exclude populated values at this snapshot only; no broader selection/cache semantics or authorization inferred.",
+    "No whole-row backup/cache invalidation/mutation authorization.",
+    "External recovery snapshot existence is not a restoration test."
+  ]
+}

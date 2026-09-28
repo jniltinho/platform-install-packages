@@ -1,0 +1,55 @@
+{
+  "command": "fixed staged readonly SQL preflight via pinned strict SSH",
+  "executor": "root coordinator",
+  "exit": 0,
+  "host": {
+    "UUID": "9e954729-16f3-4eda-9db5-b94e5ada9e44",
+    "VMState": "running",
+    "cpus": "4",
+    "memory": "8192",
+    "name": "kaltura-php74-noble-baseline"
+  },
+  "observation": {
+    "cache_invalidation_verified": false,
+    "configuration_changed": false,
+    "db_identity_verified": true,
+    "full_acceptance": false,
+    "host_name_null": false,
+    "host_name_owned": true,
+    "is_default": true,
+    "media_protocols_null": true,
+    "mutation_ready": false,
+    "opaque_fields": {
+      "custom_data": {
+        "byte_length": 0,
+        "is_null": true
+      },
+      "recognizer": {
+        "byte_length": 0,
+        "is_null": true
+      },
+      "tokenizer": {
+        "byte_length": 0,
+        "is_null": true
+      }
+    },
+    "opaque_semantics_verified": false,
+    "original_http_url_exact": true,
+    "parent_id": 0,
+    "partner_id": 0,
+    "priority": 0,
+    "profile_id": 1001,
+    "profile_status": 0,
+    "profile_type": 61,
+    "schema": 1,
+    "sql_select_count": 3,
+    "status": "READ_ONLY_DELIVERY_PROFILE_PREFLIGHT",
+    "streamer_type": "applehttp",
+    "whole_row_backup_created": false
+  },
+  "source_pins": {
+    "delivery_profile_preflight.py": "f018aa4b169d129a7a8103be3b23cd299beec8ab9bf0b0578ca8b9eb1498934c",
+    "profile_socket.py": "9735aad64f31a3329de5844f9061da9f18f12e1b34787971d9ee360872443776"
+  },
+  "stderr_bytes": 0
+}
