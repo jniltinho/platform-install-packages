@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "decision": "PURE_DELIVERY_HELPER_APPROVED_NOT_EXECUTABLE_TRANSPORT_OR_MEDIA_ACCEPTANCE",
+  "pins": {
+    "delivery.py": "3211d098fc56d86d4b16e3ddd36de31650c2a3fc26b1e3c00673faca0be05175",
+    "test_delivery.py": "c440fc7dd2d836130b19e939c539f415fd7df93b8b47a4c12262f32545ca2e8e"
+  },
+  "tests": {
+    "passed": 10,
+    "exit": 0
+  },
+  "review": [
+    "Exact .74https8443 origin, no nativeURL rewrite; wrongscheme/port/userinfo/fragment rejected",
+    "Original progressive exactbytes/hash plusfirst/last1024byte206 contentrange checks",
+    "HLS closed VODTSsubset maxmaster1/media1/segments32/2MiB; external refs/unsupported tags reject",
+    "First HLS variant only; TSframing not decode",
+    "No raw URLs/errors emitted in public results"
+  ],
+  "integration_requirements": [
+    "Injected requester must enforce pinnedCA, redirects/proxies disabled, totaldeadline<=30s and body/header caps",
+    "Caller owns currentUSER authentication and finite privacy coverage for API/delivery URLs and tokens",
+    "ffprobe projection onlycodec/shape: nofullffmpegdecode or exact640x360/25fps/10s/audio-presence validation",
+    "No HLSroute guessing or HTTP\u2192HTTPS rewriting"
+  ],
+  "limits": [
+    "No VM/network calls by reviewer",
+    "Author actualCLI pending not counted",
+    "No runtime playback/media/fullbaseline acceptance"
+  ]
+}

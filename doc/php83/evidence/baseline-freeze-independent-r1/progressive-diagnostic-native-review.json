@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "decision": "READ_ONLY_ROUTE_SHAPES_OBSERVED_CAUSE_UNRESOLVED",
+  "artifact_sha256": "48eda10632aff518eefc350730816be51106c45fd132c27855cbcc62f33f8274",
+  "diagnostic_source_sha256": "0d9f5a95a79938ecd5b146e8c35a42d0666a9be833d20b4ec0e50c0bb987729a",
+  "exit": 0,
+  "files": 374,
+  "bytes": 28766542,
+  "application_counts": {
+    "credential_marker_candidates": 0,
+    "filename_long_segments": 0,
+    "lines": 257164,
+    "long_segments": 6,
+    "other_long_segments": 6,
+    "owned_route_candidates": 6,
+    "query_candidates": 0,
+    "synthetic_filename_shape": 0,
+    "unparseable_candidates": 0
+  },
+  "interpretation": [
+    "Six observed application route candidates contain six long segments classified OTHER, not fileName; this evidence does not support filename exemption.",
+    "No query or recognized credential-path marker was observed among selected candidates; this does not establish absence of signed routes or secrets.",
+    "Rows may repeat the same route; six candidates are not necessarily six distinct URLs or requests.",
+    "Saved-start to current file ends, no journal scan, no exact prior patterns or original end reconstruction; original PRIVATE_MARKER_LOGGED remains unresolved and failed."
+  ],
+  "next_action": "Bounded read-only role counters with fixed position/key classes and equality to independently pinned public literals; no raw segment/hash/URL export. Unknown stays rejected.",
+  "privacy_pass": false,
+  "cause_confirmed": false,
+  "api_replayed": false,
+  "reviewer_vm_calls": false
+}

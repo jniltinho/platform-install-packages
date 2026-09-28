@@ -1,0 +1,20 @@
+{
+  "case": "short-delivery-r1",
+  "executor": "actual Claude CLI",
+  "terminal_exit": 0,
+  "tests": 19,
+  "tests_exit": 0,
+  "additional_adversarial_probes_reported": 12,
+  "verdict": "BLOCKED_TWO_PARSER_DEFECTS",
+  "findings": [
+    "Non-HLS Unicode/control line separators accepted by splitlines.",
+    "Malformed header names bypass selected-header checks."
+  ],
+  "denials": [],
+  "resolution": "R2 corrected both parser defects; independently reviewed in delivery-r2-source-review.json. Native progressive byte/range checks later passed but overall privacy failed; no full acceptance.",
+  "limits": [
+    "No native network, TLS, privacy-window or decode execution.",
+    "TS framing and ffprobe metadata do not prove decode.",
+    "Injected transport must enforce limits before reading."
+  ]
+}

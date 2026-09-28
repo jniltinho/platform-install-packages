@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "decision": "BOUNDED_ADDITIVE_TLS443_SOURCE_APPROVED",
+  "pins": {
+    "add443.py": "dd3a826fa382eb57dbe7c8a7c9766894b41ff18f075a9f2d7a18cc6a286af704",
+    "test_add443.py": "01815da15c8837237fdf553f2128833917a38f4f480c9faa46a6ee3b95c00047",
+    "setup_r2.py": "34e5f874c5b32126b3b6341c49cc93c5f8ad46d19183408730a5cba86994aae8",
+    "render_r2.py": "7fabc4fffd242d8d54922efee01bb2f7ead0d73d7d53ad9424f5587e71297a93"
+  },
+  "independent_test_command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/baseline-tls-r1 -p test_add443.py -v",
+  "tests": 8,
+  "exit": 0,
+  "review": [
+    "Exact target/absent owned paths; prior8443 listener and existing configs pinned.",
+    "New .74:443 virtualhost reuses private certificates and scalar log paths, no new LoadModule or ports.conf rewrite.",
+    "Postcheck exact443/8443 listeners, trusted/wrong CA handshakes, existing80 listeners and configured php7 module.",
+    "Scoped rollback verifies owned inode/hash/link and restores prior8443 listeners."
+  ],
+  "precondition": "Root must pin add443.py, setup_r2.py and render_r2.py together in trusted stage before import/execution.",
+  "limitations": [
+    "No reviewer VM or network calls.",
+    "Modeled rollback tests are not native recovery evidence.",
+    "SIGKILL or I/O failure may leave consumed state requiring root inspection; no unconditional cleanup guarantee.",
+    "Handshakes and configured php7 module do not prove API or live PHP execution.",
+    "Mandatory existing TLS privacy adapter remains required before authenticated probes."
+  ]
+}

@@ -1,6 +1,6 @@
 # PHP 8.3 — status atual e tarefas restantes
 
-Atualizado: 2026-09-28T18:59:43.713726+00:00
+Atualizado: 2026-09-28T19:28:22.517639+00:00
 
 **5 concluídas / 46 abertas / 51 tarefas.** Os 24 requisitos originais e 27 casos detalhados se sobrepõem; não são 51 funcionalidades independentes. Sem percentual ou previsão de conclusão inferidos de testes.
 
@@ -89,8 +89,27 @@ seus bloqueadores históricos não representam este status atual.
   NOT_APPLICABLE, conforme enum nativo. Consulta viaHTTPS exit0, janelas de
   privacidade completas e revisão independente aprovada. Não inferimos motivo
   dos3 itens nem aceite de reprodução a partir apenas do status.
-- Próximo:download/Range da mídia existente, HLS, mídia longa/UI e medições
-  formais. Tarefa1.2 ainda aberta.
+- Listener nativo HTTPS443 adicionado somente em .74, mantendo8443 eHTTP80:
+  configtest, CA correta/incorreta e móduloPHP7 passaram; exit0. Mesmos logs
+  privados e certificados, sem exportar/regenerar chaves. É validação de
+  configuração/handshake, não aceite integral da aplicação.
+- Entrega progressiva real em443:3 GETs validaram1.511.134 bytes, SHA256
+  `612d179c75f8f2374b7ac59c2dd7edba65e38eb357b870e8ad8c2e83d63b5473`
+  e2 respostas206 com Content-Range e bytes exatos. Porém o resultado GLOBAL
+  foi **FAILED_OBSERVATION**, guestexit2: **PRIVATE_MARKER_LOGGED** na etapa
+  **BATCH_PRIVACY**. Unidade inativa; não é aprovação de privacidade, playback
+  decodificado ou tarefa. Novas requisições autenticadas estão suspensas.
+- Diagnóstico posterior somente leitura:374 arquivos/28.766.542 bytes;
+  encontrou6 segmentos longos classificados como outros,0 como filename.
+  Não reconstruiu os padrões privados anteriores nem examinou o journal;
+  `cause_confirmed=false` e `privacy_pass=false`. A hipótese de filename
+  não foi confirmada e não autoriza ignorar marcadores arbitrários.
+- Próximo:resolver/classificar o bloqueio de privacidade com evidência limitada,
+  antes de novo tráfego autenticado; depois HLS/decode, mídia longa/UI e medições
+  formais. **Tarefa1.2 permanece aberta;5/51 concluídas,46 abertas.**
+  Recibos: ../evidence/baseline-tls-r1/native443-execute.json,
+  ../evidence/baseline-freeze-r1/progressive443-native-r1.json e
+  ../evidence/baseline-freeze-r1/progressive443-readonly-diagnostic.json.
 
 R1/R2 e seus resultados parciais/falhos permanecem preservados. Tarefa1.2 aberta;
 nenhuma alteração em produção. Fonte do box: novo download oficial de651.326.766

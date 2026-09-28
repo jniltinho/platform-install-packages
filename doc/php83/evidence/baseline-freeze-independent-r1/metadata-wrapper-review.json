@@ -18,10 +18,11 @@
     "Original windowstarts and commonend/quiet/sourcefinal guards unchanged",
     "Closed host projection canonicalizes exact metadata schema and rejects injected round claims"
   ],
-  "qualifier": "Wrapper size_unit=KiB; native public field documents KBytes, exact divisor evidence requested separately before interpreting sizes as exact binary units. Never equate rounded API size with exact sourcebyte length.",
+  "qualifier": "Resolved in final pinned wrapper: size_unit is API_KBytes, matching the native API field label without assuming a binary divisor. Rounded API size is not exact source byte length.",
   "limits": [
     "No reviewerVM calls",
     "No native metadata observation yet",
     "No playback/fulldecode/fullbaseline acceptance"
-  ]
+  ],
+  "qualifier_history": "Wrapper size_unit=KiB; native public field documents KBytes, exact divisor evidence requested separately before interpreting sizes as exact binary units. Never equate rounded API size with exact sourcebyte length."
 }

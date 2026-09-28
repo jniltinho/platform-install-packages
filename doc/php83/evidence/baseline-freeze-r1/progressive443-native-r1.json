@@ -1,0 +1,184 @@
+{
+  "approved_freeze": false,
+  "files": {
+    "guest_progressive443.py": "2b6cc743bb9dfa59dc0256294c924f39de05e4bff9c6649b24ac2799fb6bd889",
+    "media_get443.py": "7417ba4ca341f84626c7b0138ac4fbdf7103e89a0975b55be210e7047d95af30",
+    "observation_v2.py": "ec32386df1c745f5754ece19f3127f6da85415e644c8556e6c07666b2ea1abc5",
+    "privacy_logs_r2.py": "d67eb65900c3134c91efaf94b18ba482b59261c81b0084de0cea3bcd37d5246c",
+    "protocol_v2.py": "147d74b0a04779fd0819ebe210d8a1a6aea4af8fbc773683a278e540ce70d4b8",
+    "rehearsal.py": "ccf78ba0b1d3c94f05f63fd2d87c351953022c149c0e75392b5c86be2c02bb70",
+    "settle.py": "2b1382fc7ff4163240d9c6e3342738ce90ab8537df9ea9999497a44e24d84764",
+    "short_delivery443.py": "9aa829f6c1927eb493fa4f1f5d9c1584d6a8f93b253015912ce253ba24fb1e76",
+    "url_privacy.py": "338f0339e23b7d385fce17ea6fa152016342bca8d42129d5efc3f2a5183c1f6f"
+  },
+  "guest_exit": 2,
+  "phase_receipts": [
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "failure_code": "PRIVATE_MARKER_LOGGED",
+      "failure_stage": "BATCH_PRIVACY",
+      "native_url_shape": {
+        "credential_path": false,
+        "port": "443",
+        "query_present": false,
+        "scheme": "https",
+        "target_host_match": true
+      },
+      "progressive": {
+        "bytes": 1511134,
+        "case": "ORIGINAL_PROGRESSIVE",
+        "decoded": false,
+        "full_acceptance": false,
+        "range_checks": 2,
+        "requests": 3,
+        "sha256": "612d179c75f8f2374b7ac59c2dd7edba65e38eb357b870e8ad8c2e83d63b5473"
+      },
+      "quiet_window": {
+        "maximum_seconds": 30,
+        "quiet_seconds": 2,
+        "samples": 9,
+        "status": "QUIET_WINDOW_OBSERVED"
+      },
+      "status": "FAILED_OR_INCOMPLETE_MEDIA_OBSERVATION"
+    },
+    {
+      "failure_code": "PRIVATE_MARKER_LOGGED",
+      "failure_stage": "BATCH_PRIVACY",
+      "native_url_shape": {
+        "credential_path": false,
+        "port": "443",
+        "query_present": false,
+        "scheme": "https",
+        "target_host_match": true
+      },
+      "progressive": {
+        "bytes": 1511134,
+        "case": "ORIGINAL_PROGRESSIVE",
+        "decoded": false,
+        "full_acceptance": false,
+        "range_checks": 2,
+        "requests": 3,
+        "sha256": "612d179c75f8f2374b7ac59c2dd7edba65e38eb357b870e8ad8c2e83d63b5473"
+      },
+      "quiet_window": {
+        "maximum_seconds": 30,
+        "quiet_seconds": 2,
+        "samples": 9,
+        "status": "QUIET_WINDOW_OBSERVED"
+      },
+      "status": "FAILED_OR_INCOMPLETE_MEDIA_OBSERVATION"
+    },
+    {
+      "failure_code": "PRIVATE_MARKER_LOGGED",
+      "failure_stage": "BATCH_PRIVACY",
+      "native_url_shape": {
+        "credential_path": false,
+        "port": "443",
+        "query_present": false,
+        "scheme": "https",
+        "target_host_match": true
+      },
+      "progressive": {
+        "bytes": 1511134,
+        "case": "ORIGINAL_PROGRESSIVE",
+        "decoded": false,
+        "full_acceptance": false,
+        "range_checks": 2,
+        "requests": 3,
+        "sha256": "612d179c75f8f2374b7ac59c2dd7edba65e38eb357b870e8ad8c2e83d63b5473"
+      },
+      "quiet_window": {
+        "maximum_seconds": 30,
+        "quiet_seconds": 2,
+        "samples": 9,
+        "status": "QUIET_WINDOW_OBSERVED"
+      },
+      "status": "FAILED_OR_INCOMPLETE_MEDIA_OBSERVATION"
+    },
+    {
+      "failure_code": "PRIVATE_MARKER_LOGGED",
+      "failure_stage": "BATCH_PRIVACY",
+      "native_url_shape": {
+        "credential_path": false,
+        "port": "443",
+        "query_present": false,
+        "scheme": "https",
+        "target_host_match": true
+      },
+      "progressive": {
+        "bytes": 1511134,
+        "case": "ORIGINAL_PROGRESSIVE",
+        "decoded": false,
+        "full_acceptance": false,
+        "range_checks": 2,
+        "requests": 3,
+        "sha256": "612d179c75f8f2374b7ac59c2dd7edba65e38eb357b870e8ad8c2e83d63b5473"
+      },
+      "quiet_window": {
+        "maximum_seconds": 30,
+        "quiet_seconds": 2,
+        "samples": 9,
+        "status": "QUIET_WINDOW_OBSERVED"
+      },
+      "status": "FAILED_OR_INCOMPLETE_MEDIA_OBSERVATION"
+    }
+  ],
+  "status": "FAILED_OBSERVATION",
+  "stderr_bytes": 0,
+  "stdout_bytes": 410325,
+  "unit": "baseline-freeze-465479bb",
+  "unit_inactive": true
+}

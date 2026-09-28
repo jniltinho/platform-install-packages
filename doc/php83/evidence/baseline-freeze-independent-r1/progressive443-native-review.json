@@ -1,0 +1,59 @@
+{
+  "schema": 1,
+  "decision": "NATIVE_PROGRESSIVE_BYTES_PASSED_PRIVACY_FAILED_NOT_ACCEPTED",
+  "artifact_sha256": "183f95fabcfd89e556840da5ddfe8b11205ffabe9aa10956191a907b0f6ce0d4",
+  "guest_exit": 2,
+  "unit_inactive": true,
+  "stderr_bytes": 0,
+  "source_pins": {
+    "guest_progressive443.py": "2b6cc743bb9dfa59dc0256294c924f39de05e4bff9c6649b24ac2799fb6bd889",
+    "media_get443.py": "7417ba4ca341f84626c7b0138ac4fbdf7103e89a0975b55be210e7047d95af30",
+    "observation_v2.py": "ec32386df1c745f5754ece19f3127f6da85415e644c8556e6c07666b2ea1abc5",
+    "privacy_logs_r2.py": "d67eb65900c3134c91efaf94b18ba482b59261c81b0084de0cea3bcd37d5246c",
+    "protocol_v2.py": "147d74b0a04779fd0819ebe210d8a1a6aea4af8fbc773683a278e540ce70d4b8",
+    "rehearsal.py": "ccf78ba0b1d3c94f05f63fd2d87c351953022c149c0e75392b5c86be2c02bb70",
+    "settle.py": "2b1382fc7ff4163240d9c6e3342738ce90ab8537df9ea9999497a44e24d84764",
+    "short_delivery443.py": "9aa829f6c1927eb493fa4f1f5d9c1584d6a8f93b253015912ce253ba24fb1e76",
+    "url_privacy.py": "338f0339e23b7d385fce17ea6fa152016342bca8d42129d5efc3f2a5183c1f6f"
+  },
+  "final_closed_receipt": {
+    "failure_code": "PRIVATE_MARKER_LOGGED",
+    "failure_stage": "BATCH_PRIVACY",
+    "native_url_shape": {
+      "credential_path": false,
+      "port": "443",
+      "query_present": false,
+      "scheme": "https",
+      "target_host_match": true
+    },
+    "progressive": {
+      "bytes": 1511134,
+      "case": "ORIGINAL_PROGRESSIVE",
+      "decoded": false,
+      "full_acceptance": false,
+      "range_checks": 2,
+      "requests": 3,
+      "sha256": "612d179c75f8f2374b7ac59c2dd7edba65e38eb357b870e8ad8c2e83d63b5473"
+    },
+    "quiet_window": {
+      "maximum_seconds": 30,
+      "quiet_seconds": 2,
+      "samples": 9,
+      "status": "QUIET_WINDOW_OBSERVED"
+    },
+    "status": "FAILED_OR_INCOMPLETE_MEDIA_OBSERVATION"
+  },
+  "interpretation": [
+    "Three native GET requests verify original source length/hash and two byte ranges. No decode performed.",
+    "Overall observation failed PRIVATE_MARKER_LOGGED at BATCH_PRIVACY; privacy acceptance remains blocked.",
+    "No successful common-end all-pattern scan, failure privacy receipt or source-final projection is published; do not infer those passed.",
+    "Long public path segment enrollment may explain a match but is only a hypothesis; neither false positive nor actual credential disclosure is established by closed receipt.",
+    "The repeated progressive records are checkpoints from one attempt, not separate executions."
+  ],
+  "next_action": "Only bounded read-only diagnostic of saved private audits using closed pattern indices/counts/categories; no new authentication/GET until classified. Never emit needles, raw URLs, log content or private paths.",
+  "limits": [
+    "No reviewer VM calls.",
+    "No HLS/decode/browser playback/full baseline acceptance.",
+    "Preserve original failure without rewriting it as privacy pass."
+  ]
+}

@@ -1,0 +1,18 @@
+# Additive native 443 lab listener
+
+Root actual progressive observation failed before GET: native URL HTTPS effective443, while existing private lab vhost listens8443. Do not rewrite native returned URL or silently downgrade transport. New add443.py creates only an exclusive conf-available file, its exact owned conf-enabled symlink, and a private intent/terminal directory. Existing TLSR2 ports.conf hashdcada9f7ac7b7a5ce698e09e4eab52083388c67829c822e927339285fcc74410, renderer-exact8443 configuration, original Apache/app configs and publicCA5ca573... are checked before/after. Existing key metadata is checked; key bytes are neither exported, hashed nor regenerated.
+
+New state `/var/lib/kaltura-baseline-tls-443-r1`; new config/link `kaltura-baseline-tls-443-r1.conf`. Any prior state/config/link blocks reuse. Reuses exactly existing TLSR2 private logs and cert/key; no new privacy-scanner path, trust relaxation, chmod or package mutation. Mandatory TLSR2 log scanner remains required before credentials/media.
+
+Coordinator stages add443.py plus frozen setup_r2.py SHA34e5f874c5b32126b3b6341c49cc93c5f8ad46d19183408730a5cba86994aae8 and render_r2.py SHA7fabc4fffd242d8d54922efee01bb2f7ead0d73d7d53ad9424f5587e71297a93 into a NEW root-owned immutable code stage; verify all hashes before importing. First call main(False), then only after result/review main(True). Existing TLSR2 consumed stage/state must not be replaced. Root exclusively operates target.
+
+Preflight checks exact .74 hostname/IP/excludedtargets, existing config/CA/private-log metadata, only8443 TLSlistener and active Apache/php7/ssl modules, configuration syntax and existing8443 trusted/wrongCA behavior. Execute configtests, graceful reloads, checks exact443+8443 TLSlisteners, validCA/wrongCA handshakes bothports, preservedHTTP80 socketset/php7module/configpins and ownednewfiles. This is not an HTTP application/PHP-provider probe. Root should rerun existing safe provider check afterward. It emits no keys, URLtokens or raw daemon output.
+
+Failure removes ONLY createdinode/exactbyte matching config and symlink, configtests, reloads when attempted, proves prior8443/HTTP80/modules/trust again. Failedstate remains private, no automatic retry. SIGTERM/INT block critical creation and invoke bounded rollback; SIGKILL/powerloss remains manual recovery. No listener success/fullacceptance on incomplete rollback.
+
+Author eight pure/modeled tests PASS, not native execution. Actual Claude review and independent agent review recorded separately. Exclude add443-claude-raw.json from public milestone; use curated receipt.
+
+## Independent CLI finding and coordinator adjudication
+Actual Claude terminal0 executed8 tests, then predicted a fresh configtest failure from lexical include order/mod_ssl initialization. This was a source inference, not a reproduced runtime failure. Root had already run the reviewed frozen dd3a helper: post-creation fresh configtest,443+8443 trusted/wrongCA handshakes,HTTP80/module checks passed. Therefore the predicted native failure is contradicted by that observation; exact load-order mechanism remains unresolved here. Do not change a successful deployed source on this inference alone.
+
+An unaccepted speculative candidate was briefly authored before receiving root's native result, then removed from implementation paths; original dd3a helper and01815 test hashes were restored exactly. Candidate and modeled9test evidence remain separately labeled unaccepted, not deployed or source-approved. No VM changes were made by this agent. Actual deployment uses dd3a; no R2 rollout is authorized by these local files.

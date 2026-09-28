@@ -1,0 +1,17 @@
+{
+  "case": "add443",
+  "executor": "actual Claude CLI",
+  "terminal_exit": 0,
+  "tests": 8,
+  "tests_exit": 0,
+  "permission_denials": [],
+  "finding": "Predicted fresh configtest failure from lexical include order before mod_ssl loading.",
+  "finding_status": "DISPUTED_BY_ACTUAL_POST_CREATION_CONFIGTEST_SUCCESS",
+  "coordinator_observation": "Root reported actual post-creation configuration test and443+8443 trusted/wrongCA handshakes passed. No native failure inferred from reviewer prediction.",
+  "source_sha256": "dd3a826fa382eb57dbe7c8a7c9766894b41ff18f075a9f2d7a18cc6a286af704",
+  "limitations": [
+    "Modeled tests are not native execution.",
+    "Actual source of module loading order remains unadjudicated locally.",
+    "Unaccepted speculative candidate retained separately; deployed source restored exactly."
+  ]
+}

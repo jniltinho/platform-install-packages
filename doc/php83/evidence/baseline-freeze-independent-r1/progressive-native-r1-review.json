@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "decision": "NATIVE_ORIGIN_REJECTION_CONFIRMED_NOT_PROGRESSIVE_PASS",
+  "artifact_sha256": "680b580ea38ee4a21aedc0d85c19772d1a2c9a619d28c6a59abd11cdda8a4c35",
+  "guest_exit": 2,
+  "unit_inactive": true,
+  "stderr_bytes": 0,
+  "final_closed_receipt": {
+    "failure_code": "DELIVERY_ORIGIN",
+    "failure_privacy": {
+      "finite_scans_complete_and_zero": true
+    },
+    "failure_stage": "API_ROUND",
+    "native_url_shape": {
+      "credential_path": false,
+      "port": "443",
+      "query_present": false,
+      "scheme": "https",
+      "target_host_match": true
+    },
+    "status": "FAILED_OR_INCOMPLETE_MEDIA_OBSERVATION"
+  },
+  "source_pins": {
+    "guest_progressive.py": "70de8974818252d0f5a26a81efe7f861aa8d8387b6ef700bb3c7bf9e060d9cd1",
+    "media_get.py": "fb67ac1f7bdb39c75cc875389f2f9734d4a0012df550f1d62e2ee120a6240476",
+    "observation_v2.py": "ec32386df1c745f5754ece19f3127f6da85415e644c8556e6c07666b2ea1abc5",
+    "privacy_logs_r2.py": "d67eb65900c3134c91efaf94b18ba482b59261c81b0084de0cea3bcd37d5246c",
+    "protocol_v2.py": "147d74b0a04779fd0819ebe210d8a1a6aea4af8fbc773683a278e540ce70d4b8",
+    "rehearsal.py": "ccf78ba0b1d3c94f05f63fd2d87c351953022c149c0e75392b5c86be2c02bb70",
+    "settle.py": "2b1382fc7ff4163240d9c6e3342738ce90ab8537df9ea9999497a44e24d84764",
+    "short_delivery.py": "ee144fa2a27e9b86e6cfb6257965cbec47970b3217df255376198fdc661ab72e",
+    "url_privacy.py": "338f0339e23b7d385fce17ea6fa152016342bca8d42129d5efc3f2a5183c1f6f"
+  },
+  "interpretation": [
+    "Pinned source rejects native URL effective port443 before any GET because old delivery boundary requires8443.",
+    "No progressive source bytes, ranges, playback or decode were tested.",
+    "Finite failure privacy projection is complete and zero; no global privacy or unbounded log claim.",
+    "URL booleans disclose no raw URL/path or token. Credential-path false means recognized markers absent, not proof arbitrary path data is universally non-secret.",
+    "Next separately reviewed lab443 listener and versioned exact443 GET can preserve native URL unchanged; API8443 remains separate."
+  ],
+  "limits": [
+    "No reviewer VM calls.",
+    "Original failure preserved; no automatic rerun or source mutation."
+  ]
+}

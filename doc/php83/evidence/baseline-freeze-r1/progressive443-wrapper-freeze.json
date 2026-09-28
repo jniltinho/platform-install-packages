@@ -1,0 +1,24 @@
+{
+  "aggregate_tests": 100,
+  "api_port": 8443,
+  "ca_changed": false,
+  "exit": 0,
+  "files": {
+    "guest_progressive443.py": "2b6cc743bb9dfa59dc0256294c924f39de05e4bff9c6649b24ac2799fb6bd889",
+    "media_get443.py": "7417ba4ca341f84626c7b0138ac4fbdf7103e89a0975b55be210e7047d95af30",
+    "prepare_progressive443.py": "0539be4ba19414ae175e06abc3b505c0bd332fd83b1297271ec4d4ddfec77f78",
+    "run_progressive443.py": "650579f4142871ba185c62a24324cedab0372164e328d283007c902c1c79a89e",
+    "short_delivery443.py": "9aa829f6c1927eb493fa4f1f5d9c1584d6a8f93b253015912ce253ba24fb1e76",
+    "test_progressive443.py": "8e22b6318a06d8fcf4fe706abbe19b6fceb6e91e6f4ce98883c3fce00f0ba850"
+  },
+  "focused_tests": 5,
+  "full_acceptance": false,
+  "get_port": 443,
+  "implicit_https_port_allowed": true,
+  "native_executed_by_author": false,
+  "prior_failed_observation_retained": true,
+  "privacy_inventory_changed": false,
+  "root_execution_prerequisite": "Reviewed TLS443 listener setup terminal LAB_TLS443_INSTALLED_HANDSHAKE_ONLY; same existing TLSR2 logs and CA; no credential traffic before privacy inventory",
+  "status": "LOCAL_SOURCE_FROZEN_REVIEW_PENDING",
+  "url_rewritten": false
+}

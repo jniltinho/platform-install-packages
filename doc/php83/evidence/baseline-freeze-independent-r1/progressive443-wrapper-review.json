@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "decision": "GET443_BOUNDED_DERIVATIVE_SOURCE_APPROVED",
+  "pins": {
+    "run_progressive443.py": "650579f4142871ba185c62a24324cedab0372164e328d283007c902c1c79a89e",
+    "guest_progressive443.py": "2b6cc743bb9dfa59dc0256294c924f39de05e4bff9c6649b24ac2799fb6bd889",
+    "media_get443.py": "7417ba4ca341f84626c7b0138ac4fbdf7103e89a0975b55be210e7047d95af30",
+    "short_delivery443.py": "9aa829f6c1927eb493fa4f1f5d9c1584d6a8f93b253015912ce253ba24fb1e76",
+    "prepare_progressive443.py": "0539be4ba19414ae175e06abc3b505c0bd332fd83b1297271ec4d4ddfec77f78",
+    "test_progressive443.py": "8e22b6318a06d8fcf4fe706abbe19b6fceb6e91e6f4ce98883c3fce00f0ba850"
+  },
+  "independent_test_command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/baseline-freeze-r1 -p test_progressive443.py -v",
+  "tests": 5,
+  "exit": 0,
+  "review": [
+    "Exact derivative generator and all staged pins verified.",
+    "Only GET/delivery origin changed to implicit or explicit443; native URL returned unchanged. API POST remains exact8443.",
+    "Original CA, deadline, byte caps, private header pairs, credential rejection, all-token audits, original starts, common end and closed projection unchanged.",
+    "Fresh exclusive stage and old failed unit inactivity required. Original rejection preserved."
+  ],
+  "precondition": "Root must first verify separately reviewed actual .74:443 listener setup preserving existing TLS log paths and80/8443. This review does not attest listener readiness.",
+  "limits": [
+    "No reviewer VM calls.",
+    "No new HTTP request or native media result from this review.",
+    "No HLS, decode, playback or full acceptance claim."
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "alpha/lib/model/asset.php": "34f9e81972369706ea01f5e8a3ba19cd6999d2f6804f25ccdf89cac0bf74933d",
+  "alpha/apps/kaltura/lib/kAssetUtils.class.php": "4ee947a8fe89b6ee9fc5e5f97b641f4dbf411a47666892d4d90950bfc011e03b",
+  "alpha/lib/enums/PlaybackProtocol.php": "39a84b46cdd294156f129852d07e12681eb9a44f93a7a57ec5656e06e88b287d",
+  "alpha/apps/kaltura/lib/myPartnerUtils.class.php": "dddd0594e982605f2078f817017456804ded5d1f20a873aca060e34a6042737b"
+}

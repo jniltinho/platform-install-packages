@@ -1,0 +1,16 @@
+test_ca_wrong_accepted (test_add443.Tests.test_ca_wrong_accepted) ... ok
+test_ca_wrong_rejected (test_add443.Tests.test_ca_wrong_rejected) ... ok
+test_config (test_add443.Tests.test_config) ... ok
+test_execute_modeled (test_add443.Tests.test_execute_modeled) ... ok
+test_failed_post_rollback (test_add443.Tests.test_failed_post_rollback) ... ok
+test_occupied_state (test_add443.Tests.test_occupied_state) ... ok
+test_preflight_no_writes (test_add443.Tests.test_preflight_no_writes) ... ok
+test_wrong_target (test_add443.Tests.test_wrong_target) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.002s
+
+OK
+{"full_acceptance": false, "http80_preserved": true, "http_api_tested": false, "keys_exported": false, "listeners": [443, 8443], "php7_module_preserved": true, "privacy_inventory_unchanged": true, "public_ca_pem_sha256": "5ca573deffda2a3f40bc104258c7c36472d2f924a2a945cec6cb1fd99f541bef", "rollback_complete": false, "status": "LAB_TLS443_INSTALLED_HANDSHAKE_ONLY", "wrong_ca_rejected": true}
+{"failure_code": "POST_FAILURE", "full_acceptance": false, "keys_exported": false, "rollback_complete": true, "status": "TLS443_FAILED"}
+{"status": "TLS443_PREFLIGHT_ONLY", "full_acceptance": false}

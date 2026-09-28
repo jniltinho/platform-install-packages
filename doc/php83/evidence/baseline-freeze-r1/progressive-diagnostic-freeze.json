@@ -1,0 +1,16 @@
+{
+  "causal_attribution": false,
+  "exact_prior_patterns_recoverable": false,
+  "exit": 0,
+  "files": {
+    "diagnose_progressive.py": "0d9f5a95a79938ecd5b146e8c35a42d0666a9be833d20b4ec0e50c0bb987729a",
+    "test_diagnose_progressive.py": "6633b8feb1aac138534cfaf04026474cf2d4133cab08433bba1bbdeb95133abc"
+  },
+  "journal_scanned": false,
+  "native_executed_by_author": false,
+  "prior_failure_retained": true,
+  "privacy_acceptance": false,
+  "scope": "ENDED_UNIT_SAVED_START_FILE_WINDOW_CLOSED_ROUTE_SHAPES",
+  "status": "LOCAL_DIAGNOSTIC_REVIEW_PENDING",
+  "tests": 5
+}

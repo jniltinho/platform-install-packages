@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "decision": "BOUNDED_PROGRESSIVE_SOURCE_APPROVED",
+  "reviewer": "independent Codex review lane",
+  "pins": {
+    "run_progressive.py": "41e912a616360ae93d791dfccfd557e0d8f959b1fceb86b74968edb2e23e5f69",
+    "guest_progressive.py": "70de8974818252d0f5a26a81efe7f861aa8d8387b6ef700bb3c7bf9e060d9cd1",
+    "prepare_progressive.py": "5ddcf27d425418c3cc2a641386d497cf107b82ed44838c955a7e1ef977f81028",
+    "media_get.py": "fb67ac1f7bdb39c75cc875389f2f9734d4a0012df550f1d62e2ee120a6240476",
+    "url_privacy.py": "338f0339e23b7d385fce17ea6fa152016342bca8d42129d5efc3f2a5183c1f6f",
+    "test_progressive.py": "cdb41238067dc01c4cd5cd4881fc70713bc93d99a43fb3a5359e26b80a499903",
+    "test_media_get.py": "32a618dd9d0b096b8119ed1e7d8c4a5218b594738d82498d4040358f4859d295",
+    "short_delivery.py": "ee144fa2a27e9b86e6cfb6257965cbec47970b3217df255376198fdc661ab72e"
+  },
+  "independent_tests": [
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/baseline-freeze-r1 -p test_progressive.py -v",
+      "count": 8,
+      "exit": 0
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/baseline-freeze-r1 -p test_media_get.py -v",
+      "count": 5,
+      "exit": 0
+    }
+  ],
+  "review": [
+    "Generator reproduces exact guest and all staged pins match.",
+    "No upload, profile mutation, 100-call replay, HLS call or decode claim.",
+    "Exact native origin required; no rewriting HTTP or missing port into accepted HTTPS. Pinned CA, proxy disabled, redirects denied, 30-second GET deadline and 2-MiB body cap.",
+    "Private header pairs retained for duplicate checks; public progressive projection equals exact fixed expected receipt.",
+    "URL shape projection contains closed enums and booleans only, not URL/path/hash or exception values.",
+    "Known secret/session markers rejected before GET; long returned URL token candidates enrolled privately before rejection. Original finite windows, token batching, common end and mandatory TLS log inventory remain. Failure scan incompleteness is not a pass."
+  ],
+  "limitations": [
+    "Source and local modeled tests only; no reviewer VM execution.",
+    "Returned arbitrary path text is not proven globally non-secret; finite scans cover enrolled patterns and windows only.",
+    "Wrong native origin remains a real failure; do not rewrite automatically.",
+    "Not HLS, media decode, browser playback, benchmark or full baseline acceptance.",
+    "Prior CLI authentication/timeout failures remain separate; no new CLI success asserted."
+  ]
+}

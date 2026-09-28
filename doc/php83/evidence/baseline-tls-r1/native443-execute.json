@@ -1,0 +1,27 @@
+{
+  "executor": "Codex root",
+  "exit": 0,
+  "stderr_bytes": 0,
+  "source_pins": {
+    "add443.py": "dd3a826fa382eb57dbe7c8a7c9766894b41ff18f075a9f2d7a18cc6a286af704",
+    "setup_r2.py": "34e5f874c5b32126b3b6341c49cc93c5f8ad46d19183408730a5cba86994aae8",
+    "render_r2.py": "7fabc4fffd242d8d54922efee01bb2f7ead0d73d7d53ad9424f5587e71297a93"
+  },
+  "command": "strict SSH baseline74 sudo python3 -B stdin; verify immutable add443 stage and execute add443.py --execute",
+  "result": {
+    "full_acceptance": false,
+    "http80_preserved": true,
+    "http_api_tested": false,
+    "keys_exported": false,
+    "listeners": [
+      443,
+      8443
+    ],
+    "php7_module_preserved": true,
+    "privacy_inventory_unchanged": true,
+    "public_ca_pem_sha256": "5ca573deffda2a3f40bc104258c7c36472d2f924a2a945cec6cb1fd99f541bef",
+    "rollback_complete": false,
+    "status": "LAB_TLS443_INSTALLED_HANDSHAKE_ONLY",
+    "wrong_ca_rejected": true
+  }
+}

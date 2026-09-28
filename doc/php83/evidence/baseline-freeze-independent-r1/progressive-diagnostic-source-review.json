@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "decision": "BOUNDED_READ_ONLY_ROUTE_SHAPE_DIAGNOSTIC_APPROVED",
+  "pins": {
+    "diagnose_progressive.py": "0d9f5a95a79938ecd5b146e8c35a42d0666a9be833d20b4ec0e50c0bb987729a",
+    "test_diagnose_progressive.py": "6633b8feb1aac138534cfaf04026474cf2d4133cab08433bba1bbdeb95133abc"
+  },
+  "test_command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/baseline-freeze-r1 -p test_diagnose_progressive.py -v",
+  "tests": 5,
+  "exit": 0,
+  "review": [
+    "Exact ended unit and isolated target guard; boundary3 and4 must agree.",
+    "No API/SQL/credentials or journal reads; fixed sink categories and integer counters only.",
+    "Bounded512files,64MiB total,64KiB lines,10-second processing loop deadline, nofollow/identity checks."
+  ],
+  "limitations": [
+    "Window starts are saved, ends are current per-file stable EOF, not original failed scan cutoff nor cross-file common end.",
+    "Ten seconds is a processing-loop deadline, not total wall-clock including preflight/boundary reads.",
+    "Synthetic filename shape is not exact fixture equality, secret classification or proof of original cause.",
+    "No old KS/pattern recovery; original failure remains failed regardless of shapes observed.",
+    "No reviewer VM calls; no new auth/GET authorized by diagnostic."
+  ]
+}

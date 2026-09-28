@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "decision": "REVISED_PURE_DELIVERY_HELPER_APPROVED",
+  "source_sha256": "ee144fa2a27e9b86e6cfb6257965cbec47970b3217df255376198fdc661ab72e",
+  "test_sha256": "c3f8a67e097740b42143a380de1a511d302b0093ff787c12fe2ad0caf73f74f5",
+  "tests": {
+    "combined": 21,
+    "exit": 0
+  },
+  "review": [
+    "StrictHTTPtoken header names close whitespace/control bypass",
+    "HLS explicitLF/optionalCR split rejects non-HLSUnicode/control separators",
+    "NativeURL/TLSorigin/body/HLSlimits unchanged"
+  ],
+  "prior_negative": "ActualClaude found flaws missed by initial localreview; old3211approval superseded and flaws retained",
+  "limits": [
+    "Pureinjectedrequest module only; newGETwrapper separate review",
+    "TSframing/ffprobe metadata not full decode",
+    "NoVM"
+  ]
+}

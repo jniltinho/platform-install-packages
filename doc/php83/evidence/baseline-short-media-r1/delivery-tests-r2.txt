@@ -1,0 +1,26 @@
+test_api_private (test_delivery.Tests.test_api_private) ... ok
+test_bad_range (test_delivery.Tests.test_bad_range) ... ok
+test_error_redacted (test_delivery.Tests.test_error_redacted) ... ok
+test_header_guards (test_delivery.Tests.test_header_guards) ... ok
+test_hls (test_delivery.Tests.test_hls) ... ok
+test_hls_negative (test_delivery.Tests.test_hls_negative) ... ok
+test_invalid_header_names (test_delivery.Tests.test_invalid_header_names) ... ok
+test_non_hls_line_breaks (test_delivery.Tests.test_non_hls_line_breaks) ... ok
+test_origin (test_delivery.Tests.test_origin) ... ok
+test_probe (test_delivery.Tests.test_probe) ... ok
+test_progressive (test_delivery.Tests.test_progressive) ... ok
+test_source_hash (test_delivery.Tests.test_source_hash) ... ok
+test_api_exception (test_metadata.Tests.test_api_exception) ... ok
+test_duplicates (test_metadata.Tests.test_duplicates) ... ok
+test_error_sanitized (test_metadata.Tests.test_error_sanitized) ... ok
+test_fixed_request_projection (test_metadata.Tests.test_fixed_request_projection) ... ok
+test_native_error_status (test_metadata.Tests.test_native_error_status) ... ok
+test_partial_or_excess_list (test_metadata.Tests.test_partial_or_excess_list) ... ok
+test_source_binding (test_metadata.Tests.test_source_binding) ... ok
+test_types (test_metadata.Tests.test_types) ... ok
+test_wrong_ownership (test_metadata.Tests.test_wrong_ownership) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.001s
+
+OK
