@@ -1,0 +1,31 @@
+{
+  "included_configs": [
+    {
+      "config": "enabled.kaltura.conf",
+      "sha256": "0cc12e21735c3f7e968ceb9fcf35426fab678ce8a68c9fdfc71fd03612ba8ba5",
+      "public_path_directives": [
+        {
+          "line": 3,
+          "directive": "DocumentRoot \"/opt/kaltura/app/alpha/web\""
+        },
+        {
+          "line": 176,
+          "directive": "Alias /start \"/opt/kaltura/app/start\""
+        },
+        {
+          "line": 188,
+          "directive": "Alias /content/uiconf \"/opt/kaltura/web/content/uiconf\""
+        },
+        {
+          "line": 203,
+          "directive": "Alias /content \"/opt/kaltura/web/content\""
+        },
+        {
+          "line": 226,
+          "directive": "Alias /flash \"/opt/kaltura/web/flash\""
+        }
+      ]
+    }
+  ],
+  "api_requests": 0
+}

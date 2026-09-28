@@ -1,0 +1,297 @@
+{
+  "schema": 1,
+  "decision": "DIRECT_ROUTE_REJECTED_BEFORE_GET_CURRENT_FAILURE_AUDIT_ZERO",
+  "artifact_sha256": "217f5ba0cfbe45304168f9b5e618f68d9be1ee5ab0a7be24af9e45c30369cab2",
+  "guest_exit": 2,
+  "unit_inactive": true,
+  "final_closed_receipt": {
+    "failure_code": "DIRECT_URL_MISMATCH",
+    "failure_privacy": {
+      "finite_scans_complete_and_zero": true
+    },
+    "failure_stage": "API_ROUND",
+    "last_audit_quiet": {
+      "audit": 3,
+      "maximum_seconds": 30,
+      "quiet_seconds": 2,
+      "samples": 9,
+      "stage": "API_ROUND",
+      "status": "QUIET_WINDOW_OBSERVED"
+    },
+    "match_provenance": [
+      {
+        "any_match": false,
+        "audit": 1,
+        "file_window_complete": true,
+        "final_privacy_acceptance": false,
+        "journal_window_complete": true,
+        "patterns": [
+          {
+            "categories": [
+              "INVALID_CANARY_FULL"
+            ],
+            "file_count": 0,
+            "index": 1,
+            "journal_count": 0
+          },
+          {
+            "categories": [
+              "INVALID_CANARY_PREFIX"
+            ],
+            "file_count": 0,
+            "index": 2,
+            "journal_count": 0
+          }
+        ],
+        "phase": "files_and_journal",
+        "schema": 1
+      },
+      {
+        "any_match": false,
+        "audit": 1,
+        "file_window_complete": true,
+        "final_privacy_acceptance": false,
+        "journal_window_complete": true,
+        "patterns": [
+          {
+            "categories": [
+              "INVALID_CANARY_FULL"
+            ],
+            "file_count": 0,
+            "index": 1,
+            "journal_count": 0
+          },
+          {
+            "categories": [
+              "INVALID_CANARY_PREFIX"
+            ],
+            "file_count": 0,
+            "index": 2,
+            "journal_count": 0
+          }
+        ],
+        "phase": "files_after_journal",
+        "schema": 1
+      },
+      {
+        "any_match": false,
+        "audit": 2,
+        "file_window_complete": true,
+        "final_privacy_acceptance": false,
+        "journal_window_complete": true,
+        "patterns": [
+          {
+            "categories": [
+              "CURRENT_SECRET_FULL"
+            ],
+            "file_count": 0,
+            "index": 1,
+            "journal_count": 0
+          },
+          {
+            "categories": [
+              "CURRENT_SECRET_PREFIX"
+            ],
+            "file_count": 0,
+            "index": 2,
+            "journal_count": 0
+          },
+          {
+            "categories": [
+              "CURRENT_KS_FULL"
+            ],
+            "file_count": 0,
+            "index": 3,
+            "journal_count": 0
+          },
+          {
+            "categories": [
+              "CURRENT_KS_PREFIX"
+            ],
+            "file_count": 0,
+            "index": 4,
+            "journal_count": 0
+          }
+        ],
+        "phase": "files_and_journal",
+        "schema": 1
+      },
+      {
+        "any_match": false,
+        "audit": 2,
+        "file_window_complete": true,
+        "final_privacy_acceptance": false,
+        "journal_window_complete": true,
+        "patterns": [
+          {
+            "categories": [
+              "CURRENT_SECRET_FULL"
+            ],
+            "file_count": 0,
+            "index": 1,
+            "journal_count": 0
+          },
+          {
+            "categories": [
+              "CURRENT_SECRET_PREFIX"
+            ],
+            "file_count": 0,
+            "index": 2,
+            "journal_count": 0
+          },
+          {
+            "categories": [
+              "CURRENT_KS_FULL"
+            ],
+            "file_count": 0,
+            "index": 3,
+            "journal_count": 0
+          },
+          {
+            "categories": [
+              "CURRENT_KS_PREFIX"
+            ],
+            "file_count": 0,
+            "index": 4,
+            "journal_count": 0
+          }
+        ],
+        "phase": "files_after_journal",
+        "schema": 1
+      },
+      {
+        "any_match": false,
+        "audit": 3,
+        "file_window_complete": true,
+        "final_privacy_acceptance": false,
+        "journal_window_complete": true,
+        "patterns": [
+          {
+            "categories": [
+              "CURRENT_SECRET_FULL"
+            ],
+            "file_count": 0,
+            "index": 1,
+            "journal_count": 0
+          },
+          {
+            "categories": [
+              "CURRENT_SECRET_PREFIX"
+            ],
+            "file_count": 0,
+            "index": 2,
+            "journal_count": 0
+          },
+          {
+            "categories": [
+              "CURRENT_KS_FULL"
+            ],
+            "file_count": 0,
+            "index": 3,
+            "journal_count": 0
+          },
+          {
+            "categories": [
+              "CURRENT_KS_PREFIX"
+            ],
+            "file_count": 0,
+            "index": 4,
+            "journal_count": 0
+          },
+          {
+            "categories": [
+              "URL_CANDIDATE_FULL"
+            ],
+            "file_count": 0,
+            "index": 5,
+            "journal_count": 0
+          },
+          {
+            "categories": [
+              "URL_CANDIDATE_PREFIX"
+            ],
+            "file_count": 0,
+            "index": 6,
+            "journal_count": 0
+          }
+        ],
+        "phase": "files_and_journal",
+        "schema": 1
+      },
+      {
+        "any_match": false,
+        "audit": 3,
+        "file_window_complete": true,
+        "final_privacy_acceptance": false,
+        "journal_window_complete": true,
+        "patterns": [
+          {
+            "categories": [
+              "CURRENT_SECRET_FULL"
+            ],
+            "file_count": 0,
+            "index": 1,
+            "journal_count": 0
+          },
+          {
+            "categories": [
+              "CURRENT_SECRET_PREFIX"
+            ],
+            "file_count": 0,
+            "index": 2,
+            "journal_count": 0
+          },
+          {
+            "categories": [
+              "CURRENT_KS_FULL"
+            ],
+            "file_count": 0,
+            "index": 3,
+            "journal_count": 0
+          },
+          {
+            "categories": [
+              "CURRENT_KS_PREFIX"
+            ],
+            "file_count": 0,
+            "index": 4,
+            "journal_count": 0
+          },
+          {
+            "categories": [
+              "URL_CANDIDATE_FULL"
+            ],
+            "file_count": 0,
+            "index": 5,
+            "journal_count": 0
+          },
+          {
+            "categories": [
+              "URL_CANDIDATE_PREFIX"
+            ],
+            "file_count": 0,
+            "index": 6,
+            "journal_count": 0
+          }
+        ],
+        "phase": "files_after_journal",
+        "schema": 1
+      }
+    ],
+    "native_url_shape": {
+      "credential_path": false,
+      "port": "443",
+      "query_present": false,
+      "scheme": "https",
+      "target_host_match": true
+    },
+    "status": "FAILED_OR_INCOMPLETE_MEDIA_OBSERVATION"
+  },
+  "interpretation": [
+    "Native HTTPS443 URL does not match the exact FileSync-derived direct-content route. That source-supported route was a conditional candidate, not the actual selected route.",
+    "No media GET executed. Quiet waits and current failure audit succeeded, including six secret/KS/URL-candidate full/prefix patterns zero in complete windows.",
+    "This current attempt cannot reclassify old PRIVATE_MARKER_LOGGED or prove its cause.",
+    "Stop blind route guesses. One separately reviewed proof-only getUrl descriptor may retain raw URL exclusively root-private, while exporting only closed route roles and preserving full privacy scanning."
+  ],
+  "reviewer_vm_calls": false
+}

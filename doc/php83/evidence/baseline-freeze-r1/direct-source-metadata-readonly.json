@@ -1,0 +1,38 @@
+[
+  {
+    "name": "asset.php",
+    "regular": true,
+    "uid": 0,
+    "mode": 436,
+    "links": 1,
+    "size": 26128,
+    "sha256": "34f9e81972369706ea01f5e8a3ba19cd6999d2f6804f25ccdf89cac0bf74933d"
+  },
+  {
+    "name": "DeliveryProfileVod.php",
+    "regular": true,
+    "uid": 0,
+    "mode": 436,
+    "links": 1,
+    "size": 16039,
+    "sha256": "e9058bbd6cc16aa79a928ddf91ef80e819481f43404ed7d3fddb35ec4b310494"
+  },
+  {
+    "name": "myContentStorage.class.php",
+    "regular": true,
+    "uid": 0,
+    "mode": 436,
+    "links": 1,
+    "size": 14305,
+    "sha256": "090d3232baca0482cf7cf52f7011eb896270f3e18e778fdee7e2171421c3f2a9"
+  },
+  {
+    "name": "enabled.kaltura.conf",
+    "regular": true,
+    "uid": 0,
+    "mode": 420,
+    "links": 1,
+    "size": 12263,
+    "sha256": "0cc12e21735c3f7e968ceb9fcf35426fab678ce8a68c9fdfc71fd03612ba8ba5"
+  }
+]

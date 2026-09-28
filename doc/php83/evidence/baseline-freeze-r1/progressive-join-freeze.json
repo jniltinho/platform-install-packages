@@ -1,0 +1,34 @@
+{
+  "aggregate_command": "python3 -B -m unittest discover -s tools/php83/baseline-freeze-r1 -p 'test_*.py' -q",
+  "aggregate_tests": 130,
+  "alias_sha256": "0cc12e21735c3f7e968ceb9fcf35426fab678ce8a68c9fdfc71fd03612ba8ba5",
+  "api_port": 8443,
+  "credential_patterns_unchanged": true,
+  "exit": 0,
+  "files": {
+    "direct_content.py": "c8d3ce3e02cc5389407f6c3e9bda8aa348b60ab53735580f72056a754c75fb37",
+    "guest_progressive_join.py": "1c379e18dbf569b2717242fcd4c6dbbad9151eb0f56dbb7983cd2bace395a09b",
+    "prepare_progressive_join.py": "f27fe11c2d7a7c6bb0f3be4e4f8e34ec94e9ec25a7ed5f6a59e49e87094c05bb",
+    "privacy_provenance.py": "ecb0a81c37d19d9842699a928e16e6e2838fb35f68fefb281c495f5505923931",
+    "run_progressive_join.py": "3f83d96e514c4433a189dcf641bc102f0623842d843f1c095cb41976f2e04fb6",
+    "test_direct_content.py": "794dfc86d9a43597b9bd7a6b4f28288853ecae875ef6c80550a883c4891f9c81",
+    "test_privacy_provenance.py": "fb5be16c58d671a08932047ea1749bc2f79289b4f6eb6bddfb9e8e7c0e36635c",
+    "test_progressive_join.py": "cf685d69cc003cacc8a0d0a91bb09fd1684e15690a0c71660633964b29848dc5"
+  },
+  "focused_counts": {
+    "test_direct_content.py": 6,
+    "test_privacy_provenance.py": 5,
+    "test_progressive_join.py": 7
+  },
+  "focused_tests": 18,
+  "full_acceptance": false,
+  "get_port": 443,
+  "historical_failure_reclassified": false,
+  "independent_review": "doc/php83/evidence/baseline-freeze-independent-r1/progressive-join-source-review.json",
+  "native_executed_by_author": false,
+  "prethrow_private_provenance": true,
+  "source_join": "existing verified FileSync315 rawroot/rawpath plus original-byte-hashed stored path; exact source-derived numeric shards and owned basename",
+  "status": "INDEPENDENT_SOURCE_REVIEW_APPROVED_NATIVE_PENDING",
+  "unknown_routes_rejected": true,
+  "url_rewritten": false
+}

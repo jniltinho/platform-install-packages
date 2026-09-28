@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "decision": "BOUNDED_PREAUDIT_QUIET_DERIVATIVE_APPROVED",
+  "pins": {
+    "run_progressive_join_r2.py": "9c5d6f061ff52c258095caf222ee695cad990abc4f4eb1c0dd21bad188ed9562",
+    "guest_progressive_join_r2.py": "052e9b4ce6f5f5fb6575641a63c7d04d1c30157d58dcecdac4022e3431cfd362",
+    "prepare_progressive_join_r2.py": "935f11120bc040b890bf6b4d164f32b677367176d2350ec02f713275e2a1f24e",
+    "test_progressive_join_r2.py": "4090ab007dabd8584b734ec937bddfa8075a436efb44158095cf09e34b40cddc"
+  },
+  "test_command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/baseline-freeze-r1 -p test_progressive_join_r2.py -v",
+  "tests": 6,
+  "exit": 0,
+  "review": [
+    "Pinned settle loaded early; each audit waits for2s quiet with existing30s decision deadline before initial scanner call.",
+    "Original saved starts unchanged; compiled actual audit tests verify exactly one initial scan and no scan when unsettled.",
+    "audit_all settles before fixed end snapshot; per-audit waits and final common-end equality retained, so later changes still fail.",
+    "No scanner retries, changed limits, hidden tail waiver, API loop or credential exemption.",
+    "New quiet projection has closed keys/types; early phase labels distinguish invalid nonce and USER privacy."
+  ],
+  "limits": [
+    "Quiet is not proof of future inactivity; concurrent writes may still fail closed.",
+    "30s is the existing decision deadline with bounded snapshot calls, not hard total wall-clock guarantee.",
+    "Source/model tests only, no reviewer VM.",
+    "Original native failures preserved, no playback/decode/full acceptance."
+  ]
+}

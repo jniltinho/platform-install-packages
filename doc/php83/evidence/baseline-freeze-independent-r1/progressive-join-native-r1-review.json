@@ -1,0 +1,172 @@
+{
+  "schema": 1,
+  "decision": "EARLY_FINITE_SCAN_TAIL_FAILURE_PRESERVED",
+  "artifact_sha256": "2d3a6cb73d9a1e8d7ad5a1d192dbdada389c4b139e576228fe3ae5238faf6a0d",
+  "guest_exit": 2,
+  "unit_inactive": true,
+  "final_closed_receipt": {
+    "failure_code": "FILES_UNDRAINED_TAIL",
+    "failure_privacy": {
+      "finite_scans_complete_and_zero": true
+    },
+    "failure_stage": "PREFLIGHT",
+    "match_provenance": [
+      {
+        "any_match": false,
+        "audit": 1,
+        "file_window_complete": true,
+        "final_privacy_acceptance": false,
+        "journal_window_complete": true,
+        "patterns": [
+          {
+            "categories": [
+              "INVALID_CANARY_FULL"
+            ],
+            "file_count": 0,
+            "index": 1,
+            "journal_count": 0
+          },
+          {
+            "categories": [
+              "INVALID_CANARY_PREFIX"
+            ],
+            "file_count": 0,
+            "index": 2,
+            "journal_count": 0
+          }
+        ],
+        "phase": "files_and_journal",
+        "schema": 1
+      },
+      {
+        "any_match": false,
+        "audit": 1,
+        "file_window_complete": true,
+        "final_privacy_acceptance": false,
+        "journal_window_complete": true,
+        "patterns": [
+          {
+            "categories": [
+              "INVALID_CANARY_FULL"
+            ],
+            "file_count": 0,
+            "index": 1,
+            "journal_count": 0
+          },
+          {
+            "categories": [
+              "INVALID_CANARY_PREFIX"
+            ],
+            "file_count": 0,
+            "index": 2,
+            "journal_count": 0
+          }
+        ],
+        "phase": "files_after_journal",
+        "schema": 1
+      },
+      {
+        "any_match": false,
+        "audit": 3,
+        "file_window_complete": true,
+        "final_privacy_acceptance": false,
+        "journal_window_complete": true,
+        "patterns": [
+          {
+            "categories": [
+              "CURRENT_SECRET_FULL"
+            ],
+            "file_count": 0,
+            "index": 1,
+            "journal_count": 0
+          },
+          {
+            "categories": [
+              "CURRENT_SECRET_PREFIX"
+            ],
+            "file_count": 0,
+            "index": 2,
+            "journal_count": 0
+          },
+          {
+            "categories": [
+              "CURRENT_KS_FULL"
+            ],
+            "file_count": 0,
+            "index": 3,
+            "journal_count": 0
+          },
+          {
+            "categories": [
+              "CURRENT_KS_PREFIX"
+            ],
+            "file_count": 0,
+            "index": 4,
+            "journal_count": 0
+          }
+        ],
+        "phase": "files_and_journal",
+        "schema": 1
+      },
+      {
+        "any_match": false,
+        "audit": 3,
+        "file_window_complete": true,
+        "final_privacy_acceptance": false,
+        "journal_window_complete": true,
+        "patterns": [
+          {
+            "categories": [
+              "CURRENT_SECRET_FULL"
+            ],
+            "file_count": 0,
+            "index": 1,
+            "journal_count": 0
+          },
+          {
+            "categories": [
+              "CURRENT_SECRET_PREFIX"
+            ],
+            "file_count": 0,
+            "index": 2,
+            "journal_count": 0
+          },
+          {
+            "categories": [
+              "CURRENT_KS_FULL"
+            ],
+            "file_count": 0,
+            "index": 3,
+            "journal_count": 0
+          },
+          {
+            "categories": [
+              "CURRENT_KS_PREFIX"
+            ],
+            "file_count": 0,
+            "index": 4,
+            "journal_count": 0
+          }
+        ],
+        "phase": "files_after_journal",
+        "schema": 1
+      }
+    ],
+    "privacy_errors": [
+      {
+        "audit": 2,
+        "code": "UNDRAINED_TAIL",
+        "phase": "files_initial"
+      }
+    ],
+    "status": "FAILED_OR_INCOMPLETE_MEDIA_OBSERVATION"
+  },
+  "interpretation": [
+    "Audit2 initial file scan rejected undrained tail; overall failed, not a detected credential match.",
+    "No progressive GET result; failure precedes source/content mapping and media delivery.",
+    "Final failure audit3 explicitly reports current secret and KS full/prefix file+journal counts zero in complete windows; not an upgrade of failed audit2 to success.",
+    "Reported phase PREFLIGHT includes authenticated user-session work; do not interpret it as no credentials used.",
+    "Next derivative may wait bounded quiet before each initial scan while retaining original starts; common end must be captured after quiet and no scanner retry/relaxation."
+  ],
+  "reviewer_vm_calls": false
+}

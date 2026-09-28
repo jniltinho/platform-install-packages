@@ -116,3 +116,11 @@ nenhuma alteração em produção. Fonte do box: novo download oficial de651.326
 bytes, SHA14ae82e423c270d1c03907faf90691b0fbd673b16bfc369a949808e4e6991b82,
 com quatro arquivos correspondentes ao cache; não prova retrospectiva do
 provisionamento ou identidade do disco atual.
+
+## Latest bounded probes — 2026-09-28
+
+- Joined-path R1 stopped at user-session privacy scanning (`FILES_UNDRAINED_TAIL`); no media GET. Its subsequent finite failure audit completed with zero current-secret/KS matches.
+- A reviewed derivative waits for a bounded quiet window before each initial scan without advancing the saved start or relaxing common-end checks. Six focused tests and 136 aggregate tests passed.
+- Native joined-path R2 passed those privacy gates but rejected the returned native URL (`DIRECT_URL_MISMATCH`) before GET. Its failure audit covered six full/prefix secret, KS and returned-candidate patterns with zero matches and complete finite file/journal coverage.
+- These failures remain failures. The filesystem paths observed in logs do not prove the format of the API-returned URL. Next: one bounded no-GET route-shape observation with closed identity booleans, not arbitrary URL exemptions or raw URL publication.
+- No additional OpenSpec task completed: 5/51 complete, 46 open; task 1.2 remains in progress. No new completion email is due.

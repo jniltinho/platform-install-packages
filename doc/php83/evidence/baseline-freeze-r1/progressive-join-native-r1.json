@@ -1,0 +1,517 @@
+{
+  "approved_freeze": false,
+  "files": {
+    "direct_content.py": "c8d3ce3e02cc5389407f6c3e9bda8aa348b60ab53735580f72056a754c75fb37",
+    "guest_progressive_join.py": "1c379e18dbf569b2717242fcd4c6dbbad9151eb0f56dbb7983cd2bace395a09b",
+    "media_get443.py": "7417ba4ca341f84626c7b0138ac4fbdf7103e89a0975b55be210e7047d95af30",
+    "observation_v2.py": "ec32386df1c745f5754ece19f3127f6da85415e644c8556e6c07666b2ea1abc5",
+    "privacy_logs_r2.py": "d67eb65900c3134c91efaf94b18ba482b59261c81b0084de0cea3bcd37d5246c",
+    "privacy_provenance.py": "ecb0a81c37d19d9842699a928e16e6e2838fb35f68fefb281c495f5505923931",
+    "protocol_v2.py": "147d74b0a04779fd0819ebe210d8a1a6aea4af8fbc773683a278e540ce70d4b8",
+    "rehearsal.py": "ccf78ba0b1d3c94f05f63fd2d87c351953022c149c0e75392b5c86be2c02bb70",
+    "settle.py": "2b1382fc7ff4163240d9c6e3342738ce90ab8537df9ea9999497a44e24d84764",
+    "short_delivery443.py": "9aa829f6c1927eb493fa4f1f5d9c1584d6a8f93b253015912ce253ba24fb1e76",
+    "url_privacy.py": "338f0339e23b7d385fce17ea6fa152016342bca8d42129d5efc3f2a5183c1f6f"
+  },
+  "guest_exit": 2,
+  "phase_receipts": [
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "failure_code": "FILES_UNDRAINED_TAIL",
+      "failure_stage": "PREFLIGHT",
+      "match_provenance": [
+        {
+          "any_match": false,
+          "audit": 1,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "INVALID_CANARY_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "INVALID_CANARY_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_and_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 1,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "INVALID_CANARY_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "INVALID_CANARY_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_after_journal",
+          "schema": 1
+        }
+      ],
+      "privacy_errors": [
+        {
+          "audit": 2,
+          "code": "UNDRAINED_TAIL",
+          "phase": "files_initial"
+        }
+      ],
+      "status": "FAILED_OR_INCOMPLETE_MEDIA_OBSERVATION"
+    },
+    {
+      "failure_code": "FILES_UNDRAINED_TAIL",
+      "failure_stage": "PREFLIGHT",
+      "match_provenance": [
+        {
+          "any_match": false,
+          "audit": 1,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "INVALID_CANARY_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "INVALID_CANARY_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_and_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 1,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "INVALID_CANARY_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "INVALID_CANARY_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_after_journal",
+          "schema": 1
+        }
+      ],
+      "privacy_errors": [
+        {
+          "audit": 2,
+          "code": "UNDRAINED_TAIL",
+          "phase": "files_initial"
+        }
+      ],
+      "status": "FAILED_OR_INCOMPLETE_MEDIA_OBSERVATION"
+    },
+    {
+      "failure_code": "FILES_UNDRAINED_TAIL",
+      "failure_stage": "PREFLIGHT",
+      "match_provenance": [
+        {
+          "any_match": false,
+          "audit": 1,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "INVALID_CANARY_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "INVALID_CANARY_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_and_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 1,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "INVALID_CANARY_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "INVALID_CANARY_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_after_journal",
+          "schema": 1
+        }
+      ],
+      "privacy_errors": [
+        {
+          "audit": 2,
+          "code": "UNDRAINED_TAIL",
+          "phase": "files_initial"
+        }
+      ],
+      "status": "FAILED_OR_INCOMPLETE_MEDIA_OBSERVATION"
+    },
+    {
+      "failure_code": "FILES_UNDRAINED_TAIL",
+      "failure_stage": "PREFLIGHT",
+      "match_provenance": [
+        {
+          "any_match": false,
+          "audit": 1,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "INVALID_CANARY_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "INVALID_CANARY_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_and_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 1,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "INVALID_CANARY_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "INVALID_CANARY_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_after_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 3,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "CURRENT_SECRET_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_SECRET_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_FULL"
+              ],
+              "file_count": 0,
+              "index": 3,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 4,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_and_journal",
+          "schema": 1
+        }
+      ],
+      "privacy_errors": [
+        {
+          "audit": 2,
+          "code": "UNDRAINED_TAIL",
+          "phase": "files_initial"
+        }
+      ],
+      "status": "FAILED_OR_INCOMPLETE_MEDIA_OBSERVATION"
+    },
+    {
+      "failure_code": "FILES_UNDRAINED_TAIL",
+      "failure_privacy": {
+        "finite_scans_complete_and_zero": true
+      },
+      "failure_stage": "PREFLIGHT",
+      "match_provenance": [
+        {
+          "any_match": false,
+          "audit": 1,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "INVALID_CANARY_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "INVALID_CANARY_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_and_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 1,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "INVALID_CANARY_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "INVALID_CANARY_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_after_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 3,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "CURRENT_SECRET_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_SECRET_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_FULL"
+              ],
+              "file_count": 0,
+              "index": 3,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 4,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_and_journal",
+          "schema": 1
+        },
+        {
+          "any_match": false,
+          "audit": 3,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "CURRENT_SECRET_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_SECRET_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_FULL"
+              ],
+              "file_count": 0,
+              "index": 3,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "CURRENT_KS_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 4,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_after_journal",
+          "schema": 1
+        }
+      ],
+      "privacy_errors": [
+        {
+          "audit": 2,
+          "code": "UNDRAINED_TAIL",
+          "phase": "files_initial"
+        }
+      ],
+      "status": "FAILED_OR_INCOMPLETE_MEDIA_OBSERVATION"
+    }
+  ],
+  "status": "FAILED_OBSERVATION",
+  "stderr_bytes": 0,
+  "stdout_bytes": 357826,
+  "unit": "baseline-freeze-2aa0f30b",
+  "unit_inactive": true
+}

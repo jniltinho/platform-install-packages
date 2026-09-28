@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "executor": "actual Claude CLI",
+  "mode": "source-only review via stdin; tools disabled; strict MCP; no session persistence",
+  "timeout_seconds": 100,
+  "exit": 0,
+  "elapsed_seconds": 66.03,
+  "stdout_bytes": 6954,
+  "stderr_bytes": 0,
+  "tests_executed_by_cli": false,
+  "verdict": "No blocking confidentiality finding reported",
+  "findings": [
+    "Nonblocking phase exact-type/error normalization concerns; caller catches exceptions without raw tracebacks.",
+    "Completeness/any_match are diagnostics, never privacy acceptance; consumer must enforce complete windows.",
+    "Fixed pattern provenance exposes intended category/collision relationships and cannot serve as an arbitrary externally controlled equality oracle.",
+    "Prefix equality does not prove full current credential disclosure."
+  ],
+  "pin_limit": "Launcher computed disk hashes at completion, not stdin capture. Do not use this CLI attempt as exact frozen-byte attestation. Independent frozen-byte tests/review recorded separately.",
+  "raw_output_published": false
+}

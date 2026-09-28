@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "decision": "BOUNDED_READ_ONLY_ROLE_DIAGNOSTIC_APPROVED",
+  "pins": {
+    "diagnose_progressive_r2.py": "96603a62642924384a61f2bb6b49f9ea95c12eb44e8b3aff1b9c77886c2ea3be",
+    "test_diagnose_progressive_r2.py": "a1810d46f2d3d9ef692b15e7078a891891d18babbaadf8512da1a79726c4c9eb"
+  },
+  "test_command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/baseline-freeze-r1 -p test_diagnose_progressive_r2.py -v",
+  "tests": 7,
+  "exit": 0,
+  "review": [
+    "Read boundary/window/identity/bounds logic byte-identical R1 except fixed status.",
+    "Additional fields are fixed role/shape/equality counters only; no input values or hashes.",
+    "Exact owned asset basename equality is a filename-shaped candidate, not verified FileSync identity or original pattern reconstruction."
+  ],
+  "limits": [
+    "Original privacy failure preserved. No credential exemption or cause claim.",
+    "Saved start to current per-file ends, no journal/common end or old pattern reconstruction.",
+    "No reviewer VM/API/GET calls."
+  ]
+}
