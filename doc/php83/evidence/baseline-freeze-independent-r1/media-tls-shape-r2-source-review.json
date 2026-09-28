@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "decision": "READ_ONLY_SHAPE_R2_DELTA_PASS",
+  "pins": {
+    "observe_r2.py": "14c9a9c4b1238c452295fa00083962e090b8d7b12f32d75073413e17bfc1c221",
+    "test_observe_r2.py": "3e3d1a17849b74f0fe1d7d136e9f89abdf69d0b8ed5f695a6679b1f27c58defb"
+  },
+  "independent_tests": 10,
+  "exit": 0,
+  "delta": [
+    "Five fixed include paths added, lexical log-directive counts only.",
+    "Only CERTIFICATE PEM grammar may receive public certificate hash; concatenated private-key PEM rejected.",
+    "Private key metadata-only operation independently tested."
+  ],
+  "limitations": [
+    "All R1 source/native observation limits retained.",
+    "No effective include closure, process ownership, TLS verification or mutation authorization.",
+    "No VM calls by reviewer; old native receipt not retroactively invalidated."
+  ]
+}

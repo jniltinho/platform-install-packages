@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "decision": "READ_ONLY_SHAPE_OBSERVER_SOURCE_PASS",
+  "pins": {
+    "observe.py": "40e17964d961ff456baa9dbc5ee18d577fbda8d3535834e31aaaeb2572a4e6c0",
+    "test_observe.py": "11c2fd7b2e9a9d91e4da31ab61481fbe5aae446fe821b0103c6631c6372893d6"
+  },
+  "independent_tests": 8,
+  "exit": 0,
+  "scope": [
+    "Fixed baseline74 target and fixed files; two explicit configuration symlink targets only.",
+    "Private key metadata only, no open/hash.",
+    "No API, network probe, SQL, configtest, service transition or configuration writes.",
+    "Closed service/listener classifications, lexical configuration shape and hashes only."
+  ],
+  "limitations": [
+    "Parent owner/mode/xattrs are observations, not approved mutation trust.",
+    "Lexical shape is not effective parsed include closure.",
+    "Use external overall bounded executor; command waits individually bounded, not process-tree/cgroup quiescence proof.",
+    "No native execution by reviewer; tls_verified and mutation_authorized remain false."
+  ]
+}

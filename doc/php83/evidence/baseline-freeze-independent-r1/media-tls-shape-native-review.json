@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "decision": "READ_ONLY_NATIVE_SHAPE_RECEIPT_ACCEPTED",
+  "receipt_sha256": "e85378fa7c16c37e132dd030310ef5ec0720b4002d51b6c9701604f7147947ea",
+  "executor": "root coordinator",
+  "independent_vm_calls": 0,
+  "observed": {
+    "ssl_conf_empty": true,
+    "port8444_no_listener_observed": true,
+    "service": {
+      "active_state": "active",
+      "main_pid_present": false,
+      "sub_state": "running"
+    },
+    "private_key_read": false,
+    "configuration_mutated": false
+  },
+  "limitations": [
+    "Service active/running with MainPID absent is preserved literally; not proof of managed nginx process ownership, worker count, or readiness.",
+    "has_template_tokens means any literal @ byte, including valid named locations; not an unresolved-placeholder diagnosis.",
+    "No listener8444 is a point-in-time observation, not an atomic future bind reservation.",
+    "Lexical include shape and fixed links do not prove effective full configuration closure.",
+    "Public certificate hashes plus key metadata do not attest key/certificate pairing or successful TLS.",
+    "No permission for mutation or delivery derives from this receipt."
+  ]
+}

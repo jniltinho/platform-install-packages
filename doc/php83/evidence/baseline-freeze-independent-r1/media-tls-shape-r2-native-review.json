@@ -1,0 +1,41 @@
+{
+  "schema": 1,
+  "decision": "READ_ONLY_INCLUDE_SHAPE_NATIVE_RECEIPT_ACCEPTED",
+  "receipt_sha256": "7c9b71617d601f1ec8211361926189d3e907d95ab52fb980fca554ae736750e3",
+  "native_executor": "root coordinator",
+  "independent_vm_calls": 0,
+  "additional_file_pins": {
+    "main.conf": "19d13ae00a87081816835086927c4dbb6ca687eff3e45c3b3e735fd4d52fd097",
+    "http.conf": "8812898f777693e2816c7c462124b06744196791468d96b48af2b253ef111123",
+    "base.conf": "f011df8b869a55df042677e3db02529c8dab96d3858b0c322e31c64b6cad07e1",
+    "cors.conf": "97fba7f5da398ae9a3b8ea106062a60a1e0542d4b7fbde16da29b2d3f9bcd3f7",
+    "mime.types": "6f95d1d7d75e3c072907d845622a69d23110d1266c16ff122b3109b8b21f3ae9"
+  },
+  "log_directive_counts": {
+    "main.conf": {
+      "access_log_directives": 0,
+      "error_log_directives": 1
+    },
+    "http.conf": {
+      "access_log_directives": 1,
+      "error_log_directives": 0
+    },
+    "base.conf": {
+      "access_log_directives": 2,
+      "error_log_directives": 0
+    },
+    "cors.conf": {
+      "access_log_directives": 0,
+      "error_log_directives": 0
+    },
+    "mime.types": {
+      "access_log_directives": 0,
+      "error_log_directives": 0
+    }
+  },
+  "limitations": [
+    "Counts alone do not identify effective log destinations or prove safe inheritance. base.conf two access_log directives require exact-source treatment for TLS derivative.",
+    "R1 MainPID, @ byte, listener snapshot, key/cert pairing and effective closure limitations remain.",
+    "No configuration changes, TLS media delivery or mutation authorization."
+  ]
+}

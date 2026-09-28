@@ -1,0 +1,413 @@
+{
+  "command": "pinned strict SSH root Python stdin; fixed-path readonly TLS include shape",
+  "executor": "root coordinator",
+  "exit": 0,
+  "host": {
+    "UUID": "9e954729-16f3-4eda-9db5-b94e5ada9e44",
+    "VMState": "running",
+    "cpus": "4",
+    "memory": "8192",
+    "name": "kaltura-php74-noble-baseline"
+  },
+  "observation": {
+    "binary": {
+      "bytes": 2524864,
+      "exists": true,
+      "gid": 0,
+      "kind": "regular",
+      "mode": "0755",
+      "nlink": 1,
+      "sha256": "1a995dddd470f013258b1890cfc7c9e3b10c344461eb085de6b2ef8f991faec0",
+      "uid": 0,
+      "xattrs_present": false
+    },
+    "case": "BASELINE74_MEDIA_TLS_READONLY_SHAPE_R2",
+    "certificates": {
+      "ca.crt": {
+        "exists": true,
+        "gid": 0,
+        "kind": "regular",
+        "mode": "0600",
+        "nlink": 1,
+        "public_pem_sha256": "5ca573deffda2a3f40bc104258c7c36472d2f924a2a945cec6cb1fd99f541bef",
+        "uid": 0,
+        "xattrs_present": false
+      },
+      "server.crt": {
+        "exists": true,
+        "gid": 0,
+        "kind": "regular",
+        "mode": "0600",
+        "nlink": 1,
+        "public_pem_sha256": "33f22008e90374c3950ebd569e0d0358e040a00bd610e1c4fca292388b0732e7",
+        "uid": 0,
+        "xattrs_present": false
+      },
+      "server.key": {
+        "exists": true,
+        "gid": 0,
+        "kind": "regular",
+        "mode": "0600",
+        "nlink": 1,
+        "uid": 0,
+        "xattrs_present": false
+      }
+    },
+    "configs": {
+      "base.conf": {
+        "bytes": 328,
+        "exists": true,
+        "gid": 0,
+        "kind": "regular",
+        "mode": "0644",
+        "nlink": 1,
+        "sha256": "f011df8b869a55df042677e3db02529c8dab96d3858b0c322e31c64b6cad07e1",
+        "shape": {
+          "access_log_directives": 2,
+          "empty": false,
+          "error_log_directives": 0,
+          "has_template_tokens": false,
+          "include_count": 0,
+          "include_server_exact": 0,
+          "include_ssl_exact": 0,
+          "listen_count": 0,
+          "tls_listen_count": 0
+        },
+        "uid": 0,
+        "xattrs_present": false
+      },
+      "cors.conf": {
+        "bytes": 297,
+        "exists": true,
+        "gid": 0,
+        "kind": "regular",
+        "mode": "0644",
+        "nlink": 1,
+        "sha256": "97fba7f5da398ae9a3b8ea106062a60a1e0542d4b7fbde16da29b2d3f9bcd3f7",
+        "shape": {
+          "access_log_directives": 0,
+          "empty": false,
+          "error_log_directives": 0,
+          "has_template_tokens": false,
+          "include_count": 0,
+          "include_server_exact": 0,
+          "include_ssl_exact": 0,
+          "listen_count": 0,
+          "tls_listen_count": 0
+        },
+        "uid": 0,
+        "xattrs_present": false
+      },
+      "http.conf": {
+        "bytes": 1305,
+        "exists": true,
+        "gid": 0,
+        "kind": "regular",
+        "mode": "0644",
+        "nlink": 1,
+        "sha256": "8812898f777693e2816c7c462124b06744196791468d96b48af2b253ef111123",
+        "shape": {
+          "access_log_directives": 1,
+          "empty": false,
+          "error_log_directives": 0,
+          "has_template_tokens": false,
+          "include_count": 1,
+          "include_server_exact": 0,
+          "include_ssl_exact": 0,
+          "listen_count": 0,
+          "tls_listen_count": 0
+        },
+        "uid": 0,
+        "xattrs_present": false
+      },
+      "kaltura-nginx.conf": {
+        "bytes": 3686,
+        "exists": true,
+        "gid": 0,
+        "kind": "regular",
+        "mode": "0644",
+        "nlink": 1,
+        "sha256": "56c4c83f7eb6926655a07bdbb0e8d075ec38356f7f8199f1f880b00f03c19372",
+        "shape": {
+          "access_log_directives": 0,
+          "empty": false,
+          "error_log_directives": 0,
+          "has_template_tokens": false,
+          "include_count": 4,
+          "include_server_exact": 1,
+          "include_ssl_exact": 1,
+          "listen_count": 2,
+          "tls_listen_count": 0
+        },
+        "uid": 0,
+        "xattrs_present": false
+      },
+      "kaltura.conf": {
+        "bytes": 2526,
+        "exists": true,
+        "gid": 0,
+        "kind": "regular",
+        "mode": "0644",
+        "nlink": 1,
+        "sha256": "c210cb31fc8c6aa4d498fe425a04ebc0432721be423767e8a49ff1c6b418aac9",
+        "shape": {
+          "access_log_directives": 0,
+          "empty": false,
+          "error_log_directives": 0,
+          "has_template_tokens": true,
+          "include_count": 6,
+          "include_server_exact": 0,
+          "include_ssl_exact": 0,
+          "listen_count": 0,
+          "tls_listen_count": 0
+        },
+        "uid": 0,
+        "xattrs_present": false
+      },
+      "main.conf": {
+        "bytes": 236,
+        "exists": true,
+        "gid": 0,
+        "kind": "regular",
+        "mode": "0644",
+        "nlink": 1,
+        "sha256": "19d13ae00a87081816835086927c4dbb6ca687eff3e45c3b3e735fd4d52fd097",
+        "shape": {
+          "access_log_directives": 0,
+          "empty": false,
+          "error_log_directives": 1,
+          "has_template_tokens": false,
+          "include_count": 0,
+          "include_server_exact": 0,
+          "include_ssl_exact": 0,
+          "listen_count": 0,
+          "tls_listen_count": 0
+        },
+        "uid": 0,
+        "xattrs_present": false
+      },
+      "mime.types": {
+        "bytes": 5349,
+        "exists": true,
+        "gid": 0,
+        "kind": "regular",
+        "mode": "0644",
+        "nlink": 1,
+        "sha256": "6f95d1d7d75e3c072907d845622a69d23110d1266c16ff122b3109b8b21f3ae9",
+        "shape": {
+          "access_log_directives": 0,
+          "empty": false,
+          "error_log_directives": 0,
+          "has_template_tokens": false,
+          "include_count": 0,
+          "include_server_exact": 0,
+          "include_ssl_exact": 0,
+          "listen_count": 0,
+          "tls_listen_count": 0
+        },
+        "uid": 0,
+        "xattrs_present": false
+      },
+      "nginx.conf": {
+        "bytes": 3686,
+        "exists": true,
+        "gid": 0,
+        "kind": "symlink",
+        "mode": "0777",
+        "nlink": 1,
+        "resolved_fixed_target": "kaltura-nginx.conf",
+        "sha256": "56c4c83f7eb6926655a07bdbb0e8d075ec38356f7f8199f1f880b00f03c19372",
+        "shape": {
+          "access_log_directives": 0,
+          "empty": false,
+          "error_log_directives": 0,
+          "has_template_tokens": false,
+          "include_count": 4,
+          "include_server_exact": 1,
+          "include_ssl_exact": 1,
+          "listen_count": 2,
+          "tls_listen_count": 0
+        },
+        "uid": 0,
+        "xattrs_present": false
+      },
+      "server.conf": {
+        "bytes": 2526,
+        "exists": true,
+        "gid": 0,
+        "kind": "symlink",
+        "mode": "0777",
+        "nlink": 1,
+        "resolved_fixed_target": "kaltura.conf",
+        "sha256": "c210cb31fc8c6aa4d498fe425a04ebc0432721be423767e8a49ff1c6b418aac9",
+        "shape": {
+          "access_log_directives": 0,
+          "empty": false,
+          "error_log_directives": 0,
+          "has_template_tokens": true,
+          "include_count": 6,
+          "include_server_exact": 0,
+          "include_ssl_exact": 0,
+          "listen_count": 0,
+          "tls_listen_count": 0
+        },
+        "uid": 0,
+        "xattrs_present": false
+      },
+      "ssl.conf": {
+        "bytes": 0,
+        "exists": true,
+        "gid": 0,
+        "kind": "regular",
+        "mode": "0644",
+        "nlink": 1,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "shape": {
+          "access_log_directives": 0,
+          "empty": true,
+          "error_log_directives": 0,
+          "has_template_tokens": false,
+          "include_count": 0,
+          "include_server_exact": 0,
+          "include_ssl_exact": 0,
+          "listen_count": 0,
+          "tls_listen_count": 0
+        },
+        "uid": 0,
+        "xattrs_present": false
+      },
+      "ssl.conf.template": {
+        "bytes": 368,
+        "exists": true,
+        "gid": 0,
+        "kind": "regular",
+        "mode": "0644",
+        "nlink": 1,
+        "sha256": "a03132ddec157145e936e6ab4c7324b14af09ae8014580145098a277ddebefea",
+        "shape": {
+          "access_log_directives": 0,
+          "empty": false,
+          "error_log_directives": 0,
+          "has_template_tokens": true,
+          "include_count": 1,
+          "include_server_exact": 0,
+          "include_ssl_exact": 0,
+          "listen_count": 1,
+          "tls_listen_count": 1
+        },
+        "uid": 0,
+        "xattrs_present": false
+      }
+    },
+    "configuration_mutated": false,
+    "listeners": {
+      "443": [
+        "TARGET"
+      ],
+      "80": [
+        "WILDCARD"
+      ],
+      "8443": [
+        "TARGET"
+      ],
+      "8444": [],
+      "88": [
+        "WILDCARD"
+      ]
+    },
+    "mutation_authorized_by_receipt": false,
+    "parents": {
+      "/": {
+        "exists": true,
+        "gid": 0,
+        "kind": "directory",
+        "mode": "0755",
+        "nlink": 24,
+        "uid": 0,
+        "xattrs_present": false
+      },
+      "/opt": {
+        "exists": true,
+        "gid": 0,
+        "kind": "directory",
+        "mode": "0755",
+        "nlink": 5,
+        "uid": 0,
+        "xattrs_present": false
+      },
+      "/opt/kaltura": {
+        "exists": true,
+        "gid": 0,
+        "kind": "directory",
+        "mode": "0755",
+        "nlink": 16,
+        "uid": 0,
+        "xattrs_present": false
+      },
+      "/opt/kaltura/nginx": {
+        "exists": true,
+        "gid": 0,
+        "kind": "directory",
+        "mode": "0755",
+        "nlink": 12,
+        "uid": 0,
+        "xattrs_present": false
+      },
+      "/opt/kaltura/nginx/conf": {
+        "exists": true,
+        "gid": 0,
+        "kind": "directory",
+        "mode": "0755",
+        "nlink": 2,
+        "uid": 0,
+        "xattrs_present": false
+      },
+      "/opt/kaltura/nginx/sbin": {
+        "exists": true,
+        "gid": 0,
+        "kind": "directory",
+        "mode": "0755",
+        "nlink": 2,
+        "uid": 0,
+        "xattrs_present": false
+      },
+      "/var": {
+        "exists": true,
+        "gid": 0,
+        "kind": "directory",
+        "mode": "0755",
+        "nlink": 14,
+        "uid": 0,
+        "xattrs_present": false
+      },
+      "/var/lib": {
+        "exists": true,
+        "gid": 0,
+        "kind": "directory",
+        "mode": "0755",
+        "nlink": 81,
+        "uid": 0,
+        "xattrs_present": false
+      },
+      "/var/lib/kaltura-baseline-tls-r2": {
+        "exists": true,
+        "gid": 0,
+        "kind": "directory",
+        "mode": "0700",
+        "nlink": 2,
+        "uid": 0,
+        "xattrs_present": false
+      }
+    },
+    "port8444_free_observed": true,
+    "private_key_read": false,
+    "service": {
+      "active_state": "active",
+      "main_pid_present": false,
+      "sub_state": "running"
+    },
+    "tls_verified": false
+  },
+  "source_sha256": "14c9a9c4b1238c452295fa00083962e090b8d7b12f32d75073413e17bfc1c221",
+  "stderr_bytes": 0
+}
