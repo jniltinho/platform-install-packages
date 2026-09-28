@@ -1,0 +1,8 @@
+{
+  "status": "COHERENT_PRE_D2_STATE_RESTORED",
+  "machine_id_sha256": "ad9adac39d0fb440883f0b82c8c45058596b74a6d9e98da2746e4dbdafd3aad8",
+  "baseline_dpkg_sha256": "a2ca4db18e7a6ca11bacea1c33b3c8f217b389a3ca5efddae6bffaf38c304d47",
+  "resume_failed_run": false,
+  "preserved_failure_snapshot_id": "104c911b-91bc-4aff-9931-e5dec08b98a3",
+  "restored_snapshot_id": "96acf6b1-5bdd-42db-8c4f-940253e7c397"
+}

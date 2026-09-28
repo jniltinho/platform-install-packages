@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "status": "LAB_INCREMENTAL_AUTHORIZED",
+  "phase": "D2",
+  "package": {
+    "package": "kaltura-elasticsearch",
+    "version": "7.17-1+php83lab6",
+    "architecture": "all",
+    "previous": null,
+    "sha256": "7959f637addad883be0d51ce54a43aa72ad0f155abdd37ddb68aeb57d582ab53",
+    "local_deb": "/var/lib/kaltura-php83-pilot/packages-phase-d/kaltura-elasticsearch_7.17-1+php83lab6_all.deb"
+  },
+  "full_acceptance": false,
+  "pending": [
+    "full_seed_persistence",
+    "effective_authorization",
+    "full_application_acceptance"
+  ],
+  "workers_policy": "HELD",
+  "release_authorized": false,
+  "machine_id_sha256": "ad9adac39d0fb440883f0b82c8c45058596b74a6d9e98da2746e4dbdafd3aad8",
+  "baseline_dpkg_sha256": "a2ca4db18e7a6ca11bacea1c33b3c8f217b389a3ca5efddae6bffaf38c304d47",
+  "d1_contract_sha256": "724910c7029cd902a5a685903b6fc0517275e911482e2f5bad70e9e1b78553ef",
+  "d1_terminal_sha256": "50416eda849b3f562fb9e2cad399668288a62eae0b6b0dbbc18864e997f2eb0f",
+  "monit_master_sha256": "b4f88681277b36f557332194d51e03e80f6f813edcd3c05878ca197fbde48c22",
+  "monit_unit_sha256": "e322cef78adf6f3ac6e7abfd6776a6d3d161c8581d90519021f8820505d1bcc7",
+  "audit_since": "2026-09-28T04:30:00Z",
+  "snapshot_sha256": "3baf36941783ef594d078baa11bb60950d1f05c94f3bccc147c32a511a6bad84",
+  "build_sha256": "757374971e200b10cd2c71c2bc500df553ced5b292644ac9d28fe5dc741af73d",
+  "executor_sha256": "c5804a9ff6c16ab70e702375113bd851e08985f046d617fafaba22b6b027e99b",
+  "recovery_proof_sha256": "220326317b86970fd70257a5ea58543ab6449f6efe672e6946fe61bbc0133f93"
+}

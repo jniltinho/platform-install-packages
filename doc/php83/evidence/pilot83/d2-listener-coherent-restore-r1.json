@@ -1,0 +1,32 @@
+{
+  "vm_uuid": "33f4f25f-1cf2-4cc5-90ff-d519c29b2aee",
+  "restored_snapshot_id": "96acf6b1-5bdd-42db-8c4f-940253e7c397",
+  "preserved_failure_snapshot_id": "104c911b-91bc-4aff-9931-e5dec08b98a3",
+  "resume_failed_run": false,
+  "application_recovery_acceptance": false,
+  "started_utc": "2026-09-28T16:08:25.615036+00:00",
+  "commands": [
+    {
+      "command": [
+        "VBoxManage",
+        "snapshot",
+        "33f4f25f-1cf2-4cc5-90ff-d519c29b2aee",
+        "restore",
+        "96acf6b1-5bdd-42db-8c4f-940253e7c397"
+      ],
+      "exit": 0
+    },
+    {
+      "command": [
+        "VBoxManage",
+        "startvm",
+        "33f4f25f-1cf2-4cc5-90ff-d519c29b2aee",
+        "--type",
+        "headless"
+      ],
+      "exit": 0
+    }
+  ],
+  "shutdown_transport_exit": 255,
+  "clean_poweroff_confirmed": true
+}

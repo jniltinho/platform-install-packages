@@ -1,0 +1,5 @@
+2c12d4ea7053878473a003d659a4be6a8b1385528aecd241b20580b6bf6ca86d  tools/php83/pilot83/elastic-prestart-private-logs-r2.py
+ea3857c9deb42958bca94726f91309e556c0b05ffea3bc5b8aa9f84e18dacdf9  tools/php83/pilot83/prepare-elasticsearch-r7.py
+cc4247e9d105e7b97e63571c7ab0ac888db86a79501281aad9cb6a311f65792c  tools/php83/pilot83/build-elasticsearch-r7.py
+9ca9eb195e7a50801d585175aa2f3f4347e5df1133e9541aba5569340d7fd897  tools/php83/pilot83/application-phase-d2-private-logs-r2.py
+c601785f3c69a12e79a386b7675cf8095563d6ca9bf0763c222c068265251633  tools/php83/pilot83/test_elasticsearch_r7_private_logs.py

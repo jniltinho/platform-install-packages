@@ -1,0 +1,12 @@
+{
+  "status": "TWO_BUILDS_CONTROL_ONLY_PASS",
+  "sha256": "7959f637addad883be0d51ce54a43aa72ad0f155abdd37ddb68aeb57d582ab53",
+  "changed": [
+    "./control",
+    "./postinst"
+  ],
+  "data_archive_byte_identical": true,
+  "all_other_control_metadata_equal": true,
+  "md5sums_unchanged": true,
+  "installed": false
+}

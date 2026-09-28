@@ -1,0 +1,21 @@
+{
+  "hostname": "kaltura-php83-lab",
+  "machine_id_sha256": "ad9adac39d0fb440883f0b82c8c45058596b74a6d9e98da2746e4dbdafd3aad8",
+  "baseline_dpkg_sha256": "a2ca4db18e7a6ca11bacea1c33b3c8f217b389a3ca5efddae6bffaf38c304d47",
+  "cache_sha256": "238c2f883b8ec0a09d15b4bf5676bc8b593c6ddce467a3ae9820bcdf34948ee8",
+  "d1_terminal_sha256": "50416eda849b3f562fb9e2cad399668288a62eae0b6b0dbbc18864e997f2eb0f",
+  "d2_present": false,
+  "retired_d2_present": false,
+  "services": {
+    "apache2": "active",
+    "monit": "active",
+    "mariadb": "active",
+    "elasticsearch": "inactive"
+  },
+  "native_logs": {
+    "uid": 112,
+    "gid": 112,
+    "mode": "0o2750",
+    "empty": true
+  }
+}

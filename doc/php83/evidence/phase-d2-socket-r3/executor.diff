@@ -1,0 +1,68 @@
+--- tools/php83/pilot83/application-phase-d2-private-logs-r2.py	2026-09-28 13:01:10.168822595 -0300
++++ tools/php83/pilot83/application-phase-d2-private-logs-r3.py	2026-09-28 13:08:32.070820137 -0300
+@@ -1,6 +1,7 @@
+ """Lab incremental ES normal-APT phase; pinned D1 and all safety proofs required, no resume."""
+ import argparse,hashlib,http.client,json,os,re,signal,stat,time,types,uuid
+ from pathlib import Path
++from contextlib import contextmanager
+ # Frozen lab4 postinst writes its prestart receipts at this canonical path.
+ RUN=Path('/var/lib/kaltura-php83-phase-d2');RETIRED_RUN=Path('/var/lib/kaltura-php83-phase-d2-incremental');TOOLS=Path('/var/lib/kaltura-php83-pilot/tools')
+ D1_PIN='98e813f23dbdedf3c1774340d5feddfd685d544cc84719a0e931e976b10a0b8f'
+@@ -211,6 +212,29 @@
+    target=RUN/('es-private-log-'+str(len(out))+'.log');f.new_private(target,raw);out.append(str(target));d.reject_canaries(raw,canaries)
+  return out
+ 
++def canonical_es_rows(rows):
++ result=[]
++ allowed={f'127.0.0.1:{port}':f'127.0.0.1:{port}' for port in (9200,9300)}
++ allowed.update({f'[::ffff:127.0.0.1]:{port}':f'127.0.0.1:{port}' for port in (9200,9300)})
++ for address,line in rows:
++  if address.rsplit(':',1)[-1] in ('9200','9300'):
++   need(address in allowed,'ES_LISTENER_REPRESENTATION');address=allowed[address]
++  result.append((address,line))
++ return result
++@contextmanager
++def listener_adapter(p):
++ original=p.listeners
++ try:
++  p.listeners=lambda f:canonical_es_rows(original(f))
++  yield
++ finally:p.listeners=original
++
++def require_es_listeners(observed,old_listeners):
++ need({addr for addr,_ in observed}==old_listeners|{'127.0.0.1:9200','127.0.0.1:9300'},'EXACT_LOCAL_LISTENERS')
++ for port in (9200,9300):
++  rows=[line for addr,line in observed if addr=='127.0.0.1:'+str(port)]
++  need(len(rows)==1 and '"java"' in rows[0],'JAVA_LOCAL_LISTENER')
++
+ def execute(c,n,q,p,s,b,f,d,a,i,h):
+  baseline,canaries,private,configs,identity,old_listeners,elastic_before=guard(c,n,q,p,s,b,f,d,a,i,h)
+  cursor=d.cursor();d.scan_logs(canaries,cursor);f.safe_parents(RUN);RUN.mkdir(mode=0o700);os.chmod(RUN,0o700);f.sync_dir(RUN.parent);f.RUN=RUN;b.RUN=RUN
+@@ -237,12 +261,14 @@
+   receipt=json.loads(p.root_read(RUN/'prestart-mode-complete.json'));need(receipt.get('status')=='EXACT_PRIVATE_ES_PRESTART_CONFIG_READY' and receipt.get('config_sha256')==h.AFTER_PIN and receipt.get('daemon_logs')=='/var/lib/kaltura-php83-elasticsearch-logs' and receipt.get('daemon_logs_mode')=='0700','PRESTART_RECEIPT');h.private_logs(0o700)
+   need(sha(p.root_read('/etc/init.d/kaltura-elastic-populate'))==INIT_PIN and not os.path.lexists('/opt/kaltura/log/populate_elastic.pid'),'POPULATE_HELD')
+   need(f.bounded(['/usr/bin/systemctl','show','elasticsearch','--property=ActiveState','--value'],20).strip()==b'active','ES_ACTIVE')
+-  observed=p.listeners(f);need({addr for addr,_ in observed}==old_listeners|{'127.0.0.1:9200','127.0.0.1:9300'},'EXACT_LOCAL_LISTENERS')
+-  for port in (9200,9300):need(any(addr=='127.0.0.1:'+str(port) and '"java"' in line for addr,line in observed),'JAVA_LOCAL_LISTENER')
+-  semantic=semantics(month,p);effective=app_probe(p,f)
+-  old_monit=p.monit
+-  try:p.monit=lambda c,f,after=False:n.monit(c,p,f,True);runtime=p.readiness(c,b,f,old_listeners|{'127.0.0.1:9200','127.0.0.1:9300'})
+-  finally:p.monit=old_monit
++  # Only the two observed IPv4-mapped loopback representations are normalized.
++  # The same bounded adapter covers direct proof and nested B runtime readiness.
++  with listener_adapter(p):
++   observed=p.listeners(f);require_es_listeners(observed,old_listeners)
++   semantic=semantics(month,p);effective=app_probe(p,f)
++   old_monit=p.monit
++   try:p.monit=lambda c,f,after=False:n.monit(c,p,f,True);runtime=p.readiness(c,b,f,old_listeners|{'127.0.0.1:9200','127.0.0.1:9300'})
++   finally:p.monit=old_monit
+   f.new_private(RUN/'runtime.json',json.dumps({'es':semantic,'native':runtime,'effective_config':effective}).encode());status=SUCCESS
+  finally:
+   with f.signals_blocked():
+@@ -284,5 +310,5 @@
+    if tb.tb_frame.f_code.co_filename==__file__:line=tb.tb_lineno
+    tb=tb.tb_next
+   print(json.dumps({'status':'BLOCKED_OR_FAILED','failure_code':code,'source_line':line,'resume_supported':False,'full_application_acceptance':False,'full_acceptance':False,'pending':PENDING,'phase':'D2','workers_policy':'HELD'}));return 78
+-FAILURE_CODES=('RECOVERY_PIN','RECOVERY_REQUIRED','PRESTART_RUN_CONTRACT','APT_CONCURRENCY', 'AUDIT_WINDOW', 'BASELINE_SERVICES', 'BUILD_PIN', 'BUILD_SCOPE', 'CACHE_EXTRA_ENDPOINT', 'CACHE_HOST_OVERRIDE', 'CACHE_PIN', 'CGROUP_ROOT_MOUNT', 'CLUSTER_HEALTH', 'CONTAINMENT_FAILED', 'CONTAINMENT_STATE', 'CONTRACT_PIN', 'CONTRACT_SCOPE', 'D1_COHORT', 'D1_CONTRACT_PIN', 'D1_SUCCESS_REQUIRED', 'D1_TERMINAL_PIN', 'D2_FAILED', 'DPKG_AUDIT', 'ELASTIC_INI_DELTA', 'ES_ACTIVE', 'ES_HOST_OVERRIDE', 'ES_HTTP', 'ES_IDENTITY', 'EXACT_ALIAS_MEMBERSHIP', 'EXACT_EIGHT_INDICES', 'EXACT_LOCAL_LISTENERS', 'EXACT_ONE_ES_DELTA', 'EXECUTOR_PIN', 'EXPLICIT_CONTRACT', 'FOURTEEN_BASELINE', 'FRESH_INDEX_NONEMPTY', 'FRESH_KALTURA_ROOTS_ABSENT', 'FRESH_NATIVE_CONFIG', 'FRESH_POPULATE_CONFIG', 'HEAP_1G', 'HELPER_MODE', 'HELPER_PARENT', 'HELPER_PIN', 'HTTP_PATH', 'ICU_LOADED', 'INDEX_SETTINGS', 'INTERRUPTED', 'JAVA_LOCAL_LISTENER', 'LAB_INVENTORY', 'LOCAL_CACHE_ENDPOINT', 'LOG_BUDGET', 'LOG_COUNT', 'LOG_FILE', 'LOG_ROOT', 'MAPPING_SEMANTICS', 'MAPPING_SOURCE_PIN', 'MEMORY_HEADROOM', 'MONTH', 'MONTH_ROLLOVER', 'NATIVE_CONTENT_DRIFT', 'NATIVE_MODE_BASELINE', 'NATIVE_MODE_DRIFT', 'NO_RESUME_OR_POLICY', 'OFFLINE_LOOPBACK_EFFECTIVE', 'ONE_NODE', 'ONE_PACKAGE_SOLVER', 'PACKAGE_IDENTITY', 'PACKAGE_PIN', 'POPULATE_HELD', 'PRESTART_RECEIPT', 'PRE_APT_DRIFT', 'PRIVATE_CONFIG_CHANGED', 'PROBE_OWNERSHIP', 'SHARED_FUNCTIONS', 'SLICE_MEMORY_LIMIT', 'SNAPSHOT_PIN', 'SNAPSHOT_REQUIRED', 'SOURCE_PIN', 'UNIT_MEMORY_LIMIT')
++FAILURE_CODES=('ES_LISTENER_REPRESENTATION','RECOVERY_PIN','RECOVERY_REQUIRED','PRESTART_RUN_CONTRACT','APT_CONCURRENCY', 'AUDIT_WINDOW', 'BASELINE_SERVICES', 'BUILD_PIN', 'BUILD_SCOPE', 'CACHE_EXTRA_ENDPOINT', 'CACHE_HOST_OVERRIDE', 'CACHE_PIN', 'CGROUP_ROOT_MOUNT', 'CLUSTER_HEALTH', 'CONTAINMENT_FAILED', 'CONTAINMENT_STATE', 'CONTRACT_PIN', 'CONTRACT_SCOPE', 'D1_COHORT', 'D1_CONTRACT_PIN', 'D1_SUCCESS_REQUIRED', 'D1_TERMINAL_PIN', 'D2_FAILED', 'DPKG_AUDIT', 'ELASTIC_INI_DELTA', 'ES_ACTIVE', 'ES_HOST_OVERRIDE', 'ES_HTTP', 'ES_IDENTITY', 'EXACT_ALIAS_MEMBERSHIP', 'EXACT_EIGHT_INDICES', 'EXACT_LOCAL_LISTENERS', 'EXACT_ONE_ES_DELTA', 'EXECUTOR_PIN', 'EXPLICIT_CONTRACT', 'FOURTEEN_BASELINE', 'FRESH_INDEX_NONEMPTY', 'FRESH_KALTURA_ROOTS_ABSENT', 'FRESH_NATIVE_CONFIG', 'FRESH_POPULATE_CONFIG', 'HEAP_1G', 'HELPER_MODE', 'HELPER_PARENT', 'HELPER_PIN', 'HTTP_PATH', 'ICU_LOADED', 'INDEX_SETTINGS', 'INTERRUPTED', 'JAVA_LOCAL_LISTENER', 'LAB_INVENTORY', 'LOCAL_CACHE_ENDPOINT', 'LOG_BUDGET', 'LOG_COUNT', 'LOG_FILE', 'LOG_ROOT', 'MAPPING_SEMANTICS', 'MAPPING_SOURCE_PIN', 'MEMORY_HEADROOM', 'MONTH', 'MONTH_ROLLOVER', 'NATIVE_CONTENT_DRIFT', 'NATIVE_MODE_BASELINE', 'NATIVE_MODE_DRIFT', 'NO_RESUME_OR_POLICY', 'OFFLINE_LOOPBACK_EFFECTIVE', 'ONE_NODE', 'ONE_PACKAGE_SOLVER', 'PACKAGE_IDENTITY', 'PACKAGE_PIN', 'POPULATE_HELD', 'PRESTART_RECEIPT', 'PRE_APT_DRIFT', 'PRIVATE_CONFIG_CHANGED', 'PROBE_OWNERSHIP', 'SHARED_FUNCTIONS', 'SLICE_MEMORY_LIMIT', 'SNAPSHOT_PIN', 'SNAPSHOT_REQUIRED', 'SOURCE_PIN', 'UNIT_MEMORY_LIMIT')
+ if __name__=='__main__':raise SystemExit(main())

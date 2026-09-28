@@ -1,0 +1,10 @@
+{
+  "kind": "paused_full_memory_disk_checkpoint",
+  "vm_uuid": "33f4f25f-1cf2-4cc5-90ff-d519c29b2aee",
+  "name": "php83-post-d2-lab6-held-20260928T161226Z",
+  "full_application_recovery_acceptance": false,
+  "restore_automatically": false,
+  "snapshot_exit": 0,
+  "snapshot_id": "3bf09da8-953b-4d73-ac33-8e00026d439f",
+  "resume_exit": 0
+}

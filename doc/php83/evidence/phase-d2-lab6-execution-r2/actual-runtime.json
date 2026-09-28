@@ -1,0 +1,48 @@
+{
+  "terminal_sha256": "f5446a3b5f167f379d95ee8d8b6218525567e48f513faf19a11d33b855c9efde",
+  "contract_sha256": "5eee5e5a095323a377232989e48a3bb3554384157d54a7144b1590c729035a6c",
+  "after_dpkg_sha256": "6c73bbed89e4883d5b587a0f99b97e3a8d0edd063a646beda5bafea8c9eab3ab",
+  "terminal": {
+    "status": "LAB_INCREMENTAL_D2_ES_INSTALLED_LOCAL_SEMANTICS_PRIVACY_WORKERS_HELD",
+    "checks": {
+      "package_observation": true,
+      "metadata": true,
+      "input_canaries": true,
+      "es_private_log_capture": true,
+      "generated_secrets": true
+    },
+    "normal_apt_attempted": true,
+    "worker_hold_preserved": true,
+    "failure_contained": false,
+    "resume_supported": false,
+    "full_application_acceptance": false,
+    "full_acceptance": false,
+    "pending": [
+      "full_seed_persistence",
+      "effective_authorization",
+      "full_application_acceptance"
+    ],
+    "phase": "D2",
+    "workers_policy": "HELD"
+  },
+  "es": {
+    "indices": 8,
+    "aliases": 11,
+    "mapping_source_pins": true,
+    "green": true,
+    "icu_loaded": true,
+    "heap_bytes": 1073741824,
+    "geoip_downloader": false
+  },
+  "effective_config": {
+    "native_effective_es_and_local_cache": true
+  },
+  "services": {
+    "apache2": "active",
+    "monit": "active",
+    "mariadb": "active",
+    "elasticsearch": "active"
+  },
+  "package": "7.17-1+php83lab6\tii ",
+  "executor_exit": 0
+}

@@ -1,0 +1,24 @@
+{
+  "status": "BLOCKED_BEFORE_APT",
+  "code": "PARENT_TRUST",
+  "actual_parent": {
+    "path": "/var/log",
+    "uid": 0,
+    "gid": 104,
+    "mode": "0775",
+    "xattrs": false
+  },
+  "d2_run_absent": true,
+  "normal_apt_attempted": false,
+  "proposed_safe_parent": {
+    "path": "/var/lib",
+    "uid": 0,
+    "gid": 0,
+    "mode": "0755",
+    "xattrs": false
+  },
+  "proposed_leaf_absent": true,
+  "production_untouched": true,
+  "full_acceptance": false,
+  "note": "Keep trust guard. New separately reviewed candidate needed; no permission change to /var/log."
+}

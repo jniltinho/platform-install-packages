@@ -1,0 +1,13 @@
+test_actual_observed_forms (__main__.Tests.test_actual_observed_forms) ... ok
+test_adapter_nested_readiness_and_restore (__main__.Tests.test_adapter_nested_readiness_and_restore) ... ok
+test_duplicate_canonical_socket_rejected (__main__.Tests.test_duplicate_canonical_socket_rejected) ... ok
+test_existing_ipv4_supported (__main__.Tests.test_existing_ipv4_supported) ... ok
+test_frozen_package_helper_recovery_preserved (__main__.Tests.test_frozen_package_helper_recovery_preserved) ... ok
+test_mapped_other_ports_not_reclassified (__main__.Tests.test_mapped_other_ports_not_reclassified) ... ok
+test_missing_extra_and_non_java_rejected (__main__.Tests.test_missing_extra_and_non_java_rejected) ... ok
+test_wildcard_nonloopback_unknown_rejected (__main__.Tests.test_wildcard_nonloopback_unknown_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.016s
+
+OK

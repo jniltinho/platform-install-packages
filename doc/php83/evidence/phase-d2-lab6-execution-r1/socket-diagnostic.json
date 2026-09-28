@@ -1,0 +1,1 @@
+{"scope": "ES_ONLY_BOUNDED_SOCKET_DIAGNOSTIC", "full_acceptance": false, "start_exit": 0, "new_listeners": [{"address": "[::ffff:127.0.0.1]:9200", "java_process": true}, {"address": "[::ffff:127.0.0.1]:9300", "java_process": true}], "stop_exit": 0, "privacy_passed": true, "workers_held": true}

@@ -1,0 +1,11 @@
+# Exact observed ES socket representation
+
+Actual root-owned bounded diagnostic `phase-d2-lab6-execution-r1/socket-diagnostic.json` reports exactly `[::ffff:127.0.0.1]:9200` and`:9300`, both Java, start/stop0, privacyPASS and workersheld. Existing B.listeners takes ss field3 literally; D2 compared IPv4 text, and downstream B.runtime also compared raw address strings. A change only to the first D2 assertion would leave the latter failing.
+
+New executor `application-phase-d2-private-logs-r3.py` preserves lab6 package/helper/build/recovery/RUN/hold/privacy pins and gates. Scoped p.listeners adapter maps ONLY those two exact observed IPv4-mapped loopback forms to127.0.0.1 on the same port, accepting existing exact IPv4 too. It preserves raw ss lines for Java ownership checks and leaves every other service/address untouched. Unknown spellings, wildcard, nonloopback or other loopback addresses on9200/9300 fail. Mapped other ports are not normalized and cannot pass the unchanged expected full-set comparison as additions.
+
+The same adapter surrounds direct endpoint/Java checks and nested B.readiness; original listener function restored in finally even on exceptions. One Java row per ES endpoint required, so duplicate direct+mapped rows cannot disappear silently into a set. Monit adapter restored independently. No socket bind/config/package change.
+
+Eight pure Python tests PASS, with actual receipt shape, canonical positive forms, malicious/unknown representations, extra/missing/nonJava/duplicate rows, nested readiness and exception restoration, and AST equality of every existing function except the explicitly reviewed execute delta. New adapter helpers are separate. No live sockets, service commands, VM/SSH/DB or Docker executed. Existing lab6 tests/build evidence remain applicable to unchanged artifacts; source-only review is separate from runtime acceptance.
+
+Root must preserve the failed lab6 terminal/snapshot. This fresh executor cannot be resumed against configured lab6: current state must satisfy genuine coherent recovery and all fresh prerequisites before any new transaction. Alternatively any separate post-install validation needs its own explicitly reviewed scope; this derivative does not authorize it. Full acceptance remains false, workers held. Independent review pending.
