@@ -1,0 +1,37 @@
+{
+  "approved_freeze": false,
+  "full_acceptance": false,
+  "independent_review": "skill_forward_test; final independent approval reported to coordinator; separate evidence retained",
+  "native_execution_owner": "Codex root",
+  "native_result": "PENDING_SEPARATE_TERMINAL",
+  "performance_acceptance": false,
+  "schema": 1,
+  "source_pins": {
+    "tools/php83/baseline-freeze-r1/assemble_readiness.py": "59bd20b04843fff84a25d471ea19d05a77766ea8c80ec9bdaebf508d6bfcfa32",
+    "tools/php83/baseline-freeze-r1/assemble_v2.py": "c16e02fce4057fbd587b33e8e3fe9fb443577ac60bfbe2f9d4c28b2a4fea6017",
+    "tools/php83/baseline-freeze-r1/guest_untimed.py": "3f95f1ced7b530e42b90e1872b34add4f1ddea0c6da174a79bda8a324955d56c",
+    "tools/php83/baseline-freeze-r1/observation_v2.py": "ec32386df1c745f5754ece19f3127f6da85415e644c8556e6c07666b2ea1abc5",
+    "tools/php83/baseline-freeze-r1/prepare_untimed.py": "732921d29d058c0c916a26e000fc338fdf042e71b6073d263a223358548d7651",
+    "tools/php83/baseline-freeze-r1/protocol_v2.py": "147d74b0a04779fd0819ebe210d8a1a6aea4af8fbc773683a278e540ce70d4b8",
+    "tools/php83/baseline-freeze-r1/rehearsal.py": "ccf78ba0b1d3c94f05f63fd2d87c351953022c149c0e75392b5c86be2c02bb70",
+    "tools/php83/baseline-freeze-r1/run_untimed.py": "9c62eb1a195dd8b7028ad18997f5ca47c4beb1aa57cd7ec64d03599a8786dc92",
+    "tools/php83/baseline-freeze-r1/test_readiness.py": "3a2a9447138cc8ada4bf56b66136c2f1932107ea7c4e949fd5a443d55c151c3b",
+    "tools/php83/baseline-freeze-r1/test_untimed.py": "6372d073a71c1af62050dd218e9d9c92a43c7bc7b7200edabdcdf423d11a3218"
+  },
+  "status": "FROZEN_FOR_ROOT_OWNED_UNTIMED_REHEARSAL",
+  "test_only_revision": "Added explicit33/65 unique-pattern cases; source already rebalance31+2 /32+31+2; no production changes",
+  "tests": [
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/baseline-freeze-r1 -p 'test_*.py' -q",
+      "count": 60,
+      "executor": "Codex author",
+      "exit": 0
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/baseline-freeze-r1 -p 'test_untimed.py' -q",
+      "count": 8,
+      "executor": "Codex author",
+      "exit": 0
+    }
+  ]
+}

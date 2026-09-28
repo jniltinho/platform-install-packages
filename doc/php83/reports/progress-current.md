@@ -71,8 +71,15 @@ seus bloqueadores históricos não representam este status atual.
   unidade inativa e identidade da VM preservada. Revisão independente aprovada.
 - Testes auxiliares:39 do coletor V2,8 do observador SQL e13 do wrapper web,
   incluindo limpeza real de fixture local sob SIGTERM. Não são tarefas completas.
-- Próximo: ensaio funcional não cronometrado das100 chamadas API com o protocolo
-  V2, depois completar mídia/HTTPS/UI e protocolo antes das medições formais.
+- Ensaio nativo V2:100 chamadas tentadas/100 resultados funcionais válidos
+  (34session.start/33media.list/33media.get), mas execução global exit2: as
+  verificações finais de privacidade falharam com UNDRAINED_TAIL. Unidade
+  encerrada. Não é aceite da rodada, benchmark ou tarefa completa.
+- HTTPS:nenhum listener443/8443; preparação TLS parou antes da mudança de
+  configuração por PARENT_TRUST (/var/log com grupo gravável). Não alteramos
+  permissões para passar. Correções específicas seguem em revisão.
+- Próximo: resolver a coleta finita de logs e preparar HTTPS isolado, sem
+  omitir falhas; mídia/UI e medições completas continuam pendentes.
 
 R1/R2 e seus resultados parciais/falhos permanecem preservados. Tarefa1.2 aberta;
 nenhuma alteração em produção. Fonte do box: novo download oficial de651.326.766

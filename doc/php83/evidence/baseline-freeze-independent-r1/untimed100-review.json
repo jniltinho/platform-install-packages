@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "decision": "BOUNDED_SOURCE_APPROVED_FOR_ROOT_EXECUTION",
+  "pins": {
+    "run_untimed": "9c62eb1a195dd8b7028ad18997f5ca47c4beb1aa57cd7ec64d03599a8786dc92",
+    "guest_untimed": "3f95f1ced7b530e42b90e1872b34add4f1ddea0c6da174a79bda8a324955d56c",
+    "rehearsal": "ccf78ba0b1d3c94f05f63fd2d87c351953022c149c0e75392b5c86be2c02bb70",
+    "test_untimed": "6372d073a71c1af62050dd218e9d9c92a43c7bc7b7200edabdcdf423d11a3218"
+  },
+  "tests": {
+    "combined": 60,
+    "exit": 0,
+    "independent33pattern_batch_lengths": [
+      31,
+      2
+    ],
+    "independent65pattern_batch_lengths": [
+      32,
+      31,
+      2
+    ],
+    "edge_coverage": "All unique full/prefix values retained"
+  },
+  "review": [
+    "34 USER session starts/33 media.list/33 media.get default-current -1",
+    "Returned valid KS and full/prefix secret markers held memory-only",
+    "All <=32-pattern audits reuse saved pre-round window and require common unchanged final filemarks+journal cursor",
+    "Finite scanner limits unchanged; drift fails closed",
+    "Closed per-call results retain failures/notexecuted and diagnostic timings only",
+    "No upload/profile/config mutation; root-exclusive guest execution"
+  ],
+  "correction": "Initial singleton concern used draft view; frozen ccf78 already rebalanced correctly. No production edit needed.",
+  "limitations": [
+    "No native execution by reviewer",
+    "Actual CLI timeouts/auth unavailability are not PASS",
+    "100-call untimed diagnostic is not two warmups/five measured rounds or full task1.2 acceptance"
+  ]
+}

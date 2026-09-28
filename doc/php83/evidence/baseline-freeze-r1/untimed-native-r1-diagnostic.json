@@ -1,0 +1,30 @@
+{
+  "exit": 0,
+  "stderr_bytes": 0,
+  "source_sha256": "f35ebb1967dd2b5b15248517d65ae827970300075db817417de940107cb77ccd",
+  "result": {
+    "api_replayed": false,
+    "boundary_count": 4,
+    "boundary_numbers": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "privacy_pass": false,
+    "raw_data_exported": false,
+    "scanner_failures": [
+      {
+        "audit_number": 3,
+        "code": "UNDRAINED_TAIL",
+        "phase": "files_initial"
+      },
+      {
+        "audit_number": 4,
+        "code": "UNDRAINED_TAIL",
+        "phase": "files_initial"
+      }
+    ],
+    "status": "OWNED_PRIVATE_FAILURE_METADATA_OBSERVED"
+  }
+}
