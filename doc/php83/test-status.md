@@ -33,7 +33,12 @@ media execution. Prior failures are not relabelled PASS.
 This resolves the observed prepared-bound-value logging defect in this route,
 not universal log privacy. The source ZIP remains exp14; the PHP 7.4 lab with
 approved overlay is not unchanged published source or functional PHP 8.3 AIO.
-The next runtime step is an isolated full-application PHP 8.3 pilot. No benchmark,
+The next runtime step is an isolated full-application PHP 8.3 pilot.
+The operator explicitly approved deriving and installing private `+php83lab`
+DEBs only on `.83`. The compositor and independent hook/payload reviews are in
+progress; no private package installation or native83 application acceptance is
+claimed yet. This authorization does not publish packages or modify main, CI,
+original artifacts or `.20`. See [pilot plan](pilot83.md). No benchmark,
 TLS/HLS, release, task archive or `.20` cutover is approved by this checkpoint.
 
 ## Counts and boundaries
