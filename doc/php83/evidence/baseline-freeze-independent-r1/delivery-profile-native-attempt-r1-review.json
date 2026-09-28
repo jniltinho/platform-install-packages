@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "decision": "PRESERVED_PRE_MUTATION_CREDENTIAL_PARSER_REJECTION",
+  "receipt_sha256": "9df438253f2b95aaac8371881640997da1d97fb99dcc87065ae0cb77048e3abd",
+  "native_executor": "root coordinator",
+  "independent_vm_calls": 0,
+  "diagnosis": {
+    "context_import": "PASS",
+    "initial_guard": "PASS",
+    "state_directory_exists": false,
+    "closed_failure": "NATIVE_DB_CREDENTIAL_SHAPE",
+    "source": "credential_patterns.py",
+    "line": 27,
+    "prepare_executed": false,
+    "apply_executed": false,
+    "raw_credentials_exported": false
+  },
+  "interpretation": "Envelope import/initial guard succeeded, credential shape parsing rejected before state-directory creation and native prepare/apply. This is not profile application or commit failure.",
+  "limitations": [
+    "No mutation, profile selection/HLS result, or complete finite privacy success follows from this failed attempt.",
+    "No credential values exported or needed for regression review.",
+    "Reviewed parser correction and fresh explicit attempt required; no automatic retry."
+  ]
+}
