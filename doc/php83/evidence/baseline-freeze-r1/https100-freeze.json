@@ -1,0 +1,42 @@
+{
+  "status": "FROZEN_LOCAL_HTTPS100_CANDIDATE",
+  "source_pins": {
+    "tools/php83/baseline-freeze-r1/prepare_https.py": "73bc6d496c7aabb9e1b3d9f72b76058e5858755dc0a4471b56259f1c0554f0de",
+    "tools/php83/baseline-freeze-r1/guest_https.py": "2fa152c361c196c44b799c6fe6676ea17b7058c4c3bbc764f766bfc7243124ac",
+    "tools/php83/baseline-freeze-r1/run_https.py": "140d4dc97082c0e61556a5cbfb669b8352c2877d169aed5d8cc0c6bdc2564186",
+    "tools/php83/baseline-freeze-r1/test_https.py": "cb0ca228242eb530cc85fff8f41b16ca317b79828293c9cf06c839e1c30a152e",
+    "tools/php83/baseline-freeze-r1/privacy_logs_r2.py": "d67eb65900c3134c91efaf94b18ba482b59261c81b0084de0cea3bcd37d5246c",
+    "tools/php83/baseline-freeze-r1/rehearsal.py": "ccf78ba0b1d3c94f05f63fd2d87c351953022c149c0e75392b5c86be2c02bb70",
+    "tools/php83/baseline-freeze-r1/protocol_v2.py": "147d74b0a04779fd0819ebe210d8a1a6aea4af8fbc773683a278e540ce70d4b8",
+    "tools/php83/baseline-freeze-r1/settle.py": "2b1382fc7ff4163240d9c6e3342738ce90ab8537df9ea9999497a44e24d84764"
+  },
+  "tests": [
+    {
+      "suite": "HTTPS derivative",
+      "count": 6,
+      "exit": 0
+    },
+    {
+      "suite": "Original TLS log adapter",
+      "count": 2,
+      "exit": 0
+    },
+    {
+      "suite": "Baseline freeze combined",
+      "count": 75,
+      "exit": 0
+    },
+    {
+      "suite": "Original native local transport fixtures",
+      "count": 12,
+      "exit": 0
+    }
+  ],
+  "review_test_fix": "Independent aggregate found sys.path import pollution; test-only restoration fixed before75PASS; production unchanged",
+  "ca_pem_sha256": "5ca573deffda2a3f40bc104258c7c36472d2f924a2a945cec6cb1fd99f541bef",
+  "https_port": 8443,
+  "tls_adapter_required_every_inventory": true,
+  "native_execution_by_author": false,
+  "performance_acceptance": false,
+  "full_acceptance": false
+}

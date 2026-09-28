@@ -1,0 +1,55 @@
+{
+  "schema": 1,
+  "input_sha256": "e7d0185c389909acdcda07e1e8cadb644d6f38a515bdec2d343f1de12de5e111",
+  "decision": "ONE_NATIVE_UNTIMED_HTTPS_API_REHEARSAL_ACCEPTED_WITH_FINITE_PRIVACY",
+  "closed_projection_roundtrip": true,
+  "deployed_source_pin_join": true,
+  "source_before_after_expected": true,
+  "runtime_pins_verified": true,
+  "guest_exit": 0,
+  "stderr_bytes": 0,
+  "unit_inactive": true,
+  "counts": {
+    "planned": 100,
+    "attempted": 100,
+    "passed": 100,
+    "failed": 0,
+    "not_executed": 0,
+    "session_start": 34,
+    "media_list": 33,
+    "media_get": 33,
+    "tokens": 34
+  },
+  "tls_transport": {
+    "ca_sha256": "5ca573deffda2a3f40bc104258c7c36472d2f924a2a945cec6cb1fd99f541bef",
+    "port": 8443,
+    "scheme": "https",
+    "tls_logs_in_every_inventory": true
+  },
+  "privacy": {
+    "initial_nonce_user_media_windows": "all complete zero matches",
+    "round_pattern_count": 72,
+    "batch_sizes": [
+      32,
+      32,
+      8
+    ],
+    "all_file_journal_counts_zero": true,
+    "common_end_verified": true,
+    "all_tail_bytes_zero": true,
+    "new_tls_log_coverage": "Attested by exact pinned mandatory adapter on every guest inventory/rescan; raw private paths/cursors intentionally not in public receipt"
+  },
+  "quiet_window": {
+    "maximum_seconds": 30,
+    "quiet_seconds": 2,
+    "samples": 9,
+    "status": "QUIET_WINDOW_OBSERVED"
+  },
+  "limits": [
+    "No reviewer VM calls",
+    "Native observation executor is root; reviewer validates saved receipt and source contracts",
+    "No future-write privacy or old historical-log claim",
+    "One untimed HTTPS round is not measured benchmark, UI/media/upload/worker/playback/fullbaseline acceptance",
+    "HTTP R1 failure remains historical and unaltered"
+  ]
+}

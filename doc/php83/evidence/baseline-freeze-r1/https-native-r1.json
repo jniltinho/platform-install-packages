@@ -1,0 +1,1408 @@
+{
+  "approved_freeze": false,
+  "files": {
+    "guest_https.py": "2fa152c361c196c44b799c6fe6676ea17b7058c4c3bbc764f766bfc7243124ac",
+    "observation_v2.py": "ec32386df1c745f5754ece19f3127f6da85415e644c8556e6c07666b2ea1abc5",
+    "privacy_logs_r2.py": "d67eb65900c3134c91efaf94b18ba482b59261c81b0084de0cea3bcd37d5246c",
+    "protocol_v2.py": "147d74b0a04779fd0819ebe210d8a1a6aea4af8fbc773683a278e540ce70d4b8",
+    "rehearsal.py": "ccf78ba0b1d3c94f05f63fd2d87c351953022c149c0e75392b5c86be2c02bb70",
+    "settle.py": "2b1382fc7ff4163240d9c6e3342738ce90ab8537df9ea9999497a44e24d84764"
+  },
+  "guest_exit": 0,
+  "phase_receipts": [
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "admin_escalation_rejected": true,
+      "asset_version": "2",
+      "baseline_label": "PUBLISHED_PHP74_WITH_APPROVED_PRIVACY_OVERLAY",
+      "entry_version_status": "OBSERVED_FROM_ENTRY_DATA",
+      "file_sync_id": 315,
+      "fixture": {
+        "entry": {
+          "id": "0_wzmt2sfy",
+          "mediaType": 1,
+          "objectType": "KalturaMediaEntry",
+          "partnerId": 102,
+          "status": 2
+        },
+        "list_total_count": 1,
+        "media_get_version": -1,
+        "observed_entry_data_version": 0,
+        "order_by": "+createdAt",
+        "page_index": 1,
+        "page_size": 1,
+        "source_asset": {
+          "file_sync_id": 315,
+          "id": "0_ewuu0o46",
+          "version": "2"
+        },
+        "source_media_sha256": "612d179c75f8f2374b7ac59c2dd7edba65e38eb357b870e8ad8c2e83d63b5473",
+        "version": 2
+      },
+      "invalid_nonce": {
+        "files": {
+          "counts": [
+            0,
+            0
+          ],
+          "status": "COMPLETE_FINITE_FILE_WINDOW",
+          "uncovered_tail_bytes": 0
+        },
+        "journal": {
+          "complete": true,
+          "counts": [
+            0,
+            0
+          ],
+          "cutoff_covered": true,
+          "status": "COMPLETE_FINITE_JOURNAL_WINDOW"
+        },
+        "scope": "FINITE_OBSERVATION_WINDOW"
+      },
+      "media_privacy": {
+        "files": {
+          "counts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "status": "COMPLETE_FINITE_FILE_WINDOW",
+          "uncovered_tail_bytes": 0
+        },
+        "journal": {
+          "complete": true,
+          "counts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "cutoff_covered": true,
+          "status": "COMPLETE_FINITE_JOURNAL_WINDOW"
+        },
+        "scope": "FINITE_OBSERVATION_WINDOW"
+      },
+      "original_asset_id": "0_ewuu0o46",
+      "overlay_manifest_sha256": "cf16bc5c49acbe5863934ba737c72e2b65878c84048389354e79163afeca0cb8",
+      "profile": {
+        "selected_profile_id": 14,
+        "status": "UNRESOLVED_API_PROFILE"
+      },
+      "quiet_window": {
+        "maximum_seconds": 30,
+        "quiet_seconds": 2,
+        "samples": 9,
+        "status": "QUIET_WINDOW_OBSERVED"
+      },
+      "round_privacy": {
+        "batches": [
+          {
+            "files": {
+              "counts": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "status": "COMPLETE_FINITE_FILE_WINDOW",
+              "uncovered_tail_bytes": 0
+            },
+            "journal": {
+              "complete": true,
+              "counts": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "cutoff_covered": true,
+              "status": "COMPLETE_FINITE_JOURNAL_WINDOW"
+            },
+            "scope": "FINITE_COMMON_END_ROUND_WINDOW"
+          },
+          {
+            "files": {
+              "counts": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "status": "COMPLETE_FINITE_FILE_WINDOW",
+              "uncovered_tail_bytes": 0
+            },
+            "journal": {
+              "complete": true,
+              "counts": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "cutoff_covered": true,
+              "status": "COMPLETE_FINITE_JOURNAL_WINDOW"
+            },
+            "scope": "FINITE_COMMON_END_ROUND_WINDOW"
+          },
+          {
+            "files": {
+              "counts": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "status": "COMPLETE_FINITE_FILE_WINDOW",
+              "uncovered_tail_bytes": 0
+            },
+            "journal": {
+              "complete": true,
+              "counts": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "cutoff_covered": true,
+              "status": "COMPLETE_FINITE_JOURNAL_WINDOW"
+            },
+            "scope": "FINITE_COMMON_END_ROUND_WINDOW"
+          }
+        ],
+        "common_end_verified": true,
+        "pattern_count": 72
+      },
+      "round_token_count": 34,
+      "runtime_pins_verified": true,
+      "source_sha256": "612d179c75f8f2374b7ac59c2dd7edba65e38eb357b870e8ad8c2e83d63b5473",
+      "sources_after": {
+        "alpha/apps/kaltura/lib/db/KalturaStatement.php": {
+          "gid": 0,
+          "mode": 436,
+          "sha256": "bd8ab13a8fb745eb603b9c35633e24637adb5356a1792642d884c6f7e1d85bd2",
+          "uid": 0
+        },
+        "api_v3/lib/KalturaDispatcher.php": {
+          "gid": 0,
+          "mode": 436,
+          "sha256": "9ce4b17a9fb1bef95fbbbbc6f08cb396a6cc944b055bac8413d740ce5d73c7b9",
+          "uid": 0
+        },
+        "api_v3/lib/KalturaFrontController.php": {
+          "gid": 0,
+          "mode": 436,
+          "sha256": "79570bd2be507f0045281a903aa13bd2de4037c2e12df3370075c4445184a4ca",
+          "uid": 0
+        },
+        "infra/log/KalturaLog.php": {
+          "gid": 0,
+          "mode": 436,
+          "sha256": "40e4db5733cfab59e0e873f94ee64166de380d86425625411dc716f6cb1003dd",
+          "uid": 0
+        },
+        "infra/log/KalturaSerializableStream.php": {
+          "gid": 0,
+          "mode": 436,
+          "sha256": "8411013a6f2ac78b6d092594d088ba9a5fbe71ada9de00692a369388c40dc04c",
+          "uid": 0
+        }
+      },
+      "sources_before": {
+        "alpha/apps/kaltura/lib/db/KalturaStatement.php": {
+          "gid": 0,
+          "mode": 436,
+          "sha256": "bd8ab13a8fb745eb603b9c35633e24637adb5356a1792642d884c6f7e1d85bd2",
+          "uid": 0
+        },
+        "api_v3/lib/KalturaDispatcher.php": {
+          "gid": 0,
+          "mode": 436,
+          "sha256": "9ce4b17a9fb1bef95fbbbbc6f08cb396a6cc944b055bac8413d740ce5d73c7b9",
+          "uid": 0
+        },
+        "api_v3/lib/KalturaFrontController.php": {
+          "gid": 0,
+          "mode": 436,
+          "sha256": "79570bd2be507f0045281a903aa13bd2de4037c2e12df3370075c4445184a4ca",
+          "uid": 0
+        },
+        "infra/log/KalturaLog.php": {
+          "gid": 0,
+          "mode": 436,
+          "sha256": "40e4db5733cfab59e0e873f94ee64166de380d86425625411dc716f6cb1003dd",
+          "uid": 0
+        },
+        "infra/log/KalturaSerializableStream.php": {
+          "gid": 0,
+          "mode": 436,
+          "sha256": "8411013a6f2ac78b6d092594d088ba9a5fbe71ada9de00692a369388c40dc04c",
+          "uid": 0
+        }
+      },
+      "status": "EXISTING_MEDIA_FREEZE_OBSERVATION_COMPLETE",
+      "stored_source_sha256": "612d179c75f8f2374b7ac59c2dd7edba65e38eb357b870e8ad8c2e83d63b5473",
+      "tls_transport": {
+        "ca_sha256": "5ca573deffda2a3f40bc104258c7c36472d2f924a2a945cec6cb1fd99f541bef",
+        "port": 8443,
+        "scheme": "https",
+        "tls_logs_in_every_inventory": true
+      },
+      "untimed_round": {
+        "aborted": false,
+        "attempted": 100,
+        "diagnostic_timings_only": true,
+        "failed": 0,
+        "functional_round_pass": true,
+        "not_executed": 0,
+        "passed": 100,
+        "performance_acceptance": false,
+        "planned": 100,
+        "protocol_version": 2,
+        "records": [
+          {
+            "attempt_wall_ns": 62539216,
+            "child_http_ns": 13502127,
+            "index": 1,
+            "operation": "session.start",
+            "parent_ns": 62522669,
+            "parent_overhead_ns": 49020542,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 63492395,
+            "child_http_ns": 14002149,
+            "index": 2,
+            "operation": "session.start",
+            "parent_ns": 63475817,
+            "parent_overhead_ns": 49473668,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 62998915,
+            "child_http_ns": 13115015,
+            "index": 3,
+            "operation": "session.start",
+            "parent_ns": 62987017,
+            "parent_overhead_ns": 49872002,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 62953248,
+            "child_http_ns": 13000077,
+            "index": 4,
+            "operation": "session.start",
+            "parent_ns": 62941565,
+            "parent_overhead_ns": 49941488,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 63288631,
+            "child_http_ns": 13060797,
+            "index": 5,
+            "operation": "session.start",
+            "parent_ns": 63276169,
+            "parent_overhead_ns": 50215372,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 61763313,
+            "child_http_ns": 13134071,
+            "index": 6,
+            "operation": "session.start",
+            "parent_ns": 61750135,
+            "parent_overhead_ns": 48616064,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 63006421,
+            "child_http_ns": 12684918,
+            "index": 7,
+            "operation": "session.start",
+            "parent_ns": 62994237,
+            "parent_overhead_ns": 50309319,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 61850635,
+            "child_http_ns": 12692536,
+            "index": 8,
+            "operation": "session.start",
+            "parent_ns": 61839382,
+            "parent_overhead_ns": 49146846,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 64095365,
+            "child_http_ns": 13322108,
+            "index": 9,
+            "operation": "session.start",
+            "parent_ns": 64080927,
+            "parent_overhead_ns": 50758819,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 62778174,
+            "child_http_ns": 13082873,
+            "index": 10,
+            "operation": "session.start",
+            "parent_ns": 62770985,
+            "parent_overhead_ns": 49688112,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 61346875,
+            "child_http_ns": 12764755,
+            "index": 11,
+            "operation": "session.start",
+            "parent_ns": 61337424,
+            "parent_overhead_ns": 48572669,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 62705198,
+            "child_http_ns": 13177937,
+            "index": 12,
+            "operation": "session.start",
+            "parent_ns": 62693064,
+            "parent_overhead_ns": 49515127,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 62558385,
+            "child_http_ns": 12929426,
+            "index": 13,
+            "operation": "session.start",
+            "parent_ns": 62544418,
+            "parent_overhead_ns": 49614992,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 67919946,
+            "child_http_ns": 14505366,
+            "index": 14,
+            "operation": "session.start",
+            "parent_ns": 67906974,
+            "parent_overhead_ns": 53401608,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 61815678,
+            "child_http_ns": 12603207,
+            "index": 15,
+            "operation": "session.start",
+            "parent_ns": 61804680,
+            "parent_overhead_ns": 49201473,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 62889692,
+            "child_http_ns": 12838878,
+            "index": 16,
+            "operation": "session.start",
+            "parent_ns": 62877199,
+            "parent_overhead_ns": 50038321,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 63525888,
+            "child_http_ns": 13549720,
+            "index": 17,
+            "operation": "session.start",
+            "parent_ns": 63511973,
+            "parent_overhead_ns": 49962253,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 61982724,
+            "child_http_ns": 12698229,
+            "index": 18,
+            "operation": "session.start",
+            "parent_ns": 61969198,
+            "parent_overhead_ns": 49270969,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 62475158,
+            "child_http_ns": 13491201,
+            "index": 19,
+            "operation": "session.start",
+            "parent_ns": 62463158,
+            "parent_overhead_ns": 48971957,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 63795431,
+            "child_http_ns": 12912060,
+            "index": 20,
+            "operation": "session.start",
+            "parent_ns": 63782294,
+            "parent_overhead_ns": 50870234,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 62912085,
+            "child_http_ns": 13101693,
+            "index": 21,
+            "operation": "session.start",
+            "parent_ns": 62900740,
+            "parent_overhead_ns": 49799047,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 63636956,
+            "child_http_ns": 13297605,
+            "index": 22,
+            "operation": "session.start",
+            "parent_ns": 63623480,
+            "parent_overhead_ns": 50325875,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 61534625,
+            "child_http_ns": 12719527,
+            "index": 23,
+            "operation": "session.start",
+            "parent_ns": 61523495,
+            "parent_overhead_ns": 48803968,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 62168722,
+            "child_http_ns": 12968263,
+            "index": 24,
+            "operation": "session.start",
+            "parent_ns": 62153384,
+            "parent_overhead_ns": 49185121,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 63561010,
+            "child_http_ns": 12820847,
+            "index": 25,
+            "operation": "session.start",
+            "parent_ns": 63548917,
+            "parent_overhead_ns": 50728070,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 63019272,
+            "child_http_ns": 13271094,
+            "index": 26,
+            "operation": "session.start",
+            "parent_ns": 63007067,
+            "parent_overhead_ns": 49735973,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 61307034,
+            "child_http_ns": 12575807,
+            "index": 27,
+            "operation": "session.start",
+            "parent_ns": 61295586,
+            "parent_overhead_ns": 48719779,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 67382827,
+            "child_http_ns": 16786139,
+            "index": 28,
+            "operation": "session.start",
+            "parent_ns": 67367601,
+            "parent_overhead_ns": 50581462,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 62448424,
+            "child_http_ns": 12964414,
+            "index": 29,
+            "operation": "session.start",
+            "parent_ns": 62436443,
+            "parent_overhead_ns": 49472029,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 63895808,
+            "child_http_ns": 13341501,
+            "index": 30,
+            "operation": "session.start",
+            "parent_ns": 63884360,
+            "parent_overhead_ns": 50542859,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 63674032,
+            "child_http_ns": 13600538,
+            "index": 31,
+            "operation": "session.start",
+            "parent_ns": 63661417,
+            "parent_overhead_ns": 50060879,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 61000864,
+            "child_http_ns": 12493471,
+            "index": 32,
+            "operation": "session.start",
+            "parent_ns": 60989735,
+            "parent_overhead_ns": 48496264,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 61048355,
+            "child_http_ns": 12589558,
+            "index": 33,
+            "operation": "session.start",
+            "parent_ns": 61035638,
+            "parent_overhead_ns": 48446080,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 61857270,
+            "child_http_ns": 13504820,
+            "index": 34,
+            "operation": "session.start",
+            "parent_ns": 61845700,
+            "parent_overhead_ns": 48340880,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 70382060,
+            "child_http_ns": 20653583,
+            "index": 35,
+            "operation": "media.list",
+            "parent_ns": 70364806,
+            "parent_overhead_ns": 49711223,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 70542286,
+            "child_http_ns": 19739489,
+            "index": 36,
+            "operation": "media.list",
+            "parent_ns": 70522207,
+            "parent_overhead_ns": 50782718,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 73418687,
+            "child_http_ns": 20358677,
+            "index": 37,
+            "operation": "media.list",
+            "parent_ns": 73398228,
+            "parent_overhead_ns": 53039551,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 69728272,
+            "child_http_ns": 19715876,
+            "index": 38,
+            "operation": "media.list",
+            "parent_ns": 69711448,
+            "parent_overhead_ns": 49995572,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 74106582,
+            "child_http_ns": 21525768,
+            "index": 39,
+            "operation": "media.list",
+            "parent_ns": 74087332,
+            "parent_overhead_ns": 52561564,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 75783535,
+            "child_http_ns": 21419072,
+            "index": 40,
+            "operation": "media.list",
+            "parent_ns": 75764888,
+            "parent_overhead_ns": 54345816,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 74642217,
+            "child_http_ns": 20745984,
+            "index": 41,
+            "operation": "media.list",
+            "parent_ns": 74623889,
+            "parent_overhead_ns": 53877905,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 74231175,
+            "child_http_ns": 19764124,
+            "index": 42,
+            "operation": "media.list",
+            "parent_ns": 74210646,
+            "parent_overhead_ns": 54446522,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 70312985,
+            "child_http_ns": 19761247,
+            "index": 43,
+            "operation": "media.list",
+            "parent_ns": 70291236,
+            "parent_overhead_ns": 50529989,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 71650776,
+            "child_http_ns": 20529932,
+            "index": 44,
+            "operation": "media.list",
+            "parent_ns": 71627697,
+            "parent_overhead_ns": 51097765,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 70920971,
+            "child_http_ns": 20366193,
+            "index": 45,
+            "operation": "media.list",
+            "parent_ns": 70903421,
+            "parent_overhead_ns": 50537228,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 70812659,
+            "child_http_ns": 19682456,
+            "index": 46,
+            "operation": "media.list",
+            "parent_ns": 70794720,
+            "parent_overhead_ns": 51112264,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 71260163,
+            "child_http_ns": 19568766,
+            "index": 47,
+            "operation": "media.list",
+            "parent_ns": 71241814,
+            "parent_overhead_ns": 51673048,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 69818471,
+            "child_http_ns": 20028384,
+            "index": 48,
+            "operation": "media.list",
+            "parent_ns": 69801463,
+            "parent_overhead_ns": 49773079,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 68916294,
+            "child_http_ns": 19542851,
+            "index": 49,
+            "operation": "media.list",
+            "parent_ns": 68896860,
+            "parent_overhead_ns": 49354009,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 71549386,
+            "child_http_ns": 21440310,
+            "index": 50,
+            "operation": "media.list",
+            "parent_ns": 71528078,
+            "parent_overhead_ns": 50087768,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 70549065,
+            "child_http_ns": 20177695,
+            "index": 51,
+            "operation": "media.list",
+            "parent_ns": 70530091,
+            "parent_overhead_ns": 50352396,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 71219225,
+            "child_http_ns": 20444689,
+            "index": 52,
+            "operation": "media.list",
+            "parent_ns": 71200713,
+            "parent_overhead_ns": 50756024,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 70509643,
+            "child_http_ns": 19551902,
+            "index": 53,
+            "operation": "media.list",
+            "parent_ns": 70491990,
+            "parent_overhead_ns": 50940088,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 69501151,
+            "child_http_ns": 20309948,
+            "index": 54,
+            "operation": "media.list",
+            "parent_ns": 69482986,
+            "parent_overhead_ns": 49173038,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 69230635,
+            "child_http_ns": 19455232,
+            "index": 55,
+            "operation": "media.list",
+            "parent_ns": 69211026,
+            "parent_overhead_ns": 49755794,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 68524401,
+            "child_http_ns": 19777794,
+            "index": 56,
+            "operation": "media.list",
+            "parent_ns": 68503902,
+            "parent_overhead_ns": 48726108,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 66560457,
+            "child_http_ns": 18262389,
+            "index": 57,
+            "operation": "media.list",
+            "parent_ns": 66541043,
+            "parent_overhead_ns": 48278654,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 70165332,
+            "child_http_ns": 20004024,
+            "index": 58,
+            "operation": "media.list",
+            "parent_ns": 70145713,
+            "parent_overhead_ns": 50141689,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 80482646,
+            "child_http_ns": 22746636,
+            "index": 59,
+            "operation": "media.list",
+            "parent_ns": 80460857,
+            "parent_overhead_ns": 57714221,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 76677642,
+            "child_http_ns": 21558545,
+            "index": 60,
+            "operation": "media.list",
+            "parent_ns": 76658433,
+            "parent_overhead_ns": 55099888,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 87946529,
+            "child_http_ns": 29514042,
+            "index": 61,
+            "operation": "media.list",
+            "parent_ns": 87923950,
+            "parent_overhead_ns": 58409908,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 84003486,
+            "child_http_ns": 24868319,
+            "index": 62,
+            "operation": "media.list",
+            "parent_ns": 83980775,
+            "parent_overhead_ns": 59112456,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 75839493,
+            "child_http_ns": 20902668,
+            "index": 63,
+            "operation": "media.list",
+            "parent_ns": 75820909,
+            "parent_overhead_ns": 54918241,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 71445261,
+            "child_http_ns": 19851621,
+            "index": 64,
+            "operation": "media.list",
+            "parent_ns": 71421383,
+            "parent_overhead_ns": 51569762,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 69913401,
+            "child_http_ns": 19507729,
+            "index": 65,
+            "operation": "media.list",
+            "parent_ns": 69896403,
+            "parent_overhead_ns": 50388674,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 70686028,
+            "child_http_ns": 19863038,
+            "index": 66,
+            "operation": "media.list",
+            "parent_ns": 70666419,
+            "parent_overhead_ns": 50803381,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 69306724,
+            "child_http_ns": 19361141,
+            "index": 67,
+            "operation": "media.list",
+            "parent_ns": 69288508,
+            "parent_overhead_ns": 49927367,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 69594504,
+            "child_http_ns": 18490185,
+            "index": 68,
+            "operation": "media.get",
+            "parent_ns": 69568219,
+            "parent_overhead_ns": 51078034,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 69762287,
+            "child_http_ns": 18901892,
+            "index": 69,
+            "operation": "media.get",
+            "parent_ns": 69746488,
+            "parent_overhead_ns": 50844596,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 69172045,
+            "child_http_ns": 18266545,
+            "index": 70,
+            "operation": "media.get",
+            "parent_ns": 69156338,
+            "parent_overhead_ns": 50889793,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 69186616,
+            "child_http_ns": 18970169,
+            "index": 71,
+            "operation": "media.get",
+            "parent_ns": 69171164,
+            "parent_overhead_ns": 50200995,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 67303533,
+            "child_http_ns": 17964052,
+            "index": 72,
+            "operation": "media.get",
+            "parent_ns": 67288297,
+            "parent_overhead_ns": 49324245,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 69700574,
+            "child_http_ns": 18217285,
+            "index": 73,
+            "operation": "media.get",
+            "parent_ns": 69684314,
+            "parent_overhead_ns": 51467029,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 68381489,
+            "child_http_ns": 18223100,
+            "index": 74,
+            "operation": "media.get",
+            "parent_ns": 68362443,
+            "parent_overhead_ns": 50139343,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 70931507,
+            "child_http_ns": 19429131,
+            "index": 75,
+            "operation": "media.get",
+            "parent_ns": 70915534,
+            "parent_overhead_ns": 51486403,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 68375581,
+            "child_http_ns": 18503968,
+            "index": 76,
+            "operation": "media.get",
+            "parent_ns": 68359894,
+            "parent_overhead_ns": 49855926,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 66626389,
+            "child_http_ns": 17705681,
+            "index": 77,
+            "operation": "media.get",
+            "parent_ns": 66611695,
+            "parent_overhead_ns": 48906014,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 69622335,
+            "child_http_ns": 19091701,
+            "index": 78,
+            "operation": "media.get",
+            "parent_ns": 69607129,
+            "parent_overhead_ns": 50515428,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 68924313,
+            "child_http_ns": 18775497,
+            "index": 79,
+            "operation": "media.get",
+            "parent_ns": 68908953,
+            "parent_overhead_ns": 50133456,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 68286979,
+            "child_http_ns": 17828811,
+            "index": 80,
+            "operation": "media.get",
+            "parent_ns": 68270791,
+            "parent_overhead_ns": 50441980,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 68387787,
+            "child_http_ns": 18393617,
+            "index": 81,
+            "operation": "media.get",
+            "parent_ns": 68373677,
+            "parent_overhead_ns": 49980060,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 68052875,
+            "child_http_ns": 18169138,
+            "index": 82,
+            "operation": "media.get",
+            "parent_ns": 68037209,
+            "parent_overhead_ns": 49868071,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 71036943,
+            "child_http_ns": 18935744,
+            "index": 83,
+            "operation": "media.get",
+            "parent_ns": 71021881,
+            "parent_overhead_ns": 52086137,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 68528824,
+            "child_http_ns": 17934000,
+            "index": 84,
+            "operation": "media.get",
+            "parent_ns": 68513147,
+            "parent_overhead_ns": 50579147,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 68592299,
+            "child_http_ns": 18423916,
+            "index": 85,
+            "operation": "media.get",
+            "parent_ns": 68578046,
+            "parent_overhead_ns": 50154130,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 68808873,
+            "child_http_ns": 18604406,
+            "index": 86,
+            "operation": "media.get",
+            "parent_ns": 68794139,
+            "parent_overhead_ns": 50189733,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 67816283,
+            "child_http_ns": 18120921,
+            "index": 87,
+            "operation": "media.get",
+            "parent_ns": 67799736,
+            "parent_overhead_ns": 49678815,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 67744812,
+            "child_http_ns": 18108183,
+            "index": 88,
+            "operation": "media.get",
+            "parent_ns": 67730149,
+            "parent_overhead_ns": 49621966,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 73218455,
+            "child_http_ns": 19944902,
+            "index": 89,
+            "operation": "media.get",
+            "parent_ns": 73200924,
+            "parent_overhead_ns": 53256022,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 67415931,
+            "child_http_ns": 19540618,
+            "index": 90,
+            "operation": "media.get",
+            "parent_ns": 67389903,
+            "parent_overhead_ns": 47849285,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 67268678,
+            "child_http_ns": 18713548,
+            "index": 91,
+            "operation": "media.get",
+            "parent_ns": 67251772,
+            "parent_overhead_ns": 48538224,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 67922087,
+            "child_http_ns": 18121238,
+            "index": 92,
+            "operation": "media.get",
+            "parent_ns": 67906022,
+            "parent_overhead_ns": 49784784,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 69829704,
+            "child_http_ns": 18115320,
+            "index": 93,
+            "operation": "media.get",
+            "parent_ns": 69807975,
+            "parent_overhead_ns": 51692655,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 68057360,
+            "child_http_ns": 18150809,
+            "index": 94,
+            "operation": "media.get",
+            "parent_ns": 68040199,
+            "parent_overhead_ns": 49889390,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 67053537,
+            "child_http_ns": 17807000,
+            "index": 95,
+            "operation": "media.get",
+            "parent_ns": 67036366,
+            "parent_overhead_ns": 49229366,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 67764062,
+            "child_http_ns": 18266761,
+            "index": 96,
+            "operation": "media.get",
+            "parent_ns": 67748980,
+            "parent_overhead_ns": 49482219,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 67459827,
+            "child_http_ns": 18223848,
+            "index": 97,
+            "operation": "media.get",
+            "parent_ns": 67441356,
+            "parent_overhead_ns": 49217508,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 68686205,
+            "child_http_ns": 18663888,
+            "index": 98,
+            "operation": "media.get",
+            "parent_ns": 68669698,
+            "parent_overhead_ns": 50005810,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 68889857,
+            "child_http_ns": 18658143,
+            "index": 99,
+            "operation": "media.get",
+            "parent_ns": 68873985,
+            "parent_overhead_ns": 50215842,
+            "status": "PASS"
+          },
+          {
+            "attempt_wall_ns": 68014109,
+            "child_http_ns": 17954930,
+            "index": 100,
+            "operation": "media.get",
+            "parent_ns": 67988040,
+            "parent_overhead_ns": 50033110,
+            "status": "PASS"
+          }
+        ]
+      },
+      "upload_attempted": false,
+      "user_privacy": {
+        "files": {
+          "counts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "status": "COMPLETE_FINITE_FILE_WINDOW",
+          "uncovered_tail_bytes": 0
+        },
+        "journal": {
+          "complete": true,
+          "counts": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "cutoff_covered": true,
+          "status": "COMPLETE_FINITE_JOURNAL_WINDOW"
+        },
+        "scope": "FINITE_OBSERVATION_WINDOW"
+      },
+      "version_observations": [
+        {
+          "outcome": "TYPED_PROJECTION_MATCH",
+          "requested": -1
+        },
+        {
+          "outcome": "TYPED_PROJECTION_MATCH",
+          "requested": 0
+        }
+      ],
+      "wrong_secret_rejected": true
+    }
+  ],
+  "status": "OBSERVATION_CAPTURED_NOT_APPROVED",
+  "stderr_bytes": 0,
+  "stdout_bytes": 220365,
+  "unit": "baseline-freeze-3b21eb13",
+  "unit_inactive": true
+}

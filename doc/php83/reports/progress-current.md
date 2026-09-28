@@ -1,6 +1,6 @@
 # PHP 8.3 — status atual e tarefas restantes
 
-Atualizado: 2026-09-28T18:45:50.802357+00:00
+Atualizado: 2026-09-28T18:50:46.490646+00:00
 
 **5 concluídas / 46 abertas / 51 tarefas.** Os 24 requisitos originais e 27 casos detalhados se sobrepõem; não são 51 funcionalidades independentes. Sem percentual ou previsão de conclusão inferidos de testes.
 
@@ -81,9 +81,12 @@ seus bloqueadores históricos não representam este status atual.
   HTTP após o restart confirmou PHP7.4.33/apache2handler e removeu o próprio
   arquivo de prova. Nenhum segredo/chave exportado. R1 bloqueado por metadados
   permanece preservado; R2 usa diretório de logs próprio sem chmod em /var/log.
-- Próximo:100 chamadas autenticadas HTTPS com CA fixada e inclusão obrigatória
-  dos dois novos logs em todas as verificações de privacidade. Depois completar
-  HLS/Range/mídia longa/UI e as medições formais. Tarefa1.2 ainda aberta.
+- HTTPS autenticado:100/100 chamadas válidas, CA fixada,72 marcadores verificados
+  sem correspondência em janelas completas, incluindo os dois novos logs.
+  Exit0/unidade inativa; revisão independente aprovada. É ensaio funcional,
+  não benchmark ou aceite completo da tarefa.
+- Próximo:metadados dos flavors da mídia existente, HLS/Range, mídia longa/UI e
+  medições formais. Tarefa1.2 ainda aberta.
 
 R1/R2 e seus resultados parciais/falhos permanecem preservados. Tarefa1.2 aberta;
 nenhuma alteração em produção. Fonte do box: novo download oficial de651.326.766

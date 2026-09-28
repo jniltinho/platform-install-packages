@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "decision": "HTTPS100_SOURCE_APPROVED_FOR_ROOT_PREFLIGHT",
+  "pins": {
+    "run_https": "140d4dc97082c0e61556a5cbfb669b8352c2877d169aed5d8cc0c6bdc2564186",
+    "guest_https": "2fa152c361c196c44b799c6fe6676ea17b7058c4c3bbc764f766bfc7243124ac",
+    "prepare_https": "73bc6d496c7aabb9e1b3d9f72b76058e5858755dc0a4471b56259f1c0554f0de",
+    "test_https": "cb0ca228242eb530cc85fff8f41b16ca317b79828293c9cf06c839e1c30a152e"
+  },
+  "tests": {
+    "final_combined": 75,
+    "exit": 0,
+    "separate_original_tlsadapter_tests": 2,
+    "tlsadapter_exit": 0
+  },
+  "preserved_negative": "Earlier75-test discovery exited1 with9 AttributeErrors from test_https sys.path leak causing wrong run import; test-only path restoration resolved, production unchanged",
+  "review": [
+    "Both control and100-round POST transports use exact.74 HTTPS8443 with pinnedCAbytes",
+    "CA read through vetted nofollow private-file reader and hash checked",
+    "TLSlogadapter exactpin mandatory before invalidnonce and credentialread; wraps every inventory and rescan",
+    "Same bounded USER100mix, originalprivacywindow starts, alltokens/commonend/quiet guards retained",
+    "No HTTP fallback or unverifiedTLS path introduced",
+    "Fresh exclusive gueststage and previousunitinactive guard; no upload/profile mutation"
+  ],
+  "limits": [
+    "No reviewer VM/native execution",
+    "Sourceapproval not HTTPS API success",
+    "Existing actual CLI timeout/auth failure not PASS",
+    "Fullbaseline/performance/media acceptance remains open"
+  ]
+}
