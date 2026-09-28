@@ -51,3 +51,16 @@ acceptance. Do not invent a completion percentage or release date.
 These coordination rules do not authorize production changes, `.20` writes,
 package/CI integration, publishing, or bypassing the migration proposal's
 feasibility, release and cutover approvals.
+
+## PHP 8.3 milestone history
+
+At each reviewed migration milestone, create a focused commit on
+`proposal/migrate-kaltura-php83` and push that branch to its existing origin after
+checking the outgoing diff for secrets and unrelated changes. Include a sanitized
+record of scope, executed tests, source identities and remaining limitations.
+Do not bulk-stage raw CLI logs, generated private configuration, databases, VM
+artifacts or unreviewed work. A milestone commit is not a completed OpenSpec task,
+a release, or permission to change production. Preserve all final acceptance gates.
+Use ai-memory for historical context and Codebase Memory for structural discovery;
+validate both against current source and index coverage. Neither replaces Git,
+OpenSpec requirements or executed validation evidence.
