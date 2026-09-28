@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "scope": "guest observation projection and assembler only; excludes upcoming host runner",
+  "decision": "BOUNDED_SOURCE_APPROVAL_NOT_RUNTIME_ACCEPTANCE",
+  "pins": {
+    "tools/php83/baseline-freeze-r1/guest.py": "6826f1b731dd9edcfefd0cf4c39f5fe5a85797f4443d0bc7fc37d67f661931cb",
+    "tools/php83/baseline-freeze-r1/assemble.py": "1cb1b897fdea16990134cf25f9384c494b241608467ffb7fae006a7d13dda289",
+    "tools/php83/baseline-freeze-r1/observation.py": "e945b7f0ff5a9896f942281a123ee8c76ea398e45bffce9fb3d95ff8f3796364",
+    "tools/php83/baseline-freeze-r1/prepare.py": "df280a1ec4f431025f959961bf951d758f98800c9c2230cc4d5d9bfc30bdb762",
+    "tools/php83/baseline-freeze-r1/test_freeze.py": "4da475ee325246c529805beecd7d108711c56e19e64152fad5e6d81b4b5479ad"
+  },
+  "independent_tests": [
+    {
+      "command": "python3 -B -m unittest discover -s tools/php83/baseline-freeze-r1 -p test_*.py -v",
+      "exit": 0,
+      "passed": 12
+    },
+    {
+      "command": "python3 -B -m unittest discover -s tools/php83/baseline-api -p test_*.py -q",
+      "exit": 0,
+      "passed": 36
+    }
+  ],
+  "resolved_findings": [
+    "Scanner failure exports fixed code rather than exception class",
+    "Version-observation records exact keys, integer request type excluding bool and closed outcome enum"
+  ],
+  "review": [
+    "No upload/media/profile modification API calls",
+    "Exact .74 hostname/IP guard plus systemd network policy before API use",
+    "Pinned V4 source/module and private configuration identity checks retained",
+    "Wrong-secret finite file/journal window before credential read; authenticated failure window retained",
+    "Entry version derived from entry.data independent of fixed original asset version2",
+    "Asset projection max64 rows and bounded ID/numeric scalar whitelist",
+    "Assembler emits fixed envelope and approved_freeze/full_acceptance false"
+  ],
+  "actual_cli": {
+    "claude": {
+      "timeout_seconds": 75,
+      "exit": 124,
+      "stdout_bytes": 0,
+      "stderr_bytes": 0,
+      "status": "INCOMPLETE_TIMEOUT_NOT_PASS"
+    },
+    "cursor": "Not retried: root reports actual authentication failure in same cycle"
+  },
+  "limits": [
+    "No VM/SSH/credentials accessed",
+    "No native collector execution",
+    "Host runner not reviewed",
+    "Environment values may remain unknown; snapshot not attested",
+    "No task1.2/repetition/performance approval"
+  ]
+}

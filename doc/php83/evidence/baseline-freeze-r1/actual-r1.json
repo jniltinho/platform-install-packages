@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "executor": "Codex root",
+  "preflight_exit": 0,
+  "execution_exit": 2,
+  "runner_sha256": "33ac921d86811c0d4a4e1a502cf702f4d24d66b9f83aced5cf9229854a25c956",
+  "result": {
+    "approved_freeze": false,
+    "files": {
+      "guest.py": "6826f1b731dd9edcfefd0cf4c39f5fe5a85797f4443d0bc7fc37d67f661931cb",
+      "observation.py": "e945b7f0ff5a9896f942281a123ee8c76ea398e45bffce9fb3d95ff8f3796364"
+    },
+    "guest_exit": null,
+    "status": "FAILED_OR_INCOMPLETE_CAPTURE",
+    "unit": "baseline-freeze-a60d5c60",
+    "unit_inactive": true
+  },
+  "result_sha256": "8b8b5010f5a135a99d147dfbde7fe97c0c95b73b2f3e75db83defefad0215af0",
+  "post_execution_readonly_journal": {
+    "unit": "baseline-freeze-a60d5c60.service",
+    "trusted_systemd_pid1_events": [
+      "DEACTIVATED_SUCCESSFULLY"
+    ],
+    "raw_messages_exported": false,
+    "guest_exit_recovered": false
+  },
+  "confirmed_local_harness_defect": "Producer permits unresolved fixture; R1 success parser requires concrete fixture and can discard guest exit before storing it. Independently reproduced with synthetic report.",
+  "native_defect_cause_proven": false,
+  "original_attempt_preserved": true,
+  "task_complete": false
+}

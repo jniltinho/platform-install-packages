@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "runner_sha256": "33ac921d86811c0d4a4e1a502cf702f4d24d66b9f83aced5cf9229854a25c956",
+  "test_runner_sha256": "fe58a37cc009bea4b960f9b8d064f39a63166102f43ce3cd52e1380152525e4c",
+  "decision": "BOUNDED_SOURCE_APPROVED_FOR_ROOT_PREFLIGHT",
+  "tests": {
+    "pure_suite_passed": 21,
+    "exit": 0,
+    "additional_independent_success_projection": true,
+    "additional_source_drift_rejected": true,
+    "additional_private_fixture_rejected": true
+  },
+  "resolved_findings": [
+    "Selector-managed stdin shares deadline; 500KB input sleeping-child negative passed",
+    "Exceptional cleanup kills process group even exited leader; inherited-pipe deadline negative passed",
+    "Public output reduced to validated closed projection; arbitrary nested fields not persisted",
+    "Final rc0 requires terminal observation status"
+  ],
+  "limits": [
+    "No SSH/VM execution by reviewer",
+    "Root must run pinned read-only --check before staging",
+    "Imported host assembler and observation must remain at reviewed pins",
+    "Current Apache runtime/environment completeness and native observation remain unverified",
+    "No approved freeze, benchmark or task1.2 acceptance",
+    "Actual Claude terminal timeout124, Cursor auth unavailable; neither PASS"
+  ]
+}

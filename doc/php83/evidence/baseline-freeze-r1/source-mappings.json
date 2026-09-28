@@ -1,0 +1,33 @@
+{
+  "original_zip_sha256": "58d534d09b3b75c9a8333957268c884f79032638b2d44a278b1992fda1b0ab28",
+  "source_method": "literal checked extraction; no graph coverage claim",
+  "mappings": [
+    {
+      "archive_path": "alpha/lib/model/entry.php",
+      "sha256": "b677a171f5cc51f6a692eab774938b1a582e21e177ec40ff36aaf4277886dfb5",
+      "lines": [
+        1685,
+        1703
+      ],
+      "meaning": "entry.getVersion first segment and filename stem"
+    },
+    {
+      "archive_path": "alpha/lib/model/om/BaseentryPeer.php",
+      "sha256": "5fb7160752a9e03dfbc765c2946ca98bc1e7488f781c7c5564020db904f62782",
+      "lines": [
+        169,
+        170
+      ],
+      "meaning": "physical entry conversion_profile_id column"
+    },
+    {
+      "archive_path": "api_v3/lib/KalturaEntryService.php",
+      "sha256": "9495b584f73df1f4a11812efa964f57f42562159a405693b71e1731d53fe4dd5",
+      "lines": [
+        1214,
+        1234
+      ],
+      "meaning": "native getEntry version selection"
+    }
+  ]
+}

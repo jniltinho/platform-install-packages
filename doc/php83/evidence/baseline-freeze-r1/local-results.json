@@ -1,0 +1,24 @@
+{
+  "executor": "Codex author",
+  "vm_execution": false,
+  "cases": [
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/baseline-freeze-r1 -p 'test_*.py' -v",
+      "tests": 21,
+      "exit": 0
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/baseline-api -p 'test_protocol.py' -v",
+      "tests": 22,
+      "exit": 0
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tools/php83/baseline-api -p 'test_transport.py' -v",
+      "tests": 12,
+      "exit": 0
+    }
+  ],
+  "approved_freeze": false,
+  "independent_review": "separate reviewer evidence; not inferred from author tests",
+  "additional_case": "Final validated reduced projection retains contract inputs and excludes unknown synthetic value: PASS"
+}
