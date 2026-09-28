@@ -1,0 +1,8 @@
+{
+  "task_id": "1.1",
+  "status": "SEND_NOT_CONFIRMED",
+  "at_utc": "2026-09-28T17:45:50.349163+00:00",
+  "body_sha256": "f95440b6a02dc8d53cadf4fe5a89e0be2b18b022c6288668baa3f1e069042b37",
+  "inbox_delivery_confirmed": false,
+  "error_type": "TimeoutError"
+}

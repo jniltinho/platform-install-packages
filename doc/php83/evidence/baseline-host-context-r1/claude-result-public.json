@@ -1,0 +1,26 @@
+{
+  "case": "BASELINE_HOST_CONTEXT_R1_PURE_TEST_AND_SOURCE_REVIEW",
+  "executor": "actual Claude CLI",
+  "terminal_exit": 0,
+  "tests_passed": 4,
+  "test_command": "PYTHONDONTWRITEBYTECODE=1 python3 tools/php83/baseline-host-context-r1/test_collect.py -v",
+  "test_exit": 0,
+  "permission_denials": 0,
+  "source_sha256": {
+    "collect.py": "8b8ed2c6108ce9d9ea08a19f2e578e3d00b33691723e2fa1eb4feefeb3f476e0",
+    "test_collect.py": "2ea65642b67ed1593453a2af853301533492beb5feda6026eef23053f62c82f4",
+    "guest_inventory.py": "5ddb8bbbb1b6fdc4e77c93bd7833c31b046196dc44c42f6874de279aed70b0a6"
+  },
+  "verdict": "NO_CONCRETE_BLOCKER_FOR_SCOPED_READ_ONLY_OBSERVATION",
+  "findings": [
+    "SSH config trust/hostkey must be checked by operator; collector does not pin it",
+    "Exclusive output may remain partial if writing fails",
+    "Four tests cover host projection, not complete main path"
+  ],
+  "limitations": [
+    "No actual collector main, SSH, VirtualBox, VM, DB or network execution by reviewer",
+    "Not full box/disk/guest RAM/web runtime/source/config/profile attestation",
+    "No baseline acceptance and no additional CLI approval requirement inferred"
+  ],
+  "raw_reply_or_account_metadata_included": false
+}

@@ -1,0 +1,12 @@
+{
+  "case": "TASK12_PUBLIC_BASELINE_CONTEXT_R1",
+  "executor": "Codex root",
+  "guest_collection_exit": 0,
+  "independent_codex_tests": 4,
+  "actual_claude_tests": 4,
+  "scope": "Untimed read-only public observation; not full baseline",
+  "observed_report_mtime_utc": "2026-09-28T17:47:47.208956+00:00",
+  "openspec_validation": "strict PASS",
+  "tasks_complete": 5,
+  "tasks_total": 51
+}

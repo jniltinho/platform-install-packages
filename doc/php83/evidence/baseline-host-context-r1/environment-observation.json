@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "environment": {
+    "vm_uuid": "9e954729-16f3-4eda-9db5-b94e5ada9e44",
+    "snapshot_id": null,
+    "box_name": "bento/ubuntu-24.04",
+    "box_version": "202510.26.0",
+    "box_sha256": null,
+    "cpus": 4,
+    "memory_mib": 8192,
+    "disk_controller": "IntelAhci",
+    "disk_capacity_bytes": 68719476736,
+    "observed_readonly": true
+  },
+  "disk_uuid": "7592e63e-9154-4482-8111-51e7ca98443c",
+  "disk_storage_format": "VMDK",
+  "disk_format_variant": "dynamic default",
+  "box_metadata_sha256": "53d40c263eaf75948b65fdcbb24dda1fbf30511fae0c1d3b89fe00d564899362",
+  "unresolved": [
+    "Original box archive SHA256 not observed",
+    "No CurrentSnapshotUUID returned; coherent recovery checkpoint not attested",
+    "Disk cache/controller parity with candidate not checked",
+    "Guest RAM and benchmark host contention not observed"
+  ],
+  "baseline_acceptance": false,
+  "guest_mutation": false
+}

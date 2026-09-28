@@ -1,0 +1,12 @@
+{
+  "status": "STRICT_HOSTKEY_PINNED_FROM_OBSERVED_LOCAL_VM_NAT",
+  "vm_uuid": "9e954729-16f3-4eda-9db5-b94e5ada9e44",
+  "forwarding": "127.0.0.1:2201 -> guest22",
+  "hostkey_file_sha256": "6b6a9652a16acd478a01b508962452556138ce3a3f0c2cc4584baab58f00c4c6",
+  "strict_config_sha256": "15f687f3db61c013654442404e916b1b2ad7f0d1835e1f30ef10ca80355ceef3",
+  "probe_exit": 0,
+  "hostname": "kaltura-php74-baseline",
+  "original_config_unchanged": true,
+  "provenance_limit": "TOFU keyscan after exact VirtualBox forwarding check, not independently provisioned out-of-band hostkey",
+  "guest_mutation": false
+}
