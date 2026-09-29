@@ -109,3 +109,32 @@ API-log privacy overlay does not cover this. The config comes from the packaged
 template (`@LOG_DIR@`), so the same behavior is expected on stock 7.4 installs;
 production `.20` was not inspected (out of lab scope). Any thumbnail GET via getUrl
 must treat this as a recorded privacy finding; operator decision pending.
+
+## r4 — operator-approved GET with generated download KS (`thumbnail-native-r4.json`)
+
+Operator decision (2026-09-28): GET via the real getUrl route and record the
+access-log exposure as a finding. r4 accepts exactly one trailing `/ks/<token>`
+(charset `[A-Za-z0-9_=-]`, 16–2048) after optional pv/ev; own session secret/KS,
+`%`, query and foreign origin still rejected; DECODE exported as diagnostic.
+
+Native unit `baseline-freeze-128d02f3`, stage `/var/lib/kaltura-baseline-thumbnail-r4`:
+- GET HTTP 200, one `image/jpeg`, 45227 bytes (= API size, confirming bytes).
+- Pinned ffmpeg strict full MJPEG decode: 640x360, 1 frame, API dimensions match.
+- Privacy: FAILED at MEDIA_PRIVACY with `FILES_REWRITTEN` (scanner `REWRITTEN` in
+  files_initial of audits 3 and 4): a scanned log file was rewritten/rotated during the
+  finite window, so the scan is INCOMPLETE. Audits 1–2 had zero matches. The expected
+  access-log KS finding is therefore neither confirmed nor excluded. Not a privacy pass.
+- guest exit 2, stderr 0, unit inactive. No retry.
+
+Identities: thumbnail_r4.py f389bb35737957fefc3518a7b081ee81c0ca81924f91cb7caf928ac8aae8a686,
+prepare_thumbnail_r4.py 5a6eb7db34274e3b128cbde2532674a8913b623a0e4a1768008c75109d69d3e5,
+guest_thumbnail_r4.py 4482e7fac847264b5b238fb9a44c7ed14619715feb81445e12fb685019a09f97,
+run_thumbnail_r4.py 43bf607dca58d0c22b8fb68fc3e67ff1ad8bd504ce218c3714084173007710f0,
+test_thumbnail_r4.py be4283bf3b6a64a79fc3230243cc122d548628b75499592316fa35c459e11ae3,
+thumbnail-native-r4.json bc4c723a17b7aad76c55cb35df5faa036b22f1261a9004d7f5541133ec32d882.
+Local tests: 53 OK (thumbnail r1–r4 + ks reason). Reviews: Codex `gpt-6-luna` PASS,
+validated by Claude subagent Opus 5.5 (hashes, byte-identical guest rebuild, no
+redirects, no false-PASS path). Neither is execution evidence.
+
+Open: identify which log was rewritten (rotation vs application) and rerun privacy
+audit in a quiet window; decide handling of the vhost_kalt `%r` KS exposure.
