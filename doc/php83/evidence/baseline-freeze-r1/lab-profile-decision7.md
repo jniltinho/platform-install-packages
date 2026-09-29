@@ -39,3 +39,11 @@ Native unit `baseline-freeze-2e9f8e2c`: guest exit 0, `OBSERVATION_CAPTURED_NOT_
 - Privacy: 5 audits zero (incl. admin secret/KS), Sphinx scans zero, common-end STABLE on attempt 2.
 - Consumed once: a rerun aborts LAB_PROFILE_EXISTS. The 8.3 lab must receive the identical definition.
 Next: re-upload FullHD60 (and short360) with conversionProfileId=15 and verify delivered 1080p60/360p25.
+
+## FullHD60 phase A r2 on profile 15 — `long-upload-native-r2.json`, sha256 4a0f9059c745e7ff6e17165e30cd3dbeebd47ede1b41787fbca2686809065ca9
+`long_upload_r2.py` (f4e0e663…: long_upload + conversionProfileId=15 echoed), guest/runner from the
+new-log-aware base with clock guard (`guest_long_upload_r2.py` 8ee9ede7…, `run_long_upload_r2.py` 6aba9742…).
+Codex `gpt-6-luna` PASS; Opus 5.5 VALIDATED (103 tests). Started in minutes 00–09 for margin.
+Native unit `baseline-freeze-ec2a43b0`: guest exit 0, `OBSERVATION_CAPTURED_NOT_APPROVED`; 112 parts acknowledged
+(117,210,794 bytes, 8.344 s), entry **`0_3h92ab2l`** on profile 15, addContent accepted (status 1). All four
+finite audits zero **including the batch audit** (new worker logs handled), Sphinx scans zero, common-end STABLE.
