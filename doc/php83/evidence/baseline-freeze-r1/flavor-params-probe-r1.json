@@ -1,0 +1,414 @@
+{
+ "cp": [
+  {
+   "id": "13",
+   "partner_id": "102",
+   "status": "2",
+   "system_name": "Passthrough_Live",
+   "type": "2"
+  },
+  {
+   "id": "14",
+   "partner_id": "102",
+   "status": "2",
+   "system_name": "Default",
+   "type": "1"
+  }
+ ],
+ "db_identity_verified": true,
+ "fp": [
+  {
+   "frame_rate": "0",
+   "height": "1080",
+   "id": "-1",
+   "is_default": "0",
+   "max_frame_rate_raw": "",
+   "partner_id": "0",
+   "system_name": "Generic(H264)",
+   "tags": "",
+   "type": "1",
+   "video_bitrate": "4000",
+   "video_codec": "h264m",
+   "width": "0"
+  },
+  {
+   "frame_rate": "0",
+   "height": "0",
+   "id": "0",
+   "is_default": "1",
+   "max_frame_rate_raw": "",
+   "partner_id": "0",
+   "system_name": "Source",
+   "tags": "source",
+   "type": "1",
+   "video_bitrate": "0",
+   "video_codec": "",
+   "width": "0"
+  },
+  {
+   "frame_rate": "0",
+   "height": "0",
+   "id": "1",
+   "is_default": "1",
+   "max_frame_rate_raw": "",
+   "partner_id": "0",
+   "system_name": "Mobile(3GP)",
+   "tags": "mobile,mpeg4",
+   "type": "1",
+   "video_bitrate": "300",
+   "video_codec": "mpeg4",
+   "width": "320"
+  },
+  {
+   "frame_rate": "0",
+   "height": "360",
+   "id": "2",
+   "is_default": "1",
+   "max_frame_rate_raw": "",
+   "partner_id": "0",
+   "system_name": "Basic/Small - WEB/MBL (H264/400)",
+   "tags": "mobile,web,mbr,iphone,iphonenew,ipad,ipadnew,dash",
+   "type": "1",
+   "video_bitrate": "400",
+   "video_codec": "h264b",
+   "width": "0"
+  },
+  {
+   "frame_rate": "0",
+   "height": "480",
+   "id": "3",
+   "is_default": "1",
+   "max_frame_rate_raw": "",
+   "partner_id": "0",
+   "system_name": "Basic/Small - WEB/MBL (H264/600)",
+   "tags": "mobile,web,mbr,iphone,iphonenew,ipad,ipadnew,dash",
+   "type": "1",
+   "video_bitrate": "600",
+   "video_codec": "h264b",
+   "width": "0"
+  },
+  {
+   "frame_rate": "0",
+   "height": "540",
+   "id": "4",
+   "is_default": "1",
+   "max_frame_rate_raw": "",
+   "partner_id": "0",
+   "system_name": "SD/Small - WEB/MBL (H264/900)",
+   "tags": "mobile,web,mbr,ipad,ipadnew,iphone,iphonenew,dash",
+   "type": "1",
+   "video_bitrate": "900",
+   "video_codec": "h264m",
+   "width": "0"
+  },
+  {
+   "frame_rate": "0",
+   "height": "720",
+   "id": "5",
+   "is_default": "1",
+   "max_frame_rate_raw": "",
+   "partner_id": "0",
+   "system_name": "SD/Large - WEB/MBL (H264/1500)",
+   "tags": "mobile,web,mbr,ipad,ipadnew,iphone,iphonenew,dash",
+   "type": "1",
+   "video_bitrate": "1500",
+   "video_codec": "h264m",
+   "width": "1024"
+  },
+  {
+   "frame_rate": "0",
+   "height": "720",
+   "id": "6",
+   "is_default": "1",
+   "max_frame_rate_raw": "",
+   "partner_id": "0",
+   "system_name": "HD/720 - WEB (H264/2500)",
+   "tags": "web,mbr,dash",
+   "type": "1",
+   "video_bitrate": "2500",
+   "video_codec": "h264h",
+   "width": "0"
+  },
+  {
+   "frame_rate": "0",
+   "height": "1080",
+   "id": "7",
+   "is_default": "1",
+   "max_frame_rate_raw": "",
+   "partner_id": "0",
+   "system_name": "HD/1080 - WEB (H264/4000)",
+   "tags": "web,mbr,dash",
+   "type": "1",
+   "video_bitrate": "4000",
+   "video_codec": "h264h",
+   "width": "0"
+  },
+  {
+   "frame_rate": "0",
+   "height": "360",
+   "id": "8",
+   "is_default": "1",
+   "max_frame_rate_raw": "",
+   "partner_id": "0",
+   "system_name": "WebM",
+   "tags": "html5,webm",
+   "type": "1",
+   "video_bitrate": "750",
+   "video_codec": "vp8",
+   "width": "0"
+  },
+  {
+   "frame_rate": "0",
+   "height": "720",
+   "id": "9",
+   "is_default": "0",
+   "max_frame_rate_raw": "",
+   "partner_id": "0",
+   "system_name": "save_original_source_flavor_params",
+   "tags": "save_source",
+   "type": "1",
+   "video_bitrate": "2500",
+   "video_codec": "",
+   "width": "0"
+  },
+  {
+   "frame_rate": "0",
+   "height": "0",
+   "id": "10",
+   "is_default": "0",
+   "max_frame_rate_raw": "",
+   "partner_id": "0",
+   "system_name": "Lecture Capture - WEB/MBL (H264/400)",
+   "tags": "mobile,web,mbr,iphone,iphonenew",
+   "type": "1",
+   "video_bitrate": "400",
+   "video_codec": "h264b",
+   "width": "640"
+  },
+  {
+   "frame_rate": "0",
+   "height": "0",
+   "id": "11",
+   "is_default": "1",
+   "max_frame_rate_raw": "",
+   "partner_id": "0",
+   "system_name": "English Audio (Multi-Audio Streaming) 64 Kbps",
+   "tags": "mobile,web,mbr,iphone,iphonenew,ipad,ipadnew,dash,audio_only,alt_audio",
+   "type": "1",
+   "video_bitrate": "0",
+   "video_codec": "",
+   "width": "0"
+  },
+  {
+   "frame_rate": "0",
+   "height": "0",
+   "id": "12",
+   "is_default": "1",
+   "max_frame_rate_raw": "",
+   "partner_id": "0",
+   "system_name": "Spanish Audio (Multi-Audio Streaming) 64 Kbps",
+   "tags": "mobile,web,mbr,iphone,iphonenew,ipad,ipadnew,dash,audio_only,alt_audio",
+   "type": "1",
+   "video_bitrate": "0",
+   "video_codec": "",
+   "width": "0"
+  },
+  {
+   "frame_rate": "0",
+   "height": "0",
+   "id": "13",
+   "is_default": "1",
+   "max_frame_rate_raw": "",
+   "partner_id": "0",
+   "system_name": "German Audio (Multi-Audio Streaming) 64 Kbps",
+   "tags": "mobile,web,mbr,iphone,iphonenew,ipad,ipadnew,dash,audio_only,alt_audio",
+   "type": "1",
+   "video_bitrate": "0",
+   "video_codec": "",
+   "width": "0"
+  },
+  {
+   "frame_rate": "0",
+   "height": "0",
+   "id": "14",
+   "is_default": "1",
+   "max_frame_rate_raw": "",
+   "partner_id": "0",
+   "system_name": "French Audio (Multi-Audio Streaming) 64 Kbps",
+   "tags": "mobile,web,mbr,iphone,iphonenew,ipad,ipadnew,dash,audio_only,alt_audio",
+   "type": "1",
+   "video_bitrate": "0",
+   "video_codec": "",
+   "width": "0"
+  },
+  {
+   "frame_rate": "0",
+   "height": "0",
+   "id": "15",
+   "is_default": "1",
+   "max_frame_rate_raw": "",
+   "partner_id": "0",
+   "system_name": "Italian Audio (Multi-Audio Streaming) 64 Kbps",
+   "tags": "mobile,web,mbr,iphone,iphonenew,ipad,ipadnew,dash,audio_only,alt_audio",
+   "type": "1",
+   "video_bitrate": "0",
+   "video_codec": "",
+   "width": "0"
+  },
+  {
+   "frame_rate": "0",
+   "height": "0",
+   "id": "16",
+   "is_default": "1",
+   "max_frame_rate_raw": "",
+   "partner_id": "0",
+   "system_name": "Brazilian Portuguese Audio (Multi-Audio Streaming) 64 Kbps",
+   "tags": "mobile,web,mbr,iphone,iphonenew,ipad,ipadnew,dash,audio_only,alt_audio",
+   "type": "1",
+   "video_bitrate": "0",
+   "video_codec": "",
+   "width": "0"
+  },
+  {
+   "frame_rate": "0",
+   "height": "0",
+   "id": "17",
+   "is_default": "1",
+   "max_frame_rate_raw": "",
+   "partner_id": "0",
+   "system_name": "Mandarin Audio (Multi-Audio Streaming) 64 Kbps",
+   "tags": "mobile,web,mbr,iphone,iphonenew,ipad,ipadnew,dash,audio_only,alt_audio",
+   "type": "1",
+   "video_bitrate": "0",
+   "video_codec": "",
+   "width": "0"
+  },
+  {
+   "frame_rate": "0",
+   "height": "0",
+   "id": "18",
+   "is_default": "1",
+   "max_frame_rate_raw": "",
+   "partner_id": "0",
+   "system_name": "Spanish-LAM Audio (Multi-Audio Streaming) 64 Kbps",
+   "tags": "mobile,web,mbr,iphone,iphonenew,ipad,ipadnew,dash,audio_only,alt_audio",
+   "type": "1",
+   "video_bitrate": "0",
+   "video_codec": "",
+   "width": "0"
+  },
+  {
+   "frame_rate": "0",
+   "height": "0",
+   "id": "19",
+   "is_default": "1",
+   "max_frame_rate_raw": "",
+   "partner_id": "0",
+   "system_name": "Default Thumbnail",
+   "tags": "default_thumb",
+   "type": "2",
+   "video_bitrate": "0",
+   "video_codec": "",
+   "width": "0"
+  }
+ ],
+ "fpcp": [
+  {
+   "flavor_params_id": "32",
+   "profile": "13"
+  },
+  {
+   "flavor_params_id": "36",
+   "profile": "13"
+  },
+  {
+   "flavor_params_id": "37",
+   "profile": "13"
+  },
+  {
+   "flavor_params_id": "0",
+   "profile": "14"
+  },
+  {
+   "flavor_params_id": "2",
+   "profile": "14"
+  },
+  {
+   "flavor_params_id": "3",
+   "profile": "14"
+  },
+  {
+   "flavor_params_id": "4",
+   "profile": "14"
+  },
+  {
+   "flavor_params_id": "5",
+   "profile": "14"
+  },
+  {
+   "flavor_params_id": "6",
+   "profile": "14"
+  },
+  {
+   "flavor_params_id": "7",
+   "profile": "14"
+  },
+  {
+   "flavor_params_id": "19",
+   "profile": "14"
+  }
+ ],
+ "guest_stderr_bytes": 0,
+ "short": [
+  {
+   "flavor_params_id": "0",
+   "frame_rate": "25",
+   "height": "360",
+   "status": "2",
+   "width": "640"
+  },
+  {
+   "flavor_params_id": "2",
+   "frame_rate": "25",
+   "height": "360",
+   "status": "2",
+   "width": "640"
+  },
+  {
+   "flavor_params_id": "3",
+   "frame_rate": "25",
+   "height": "360",
+   "status": "2",
+   "width": "640"
+  },
+  {
+   "flavor_params_id": "4",
+   "frame_rate": "25",
+   "height": "360",
+   "status": "2",
+   "width": "640"
+  },
+  {
+   "flavor_params_id": "5",
+   "frame_rate": "0",
+   "height": "0",
+   "status": "4",
+   "width": "0"
+  },
+  {
+   "flavor_params_id": "6",
+   "frame_rate": "0",
+   "height": "0",
+   "status": "4",
+   "width": "0"
+  },
+  {
+   "flavor_params_id": "7",
+   "frame_rate": "0",
+   "height": "0",
+   "status": "4",
+   "width": "0"
+  }
+ ],
+ "status": "READ_ONLY_FLAVOR_PARAMS_OBSERVED"
+}
