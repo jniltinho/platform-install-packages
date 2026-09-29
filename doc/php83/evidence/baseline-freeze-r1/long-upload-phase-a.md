@@ -41,3 +41,17 @@ stage_long_fixture.py f9fb9574…2fe15, test_long_upload_r1.py 5e0ca558…a13d1.
 ## Next
 Phase B must scan log files created during its window from offset 0 (append scanner rejects new
 files), then observe READY, flavors and delivered 1080p60 properties for `0_wzlsbwmy`.
+
+# FullHD60 phase B r1 — read-only READY observation (failed before any media call)
+
+Reviewed additions: `privacy_new_logs.py` (logs created in-window scanned from offset 0; per-window
+registry so a new log that vanishes/shrinks/changes identity fails closed — an Opus-reproduced false
+PASS in an earlier draft was fixed), `long_ready.py` (READY poll ≤240 s checked before each poll,
+profile 14, closed flavor projection with recomputed invariants, stored original bound via file_sync to
+the fixture SHA256). Codex `gpt-6-luna` 6 rounds → PASS; Opus 5.5 VALIDATED (92 tests).
+
+Native unit `baseline-freeze-068f5a98` (`long-ready-native-r1.json`, sha256 bdb4d32bb4a87285284b57fb2fb9da22ef7b5babad22517648f2883a5ce94030): FAILED at the first
+audit (INVALID_NONCE_PRIVACY) with persistent `FILES_INVENTORY_CHANGED`. Private diff: six
+pre-existing `batch/*-2026-09-27*.log` files were deleted at 02:50 VM time by Kaltura's hourly
+DirectoryCleanupBatchLogs job (HH:50). The scanner correctly fails closed when a start file vanishes.
+No media API call, no mutation. r2 adds a VM-clock start guard (minutes 00–29, not 23:xx / 00:00–00:14).
