@@ -64,3 +64,21 @@ a release, or permission to change production. Preserve all final acceptance gat
 Use ai-memory for historical context and Codebase Memory for structural discovery;
 validate both against current source and index coverage. Neither replaces Git,
 OpenSpec requirements or executed validation evidence.
+
+## Acceleration decisions (operator, 2026-09-29)
+
+To speed up the 7.4 baseline work without weakening the evidence:
+
+- **Lab cron pause during runs.** On the Baseline74 lab VM (`.74`) only, a runner may pause the Kaltura `clear_cache`
+  (*/15) cron and the hourly batch-log cleanup for the duration of one bounded run and must restore them at the end
+  (including on failure), recording both actions. Never on `.20` or any non-lab host. This replaces the VM-clock
+  start window when used.
+- **Light review for trivial derivations.** Changes that only rename a stage/output, swap a pin or module name, or add a
+  prior unit to an inactive-guard list need one actual Codex (`gpt-6-luna`) review plus local tests. Any change to
+  logic, guards, privacy scanning or acceptance criteria keeps Codex review plus independent Opus validation.
+- **Batch workloads.** Independent read-only checks may share one run and one privacy audit set when each keeps its own
+  closed diagnostics and fail-closed codes.
+- **1.2 scope.** UI/Admin Console/KMC, the timed 2+5 protocol, and HLS/delivered-progressive of the 1080p60 fixture are
+  deferred (not dropped) to 3.4/5.12, 3.6/5.22 and 3.5/5.14; see the note under task 1.2 in `tasks.md`.
+
+The privacy audit, consumed-once stages and no-`.20` rules are unchanged.

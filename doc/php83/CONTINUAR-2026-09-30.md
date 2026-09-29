@@ -9,6 +9,27 @@ Documento anterior: `doc/php83/CLAUDE-HANDOFF-PHP83.md` (visão geral, mapa de p
 OpenSpec **5/51** (1.1, 1.6, 5.1–5.3). Tarefa principal aberta: **1.2 — baseline PHP 7.4**. Hoje o laboratório 7.4 passou a
 entregar e decodificar **1080p60** num perfil de laboratório; falta provar o stream **entregue** (etapa 2, progressive) e o HLS.
 
+## 1a. NOVO PLANO (decisão do operador ao encerrar, 2026-09-29) — prioridade: agilizar
+
+Adotado (ver `AGENTS.md` → "Acceleration decisions" e a nota sob a tarefa 1.2 no `tasks.md`):
+- **Pausar crons na VM lab durante a rodada** (`clear_cache` */15 e limpeza de logs das :50, só na `.74`, restaurar ao fim) —
+  elimina a janela de minutos 16–19 e as falhas por ruído de log.
+- **Revisão leve** para derivações triviais (só Codex `gpt-6-luna`); lógica/guards/privacidade seguem Codex + Opus.
+- **Agrupar** checagens somente-leitura numa mesma rodada.
+- **Escopo da 1.2 reduzido** (adiado, não descartado): UI/KMC → 3.4/5.12; protocolo 2+5 → 3.6/5.22 (medir 7.4 e 8.3 na
+  mesma sessão); HLS e progressive entregue do 1080p60 → 3.5/5.14. O decode completo do flavor armazenado vale como
+  evidência 1080p60 da baseline.
+
+**Para FECHAR a 1.2 amanhã faltam só:**
+1. Implementar a pausa/restauração dos crons como wrapper do runner (mudança de lógica → Codex + Opus), uma vez.
+2. **360p25 no perfil 15**: reenviar `short360.mp4` com `conversionProfileId=15` e observar READY + flavors 360p a 25 fps
+   (reaproveitar `long_upload_r2`/`long_ready_r2` parametrizados para o fixture curto), numa rodada agrupada.
+3. **Relatório de runtime/extensões/proveniência** (somente leitura: PHP CLI/Apache, módulos, INI, pacotes, VM/snapshot).
+4. Reconciliar critérios da 1.2 com as evidências e marcar a caixa **só se** tudo bater; commit + e-mail.
+Depois: 1.3 (PHPCompatibility), 1.4 (matriz de distros), 1.5 (go/no-go).
+
+A seção 4 abaixo (etapa 2 progressive) passa a pertencer à 3.5/5.14 e **não** bloqueia a 1.2.
+
 ## 2. Ambiente deixado DESLIGADO (tudo parado de propósito)
 
 | Item | Estado | Observação |
