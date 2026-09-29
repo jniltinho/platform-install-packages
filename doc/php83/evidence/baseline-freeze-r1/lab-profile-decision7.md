@@ -87,3 +87,10 @@ for privacy scanning. The lab 443 vhost logs only "%>s %B %D", so the request li
 serveFlavor application logs record the path, BATCH_PRIVACY fails closed with PRIVATE_MARKER_LOGGED. That outcome would
 be a recorded finding (non-secret route token logged), not a privacy pass and not a byte-equality failure; the public
 TRANSFER diagnostic is only written after the hash matched.
+
+## Step 2 native r1 — `flavor-progressive-native-r1.json`, sha256 753d6174063a33d161c6b8127b2956b2b77cc0bf7d5d62bd0a46a947e91400e6
+Unit `baseline-freeze-bc2263f7` (VM minutes 16–19): guest exit 2, **PROG_ROUTE** at API_ROUND, before any GET.
+URL diagnostic: HTTPS, owned host 192.168.56.74, port 443, no query/fragment/userinfo, **grammar=false**. Privacy:
+3 audits zero, Sphinx zero, common-end STABLE. The returned serveFlavor path differs from the grammar observed for
+the short fixture; which segment differs is unknown (no closed route-key diagnostic in this module). Next: add a
+closed ROUTE_CHECKS (key names only, as thumbnail r3) before the rejection, review, rerun once.
