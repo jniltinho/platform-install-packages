@@ -75,3 +75,15 @@ with dev/ctime; validate bounds/codecs; single meets() rule; projection bounds) 
   full decode h264 1920x1080, 60/1 fps, 3600 frames, 60.010 s, AAC 44.1 kHz stereo; meets_1080p60=true.**
   Note: audio resampled 48→44.1 kHz by the transcode. Not yet delivery: step 2 must fetch the delivered progressive
   bytes and match this SHA256 (plus Range 206); HLS is step 3.
+
+## Step 2 pre-declaration (before consuming stage flavor-progressive-r1)
+`flavor_progressive.py` (e17f1f67…) fetches the delivered progressive bytes of 0_j6rfow09 via getUrl → serveFlavor on
+pinned HTTPS443 in 30 exact 1 MiB ranges and requires SHA256 = c14cbe84… (the natively decoded stored file). Reviews:
+Codex `gpt-6-luna` round 1 CHANGES_REQUIRED (required Content-Length, removed unused PROG_TYPE, final budget check,
+credential-encoding explained), round 2 PASS; Opus 5.5 VALIDATED (123 tests; grammar matches the pinned
+getServeFlavorUrl/fileName derivation; no KS in serveFlavor path; 1 MiB fits media_get443 IPC).
+**Expected-result declaration:** URL tokens, including the fileName segment (≥16 chars, not a credential), are enrolled
+for privacy scanning. The lab 443 vhost logs only "%>s %B %D", so the request line is not written there; if the Kaltura
+serveFlavor application logs record the path, BATCH_PRIVACY fails closed with PRIVATE_MARKER_LOGGED. That outcome would
+be a recorded finding (non-secret route token logged), not a privacy pass and not a byte-equality failure; the public
+TRANSFER diagnostic is only written after the hash matched.
