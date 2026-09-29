@@ -150,3 +150,42 @@ Sphinx RT binlog data write with constant size, not a log leak. Earlier passing
 rounds did not coincide with a Sphinx binlog write, so the risk applies to every
 round. Handling these binary index files (separate full-content scan vs exclusion)
 is a privacy-protocol decision; nothing was changed.
+
+## r5 — Sphinx binlog full-content scan; thumbnail round COMPLETE (`thumbnail-native-r5.json`)
+
+Operator decision: scan Sphinx RT binlogs by full content instead of excluding them.
+`privacy_sphinx_binlog.py` removes `/opt/kaltura/log/sphinx/data` (closed name set,
+alias-checked) from every append inventory and, in every accepted audit, reads each
+binlog whole via a pinned directory fd with inode checks, counting private patterns.
+thumbnail_r4.py reused unchanged.
+
+Native unit `baseline-freeze-6858a1eb`, stage `/var/lib/kaltura-baseline-thumbnail-r5`:
+status `EXISTING_MEDIA_FREEZE_OBSERVATION_COMPLETE` / runner
+`OBSERVATION_CAPTURED_NOT_APPROVED`, guest exit 0, stderr 0, unit inactive.
+- GET via getUrl with generated download KS: HTTP 200 image/jpeg 45227 bytes; strict full
+  MJPEG decode 640x360, 1 frame, API dimensions match.
+- Finite privacy: all 4 audits zero (files + journal), common-end STABLE, round batch
+  with tracked URL tokens (incl. the download KS) zero; Sphinx full-content scans zero
+  (4 scans, 3 files, 11 bytes). `deleted_between_audits_covered=false`.
+
+Correction of the r4 logging expectation: the lab TLS vhosts on 192.168.56.74:443/8443
+(`kaltura-baseline-tls-443-r1.conf`, `kaltura-baseline-tls-r2.conf`) log only
+`"%>s %B %D"` to `/var/lib/kaltura-baseline-tls-logs-r2/access.log`, so the KS did not
+reach any scanned sink. The packaged `vhost_kalt` (`%r`) applies to the packaged vhosts;
+a stock install serving thumbnails through them would log the KS path. That remains a
+configuration observation, not a runtime observation.
+
+Identities: privacy_sphinx_binlog.py 3674826a970333481db26d4fe892fb40599709e21a9581109799bd01c5afe5e2,
+prepare_thumbnail_r5.py d35917c93074cb7eab68652767b08255a1b228dae478768fd8f3d07c70697353,
+guest_thumbnail_r5.py 6a3bc5c0551102a9c4cff75c1cf3d5e6fc2ae4a67b0b4fe424188af2925a1b24,
+run_thumbnail_r5.py 2e32ed2f8309dde96c85536275c76b945bf13b3f073e072b36d30c1bc380fded,
+test_thumbnail_r5.py 6252ffaba31db3502fd9a33518c11f61fa55bfc9b5f148bf3582ed2a87f93470,
+thumbnail-native-r5.json 3b45d7ce8a4d3fb917b40173ab61c0f4f4ad17bb299d31656192a7783691bc64. Local tests: 74 OK.
+Reviews: Codex `gpt-6-luna` 4 rounds (CHANGES_REQUIRED x3: swap race, alias/dir-itself,
+split lstat — all fixed; final PASS), validated by Claude subagent Opus 5.5 (VALIDATED:
+42 pins, byte-identical guest rebuild, failure-path coverage, no false-PASS path).
+
+Scope: one thumbnail case on the lab baseline; not full 1.2 acceptance. Residuals:
+content written and deleted between audits; runner does not cross-check one Sphinx row
+per accepted audit (guaranteed by pinned guest construction); dynamic library cohort not
+attested; approved_freeze remains false.
