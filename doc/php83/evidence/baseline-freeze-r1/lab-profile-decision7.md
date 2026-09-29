@@ -47,3 +47,14 @@ Codex `gpt-6-luna` PASS; Opus 5.5 VALIDATED (103 tests). Started in minutes 00�
 Native unit `baseline-freeze-ec2a43b0`: guest exit 0, `OBSERVATION_CAPTURED_NOT_APPROVED`; 112 parts acknowledged
 (117,210,794 bytes, 8.344 s), entry **`0_3h92ab2l`** on profile 15, addContent accepted (status 1). All four
 finite audits zero **including the batch audit** (new worker logs handled), Sphinx scans zero, common-end STABLE.
+
+## FullHD60 phase B r3 on profile 15 — `long-ready-native-r3.json`, sha256 668bfea1bc804363ac3ab04fd367ffe58d912697fb94a694a4b6864ec56e3b05
+`long_ready_r2.py` (0eef7aa4…: entry 0_3h92ab2l, profile 15, params {0,2,3,4,5,6,118}), guest
+`guest_long_ready_r3.py` (5c2e41a6…), runner `run_long_ready_r3.py` (ca41fe1d…). Codex `gpt-6-luna` PASS;
+Opus 5.5 VALIDATED (106 tests). Native unit `baseline-freeze-b9e18cb6`: guest exit 0,
+`OBSERVATION_CAPTURED_NOT_APPROVED`; 5 audits zero, Sphinx scans zero, common-end STABLE (attempt 2).
+- Entry READY on profile 15, msDuration 60010; stored original bytes equal the fixture SHA256.
+- **Params 118 flavor READY at 1920x1080, 60.0 fps**, avc1/isom, 4191 kbps → `delivered_1080p60_flavor_present=true`.
+- Params 2–6 unchanged from profile 14 (360p–720p at 30 fps for a 60 fps source).
+- Metadata only (API); delivered streams not yet decoded; the 360p25 requirement is met by the short fixture
+  (profile 14 params 2–4 at 640x360@25) and must be re-observed on profile 15 for the timed protocol.
