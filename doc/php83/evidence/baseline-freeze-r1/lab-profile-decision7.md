@@ -58,3 +58,20 @@ Opus 5.5 VALIDATED (106 tests). Native unit `baseline-freeze-b9e18cb6`: guest ex
 - Params 2–6 unchanged from profile 14 (360p–720p at 30 fps for a 60 fps source).
 - Metadata only (API); delivered streams not yet decoded; the 360p25 requirement is met by the short fixture
   (profile 14 params 2–4 at 640x360@25) and must be re-observed on profile 15 for the timed protocol.
+
+## Stored 1080p60 flavor full decode (step 1 of delivered-stream verification)
+`flavor_decode.py` (70a4d15f…): pinned ffprobe/ffmpeg via sealed memfds (file protocol, -xerror, zero exit and
+empty stderr), own bounded runner (CPU 150 s, wall 180 s, 2 GiB AS). Codex `gpt-6-luna` 4 rounds (stable read
+with dev/ctime; validate bounds/codecs; single meets() rule; projection bounds) → PASS; Opus 5.5 VALIDATED
+(111 tests) incl. a host-ffmpeg functional check (synthetic 1080p60 clip accepted, truncated copies rejected).
+- r1 (`flavor-decode-native-r1.json`, 5dc3498cdd00…): failed closed at the first audit, FILES_UNDRAINED_TAIL (API/batch log
+  bursts; a */15 clear_cache cron exists). No workload ran.
+- r2 (`flavor-decode-native-r2.json`, 00ff55ad2722…): privacy zero, then FLAVOR_ASSET_BINDING at flavorasset.get under the
+  user KS (no closed diagnostic; entitlement filtering on assetPeer::retrieveById is the unproven leading hypothesis).
+- r3 (`flavor-decode-native-r3.json`, sha256 f9811a8b204d4fd242842d34cfdb9279c4145b8de2c02f3a30e29f7e502bb710): guest r2 binds via flavorasset.getByEntryId (proven path) and
+  selects exactly 0_j6rfow09; runner r3, VM minutes 16–19. Unit `baseline-freeze-c603dc7e`, guest exit 0,
+  `OBSERVATION_CAPTURED_NOT_APPROVED`; 4 audits zero, Sphinx zero, common-end STABLE.
+  **Stored flavor 0_j6rfow09 (params 118, v2): 31,441,393 bytes, SHA256 c14cbe84aa6f401c813200a12b427518cd3f0c7dd68fb5b7f4d4bd7f8c9ccf7a;
+  full decode h264 1920x1080, 60/1 fps, 3600 frames, 60.010 s, AAC 44.1 kHz stereo; meets_1080p60=true.**
+  Note: audio resampled 48→44.1 kHz by the transcode. Not yet delivery: step 2 must fetch the delivered progressive
+  bytes and match this SHA256 (plus Range 206); HLS is step 3.

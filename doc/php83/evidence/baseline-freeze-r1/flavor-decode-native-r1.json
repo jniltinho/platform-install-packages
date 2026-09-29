@@ -1,0 +1,119 @@
+{
+  "approved_freeze": false,
+  "files": {
+    "common_end.py": "3264c66211a8730c35ca192a764603f71c8cd21fad0f64ca68c7db7aa637b096",
+    "context_selected.py": "64bd6fb3cd957eec51b6abd9baf9ccd4713bbf930a6405d6f07cf7db94344d8b",
+    "context_urls.py": "1ecf0476baed260a405ddd6fb6da0b1eee42b612de61d5762761c84b3c6a2bff",
+    "convergence.py": "b7f8114c27a930c471d3640c76ad60f28e0c0133b63abb5a4d805fa7c01cceca",
+    "decode_diagnostic.py": "e6c913791e8176df8883e85cde449111d6e5aee7c9d55ed8a3df2581b8e9fc01",
+    "decode_diagnostic_r3.py": "0aa4ce20f348c43d586d60bc8e0582f31091cb5060ca9e48db86afff10ad92d8",
+    "delivery_context_pair_r2.py": "ecfbec3480ef22772e50717773277834125404bef681ec687ea39a6b38b0f385",
+    "direct_content.py": "c8d3ce3e02cc5389407f6c3e9bda8aa348b60ab53735580f72056a754c75fb37",
+    "flavor_decode.py": "70a4d15f76516c980a45e0acc52a937b6dce024c3e7e47a6e50ab19d7458e924",
+    "guest_flavor_decode_r1.py": "3252b37a54a3e3e154c51f9de86f650124ce3c829c5081f608ab1000a9947d89",
+    "hls_context_proof.py": "a2bf5ee4de39119ad4c0c2eb743bdb381e7550eb2d2dd80534dc28572644bdc5",
+    "hls_decode.py": "2fda1a247b2d3cc284329224525e6afcb5593463bb3d685bafd0c83a6f69e72a",
+    "hls_decode_r2.py": "9bb3ad909ca3225b76eed3f42adb58b662517399ad4561fca3d03654dc1fb3fd",
+    "hls_decode_r3.py": "5fde3ab2d4d3daafa910f32148870f53b392dbf4d856063d7fe4487d43aa8733",
+    "hls_delivery8444.py": "cd805d0e83070fdac669d196a502e76ae83e134d88ba0ebad2c5f50896dbefa5",
+    "hls_delivery8444_r2.py": "fec502c37cc418de0dc7167855f98c822d5b3bc3db86d4033fb30b87d7640ada",
+    "hls_delivery8444_r3.py": "e93dba292d3e574828d215c13deeaae588c1efb3167bbc6ba54d8e39f85a37d0",
+    "hls_media8444.py": "cc97c2b6fdd5fc49f01b98a6a9fe332189ee9309a7a795400c517d239ebc7381",
+    "hls_nested8444.py": "fcbadbb8a86b84c6bea05880ce7dfe341188a63bceb1564d5d9239946b73cb3e",
+    "hls_playlist_bridge.py": "9f19a1e72e378e9867cda2a60f8823275de90948cc28564739886536f3b03e52",
+    "hls_response.py": "a43fb5f9a0848cbf5fef5d7cf70423255a023f6f7b06d8a9d81da0508f93f62a",
+    "hls_segments.py": "5d8e38218b899dff4181caf3bc8febf5966989d3a61f77f29c15380fab4bee05",
+    "hls_source_r2.py": "b1b4e5ed19d1589b84fb4e09bf4b98dd32d668e64b54ea69efde59bdf33d80bb",
+    "manifest_diagnostic.py": "c270871ab2ccfdd1b848e2081470b165052e2bcd0dc4b2ccad6151e5c7fc0ce4",
+    "media_get443.py": "7417ba4ca341f84626c7b0138ac4fbdf7103e89a0975b55be210e7047d95af30",
+    "media_get8444.py": "741712af0acb01c0cf5531cd5c474da34572b9725afcbf19223e5b35a815c064",
+    "nested_descriptor.py": "8d912931a8f41e23bd068d8f5576250a8c19bef79fcf3b3a88e348c603a4a89f",
+    "observation_v2.py": "ec32386df1c745f5754ece19f3127f6da85415e644c8556e6c07666b2ea1abc5",
+    "offline_decode.py": "8940b878a572b968969acdc66090184568169dadff2713e51dcf64126ca1cae4",
+    "playback_context_r4.py": "8bb6c410b034a8c140ef9408c8e49ee826e5561399eae5b0778629effed9a0f5",
+    "privacy_logs_r2.py": "d67eb65900c3134c91efaf94b18ba482b59261c81b0084de0cea3bcd37d5246c",
+    "privacy_media_tls.py": "24ea4beb525a9084e1a17667654a815cbdb1fc1d6a84188133454b4c5e0c19a0",
+    "privacy_new_logs.py": "d0978aba995c44ec6ca3dc24ba42e32528df0e5e93e3aa94a59c49d947b23436",
+    "privacy_provenance.py": "ecb0a81c37d19d9842699a928e16e6e2838fb35f68fefb281c495f5505923931",
+    "privacy_sphinx_binlog.py": "3674826a970333481db26d4fe892fb40599709e21a9581109799bd01c5afe5e2",
+    "protocol_v2.py": "147d74b0a04779fd0819ebe210d8a1a6aea4af8fbc773683a278e540ce70d4b8",
+    "rehearsal.py": "ccf78ba0b1d3c94f05f63fd2d87c351953022c149c0e75392b5c86be2c02bb70",
+    "route_descriptor.py": "a9276e52f8a238303c1011f781f13f066134d12b315afd3634f9f87eeea1fee9",
+    "settle.py": "2b1382fc7ff4163240d9c6e3342738ce90ab8537df9ea9999497a44e24d84764",
+    "short_delivery443.py": "9aa829f6c1927eb493fa4f1f5d9c1584d6a8f93b253015912ce253ba24fb1e76",
+    "short_metadata.py": "a3a60d6ad5ddfcadebf13181d757915e41fb4fd65d16c1c08c3f5b4263bf59bb",
+    "split-proof.json": "f6a09da7879e10e8fbc288dc56927a1c514169cf3f5fc545c9dd414d7ab9fd13",
+    "thumbnail_decode.py": "75b104a7acd9d6e5a35bbd0b461fe70df0a1f956ef77f08652eafddf97eb22a4",
+    "thumbnail_r4.py": "f389bb35737957fefc3518a7b081ee81c0ca81924f91cb7caf928ac8aae8a686",
+    "url_privacy.py": "338f0339e23b7d385fce17ea6fa152016342bca8d42129d5efc3f2a5183c1f6f"
+  },
+  "guest_exit": 2,
+  "phase_receipts": [
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "status": "INCOMPLETE"
+    },
+    {
+      "failure_code": "FILES_UNDRAINED_TAIL",
+      "failure_stage": "INVALID_NONCE_PRIVACY",
+      "last_audit_quiet": {
+        "audit": 1,
+        "maximum_seconds": 30,
+        "quiet_seconds": 2,
+        "samples": 9,
+        "stage": "INVALID_NONCE_PRIVACY",
+        "status": "QUIET_WINDOW_OBSERVED"
+      },
+      "match_provenance": [
+        {
+          "any_match": false,
+          "audit": 1,
+          "file_window_complete": true,
+          "final_privacy_acceptance": false,
+          "journal_window_complete": true,
+          "patterns": [
+            {
+              "categories": [
+                "INVALID_CANARY_FULL"
+              ],
+              "file_count": 0,
+              "index": 1,
+              "journal_count": 0
+            },
+            {
+              "categories": [
+                "INVALID_CANARY_PREFIX"
+              ],
+              "file_count": 0,
+              "index": 2,
+              "journal_count": 0
+            }
+          ],
+          "phase": "files_and_journal",
+          "schema": 1
+        }
+      ],
+      "privacy_errors": [
+        {
+          "audit": 1,
+          "code": "UNDRAINED_TAIL",
+          "phase": "files_after_journal"
+        }
+      ],
+      "status": "FAILED_OR_INCOMPLETE_MEDIA_OBSERVATION"
+    }
+  ],
+  "status": "FAILED_OBSERVATION",
+  "stderr_bytes": 0,
+  "stdout_bytes": 16652,
+  "unit": "baseline-freeze-bb9fab6d",
+  "unit_inactive": true
+}
