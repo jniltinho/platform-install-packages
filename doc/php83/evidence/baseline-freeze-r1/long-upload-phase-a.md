@@ -55,3 +55,26 @@ audit (INVALID_NONCE_PRIVACY) with persistent `FILES_INVENTORY_CHANGED`. Private
 pre-existing `batch/*-2026-09-27*.log` files were deleted at 02:50 VM time by Kaltura's hourly
 DirectoryCleanupBatchLogs job (HH:50). The scanner correctly fails closed when a start file vanishes.
 No media API call, no mutation. r2 adds a VM-clock start guard (minutes 00–29, not 23:xx / 00:00–00:14).
+
+# FullHD60 phase B r2 — READY and flavors observed (`long-ready-native-r2.json`, sha256 58f1a71341c2eebad8d10abe1862b0f0e98deeb1b9d16c0d17772ed54c0810bf)
+
+Runner r2 (`run_long_ready_r2.py`): same reviewed guest/pins, new stage, VM-clock start guard
+(minutes 00–29 UTC; VM timezone confirmed Etc/UTC). Codex `gpt-6-luna` accepted as best-effort start
+guard; Opus 5.5 VALIDATED (11 tests; guard runs in --check and staging).
+
+Native unit `baseline-freeze-18154d61`: `EXISTING_MEDIA_FREEZE_OBSERVATION_COMPLETE` / runner
+`OBSERVATION_CAPTURED_NOT_APPROVED`, guest exit 0, stderr 0, unit inactive. All 4 finite audits zero,
+Sphinx full-content scans zero, common-end STABLE.
+
+- Entry `0_wzlsbwmy`: READY (first poll), conversion profile 14, msDuration 60067.
+- Stored original (`0_laweerrb`, 1920x1080, 60.0 fps, avc1/isom) bound via file_sync: bytes equal the
+  fixture SHA256 611e3644…5b07 (end-to-end chunked upload integrity).
+- Transcoded flavors, all READY, avc1/isom: params 2 640x360@30, 3 854x480@30, 4 960x540@30,
+  5 1024x576@30, 6 1280x720@30, 7 1920x1080@30.
+- **Finding:** the published 7.4 default profile does not deliver 60 fps; `delivered_1080p60_flavor_present
+  = false`. Decision 7 / protocol plan require the accepted conversion profile to include delivered
+  1080p60 (and 360p25) explicitly; a profile decision is needed before timed rounds.
+- API metadata only; delivered streams were not decoded/inspected (`stream_inspected=false`).
+
+Identities: run_long_ready_r2.py fde7bef2…48ec, test_long_ready_r2.py c15df243…fa02; guest 75a36006…,
+long_ready.py 59874e7e…, privacy_new_logs.py d0978aba… (unchanged from r1).
