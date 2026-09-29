@@ -99,3 +99,13 @@ design. How partner 102 acquired entitlement (installer default vs lab overlay) 
 not yet established. Local tests: `test_thumb_ks_reason` 5 OK. Limitations:
 compressed ACL rules are not decoded (rules column empty/`a:0:{}` check only);
 timestamps compared with DB `NOW()`.
+
+## Apache logging consequence (read-only config check, Baseline74)
+
+Packaged Kaltura vhost logs `CustomLog /opt/kaltura/log/kaltura_apache_access_ssl.log
+vhost_kalt`, and `vhost_kalt` includes `%r` (full request line). A GET of the
+getUrl path therefore writes the generated download KS into the access log; the
+API-log privacy overlay does not cover this. The config comes from the packaged
+template (`@LOG_DIR@`), so the same behavior is expected on stock 7.4 installs;
+production `.20` was not inspected (out of lab scope). Any thumbnail GET via getUrl
+must treat this as a recorded privacy finding; operator decision pending.
