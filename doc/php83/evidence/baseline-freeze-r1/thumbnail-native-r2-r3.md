@@ -138,3 +138,15 @@ redirects, no false-PASS path). Neither is execution evidence.
 
 Open: identify which log was rewritten (rotation vs application) and rerun privacy
 audit in a quiet window; decide handling of the vhost_kalt `%r` KS exposure.
+
+## r4 FILES_REWRITTEN root cause (read-only, Baseline74)
+
+The append-window scanner (`baseline-rehearsal/privacy/append-window-v1/scan.py:72`)
+raises `REWRITTEN` when a file keeps its size but changes mtime. VM clock is +3m55s vs
+host; r4 ran 02:01:28–02:01:45 VM time. `/opt/kaltura/log/sphinx/data/binlog.meta`
+(11 bytes) and `binlog.001` (0 bytes) were both rewritten at 02:01:30.92 inside that
+window (sphinx `binlog_path` is under the log tree, `binlog_flush = 1`). This is a
+Sphinx RT binlog data write with constant size, not a log leak. Earlier passing
+rounds did not coincide with a Sphinx binlog write, so the risk applies to every
+round. Handling these binary index files (separate full-content scan vs exclusion)
+is a privacy-protocol decision; nothing was changed.
