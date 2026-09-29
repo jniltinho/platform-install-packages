@@ -28,6 +28,13 @@ Adotado (ver `AGENTS.md` → "Acceleration decisions" e a nota sob a tarefa 1.2 
 4. Reconciliar critérios da 1.2 com as evidências e marcar a caixa **só se** tudo bater; commit + e-mail.
 Depois: 1.3 (PHPCompatibility), 1.4 (matriz de distros), 1.5 (go/no-go).
 
+**Rascunho já iniciado (não revisado, não executado, não commitado):** `tools/php83/baseline-freeze-r1/short_p15.py` — rodada
+agrupada do item 2 (upload do short360 no perfil 15 reaproveitando o transporte/ack do `long_upload_r2` + READY + flavors
+360p25). Falta: preparador/guest (base `guest_long_ready_r1`), runner (base `run_long_ready_r3`, estágio novo), testes,
+Codex + Opus. Janelas de início permitidas pela trava atual (`tm_min<30`): minutos **01–04 e 16–19** (entre os crons
+`clear_cache`); a pausa de crons (item 1) é opcional — a limpeza das :50 é um job do batch, não cron, e o batch precisa
+ficar ativo para transcodificar. Estimativa para fechar a 1.2: ~1,5–3 h.
+
 A seção 4 abaixo (etapa 2 progressive) passa a pertencer à 3.5/5.14 e **não** bloqueia a 1.2.
 
 ## 2. Ambiente deixado DESLIGADO (tudo parado de propósito)
