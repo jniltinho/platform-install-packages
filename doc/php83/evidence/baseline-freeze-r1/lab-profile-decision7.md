@@ -22,3 +22,20 @@ exposes writable `maxFrameRate` (api_v3/lib/types/conversionProfile/KalturaFlavo
    Profile 14 and the partner default remain untouched; uploads pass conversionProfileId explicitly.
 3. Re-upload both fixtures on `lab_decision7` and verify delivered 1080p60 / 360p25.
 Admin KS is required; admin secret/KS are added to every privacy audit pattern set.
+
+## Execution (operator-authorized admin KS) — `lab-profile-native-r1.json`, sha256 44eeac963c7021f2ad6aba1f5fdc2390aa2933ecdf0130393dd904b7529ea7be
+`lab_profile.py` (5256e80d…), guest `guest_lab_profile_r1.py` (47080066…) from the reviewed phase-B guest,
+runner `run_lab_profile_r1.py` (21bc95ed…) with the VM-clock guard. The partner-102 admin secret is read
+in-guest only, tracked (full + 15-char prefix) before first use, and in every audit; never exported.
+Reviews: Codex `gpt-6-luna` round 1 CHANGES_REQUIRED (partial-mutation visibility → progress ids exported;
+set-based membership kept and documented), round 2 PASS; Opus 5.5 VALIDATED (99 tests; writable fields,
+partner-from-KS, isDefault semantics, no other 60 fps cap in KDL); non-blocking suggestions applied
+(profile 14 `isPartnerDefault` observed unchanged); Codex round 3 PASS.
+
+Native unit `baseline-freeze-2e9f8e2c`: guest exit 0, `OBSERVATION_CAPTURED_NOT_APPROVED`.
+- Created partner-102 flavor params **118** `lab_decision7_1080p60` (clone of 7, maxFrameRate=60, 35 writable
+  fields copied) and conversion profile **15** `lab_decision7` = profile 14 params with 7 → 118.
+- Profile 14 membership and partner-default flag observed unchanged; isDefault=0.
+- Privacy: 5 audits zero (incl. admin secret/KS), Sphinx scans zero, common-end STABLE on attempt 2.
+- Consumed once: a rerun aborts LAB_PROFILE_EXISTS. The 8.3 lab must receive the identical definition.
+Next: re-upload FullHD60 (and short360) with conversionProfileId=15 and verify delivered 1080p60/360p25.
